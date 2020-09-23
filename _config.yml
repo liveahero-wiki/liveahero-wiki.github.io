@@ -1,0 +1,24 @@
+title: Live A Hero Wiki
+url: https://liveahero-wiki.github.io/
+permalink: /news/:year/:month/:title/
+markdown: kramdown
+sass:
+  style: compressed
+plugins:
+  - jekyll-feed
+  - jekyll-redirect-from
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: "heroes"
+    values:
+      layout: heroes
+
+collections:
+  heroes:
+    output: true
+    permalink: /:collection/:path/

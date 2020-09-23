@@ -1,0 +1,19 @@
+<table>
+  <thead class="sticky-header">
+    <tr>
+    {% assign heads = include.table[0] %}
+    {% for head in heads %}
+      <th>{{ head[0] }}</th>
+    {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+  {% for row in include.table %}
+    <tr>
+    {% for col_hash in row %}
+      <td>{{ col_hash[1] }}</td>
+    {% endfor %}
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>

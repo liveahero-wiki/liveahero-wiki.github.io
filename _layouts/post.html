@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <h1 class="post-title" itemprop="name headline">
+    <a href="{{ page.url }}">{{ page.title }}</a>
+  </h1>
+  <div class="meta">
+    {% if page.date %}
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+    {% endif %}
+    {% if page.author %}
+      <span class="author" itemscope itemtype="http://schema.org/Person" itemprop="author">{{ page.author }}</span>
+    {% endif %}
+  </div>
+  <div class="post-content" itemprop="articleBody">{{ page.content }}</div>
+</article>

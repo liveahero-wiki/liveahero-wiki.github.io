@@ -1,0 +1,12 @@
+---
+layout: default
+permalink: /heroes/
+---
+
+<ul>
+{% for hero in site.heroes %}
+  <li>
+      <a href="{{ hero.url }}">{{ hero.name }}</a>
+  </li>
+{% endfor %}
+</ul>

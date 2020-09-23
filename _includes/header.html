@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{ page.title }}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  {% if page.hidden %}<meta name="robots" content="noindex">{% endif %}
+  <meta name="theme-color" content="#1e2327">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" type="text/css" href="/assets/main.css">
+  <link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} posts" />
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <a class="site-title" href="/"><b>Live A Hero</b></a> Wiki
+    <nav class="site-nav">
+      <a href="/">Home</a>
+      <a href="/heroes/">Heroes</a>
+    </nav>
+  </div>
+</header>
