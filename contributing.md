@@ -36,5 +36,5 @@ Please feel free to fix typos and phrasings.
 
 ### Create page for new Hero `/heroes/:name/`
 
-1. Under `_heroes/` directory, create a new `name.md` file. `name` should be lowercase of English name in official trailer (e.g. `akashi`).
+1. Under `_heroes/` directory, [create a new `name.md` file](https://github.com/liveahero-wiki/liveahero-wiki.github.io/new/master/_heroes). `name` should be lowercase of English name in official trailer (e.g. `akashi`).
 2. Copy the content of [akashi's page](https://raw.githubusercontent.com/liveahero-wiki/liveahero-wiki.github.io/master/_heroes/akashi.md) into this file and edit accordingly.
