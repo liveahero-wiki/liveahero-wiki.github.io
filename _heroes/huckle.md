@@ -1,6 +1,6 @@
 ---
 name: Huckle
-jp_name: "something"
+jp_name: "ハックル"
 race: human
 occupation: "Hero Office Manager)"
 illustrator: "Shukou Akanaru (朱交赤成)"
