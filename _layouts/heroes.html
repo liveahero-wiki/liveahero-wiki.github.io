@@ -2,20 +2,9 @@
 layout: default
 ---
 
-{% include hero-infobox.html name=page.name jp_name=page.jp_name race=page.race illustrator=page.illustrator voice_actor=page.voice_actor %}
-
-<p>Name: {{ page.name }}</p>
-<p>JP Name: {{ page.jp_name }}</p>
-<p>Race: {{ page.race }}</p>
-<p>Occupation: {{ page.occupation }}</p>
-<p>Illustrator: {{ page.illustrator }}</p>
-<p>Voice actor: {{ page.voice_actor }}</p>
-<p>HP: {{ page.HP }}</p>
-<p>ATK: {{ page.ATK }}</p>
-
-{% capture url %}/assets/img/hero_sprites/{{ page.sprite_prefix }}_h01.png{% endcapture %}
-{% include figure.html src=url caption="hero form" %}
-{% capture url %}/assets/img/hero_sprites/{{ page.sprite_prefix }}_s01.png{% endcapture %}
-{% include figure.html src=url caption="sidekick form" %}
+{% include hero-infobox.html name=page.name jp_name=page.jp_name
+    race=page.race occupation=page.occupation
+    illustrator=page.illustrator voice_actor=page.voice_actor
+    sprite_prefix=page.sprite_prefix %}
 
 {{ content }}

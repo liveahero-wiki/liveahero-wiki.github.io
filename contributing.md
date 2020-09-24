@@ -63,6 +63,7 @@ If you plan to contribute something big, such as starting a new group of pages, 
 This wiki is powered by [Jekyll](https://jekyllrb.com/docs/), a static site generator. The templating language is [Liquid](https://shopify.github.io/liquid/basics/introduction/), which looks very similar to Jinja2 and ejs templating language. Jekyll has provided [additional Liquid filters and tags](https://jekyllrb.com/docs/liquid/) to make life easier.
 
 - [Testing your GitHub Pages site locally with Jekyll](https://docs.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll)
+- [Jekyll Cheatsheet](https://learn.cloudcannon.com/jekyll-cheat-sheet/)
 
 For code change that affects significant parts of the website (excluding trivial bug fixes), please open a new Pull Request instead of directly commiting to the master branch.
 
