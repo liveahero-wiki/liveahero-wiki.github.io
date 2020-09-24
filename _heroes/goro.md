@@ -1,6 +1,6 @@
 ---
 name: Goro
-jp_name: "something"
+jp_name: "ゴロウ"
 race: human
 occupation: "University student (Part-timer)"
 illustrator: "oaks (おーくす)"
