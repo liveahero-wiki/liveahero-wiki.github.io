@@ -48,8 +48,15 @@ If you plan to contribute something big, such as starting a new group of pages, 
 
 ### Create page for new Hero `/heroes/:name/`
 
-1. Under `_heroes/` directory, [create a new `name.md` file](https://github.com/liveahero-wiki/liveahero-wiki.github.io/new/master/_heroes). `name` should be lowercase of English name in official trailer (e.g. `akashi`).
+1. Under `_heroes/` directory, [create a new `name.md` file](https://github.com/liveahero-wiki/liveahero-wiki.github.io/new/master/_heroes).  See [Hero file name convention](#hero-file-name-convention).
 2. Copy the content of [akashi's page](https://raw.githubusercontent.com/liveahero-wiki/liveahero-wiki.github.io/master/_heroes/akashi.md) into this file and edit accordingly.
+
+#### Hero file name convention
+
+- `name` should be lowercase of English name in official trailer.
+- For single-word English name like `Akashi`, file name will be `akashi.md`
+- For multi-word English name like `Polaris Mask`, replace whitespace with underscore (`_`), so it becomes `polaris_mask.md`.
+- For name with `&` like `Kouki & Sirius`, replace `&` with `and`, so it becomes `kouki_and_sirius.md`.
 
 ## Notes for Programmers
 
