@@ -6,10 +6,12 @@ layout: default
 <p>JP Name: {{ page.jp_name }}</p>
 <p>Race: {{ page.race }}</p>
 <p>Occupation: {{ page.occupation }}</p>
+<p>Illustrator: {{ page.illustrator }}</p>
 <p>Voice actor: {{ page.voice_actor }}</p>
 <p>HP: {{ page.HP }}</p>
 <p>ATK: {{ page.ATK }}</p>
 
-<div>
-{{ content }}
-</div>
+{% comment %}
+{{ include figure.html src="/assets/img/hero_sprites/{{ page.sprite_prefix }}_h01.png" caption="hero form"}}
+{{ include figure.html src="/assets/img/hero_sprites/{{ page.sprite_prefix }}_s01.png" caption="sidekick form"}}
+{% comment %}
