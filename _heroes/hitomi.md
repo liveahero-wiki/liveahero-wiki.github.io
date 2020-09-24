@@ -1,6 +1,6 @@
 ---
 name: Hitomi
-jp_name: "something"
+jp_name: "ヒトミ"
 race: human
 occupation: "Idol Singer"
 illustrator: "Zhuzi (ずじ)"
