@@ -8,7 +8,7 @@ When you start the game, you can freely choose the appearance, voice, and gender
 You can choose from 4 different appearance types and 5 different voices!
 Let's start the story with the "Real you"!
 
-![alt text](https://liveahero-wiki.github.io/blob/master/assets/img/uipage_1.png)
+![alt text](https://liveahero-wiki.github.io/assets/img/uipage_1.png)
 
 ## Combat system
 
@@ -23,7 +23,7 @@ The order of actions is dependent on each character’s agility order.
 
 When the turn of the next ally character comes around, you can choose between “Skill activation” or “Wait”.
 
-![alt text](https://liveahero-wiki.github.io/blob/master/assets/img/uipage_3.png)
+![alt text](https://liveahero-wiki.github.io/assets/img/uipage_3.png)
 
 ### Fight with your character’s various skills!
 
@@ -50,7 +50,7 @@ Make sure to consume VP before your enemy so you can block their skill activatio
 
 A "Hero" who fights on the front line and a "Sidekick" who assists them. You can combine them as you wish! Create your own team by organizing characters according to the attributes and characteristics of your opponents!
 
-![alt text](https://liveahero-wiki.github.io/blob/master/assets/img/uipage_2.png)
+![alt text](https://liveahero-wiki.github.io/assets/img/uipage_2.png)
 
 ### Get in battle using the “Hero” and “Sidekick” tags!
 
@@ -72,7 +72,7 @@ You can improve the survival rate of your team if you place characters with high
 
 As the relationship between a Hero and a Sidekick deepens, the Sidekick can improve the ability to support the Hero and grant the Hero new skills. Strengthen the tags you like the most!
 
-![alt text](https://liveahero-wiki.github.io/blob/master/assets/img/uipage_5.png)
+![alt text](https://liveahero-wiki.github.io/assets/img/uipage_5.png)
 
 ### Train a Hero to improve their strenght!
 
@@ -93,7 +93,7 @@ When the Relation parameter increases its value by setting a tag of a Hero and a
 
 By sending your Hero to "Business", they can earn experience points and collect items depending on how long they train. Get your heroes to business while you're studying or working and make them stronger!
 
-![alt text](https://liveahero-wiki.github.io/blob/master/assets/img/uipage_4.png)
+![alt text](https://liveahero-wiki.github.io/assets/img/uipage_4.png)
 
 ### Business is also an important job for a Hero!
 
