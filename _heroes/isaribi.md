@@ -1,6 +1,6 @@
 ---
 name: Isaribi
-jp_name: "something"
+jp_name: "イサリビ"
 race: human
 occupation: "Fisherman"
 illustrator: "Xigma (きしぐま)"
