@@ -1,0 +1,60 @@
+{% capture artwork_cond %}item.path contains {{ include.sprite_prefix }}{% endcapture %}
+{{ artwork_cond }}
+{% assign artworks = site.static_files | where: "hero_sprites", true | where_exp: "item", artwork_cond | map: "path" %}
+{{ artworks | jsonify }}
+{% assign first_art = artworks | first | default: "" }}
+<style>
+.transientBox {
+    display: inline-block;
+    border: #aaa 1px solid;
+    padding: 18px;
+    background-color: #f9f9f9;
+    max-width: 640px;
+}
+.transientBox .tabs span {
+    padding: 0 10px;
+}
+</style>
+
+<div class="transientBox">
+    <!--<div class="tabs"><span class="selected" data-id="0" data-voice="nekros2"
+            style="background-color: rgb(229, 204, 255);">Traveling Sorcerer</span><span class="" data-id="1"
+            data-voice="nekros">Lifeless Emperor</span></div>-->
+    <div class="transient0 nether">
+        <div class="header">
+            <td class="caption">
+                <div class="name">{{ include.name }}</div>
+                <div class="sub">{{ include.jp_name }}</div>
+            </td>
+        </div>
+        <div class="artwork"><img src="{{ first_art }}" loading="lazy"
+                style="padding: 0px 159px;" data-failed="false">
+            <select class="spriteSelector">
+                <option value="0">{{ include.sprite_prefix }}_h01</option>
+                <option value="1">{{ include.sprite_prefix }}_s01</option>
+            </select>
+        </div>
+        <div class="body">
+            <table class="data transientInfo0">
+                <tbody>
+                    <tr>
+                        <th>Illustration</th>
+                        <td>{{ include.illustrator }}</td>
+                    </tr>
+                    <tr>
+                        <th>Voice</th>
+                        <td>{{ include.voice_actor }}</td>
+                    </tr>
+                    <tr>
+                        <th>Race</th>
+                        <td>{{ include.race }}</td>
+                    </tr>
+                    <tr>
+                        <th>Occupation</th>
+                        <td>{{ include.occupation }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
