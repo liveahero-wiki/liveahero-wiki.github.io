@@ -20,4 +20,4 @@ She is an in-house mechanic and spaceship pilot who has a partnership agreement 
 
 Her arms are as strong as her spirit, and she abhors being treated with contempt "because she's a woman".
 
-Since she's a geek deeply interested in high tech, when she sees rare mechas or robots she has a bat habit of wanting to disassemble them and analyze their structure.
+Since she's a geek deeply interested in high tech, when she sees rare mechas or robots she has a bad habit of wanting to disassemble them and analyze their structure.
