@@ -17,4 +17,4 @@ You can use any modern HTML/CSS/JS features you like. Bootstrap and JQuery are b
 
 Most pages can be a Markdown file as it is easier to read and write. More technical pages like list of heroes can be HTML file if you need more control over the final html output.
 
-Put static files under `/assets`. `/assets/imgs` for images, `/assets/js` for reusable js code.
+Put static files under `/assets`. `/assets/img` for images, `/assets/js` for reusable js code.

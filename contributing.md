@@ -32,9 +32,31 @@ Most pages are written in Markdown syntax. Please see [Basic writing and formatt
 
 Please feel free to fix typos and phrasings.
 
+Keep in mind that vandalism is reversible, but the punitive measures you'll face for committing this is not.
+
+When editing articles, please try to write objectively and formally about the topics at hand while using proper English. Avoid writing in the first person, casual figures of speech, spelling and grammatical errors, et cetera unless appropriate for the situation. Information should be accurately and concisely conveyed, and article contributions should reflect this goal.
+
+### Upload image
+
+You can upload image file by going to [this page](https://github.com/liveahero-wiki/liveahero-wiki.github.io/upload/master/assets/img).
+
+## Task Coordination
+
+If you plan to contribute something big, such as starting a new group of pages, changing design of the websites and adding new feature, please create a new issue in our [Github issue](https://github.com/liveahero-wiki/liveahero-wiki.github.io/issues) page before beginning your work.
+
 ## More instructions on specific task
 
 ### Create page for new Hero `/heroes/:name/`
 
 1. Under `_heroes/` directory, [create a new `name.md` file](https://github.com/liveahero-wiki/liveahero-wiki.github.io/new/master/_heroes). `name` should be lowercase of English name in official trailer (e.g. `akashi`).
 2. Copy the content of [akashi's page](https://raw.githubusercontent.com/liveahero-wiki/liveahero-wiki.github.io/master/_heroes/akashi.md) into this file and edit accordingly.
+
+## Notes for Programmers
+
+This wiki is powered by [Jekyll](https://jekyllrb.com/docs/), a static site generator. The templating language is [Liquid](https://shopify.github.io/liquid/basics/introduction/), which looks very similar to Jinja2 and ejs templating language. Jekyll has provided [additional Liquid filters and tags](https://jekyllrb.com/docs/liquid/) to make life easier.
+
+- [Testing your GitHub Pages site locally with Jekyll](https://docs.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll)
+
+For code change that affects significant parts of the website (excluding trivial bug fixes), please open a new Pull Request instead of directly commiting to the master branch.
+
+For code change related to website design, please include screenshot preview whenever possible.
