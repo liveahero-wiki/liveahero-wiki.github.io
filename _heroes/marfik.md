@@ -1,6 +1,6 @@
 ---
 name: Marfik
-jp_name: "something"
+jp_name: "マルフィク"
 race: human
 occupation: "University Professor (Archeology)"
 illustrator: "Mensuke (めんスケ)"
