@@ -11,5 +11,9 @@ layout: default
 <p>HP: {{ page.HP }}</p>
 <p>ATK: {{ page.ATK }}</p>
 
-{{ include figure.html src="/assets/img/hero_sprites/{{ page.sprite_prefix }}_h01.png" caption="hero form"}}
-{{ include figure.html src="/assets/img/hero_sprites/{{ page.sprite_prefix }}_s01.png" caption="sidekick form"}}
+{% capture url %}/assets/img/hero_sprites/{{ page.sprite_prefix }}_h01.png{% endcapture %}
+{% include figure.html src=url caption="hero form" %}
+{% capture url %}/assets/img/hero_sprites/{{ page.sprite_prefix }}_s01.png{% endcapture %}
+{% include figure.html src=url caption="sidekick form" %}
+
+{{ content }}
