@@ -12,7 +12,7 @@ ATK: 100
 
 ## Notes:
 
-"I'm Professor Malfik, a researcher passionate for the ancient times. If you give me a hand with excavation here, I'll return the favor with your work. How's that sound?"
+"I'm Professor Marfik, a researcher passionate for the ancient times. If you give me a hand with excavation here, I'll return the favor with your work. How's that sound?"
 
 Archeologist enrolled in university, and an adventure-lover for as long as he remembers. An Earthling from Indianapolis, USA. Having vitality and toughness far from any ordinary person, he's a mischievous man in the prime of his life, who possesses both the composure and thinking power of a scholar, and the curiosity of a child.
 
