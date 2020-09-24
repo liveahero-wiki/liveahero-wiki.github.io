@@ -5,6 +5,7 @@ race: Human
 occupation: "Child actor - Entertainer & Dog entertainer"
 illustrator: "Unknown"
 voice_actor: "Unknown"
+sprite_prefix: fg_kouki
 HP: 100
 ATK: 100
 ---
