@@ -7,23 +7,57 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   {% if page.hidden %}<meta name="robots" content="noindex">{% endif %}
-  <meta name="theme-color" content="#1e2327">
+  <meta name="theme-color" content="#ffa726">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <link rel="stylesheet" type="text/css" href="/assets/main.css">
   <link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} posts" />
 </head>
 
 <body>
+  <div class="sidebar">
+    <header class="sidebar__logo" role="banner">
+      <img src="/assets/img/logo.png">
+    </header>
+    <nav class="sidebar__nav">
+      <div class="sidebar__nav-interior">
+        <h3 class="section__header">Wiki</h3>
+        <ul>
+          <li>
+            <a href="/">Main page</a>
+          </li>
+          <li>
+            <a href="https://github.com/liveahero-wiki/liveahero-wiki.github.io/commits/master">Recent changes</a>
+          </li>
+          <li>
+            <a href="https://github.com/liveahero-wiki/liveahero-wiki.github.io/">Open source</a>
+          </li>    
+        </ul>
 
-<header>
-  <div class="container">
-    <a class="site-title" href="/"><b>Live A Hero</b></a> Wiki
-    <nav class="site-nav">
-      <a href="/">Home</a>
-      <a href="/gameplay/">Gameplay</a>
-      <a href="/heroes/">Heroes</a>
-      <a href="/contributing/">Contributing</a>
+        <h3 class="section__header">Basic Information</h3>
+        <ul>
+          <li>
+            <a href="/gameplay/">Gameplay</a>
+          </li>
+        </ul>
+        <h3 class="section__header">Catalogs</h3>
+        <ul>
+          <li>
+            <a href="/heroes/">Heroes</a>
+          </li>
+        </ul>
+        <h3 class="section__header">Tools</h3>
+        <ul>
+          <li>
+            <a href="https://github.com/liveahero-wiki/liveahero-wiki.github.io/upload/master/assets/img">Upload image</a>
+          </li>
+        </ul>
+        <h3 class="section__header">Contributing</h3>
+        <ul>
+          <li>
+            <a href="/contributing/">Contributing Guide</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </div>
-</header>
+  <div class="content__overlay"></div>
