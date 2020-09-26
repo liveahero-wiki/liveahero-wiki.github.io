@@ -3,7 +3,7 @@ title: Contributing Guide
 banner: true
 ---
 
-1. The generated Toc will be an ordered list
+* unordered list
 {:toc}
 
 ## Foreword
@@ -18,7 +18,7 @@ get back to the website design later when we have enough active contributors.
 ## How to contribute
 
 For all potential wiki contributors, you must create a Github account beforehand (free plan is enough).
-If this is hosted with MediaWiki, we would have ask you to create wiki account as well, so please don't
+If this is hosted with MediaWiki, we would have ask you to create a wiki account as well, so please don't
 be discouraged by the need to create a new account.
 
 ### Edit a page
