@@ -1,23 +1,11 @@
 {% capture artwork_cond %}item.path contains "{{ include.sprite_prefix }}"{% endcapture %}
 {% assign artworks = site.static_files | where: "hero_sprites", true | where_exp: "item", artwork_cond | map: "path" %}
-<style>
-.transientBox {
-    display: inline-block;
-    border: #aaa 1px solid;
-    padding: 18px;
-    background-color: #f9f9f9;
-    max-width: 640px;
-}
-.transientBox .tabs span {
-    padding: 0 10px;
-}
-</style>
 
-<div class="transientBox">
+<div class="heroBox">
     <!--<div class="tabs"><span class="selected" data-id="0" data-voice="nekros2"
             style="background-color: rgb(229, 204, 255);">Traveling Sorcerer</span><span class="" data-id="1"
             data-voice="nekros">Lifeless Emperor</span></div>-->
-    <div class="transient0 nether">
+    <div class="hero0 nether">
         <div class="header">
             <td class="caption">
                 <div class="name">{{ include.name }}</div>
@@ -26,7 +14,7 @@
         </div>
         {% include hero-infobox-gallery.html artworks=artworks %}
         <div class="body">
-            <table class="data transientInfo0">
+            <table>
                 <tbody>
                     <tr>
                         <th>Illustration</th>

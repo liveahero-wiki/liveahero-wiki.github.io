@@ -246,18 +246,18 @@ footer {
   color: #fff;
   font-size: 14px;
   background-color: $colorDark;
-  padding: 50px 0;
+  padding: 40px 0;
 }
 footer a {
   color: #fff;
   text-decoration: underline;
 }
-@media (min-width: 820px) {
+/*@media (min-width: 820px) {
   .container {
     width: 760px;
     margin: auto;
   }
-}
+}*/
 @media (max-width: 820px) {
   .container {
     padding-left: 20px;
@@ -291,4 +291,20 @@ figcaption {
   background-color: #78909c;
   padding: 10px 30px 30px;
   margin-bottom: 30px;
+}
+// Hero page
+.heroBox {
+  display: inline-block;
+  border: #aaa 1px solid;
+  padding: 18px;
+  background-color: #f9f9f9;
+  max-width: 640px;
+}
+.heroBox .tabs span {
+  padding: 0 10px;
+}
+@media (min-width: 1064px) {
+  .hero-gallery img {
+      padding: 0 159px;
+  }
 }
