@@ -1,6 +1,5 @@
 {% capture artwork_cond %}item.path contains "{{ include.sprite_prefix }}"{% endcapture %}
 {% assign artworks = site.static_files | where: "hero_sprites", true | where_exp: "item", artwork_cond | map: "path" %}
-{% assign first_art = artworks | first | default: "" %}
 <style>
 .transientBox {
     display: inline-block;
@@ -13,7 +12,6 @@
     padding: 0 10px;
 }
 </style>
-<script>const data = {{ artworks | jsonify }}</script>
 
 <div class="transientBox">
     <!--<div class="tabs"><span class="selected" data-id="0" data-voice="nekros2"
@@ -26,9 +24,7 @@
                 <div class="sub">{{ include.jp_name }}</div>
             </td>
         </div>
-        <div class="artwork"><img src="{{ first_art }}" loading="lazy" style="padding: 0px 159px;" data-failed="false">
-            <select class="spriteSelector"></select>
-        </div>
+        {% include hero-infobox-gallery.html artworks=artworks %}
         <div class="body">
             <table class="data transientInfo0">
                 <tbody>
