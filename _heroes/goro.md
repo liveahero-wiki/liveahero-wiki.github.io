@@ -1,8 +1,8 @@
 ---
 name: Goro
 jp_name: "ゴロウ"
-race: human
-occupation: "University student (Part-timer)"
+race: Alien
+occupation: "Carpenter"
 illustrator: "oaks (おーくす)"
 voice_actor: "Yoshihito Oonami (大浪嘉仁)"
 sprite_prefix: fg_goro
@@ -13,8 +13,6 @@ ATK: 100
 ## Notes
 
 "Hey, yer the backbone that keeps us all together, ya know. If ya weren't here, we wouldn't carry on and the scull'd reel. So come on now, puff up that chest."
-
-Occupation: Carpenter
 
 He is a diligent man who works as a shipwright in charge of repairs and onboard construction in a shipboard city in the ocean planet of Muirauqa IV. Originating from a different planet, he eventually arrived to Muirauqa IV after wandering.
 
