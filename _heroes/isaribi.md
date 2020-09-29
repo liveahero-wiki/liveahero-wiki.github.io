@@ -1,7 +1,7 @@
 ---
 name: Isaribi
 jp_name: "イサリビ"
-race: human
+race: Alien
 occupation: "Fisherman"
 illustrator: "Xigma (きしぐま)"
 voice_actor: "Masahiro Ogata (尾形雅宏)"
