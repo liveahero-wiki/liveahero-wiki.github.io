@@ -1,7 +1,7 @@
 ---
 name: Huckle
 jp_name: "ハックル"
-race: human
+race: Alien
 occupation: "Hero Office Manager)"
 illustrator: "Shukou Akanaru (朱交赤成)"
 voice_actor: "Kenyuu Horiuchi (堀内賢雄)"
