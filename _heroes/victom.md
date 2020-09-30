@@ -2,13 +2,49 @@
 name: Victom
 jp_name: "ヴィクトム"
 race: human
-occupation: "レスキュー隊隊長"
-illustrator: "ダイエクスト"
-voice_actor: "尾形雅宏"
+occupation: "Rescue squad captain"
+illustrator: "DAI-XT."
+voice_actor: "Masahiro Ogata"
 sprite_prefix: fg_victom
 HP: 263
 ATK: 181
 ---
+
+## Stats
+
+### Hero
+
+#### 4☆
+
+| Level 	| HP   	| ATK  	| SPD 	| View 	|
+|-------	|------	|------	|-----	|------	|
+| 1     	| 263  	| 181  	| 106 	| 1237 	|
+| 30    	| 1316 	| 908 	| 106 	| 1361 	|
+| 40    	| 1975 	| 1363 	| 106 	| 1422 	|
+<!--| 50    	| 2852 	| 2330 	| 106 	| 1546 	|
+| 60    	| 3950 	| 3226 	| 106 	| 1731 	|-->
+
+#### 5/6☆
+
+| Level 	| HP   	| ATK  	| SPD 	| View 	|
+|-------	|------	|------	|-----	|------	|
+| 1     	| 263  	| 215  	| 106 	| 1237 	|
+| 30    	| 1316 	| 1075 	| 106 	| 1361 	|
+| 40    	| 1975 	| 1612 	| 106 	| 1422 	|
+| 50    	| 2852 	| 2330 	| 106 	| 1546 	|
+| 60    	| 3950 	| 3226 	| 106 	| 1731 	|
+
+### Sidekick
+
+| Level 	| HP   	| ATK  	| SPD 	| View 	|
+|-------	|------	|------	|-----	|------	|
+| 1     	| 40  	| 42  	| 2    	| 70   	|
+| 50    	| 160 	| 168 	| 2   	| 175 	|
+| 60    	| 200 	| 210 	| 2   	| 210 	|
+| 70    	| 240 	| 252 	| 2    	| 245 	|
+| 80    	| 280 	| 294 	| 2    	| 280   |
+| 90    	| 340 	| 357 	| 2    	| 315 	|
+| 100    	| 400 	| 420 	| 2    	| 350 	|
 
 ## Skills
 
@@ -23,8 +59,20 @@ ATK: 181
   
 ### Sidekick
 
+#### Active
+
 | Skill name       	| Effect                                               	| Proc rate 	| View cost 	|
 |------------------	|------------------------------------------------------	|-----------	|-----------	|
 | 絶対救助の誓い   	| ATK Up by 1.5x<br>ATK Up by 1.5x<br>DEF Down by 1.5x 	| 100       	| 4000      	|
 | 絶対救助の誓い+  	| ATK Up by 1.5x<br>ATK Up by 1.5x<br>DEF Down by 1.5x 	| 100       	| 3500      	|
 | 絶対救助の誓い++ 	| ATK Up by 1.5x<br>ATK Up by 1.5x<br>DEF Down by 1.5x 	| 100       	| 3000      	|
+
+#### Equipment
+| Skill name       	| Effect                                               	| Proc rate 	|
+|------------------	|------------------------------------------------------	|-----------	|
+| 不屈のレンジャーⅠ   | ATK Up by 1.5x for 1 turn after getting hit 	| 10       	|
+| 不屈のレンジャーⅡ  	| ATK Up by 1.5x for 1 turn after getting hit 	| 14       	|
+| 不屈のレンジャーⅢ 	| ATK Up by 1.5x for 1 turn after getting hit 	| 18       	|
+| 不屈のレンジャーⅣ 	| ATK Up by 1.5x for 1 turn after getting hit 	| 22       	|
+| 不屈のレンジャーⅤ 	| ATK Up by 1.5x for 1 turn after getting hit 	| 26       	|
+| 不屈のレンジャーⅥ 	| ATK Up by 1.5x for 1 turn after getting hit 	| 30       	|
