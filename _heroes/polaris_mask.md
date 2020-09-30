@@ -1,8 +1,8 @@
 ---
 name: Polaris Mask
 jp_name: "ポラリスマスク"
-race: human
-occupation: "Professional Wrestler"
+race: Human
+occupation: "Professional Wrestler (プロレスラー)"
 illustrator: GomTang
 voice_actor: "三宅健太"
 sprite_prefix: fg_polaris
