@@ -1,11 +1,25 @@
 ---
 name: Narihito
-jp_name: "something"
+jp_name: "ナリヒト"
 race: human
-occupation: "University student (Part-timer)"
-illustrator: "shukou"
-voice_actor: "someone"
+occupation: "Reporter (取材記者)"
+illustrator: "めんスケ"
+voice_actor: "内匠靖明"
 sprite_prefix: fg_narihito
 HP: 100
 ATK: 100
 ---
+
+## Notes
+
+"こんにちは、オペレーターさん！今日こそ僕の取材を受けて下さいます？…えっ、代わりに仕事手伝え？やれやれ、敵わないなぁ。"
+
+ニュース配信企業・太陽新報社に所属する、神出鬼没の取材記者。
+
+日本・神戸出身の地球人で、フルネームは軽江（かるえ）ナリヒト。
+
+一見大人しそうな男なのだが、ヒーローの話題になると暑苦しいまでの熱量を発しながら食いついてくる。
+
+常にヒーロー関連の特ダネを求めて方々を駆け回っており、本社にいる事は殆ど無い。
+
+古今東西のヒーローやヴィラン、カイブツに関する情報をプロファイリングしている情報通。
