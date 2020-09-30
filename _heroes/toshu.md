@@ -2,10 +2,24 @@
 name: Toshu
 jp_name: "something"
 race: human
-occupation: "University student (Part-timer)"
-illustrator: "shukou"
-voice_actor: "someone"
+occupation: "Kendo Artist (剣道家)"
+illustrator: "おーくす"
+voice_actor: "稲田徹"
 sprite_prefix: fg_toshu
 HP: 100
 ATK: 100
 ---
+
+## Notes
+
+"フン、ようやく来たか。武具の手入れにも飽いていたところだ。貴様の望む戦働きをしてくれようぞ。"
+
+ヒノワ体育大学の教員であり、剣道部の顧問を務める剣道家。
+
+異星の故郷に於いて代々騎士を務める厳格な家庭で育った、非常に規律に厳しい武人である。
+
+精神修行を行っている割には短気で血の気が多く、鬣を触られると高確率でキレる。
+
+堅物としか言いようのない性格ゆえに、「嬉しい」や「好き」といった気持ちを素直に表現する事が出来ない。
+
+その有り様を「ツンデレ」と揶揄されると、やっぱりキレる。
