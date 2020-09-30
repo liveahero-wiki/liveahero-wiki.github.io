@@ -1,10 +1,25 @@
 ---
 name: Polaris Mask
-jp_name: "something"
+jp_name: "ポラリスマスク"
 race: human
-occupation: "University student (Part-timer)"
-voice_actor: "someone"
+occupation: "Professional Wrestler"
+illustrator: GomTang
+voice_actor: "三宅健太"
 sprite_prefix: fg_polaris
 HP: 100
 ATK: 100
 ---
+
+## Notes
+
+"北空輝く一番星！悪を挫いて弱きを導く！そう！俺こそが、ポラリィィス、マスクッ！熱いリングへ導いてくれよ、パートナー！"
+
+宇宙を放浪する、覆面のプロレスラー。
+
+日本・札幌出身の地球人であり、本名は北上ケンスケ。
+
+かつて地球のプロレス界で頂点に登り詰めたチャンピオンだが、それだけでは満足できなかった彼は更なる猛者との戦いを望み、広い銀河へと旅立った。
+
+行き過ぎたポジティブシンキングと豪快ぶりゆえに、全ての行動が非常に大雑把かつ見切り発車。
+
+大きな騒動の渦中にいることも多い、ヒーローでありながらトラブルメーカーでもある男。
