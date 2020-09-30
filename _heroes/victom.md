@@ -66,6 +66,7 @@ ATK: 181
 | 絶対救助の誓い++ 	| ATK Up by 1.5x<br>ATK Up by 1.5x<br>DEF Down by 1.5x 	| 100       	| 3000      	|
 
 #### Equipment
+
 | Skill name       	| Effect                                               	| Proc rate 	|
 |------------------	|------------------------------------------------------	|-----------	|
 | 不屈のレンジャーⅠ   | ATK Up by 1.5x for 1 turn after getting hit 	| 10       	|
