@@ -1,11 +1,25 @@
 ---
 name: Sui
-jp_name: "something"
-race: human
-occupation: "University student (Part-timer)"
-illustrator: "shukou"
-voice_actor: "someone"
+jp_name: "スイ"
+race: Human
+occupation: "Fashion Designer (服飾デザイナー)"
+illustrator: "Shukou Akanaru (朱交赤成)"
+voice_actor: "伊瀬茉莉也"
 sprite_prefix: fg_sui
 HP: 100
 ATK: 100
 ---
+
+## Notes
+
+"私はスイ、デザイナー見習いだよ。私の裁縫なんかで、人助けが出来るんなら…どうぞ、好きに役立ててよ。"
+
+オリエントシティ市内の服飾デザイナーの下で勉強中の、見習い服飾デザイナー。
+
+月面都市出身で、月面人と地球人のハーフ。
+
+幼い頃から服に囲まれた生活をしてきた為、衣類やファッションに関する造詣は深い。
+
+性格はクールかつドライで、やや毒舌。顧客との対話が重要であるデザイナーという職に身を置きながら、他者と関わるのが苦手。
+
+身体と心のズレに、幼少期から悩まされ続けている。
