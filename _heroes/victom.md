@@ -3,12 +3,24 @@ name: Victom
 jp_name: "ヴィクトム"
 race: human
 occupation: "Rescue squad captain"
-illustrator: "DAI-XT."
+illustrator: "DAI-XT (ダイエクスト)"
 voice_actor: "Masahiro Ogata"
 sprite_prefix: fg_victom
 HP: 263
 ATK: 181
 ---
+
+## Notes
+
+"ああ、来ているとも。それで、今日はどのような任務に向かう？安心しろ、ちょっとやそっとじゃ俺は死なん。"
+
+常にフルフェイス・ヘルメットを被っている、オリエントシティ消防局・ハイパーレスキュー隊の隊長。
+
+英国ロンドン出身で、フルネームはヴィクトム・ヴィンセント。
+
+冷静沈着でストイック、優れた状況判断能力を有しているなど、レスキュー隊員になるべくしてなったような男。
+
+他人の命は貴ぶものの、「他人のために生き、他人のために死ぬ」と公言しており、自らの命を軽く見ている節がある。
 
 ## Stats
 
