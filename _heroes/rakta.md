@@ -98,8 +98,8 @@ ATK: 100
 | Skill name       	| Effect                                               	| Proc rate 	|
 |------------------	|------------------------------------------------------	|-----------	|
 | 脅威の集中力Ⅰ   | Ignore Taunt effects 	| 100       	|
-| 脅威の集中力Ⅱ  	| Ignore Taunt effects<br>ATK Up by 1.01x 	| 30       	|
-| 脅威の集中力Ⅲ 	| Ignore Taunt effects<br>ATK Up by 1.02x 	| 35       	|
-| 脅威の集中力Ⅳ 	| Ignore Taunt effects<br>ATK Up by 1.03x 	| 40       	|
-| 脅威の集中力Ⅴ 	| Ignore Taunt effects<br>ATK Up by 1.04x 	| 45       	|
-| 脅威の集中力Ⅵ 	| Ignore Taunt effects<br>ATK Up by 1.05x 	| 50       	|
+| 脅威の集中力Ⅱ  	| Ignore Taunt effects<br>ATK Up by 1.01x 	| 100       	|
+| 脅威の集中力Ⅲ 	| Ignore Taunt effects<br>ATK Up by 1.02x 	| 100       	|
+| 脅威の集中力Ⅳ 	| Ignore Taunt effects<br>ATK Up by 1.03x 	| 100       	|
+| 脅威の集中力Ⅴ 	| Ignore Taunt effects<br>ATK Up by 1.04x 	| 100       	|
+| 脅威の集中力Ⅵ 	| Ignore Taunt effects<br>ATK Up by 1.05x 	| 100       	|
