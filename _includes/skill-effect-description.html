@@ -1,0 +1,85 @@
+{% assign effect = include.effect %}
+{% capture eid %}{{ effect.skillEffectId }}{% endcapture %}
+{% assign skillEffectJson = site.data.SkillEffectMaster[eid].skillEffectJson %}
+{% capture target %}{% include skill-effect-target.html target=effect.effectTarget %}{% endcapture %}
+
+{% for effect in skillEffectJson.effects %}
+{% case effect.class %}
+{% when "Damage" %}
+Deal {{ effect.parameter.value }}% of damage
+{% when "ChangeHp" %}
+Decrease/Increase HP by {{ 0 | minus: effect.parameter.value }}% to {{ target }}
+{% when "MultipleAttack" %}
+ATK Up/Down by {{ effect.parameter.value | divide_by: 100.0 }}x to {{ target }}
+{% when "MultipleBaseView" %}
+Base View Up/Down by {{ effect.parameter.value | divide_by: 100.0 }}x to {{ target }}
+{% when "ChangeView" %}
+Add {{ effect.parameter.value }} views
+{% when "MultipleDefence" %}
+DEF Up/Down by {{ effect.parameter.value | divide_by: 100.0 }}x to {{ target }}
+{% when "ChangeAgi" %}
+SPD Up/Down by {{ effect.parameter.value }} to {{ target }}
+{% when "RemoveBuff" %}
+Remove {{ effect.parameter.value }} buffs from {{ target }}
+{% when "ComboPlus" %}
+Gain {{ effect.parameter.value }} combos to {{ target }}
+{% when "ChangeSkillProve" %}
+Proc rate Up/Down by {{ effect.parameter.value }} for {{ target }}
+{% when "MoreTurn" %}
+Perform {{ effect.parameter.value }} more action(s)
+{% when "Heal" %}
+Heal {{ target }} for {{ effect.parameter.value }}% of own(?) ATK value
+{% when "NeedViewChange" %}
+Skill View cost Up/Down by ({{ effect.parameter.value | divide_by: 100.0 }})x for {{ target }}
+{% when "Cure" %}
+Remove {{ effect.parameter.value }} debuff(s) from {{ target }}
+{% when "RegistDebuff" %}
+{{ effect.parameter.value }}% chance to resist a debuff for {{ target }}
+{% when "Provocation" %}
+Give {{ target }} Taunt. Opponents can target only {{ target }}
+{% when "HealthDamage" %}
+Deal {{ effect.parameter.value }}% -> {{ effect.parameter.value | multiply: 2 }}% as HP goes from Max to 0
+{% when "DeleteTurn" %}
+Skip {{ effect.parameter.value }} enemy action(s)
+{% when "Silence" %}
+{{ target }} cannot use view-costing skills
+{% when "ComboDamage" %}
+Deal {{ effect.parameter.value }}% of damage and {{ effect.parameter.combpMult }}% extra for each combo
+{% when "ElementPenetrateDamage" %}
+ATK Up/Down to {{ target }} by {{ effect.parameter.value | divide_by: 100.0 }}x against advantageous elements
+{% when "Wait" %}
+Make {{ target }} go last
+{% when "ComboMultipleAttack" %}
+ATK Up by {{ effect.parameter.value }}% to {{ target }} for each combo
+{% when "SpdDeferenceMultipleAttack" %}
+ATK Up by (spdMult)% to {{ target }} for each point in speed difference (???)
+{% when "Penetration" %}
+Make {{ target }} ignore Taunt
+{% when "AllAttack" %}
+View-costing skills for {{ target }} now target all allies/enemies
+{% when "MultipleHp" %}
+HP Up by {{ effect.parameter.value | divide_by: 100.0 }}x to {{ target }}
+{% when "StatusNumberMultipleAttack" %}
+ATK Up by {{ effect.parameter.value }}% to {{ target }} for each {% if effect.parameter.isGoodStatus == 1 %}buff{% else %}debuff{% endif %}
+{% when "NeedViewValueChange" %}
+Change skill view cost by {{ effect.parameter.value }} for {{ target }}
+{% when "IgnoreElement" %}
+Make {{ target }} ignore element advantages
+{% when "NowViewDamage" %}
+Deal Damage based on views (needs more research on how it works, encountered in Polaris 3rd skill)
+{% when "SpdDeferenceDamage" %}
+Deal Damage based on speed advantage (needs more research, encountered in Ryekie's 3rd skill)
+{% when "StatusNumDamage" %}
+Deal {{ effect.parameter.value }}% of damage and {{ effect.parameter.statusMult }}% extra for each opponent's {% if effect.parameter.isGoodStatus == 1 %}buff{% else %}debuff{% endif %}
+{% when "SalesBonusCheat" %}
+Ignore business bonus conditions (?)
+{% when "IncreaseLAH" %}
+Gain {{ effect.parameter.value }}% extra gold
+{% when "IncreaseExp" %}
+Gain {{ effect.parameter.value }}% extra XP
+{% when "Aggregation" %}
+Aggregate damage (?)
+{% else %}
+Unknown effect class ({{ effect.class }})
+{% endcase %}
+{% endfor %}

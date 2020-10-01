@@ -1,0 +1,4 @@
+{% include skill-timing.html timing=include.skill.timing %}
+{% for effect in include.skill.effects %}
+{% include skill-effect-description.html effect=effect %}/{{ effect.prob }}%<br>
+{% endfor %}

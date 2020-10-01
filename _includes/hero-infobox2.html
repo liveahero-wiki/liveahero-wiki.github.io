@@ -1,0 +1,74 @@
+{% assign resourceName = "akashi" %}
+
+{% capture artwork_cond %}item.path contains "fg_{{ resourceName }}"{% endcapture %}
+{% assign artworks = site.static_files | where: "hero_sprites", true | where_exp: "item", artwork_cond | map: "path" %}
+
+{% assign cardInfos = site.data.CardMaster | where: "resourceName", resourceName %}
+
+{% assign firstCardInfo = cardInfos | first %}
+<div class="element{{ firstCardInfo.element }}">
+    <div class="header">
+        <td class="caption">
+            <div class="name">{{ firstCardInfo.name }}</div>
+            <div class="sub">{{ firstCardInfo.cardName }}</div>
+        </td>
+    </div>
+    {% include hero-infobox-gallery.html artworks=artworks %}
+    <div class="body">
+        <table>
+            <tbody>
+                <tr>
+                    <th>Illustration</th>
+                    <td>{{ firstCardInfo.illustrator }}</td>
+                </tr>
+                <tr>
+                    <th>Voice</th>
+                    <td>{{ firstCardInfo.characterVoice }}</td>
+                </tr>
+                <tr>
+                    <th>Occupation</th>
+                    <td>{{ firstCardInfo.job }}</td>
+                </tr>
+                <tr>
+                    <th>Affliation office</th>
+                    <td>{{ firstCardInfo.affiliationOffice }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+{% assign skillIdss = firstCardInfo.skillIds %}
+<h2>Stats</h2>
+{% for cardInfo in cardInfos %}
+<div class="hero{{ cardInfo.rarity }} element{{ cardInfo.element }}">
+    <h3>{{ cardInfo.rarity }} ☆</h3>
+    <table>
+        <tr>
+            <th>Level</th><th>HP</th><th>ATK</th><th>SPD</th><th>View</th>
+        </tr>
+        {% for growth in cardInfo.growths %}
+        <tr>
+            <td>{{ growth.level }}</td><td>{{ growth.hp }}</td><td>{{ growth.attack }}</td><td>{{ growth.agility }}</td><td>{{ growth.addView }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endfor %}
+</div>
+
+<h2>Skills</h2>
+
+{% assign cardInfo = firstCardInfo %}
+<table>
+    <tr>
+        <th>Skill Name</th><th>Effect/Proc rate</th><th>View cost</th>
+    </tr>
+    {% for id in cardInfo.skillIds %}
+    {% capture sid %}{{ id }}{% endcapture %}
+    {% assign skill = site.data.SkillMaster[sid] %}
+    <script>var data = {{ skill | jsonify }}</script>
+    <tr data-skill_id="{{ sid }}">
+        <td>{{ skill.skillName }}</td><td alt="{{ skill.description }}">{% include skill-description.html skill=skill %}</td><td>{{ skill.useView }}</td>
+    </tr>
+    {% endfor %}
+</table>

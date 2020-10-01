@@ -1,0 +1,21 @@
+{% case include.timing %}
+{% when 0 %}
+base skill
+{% when 1 %}
+when appearing
+{% when 2 %}
+action start
+{% when 2 %}
+action end
+{% comment %}4, 5 , 6 (no skills with such timing){% endcomment %}
+{% when 7 %}
+when attacking
+{% when 8 %}
+when taking damage
+{% comment %}9 (no skills with such timing){% endcomment %}
+{% when 10 %}
+permanent effect
+{% comment %}11 (no skills with such timing){% endcomment %}
+{% else %}
+unknown timing ({include.timing})
+{% endcase %}
