@@ -1,11 +1,10 @@
-{% assign resourceName = "akashi" %}
-
-{% capture artwork_cond %}item.path contains "fg_{{ resourceName }}"{% endcapture %}
-{% assign artworks = site.static_files | where: "hero_sprites", true | where_exp: "item", artwork_cond | map: "path" %}
-
-{% assign cardInfos = site.data.CardMaster | where: "resourceName", resourceName %}
+{% assign cardInfos = site.data.CardMaster | where: "stockId", include.stockId %}
 
 {% assign firstCardInfo = cardInfos | first %}
+
+{% capture artwork_cond %}item.path contains "fg_{{ firstCardInfo.resourceName }}"{% endcapture %}
+{% assign artworks = site.static_files | where: "hero_sprites", true | where_exp: "item", artwork_cond | map: "path" %}
+
 <div class="element{{ firstCardInfo.element }}">
     <div class="header">
         <td class="caption">
@@ -37,7 +36,14 @@
         </table>
     </div>
 
-{% assign skillIdss = firstCardInfo.skillIds %}
+{% assign skillIds = firstCardInfo.skillIds %}
+{% for cardInfo in cardInfos %}
+{% unless forloop.first %}
+{% for id in cardInfo.skillIds %}
+{% unless skillIds contains id %}{% assign skillIds = skillIds | push: id %}{% endunless %}
+{% endfor %}
+{% endunless %}
+{% endfor %}
 <h2>Stats</h2>
 {% for cardInfo in cardInfos %}
 <div class="hero{{ cardInfo.rarity }} element{{ cardInfo.element }}">
@@ -58,15 +64,13 @@
 
 <h2>Skills</h2>
 
-{% assign cardInfo = firstCardInfo %}
 <table>
     <tr>
         <th>Skill Name</th><th>Effect/Proc rate</th><th>View cost</th>
     </tr>
-    {% for id in cardInfo.skillIds %}
+    {% for id in skillIds %}
     {% capture sid %}{{ id }}{% endcapture %}
     {% assign skill = site.data.SkillMaster[sid] %}
-    <script>var data = {{ skill | jsonify }}</script>
     <tr data-skill_id="{{ sid }}">
         <td>{{ skill.skillName }}</td><td alt="{{ skill.description }}">{% include skill-description.html skill=skill %}</td><td>{{ skill.useView }}</td>
     </tr>
