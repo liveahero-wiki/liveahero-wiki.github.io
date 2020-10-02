@@ -4,7 +4,7 @@ jp_name: "ポラリスマスク"
 race: Human
 occupation: "Professional Wrestler (プロレスラー)"
 illustrator: GomTang
-voice_actor: "三宅健太"
+voice_actor: "Miyake Kenta (三宅健太)"
 sprite_prefix: fg_polaris
 HP: 100
 ATK: 100
@@ -12,14 +12,14 @@ ATK: 100
 
 ## Notes
 
-"北空輝く一番星！悪を挫いて弱きを導く！そう！俺こそが、ポラリィィス、マスクッ！熱いリングへ導いてくれよ、パートナー！"
+"The brightest star of the northern sky is here! The one who will crush evil and guide the weak! That's right, for I am Polaris Mask! Lead me to the burning ring, Partner!"
 
-宇宙を放浪する、覆面のプロレスラー。
+A masked professional wrestler who wanders through the universe.
 
-日本・札幌出身の地球人であり、本名は北上ケンスケ。
+An earthling originating from Sapporo, Japan. His real name is Kensuke Kitakami.
 
-かつて地球のプロレス界で頂点に登り詰めたチャンピオンだが、それだけでは満足できなかった彼は更なる猛者との戦いを望み、広い銀河へと旅立った。
+Once a champion who climbed to the very top of the world professional wrestling on Earth, he became unsatisfied with that title alone, and so he embarked towads wider galaxies in hopes of facing fiercer opponents.
 
-行き過ぎたポジティブシンキングと豪快ぶりゆえに、全ての行動が非常に大雑把かつ見切り発車。
+Because his positive thinking and excitement are always off-charts, all of his actions and decisions are impulsive and without second thought.
 
-大きな騒動の渦中にいることも多い、ヒーローでありながらトラブルメーカーでもある男。
+He has a tendency of being in the midst of big-sized tussles, so he is a man who is both a hero and a troublemaker.
