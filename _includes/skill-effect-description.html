@@ -6,6 +6,7 @@
 
 {% if skillEffectJson.trigger %}(<span class="skill-trigger" data-trigger="{{ skillEffectJson.trigger | escape }}"></span>){% endif %}
 {% for effect in skillEffectJson.effects %}
+{% assign turnDefinition = turn %}
 {% case effect.class %}
 {% when "Damage" %}
 Deal {{ effect.parameter.value }}% of damage to {{ target }}
@@ -18,13 +19,14 @@ Base View {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {
 {% when "ChangeView" %}
 Add {{ effect.parameter.value }} views
 {% when "MultipleDefence" %}
+{% assign turnDefinition = next attack %}
 DEF {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "ChangeAgi" %}
 SPD {% if effect.parameter.value >= 0 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value }} to {{ target }}
 {% when "RemoveBuff" %}
 Remove {{ effect.parameter.value }} buffs from {{ target }}
 {% when "ComboPlus" %}
-Gain {{ effect.parameter.value }} combos to {{ target }}
+Gain {{ effect.parameter.value }} combos
 {% when "ChangeSkillProve" %}
 Proc rate {% if effect.parameter.value >= 0 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value }} for {{ target }}
 {% when "MoreTurn" %}
@@ -84,4 +86,5 @@ Apply Damage Aggregation status to self
 {% else %}
 Unknown effect class ({{ effect.class }})
 {% endcase %}
+{% if skillEffectJson.persistence == "true" %}for the entire battle{% else %}{% if skillEffectJson.turn != 0 %}for {{ skillEffectJson.turn }} {{ turnDefinition }}(s){% endif %}{% endif %}
 {% endfor %}
