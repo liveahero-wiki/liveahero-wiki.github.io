@@ -1,0 +1,14 @@
+{% case include.element %}
+{% when 1 %}
+Fire
+{% when 2 %}
+Water
+{% when 3 %}
+Wood
+{% when 4 %}
+Aether
+{% when 5 %}
+Nether
+{% else %}
+Unknown element ({{ include.element }})
+{% endcase %}

@@ -1,0 +1,20 @@
+{% case include.role %}
+{% when 1 %}
+Attack
+{% when 2 %}
+Defense
+{% when 3 %}
+Assistance
+{% when 4 %}
+Debuff
+{% when 5 %}
+Speed
+{% when 6 %}
+VP Gain
+{% when 7 %}
+Heal
+{% when 99 %}
+Special
+{% else %}
+Unknown role ({{ include.role }})
+{% endcase %}
