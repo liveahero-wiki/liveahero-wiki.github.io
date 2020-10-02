@@ -3,8 +3,8 @@ name: Kyoichi
 jp_name: "キョウイチ"
 race: human
 occupation: "Elementary School Teacher (小学校教諭)"
-illustrator: "一十"
-voice_actor: "よねざわたかし"
+illustrator: "Mentaiko/Itto(一十)"
+voice_actor: "Yonezawa Takashi (よねざわたかし)"
 sprite_prefix: fg_kyoichi
 HP: 100
 ATK: 100
@@ -12,16 +12,16 @@ ATK: 100
 
 ## Notes
 
-"よう、お疲れさん！今日も仕事出るんだろ、オレも付き合うぜ。っと、その前にテストの採点だけやらせてくれ。"
+"Yo, great work out there! You're going to work today as well, right? I'll come with you! Though, let me just score this test first."
 
-オリエントシティの小学校で教鞭を取る教諭。
+A teacher working at an elementary school in Orient City
 
-日本・仙台出身の地球人で、フルネームは大友キョウイチ。
+An Earthling from Sendai Japan, his fullname is Kyouichi Ootomo
 
-アカシの大学の元先輩であり、教職に就いて間もない新米教師。
+A former senior of Akashi at university, now a teacher who just began his profession
 
-元々野球選手を目指していただけあって、運動神経は抜群。
+since he originally aim to be a baseball player, he has exceptional reflexes.
 
-児童たちから慕われるリーダーシップや度量の大きさの持ち主であるが、年下好きを拗らせている節がある。
+Although he possesses the leadership and magnanimity that children idolize, there is a part of him that aggravates things with his younger friends.
 
-ちなみに「小学生はそっちの意味では守備範囲外」らしい。
+By the way, it seems like "Elementary students are the base he's supposed to defend".
