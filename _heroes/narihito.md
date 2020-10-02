@@ -1,14 +1,13 @@
 ---
 name: Narihito
 jp_name: "ナリヒト"
-race: human
 occupation: "Reporter (取材記者)"
 illustrator: "Mensuke (めんスケ)"
 voice_actor: "Yasuaki Takumi (内匠靖明)"
-sprite_prefix: fg_narihito
-HP: 100
-ATK: 100
 ---
+
+{% include hero-infobox2.html stockId=10291 %}
+{% include sidekick-infobox.html stockId=10291 %}
 
 ## Notes
 

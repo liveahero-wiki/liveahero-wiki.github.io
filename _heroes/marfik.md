@@ -1,14 +1,13 @@
 ---
 name: Marfik
 jp_name: "マルフィク"
-race: human
 occupation: "University Professor (Archeology)"
 illustrator: "Mensuke (めんスケ)"
 voice_actor: "Otomo Ryosaburo (大友龍三郎)"
-sprite_prefix: fg_marfik
-HP: 100
-ATK: 100
 ---
+
+{% include hero-infobox2.html stockId=10141 %}
+{% include sidekick-infobox.html stockId=10141 %}
 
 ## Notes:
 

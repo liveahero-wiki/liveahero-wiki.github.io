@@ -1,0 +1,16 @@
+{% case include.target %}
+{% when 0 %}
+self
+{% when 1 %}
+target ally
+{% when 2 %}
+target enemy
+{% when 3 %}
+all allies
+{% when 4 %}
+all enemies
+{% when 5 %}
+???(used in an event skill)
+{% else %}
+Unknown target ({{ include.target }})
+{% endcase %}

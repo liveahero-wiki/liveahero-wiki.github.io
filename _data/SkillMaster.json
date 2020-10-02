@@ -1,0 +1,8326 @@
+{
+  "1": {
+    "skillId": 1,
+    "skillName": "ウェイト",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_wait",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に1ターンの間ウェイトを付与。もう１度行動をする。",
+    "cutin": [
+      {
+        "info": {
+          "class": "System"
+        },
+        "name": "skill_wait"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 65,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2": {
+    "skillId": 2,
+    "skillName": "コンティニュー用デバフバフ削除無敵化",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方全体にバフを全て解除。デバフを全て解除。1ターンの間無敵を付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 12,
+        "prob": 100,
+        "effectTarget": 3
+      },
+      {
+        "skillEffectId": 209,
+        "prob": 100,
+        "effectTarget": 3
+      },
+      {
+        "skillEffectId": 17,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "3": {
+    "skillId": 3,
+    "skillName": "イベント用_攻撃力50%アップ",
+    "useView": 0,
+    "targetFlag": 5,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "0ターンの間ATK+50%を付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 218,
+        "prob": 100,
+        "effectTarget": 5
+      }
+    ]
+  },
+  "4": {
+    "skillId": 4,
+    "skillName": "イベント用_攻撃力20%アップ",
+    "useView": 0,
+    "targetFlag": 5,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "0ターンの間ATK+20%を付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 219,
+        "prob": 100,
+        "effectTarget": 5
+      }
+    ]
+  },
+  "1001101": {
+    "skillId": 1001101,
+    "skillName": "燃ゆる白球",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。40%の確率で2ターンの間火傷を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_akashi_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 2,
+        "prob": 40,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1001102": {
+    "skillId": 1001102,
+    "skillName": "球児の闘志",
+    "useView": 2000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に1ターンの間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_akashi_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1001103": {
+    "skillId": 1001103,
+    "skillName": "百烈打砲",
+    "useView": 16000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に120%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_akashi_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "1001104": {
+    "skillId": 1001104,
+    "skillName": "球児の闘志+",
+    "useView": 2000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に2ターンの間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_akashi_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1002101": {
+    "skillId": 1002101,
+    "skillName": "ハーキュリアン・パンチ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_mokdai_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1002102": {
+    "skillId": 1002102,
+    "skillName": "ベスト・ディレクション",
+    "useView": 6000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "Viewを15000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_mokdai_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 114,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1002103": {
+    "skillId": 1002103,
+    "skillName": "メガトン・クラッシャー",
+    "useView": 6000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に150%ダメージ。70%の確率で2ターンの間DEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_mokdai_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 11,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 9,
+        "prob": 70,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1002104": {
+    "skillId": 1002104,
+    "skillName": "ベスト・ディレクション+",
+    "useView": 5000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "Viewを15000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_mokdai_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 114,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1003101": {
+    "skillId": 1003101,
+    "skillName": "スーツ・フロッギング",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。50%の確率で1ターンの間DEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_sui_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 50,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1003102": {
+    "skillId": 1003102,
+    "skillName": "ボディ・ソーイング",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。50%の確率で1ターンの間SPDダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_sui_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 50,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1003103": {
+    "skillId": 1003103,
+    "skillName": "エギュイーユ・ド・サルー",
+    "useView": 13000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に150%ダメージ。2ターンの間DEFダウンを付与。バフを全て解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_sui_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 11,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 9,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 12,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1003104": {
+    "skillId": 1003104,
+    "skillName": "ボディ・ソーイング+",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。1ターンの間SPDダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_sui_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1004101": {
+    "skillId": 1004101,
+    "skillName": "キロボルト・スラッグ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_ryekie_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1004102": {
+    "skillId": 1004102,
+    "skillName": "メガボルト・クラッシュ",
+    "useView": 10000,
+    "targetFlag": 3,
+    "resourceName": "b_skill_spdUpAll",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "味方全体に1ターンの間SPDアップを付与。自身に1ターンの間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_ryekie_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 3
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1004103": {
+    "skillId": 1004103,
+    "skillName": "ギガボルト・ブレイカー",
+    "useView": 23000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に90%ダメージ+対象と自分のSPDの差だけダメージ量が上昇。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_ryekie_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 116,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "1004104": {
+    "skillId": 1004104,
+    "skillName": "ギガボルト・ブレイカー+",
+    "useView": 18000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に90%ダメージ+対象と自分のSPDの差だけダメージ量が上昇。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_ryekie_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 116,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "1005101": {
+    "skillId": 1005101,
+    "skillName": "マシン・クラック",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。自身に50%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_crowne_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 50,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1005102": {
+    "skillId": 1005102,
+    "skillName": "アームズ・リペアメント",
+    "useView": 5000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの50%回復する。2ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_crowne_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 30,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "1005103": {
+    "skillId": 1005103,
+    "skillName": "アナライズ＆スクラップ",
+    "useView": 7000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_spdUp",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方単体に2ターンの間DEFアップを付与 & SPDアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_crowne_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 18,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "1005104": {
+    "skillId": 1005104,
+    "skillName": "アナライズ＆スクラップ+",
+    "useView": 7000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_spdUp",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方単体に2ターンの間SPDアップを付与 & DEFアップを付与。1ターンの間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_crowne_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 18,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "1008101": {
+    "skillId": 1008101,
+    "skillName": "スパラーレ・アクア",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。40%の確率で1ターンの間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_furlong_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 40,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1008102": {
+    "skillId": 1008102,
+    "skillName": "リキエスタ・スポルト",
+    "useView": 2000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に2ターンの間ダメージ集約を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_furlong_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 217,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1008103": {
+    "skillId": 1008103,
+    "skillName": "マングェラ・デ・アクアリオ",
+    "useView": 11000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵全体に90%ダメージ。自身に1ターンの間無敵を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_furlong_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 17,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1008104": {
+    "skillId": 1008104,
+    "skillName": "スパラーレ・アクア+",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。1ターンの間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_furlong_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1009101": {
+    "skillId": 1009101,
+    "skillName": "ハイパー・レスキュー",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。自身に2ターンの間火傷を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_victom_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 2,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1009102": {
+    "skillId": 1009102,
+    "skillName": "デスペラード・マインド",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "自身に2ターンの間ATKアップ×2を付与 & DEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_victom_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 9,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1009103": {
+    "skillId": 1009103,
+    "skillName": "ライトスピード・フェニックス",
+    "useView": 9000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に150%ダメージ+HPが減るほどダメージ量が上昇する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_victom_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 220,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1009104": {
+    "skillId": 1009104,
+    "skillName": "ライトスピード・フェニックス+",
+    "useView": 9000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に170%ダメージ+HPが減るほどダメージ量が上昇する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_victom_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 223,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1010101": {
+    "skillId": 1010101,
+    "skillName": "教師の鉄拳",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kyoichi_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1010102": {
+    "skillId": 1010102,
+    "skillName": "担任のリーダーシップ",
+    "useView": 2000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "コンボ数+3。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kyoichi_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 20,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1010103": {
+    "skillId": 1010103,
+    "skillName": "初教戦法180°",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に180%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_kyoichi_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 21,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1010104": {
+    "skillId": 1010104,
+    "skillName": "初教戦法180°+",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に200%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_kyoichi_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 19,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1012101": {
+    "skillId": 1012101,
+    "skillName": "「打」の墨跡",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。50%の確率で1ターンの間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_shoen_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 50,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1012102": {
+    "skillId": 1012102,
+    "skillName": "「耐」の墨跡",
+    "useView": 7000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に2ターンの間挑発を付与 & DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_shoen_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 49,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "1012103": {
+    "skillId": 1012103,
+    "skillName": "九十九墨跡",
+    "useView": 12000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。味方全体に1ターンの間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_shoen_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "1012104": {
+    "skillId": 1012104,
+    "skillName": "九十九墨跡+",
+    "useView": 10000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "敵単体に150%ダメージ。味方全体に1ターンの間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_shoen_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 11,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "1013101": {
+    "skillId": 1013101,
+    "skillName": "居合の一斬",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。40%の確率で1ターンの間DEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_toshu_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 40,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1013102": {
+    "skillId": 1013102,
+    "skillName": "大彗星斬り",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_toshu_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1013103": {
+    "skillId": 1013103,
+    "skillName": "獅子武者剣舞",
+    "useView": 11000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に150%ダメージ+コンボ数に応じてダメージ量が上昇。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_toshu_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 244,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1013104": {
+    "skillId": 1013104,
+    "skillName": "居合の一斬+",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。1ターンの間DEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_toshu_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1014101": {
+    "skillId": 1014101,
+    "skillName": "ハンティング・スピリット",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_heal",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。自身のHPを基礎ATKの50%回復する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_marfik_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 30,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1014102": {
+    "skillId": 1014102,
+    "skillName": "サバイバー・ソウル",
+    "useView": 4000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_cure",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "自身にデバフを２つ解除。2ターンの間挑発を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_marfik_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 73,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 49,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1014103": {
+    "skillId": 1014103,
+    "skillName": "ルインズ・サルベージ",
+    "useView": 10000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。味方全体に1ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_marfik_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "1014104": {
+    "skillId": 1014104,
+    "skillName": "サバイバー・ソウル+",
+    "useView": 4000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_cure",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "自身にデバフを２つ解除。2ターンの間挑発を付与。1ターンの間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_marfik_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 73,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 49,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1015101": {
+    "skillId": 1015101,
+    "skillName": "綺羅星バックブリーカー",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。Viewを3000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_polaris_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 24,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1015102": {
+    "skillId": 1015102,
+    "skillName": "マイクパフォーマンス",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。自身に1ターンの間注目を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_polaris_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 216,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1015103": {
+    "skillId": 1015103,
+    "skillName": "ポラリス・バスター！！",
+    "useView": 10000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に150%ダメージ+Viewに応じてダメージ量が上昇。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_polaris_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 115,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1015104": {
+    "skillId": 1015104,
+    "skillName": "ポラリス・バスター！！+",
+    "useView": 10000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に170%ダメージ+Viewに応じてダメージ量が上昇。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_polaris_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 222,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1018101": {
+    "skillId": 1018101,
+    "skillName": "アピール・チャンス",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。40%の確率で1ターンの間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kouki_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 40,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1018102": {
+    "skillId": 1018102,
+    "skillName": "スペシャル・サービス",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "Viewを5000獲得。自身に1ターンの間無敵を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kouki_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 17,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1018103": {
+    "skillId": 1018103,
+    "skillName": "プライムタイムズ・エンペラー",
+    "useView": 14000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "Viewを30000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_kouki_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 39,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1018104": {
+    "skillId": 1018104,
+    "skillName": "スペシャル・サービス+",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "Viewを5000獲得。自身に1ターンの間無敵を付与 & SPDアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kouki_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 17,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1019101": {
+    "skillId": 1019101,
+    "skillName": "強烈♡攻め恋GIRL",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_hitomi_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1019102": {
+    "skillId": 1019102,
+    "skillName": "I・愛・EYESIGHT",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に2ターンの間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_hitomi_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "1019103": {
+    "skillId": 1019103,
+    "skillName": "LOVE ME☆ヒット・ミー！",
+    "useView": 11000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "敵全体に80%ダメージ。味方全体に2ターンの間幸運を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_hitomi_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 35,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "1019104": {
+    "skillId": 1019104,
+    "skillName": "I・愛・EYESIGHT+",
+    "useView": 3000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に2ターンの間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_hitomi_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "1020101": {
+    "skillId": 1020101,
+    "skillName": "フォーカス・リムーバー",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。50%の確率で1ターンの間DEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_rakta_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 50,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1020102": {
+    "skillId": 1020102,
+    "skillName": "デベロップメント・アレスト",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に100%ダメージ。1ターンの間超SPDダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_rakta_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 28,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1020103": {
+    "skillId": 1020103,
+    "skillName": "グレイテスト・オペレーション",
+    "useView": 13000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に2ターンの間覚醒を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_rakta_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 41,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "1020104": {
+    "skillId": 1020104,
+    "skillName": "グレイテスト・オペレーション+",
+    "useView": 13000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_cureTeam",
+    "timing": 0,
+    "description": "味方単体に2ターンの間覚醒を付与。デバフを２つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_rakta_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 41,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 73,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "1021101": {
+    "skillId": 1021101,
+    "skillName": "痛かったらゴメンナサイ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_cureOwn",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。自身のデバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_loren_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1021102": {
+    "skillId": 1021102,
+    "skillName": "今手当てしますからね",
+    "useView": 3000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの70%回復する。1ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_loren_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 43,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "1021103": {
+    "skillId": 1021103,
+    "skillName": "ブリング・ユア・スマイル",
+    "useView": 7000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの220%回復する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_loren_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 241,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "1021104": {
+    "skillId": 1021104,
+    "skillName": "今手当てしますからね+",
+    "useView": 3000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの80%回復する。1ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_loren_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 45,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "1022101": {
+    "skillId": 1022101,
+    "skillName": "一本釣り漁法",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_isaribi_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1022102": {
+    "skillId": 1022102,
+    "skillName": "ホーミング投網",
+    "useView": 6000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に80%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_isaribi_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "1022103": {
+    "skillId": 1022103,
+    "skillName": "イサリビ式爆釣漁法",
+    "useView": 14000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に180%ダメージ+相手のバフの数に応じてダメージ量が上昇。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_isaribi_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 125,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1022104": {
+    "skillId": 1022104,
+    "skillName": "イサリビ式爆釣漁法+",
+    "useView": 11000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に180%ダメージ+相手のバフの数に応じてダメージ量が上昇。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_isaribi_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 125,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1023101": {
+    "skillId": 1023101,
+    "skillName": "ドランク・カーペンター",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に50%ダメージ。自身に60%の確率で2ターンの間挑発を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_goro_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 49,
+        "prob": 60,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1023102": {
+    "skillId": 1023102,
+    "skillName": "スキャフォールディング",
+    "useView": 5000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_spdUp",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方単体に1ターンの間SPDアップを付与。2ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_goro_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "1023103": {
+    "skillId": 1023103,
+    "skillName": "ハイエンド・コンストラクト",
+    "useView": 9000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffAll",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。40%の確率で1ターンの間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_goro_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 40,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "1023104": {
+    "skillId": 1023104,
+    "skillName": "ドランク・カーペンター+",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に50%ダメージ。自身に2ターンの間挑発を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_goro_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 49,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1024101": {
+    "skillId": 1024101,
+    "skillName": "出発進行",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_cureOwn",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。自身のデバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_digram_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1024102": {
+    "skillId": 1024102,
+    "skillName": "エネルギー充填",
+    "useView": 2000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_cureTeam",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの50%回復する。デバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_digram_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 30,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "1024103": {
+    "skillId": 1024103,
+    "skillName": "アウト・オブ・ホワイトライン",
+    "useView": 14000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_antiBuffAll",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。バフを２つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_digram_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 72,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "1024104": {
+    "skillId": 1024104,
+    "skillName": "エネルギー充填+",
+    "useView": 2000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_cureTeam",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの50%回復する。デバフを２つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_digram_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 30,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 73,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "1026101": {
+    "skillId": 1026101,
+    "skillName": "ピスタ・エピディオシ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。40%の確率で2ターンの間毒を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_alchiba_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 23,
+        "prob": 40,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1026102": {
+    "skillId": 1026102,
+    "skillName": "ヴァサニスティリオ",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。2ターンの間SPDダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_alchiba_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 10,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1026103": {
+    "skillId": 1026103,
+    "skillName": "マヴロ・アスプロ",
+    "useView": 15000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に2ターンの間沈黙を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_alchiba_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 54,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1026104": {
+    "skillId": 1026104,
+    "skillName": "ヴァサニスティリオ+",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。2ターンの間SPDダウンを付与。70%の確率で1ターンの間DEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_alchiba_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 10,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 70,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1028101": {
+    "skillId": 1028101,
+    "skillName": "メレンゲ・メイキング",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。60%の確率で2ターンの間火傷を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kirsch_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 2,
+        "prob": 60,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1028102": {
+    "skillId": 1028102,
+    "skillName": "スイーツ・ファクトリー",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_cureTeam",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの100%回復する。デバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kirsch_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 50,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "1028103": {
+    "skillId": 1028103,
+    "skillName": "ホイッピング・トルネード",
+    "useView": 14000,
+    "targetFlag": 3,
+    "resourceName": "b_skill_healAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方全体に2ターンの間リジェネを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_kirsch_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 64,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "1028104": {
+    "skillId": 1028104,
+    "skillName": "スイーツ・ファクトリー+",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_cureTeam",
+    "timing": 0,
+    "description": "味方単体のHPをATKの130%回復する。デバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kirsch_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 239,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "1029101": {
+    "skillId": 1029101,
+    "skillName": "ミレニアム・フィスト",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。Viewを1000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_narihito_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 34,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1029102": {
+    "skillId": 1029102,
+    "skillName": "フルレンジ・スマッシャー",
+    "useView": 9000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に90%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_narihito_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "1029103": {
+    "skillId": 1029103,
+    "skillName": "メモリアル・ヒーローズ",
+    "useView": 11000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "Viewを25000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_narihito_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 57,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1029104": {
+    "skillId": 1029104,
+    "skillName": "ミレニアム・フィスト+",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。Viewを3000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_narihito_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 24,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1032101": {
+    "skillId": 1032101,
+    "skillName": "マネー・イズ・タイム",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。自身に10%の確率で1ターンの間覚醒を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_procy_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 226,
+        "prob": 10,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1032102": {
+    "skillId": 1032102,
+    "skillName": "ゴールドラッシュ・アワー",
+    "useView": 5000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_spdUp",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "味方単体に1ターンの間SPDアップを付与。Viewを8000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_procy_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 63,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1032103": {
+    "skillId": 1032103,
+    "skillName": "ビッグハンマー・コルヌコピア",
+    "useView": 13000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に2ターンの間覚醒を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_procy_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 41,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "1032104": {
+    "skillId": 1032104,
+    "skillName": "ビッグハンマー・コルヌコピア+",
+    "useView": 10000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に2ターンの間覚醒を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_procy_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 41,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "2001101": {
+    "skillId": 2001101,
+    "skillName": "一球入魂",
+    "useView": 4000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に1ターンの間ATKアップを付与 & DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_akashi_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2001102": {
+    "skillId": 2001102,
+    "skillName": "一球入魂+",
+    "useView": 3500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に1ターンの間ATKアップを付与 & DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_akashi_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2001103": {
+    "skillId": 2001103,
+    "skillName": "一球入魂++",
+    "useView": 3500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "自身に2ターンの間ATKアップを付与。1ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_akashi_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2001201": {
+    "skillId": 2001201,
+    "skillName": "限定アカシS",
+    "useView": 7000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "自身に1ターンの間ATKアップを付与。もう１度行動をする。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2001202": {
+    "skillId": 2001202,
+    "skillName": "限定アカシS+",
+    "useView": 6000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "自身に1ターンの間ATKアップを付与。もう１度行動をする。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2001203": {
+    "skillId": 2001203,
+    "skillName": "限定アカシS++",
+    "useView": 4000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "自身に1ターンの間ATKアップを付与。もう１度行動をする。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2002101": {
+    "skillId": 2002101,
+    "skillName": "ド迫力演出",
+    "useView": 6000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "Viewを10000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_mokdai_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 25,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2002102": {
+    "skillId": 2002102,
+    "skillName": "ド迫力演出+",
+    "useView": 5000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "Viewを10000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_mokdai_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 25,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2002103": {
+    "skillId": 2002103,
+    "skillName": "ド迫力演出++",
+    "useView": 4000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "Viewを10000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_mokdai_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 25,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2003101": {
+    "skillId": 2003101,
+    "skillName": "編み糸解き",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に2ターンの間DEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_sui_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 9,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2003102": {
+    "skillId": 2003102,
+    "skillName": "編み糸解き+",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に2ターンの間DEFダウンを付与 & 25%の確率でDEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_sui_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 9,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 9,
+        "prob": 25,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2003103": {
+    "skillId": 2003103,
+    "skillName": "編み糸解き++",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に2ターンの間DEFダウンを付与 & 50%の確率でDEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_sui_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 9,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 9,
+        "prob": 45,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2004101": {
+    "skillId": 2004101,
+    "skillName": "正義の雷撃",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ+対象と自分のSPDの差だけダメージ量が上昇。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_ryekie_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 116,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2004102": {
+    "skillId": 2004102,
+    "skillName": "正義の雷撃+",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ+対象と自分のSPDの差だけダメージ量が上昇。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_ryekie_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 116,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2004103": {
+    "skillId": 2004103,
+    "skillName": "正義の雷撃++",
+    "useView": 3500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ+対象と自分のSPDの差だけダメージ量が上昇。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_ryekie_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 116,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2005101": {
+    "skillId": 2005101,
+    "skillName": "インスタント装甲",
+    "useView": 4000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に2ターンの間DEFアップを付与。1ターンの間SPDアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_crowne_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2005102": {
+    "skillId": 2005102,
+    "skillName": "インスタント装甲+",
+    "useView": 3500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に2ターンの間DEFアップを付与。1ターンの間SPDアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_crowne_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2005103": {
+    "skillId": 2005103,
+    "skillName": "インスタント装甲++",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に2ターンの間DEFアップを付与。1ターンの間SPDアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_crowne_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2008101": {
+    "skillId": 2008101,
+    "skillName": "火の粉払い",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に1ターンの間無敵を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_furlong_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 17,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2008102": {
+    "skillId": 2008102,
+    "skillName": "火の粉払い+",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_heal",
+    "timing": 0,
+    "description": "自身に1ターンの間無敵を付与。HPを基礎ATKの50%回復する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_furlong_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 17,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 30,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2008103": {
+    "skillId": 2008103,
+    "skillName": "火の粉払い++",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_heal",
+    "timing": 0,
+    "description": "自身に1ターンの間無敵を付与。HPを基礎ATKの80%回復する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_furlong_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 17,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 45,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2009101": {
+    "skillId": 2009101,
+    "skillName": "絶対救助の誓い",
+    "useView": 4000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "自身に2ターンの間ATKアップ×2を付与 & DEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_victom_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 9,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2009102": {
+    "skillId": 2009102,
+    "skillName": "絶対救助の誓い+",
+    "useView": 3500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "自身に2ターンの間ATKアップ×2を付与 & DEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_victom_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 9,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2009103": {
+    "skillId": 2009103,
+    "skillName": "絶対救助の誓い++",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "自身に2ターンの間ATKアップ×2を付与 & DEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_victom_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 9,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2010101": {
+    "skillId": 2010101,
+    "skillName": "成績向上",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "コンボ数+3。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_kyoichi_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 20,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2010102": {
+    "skillId": 2010102,
+    "skillName": "成績向上+",
+    "useView": 2000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "コンボ数+3。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_kyoichi_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 20,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2010103": {
+    "skillId": 2010103,
+    "skillName": "成績向上++",
+    "useView": 2000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "コンボ数+4。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_kyoichi_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 68,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2012101": {
+    "skillId": 2012101,
+    "skillName": "「攻」の墨跡",
+    "useView": 5000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に2ターンの間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_shoen_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "2012102": {
+    "skillId": 2012102,
+    "skillName": "「攻」の墨跡+",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に2ターンの間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_shoen_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "2012103": {
+    "skillId": 2012103,
+    "skillName": "「攻」の墨跡++",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_cureOwn",
+    "timing": 0,
+    "description": "味方単体に2ターンの間ATKアップを付与。自身のデバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_shoen_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2013101": {
+    "skillId": 2013101,
+    "skillName": "義に拠る助太刀",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_toshu_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2013102": {
+    "skillId": 2013102,
+    "skillName": "義に拠る助太刀+",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に130%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_toshu_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 71,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2013103": {
+    "skillId": 2013103,
+    "skillName": "義に拠る助太刀++",
+    "useView": 2500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に130%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_toshu_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 71,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2014101": {
+    "skillId": 2014101,
+    "skillName": "タフガイの精神",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に2ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_marfik_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "2014102": {
+    "skillId": 2014102,
+    "skillName": "タフガイの精神+",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に2ターンの間DEFアップを付与。自身に50%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_marfik_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 50,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2014103": {
+    "skillId": 2014103,
+    "skillName": "タフガイの精神++",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に2ターンの間DEFアップを付与。自身に1ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_marfik_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2015101": {
+    "skillId": 2015101,
+    "skillName": "ツープラトン",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。自身に50%の確率で2ターンの間幸運を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_polaris_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 35,
+        "prob": 50,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2015102": {
+    "skillId": 2015102,
+    "skillName": "ツープラトン+",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。自身に75%の確率で2ターンの間幸運を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_polaris_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 35,
+        "prob": 75,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2015103": {
+    "skillId": 2015103,
+    "skillName": "ツープラトン++",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。自身に2ターンの間幸運を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_polaris_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 35,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2018101": {
+    "skillId": 2018101,
+    "skillName": "スーパースター登場",
+    "useView": 4000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "Viewを7000獲得。自身に2ターンの間幸運を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_kouki_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 40,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 35,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2018102": {
+    "skillId": 2018102,
+    "skillName": "スーパースター登場+",
+    "useView": 3500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "Viewを7000獲得。自身に2ターンの間幸運を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_kouki_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 40,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 35,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2018103": {
+    "skillId": 2018103,
+    "skillName": "スーパースター登場++",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "Viewを7000獲得。自身に2ターンの間幸運を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_kouki_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 40,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 35,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2019101": {
+    "skillId": 2019101,
+    "skillName": "得意の燃え曲",
+    "useView": 8000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に3ターンの間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_hitomi_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 3,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "2019102": {
+    "skillId": 2019102,
+    "skillName": "得意の燃え曲+",
+    "useView": 7000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に3ターンの間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_hitomi_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 3,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "2019103": {
+    "skillId": 2019103,
+    "skillName": "得意の燃え曲++",
+    "useView": 6000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に3ターンの間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_hitomi_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 3,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "2020101": {
+    "skillId": 2020101,
+    "skillName": "病巣切除",
+    "useView": 6000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。2ターンの間DEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_rakta_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 9,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2020102": {
+    "skillId": 2020102,
+    "skillName": "病巣切除+",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。2ターンの間DEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_rakta_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 9,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2020103": {
+    "skillId": 2020103,
+    "skillName": "病巣切除++",
+    "useView": 4500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。2ターンの間DEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_rakta_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 9,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2021101": {
+    "skillId": 2021101,
+    "skillName": "応急処置",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの100%回復する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_loren_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 50,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "2021102": {
+    "skillId": 2021102,
+    "skillName": "応急処置+",
+    "useView": 3500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの100%回復する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_loren_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 50,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "2021103": {
+    "skillId": 2021103,
+    "skillName": "応急処置++",
+    "useView": 3000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの100%回復する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_loren_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 50,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "2022101": {
+    "skillId": 2022101,
+    "skillName": "追い込み漁",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。自身に1ターンの間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_isaribi_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2022102": {
+    "skillId": 2022102,
+    "skillName": "追い込み漁+",
+    "useView": 4500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。自身に1ターンの間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_isaribi_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2022103": {
+    "skillId": 2022103,
+    "skillName": "追い込み漁++",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。自身に1ターンの間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_isaribi_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2023101": {
+    "skillId": 2023101,
+    "skillName": "防壁急造",
+    "useView": 4000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に2ターンの間挑発を付与。1ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_goro_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 49,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2023102": {
+    "skillId": 2023102,
+    "skillName": "防壁急造+",
+    "useView": 3500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に2ターンの間挑発を付与。1ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_goro_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 49,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2023103": {
+    "skillId": 2023103,
+    "skillName": "防壁急造++",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に2ターンの間挑発を付与。1ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_goro_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 49,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2024101": {
+    "skillId": 2024101,
+    "skillName": "運転抑止解除",
+    "useView": 2000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_cure",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身のデバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_digram_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2024102": {
+    "skillId": 2024102,
+    "skillName": "運転抑止解除+",
+    "useView": 2000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_cure",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身のデバフを２つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_digram_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 73,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2024103": {
+    "skillId": 2024103,
+    "skillName": "運転抑止解除++",
+    "useView": 2000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_cure",
+    "subResourceName": "s_skill_heal",
+    "timing": 0,
+    "description": "自身のデバフを２つ解除。HPを基礎ATKの50%回復する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_digram_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 73,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 30,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2026101": {
+    "skillId": 2026101,
+    "skillName": "行動推理",
+    "useView": 3500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_spdDown",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に2ターンの間SPDダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_alchiba_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 10,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2026102": {
+    "skillId": 2026102,
+    "skillName": "行動推理+",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_spdDown",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に2ターンの間SPDダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_alchiba_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 10,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2026103": {
+    "skillId": 2026103,
+    "skillName": "行動推理++",
+    "useView": 2500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_spdDown",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に2ターンの間SPDダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_alchiba_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 10,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2028101": {
+    "skillId": 2028101,
+    "skillName": "ひと摘みの隠し味",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に2ターンの間リジェネを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_kirsch_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 64,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2028102": {
+    "skillId": 2028102,
+    "skillName": "ひと摘みの隠し味+",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に3ターンの間リジェネを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_kirsch_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 55,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2028103": {
+    "skillId": 2028103,
+    "skillName": "ひと摘みの隠し味++",
+    "useView": 3000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に3ターンの間リジェネを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_kirsch_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 55,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "2029101": {
+    "skillId": 2029101,
+    "skillName": "特ダネ素っ破抜き",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に1ターンの間DEFダウンを付与。Viewを5000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_narihito_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2029102": {
+    "skillId": 2029102,
+    "skillName": "特ダネ素っ破抜き+",
+    "useView": 3500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に1ターンの間DEFダウンを付与。Viewを5000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_narihito_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2029103": {
+    "skillId": 2029103,
+    "skillName": "特ダネ素っ破抜き++",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に1ターンの間DEFダウンを付与。Viewを5000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_narihito_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2032101": {
+    "skillId": 2032101,
+    "skillName": "ベテランの誇示",
+    "useView": 4000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_spdUp",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "自身に1ターンの間SPDアップを付与 & 無敵を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_procy_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 17,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2032102": {
+    "skillId": 2032102,
+    "skillName": "ベテランの誇示+",
+    "useView": 3500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_spdUp",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "自身に1ターンの間SPDアップを付与 & 無敵を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_procy_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 17,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2032103": {
+    "skillId": 2032103,
+    "skillName": "ベテランの誇示++",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_spdUp",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "自身に1ターンの間SPDアップを付与 & 無敵を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_procy_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 17,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2034101": {
+    "skillId": 2034101,
+    "skillName": "昔取った杵柄",
+    "useView": 3500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_spdUp",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方単体に1ターンの間SPDアップを付与 & ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_huckle_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "2034102": {
+    "skillId": 2034102,
+    "skillName": "昔取った杵柄+",
+    "useView": 3000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_spdUp",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方単体に1ターンの間SPDアップを付与 & ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_huckle_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "2034103": {
+    "skillId": 2034103,
+    "skillName": "昔取った杵柄++",
+    "useView": 2500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_spdUp",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方単体に1ターンの間SPDアップを付与 & ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_huckle_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "2999101": {
+    "skillId": 2999101,
+    "skillName": "類稀なる強運",
+    "useView": 1000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に2ターンの間幸運を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_player_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 35,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "2999102": {
+    "skillId": 2999102,
+    "skillName": "類稀なる強運+",
+    "useView": 1000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に3ターンの間幸運を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_player_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 26,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "2999103": {
+    "skillId": 2999103,
+    "skillName": "類稀なる強運++",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に3ターンの間幸運を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_player_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 26,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "3001101": {
+    "skillId": 3001101,
+    "skillName": "持ち前の負けん気Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_akashi_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "ピンチ状態で無い時、ATKが10%アップ。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 75,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3001102": {
+    "skillId": 3001102,
+    "skillName": "持ち前の負けん気Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_akashi_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "ピンチ状態で無い時、ATKが12%アップ。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 132,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3001103": {
+    "skillId": 3001103,
+    "skillName": "持ち前の負けん気Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_akashi_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "ピンチ状態で無い時、ATKが14%アップ。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 133,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3001104": {
+    "skillId": 3001104,
+    "skillName": "持ち前の負けん気Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_akashi_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "ピンチ状態で無い時、ATKが16%アップ。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 134,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3001105": {
+    "skillId": 3001105,
+    "skillName": "持ち前の負けん気Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_akashi_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "ピンチ状態で無い時、ATKが18%アップ。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 135,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3001106": {
+    "skillId": 3001106,
+    "skillName": "持ち前の負けん気Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_akashi_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "ピンチ状態で無い時、ATKが20%アップ。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 76,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3001201": {
+    "skillId": 3001201,
+    "skillName": "逆転ホーマー",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_akashi_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、自身に50%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 50,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3001202": {
+    "skillId": 3001202,
+    "skillName": "逆転ホーマー+",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_akashi_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "自身に60%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 60,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3001203": {
+    "skillId": 3001203,
+    "skillName": "逆転ホーマー++",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_akashi_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "自身に70%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 70,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3001204": {
+    "skillId": 3001204,
+    "skillName": "逆転ホーマー+++",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_akashi_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "自身に80%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 80,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3001205": {
+    "skillId": 3001205,
+    "skillName": "逆転ホーマー++++",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_akashi_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "自身に90%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 90,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3001206": {
+    "skillId": 3001206,
+    "skillName": "逆転ホーマー+++++",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_akashi_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "自身に1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3002101": {
+    "skillId": 3002101,
+    "skillName": "巧みなカメラワークⅠ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mokdai_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "View基礎値+5%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 77,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3002102": {
+    "skillId": 3002102,
+    "skillName": "巧みなカメラワークⅡ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mokdai_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "View基礎値+6%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 136,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3002103": {
+    "skillId": 3002103,
+    "skillName": "巧みなカメラワークⅢ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mokdai_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "View基礎値+7%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 137,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3002104": {
+    "skillId": 3002104,
+    "skillName": "巧みなカメラワークⅣ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mokdai_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "View基礎値+8%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 138,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3002105": {
+    "skillId": 3002105,
+    "skillName": "巧みなカメラワークⅤ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mokdai_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "View基礎値+9%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 139,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3002106": {
+    "skillId": 3002106,
+    "skillName": "巧みなカメラワークⅥ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mokdai_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "View基礎値+10%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 83,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3003101": {
+    "skillId": 3003101,
+    "skillName": "デザイナーの閃きⅠ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_sui_s01",
+    "subResourceName": "",
+    "timing": 7,
+    "description": "自身の攻撃で敵をピンチ状態にした時、5%の確率でもう１度行動をする。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 29,
+        "prob": 5,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3003102": {
+    "skillId": 3003102,
+    "skillName": "デザイナーの閃きⅡ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_sui_s01",
+    "subResourceName": "",
+    "timing": 7,
+    "description": "自身の攻撃で敵をピンチ状態にした時、6%の確率でもう１度行動をする。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 29,
+        "prob": 6,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3003103": {
+    "skillId": 3003103,
+    "skillName": "デザイナーの閃きⅢ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_sui_s01",
+    "subResourceName": "",
+    "timing": 7,
+    "description": "自身の攻撃で敵をピンチ状態にした時、7%の確率でもう１度行動をする。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 29,
+        "prob": 7,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3003104": {
+    "skillId": 3003104,
+    "skillName": "デザイナーの閃きⅣ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_sui_s01",
+    "subResourceName": "",
+    "timing": 7,
+    "description": "自身の攻撃で敵をピンチ状態にした時、8%の確率でもう１度行動をする。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 29,
+        "prob": 8,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3003105": {
+    "skillId": 3003105,
+    "skillName": "デザイナーの閃きⅤ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_sui_s01",
+    "subResourceName": "",
+    "timing": 7,
+    "description": "自身の攻撃で敵をピンチ状態にした時、9%の確率でもう１度行動をする。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 29,
+        "prob": 9,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3003106": {
+    "skillId": 3003106,
+    "skillName": "デザイナーの閃きⅥ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_sui_s01",
+    "subResourceName": "",
+    "timing": 7,
+    "description": "自身の攻撃で敵をピンチ状態にした時、10%の確率でもう１度行動をする。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 29,
+        "prob": 10,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3004101": {
+    "skillId": 3004101,
+    "skillName": "我が名を呼ぶ声Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_ryekie_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "Spd基礎値+5。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 78,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3004102": {
+    "skillId": 3004102,
+    "skillName": "我が名を呼ぶ声Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_ryekie_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "Spd基礎値+5 & ATK+1%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 78,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 148,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3004103": {
+    "skillId": 3004103,
+    "skillName": "我が名を呼ぶ声Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_ryekie_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "Spd基礎値+5 & ATK+2%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 78,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 149,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3004104": {
+    "skillId": 3004104,
+    "skillName": "我が名を呼ぶ声Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_ryekie_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "Spd基礎値+5 & ATK+3%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 78,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 150,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3004105": {
+    "skillId": 3004105,
+    "skillName": "我が名を呼ぶ声Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_ryekie_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "Spd基礎値+5 & ATK+4%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 78,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 151,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3004106": {
+    "skillId": 3004106,
+    "skillName": "我が名を呼ぶ声Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_ryekie_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "Spd基礎値+5 & ATK+5%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 78,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 86,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3005101": {
+    "skillId": 3005101,
+    "skillName": "カスタムスーツⅠ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_crowne_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "被ダメージ-5%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 79,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3005102": {
+    "skillId": 3005102,
+    "skillName": "カスタムスーツⅡ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_crowne_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "被ダメージ-6%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 144,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3005103": {
+    "skillId": 3005103,
+    "skillName": "カスタムスーツⅢ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_crowne_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "被ダメージ-7%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 145,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3005104": {
+    "skillId": 3005104,
+    "skillName": "カスタムスーツⅣ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_crowne_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "被ダメージ-8%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 146,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3005105": {
+    "skillId": 3005105,
+    "skillName": "カスタムスーツⅤ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_crowne_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "被ダメージ-9%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 147,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3005106": {
+    "skillId": 3005106,
+    "skillName": "カスタムスーツⅥ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_crowne_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "被ダメージ-10%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 85,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3008101": {
+    "skillId": 3008101,
+    "skillName": "恒高温体質Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_furlong_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "被ダメージ-5%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 79,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3008102": {
+    "skillId": 3008102,
+    "skillName": "恒高温体質Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_furlong_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "被ダメージ-6%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 144,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3008103": {
+    "skillId": 3008103,
+    "skillName": "恒高温体質Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_furlong_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "被ダメージ-7%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 145,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3008104": {
+    "skillId": 3008104,
+    "skillName": "恒高温体質Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_furlong_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "被ダメージ-8%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 146,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3008105": {
+    "skillId": 3008105,
+    "skillName": "恒高温体質Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_furlong_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "被ダメージ-9%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 147,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3008106": {
+    "skillId": 3008106,
+    "skillName": "恒高温体質Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_furlong_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "被ダメージ-10%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 85,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3009101": {
+    "skillId": 3009101,
+    "skillName": "不屈のレンジャーⅠ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_victom_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、10%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 10,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3009102": {
+    "skillId": 3009102,
+    "skillName": "不屈のレンジャーⅡ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_victom_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、14%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 14,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3009103": {
+    "skillId": 3009103,
+    "skillName": "不屈のレンジャーⅢ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_victom_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、18%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 18,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3009104": {
+    "skillId": 3009104,
+    "skillName": "不屈のレンジャーⅣ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_victom_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、22%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 22,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3009105": {
+    "skillId": 3009105,
+    "skillName": "不屈のレンジャーⅤ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_victom_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、26%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 26,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3009106": {
+    "skillId": 3009106,
+    "skillName": "不屈のレンジャーⅥ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_victom_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、30%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 30,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3010101": {
+    "skillId": 3010101,
+    "skillName": "集中講義Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_kyoichi_s01",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、10%の確率でコンボ数+1。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 10,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3010102": {
+    "skillId": 3010102,
+    "skillName": "集中講義Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_kyoichi_s01",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、12%の確率でコンボ数+1。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 12,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3010103": {
+    "skillId": 3010103,
+    "skillName": "集中講義Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_kyoichi_s01",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、14%の確率でコンボ数+1。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 14,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3010104": {
+    "skillId": 3010104,
+    "skillName": "集中講義Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_kyoichi_s01",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、16%の確率でコンボ数+1。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 16,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3010105": {
+    "skillId": 3010105,
+    "skillName": "集中講義Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_kyoichi_s01",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、18%の確率でコンボ数+1。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 18,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3010106": {
+    "skillId": 3010106,
+    "skillName": "集中講義Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_kyoichi_s01",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、20%の確率でコンボ数+1。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 20,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3012101": {
+    "skillId": 3012101,
+    "skillName": "明鏡止水の心Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_shoen_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "スキル発動確率+5%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 90,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3012102": {
+    "skillId": 3012102,
+    "skillName": "明鏡止水の心Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_shoen_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "スキル発動確率+6%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 152,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3012103": {
+    "skillId": 3012103,
+    "skillName": "明鏡止水の心Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_shoen_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "スキル発動確率+7%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 153,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3012104": {
+    "skillId": 3012104,
+    "skillName": "明鏡止水の心Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_shoen_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "スキル発動確率+8%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 154,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3012105": {
+    "skillId": 3012105,
+    "skillName": "明鏡止水の心Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_shoen_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "スキル発動確率+9%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 155,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3012106": {
+    "skillId": 3012106,
+    "skillName": "明鏡止水の心Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_shoen_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "スキル発動確率+10%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 91,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3013101": {
+    "skillId": 3013101,
+    "skillName": "武人の心得Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_toshu_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "ATK+5%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 86,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3013102": {
+    "skillId": 3013102,
+    "skillName": "武人の心得Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_toshu_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "ATK+6%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 156,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3013103": {
+    "skillId": 3013103,
+    "skillName": "武人の心得Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_toshu_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "ATK+7%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 157,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3013104": {
+    "skillId": 3013104,
+    "skillName": "武人の心得Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_toshu_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "ATK+8%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 158,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3013105": {
+    "skillId": 3013105,
+    "skillName": "武人の心得Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_toshu_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "ATK+9%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 159,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3013106": {
+    "skillId": 3013106,
+    "skillName": "武人の心得Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_toshu_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "ATK+10%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 87,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3014101": {
+    "skillId": 3014101,
+    "skillName": "屈強なる冒険者Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_marfik_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "ピンチ状態の時、被ダメージ-10%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 92,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3014102": {
+    "skillId": 3014102,
+    "skillName": "屈強なる冒険者Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_marfik_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "ピンチ状態の時、被ダメージ-12%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 160,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3014103": {
+    "skillId": 3014103,
+    "skillName": "屈強なる冒険者Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_marfik_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "ピンチ状態の時、被ダメージ-14%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 161,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3014104": {
+    "skillId": 3014104,
+    "skillName": "屈強なる冒険者Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_marfik_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "ピンチ状態の時、被ダメージ-16%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 162,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3014105": {
+    "skillId": 3014105,
+    "skillName": "屈強なる冒険者Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_marfik_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "ピンチ状態の時、被ダメージ-18%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 163,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3014106": {
+    "skillId": 3014106,
+    "skillName": "屈強なる冒険者Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_marfik_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "ピンチ状態の時、被ダメージ-20%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 93,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3015101": {
+    "skillId": 3015101,
+    "skillName": "逆境で魅せる戦士Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_polaris_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、50%の確率でViewを1000獲得。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 34,
+        "prob": 50,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3015102": {
+    "skillId": 3015102,
+    "skillName": "逆境で魅せる戦士Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_polaris_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、60%の確率でViewを1000獲得。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 34,
+        "prob": 60,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3015103": {
+    "skillId": 3015103,
+    "skillName": "逆境で魅せる戦士Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_polaris_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、70%の確率でViewを1000獲得。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 34,
+        "prob": 70,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3015104": {
+    "skillId": 3015104,
+    "skillName": "逆境で魅せる戦士Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_polaris_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、80%の確率でViewを1000獲得。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 34,
+        "prob": 80,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3015105": {
+    "skillId": 3015105,
+    "skillName": "逆境で魅せる戦士Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_polaris_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、90%の確率でViewを1000獲得。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 34,
+        "prob": 90,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3015106": {
+    "skillId": 3015106,
+    "skillName": "逆境で魅せる戦士Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_polaris_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、Viewを1000獲得。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 34,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3018101": {
+    "skillId": 3018101,
+    "skillName": "キラーコンテンツⅠ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_kouki_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "View基礎値+5%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 77,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3018102": {
+    "skillId": 3018102,
+    "skillName": "キラーコンテンツⅡ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_kouki_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "View基礎値+6%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 136,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3018103": {
+    "skillId": 3018103,
+    "skillName": "キラーコンテンツⅢ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_kouki_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "View基礎値+7%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 137,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3018104": {
+    "skillId": 3018104,
+    "skillName": "キラーコンテンツⅣ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_kouki_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "View基礎値+8%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 138,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3018105": {
+    "skillId": 3018105,
+    "skillName": "キラーコンテンツⅤ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_kouki_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "View基礎値+9%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 139,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3018106": {
+    "skillId": 3018106,
+    "skillName": "キラーコンテンツⅥ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_kouki_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "View基礎値+10%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 83,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3019101": {
+    "skillId": 3019101,
+    "skillName": "コール＆レスポンスⅠ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_hitomi_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、15%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 15,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3019102": {
+    "skillId": 3019102,
+    "skillName": "コール＆レスポンスⅡ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_hitomi_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、18%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 18,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3019103": {
+    "skillId": 3019103,
+    "skillName": "コール＆レスポンスⅢ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_hitomi_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、21%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 21,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3019104": {
+    "skillId": 3019104,
+    "skillName": "コール＆レスポンスⅣ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_hitomi_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、24%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 24,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3019105": {
+    "skillId": 3019105,
+    "skillName": "コール＆レスポンスⅤ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_hitomi_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、27%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 27,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3019106": {
+    "skillId": 3019106,
+    "skillName": "コール＆レスポンスⅥ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_hitomi_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、30%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 30,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3020101": {
+    "skillId": 3020101,
+    "skillName": "脅威の集中力Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_rakta_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "敵の挑発を無視。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 96,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3020102": {
+    "skillId": 3020102,
+    "skillName": "脅威の集中力Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_rakta_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "敵の挑発を無視 & ATK+1%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 96,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 148,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3020103": {
+    "skillId": 3020103,
+    "skillName": "脅威の集中力Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_rakta_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "敵の挑発を無視 & ATK+2%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 96,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 149,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3020104": {
+    "skillId": 3020104,
+    "skillName": "脅威の集中力Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_rakta_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "敵の挑発を無視 & ATK+3%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 96,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 150,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3020105": {
+    "skillId": 3020105,
+    "skillName": "脅威の集中力Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_rakta_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "敵の挑発を無視 & ATK+4%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 96,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 151,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3020106": {
+    "skillId": 3020106,
+    "skillName": "脅威の集中力Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_rakta_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "敵の挑発を無視 & ATK+5%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 96,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 86,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3021101": {
+    "skillId": 3021101,
+    "skillName": "戦場を駆ける天使Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_loren_s01",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、HPを基礎ATKの10%回復する。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 97,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3021102": {
+    "skillId": 3021102,
+    "skillName": "戦場を駆ける天使Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_loren_s01",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、HPを基礎ATKの12%回復する。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 168,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3021103": {
+    "skillId": 3021103,
+    "skillName": "戦場を駆ける天使Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_loren_s01",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、HPを基礎ATKの14%回復する。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 169,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3021104": {
+    "skillId": 3021104,
+    "skillName": "戦場を駆ける天使Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_loren_s01",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、HPを基礎ATKの16%回復する。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 170,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3021105": {
+    "skillId": 3021105,
+    "skillName": "戦場を駆ける天使Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_loren_s01",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、HPを基礎ATKの18%回復する。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 171,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3021106": {
+    "skillId": 3021106,
+    "skillName": "戦場を駆ける天使Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_loren_s01",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、HPを基礎ATKの20%回復する。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 98,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3022101": {
+    "skillId": 3022101,
+    "skillName": "喧嘩好き漁師Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_isaribi_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "ATK+5%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 86,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3022102": {
+    "skillId": 3022102,
+    "skillName": "喧嘩好き漁師Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_isaribi_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "ATK+6%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 156,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3022103": {
+    "skillId": 3022103,
+    "skillName": "喧嘩好き漁師Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_isaribi_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "ATK+7%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 157,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3022104": {
+    "skillId": 3022104,
+    "skillName": "喧嘩好き漁師Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_isaribi_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "ATK+8%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 158,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3022105": {
+    "skillId": 3022105,
+    "skillName": "喧嘩好き漁師Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_isaribi_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "ATK+9%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 159,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3022106": {
+    "skillId": 3022106,
+    "skillName": "喧嘩好き漁師Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_isaribi_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "ATK+10%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 87,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3023101": {
+    "skillId": 3023101,
+    "skillName": "大工の手遊びⅠ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_goro_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、50%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 50,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3023102": {
+    "skillId": 3023102,
+    "skillName": "大工の手遊びⅡ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_goro_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、60%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 60,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3023103": {
+    "skillId": 3023103,
+    "skillName": "大工の手遊びⅢ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_goro_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、70%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 70,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3023104": {
+    "skillId": 3023104,
+    "skillName": "大工の手遊びⅣ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_goro_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、80%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 80,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3023105": {
+    "skillId": 3023105,
+    "skillName": "大工の手遊びⅤ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_goro_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、90%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 90,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3023106": {
+    "skillId": 3023106,
+    "skillName": "大工の手遊びⅥ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_goro_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、1ターンの間DEFアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3024101": {
+    "skillId": 3024101,
+    "skillName": "運転計画修正Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_digram_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、25%の確率でデバフを１つ解除。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 25,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3024102": {
+    "skillId": 3024102,
+    "skillName": "運転計画修正Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_digram_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、30%の確率でデバフを１つ解除。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 30,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3024103": {
+    "skillId": 3024103,
+    "skillName": "運転計画修正Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_digram_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、35%の確率でデバフを１つ解除。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 35,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3024104": {
+    "skillId": 3024104,
+    "skillName": "運転計画修正Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_digram_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、40%の確率でデバフを１つ解除。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 40,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3024105": {
+    "skillId": 3024105,
+    "skillName": "運転計画修正Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_digram_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、45%の確率でデバフを１つ解除。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 45,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3024106": {
+    "skillId": 3024106,
+    "skillName": "運転計画修正Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_digram_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、50%の確率でデバフを１つ解除。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 50,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3026101": {
+    "skillId": 3026101,
+    "skillName": "敵情把握Ⅰ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "icon_alchiba_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、敵単体に10%の確率で1ターンの間DEFダウンを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 31,
+        "prob": 10,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "3026102": {
+    "skillId": 3026102,
+    "skillName": "敵情把握Ⅱ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "icon_alchiba_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、敵単体に12%の確率で1ターンの間DEFダウンを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 31,
+        "prob": 12,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "3026103": {
+    "skillId": 3026103,
+    "skillName": "敵情把握Ⅲ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "icon_alchiba_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、敵単体に14%の確率で1ターンの間DEFダウンを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 31,
+        "prob": 14,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "3026104": {
+    "skillId": 3026104,
+    "skillName": "敵情把握Ⅳ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "icon_alchiba_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、敵単体に16%の確率で1ターンの間DEFダウンを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 31,
+        "prob": 16,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "3026105": {
+    "skillId": 3026105,
+    "skillName": "敵情把握Ⅴ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "icon_alchiba_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、敵単体に18%の確率で1ターンの間DEFダウンを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 31,
+        "prob": 18,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "3026106": {
+    "skillId": 3026106,
+    "skillName": "敵情把握Ⅵ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "icon_alchiba_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、敵単体に20%の確率で1ターンの間DEFダウンを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 31,
+        "prob": 20,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "3028101": {
+    "skillId": 3028101,
+    "skillName": "師匠譲りのド根性Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_kirsch_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、15%の確率で2ターンの間リジェネを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 64,
+        "prob": 15,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3028102": {
+    "skillId": 3028102,
+    "skillName": "師匠譲りのド根性Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_kirsch_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、20%の確率で2ターンの間リジェネを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 64,
+        "prob": 20,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3028103": {
+    "skillId": 3028103,
+    "skillName": "師匠譲りのド根性Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_kirsch_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、25%の確率で2ターンの間リジェネを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 64,
+        "prob": 25,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3028104": {
+    "skillId": 3028104,
+    "skillName": "師匠譲りのド根性Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_kirsch_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、30%の確率で2ターンの間リジェネを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 64,
+        "prob": 30,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3028105": {
+    "skillId": 3028105,
+    "skillName": "師匠譲りのド根性Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_kirsch_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、35%の確率で2ターンの間リジェネを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 64,
+        "prob": 35,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3028106": {
+    "skillId": 3028106,
+    "skillName": "師匠譲りのド根性Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_kirsch_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、40%の確率で2ターンの間リジェネを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 64,
+        "prob": 40,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3029101": {
+    "skillId": 3029101,
+    "skillName": "今回のハイライトⅠ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_narihito_s01",
+    "subResourceName": "",
+    "timing": 11,
+    "description": "ピンチ状態の時、View基礎値+10%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 232,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3029102": {
+    "skillId": 3029102,
+    "skillName": "今回のハイライトⅡ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_narihito_s01",
+    "subResourceName": "",
+    "timing": 11,
+    "description": "ピンチ状態の時、View基礎値+12%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 233,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3029103": {
+    "skillId": 3029103,
+    "skillName": "今回のハイライトⅢ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_narihito_s01",
+    "subResourceName": "",
+    "timing": 11,
+    "description": "ピンチ状態の時、View基礎値+14%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 234,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3029104": {
+    "skillId": 3029104,
+    "skillName": "今回のハイライトⅣ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_narihito_s01",
+    "subResourceName": "",
+    "timing": 11,
+    "description": "ピンチ状態の時、View基礎値+16%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 235,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3029105": {
+    "skillId": 3029105,
+    "skillName": "今回のハイライトⅤ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_narihito_s01",
+    "subResourceName": "",
+    "timing": 11,
+    "description": "ピンチ状態の時、View基礎値+18%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 236,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3029106": {
+    "skillId": 3029106,
+    "skillName": "今回のハイライトⅥ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_narihito_s01",
+    "subResourceName": "",
+    "timing": 11,
+    "description": "ピンチ状態の時、View基礎値+20%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 237,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3032101": {
+    "skillId": 3032101,
+    "skillName": "金の亡者Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_procy_s01",
+    "subResourceName": "",
+    "timing": 11,
+    "description": "戦闘時獲得ラフ+1%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 128,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3032102": {
+    "skillId": 3032102,
+    "skillName": "金の亡者Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_procy_s01",
+    "subResourceName": "",
+    "timing": 11,
+    "description": "戦闘時獲得ラフ+2%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 192,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3032103": {
+    "skillId": 3032103,
+    "skillName": "金の亡者Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_procy_s01",
+    "subResourceName": "",
+    "timing": 11,
+    "description": "戦闘時獲得ラフ+3%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 193,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3032104": {
+    "skillId": 3032104,
+    "skillName": "金の亡者Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_procy_s01",
+    "subResourceName": "",
+    "timing": 11,
+    "description": "戦闘時獲得ラフ+4%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 194,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3032105": {
+    "skillId": 3032105,
+    "skillName": "金の亡者Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_procy_s01",
+    "subResourceName": "",
+    "timing": 11,
+    "description": "戦闘時獲得ラフ+5%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 195,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3032106": {
+    "skillId": 3032106,
+    "skillName": "金の亡者Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_procy_s01",
+    "subResourceName": "",
+    "timing": 11,
+    "description": "戦闘時獲得ラフ+6%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 129,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3034101": {
+    "skillId": 3034101,
+    "skillName": "先導者の責務Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_huckle_s01",
+    "subResourceName": "",
+    "timing": 11,
+    "description": "戦闘時獲得Exp+1%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 130,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3034102": {
+    "skillId": 3034102,
+    "skillName": "先導者の責務Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_huckle_s01",
+    "subResourceName": "",
+    "timing": 11,
+    "description": "戦闘時獲得Exp+2%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 196,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3034103": {
+    "skillId": 3034103,
+    "skillName": "先導者の責務Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_huckle_s01",
+    "subResourceName": "",
+    "timing": 11,
+    "description": "戦闘時獲得Exp+3%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 197,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3034104": {
+    "skillId": 3034104,
+    "skillName": "先導者の責務Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_huckle_s01",
+    "subResourceName": "",
+    "timing": 11,
+    "description": "戦闘時獲得Exp+4%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 198,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3034105": {
+    "skillId": 3034105,
+    "skillName": "先導者の責務Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_huckle_s01",
+    "subResourceName": "",
+    "timing": 11,
+    "description": "戦闘時獲得Exp+5%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 199,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3034106": {
+    "skillId": 3034106,
+    "skillName": "先導者の責務Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_huckle_s01",
+    "subResourceName": "",
+    "timing": 11,
+    "description": "戦闘時獲得Exp+6%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 131,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3999101": {
+    "skillId": 3999101,
+    "skillName": "無意識下のアシストⅠ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "@playerIcon",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "View消費量-500",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 107,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3999102": {
+    "skillId": 3999102,
+    "skillName": "無意識下のアシストⅡ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "@playerIcon",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "View消費量-600",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 204,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3999103": {
+    "skillId": 3999103,
+    "skillName": "無意識下のアシストⅢ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "@playerIcon",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "View消費量-700",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 205,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3999104": {
+    "skillId": 3999104,
+    "skillName": "無意識下のアシストⅣ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "@playerIcon",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "View消費量-800",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 206,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3999105": {
+    "skillId": 3999105,
+    "skillName": "無意識下のアシストⅤ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "@playerIcon",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "View消費量-900",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 207,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3999106": {
+    "skillId": 3999106,
+    "skillName": "無意識下のアシストⅥ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "@playerIcon",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "View消費量-1000",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 108,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "4008101": {
+    "skillId": 4008101,
+    "skillName": "リキエスタ・スポルト",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に2ターンの間挑発を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_furlong_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 49,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "4008102": {
+    "skillId": 4008102,
+    "skillName": "徹底防御",
+    "useView": 1000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に3ターンの間DEFアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_furlong_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 70,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "4009101": {
+    "skillId": 4009101,
+    "skillName": "デスペラード・マインド",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_spdUp",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "自身に1ターンの間ATKアップを付与 & SPDアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_victom_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "4009102": {
+    "skillId": 4009102,
+    "skillName": "ハイパー・レスキュー",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ+HPが減るほどダメージ量が上昇する。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_victom_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 121,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "4013101": {
+    "skillId": 4013101,
+    "skillName": "獅子武者剣舞",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に200%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_toshu_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 19,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "4021101": {
+    "skillId": 4021101,
+    "skillName": "痛かったらゴメンナサイ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_loren_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "4021102": {
+    "skillId": 4021102,
+    "skillName": "皆さん、手当しますからね",
+    "useView": 7500,
+    "targetFlag": 3,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方全体のHPを基礎ATKの80%回復する。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_loren_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 45,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "4021103": {
+    "skillId": 4021103,
+    "skillName": "ブリング・ユア・スマイル",
+    "useView": 11000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_heal",
+    "timing": 0,
+    "description": "敵全体に80%ダメージ。味方全体のHPを基礎ATKの80%回復する。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_loren_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 45,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "4026101": {
+    "skillId": 4026101,
+    "skillName": "探偵の鼓舞",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buffAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方全体に2ターンの間ATKアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_alchiba_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "4026102": {
+    "skillId": 4026102,
+    "skillName": "探偵の推理",
+    "useView": 2000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_debuffAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に1ターンの間DEFダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_alchiba_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "4026103": {
+    "skillId": 4026103,
+    "skillName": "事件解決",
+    "useView": 4000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_buffAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に1ターンの間ATKダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_alchiba_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "4032101": {
+    "skillId": 4032101,
+    "skillName": "マネー・イズ・タイム",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_procy_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "4032102": {
+    "skillId": 4032102,
+    "skillName": "ゴールドラッシュ・アワー",
+    "useView": 4500,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に90%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_procy_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "4032103": {
+    "skillId": 4032103,
+    "skillName": "ビッグハンマー・コルヌコピア",
+    "useView": 12000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に150%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_procy_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 11,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "4036101": {
+    "skillId": 4036101,
+    "skillName": "カイブツ・バイト",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。40%の確率で1ターンの間SPDダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsu_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 40,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "4036102": {
+    "skillId": 4036102,
+    "skillName": "牙",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsu_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "4037103": {
+    "skillId": 4037103,
+    "skillName": "巨大エネミーデバッグ用スキル",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に120%ダメージ。自身に2ターンの間ATKアップを付与。3ターンの間リジェネを付与。2ターンの間DEFアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_ryekie_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 55,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "4041101": {
+    "skillId": 4041101,
+    "skillName": "スラッシュ！",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。40%の確率で1ターンの間毒を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villain_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 89,
+        "prob": 40,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "4041102": {
+    "skillId": 4041102,
+    "skillName": "ビルドアップ！",
+    "useView": 2000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に2ターンの間ATKアップを付与 & DEFアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villain_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "4046101": {
+    "skillId": 4046101,
+    "skillName": "爪",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。1ターンの間DEFダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuAdult_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "4046102": {
+    "skillId": 4046102,
+    "skillName": "オールレンジビーム",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に90%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuAdult_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "4046103": {
+    "skillId": 4046103,
+    "skillName": "View喰らい",
+    "useView": 7000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_cureOwn",
+    "timing": 0,
+    "description": "自身のHPを基礎ATKの70%回復する。2ターンの間DEFアップを付与。デバフを２つ解除。（敵専用）",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 43,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 73,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  }
+}

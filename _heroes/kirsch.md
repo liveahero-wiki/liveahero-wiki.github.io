@@ -1,14 +1,13 @@
 ---
 name: Kirsch
 jp_name: "キルシュ"
-race: human
 occupation: "Pâtissier "
 illustrator: "Zhuzi (ずじ)"
 voice_actor: "Orie Kimoto (樹元オリエ)"
-sprite_prefix: fg_kirsch
-HP: 100
-ATK: 100
 ---
+
+{% include hero-infobox2.html stockId=10281 %}
+{% include sidekick-infobox.html stockId=10281 %}
 
 ## Notes
 

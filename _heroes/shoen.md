@@ -1,14 +1,13 @@
 ---
 name: Shoen
 jp_name: "ショウエン"
-race: Alien
 occupation: "Calligrapher (書道家)"
 illustrator: "Kinoshita Jiroh (樹下次郎)"
 voice_actor: "Ken Narita (成田剣)"
-sprite_prefix: fg_shoen
-HP: 100
-ATK: 100
 ---
+
+{% include hero-infobox2.html stockId=10121 %}
+{% include sidekick-infobox.html stockId=10121 %}
 
 ## Notes
 

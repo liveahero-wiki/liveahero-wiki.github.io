@@ -1,14 +1,13 @@
 ---
 name: Kouki & Sirius
 jp_name: "コウキ＆シリウス"
-race: Human
 occupation: "Child actor - Entertainer & Dog entertainer"
 illustrator: "steelwire (steelwire/鉄線)"
 voice_actor: "Yumiko Kobayashi (小林由美子)"
-sprite_prefix: fg_kouki
-HP: 100
-ATK: 100
 ---
+
+{% include hero-infobox2.html stockId=10181 %}
+{% include sidekick-infobox.html stockId=10181 %}
 
 ## Notes
 

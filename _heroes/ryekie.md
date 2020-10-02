@@ -1,14 +1,13 @@
 ---
 name: Ryekie
 jp_name: "ライキ"
-race: Alien
 occupation: "Hero Office Employee (Salesperson)"
 illustrator: "Shukou Akanaru (朱交赤成)"
 voice_actor: "Kazuhiro Nakaya (中谷一博)"
-sprite_prefix: fg_ryekie
-HP: 100
-ATK: 100
 ---
+
+{% include hero-infobox2.html stockId=10041 %}
+{% include sidekick-infobox.html stockId=10041 %}
 
 ## Notes
 

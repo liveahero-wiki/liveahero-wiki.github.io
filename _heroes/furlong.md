@@ -1,14 +1,13 @@
 ---
 name: Furlong
 jp_name: "ハロン"
-race: Alien
 occupation: "Firefighter"
 illustrator: "Xigma (きしぐま)"
 voice_actor: "Takashi Yonezawa (よねざわたかし)"
-sprite_prefix: fg_furlong
-HP: 100
-ATK: 100
 ---
+
+{% include hero-infobox2.html stockId=10081 %}
+{% include sidekick-infobox.html stockId=10081 %}
 
 ## Notes
 

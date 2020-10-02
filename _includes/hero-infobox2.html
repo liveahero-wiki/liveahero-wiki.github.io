@@ -1,0 +1,71 @@
+{% assign cardInfos = site.data.CardMaster | where: "stockId", include.stockId %}
+
+{% assign firstCardInfo = cardInfos | first %}
+
+{% capture artwork_cond %}item.path contains "fg_{{ firstCardInfo.resourceName }}"{% endcapture %}
+{% assign artworks = site.static_files | where: "hero_sprites", true | where_exp: "item", artwork_cond | map: "path" %}
+
+<div class=" element{{ firstCardInfo.element }}">
+    <div class="heroinfobox">
+        <div class="header">
+            <div class="name">{{ page.name }}</div>
+            <div class="sub">{{ firstCardInfo.cardName }}</div>
+        </div>
+        {% include hero-infobox-gallery.html artworks=artworks %}
+        <table>
+            <tbody>
+                <tr>
+                    <th>Attribute</th>
+                    <td>{% include hero-element.html element=firstCardInfo.element %}</td>
+                    <th>Role</th>
+                    <td>{% include hero-role.html role=firstCardInfo.role %}</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Illustration</th>
+                    <td colspan="2">{{ firstCardInfo.illustrator }}</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Voice</th>
+                    <td colspan="2">{{ firstCardInfo.characterVoice }}</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Occupation</th>
+                    <td colspan="2">{{ firstCardInfo.job }}</td>
+                </tr>
+                <tr>
+                    <th colspan="2">Affliation office</th>
+                    <td colspan="2">{{ firstCardInfo.affiliationOffice }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+{% assign skillIds = firstCardInfo.skillIds %}
+{% for cardInfo in cardInfos %}
+{% unless forloop.first %}
+{% for id in cardInfo.skillIds %}
+{% unless skillIds contains id %}{% assign skillIds = skillIds | push: id %}{% endunless %}
+{% endfor %}
+{% endunless %}
+{% endfor %}
+<h2>Stats</h2>
+{% for cardInfo in cardInfos %}
+<div class="hero{{ cardInfo.rarity }}">
+    <h3>{{ cardInfo.rarity }} ☆</h3>
+    <table>
+        <tr>
+            <th>Level</th><th>HP</th><th>ATK</th><th>SPD</th><th>View</th>
+        </tr>
+        {% for growth in cardInfo.growths %}
+        <tr>
+            <td>{{ growth.level }}</td><td>{{ growth.hp }}</td><td>{{ growth.attack }}</td><td>{{ growth.agility }}</td><td>{{ growth.addView }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endfor %}
+
+<h2>Skills</h2>
+
+{% include skill-table.html skillIds=skillIds %}
+</div>

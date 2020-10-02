@@ -1,14 +1,13 @@
 ---
 name: Sui
 jp_name: "スイ"
-race: Human
 occupation: "Fashion Designer (服飾デザイナー)"
 illustrator: "Shukou Akanaru (朱交赤成)"
 voice_actor: "Mariya Ise (伊瀬茉莉也)"
-sprite_prefix: fg_sui
-HP: 100
-ATK: 100
 ---
+
+{% include hero-infobox2.html stockId=10031 %}
+{% include sidekick-infobox.html stockId=10031 %}
 
 ## Notes
 

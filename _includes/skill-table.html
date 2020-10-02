@@ -1,0 +1,18 @@
+<p>Disclaimer: skill effect parsing is still work in progress. The generated English description might
+contains some misinformation. Hover over the effect description to see original japanese description.
+</p>
+
+<p>Please help report any bug related to skill effect <a href="https://github.com/liveahero-wiki/liveahero-wiki.github.io/issues/7">here</a>.</p>
+
+<table>
+    <tr>
+        <th>Skill Name</th><th>Effect/Proc rate</th><th>View cost</th>
+    </tr>
+    {% for id in include.skillIds %}
+    {% capture sid %}{{ id }}{% endcapture %}
+    {% assign skill = site.data.SkillMaster[sid] %}
+    <tr data-skill_id="{{ sid }}">
+        <td>{{ skill.skillName }}</td><td title="{{ skill.description }}">{% include skill-description.html skill=skill %}</td><td>{{ skill.useView }}</td>
+    </tr>
+    {% endfor %}
+</table>

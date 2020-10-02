@@ -1,14 +1,13 @@
 ---
 name: Polaris Mask
 jp_name: "ポラリスマスク"
-race: Human
 occupation: "Professional Wrestler (プロレスラー)"
 illustrator: GomTang
 voice_actor: "Miyake Kenta (三宅健太)"
-sprite_prefix: fg_polaris
-HP: 100
-ATK: 100
 ---
+
+{% include hero-infobox2.html stockId=10151 %}
+{% include sidekick-infobox.html stockId=10151 %}
 
 ## Notes
 

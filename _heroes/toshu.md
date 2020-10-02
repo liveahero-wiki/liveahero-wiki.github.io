@@ -1,14 +1,13 @@
 ---
 name: Toshu
 jp_name: "トウシュウ"
-race: human
 occupation: "Kendo Artist (剣道家)"
 illustrator: "Oaks (おーくす)"
 voice_actor: "Tetsu Inada (稲田徹)"
-sprite_prefix: fg_toshu
-HP: 100
-ATK: 100
 ---
+
+{% include hero-infobox2.html stockId=10131 %}
+{% include sidekick-infobox.html stockId=10131 %}
 
 ## Notes
 

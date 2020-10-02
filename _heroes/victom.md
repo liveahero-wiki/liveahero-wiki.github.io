@@ -1,14 +1,15 @@
 ---
 name: Victom
 jp_name: "ヴィクトム"
-race: human
 occupation: "Rescue squad captain"
 illustrator: "DAI-XT (ダイエクスト)"
 voice_actor: "Masahiro Ogata"
-sprite_prefix: fg_victom
 HP: 263
 ATK: 181
 ---
+
+{% include hero-infobox2.html stockId=10091 %}
+{% include sidekick-infobox.html stockId=10091 %}
 
 ## Notes
 
