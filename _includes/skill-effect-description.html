@@ -8,7 +8,7 @@
 {% for effect in skillEffectJson.effects %}
 {% case effect.class %}
 {% when "Damage" %}
-Deal {{ effect.parameter.value }}% of damage
+Deal {{ effect.parameter.value }}% of damage to {{ target }}
 {% when "ChangeHp" %}
 Decrease/Increase HP by {{ 0 | minus: effect.parameter.value }}% to {{ target }}
 {% when "MultipleAttack" %}
