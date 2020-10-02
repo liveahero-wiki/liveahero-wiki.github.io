@@ -4,7 +4,7 @@ jp_name: "スイ"
 race: Human
 occupation: "Fashion Designer (服飾デザイナー)"
 illustrator: "Shukou Akanaru (朱交赤成)"
-voice_actor: "伊瀬茉莉也"
+voice_actor: "Mariya Ise (伊瀬茉莉也)"
 sprite_prefix: fg_sui
 HP: 100
 ATK: 100
@@ -12,14 +12,14 @@ ATK: 100
 
 ## Notes
 
-"私はスイ、デザイナー見習いだよ。私の裁縫なんかで、人助けが出来るんなら…どうぞ、好きに役立ててよ。"
+"I'm Sui, a designer apprentice. If I can save people with my needlework, then... please, make use of it as you see fit."
 
-オリエントシティ市内の服飾デザイナーの下で勉強中の、見習い服飾デザイナー。
+An apprentice clothing designer from Orient City studying design under tutorship.
 
-月面都市出身で、月面人と地球人のハーフ。
+As someone born in the Lunar Capital, they are half-Lunarian and half-Earthling.
 
-幼い頃から服に囲まれた生活をしてきた為、衣類やファッションに関する造詣は深い。
+Since they were acquainted with clothes from an early age, they have a deep knowledge of clothing and fashion.
 
-性格はクールかつドライで、やや毒舌。顧客との対話が重要であるデザイナーという職に身を置きながら、他者と関わるのが苦手。
+They posses a cool and dry personality and a somewhat poisonous tongue. Dialogue with customers is important while in the position of a designer, but they're not good at interacting with others.
 
-身体と心のズレに、幼少期から悩まされ続けている。
+They have been afflicted by the gap between their body and mind ever since childhood.
