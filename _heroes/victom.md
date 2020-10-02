@@ -12,15 +12,15 @@ ATK: 181
 
 ## Notes
 
-"ああ、来ているとも。それで、今日はどのような任務に向かう？安心しろ、ちょっとやそっとじゃ俺は死なん。"
+"Ah, you're here. Now then, what kind of mission shall we face today? Rest assured, I won't die easy out there."
 
-常にフルフェイス・ヘルメットを被っている、オリエントシティ消防局・ハイパーレスキュー隊の隊長。
+The commanding officer of Orient City Fire Department's Hyper Rescue team, always wearing a full face helmet.
 
-英国ロンドン出身で、フルネームはヴィクトム・ヴィンセント。
+Originating from London, England. His full name is Victom Vincent.
 
-冷静沈着でストイック、優れた状況判断能力を有しているなど、レスキュー隊員になるべくしてなったような男。
+Calm and stoic, he is a man who is as much of a life saver as possible, possessing an oustanding situational awareness ability.
 
-他人の命は貴ぶものの、「他人のために生き、他人のために死ぬ」と公言しており、自らの命を軽く見ている節がある。
+Even though he believes that all lives are precious, there is a side of him that follows the saying of "To Live for others, and to die for others", so he tends to look down on his life.
 
 ## Stats
 
