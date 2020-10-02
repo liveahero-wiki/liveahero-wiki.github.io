@@ -33,19 +33,26 @@
             </tbody>
         </table>
     </div>
-
-{% assign skillIds = firstCardInfo.equipmentSkills %}
+    
+{% assign skillIdsActive = firstCardInfo.skillIds %}
+{% for cardInfo in cardInfos %}
+{% unless forloop.first %}
+{% for id in cardInfo.skillIds %}
+{% unless skillIdsActive contains id %}{% assign skillIdsActive = skillIdsActive | push: id %}{% endunless %}
+{% endfor %}
+{% endunless %}
+{% endfor %}
+{% assign skillIdsPassive = firstCardInfo.equipmentSkills %}
 {% for cardInfo in cardInfos %}
 {% unless forloop.first %}
 {% for id in cardInfo.equipmentSkills %}
-{% unless skillIds contains id %}{% assign skillIds = skillIds | push: id %}{% endunless %}
+{% unless skillIdsPassive contains id %}{% assign skillIdsPassive = skillIdsPassive | push: id %}{% endunless %}
 {% endfor %}
 {% endunless %}
 {% endfor %}
 <h2>Stats</h2>
 {% for cardInfo in cardInfos %}
 <div class="hero{{ cardInfo.rarity }}">
-    <h3>{{ cardInfo.rarity }} ☆</h3>
     <table>
         <tr>
             <th>Level</th><th>HP</th><th>ATK</th><th>SPD</th><th>View</th>
@@ -60,6 +67,8 @@
 {% endfor %}
 
 <h2>Skills</h2>
-
-{% include skill-table.html skillIds=skillIds %}
+    <h3>Active</h3>
+    {% include skill-table.html skillIds=skillIdsActive %}
+    <h3>Passive</h3>
+    {% include skill-table.html skillIds=skillIdsPassive %}
 </div>
