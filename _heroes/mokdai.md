@@ -4,7 +4,7 @@ jp_name: "モクダイ"
 race: alien
 occupation: "Video Production Staff (映像技術スタッフ)"
 illustrator: "Shukou Akanaru (朱交赤成)"
-voice_actor: "熊本健太"
+voice_actor: "Kumamoto Kenta (熊本健太)"
 sprite_prefix: fg_mokdai
 HP: 100
 ATK: 100
@@ -12,12 +12,13 @@ ATK: 100
 
 ## Notes
 
-"おっ、来たね！カメラも機材も準備万全、いつでも行けるよ。さあて、今日も元気に出動出動っ！"
+"Oh, you came! The camera and the equipment are ready, so you're good to go. Now then, go out there and break a leg!"
 
-主人公の勤務する会社の先輩社員で、カメラや映像演出を主に担当している、人当たりのいい青年。
+A friendly young man, senior employee of the company where the protagonist works at. Mainly in charge of camera work and video direction.
 
-獣人型宇宙人の見た目をしているが、日本・福岡で生まれ育っている。
+Although he has the qualities of a beastman-like alien, he was born and raised in fukuoka, japan
 
-ヒーローやヴィラン、カイブツについて幅広い知識を有しているオタクである上、頭もよく回る方である為、現場で戦略を練る際に一役買うこともある。
+He's a geek possessing a wide range of knowledge about heroes, villains, and kaibutsu、
+Since he's a smart person, he can also partake in formulating strategies on the field.
 
-まるまるとして柔らかそうな体だが、血筋の影響か恐ろしいまでの怪力を有している。
+Although his body is plump and looks soft, his bloodline carries an effect that grants him terrifying superhuman strength.
