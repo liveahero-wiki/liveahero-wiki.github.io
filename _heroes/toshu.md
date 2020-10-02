@@ -1,10 +1,10 @@
 ---
 name: Toshu
-jp_name: "something"
+jp_name: "トウシュウ"
 race: human
 occupation: "Kendo Artist (剣道家)"
-illustrator: "おーくす"
-voice_actor: "稲田徹"
+illustrator: "Oaks (おーくす)"
+voice_actor: "Tetsu Inada (稲田徹)"
 sprite_prefix: fg_toshu
 HP: 100
 ATK: 100
@@ -12,14 +12,14 @@ ATK: 100
 
 ## Notes
 
-"フン、ようやく来たか。武具の手入れにも飽いていたところだ。貴様の望む戦働きをしてくれようぞ。"
+"Hmph, so you've come at last. I was getting tired of tending to my armor already. I'll do as you want in the battlefield."
 
-ヒノワ体育大学の教員であり、剣道部の顧問を務める剣道家。
+A Kendo artist who is a teacher at Hinowa University of Physical Education, serving as an advisor to the institution's kendo club
 
-異星の故郷に於いて代々騎士を務める厳格な家庭で育った、非常に規律に厳しい武人である。
+He is an extraordinary disciplined and rigid warrior, raised in a strict family that has served as knights for generation in his alien hometown.
 
-精神修行を行っている割には短気で血の気が多く、鬣を触られると高確率でキレる。
+Although he partakes in spiritual training, he has a short temper and is quite hotheaded, so if you touch his mane, there's a high chance that he will snap.
 
-堅物としか言いようのない性格ゆえに、「嬉しい」や「好き」といった気持ちを素直に表現する事が出来ない。
+Because of his personality, which can only be considered as strait-laced, he can't quite express honest feelings of happiness or fondness.
 
-その有り様を「ツンデレ」と揶揄されると、やっぱりキレる。
+Dare someone tease him and call him a "tsundere" he WILL snap.
