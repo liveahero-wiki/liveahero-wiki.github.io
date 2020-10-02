@@ -2,6 +2,7 @@
 {% capture eid %}{{ effect.skillEffectId }}{% endcapture %}
 {% assign skillEffectJson = site.data.SkillEffectMaster[eid].skillEffectJson %}
 {% capture target %}{% include skill-effect-target.html target=effect.effectTarget %}{% endcapture %}
+{% assign target = target | strip %}
 
 {% for effect in skillEffectJson.effects %}
 {% case effect.class %}
@@ -10,13 +11,13 @@ Deal {{ effect.parameter.value }}% of damage
 {% when "ChangeHp" %}
 Decrease/Increase HP by {{ 0 | minus: effect.parameter.value }}% to {{ target }}
 {% when "MultipleAttack" %}
-ATK Up/Down by {{ effect.parameter.value | divide_by: 100.0 }}x to {{ target }}
+ATK Up/Down by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "MultipleBaseView" %}
-Base View Up/Down by {{ effect.parameter.value | divide_by: 100.0 }}x to {{ target }}
+Base View Up/Down by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "ChangeView" %}
 Add {{ effect.parameter.value }} views
 {% when "MultipleDefence" %}
-DEF Up/Down by {{ effect.parameter.value | divide_by: 100.0 }}x to {{ target }}
+DEF Up/Down by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "ChangeAgi" %}
 SPD Up/Down by {{ effect.parameter.value }} to {{ target }}
 {% when "RemoveBuff" %}
@@ -30,7 +31,7 @@ Perform {{ effect.parameter.value }} more action(s)
 {% when "Heal" %}
 Heal {{ target }} for {{ effect.parameter.value }}% of own(?) ATK value
 {% when "NeedViewChange" %}
-Skill View cost Up/Down by ({{ effect.parameter.value | divide_by: 100.0 }})x for {{ target }}
+Skill View cost Up/Down by ({{ effect.parameter.value | divided_by: 100.0 }})x for {{ target }}
 {% when "Cure" %}
 Remove {{ effect.parameter.value }} debuff(s) from {{ target }}
 {% when "RegistDebuff" %}
@@ -46,7 +47,7 @@ Skip {{ effect.parameter.value }} enemy action(s)
 {% when "ComboDamage" %}
 Deal {{ effect.parameter.value }}% of damage and {{ effect.parameter.combpMult }}% extra for each combo
 {% when "ElementPenetrateDamage" %}
-ATK Up/Down to {{ target }} by {{ effect.parameter.value | divide_by: 100.0 }}x against advantageous elements
+ATK Up/Down to {{ target }} by {{ effect.parameter.value | divided_by: 100.0 }}x against advantageous elements
 {% when "Wait" %}
 Make {{ target }} go last
 {% when "ComboMultipleAttack" %}
@@ -58,7 +59,7 @@ Make {{ target }} ignore Taunt
 {% when "AllAttack" %}
 View-costing skills for {{ target }} now target all allies/enemies
 {% when "MultipleHp" %}
-HP Up by {{ effect.parameter.value | divide_by: 100.0 }}x to {{ target }}
+HP Up by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "StatusNumberMultipleAttack" %}
 ATK Up by {{ effect.parameter.value }}% to {{ target }} for each {% if effect.parameter.isGoodStatus == 1 %}buff{% else %}debuff{% endif %}
 {% when "NeedViewValueChange" %}
@@ -66,9 +67,9 @@ Change skill view cost by {{ effect.parameter.value }} for {{ target }}
 {% when "IgnoreElement" %}
 Make {{ target }} ignore element advantages
 {% when "NowViewDamage" %}
-Deal Damage based on views (needs more research on how it works, encountered in Polaris 3rd skill)
+Deal {{ effect.parameter.value}}% of damage to {{ target }} + extra {{ effect.parameter.viewMult }}% damage from current views to {{ target }}
 {% when "SpdDeferenceDamage" %}
-Deal Damage based on speed advantage (needs more research, encountered in Ryekie's 3rd skill)
+Deal {{ effect.parameter.value}}% of damage to {{ target }} + extra {{ effect.parameter.spdMult }}% damage from speed advantage between caster and {{ target }}
 {% when "StatusNumDamage" %}
 Deal {{ effect.parameter.value }}% of damage and {{ effect.parameter.statusMult }}% extra for each opponent's {% if effect.parameter.isGoodStatus == 1 %}buff{% else %}debuff{% endif %}
 {% when "SalesBonusCheat" %}
