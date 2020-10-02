@@ -6,11 +6,12 @@
 
 {% if skillEffectJson.trigger %}(<span class="skill-trigger" data-trigger="{{ skillEffectJson.trigger | escape }}"></span>){% endif %}
 {% for effect in skillEffectJson.effects %}
-{% assign turnDefinition = "turn" %}
+{% assign turnDefinition = "action" %}
 {% case effect.class %}
 {% when "Damage" %}
 Deal {{ effect.parameter.value }}% of damage to {{ target }}
 {% when "ChangeHp" %}
+{% assign turnDefinition = "turn" %}
 {% if effect.parameter.value >= 0 %}Decrease{% else %}Increase{% endif %} HP by {{ 0 | minus: effect.parameter.value }}% to {{ target }}
 {% when "MultipleAttack" %}
 ATK {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
@@ -32,20 +33,24 @@ Proc rate {% if effect.parameter.value >= 0 %}Up{% else %}Down{% endif %} by {{ 
 {% when "MoreTurn" %}
 Perform {{ effect.parameter.value }} more action(s)
 {% when "Heal" %}
+{% assign turnDefinition = "turn" %}
 Heal {{ target }} for {{ effect.parameter.value }}% of own ATK value
 {% when "NeedViewChange" %}
+{% assign turnDefinition = "turn" %}
 Skill View cost {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x for {{ target }}
 {% when "Cure" %}
 Remove {{ effect.parameter.value }} debuff(s) from {{ target }}
 {% when "RegistDebuff" %}
 {{ effect.parameter.value }}% chance to resist a debuff for {{ target }}
 {% when "Provocation" %}
+{% assign turnDefinition = "turn" %}
 Give {{ target }} Taunt. Opponents can target only {{ target }}
 {% when "HealthDamage" %}
 Deal {{ effect.parameter.value }}% -> {{ effect.parameter.value | times: 2 }}% as HP goes from Max to 0
 {% when "DeleteTurn" %}
 Skip {{ effect.parameter.value }} enemy action(s)
 {% when "Silence" %}
+{% assign turnDefinition = "turn" %}
 {{ target }} cannot use view-costing skills
 {% when "ComboDamage" %}
 Deal {{ effect.parameter.value }}% of damage and {{ effect.parameter.combpMult }}% extra for each combo
@@ -66,6 +71,7 @@ HP Up by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "StatusNumberMultipleAttack" %}
 ATK Up by {{ effect.parameter.value }}% to {{ target }} for each {% if effect.parameter.isGoodStatus == 1 %}buff{% else %}debuff{% endif %}
 {% when "NeedViewValueChange" %}
+{% assign turnDefinition = "turn" %}
 Change skill view cost by {{ effect.parameter.value }} for {{ target }}
 {% when "IgnoreElement" %}
 Make {{ target }} ignore element advantages
@@ -82,6 +88,7 @@ Gain {{ effect.parameter.value }}% extra gold
 {% when "IncreaseExp" %}
 Gain {{ effect.parameter.value }}% extra XP
 {% when "Aggregation" %}
+{% assign turnDefinition = "turn" %}
 Apply Damage Aggregation status to self
 {% else %}
 Unknown effect class ({{ effect.class }})
