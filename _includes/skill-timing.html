@@ -5,7 +5,7 @@ base skill
 when appearing
 {% when 2 %}
 action start
-{% when 2 %}
+{% when 3 %}
 action end
 {% comment %}4, 5 , 6 (no skills with such timing){% endcomment %}
 {% when 7 %}
@@ -15,7 +15,8 @@ when taking damage
 {% comment %}9 (no skills with such timing){% endcomment %}
 {% when 10 %}
 permanent effect
-{% comment %}11 (no skills with such timing){% endcomment %}
+{% when 11 %}
+battle win
 {% else %}
-unknown timing ({include.timing})
+unknown timing ({{ include.timing }})
 {% endcase %}
