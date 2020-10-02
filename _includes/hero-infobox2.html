@@ -67,16 +67,5 @@
 
 <h2>Skills</h2>
 
-<table>
-    <tr>
-        <th>Skill Name</th><th>Effect/Proc rate</th><th>View cost</th>
-    </tr>
-    {% for id in skillIds %}
-    {% capture sid %}{{ id }}{% endcapture %}
-    {% assign skill = site.data.SkillMaster[sid] %}
-    <tr data-skill_id="{{ sid }}">
-        <td>{{ skill.skillName }}</td><td title="{{ skill.description }}">{% include skill-description.html skill=skill %}</td><td>{{ skill.useView }}</td>
-    </tr>
-    {% endfor %}
-</table>
+{% include skill-table.html skillIds=skillIds %}
 </div>
