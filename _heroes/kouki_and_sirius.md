@@ -3,14 +3,16 @@ name: Kouki & Sirius
 jp_name: "コウキ＆シリウス"
 race: Human
 occupation: "Child actor - Entertainer & Dog entertainer"
-illustrator: "Unknown"
-voice_actor: "Unknown"
+illustrator: "steelwire (steelwire/鉄線)"
+voice_actor: "Yumiko Kobayashi (小林由美子)"
 sprite_prefix: fg_kouki
 HP: 100
 ATK: 100
 ---
 
 ## Notes
+
+"I'm Kouki Inukura, and this here is my buddy, Sirius! …huh? The camera isn't rolling? Eh, whatever. Make sure not to be a nuisance in the meantime, capeesh?"
 
 A duo of a child actor and a talented dog who display a wide range of activites centered on global video media. 
 
