@@ -3,8 +3,8 @@ name: Rakta
 jp_name: "ラクタ"
 race: Human
 occupation: "Surgeon (外科医師)"
-illustrator: "一十"
-voice_actor: "笠間淳"
+illustrator: "Mentaiko/Itto (一十)"
+voice_actor: "Jun Kasama (笠間淳)"
 sprite_prefix: fg_rakta
 HP: 100
 ATK: 100
@@ -12,15 +12,15 @@ ATK: 100
 
 ## Notes
 
-"私はラクタ、医師をしております。さあ、クライアント。参りましょうか。この世に巣食う癌細胞を切開・除去・抹消せねば！"
+"I am Rakta, a physician. Now then, my client, shall we proceed? The rooting cancer cells of this world need to be incised, removed, and erased!"
 
-月面の移民都市の総合病院で執刀する外科医。
+A surgeon working at a general hospital in an immigrant city on the moon.
 
-アジア系月面人で、フルネームはラクタ・シャーリヤ。
+An Asian Lunarian whose full name is Rakta Salya.
 
-医師として非常に真面目な人物であり、その手腕にも一定の信頼を得ているものの、何をするにも生真面目であるがゆえに熱意が空回りしがち。
+As a doctor, he is an exceedingly serious person. Even though a fixed amount of trust in his abilities, his enthusiasm tends to run at idle because he is serious in everything he does.
 
-先輩医師に「外科医は体力勝負」と教わってから、様々な健康法を試し、週５でスポーツジムに通う、何か間違った方向の努力を惜しまない健康オタクの側面がある。
+After being taught by a senior doctor that "Being a surgeon is a trial of strength", he has undergone various health methods and attend the gym 5 times a week, which is an aspect of a health nut who spares no effort even when misguided.
 
 ## Stats
 
