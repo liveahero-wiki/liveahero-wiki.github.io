@@ -3,8 +3,8 @@ name: Loren
 jp_name: "ロレン"
 race: human
 occupation: "Nurse (看護師)"
-illustrator: "ぷらす野 昆布"
-voice_actor: "大浪嘉仁"
+illustrator: "Plusno Konbu (ぷらす野 昆布)"
+voice_actor: "Yoshihito Oonami (大浪嘉仁)"
 sprite_prefix: fg_loren
 HP: 100
 ATK: 100
@@ -12,12 +12,12 @@ ATK: 100
 
 ## Notes
 
-"こんにちは、お加減いかがですか？健康管理もヒーローに関わる者の務めですよっ。それじゃ、今日も元気にお仕事しましょっか！"
+"Hello, how are you feeling? Health care is also the duty of those involved with heroes. Well then, let's do our best at work today!"
 
-月面都市の総合病院に勤務する看護師。
+A Nurse Working at a general hospital in the lunar capital.
 
-英国・バーミンガム出身の地球人で、フルネームはロレン・ファーランド。
+An earthling from Birmingham, England. His Full name is Loren Farland
 
-物腰が柔らかく優しい性格ゆえ、患者から人気を集めているが、どうしてそうなるのかというレベルのドジを何度も繰り返すドジナースである。
+Because of his gentle and soft personality, he is popular within patients, but because his clumsiness often lead him to question "why does this always happen to me?", he is an oopsie nursie.
 
-しかし、同じくヒーローとして活躍する暴走しがちの医師・ラクタを唯一制止できる存在である為、病院では何かと重宝されているようだ。
+Despite this, he can also be useful in the hospital, since he is the only one who can restrain the rampaging doctor, Rakta, who plays an active role as a similar hero.
