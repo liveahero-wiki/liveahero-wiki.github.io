@@ -38,7 +38,7 @@ Remove {{ effect.parameter.value }} debuff(s) from {{ target }}
 {% when "Provocation" %}
 Give {{ target }} Taunt. Opponents can target only {{ target }}
 {% when "HealthDamage" %}
-Deal {{ effect.parameter.value }}% -> {{ effect.parameter.value | multiply: 2 }}% as HP goes from Max to 0
+Deal {{ effect.parameter.value }}% -> {{ effect.parameter.value | times: 2 }}% as HP goes from Max to 0
 {% when "DeleteTurn" %}
 Skip {{ effect.parameter.value }} enemy action(s)
 {% when "Silence" %}
@@ -52,7 +52,7 @@ Make {{ target }} go last
 {% when "ComboMultipleAttack" %}
 ATK Up by {{ effect.parameter.value }}% to {{ target }} for each combo
 {% when "SpdDeferenceMultipleAttack" %}
-ATK Up by (spdMult)% to {{ target }} for each point in speed difference (???)
+ATK Up by {{ effect.parameter.spdMult }}% to {{ target }} for each point in speed difference (???)
 {% when "Penetration" %}
 Make {{ target }} ignore Taunt
 {% when "AllAttack" %}
