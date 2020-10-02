@@ -20,7 +20,7 @@ Base View {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {
 Add {{ effect.parameter.value }} views
 {% when "MultipleDefence" %}
 {% assign turnDefinition = "next attack" %}
-DEF {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
+{% if effect.parameter.value == 0 %}Ignore incoming damage{% else %}DEF {% if effect.parameter.value >= 100 %}Down{% else %}Up{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}{% endif %}
 {% when "ChangeAgi" %}
 SPD {% if effect.parameter.value >= 0 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value }} to {{ target }}
 {% when "RemoveBuff" %}
