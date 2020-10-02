@@ -32,7 +32,7 @@ Perform {{ effect.parameter.value }} more action(s)
 {% when "Heal" %}
 Heal {{ target }} for {{ effect.parameter.value }}% of own ATK value
 {% when "NeedViewChange" %}
-Skill View cost {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by ({{ effect.parameter.value | divided_by: 100.0 }})x for {{ target }}
+Skill View cost {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x for {{ target }}
 {% when "Cure" %}
 Remove {{ effect.parameter.value }} debuff(s) from {{ target }}
 {% when "RegistDebuff" %}
