@@ -4,7 +4,7 @@ jp_name: "ショウエン"
 race: Alien
 occupation: "Calligrapher (書道家)"
 illustrator: "Kinoshita Jiroh (樹下次郎)"
-voice_actor: "成田剣"
+voice_actor: "Ken Narita (成田剣)"
 sprite_prefix: fg_shoen
 HP: 100
 ATK: 100
@@ -12,10 +12,12 @@ ATK: 100
 
 ## Notes
 
-オリエントシティで小さな書道教室を開いている書道家であり、大学の文学部に客員教授として籍を置く教育者でもある。
+"I am Shouen, someone who makes good use of letters and spreads them around... that's the kind of man I am."
 
-異星出身の宇宙人で、初めて降り立った地球の国・日本の文化に強い感銘を受けて以来、書道の追求に人生を費やしている。
+A calligrapher who owns a small calligraphy one-room school in Orient City. He is also an educator registered as visiting scholar at university's literature department.
 
-無口かつ仏頂面の巨漢である為、恐い印象を抱かれることが多いが、至って穏やかな性格であり、子供好き。
+He is an alien from a different world who has devoted his life pursuing calligraphy ever since he became strongly impressed with the culture of japan, the country of earth he first landed on.
 
-子供と会うと折り紙を折って渡す習慣がある。
+Due to his enormous size and the fact that he's taciturn and has an unfriendly face, he tends to come off as scary, but he has an exceedingly gentle personality, He is fond of children
+
+He has a habit of giving folded origami figures to the children he meets.
