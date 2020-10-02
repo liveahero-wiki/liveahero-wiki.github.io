@@ -6,6 +6,9 @@ illustrator: "Shukou Akanaru (朱交赤成)"
 voice_actor: "Kumamoto Kenta (熊本健太)"
 ---
 
+{% include hero-infobox2.html stockId=10021 %}
+{% include sidekick-infobox.html stockId=10021 %}
+
 ## Notes
 
 "Oh, you came! The camera and the equipment are ready, so you're good to go. Now then, go out there and break a leg!"

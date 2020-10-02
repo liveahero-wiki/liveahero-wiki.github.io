@@ -6,6 +6,9 @@ illustrator: "Mensuke (めんスケ)"
 voice_actor: "Yasuaki Takumi (内匠靖明)"
 ---
 
+{% include hero-infobox2.html stockId=10291 %}
+{% include sidekick-infobox.html stockId=10291 %}
+
 ## Notes
 
 "Hey there, Mr. Operator! Would you let me interview you today? ...huh? You want me to fill in for you at your job? Good grief, aren't you a handful..."

@@ -6,6 +6,9 @@ illustrator: "Shukoh Akanaru"
 voice_actor: "Toshiyuki Hosaka"
 ---
 
+{% include hero-infobox2.html stockId=10011 %}
+{% include sidekick-infobox.html stockId=10011 %}
+
 ## Notes
 
 "I'm Akashi, a college baseball player. I don't exactly look like a hero, but it's a part-time job. Looking forward to working with you!"

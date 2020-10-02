@@ -6,6 +6,9 @@ illustrator: "Shukou Akanaru (朱交赤成)"
 voice_actor: "Mayumi Yamaguchi (山口眞弓)"
 ---
 
+{% include hero-infobox2.html stockId=10051 %}
+{% include sidekick-infobox.html stockId=10051 %}
+
 ## Notes
 
 "You're quite the promise, aren't ya? Well, it's not like I hate gutsy idiots like you. Ahaha, what's up with that face? That was a compliment!"

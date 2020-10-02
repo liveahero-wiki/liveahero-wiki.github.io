@@ -6,6 +6,9 @@ illustrator: "Plusno Konbu (ぷらす野 昆布)"
 voice_actor: "Yoshihito Oonami (大浪嘉仁)"
 ---
 
+{% include hero-infobox2.html stockId=10211 %}
+{% include sidekick-infobox.html stockId=10211 %}
+
 ## Notes
 
 "Hello, how are you feeling? Health care is also the duty of those involved with heroes. Well then, let's do our best at work today!"

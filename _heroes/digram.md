@@ -6,6 +6,9 @@ illustrator: "DAI-XT. (ダイエクスト)"
 voice_actor: "Kenji Nomura (乃村健次)"
 ---
 
+{% include hero-infobox2.html stockId=10241 %}
+{% include sidekick-infobox.html stockId=10241 %}
+
 ## Notes
 
 "I am exactly 34 seconds late, master. I apologize for not arriving to the meeting in time. In order to make up for the delay, let us make haste to our destination at once."

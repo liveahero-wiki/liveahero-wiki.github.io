@@ -6,6 +6,9 @@ illustrator: "Shukou Akanaru (朱交赤成)"
 voice_actor: "Kazuhiro Nakaya (中谷一博)"
 ---
 
+{% include hero-infobox2.html stockId=10041 %}
+{% include sidekick-infobox.html stockId=10041 %}
+
 ## Notes
 
 "My name's Ryekie! And my other name is... Zap the Justice!! Now then, let us begin the legend of the hero of absolute justice!"

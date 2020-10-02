@@ -6,6 +6,9 @@ illustrator: "steelwire (steelwire/鉄線)"
 voice_actor: "Yumiko Kobayashi (小林由美子)"
 ---
 
+{% include hero-infobox2.html stockId=10181 %}
+{% include sidekick-infobox.html stockId=10181 %}
+
 ## Notes
 
 "I'm Kouki Inukura, and this here is my buddy, Sirius! …huh? The camera isn't rolling? Eh, whatever. Make sure not to be a nuisance in the meantime, capeesh?"

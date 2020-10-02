@@ -6,6 +6,9 @@ illustrator: "Kinoshita Jiroh (樹下次郎)"
 voice_actor: "Ken Narita (成田剣)"
 ---
 
+{% include hero-infobox2.html stockId=10121 %}
+{% include sidekick-infobox.html stockId=10121 %}
+
 ## Notes
 
 "I am Shouen, someone who makes good use of letters and spreads them around... that's the kind of man I am."

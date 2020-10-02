@@ -6,6 +6,8 @@ illustrator: "Shukou Akanaru (朱交赤成)"
 voice_actor: "Kenyuu Horiuchi (堀内賢雄)"
 ---
 
+{% include sidekick-infobox.html stockId=10341 %}
+
 ## Notes:
 
 "Hey now, don't overdo yourself over work. An operator must be ready at all times, you know? If something happens, it's my job to back you up."

@@ -6,6 +6,9 @@ illustrator: "Kinoshita Jiroh (樹下次郎)"
 voice_actor: "Kappei Yamaguchi (山口勝平)"
 ---
 
+{% include hero-infobox2.html stockId=10321 %}
+{% include sidekick-infobox.html stockId=10321 %}
+
 ## Notes
 
 "Easy: You earn the viewers, you earn the cash. If you wanna get in the biz, you hafta remember that. Ah well, since it's you, you'll get the knack of it fast."

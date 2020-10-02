@@ -6,6 +6,9 @@ illustrator: "Mensuke (めんスケ)"
 voice_actor: "Otomo Ryosaburo (大友龍三郎)"
 ---
 
+{% include hero-infobox2.html stockId=10141 %}
+{% include sidekick-infobox.html stockId=10141 %}
+
 ## Notes:
 
 "I'm Professor Marfik, a researcher passionate for the ancient times. If you give me a hand with excavation here, I'll return the favor with your work. How's that sound?"

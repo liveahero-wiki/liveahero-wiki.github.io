@@ -6,6 +6,9 @@ illustrator: "oaks (おーくす)"
 voice_actor: "Yoshihito Oonami (大浪嘉仁)"
 ---
 
+{% include hero-infobox2.html stockId=10231 %}
+{% include sidekick-infobox.html stockId=10231 %}
+
 ## Notes
 
 "Hey, yer the backbone that keeps us all together, ya know. If ya weren't here, we wouldn't carry on and the scull'd reel. So come on now, puff up that chest."

@@ -6,6 +6,9 @@ illustrator: "Mentaiko/Itto(一十)"
 voice_actor: "Yonezawa Takashi (よねざわたかし)"
 ---
 
+{% include hero-infobox2.html stockId=10101 %}
+{% include sidekick-infobox.html stockId=10101 %}
+
 ## Notes
 
 "Yo, great work out there! You're going to work today as well, right? I'll come with you! Though, let me just score this test first."

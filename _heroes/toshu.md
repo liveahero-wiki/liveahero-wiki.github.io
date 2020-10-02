@@ -6,6 +6,9 @@ illustrator: "Oaks (おーくす)"
 voice_actor: "Tetsu Inada (稲田徹)"
 ---
 
+{% include hero-infobox2.html stockId=10131 %}
+{% include sidekick-infobox.html stockId=10131 %}
+
 ## Notes
 
 "Hmph, so you've come at last. I was getting tired of tending to my armor already. I'll do as you want in the battlefield."

@@ -6,6 +6,9 @@ illustrator: "Mentaiko/Itto (一十)"
 voice_actor: "Jun Kasama (笠間淳)"
 ---
 
+{% include hero-infobox2.html stockId=10201 %}
+{% include sidekick-infobox.html stockId=10201 %}
+
 ## Notes
 
 "I am Rakta, a physician. Now then, my client, shall we proceed? The rooting cancer cells of this world need to be incised, removed, and erased!"
