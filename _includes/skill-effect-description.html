@@ -12,27 +12,27 @@ Deal {{ effect.parameter.value }}% of damage to {{ target }}
 {% when "ChangeHp" %}
 {% if effect.parameter.value >= 0 %}Decrease{% else %}Increase{% endif %} HP by {{ 0 | minus: effect.parameter.value }}% to {{ target }}
 {% when "MultipleAttack" %}
-ATK Up/Down by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
+ATK {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "MultipleBaseView" %}
-Base View Up/Down by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
+Base View {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "ChangeView" %}
 Add {{ effect.parameter.value }} views
 {% when "MultipleDefence" %}
-DEF Up/Down by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
+DEF {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "ChangeAgi" %}
-SPD Up/Down by {{ effect.parameter.value }} to {{ target }}
+SPD {% if effect.parameter.value >= 0 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value }} to {{ target }}
 {% when "RemoveBuff" %}
 Remove {{ effect.parameter.value }} buffs from {{ target }}
 {% when "ComboPlus" %}
 Gain {{ effect.parameter.value }} combos to {{ target }}
 {% when "ChangeSkillProve" %}
-Proc rate Up/Down by {{ effect.parameter.value }} for {{ target }}
+Proc rate {% if effect.parameter.value >= 0 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value }} for {{ target }}
 {% when "MoreTurn" %}
 Perform {{ effect.parameter.value }} more action(s)
 {% when "Heal" %}
-Heal {{ target }} for {{ effect.parameter.value }}% of own(?) ATK value
+Heal {{ target }} for {{ effect.parameter.value }}% of own ATK value
 {% when "NeedViewChange" %}
-Skill View cost Up/Down by ({{ effect.parameter.value | divided_by: 100.0 }})x for {{ target }}
+Skill View cost {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by ({{ effect.parameter.value | divided_by: 100.0 }})x for {{ target }}
 {% when "Cure" %}
 Remove {{ effect.parameter.value }} debuff(s) from {{ target }}
 {% when "RegistDebuff" %}
@@ -48,7 +48,7 @@ Skip {{ effect.parameter.value }} enemy action(s)
 {% when "ComboDamage" %}
 Deal {{ effect.parameter.value }}% of damage and {{ effect.parameter.combpMult }}% extra for each combo
 {% when "ElementPenetrateDamage" %}
-ATK Up/Down to {{ target }} by {{ effect.parameter.value | divided_by: 100.0 }}x against advantageous elements
+ATK {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} to {{ target }} by {{ effect.parameter.value | divided_by: 100.0 }}x against advantageous elements
 {% when "Wait" %}
 Make {{ target }} go last
 {% when "ComboMultipleAttack" %}
