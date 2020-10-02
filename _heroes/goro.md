@@ -1,13 +1,9 @@
 ---
 name: Goro
 jp_name: "ゴロウ"
-race: Alien
 occupation: "Carpenter"
 illustrator: "oaks (おーくす)"
 voice_actor: "Yoshihito Oonami (大浪嘉仁)"
-sprite_prefix: fg_goro
-HP: 100
-ATK: 100
 ---
 
 ## Notes

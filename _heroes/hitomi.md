@@ -1,13 +1,9 @@
 ---
 name: Hitomi
 jp_name: "ヒトミ"
-race: human
 occupation: "Idol Singer"
 illustrator: "Zhuzi (ずじ)"
 voice_actor: "Karen (夏怜)"
-sprite_prefix: fg_hitomi
-HP: 100
-ATK: 100
 ---
 
 ## Notes:

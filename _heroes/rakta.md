@@ -1,13 +1,9 @@
 ---
 name: Rakta
 jp_name: "ラクタ"
-race: Human
 occupation: "Surgeon (外科医師)"
 illustrator: "Mentaiko/Itto (一十)"
 voice_actor: "Jun Kasama (笠間淳)"
-sprite_prefix: fg_rakta
-HP: 100
-ATK: 100
 ---
 
 ## Notes

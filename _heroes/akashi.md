@@ -1,13 +1,9 @@
 ---
 name: "Akashi Tamamura"
 jp_name: "たまむら アカシ"
-race: Human
 occupation: "University Student (Part-timer)"
 illustrator: "Shukoh Akanaru"
 voice_actor: "Toshiyuki Hosaka"
-sprite_prefix: fg_akashi
-HP: 100
-ATK: 100
 ---
 
 ## Notes

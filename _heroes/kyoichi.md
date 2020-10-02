@@ -1,13 +1,9 @@
 ---
 name: Kyoichi
 jp_name: "キョウイチ"
-race: human
 occupation: "Elementary School Teacher (小学校教諭)"
 illustrator: "Mentaiko/Itto(一十)"
 voice_actor: "Yonezawa Takashi (よねざわたかし)"
-sprite_prefix: fg_kyoichi
-HP: 100
-ATK: 100
 ---
 
 ## Notes

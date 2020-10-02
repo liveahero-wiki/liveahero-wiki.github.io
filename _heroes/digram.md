@@ -1,13 +1,9 @@
 ---
 name: Digram
 jp_name: "ディグラム"
-race: robot
 occupation: "Railroad Staff"
 illustrator: "DAI-XT. (ダイエクスト)"
 voice_actor: "Kenji Nomura (乃村健次)"
-sprite_prefix: fg_digram
-HP: 100
-ATK: 100
 ---
 
 ## Notes

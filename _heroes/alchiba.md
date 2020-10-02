@@ -1,13 +1,9 @@
 ---
 name: Alchiba
 jp_name: "アルキバ"
-race: Alien
 occupation: "Private Investigator"
 illustrator: "1boshi"
 voice_actor: "Jun Kasama (笠間淳"
-sprite_prefix: fg_alchiba
-HP: 100
-ATK: 100
 ---
 
 ## Notes

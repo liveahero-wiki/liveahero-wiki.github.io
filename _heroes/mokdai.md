@@ -1,13 +1,9 @@
 ---
 name: Mokdai
 jp_name: "モクダイ"
-race: alien
 occupation: "Video Production Staff (映像技術スタッフ)"
 illustrator: "Shukou Akanaru (朱交赤成)"
 voice_actor: "Kumamoto Kenta (熊本健太)"
-sprite_prefix: fg_mokdai
-HP: 100
-ATK: 100
 ---
 
 ## Notes

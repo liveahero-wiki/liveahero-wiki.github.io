@@ -1,13 +1,9 @@
 ---
 name: Procy
 jp_name: "プロキー"
-race: Alien
 occupation: "Bartender (バーテンダー)"
 illustrator: "Kinoshita Jiroh (樹下次郎)"
 voice_actor: "Kappei Yamaguchi (山口勝平)"
-sprite_prefix: fg_procy
-HP: 100
-ATK: 100
 ---
 
 ## Notes

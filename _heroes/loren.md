@@ -1,13 +1,9 @@
 ---
 name: Loren
 jp_name: "ロレン"
-race: human
 occupation: "Nurse (看護師)"
 illustrator: "Plusno Konbu (ぷらす野 昆布)"
 voice_actor: "Yoshihito Oonami (大浪嘉仁)"
-sprite_prefix: fg_loren
-HP: 100
-ATK: 100
 ---
 
 ## Notes

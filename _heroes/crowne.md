@@ -1,13 +1,9 @@
 ---
 name: Crowne Applefield
 jp_name: "クローネ・アップルフィールド"
-race: human
 occupation: "Mechanic"
 illustrator: "Shukou Akanaru (朱交赤成)"
 voice_actor: "Mayumi Yamaguchi (山口眞弓)"
-sprite_prefix: fg_crowne
-HP: 100
-ATK: 100
 ---
 
 ## Notes
