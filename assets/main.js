@@ -23,3 +23,23 @@ contentOverlay.addEventListener('click', function () {
   sidebar.classList.toggle('sidebar--is-visible')
   contentOverlay.classList.toggle('content__overlay--is-active')
 })
+document.querySelectorAll(".skill-trigger").forEach(trigger => {
+  const conds = JSON.parse(trigger.dataset.trigger);
+  let f = [];
+  for (const c of conds) {
+    switch (c.class) {
+      case "MinComboTrigger":
+        f.push(`${c.value}+ combos`);
+        break;
+      case "MinHPTrigger":
+        f.push(`${c.value}+% HP`);
+        break;
+      case "MaxHPTrigger":
+        f.push(`${value}-% HP`);
+        break;
+      default:
+        f.push("unknown condition");
+    }
+  }
+  trigger.textContent = "triggered when " + f.join(" and ");
+});

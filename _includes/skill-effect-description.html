@@ -1,9 +1,10 @@
-{% assign effect = include.effect %}
-{% capture eid %}{{ effect.skillEffectId }}{% endcapture %}
-{% assign skillEffectJson = site.data.SkillEffectMaster[eid].skillEffectJson %}
+{% capture eid %}{{ include.effect.skillEffectId }}{% endcapture %}
+{% assign effectParent = site.data.SkillEffectMaster[eid] %}
+{% assign skillEffectJson = effectParent.skillEffectJson %}
 {% capture target %}{% include skill-effect-target.html target=effect.effectTarget %}{% endcapture %}
 {% assign target = target | strip %}
 
+{% if skillEffectJson.trigger %}(<span class="skill-trigger" data-trigger="{{ skillEffectJson.trigger | escape }}"></span>){% endif %}
 {% for effect in skillEffectJson.effects %}
 {% case effect.class %}
 {% when "Damage" %}
