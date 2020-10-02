@@ -3,8 +3,8 @@ name: Narihito
 jp_name: "ナリヒト"
 race: human
 occupation: "Reporter (取材記者)"
-illustrator: "めんスケ"
-voice_actor: "内匠靖明"
+illustrator: "Mensuke (めんスケ)"
+voice_actor: "Yasuaki Takumi (内匠靖明)"
 sprite_prefix: fg_narihito
 HP: 100
 ATK: 100
@@ -12,14 +12,14 @@ ATK: 100
 
 ## Notes
 
-"こんにちは、オペレーターさん！今日こそ僕の取材を受けて下さいます？…えっ、代わりに仕事手伝え？やれやれ、敵わないなぁ。"
+"Hey there, Mr. Operator! Would you let me interview you today? ...huh? You want me to fill in for you at your job? Good grief, aren't you a handful..."
 
-ニュース配信企業・太陽新報社に所属する、神出鬼没の取材記者。
+An elusive news reporter, working for the news broadcast company Taiyou News Network.
 
-日本・神戸出身の地球人で、フルネームは軽江（かるえ）ナリヒト。
+He's an earthling from Kobe, Japan. His full name is Narihito Karue.
 
-一見大人しそうな男なのだが、ヒーローの話題になると暑苦しいまでの熱量を発しながら食いついてくる。
+Despite seeming like an adult at first glance, when the topic of heroes is put on the table he becomes unexpectedly heated and passionate.
 
-常にヒーロー関連の特ダネを求めて方々を駆け回っており、本社にいる事は殆ど無い。
+He is always running around people in search of hero-related scoops.
 
-古今東西のヒーローやヴィラン、カイブツに関する情報をプロファイリングしている情報通。
+As a knowledgeable connoisseur, he experts at profiling information about heroes, villains, and kaibutsu from all times and places.
