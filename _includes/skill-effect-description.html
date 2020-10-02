@@ -10,7 +10,7 @@
 {% when "Damage" %}
 Deal {{ effect.parameter.value }}% of damage to {{ target }}
 {% when "ChangeHp" %}
-Decrease/Increase HP by {{ 0 | minus: effect.parameter.value }}% to {{ target }}
+{% if effect.parameter.value >= 0 %}Decrease{% else %}Increase{% endif %} HP by {{ 0 | minus: effect.parameter.value }}% to {{ target }}
 {% when "MultipleAttack" %}
 ATK Up/Down by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "MultipleBaseView" %}
