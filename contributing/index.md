@@ -102,10 +102,10 @@ You can upload image file by going to [this page](https://github.com/liveahero-w
 
 ## More instructions on specific task
 
-### Create page for new Hero `/heroes/:name/`
+### Create page for new Hero `/charas/:name/`
 
-1. Under `_heroes/` directory, [create a new `name.md` file](https://github.com/liveahero-wiki/liveahero-wiki.github.io/new/master/_heroes).  See [Hero file name convention](#hero-file-name-convention).
-2. Copy the content of [akashi's page](https://raw.githubusercontent.com/liveahero-wiki/liveahero-wiki.github.io/master/_heroes/akashi.md) into this file and edit accordingly.
+1. Under `_charas/` directory, [create a new `name.md` file](https://github.com/liveahero-wiki/liveahero-wiki.github.io/new/master/_charas).  See [Hero file name convention](#hero-file-name-convention).
+2. Copy the content of [akashi's page](https://raw.githubusercontent.com/liveahero-wiki/liveahero-wiki.github.io/master/_charas/akashi.md) into this file and edit accordingly.
 
 #### Hero file name convention
 
@@ -133,4 +133,4 @@ You can use any modern HTML/CSS/JS features you like. Bootstrap and JQuery are b
 
 #### Hero info
 
-Heroes are registered in the `_heroes` directory. Each `.md` is one data record. Each hero will have a page with `_layout/heroes.html` template. [Jekyll Collections](https://jekyllrb.com/docs/collections/) is used here. You can access the info through `site.heroes` when doing templating, see how it used in `/heroes.html` for example.
+Heroes are registered in the `_charas` directory. Each `.md` is one data record. Each hero will have a page with `_layout/charas.html` template. [Jekyll Collections](https://jekyllrb.com/docs/collections/) is used here. You can access the info through `site.charas` when doing templating, see how it used in `/charas.html` for example.
