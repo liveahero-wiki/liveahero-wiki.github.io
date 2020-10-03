@@ -30,7 +30,7 @@ Remove {{ effect.parameter.value }} buffs from {{ target }}
 Gain {{ effect.parameter.value }} combos
 {% when "ChangeSkillProve" %}
 Proc rate {% if effect.parameter.value >= 0 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value }} for {{ target }}
-{% when "MoreTurn" %}
+{% when "MoreTurn" %} 
 Perform {{ effect.parameter.value }} more action(s)
 {% when "Heal" %}
 {% assign turnDefinition = "turn" %}
@@ -76,7 +76,7 @@ Change skill view cost by {{ effect.parameter.value }} for {{ target }}
 {% when "IgnoreElement" %}
 Make {{ target }} ignore element advantages
 {% when "NowViewDamage" %}
-Deal {{ effect.parameter.value }}% -> {{ 2 * effect.parameter.value }}% of damage to {{ target }} as remaining Views go from 0 to ({{ effect.parameter.value | divided_by: effect.parameter.viewMult }} * total ally Base View)
+Deal {{ effect.parameter.value }}% -> 300% of damage to {{ target }} as remaining Views go from 0 to ({{ 300 | minus:effect.parameter.value | divided_by: effect.parameter.viewMult }} * total ally Base View)
 {% when "SpdDeferenceDamage" %}
 Deal {{ effect.parameter.value }}% of damage to {{ target }} + extra {{ effect.parameter.spdMult }}% damage from speed advantage between caster and {{ target }}
 {% when "StatusNumDamage" %}
