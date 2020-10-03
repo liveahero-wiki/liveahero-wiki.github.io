@@ -5,7 +5,7 @@
 {% capture artwork_cond %}item.path contains "fg_{{ firstCardInfo.resourceName }}"{% endcapture %}
 {% assign artworks = site.static_files | where: "hero_sprites", true | where_exp: "item", artwork_cond | map: "path" %}
 
-<div class=" element{{ firstCardInfo.element }}">
+<div class="element{{ firstCardInfo.element }}">
     <div class="heroinfobox">
         <div class="header">
             <div class="name">{{ page.name }}</div>
