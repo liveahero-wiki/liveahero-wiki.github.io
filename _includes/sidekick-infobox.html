@@ -2,7 +2,7 @@
 
 {% assign firstCardInfo = cardInfos | first %}
 
-{% capture artwork_cond %}item.path contains "fg_{{ firstCardInfo.resourceName }}"{% endcapture %}
+{% capture artwork_cond %}item.path contains "fg_{{ firstCardInfo.resourceName }}_s"{% endcapture %}
 {% assign artworks = site.static_files | where: "hero_sprites", true | where_exp: "item", artwork_cond | map: "path" %}
 
 <div class="elementNone">
