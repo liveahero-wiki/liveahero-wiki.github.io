@@ -1,10 +1,10 @@
-{% unless include.no_disclaimer %}
 <p>Disclaimer: skill effect parsing is still work in progress. The generated English description might
 contain some misinformation. Hover over the effect description to see original japanese description.
 </p>
 
 <p>Please help report any bug related to skill effect <a href="https://github.com/liveahero-wiki/liveahero-wiki.github.io/issues/7">here</a>.</p>
-{% endunless %}
+
+<p>Want to help in translating skill names? Please see <a href="https://github.com/liveahero-wiki/liveahero-wiki.github.io/issues/26">here</a>.</p>
 
 <table>
     <tr>
@@ -13,8 +13,9 @@ contain some misinformation. Hover over the effect description to see original j
     {% for id in include.skillIds %}
     {% capture sid %}{{ id }}{% endcapture %}
     {% assign skill = site.data.SkillMaster[sid] %}
+    {% assign skillName = site.data.wiki.SkillNameTranslation[id] | default: skill.skillName %}
     <tr data-skill_id="{{ sid }}">
-        <td>{{ skill.skillName }}</td><td title="{{ skill.description }}">{% include skill-description.html skill=skill %}</td><td>{{ skill.useView }}</td>
+        <td title="{{ sid }}">{{ skillName }}</td><td title="{{ skill.description }}">{% include skill-description.html skill=skill %}</td><td>{{ skill.useView }}</td>
     </tr>
     {% endfor %}
 </table>
