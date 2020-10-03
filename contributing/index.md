@@ -11,9 +11,9 @@ banner: true
 Welcome to the fan-made Live A Hero Wiki! It is still work in progress, so thanks for considering to contribute
 this project.
 
-The owner of this wiki is currently focusing on laying out the fundamentals of this websites and writing contributing guides
-so that more people can start contributing (we need content writers!). Design is less of a priority now, we promise we will
-get back to the website design later when we have enough active contributors.
+> Please go to our [Github Issue](https://github.com/liveahero-wiki/liveahero-wiki.github.io/issues) page to check if there is any existing tasks that you can help.
+>
+> If you plan to contribute something big, such as starting a new group of pages, changing design of the websites and adding new feature, please create a new issue in our Github Issue page to discuss with other contributors before beginning your work. This is to avoid duplicated effort.
 
 ## How to contribute
 
@@ -21,18 +21,23 @@ For all potential wiki contributors, you must create a Github account beforehand
 If this is hosted with MediaWiki, we would have ask you to create a wiki account as well, so please don't
 be discouraged by the need to create a new account.
 
+### Edit a page
+
+Every page should have a "Edit this page" link on top. It will lead you to the edit page in Github. If you don't have a Github account, you will be prompted to make one.
+
+After that, if you are a new contributor, you may be asked to "fork" the repository, just agree with it. What this means is you will be editing a copied version of the Wiki before it goes through our review process.
+
+You will now see a simple editing interface. Most pages are written in Markdown syntax. Please see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
+
+Once you are done, you can click "Propose changes" and follow the instructions to create a "Pull Request". A Wiki collaborator will review your change and accept it.
+
+For existing Wiki collaborator, you can just choose "Commit directly to the `master` branch" and click "Commit changes" to skip the review process.
+
 Please feel free to fix typos and phrasings.
 
 Keep in mind that vandalism is reversible, but the punitive measures you'll face for committing this is not.
 
 When editing articles, please try to write objectively and formally about the topics at hand while using proper English. Avoid writing in the first person, casual figures of speech, spelling and grammatical errors, et cetera unless appropriate for the situation. Information should be accurately and concisely conveyed, and article contributions should reflect this goal.
-
-### Edit a page
-
-Every page should have a "Edit this page" link on top. It will lead you to the edit page in Github. The interface
-should be pretty intuitive to use.
-
-Most pages are written in Markdown syntax. Please see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)
 
 #### Special features
 
@@ -94,10 +99,6 @@ Wiki
 ### Upload image
 
 You can upload image file by going to [this page](https://github.com/liveahero-wiki/liveahero-wiki.github.io/upload/master/assets/img).
-
-## Task Coordination
-
-If you plan to contribute something big, such as starting a new group of pages, changing design of the websites and adding new feature, please create a new issue in our [Github issue](https://github.com/liveahero-wiki/liveahero-wiki.github.io/issues) page to discuss with other contributors before beginning your work. This is to avoid duplicated effort.
 
 ## More instructions on specific task
 
