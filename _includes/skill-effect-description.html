@@ -76,9 +76,9 @@ Change skill view cost by {{ effect.parameter.value }} for {{ target }}
 {% when "IgnoreElement" %}
 Make {{ target }} ignore element advantages
 {% when "NowViewDamage" %}
-Deal {{ effect.parameter.value }}% -> {{ effect.parameter.value | times:2 }}% of damage to {{ target }} as remaining Views go from 0 to ({{ effect.parameter.value | divided_by: effect.parameter.viewMult }} * total ally Base View)
+Deal {{ effect.parameter.value }}% -> {{ effect.parameter.value | times:2 }}% of damage to {{ target }} as remaining Views go from 0 to ~100000
 {% when "SpdDeferenceDamage" %}
-Deal {{ effect.parameter.value }}% of damage to {{ target }} + extra {{ effect.parameter.spdMult }}% damage from speed advantage between caster and {{ target }}
+Deal {{ effect.parameter.value }}% of damage to {{ target }} + extra {{ effect.parameter.spdMult }}% damage if caster is faster than {{ target }}
 {% when "StatusNumDamage" %}
 Deal {{ effect.parameter.value }}% of damage to {{ target }} and {{ effect.parameter.statusMult }}% extra for each {{ target }}'s {% if effect.parameter.isGoodStatus == 1 %}buff{% else %}debuff{% endif %}
 {% when "SalesBonusCheat" %}
