@@ -44,7 +44,7 @@ Remove {{ effect.parameter.value }} debuff(s) from {{ target }}
 {{ effect.parameter.value }}% chance to resist a debuff for {{ target }}
 {% when "Provocation" %}
 {% assign turnDefinition = "turn" %}
-Give {{ target }} Taunt. Opponents can target only {{ target }}
+Give {{ target }} Taunt: opponents can target only {{ target }}
 {% when "HealthDamage" %}
 Deal {{ effect.parameter.value }}% -> {{ effect.parameter.value | times: 2 }}% damage to {{ target }} as HP goes from Max to 0
 {% when "DeleteTurn" %}
@@ -89,7 +89,7 @@ Gain {{ effect.parameter.value }}% extra gold
 Gain {{ effect.parameter.value }}% extra XP
 {% when "Aggregation" %}
 {% assign turnDefinition = "turn" %}
-Apply Damage Aggregation status to {{ target }}. {{ target }} takes all damage done to their team.
+Apply Damage Aggregation status to {{ target }}: {{ target }} takes all damage done to their team.
 {% else %}
 Unknown effect class ({{ effect.class }})
 {% endcase %}
