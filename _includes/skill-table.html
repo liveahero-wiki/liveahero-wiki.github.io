@@ -14,8 +14,8 @@ contain some misinformation. Hover over the effect description to see original j
     {% capture sid %}{{ id }}{% endcapture %}
     {% assign skill = site.data.SkillMaster[sid] %}
     {% assign skillName = site.data.wiki.SkillNameTranslation[id] | default: skill.skillName %}
-    <tr data-skill_id="{{ sid }}">
-        <td title="{{ sid }}">{{ skillName }}</td><td title="{{ skill.description }}">{% include skill-description.html skill=skill %}</td><td>{{ skill.useView }}</td>
+    <tr>
+        <td title="{{ sid }}" class="translate" data-translate="{{ skill.skillName }}">{{ skillName }}</td><td title="{{ skill.description }}">{% include skill-description.html skill=skill %}</td><td>{{ skill.useView }}</td>
     </tr>
     {% endfor %}
 </table>
