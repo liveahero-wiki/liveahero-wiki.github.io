@@ -99,6 +99,10 @@ At rank 5 the hero will take on a different figure.
 
 Ranking up increases the basic ability value, and while on a specific hero rank, the skill will also be strengthened.
 
+### Rank Table
+
+{% include hero-rank-table.html %}
+
 ## Hero Skill
 
 Hero's skills can be selected as a command during battle.
