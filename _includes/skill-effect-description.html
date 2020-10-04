@@ -93,5 +93,5 @@ Apply Damage Aggregation status to {{ target }}. {{ target }} takes all damage d
 {% else %}
 Unknown effect class ({{ effect.class }})
 {% endcase %}
-{% if skillEffectJson.persistence == true %}for the entire battle{% else %}{% if skillEffectJson.turn != 0 %}for {{ skillEffectJson.turn }} {{ turnDefinition | strip }}(s){% endif %}{% endif %}
+{% if skillEffectJson.persistence == true %}permanently{% else %}{% if skillEffectJson.turn != 0 %}for {{ skillEffectJson.turn }} {{ turnDefinition | strip }}(s){% endif %}{% endif %}
 {% endfor %}
