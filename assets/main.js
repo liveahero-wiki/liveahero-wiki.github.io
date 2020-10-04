@@ -35,7 +35,7 @@ document.querySelectorAll(".skill-trigger").forEach(trigger => {
         f.push(`${c.value}+% HP`);
         break;
       case "MaxHPTrigger":
-        f.push(`${value}-% HP`);
+        f.push(`${c.value}-% HP`);
         break;
       default:
         f.push("unknown condition");
