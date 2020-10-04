@@ -60,6 +60,8 @@
         <tr>
             <td>{{ growth.level }}</td><td>{{ growth.hp }}</td><td>{{ growth.attack }}</td><td>{{ growth.agility }}</td><td>{{ growth.addView }}</td>
         </tr>
+        {% assign maxLevel = cardInfo.rarity | times: 10 %}
+        {% if growth.level == maxLevel %}{% break %}{% endif %}
         {% endfor %}
     </table>
 </div>

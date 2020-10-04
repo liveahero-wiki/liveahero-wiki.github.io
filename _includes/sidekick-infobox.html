@@ -55,20 +55,21 @@
 {% endunless %}
 {% endfor %}
 <h2>Stats</h2>
+
+<table>
+    <tr>
+        <th>Level</th><th>HP</th><th>ATK</th><th>SPD</th><th>View</th>
+    </tr>
 {% for cardInfo in cardInfos %}
-<div class="hero{{ cardInfo.rarity }}">
-    <table>
-        <tr>
-            <th>Level</th><th>HP</th><th>ATK</th><th>SPD</th><th>View</th>
-        </tr>
-        {% for growth in cardInfo.growths %}
-        <tr>
-            <td>{{ growth.level }}</td><td>{{ growth.hp }}</td><td>{{ growth.attack }}</td><td>{{ growth.agility }}</td><td>{{ growth.addView }}</td>
-        </tr>
-        {% endfor %}
-    </table>
-</div>
+    {% for growth in cardInfo.growths %}
+    {% if cardInfo.sidekickCardId == firstCardInfo.sidekickCardId or growth.level > 1 %}
+    <tr>
+        <td>{{ growth.level }}</td><td>{{ growth.hp }}</td><td>{{ growth.attack }}</td><td>{{ growth.agility }}</td><td>{{ growth.addView }}</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
 {% endfor %}
+</table>
 
 <h2>Skills</h2>
     <h3>Active</h3>
