@@ -3,11 +3,11 @@
 {% assign firstCardInfo = cardInfos | first %}
 
 {% if firstCardInfo.resourceName == "player" %}
-{% capture artwork_cond %}item.fg == true and item.path contains "fg_player"{% endcapture %}
+{% capture artwork_cond %}item.path contains "fg_player"{% endcapture %}
 {% else %}
-{% capture artwork_cond %}item.fg == true and item.path contains "fg_{{ firstCardInfo.resourceName }}_s"{% endcapture %}
+{% capture artwork_cond %}item.path contains "fg_{{ firstCardInfo.resourceName }}_s"{% endcapture %}
 {% endif %}
-{% assign artworks = site.static_files | where_exp: "item", artwork_cond | map: "path" %}
+{% assign artworks = site.static_files | where: "fg", true | where_exp: "item", artwork_cond | map: "path" %}
 
 <div class="elementNone">
     <div class="heroinfobox">

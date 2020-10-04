@@ -1,5 +1,5 @@
-{% capture artwork_cond %}item.fg == true and item.path contains "{{ include.sprite_prefix }}"{% endcapture %}
-{% assign artworks = site.static_files | where_exp: "item", artwork_cond | map: "path" %}
+{% capture artwork_cond %}item.path contains "{{ include.sprite_prefix }}"{% endcapture %}
+{% assign artworks = site.static_files | where: "fg", true | where_exp: "item", artwork_cond | map: "path" %}
 
 <div class="heroBox">
     <!--<div class="tabs"><span class="selected" data-id="0" data-voice="nekros2"
