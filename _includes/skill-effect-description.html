@@ -78,7 +78,7 @@ Make {{ target }} ignore element advantages
 {% when "NowViewDamage" %}
 Deal {{ effect.parameter.value }}% -> {{ effect.parameter.value | times:2 }}% of damage to {{ target }} as remaining Views go from 0 to ~100000
 {% when "SpdDeferenceDamage" %}
-Deal {{ effect.parameter.value }}% of damage to {{ target }} + extra {{ effect.parameter.spdMult }}% damage if caster is faster than {{ target }}
+Deal {{ effect.parameter.value }}% of damage to {{ target }} + extra {{ effect.parameter.spdMult }}% damage if caster is faster than target
 {% when "StatusNumDamage" %}
 Deal {{ effect.parameter.value }}% of damage to {{ target }} and {{ effect.parameter.statusMult }}% extra for each {{ target }}'s {% if effect.parameter.isGoodStatus == 1 %}buff{% else %}debuff{% endif %}
 {% when "SalesBonusCheat" %}
@@ -89,7 +89,7 @@ Gain {{ effect.parameter.value }}% extra gold
 Gain {{ effect.parameter.value }}% extra XP
 {% when "Aggregation" %}
 {% assign turnDefinition = "turn" %}
-Apply Damage Aggregation status to {{ target }}.
+Apply Damage Aggregation status to {{ target }}. {{ target }} takes all damage done to their team.
 {% else %}
 Unknown effect class ({{ effect.class }})
 {% endcase %}
