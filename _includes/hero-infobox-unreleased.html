@@ -1,39 +1,17 @@
-{% capture artwork_cond %}item.path contains "{{ include.sprite_prefix }}"{% endcapture %}
+{% capture artwork_cond %}item.path contains "fg_{{ include.resourceName }}"{% endcapture %}
 {% assign artworks = site.static_files | where: "fg", true | where_exp: "item", artwork_cond | map: "path" %}
 
-<div class="heroBox">
-    <!--<div class="tabs"><span class="selected" data-id="0" data-voice="nekros2"
-            style="background-color: rgb(229, 204, 255);">Traveling Sorcerer</span><span class="" data-id="1"
-            data-voice="nekros">Lifeless Emperor</span></div>-->
-    <div class="hero0 nether">
+<blockquote>
+<p>Unreleased units often contain sprites that are not used in any available quests. Please respect those
+who do not wish to be spoiled about future content.</p>
+</blockquote>
+
+<div class="elementNone">
+    <div class="heroinfobox">
         <div class="header">
-            <td class="caption">
-                <div class="name">{{ include.name }}</div>
-                <div class="sub">{{ include.jp_name }}</div>
-            </td>
+            <div class="name">{{ page.name }}</div>
+            <div class="sub">{{ page.jp_name }}</div>
         </div>
         {% include hero-infobox-gallery.html artworks=artworks %}
-        <div class="body">
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Illustration</th>
-                        <td>{{ include.illustrator }}</td>
-                    </tr>
-                    <tr>
-                        <th>Voice</th>
-                        <td>{{ include.voice_actor }}</td>
-                    </tr>
-                    <tr>
-                        <th>Race</th>
-                        <td>{{ include.race }}</td>
-                    </tr>
-                    <tr>
-                        <th>Occupation</th>
-                        <td>{{ include.occupation }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
     </div>
 </div>

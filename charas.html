@@ -1,12 +1,28 @@
 ---
 layout: default
+title: Characters
+banner: true
 permalink: /charas/
 ---
 
+<h2>Released units</h2>
+
+{% assign heroes = site.charas | where: "unreleased", false %}
 <ul>
-{% for hero in site.charas %}
+{% for hero in heroes %}
   <li>
       <a href="{{ hero.url }}">{{ hero.name }}</a>
+  </li>
+{% endfor %}
+</ul>
+
+<h2>Unreleased units</h2>
+
+{% assign unreleased = site.charas | where: "unreleased", true %}
+<ul>
+{% for chara in unreleased %}
+  <li>
+      <a href="{{ chara.url }}">{{ chara.name }}</a>
   </li>
 {% endfor %}
 </ul>
