@@ -6,7 +6,7 @@ illustrator: "Mensuke (めんスケ)"
 voice_actor: "Yasuaki Takumi (内匠靖明)"
 ---
 
-{% include hero-infobox2.html stockId=10291 %}
+{% include hero-infobox.html stockId=10291 %}
 {% include sidekick-infobox.html stockId=10291 %}
 
 ## Notes

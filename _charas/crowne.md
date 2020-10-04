@@ -6,7 +6,7 @@ illustrator: "Shukou Akanaru (朱交赤成)"
 voice_actor: "Mayumi Yamaguchi (山口眞弓)"
 ---
 
-{% include hero-infobox2.html stockId=10051 %}
+{% include hero-infobox.html stockId=10051 %}
 {% include sidekick-infobox.html stockId=10051 %}
 
 ## Notes

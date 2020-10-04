@@ -8,7 +8,7 @@ HP: 263
 ATK: 181
 ---
 
-{% include hero-infobox2.html stockId=10091 %}
+{% include hero-infobox.html stockId=10091 %}
 {% include sidekick-infobox.html stockId=10091 %}
 
 ## Notes

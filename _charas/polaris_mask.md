@@ -6,7 +6,7 @@ illustrator: GomTang
 voice_actor: "Miyake Kenta (三宅健太)"
 ---
 
-{% include hero-infobox2.html stockId=10151 %}
+{% include hero-infobox.html stockId=10151 %}
 {% include sidekick-infobox.html stockId=10151 %}
 
 ## Notes

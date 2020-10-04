@@ -6,7 +6,7 @@ illustrator: "Shukou Akanaru (朱交赤成)"
 voice_actor: "Kumamoto Kenta (熊本健太)"
 ---
 
-{% include hero-infobox2.html stockId=10021 %}
+{% include hero-infobox.html stockId=10021 %}
 {% include sidekick-infobox.html stockId=10021 %}
 
 ## Notes

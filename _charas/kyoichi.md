@@ -6,7 +6,7 @@ illustrator: "Mentaiko/Itto(一十)"
 voice_actor: "Yonezawa Takashi (よねざわたかし)"
 ---
 
-{% include hero-infobox2.html stockId=10101 %}
+{% include hero-infobox.html stockId=10101 %}
 {% include sidekick-infobox.html stockId=10101 %}
 
 ## Notes

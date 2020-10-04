@@ -6,7 +6,7 @@ illustrator: "DAI-XT. (ダイエクスト)"
 voice_actor: "Kenji Nomura (乃村健次)"
 ---
 
-{% include hero-infobox2.html stockId=10241 %}
+{% include hero-infobox.html stockId=10241 %}
 {% include sidekick-infobox.html stockId=10241 %}
 
 ## Notes

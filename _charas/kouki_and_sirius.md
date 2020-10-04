@@ -6,7 +6,7 @@ illustrator: "steelwire (steelwire/鉄線)"
 voice_actor: "Yumiko Kobayashi (小林由美子)"
 ---
 
-{% include hero-infobox2.html stockId=10181 %}
+{% include hero-infobox.html stockId=10181 %}
 {% include sidekick-infobox.html stockId=10181 %}
 
 ## Notes

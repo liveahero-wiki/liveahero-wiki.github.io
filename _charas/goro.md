@@ -6,7 +6,7 @@ illustrator: "oaks (おーくす)"
 voice_actor: "Yoshihito Oonami (大浪嘉仁)"
 ---
 
-{% include hero-infobox2.html stockId=10231 %}
+{% include hero-infobox.html stockId=10231 %}
 {% include sidekick-infobox.html stockId=10231 %}
 
 ## Notes

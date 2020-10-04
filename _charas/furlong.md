@@ -6,7 +6,7 @@ illustrator: "Xigma (きしぐま)"
 voice_actor: "Takashi Yonezawa (よねざわたかし)"
 ---
 
-{% include hero-infobox2.html stockId=10081 %}
+{% include hero-infobox.html stockId=10081 %}
 {% include sidekick-infobox.html stockId=10081 %}
 
 ## Notes

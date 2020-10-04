@@ -6,7 +6,7 @@ illustrator: "Zhuzi (ずじ)"
 voice_actor: "Karen (夏怜)"
 ---
 
-{% include hero-infobox2.html stockId=10191 %}
+{% include hero-infobox.html stockId=10191 %}
 {% include sidekick-infobox.html stockId=10191 %}
 
 ## Notes:

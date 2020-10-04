@@ -6,7 +6,7 @@ illustrator: "Mensuke (めんスケ)"
 voice_actor: "Otomo Ryosaburo (大友龍三郎)"
 ---
 
-{% include hero-infobox2.html stockId=10141 %}
+{% include hero-infobox.html stockId=10141 %}
 {% include sidekick-infobox.html stockId=10141 %}
 
 ## Notes:

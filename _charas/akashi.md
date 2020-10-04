@@ -6,7 +6,7 @@ illustrator: "Shukoh Akanaru"
 voice_actor: "Toshiyuki Hosaka"
 ---
 
-{% include hero-infobox2.html stockId=10011 %}
+{% include hero-infobox.html stockId=10011 %}
 {% include sidekick-infobox.html stockId=10011 %}
 
 ## Notes

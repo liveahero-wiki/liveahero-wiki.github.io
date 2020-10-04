@@ -6,7 +6,7 @@ illustrator: "Mentaiko/Itto (一十)"
 voice_actor: "Jun Kasama (笠間淳)"
 ---
 
-{% include hero-infobox2.html stockId=10201 %}
+{% include hero-infobox.html stockId=10201 %}
 {% include sidekick-infobox.html stockId=10201 %}
 
 ## Notes

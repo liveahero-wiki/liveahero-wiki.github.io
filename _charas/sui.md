@@ -6,7 +6,7 @@ illustrator: "Shukou Akanaru (朱交赤成)"
 voice_actor: "Mariya Ise (伊瀬茉莉也)"
 ---
 
-{% include hero-infobox2.html stockId=10031 %}
+{% include hero-infobox.html stockId=10031 %}
 {% include sidekick-infobox.html stockId=10031 %}
 
 ## Notes

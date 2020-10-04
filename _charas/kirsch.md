@@ -6,7 +6,7 @@ illustrator: "Zhuzi (ずじ)"
 voice_actor: "Orie Kimoto (樹元オリエ)"
 ---
 
-{% include hero-infobox2.html stockId=10281 %}
+{% include hero-infobox.html stockId=10281 %}
 {% include sidekick-infobox.html stockId=10281 %}
 
 ## Notes

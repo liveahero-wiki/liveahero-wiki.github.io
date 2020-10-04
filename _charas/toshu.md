@@ -6,7 +6,7 @@ illustrator: "Oaks (おーくす)"
 voice_actor: "Tetsu Inada (稲田徹)"
 ---
 
-{% include hero-infobox2.html stockId=10131 %}
+{% include hero-infobox.html stockId=10131 %}
 {% include sidekick-infobox.html stockId=10131 %}
 
 ## Notes

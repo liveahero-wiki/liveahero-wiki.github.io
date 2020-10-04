@@ -6,7 +6,7 @@ illustrator: "Shukou Akanaru (朱交赤成)"
 voice_actor: "Kazuhiro Nakaya (中谷一博)"
 ---
 
-{% include hero-infobox2.html stockId=10041 %}
+{% include hero-infobox.html stockId=10041 %}
 {% include sidekick-infobox.html stockId=10041 %}
 
 ## Notes

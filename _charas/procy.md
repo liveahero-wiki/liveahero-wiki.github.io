@@ -6,7 +6,7 @@ illustrator: "Kinoshita Jiroh (樹下次郎)"
 voice_actor: "Kappei Yamaguchi (山口勝平)"
 ---
 
-{% include hero-infobox2.html stockId=10321 %}
+{% include hero-infobox.html stockId=10321 %}
 {% include sidekick-infobox.html stockId=10321 %}
 
 ## Notes

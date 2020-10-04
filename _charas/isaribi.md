@@ -6,7 +6,7 @@ illustrator: "Xigma (きしぐま)"
 voice_actor: "Masahiro Ogata (尾形雅宏)"
 ---
 
-{% include hero-infobox2.html stockId=10221 %}
+{% include hero-infobox.html stockId=10221 %}
 {% include sidekick-infobox.html stockId=10221 %}
 
 ## Notes:
