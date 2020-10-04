@@ -78,7 +78,7 @@ Make {{ target }} ignore element advantages
 {% when "NowViewDamage" %}
 Deal {{ effect.parameter.value }}% -> {{ effect.parameter.value | times:2 }}% of damage to {{ target }} as remaining Views go from 0 to ~100000
 {% when "SpdDeferenceDamage" %}
-Deal {{ effect.parameter.value }}% of damage to {{ target }} + extra {{ effect.parameter.spdMult | times:0.18 }}% damage for each point of advantage in speed with {{ target }}
+Deal {{ effect.parameter.value }}% of damage to {{ target }} + extra {{ effect.parameter.spdMult | times:0.18 }}% damage for each point of advantage in speed with target
 {% when "StatusNumDamage" %}
 Deal {{ effect.parameter.value }}% of damage to {{ target }} and {{ effect.parameter.statusMult }}% extra for each {{ target }}'s {% if effect.parameter.isGoodStatus == 1 %}buff{% else %}debuff{% endif %}
 {% when "SalesBonusCheat" %}
