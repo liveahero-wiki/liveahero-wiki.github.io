@@ -86,6 +86,10 @@ Upon obtaining they will all be level 1, and you can obtain exp through quests, 
 
 When the hero gains a level, their parameters will increase, excluding their SPD value.
 
+### Hero Level Table
+
+{% include hero-xp-table.html %}
+
 ## Hero Rank
 
 A value that shows the hero's current max level limit.
@@ -97,10 +101,6 @@ Hero that rank up will have their max level limit increased.
 At rank 5 the hero will take on a different figure.
 
 Ranking up increases the basic ability value, and while on a specific hero rank, the skill will also be strengthened.
-
-### Rank Table
-
-{% include hero-xp-table.html %}
 
 ## Hero Skill
 
