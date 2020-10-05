@@ -63,7 +63,7 @@ Disadvantageous attribute will have increased incoming damage, along with a decr
 
 The roles indicates what the hero can do during the battle.
 
-There are 8 roles available: Oddensee, Defense, Strengthen, Weaken, Speed Operation, View Acquirer, Recovery, and Special.
+There are 8 roles available: Offense, Defense, Strengthen, Weaken, Speed Operation, View Acquirer, Recovery, and Special.
 
 When choosing a hero for the team formation, the hero's role can be a guide of action.
 
