@@ -39,7 +39,6 @@ User Rank is currently maxed out at level 80. The current user rank can be check
 # Hero and Sidekick
 
 ## About Hero
-
 Hero is a general term for characters that appears in battle.
 
 They can be obtained by "Ether searching", or by mission rewards.
@@ -98,6 +97,10 @@ Hero that rank up will have their max level limit increased.
 At rank 5 the hero will take on a different figure.
 
 Ranking up increases the basic ability value, and while on a specific hero rank, the skill will also be strengthened.
+
+### Rank Table
+
+{% include hero-xp-table.html %}
 
 ## Hero Skill
 

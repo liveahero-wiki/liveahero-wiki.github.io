@@ -1,11 +1,10 @@
-{% assign levelTable = site.data.HeroCardExpMaster %}
 <table>
 <tr>
   <th>Level</th><th>XP to lv up</th><th>Total XP</th>
 </tr>
-{% for lv in levelTable %}
+{% for pair in site.data.HeroCardExpMaster %}
 <tr>
-  <td>{{ lv.level }}</td><td>{{ lv.nextExp }}</td><td>{{ lv.totalExp }}</td>
+  <td>{{ pair[1].level }}</td><td>{{ pair[1].nextExp }}</td><td>{{ pair[1].totalExp }}</td>
 </tr>
 {% endfor %}
 </table>
