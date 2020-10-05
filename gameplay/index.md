@@ -36,6 +36,10 @@ As the user rank increases, the max stamina limit will also increase, along with
 
 User Rank is currently maxed out at level 80. The current user rank can be checked at the top of the game screen.
 
+### User Rank table
+
+{% include player-xp-table.html %}
+
 # Hero and Sidekick
 
 ## About Hero
@@ -119,6 +123,10 @@ Sidekick is a general term for characters that pairs up with the hero.
 During the battle, the sidekick's parameter will be added up along with the hero's parameter.
 
 Sidekick's parameter will increase when the relation level with the hero increases.
+
+### Sidekick Level table
+
+{% include sidekick-xp-table.html %}
 
 ## Sidekick Limit Breakthrough
 
