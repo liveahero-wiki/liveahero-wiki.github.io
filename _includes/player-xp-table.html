@@ -1,10 +1,10 @@
 <table>
 <tr>
-  <th>Level</th><th>Max Stamina</th><th>XP to lv up</th><th>Total XP</th>
+  <th>Rank</th><th>Max Stamina</th><th>XP to rank up</th><th>Total XP</th>
 </tr>
 {% for pair in site.data.UserRankMaster %}
 <tr>
-  <td>{{ pair[1].level }}</td><td>{{ pair[1].maxStamina }}</td><td>{{ pair[1].nextExp }}</td><td>{{ pair[1].totalExp }}</td>
+  <td>{{ pair[1].userRank }}</td><td>{{ pair[1].maxStamina }}</td><td>{{ pair[1].nextExp }}</td><td>{{ pair[1].totalExp }}</td>
 </tr>
 {% endfor %}
 </table>
