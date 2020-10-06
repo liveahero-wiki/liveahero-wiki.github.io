@@ -6,7 +6,10 @@ illustrator: "Xigma (きしぐま)"
 voice_actor: "Takashi Yonezawa (よねざわたかし)"
 ---
 
-{% include hero-infobox.html stockId=10081 %}
+{% capture BIO_H01 %}
+Furlong vowed/swore an oath to "become a firefighter hotter than flames" and transforms into a brave and hot hero "Burn Striker" who is the opposite of what he usually is/does. Once he transforms, no matter how dangerous or perilous a situation may be, he will dive head-first into the fierce fire whilst proclaiming that lifesaving is the highest priority. The change in personality is NOT due to the weapon (pump) on his back, but rather transformation itself calls forth the 'sleeping' courage within him to overtake the fears he has.
+{% endcapture %}
+{% include hero-infobox.html stockId=10081 BIO_H01=BIO_H01 %}
 
 {% capture BIO_S01 %}
 A firefighter belonging to Orient City's fire department.
