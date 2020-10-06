@@ -8,7 +8,13 @@ HP: 263
 ATK: 181
 ---
 
-{% include hero-infobox.html stockId=10091 %}
+{% capture BIO_H01 %}
+Victom transforms into "Survive taker" when he dresses up in a suit and armor closely resembling that of a rescue squad uniform. He possesses a rope which allows him to reach his rescue target in the shortest distance possible even if they are in the belly of a kaibutsu.  He makes the best use of his suit and rope which have the ability to break through any obstacle; that allows him to carry out rescue missions at the speed of sound.
+{% endcapture %}
+{% capture BIO_H02 %}
+His desire/wish is "to have the power to rescue all the weak and powerless people who are threatened." It it something that he swore to do after he saw his entire family that disappeared (died) in a city that was once attacked and burned by a ravenous/aggressive kaibutsu. Despite having numerous injuries to his face under the helmet he wears, the reason he continues to do his best to help others is out of a desire for revenge against kaibutsu.
+{% endcapture %}
+{% include hero-infobox.html stockId=10091 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 The commanding officer of Orient City Fire Department's Hyper Rescue team, always wearing a full face helmet.
