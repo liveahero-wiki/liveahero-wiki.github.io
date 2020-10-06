@@ -10,7 +10,7 @@ After putting on a pure white mantle and utilizing the power of lightning, he tr
 {% endcapture %}
 
 {% capture BIO_H02 %}
-"To remain a superhero who embodies/personifies justice" is the lightning hero's wish.  It was something that he once spoke to his former partner who fought together with him in a tag team, and was also a vow that he declared to his friends/allies who fell on the battlefield.  Before he became the superhero "Zap the Justice", who laughed loudly in the face of any predicament and showed majestic dignity, there were days of extraordinary efforts and regretful and tearful battles."
+"To remain a superhero who embodies/personifies justice" is the lightning hero's wish.  It was something that he once spoke to his former partner who fought together with him in a tag team, and was also a vow that he declared to his friends/allies who fell on the battlefield.  Before he became the superhero "Zap the Justice", who laughed loudly in the face of any predicament and showed majestic dignity, there were days of extraordinary efforts and regretful and tearful battles.
 {% endcapture %}
 {% include hero-infobox.html stockId=10041 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
