@@ -14,7 +14,7 @@ The one who values the public transportation facility's safety above all else tr
 There was a day when the war ended and the public transportation of the ferry resumed. The brave figure of the train going through the air was just a "symbol of peace" for him. Therefore, it is a very precious thing for him that public transportation is operating on time, and it is an event that must be protected. He takes decisive action against those who try to disturb that symbol of peace.
 {% endcapture %}
 
-{% include hero-infobox.html stockId=10241 %}
+{% include hero-infobox.html stockId=10241 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 A living humanoid robot originating from the planet of machine life-forms, Tronesion.
