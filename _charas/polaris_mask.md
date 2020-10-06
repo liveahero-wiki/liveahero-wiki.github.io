@@ -8,7 +8,7 @@ voice_actor: "Miyake Kenta (三宅健太)"
 {% capture BIO_H02 %}
 His special Move is "Fighting Spirit - Polaris Buster". In a gravitational field that is completely different from the earth, such as high gravity and low gravity, he uses a deadly flying technique against the enemy by maximizing his strength and fighting ability. Even under high gravity, where his body is likely to be crushed, he laughs invincibly while flexing his muscles, and shows off the best extreme battle that the audience wants to see. All to prepare for his dream of "confrontation with the strongest man in the universe".
 {% endcapture %}
-{% include hero-infobox.html stockId=10151 %}
+{% include hero-infobox.html stockId=10151 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 A masked professional wrestler who wanders through the universe.
