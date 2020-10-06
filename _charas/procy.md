@@ -7,12 +7,8 @@ voice_actor: "Kappei Yamaguchi (山口勝平)"
 ---
 
 {% include hero-infobox.html stockId=10321 %}
-{% include sidekick-infobox.html stockId=10321 %}
 
-## Notes
-
-"Easy: You earn the viewers, you earn the cash. If you wanna get in the biz, you hafta remember that. Ah well, since it's you, you'll get the knack of it fast."
-
+{% capture BIO_S01 %}
 An alien who runs "The Guild of Heroes : Earth Camp", and information exchange center and bar for heroes.
 
 Located near the company where the protagonist works at. Despite looking like a cute little puppy, he's a veteran hero with more than 20 years of career over his shoulder. He is old friends with Ryekie and Huckle.
@@ -22,3 +18,9 @@ Although he is caring and open hearted man, his attachment to money is stronger 
 He hates excessive payments and very much prefers get-rich-quick schemes one way or another.
 
 It seems like the bar's opening cost has him up to his neck in debt.
+{% endcapture %}
+{% include sidekick-infobox.html stockId=10321 BIO_S01=BIO_S01 %}
+
+## Notes
+
+"Easy: You earn the viewers, you earn the cash. If you wanna get in the biz, you hafta remember that. Ah well, since it's you, you'll get the knack of it fast."

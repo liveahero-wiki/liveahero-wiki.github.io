@@ -7,12 +7,8 @@ voice_actor: "Miyake Kenta (三宅健太)"
 ---
 
 {% include hero-infobox.html stockId=10151 %}
-{% include sidekick-infobox.html stockId=10151 %}
 
-## Notes
-
-"The brightest star of the northern sky is here! The one who will crush evil and guide the weak! That's right, for I am Polaris Mask! Lead me to the burning ring, Partner!"
-
+{% capture BIO_S01 %}
 A masked professional wrestler who wanders through the universe.
 
 An earthling originating from Sapporo, Japan. His real name is Kensuke Kitakami.
@@ -22,3 +18,9 @@ Once a champion who climbed to the very top of the world professional wrestling 
 Because his positive thinking and excitement are always off-charts, all of his actions and decisions are impulsive and without second thought.
 
 He has a tendency of being in the midst of big-sized tussles, so he is a man who is both a hero and a troublemaker.
+{% endcapture %}
+{% include sidekick-infobox.html stockId=10151 BIO_S01=BIO_S01 %}
+
+## Notes
+
+"The brightest star of the northern sky is here! The one who will crush evil and guide the weak! That's right, for I am Polaris Mask! Lead me to the burning ring, Partner!"

@@ -40,6 +40,32 @@
         </table>
     </div>
 
+{% assign detail_prefix = firstCardInfo.resourceName | upcase | prepend: "DETAIL_" %}
+{% assign bio_h01 = detail_prefix | append: "_H01" %}
+<button class="accordion-button">Personal Data 1</button>
+<div class="accordion-panel">
+<p>{{ site.data.processed.jp_bio[bio_h01] }}</p>
+</div>
+{% if include.BIO_H01 %}
+<button class="accordion-button">Personal Data</button>
+<div class="accordion-panel">
+<p>{{ include.BIO_H01 }}</p>
+</div>
+{% endif %}
+
+{% assign bio_h02 = detail_prefix | append: "_H02" %}
+<button class="accordion-button">Personal Data 2</button>
+<div class="accordion-panel">
+<p>{{ site.data.processed.jp_bio[bio_h02] }}</p>
+</div>
+{% if include.BIO_H02 %}
+<button class="accordion-button">Personal Data</button>
+<div class="accordion-panel">
+<p>{{ include.BIO_H02 }}</p>
+</div>
+{% endif %}
+
+
 {% assign skillIds = firstCardInfo.skillIds %}
 {% for cardInfo in cardInfos %}
 {% unless forloop.first %}

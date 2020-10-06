@@ -306,6 +306,7 @@ figcaption {
 }
 .heroinfobox {
   padding: 2px;
+  margin-bottom: 10px;
 }
 .heroinfobox .header {
   padding: 5px;
@@ -313,39 +314,47 @@ figcaption {
 .heroinfobox table {
   margin: 0;
 }
-.elementNone th, .elementNone .header {
-  background: #bbb;
+$elementColor: #f07d75, #4e8ddf, #5fcb58, #ffb251, #9c76db;
+@for $i from 1 to 6 {
+  .element#{$i} {
+    $color: nth($elementColor, $i);
+    th, .header {
+      background: $color;
+    }
+    .heroinfobox {
+      border: 1px solid $color;
+    }
+    .accordion-button {
+      background-color: $color;
+    }
+    .accordion-panel {
+      border: 1px solid $color;
+    }
+  }
 }
-.elementNone .heroinfobox {
-  border: 2px solid #bbb;
+.elementNone {
+  th, .header {
+    background: #bbb;
+  }
+  .heroinfobox {
+    border: 2px solid #bbb;
+  }
+  .accordion-button {
+    background-color: #bbb;
+  }
+  .accordion-panel {
+    border: 2px solid #bbb;
+  }
 }
-.element1 th, .element1 .header {
-  background: #f07d75;
+.accordion-button {
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
 }
-.element1 .heroinfobox {
-  border: 1px solid #f07d75;
-}
-.element2 th, .element2 .header {
-  background: #4e8ddf;
-}
-.element2 .heroinfobox {
-  border: 1px solid #4e8ddf;
-}
-.element3 th, .element3 .header {
-  background: #5fcb58;
-}
-.element3 .heroinfobox {
-  border: 1px solid #5fcb58;
-}
-.element4 th, .element4 .header {
-  background: #ffb251;
-}
-.element4 .heroinfobox {
-  border: 1px solid #ffb251;
-}
-.element5 th, .element5 .header {
-  background: #9c76db;
-}
-.element5 .heroinfobox {
-  border: 1px solid #9c76db;
+.accordion-panel {
+  padding: 18px;
+  display: none;
+  overflow: hidden;
 }

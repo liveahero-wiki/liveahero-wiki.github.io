@@ -44,9 +44,20 @@ document.querySelectorAll(".skill-trigger").forEach(trigger => {
   trigger.textContent = "triggered when " + f.join(" and ");
 });
 function toggleTranslate(e) {
-  const ele = e.target;
-  const tmp = ele.textContent;
-  ele.textContent = ele.dataset.translate;
-  ele.dataset.translate = tmp;
+  const tmp = this.textContent;
+  this.textContent = this.dataset.translate;
+  this.dataset.translate = tmp;
 }
 document.querySelectorAll(".translate").forEach(t => t.addEventListener('click', toggleTranslate));
+document.querySelectorAll(".accordion-button").forEach(a => {
+  a.addEventListener("click", function() {
+    this.classList.toggle("active");
+
+    const panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  })
+});

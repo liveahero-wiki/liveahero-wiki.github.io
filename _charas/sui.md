@@ -7,12 +7,8 @@ voice_actor: "Mariya Ise (伊瀬茉莉也)"
 ---
 
 {% include hero-infobox.html stockId=10031 %}
-{% include sidekick-infobox.html stockId=10031 %}
 
-## Notes
-
-"I'm Sui, a designer apprentice. If I can save people with my needlework, then... please, make use of it as you see fit."
-
+{% capture BIO_S01 %}
 An apprentice clothing designer from Orient City studying design under tutorship.
 
 As someone born in the Lunar Capital, they are half-Lunarian and half-Earthling.
@@ -22,3 +18,9 @@ Since they were acquainted with clothes from an early age, they have a deep know
 They posses a cool and dry personality and a somewhat poisonous tongue. Dialogue with customers is important while in the position of a designer, but they're not good at interacting with others.
 
 They have been afflicted by the gap between their body and mind ever since childhood.
+{% endcapture %}
+{% include sidekick-infobox.html stockId=10031 BIO_S01=BIO_S01 %}
+
+## Notes
+
+"I'm Sui, a designer apprentice. If I can save people with my needlework, then... please, make use of it as you see fit."

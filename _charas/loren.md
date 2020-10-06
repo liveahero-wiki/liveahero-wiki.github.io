@@ -7,12 +7,8 @@ voice_actor: "Yoshihito Oonami (大浪嘉仁)"
 ---
 
 {% include hero-infobox.html stockId=10211 %}
-{% include sidekick-infobox.html stockId=10211 %}
 
-## Notes
-
-"Hello, how are you feeling? Health care is also the duty of those involved with heroes. Well then, let's do our best at work today!"
-
+{% capture BIO_S01 %}
 A Nurse Working at a general hospital in the lunar capital.
 
 An earthling from Birmingham, England. His Full name is Loren Farland
@@ -20,3 +16,9 @@ An earthling from Birmingham, England. His Full name is Loren Farland
 Because of his gentle and soft personality, he is popular within patients, but because his clumsiness often lead him to question "why does this always happen to me?", he is an oopsie nursie.
 
 Despite this, he can also be useful in the hospital, since he is the only one who can restrain the rampaging doctor, Rakta, who plays an active role as a similar hero.
+{% endcapture %}
+{% include sidekick-infobox.html stockId=10211 BIO_S01=BIO_S01 %}
+
+## Notes
+
+"Hello, how are you feeling? Health care is also the duty of those involved with heroes. Well then, let's do our best at work today!"
