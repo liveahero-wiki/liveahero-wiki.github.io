@@ -22,7 +22,6 @@ When he was trying to rescue injured people, a seriously injured person grabbed 
 Therefore, he has a strong determination and pride in continuing to be an "Angel in a White Coat."
 
 As long as the object to be saved continues to exist in this world, he will continue to flap his wings to save lives.
-
 {% endcapture %}
 
 {% include hero-infobox.html stockId=10211 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
