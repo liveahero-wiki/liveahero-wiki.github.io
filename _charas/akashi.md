@@ -5,8 +5,15 @@ occupation: "University Student (Part-timer)"
 illustrator: "Shukoh Akanaru"
 voice_actor: "Toshiyuki Hosaka"
 ---
+{% capture BIO_H01 %}
+Akashi transforms into a hero who fights with a mass of powerful flames and a bat. The ball of fire is created from 2 rings attached to both his arms, and by using his own energy as a resource, he is able to throw the ball at incredible speeds much like a slugger.
+{% endcapture %}
 
-{% include hero-infobox.html stockId=10011 %}
+{% capture BIO_H02 %}
+There was once a time when he got eaten by a Kaibutsu and he realised something important. During that time, he found out that things eaten by Kaibutsu not only die, but they are removed from everyone's memories. Everyone dies eventually, but those eaten by Kaibutsu aren't even allowed to be remembered. "Is there a way for me to leave some living proof...." Even today, he clasps his bat and that idea looms over his thoughts.
+{% endcapture %}
+
+{% include hero-infobox.html stockId=10011 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 Akashi is born and raised in Orient City, a native Earthling. Full name's Tamamura Akashi.
