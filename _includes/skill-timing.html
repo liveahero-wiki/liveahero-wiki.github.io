@@ -1,22 +1,22 @@
 {% case include.timing %}
 {% when 0 %}
-base skill
+Base skill
 {% when 1 %}
-when appearing
+When appearing
 {% when 2 %}
-action start
+Action start
 {% when 3 %}
-action end
-{% comment %}4, 5 , 6 (no skills with such timing){% endcomment %}
+Action end
+{% comment %}4, 5, 6 (no skills with such timing){% endcomment %}
 {% when 7 %}
-when attack causes target's HP goes below 50%
+After own cloth-tearing attack
 {% when 8 %}
-when taking damage
+When taking damage
 {% comment %}9 (no skills with such timing){% endcomment %}
 {% when 10 %}
-permanent effect
+Permanent effect
 {% when 11 %}
-battle win
+Battle win
 {% else %}
-unknown timing ({{ include.timing }})
+Unknown timing ({{ include.timing }})
 {% endcase %}
