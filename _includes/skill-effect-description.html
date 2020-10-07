@@ -25,13 +25,13 @@ Add {{ effect.parameter.value }} views
 {% when "ChangeAgi" %}
 SPD {% if effect.parameter.value >= 0 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value }} to {{ target }}
 {% when "RemoveBuff" %}
-Remove {{ effect.parameter.value }} buffs from {{ target }}
+Remove {{ effect.parameter.value }} buff{% if effect.parameter.value > 1 %}s{% endif %} from {{ target }}
 {% when "ComboPlus" %}
 Gain {{ effect.parameter.value }} combos
 {% when "ChangeSkillProve" %}
 Proc rate {% if effect.parameter.value >= 0 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value }} for {{ target }}
 {% when "MoreTurn" %} 
-Perform {{ effect.parameter.value }} more action(s)
+Perform {{ effect.parameter.value }} more action{% if effect.parameter.value > 1 %}s{% endif %}
 {% when "Heal" %}
 {% assign turnDefinition = "turn" %}
 Heal {{ target }} for {{ effect.parameter.value }}% of own ATK value
@@ -39,7 +39,7 @@ Heal {{ target }} for {{ effect.parameter.value }}% of own ATK value
 {% assign turnDefinition = "turn" %}
 Skill View cost {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x for {{ target }}
 {% when "Cure" %}
-Remove {{ effect.parameter.value }} debuff(s) from {{ target }}
+Remove {{ effect.parameter.value }} debuff{% if effect.parameter.value > 1 %}s{% endif %} from {{ target }}
 {% when "RegistDebuff" %}
 {{ effect.parameter.value }}% chance to resist a debuff for {{ target }}
 {% when "Provocation" %}
@@ -48,7 +48,7 @@ Give {{ target }} Taunt: opponents can target only {{ target }}
 {% when "HealthDamage" %}
 Deal {{ effect.parameter.value }}% -> {{ effect.parameter.value | times: 2 }}% damage to {{ target }} as HP goes from Max to 0
 {% when "DeleteTurn" %}
-Skip {{ effect.parameter.value }} enemy action(s)
+Skip {{ effect.parameter.value }} enemy action{% if effect.parameter.value > 1 %}s{% endif %}
 {% when "Silence" %}
 {% assign turnDefinition = "turn" %}
 {{ target }} cannot use view-costing skills
