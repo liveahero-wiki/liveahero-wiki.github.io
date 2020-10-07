@@ -18,7 +18,7 @@ As long as there is a black-and-white incident in front of him, he will continue
 
 {% endcapture %}
 
-{% include hero-infobox.html stockId=10261 BIO_H01=BIO_H01 %}
+{% include hero-infobox.html stockId=10261 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 A winged alien who runs a detective bureau.
