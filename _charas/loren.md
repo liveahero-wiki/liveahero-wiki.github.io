@@ -11,13 +11,13 @@ As the literal "Angel in a White Coat", he descends onto the battlefield. His he
 
 The wing-shaped parallel weapon is designed so that each feather turns into a healing tool as soon as you pick it up.
 
-He is mainly in charge of backup, picking up feathers, treating rescued civilians with the tools he's obtained, and attempting to recover his friends with the special tools he's obtained.
+He is mainly in charge of backup, using his feathers to treat the rescued civilians and attempting to recover his friends with the special tools he's obtained.
 {% endcapture %}
 
 {% capture BIO_H02 %}
 The city he lived in was severely damaged by the attacks of the Kaibutsu when he was a student.
 
-When he was trying to rescue injured people, a seriously injured person grabbed his hand and in gratitude told him "you're like an angel",so he decided to become a nurse.
+While trying to rescue the affected people, a seriously injured person grabbed his hand and in gratitude told him "you're like an angel",so he decided to become a nurse.
 
 Therefore, he has a strong determination and pride in continuing to be an "Angel in a White Coat."
 
