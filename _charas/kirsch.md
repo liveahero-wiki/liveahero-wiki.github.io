@@ -12,9 +12,9 @@ Her confections, created using her parallel weapon abilities, have the effect of
 {% endcapture %}
 
 {% capture BIO_H02 %}
-She is unconventional in many respects, but her wish is also unconventional: to risk her life as a pâtissier to recreate the phantom sweet.
-She will continue to be a fighting pâtissier until the day comes when she can recreate the "phantom sweets" that her master once met at the edge of the galaxy and created in his recipe after a near-death experience.
-By the way, the best thing that makes her happy is when people say that her sweets are delicious.
+She is unconventional in many respects, but her wish is also unconventional: to risk her life as a pâtissier to recreate the ultimate confection.
+She will continue to be a fighting pâtissier until the day comes when she can recreate the "ultimate confection" that her master once met at the edge of the galaxy and wrote in his recipe after a near-death experience.
+By the way, what makes her happiest is when people say that her sweets are delicious.
 {% endcapture %}
 
 {% include hero-infobox.html stockId=10281 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
