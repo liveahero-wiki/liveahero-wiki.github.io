@@ -6,7 +6,25 @@ illustrator: "Plusno Konbu (ぷらす野 昆布)"
 voice_actor: "Yoshihito Oonami (大浪嘉仁)"
 ---
 
-{% include hero-infobox.html stockId=10211 %}
+{% capture BIO_H01 %}
+As the literal "Angel in a White Coat", he descends onto the battlefield. His hero code name is "Praeger L".
+
+The wing-shaped parallel weapon is designed so that each feather turns into a healing tool as soon as you pick it up.
+
+He is mainly in charge of backup, picking up feathers, treating rescued civilians with the tools he's obtained, and attempting to recover his friends with the special tools he's obtained.
+{% endcapture %}
+
+{% capture BIO_H02 %}
+The city he lived in was severely damaged by the attacks of the Kaibutsu when he was a student.
+
+When he was trying to rescue injured people, a seriously injured person grabbed his hand and in gratitude told him "you're like an angel",so he decided to become a nurse.
+
+Therefore, he has a strong determination and pride in continuing to be an "Angel in a White Coat."
+
+As long as the object to be saved continues to exist in this world, he will continue to flap his wings to save lives.
+{% endcapture %}
+
+{% include hero-infobox.html stockId=10211 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 A Nurse Working at a general hospital in the lunar capital.
