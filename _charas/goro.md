@@ -14,7 +14,7 @@ He transforms into a hero that can show off his best performance as a carpenter.
 In his home town, he was raising a family and living a normal life as a carpenter, when one day a giant monster attacked, bringing disaster and seperating him from his family before drifting ashore to Muirauqa IV.  This is when he started drinking daily, and it's also when he began his dream of building a house that could resist even a monsters attack.  Consequently, when he sees two lovers or two family members get seperated, he loses his composure, even if they're strangers to him. 
 {% endcapture %}
 
-{% include hero-infobox.html stockId=10011 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+{% include hero-infobox.html stockId=10231 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 He is a diligent man who works as a shipwright in charge of repairs and onboard construction in a shipboard city in the ocean planet of Muirauqa IV. Originating from a different planet, he eventually arrived to Muirauqa IV after wandering.
