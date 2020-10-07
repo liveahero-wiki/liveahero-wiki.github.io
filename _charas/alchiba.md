@@ -15,7 +15,6 @@ His Parallel weapon, the monocle, has the ability to scan all the information hi
 He was a police officer in the national police, but he was falsely accused of uncovering the secrets that would reveal a large corruption.
 Since then, he has been deeply distrustful of the police organization and has become obsessed with "black and white".
 As long as there is a black-and-white incident in front of him, he will continue to be a detective and hero.
-
 {% endcapture %}
 
 {% include hero-infobox.html stockId=10261 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
