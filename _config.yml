@@ -10,6 +10,7 @@ sass:
 plugins:
   #- jekyll-feed
   - jekyll-redirect-from
+  - jekyll-sitemap
   - jemoji
 defaults:
   - scope:
@@ -24,6 +25,10 @@ defaults:
       path: "assets/img/fg"
     values:
       fg: true
+  - scope:
+      path: "assets"
+    values:
+      sitemap: false
 
 collections:
   charas:
