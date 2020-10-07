@@ -25,7 +25,7 @@ Add {{ effect.parameter.value }} views
 {% when "ChangeAgi" %}
 SPD {% if effect.parameter.value >= 0 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value }} to {{ target }}
 {% when "RemoveBuff" %}
-Remove {{ effect.parameter.value }} buff{% if effect.parameter.value > 1 %}s{% endif %} from {{ target }}
+Remove {% if effect.parameter.value >= 99 %}all{% else %}{{ effect.parameter.value }}{% endif %} buff{% if effect.parameter.value > 1 %}s{% endif %} from {{ target }}
 {% when "ComboPlus" %}
 Gain {{ effect.parameter.value }} combos
 {% when "ChangeSkillProve" %}
@@ -39,7 +39,7 @@ Heal {{ target }} for {{ effect.parameter.value }}% of own ATK value
 {% assign turnDefinition = "turn" %}
 Skill View cost {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x for {{ target }}
 {% when "Cure" %}
-Remove {{ effect.parameter.value }} debuff{% if effect.parameter.value > 1 %}s{% endif %} from {{ target }}
+Remove {% if effect.parameter.value >= 99 %}all{% else %}{{ effect.parameter.value }}{% endif %} debuff{% if effect.parameter.value > 1 %}s{% endif %} from {{ target }}
 {% when "RegistDebuff" %}
 {{ effect.parameter.value }}% chance to resist a debuff for {{ target }}
 {% when "Provocation" %}
@@ -93,5 +93,5 @@ Apply Damage Aggregation status to {{ target }}: {{ target }} takes all damage d
 {% else %}
 Unknown effect class ({{ effect.class }})
 {% endcase %}
-{% if skillEffectJson.persistence == true %}permanently{% else %}{% if skillEffectJson.turn != 0 %}for {{ skillEffectJson.turn }} {{ turnDefinition | strip }}(s){% endif %}{% endif %}
+{% if skillEffectJson.persistence == true %}permanently{% else %}{% if skillEffectJson.turn != 0 %}for {{ skillEffectJson.turn }} {{ turnDefinition | strip }}{% if skillEffectJson.turn > 1 %}s{% endif %}{% endif %}{% endif %}
 {% endfor %}
