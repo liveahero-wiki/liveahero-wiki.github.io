@@ -7,7 +7,7 @@ voice_actor: "Jun Kasama (笠間淳"
 ---
 
 {% capture BIO_H01 %}
-Alchiba has the belief that "finding the truth in balck and white" is most important, so he dyes even his jet-black wings white, transforming him into a detective hero.
+Alchiba has the belief that "finding the truth in black and white" is most important, so he dyes even his jet-black wings white, transforming him into a detective hero.
 His Parallel weapon, the monocle, has the ability to scan all the information hidden by the subject and visualize it as a record, and by reading, analyzing and inferring the record, the enemy's features and weaknesses, even the truth of the incident that is occurring can come to light.
 {% endcapture %}
 
