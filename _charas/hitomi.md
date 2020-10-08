@@ -21,6 +21,9 @@ However, due to the genetic inheritance of her mother, an alien, she has acquire
 
 {% include voice-table.html resourceName="hitomi"
 APPRECIATION = ""
+HERO = "Sui-san's costume is so beautiful ...!  It's cool, but it's also cute!  I can't help but keep glancing at her..."
+PLAYER = "Let's do our best together, partner!  Giving it your all is essential for both operators and idols!  I can't slack off and get outdone! "
+TOUCH = "Hey, partner?!  That’s no good, alright?  Idols belong to everyone, so touching is strictly forbidden!"
 %}
 
 ## Notes:
