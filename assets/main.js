@@ -44,9 +44,10 @@ document.querySelectorAll(".skill-trigger").forEach(trigger => {
   trigger.textContent = "triggered when " + f.join(" and ");
 });
 function toggleTranslate(e) {
-  const tmp = this.textContent;
-  this.textContent = this.dataset.translate;
-  this.dataset.translate = tmp;
+  const tmp = this.dataset.translate;
+  if (tmp.length === 0) return;
+  this.dataset.translate = this.innerHTML;
+  this.innerHTML = tmp;
 }
 document.querySelectorAll(".translate").forEach(t => t.addEventListener('click', toggleTranslate));
 document.querySelectorAll(".accordion-button").forEach(a => {
