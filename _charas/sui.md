@@ -6,7 +6,15 @@ illustrator: "Shukou Akanaru (朱交赤成)"
 voice_actor: "Mariya Ise (伊瀬茉莉也)"
 ---
 
-{% include hero-infobox.html stockId=10031 %}
+{% capture BIO_H01 %}
+Wearing a costume that resembles the dress designed for her by her beloved mother, Sui transforms into a hero who fights with huge needles, threads, scissor parallel weapons. Sui's weapons can directly interfere with space, sewing objects in different spaces together, or conversely severing their connections. It is said that her technique is a beautiful sight to behold, as glittering threads are woven throughout the battlefield.
+{% endcapture %}
+
+{% capture BIO_H02 %}
+For Sui, who had a gap between her mind and body and felt distant from those around her, the existence of a mother who adored and accepted her as she is was very important. After her mother disappeared from this world, Sui lost her attachment to life as if a thread had snapped, and she wanted to disappear every day. What made Sui want to live again, and what made her want to leave proof of her existence in this world, was...
+{% endcapture %}
+
+{% include hero-infobox.html stockId=10031 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 An apprentice clothing designer from Orient City studying design under tutorship.
