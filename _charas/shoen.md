@@ -27,6 +27,10 @@ He has a habit of giving folded origami figures to the children he meets.
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10121 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="shoen"
+APPRECIATION = ""
+%}
+
 ## Notes
 
 "I am Shouen, someone who makes good use of letters and spreads them around... that's the kind of man I am."

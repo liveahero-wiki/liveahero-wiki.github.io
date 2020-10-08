@@ -31,6 +31,10 @@ After being taught by a senior doctor that "Being a surgeon is a trial of streng
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10201 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="rakta"
+APPRECIATION = ""
+%}
+
 ## Notes
 
 "I am Rakta, a physician. Now then, my client, shall we proceed? The rooting cancer cells of this world need to be incised, removed, and erased!"

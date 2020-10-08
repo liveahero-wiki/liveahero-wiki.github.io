@@ -18,6 +18,10 @@ He is interested in ancient civilizations from all sorts of planets, even the on
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10141 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="marfik"
+APPRECIATION = ""
+%}
+
 ## Notes:
 
 "I'm Professor Marfik, a researcher passionate for the ancient times. If you give me a hand with excavation here, I'll return the favor with your work. How's that sound?"

@@ -1,0 +1,12 @@
+{% assign whitelist = "APPRECIATION,DAILY,HERO,PLAYER,RELATION,TOUCH,TRAIN,TRAINED" | split: "," %}
+{% assign name = include.resourceName | upcase | prepend: "_" | append: "_" %}
+
+<h2>Voice Lines</h2>
+<table>
+{% for part in whitelist %}
+{% assign key = "SERIF" | append: name | append: part %}
+{% assign jp_line = site.data.processed.jp_serif[key] %}
+{% assign translated = include[part] %}
+<tr><th>{{ part }}</th><td class="translate" data-translate="{% if translated %}{{ jp_line | escape }}{% endif %}">{{ translated | default: jp_line }}</td></tr>
+{% endfor %}
+</table>

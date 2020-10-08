@@ -23,6 +23,10 @@ He has a tendency of being in the midst of big-sized tussles, so he is a man who
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10151 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="polaris"
+APPRECIATION = ""
+%}
+
 ## Notes
 
 "The brightest star of the northern sky is here! The one who will crush evil and guide the weak! That's right, for I am Polaris Mask! Lead me to the burning ring, Partner!"

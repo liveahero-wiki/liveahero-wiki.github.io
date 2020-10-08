@@ -33,6 +33,10 @@ Since she's a geek deeply interested in high tech, when she sees rare mechas or 
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10051 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="crowne"
+APPRECIATION = ""
+%}
+
 ## Notes
 
 "You're quite the promise, aren't ya? Well, it's not like I hate gutsy idiots like you. Ahaha, what's up with that face? That was a compliment!"

@@ -25,6 +25,10 @@ Kouki has risen as a first-class actor thanks to his talent as a performer, ackn
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10181 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="kouki"
+APPRECIATION = ""
+%}
+
 ## Notes
 
 "I'm Kouki Inukura, and this here is my buddy, Sirius! …huh? The camera isn't rolling? Eh, whatever. Make sure not to be a nuisance in the meantime, capeesh?"

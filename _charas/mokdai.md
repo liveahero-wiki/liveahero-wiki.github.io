@@ -28,6 +28,10 @@ Although his body is plump and looks soft, his bloodline carries an effect that 
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10021 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="mokdai"
+APPRECIATION = ""
+%}
+
 ## Notes
 
 "Oh, you came! The camera and the equipment are ready, so you're good to go. Now then, go out there and break a leg!"

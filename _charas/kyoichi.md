@@ -31,6 +31,10 @@ By the way, it seems like "Elementary students are the base he's supposed to def
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10101 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="kyoichi"
+APPRECIATION = ""
+%}
+
 ## Notes
 
 "Yo, great work out there! You're going to work today as well, right? I'll come with you! Though, let me just score this test first."

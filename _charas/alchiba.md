@@ -28,6 +28,10 @@ He tends to speak incessant bickering that could set anyone's teeth on edge. Nev
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10261 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="alchiba"
+APPRECIATION = ""
+%}
+
 ## Notes
 
 "I’m Alchiba, just a plain old private detective, no biggie. Glad to meet such a wonderful client as yourself. Now then, let’s settle things up. What’s your request?"

@@ -31,6 +31,10 @@ Claiming to be indifferent about anything unrelated to confectionery, both her w
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10281 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="kirsch"
+APPRECIATION = ""
+%}
+
 ## Notes
 
 "I'm Kirsch, a pastry chef! I will keep on fighting until I can master the recipe of that fantastic sweet that made my teacher gasp in delight...!"

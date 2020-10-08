@@ -23,6 +23,10 @@ Confident in his vigorous stamina and muscles, he recklessly gets into fights, p
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10221 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="isaribi"
+APPRECIATION = ""
+%}
+
 ## Notes:
 
 "Yo, chief! How you doin'!? What? Too loud? I always talk like this! Anyway, let's go fishin' already! I'm itchin' for it!"

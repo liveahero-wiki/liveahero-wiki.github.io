@@ -25,6 +25,10 @@ His voice is always loud.
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10041 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="ryekie"
+APPRECIATION = ""
+%}
+
 ## Notes
 
 "My name's Ryekie! And my other name is... Zap the Justice!! Now then, let us begin the legend of the hero of absolute justice!"

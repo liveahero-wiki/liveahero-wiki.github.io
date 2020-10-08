@@ -23,6 +23,10 @@ He is a lewd optimist with a sloppy personality, a heavy drinker, and an irrespo
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10231 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="goro"
+APPRECIATION = ""
+%}
+
 ## Notes
 
 "Hey, yer the backbone that keeps us all together, ya know. If ya weren't here, we wouldn't carry on and the scull'd reel. So come on now, puff up that chest."

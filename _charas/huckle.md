@@ -13,6 +13,10 @@ Even though he is an adult with an easygoing personality and a high sense of res
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10341 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="huckle"
+APPRECIATION = ""
+%}
+
 ## Notes:
 
 "Hey now, don't overdo yourself over work. An operator must be ready at all times, you know? If something happens, it's my job to back you up."

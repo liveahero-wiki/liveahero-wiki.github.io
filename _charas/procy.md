@@ -29,6 +29,10 @@ It seems like the bar's opening cost has him up to his neck in debt.
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10321 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="procy"
+APPRECIATION = ""
+%}
+
 ## Notes
 
 "Easy: You earn the viewers, you earn the cash. If you wanna get in the biz, you hafta remember that. Ah well, since it's you, you'll get the knack of it fast."

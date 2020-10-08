@@ -24,6 +24,10 @@ Usually shy and timid, he's a scaredy-cat that loves peace. However, when he tra
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10081 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="furlong"
+APPRECIATION = ""
+%}
+
 ## Notes
 
 "Ah... good work out there. If a fire breaks out, please leave it to me. I'm fine walking into the flames and such..."

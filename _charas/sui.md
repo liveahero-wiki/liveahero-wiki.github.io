@@ -29,6 +29,10 @@ They have been afflicted by the gap between their body and mind ever since child
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10031 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="sui"
+APPRECIATION = ""
+%}
+
 ## Notes
 
 "I'm Sui, a designer apprentice. If I can save people with my needlework, then... please, make use of it as you see fit."

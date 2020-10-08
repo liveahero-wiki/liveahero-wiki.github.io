@@ -25,6 +25,10 @@ He is a university student who attends the Hinowa University of Physical Educati
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10011 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="akashi"
+APPRECIATION = ""
+%}
+
 ## Notes
 
 "I'm Akashi, a college baseball player. I don't exactly look like a hero, but it's a part-time job. Looking forward to working with you!"

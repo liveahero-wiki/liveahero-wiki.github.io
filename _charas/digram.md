@@ -29,6 +29,10 @@ If he is given affection, he will meekly return the favor.
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10241 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="digram"
+APPRECIATION = ""
+%}
+
 ## Notes
 
 "I am exactly 34 seconds late, master. I apologize for not arriving to the meeting in time. In order to make up for the delay, let us make haste to our destination at once."

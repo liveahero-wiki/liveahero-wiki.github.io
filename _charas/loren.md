@@ -37,6 +37,10 @@ Despite this, he can also be useful in the hospital, since he is the only one wh
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10211 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="loren"
+APPRECIATION = ""
+%}
+
 ## Notes
 
 "Hello, how are you feeling? Health care is also the duty of those involved with heroes. Well then, let's do our best at work today!"

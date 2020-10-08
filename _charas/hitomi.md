@@ -19,6 +19,10 @@ However, due to the genetic inheritance of her mother, an alien, she has acquire
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10191 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="hitomi"
+APPRECIATION = ""
+%}
+
 ## Notes:
 
 "HIT☆ME with that gaze of yours! Hitomi Ayauta here! Pretty AND strong, that's Hitomi's motto! Let's do our best, Mr. Partner!"

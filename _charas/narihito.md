@@ -29,6 +29,10 @@ As a knowledgeable connoisseur, he experts at profiling information about heroes
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10291 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="narihito"
+APPRECIATION = ""
+%}
+
 ## Notes
 
 "Hey there, Mr. Operator! Would you let me interview you today? ...huh? You want me to fill in for you at your job? Good grief, aren't you a handful..."
