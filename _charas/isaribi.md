@@ -24,7 +24,11 @@ Confident in his vigorous stamina and muscles, he recklessly gets into fights, p
 {% include sidekick-infobox.html stockId=10221 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="isaribi"
-APPRECIATION = ""
+APPRECIATION = "Oh, what do you want to do, boss!  Are you tired?  At that time, it's best to eat and sleep!  Don't hesitate to take a good nap after eating  the prey I hauled in today!"
+DAILY = "Boss!  How're ya doing?  Ah?  Lower my voice?  I always talk like this!  Let's go fishing!  I'm bored of sittin around!"
+PLAYER = "Boss, you still got energy to burn? You are, so to speak, the captain of this ship and all. We need ya in top form!"
+RELATION = "Goro... well, we've known eachother a long time. That dipshit carpenter always turns up and I can't get rid of him. I guess... I don't hate him or nothin'."
+TOUCH = "Oh!  Boss, you have good eyes!  I see you  appreciate this well honed body trained in the fishing grounds.  I got rough skin, but touch as much as you like!  Gahaha!"
 %}
 
 ## Notes:
