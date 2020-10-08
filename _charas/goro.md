@@ -27,6 +27,17 @@ He is a lewd optimist with a sloppy personality, a heavy drinker, and an irrespo
 APPRECIATION = ""
 %}
 
+{% include voice-table.html resourceName="akashi"
+APPRECIATION = "Hey! You in good spirits?  What, not really?  <br>Livin' life carefree is the best thing to do.<br>If you do, somethin' good will happen eventually."
+DAILY =  Whoa...what, there's work to do?<br>Then I guess now's not a good to be drinkin'. Alright alright, I'm going.
+HERO = I may not look it, but I am a bookworm.  I know all about that sensei. <br>He has the power to change the flow of time, pretty amazin'.<br>If I could do that, I could change my...oh, are we out of liquor? 
+PLAYER = Hey, yer the backbone that keeps us all together, ya know. <br>If ya weren’t here, we wouldn’t carry on and the scull’d reel. <br>So come on now, puff up that chest.
+RELATION = I've known Isaribi for quite a long time, ya know. <br>I've known him ever since the day I came to this planet all beat up...<br>He's a good guy who will always go drinking with me.
+TOUCH = Whoa.  Hey, what's up?<br>So you want that kind of skinship, huh?<br> It's not my style to turn anyone down, so feel free.
+TRAIN = It's just a bit of training.  So c'mon, hang out with me.
+TRAINED = Guh...my head is still ringing...
+%}
+
 ## Notes
 
 "Hey, yer the backbone that keeps us all together, ya know. If ya weren't here, we wouldn't carry on and the scull'd reel. So come on now, puff up that chest."
