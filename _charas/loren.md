@@ -7,7 +7,7 @@ voice_actor: "Yoshihito Oonami (大浪嘉仁)"
 ---
 
 {% capture BIO_H01 %}
-As the literal "Angel in a White Coat", he descends onto the battlefield. His hero code name is "Praeger L".
+As the literal "Angel in White", he descends onto the battlefield. His hero code name is "Praeger L".
 
 The wing-shaped parallel weapon is designed so that each feather turns into a healing tool as soon as you pick it up.
 
@@ -19,7 +19,7 @@ The city he lived in was severely damaged by the attacks of the Kaibutsu when he
 
 While trying to rescue the affected people, a seriously injured person grabbed his hand and in gratitude told him "you're like an angel",so he decided to become a nurse.
 
-Therefore, he has a strong determination and pride in continuing to be an "Angel in a White Coat."
+Therefore, he has a strong determination and pride in continuing to be an "Angel in White".
 
 As long as the object to be saved continues to exist in this world, he will continue to flap his wings to save lives.
 {% endcapture %}
