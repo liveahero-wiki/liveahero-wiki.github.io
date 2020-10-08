@@ -69,7 +69,7 @@ View-costing skills for {{ target }} now target all allies/enemies
 {% when "MultipleHp" %}
 HP Up by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "StatusNumberMultipleAttack" %}
-ATK Up by {{ effect.parameter.value }}% to {{ target }} for each {% if effect.parameter.isGoodStatus == 1 %}buff{% else %}debuff{% endif %}
+ATK Up by {{ effect.parameter.value }}% to {{ target }} for each {% if effect.parameter.isGoodStatus == true %}buff{% else %}debuff{% endif %}
 {% when "NeedViewValueChange" %}
 {% assign turnDefinition = "turn" %}
 Change skill view cost by {{ effect.parameter.value }} for {{ target }}
@@ -80,7 +80,7 @@ Deal {{ effect.parameter.value }}% -> {{ effect.parameter.value | times:2 }}% of
 {% when "SpdDeferenceDamage" %}
 Deal {{ effect.parameter.value }}% of damage to {{ target }} + extra {{ effect.parameter.spdMult | times:0.18 }}% damage for each point of advantage in speed with target
 {% when "StatusNumDamage" %}
-Deal {{ effect.parameter.value }}% of damage to {{ target }} and {{ effect.parameter.statusMult }}% extra for each {{ target }}'s {% if effect.parameter.isGoodStatus == 1 %}buff{% else %}debuff{% endif %}
+Deal {{ effect.parameter.value }}% of damage to {{ target }} and {{ effect.parameter.statusMult }}% extra for each {{ target }}'s {% if effect.parameter.isGoodStatus == true %}buff{% else %}debuff{% endif %}
 {% when "SalesBonusCheat" %}
 Ignore business bonus conditions (?)
 {% when "IncreaseLAH" %}
