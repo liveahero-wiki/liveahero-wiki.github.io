@@ -23,6 +23,9 @@ APPRECIATION = ""
 PLAYER = "Looking at you reminds me of my youth. I was desperately hitting anything. Such good times... Eh, I haven't changed much even now? Really!?"
 TOUCH = "Haha! How is it? This old man's got a good body doesn't he? These muscles are proof of being a true adventurer!"
 TRAINED = "Why you...! Be more attentive to the elderly!"
+TRAIN = "You think I'm just an old man?! Don't underestimate me!"
+DAILY = "Yo, young captain. How do you feel about going on an adventure with this old man? W-Wha-? Your job comes first?... I-...I know..."
+HERO =  "A child of a non-human, born of a mechanical star. What kind of history and technology gave birth to that child? It's pretty interesting..."
 %}
 
 ## Notes:
