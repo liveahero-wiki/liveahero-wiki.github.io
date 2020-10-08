@@ -33,6 +33,9 @@ After being taught by a senior doctor that "Being a surgeon is a trial of streng
 
 {% include voice-table.html resourceName="rakta"
 APPRECIATION = ""
+DAILY = "Everyone is a novice at first.  You just have to get used to the work little by little.  I needed some encouragement as well, when I performed my first operation."
+HERO = "Loren is a very reliable nurse.  Despite some... peculiarities. But at the site, he can take care of himself.  That's the kind of man I need in both lines of work."
+TOUCH = "Hmm?  Are you interested in my body?  Yes, I am quite proud of this healthy body trained at the sports gym five times a week.  Come on!"
 %}
 
 ## Notes

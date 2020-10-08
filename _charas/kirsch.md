@@ -32,7 +32,8 @@ Claiming to be indifferent about anything unrelated to confectionery, both her w
 {% include sidekick-infobox.html stockId=10281 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="kirsch"
-APPRECIATION = ""
+APPRECIATION = "Thank you for your hard work, leader!  Would you like to have a break and eat some cake?  Ehe ... I want you to taste this new one I came up with."
+DAILY = "Hello there, leader! The journey on the road of confectionery starts with a single step.  Come on, let's get training ... let's do our best!"
 %}
 
 ## Notes

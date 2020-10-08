@@ -25,7 +25,11 @@ Usually shy and timid, he's a scaredy-cat that loves peace. However, when he tra
 {% include sidekick-infobox.html stockId=10081 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="furlong"
-APPRECIATION = ""
+APPRECIATION = "Um... are you okay?  No, I just thought you looked...tired? Well... don't overdo it...?"
+DAILY = "Ah ... Thank you for your hard work.  If it's a hot area, leave it to me.  I'm fine in the flames..."
+HERO = "Superhero Zap the Justice.  He's so cool, so righteous, so brave.  He was my role model way back before I became a hero."
+PLAYER = "Yaknow, I've heard our seniors in the hero biz only have those brave figures they have now after overcoming various challenges! Hey, let's do our best together too!"
+TOUCH = "Woah??  Oh, you surprised me...!  Ah ... isn't my body hot ...?  My body temperature is quite high compared to your kind, doesn't doing that burn ...?"
 %}
 
 ## Notes

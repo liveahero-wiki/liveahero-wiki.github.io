@@ -27,6 +27,7 @@ He is a university student who attends the Hinowa University of Physical Educati
 
 {% include voice-table.html resourceName="akashi"
 APPRECIATION = ""
+TOUCH = "Gyaah~! W-what's your deal, you haven't changed at all since we were kids... da-haha-mnit, I'm ticklish there, hahaha!"
 %}
 
 ## Notes
