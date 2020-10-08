@@ -29,7 +29,14 @@ Although his body is plump and looks soft, his bloodline carries an effect that 
 {% include sidekick-infobox.html stockId=10021 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="mokdai"
-APPRECIATION = ""
+APPRECIATION = "Good work today. It looks like you could use a break. Alright, since I'm the senpai, I'll pay for lunch! Feel free to ask for whatever you like!"
+DAILY = "Oh, you came! The camera and the equipment are ready, so you’re good to go. Now then, go out there and break a leg!"
+HERO = "Survive Taker, he's sooo cool! That mask is just like the retro  tokusatsu heroes.  And his weapon...! Ah, I almost got carried away, huh. Do you mind chatting about it?"
+PLAYER = "Well?  Have you gotten used to work yet?  If you have any problems, you can always come to me. I'm your reliable senpai, after all!  Heehee."
+RELATION = "Akashi sure can be an amazing hero when he puts his mind to it. He loses his nerve sometimes, but I think he might really be a natural at this, you know?"
+TOUCH = "Eh?! Wha-wha-what, what are you grabbing at?! ...Eh? not as soft as you imagined? E-even if you say that…"
+TRAIN = "Alright! I'm raring to go!"
+TRAINED = "Awawawa~! Stop, stop! This is impossible~!"
 %}
 
 ## Notes
