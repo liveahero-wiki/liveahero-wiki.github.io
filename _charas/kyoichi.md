@@ -32,7 +32,9 @@ By the way, it seems like "Elementary students are the base he's supposed to def
 {% include sidekick-infobox.html stockId=10101 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="kyoichi"
-APPRECIATION = ""
+APPRECIATION = "Hey, hey, you're throwing a little too soft. I'm not a kid, so think about how to appropriately distribute your physical strength.  The body is the capital of both teachers and operators, right?"
+DAILY = "Yeah, good work today!   I'll go out with you in a bit. Before that, let me just finish up scoring these tests."
+RELATION = "Akashi's the most promising among the juniors by a mile. Once he's refined his technique and got some experience under his belt he's gonna go far... ha, he is going far... why's he running away?!?!"
 %}
 
 ## Notes
