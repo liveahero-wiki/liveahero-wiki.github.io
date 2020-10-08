@@ -20,6 +20,9 @@ He is interested in ancient civilizations from all sorts of planets, even the on
 
 {% include voice-table.html resourceName="marfik"
 APPRECIATION = ""
+PLAYER = Looking at you reminds me of my youth. I was desperately hitting anything. Such good times... Eh, I haven't changed much even now? Really!?
+TOUCH = Haha! How is it? This old man's got a good body doesn't he? These muscles are proof of being a true adventurer!
+TRAINED = You ...! Be more attentive to the elderly!
 %}
 
 ## Notes:
