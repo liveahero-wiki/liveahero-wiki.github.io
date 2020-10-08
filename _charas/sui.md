@@ -31,6 +31,9 @@ They have been afflicted by the gap between their body and mind ever since child
 
 {% include voice-table.html resourceName="sui"
 APPRECIATION = ""
+DAILY = "How am I holding up?  Right...  Well, I'm doing my best... I guess?  It feels like we both still have a long way to go."
+HERO = "That idol's clothes are nice.  So cutesy and fluffy and dazzling. To be honest... I'm a little envious."
+TOUCH = "W, wait just a second! What are you thinking!  Just hugging out of the blue like that... hyaah?!"
 %}
 
 ## Notes
