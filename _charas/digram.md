@@ -31,6 +31,7 @@ If he is given affection, he will meekly return the favor.
 
 {% include voice-table.html resourceName="digram"
 APPRECIATION = ""
+TOUCH = "Physical contact with this machine, is there any meaning in such a thing? Maybe this is just something a machine like myself can't comprehend. Though, I do feel the warmth of your hand..."
 %}
 
 ## Notes
