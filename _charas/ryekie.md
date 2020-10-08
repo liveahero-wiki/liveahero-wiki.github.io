@@ -26,7 +26,12 @@ His voice is always loud.
 {% include sidekick-infobox.html stockId=10041 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="ryekie"
-APPRECIATION = ""
+APPRECIATION = "Hahaha! Good work today! Your hard work in supporting is just as vital!  In other words, you are our hero!"
+DAILY = "Let's go!  Good morning, partner!  This body tempered by business and muscle training!  I'll use it to fight for justice today too!"
+HERO = "Victory or defeat don't matter to him, that Procy is all about money! For him, the game is determined by his profit margin! Money is the Justice he believes in, nobody can deny that!"
+PLAYER = "Wahaha!, Don't worry too much, Partner!  Even Huckle was very nervous at first!  You just have to get used to it little by little, that's it!"
+TOUCH = "Oh?! Do you want a hug, Partner? Then.... JUSTICE HUUUUG!! Haha, how was that... oh! Did I zap you?!"
+RELATION = "Huckle has always been my dearest friend! Back when he was a hero, no, even now, he's always lived up to the faith I had in him! That's why he's the man I look up to!"
 %}
 
 ## Notes
