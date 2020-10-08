@@ -9,7 +9,11 @@ voice_actor: "Otomo Ryosaburo (大友龍三郎)"
 Marfik transforms into a hero by dressing up with an adventurer-like appearance while handling two types of parallel weapons, a pickaxe and a rope. When he hits the ground with his pickaxe, he has the ability to evoke the "memory of the stars" that sleep deep within the stratum of the earth, and the rope can pull out the energy that embodies that memory and use it for attacks. However, he can only keep this power for a short time, usually just a few minutes.
 {% endcapture %}
 
-{% include hero-infobox.html stockId=10141 BIO_H01=BIO_H01 %}
+{% capture BIO_H02 %}
+The supreme theory of life in Marfik's mind is, who has an immense curiosity for such things, is "to know the mystery of space life". He wishes to leave himself to the spirit of inquiry, to go where he wants to go, to do what he wants to do, and to know what he wants to know. Because of that, he always ends up breaking up with the partners he loves. If such an existence that occupies his unyielding obsession appears, it will be an existence full of mystery.
+{% endcapture %}
+
+{% include hero-infobox.html stockId=10141 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 Archeologist enrolled in university, and an adventure-lover for as long as he remembers. An Earthling from Indianapolis, USA. Having vitality and toughness far from any ordinary person, he's a mischievous man in the prime of his life, who possesses both the composure and thinking power of a scholar, and the curiosity of a child.
