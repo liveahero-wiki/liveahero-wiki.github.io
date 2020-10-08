@@ -28,7 +28,10 @@ He has a habit of giving folded origami figures to the children he meets.
 {% include sidekick-infobox.html stockId=10121 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="shoen"
-APPRECIATION = ""
+APPRECIATION = "It's important to keep your mind calm.  You must alway find time to attend to your own needs... Do you want to fold origami together?  It always puts my heart at ease."
+DAILY = "... I was just folding origami.  Well, if it is time to get to work... I am ready."
+RELATION = "Toshu is different alien species than I, but our hearts share the same fondness for Japanese culture.  This is a secret, but if you give him sweets made from red bean paste he will be greatly pleased."
+TOUCH = "Mmm ... you want to touch my belly ...?  Is this... what is known as skinship?  Hmm ... I see ..."
 %}
 
 ## Notes
