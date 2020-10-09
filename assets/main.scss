@@ -358,3 +358,68 @@ $elementColor: #f07d75, #4e8ddf, #5fcb58, #ffb251, #9c76db;
   display: none;
   overflow: hidden;
 }
+// Chara list page
+.card-list {
+  padding: 10px;
+}
+.card-list li {
+  display: block;
+  list-style: none;
+  float: left;
+  border: 1px solid black;
+  width: 140px;
+}
+.card-list a {
+  display: block;
+  padding: 5px;
+  text-align: center;
+}
+.hero-icon, .sidekick-icon {
+  width: 128px;
+  height: 128px;
+  margin: calc((140px - 128px)/2);
+}
+.hero-icon {
+  position: relative;
+}
+.hero-icon .border {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: calc(128/125*100%);
+}
+.hero-chara-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 8px;
+}
+.hero-3 {
+  background-image: url(/assets/img/icon/ui_frame_h_01.png);
+}
+.hero-4 {
+  background-image: url(/assets/img/icon/ui_frame_h_02.png);
+}
+.hero-5 {
+  background-image: url(/assets/img/icon/ui_frame_h_03.png);
+}
+.hero-6 {
+  background-image: url(/assets/img/icon/ui_frame_h_04.png);
+}
+.sidekick-icon img {
+  -webkit-mask-image: url(/assets/img/icon/ui_frame_s_base_mask.png);
+  mask-image: url(/assets/img/icon/ui_frame_s_base_mask.png);
+}
+.sidekick-3 {
+  background-image: url(/assets/img/icon/ui_frame_s_base_01.png);
+}
+.sidekick-4 {
+  background-image: url(/assets/img/icon/ui_frame_s_base_02.png);
+}

@@ -4,6 +4,7 @@ jp_name: "ポラリスマスク"
 occupation: "Professional Wrestler (プロレスラー)"
 illustrator: GomTang
 voice_actor: "Miyake Kenta (三宅健太)"
+permalink: /charas/polaris_mask/
 ---
 {% capture BIO_H02 %}
 His special Move is "Fighting Spirit - Polaris Buster". In a gravitational field that is completely different from the earth, such as high gravity and low gravity, he uses a deadly flying technique against the enemy by maximizing his strength and fighting ability. Even under high gravity, where his body is likely to be crushed, he laughs invincibly while flexing his muscles, and shows off the best extreme battle that the audience wants to see. All to prepare for his dream of "confrontation with the strongest man in the universe".

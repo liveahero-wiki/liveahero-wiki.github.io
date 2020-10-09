@@ -4,6 +4,7 @@ jp_name: "コウキ＆シリウス"
 occupation: "Child actor - Entertainer & Dog entertainer"
 illustrator: "steelwire (steelwire/鉄線)"
 voice_actor: "Yumiko Kobayashi (小林由美子)"
+permalink: /charas/kouki_and_sirius/
 ---
 
 {% capture BIO_H01 %}
