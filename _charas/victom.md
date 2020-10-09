@@ -27,6 +27,10 @@ Even though he believes that all lives are precious, there is a side of him that
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10091 BIO_S01=BIO_S01 %}
 
+{% include voice-table.html resourceName="victom"
+APPRECIATION = ""
+%}
+
 ## Notes
 
 "Ah, you're here. Now then, what kind of mission shall we face today? Rest assured, I won't die easy out there."
