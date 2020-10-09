@@ -33,6 +33,7 @@ If he is given affection, he will meekly return the favor.
 APPRECIATION = "…The body of organic lifeforms are said to lose performance when exhausted, Master… Please take an early rest."
 DAILY = "You are 34 seconds late, Master.  It will be trouble if we don't arrive on time.  Let's go to the site immediately to recover from this delay."
 TOUCH = "Physical contact with this machine, is there any meaning in such a thing? Maybe this is just something a machine like myself can't comprehend. Though, I do feel the warmth of your hand..."
+HERO = "Why does mechanical life seek an organic body? I question that a lot. However... for what reason are my emotions shaken when this person gets into battle?"
 RELATION = "Proper maintenance is essential for on-time performance of ships.  This machine respects that woman's mechanical aptitude."
 %}
 
