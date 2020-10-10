@@ -26,8 +26,14 @@ He is a university student who attends the Hinowa University of Physical Educati
 {% include sidekick-infobox.html stockId=10011 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="akashi"
-APPRECIATION = ""
-TOUCH = "Gyaah~! W-what's your deal, you haven't changed at all since we were kids... da-haha-mnit, I'm ticklish there, hahaha!"
+APPRECIATION = "Hmm? You're pretty tired, aren't you?<br>let's go eat something then!<br>Eat and sleep, that's the best way to recover."
+DAILY = "Yo, what is today's job? <br> I have club activities later but I will work hard today."
+HERO = "Zap the Justice is really amazing<br>That's what a real hero is…huh<br>I-It's not like I admire him!?"
+PLAYER = "It's embarrassing to praise your childhood friend, but...<br>Well, you're doing a great job, aren't you? <br>it feels like I can rely on you."
+RELATION = "Really, that sui is not honest with their feelings.<br>Forcing themselves to be an adult even though they're still a kid<br>..I'm not that old either? S-shut up!"
+TOUCH = "Gyaah~! W-what's your deal, you haven't changed at all since we were kids...<br>da-haha-mnit, I'm ticklish there, hahaha!"
+TRAIN = "It's a light warm-up, properly receive it okay?"
+TRAINED = "Guu..! T-take it easy on me…"
 %}
 
 ## Notes
