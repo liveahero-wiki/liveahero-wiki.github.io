@@ -607,7 +607,7 @@
         }
       ],
       "filename": "status_superagidown",
-      "statusId": 13,
+      "statusId": 29,
       "canDispel": true,
       "description": "超SPDダウン",
       "isImmediate": false,
@@ -5327,6 +5327,28 @@
       "description": "150%ダメージ+コンボ数に応じてダメージ量が上昇",
       "isImmediate": true,
       "persistence": false,
+      "canDuplicate": false
+    }
+  },
+  "245": {
+    "skillEffectId": 245,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "DamageLimit",
+          "parameter": {
+            "value": 20000
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 27,
+      "canDispel": false,
+      "description": "ダメージ上限20000",
+      "isImmediate": false,
+      "persistence": true,
       "canDuplicate": false
     }
   }

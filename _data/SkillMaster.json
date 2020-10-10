@@ -8322,5 +8322,148 @@
         "effectTarget": 0
       }
     ]
+  },
+  "4046104": {
+    "skillId": 4046104,
+    "skillName": "オールレンジビーム",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffAll",
+    "timing": 0,
+    "description": "敵全体に140%ダメージ。60%の確率で2ターンの間火傷を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuAdult_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 117,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 2,
+        "prob": 60,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "4046105": {
+    "skillId": 4046105,
+    "skillName": "固い爪",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。自身に3ターンの間DEFアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuAdult_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 70,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "4046106": {
+    "skillId": 4046106,
+    "skillName": "View捕食",
+    "useView": 5000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "自身のHPを基礎ATKの100%回復する。1ターンの間SPDアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuAdult_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 50,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "4046107": {
+    "skillId": 4046107,
+    "skillName": "View捕食+",
+    "useView": 5000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_cureOwn",
+    "timing": 0,
+    "description": "自身のHPを基礎ATKの100%回復する。デバフを全て解除。1ターンの間SPDアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuAdult_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 50,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 209,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "6000001": {
+    "skillId": 6000001,
+    "skillName": "ダメージ制限20000",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "相手から受けるダメージの上限を20000にする。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 245,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
   }
 }
