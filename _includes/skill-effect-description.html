@@ -90,6 +90,8 @@ Gain {{ effect.parameter.value }}% extra XP
 {% when "Aggregation" %}
 {% assign turnDefinition = "turn" %}
 Apply Damage Aggregation status to {{ target }}: {{ target }} takes all damage done to their team.
+{% when "DamageLimit" %}
+Enemy hits cannot deal over {{ effect.parameter.value }} damage to {{ target }}
 {% else %}
 Unknown effect class ({{ effect.class }})
 {% endcase %}
