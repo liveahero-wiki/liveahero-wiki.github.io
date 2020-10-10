@@ -84,16 +84,15 @@
         {% assign startLevel = 1 %}
         {% for cardInfo in cardInfos %}
         {% assign maxLevel = cardInfo.rarity | times: 10 %}
+        {% for growth in cardInfo.growths %}
+        {% if growth.level >= startLevel %}
+        {% if growth.level > maxLevel %}{% break %}{% endif %}
+        {% assign startLevel = growth.level %}
         <tr>
-            <td>{{ cardInfo.rarity }} ☆</td>
-            {% for growth in cardInfo.growths %}
-            {% if growth.level >= startLevel %}
-            {% if growth.level > maxLevel %}{% break %} {% endif %}
-            {% assign startLevel = growth.level %}
-            <td>{{ growth.level }}</td><td>{{ growth.hp }}</td><td>{{ growth.attack }}</td><td>{{ growth.agility }}</td><td>{{ growth.addView }}</td>
-            {% endif %}
-            {% endfor %}
+            <td>{{ cardInfo.rarity }} ☆</td><td>{{ growth.level }}</td><td>{{ growth.hp }}</td><td>{{ growth.attack }}</td><td>{{ growth.agility }}</td><td>{{ growth.addView }}</td>
         </tr>
+        {% endif %}
+        {% endfor %}
         {% endfor %}
     </table>
 </div>
