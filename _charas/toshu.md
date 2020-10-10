@@ -28,6 +28,8 @@ HERO = "That assistant teacher is immature in both skill and personality.  Howev
 PLAYER = "…I can see some promise in you, however immature.  In order to fulfill that potential, it is essential to have a permanent battlefield attitude… This is an observation, not advice!  Don't get me wrong!"
 RELATION = "Typically one should take close care with the elderly, but it is rare for an old man to be spry as Marfik.  That old man ... Is he really an earthling?"
 TOUCH = "Ngh..!! Damn you...! Don't stroke my mane as you please! I didn't grow it to be your stress relief!"
+TRAIN = "Let's go! Today is the time to hone the skills of a warrior!"
+TRAINED = "Ugh! You're barbaric!"
 %}
 
 ## Notes
