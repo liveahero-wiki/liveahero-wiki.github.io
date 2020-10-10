@@ -75,7 +75,29 @@
 {% endunless %}
 {% endfor %}
 <h2>Stats</h2>
-{% for cardInfo in cardInfos %}
+    
+<div class="hero3">
+    <table>
+        <tr>
+            <th>Rarity</th><th>Level</th><th>HP</th><th>ATK</th><th>SPD</th><th>View</th>
+        </tr>
+        {% assign startLevel = 1 %}
+        {% for cardInfo in cardInfos %}
+        {% assign maxLevel = cardInfo.rarity | times: 10 %}
+        <tr>
+            <td>{{ cardInfo.rarity }} ☆</td>
+            {% for growth in cardInfo.growths %}
+            {% if growth.level >= startLevel %}
+            {% if growth.level > maxLevel %}{% break %} {% endif %}
+            {% assign startLevel = growth.level %}
+            <td>{{ growth.level }}</td><td>{{ growth.hp }}</td><td>{{ growth.attack }}</td><td>{{ growth.agility }}</td><td>{{ growth.addView }}</td>
+            {% endif %}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<!--{% for cardInfo in cardInfos %}
 <div class="hero{{ cardInfo.rarity }}">
     <h3>{{ cardInfo.rarity }} ☆</h3>
     <table>
@@ -91,7 +113,7 @@
         {% endfor %}
     </table>
 </div>
-{% endfor %}
+{% endfor %}-->
 
 <h2>Skills</h2>
 
