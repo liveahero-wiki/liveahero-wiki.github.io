@@ -87,10 +87,10 @@
         {% for growth in cardInfo.growths %}
         {% if growth.level >= startLevel %}
         {% if growth.level > maxLevel %}{% break %}{% endif %}
-        {% assign startLevel = growth.level %}
-        <tr>
+        {% if startLevel == growth.level %}<tr style="border-top-style: solid; border-width: 3px;">{% else %}<tr>{% endif %}
             <td>{{ cardInfo.rarity }} ☆</td><td>{{ growth.level }}</td><td>{{ growth.hp }}</td><td>{{ growth.attack }}</td><td>{{ growth.agility }}</td><td>{{ growth.addView }}</td>
         </tr>
+        {% assign startLevel = growth.level %}
         {% endif %}
         {% endfor %}
         {% endfor %}
