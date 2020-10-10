@@ -16,7 +16,7 @@ Deal {{ effect.parameter.value }}% of damage to {{ target }}
 {% when "MultipleAttack" %}
 ATK {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "MultipleBaseView" %}
-Base View {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
+Base View {% if effect.parameter.value > 0 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value | plus: 100 | divided_by: 100.0 }}x to {{ target }}
 {% when "ChangeView" %}
 Add {{ effect.parameter.value }} views
 {% when "MultipleDefence" %}
