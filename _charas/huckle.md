@@ -19,7 +19,7 @@ His physique and good judgment on the battlefield can be attributed to this back
 
 {% include voice-table.html resourceName="huckle"
 APPRECIATION = "Oh, it looks like you're tired. <br>Well, that's it for today.<br>I know a great place, how about we go together?"
-DAILY = "Hey, good job.<br>There's a lot of work coming in today.<br>Go ahead and do the one you prefer to do."
+DAILY = "Hey, There's a lot of work coming in today.<br>Go ahead and do the one you prefer to do."
 HERO = "I have faith in that guy as a hero.<br>That single-minded commitment to justice that makes him who he is.<br>It's never going to be something that anyone can copy, is it?"
 PLAYER = "Well, don't get too worked up about it.<br>Operators need to be poised.<br>It's my job to cover for you if something goes wrong."
 RELATION = "That waiter who works at Procy's bar.<br>I can't wait to see what kind of hero he'll grow up to be.<br>Well, I'm the one who awakened him after all."
