@@ -32,8 +32,14 @@ Claiming to be indifferent about anything unrelated to confectionery, both her w
 {% include sidekick-infobox.html stockId=10281 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="kirsch"
-APPRECIATION = "Thank you for your hard work, leader!  Would you like to have a break and eat some cake?  Ehe ... I want you to taste this new one I came up with."
-DAILY = "Hello there, leader! The journey on the road of confectionery starts with a single step.  Come on, let's get training ... let's do our best!"
+APPRECIATION = "Thank you for your hard work, leader!<br>Would you like to have a break and eat some cake?<br>Ehe ... I want you to taste this new one I came up with."
+DAILY = "Hello there, leader!<br>The journey on the road of confectionery starts with a single step.<br>Come on, let's get training ... let's do our best!"
+HERO = "Mr. Justice reminds me of my mentor.<br>His muscular body, his body language, his dynamic skills... Huh?<br>Mentor of what? No waay, it's my baking mentor"
+PLAYER = "Aren't we fellow trainees?<br>You're an observer and I'm a pâtissier<br>Let's encourage each other to do our best."
+RELATION = "Hmmm...can we make spicy sweets....<br>He who likes to pour hot sauce on his cake...<br>I want to satisfy Mr. Barrel's taste somehow!"
+TOUCH = "Kya! W-what's the matter leader!<br>Are you interested in this body dedicated to making sweets?<br>Well, I don't feel bad about it...."
+TRAIN = "The road to master my technique is not easy you know?"
+TRAINED = "Kuu..! You're good..!"
 %}
 
 ## Notes
