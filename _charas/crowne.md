@@ -34,7 +34,10 @@ Since she's a geek deeply interested in high tech, when she sees rare mechas or 
 {% include sidekick-infobox.html stockId=10051 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="crowne"
-APPRECIATION = ""
+APPRECIATION = "Why're you so tired?<br>You're trying to do everything by yourself<br>Y'know, you can always rely on me."
+DAILY = "Yo, how are you feeling?<br>The ship's in perfect condition so we can fly off whenever you want.<br>Let's finish work quickly and go for a drink."
+HERO = "The mecha's origin being a star is quite exciting, isn't it?<br>Isn't his entire body a machine?<br>Won't you let me dismantle him a little?"
+PLAYER = "You're a pretty interesting one aren't you?<br>Oh, I don't really dislike courageous dummies.<br>Ahaha, don't make that face just because I complimented you."
 %}
 
 ## Notes
