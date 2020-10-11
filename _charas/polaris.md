@@ -25,7 +25,14 @@ He has a tendency of being in the midst of big-sized tussles, so he is a man who
 {% include sidekick-infobox.html stockId=10151 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="polaris"
-APPRECIATION = ""
+APPRECIATION = "Whoops, have I shown off too much?<br>Alright! Let's go eat some meat!<br>Eating meat is the best way to improve your physical strength!"
+DAILY = "Polaris mask is HERE!<br>Come on now, what kind of battle are we going to fight today?<br>Whether it be villain or a kaibutsu, let them all come at me!"
+HERO = "Hmm, that hero called Justice...<br>I think his muscles are fit for professional wrestling.<br>I want to have a head-to-head battle with him!"
+PLAYER = "Second beginner isn't bad at all!<br>From here on out, you're going to be gathering up experience!<br>Be quiet and follow me!"
+RELATION = "I oftentimes meet Rad while on the road.<br>That's because we're always on the road looking for battle.<br>The kicks that come out of his legs are the best I've ever seen..."
+TOUCH = "Hmm, what? You're interested in my body?<br>Haha, my body's not so bad huh? <br>I've got really good technique!"
+TRAIN = "I'm not going to go easy on you just because you're new to this!"
+TRAINED = "Yeah, that's g-good! You're real hot!"
 %}
 
 ## Notes
