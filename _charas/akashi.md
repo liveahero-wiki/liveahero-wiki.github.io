@@ -26,7 +26,7 @@ He is a university student who attends the Hinowa University of Physical Educati
 {% include sidekick-infobox.html stockId=10011 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="akashi"
-APPRECIATION = "Hmm? You're pretty tired, aren't you?<br>let's go eat something then!<br>Eat and sleep, that's the best way to recover."
+APPRECIATION = "Hmm? You look pretty tired<br>let's go eat something then!<br>Eat and sleep, that's the best way to recover."
 DAILY = "Yo, what is today's job? <br> I have club activities later but I will work hard today."
 HERO = "Zap the Justice is really amazing<br>That's what a real hero is…huh<br>I-It's not like I admire him!?"
 PLAYER = "It's embarrassing to praise your childhood friend, but...<br>Well, you're doing a great job, aren't you? <br>it feels like I can rely on you."
