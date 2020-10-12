@@ -33,6 +33,8 @@ HERO = "You know Hitomi from our agency?  She's a pro, really knows how to hype 
 PLAYER = "Well, Sirius seems to be taking a liking to you...  Are you sure about that, boy?  People you get close to just end up leaving eventually... whatever."
 RELATION = "That elementary school teacher is so annoying. What does he care if I'm studying or not? Look, I'll properly submit the homework I was given."
 TOUCH = "U-ughya Hey!  No petting, we're celebrities!  Sirius, quit wagging your stupid tail already!"
+TRAIN = "Even if it was only a rehearsal I'll give it my all."
+TRAINED = "Stop, you're acting childish against a kid!?"
 %}
 
 ## Notes
