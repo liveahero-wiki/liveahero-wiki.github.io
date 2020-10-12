@@ -24,10 +24,14 @@ However, due to the genetic inheritance of her mother, an alien, she has acquire
 {% include sidekick-infobox.html stockId=10191 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="hitomi"
-APPRECIATION = ""
-HERO = "Sui-san's costume is so beautiful ...!  It's cool, but it's also cute!  I can't help but keep glancing at her..."
-PLAYER = "Let's do our best together, partner!  Giving it your all is essential for both operators and idols!  I can't slack off and get outdone! "
-TOUCH = "Hey, partner?!  That’s no good, alright?  Idols belong to everyone, so touching is strictly forbidden!"
+APPRECIATION = "Oh, what's this? Are you tired, partner?<br>In times like these... I'll inject you with energy!!!<br>A-AHHH! Did I use too much force? I'm so sorry!!!!"
+DAILY = "Yahooo! How are you today partner?<br>I'm once again on the cameras today.<br>Now then, let's fight our way through work once again!"
+RELATION = "That boy really has a lot of strength, huh...<br>Child actor, but also an entertainer...<br>I need to learn from him by looking up to him and following his example"
+HERO = "Sui-san's costume is so beautiful ...!<br>It's cool, but it's also cute!<br>I can't help but keep glancing at her..."
+PLAYER = "Let's do our best together, partner!<br>Giving it your all is essential for both operators and idols!<br>I can't slack off and get outdone! "
+TOUCH = "Hey, partner?!<br>That’s no good, alright?<br>Idols belong to everyone, so touching is strictly forbidden!"
+TRAIN = "Idols are always at their best!"
+TRAINED = "Gyaaa~!! It's too intense!"
 %}
 
 ## Notes:
