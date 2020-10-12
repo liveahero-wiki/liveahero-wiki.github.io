@@ -6,13 +6,13 @@ banner: true
 * this will be unordered
 {:toc}
 
-# Login Bonus
+## Login Bonus
 
 **Login bonus** is a reward system that rewards the player just by logging in to the game regularly. There are currently two types of bonus system: *Continuous Login* and *Cumulative login*. 
 
 Update on login days will only occur after the daily rotation, which is scheduled to happen after 0000 hours (GMT+9) daily.
 
-## Continuous Login
+### Continuous Login
 
 The continuous login is a step-by-step reward system in which different sets of reward is given to the player on their respective days. The rewards are automatically received when the player launch the game for the first time of the day.
 
@@ -29,7 +29,7 @@ There are 8 days in total, and upon receiving the Day 8 reward, the reward for t
 |Day 7|Stamina Drink x 1|Bronze Return Ticket x 3|Quest Ticket x 3|
 |Day 8|Ether Crystal x 4|Bronze Return Ticket x 3|Quest Ticket x 3|
 
-## Cumulative Login
+### Cumulative Login
 
 Unlike the continuous login system, the cumulative login accounts for all number of days that the player has logged in. However, claiming the reward for cumulative login is a manual process, and they can be accessed via the *Mission > Standard Mission* menu.
 
