@@ -30,7 +30,14 @@ It seems like the bar's opening cost has him up to his neck in debt.
 {% include sidekick-infobox.html stockId=10321 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="procy"
-APPRECIATION = ""
+APPRECIATION = "Hey, you look pretty tired, don't you?<br>...Go ahead, let it all out.<br>I'll give you a free drink."
+DAILY = "Oi, welcome.<br>I know that look. You're looking for a hero.<br>The machine is less crowded, you can use it as much as you like."
+HERO = "That justice guy... I've known him for a long time.<br>Even if he does scratch everything and cause lightning strikes…<br> I wonder if there's a time I've ever been jealous of him."
+PLAYER = "Earn views, earn money.<br>Those are the basics. If you want to prosper in this business, remember that.<br>Ah well, you'll get used to it soon."
+RELATION = "Being loved by the guests is good, but…<br>what the hell did that kid think of me?<br>I hope they don't come with a ribbon tomorrow."
+TOUCH = "H-Hey, y-you! How many times are you going to pet me?!<br>This isn't free, b-but... maybe just one...<br>g-god damnit, do whatever you want!"
+TRAIN = "Pay for the training!"
+TRAINED = "Owowow! I'm going to charge for medical treatment!"
 %}
 
 ## Notes
