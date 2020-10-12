@@ -38,6 +38,10 @@ APPRECIATION = "Why're you so tired?<br>You're trying to do everything by yourse
 DAILY = "Yo, how are you feeling?<br>The ship's in perfect condition so we can fly off whenever you want.<br>Let's finish work quickly and go for a drink."
 HERO = "The mecha's origin being a star is quite exciting, isn't it?<br>Isn't his entire body a machine?<br>Won't you let me dismantle him a little?"
 PLAYER = "You're a pretty interesting one aren't you?<br>Oh, I don't really dislike courageous dummies.<br>Ahaha, don't make that face just because I complimented you."
+RELATION = "That girl... She's pretty cute.<br>When I see her cute clothes, my eyes start to glitter."
+TOUCH = "Hold on, you must have some nerve to be doing this!<br>What if I did the same to you?<br>Where do you want me to touch you? Come on, tell me!"
+TRAIN = "Let me check the performance of the weapon!"
+TRAINED = "You're using me as a test subject? That's some nerve...."
 %}
 
 ## Notes
