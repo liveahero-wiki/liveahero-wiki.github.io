@@ -6,7 +6,20 @@ illustrator: "Oaks (おーくす)"
 voice_actor: "Tetsu Inada (稲田徹)"
 ---
 
-{% include hero-infobox.html stockId=10131 %}
+{% capture BIO_H01 %}
+In honor of a man he once met when he landed on Earth, a samurai he acknowledges as "the noblest spirit on Earth", he transforms into a hero who mimics the appearance of a samurai on the battlefield.
+His weapon is a sword with a blade made up of an energy, and he attacks his opponents by slashing at them in one fell swoop, a style of fighting that is unique to his hot-blooded nature.
+His "offensive" approach has the weakness in that his "defense" becomes thin.
+{% endcapture %}
+
+{% capture BIO_H02 %}
+"To catch up with the true samurai he met that day" is his goal and his belief in the path of the sword.
+He once studied under a samurai who called himself "Sakimori" and learned the way of the sword on this planet.
+The man's way of life, whose whereabout is unknown, is the ultimate ideal and his goal.
+He will continue to wield his sword on the battlefield until the day he can recognize himself as "a true samurai".
+{% endcapture %}
+
+{% include hero-infobox.html stockId=10131 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 A Kendo artist who is a teacher at Hinowa University of Physical Education, serving as an advisor to the institution's kendo club
