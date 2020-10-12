@@ -27,7 +27,7 @@ He is a university student who attends the Hinowa University of Physical Educati
 
 {% include voice-table.html resourceName="akashi"
 APPRECIATION = "Hmm? You look pretty tired<br>let's go eat something then!<br>Eat and sleep, that's the best way to recover."
-DAILY = "Yo, what is today's job? <br> I have club activities later but I will work hard today."
+DAILY = "Yo, I just got back from club activities but I will work hard today.<br>so,what is today's job?"
 HERO = "Zap the Justice is really amazing<br>That's what a real hero is…huh<br>I-It's not like I admire him!?"
 PLAYER = "It's embarrassing to praise your childhood friend, but...<br>Well, you're doing a great job, aren't you? <br>it feels like I can rely on you."
 RELATION = "Really, that sui is not honest with their feelings.<br>Forcing themselves to be an adult even though they're still a kid<br>..I'm not that old either? S-shut up!"
