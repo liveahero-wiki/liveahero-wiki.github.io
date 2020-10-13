@@ -32,10 +32,14 @@ After being taught by a senior doctor that "Being a surgeon is a trial of streng
 {% include sidekick-infobox.html stockId=10201 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="rakta"
-APPRECIATION = ""
+APPRECIATION = "It looks like your health is being compromised.<br>Don't push yourself, take a quick rest.<br>Fatigue is the worst enemy of good work, you know?"
 DAILY = "Everyone is a novice at first.  You just have to get used to the work little by little.  I needed some encouragement as well, when I performed my first operation."
 HERO = "Loren is a very reliable nurse.  Despite some... peculiarities. But at the site, he can take care of himself.  That's the kind of man I need in both lines of work."
+PLAYER = "Everyone has a beginner phase.<br>You just have to get used to the work, little by little.<br>I was encouraged like that too during my first operation."
+RELATION = "I can't help but wonder.<br>That detective's eating habit is going to cause a severe case of malnutrition.<br>And yet he's perfectly healthy, what's the secret...?"
 TOUCH = "Hmm?  Are you interested in my body?  Yes, I am quite proud of this healthy body trained at the sports gym five times a week.  Come on!"
+TRAIN = "Let's take pride in our health!"
+TRAINED = "Guh, what a healthy body ...!"
 %}
 
 ## Notes
