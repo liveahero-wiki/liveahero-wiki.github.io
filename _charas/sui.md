@@ -30,10 +30,14 @@ They have been afflicted by the gap between their body and mind ever since child
 {% include sidekick-infobox.html stockId=10031 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="sui"
-APPRECIATION = ""
-DAILY = "How am I holding up?  Right...  Well, I'm doing my best... I guess?  It feels like we both still have a long way to go."
+APPRECIATION = "Hmm, so you can get that worn out.<br>Just get some rest, and I'll get this document done.<br>When in trouble we should aid each other, right?"
+DAILY = "…n, Hi<br>My condition? Un, it's fine.<br>So, what job will we do today?"
 HERO = "That idol's clothes are nice.  So cutesy and fluffy and dazzling. To be honest... I'm a little envious."
+PLAYER = "About you? Hmmm…<br>Well, you're doing pretty well... aren't you?<br>It feels like we both still have a long way to go."
+RELATION = "Mokdai, his suit is fraying again.<br>Did I get the size wrong..or rather,<br>He's fattening up rapidly…"
 TOUCH = "W, wait just a second! What are you thinking!  Just hugging out of the blue like that... hyaah?!"
+TRAIN = "I'll let you be the mannequin."
+TRAINED = "My clothes are ripping…!"
 %}
 
 ## Notes
