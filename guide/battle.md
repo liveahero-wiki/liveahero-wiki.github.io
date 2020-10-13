@@ -8,17 +8,14 @@ banner: true
 
 ## About Battle
 
-Pair a hero with a sidekick, and fight against monsters and other heroes.
+Pair a hero with a sidekick, and fight against monsters and other heroes. Winning the battle gives various rewards, depending on the type of [Quest](/guide/quest). All quests award [Heroes](/guide/hero) and [Sidekicks](/guide/sidekick) with EXP, and the player with [Rank EXP](/guide/user_rank).
 
-Winning the battle will give you various rewards. 
 
 ## Battle Flow
 
-The battle timeline will decides on the character's order of actions.
+ ![Battle Flow](/assets/img/uipage_3.png)
 
-The timeline is determined by the SPD of the character.
-
-Only characters whose turn has come around could select their skills to activate it.
+The battle timeline shows each character's order of actions. Order of action is determined by a Hero's speed (SPD). The higher their SPD stat, the sooner their chance to strike. Skills can only be selected and activated during a Hero's turn.
 
 ## Battle Auto Mode
 
@@ -26,11 +23,11 @@ By tapping on the Auto button located at the top right of the battle screen, aut
 
 ## Battle Menu Button
 
-By tapping on the Menu button located at the bottom right of the battle screen, you can choose to give up on the current battle.
+By tapping on the Menu button located at the bottom right of the battle screen, the player can choose to give up on the current battle.
 
 ## Battle List Button
 
-By tapping on the List button located at the bottom right of the battle screen, you can view the skills of the hero attacking in order, and also the View Power needed to activate their skills.
+By tapping on the List button located at the bottom right of the battle screen, the player can view the skills of their heroes by their order of actions. This includes the skill descriptions as well as their View Power cost.
 
 ## View Power
 
