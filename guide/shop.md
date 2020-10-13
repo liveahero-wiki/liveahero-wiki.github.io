@@ -26,8 +26,27 @@ The support team will not be responsible for any incorrect information provided.
 
 ## Store
 
-Items can be exchanged using the "Laf" currency earned, or Ether Stones.
-Selected items might have a restrictions on the amount of quantity purchased.
+Items can be exchanged using {% include item.html id=35 %} or {% include item.html id=1 %}. Selected items might have a restrictions on the amount of quantity purchased. Currently, items are either restocked monthly or purchasable only once per account.
+
+|              Item             |     Price    | Stock |
+|:-----------------------------:|:------------:|:-----:|
+| {% include item.html id=12 %} |     1500{% include item.html id=35 %}     |  500  |
+| {% include item.html id=13 %} |     3000{% include item.html id=35 %}     |  250  |
+| {% include item.html id=14 %} |     6000{% include item.html id=35 %}     |  100  |
+| {% include item.html id=15 %} |     1500{% include item.html id=35 %}     |  500  |
+| {% include item.html id=16 %} |     3000{% include item.html id=35 %}     |  250  |
+| {% include item.html id=17 %} |     6000{% include item.html id=35 %}     |  100  |
+| {% include item.html id=18 %} |     1500{% include item.html id=35 %}     |  500  |
+| {% include item.html id=19 %} |     3000{% include item.html id=35 %}     |  250  |
+| {% include item.html id=20 %} |     6000{% include item.html id=35 %}     |  100  |
+| {% include item.html id=21 %} |     1500{% include item.html id=35 %}     |  500  |
+| {% include item.html id=22 %} |     3000{% include item.html id=35 %}     |  250  |
+| {% include item.html id=23 %} |     6000{% include item.html id=35 %}     |  100  |
+| {% include item.html id=24 %} |     1500{% include item.html id=35 %}     |  500  |
+| {% include item.html id=25 %} |     3000 {% include item.html id=35 %}    |  250  |
+| {% include item.html id=26 %} |     6000{% include item.html id=35 %}     |  100  |
+
+|             Business Slot Unlock Ticket            | 10{% include item-icon.html id=1 %} |    1 (one-time purchase)   |
 
 ## Buying Record Cubes
 
