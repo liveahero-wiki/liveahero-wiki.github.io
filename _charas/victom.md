@@ -30,7 +30,7 @@ Even though he believes that all lives are precious, there is a side of him that
 {% include voice-table.html resourceName="victom"
 APPRECIATION = "Accumulation of fatigue is the worst thing that can happen during a mission.<br>If the commander is exhausted, it will affect morale.<br>In other words... take a little break. Don't worry me too much."
 DAILY = "Oh, you are here.<br>In that case, what sort of mission are we going to embark on?<br>Don't worry, I won't die."
-HERO = "That chick is forever immature.<br>Despite his timid personality, he is way too reckless.<br>But ... I don't hate him."
+HERO = "That young one is forever immature.<br>Despite his timid personality, he is way too reckless.<br>But ... I don't hate him."
 PLAYER = "Your behavior is extremely dangerous.<br>but still... my job is to protect you.<br>I will even use my body to do that task."
 RELATION = "I don't understand that waiter's idea.<br>There is no way I can get along with Kaibutsu.<br>They are... only enemies that should be destroyed."
 TOUCH = "What is it? You want to see my face? Stop it.<br>There is nothing to see underneath the helmet.<br>If you still want to... maybe next time."
