@@ -45,8 +45,7 @@ Items can be exchanged using {% include item.html id=35 %} or {% include item.ht
 | {% include item.html id=24 %} |     1500{% include item.html id=35 %}     |  500  |
 | {% include item.html id=25 %} |     3000 {% include item.html id=35 %}    |  250  |
 | {% include item.html id=26 %} |     6000{% include item.html id=35 %}     |  100  |
-
-|             Business Slot Unlock Ticket            | 10{% include item-icon.html id=1 %} |    1 (one-time purchase)   |
+| Business Slot Unlock Ticket | 10{% include item-icon.html id=1 %} | 1 (one-time purchase) |
 
 ## Buying Record Cubes
 
