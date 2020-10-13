@@ -1,0 +1,20 @@
+---
+title: Items
+banner: true
+---
+
+<p>To add item when writing Wiki page, write <code>{% raw %}{% include item.html id=number %}{% endraw %}</code>.</p>
+
+<p>Example: <code>{% raw %}{% include item.html id=1 %}{% endraw %}</code> will becomes {% include item.html id=1 %} when rendered.</p>
+
+<p>Example: <code>{% raw %}{% include item-icon.html id=42 %}{% endraw %}</code> will becomes {% include item-icon.html id=42 %} when rendered.</p>
+
+<table>
+<tr><th>ID</th><th>Item</th></tr>
+{% for pair in site.data.ItemMaster %}
+{% assign id = pair[0] %}
+{% assign iid = id | plus: 0 %}
+{% if iid > 100000 %}{% break %}{% endif %}
+<tr><td>{{ id }}</td><td>{% include item.html id=id %}</td></tr>
+{% endfor %}
+</table>
