@@ -8,27 +8,30 @@ banner: true
 
 ## About Sale
 
-You can leave the hero for a set amount of time during the business, and you can get items needed to train your character.
+You can leave the hero for a set amount of time during the business. Sales reward currency needed to improve your characters: EXP, Coin, and relation-increasing items. All sale types reward some EXP.
 
 ## Business Slot
 
-There are slots in business,
+There are four business slots. Initially, only two are unlocked. An additional slot is unlocked after beating Chapter 1 of the [Main Quest](https://liveahero-wiki.github.io/guide/quest/#main-quest), while the fourth slot is unlockable with a Business Slot Unlock Ticket purchasable from the [Shop](https://liveahero-wiki.github.io/guide/shop/) for 10 Ether Stones.
 
-Heroes departed onto an ongoing business cannot be assigned onto a different business.
-
-Business slot can be unlocked by clearing scenarios, or by purchasing a Business Slot Unlock Ticket.
+Heroes departed onto an ongoing business cannot be assigned onto a different business. However, they are free to participate in [Quests](https://liveahero-wiki.github.io/guide/quest/).
 
 ## Business Hour
 
-Each business has a set business hour.
+Business can be conducted in set amounts of time: two hours, four hours, eight hours, and 16 hours. There is no difference in efficiency as the rewards scale linearly with the amount of time spent, so choose a timing that fits your lifestyle. 
 
-There is no difference on efficiency timing wise, so choose a timing that fits your lifestyle.
+<!--- Testing is required to determine average amount of coin/relation token per time --->
 
 ## Business Obtainable Experience
 
-Experience points will be given to all heroes who have departed on the business.
+Experience points will be given to all heroes who have departed on the business. In case the hero's level is already at its limit, the experience will be given in the form of item instead. The EXP rewards per type of sale for each amount of time can be found in the table below.
 
-In situation where the hero's level is already at its limit, the experience will be given as a form of item instead.
+| Time   | EXP  | Coin | Relation |
+|--------|------|------|----------|
+| 2:00h  | 400  | 160  | 160      |
+| 4:00h  | 800  | 320  | 320      |
+| 8:00h  | 1600 | 640  | 640      |
+| 16:00h | 3200 | 1280 | 1280     |
 
 ## Business Bonus
 
@@ -36,16 +39,19 @@ There is bonus for each business, if a requirement is met the bonus will be adde
 
 ## Business Log
 
-When a business has been achieved, you will receive a business log of the business, from the characters departing for the business.
+When a business has been completed you will receive a business log from the characters who have departed for the business.
 
 ## Business Shortening and Canceling
 
 Business can be shortened and canceled.
 
-If you wanted to shorten the duration of a sale, a Business Shortening Ticket is required to do so.
+Business Shortening Tickets can be used to shorten the duration of a sale. Business Shortening Ticket come in several tiers of efficacy: bronze, silver, and gold. As a result from shortening, if the business hour is less than the shortening amount, the business will be instantly completed.
 
-A Business Shortening Ticket could shorten the timing by 10 minutes for a bronze tier ticket, 30 minutes for a silver tier ticket, and 1 hour for a gold tier ticket.
+| Tier   | Shortening amount (mins) |
+|--------|------------------------|
+| Bronze | 10                     |
+| Silver | 30                     |
+| Gold   | 60                     |
 
-As a result from shortening, if the business hour is lesser than the shortening hour, business will be completed, and reward will also be distributed accordingly.
 
-Stopping an ongoing business will not return anything.
+Stopping an ongoing business will instantly complete the business, but with no rewards.
