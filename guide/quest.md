@@ -28,9 +28,9 @@ EXP Item Quests can be selected at any time, and come in four ranks (D to A). Th
 
 | Rank | Enemy Level | Stamina Cost | EXP / Hero | EXP / Sidekick | EXP Drops  (average) | Coin | Training Bands | Rank EXP |
 |:----:|:-----------:|:------------:|:----------:|:--------------:|:--------------------:|:----:|:--------------:|:--------:|
-|   D  |      1      |       6      |     135    |       60       |          250         |  120 |        0       |    60    |
-|   C  |      15     |      10      |     280    |       125      |          350         |  250 |       50       |    100   |
-|   B  |      30     |      14      |     472    |       210      |          370         |  420 |       100      |    140   |
+|   D  |      1      |       6      |     135    |       60       |          200         |  120 |        0       |    60    |
+|   C  |      15     |      10      |     280    |       125      |          300         |  250 |       50       |    100   |
+|   B  |      30     |      14      |     472    |       210      |          445         |  420 |       100      |    140   |
 |   A  |      45     |      18      |     810    |       360      |          910         |  720 |       150      |    180   |
 
 <!--- Quest rewards appear to have some variation, but my sample size was low (N=5 for each quest). This might require a weighted average but until I have more data points I'll do a simple average of the drop types I've seen. It seems there are three drop tiers per rank so far. --->
