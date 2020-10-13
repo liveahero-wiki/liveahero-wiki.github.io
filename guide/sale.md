@@ -8,26 +8,32 @@ banner: true
 
 ## About Sale
 
-You can leave the hero for a set amount of time during the business. Sales reward currency needed to improve your characters: EXP, Coin, and relation-increasing items. All sale types reward some EXP.
+You can leave the hero for a set amount of time during the business. Sales reward currency needed to improve your characters: EXP, Lah, and Training Bands. All sale types reward some EXP.
 
 ## Business Slot
 
-There are four business slots. Initially, only two are unlocked. An additional slot is unlocked after beating Chapter 1 of the [Main Quest](https://liveahero-wiki.github.io/guide/quest/#main-quest), while the fourth slot is unlockable with a Business Slot Unlock Ticket purchasable from the [Shop](https://liveahero-wiki.github.io/guide/shop/) for 10 Ether Stones.
+There are four business slots. Initially, only two are unlocked. An additional slot is unlocked after beating Chapter 1 of the [Main Quest](/guide/quest/#main-quest), while the fourth slot is unlockable with a Business Slot Unlock Ticket purchasable from the [Shop](/guide/shop/) for 10 Ether Stones.
 
-Heroes departed onto an ongoing business cannot be assigned onto a different business. However, they are free to participate in [Quests](https://liveahero-wiki.github.io/guide/quest/).
+Heroes departed onto an ongoing business cannot be assigned onto a different business. However, they are free to participate in [Quests](/guide/quest/).
 
 ## Business Hour
 
-Business can be conducted in set amounts of time: two hours, four hours, eight hours, and 16 hours. There is no difference in efficiency as the rewards scale linearly with the amount of time spent, so choose a timing that fits your lifestyle. 
+Business can be conducted in set amounts of time: two hours, four hours, eight hours, and 16 hours. There is no difference in efficiency as the rewards scale linearly with the amount of time spent, so choose a timing that fits your lifestyle. Note that rewards are cumulative with business obtainable experience values.
 
-<!--- Testing is required to determine average amount of coin/relation token per time --->
+|  Time  |  EXP |  Lah | Training Band |
+|:------:|:----:|:----:|:-------------:|
+|  2:00h |  400 |  960 |      640      |
+|  4:00h |  800 | 1920 |      1280     |
+|  8:00h | 1600 | 3840 |      2560     |
+| 16:00h | 3200 | 7680 |      5120     |
+
 
 ## Business Obtainable Experience
 
 Experience points will be given to all heroes who have departed on the business. In case the hero's level is already at its limit, the experience will be given in the form of item instead. The EXP rewards per type of sale for each amount of time can be found in the table below.
 
-| Time   | EXP  | Coin | Relation |
-|--------|------|------|----------|
+| Time   | EXP  | Lah | Training Band |
+|:--------:|:------:|:------:|:----------:|
 | 2:00h  | 400  | 160  | 160      |
 | 4:00h  | 800  | 320  | 320      |
 | 8:00h  | 1600 | 640  | 640      |
