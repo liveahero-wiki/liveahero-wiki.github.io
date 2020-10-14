@@ -13,7 +13,9 @@ Pair a hero with a sidekick, and fight against monsters and other heroes. Winnin
 
 ## Battle Flow
 
-<img align="center" src="/assets/img/uipage_3.png" alt="Battle Flow">
+{:refdef: style="text-align: center;"}
+<img src="/assets/img/uipage_3.png" alt="Battle Flow" height=500px>
+{: refdef}
 
 The battle timeline shows each character's order of actions. Order of action is determined by a Hero's speed (SPD). The higher their SPD stat, the sooner their chance to strike. Skills can only be selected and activated during a Hero's turn. After all characters have performed their actions, the turn is over. If desired, a Hero's turn order can be delayed to the end of turn by choosing to wait (purple icon with the hourglass).
 
@@ -41,6 +43,7 @@ Statuses that grant positive effects on the hero are displayed as a yellow icon,
 
 The available status modifiers are listed as follows:
 
+<!-- would be nice to have the icons for these statuses -->
 #### Buffs
 
 - ATK Up: Attack is increased by 1.5x. Duration decreases after the Hero performs an action.
