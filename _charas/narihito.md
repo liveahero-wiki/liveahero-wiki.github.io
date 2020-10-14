@@ -30,7 +30,14 @@ As a knowledgeable connoisseur, he experts at profiling information about heroes
 {% include sidekick-infobox.html stockId=10291 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="narihito"
-APPRECIATION = ""
+APPRECIATION = "Oh, should I stop interviewing?<br>yeah, it's fine take a rest.<br>I could at least make you a cup of coffee."
+DAILY = "Good day, Operator-san!<br>Would you be willing to do an interview with me today? e?<br>In return I should help with your work? Really, I'm no match for you."
+HERO = "Oh yeah, now I remember! That little guy in the bar!<br>Even the bounty hunters are speechless, he was the legendary money-grubber hero.<br>Awesome, awesome, I'd love to write an interview story about him!"
+PLAYER = "I've interviewed a lot of people, but you're a mystery.<br>There's something special about you that other operators don't have.<br>I can feel it somehow."
+RELATION = "The president at your place, I think I saw him before.<br>Didn't he used to be a hero? If I'm not wrong…<br>Hopper The Faith, was it?"
+TOUCH = "Oops! Are you looking for my notebook?<br>It's a pity, but the matter of yesterday I have properly wrote it in…<br>Wahyaa!? S-stop it! I didn't write it at all!"
+TRAIN = "I'm practicing my memory withdrawal, please accompany me."
+TRAINED = "Gaah, heroes are really amazing..!"
 %}
 
 ## Notes
