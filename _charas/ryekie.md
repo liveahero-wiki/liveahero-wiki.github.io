@@ -32,6 +32,7 @@ HERO = "Victory or defeat don't matter to him, that Procy is all about money! Fo
 PLAYER = "Wahaha!, Don't worry too much, Partner!  Even Huckle was very nervous at first!  You just have to get used to it little by little, that's it!"
 TOUCH = "Oh?! Do you want a hug, Partner? Then.... JUSTICE HUUUUG!! Haha, how was that... oh! Did I zap you?!"
 RELATION = "Huckle has always been my dearest friend! Back when he was a hero, no, even now, he's always lived up to the faith I had in him! That's why he's the man I look up to!"
+TRAIN = "I'll go easy on you. Let's go!"
 TRAINED = "G-GHNN! It's hard to make me groan!..."
 %}
 
