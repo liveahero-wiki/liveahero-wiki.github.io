@@ -20,7 +20,9 @@ His basal body temperature is higher than average because he originates from a p
 
 Because he's resistant to high temperatures, he's helpful at rescuing lives from fires.
 
-Usually shy and timid, he's a scaredy-cat that loves peace. However, when he transforms into the hero "Burn Striker", he drastically changes into a burningly brave personality.
+Usually shy and timid, he's a scaredy-cat that loves peace.
+
+He talks with everyone except Barrel in a honorifix form, who is close in age and so only one person on an equal basis.
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10081 BIO_S01=BIO_S01 %}
 
