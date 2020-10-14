@@ -22,7 +22,7 @@ Because he's resistant to high temperatures, he's helpful at rescuing lives from
 
 Usually shy and timid, he's a scaredy-cat that loves peace.
 
-He talks with everyone except Barrel in a honorifix form, who is close in age and so only one person on an equal basis.
+He talks to everyone in an honorific form, except to Barrel who is close to his age and so the only one he speaks casually with.
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10081 BIO_S01=BIO_S01 %}
 
