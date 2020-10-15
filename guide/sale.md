@@ -59,9 +59,89 @@ Business Shortening Tickets can be used to shorten the duration of a sale. Busin
 
 | Tier   | Shortening amount (mins) |
 |:--------:|:------------------------:|
-| Bronze | 10                     |
-| Silver | 30                     |
-| Gold   | 60                     |
+| Bronze {% include item-icon.html id=31 %} | 10                     |
+| Silver {% include item-icon.html id=32 %} | 30                     |
+| Gold   {% include item-icon.html id=33 %} | 60                     |
 
 
 Stopping an ongoing business will instantly complete the business, but with no rewards.
+
+## Business Report
+
+After business is completed, a report will be randomly generated from these templates, with <code>characterX</code> replaced with
+the name of the hero(es) sent to the business.
+
+<details><summary>Sales Report 1</summary>
+<p><code>character0</code>は待ち合わせ場所に到着した。<br>すると現れた仲介業者の男が頭を下げてきた。<br>「どうしても欠員が出ちゃって…お願いします！」<br>言われるがままに、<code>character0</code>は更衣室に入った。<br>そこにあったのは、ファンシーな着ぐるみだった。<br><code>character0</code>はそれを着用し、台本通りに役をこなした。<br>ベタなショーの内容に、子供 たちは冷め気味……。<br><br>しかし、途中現れたチンピラを取り押さえたことで、<br><code>character0</code>は一躍子供たちの人 気者に。<br>沢山の子供達と共に写真を撮った。<br><br>ハプニングだらけの営業活動だったが、<br>満更でもない気持ちで帰還したのだった……。
+</p>
+</details>
+
+<details><summary>Sales Report 2</summary>
+<p>営業先で、<code>character0</code>はヴィランと遭遇した！<br>ヴィランは、奇怪な踊りを踊りながら、<br>民衆にセクハラ的な行為を行って喜んでいる、<br>文字通りの変態だった！<br><br><code>character0</code>はそんな変態を止めるべく戦闘を行うが、<br>変態相手にマトモな技は通用しなかった。<br><br>目には目を、歯には歯を。<br><code>character0</code>はダンスバトルを申し込んだ！<br>変態を軽々と圧倒するデタラメで妙ちきりんな踊りに、<br>ヴィランは負けを認め、たちまち御用となった。<br><br>しかし、変態ヴィランを逮捕した功績と共に、<br><code>character0</code>は大事な何かを失ったのだった……。
+</p>
+</details>
+
+<details><summary>Sales Report 3</summary>
+<p>自分は一体、どこから来たのか。<br>自分は一体、何者なのか。<br>自分は一体、どこへ向かうのか。<br><br>自分は一体、今何 をしているのか。<br><br>そんなことを考えながら、<br><code>character0</code>は一心不乱に流れ作業を行い続けた。<br>他のメ ンバーは皆、一体何を考えながら<br>この作業をしているのだろう……。<br><br>この仕事を続けていれば、いずれ真理を<br>見つけられるかもしれない。<br><code>character0</code>は、精神修行について、<br>真剣に考えさせられたという。
+</p>
+</details>
+
+<details><summary>Sales Report 4</summary>
+<p><code>character0</code>を待っていたのは、<br>恐ろしいまでにハイテンションな現場だった。<br>皆、徹夜明け何日目かという勢いの、<br>ナチュラルハイの状態に入っている。<br><br><code>character0</code>は流石に危機感を覚え、<br>必死に彼らの仕事 を手伝った。<br>しかし、想像以上に過酷な仕事内容に、<br><code>character0</code>もだんだんと心のブレーキが壊れ始める……。<br><br>そして、<code>character0</code>もまた、<br>今までの人生で一番では無いかというくらいの<br>超ハイテンション状態で現場を去るのだった……。
+</p>
+</details>
+
+<details><summary>Sales Report 5</summary>
+<p>営業先で、<code>character0</code>はヴィランと遭遇した！<br>ヴィランは、<code>character0</code>にフードファイトを申し 込んできた！<br>何処からか運ばれてくる山盛りの食事。<br>続々と集まり始める観客……。<br><br><code>character0</code>は勝負 を受けて、食事の山にかじりついた！<br>無我夢中で食していくうちに、段々とペースを<br>落としていくヴィラン……。<br>これを好機と、一気に攻める<code>character0</code>！<br><code>character0</code>は見事、ヴィランとの戦いに勝利した！<br><br>しばらく、食事の量を元の状態に戻すのに<br>苦労したという。<br>
+</p>
+</details>
+
+<details><summary>Sales Report 6</summary>
+<p>活動中、些細な意見の相違からいざこざが発生。<br><code>character0</code>が口火を切り、<code>character1</code>が挑発に 乗ってしまう。<br>言い争いになる<code>character0</code>と<code>character1</code>。<br><br>どっちが先かは分からないが、<br>次第と手が出て、掴み合いの大喧嘩に発展。<br><code>character0</code>が吠え、<code>character1</code>が叫び返す。<br>誰も止められないほどに現場は混乱する。<br><br>しかし、しばらく喧嘩が続くうちに、<br>お互いの実力を認め合い、次第に笑い合うようになる。<br>最後には<code>character0</code>が手を差し出し、<br><code>character1</code>が握り返し、２人で夕日を眺めて笑い合った。<br>２人の仲は、なんだかんだで深まったのだった。<br><br><code>character0</code>追記：<br>本件に関しての始末書 については、別途提出します。<br>
+</p>
+</details>
+
+<details><summary>Sales Report 7</summary>
+<p>営業先から帰還するため、宇宙船を駆る。<br>しかし、動力エンジンがまさかの故障。<br>修理サービスを待つ羽目になってしま った。<br><br>幸い空調や食料に問題はない。<br>しかし、狭い空間には、<code>character0</code>と<code>character1</code>が２人きり。<br>気を紛らわそうと話題を振る<code>character0</code>。<br>話を膨らませようと頑張る<code>character1</code>。<br>しかし、すぐに話題もつき、沈黙の時間が流れる。<br><br>やがて就寝の時間が訪れ、２人は座席を倒す。<br>だが、相手のことが気になって、寝るに寝れない。<br><code>character1</code>が寝返りを打つ衣擦れの音に、<br><code>character0</code>は思わずドキドキ。<br><code>character0</code>がトイレに立つ足音が、<br><code>character1</code>には妙に気になってしまう。<br><br>やがて修理サービスが到着し、無事帰還するも、<br>２人の目は隈だらけになっていた…。
+</p>
+</details>
+
+<details><summary>Sales Report 8</summary>
+<p>炎天下、高温の現場での仕事。<br>気丈に仕事を回していた<code>character0</code>も、<br>次第にふらつき始め、やがて倒れてしまう。<br><br><code>character1</code>は<code>character0</code>を涼しい空間に運び、介抱する。<br><code>character1</code>は熱を貯め込んだ<code>character0</code>の体を冷やすため、<br><code>character0</code>の服を脱がすことにする……が。<br>妙 にドキドキしてしまう<code>character1</code>。<br>適切な対処を行おうとしているだけなのに、<br>何か、いけない事をしている ような……。<br><br>やがて目を覚ました<code>character0</code>。<br>自らの着衣の様を見て、思わず赤面してしまう。<br>ひとま ず<code>character1</code>に礼を言うも、<br>なんとも言えない微妙な空気が、２人の間に流れる。<br><br>帰還後、妙にお互いの 視線が気になってしまう<br><code>character0</code>と<code>character1</code>の２人だった。
+</p>
+</details>
+
+<details><summary>Sales Report 9</summary>
+<p>仕事が早く終わってしまい、<br>迎えが来るまで半日近く時間が空いてしまった。<br><code>character0</code>の提案で、<code>character1</code>は現地を観光して時間を潰すことに。<br><br>現地では丁度祭りが行われており、<br>普段見ないような異文化の 屋台が軒を連ねていた。<br><code>character1</code>は興味深そうにそれらの店先を眺め、<br>１つの商品を手に取り、<code>character0</code>に見せる。<br><code>character0</code>に似合いそうだ、と。<br><br>店主は「それは恋人に送ると結ばれるという<br>まじないが込められた品ですよ」と語る。<br><br><code>character1</code>は、説明に動揺し、赤面してうつむいてしまう。<br>しかし、折角<code>character1</code>が勧めてくれたものだから、と、<br><code>character0</code>は店主に代金を渡し、それを購入する。<br><br><code>character0</code>は今も、こっそりそれを身に着けているという。
+</p>
+</details>
+
+<details><summary>Sales Report 10</summary>
+<p>職務中、成り行きで取引先の重役を接待しなくては<br>いけなくなってしまった<code>character0</code>と<code>character1</code>。<br>連れてこられたのは、歓楽街のスナック。<br><br>酒が入り、すっかり上機嫌な重役は、<br>２人の歌声を聞きたいと、<br>カラオケマシンに曲をリクエストし、<br>２人にマイクを持たせ、前に立たせる。<br><br>流れ出したのは、やや古臭いデュエット のラブソング。<br><code>character0</code>は全くその曲を知らない。<br>画面に流れる歌詞を追い、懸命に歌う<code>character0</code>。<br><br>しかし、<code>character1</code>は元からその曲を知っていた。<br><code>character1</code>は、うまく<code>character0</code>をリードして歌う。<br>重役は大満足の拍手で２人を労った。<br><br>以降、<code>character1</code>がその時の曲の一節を口ずさむと、<br><code>character0</code>が乗っかってくるようになったという。
+</p>
+</details>
+
+<details><summary>Sales Report 11</summary>
+<p><code>character0</code>の運転により現場へ出発する際、<br>船内でどっちが助手席に座るかで<br><code>character2</code>と<code>character3</code>が揉めてしまった。<br>どちらも一歩も引かず、まるで子供の喧嘩の様相を<br>呈し始めていた。<br><br>結局、<code>character1</code>が仲裁に入り、<br><code>character1</code>が助手席、<code>character2</code>と<code>character3</code>はどちらも<br>後部座席という形で落ち着き、発進した。<br><br>しかし、<code>character0</code>の運転があまりに荒い為 か、<br>はたまたスペースデブリの量が多かったためか、<br>船体は大きく揺れる。<br><br><code>character2</code>と<code>character3</code>は、<br>どちらも仲良く船酔いしてしまった。<br><br>現場到着後、１時間程度稼働までに時間がかかった<br>理由については、以上の通りとなる。
+</p>
+</details>
+
+<details><summary>Sales Report 12</summary>
+<p>現場において、強盗行為を行うヴィランに遭遇。<br>総員で対処にあたった。<br><br><code>character0</code>のサポートを<code>character1</code>、<br><code>character2</code>のサポートを<code>character3</code>が行い、<br>あとはヴィランを取り押さ えるだけだった。<br><br>そこで<code>character2</code>が、最後の決め技に必要だとして、<br>「アレ」を<code>character3</code>に対して要求。<br><code>character3</code>は全く何のことか分からず、<br>焦った様子で「アレ」を要求する<code>character2</code>に対し、<br>困惑したような切り返しをするばかり。<br><br>結局モタついている間にヴィランが逃走を図った為、<br><code>character0</code>と<code>character1</code>で捕獲を行った。<br><br>戦闘後「アレさえあれば…」と不満げにする<code>character2</code>。<br>一体「アレ」とは何だったのか……。
+</p>
+</details>
+
+<details><summary>Sales Report 13</summary>
+<p>昼食時、ある騒動が発生した。<br><code>character2</code>の弁当のから揚げが、<br>あからさまに１つ足りないのだ。<br><br><code>character1</code>は弁当屋の店員が入れ忘れたのではと言うが、<br>ぽっかりと空いた空間には、衣が落ちた形跡がある。<br><code>character3</code>は自分の分を渡すから落ち着くよう促す。<br>しかし<code>character2</code>はそういう事ではないと返 す。<br><br><code>character0</code>を疑う<code>character2</code>は問い詰めるが、<br>あまりにしつこいために<code>character0</code>は怒り、<br>「から揚げ１個くらいで」と食って掛かる。<br><code>character2</code>と<code>character0</code>は、口 論を始めてしまった。<br><br>その時、小型の野生動物が接近してきて、<br>蓋の空いた弁当から、から揚げを１個持ち去った。<br><br>真犯人は、<code>character2</code>の目の前で<br>それを美味しそうに平らげた。
+</p>
+</details>
+
+<details><summary>Sales Report 14</summary>
+<p>出発時から、<code>character0</code>と<code>character1</code>は機嫌が悪かった。<br>互いの顔を見ようともせず、言葉すら 交わさない。<br>職務中も、それは同様。<br><code>character2</code>と<code>character3</code>は、その空気にただ耐えるしかなかった。<br><br>しかし、カイブツの発生に対する対応の際、<br>状況は変化する。<br><code>character0</code>は<code>character1</code>と何か言い合いながらも、<br>素晴らしいコンビネーションで戦闘を行い、<br>見事にカイブツを撃退。<br><br>バトルの後、<code>character0</code>は<code>character1</code>に対し、<br>今日の事に免じて、あのことは許すと告げる。<br><code>character1</code>も、それを受けて謝罪の言葉を述べる。<br><code>character2</code>はその光景を見て、<br>そうか、あの事はもういいのかと<code>character0</code>に尋ねる。<br><code>character0</code>の頷くさまに、<code>character2</code>は頷きながら感涙 する。<br><br><code>character3</code>は、状況が全く分からずに唖然としていた。<br>
+</p>
+</details>
+
+<details><summary>Sales Report 15</summary>
+<p>仕事の後、夕飯を食べて帰ることになった。<br><br>しかし、たまたま入った店が高級店だった為か、<br>食事後に請求された金 額はとんでもないものだった。<br><br>奢るはずだった<code>character0</code>は、明らかに混乱している。<br><code>character1</code>は財布の中身を確かめ、ため息をつく。<br><code>character2</code>は、皿洗いを覚悟した。<br><br>しかしそこで、<code>character3</code>が颯爽と金色に輝くカードを<br>取り出し、「一括払い」を宣言。<br><br>全員、<code>character3</code>に感謝 の言葉を述べ、<br><code>character3</code>はなんてことないと笑って切り返した。<br>何て太っ腹なんだろう……。<br><br>備考：<br><code>character3</code>は当面の間、<br>食事時にカップ麺の支給を要望している。<br>
+</p>
+</details>
