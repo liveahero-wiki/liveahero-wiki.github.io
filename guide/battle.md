@@ -81,6 +81,6 @@ In quests, items may be available as a random drop. For instance, many quests wi
 
 ## Support
 
-After quest selection, another player's Hero and respective Sidekick can be selected as Support for that battle. Depending on the quest, an NPC support might be locked in place of a player's support. When a Hero is selected as Support, their opearting player will earn additional {% include item.html id=42 %} (Friend Points). <!-- how many? -->
+After quest selection, another player's Hero and respective Sidekick can be selected as Support for that battle. Depending on the quest, an NPC support might be locked in place of a player's support. When a Hero is selected as Support, both their operating player and the player receiving support will earn {% include item.html id=42 %} (Friend Points): 100 if they are friends, or 50 if they are not.
 
 If a non-friend Support is chosen, it is possible to request that player to become a friend after the battle has ended. Supports can be set for other users to use under the Support tag via the Options menu > Player Settings. <!-- needs a screenshot -->
