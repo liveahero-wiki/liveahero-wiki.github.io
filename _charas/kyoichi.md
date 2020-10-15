@@ -32,9 +32,16 @@ By the way, it seems like "Elementary students are the base he's supposed to def
 {% include sidekick-infobox.html stockId=10101 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="kyoichi"
-APPRECIATION = "Hey, hey, you're throwing a little too soft. I'm not a kid, so think about how to appropriately distribute your physical strength.  The body is the capital of both teachers and operators, right?"
-DAILY = "Yeah, good work today!   I'll go out with you in a bit. Before that, let me just finish up scoring these tests."
-RELATION = "Akashi's the most promising among the juniors by a mile. Once he's refined his technique and got some experience under his belt he's gonna go far... ha, he is going far... why's he running away?!?!"
+APPRECIATION = "Hey, hey, you're throwing a little too soft.<br>I'm not a kid, so think about how to appropriately distribute your physical strength.<br>The body is the capital of both teachers and operators, right?"
+DAILY = "Yeah, good work today!<br>I'll go out with you in a bit.<br>Before that, let me just finish up scoring these tests."
+HERO = "You know, sometimes I'm really worried!<br>I wonder if that kid hero even go to school!?<br>does his studies get affected or not, I'm concerned!"
+PLAYER = "Honestly, I'm amazed at you.<br>It requires a lot of courage to suddenly go out there without any training at all.<br>Really remarkable."
+RELATION = "Akashi's the most promising among the juniors by a mile.<br>Once he's refined his technique and got some experience under his belt he's gonna go far...<br>ha, he is going far... why's he running away?!?!"
+TOUCH = "Oops! Hoh…<br>Since you're the one who started it first,<br>that means it's OK to return it right? Hehe…here I come!"
+TRAIN = "Alright follow your teacher!"
+TRAINED = "Uwaa wait, I give up, I give up! Uhyaa!"
+
+
 %}
 
 ## Notes
