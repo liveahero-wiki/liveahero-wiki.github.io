@@ -30,11 +30,14 @@ If he is given affection, he will meekly return the favor.
 {% include sidekick-infobox.html stockId=10241 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="digram"
-APPRECIATION = "…The body of organic lifeforms are said to lose performance when exhausted, Master… Please take an early rest."
-DAILY = "You are 34 seconds late, Master.  It will be trouble if we don't arrive on time.  Let's go to the site immediately to recover from this delay."
-TOUCH = "Physical contact with this machine, is there any meaning in such a thing? Maybe this is just something a machine like myself can't comprehend. Though, I do feel the warmth of your hand..."
-HERO = "Why does mechanical life seek an organic body? I question that a lot. However... for what reason are my emotions shaken when this person gets into battle?"
-RELATION = "Proper maintenance is essential for on-time performance of ships.  This machine respects that woman's mechanical aptitude."
+APPRECIATION = "…The body of organic lifeforms are said to lose performance when exhausted,<br>Master… Please take an early rest."
+DAILY = "You are 34 seconds late, Master.<br>It will be trouble if we don't arrive on time.<br>Let's go to the site immediately to recover from this delay."
+TOUCH = "Physical contact with this machine, is there any meaning in such a thing?<br>Maybe this is just something a machine like myself can't comprehend.<br>Though, I do feel the warmth of your hand..."
+HERO = "Why does mechanical life seek an organic body? I question that a lot.<br>However... for what reason are my emotions shaken when this person gets into battle?"
+PLAYER = "Master, I believe you still needs more time to polish your skills.<br>To partake in combat without enough familiarity is very dangerous.<br>Please consider your own safety first and foremost."
+RELATION = "Proper maintenance is essential for on-time performance of ships.<br>This machine respects that woman's mechanical aptitude."
+TRAIN = "Thank you for your cooperation in the test run."
+TRAINED = "A..As of now, any more trial run is..meaningless..!"
 %}
 
 ## Notes
