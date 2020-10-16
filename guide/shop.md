@@ -47,6 +47,8 @@ Items can be exchanged using {% include item.html id=35 %} or {% include item.ht
 | {% include item.html id=26 %} |     6000{% include item.html id=35 %}     |  100  |
 | Business Slot Unlock Ticket | 10{% include item-icon.html id=1 %} | 1 (one-time purchase) |
 
+{% include shop-table.html id=1 %}
+
 ## Buying Record Cubes
 
 Record Cubes can be obtained by exchanging Hero's Memories or Sidekick's Mind.
