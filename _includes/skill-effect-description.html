@@ -53,7 +53,7 @@ Skip {{ effect.parameter.value }} enemy action(s)
 {% assign turnDefinition = "turn" %}
 {{ target }} cannot use view-costing skills
 {% when "ComboDamage" %}
-Deal {{ effect.parameter.value }}% of damage and {{ effect.parameter.combpMult }}% extra for each combo to {{ target }}
+Deal {{ effect.parameter.value }}% of damage and {{ effect.parameter.value | times: effect.parameter.combpMult | divided_by: 100.0 }}% extra for each combo to {{ target }}
 {% when "ElementPenetrateDamage" %}
 ATK {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} to {{ target }} by {{ effect.parameter.value | divided_by: 100.0 }}x against advantageous elements
 {% when "Wait" %}
