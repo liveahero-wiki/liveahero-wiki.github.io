@@ -45,7 +45,7 @@ Experience points will be given to all heroes who have departed on the business.
 
 ## Business Bonus
 
-The amount of currency obtained in each type of Sale is increased by a bonus. Heroes going on the business give a +5% bonus, up to maximum of +45% if all eight slots are filled; 5★ Heroes provide an additional +5%, up to a maximum of 45%. Hence, the maximum total of bonus for each sale is +90% for a team of eight 5★ Heroes. Obtainable experience is also affected by this bonus.
+The amount of currency obtained in each type of Sale is increased by a bonus. Heroes going on the business give either a +5% bonus for the first six Heroes and a +10% bonus for the seventh and eighth Heroes, up to maximum of +50% if all eight slots are filled; 5★ Heroes provide an additional +5% for the first six 5★ Heroes and a +10% bonus for the seventh and eighth 5★ Heroes, up to a maximum o 50%. Hence, the maximum total of bonus for each sale is +100% for a team of eight 5★ Heroes. Obtainable experience is also affected by this bonus.
 
 ## Business Log
 
