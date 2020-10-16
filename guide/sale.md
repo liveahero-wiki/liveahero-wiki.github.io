@@ -106,6 +106,11 @@ the name of the hero(es) sent to the business.
 </p>
 </details>
 
+<details><summary>Sales Report 4 (Translated)</summary>
+<p>What awaits<code>character0</code>、<br>is a terrifying high-tension scene.<br>Everyone enters a state of natural high,<br>and looks like they haven't sleep for who knows how many nights.<br><br><code>character0</code>felt a sense of urgency,<br>and desperately try to help them with their work.<br>However, the job description is more demanding than they imagined.<br><code>character0</code>is starting to get affected…<br><br>And so,<code>character0</code>wonder,<br>In their life up till now did they ever be the best in anything?<br>They left in a state of extreme stress…
+</p>
+</details>
+
 <details><summary>Sales Report 5</summary>
 <p>営業先で、<code>character0</code>はヴィランと遭遇した！<br>ヴィランは、<code>character0</code>にフードファイトを申し 込んできた！<br>何処からか運ばれてくる山盛りの食事。<br>続々と集まり始める観客……。<br><br><code>character0</code>は勝負 を受けて、食事の山にかじりついた！<br>無我夢中で食していくうちに、段々とペースを<br>落としていくヴィラン……。<br>これを好機と、一気に攻める<code>character0</code>！<br><code>character0</code>は見事、ヴィランとの戦いに勝利した！<br><br>しばらく、食事の量を元の状態に戻すのに<br>苦労したという。<br>
 </p>
@@ -128,6 +133,11 @@ the name of the hero(es) sent to the business.
 
 <details><summary>Sales Report 7</summary>
 <p>営業先から帰還するため、宇宙船を駆る。<br>しかし、動力エンジンがまさかの故障。<br>修理サービスを待つ羽目になってしま った。<br><br>幸い空調や食料に問題はない。<br>しかし、狭い空間には、<code>character0</code>と<code>character1</code>が２人きり。<br>気を紛らわそうと話題を振る<code>character0</code>。<br>話を膨らませようと頑張る<code>character1</code>。<br>しかし、すぐに話題もつき、沈黙の時間が流れる。<br><br>やがて就寝の時間が訪れ、２人は座席を倒す。<br>だが、相手のことが気になって、寝るに寝れない。<br><code>character1</code>が寝返りを打つ衣擦れの音に、<br><code>character0</code>は思わずドキドキ。<br><code>character0</code>がトイレに立つ足音が、<br><code>character1</code>には妙に気になってしまう。<br><br>やがて修理サービスが到着し、無事帰還するも、<br>２人の目は隈だらけになっていた…。
+</p>
+</details>
+
+<details><summary>Sales Report 7 (Translated)</summary>
+<p>While driving the spaceship after returning from work,<br>the ship's power engine suddenly fails.<br>They have to wait for the repair service.<br><br>Fortunately, there are no problems with air conditioning or food.<br>However there are only two people in the small space,<code>character0</code>and<code>character1</code>.<br><code>character0</code>brings up a topic of conversation to distract themselves.<br><code>character1</code>works hard to maintain the conversation.<br>However, the conversation soon ended and there is only silence.<br><br>Eventually, bedtime arrives and the two recline in their seats.<br>However they can't sleep because they're too conscious of each other.<br><code>character1</code>turns around and at the sound of their rustling clothes,<br><code>character0</code>feels their heart beats faster.<br><code>character0</code>stands up and go to the toilet,<br><code>character1</code>is strangely bothered by it.<br><br>Eventually the repair service arrived and they returned safely, but<br>the two of them have dark circles under their eyes…
 </p>
 </details>
 
