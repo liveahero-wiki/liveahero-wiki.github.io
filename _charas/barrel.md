@@ -1,6 +1,10 @@
 ---
 name: Barrel
-unreleased: true
 ---
 
-{% include hero-infobox-unreleased.html resourceName="barrel" %}
+{% include hero-infobox.html stockId=10071 %}
+
+{% include hero-infobox.html stockId=10071 %}
+
+{% include voice-table.html resourceName="barrel"
+%}
