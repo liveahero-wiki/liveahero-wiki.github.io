@@ -72,17 +72,17 @@ After business is completed, a report will be randomly generated from these temp
 the name of the hero(es) sent to the business.
 
 <details><summary>Sales Report 1</summary>
-<p><code>character0</code>は待ち合わせ場所に到着した。<br>すると現れた仲介業者の男が頭を下げてきた。<br>「どうしても欠員が出ちゃって…お願いします！」<br>言われるがままに、<code>character0</code>は更衣室に入った。<br>そこにあったのは、ファンシーな着ぐるみだった。<br><code>character0</code>はそれを着用し、台本通りに役をこなした。<br>ベタなショーの内容に、子供 たちは冷め気味……。<br><br>しかし、途中現れたチンピラを取り押さえたことで、<br><code>character0</code>は一躍子供たちの人 気者に。<br>沢山の子供達と共に写真を撮った。<br><br>ハプニングだらけの営業活動だったが、<br>満更でもない気持ちで帰還したのだった……。
+<p><code>character0</code>arrived at the meeting place.<br>There, the frazzled client bowed his head in gratitude.<br>"We're booked so full there are no vacancies left at all... thank you so much!".<br>As asked,<code>character0</code>entered the changing room.<br>What was there was a fancy cartoon mascot costume.<br><code>character0</code>wore it and did the job according to the script, and endured performing the corny children's show...<br><br>However, while on their way back to change out of the costume,<br><code>character0</code>was suddenly swarmed by cheering kids.<br>They ended up taking pictures with a lot of children.<br><br>It was a sales activity full of happenings,<br>They returned with a feeling that it wasn't so bad after all...
 </p>
 </details>
 
 <details><summary>Sales Report 2</summary>
-<p>営業先で、<code>character0</code>はヴィランと遭遇した！<br>ヴィランは、奇怪な踊りを踊りながら、<br>民衆にセクハラ的な行為を行って喜んでいる、<br>文字通りの変態だった！<br><br><code>character0</code>はそんな変態を止めるべく戦闘を行うが、<br>変態相手にマトモな技は通用しなかった。<br><br>目には目を、歯には歯を。<br><code>character0</code>はダンスバトルを申し込んだ！<br>変態を軽々と圧倒するデタラメで妙ちきりんな踊りに、<br>ヴィランは負けを認め、たちまち御用となった。<br><br>しかし、変態ヴィランを逮捕した功績と共に、<br><code>character0</code>は大事な何かを失ったのだった……。
+<p>At the business location,<code>character0</code>encountered a villain!<br>The villain dragged citizens along, forcing them into a bizarre dance,<br>but slyly groping the dance partners on the side.<br>It was a pervert on the loose!<br><br><code>character0</code>transformed, determined to put a stop to their misdeeds.<br>However, their usual battle techniques did not work against the agile, slippery opponent.<br><br>Eye for an eye, tooth for a tooth.<br><code>character0</code>challenged the villain head on in a dance battle!<br>Their haphazard, unpredictable dancing overwhelmed the opponent,<br>The Villain admitted to losing and was quickly arrested.<br><br>However, with the achievement of capturing the perverted villain<br><code>character0</code>lost something important...
 </p>
 </details>
 
 <details><summary>Sales Report 3</summary>
-<p>自分は一体、どこから来たのか。<br>自分は一体、何者なのか。<br>自分は一体、どこへ向かうのか。<br><br>自分は一体、今何 をしているのか。<br><br>そんなことを考えながら、<br><code>character0</code>は一心不乱に流れ作業を行い続けた。<br>他のメ ンバーは皆、一体何を考えながら<br>この作業をしているのだろう……。<br><br>この仕事を続けていれば、いずれ真理を<br>見つけられるかもしれない。<br><code>character0</code>は、精神修行について、<br>真剣に考えさせられたという。
+<p>Where did you come from?<br>Who are you?<br>Where on earth are you going?<br>........<br><br>What on earth are you doing now?<br><br>While thinking about that,<br><code>character0</code>continued to work on the assembly line.<br>What the hell are all the other members thinking about<br>Their mind continued to wander as they went about their repetitive task...<br><br>If you continue this work, the truth will come<br>You may be able to find it.<br><code>character0</code>sank deep into their meditative training,<br>It was said that they were made to think seriously.
 </p>
 </details>
 
@@ -92,12 +92,13 @@ the name of the hero(es) sent to the business.
 </details>
 
 <details><summary>Sales Report 5</summary>
-<p>営業先で、<code>character0</code>はヴィランと遭遇した！<br>ヴィランは、<code>character0</code>にフードファイトを申し 込んできた！<br>何処からか運ばれてくる山盛りの食事。<br>続々と集まり始める観客……。<br><br><code>character0</code>は勝負 を受けて、食事の山にかじりついた！<br>無我夢中で食していくうちに、段々とペースを<br>落としていくヴィラン……。<br>これを好機と、一気に攻める<code>character0</code>！<br><code>character0</code>は見事、ヴィランとの戦いに勝利した！<br><br>しばらく、食事の量を元の状態に戻すのに<br>苦労したという。<br>
+<p>At the business location,<code>character0</code>encountered a villain!<br>The villain challenged <code>character0</code>to an eating competition!<br>A heap of meals was brought from somewhere,<br>and an audiences began to gather one after another...<br><br><code>character0</code>accepted the challenge with gusto and began to attack the mountain of food!<br>The pitched battle initially seemed like an even match,<br>Until the villain eventually began to fall behind...<br>Taking this as an opportunity,<code>character0</code> attacked at once!<br><code>character0</code>has won the battle with the villain brilliantly!
+<br><br>They've apparently been trying to make up for the battle with a diet since then...<br>
 </p>
 </details>
 
 <details><summary>Sales Report 6</summary>
-<p>活動中、些細な意見の相違からいざこざが発生。<br><code>character0</code>が口火を切り、<code>character1</code>が挑発に 乗ってしまう。<br>言い争いになる<code>character0</code>と<code>character1</code>。<br><br>どっちが先かは分からないが、<br>次第と手が出て、掴み合いの大喧嘩に発展。<br><code>character0</code>が吠え、<code>character1</code>が叫び返す。<br>誰も止められないほどに現場は混乱する。<br><br>しかし、しばらく喧嘩が続くうちに、<br>お互いの実力を認め合い、次第に笑い合うようになる。<br>最後には<code>character0</code>が手を差し出し、<br><code>character1</code>が握り返し、２人で夕日を眺めて笑い合った。<br>２人の仲は、なんだかんだで深まったのだった。<br><br><code>character0</code>追記：<br>本件に関しての始末書 については、別途提出します。<br>
+<p>During the activity, a slight disagreement caused trouble.<br><code>character0</code>became angry and<code>character1</code>provoked them further.<br><code>character0</code>and<code>character1</code>got into a big argument.<br><br>Nobody knows who started it first,<br>But gradually it devolved into a physcical altercation of grabbing and shoving,<br><code>character0</code>barks and<code>character1</code>shouts back.<br>The scene is so confusing and chaotic that no one can stop it.<br><br>However, after the quarrel continued for a while,<br>They recognize each other's abilities and gradually start to laugh.<br>At the end,<code>character0</code>reaches out a hand,<br><code>character1</code>shook it heartily and the pair laughed at the sunset.<br>The relationship between the two had somehow deepened.<br><br><code>character0</code>postscript:<br>A written statement regarding this matter will be submitted separately.<br>
 </p>
 </details>
 
@@ -107,17 +108,17 @@ the name of the hero(es) sent to the business.
 </details>
 
 <details><summary>Sales Report 8</summary>
-<p>炎天下、高温の現場での仕事。<br>気丈に仕事を回していた<code>character0</code>も、<br>次第にふらつき始め、やがて倒れてしまう。<br><br><code>character1</code>は<code>character0</code>を涼しい空間に運び、介抱する。<br><code>character1</code>は熱を貯め込んだ<code>character0</code>の体を冷やすため、<br><code>character0</code>の服を脱がすことにする……が。<br>妙 にドキドキしてしまう<code>character1</code>。<br>適切な対処を行おうとしているだけなのに、<br>何か、いけない事をしている ような……。<br><br>やがて目を覚ました<code>character0</code>。<br>自らの着衣の様を見て、思わず赤面してしまう。<br>ひとま ず<code>character1</code>に礼を言うも、<br>なんとも言えない微妙な空気が、２人の間に流れる。<br><br>帰還後、妙にお互いの 視線が気になってしまう<br><code>character0</code>と<code>character1</code>の２人だった。
+<p>Working together in a hot field under the scorching sun.<br><code>character0</code>who had been working hard,<br>gradually begins to sway and eventually collapses.<br><br><code>character1</code>carries <code>character0</code>to a cool, shady area to take care of them.<br>While<code>character1</code>attempts to cool off the body of <code>character0</code>、<br>They decided to take off some of <code>character0</code>'s clothes...<br><code>character1</code>'s heart pounds for some reason.<br>I'm just trying to take appropriate action<br>It's not like I'm doing something wrong...<br><br>Eventually,<code>character0</code>began to stir.。<br>Upon seeing their clothes, they blush.<br>Still, they thank<code>character1</code>for caring for them, but<br>An awkward air flows between the two.<br><br>After returning from the job, the two still have trouble looking eachother in the eyes.
 </p>
 </details>
 
 <details><summary>Sales Report 9</summary>
-<p>仕事が早く終わってしまい、<br>迎えが来るまで半日近く時間が空いてしまった。<br><code>character0</code>の提案で、<code>character1</code>は現地を観光して時間を潰すことに。<br><br>現地では丁度祭りが行われており、<br>普段見ないような異文化の 屋台が軒を連ねていた。<br><code>character1</code>は興味深そうにそれらの店先を眺め、<br>１つの商品を手に取り、<code>character0</code>に見せる。<br><code>character0</code>に似合いそうだ、と。<br><br>店主は「それは恋人に送ると結ばれるという<br>まじないが込められた品ですよ」と語る。<br><br><code>character1</code>は、説明に動揺し、赤面してうつむいてしまう。<br>しかし、折角<code>character1</code>が勧めてくれたものだから、と、<br><code>character0</code>は店主に代金を渡し、それを購入する。<br><br><code>character0</code>は今も、こっそりそれを身に着けているという。
+<p>Work was finished early this time,<br>with nearly half a day remaining until the scheduled pickup time.<br>At the suggestion of <code>character0</code>,<code>character1</code>decided to go sightseeing and kill time.<br><br>A festival is being held locally,<br>There were many stalls of different cultures that you wouldn't normally see.<br><code>character1</code>looks at those storefronts with interest,<br>Picking up one product and showing it to <code>character0</code>.<br>"<code>character0</code>this one would look good on you!"<br><br>The stall owner said, "That one is said to hold a special magic,<br>if you give it to your lover, the two of you will be bound together forever." He says.<br><br><code>character1</code>is flustered by the explanation, blushes and looks down.<br>However, because it was recommended by<code>character1</code><br><code>character0</code>gives the money to the shop owner and buys it.<br><br>Secretly,<code>character0</code>still wears it on days off.
 </p>
 </details>
 
 <details><summary>Sales Report 10</summary>
-<p>職務中、成り行きで取引先の重役を接待しなくては<br>いけなくなってしまった<code>character0</code>と<code>character1</code>。<br>連れてこられたのは、歓楽街のスナック。<br><br>酒が入り、すっかり上機嫌な重役は、<br>２人の歌声を聞きたいと、<br>カラオケマシンに曲をリクエストし、<br>２人にマイクを持たせ、前に立たせる。<br><br>流れ出したのは、やや古臭いデュエット のラブソング。<br><code>character0</code>は全くその曲を知らない。<br>画面に流れる歌詞を追い、懸命に歌う<code>character0</code>。<br><br>しかし、<code>character1</code>は元からその曲を知っていた。<br><code>character1</code>は、うまく<code>character0</code>をリードして歌う。<br>重役は大満足の拍手で２人を労った。<br><br>以降、<code>character1</code>がその時の曲の一節を口ずさむと、<br><code>character0</code>が乗っかってくるようになったという。
+<p>For today's duties,<br>we have to entertain some executives of a partner company<code>character0</code>and<code>character1</code>attended a dinner with them in the red-light district.<br><br>The executive got into a good mood thanks to the sake,<br>"I want to hear you two's singing voices!"<br>Requesting a song from the karaoke machine,<br>The two were hastily given microphones and told to stand in front of them.<br><br>What began playing was a slightly old-fashioned duet love song.<br><code>character0</code>doesn't know the song at all.<br>Nonetheless,<code>character0</code>does their best to follow the onscreen lyrics, singing with their all.<br><br>However,<code>character1</code>was already familiar with the song from the beginning.<br><code>character1</code>leads <code>character0</code>through the ballad.<br>The executives were very pleased and applauded the duet.<br><br>Since then, when <code>character1</code>idly sings a passage of the song,<br><code>character0</code>follows up with the next lyrics.
 </p>
 </details>
 
@@ -137,11 +138,11 @@ the name of the hero(es) sent to the business.
 </details>
 
 <details><summary>Sales Report 14</summary>
-<p>出発時から、<code>character0</code>と<code>character1</code>は機嫌が悪かった。<br>互いの顔を見ようともせず、言葉すら 交わさない。<br>職務中も、それは同様。<br><code>character2</code>と<code>character3</code>は、その空気にただ耐えるしかなかった。<br><br>しかし、カイブツの発生に対する対応の際、<br>状況は変化する。<br><code>character0</code>は<code>character1</code>と何か言い合いながらも、<br>素晴らしいコンビネーションで戦闘を行い、<br>見事にカイブツを撃退。<br><br>バトルの後、<code>character0</code>は<code>character1</code>に対し、<br>今日の事に免じて、あのことは許すと告げる。<br><code>character1</code>も、それを受けて謝罪の言葉を述べる。<br><code>character2</code>はその光景を見て、<br>そうか、あの事はもういいのかと<code>character0</code>に尋ねる。<br><code>character0</code>の頷くさまに、<code>character2</code>は頷きながら感涙 する。<br><br><code>character3</code>は、状況が全く分からずに唖然としていた。<br>
+<p>From the time of departure,<code>character0</code>and<code>character1</code>were in a foul mood due to an earlier argument.<br>They refuse to look at each other's faces and don't even exchange words.<br>Even during the duties, it is the same.<br><code>character2</code>and<code>character3</code>had no choice but to endure the tense atmosphere.<br><br>However, when responding to an outbreak of Kaibutsu<br>The situation changes.<br>Despite the lingering bitterness between<code>character0</code>and<code>character1</code>,<br>The two fight in a great combination and repel the Kaibutsu brilliantly.<br><br>After the battle,<code>character0</code>is against<code>character1</code>,<br>I'm sorry for today, and I hope you can forgive me...<br><code>character1</code>apologizes as well.<br><code>character2</code>sees the scene and asks if things are okay between them again,<br><code>character0</code>nods, smiling through tears at<code>character2</code>.<br><br><code>character3</code>was stunned, not having realized any of this was going on at all.<br>
 </p>
 </details>
 
 <details><summary>Sales Report 15</summary>
-<p>仕事の後、夕飯を食べて帰ることになった。<br><br>しかし、たまたま入った店が高級店だった為か、<br>食事後に請求された金 額はとんでもないものだった。<br><br>奢るはずだった<code>character0</code>は、明らかに混乱している。<br><code>character1</code>は財布の中身を確かめ、ため息をつく。<br><code>character2</code>は、皿洗いを覚悟した。<br><br>しかしそこで、<code>character3</code>が颯爽と金色に輝くカードを<br>取り出し、「一括払い」を宣言。<br><br>全員、<code>character3</code>に感謝 の言葉を述べ、<br><code>character3</code>はなんてことないと笑って切り返した。<br>何て太っ腹なんだろう……。<br><br>備考：<br><code>character3</code>は当面の間、<br>食事時にカップ麺の支給を要望している。<br>
+<p>After work, the team decided to eat dinner and go home.<br><br>However, maybe because the store they happened to enter was a luxury store.<br>The amount charged after the meal was unexpectedly ridiculous.<br><br><code>character0</code>,who had intended to treat everyone, is clearly confused.<br><code>character1</code>checks the contents of his wallet and sighs.<br><code>character2</code>resigned to a night of washing the dishes.<br><br>Suddenly, <code>character3</code>saves the day, flashing a dashing golden card and declaring a "Dinner's on me."<br><br>Everyone thanked<code>character3</code>,<br><code>character3</code>laughed and told them to think nothing of it.<br>Everyone left satisfied with full bellies...<br><br>Additional Notes:<br>For the forseeable future, <code>character3</code>requests the provision of cup noodles at meal time.<br>
 </p>
 </details>
