@@ -43,20 +43,21 @@ Statuses that grant positive effects on the hero are displayed as a yellow icon,
 
 The available status modifiers are listed as follows:
 
-<!-- would be nice to have the icons for these statuses -->
 #### Buffs
 
-- ATK Up: Attack is increased by 1.5x. Duration decreases after the Hero performs an action.
-- DEF Up: Damage received is decreased by 0.5x once. Duration decreases after taking damage.
-- SPD Up: Speed is increased by +10. Duration decreases after the Hero performs an action.
-- Super SPD Up: Speed is increased by +30. Duration decreases after the Hero performs an action.
-- Attention: Views gained after an action are increased by 1.5x. Turn decreased based on action. It is non-repeatable.
-- Provocation: Enemies target the ally until the end of the turn.
-- Invincible: Damage received from enemies is reduced to 0 once.
-- Good luck: Activation rate of skills increased by 20%. Duration decreases after the Hero performs an action.
-- Awakening: View Power required for skills is halved. Duration decreases after the Hero performs an action. It is non-repeatable.
-- Regen: Restores 10% HP at the end of turn. Duration decreases when the turn ends.
-- Damage Gathering: All enemy attacks apply to the target ally. Duration decreases when the turn ends. It does not repeat.
+| Buff | English Name | Description |
+|:----:|:--------------:|:-----------:|
+| {% include status.html id=1 %} | ATK Up | Attack is increased by 1.5x. Duration decreases after the Hero performs an action. |
+| {% include status.html id=2 %} | Def Up | Damage received is decreased by 0.5x once. Duration decreases after taking damage.|
+| {% include status.html id=3 %} | SPD UP | Speed is increased by +10. Duration decreases after the Hero performs an action.|
+| {% include status.html id=20 %} | Super SPD Up | Speed is increased by +30. Duration decreases after the Hero performs an action. |
+| {% include status.html id=4 %} | Attention | Views gained after an action are increased by 1.5x. Turn decreased based on action. It is non-repeatable. |
+| {% include status.html id=5 %} | Provocation | Enemies target the ally until the end of the turn. |
+| {% include status.html id=6 %} | Invincible | Damage received from enemies is reduced to 0 once. |
+| {% include status.html id=7 %} | Good Luck | Activation rate of skills increased by 20%. Duration decreases after the Hero performs an action. |
+| {% include status.html id=8 %} | Awakening | View Power required for skills is halved. Duration decreases after the Hero performs an action. It is non-repeatable. |
+| {% include status.html id=10 %} | Regen | Restores 10% HP at the end of turn. Duration decreases when the turn ends. |
+| {% include status.html id=26 %} | Damage Gathering | All enemy attacks apply to the target ally. Duration decreases when the turn ends. It does not repeat. |
 
 #### Debuffs
 
@@ -68,7 +69,6 @@ The available status modifiers are listed as follows:
 - Misfortune: Activation rate of skills decreased by 20%. Duration decreases after the Hero performs an action.
 - Silence: Skill cannot be used. Duration decreases when the turn ends. It does not repeat.
 - Poison: Takes 5% of HP as damage at end of turn. Duration decreases when the turn ends.
-- Burn: Takes 10% of HP as damage at end of turn. Duration decreases when the turn ends.
 - Burn: Takes 10% of HP as damage at end of turn. Duration decreases when the turn ends.
 
 ## Battle acquisition EXP/ Relation
