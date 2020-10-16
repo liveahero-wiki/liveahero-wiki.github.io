@@ -107,7 +107,7 @@ the name of the hero(es) sent to the business.
 </details>
 
 <details><summary>Sales Report 4 (Translated)</summary>
-<p>What awaits<code>character0</code>、<br>is a terrifying high-tension scene.<br>Everyone enters a state of natural high,<br>and looks like they haven't sleep for who knows how many nights.<br><br><code>character0</code>felt a sense of urgency,<br>and desperately try to help them with their work.<br>However, the job description is more demanding than they imagined.<br><code>character0</code>is starting to get affected…<br><br>And so,<code>character0</code>wonder,<br>In their life up till now did they ever be the best in anything?<br>They left in a state of extreme stress…
+<p>What awaits<code>character0</code>,<br>is a terrifying high-tension scene.<br>Everyone enters a state of natural high,<br>and looks like they haven't sleep for who knows how many nights.<br><br><code>character0</code>felt a sense of urgency,<br>and desperately try to help them with their work.<br>However, the job description is more demanding than they imagined.<br><code>character0</code>is starting to get affected…<br><br>And so,<code>character0</code>wonder,<br>In their life up till now did they ever be the best in anything?<br>They left in a state of extreme stress…
 </p>
 </details>
 
