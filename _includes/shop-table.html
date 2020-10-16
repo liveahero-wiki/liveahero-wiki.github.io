@@ -1,0 +1,17 @@
+{% assign shopData = site.data.ShopMaster[id] %}
+<h2>{{ shopData.storeName }}</h2>
+<table>
+  <tr>
+    <th>Item</th><th>Price</th><th>Stock</th><th>Total cost</th>
+  </tr>
+  {% for productData in shopData.products %}
+  {% assign product = productData.product %}
+  {% assign currency = productData.currency %}
+  <tr>
+    <td>{% include item.html id=product.objectId %} x{{ product.objectValue }}</td>
+    <td>{% include item.html id=currency.objectId %} x{{ currency.objectValue }}</td>
+    <td>{{ productData.exchangeLimit }}</td>
+    <td>{{ currency.objectValue | times: productData.exchangeLimit }}</td>
+  </tr>
+  {% endfor %}
+</table>
