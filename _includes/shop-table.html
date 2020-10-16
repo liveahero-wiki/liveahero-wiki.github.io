@@ -1,4 +1,4 @@
-{% assign id = include.id %}
+{% assign id = include.id | downcase %}
 {% assign shopData = site.data.ShopMaster.stores[id] %}
 <h2>{{ shopData.storeName }}</h2>
 <table>
