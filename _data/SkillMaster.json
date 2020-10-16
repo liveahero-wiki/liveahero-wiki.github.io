@@ -77,17 +77,71 @@
   },
   "4": {
     "skillId": 4,
-    "skillName": "イベント用_攻撃力20%アップ",
+    "skillName": "イベント用_攻撃力30%アップ",
     "useView": 0,
     "targetFlag": 5,
     "resourceName": "",
     "subResourceName": "",
     "timing": 0,
-    "description": "0ターンの間ATK+20%を付与。",
+    "description": "ATK+30%（イベントボーナス）",
     "cutin": [],
     "effects": [
       {
-        "skillEffectId": 219,
+        "skillEffectId": 246,
+        "prob": 100,
+        "effectTarget": 5
+      }
+    ]
+  },
+  "5": {
+    "skillId": 5,
+    "skillName": "イベント用_攻撃力10%アップ",
+    "useView": 0,
+    "targetFlag": 5,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "ATK+10%（イベントボーナス）",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 87,
+        "prob": 100,
+        "effectTarget": 5
+      }
+    ]
+  },
+  "6": {
+    "skillId": 6,
+    "skillName": "イベント用_HP+50%",
+    "useView": 0,
+    "targetFlag": 5,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "HP基礎値+50%(イベントボーナス)",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 250,
+        "prob": 100,
+        "effectTarget": 5
+      }
+    ]
+  },
+  "7": {
+    "skillId": 7,
+    "skillName": "イベント用_HP+30%",
+    "useView": 0,
+    "targetFlag": 5,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "HP基礎値+30%(イベントボーナス)",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 249,
         "prob": 100,
         "effectTarget": 5
       }
@@ -655,6 +709,121 @@
         "skillEffectId": 88,
         "prob": 100,
         "effectTarget": 1
+      }
+    ]
+  },
+  "1007101": {
+    "skillId": 1007101,
+    "skillName": "狙い撃ちッス！",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_combo",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。コンボ数+1。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_barrel_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1007102": {
+    "skillId": 1007102,
+    "skillName": "撃ちまくりッス！",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。50%の確率で1ターンの間SPDダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_barrel_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 50,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1007103": {
+    "skillId": 1007103,
+    "skillName": "BANG&BANG&BANG!!",
+    "useView": 11000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ+コンボ数に応じてダメージ量が上昇。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_barrel_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 56,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "1007104": {
+    "skillId": 1007104,
+    "skillName": "撃ちまくりッス！+",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。1ターンの間SPDダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_barrel_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 100,
+        "effectTarget": 2
       }
     ]
   },
@@ -2703,6 +2872,111 @@
       }
     ]
   },
+  "1033101": {
+    "skillId": 1033101,
+    "skillName": "大風の舞い",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。自身に50%の確率で1ターンの間注目を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_gomeisa_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 216,
+        "prob": 50,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1033102": {
+    "skillId": 1033102,
+    "skillName": "日輪の踊り",
+    "useView": 2000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "Viewを7000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_gomeisa_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 40,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1033103": {
+    "skillId": 1033103,
+    "skillName": "ダンサクェ・トラエパス",
+    "useView": 12000,
+    "targetFlag": 3,
+    "resourceName": "b_skill_healAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方全体のHPを基礎ATKの100%回復する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_gomeisa_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 50,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "1033104": {
+    "skillId": 1033104,
+    "skillName": "ダンサクェ・トラエパス+",
+    "useView": 12000,
+    "targetFlag": 3,
+    "resourceName": "b_skill_healAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方全体のHPを基礎ATKの110%回復する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_gomeisa_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 251,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
   "2001101": {
     "skillId": 2001101,
     "skillName": "一球入魂",
@@ -3182,6 +3456,96 @@
       },
       {
         "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2007101": {
+    "skillId": 2007101,
+    "skillName": "援護射撃",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_combo",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。コンボ数+1。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_barrel_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2007102": {
+    "skillId": 2007102,
+    "skillName": "援護射撃+",
+    "useView": 2500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_combo",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。コンボ数+1。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_barrel_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2007103": {
+    "skillId": 2007103,
+    "skillName": "援護射撃++",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_combo",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。コンボ数+1。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_barrel_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 15,
         "prob": 100,
         "effectTarget": 0
       }
@@ -4702,6 +5066,96 @@
       }
     ]
   },
+  "2033101": {
+    "skillId": 2033101,
+    "skillName": "緑の恵み",
+    "useView": 3000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_spdUp",
+    "subResourceName": "s_skill_cureTeam",
+    "timing": 0,
+    "description": "味方単体に1ターンの間SPDアップを付与。デバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_gomeisa_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "2033102": {
+    "skillId": 2033102,
+    "skillName": "緑の恵み+",
+    "useView": 2500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_spdUp",
+    "subResourceName": "s_skill_cureTeam",
+    "timing": 0,
+    "description": "味方単体に1ターンの間SPDアップを付与。デバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_gomeisa_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "2033103": {
+    "skillId": 2033103,
+    "skillName": "緑の恵み++",
+    "useView": 2000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_spdUp",
+    "subResourceName": "s_skill_cureTeam",
+    "timing": 0,
+    "description": "味方単体に1ターンの間SPDアップを付与。デバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_gomeisa_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
   "2034101": {
     "skillId": 2034101,
     "skillName": "昔取った杵柄",
@@ -5536,6 +5990,114 @@
       {
         "skillEffectId": 85,
         "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3007101": {
+    "skillId": 3007101,
+    "skillName": "次弾装填Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_barrel_s01",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、10%の確率でコンボ数+1。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 10,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3007102": {
+    "skillId": 3007102,
+    "skillName": "次弾装填Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_barrel_s01",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、12%の確率でコンボ数+1。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 12,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3007103": {
+    "skillId": 3007103,
+    "skillName": "次弾装填Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_barrel_s01",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、14%の確率でコンボ数+1。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 14,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3007104": {
+    "skillId": 3007104,
+    "skillName": "次弾装填Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_barrel_s01",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、16%の確率でコンボ数+1。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 16,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3007105": {
+    "skillId": 3007105,
+    "skillName": "次弾装填Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_barrel_s01",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、18%の確率でコンボ数+1。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 18,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3007106": {
+    "skillId": 3007106,
+    "skillName": "次弾装填Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_barrel_s01",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、20%の確率でコンボ数+1。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 20,
         "effectTarget": 0
       }
     ]
@@ -7509,6 +8071,114 @@
       }
     ]
   },
+  "3033101": {
+    "skillId": 3033101,
+    "skillName": "光合成体質Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_gomeisa_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "HP基礎値+5%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 227,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3033102": {
+    "skillId": 3033102,
+    "skillName": "光合成体質Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_gomeisa_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "HP基礎値+6%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 228,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3033103": {
+    "skillId": 3033103,
+    "skillName": "光合成体質Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_gomeisa_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "HP基礎値+7%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 229,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3033104": {
+    "skillId": 3033104,
+    "skillName": "光合成体質Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_gomeisa_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "HP基礎値+8%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 230,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3033105": {
+    "skillId": 3033105,
+    "skillName": "光合成体質Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_gomeisa_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "HP基礎値+9%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 231,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3033106": {
+    "skillId": 3033106,
+    "skillName": "光合成体質Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_gomeisa_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "HP基礎値+10%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 101,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
   "3034101": {
     "skillId": 3034101,
     "skillName": "先導者の責務Ⅰ",
@@ -8237,6 +8907,56 @@
         "skillEffectId": 46,
         "prob": 100,
         "effectTarget": 0
+      }
+    ]
+  },
+  "4041103": {
+    "skillId": 4041103,
+    "skillName": "オールスラッシュ",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villain_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "4041104": {
+    "skillId": 4041104,
+    "skillName": "クリティカルヒット",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に70%ダメージの有利属性攻撃。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villain_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 224,
+        "prob": 100,
+        "effectTarget": 2
       }
     ]
   },
