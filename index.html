@@ -3,9 +3,103 @@ title: Live A Hero Wiki
 banner: true
 ---
 
-<img src="/assets/img/lah_banner.png" align="center" alt="Live A Hero banner">
+<style>
+#jst-time {
+    padding: 5px;
+    border: 1px solid #000;
+    text-align: center;
+}
+#daily-quest-box img {
+    height: 100px;
+    margin: 5px;
+}
+#daily-quest-box {
+    padding: 5px;
+    border: 1px solid #000;
+    max-width: 320px;
+}
+</style>
 
-<p style="text-align: center"><a href="https://live-a-hero.jp/">Official Website</a> ★ <a href="https://twitter.com/lah_lw">Official Japanese Twitter</a> ★ <a href="https://twitter.com/LAH_ENG">Unofficial English Twitter</a>
-<br><a href="https://play.google.com/store/apps/details?id=jp.co.lifewonders.liveahero">Download on Google Play</a> ★ <a href="https://apps.apple.com/jp/app/id1474209512">Download on the Apple App Store</a> ★ <a href="https://tiermaker.com/create/live-a-hero-characters-585406">Character Tier Maker</a></p>
+<img src="/assets/img/lah_banner.png" style="margin-bottom: 30px" align="center" alt="Live A Hero banner">
+
+<!-- TODO: add template for current event -->
+<table class="event-infobox">
+<tr><th><a href="/events/">Current Event</a></th></tr>
+{% assign event = site.events | sort: "event_start_time" | last %}
+<tr><td><a href="{{ event.url }}">{{ event.title }}</a> ({{ event.event_start_time | date: "%-d %b %Y" }} ~ {{ event.event_end_time | date: "%-d %b %Y" }})</td></tr>
+</table>
 
 <p style="text-align: justify">Live A Hero (LAH) is a turn-based mobile RPG developed by Lifewonders.</p>
+
+<p>The main character can play with a character selected from 4 types of appearance, 5 types of voice, and 3 types of gender identity.</p>
+<p>The setting of the main character, including the name, can be changed at any time later as an option.</p>
+
+<p>In addition, it is a turn-based command battle RPG that allows you to develop characters simply by forming a team in any combination and leaving it alone.</p>
+
+<h2>Core Information</h2>
+
+<ul>
+<li>Name: Live (pronounced "live" as in "livestream/ live broadcast") A Hero</li>
+<li>Launch Date: 30 September 2020</li>
+<li><a href="https://live-a-hero.jp/">Official Website</a></li>
+<li><a href="https://twitter.com/lah_lw">Official Twitter</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=jp.co.lifewonders.liveahero">Download on Google Play</a></li>
+<li><a href="https://apps.apple.com/jp/app/id1474209512">Download on the Apple App Store</a></li>
+</ul>
+
+<div id="jst-time"></div>
+<details id="daily-quest-box" open>
+<summary>Daily Quest</summary>
+</details>
+
+<h2>Story</h2>
+
+<p>There's a theory that there are countless parallel universes outside of ours.</p>
+
+<p>“If only I had acted like this back then…” “If only my dreams back then had come true...”</p>
+
+<p>Within these countless parallel universe, there may exist a universe in which such “what if” scenarios is a reality…</p>
+
+<p>The Earth of the future exists in one of these countless universes.</p>
+
+<p>On this planet, a wide variety of earthlings and aliens roam the planet - humans, beast-human aliens, and mechanical life forms. And on that very planet, menaces from a dimension from outer space, Monsters, shows up and battles are waged night and day against them - and the only one who can oppose them are called heroes.</p>
+
+<p>Businesspersons, police officers, teachers, carpenters, fisherfolks, freelancers, etc… People with various jobs will become heroes once these Monsters appear on their doorstep. With the help of “what-ifs” - the power of the universe of unlimited potential realities, these people are able to harness their power by embodying their dreams and steely resolute and fight against the looming threat in front of them.</p>
+
+<p>And you, through a strange turn of events, have been hired to support these very heroes. You shall become the source and beacon to provide power to the heroes by helping them to live stream their battles, by observing the infinite "possibilities" hidden deep within the people around you…</p>
+
+<h2>Community Links</h2>
+
+<ul>
+<li><a href="https://twitter.com/LAH_ENG">LAH English Twitter (Unofficial)</a></li>
+<li><a href="https://wikiwiki.jp/live-a-hero/">LAH Japanese Wiki</a></li>
+<li><a href="https://liveahero-community.github.io/">LAH Chinese Database</a></li>
+<li><a href="https://www.reddit.com/r/LiveAHero/">LAH Subreddit</a></li>
+<li><a href="https://discord.gg/zpc7PCk">LAH Discord (Herocord)</a></li>
+<li><a href="https://tiermaker.com/create/live-a-hero-characters-585406">Character Tier Maker</a></li>
+</ul>
+
+<script>
+const jstTime = document.querySelector("#jst-time");
+const dailyBox = document.querySelector("#daily-quest-box");
+function updateJstTime() {
+    jstTime.textContent = "Tokyo time: " + new Date().toLocaleString('en-US', {timeZone: 'Asia/Tokyo'});
+}
+setInterval(updateJstTime, 1000);
+const dailys = [["light"], ["fire"], ["water"], ["earth"], ["shadow"], ["light", "fire", "water"], ["earth", "shadow"]];
+const ranks = [4, 5, 6];
+function test() {
+    const d = new Date();
+    const jst = d.getTime() + (60*9 + d.getTimezoneOffset()) * 60000;
+    console.log(jst);
+    const elements = dailys[new Date(jst).getUTCDay() - 1];
+    for (const e of elements)
+    for (const rank of ranks) {
+        const img = new Image();
+        img.src = `/assets/img/icon/item_rank${rank}_${e}.png`;
+        dailyBox.appendChild(img);
+    }
+}
+test();
+
+</script>
