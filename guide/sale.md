@@ -177,6 +177,11 @@ the name of the hero(es) sent to the business.
 </p>
 </details>
 
+<details><summary>Sales Report 11 (Translated)</summary>
+<p>It was decided that <code>character0</code> would drive to the site, <br>but then<code>character2</code>and<code>character3</code>got into a dispute over who should be in the passenger seat.<br>Neither of them stepped back, and it was beginning to look like a child's fight.<br><br>Eventually,<code>character1</code>interceded.<br><code>character1</code>was in the passenger's seat,<code>character2</code>and<code>character3</code>were both in the back seat,<br> so they settled in and took off.<br><br>However, whether it was because<code>character0</code>was driving too roughly,<br>or because the amount of space debris was too much,<br>the hull shook significantly.<br><br>Both<code>character2</code>and<code>character3</code>got motion sickness.<br><br>After arriving at the site, it took one hour for them to begin work<br>The reason for this was stated above.
+</p>
+</details>
+
 <details><summary>Sales Report 12</summary>
 <p>現場において、強盗行為を行うヴィランに遭遇。<br>総員で対処にあたった。<br><br><code>character0</code>のサポートを<code>character1</code>、<br><code>character2</code>のサポートを<code>character3</code>が行い、<br>あとはヴィランを取り押さ えるだけだった。<br><br>そこで<code>character2</code>が、最後の決め技に必要だとして、<br>「アレ」を<code>character3</code>に対して要求。<br><code>character3</code>は全く何のことか分からず、<br>焦った様子で「アレ」を要求する<code>character2</code>に対し、<br>困惑したような切り返しをするばかり。<br><br>結局モタついている間にヴィランが逃走を図った為、<br><code>character0</code>と<code>character1</code>で捕獲を行った。<br><br>戦闘後「アレさえあれば…」と不満げにする<code>character2</code>。<br>一体「アレ」とは何だったのか……。
 </p>
