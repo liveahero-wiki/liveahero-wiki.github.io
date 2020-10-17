@@ -8,7 +8,7 @@ banner: true
 <h2>{{ year.name }}</h2>
 <ul>
   {% for event in year.items %}
-  <li><a href="{{ event.url }}">{{ event.title }}-{{ event.event_start_time }}</a></li>
+  <li><a href="{{ event.url }}">{{ event.title }}</a> ({{ event.event_start_time | date: "%-d %b %Y" }} ~ {{ event.event_end_time | date: "%-d %b %Y" }})</li>
   {% endfor %}
 </ul>
 {% endfor %}
