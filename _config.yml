@@ -2,6 +2,8 @@ title: Live A Hero Wiki
 url: https://liveahero-wiki.github.io
 github_edit: https://github.com/liveahero-wiki/liveahero-wiki.github.io/edit/master
 permalink: /news/:year/:month/:title/
+timezone: Asia/Tokyo
+date_format: "%-d %B %Y %R JST"
 markdown: kramdown
 #kramdown:
 #  parse_block_html: true
@@ -22,6 +24,10 @@ defaults:
     values:
       unreleased: false
   - scope:
+      type: "events"
+    values:
+      layout: event
+  - scope:
       path: "assets/img/fg"
     values:
       fg: true
@@ -33,3 +39,10 @@ defaults:
 collections:
   charas:
     output: true
+  events:
+    output: true
+    sort_by: event_start_time
+
+exclude:
+  - readme.md
+  - CONTRIBUTING.md

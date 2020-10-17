@@ -1,0 +1,14 @@
+---
+title: Events
+banner: true
+---
+
+{% assign eventsByYear  = site.events | group_by_exp: "event", "event.event_start_time | date: '%Y'" %}
+{% for year in eventsByYear %}
+<h2>{{ year.name }}</h2>
+<ul>
+  {% for event in year.items %}
+  <li><a href="{{ event.url }}">{{ event.title }}-{{ event.event_start_time }}</a></li>
+  {% endfor %}
+</ul>
+{% endfor %}

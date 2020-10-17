@@ -30,8 +30,6 @@ Items can be exchanged using {% include item.html id=35 %} or {% include item.ht
 
 {% include shop-table.html id=1 %}
 
-{% include shop-table.html id=2 %}
-
 ## Buying Record Cubes
 
 Record Cubes can be obtained by exchanging Hero's Memories or Sidekick's Mind.

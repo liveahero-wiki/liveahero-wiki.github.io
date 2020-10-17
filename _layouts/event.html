@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div class="page-header">
+<h1><a href="{{ page.url }}">Event Quest: {{ page.title | defualt: page.jp_title }}</a></h1>
+</div>
+
+<table class="event-infobox">
+<tr><th colspan="2">{{ page.title | default: page.jp_title }}</th></tr>
+<tr><th colspan="2">Duration</th></tr>
+<tr><th>Gacha</th><td>{{ page.event_start_time | date: site.date_format }} to {{ page.event_end_time | date: site.date_format }}</td></tr>
+<tr><th>Main Quests</th><td>{{ page.event_start_time | date: site.date_format }} to {{ page.event_end_time | date: site.date_format }}</td></tr>
+<!-- free quests, item exchange -->
+<tr><td colspan="2"><a href="{{ page.news_link }}">News link</a></td></tr>
+</table>
+
+{{ content }}
