@@ -4,6 +4,7 @@ $color50: #e3f2fd;
 $colorLight: #ffd95b;
 $colorPrimary: #ffa726;
 $colorDark: #c77800;
+$colorGrey: #ccc;
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -182,10 +183,15 @@ li {
 }
 details {
   border: 1px solid #aaa;
-  padding: 10px;
+
+  p, ul, ol {
+    margin: 15px;
+  }
 }
 summary {
-  margin-bottom: 10px;
+  cursor: pointer;
+  background: $colorGrey;
+  padding: 15px;
 }
 .footnotes {
   border-top: 1px dotted;
@@ -324,39 +330,27 @@ $elementColor: #f07d75, #4e8ddf, #5fcb58, #ffb251, #9c76db;
     .heroinfobox {
       border: 1px solid $color;
     }
-    .accordion-button {
+    summary {
       background-color: $color;
     }
-    .accordion-panel {
+    details {
       border: 1px solid $color;
     }
   }
 }
 .elementNone {
   th, .header {
-    background: #bbb;
+    background: $colorGrey;
   }
   .heroinfobox {
-    border: 2px solid #bbb;
+    border: 2px solid $colorGrey;
   }
-  .accordion-button {
-    background-color: #bbb;
+  summary {
+    background-color: $colorGrey;
   }
-  .accordion-panel {
-    border: 2px solid #bbb;
+  details {
+    border: 2px solid $colorGrey;
   }
-}
-.accordion-button {
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-}
-.accordion-panel {
-  padding: 18px;
-  display: none;
-  overflow: hidden;
 }
 // Chara list page
 .card-list {
