@@ -1,10 +1,21 @@
 ---
 name: Barrel
 ---
+{% capture BIO_H01 %}
+He transforms into "Symphonic Trigger", a hero who wears a costume that resembles the sheriff in a western movie that he has admired since he was a child. With twin pistol-type parallel weapons, he subdue his target with quick draw shots. When transformed, different from his usual poor skills, he can shoot with one hundred percent accuracy. In battle, shooting energy bullets as much as he wants, he always looks like he's having a lot of fun.
+{% endcapture %}
 
-{% include hero-infobox.html stockId=10071 %}
+{% capture BIO_H02 %}
+He appears gallantly in front of evil-doers and punish them with his twin guns. Today, he keeps the peace in the city and leaves with the setting sun on his back... a western movie that is often treated as old-fashioned, but he was captivated by it. He wanted to be a "righteous gunman" like that sheriff who fights to do justice. Such a wish transformed him into an unprecedented police hero.
+{% endcapture %}
 
-{% include sidekick-infobox.html stockId=10071 %}
+{% include hero-infobox.html stockId=10071 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+
+{% capture BIO_S01 %}
+Working at the police station, he is the officer assigned to the orient city community division. An alien who grew up in Houston, USA. Honest, straightforward and very friendly, a model police officer if not for his excessive adoration for western sheriffs and tendency to jump to conclusions at the drop of a hat. He uses a tranquilizer gun, but have very poor shooting skills, no matter how many rounds are fired he can't even hit his target, let alone the surrounding onlookers.
+{% endcapture %}
+
+{% include sidekick-infobox.html stockId=10071 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="barrel"
 
