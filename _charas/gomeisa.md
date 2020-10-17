@@ -3,7 +3,7 @@ name: Gomeisa
 ---
 
 {% capture BIO_H01 %}
-omeisa wears a costume that resembles the costume he wore when he prayed to the sacred tree in his home town, and fights on the battlefield as a dancer hero. However, due to him being a pacifist who hates hurting others, he rarely ever does his opponent any harm. His value comes from the healing crystals made of pure sunlight that are produced on the surface of his body. Through dance, he is able to scatter those crystals around, and any allies that are exposed to said light will be healed.
+Gomeisa wears a costume that resembles the costume he wore when he prayed to the sacred tree in his home town, and fights on the battlefield as a dancer hero. However, due to him being a pacifist who hates hurting others, he rarely ever does his opponent any harm. His value comes from the healing crystals made of pure sunlight that are produced on the surface of his body. Through dance, he is able to scatter those crystals around, and any allies that are exposed to said light will be healed.
 {% endcapture %}
 
 {% capture BIO_H02 %}
