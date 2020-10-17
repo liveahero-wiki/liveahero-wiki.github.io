@@ -19,4 +19,12 @@ Gomeisa is a young giant alien working as a waiter in a place where heroes gathe
 {% include sidekick-infobox.html stockId=10331 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="gomeisa"
+APPRECIATION = "If you want to feel better, basking in the light's radiance is the best thing to do!<br>The sun's light helps you relax and feel warm.<br>Your heart and body will feel recover and feel refreshed."
+DAILY = "Welcome, operator!<br>If you're here for the machine, it's currently free!<br>Here you go! It's good to connect with heroes!"
+HERO = "That angel nurse is amazing!<br>Those pure white wings, as well as the wonderful power to heal wounds...<br>Just like the god of my hometown's faith."
+PLAYER = "You seem to always be doing your best even in the most difficult circumstances!<br>You work hard just like every other hero.<br>I think it's very cool!"
+RELATION = "The shop manager is sooooo cute!<br>Petting him gently is really soothing!<br>Next time I'll brush him too!"
+TOUCH = "Hmm? Is there something on me?<br>Ohhh, I get it! You want a hug!<br>I love Hugs! *squeeze*!"
+TRAIN = "Please go out on a dancing lesson with me!"
+TRAINED = "T-This is my limit..."
 %}
