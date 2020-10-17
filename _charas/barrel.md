@@ -12,7 +12,7 @@ He appears gallantly in front of evil-doers and punish them with his twin guns. 
 {% include hero-infobox.html stockId=10071 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
-Working at the police station, he is the officer assigned to the orient city community division. An alien who grew up in Houston, USA. Honest, straightforward and very friendly, a model police officer if not for his excessive adoration for western sheriffs and tendency to jump to conclusions at the drop of a hat. He uses a tranquilizer gun, but have very poor shooting skills, no matter how many rounds are fired he can't even hit his target, let alone the surrounding onlookers.
+A Police officer from Orient City's municipal police department, working in a police box. An alien who grew up in Houston, USA. Honest, straightforward and very friendly, a model police officer if not for his excessive adoration for western sheriffs and tendency to jump to conclusions at the drop of a hat. He uses a tranquilizer gun, but have very poor shooting skills, no matter how many rounds are fired he can't hit his target, not even the surrounding onlookers have ever got hit.
 {% endcapture %}
 
 {% include sidekick-infobox.html stockId=10071 BIO_S01=BIO_S01 %}
