@@ -187,8 +187,18 @@ the name of the hero(es) sent to the business.
 </p>
 </details>
 
+<details><summary>Sales Report 12 (Translated)</summary>
+<p>Encountered a Villain who is committing robbery on the site.<br>All hands were on deck to deal with the situation.<br><br><code>character1</code>provide support for<code>character0</code>、<br><code>character3</code>provide support for<code>character2</code>,<br>All that's left was to take down the villain.<br><br>Then, <code>character2</code>requests "that" from <code>character3</code>as a necessary part of the final decisive move.<br><code>character3</code>doesn't know what they are talking about at all,<br>and just gives a puzzled look to<code>character2</code>, who looks impatient and demands that "thing".<br><br>The villain try to get away while they're bickering,<br>but got captured by<code>character0</code>and<code>character1</code>.<br><br>After the battle,<code>character2</code>complains, "If only I had that thing...".<br>What on earth was that "thing"? .......
+</p>
+</details>
+
 <details><summary>Sales Report 13</summary>
 <p>昼食時、ある騒動が発生した。<br><code>character2</code>の弁当のから揚げが、<br>あからさまに１つ足りないのだ。<br><br><code>character1</code>は弁当屋の店員が入れ忘れたのではと言うが、<br>ぽっかりと空いた空間には、衣が落ちた形跡がある。<br><code>character3</code>は自分の分を渡すから落ち着くよう促す。<br>しかし<code>character2</code>はそういう事ではないと返 す。<br><br><code>character0</code>を疑う<code>character2</code>は問い詰めるが、<br>あまりにしつこいために<code>character0</code>は怒り、<br>「から揚げ１個くらいで」と食って掛かる。<br><code>character2</code>と<code>character0</code>は、口 論を始めてしまった。<br><br>その時、小型の野生動物が接近してきて、<br>蓋の空いた弁当から、から揚げを１個持ち去った。<br><br>真犯人は、<code>character2</code>の目の前で<br>それを美味しそうに平らげた。
+</p>
+</details>
+
+<details><summary>Sales Report 13 (Translated)</summary>
+<p>At lunch, a commotion arose.<br><code>character2</code>'s lunchbox is missing one karaage.<br><br><code>character1</code>says the bento shop clerk may have forgotten to put it in,<br>but in the corner of the box there is a trace of cloth left.<br><code>character3</code> urges them to calm down and hand over their own portion.<br>but,<code>character2</code>refuses it saying that's not the problem.<br><br><code>character2</code>,who suspects <code>character0</code>, questions them, <br>but they are so persistent that<code>character0</code>gets angry, <br>"Just for a single karaage!"<br><code>character2</code>and<code>character0</code>began arguing.<br><br>At that time, a small wild animal approached.<br>It took one of the karaage pieces away from the lunchbox<br><br>The real culprit ate it deliciously in front of <code>character2</code>'s eyes.
 </p>
 </details>
 
