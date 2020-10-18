@@ -86,13 +86,13 @@ function updateJstTime() {
     jstTime.textContent = "Tokyo time: " + new Date().toLocaleString('en-US', {timeZone: 'Asia/Tokyo'});
 }
 setInterval(updateJstTime, 1000);
-const dailys = [["light"], ["fire"], ["water"], ["earth"], ["shadow"], ["light", "fire", "water"], ["earth", "shadow"]];
+const dailys = [["earth", "shadow"], ["light"], ["fire"], ["water"], ["earth"], ["shadow"], ["light", "fire", "water"]];
 const ranks = [4, 5, 6];
 function test() {
     const d = new Date();
     const jst = d.getTime() + (60*9 + d.getTimezoneOffset()) * 60000;
     console.log(jst);
-    const elements = dailys[new Date(jst).getUTCDay() - 1];
+    const elements = dailys[new Date(jst).getUTCDay()];
     for (const e of elements)
     for (const rank of ranks) {
         const img = new Image();
