@@ -19,7 +19,7 @@ permalink: /charas/
 </div>
   {% capture page_cond %}item.path == "_charas/{{ c.resourceName }}.md"{% endcapture %}
   {% assign page = site.charas | where_exp: "item", page_cond | first %}
-  <a href="{{ page.url }}">{{ page.name }}</a></li>
+  <a href="{{ page.url }}#h{{ c.stockId }}">{{ page.name }}</a></li>
 {% endfor %}
 </ul>
 
@@ -38,7 +38,7 @@ permalink: /charas/
 </div>
   {% capture page_cond %}item.path == "_charas/{{ c.resourceName }}.md"{% endcapture %}
   {% assign page = site.charas | where_exp: "item", page_cond | first %}
-  <a href="{{ page.url }}">{{ page.name }}</a></li>
+  <a href="{{ page.url }}#s{{ c.stockId }}">{{ page.name }}</a></li>
 {% endfor %}
 </ul>
 

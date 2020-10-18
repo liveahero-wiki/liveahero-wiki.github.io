@@ -9,7 +9,7 @@
 {% endif %}
 {% assign artworks = site.static_files | where: "fg", true | where_exp: "item", artwork_cond | map: "path" %}
 
-<div class="elementNone">
+<div id="s{{ include.stockId }}" class="elementNone">
     <div class="heroinfobox">
         <div class="header">
             <div class="name">{{ page.name }}</div>
