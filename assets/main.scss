@@ -397,6 +397,14 @@ $elementColor: #f07d75, #4e8ddf, #5fcb58, #ffb251, #9c76db;
   right: 0;
   margin: auto;
   border-radius: 8px;
+  background-size: 128px;
+}
+$elementName: fire, water, earth, light, shadow;
+@for $i from 1 to 6 {
+  [data-element="#{$i}"] .hero-chara-icon {
+    $name: nth($elementName, $i);
+    background-image: url(/assets/img/icon/ui_frame_h_base_#{$name}.png);
+  }
 }
 .hero-3 {
   background-image: url(/assets/img/icon/ui_frame_h_01.png);
