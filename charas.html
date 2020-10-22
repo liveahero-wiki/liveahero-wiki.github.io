@@ -9,26 +9,41 @@ permalink: /charas/
 
 <h3 id="heroes">Heroes</h3>
 
+<div class="chara-sort" data-list="#hero-list">
+<button data-sort="id">Card ID</button>
+<button data-sort="name">Name</button>
+<button data-sort="rarity">Rarity</button>
+<button data-sort="element">Element</button>
+</div>
+
 {% assign cardInfos = site.data.CardMaster | where: "stockOrder", 1 %}
-<ul class="card-list clearfix">
+<ul id="hero-list" class="card-list clearfix">
 {% for c in cardInfos %}
-<li>
+{% capture page_cond %}item.path == "_charas/{{ c.resourceName }}.md"{% endcapture %}
+{% assign page = site.charas | where_exp: "item", page_cond | first %}
+<li data-id="{{ c.stockId }}" data-rarity="{{ c.rarity }}" data-element="{{ c.element }}" data-name="{{ page.name }}">
 <div class="hero-icon">
   <div class="border hero-{{ c.rarity }}"></div>
   <img class="hero-chara-icon" src="/assets/img/icon/icon_{{ c.resourceName }}_h01.png" loading="lazy">
 </div>
-  {% capture page_cond %}item.path == "_charas/{{ c.resourceName }}.md"{% endcapture %}
-  {% assign page = site.charas | where_exp: "item", page_cond | first %}
   <a href="{{ page.url }}#h{{ c.stockId }}">{{ page.name }}</a></li>
 {% endfor %}
 </ul>
 
 <h3 id="sidekicks">Sidekicks</h3>
 
+<div class="chara-sort" data-list="#sidekick-list">
+<button data-sort="id">Card ID</button>
+<button data-sort="name">Name</button>
+<button data-sort="rarity">Rarity</button>
+</div>
+
 {% assign cardInfos = site.data.SidekickMaster | where: "levelZone", 1 %}
-<ul class="card-list clearfix">
+<ul id="sidekick-list" class="card-list clearfix">
 {% for c in cardInfos %}
-<li>
+{% capture page_cond %}item.path == "_charas/{{ c.resourceName }}.md"{% endcapture %}
+{% assign page = site.charas | where_exp: "item", page_cond | first %}
+<li data-id="{{ c.stockId }}" data-rarity="{{ c.rarity }}" data-name="{{ page.name }}">
 <div class="sidekick-icon sidekick-{{ c.rarity }}">
   {% if c.resourceName == "player" %}
   <img src="/assets/img/icon/icon_player_s01.gif">
@@ -36,8 +51,6 @@ permalink: /charas/
   <img src="/assets/img/icon/icon_{{ c.resourceName }}_s01.png">
   {% endif %}
 </div>
-  {% capture page_cond %}item.path == "_charas/{{ c.resourceName }}.md"{% endcapture %}
-  {% assign page = site.charas | where_exp: "item", page_cond | first %}
   <a href="{{ page.url }}#s{{ c.stockId }}">{{ page.name }}</a></li>
 {% endfor %}
 </ul>
@@ -52,3 +65,30 @@ permalink: /charas/
   </li>
 {% endfor %}
 </ul>
+
+<script>
+function sortList(list, column, btn) {
+  const oldOrder = parseInt(btn.dataset.order || '1', 10);
+  const newOrder = 0 - oldOrder;
+  btn.dataset.order = newOrder;
+
+  const array = [];
+  for (const item of list.children) {
+    const value = column == "name" ? item.dataset.name : parseInt(item.dataset[column], 10);
+    array.push({value: value, element: item});
+  }
+  array.sort((lhs, rhs) => {
+    return lhs.value > rhs.value ? newOrder : lhs.value < rhs.value ? oldOrder : 0;
+  });
+
+  for (const x of array) {
+    list.appendChild(x.element);
+  }
+}
+document.querySelectorAll(".chara-sort").forEach(e => {
+  const list = document.querySelector(e.dataset.list);
+  for (const btn of e.children) {
+    btn.addEventListener("click", () => sortList(list, btn.dataset.sort, btn));
+  }
+});
+</script>
