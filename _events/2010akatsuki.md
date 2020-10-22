@@ -10,9 +10,27 @@ sales_start_time: 2020-10-16T20:00:00+09
 sales_end_time: 2020-11-06T20:00:00+09
 ---
 
+## Event Details
 
+Lifewonders is launching their first full event of the year, together with the event a new gacha summon is also released which include Barrel(Hero), Gomeisa(Hero), Barrel(Sidekick), and Gomeisa(Sidekick).
 
-TODO: event bonus table for free quest and sales
+The event has event specific free quest and sales, with bonus using the banner unit.
+
+### Free Quest Bonus
+
+| Hero | +Bonus (%)| Sidekick | +Bonus (%) |
+|------------|--------------|-------------|---------------|
+| Gomeisa    | 30           | Gomeisa     | 10            | 
+| Barrel     | 30           | Barrel      | 10            | 
+
+### Event Sales Bonus
+
+| Hero | +Bonus (%) |
+|------------+---------------|
+| Gomeisa    | 25            |
+| Barrel     | 25            |
+
+Note: Support unit (the one you borrow from other player) doesn't give any bonus in free quest
 
 ## Event Shop
 
