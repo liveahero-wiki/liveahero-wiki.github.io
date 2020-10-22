@@ -9,10 +9,10 @@ layout: default
 <table class="event-infobox">
 <tr><th colspan="2">{{ page.title | default: page.jp_title }}</th></tr>
 <tr><th colspan="2">Duration</th></tr>
-<tr><th>Gacha</th><td>{{ page.event_start_time | date: site.date_format }} to {{ page.event_end_time | date: site.date_format }}</td></tr>
-<tr><th>Main Quests</th><td>{{ page.event_start_time | date: site.date_format }} to {{ page.event_end_time | date: site.date_format }}</td></tr>
-<tr><th>Free Quests</th><td>{{ page.farm_start_time | date: site.date_format }} to {{ page.farm_end_time | date: site.date_format }}</td></tr>
-<tr><th>Event Sales</th><td>{{ page.sales_start_time | date: site.date_format }} to {{ page.sales_end_time | date: site.date_format }}</td></tr>
+<tr><th>Gacha</th><td data-expiry="{{ page.event_end_time }}">{{ page.event_start_time | date: site.date_format }} to {{ page.event_end_time | date: site.date_format }}</td></tr>
+<tr><th>Main Quests</th><td data-expiry="{{ page.event_end_time }}">{{ page.event_start_time | date: site.date_format }} to {{ page.event_end_time | date: site.date_format }}</td></tr>
+<tr><th>Free Quests</th><td data-expiry="{{ page.farm_end_time }}">{{ page.farm_start_time | date: site.date_format }} to {{ page.farm_end_time | date: site.date_format }}</td></tr>
+<tr><th>Event Sales</th><td data-expiry="{{ page.sales_end_time }}">{{ page.sales_start_time | date: site.date_format }} to {{ page.sales_end_time | date: site.date_format }}</td></tr>
 <tr><td colspan="2"><a href="{{ page.news_link }}">News link</a></td></tr>
 </table>
 

@@ -50,3 +50,8 @@ function toggleTranslate(e) {
   this.innerHTML = tmp;
 }
 document.querySelectorAll(".translate").forEach(t => t.addEventListener('click', toggleTranslate));
+const today = new Date();
+document.querySelectorAll("[data-expiry]").forEach(d => {
+  const dd = new Date(d.dataset.expiry);
+  if (dd < today) d.classList.add("expired");
+});

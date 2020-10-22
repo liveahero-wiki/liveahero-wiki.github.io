@@ -26,7 +26,7 @@ banner: true
 <table class="event-infobox">
 <tr><th><a href="/events/">Current Event</a></th></tr>
 {% assign event = site.events | sort: "event_start_time" | last %}
-<tr><td><a href="{{ event.url }}">{{ event.title }}</a> ({{ event.event_start_time | date: "%-d %b %Y" }} ~ {{ event.event_end_time | date: "%-d %b %Y" }})</td></tr>
+<tr><td data-expired="{{ event.event_end_time }}"><a href="{{ event.url }}">{{ event.title }}</a> ({{ event.event_start_time | date: "%-d %b %Y" }} ~ {{ event.event_end_time | date: "%-d %b %Y" }})</td></tr>
 </table>
 
 <p style="text-align: justify">Live A Hero (LAH) is a turn-based mobile RPG developed by Lifewonders.</p>
