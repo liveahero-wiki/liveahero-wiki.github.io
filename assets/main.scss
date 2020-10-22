@@ -33,7 +33,7 @@ header {
   display: table;
 }
 a {
-  color: #ff6f00;
+  color: $colorDark;
   text-decoration: none;
 }
 a:hover {
@@ -41,7 +41,6 @@ a:hover {
 }
 .page-header {
   padding: 30px 0;
-  //background-color: $color50;
 }
 .page-header h1 {
   margin: 22px 0;
@@ -242,8 +241,10 @@ th, td {
   padding: 5px 10px;
   border-bottom: 1px solid #e5e5e5;
 }
-.sticky-header th {
+th {
   background-color: $colorPrimary;
+}
+.sticky-header th {
   position: sticky;
   top: 0;
 }
@@ -436,4 +437,7 @@ $elementColor: #f07d75, #4e8ddf, #5fcb58, #ffb251, #9c76db;
   background-color: $colorDark;
   color: #fff;
   text-align: center;
+}
+.event-infobox th a {
+  color: #fff;
 }
