@@ -13,3 +13,7 @@ Their ability to interfere with parallel universes is extremely high compared to
 {% endcapture %}
 
 {% include sidekick-infobox.html stockId=19991 BIO_S01=BIO_S01 %}
+
+{% include voice-table.html resourceName="player1,player2,player3,player4,player5"
+PLAYER1_TRAINED = ""
+%}

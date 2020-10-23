@@ -42,6 +42,10 @@ TRAIN = "Thank you for your cooperation in training!"
 TRAINED = "Ugh...I never knew it could get this hot...!"
 %}
 
+{% include voice-table.html resourceName="furlong_hero"
+APPRECIATION = ""
+%}
+
 ## Notes
 
 "Ah... good work out there. If a fire breaks out, please leave it to me. I'm fine walking into the flames and such..."
