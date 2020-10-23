@@ -10,7 +10,7 @@ Marfik transforms into a hero by dressing up with an adventurer-like appearance 
 {% endcapture %}
 
 {% capture BIO_H02 %}
-The supreme theory of life in Marfik's mind is, who has an immense curiosity for such things, is "to know the mystery of space life". He wishes to leave himself to the spirit of inquiry, to go where he wants to go, to do what he wants to do, and to know what he wants to know. Because of that, he always ends up breaking up with the partners he loves. If such an existence that occupies his unyielding obsession appears, it will be an existence full of mystery.
+The supreme theory of life in Marfik's mind, who has an immense curiosity for such things, is "to know the mystery of space life". He wishes to leave himself to the spirit of inquiry, to go where he wants to go, to do what he wants to do, and to know what he wants to know. Because of that, he always ends up breaking up with the partners he loves. If such an existence that occupies his unyielding obsession appears, it will be an existence full of mystery.
 {% endcapture %}
 
 {% include hero-infobox.html stockId=10141 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
