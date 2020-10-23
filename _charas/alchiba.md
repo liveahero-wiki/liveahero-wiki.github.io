@@ -30,12 +30,12 @@ He tends to speak incessant bickering that could set anyone's teeth on edge. Nev
 
 {% include voice-table.html resourceName="alchiba"
 APPRECIATION = "Hey, your pretty face will be ruined you know?<br>If you're tired, why don't you wrap up in my wings and sleep in them?<br>…W-what, I won't do anything! ...maybe."
-DAILY = "Hey, client. Would you like to go on a date with me now?<br>...oops, work. Well it cannot be helped then.<br>I'll go along for the ride. What do you have in mind?"
-HERO = "I don't trust the police ... but.<br>That detective is not two-faced, so I trust him.<br>It would have been better if all of them were like him."
+DAILY = "Oi, my client. How about we go on a date? Oh... work? I guess it can't be helped. I'll keep you company. What sort of request came in?"
+HERO = "I don't trust the police, BUT... that detective can be trusted both inside and out. It would've been a good thing if everyone was like him."
 PLAYER = "It's a horrible trick of fate to see you on the battlefield.<br>Don't worry. I'll guarantee your safety.<br>In return ... That's right.How about your love?"
-RELATION = "That reporter's ability to gather information is frightening.<br>And then there's that sneaking ability to go behind you before you know it.<br>These would make him a good detective, I'm sure…"
+RELATION = "That reporter's special intelligence gathering ability is quite scary. On top of that, he also has the ability to sneak up on me. I'm sure he can become a great detective... surely."
 TOUCH = "... Oops, you're aggressive, My Sweet.<br>It's fine, enjoy my feathers to your heart's content.<br>I won't ask anything in return…fufufu."
-TRAIN = "Well then, let's do it lightly."
+TRAIN = "Now then, I wonder if you can parry me."
 TRAINED = "Nuu..! Perhaps I need to take it seriously..!?"
 %}
 
