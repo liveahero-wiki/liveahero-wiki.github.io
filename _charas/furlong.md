@@ -44,6 +44,9 @@ TRAINED = "Ugh...I never knew it could get this hot...!"
 
 {% include voice-table.html resourceName="furlong_hero"
 APPRECIATION = ""
+HERO = "Superhero Zap the Justice.  He's so cool, so righteous, so brave.  He was my role model way back before I became a hero."
+PLAYER = "Yaknow, I've heard our seniors in the hero biz only have those brave figures they have now after overcoming various challenges! Hey, let's do our best together too!"
+TRAIN = "Thank you for your cooperation in training!"
 %}
 
 ## Notes
