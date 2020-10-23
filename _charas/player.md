@@ -15,5 +15,9 @@ Their ability to interfere with parallel universes is extremely high compared to
 {% include sidekick-infobox.html stockId=19991 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="player1,player2,player3,player4,player5"
-PLAYER1_TRAINED = ""
+PLAYER1_TRAINED = "Wa, wait it's too hard…!"
+PLAYER2_TRAINED = "Gu, you're good…!"
+PLAYER3_TRAINED = "This is a tough one…"
+PLAYER4_TRAINED = "Please wait, this is too tough!"
+PLAYER5_TRAINED = "I can barely endure it…"
 %}
