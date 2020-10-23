@@ -33,17 +33,12 @@ Limited-time missions are special missions that is only avaiable during a specif
 
 Standard missions are permanent missions that can be cleared at any point of time. They can only be cleared once and their progress will not reset.
 
-#### Akashi
-
 |Task Details|Reward|
 |-|-|
 |Hero: Akashi reaches level 30|{%include item.html id=12%} x 6, {% include item.html id=27 %} x 3|
 |Hero: Akashi reaches level 40|{%include item.html id=13%} x 6, {% include item.html id=28 %} x 3|
 |Hero: Akashi reaches rank 4|{%include item.html id=11%} x 5000|
 |Hero: Akashi reaches rank 5|{%include item.html id=10%} x 1, {% include item.html id=110011 %} x 1|
-
-#### Relationship Level
-
 |Any character and the protagonist reaches relationship level 50|{%include item.html id=39%} (Protagonist)| 
 |Any character and the protagonist reaches relationship level 100|{%include item.html id=1%} x 10|
 
