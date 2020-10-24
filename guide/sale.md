@@ -38,10 +38,10 @@ Experience points will be given to all heroes who have departed on the business.
 
 | Time   | EXP  | Laf | Training Band |
 |:--------:|:------:|:------:|:----------:|
-| 2:00h  | 400 {% include item-icon.html id=11 %}  | 160 {% include item-icon.html id=11 %}  | 160 {% include item-icon.html id=11 %}      |
-| 4:00h  | 800 {% include item-icon.html id=11 %}  | 320 {% include item-icon.html id=11 %}  | 320 {% include item-icon.html id=11 %}     |
-| 8:00h  | 1600 {% include item-icon.html id=11 %} | 640 {% include item-icon.html id=11 %}  | 640 {% include item-icon.html id=11 %}     |
-| 16:00h | 3200 {% include item-icon.html id=11 %} | 1280 {% include item-icon.html id=11 %} | 1280 {% include item-icon.html id=11 %}     |
+| 2:00h  | 400 {% include item-icon.html id=11 %}  | 160 {% include item-icon.html id=35 %}  | 160 {% include item-icon.html id=30 %}      |
+| 4:00h  | 800 {% include item-icon.html id=11 %}  | 320 {% include item-icon.html id=35 %}  | 320 {% include item-icon.html id=30 %}     |
+| 8:00h  | 1600 {% include item-icon.html id=11 %} | 640 {% include item-icon.html id=35 %}  | 640 {% include item-icon.html id=30 %}     |
+| 16:00h | 3200 {% include item-icon.html id=11 %} | 1280 {% include item-icon.html id=35 %} | 1280 {% include item-icon.html id=30 %}     |
 
 ## Business Bonus
 
