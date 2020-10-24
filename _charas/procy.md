@@ -42,4 +42,7 @@ TRAINED = "Owowow! I'm going to charge for medical treatment!"
 
 ## Notes
 
-"Easy: You earn the viewers, you earn the cash. If you wanna get in the biz, you hafta remember that. Ah well, since it's you, you'll get the knack of it fast."
+- "Easy: You earn the viewers, you earn the cash. If you wanna get in the biz, you hafta remember that. Ah well, since it's you, you'll get the knack of it fast."
+- His real name is Procyon as revealed in golden spirit of dawn episode 3
+- His name is based off a star with the same name [Procyon](https://en.wikipedia.org/wiki/Procyon), the brightest star in canis minor constellation with the second brightest being [Gomeisa](https://en.wikipedia.org/wiki/Beta_Canis_Minoris)
+
