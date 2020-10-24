@@ -32,21 +32,25 @@ He talks to everyone in an honorific form, except to Barrel who is close to his 
 {% include sidekick-infobox.html stockId=10081 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="furlong"
-APPRECIATION = "Um... are you okay?  No, I just thought you looked...tired? Well... don't overdo it...?"
-DAILY = "Ah ... Thank you for your hard work.  If it's a hot area, leave it to me.  I'm fine in the flames..."
-HERO = "Superhero Zap the Justice.  He's so cool, so righteous, so brave.  He was my role model way back before I became a hero."
-PLAYER = "Yaknow, I've heard our seniors in the hero biz only have those brave figures they have now after overcoming various challenges! Hey, let's do our best together too!"
+APPRECIATION = "Um... are you okay?<br>No, I just thought you looked...tired?<br>Well... don't overdo it...?"
+DAILY = "Ah ... Thank you for your hard work.<br>If it's a hot area, leave it to me.<br>I'm fine in the flames..."
+HERO = "Superhero Zap the Justice.<br>He's so cool, so righteous, so brave.<br>He was my role model way back before I became a hero."
+PLAYER = "Yaknow, I've heard our seniors in the hero biz only have those brave figures they have now after overcoming various challenges!<br>Hey, let's do our best together too!"
 RELATION = "Barrel? Oh, he's a good guy, you know…?<br>For me, his straightforward way of interacting with me,<br>is something I'm grateful of.."
-TOUCH = "Woah??  Oh, you surprised me...!  Ah ... isn't my body hot ...?  My body temperature is quite high compared to your kind, doesn't doing that burn ...?"
+TOUCH = "Woah??  Oh, you surprised me...!<br>Ah ... isn't my body hot ...?<br>My body temperature is quite high compared to your kind, doesn't doing that burn ...?"
 TRAIN = "Thank you for your cooperation in training!"
 TRAINED = "Ugh...I never knew it could get this hot...!"
 %}
 
 {% include voice-table.html resourceName="furlong_hero"
-APPRECIATION = ""
-HERO = "Superhero Zap the Justice.  He's so cool, so righteous, so brave.  He was my role model way back before I became a hero."
-PLAYER = "Yaknow, I've heard our seniors in the hero biz only have those brave figures they have now after overcoming various challenges! Hey, let's do our best together too!"
+APPRECIATION = "You look tired, captain!<br>Come come, lie down!<br>Let me show you my massage skills!"
+DAILY = "Hi, Captain!<br>If it's a hot scene, leave it to me<br>I'm fine even inside a fire after all!"
+HERO = "Superhero Zap the Justice.<br>He's so cool, so righteous, so brave.<br>He was my role model way back before I became a hero."
+PLAYER = "Yaknow, I've heard our seniors in the hero biz only have those brave figures they have now after overcoming various challenges!<br>Hey, let's do our best together too!"
+RELATION = "Barrel is a good colleague and comrade-in-arms.<br>He always managed to pull me out of my usual pessimism.<br>Frankly speaking, he is my best friend."
+TOUCH = "Whoa, what's going on, captain!<br>I have a pretty high body temperature.<br>You'll get scalded if you touch me carelessly."
 TRAIN = "Thank you for your cooperation in training!"
+TRAINED = "Gu..! I-it's hot..!"
 %}
 
 ## Notes
