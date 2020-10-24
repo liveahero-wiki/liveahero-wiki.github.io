@@ -4,10 +4,10 @@ banner: true
 ---
 
 {% assign eventsByYear  = site.events | group_by_exp: "event", "event.event_start_time | date: '%Y'" %}
-{% for year in eventsByYear %}
-<h2>{{ year.name }}</h2>
+{% for year in eventsByYear reversed %}
+<h2 id="{{ year.name }}">{{ year.name }}</h2>
 <ul>
-  {% for event in year.items %}
+  {% for event in year.items reversed %}
   <li><a href="{{ event.url }}">{{ event.title }}</a> ({{ event.event_start_time | date: "%-d %b %Y" }} ~ {{ event.event_end_time | date: "%-d %b %Y" }})</li>
   {% endfor %}
 </ul>
