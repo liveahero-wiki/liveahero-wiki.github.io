@@ -8810,6 +8810,56 @@
       }
     ]
   },
+  "4036103": {
+    "skillId": 4036103,
+    "skillName": "力の充填",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方全体に1ターンの間ATKアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsu_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "4036104": {
+    "skillId": 4036104,
+    "skillName": "力の断絶",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "b_skill_buffAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方全体に1ターンの間DEFアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsu_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
   "4037103": {
     "skillId": 4037103,
     "skillName": "巨大エネミーデバッグ用スキル",
@@ -9165,6 +9215,56 @@
         "skillEffectId": 14,
         "prob": 100,
         "effectTarget": 0
+      }
+    ]
+  },
+  "4046110": {
+    "skillId": 4046110,
+    "skillName": "爪",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuAdult_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "4046112": {
+    "skillId": 4046112,
+    "skillName": "オールレンジビーム",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuAdult_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4
       }
     ]
   },
