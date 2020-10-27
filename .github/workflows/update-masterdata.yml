@@ -1,5 +1,6 @@
 name: auto masterdata update
 on:
+  workflow_dispatch: ~
   schedule:
     # At minute 0 and 30.
     - cron: '0,30 * * * *'
@@ -25,8 +26,6 @@ jobs:
       - name: Diff with previous commit and commit files
         run: |
           if [[ `git status --porcelain --untracked-files=no` ]]; then
-            echo "Master data is already up to date."
-          else
             echo "Master data is updated."
             git config --local user.name $USER_NAME
             git config --local user.email $USER_EMAIL
@@ -37,4 +36,6 @@ jobs:
             git commit -m "Master data version $value"
             git push origin HEAD
             echo "🤘 update version complete."
+          else
+            echo "Master data is already up to date."
           fi
