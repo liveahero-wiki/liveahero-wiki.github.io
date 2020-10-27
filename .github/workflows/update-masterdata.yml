@@ -1,0 +1,40 @@
+name: auto masterdata update
+on:
+  schedule:
+    # At minute 0 and 30.
+    - cron: '0,30 * * * *'
+jobs:
+  build:
+    name: Auto-update master data
+    env:
+      USER_NAME: lah-wiki-bot
+      USER_EMAIL: noreply@github.com
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Download master data
+        run: |
+          python tools/masterdata.py
+      - name: Diff with previous commit and commit files
+        run: |
+          if [[ `git status --porcelain --untracked-files=no` ]]; then
+            echo "Master data is already up to date."
+          else
+            echo "Master data is updated."
+            git config --local user.name $USER_NAME
+            git config --local user.email $USER_EMAIL
+            git status
+            git add _data
+            git add tools
+            value=`cat tools/masterdata_ver.txt`
+            git commit -m "Master data version $value"
+            git push origin HEAD
+            echo "🤘 update version complete."
+          fi
