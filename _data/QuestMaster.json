@@ -1,0 +1,3977 @@
+{
+  "101001": {
+    "questId": 101001,
+    "questName": "プロローグ",
+    "subName": "オープニング",
+    "questKind": 1,
+    "chapterId": 101,
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": "2019-12-10 06:00:00",
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 1,
+    "canNotRetire": true,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 2,
+        "objectId": 199911,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      },
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 140,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 6
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "101002": {
+    "questId": 101002,
+    "questName": "放り出されて未来世界",
+    "subName": "第１話",
+    "questKind": 1,
+    "chapterId": 101,
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 1,
+    "enemyLevel": 1,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 101001
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "101003": {
+    "questId": 101003,
+    "questName": "居場所を追われて",
+    "subName": "第２話",
+    "questKind": 1,
+    "chapterId": 101,
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 2,
+    "enemyLevel": 1,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 101002
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "101004": {
+    "questId": 101004,
+    "questName": "初対面の幼馴染",
+    "subName": "第３話",
+    "questKind": 1,
+    "chapterId": 101,
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 3,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 101003
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false
+  },
+  "101005": {
+    "questId": 101005,
+    "questName": "パスは繋がった",
+    "subName": "第４話",
+    "questKind": 1,
+    "chapterId": 101,
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 4,
+    "enemyLevel": 1,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 80,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 80,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 101004
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "101006": {
+    "questId": 101006,
+    "questName": "スタートラインへ",
+    "subName": "第５話",
+    "questKind": 1,
+    "chapterId": 101,
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 5,
+    "enemyLevel": 3,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 7
+      },
+      {
+        "class": "QuestClear",
+        "questId": 101005
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "101007": {
+    "questId": 101007,
+    "questName": "ビジネスの時間",
+    "subName": "第６話",
+    "questKind": 1,
+    "chapterId": 101,
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 6,
+    "enemyLevel": 3,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 7
+      },
+      {
+        "class": "QuestClear",
+        "questId": 101006
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "101008": {
+    "questId": 101008,
+    "questName": "ヒーローショータイム",
+    "subName": "第７話",
+    "questKind": 1,
+    "chapterId": 101,
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 7,
+    "enemyLevel": 4,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 101007
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "101009": {
+    "questId": 101009,
+    "questName": "条件不適合",
+    "subName": "第８話",
+    "questKind": 1,
+    "chapterId": 101,
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 8,
+    "enemyLevel": 5,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 35,
+        "objectValue": 250,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 101008
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "101010": {
+    "questId": 101010,
+    "questName": "叶えたい夢",
+    "subName": "第９話",
+    "questKind": 1,
+    "chapterId": 101,
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 9,
+    "enemyLevel": 5,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 101009
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "101011": {
+    "questId": 101011,
+    "questName": "夢の原点",
+    "subName": "第１０話",
+    "questKind": 1,
+    "chapterId": 101,
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 10,
+    "enemyLevel": 6,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 7
+      },
+      {
+        "class": "QuestClear",
+        "questId": 101010
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "101012": {
+    "questId": 101012,
+    "questName": "君に出来る何か",
+    "subName": "第１１話",
+    "questKind": 1,
+    "chapterId": 101,
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 11,
+    "enemyLevel": 7,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 7
+      },
+      {
+        "class": "QuestClear",
+        "questId": 101011
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "101013": {
+    "questId": 101013,
+    "questName": "ヒーロー復活",
+    "subName": "第１２話",
+    "questKind": 1,
+    "chapterId": 101,
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 12,
+    "enemyLevel": 7,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 35,
+        "objectValue": 250,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 7
+      },
+      {
+        "class": "QuestClear",
+        "questId": 101012
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "101014": {
+    "questId": 101014,
+    "questName": "日が昇り、沈む",
+    "subName": "第１３話",
+    "questKind": 1,
+    "chapterId": 101,
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 13,
+    "enemyLevel": 8,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 80,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 80,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 101013
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "201001": {
+    "questId": 201001,
+    "questName": "力を求めて",
+    "subName": "D級",
+    "questKind": 2,
+    "chapterId": 201,
+    "iconFilename": "ui_icon_questicon_traning",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 1,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 100,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 50,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 6
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaEarth_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "201002": {
+    "questId": 201002,
+    "questName": "力を求めて",
+    "subName": "C級",
+    "questKind": 2,
+    "chapterId": 201,
+    "iconFilename": "ui_icon_questicon_traning",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 15,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 150,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 100,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 50,
+        "prob": 50
+      },
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 50,
+        "prob": 30
+      },
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 50,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 10
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainEarth_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "201003": {
+    "questId": 201003,
+    "questName": "力を求めて",
+    "subName": "B級",
+    "questKind": 2,
+    "chapterId": 201,
+    "iconFilename": "ui_icon_questicon_traning",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 30,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 220,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 100,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 50,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 150,
+        "prob": 50
+      },
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 100,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 14
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_ryekie_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_crowne_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainEarth_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "201004": {
+    "questId": 201004,
+    "questName": "力を求めて",
+    "subName": "A級",
+    "questKind": 2,
+    "chapterId": 201,
+    "iconFilename": "ui_icon_questicon_traning",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 45,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 300,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 150,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 100,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 75
+      },
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 200,
+        "prob": 50
+      },
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 150,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 18
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_ryekie_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_crowne_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainEarth_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "202001": {
+    "questId": 202001,
+    "questName": "火への挑戦",
+    "subName": "C級",
+    "questKind": 3,
+    "chapterId": 202,
+    "iconFilename": "item_rank4_fire",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 68,
+    "sortWeight": 0,
+    "enemyLevel": 20,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 12,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 12,
+        "objectValue": 1,
+        "prob": 40
+      },
+      {
+        "rewardType": 3,
+        "objectId": 12,
+        "objectValue": 1,
+        "prob": 20
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 14
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFire_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "202002": {
+    "questId": 202002,
+    "questName": "火への挑戦",
+    "subName": "B級",
+    "questKind": 3,
+    "chapterId": 202,
+    "iconFilename": "item_rank5_fire",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 68,
+    "sortWeight": 0,
+    "enemyLevel": 35,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 13,
+        "objectValue": 1,
+        "prob": 30
+      },
+      {
+        "rewardType": 3,
+        "objectId": 12,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 12,
+        "objectValue": 1,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 18
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFire_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "202003": {
+    "questId": 202003,
+    "questName": "火への挑戦",
+    "subName": "A級",
+    "questKind": 3,
+    "chapterId": 202,
+    "iconFilename": "item_rank6_fire",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 68,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 14,
+        "objectValue": 1,
+        "prob": 18
+      },
+      {
+        "rewardType": 3,
+        "objectId": 13,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 12,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 12,
+        "objectValue": 1,
+        "prob": 80
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 22
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_akashi_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_rakta_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kirsch_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "202004": {
+    "questId": 202004,
+    "questName": "水への挑戦",
+    "subName": "C級",
+    "questKind": 3,
+    "chapterId": 202,
+    "iconFilename": "item_rank4_water",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 72,
+    "sortWeight": 0,
+    "enemyLevel": 20,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 15,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 15,
+        "objectValue": 1,
+        "prob": 40
+      },
+      {
+        "rewardType": 3,
+        "objectId": 15,
+        "objectValue": 1,
+        "prob": 20
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 14
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaWater_h01",
+        "battleInfoElement": 2
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "202005": {
+    "questId": 202005,
+    "questName": "水への挑戦",
+    "subName": "B級",
+    "questKind": 3,
+    "chapterId": 202,
+    "iconFilename": "item_rank5_water",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 72,
+    "sortWeight": 0,
+    "enemyLevel": 35,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 16,
+        "objectValue": 1,
+        "prob": 30
+      },
+      {
+        "rewardType": 3,
+        "objectId": 15,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 15,
+        "objectValue": 1,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 18
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaWater_h01",
+        "battleInfoElement": 2
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "202006": {
+    "questId": 202006,
+    "questName": "水への挑戦",
+    "subName": "A級",
+    "questKind": 3,
+    "chapterId": 202,
+    "iconFilename": "item_rank6_water",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 72,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 17,
+        "objectValue": 1,
+        "prob": 18
+      },
+      {
+        "rewardType": 3,
+        "objectId": 16,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 15,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 15,
+        "objectValue": 1,
+        "prob": 80
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 22
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_furlong_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_isaribi_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_loren_h01",
+        "battleInfoElement": 2
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "202007": {
+    "questId": 202007,
+    "questName": "木への挑戦",
+    "subName": "C級",
+    "questKind": 3,
+    "chapterId": 202,
+    "iconFilename": "item_rank4_earth",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 17,
+    "sortWeight": 0,
+    "enemyLevel": 20,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 18,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 18,
+        "objectValue": 1,
+        "prob": 40
+      },
+      {
+        "rewardType": 3,
+        "objectId": 18,
+        "objectValue": 1,
+        "prob": 20
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 14
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaEarth_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "202008": {
+    "questId": 202008,
+    "questName": "木への挑戦",
+    "subName": "B級",
+    "questKind": 3,
+    "chapterId": 202,
+    "iconFilename": "item_rank5_earth",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 17,
+    "sortWeight": 0,
+    "enemyLevel": 35,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 19,
+        "objectValue": 1,
+        "prob": 30
+      },
+      {
+        "rewardType": 3,
+        "objectId": 18,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 18,
+        "objectValue": 1,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 18
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaEarth_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "202009": {
+    "questId": 202009,
+    "questName": "木への挑戦",
+    "subName": "A級",
+    "questKind": 3,
+    "chapterId": 202,
+    "iconFilename": "item_rank6_earth",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 17,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 20,
+        "objectValue": 1,
+        "prob": 18
+      },
+      {
+        "rewardType": 3,
+        "objectId": 19,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 18,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 18,
+        "objectValue": 1,
+        "prob": 80
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 22
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_goro_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_mokdai_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_kyoichi_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "202010": {
+    "questId": 202010,
+    "questName": "光への挑戦",
+    "subName": "Ｃ級",
+    "questKind": 3,
+    "chapterId": 202,
+    "iconFilename": "item_rank4_light",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 66,
+    "sortWeight": 0,
+    "enemyLevel": 20,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 21,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 21,
+        "objectValue": 1,
+        "prob": 40
+      },
+      {
+        "rewardType": 3,
+        "objectId": 21,
+        "objectValue": 1,
+        "prob": 20
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 14
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaLight_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "202011": {
+    "questId": 202011,
+    "questName": "光への挑戦",
+    "subName": "Ｂ級",
+    "questKind": 3,
+    "chapterId": 202,
+    "iconFilename": "item_rank5_light",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 66,
+    "sortWeight": 0,
+    "enemyLevel": 35,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 22,
+        "objectValue": 1,
+        "prob": 30
+      },
+      {
+        "rewardType": 3,
+        "objectId": 21,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 21,
+        "objectValue": 1,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 18
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaLight_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "202012": {
+    "questId": 202012,
+    "questName": "光への挑戦",
+    "subName": "Ａ級",
+    "questKind": 3,
+    "chapterId": 202,
+    "iconFilename": "item_rank6_light",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 66,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 23,
+        "objectValue": 1,
+        "prob": 18
+      },
+      {
+        "rewardType": 3,
+        "objectId": 22,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 21,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 21,
+        "objectValue": 1,
+        "prob": 80
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 22
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_ryekie_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_hitomi_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_procy_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "202013": {
+    "questId": 202013,
+    "questName": "影への挑戦",
+    "subName": "C級",
+    "questKind": 3,
+    "chapterId": 202,
+    "iconFilename": "item_rank4_shadow",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 33,
+    "sortWeight": 0,
+    "enemyLevel": 20,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 24,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 24,
+        "objectValue": 1,
+        "prob": 40
+      },
+      {
+        "rewardType": 3,
+        "objectId": 24,
+        "objectValue": 1,
+        "prob": 20
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 14
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "202014": {
+    "questId": 202014,
+    "questName": "影への挑戦",
+    "subName": "Ｂ級",
+    "questKind": 3,
+    "chapterId": 202,
+    "iconFilename": "item_rank5_shadow",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 33,
+    "sortWeight": 0,
+    "enemyLevel": 35,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 25,
+        "objectValue": 1,
+        "prob": 30
+      },
+      {
+        "rewardType": 3,
+        "objectId": 24,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 24,
+        "objectValue": 1,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 18
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "202015": {
+    "questId": 202015,
+    "questName": "影への挑戦",
+    "subName": "Ａ級",
+    "questKind": 3,
+    "chapterId": 202,
+    "iconFilename": "item_rank6_shadow",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 33,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 26,
+        "objectValue": 1,
+        "prob": 18
+      },
+      {
+        "rewardType": 3,
+        "objectId": 25,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 24,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 24,
+        "objectValue": 1,
+        "prob": 80
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 22
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_digram_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_crowne_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_toshu_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "204001": {
+    "questId": 204001,
+    "questName": "次なるランクへ",
+    "subName": "シルバーメダル獲得クエスト",
+    "questKind": 2,
+    "chapterId": 204,
+    "iconFilename": "item_rank4_common",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 1000,
+    "enemyLevel": 30,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 27,
+        "objectValue": 1,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 10
+      },
+      {
+        "class": "ItemConsume",
+        "value": 1,
+        "itemId": 38
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_furlong_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_akashi_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_victom_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "204002": {
+    "questId": 204002,
+    "questName": "次なるランクへ",
+    "subName": "ゴールドメダル獲得クエスト",
+    "questKind": 2,
+    "chapterId": 204,
+    "iconFilename": "item_rank5_common",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 1000,
+    "enemyLevel": 45,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 28,
+        "objectValue": 1,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 30
+      },
+      {
+        "class": "ItemConsume",
+        "value": 1,
+        "itemId": 38
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_alchiba_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_procy_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_loren_h01",
+        "battleInfoElement": 2
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "204003": {
+    "questId": 204003,
+    "questName": "更なる力を求めて",
+    "subName": "EXPアイテム獲得クエスト",
+    "questKind": 2,
+    "chapterId": 204,
+    "iconFilename": "item_exp",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 30,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 1000,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 700,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 450,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 20
+      },
+      {
+        "class": "ItemConsume",
+        "value": 1,
+        "itemId": 38
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_ryekie_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_crowne_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainEarth_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "204004": {
+    "questId": 204004,
+    "questName": "更なる絆を求めて",
+    "subName": "トレーニングバンド獲得クエスト",
+    "questKind": 2,
+    "chapterId": 204,
+    "iconFilename": "item_trainingband",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 30,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 1000,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 700,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 450,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 20
+      },
+      {
+        "class": "ItemConsume",
+        "value": 1,
+        "itemId": 38
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaEarth_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "204005": {
+    "questId": 204005,
+    "questName": "更なる火への挑戦",
+    "subName": "火のランクアップ素材獲得クエスト",
+    "questKind": 3,
+    "chapterId": 204,
+    "iconFilename": "item_rank6_fire",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 68,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 14,
+        "objectValue": 1,
+        "prob": 55
+      },
+      {
+        "rewardType": 3,
+        "objectId": 13,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 13,
+        "objectValue": 1,
+        "prob": 80
+      },
+      {
+        "rewardType": 3,
+        "objectId": 12,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 12,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 12,
+        "objectValue": 1,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 22
+      },
+      {
+        "class": "ItemConsume",
+        "value": 1,
+        "itemId": 38
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_akashi_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_rakta_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kirsch_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "204006": {
+    "questId": 204006,
+    "questName": "更なる水への挑戦",
+    "subName": "水のランクアップ素材獲得クエスト",
+    "questKind": 3,
+    "chapterId": 204,
+    "iconFilename": "item_rank6_water",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 72,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 17,
+        "objectValue": 1,
+        "prob": 55
+      },
+      {
+        "rewardType": 3,
+        "objectId": 16,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 16,
+        "objectValue": 1,
+        "prob": 80
+      },
+      {
+        "rewardType": 3,
+        "objectId": 15,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 15,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 15,
+        "objectValue": 1,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 22
+      },
+      {
+        "class": "ItemConsume",
+        "value": 1,
+        "itemId": 38
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_furlong_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_isaribi_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_loren_h01",
+        "battleInfoElement": 2
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "204007": {
+    "questId": 204007,
+    "questName": "更なる木への挑戦",
+    "subName": "木のランクアップ素材獲得クエスト",
+    "questKind": 3,
+    "chapterId": 204,
+    "iconFilename": "item_rank6_earth",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 17,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 20,
+        "objectValue": 1,
+        "prob": 55
+      },
+      {
+        "rewardType": 3,
+        "objectId": 19,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 19,
+        "objectValue": 1,
+        "prob": 80
+      },
+      {
+        "rewardType": 3,
+        "objectId": 18,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 18,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 18,
+        "objectValue": 1,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 22
+      },
+      {
+        "class": "ItemConsume",
+        "value": 1,
+        "itemId": 38
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_goro_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_mokdai_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_kyoichi_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "204008": {
+    "questId": 204008,
+    "questName": "更なる光への挑戦",
+    "subName": "光のランクアップ素材獲得クエスト",
+    "questKind": 3,
+    "chapterId": 204,
+    "iconFilename": "item_rank6_light",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 66,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 23,
+        "objectValue": 1,
+        "prob": 55
+      },
+      {
+        "rewardType": 3,
+        "objectId": 22,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 22,
+        "objectValue": 1,
+        "prob": 80
+      },
+      {
+        "rewardType": 3,
+        "objectId": 21,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 21,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 21,
+        "objectValue": 1,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 22
+      },
+      {
+        "class": "ItemConsume",
+        "value": 1,
+        "itemId": 38
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_ryekie_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_hitomi_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_procy_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "204009": {
+    "questId": 204009,
+    "questName": "更なる影への挑戦",
+    "subName": "影のランクアップ素材獲得クエスト",
+    "questKind": 3,
+    "chapterId": 204,
+    "iconFilename": "item_rank6_shadow",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 33,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 26,
+        "objectValue": 1,
+        "prob": 65
+      },
+      {
+        "rewardType": 3,
+        "objectId": 25,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 25,
+        "objectValue": 1,
+        "prob": 80
+      },
+      {
+        "rewardType": 3,
+        "objectId": 24,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 24,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 24,
+        "objectValue": 1,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 22
+      },
+      {
+        "class": "ItemConsume",
+        "value": 1,
+        "itemId": 38
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_digram_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_crowne_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_toshu_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "401001": {
+    "questId": 401001,
+    "questName": "カイブツ・襲来",
+    "subName": "C級",
+    "questKind": 6,
+    "chapterId": 401,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": "2020-10-16 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 30,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 0
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFire_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "401002": {
+    "questId": 401002,
+    "questName": "カイブツ・襲来",
+    "subName": "B級",
+    "questKind": 6,
+    "chapterId": 401,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": "2020-10-16 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 40,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 0
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFire_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "401003": {
+    "questId": 401003,
+    "questName": "カイブツ・襲来",
+    "subName": "A級",
+    "questKind": 6,
+    "chapterId": 401,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": "2020-10-16 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 0
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFire_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "402001": {
+    "questId": 402001,
+    "questName": "うちのプロキー知りませんか？",
+    "subName": "第１話",
+    "questKind": 5,
+    "chapterId": 402,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2020-10-10 20:00:00",
+    "endAt": "2020-11-13 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 0
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false
+  },
+  "402002": {
+    "questId": 402002,
+    "questName": "ファイターvsガンマン",
+    "subName": "第２話",
+    "questKind": 5,
+    "chapterId": 402,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 5,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 402001
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "402003": {
+    "questId": 402003,
+    "questName": "北空輝く一番星",
+    "subName": "第３話",
+    "questKind": 5,
+    "chapterId": 402,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 5,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 402002
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "402004": {
+    "questId": 402004,
+    "questName": "癒しのちから",
+    "subName": "第４話",
+    "questKind": 5,
+    "chapterId": 402,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2020-10-23 18:00:00",
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 6,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 402003
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "402005": {
+    "questId": 402005,
+    "questName": "薄紫のもや",
+    "subName": "第５話",
+    "questKind": 5,
+    "chapterId": 402,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2020-10-23 18:00:00",
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 6,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 402004
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainEarth_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "402006": {
+    "questId": 402006,
+    "questName": "過去の影",
+    "subName": "第６話",
+    "questKind": 5,
+    "chapterId": 402,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2020-10-27 18:00:00",
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 7,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 402005
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "402007": {
+    "questId": 402007,
+    "questName": "正義と悪",
+    "subName": "第７話",
+    "questKind": 5,
+    "chapterId": 402,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2020-10-27 18:00:00",
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 402006
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false
+  },
+  "403001": {
+    "questId": 403001,
+    "questName": "強制捜査！",
+    "subName": "D級",
+    "questKind": 6,
+    "chapterId": 403,
+    "iconFilename": "item_2010akatsuki_exchange01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 1,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 48,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 48,
+        "objectValue": 4,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 48,
+        "objectValue": 4,
+        "prob": 10
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 4
+      },
+      {
+        "class": "QuestClear",
+        "questId": 402001
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "403002": {
+    "questId": 403002,
+    "questName": "強制捜査！",
+    "subName": "C級",
+    "questKind": 6,
+    "chapterId": 403,
+    "iconFilename": "item_2010akatsuki_exchange01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 15,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 48,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 48,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 48,
+        "objectValue": 10,
+        "prob": 68
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 8
+      },
+      {
+        "class": "QuestClear",
+        "questId": 402001
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "403003": {
+    "questId": 403003,
+    "questName": "強制捜査！",
+    "subName": "B級",
+    "questKind": 6,
+    "chapterId": 403,
+    "iconFilename": "item_2010akatsuki_exchange01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 30,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 48,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 48,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 48,
+        "objectValue": 20,
+        "prob": 86
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 12
+      },
+      {
+        "class": "QuestClear",
+        "questId": 402001
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "403004": {
+    "questId": 403004,
+    "questName": "強制捜査！",
+    "subName": "A級",
+    "questKind": 6,
+    "chapterId": 403,
+    "iconFilename": "item_2010akatsuki_exchange01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 45,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 48,
+        "objectValue": 50,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 48,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 48,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 48,
+        "objectValue": 20,
+        "prob": 76
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 16
+      },
+      {
+        "class": "QuestClear",
+        "questId": 402001
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "404001": {
+    "questId": 404001,
+    "questName": "裏路地探索！",
+    "subName": "D級",
+    "questKind": 6,
+    "chapterId": 404,
+    "iconFilename": "item_2010akatsuki_exchange02",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 1,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 49,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 49,
+        "objectValue": 4,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 49,
+        "objectValue": 4,
+        "prob": 10
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 4
+      },
+      {
+        "class": "QuestClear",
+        "questId": 402007
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "404002": {
+    "questId": 404002,
+    "questName": "裏路地探索！",
+    "subName": "C級",
+    "questKind": 6,
+    "chapterId": 404,
+    "iconFilename": "item_2010akatsuki_exchange02",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 15,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 49,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 49,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 49,
+        "objectValue": 10,
+        "prob": 68
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 8
+      },
+      {
+        "class": "QuestClear",
+        "questId": 402007
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "404003": {
+    "questId": 404003,
+    "questName": "裏路地探索！",
+    "subName": "B級",
+    "questKind": 6,
+    "chapterId": 404,
+    "iconFilename": "item_2010akatsuki_exchange02",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 30,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 49,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 49,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 49,
+        "objectValue": 20,
+        "prob": 86
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 12
+      },
+      {
+        "class": "QuestClear",
+        "questId": 402007
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "404004": {
+    "questId": 404004,
+    "questName": "裏路地探索！",
+    "subName": "A級",
+    "questKind": 6,
+    "chapterId": 404,
+    "iconFilename": "item_2010akatsuki_exchange02",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 45,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 49,
+        "objectValue": 50,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 49,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 49,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 49,
+        "objectValue": 20,
+        "prob": 76
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 16
+      },
+      {
+        "class": "QuestClear",
+        "questId": 402007
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  }
+}
