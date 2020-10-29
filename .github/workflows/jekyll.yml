@@ -3,8 +3,6 @@ name: Jekyll site CI
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
   build:
@@ -14,8 +12,8 @@ jobs:
       MY_SECRET: ${{ github.token }}
     steps:
     - uses: actions/checkout@v2
-      #with:
-      #  submodules: true
+      with:
+        submodules: true
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
@@ -29,8 +27,7 @@ jobs:
         git init
         git config --local user.email noreply@github.com
         git config --local user.name lah-wiki-bot
-        #git remote add origin https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
-        git remote add origin https://${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
+        git remote add origin https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
         git checkout -b gh-pages
         git add --all
         git commit -m "Deploy to Github pages"
