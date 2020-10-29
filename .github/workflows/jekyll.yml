@@ -8,13 +8,29 @@ on:
 
 jobs:
   build:
-
+    if: "!contains(github.event.head_commit.message, '[ci skip]')"
     runs-on: ubuntu-latest
-
+    env:
+      MY_SECRET: ${{ github.token }}
     steps:
     - uses: actions/checkout@v2
+      with:
+        submodules: true
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "jekyll --version && chmod 777 /srv/jekyll && jekyll build --future"
+    - name: Publish to Github Pages
+      run: |
+        cd _site
+        touch .nojekyll
+        git init
+        git config --local user.email lah-wiki-bot
+        git config --local user.name noreply@github.com
+        git remote add origin https://$MY_SECRET@github.com/$GITHUB_REPOSITORY.git
+        git checkout -b gh-pages
+        git add --all
+        git commit -m "Deploy to Github pages"
+        git push origin gh-pages -f
+        echo "Deploy to Github Pages complete."
