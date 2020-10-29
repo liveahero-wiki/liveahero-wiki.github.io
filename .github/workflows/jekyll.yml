@@ -23,8 +23,9 @@ jobs:
         jekyll/builder:latest /bin/bash -c "jekyll --version && chmod 777 /srv/jekyll && jekyll build --future"
     - name: Publish to Github Pages
       run: |
+        sudo chmod 777 _site
         cd _site
-        #touch .nojekyll
+        touch .nojekyll
         git init
         git config --local user.email lah-wiki-bot
         git config --local user.name noreply@github.com
