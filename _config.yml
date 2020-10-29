@@ -13,7 +13,7 @@ sass:
 plugins:
   #- jekyll-feed
   - jekyll-redirect-from
-  - jekyll-sitemap
+  #- jekyll-sitemap
   - jemoji
 defaults:
   - scope:
@@ -34,6 +34,10 @@ defaults:
       fg: true
   - scope:
       path: "assets"
+    values:
+      sitemap: false
+  - scope:
+      path: "google9c8bdece57d6fa9c.html"
     values:
       sitemap: false
 
