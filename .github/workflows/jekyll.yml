@@ -24,7 +24,7 @@ jobs:
     - name: Publish to Github Pages
       run: |
         cd _site
-        touch .nojekyll
+        #touch .nojekyll
         git init
         git config --local user.email lah-wiki-bot
         git config --local user.name noreply@github.com
