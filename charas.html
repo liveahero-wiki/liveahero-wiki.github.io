@@ -20,13 +20,13 @@ permalink: /charas/
 <ul id="hero-list" class="card-list clearfix">
 {% for c in cardInfos %}
 {% capture page_cond %}item.path == "_charas/{{ c.resourceName }}.md"{% endcapture %}
-{% assign page = site.charas | where_exp: "item", page_cond | first %}
-<li data-id="{{ c.stockId }}" data-rarity="{{ c.rarity }}" data-element="{{ c.element }}" data-name="{{ page.name }}">
+{% assign page = site.charas | find_exp: "item", page_cond %}
+<li data-id="{{ c.stockId }}" data-rarity="{{ c.rarity }}" data-element="{{ c.element }}" data-name="{{ page.title }}">
 <div class="hero-icon">
   <div class="border hero-{{ c.rarity }}"></div>
   <img class="hero-chara-icon" src="/assets/img/icon/icon_{{ c.resourceName }}_h01.png" loading="lazy">
 </div>
-  <a href="{{ page.url }}#h{{ c.stockId }}">{{ page.name }}</a></li>
+  <a href="{{ page.url }}#h{{ c.stockId }}">{{ page.title }}</a></li>
 {% endfor %}
 </ul>
 
@@ -42,8 +42,8 @@ permalink: /charas/
 <ul id="sidekick-list" class="card-list clearfix">
 {% for c in cardInfos %}
 {% capture page_cond %}item.path == "_charas/{{ c.resourceName }}.md"{% endcapture %}
-{% assign page = site.charas | where_exp: "item", page_cond | first %}
-<li data-id="{{ c.stockId }}" data-rarity="{{ c.rarity }}" data-name="{{ page.name }}">
+{% assign page = site.charas | find_exp: "item", page_cond %}
+<li data-id="{{ c.stockId }}" data-rarity="{{ c.rarity }}" data-name="{{ page.title }}">
 <div class="sidekick-icon sidekick-{{ c.rarity }}">
   {% if c.resourceName == "player" %}
   <img src="/assets/img/icon/icon_player_s01.gif">
@@ -51,7 +51,7 @@ permalink: /charas/
   <img src="/assets/img/icon/icon_{{ c.resourceName }}_s01.png">
   {% endif %}
 </div>
-  <a href="{{ page.url }}#s{{ c.stockId }}">{{ page.name }}</a></li>
+  <a href="{{ page.url }}#s{{ c.stockId }}">{{ page.title }}</a></li>
 {% endfor %}
 </ul>
 

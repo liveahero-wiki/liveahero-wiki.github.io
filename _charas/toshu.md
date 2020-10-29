@@ -1,6 +1,5 @@
 ---
-name: Toshu
-jp_name: "トウシュウ"
+title: Toshu
 occupation: "Kendo Artist (剣道家)"
 illustrator: "Oaks (おーくす)"
 voice_actor: "Tetsu Inada (稲田徹)"

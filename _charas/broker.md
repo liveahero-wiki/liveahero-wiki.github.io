@@ -1,5 +1,5 @@
 ---
-name: Broker
+title: Broker
 unreleased: true
 ---
 

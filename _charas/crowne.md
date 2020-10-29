@@ -1,6 +1,5 @@
 ---
-name: Crowne
-jp_name: "クローネ"
+title: Crowne
 occupation: "Mechanic"
 illustrator: "Shukou Akanaru (朱交赤成)"
 voice_actor: "Mayumi Yamaguchi (山口眞弓)"

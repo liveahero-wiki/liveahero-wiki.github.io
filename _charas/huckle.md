@@ -1,6 +1,5 @@
 ---
-name: Huckle
-jp_name: "ハックル"
+title: Huckle
 occupation: "Hero Office Manager)"
 illustrator: "Shukou Akanaru (朱交赤成)"
 voice_actor: "Kenyuu Horiuchi (堀内賢雄)"

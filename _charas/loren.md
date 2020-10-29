@@ -1,6 +1,5 @@
 ---
-name: Loren
-jp_name: "ロレン"
+title: Loren
 occupation: "Nurse (看護師)"
 illustrator: "Plusno Konbu (ぷらす野 昆布)"
 voice_actor: "Yoshihito Oonami (大浪嘉仁)"

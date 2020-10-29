@@ -1,6 +1,5 @@
 ---
-name: Mokdai
-jp_name: "モクダイ"
+title: Mokdai
 occupation: "Video Production Staff (映像技術スタッフ)"
 illustrator: "Shukou Akanaru (朱交赤成)"
 voice_actor: "Kumamoto Kenta (熊本健太)"

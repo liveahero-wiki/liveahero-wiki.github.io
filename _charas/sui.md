@@ -1,6 +1,5 @@
 ---
-name: Sui
-jp_name: "スイ"
+title: Sui
 occupation: "Fashion Designer (服飾デザイナー)"
 illustrator: "Shukou Akanaru (朱交赤成)"
 voice_actor: "Mariya Ise (伊瀬茉莉也)"

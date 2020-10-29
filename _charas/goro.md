@@ -1,6 +1,5 @@
 ---
-name: Goro
-jp_name: "ゴロウ"
+title: Goro
 occupation: "Carpenter"
 illustrator: "oaks (おーくす)"
 voice_actor: "Yoshihito Oonami (大浪嘉仁)"

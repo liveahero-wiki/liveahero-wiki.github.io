@@ -1,6 +1,5 @@
 ---
-name: Shoen
-jp_name: "ショウエン"
+title: Shoen
 occupation: "Calligrapher (書道家)"
 illustrator: "Kinoshita Jiroh (樹下次郎)"
 voice_actor: "Ken Narita (成田剣)"

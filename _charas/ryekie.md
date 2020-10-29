@@ -1,6 +1,5 @@
 ---
-name: Ryekie
-jp_name: "ライキ"
+title: Ryekie
 occupation: "Hero Office Employee (Salesperson)"
 illustrator: "Shukou Akanaru (朱交赤成)"
 voice_actor: "Kazuhiro Nakaya (中谷一博)"

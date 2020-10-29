@@ -1,6 +1,5 @@
 ---
-name: Player
-jp_name: "主人公"
+title: Player
 occupation: "Hero operator"
 illustrator: "Shukou Akanaru (朱交赤成)"
 voice_actor: "someone"

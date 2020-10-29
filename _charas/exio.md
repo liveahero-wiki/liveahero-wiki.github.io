@@ -1,5 +1,5 @@
 ---
-name: Exio
+title: Exio
 unreleased: true
 ---
 

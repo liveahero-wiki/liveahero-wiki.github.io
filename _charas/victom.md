@@ -1,6 +1,5 @@
 ---
-name: Victom
-jp_name: "ヴィクトム"
+title: Victom
 occupation: "Rescue squad captain"
 illustrator: "DAI-XT (ダイエクスト)"
 voice_actor: "Masahiro Ogata"

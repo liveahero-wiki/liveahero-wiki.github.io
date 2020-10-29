@@ -1,5 +1,5 @@
 ---
-name: Barrel
+title: Barrel
 ---
 {% capture BIO_H01 %}
 He transforms into "Symphonic Trigger", a hero who wears a costume that resembles the sheriff in a western movie that he has admired since he was a child. With twin pistol-type parallel weapons, he subdue his target with quick draw shots. When transformed, different from his usual poor skills, he can shoot with one hundred percent accuracy. In battle, shooting energy bullets as much as he wants, he always looks like he's having a lot of fun.

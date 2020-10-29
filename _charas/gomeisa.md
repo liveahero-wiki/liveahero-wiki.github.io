@@ -1,5 +1,5 @@
 ---
-name: Gomeisa
+title: Gomeisa
 ---
 
 {% capture BIO_H01 %}

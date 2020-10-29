@@ -1,6 +1,5 @@
 ---
-name: Marfik
-jp_name: "マルフィク"
+title: Marfik
 occupation: "University Professor (Archeology)"
 illustrator: "Mensuke (めんスケ)"
 voice_actor: "Otomo Ryosaburo (大友龍三郎)"

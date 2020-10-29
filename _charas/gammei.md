@@ -1,5 +1,5 @@
 ---
-name: Gammei
+title: Gammei
 unreleased: true
 ---
 
