@@ -148,7 +148,7 @@ And if you are really really lazy, just use a [Markdown table generator](https:/
 
 ---
 
-To have it expanded by default, add a ` open` in the `<details>` tag.
+To have it expanded by default, add a ` open` in the <code>&lt;details&gt;</code> tag.
 
 ```
 <details open>
@@ -219,7 +219,7 @@ Wiki
 
 ## Common Wiki templates
 
-We use templates to
+We use templates to do fancy things like adding item and status icons.
 
 - [Item template](/items/)
 - [Status template](/statuses)
