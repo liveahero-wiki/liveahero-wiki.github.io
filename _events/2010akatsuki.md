@@ -30,7 +30,7 @@ The event has event specific free quest and sales, with bonus using the banner u
 | Gomeisa    | 25            |
 | Barrel     | 25            |
 
-Note: Support unit (the one you borrow from other player) doesn't give any bonus in free quest
+>Note: Support unit (the one you borrow from other player) doesn't give any bonus in free quest
 
 ## Event Shop
 
