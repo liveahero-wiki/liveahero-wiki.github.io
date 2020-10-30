@@ -25,6 +25,8 @@ He is a university student who attends the Hinowa University of Physical Educati
 {% include sidekick-infobox.html stockId=10011 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="akashi"
+s_gachaResult = "I'm Akashi, a college baseball player. I don’t exactly look like a hero, but it’s a part-time job. Looking forward to working with you!"
+salesStart = "Well then, I'm going"
 APPRECIATION = "Hmm? You look pretty tired<br>let's go eat something then!<br>Eat and sleep, that's the best way to recover."
 DAILY = "Yo, I just got back from club activities but I will work hard today.<br>so,what is today's job?"
 HERO = "Zap the Justice is really amazing<br>That's what a real hero is…huh<br>I-It's not like I admire him!?"
@@ -36,5 +38,3 @@ TRAINED = "Guu..! T-take it easy on me…"
 %}
 
 ## Notes
-
-"I'm Akashi, a college baseball player. I don't exactly look like a hero, but it's a part-time job. Looking forward to working with you!"
