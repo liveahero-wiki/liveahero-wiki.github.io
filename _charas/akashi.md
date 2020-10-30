@@ -26,7 +26,8 @@ He is a university student who attends the Hinowa University of Physical Educati
 
 {% include voice-table.html resourceName="akashi"
 h_gachaResult = "I'm Akashi, a college baseball player.<br>I don’t exactly look like a hero, but it’s a part-time job.<br>Looking forward to working with you!"
-s_gachaResult = "I'm Akashi. I'm a college student and i play baseball.<br>I can't disregard a childhood friend's request…<br>I'll do whatever I can. You can count on me."
+s_gachaResult = "I'm Akashi. I'm a college student and I play baseball.<br>I can't disregard a childhood friend's request…<br>I'll do whatever I can. You can count on me."
+
 salesStart = "Well then, I'm going"
 salesEnd = "Easy-peasy! Here, a souvenir"
 battleStart = "Play ball! Let's shut them down!"
