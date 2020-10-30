@@ -29,7 +29,7 @@ Although his body is plump and looks soft, his bloodline carries an effect that 
 
 {% include voice-table.html resourceName="mokdai"
 h_gachaResult = "I'm Mokdai, a cameraman.<br>If you need a battle live filmed, you can leave it to me!<br>...Eh!? y-you want me to do the fighting!?"
-s_gachaResult = "I'm Mokudai. I guess this makes me your senpai here.<br>You can leave the filming and editing to me.<br>When it comes to this at least, I'm a pro! Hehe."
+s_gachaResult = "I'm Mokdai. I guess this makes me your senpai here.<br>You can leave the filming and editing to me.<br>When it comes to this at least, I'm a pro! Hehe."
 salesStart = "I'm heading out!"
 salesEnd = "Aah, I'm starving..."
 battleStart = "The heroes have arrived! Cue the explosion entrance!!<br>...The effect's not ready yet?! Come on...!"
