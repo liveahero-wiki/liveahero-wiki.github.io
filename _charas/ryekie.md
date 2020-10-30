@@ -51,5 +51,3 @@ TRAINED = "G-GHNN! It's hard to make me groan!..."
 %}
 
 ## Notes
-
-"My name's Ryekie! And my other name is... Zap the Justice!! Now then, let us begin the legend of the hero of absolute justice!"
