@@ -3,7 +3,7 @@ on:
   workflow_dispatch: ~
   schedule:
     # At minute 0 and 30.
-    - cron: '0,30 * * * *'
+    - cron: '0 * * * *'
 jobs:
   build:
     name: Auto-update master data
