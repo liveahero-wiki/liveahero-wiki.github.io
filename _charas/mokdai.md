@@ -55,4 +55,3 @@ TRAINED = "Awawawa~! Stop, stop! This is impossible~!"
 
 ## Notes
 
-"I'm Mokdai, a cameraman. If you need a battle live filmed, you can leave it to me! ...Eh!? y-you want me to do the fighting!?"
