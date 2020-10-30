@@ -41,12 +41,12 @@
 {% assign detail_prefix = firstCardInfo.resourceName | upcase | prepend: "DETAIL_" %}
 {% assign bio_s01 = detail_prefix | append: "_S01" %}
 <details>
-<summary>Personal Data</summary>
+<summary>Side Story</summary>
 <p>{{ site.data.processed.jp_bio[bio_s01] }}</p>
 </details>
 {% if include.BIO_S01 %}
 <details>
-<summary>Personal Data (Translated)</summary>
+<summary>Side Story (Translated)</summary>
 <p>{{ include.BIO_S01 }}</p>
 </details>
 {% endif %}
