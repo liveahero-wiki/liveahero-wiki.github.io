@@ -32,7 +32,7 @@ Claiming to be indifferent about anything unrelated to confectionery, both her w
 
 {% include voice-table.html resourceName="kirsch"
 h_gachaResult = "I’m Kirsch, a pâtissier!<br> I will keep on fighting until I can master the recipe of that fantastic sweet that made my teacher gasp in delight…!"
-s_gachaResult = "Kirsch here! I'm a passionate pâtissier!<br>You can also count on me for supporting the heroes!<br>In the name of my master,I'll give it my all!"
+s_gachaResult = "Kirsch here! I'm a passionate pâtissier!<br>You can also count on me for supporting the heroes!<br>In the name of my master, I'll give it my all!"
 salesStart = "I'm going, for everyone's sake!"
 salesEnd = "I'm back everyone!"
 battleStart = "I'll show you my master's spinning confectionery technique!"
