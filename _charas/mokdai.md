@@ -40,4 +40,4 @@ TRAINED = "Awawawa~! Stop, stop! This is impossible~!"
 
 ## Notes
 
-"Oh, you came! The camera and the equipment are ready, so you're good to go. Now then, go out there and break a leg!"
+"I'm Mokdai, a cameraman. If you need a battle live filmed, you can leave it to me! ...Eh!? y-you want me to do the fighting!?"
