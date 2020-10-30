@@ -52,3 +52,8 @@ TRAINED = "Guu..! T-take it easy on me…"
 %}
 
 ## Notes
+
+- His full name is Tamamura Akashi (<ruby>魂群<rt>たまむら</rt></ruby>アカシ).
+- In LifeWonders' previous game "Tokyo Afterschool Summoners", there is another character called [Tamamura Gunzo](https://housamo.wiki/Gunzo) (<ruby>魂群<rt>たまむら</rt></ruby>グンゾウ).
+  Not only do they share the same surname, they are also drawn by the same artist and voiced by the same voice actor ~~and have the same iconic "smile with eye pupil" expression~~. It seems like the similarity is intentional, but the relationship between Akashi and Gunzo is currently unknown.
+- Akashi currently studies in Hinowa Physical Education University (ヒノワ体育大学). In the gay games called "Wrestle Fight" and "Rental Athletes" released by LifeWonders' previous doujin circle "四畳半的生活", there was also a university with the same name (written in Japanese as <ruby>日輪<rt>ひのわ</rt></ruby>体育大学).
