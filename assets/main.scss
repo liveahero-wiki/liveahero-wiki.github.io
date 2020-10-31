@@ -50,6 +50,7 @@ a:hover {
 }
 .sidebar {
   background: $colorLight;
+  visibility: hidden;
   width: 250px;
   position: fixed;
   transform: translateX(-250px);
@@ -60,6 +61,7 @@ a:hover {
 }
 .sidebar--is-visible {
   transform: translateX(0);
+  visibility: visible;
 }
 .sidebar__logo {
   border-bottom: 1px solid $colorDark;
@@ -125,6 +127,7 @@ a:hover {
 @media (min-width: 768px) {
   .sidebar {
     transform: translateX(0);
+    visibility: visible;
   }
   .content__area {
     padding: 40px 40px 40px 290px;
