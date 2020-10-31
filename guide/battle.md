@@ -61,15 +61,17 @@ The available status modifiers are listed as follows:
 
 #### Debuffs
 
-- ATK Down: Attack is decreased by 0.5x. Duration decreases after the Hero performs an action.
-- DEF Down: Damage received is increased by 1.5x once. Duration decreases after taking damage.
-- SPD down: Speed is decreased by -10. Duration decreases after the Hero performs an action.
-- Super SPD Down: Speed is decreased by 30. Duration decreases after the Hero performs an action.
-- Mosaic: View Power gained from actions is decreased by 0.5x. Duration decreases after the Hero performs an action.
-- Misfortune: Activation rate of skills decreased by 20%. Duration decreases after the Hero performs an action.
-- Silence: Skill cannot be used. Duration decreases when the turn ends. It does not repeat.
-- Poison: Takes 5% of HP as damage at end of turn. Duration decreases when the turn ends.
-- Burn: Takes 10% of HP as damage at end of turn. Duration decreases when the turn ends.
+| Debuff | English Name | Description |
+|:----:|:--------------:|:-----------:|
+| {% include status.html id=11 %} | ATK Down | Attack is decreased by 0.5x. Duration decreases after the Hero performs an action. |
+| {% include status.html id=12 %} | DEF Down | Damage received is increased by 1.5x once. Duration decreases after taking damage. |
+| {% include status.html id=13 %} | SPD down | Speed is decreased by -10. Duration decreases after the Hero performs an action. |
+| {% include status.html id=14 %} | Super SPD Down | Speed is decreased by 30. Duration decreases after the Hero performs an action. |
+| {% include status.html id=15 %} | Mosaic | View Power gained from actions is decreased by 0.5x. Duration decreases after the Hero performs an action. |
+| {% include status.html id=16 %} | Misfortune | Activation rate of skills decreased by 20%. Duration decreases after the Hero performs an action. |
+| {% include status.html id=17 %} | Silence | Skill cannot be used. Duration decreases when the turn ends. It does not repeat. |
+| {% include status.html id=18 %} | Poison | Takes 5% of HP as damage at end of turn. Duration decreases when the turn ends. |
+| {% include status.html id=19 %} | Burn | Takes 10% of HP as damage at end of turn. Duration decreases when the turn ends. |
 
 ## Battle acquisition EXP/ Relation
 
