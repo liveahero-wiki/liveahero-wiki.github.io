@@ -18,7 +18,21 @@ A Police officer from Orient City's municipal police department, working in a po
 {% include sidekick-infobox.html stockId=10071 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="barrel"
-
+h_gachaResult = "Orient City Police Department, I'm Officer Barrel!<br>In the name of justice,I will fight!<br>So, where's the crime scene!?<br>Come come!!"
+s_gachaResult = "Hey! I'm Police officer barrel!<br>You can leave sidekick duty to me!<br>I'll provide cover fire!"
+salesStart = "Bang! Bang! I'm going!"
+salesEnd = "Bang! I'm done!"
+battleStart = "The sheriff of justice has arrived!<br>Come, let's fire away!"
+action = "Bang! Bang! Let's go!"
+attack = "Boom!"
+skill = "Bam and go!"
+special = "Shoot, shoot, shoot 'em all!<br>Bullseye!<br>BANG&BANG&BAAANG!!"
+smallDamage = "Agh!"
+bigDamage = "It's jammed!"
+win = "Haa~! Thrilling MAX!<br>&quot;The peace of the city was kept today. For the sake of the people we love, the sheriff will fight again tomorrow.&quot;<br>Bang-bang!"
+lose = "Ahyaa!  I'm screwed...<br>I'm sorry, I leave the rest to you…"
+assist = "The showdown begins now!"
+assisted = "I owe you!"
 APPRECIATION = "Thank you for your hard work, partner!<br>Ah, if you meet someone troubling on your way home, don't hesitate to go to the police box!<br>I will solve it in a flash!"
 DAILY = "Thank you for your hard work! <br>Come on, come on, let's quickly go to the scene of the crime, there!<br>The scent of danger is waiting for us officials!"
 HERO = "That bomber guy is amazing!<br>I feel bad for them having to smell gunpowder all the time<br>... Eh? Hobby friend? What's that?"
@@ -28,3 +42,5 @@ TOUCH = "H-Hey! It tickles, hahaha!<br>If you keep doing that, I'll--"
 TRAIN = "Don't worry, I won't really try to hit you!"
 TRAINED = "Aghh! T-That's a big hit!"
 %}
+
+## Notes
