@@ -33,6 +33,21 @@ Since she's a geek deeply interested in high tech, when she sees rare mechas or 
 {% include sidekick-infobox.html stockId=10051 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="crowne"
+h_gachaResult = "I'm Crowne a Mechanic.<br>You will be my operator?<br>Well, this must be some sort of fate.<br>I'm counting on you."
+s_gachaResult = "My name's Crowne,<br>I'm just your everyday mechanic.<br>You want me to work on your spaceship's maintenance?<br>or…hm? sidekick?<br>Asking me for that, you're quite peculiar."
+salesStart = "Heave-ho, I'm going."
+salesEnd = "Well, it's done."
+battleStart = "You've got some nerve picking a fight with us.<br>Oo, I'm going to dismantle every single one of you!"
+action = "I'm here!"
+attack = "Heave-ho"
+skill = "Step it up a bit."
+special = "This is how a technician win.<br>Restructure! Analyze and Scrap!"
+smallDamage = "You're good."
+bigDamage = "Uuu."
+win = "What, done already?<br>Geez, what a bunch of wimps.<br>Would you like me to modify that weapon?"
+lose = "Sorry, I made a mistake.<br>Me of all people, to be this careless."
+assist = "Fight freely!"
+assisted = "Thank you."
 APPRECIATION = "Why're you so tired?<br>You're trying to do everything by yourself<br>Y'know, you can always rely on me."
 DAILY = "Yo, how are you feeling?<br>The ship's in perfect condition so we can fly off whenever you want.<br>Let's finish work quickly and go for a drink."
 HERO = "The mecha's origin being a star is quite exciting, isn't it?<br>Isn't his entire body a machine?<br>Won't you let me dismantle him a little?"
@@ -45,4 +60,3 @@ TRAINED = "You're using me as a test subject? That's some nerve...."
 
 ## Notes
 
-"You're quite the promise, aren't ya? Well, it's not like I hate gutsy idiots like you. Ahaha, what's up with that face? That was a compliment!"
