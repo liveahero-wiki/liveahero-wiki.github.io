@@ -18,11 +18,11 @@ A Police officer from Orient City's municipal police department, working in a po
 {% include sidekick-infobox.html stockId=10071 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="barrel"
-h_gachaResult = "Orient City Police Department, I'm Officer Barrel!<br>In the name of justice,I will fight!<br>So, where's the crime scene!?<br>Come come!!"
+h_gachaResult = "Orient City Police Department, I'm Officer Barrel!<br>In the name of justice,I will fight!<br>So, where's the crime scene!?<br>Come on,come on!!"
 s_gachaResult = "Hey! I'm Police officer barrel!<br>You can leave sidekick duty to me!<br>I'll provide cover fire!"
 salesStart = "Bang! Bang! I'm going!"
 salesEnd = "Bang! I'm done!"
-battleStart = "The sheriff of justice has arrived!<br>Come, let's fire away!"
+battleStart = "The sheriff of justice has arrived!<br>Come on, let's fire away!"
 action = "Bang! Bang! Let's go!"
 attack = "Boom!"
 skill = "Bam and go!"
