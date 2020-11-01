@@ -27,6 +27,21 @@ He has a habit of giving folded origami figures to the children he meets.
 {% include sidekick-infobox.html stockId=10121 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="shoen"
+h_gachaResult = "...I am Shoen,<br>someone who makes good use of characters and spreads them around...<br>that’s the kind of man I am."
+s_gachaResult = "My name's Shoen, I'm a simple calligrapher.<br>My writing is not really good but,<br>If it help master and the others..<br>I will provide assistance,<br>With all that I can offer"
+salesStart = "I'm going."
+salesEnd = "I'm back."
+battleStart = "Singular focus in each stroke...until the final one.<br>This is the path of my writing."
+action = "...Alright."
+attack = "Humph!"
+skill = "It's fleeting..."
+special = "Scattered ink gather to end evil.<br>Depart...Ninety-nine Ink Marks."
+smallDamage = "Nn!"
+bigDamage = "Uoo!"
+win = "It will break and disappear again.<br>Born and then gone...an existence like a bubble.<br>...the lifes of the characters, are a fleeting one."
+lose = "I guess this is retribution...My characters...I'm sorry."
+assist = "Maybe this can help."
+assisted = "Thank you."
 APPRECIATION = "It's important to keep your mind calm.<br>You must alway find time to attend to your own needs... Do you want to fold origami together?<br>It always puts my heart at ease."
 DAILY = "... I was just folding origami.<br>Well, if it is time to get to work... I am ready."
 RELATION = "Toshu is different alien species than I, but our hearts share the same fondness for Japanese culture.<br>This is a secret, but if you give him sweets made from red bean paste he will be greatly pleased."
@@ -39,4 +54,3 @@ TRAINED = "This body, move...!"
 
 ## Notes
 
-"I am Shouen, someone who makes good use of letters and spreads them around... that's the kind of man I am."
