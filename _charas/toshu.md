@@ -41,7 +41,7 @@ salesEnd = "I'm back."
 battleStart = "Let's cut down on evil without slaying anyone, fellow samurai!"
 action = "Let's go ahead!"
 attack = "Teyaa!"
-skill = "Hachiman![^1]"
+skill = "Hachiman!"
 special = "The self of yesterday must be conquered today!<br>Flash! Sword Dance of the Lion Warrior!"
 smallDamage = "Ugu!"
 bigDamage = "Gaa!"
@@ -61,4 +61,3 @@ TRAINED = "Ugh! You're barbaric!"
 %}
 
 ## Notes
-[^1]: 八幡([Hachiman](https://en.wikipedia.org/wiki/Hachiman)) refer to the name of japanese God of war 
