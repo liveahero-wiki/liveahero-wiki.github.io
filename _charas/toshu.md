@@ -34,6 +34,22 @@ Dare someone tease him and call him a "tsundere" he WILL snap.
 {% include sidekick-infobox.html stockId=10131 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="toshu"
+h_gachaResult = "My name's Toshu.<br>I seek to master the way of the sword,<br>and become a samurai like &quot;Sakimori&quot;.<br>The will that you hold in your heart,<br>Show it to me."
+s_gachaResult = "Young man, You're the one who called me?<br>I am Toshu.<br>As a warrior,<br>It is my principle to not be shoddy when it comes to helping my fellow warriors."
+salesStart = "I know what to do. I'm going."
+salesEnd = "I'm back."
+battleStart = "Let's cut down on evil without slaying anyone, fellow samurai!"
+action = "Let's go ahead!"
+attack = "Teyaa!"
+skill = "Hachiman!"
+special = "The self of yesterday must be conquered today!<br>Flash! Sword Dance of the Lion Warrior!"
+smallDamage = "Ugu!"
+bigDamage = "Gaa!"
+win = "I'm not so immature that I give in to my victory.<br>I'm going to be even more diligent in anticipation of the next battle - that's all."
+lose = "Guu...I'm halfway to my aspiration...<br>I'm sorry..."
+assist = "Leave it to me!"
+assisted = "I appreciate it!"
+loveIndexMax = "Hmm…You are a very interesting fellow.<br>When I'm with you, my swordmanship also get sharper.<br>That's why...um...don't leave me."
 APPRECIATION = "You're not confident in your physical strength, are you?  After all ... your expertise lies in other fields. Here, I've prepared some tea. Take a break."
 DAILY = "Hn, is it finally time to go?  I was tired of maintaining my armor.  Let's go then, off to war."
 HERO = "That assistant teacher is immature in both skill and personality.  However.  He has people he would do anything to protect.  That's why I understand.  I'm sure he will get stronger."
@@ -46,4 +62,3 @@ TRAINED = "Ugh! You're barbaric!"
 
 ## Notes
 
-"Hmph, so you've come at last. I was getting tired of tending to my armor already. I'll do as you want in the battlefield."
