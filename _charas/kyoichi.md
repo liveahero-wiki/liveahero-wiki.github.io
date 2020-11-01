@@ -31,6 +31,21 @@ By the way, it seems like "Elementary students are the base he's supposed to def
 {% include sidekick-infobox.html stockId=10101 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="kyoichi"
+h_gachaResult = "My name is Kyoichi Ootomo, <br>I'm the second home room teacher at Wangansan Elementary School for 4th grade class.<br>I'll partake in any battle to ensure my students' peaceful lives."
+s_gachaResult = "My name's Kyoichi, I'm an elementary school teacher.<br>Yes, leave it to me! Whether it's children or hero,<br>I will guide them with extensive support!"
+salesStart = "Yosh, off on a field trip!"
+salesEnd = "I'm back! Come on, you guys, say it too!"
+battleStart = "Let's begin today's lesson! What will happen if you bad things, properly watch it okay?"
+action = "Oshaa!"
+attack = "Guidance!"
+skill = "Attention!"
+special = "Alright, let's wrap up the class! Instruct! Primary Education 180°!"
+smallDamage = "Nuo!?"
+bigDamage = "It hurtss!"
+win = "That's it for today! Everyone, make sure you do your homework!"
+lose = "Damn it…I can't reach..them.."
+assist = "Properly do it!"
+assisted = "Thank you!"
 APPRECIATION = "Hey, hey, you're throwing a little too soft.<br>I'm not a kid, so think about how to appropriately distribute your physical strength.<br>The body is the capital of both teachers and operators, right?"
 DAILY = "Yeah, good work today!<br>I'll go out with you in a bit.<br>Before that, let me just finish up scoring these tests."
 HERO = "You know, sometimes I'm really worried!<br>I wonder if that kid hero even go to school!?<br>does his studies get affected or not, I'm concerned!"
@@ -40,9 +55,7 @@ TOUCH = "Oops! Hoh…<br>Since you're the one who started it first,<br>that mean
 TRAIN = "Alright follow your teacher!"
 TRAINED = "Uwaa wait, I give up, I give up! Uhyaa!"
 
-
 %}
 
 ## Notes
 
-"Yo, great work out there! You're going to work today as well, right? I'll come with you! Though, let me just score this test first."
