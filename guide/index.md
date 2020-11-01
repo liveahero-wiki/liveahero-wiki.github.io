@@ -1,6 +1,7 @@
 ---
 title: Gameplay
 banner: true
+redirect_from: /gameplay/
 ---
 
 * this will be unordered
