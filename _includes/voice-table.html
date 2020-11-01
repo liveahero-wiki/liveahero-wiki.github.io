@@ -5,13 +5,16 @@
 {% assign greeting = "h_gachaResult,s_gachaResult" | split: "," %}
 
 <h2>Voice Lines</h2>
-<table>
+<table class="voice-table">
 {% for n in names %}
   {% assign name = n | upcase | prepend: "_" | append: "_" %}
 
   {% for part in greeting %}
   {% assign line = include[part] %}
-  {% if line %}<tr><th>{{ part | replace: "h_", "Hero " | replace: "s_", "Sidekick " }}</th><td>{{ line }}</td></tr>{% endif %}
+  {% if line %}<tr><th>{{ part | replace: "h_", "Hero " | replace: "s_", "Sidekick " }}</th>
+<td markdown="1">
+{{ line }}
+</td></tr>{% endif %}
   {% endfor %}
 
   {% for part in whitelist %}
@@ -23,12 +26,18 @@
       {% assign p = key | replace: "SERIF_", "" %}
     {% endif %}
     {% assign translated = include[p] %}
-    <tr><th>{{ p }}</th><td class="translate" data-translate="{% if translated %}{{ jp_line | escape }}{% endif %}">{{ translated | default: jp_line }}</td></tr>
+    <tr><th>{{ p }}</th>
+<td markdown="1" class="translate" data-translate="{% if translated %}{{ jp_line | escape }}{% endif %}">
+{{ translated | default: jp_line }}
+</td></tr>
   {% endfor %}
 
   {% for part in manual %}
   {% assign line = include[part] %}
-  {% if line %}<tr><th>{{ part }}</th><td>{{ line }}</td></tr>{% endif %}
+  {% if line %}<tr><th>{{ part }}</th>
+<td markdown="1">
+{{ line }}
+</td></tr>{% endif %}
   {% endfor %}
 {% endfor %}
 </table>
