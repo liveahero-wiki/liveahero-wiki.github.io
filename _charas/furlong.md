@@ -68,5 +68,3 @@ TRAINED = "Gu..! I-it's hot..!"
 %}
 
 ## Notes
-
-"Ah... good work out there. If a fire breaks out, please leave it to me. I'm fine walking into the flames and such..."
