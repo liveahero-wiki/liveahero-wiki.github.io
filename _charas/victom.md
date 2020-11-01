@@ -27,6 +27,21 @@ Even though he believes that all lives are precious, there is a side of him that
 {% include sidekick-infobox.html stockId=10091 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="victom"
+h_gachaResult = "Hyper Rescue Squad Captain, Victom.<br>Also known as Survive Taker.<br>I'll certainly protect your lives…"
+s_gachaResult = "My name's Victom, Hyper Rescue Squad Captain.<br>I want you to entrust the heroes' live to me<br>Even if I have to injure my body, I will protect them."
+salesStart = "Roger, Let's move."
+salesEnd = "We made it back. Mission accomplished."
+battleStart = "Survive taker, Mission received<br>Commencing lifesaving!"
+action = "Roger."
+attack = "Sweep off"
+skill = "Let's break this situation!"
+special = "Rescue! Lightspeed Phoenix!"
+smallDamage = "Nu..!"
+bigDamage = "Nua!"
+win = "Mission accomplished, returning back.<br>Aa, this injury is of no concern, when compared to the weight of their lives…"
+lose = "Aa, once again…once again, I can't save the life in front of me…."
+assist = "I'll make an opening!"
+assisted = "Thank you."
 APPRECIATION = "Accumulation of fatigue is the worst thing that can happen during a mission.<br>If the commander is exhausted, it will affect morale.<br>In other words... take a little break. Don't worry me too much."
 DAILY = "Oh, you are here.<br>In that case, what sort of mission are we going to embark on?<br>Don't worry, I won't die."
 HERO = "That young one is forever immature.<br>Despite his timid personality, he is way too reckless.<br>But ... I don't hate him."
@@ -39,4 +54,3 @@ TRAINED = "Ghnnhg... Q-Quite formidable…"
 
 ## Notes
 
-"Ah, you're here. Now then, what kind of mission shall we face today? Rest assured, I won't die easy out there."
