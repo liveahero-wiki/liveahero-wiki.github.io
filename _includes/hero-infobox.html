@@ -47,10 +47,11 @@
 <p>{{ site.data.processed.jp_bio[bio_h01] }}</p>
 </details>
 {% if include.BIO_H01 %}
-<details>
+<details open>
 <summary>Personal Data 1 (Translated)</summary>
-<p>{{ include.BIO_H01 }}</p>
-</details>
+<div markdown="1">
+{{ include.BIO_H01 }}
+</div></details>
 {% endif %}
 
 {% assign bio_h02 = detail_prefix | append: "_H02" %}
@@ -59,9 +60,11 @@
 <p>{{ site.data.processed.jp_bio[bio_h02] }}</p>
 </details>
 {% if include.BIO_H02 %}
-<details>
+<details open>
 <summary>Personal Data 2 (Translated)</summary>
-<p>{{ include.BIO_H02 }}</p>
+<div markdown="1">
+{{ include.BIO_H02 }}
+</div>
 </details>
 {% endif %}
 

@@ -45,9 +45,11 @@
 <p>{{ site.data.processed.jp_bio[bio_s01] }}</p>
 </details>
 {% if include.BIO_S01 %}
-<details>
+<details open>
 <summary>Side Story (Translated)</summary>
-<p>{{ include.BIO_S01 }}</p>
+<div markdown="1">
+{{ include.BIO_S01 }}
+</div>
 </details>
 {% endif %}
 
