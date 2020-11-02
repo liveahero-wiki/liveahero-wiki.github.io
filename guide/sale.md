@@ -84,12 +84,12 @@ For special sales report released in events, please see event info pages listed 
 </details>
 
 <details><summary>Sales Report 2</summary>
-<p>営業先で、 <code>character0</code> はヴィランと遭遇した！<br>ヴィランは、奇怪な踊りを踊りながら、<br>民衆にセクハラ的な行為を行って喜んでいる、<br>文字通りの変態だった！<br><br> <code>character0</code> はそんな変態を止めるべく戦闘を行うが、<br>変態相手にマトモな技は通用しなかった。<br><br>目には目を、歯には歯を。<br> <code>character0</code> はダンスバトルを申し込んだ！<br>変態を軽々と圧倒するデタラメで妙ちきりんな踊りに、<br>ヴィランは負けを認め、たちまち御用となった。<br><br>しかし、変態ヴィランを逮捕した功績と共に、<br> <code>character0</code> は大事な何かを失ったのだった……。
+<p><p>営業先で、 <code>character0</code> はヴィランと遭遇した！<br>ヴィランは、奇怪な踊りを踊りながら、<br>民衆にセクハラ的な行為を行って喜んでいる！<br><br> <code>character0</code> はそんなヴィランを止めるべく戦闘を行うが、<br>相手にマトモな 技は通用しなかった。<br><br>目には目を、歯には歯を。<br> <code>character0</code> はダンスバトルを申し込んだ！<br>相手を 軽々と圧倒するデタラメで妙ちきりんな踊りに、<br>ヴィランは負けを認め、たちまち御用となった。<br><br>しかし、ヴィランを逮捕した功績と共に、<br> <code>character0</code> は大事な何かを失ったのだった……。
 </p>
 </details>
 
 <details><summary>Sales Report 2 (Translated)</summary>
-<p>At the business location, <code>character0</code> encountered a villain!<br>The villain dragged citizens along, forcing them into a bizarre dance,<br>but slyly groping the dance partners on the side.<br>It was a pervert on the loose!<br><br> <code>character0</code> transformed, determined to put a stop to their misdeeds.<br>However, their usual battle techniques did not work against the agile, slippery opponent.<br><br>Eye for an eye, tooth for a tooth.<br> <code>character0</code> challenged the villain head on in a dance battle!<br>Their haphazard, unpredictable dancing overwhelmed the opponent,<br>The Villain admitted to losing and was quickly arrested.<br><br>However, with the achievement of capturing the perverted villain<br> <code>character0</code> lost something important...
+<p> <code>character0</code> encountered a villain at the sales location!<br>The villain is happily sexually harassing the citizens while dancing a strange dance!<br><br> <code>character0</code> went to fight the villain to stop them,<br>but they didn’t use any standard moves to do so.<br><br>An eye for an eye, and a tooth for a tooth.<br> <code>character0</code> challenged them to a dance battle!<br>By using a careless and overwhelmingly bizarre dance,<br>The villain accepted defeat and was arrested at once.<br><br>But in arresting this villain,<br> <code>character0</code> lost something important...
 </p>
 </details>
 
