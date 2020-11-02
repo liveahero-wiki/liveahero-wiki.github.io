@@ -35,7 +35,9 @@ battleStart = "Singular focus in each stroke...until the final one.<br>This is t
 action = "...Alright."
 attack = "Humph!"
 skill = "It's fleeting..."
-special = "Scattered ink gather to end evil.<br>Depart...Ninety-nine Ink Marks."
+special = "Scattered ink, gather to end evil.<br>Depart[^shoen_n1] ...Ninety-nine Ink Marks.
+
+[^shoen_n1]: 送筆, Literally:to send the writing; think of it like taomon's ultimate skill i.e.: writing on the air and send it to the enemy"
 smallDamage = "Nn!"
 bigDamage = "Uoo!"
 win = "It will break and disappear again.<br>Born and then gone...an existence like a bubble.<br>...the lifes of the characters, are a fleeting one."
