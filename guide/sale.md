@@ -84,7 +84,7 @@ For special sales report released in events, please see event info pages listed 
 </details>
 
 <details><summary>Sales Report 2</summary>
-<p><p>営業先で、 <code>character0</code> はヴィランと遭遇した！<br>ヴィランは、奇怪な踊りを踊りながら、<br>民衆にセクハラ的な行為を行って喜んでいる！<br><br> <code>character0</code> はそんなヴィランを止めるべく戦闘を行うが、<br>相手にマトモな 技は通用しなかった。<br><br>目には目を、歯には歯を。<br> <code>character0</code> はダンスバトルを申し込んだ！<br>相手を 軽々と圧倒するデタラメで妙ちきりんな踊りに、<br>ヴィランは負けを認め、たちまち御用となった。<br><br>しかし、ヴィランを逮捕した功績と共に、<br> <code>character0</code> は大事な何かを失ったのだった……。
+<p>営業先で、 <code>character0</code> はヴィランと遭遇した！<br>ヴィランは、奇怪な踊りを踊りながら、<br>民衆にセクハラ的な行為を行って喜んでいる！<br><br> <code>character0</code> はそんなヴィランを止めるべく戦闘を行うが、<br>相手にマトモな 技は通用しなかった。<br><br>目には目を、歯には歯を。<br> <code>character0</code> はダンスバトルを申し込んだ！<br>相手を 軽々と圧倒するデタラメで妙ちきりんな踊りに、<br>ヴィランは負けを認め、たちまち御用となった。<br><br>しかし、ヴィランを逮捕した功績と共に、<br> <code>character0</code> は大事な何かを失ったのだった……。
 </p>
 </details>
 
