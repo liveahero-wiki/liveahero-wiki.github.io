@@ -45,11 +45,14 @@ Experience points will be given to all heroes who have departed on the business.
 
 ## Business Bonus
 
-The amount of currency obtained in each type of Sale is increased by a bonus. Heroes going on the business give either a +5% bonus for the first six Heroes and a +10% bonus for the seventh and eighth Heroes, up to maximum of +50% if all eight slots are filled; 5★ Heroes provide an additional +5% for the first six 5★ Heroes and a +10% bonus for the seventh and eighth 5★ Heroes, up to a maximum o 50%. Hence, the maximum total of bonus for each sale is +100% for a team of eight 5★ Heroes. Obtainable experience is also affected by this bonus.
+The amount of currency obtained in each type of Sale is increased by a bonus. Heroes going on the business give either a +5% bonus for the first six Heroes and a +10% bonus for the seventh and eighth Heroes, up to maximum of +50% if all eight slots are filled; 5★ Heroes provide an additional +5% for the first six 5★ Heroes and a +10% bonus for the seventh and eighth 5★ Heroes, up to a maximum of 50%. Hence, the maximum total of bonus for each sale is +100% for a team of eight 5★ Heroes. Obtainable experience is also affected by this bonus.
 
-## Business Log
+### Efficiency Priority List
 
-When a business has been completed you will receive a business log from the characters who have departed for the business.
+1. Fill out every sale slot, since each sale slot gives you 100% rewards.
+1. Use every hero you have. Heroes that are used in sale can still participate in battle.
+1. Stack one sale to 7/8 members if possible, since the 7th and 8th members will give 10% bonus each instead of 5% bonus.
+1. Stack one sale to 7/8 5★ members if possible, since the 7th and 8th 5★ members will give 10% bonus each instead of 5% bonus.
 
 ## Business Shortening and Canceling
 
