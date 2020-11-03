@@ -19,7 +19,7 @@ and launched at 30 september 2020. Following it's predecessors this game is a LG
 
 If you're an iPhone user, simply download the game from [here](https://apps.apple.com/jp/app/id1474209512)
 
-If you are an Android user, you can download the app from the Google Play Store [here] (https://play.google.com/store/apps/details?id=jp.co.lifewonders.liveahero). 
+If you are an Android user, you can download the app from the Google Play Store [here](https://play.google.com/store/apps/details?id=jp.co.lifewonders.liveahero). 
 If this is not possible for some reason, you must install QooApp onto your phone from here. Then, open QooApp and do a search for Lifewonders. 
 Select Live A Hero and install.
 
@@ -38,7 +38,7 @@ Follow the instructions given by the Game and you will see yourself winning the 
 After winning the game will continue the story until you're prompted to call a hero, simply follow the instruction and call your hero,
 The game will then proceed to instruct you to add your newly called hero as a member of your team it will also instruct you to level it up similar to how you will be doing the same for your future units.
 
-If all of this is fulfilled you will be then redirected to the Home UI where you can choose [Quest] (https://liveahero-wiki.github.io/guide/quest/), event, [sales ] (https://liveahero-wiki.github.io/guide/sale/) and a plethora of other menus.
+If all of this is fulfilled you will be then redirected to the Home UI where you can choose [Quest](/guide/quest/), event, [sales](/guide/sale/) and a plethora of other menus.
 
 
 ## Summon Currency
@@ -67,7 +67,7 @@ Here are some ways to earn more free stones:
 - Earn 50 {% include item.html id=2 %} for first day of play 
 - Earn 6 {% include item.html id=2 %} for daily logins on a weekly cycle (2 on Day 4, 4 on Day 8)
 - Earn 1 {% include item.html id=2 %} daily for completing the daily missions
-- Earn extra stones for cumulative logins , Main quest missions and standard missions, check [missions] (https://liveahero-wiki.github.io/guide/mission/) for detail
+- Earn extra stones for cumulative logins , Main quest missions and standard missions, check [missions](/guide/mission/) for detail
 - Purchase stones with real-life money. (Be responsible!)
 - Gain stones from LifeWonders after server maintenance, issues, or login campaigns.
 
@@ -97,7 +97,7 @@ The grand prize in Friend Gacha is a player sidekick dupe <img src="/assets/img/
 Despite the game being relatively new there are a lot of players who has max leveled unit (level 50) and if you're lucky enough to be accepted as friend by them, 
 you will now have a Support that can carry your party all on their own at least until the middle difficulty quest, and the best part of this is that friend supports characters cost nothing to borrow in fact it gives friend point to you and your friend.
 
-To gain friends quickly, you will want to share your friend code, which is a 9-digit code (found in the Friends section of the game), in various places. A popular place for now is LAH community discord
+To gain friends quickly, you will want to share your friend code, which is a 9-digit code (found in the Friends section of the game), in various places. A good place for now is LAH community discord
 
 
 ## About Characters Rarity
