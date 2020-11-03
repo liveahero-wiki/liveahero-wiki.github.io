@@ -31,7 +31,8 @@ The player will have the same kit regardless of your choices.
 When all of this has been fulfilled, you will be then redirected to the Transfer Form screen where you are given a chance to proceed or redo your character customization. 
 
 When you officially start, you are greeted by a black screen followed by some dialogue and story, skipping and reading through that will result on a battle with a Kaibutsu
-Follow the instructions given by the Game and you will see yourself winning the fight. To learn more about how Fighting, it's suggested to look and read the [Battle System] (https://liveahero-wiki.github.io/guide/battle/). 
+Follow the instructions given by the Game and you will see yourself winning the fight. To learn more about how Fighting, it's suggested to look and read the [Battle System](/guide/battle/). 
+
 
 After winning the game will continue the story until you're prompted to call a hero, simply follow the instruction and call your hero,
 The game will then proceed to instruct you to add your newly called hero as a member of your team it will also instruct you to level it up similar to how you will be doing the same for your future units.
