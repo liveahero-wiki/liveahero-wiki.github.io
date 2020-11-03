@@ -17,7 +17,8 @@ and launched at 30 september 2020. Following it's predecessors this game is a LG
 
 ## How Do I Download This Game?
 
-If you're an iPhone user, simply download the game from [here] (https://apps.apple.com/jp/app/id1474209512)
+If you're an iPhone user, simply download the game from [here](https://apps.apple.com/jp/app/id1474209512)
+
 If you are an Android user, you can download the app from the Google Play Store [here] (https://play.google.com/store/apps/details?id=jp.co.lifewonders.liveahero). 
 If this is not possible for some reason, you must install QooApp onto your phone from here. Then, open QooApp and do a search for Lifewonders. 
 Select Live A Hero and install.
