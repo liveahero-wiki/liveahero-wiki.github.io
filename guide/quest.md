@@ -20,7 +20,7 @@ This is the quest where you can read the game's main story.
 
 ## Enhancement/ Training Quest
 
-These quests are meant for gathering items that can be used to raise and rank up [Heroes](/guide/hero) and [Sidekicks](/guide/sidekick). Enhancement Quests are divided by rank, with higher ranks offering better rewards at the cost of being more difficult and consuming higher levels of stamina.
+These quests are meant for gathering items that can be used to raise and rank up [Heroes](/guide/hero/) and [Sidekicks](/guide/sidekick/). Enhancement Quests are divided by rank, with higher ranks offering better rewards at the cost of being more difficult and consuming higher levels of stamina.
 
 ### EXP Item Quests
 

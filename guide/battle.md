@@ -8,7 +8,7 @@ banner: true
 
 ## About Battle
 
-Pair a hero with a sidekick, and fight against monsters and other heroes. Winning the battle gives various rewards, depending on the type of [Quest](/guide/quest). All quests award [Heroes](/guide/hero) and [Sidekicks](/guide/sidekick) with EXP, and the player with [Rank EXP](/guide/user_rank).
+Pair a hero with a sidekick, and fight against monsters and other heroes. Winning the battle gives various rewards, depending on the type of [Quest](/guide/quest/). All quests award [Heroes](/guide/hero/) and [Sidekicks](/guide/sidekick/) with EXP, and the player with [Rank EXP](/guide/user_rank/).
 
 
 ## Battle Flow
