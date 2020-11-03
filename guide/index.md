@@ -7,15 +7,15 @@ redirect_from: /gameplay/
 * this will be unordered
 {:toc}
 
-# Game Desciption
+## Game Desciption
 
-## What is Live A Hero?
+### What is Live A Hero?
 
 Live a hero was developed by the company Lifewonders, released as their 3rd mobile game (1st being Fantastic boyfriends and 2nd being Tokyo afterschool summoners)
 
 and launched at 30 september 2020. Following it's predecessors this game is a LGBT-positive game that features LGBT genres all in one place.
 
-## How Do I Download This Game?
+### How Do I Download This Game?
 
 If you're an iPhone user, simply download the game from [here](https://apps.apple.com/jp/app/id1474209512)
 
@@ -23,7 +23,7 @@ If you are an Android user, you can download the app from the Google Play Store 
 If this is not possible for some reason, you must install QooApp onto your phone from here. Then, open QooApp and do a search for Lifewonders. 
 Select Live A Hero and install.
 
-## How to Start Playing??
+### How to Start Playing??
 
 After you have agreed on the game's "Terms of Use", you will be then redirected to the Character Creation screen where you will be given a choice which of the following Player looks you will choose followed by the voice, gender, and player name.
 
@@ -41,7 +41,7 @@ The game will then proceed to instruct you to add your newly called hero as a me
 If all of this is fulfilled you will be then redirected to the Home UI where you can choose [Quest] (https://liveahero-wiki.github.io/guide/quest/), event, [sales ] (https://liveahero-wiki.github.io/guide/sale/) and a plethora of other menus.
 
 
-# Summon Currency
+## Summon Currency
 
 How do I obtain more characters?
 
@@ -53,7 +53,7 @@ You can get both heroes and sidekicks from the Premium Gacha
 
 Premium Gachas are mainly based on the current event, which as of now only one is available (Akatsuki's Golden Spirit).
 
-## Ether Stones (Premium Event Gacha/Premium Standard Gacha)
+### Ether Stones (Premium Event Gacha/Premium Standard Gacha)
 
 5 {% include item.html id=2 %} for Single Pull, 50 {% include item.html id=2 %} for Multi-Pull
 
@@ -71,7 +71,7 @@ Here are some ways to earn more free stones:
 - Purchase stones with real-life money. (Be responsible!)
 - Gain stones from LifeWonders after server maintenance, issues, or login campaigns.
 
-## Friend Points (Friend Points Gacha)
+### Friend Points (Friend Points Gacha)
 
 1000 points for 10-Pull only
 
@@ -84,7 +84,7 @@ The grand prize in Friend Gacha is a player sidekick dupe <img src="/assets/img/
 - Gain +100 {% include item.html id=42 %} every time you use your friend's support
 - Gain +100 {% include item.html id=42 %} every time your friend use your support
 
-## Ether Tickets
+### Ether Tickets
 
 {% include item.html id=10 %} are rare tickets that allow for a single pull (can't do multi-pulls sadly with these tickets) on any Premium Gacha.
 
@@ -92,7 +92,7 @@ The grand prize in Friend Gacha is a player sidekick dupe <img src="/assets/img/
 - Gain 1 {% include item.html id=10 %} as a possible reward by completing a high difficulty mission.
 
 
-# Friend Code/ Friend
+## Friend Code/ Friend
 
 Despite the game being relatively new there are a lot of players who has max leveled unit (level 50) and if you're lucky enough to be accepted as friend by them, 
 you will now have a Support that can carry your party all on their own at least until the middle difficulty quest, and the best part of this is that friend supports characters cost nothing to borrow in fact it gives friend point to you and your friend.
@@ -100,7 +100,7 @@ you will now have a Support that can carry your party all on their own at least 
 To gain friends quickly, you will want to share your friend code, which is a 9-digit code (found in the Friends section of the game), in various places. A popular place for now is LAH community discord
 
 
-# About Characters Rarity
+## About Characters Rarity
 
 The game contains up to 4 ratings for each hero, from a 3 star rating to 6 star rating, any hero can be upgraded to 6 star rating eventually and as of now no hero starts at 6 star rating
 
@@ -109,18 +109,18 @@ Each hero has two different portrait, with the first unlocked from the beginning
 Sidekicks has different system than heroes, with a 3 star rating to 4 star rating, and no possible way to upgrade rarity
 
 
-# About Team
+## About Team
 
 A team is made of up of 4 of your own heroes ,4 of your sidekicks and, when you enter battle, 1 Support (a hero and sidekick from another player), for a total of 5 Heroes and 5 sidekicks. 
 
 4 heroes can fight at one time, with one of your heroes being sub-heroes. When one of your hero is defeated, it will be swapped out for a sub-hero in its place at the next turn.
 
 
-# Keeping Your Account Safe
+## Keeping Your Account Safe
 
 It is recommended to follow these steps to make it easier to recover your account in case you lose access to it.
 
-## Backing up your user key
+### Backing up your user key
 
 userKey is the file that keeps your account data. If you lose access to the device where you play the game you can simply install the game on another device and copy the userKey to the game folder. 
 
@@ -128,14 +128,14 @@ This means that making a copy of your userKey and keeping it somewhere safe is h
 
 you can find userKey on Android devices under /SD/Android/data/jp.co.lifewonders.liveahero/files/Data/ 
 
-## Player ID
+### Player ID
 
 From the main menu, select "Friends" and then "Search for Friends".
 
 On the lower part of the screen you will find your Player ID. Noting this number down is recommended, as it is something Lifewonders will ask you if you have to contact their support to recover your account.
 
 
-# Tips
+## Tips
 
 If your team happens to die during a quest, do NOT use a stone to revive your party unless you're absolutely desperate. 
 You can just leave the battle and the stamina will be refunded
