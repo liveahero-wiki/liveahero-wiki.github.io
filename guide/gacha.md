@@ -11,7 +11,7 @@ banner: true
 One of the primary methods of acquiring heroes and sidekicks is through the gacha;
 you can either consume five {% include item-icon.html id=1 %} Ether Stones for a single pull,
 or consume fifty for a multi-roll of ten. Multirolls guarantees that the tenth pull must be a 4 star hero or 5 star hero.
-A {% include item-icon.html id=10 %} Summon Ticket can be used in place of a single role of 5 stones; rates using a ticket does not offer any functional changes.
+A {% include item-icon.html id=10 %} Ether Ticket can be used in place of a single role of 5 stones; rates using a ticket does not offer any functional changes.
 
 You can check for the details on the obtainable units for the gacha by tapping on the "Offer Ratio" button.
 
