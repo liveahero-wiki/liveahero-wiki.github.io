@@ -11,16 +11,16 @@ redirect_from: /gameplay/
 
 ### What is Live A Hero?
 
-Live a hero was developed by the company Lifewonders, released as their 3rd mobile game (1st being Fantastic boyfriends and 2nd being Tokyo afterschool summoners)
+Live a hero was developed by the company Lifewonders, released as their 3rd mobile game (1st being Fantastic boyfriends and 2nd being Tokyo afterschool summoners) and launched at 30 september 2020.
 
-and launched at 30 september 2020. Following it's predecessors this game is a LGBT-positive game that features LGBT genres all in one place.
+Following it's predecessors this game is a LGBT-positive game that features LGBT genres all in one place.
 
 ### How Do I Download This Game?
 
 If you're an iPhone user, simply download the game from [here](https://apps.apple.com/jp/app/id1474209512)
 
 If you are an Android user, you can download the app from the Google Play Store [here](https://play.google.com/store/apps/details?id=jp.co.lifewonders.liveahero). 
-If this is not possible for some reason, you must install QooApp onto your phone from here. Then, open QooApp and do a search for Lifewonders. 
+If this is not possible for some reason, you must install QooApp onto your phone from [here](https://apps.qoo-app.com/en/app/880). Then, open QooApp and do a search for Lifewonders. 
 Select Live A Hero and install.
 
 ### How to Start Playing??
@@ -77,7 +77,7 @@ Here are some ways to earn more free stones:
 
 Give a variety of items such as: {% include item.html id=11 %}, {% include item.html id=35 %}, {% include item.html id=31 %}
 
-The grand prize in Friend Gacha is a player sidekick dupe <img src="/assets/img/icon/item_heart_player.png">
+The grand prize in Friend Gacha is a player sidekick dupe
 
 - Gain +50 {% include item.html id=42 %} every time you use other player's support
 - Gain +50 {% include item.html id=42 %} every time other player use your support
