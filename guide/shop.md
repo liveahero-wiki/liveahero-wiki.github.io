@@ -29,11 +29,3 @@ The support team will not be responsible for any incorrect information provided.
 Items can be exchanged using {% include item.html id=35 %} or {% include item.html id=1 %}. Selected items might have a restrictions on the amount of quantity purchased. Currently, items are either restocked monthly or purchasable only once per account.
 
 {% include shop-table.html id=1 %}
-
-## Buying Record Cubes
-
-Record Cubes can be obtained by exchanging Hero's Memories or Sidekick's Mind.
-
-## Exchanging Record Cubes
-
-The items available can be used on the hero/ sidekick during the time of rolling
