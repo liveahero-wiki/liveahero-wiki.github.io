@@ -6,9 +6,13 @@ banner: true
 * this will be unordered
 {:toc}
 
+{:refdef: style="text-align: center;"}
+<img src="/assets/img/levelup.png" alt="training" height=500px>
+{: refdef}
+
 ## Level Enhancement
 
-By using exp items, you could raise the level of your heroes.
+By using {% include item.html id=11 %}, you could raise the level of your heroes.
 
 When the hero gains a level, their parameters will increase, excluding their SPD value.
 
@@ -45,7 +49,7 @@ Hero's Fan Count can earn additional View Power during battle.
 
 ## Relation Enhancement
 
-You can increase the relation by using the Training Band item.
+You can increase the relation by using the {% include item.html id=30 %}.
 Higher relation level with the sidekick and the hero will have increased perimeter on the hero.
 Also, sidekicks with a relation level 50 and higher and higher with the hero will gain a special skill, known as the Equipment Skill.
 
