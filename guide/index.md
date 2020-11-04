@@ -40,6 +40,12 @@ The game will then proceed to instruct you to add your newly called hero as a me
 
 If all of this is fulfilled you will be then redirected to the Home UI where you can choose [Quest](/guide/quest/), event, [sales](/guide/sale/) and a plethora of other menus.
 
+Here is the translated home menu screen:
+
+{:refdef: style="text-align: center;"}
+<img src="/assets/img/TLed_Main_Menu.png" alt="mainMenu" height=500px>
+{: refdef}
+
 
 ## Summon Currency
 
@@ -111,6 +117,10 @@ Sidekicks has different system than heroes, with a 3 star rating to 4 star ratin
 
 ## About Team
 
+{:refdef: style="text-align: center;"}
+<img src="/assets/img/systempage_2.png" alt="Team" height=500px>
+{: refdef}
+
 A team is made of up of 4 of your own heroes ,4 of your sidekicks and, when you enter battle, 1 Support (a hero and sidekick from another player), for a total of 5 Heroes and 5 sidekicks. 
 
 4 heroes can fight at one time, with one of your heroes being sub-heroes. When one of your hero is defeated, it will be swapped out for a sub-hero in its place at the next turn.
@@ -133,6 +143,10 @@ you can find userKey on Android devices under `/SD/Android/data/jp.co.lifewonder
 From the main menu, select "Friends" and then "Search for Friends".
 
 On the lower part of the screen you will find your Player ID. Noting this number down is recommended, as it is something Lifewonders will ask you if you have to contact their support to recover your account.
+
+{:refdef: style="text-align: center;"}
+<img src="/assets/img/Playerid.png" alt="Pid" height=500px>
+{: refdef}
 
 
 ## Tips
