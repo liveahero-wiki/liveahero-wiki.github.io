@@ -77,7 +77,7 @@ Here are some ways to earn more free stones:
 
 Give a variety of items such as: {% include item.html id=11 %}, {% include item.html id=35 %}, {% include item.html id=31 %}
 
-The grand prize in Friend Gacha is a player sidekick dupe
+The grand prize in Friend Gacha is a player sidekick dupe {% include item-icon.html id=219991 %}.
 
 - Gain +50 {% include item.html id=42 %} every time you use other player's support
 - Gain +50 {% include item.html id=42 %} every time other player use your support
@@ -92,21 +92,21 @@ The grand prize in Friend Gacha is a player sidekick dupe
 - Gain 1 {% include item.html id=10 %} as a possible reward by completing a high difficulty mission.
 
 
-## Friend Code/ Friend
+## Friend Code/Friend
 
 Despite the game being relatively new there are a lot of players who has max leveled unit (level 50) and if you're lucky enough to be accepted as friend by them, 
 you will now have a Support that can carry your party all on their own at least until the middle difficulty quest, and the best part of this is that friend supports characters cost nothing to borrow in fact it gives friend point to you and your friend.
 
-To gain friends quickly, you will want to share your friend code, which is a 9-digit code (found in the Friends section of the game), in various places. A good place for now is LAH community discord
+To gain friends quickly, you will want to share your friend code, which is a 9-digit code (found in the Friends section of the game), in various places. A good place for now is LAH community discord.
 
 
 ## About Characters Rarity
 
-The game contains up to 4 ratings for each hero, from a 3 star rating to 6 star rating, any hero can be upgraded to 6 star rating eventually and as of now no hero starts at 6 star rating
+The game contains up to 4 ratings for each hero, from a 3 star rating to 6 star rating, any hero can be upgraded to 6 star rating eventually and as of now no hero starts at 6 star rating.
 
 Each hero has two different portrait, with the first unlocked from the beginning and the second unlocked at 5 star rarity (for natural 5 star heroes the two portraits are unlocked from the beginning)
 
-Sidekicks has different system than heroes, with a 3 star rating to 4 star rating, and no possible way to upgrade rarity
+Sidekicks has different system than heroes, with a 3 star rating to 4 star rating, and no possible way to upgrade rarity.
 
 
 ## About Team
@@ -126,7 +126,7 @@ userKey is the file that keeps your account data. If you lose access to the devi
 
 This means that making a copy of your userKey and keeping it somewhere safe is highly recommended. 
 
-you can find userKey on Android devices under /SD/Android/data/jp.co.lifewonders.liveahero/files/Data/ 
+you can find userKey on Android devices under `/SD/Android/data/jp.co.lifewonders.liveahero/files/Data/`.
 
 ### Player ID
 
@@ -138,4 +138,4 @@ On the lower part of the screen you will find your Player ID. Noting this number
 ## Tips
 
 If your team happens to die during a quest, do NOT use a stone to revive your party unless you're absolutely desperate. 
-You can just leave the battle and the stamina will be refunded
+You can just leave the battle and the stamina will be refunded.
