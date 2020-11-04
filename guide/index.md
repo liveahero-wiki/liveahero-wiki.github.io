@@ -43,7 +43,7 @@ If all of this is fulfilled you will be then redirected to the Home UI where you
 Here is the translated home menu screen:
 
 {:refdef: style="text-align: center;"}
-<img src="/assets/img/TLed_Main_Menu.png" alt="mainMenu" height=500px>
+<img src="/assets/img/TLed_Main_menu.png" alt="mainMenu" height=500px>
 {: refdef}
 
 
