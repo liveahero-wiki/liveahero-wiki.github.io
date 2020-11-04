@@ -40,7 +40,7 @@ special = "Scattered ink, gather to end evil.<br>Depart[^shoen_n1] ...Ninety-nin
 [^shoen_n1]: 送筆, Literally:to send the writing; think of it like taomon's ultimate skill i.e.: writing on the air and send it to the enemy"
 smallDamage = "Nn!"
 bigDamage = "Uoo!"
-win = "It will break and disappear again.<br>Born and then gone...an existence like a bubble.<br>...the lifes of the characters, are a fleeting one."
+win = "It will break and disappear again.<br>Born and then gone...an existence like a bubble.<br>...the lives of the characters, are a fleeting one."
 lose = "I guess this is retribution...My characters...I'm sorry."
 assist = "Maybe this can help."
 assisted = "Thank you."
