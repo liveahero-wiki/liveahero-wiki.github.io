@@ -6,6 +6,11 @@ banner: true
 * this will be unordered
 {:toc}
 
+{:refdef: style="text-align: center;"}
+<img src="/assets/img/TLed_QuestMenu.png" alt="mainMenu" height=500px>
+{: refdef}
+
+
 ## About Quest
 
 You can read scenarios, and battle to obtain items.
