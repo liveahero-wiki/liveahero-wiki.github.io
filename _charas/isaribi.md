@@ -23,6 +23,19 @@ Confident in his vigorous stamina and muscles, he recklessly gets into fights, p
 {% include sidekick-infobox.html stockId=10221 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="isaribi"
+h_gachaResult = "Are ya the one who called me?<br>Ooh, let this Isaribi do it.<br>No matter how big it is, I'll stab through it!"
+salesStart = "Osha! Let's go!"
+salesEnd = "It's an adequate catch!"
+battleStart = "So you've come, my prey! I'm going to get you all so prepare yourselves!"
+action = "I got this!"
+attack = "One Stab!"
+skill = "It's a match of strength!"
+special = "We're going to get what we came for today!<br>Big catch! Isaribi-style explosive fishing method!"
+smallDamage = "Agh!"
+bigDamage = "Very good!"
+win = "Gahahaha! It's a big catch<br>Return! raise the flag! and don't forget to get ready for the party!"
+lose = "I lay the net at the opposite direction...my intuition have dulled..."
+assisted = "Thanks!"
 APPRECIATION = "Oh, what do you want to do, boss!<br>Are you tired?  At that time, it's best to eat and sleep!<br>Don't hesitate to take a good nap after eating  the prey I hauled in today!"
 DAILY = "Boss!  How're ya doing? <br>Ah?  Lower my voice?  I always talk like this!<br>Let's go fishing!  I'm bored of sittin around!"
 PLAYER = "Boss, you still got energy to burn?<br>You are, so to speak, the captain of this ship and all.<br>We need ya in top form!"
@@ -35,4 +48,3 @@ TRAINED = "Nuga…!? Ya idiot, do ya want to kill me!"
 
 ## Notes:
 
-"Yo, chief! How you doin'!? What? Too loud? I always talk like this! Anyway, let's go fishin' already! I'm itchin' for it!"
