@@ -89,7 +89,7 @@ Gain {{ effect.parameter.value }}% extra gold
 Gain {{ effect.parameter.value }}% extra XP
 {% when "Aggregation" %}
 {% assign turnDefinition = "turn" %}
-Apply Damage Aggregation status to {{ target }}: {{ target }} takes all damage done to their team.
+Apply Damage Aggregation status to {{ target }}: <abbr title="Does not include single target attack">{{ target }} takes full damage of all-ranged attack done to their team</abbr>
 {% when "DamageLimit" %}
 Enemy hits cannot deal over {{ effect.parameter.value }} damage to {{ target }}
 {% else %}
