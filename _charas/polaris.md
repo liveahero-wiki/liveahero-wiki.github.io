@@ -28,6 +28,20 @@ He has a tendency of being in the midst of big-sized tussles, so he is a man who
 {% include sidekick-infobox.html stockId=10151 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="polaris"
+h_gachaResult = "The brightest star of the northern sky is here! The one who will crush evil and guide the weak!<br>That’s right, for I am Polaris Mask!<br>Lead me to the burning ring, Partner!"
+salesStart = "Let's go! It's a performance!"
+salesEnd = "Give me your loud applause!"
+battleStart = "The sound of the gong is calling me!<br>Polaris mask, is here!"
+action = "I'm on fire!"
+attack = "Hyah!"
+skill = "It's a slugfest!"
+special = "I'm gonna finish you off with this!<br>Fighting Spirit! Polaris Buster!"
+smallDamage = "Oops!"
+bigDamage = "What!?"
+win = "Yes! Big win!<br>Villains who want to fight me! I will wait for your challenge!"
+lose = "Damn it…I've done a lousy show…"
+assist = "Show me some guts!"
+assisted = "Thank you, Brother!"
 APPRECIATION = "Whoops, have I shown off too much?<br>Alright! Let's go eat some meat!<br>Eating meat is the best way to improve your physical strength!"
 DAILY = "Polaris mask is HERE!<br>Come on now, what kind of battle are we going to fight today?<br>Whether it be villain or a kaibutsu, let them all come at me!"
 HERO = "Hmm, that tiger hero called Justice...<br>I think his muscles are fit for professional wrestling.<br>I want to have a head-to-head battle with him!"
@@ -40,4 +54,3 @@ TRAINED = "Yeah, that's g-good! You're real hot!"
 
 ## Notes
 
-"The brightest star of the northern sky is here! The one who will crush evil and guide the weak! That's right, for I am Polaris Mask! Lead me to the burning ring, Partner!"
