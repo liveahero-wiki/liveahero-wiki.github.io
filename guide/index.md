@@ -151,10 +151,15 @@ On the lower part of the screen you will find your Player ID. Noting this number
 ## How to Back-up Your Data
 
 To create a transfer code data, simply start up the game, go past the title screen to the map, and go to Options(オプション) on main menu. 
-Then hit Transfer Account (アカウント引継ぎ) at the second option from the top,
-Enter a password into both boxes of your choosing and hit the blue bottom right-most button. Write down the Code it gives you AND the password you used.
 
-When you're ready or need to use it, start up the game. At the Title Screen, hit the bottom left button (Account Transfer/アカウント引継ぎ). Enter the Code in the top box, and your custom password you made in the bottom box. Then hit the blue button.
+Then hit Transfer Account (アカウント引継ぎ) at the second option from the top,
+Enter a password into both boxes of your choosing and hit the blue bottom right-most button. 
+
+Write down the Code it gives you AND the password you used.
+
+When you're ready or need to use it, start up the game. At the Title Screen, hit the bottom left button (Account Transfer/アカウント引継ぎ). 
+
+Enter the Code in the top box, and your custom password you made in the bottom box. Then hit the blue button.
 
 >NOTE: When you transfer your account to another device using this code, a new userKey will be created in this device and your account will be bound to this new userKey, while the previous userKey will be bound to a new account. So remember to backup this new userKey after transferring your data, as the previous userKey will be rendered useless.
 
