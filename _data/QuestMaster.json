@@ -3478,6 +3478,218 @@
     "hasBattle": true,
     "hasStockBattle": false
   },
+  "402010": {
+    "questId": 402010,
+    "questName": "ポイントYhへ",
+    "subName": "第10話",
+    "questKind": 5,
+    "chapterId": 402,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2020-11-06 18:00:00",
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 9,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 402009
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "402011": {
+    "questId": 402011,
+    "questName": "彼の帰る場所",
+    "subName": "第11話",
+    "questKind": 5,
+    "chapterId": 402,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2020-11-06 18:00:00",
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 9,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 7
+      },
+      {
+        "class": "QuestClear",
+        "questId": 402010
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultEarth_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "402012": {
+    "questId": 402012,
+    "questName": "明日の笑顔のために",
+    "subName": "第12話",
+    "questKind": 5,
+    "chapterId": 402,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2020-11-06 18:00:00",
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 10,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 7
+      },
+      {
+        "class": "QuestClear",
+        "questId": 402011
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "402013": {
+    "questId": 402013,
+    "questName": "おかえり、プロキー",
+    "subName": "最終話",
+    "questKind": 5,
+    "chapterId": 402,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2020-11-06 18:00:00",
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 402012
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false
+  },
   "403001": {
     "questId": 403001,
     "questName": "強制捜査！",
@@ -3486,7 +3698,7 @@
     "chapterId": 403,
     "iconFilename": "item_2010akatsuki_exchange01",
     "startAt": null,
-    "endAt": null,
+    "endAt": "2020-11-06 20:00:00",
     "dayOfWeek": 0,
     "sortWeight": 0,
     "enemyLevel": 1,
@@ -3558,7 +3770,7 @@
     "chapterId": 403,
     "iconFilename": "item_2010akatsuki_exchange01",
     "startAt": null,
-    "endAt": null,
+    "endAt": "2020-11-06 20:00:00",
     "dayOfWeek": 0,
     "sortWeight": 0,
     "enemyLevel": 15,
@@ -3630,7 +3842,7 @@
     "chapterId": 403,
     "iconFilename": "item_2010akatsuki_exchange01",
     "startAt": null,
-    "endAt": null,
+    "endAt": "2020-11-06 20:00:00",
     "dayOfWeek": 0,
     "sortWeight": 0,
     "enemyLevel": 30,
@@ -3702,7 +3914,7 @@
     "chapterId": 403,
     "iconFilename": "item_2010akatsuki_exchange01",
     "startAt": null,
-    "endAt": null,
+    "endAt": "2020-11-06 20:00:00",
     "dayOfWeek": 0,
     "sortWeight": 0,
     "enemyLevel": 45,
@@ -3780,7 +3992,7 @@
     "chapterId": 404,
     "iconFilename": "item_2010akatsuki_exchange02",
     "startAt": null,
-    "endAt": null,
+    "endAt": "2020-11-06 20:00:00",
     "dayOfWeek": 0,
     "sortWeight": 0,
     "enemyLevel": 1,
@@ -3852,7 +4064,7 @@
     "chapterId": 404,
     "iconFilename": "item_2010akatsuki_exchange02",
     "startAt": null,
-    "endAt": null,
+    "endAt": "2020-11-06 20:00:00",
     "dayOfWeek": 0,
     "sortWeight": 0,
     "enemyLevel": 15,
@@ -3924,7 +4136,7 @@
     "chapterId": 404,
     "iconFilename": "item_2010akatsuki_exchange02",
     "startAt": null,
-    "endAt": null,
+    "endAt": "2020-11-06 20:00:00",
     "dayOfWeek": 0,
     "sortWeight": 0,
     "enemyLevel": 30,
@@ -4000,7 +4212,7 @@
     "chapterId": 404,
     "iconFilename": "item_2010akatsuki_exchange02",
     "startAt": null,
-    "endAt": null,
+    "endAt": "2020-11-06 20:00:00",
     "dayOfWeek": 0,
     "sortWeight": 0,
     "enemyLevel": 45,
