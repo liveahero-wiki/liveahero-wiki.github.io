@@ -29,6 +29,21 @@ If he is given affection, he will meekly return the favor.
 {% include sidekick-infobox.html stockId=10241 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="digram"
+h_gachaResult = "Thank you very much for the cooperation contract.<br>This machine is Digram. I am a ship operations coordinator.<br>Let's work together to secure the future of our transportation system."
+s_gachaResult = "This machine is Digram. I am a ship operations coordinator.<br>Command received, I have been assigned to the sidekick duties.<br>I will carry out my duties according to protocol."
+salesStart = "Roger that. Commencing departure."
+salesEnd = "I have returned on time."
+battleStart = "Mode change Transaver.<br>I am now in the process of eliminating the operational disruptions."
+action = "At your service."
+attack = "Please vacate the premises."
+skill = "Refill complete."
+special = "Gun unit deployment, aim set<br>Expel, Out of White Line"
+smallDamage = "Minor damage."
+bigDamage = "The damage is critical."
+win = "Obstacle clearance confirmed, mission complete. Mode Transaver release.<br>All personnel, please work to restore normal operation."
+lose = "The transport system...I will not let this symbol of peace to be broken...!"
+assist = "I will cover you."
+assisted = "Thank you for your cooperation."
 APPRECIATION = "…The body of organic lifeforms are said to lose performance when exhausted,<br>Master… Please take an early rest."
 DAILY = "You are 34 seconds late, Master.<br>It will be trouble if we don't arrive on time.<br>Let's go to the site immediately to recover from this delay."
 TOUCH = "Physical contact with this machine, is there any meaning in such a thing?<br>Maybe this is just something a machine like myself can't comprehend.<br>Though, I do feel the warmth of your hand..."
@@ -41,4 +56,3 @@ TRAINED = "A..As of now, any more trial run is..meaningless..!"
 
 ## Notes
 
-"I am exactly 34 seconds late, master. I apologize for not arriving to the meeting in time. In order to make up for the delay, let us make haste to our destination at once."
