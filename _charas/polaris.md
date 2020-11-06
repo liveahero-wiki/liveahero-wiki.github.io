@@ -29,6 +29,7 @@ He has a tendency of being in the midst of big-sized tussles, so he is a man who
 
 {% include voice-table.html resourceName="polaris"
 h_gachaResult = "The brightest star of the northern sky is here! The one who will crush evil and guide the weak!<br>That’s right, for I am Polaris Mask!<br>Lead me to the burning ring, Partner!"
+s_gachaResult = "The first star in the ring! POLARIS MASK!<br>You want me to take the second position, partner?<br>Leave it to me!<br>Let's make a passionate battle!"
 salesStart = "Let's go! It's a performance!"
 salesEnd = "Give me your loud applause!"
 battleStart = "The sound of the gong is calling me!<br>Polaris mask, is here!"
