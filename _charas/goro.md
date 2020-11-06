@@ -23,6 +23,21 @@ He is a lewd optimist with a sloppy personality, a heavy drinker, and an irrespo
 {% include sidekick-infobox.html stockId=10231 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="goro"
+h_gachaResult = "Are you the chief this time? I am Goro, as you can see, a carpenter.<br>I can drink with you or do hero work. Nice to meet you."
+s_gachaResult = "Hey, chief. Have you been drinking?<br>Hmm? this is not a place for that?<br>I made a mistake because it's so lively.<br>Yeah, I'm Goro. A carpenter. Nice to meet you."
+salesStart = "Okay, I'm going."
+salesEnd = "Ooi, I'm back"
+battleStart = "Let's get to work! Let's build a nice little house."
+action = "Hm? My turn?"
+attack = "Hmph."
+skill = "Piece of cake!"
+special = "You can try to break it if you can!<br>Build! High-end construct!"
+smallDamage = "Gu!"
+bigDamage = "The pillar is..!"
+win = "Hehe, good work. All right, let's drink, drink, drink!<br>...What, the cameras are still rolling? That's not important."
+lose = "Am I gonna lose it again…My family…My house…"
+assist = "Leave the foothold to me!"
+assisted = "I owe you!"
 APPRECIATION = "Hey! You in good spirits? What, not really?<br>Livin' life carefree is the best thing to do.<br>If you do, somethin' good will happen eventually."
 DAILY = "Whoa...what, there's work to do?<br>Then I guess now's not a good to be drinkin'. Alright alright, I'm going."
 HERO = "I may not look it, but I am a bookworm. I know all about that sensei. <br>He has the power to change the flow of time, pretty amazin'.<br>If I could do that, I could change my...oh, are we out of liquor?"
@@ -35,4 +50,3 @@ TRAINED = "Guh...my head is still ringing..."
 
 ## Notes
 
-"Hey, yer the backbone that keeps us all together, ya know. If ya weren't here, we wouldn't carry on and the scull'd reel. So come on now, puff up that chest."
