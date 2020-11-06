@@ -29,6 +29,21 @@ It seems like the bar's opening cost has him up to his neck in debt.
 {% include sidekick-infobox.html stockId=10321 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="procy"
+h_gachaResult = "Never thought I'd get scouted by your place.<br>Well, leave to me anything related to money-making.<br>This procy will give you a crash course on how to make money."
+s_gachaResult = "You request this procy to be a sidekick?<br>Of course you can, as long as you're willing to pay the fee.<br>Well, don't look so scared.<br>I'll give you a discount."
+salesStart = "I'm going to make some money."
+salesEnd = "We got a lot of profit!"
+battleStart = "I can smell it, I can smell it, I can smell the money! Let's gobble up some money!"
+action = "Time is money!"
+attack = "C'mon!"
+skill = "I smell business!"
+special = "Profit, Big Hammer Cornucopia! Let's get rich quick!"
+smallDamage = "Ata!"
+bigDamage = "The money..."
+win = "Yosh, I made a fortune, I made a fortune!<br>That should lighten my debt, right?<br>Well then, see you next time!"
+lose = "Damn it, it's a big loss...those who depends on me, I'm sorry..."
+assist = "Go get your earnings."
+assisted = "I'll give you your share later!"
 APPRECIATION = "Hey, you look pretty tired, don't you?<br>...Go ahead, let it all out.<br>I'll give you a free drink."
 DAILY = "Oi, welcome.<br>I know that look. You're looking for a hero.<br>The machine is less crowded, you can use it as much as you like."
 HERO = "That justice guy... I've known him for a long time.<br>Even if he does scratch everything and cause lightning strikes…<br> I wonder if there's a time I've ever been jealous of him."
@@ -40,5 +55,3 @@ TRAINED = "Owowow! I'm going to charge for medical treatment!"
 %}
 
 ## Notes
-
-"Easy: You earn the viewers, you earn the cash. If you wanna get in the biz, you hafta remember that. Ah well, since it's you, you'll get the knack of it fast."
