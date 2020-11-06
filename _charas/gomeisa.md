@@ -19,6 +19,18 @@ Gomeisa is a young giant alien working as a waiter in a place where heroes gathe
 {% include sidekick-infobox.html stockId=10331 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="gomeisa"
+s_gachaResult = "Yes! Did you call me, Mr. Operator!<br>If you're looking for someone to liven things up, I can take care of it.<br>Gomeisa-style, Happy dance.<br>I'm going to show it off!"
+battleStart = "All right everybody, let's dance!<br>For the sake of mutual understanding, for the sake of peace!"
+action = "Please don't fight!"
+attack = "I'm sorry!"
+skill = "I want you to see this!"
+special = "Deep love, Dansaque Traepas!<br>Let's get along, don't fight each other!"
+smallDamage = "It hurts!"
+bigDamage = "Suffering....!"
+win = "I want to understand them all. Maybe we can all live together in peace...!<br>That's why, I'm going to keep dancing!"
+lose = "Why...why do everyone keep fighting..."
+assist = "Let us move smoothly!"
+assisted = "I'm happy for your cheers!"
 APPRECIATION = "If you want to feel better, basking in the light's radiance is the best thing to do!<br>The sun's light helps you relax and feel warm.<br>Your heart and body will feel recover and feel refreshed."
 DAILY = "Welcome, operator!<br>If you're here for the machine, it's currently free!<br>Here you go! It's good to connect with heroes!"
 HERO = "That angel nurse is amazing!<br>Those pure white wings, as well as the wonderful power to heal wounds...<br>Just like the god of my hometown's faith."
