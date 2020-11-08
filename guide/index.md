@@ -150,7 +150,7 @@ On the lower part of the screen you will find your Player ID. Noting this number
 
 ## How to Back-up Your Data
 
-To create a transfer code data, simply start up the game, go past the title screen to the map, and go to Options(オプション) on main menu. 
+To create a transfer code data, simply start up the game, go past the title screen, and go to Options(オプション) on main menu. 
 
 Then hit Transfer Account (アカウント引継ぎ) at the second option from the top,
 Enter a password into both boxes of your choosing and hit the blue bottom right-most button. 
