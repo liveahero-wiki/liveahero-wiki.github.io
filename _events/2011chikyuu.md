@@ -6,4 +6,12 @@ event_start_time: 2020-11-11T18:00:00+09
 event_end_time: 2020-11-25T18:00:00+09
 ---
 
-Opponent will give debuffs such as ATK Down and Poison before dealing significant damage to the hero that has these afflictions. Bring heroes such as Digram, Rakta, and Kirsch, or sidekicks like Gomeisa and Digram to cure these afflictions and get an edge in battle
+## Event Details
+
+The Global Union Hero Detachment have prepared three new limited-time quests that will test the player's skill in a disadvantageous situation. The heroes and combatants from this organization will fight with debuffs such as ATK Down and Poison before they deal significant damage to the hero that has these afflictions on them.
+
+Overcome these disadvantageous situations by removing debuffs with Heroes such as Digram, Rakta, and Kirsch. Sidekick skills that remove debuffs such as Gomeisa and Digram will also be preferred.
+
+### Limited Time Mission
+
+Commplete all three "Behavioral Exercises".
