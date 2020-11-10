@@ -117,14 +117,17 @@ Sidekicks has different system than heroes, with a 3 star rating to 4 star ratin
 
 ## About Team
 
-{:refdef: style="text-align: center;"}
-<img src="/assets/img/systempage_2.png" alt="Team" height=500px>
-{: refdef}
-
 A team is made of up of 4 of your own heroes ,4 of your sidekicks and, when you enter battle, 1 Support (a hero and sidekick from another player), for a total of 5 Heroes and 5 sidekicks. 
 
 4 heroes can fight at one time, with one of your heroes being sub-heroes. When one of your hero is defeated, it will be swapped out for a sub-hero in its place at the next turn.
 
+### Support Unit
+
+{:refdef: style="text-align: center;"}
+<img src="/assets/img/Support.png" alt="Team" height=500px>
+{: refdef}
+
+You can set your own support unit from the support setting button in team menu, select the hero and the corresponding sidekick to set as your support so that your friends can use your unit in battle (thus netting you friend points)
 
 ## Keeping Your Account Safe
 
