@@ -27,6 +27,10 @@ Disadvantageous attribute will have increased incoming damage, along with a decr
 - Aether is advantageous against Nether, thus dealing more damage.
 - Nether is advantageous against Aether, thus dealing more damage.
 
+{:refdef: style="text-align: center;"}
+<img src="/assets/img/ui_tutorial_battle_2_1.png" alt="mainMenu" height=300px>
+{: refdef}
+
 ## Hero Role
 
 The roles indicates what the hero can do during the battle.
