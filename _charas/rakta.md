@@ -31,6 +31,20 @@ After being taught by a senior doctor that "Being a surgeon is a trial of streng
 {% include sidekick-infobox.html stockId=10201 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="rakta"
+h_gachaResult = "I am Rakta, a physician.<br>Now then, my client, shall we proceed?<br>The rooting cancer cells of this world need to be incised, removed, and erased!"
+s_gachaResult = "My name is Rakta, a surgeon at an immigrant city on the moon.<br>Leave sidekicks job to me, my client.<br>For the removal of the world's disease.<br>I'll do my best!"
+salesStart = "Let's proceed!"
+salesEnd = "I have returned."
+battleStart = "Dr. R., Have arrived at the scene! Let's make saving lives our top priority!"
+action = "I'll take care of it."
+attack = "Incision!"
+skill = "Emergency surgery."
+special = "Salvation! Greatest Operation!<br>Start the procedure! Scalpel!"
+smallDamage = "Kuh."
+bigDamage = "Guu."
+win = "The procedure is complete. How's the condition? ...oh, the patient is stable. That's good.<br>Now then, I should go. May you have a good rest."
+lose = "Am i just gonna let them die right here in front of me again...!"
+assisted = "Thank you very much."
 APPRECIATION = "It looks like your health is being compromised.<br>Don't push yourself, take a quick rest.<br>Fatigue is the worst enemy of good work, you know?"
 DAILY = "Everyone is a novice at first.  You just have to get used to the work little by little.  I needed some encouragement as well, when I performed my first operation."
 HERO = "Loren is a very reliable nurse.  Despite some... peculiarities. But at the site, he can take care of himself.  That's the kind of man I need in both lines of work."
@@ -42,5 +56,3 @@ TRAINED = "Guh, what a healthy body ...!"
 %}
 
 ## Notes
-
-"I am Rakta, a physician. Now then, my client, shall we proceed? The rooting cancer cells of this world need to be incised, removed, and erased!"
