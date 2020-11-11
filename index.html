@@ -24,7 +24,6 @@ banner: true
 
 <table class="event-infobox">
 <tr><th><a href="/events/">Current Event</a></th></tr>
-{% assign event = site.events | sort: "event_start_time" | last %}
 {% assign current_date = site.time | date: "%s" | plus: 0 %}
 {% for event in site.events reversed %}
 {% assign event_date = event.event_end_time | date: "%s" | plus: 0 %}
