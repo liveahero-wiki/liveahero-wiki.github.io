@@ -14,4 +14,8 @@ Overcome these disadvantageous situations by removing debuffs with Heroes such a
 
 ### Limited Time Mission
 
-Commplete all three "Behavioral Exercises".
+Commplete all three quests will give you one {% include item.html id=10 %}.
+
+{% include quest-infobox.html id=405001 %}
+{% include quest-infobox.html id=405002 %}
+{% include quest-infobox.html id=405003 %}

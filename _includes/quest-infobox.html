@@ -1,0 +1,56 @@
+{% assign qid = include.id | downcase %}
+{% assign Q = site.data.QuestMaster[qid] %}
+<table class="quest-infobox" id="q{{ qid }}">
+<tr><th class="item"><img src="/assets/img/icon/{{ Q.iconFilename }}.png"></th><td>{{ Q.questName }}{% if Q.subName %} ({{ Q.subName }}){% endif %}</td></tr>
+<tr><th>Level</th><td>{{ Q.enemyLevel }}</td></tr>
+
+{% for cond in Q.conditions %}
+{% case cond.class %}
+{% when "Stamina" %}
+<tr><th>Stamina</th><td>{{ cond.stamina }}</td></tr>
+{% when "QuestClear" %}
+{% assign pqid = cond.questId | downcase %}
+<tr><th>Required Quest</th><td><a href="#q{{ pqid }}">{{ site.data.QuestMaster[pqid].questName }}</a></td></tr>
+{% when "ItemConsume" %}
+<tr><th>Consumable item</th><td>
+{% include item.html id=cond.itemId %} x {{ cond.value }}
+</td></tr>
+{% else %}
+<tr><td>Unknown condition ({{ cond.class }})</td></tr>
+{% endcase %}
+{% endfor %}
+
+{% if Q.endAt %}
+<tr><th>End Time</th><td data-expiry="{{ Q.endAt | append: '+09' }}">{{ Q.endAt | date: site.date_format }}</td></tr>
+{% endif %}
+
+{% if Q.enemies.size > 0 %}
+<tr><th>Enemies</th><td>
+{% for enemy in Q.enemies %}
+<div class="hero-icon" data-element="{{ enemy.battleInfoElement }}">
+<img class="hero-chara-icon" src="/assets/img/icon/{{ enemy.battleInfoIcon }}.png" loading="lazy">
+</div>
+{% endfor %}
+</td></tr>
+{% endif %}
+
+{% if Q.rewards.size > 0 %}
+<tr><th>Rewards</th><td>
+<ul>
+{% for reward in Q.rewards %}
+<li>{% include item.html id=reward.objectId %} x {{ reward.objectValue }} ({{ reward.prob}}%)</li>
+{% endfor %}
+</ul>
+</td></tr>
+{% endif %}
+
+{% if Q.drops.size > 0 %}
+<tr><th>Drops</th><td>
+<ul>
+{% for drop in Q.drops %}
+<li>{% include item.html id=drop.objectId %} x {{ drop.objectValue }} ({{ drop.prob }}%)</li>
+{% endfor %}
+</ul>
+</td></tr>
+{% endif %}
+</table>
