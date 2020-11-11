@@ -49,4 +49,3 @@ RELATION = "That doggy at your place is wonderful!<br>That kind of power would b
 
 ## Notes:
 
-"I'm Professor Marfik, a researcher passionate for the ancient times. If you give me a hand with excavation here, I'll return the favor with your work. How's that sound?"
