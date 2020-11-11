@@ -2764,7 +2764,9 @@
         {
           "class": "StatusNumDamage",
           "parameter": {
-            "value": 90
+            "value": 90,
+            "statusMult": 10,
+            "isGoodStatus": true
           }
         }
       ],
@@ -5068,7 +5070,7 @@
         {
           "class": "MultipleBaseView",
           "parameter": {
-            "value": 10
+            "value": 110
           }
         }
       ],
@@ -5091,7 +5093,7 @@
         {
           "class": "MultipleBaseView",
           "parameter": {
-            "value": 12
+            "value": 112
           }
         }
       ],
@@ -5114,7 +5116,7 @@
         {
           "class": "MultipleBaseView",
           "parameter": {
-            "value": 14
+            "value": 114
           }
         }
       ],
@@ -5137,7 +5139,7 @@
         {
           "class": "MultipleBaseView",
           "parameter": {
-            "value": 16
+            "value": 116
           }
         }
       ],
@@ -5160,7 +5162,7 @@
         {
           "class": "MultipleBaseView",
           "parameter": {
-            "value": 18
+            "value": 118
           }
         }
       ],
@@ -5183,7 +5185,7 @@
         {
           "class": "MultipleBaseView",
           "parameter": {
-            "value": 20
+            "value": 120
           }
         }
       ],
@@ -5479,6 +5481,227 @@
       "statusId": 0,
       "canDispel": false,
       "description": "HPを基礎ATKの110%回復する",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false
+    }
+  },
+  "252": {
+    "skillEffectId": 252,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Provocation",
+          "parameter": []
+        }
+      ],
+      "filename": "status_provocation",
+      "statusId": 5,
+      "canDispel": true,
+      "description": "挑発",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false
+    }
+  },
+  "253": {
+    "skillEffectId": 253,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SpdDeferenceDamage",
+          "parameter": {
+            "value": 100,
+            "spdMult": 10
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "description": "100%ダメージ+対象と自分のSPDの差だけダメージ量が上昇",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false
+    }
+  },
+  "254": {
+    "skillEffectId": 254,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "StatusNumDamage",
+          "parameter": {
+            "value": 120,
+            "statusMult": 10,
+            "isGoodStatus": false
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "description": "120%ダメージ+相手のデバフの数に応じてダメージ量が上昇",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false
+    }
+  },
+  "255": {
+    "skillEffectId": 255,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Provocation",
+          "parameter": []
+        }
+      ],
+      "filename": "status_provocation",
+      "statusId": 5,
+      "canDispel": true,
+      "description": "挑発",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false
+    }
+  },
+  "256": {
+    "skillEffectId": 256,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "StatusNumDamage",
+          "parameter": {
+            "value": 120,
+            "statusMult": 15,
+            "isGoodStatus": false
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "description": "120%ダメージ+相手のデバフの数に応じてダメージ量が上昇",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false
+    }
+  },
+  "257": {
+    "skillEffectId": 257,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Damage",
+          "parameter": {
+            "value": 110
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "description": "110%ダメージ",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false
+    }
+  },
+  "258": {
+    "skillEffectId": 258,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Damage",
+          "parameter": {
+            "value": 115
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "description": "115%ダメージ",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false
+    }
+  },
+  "259": {
+    "skillEffectId": 259,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Damage",
+          "parameter": {
+            "value": 25
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "description": "25%ダメージ",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false
+    }
+  },
+  "260": {
+    "skillEffectId": 260,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Ressurection",
+          "parameter": {
+            "value": 100
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "description": "100%のHPで復活",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false
+    }
+  },
+  "261": {
+    "skillEffectId": 261,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Damage",
+          "parameter": {
+            "value": 20
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "description": "20%ダメージ",
       "isImmediate": true,
       "persistence": false,
       "canDuplicate": false

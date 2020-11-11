@@ -7862,7 +7862,7 @@
     "targetFlag": 0,
     "resourceName": "icon_narihito_s01",
     "subResourceName": "",
-    "timing": 11,
+    "timing": 1,
     "description": "ピンチ状態の時、View基礎値+10%。",
     "cutin": [],
     "effects": [
@@ -7880,7 +7880,7 @@
     "targetFlag": 0,
     "resourceName": "icon_narihito_s01",
     "subResourceName": "",
-    "timing": 11,
+    "timing": 1,
     "description": "ピンチ状態の時、View基礎値+12%。",
     "cutin": [],
     "effects": [
@@ -7898,7 +7898,7 @@
     "targetFlag": 0,
     "resourceName": "icon_narihito_s01",
     "subResourceName": "",
-    "timing": 11,
+    "timing": 1,
     "description": "ピンチ状態の時、View基礎値+14%。",
     "cutin": [],
     "effects": [
@@ -7916,7 +7916,7 @@
     "targetFlag": 0,
     "resourceName": "icon_narihito_s01",
     "subResourceName": "",
-    "timing": 11,
+    "timing": 1,
     "description": "ピンチ状態の時、View基礎値+16%。",
     "cutin": [],
     "effects": [
@@ -7934,7 +7934,7 @@
     "targetFlag": 0,
     "resourceName": "icon_narihito_s01",
     "subResourceName": "",
-    "timing": 11,
+    "timing": 1,
     "description": "ピンチ状態の時、View基礎値+18%。",
     "cutin": [],
     "effects": [
@@ -7952,7 +7952,7 @@
     "targetFlag": 0,
     "resourceName": "icon_narihito_s01",
     "subResourceName": "",
-    "timing": 11,
+    "timing": 1,
     "description": "ピンチ状態の時、View基礎値+20%。",
     "cutin": [],
     "effects": [
@@ -8395,6 +8395,81 @@
       }
     ]
   },
+  "4007102": {
+    "skillId": 4007102,
+    "skillName": "撃ちまくりッス！",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ+相手のデバフの数に応じてダメージ量が上昇。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_barrel_eh01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 256,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "4007103": {
+    "skillId": 4007103,
+    "skillName": "BANG&BANG&BANG!!",
+    "useView": 8000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に90%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_barrel_eh01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "4007104": {
+    "skillId": 4007104,
+    "skillName": "狙い撃ちッス！",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_combo",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_barrel_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
   "4008101": {
     "skillId": 4008101,
     "skillName": "リキエスタ・スポルト",
@@ -8442,6 +8517,31 @@
         "skillEffectId": 70,
         "prob": 100,
         "effectTarget": 0
+      }
+    ]
+  },
+  "4008103": {
+    "skillId": 4008103,
+    "skillName": "鎮火確認！",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "b_skill_debuffAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に2ターンの間ATKダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_furlong_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 16,
+        "prob": 100,
+        "effectTarget": 4
       }
     ]
   },
@@ -9010,6 +9110,61 @@
       }
     ]
   },
+  "4041105": {
+    "skillId": 4041105,
+    "skillName": "毒霧",
+    "useView": 4000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_debuffAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に2ターンの間毒を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villain_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 23,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "4041106": {
+    "skillId": 4041106,
+    "skillName": "スラッシュ！",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。1ターンの間毒を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villain_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 89,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
   "4046101": {
     "skillId": 4046101,
     "skillName": "爪",
@@ -9281,6 +9436,24 @@
     "effects": [
       {
         "skillEffectId": 245,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "6000002": {
+    "skillId": 6000002,
+    "skillName": "挑発付与",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、3ターンの間挑発を付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 255,
         "prob": 100,
         "effectTarget": 0
       }
