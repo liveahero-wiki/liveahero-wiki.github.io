@@ -1,0 +1,5 @@
+{% capture cond %}item.chapterId == {{ include.chapterId }}{% endcapture %}
+{% assign qq = site.data.QuestMaster | where_exp: "item", cond %}
+{% for q in qq %}
+{% include quest-infobox.html id=q.questId %}
+{% endfor %}

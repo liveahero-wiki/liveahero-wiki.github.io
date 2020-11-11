@@ -68,3 +68,15 @@ Note: Support unit (the one you borrow from other player) doesn't give any bonus
 <p>After completing their mission,while returning to the pickup area through the wilderness,<br> <code>character0</code> and <code>character1</code> happened upon a clearing with a nice, dramatic atmosphere and came up with the idea to shoot a few fanservice videos.<br><br>Turn around and count to three,<br>The one who lands an attack first wins...<br>Tension runs high between <code>character0</code> and <code>character1</code> .<br><br>１、２、３……！<br> <code>character0</code> turned around only to immediately be booped on the nose by <code>character1</code> .<br><br> <code>character1</code> chuckles giddily and leaves.<br><br> <code>character0</code> doesn't say anything But merely shouted their anguished defeat into the clear sky.<br>
 </p>
 </details>
+
+## Quest Details
+
+### Main Quests
+
+{% include quest-group.html chapterId=402 %}
+
+### Free Quests
+
+{% include quest-group.html chapterId=403 %}
+
+{% include quest-group.html chapterId=404 %}
