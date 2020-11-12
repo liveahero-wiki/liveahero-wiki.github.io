@@ -1,9 +1,9 @@
 {% assign qid = include.id | downcase %}
 {% assign Q = site.data.QuestMaster[qid] %}
-<table class="quest-infobox" id="q{{ qid }}">
-<tr><th class="item"><img src="/assets/img/icon/{{ Q.iconFilename }}.png"></th><td>{{ Q.questName }}{% if Q.subName %} ({{ Q.subName }}){% endif %}</td></tr>
+<details id="q{{ qid }}">
+<summary><span class="item"><img src="/assets/img/icon/{{ Q.iconFilename }}.png"></span> {{ Q.questName }}{% if Q.subName %} ({{ Q.subName }}){% endif %}</summary>
+<table class="quest-infobox">
 <tr><th>Level</th><td>{{ Q.enemyLevel }}</td></tr>
-
 {% for cond in Q.conditions %}
 {% case cond.class %}
 {% when "Stamina" %}
@@ -54,3 +54,4 @@
 </td></tr>
 {% endif %}
 </table>
+</details>
