@@ -4,6 +4,7 @@
 <summary><span class="item"><img src="/assets/img/icon/{{ Q.iconFilename }}.png"></span> {{ Q.questName }}{% if Q.subName %} ({{ Q.subName }}){% endif %}</summary>
 <table class="quest-infobox">
 <tr><th>Level</th><td>{{ Q.enemyLevel }}</td></tr>
+{% assign item_cost = "" | split: "," %}
 {% for cond in Q.conditions %}
 {% case cond.class %}
 {% when "Stamina" %}
@@ -12,13 +13,21 @@
 {% assign pqid = cond.questId | downcase %}
 <tr><th>Required Quest</th><td><a href="#q{{ pqid }}">{{ site.data.QuestMaster[pqid].questName }}</a></td></tr>
 {% when "ItemConsume" %}
-<tr><th>Consumable item</th><td>
-{% include item.html id=cond.itemId %} x {{ cond.value }}
-</td></tr>
+{% assign item_cost = item_cost | push: cond %}
 {% else %}
 <tr><td>Unknown condition ({{ cond.class }})</td></tr>
 {% endcase %}
 {% endfor %}
+
+{% if item_cost.size > 0 %}
+<tr><th>Item Cost</th><td>
+<ul>
+{% for cond in item_cost %}
+<li>{% include item.html id=cond.itemId %} x {{ cond.value }}</li>
+{% endfor %}
+</ul>
+</td></tr>
+{% endif %}
 
 {% if Q.endAt %}
 <tr><th>End Time</th><td data-expiry="{{ Q.endAt | append: '+09' }}">{{ Q.endAt | date: site.date_format }}</td></tr>

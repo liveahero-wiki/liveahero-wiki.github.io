@@ -191,6 +191,11 @@ details {
     margin: 15px;
   }
 }
+td {
+  >p, >ul, >ol {
+    margin: 0;
+  }
+}
 summary {
   cursor: pointer;
   background: $colorGrey;
@@ -368,9 +373,6 @@ $elementColor: #f07d75, #4e8ddf, #5fcb58, #ffb251, #9c76db;
   details {
     border: 2px solid $colorGrey;
   }
-}
-.voice-table p {
-  margin-bottom: 0;
 }
 // Chara list page
 .card-list {

@@ -38,6 +38,8 @@ EXP Item Quests can be selected at any time, and come in four ranks (D to A). Th
 |   B  |      30     |      14      |     472    |       210      |          445         |  420 |       100      |    140   |
 |   A  |      45     |      18      |     810    |       360      |          910         |  720 |       150      |    180   |
 
+{% include quest-group.html chapterId=201 %}
+
 <!--- Quest rewards appear to have some variation, but my sample size was low (N=5 for each quest). This might require a weighted average but until I have more data points I'll do a simple average of the drop types I've seen. It seems there are three drop tiers per rank so far. --->
 <!--- However, I found no variation in EXP per Hero/Sidekick, Rank EXP, as well as Coin and Training Band drops so far.  --->
 <!--- Take the current values with a grain of salt as I gather more data points (also pls donate stamina drinks, thanks). --->
@@ -56,8 +58,12 @@ There are different Rank Up Items available each day. The attributes available d
 |  Saturday | Aether {% include item-icon.html id=21 %}{% include item-icon.html id=22 %}{% include item-icon.html id=23 %}, Fire {% include item-icon.html id=12 %}{% include item-icon.html id=13 %}{% include item-icon.html id=14 %}, Water {% include item-icon.html id=15 %}{% include item-icon.html id=16 %}{% include item-icon.html id=17 %} |
 |   Sunday  |     Wood {% include item-icon.html id=18 %}{% include item-icon.html id=19 %}{% include item-icon.html id=20 %}, Nether {% include item-icon.html id=24 %}{% include item-icon.html id=25 %}{% include item-icon.html id=26 %}    |
 
+{% include quest-group.html chapterId=202 %}
+
 ## Ticket Quest
 
 This is the quest where activating it requires the Quest Ticket, which can be obtained from login bonus.
 
 Comparing with regular quests, you can get more rewards out of it.
+
+{% include quest-group.html chapterId=204 %}
