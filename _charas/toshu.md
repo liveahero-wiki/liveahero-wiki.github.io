@@ -29,7 +29,7 @@ Because of his personality, which can only be considered as strait-laced, he can
 
 Dare someone tease him and call him a "tsundere" he WILL snap.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10131 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10131 BIO_S01=BIO_S01 extra_sprites="fg_toshu_s01_skin1" %}
 
 {% include voice-table.html resourceName="toshu"
 h_gachaResult = "My name's Toshu.<br>I seek to master the way of the sword,<br>and become a samurai like &quot;Sakimori&quot;.<br>The will that you hold in your heart,<br>Show it to me."

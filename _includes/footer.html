@@ -7,5 +7,6 @@
 </footer>
 <script async src="/assets/main.js"></script>
 <script async src="/assets/analytics.js"></script>
+{% for s in page.additional_scripts %}<script async src="{{ s }}"></script>{% endfor %}
 </body>
 </html>

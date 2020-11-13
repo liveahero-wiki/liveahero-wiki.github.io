@@ -1,9 +1,11 @@
 {% assign cardInfos = site.data.CardMaster | where: "stockId", include.stockId %}
 
 {% assign firstCardInfo = cardInfos | first %}
-
-{% capture artwork_cond %}item.path contains "fg_{{ firstCardInfo.resourceName }}_h"{% endcapture %}
-{% assign artworks = site.static_files | where: "fg", true | where_exp: "item", artwork_cond | map: "path" %}
+{% assign r = firstCardInfo.resourceName %}
+{% capture sprites %}fg_{{ r }}_h01,fg_{{ r }}_h01_skin1,fg_{{ r }}_h02,fg_{{ r }}_h02_skin1{% endcapture %}
+{% if include.extra_sprites %}
+{% assign sprites = sprites | append: "," | append: include.extra_sprites %}
+{% endif %}
 
 <div id="h{{ include.stockId }}" class="element{{ firstCardInfo.element }}">
     <div class="heroinfobox">
@@ -11,7 +13,7 @@
             <div class="name">{{ page.title }}</div>
             <div class="sub">{{ firstCardInfo.cardName }}</div>
         </div>
-        {% include hero-infobox-gallery.html artworks=artworks %}
+        {% include atlas-gallery.html sprites=sprites %}
         <table>
             <tbody>
                 <tr>
