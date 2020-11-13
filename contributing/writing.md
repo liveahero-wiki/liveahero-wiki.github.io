@@ -223,3 +223,27 @@ We use templates to do fancy things like adding item and status icons.
 
 - [Item template](/items/)
 - [Status template](/statuses)
+
+### Character link templates
+
+Put the character name listed in [Characters page](/charas/) inside `{% raw %}{% chara_link name %}{% endraw %}`.
+
+Example:
+
+```
+{% raw %}{% chara_link Akashi %} and {% chara_link Player %} went to
+{% chara_link Procy %}'s pub for a drink. They met {% chara_link Polaris Mask %}
+there. {% chara_link Kouki & Sirius %}'s performance was playing on the TV
+(not that anyone was watching it).
+
+{% chara_link Player %} got so drunk he saw {% chara_link Broker %}
+in their dream that night.{% endraw %}
+```
+
+{% chara_link Akashi %} and {% chara_link Player %} went to
+{% chara_link Procy %}'s pub for a drink. They met {% chara_link Polaris Mask %}
+there. {% chara_link Kouki & Sirius %}'s performance was playing on the TV
+(not that anyone was watching it).
+
+{% chara_link Player %} got so drunk he saw {% chara_link Broker %}
+in their dream that night.

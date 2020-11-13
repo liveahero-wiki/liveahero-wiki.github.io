@@ -46,11 +46,7 @@ redirect_from: /heroes/
 {% assign page = site.charas | find_exp: "item", page_cond %}
 <li data-id="{{ c.stockId }}" data-rarity="{{ c.rarity }}" data-name="{{ page.title }}">
 <div class="sidekick-icon sidekick-{{ c.rarity }}">
-  {% if c.resourceName == "player" %}
-  <img src="/assets/img/icon/icon_player_s01.gif">
-  {% else %}
   <img src="/assets/img/icon/icon_{{ c.resourceName }}_s01.png">
-  {% endif %}
 </div>
   <a href="{{ page.url }}#s{{ c.stockId }}">{{ page.title }}</a></li>
 {% endfor %}
