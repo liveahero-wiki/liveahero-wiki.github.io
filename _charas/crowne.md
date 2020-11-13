@@ -1,8 +1,6 @@
 ---
 title: Crowne
 occupation: "Mechanic"
-illustrator: "Shukou Akanaru (朱交赤成)"
-voice_actor: "Mayumi Yamaguchi (山口眞弓)"
 ---
 
 {% capture BIO_H01 %}

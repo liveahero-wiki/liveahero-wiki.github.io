@@ -1,8 +1,6 @@
 ---
 title: Furlong
 occupation: "Firefighter"
-illustrator: "Xigma (きしぐま)"
-voice_actor: "Takashi Yonezawa (よねざわたかし)"
 ---
 
 {% capture BIO_H01 %}

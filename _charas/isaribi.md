@@ -1,8 +1,6 @@
 ---
 title: Isaribi
 occupation: "Fisherman"
-illustrator: "Xigma (きしぐま)"
-voice_actor: "Masahiro Ogata (尾形雅宏)"
 ---
 
 {% capture BIO_H01 %}

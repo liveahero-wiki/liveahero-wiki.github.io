@@ -1,8 +1,6 @@
 ---
 title: Akashi
 occupation: "University Student (Part-timer)"
-illustrator: "Shukoh Akanaru"
-voice_actor: "Toshiyuki Hosaka"
 ---
 
 {% capture BIO_H01 %}

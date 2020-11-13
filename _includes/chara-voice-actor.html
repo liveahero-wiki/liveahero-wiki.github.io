@@ -1,0 +1,6 @@
+{% assign cv = site.data.wiki.VoiceActor[include.cv] %}
+{% if cv %}
+<abbr title="{{ include.cv }}">{{ cv.en }}</abbr>
+{% else %}
+{{ include.cv }}
+{% endif %}

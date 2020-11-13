@@ -1,8 +1,6 @@
 ---
 title: Hitomi
 occupation: "Idol Singer"
-illustrator: "Zhuzi (ずじ)"
-voice_actor: "Karen (夏怜)"
 ---
 
 {% capture BIO_H01 %}

@@ -1,8 +1,6 @@
 ---
 title: Kyoichi
 occupation: "Elementary School Teacher (小学校教諭)"
-illustrator: "Mentaiko/Itto(一十)"
-voice_actor: "Yonezawa Takashi (よねざわたかし)"
 ---
 
 {% capture BIO_H01 %}

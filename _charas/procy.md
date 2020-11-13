@@ -1,8 +1,6 @@
 ---
 title: Procy
 occupation: "Bartender (バーテンダー)"
-illustrator: "Kinoshita Jiroh (樹下次郎)"
-voice_actor: "Kappei Yamaguchi (山口勝平)"
 ---
 
 {% capture BIO_H01 %}

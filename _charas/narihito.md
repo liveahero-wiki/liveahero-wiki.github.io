@@ -1,8 +1,6 @@
 ---
 title: Narihito
 occupation: "Reporter (取材記者)"
-illustrator: "Mensuke (めんスケ)"
-voice_actor: "Yasuaki Takumi (内匠靖明)"
 ---
 
 {% capture BIO_H01 %}

@@ -1,8 +1,6 @@
 ---
 title: Polaris Mask
 occupation: "Professional Wrestler (プロレスラー)"
-illustrator: GomTang
-voice_actor: "Miyake Kenta (三宅健太)"
 permalink: /charas/polaris_mask/
 ---
 {% capture BIO_H01 %}

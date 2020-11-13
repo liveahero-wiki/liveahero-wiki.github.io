@@ -1,8 +1,6 @@
 ---
 title: Kirsch
 occupation: "Pâtissier "
-illustrator: "Zhuzi (ずじ)"
-voice_actor: "Orie Kimoto (樹元オリエ)"
 ---
 
 {% capture BIO_H01 %}

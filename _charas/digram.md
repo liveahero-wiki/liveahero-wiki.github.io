@@ -1,8 +1,6 @@
 ---
 title: Digram
 occupation: "Railroad Staff"
-illustrator: "DAI-XT. (ダイエクスト)"
-voice_actor: "Kenji Nomura (乃村健次)"
 ---
 
 {% capture BIO_H01 %}

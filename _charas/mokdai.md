@@ -1,8 +1,6 @@
 ---
 title: Mokdai
 occupation: "Video Production Staff (映像技術スタッフ)"
-illustrator: "Shukou Akanaru (朱交赤成)"
-voice_actor: "Kumamoto Kenta (熊本健太)"
 ---
 
 {% capture BIO_H01 %}

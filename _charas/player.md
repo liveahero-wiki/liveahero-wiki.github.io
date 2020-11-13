@@ -1,8 +1,6 @@
 ---
 title: Player
 occupation: "Hero operator"
-illustrator: "Shukou Akanaru (朱交赤成)"
-voice_actor: "someone"
 ---
 
 {% capture BIO_S01 %}

@@ -1,0 +1,6 @@
+{% assign illu = site.data.wiki.Illustrator[include.illustrator] %}
+{% if illu %}
+<abbr title="{{ include.illustrator }}">{{ illu.en }}</abbr>
+{% else %}
+{{ include.illustrator }}
+{% endif %}

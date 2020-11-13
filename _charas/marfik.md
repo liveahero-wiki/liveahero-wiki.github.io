@@ -1,8 +1,6 @@
 ---
 title: Marfik
 occupation: "University Professor (Archeology)"
-illustrator: "Mensuke (めんスケ)"
-voice_actor: "Otomo Ryosaburo (大友龍三郎)"
 ---
 {% capture BIO_H01 %}
 Marfik transforms into a hero by dressing up with an adventurer-like appearance while handling two types of parallel weapons, a pickaxe and a rope. When he hits the ground with his pickaxe, he has the ability to evoke the "memory of the stars" that sleep deep within the stratum of the earth, and the rope can pull out the energy that embodies that memory and use it for attacks. However, he can only keep this power for a short time, usually just a few minutes.

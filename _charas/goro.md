@@ -1,8 +1,6 @@
 ---
 title: Goro
 occupation: "Carpenter"
-illustrator: "oaks (おーくす)"
-voice_actor: "Yoshihito Oonami (大浪嘉仁)"
 ---
 
 {% capture BIO_H01 %}

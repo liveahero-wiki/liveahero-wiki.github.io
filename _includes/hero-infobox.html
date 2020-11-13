@@ -22,11 +22,11 @@
                 </tr>
                 <tr>
                     <th colspan="2">Illustration</th>
-                    <td colspan="2">{{ firstCardInfo.illustrator }}</td>
+                    <td colspan="2">{% include chara-illustrator.html illustrator=firstCardInfo.illustrator %}</td>
                 </tr>
                 <tr>
                     <th colspan="2">Voice</th>
-                    <td colspan="2">{{ firstCardInfo.characterVoice }}</td>
+                    <td colspan="2">{% include chara-voice-actor.html cv=firstCardInfo.characterVoice %}</td>
                 </tr>
                 <tr>
                     <th colspan="2">Occupation</th>

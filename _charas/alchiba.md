@@ -1,8 +1,6 @@
 ---
 title: Alchiba
 occupation: "Private Investigator"
-illustrator: "1boshi"
-voice_actor: "Jun Kasama (笠間淳"
 ---
 
 {% capture BIO_H01 %}

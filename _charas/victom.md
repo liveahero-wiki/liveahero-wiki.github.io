@@ -1,10 +1,6 @@
 ---
 title: Victom
 occupation: "Rescue squad captain"
-illustrator: "DAI-XT (ダイエクスト)"
-voice_actor: "Masahiro Ogata"
-HP: 263
-ATK: 181
 ---
 
 {% capture BIO_H01 %}
