@@ -9,13 +9,20 @@ module Jekyll
       @@name_to_pages
     end
 
+    def self.resourceName_to_pages
+      @@resourceName_to_pages
+    end
+
     def self.generate(site)
       @@name_to_pages = {}
+      @@resourceName_to_pages = {}
       puts "Initializing chara page map"
 
       site.collections["charas"].docs.each do |chara|
         name = chara.data["title"]
+        resourceName = path_to_resourceName(chara.path)
         @@name_to_pages[name] = chara
+        @@resourceName_to_pages[resourceName] = chara
       end
     end
 
@@ -47,8 +54,15 @@ module Jekyll
       end
     end
   end
+
+  module CharaFilter
+    def resourceNameToPage(resourceName)
+      CharaMap.resourceName_to_pages[resourceName]
+    end
+  end
 end
 
+Liquid::Template.register_filter(Jekyll::CharaFilter)
 Liquid::Template.register_tag('chara_link', Jekyll::CharaLinkTag)
 
 Jekyll::Hooks.register :site, :pre_render do |site|
