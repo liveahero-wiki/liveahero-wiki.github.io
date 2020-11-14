@@ -27,6 +27,8 @@ As a knowledgeable connoisseur, he experts at profiling information about heroes
 {% include sidekick-infobox.html stockId=10291 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="narihito"
+h_gachaResult = "From Taiyou News Network, I'm Narihito Karue!<br>You there, Mr. Hero and Operator!<br>By all means!<br>Let me do an interview!"
+s_gachaResult = "Taiyou News Network reporter.<br>I'm Narihito Karue!<br>Eh, sidekick work.<br>Well, I'll take care of it,<br>If you can promise me an exclusive interview after the battle!"
 APPRECIATION = "Oh, should I stop interviewing?<br>yeah, it's fine take a rest.<br>I could at least make you a cup of coffee."
 DAILY = "Good day, Operator-san!<br>Would you be willing to do an interview with me today? e?<br>In return I should help with your work? Really, I'm no match for you."
 HERO = "Oh yeah, now I remember! That little guy in the bar!<br>Even the bounty hunters are speechless, he was the legendary money-grubber hero.<br>Awesome, awesome, I'd love to write an interview story about him!"
