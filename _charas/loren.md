@@ -35,6 +35,8 @@ Despite this, he can also be useful in the hospital, since he is the only one wh
 {% include sidekick-infobox.html stockId=10211 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="loren"
+h_gachaResult = "You can call me Loren.<br>I'm a nurse.<br>Leave the treatment of wounded people to me.<br>I'll do my best!"
+s_gachaResult = "A nurse at an immigrant city on the moon.<br>My name is Loren.<br>Leave the wounded heroes to me.<br>I'll make sure to do sidekick duty properly!"
 APPRECIATION = "When you're tired, you shouldn't overdo it, okay?<br>Or else I'll take care of you like a patient.<br>Come on, lie down. I'll bring you something to eat."
 DAILY = "Hello, how are you feeling?<br>Health care is also the duty of those involved with heroes.<br>Well then, let’s do our best at work today!"
 HERO = "Dr. Rakta is a very dependable person.<br>As a doctor and a hero...<br>He sometimes act recklessly though, I'm a bit worried."
