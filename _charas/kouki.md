@@ -24,6 +24,8 @@ Kouki has risen as a first-class actor thanks to his talent as a performer, ackn
 {% include sidekick-infobox.html stockId=10181 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="kouki"
+h_gachaResult = "Heyy, I'm Inukura kouki!<br>This here is Sirius!<br>...Eh, the camera is not rolling?<br>Hmmm...well,<br>Don't drag me down, okay?"
+s_gachaResult = "I'm Kouki.<br>This is Sirius.<br>You should be grateful,<br>That a superstar like me,<br>is going to work as a sidekick."
 APPRECIATION = "Are you tired?  Aren't you? Well, don't you have to work hard?  Come on.  I'll buy you a juice, and you'll owe me one."
 DAILY = "You're late, yaknow. I was waiting. Hey, Sirius!  Don't greet them all happily!  Well, whatever….  So what's today's job?"
 HERO = "You know Hitomi from our agency?  She's a pro, really knows how to hype up an audience ... N-no, I don't see her as a rival!"
