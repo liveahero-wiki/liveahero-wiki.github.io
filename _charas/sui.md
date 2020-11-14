@@ -27,6 +27,8 @@ They have been afflicted by the gap between their body and mind ever since child
 {% include sidekick-infobox.html stockId=10031 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="sui"
+h_gachaResult = "I'm Sui.<br>I'm an apprentice designer.<br>If I can save people with my needlework, then…<br>Please, make use of it as you see fit."
+s_gachaResult = "Just Sui is fine.<br>I'm working as an apprentice at a tailor's shop.<br>…It might be a short association but,<br>I look forward to working with you."
 APPRECIATION = "Hmm, so you can get that worn out.<br>Just get some rest, and I'll get this document done.<br>When in trouble we should aid each other, right?"
 DAILY = "…n, Hi<br>My condition? Un, it's fine.<br>So, what job will we do today?"
 HERO = "That idol's clothes are nice.  So cutesy and fluffy and dazzling. To be honest... I'm a little envious."
@@ -39,4 +41,3 @@ TRAINED = "My clothes are ripping…!"
 
 ## Notes
 
-"I'm Sui, a designer apprentice. If I can save people with my needlework, then... please, make use of it as you see fit."
