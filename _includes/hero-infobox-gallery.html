@@ -2,6 +2,6 @@
 {% assign first_art = artworks | first | default: "" %}
 
 <div class="hero-gallery" data-arts="{{ artworks | jsonify | escape }}">
-    <img src="{{ first_art }}" loading="lazy">
+    <img width="640" height="1024" src="{{ first_art }}" loading="lazy">
     <select class="spriteSelector"></select>
 </div>
