@@ -21,8 +21,8 @@ However, due to the genetic inheritance of her mother, an alien, she has acquire
 {% include sidekick-infobox.html stockId=10191 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="hitomi"
-h_gachaResult = "Your eyes on Hito☆mi!<br>It's Ayauta Hitomi !<br>Pretty and strong is Hitomi's motto!<br>Let's work hard together, okay?<br>Partner-san!"
-s_gachaResult = "Your eyes on Hito☆mi!<br>It's Ayauta Hitomi !<br>Even working as a sidekick,<br>I will give it my all!<br>Leave it to me to warm up the stage!"
+h_gachaResult = "HIT☆ME with that gaze of yours! <br>Ayauta Hitomi here!<br>Pretty and strong is Hitomi's motto!<br>Let's work hard together, okay?<br>Partner-san!"
+s_gachaResult = "HIT☆ME with that gaze of yours! <br>Ayauta Hitomi here!<br>Even working as a sidekick,<br>I will give it my all!<br>Leave it to me to warm up the stage!"
 APPRECIATION = "Oh, what's this? Are you tired, partner?<br>In times like these... I'll inject you with energy!!!<br>A-AHHH! Did I use too much force? I'm so sorry!!!!"
 DAILY = "Yahooo! How are you today partner?<br>I'm once again on the cameras today.<br>Now then, let's fight our way through work once again!"
 RELATION = "That boy really has a lot of strength, huh...<br>Child actor, but also an entertainer...<br>I need to learn from him by looking up to him and following his example"
@@ -35,4 +35,3 @@ TRAINED = "Gyaaa~!! It's too intense!"
 
 ## Notes:
 
-"HIT☆ME with that gaze of yours! Hitomi Ayauta here! Pretty AND strong, that's Hitomi's motto! Let's do our best, Mr. Partner!"
