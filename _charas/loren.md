@@ -49,4 +49,3 @@ TRAINED = "Uhh, Time-out! It's tough!"
 
 ## Notes
 
-"Hello, how are you feeling? Health care is also the duty of those involved with heroes. Well then, let's do our best at work today!"
