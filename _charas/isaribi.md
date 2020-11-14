@@ -22,6 +22,7 @@ Confident in his vigorous stamina and muscles, he recklessly gets into fights, p
 
 {% include voice-table.html resourceName="isaribi"
 h_gachaResult = "Are ya the one who called me?<br>Ooh, let this Isaribi do it.<br>No matter how big it is, I'll stab through it!"
+s_gachaResult = "The best fisherman in the world,<br>Isaribi-san have come, baby!<br>Eh, Sidekick Work?<br>Well, okay. Leave it to me,<br>I will provide a smooth sailing"
 salesStart = "Osha! Let's go!"
 salesEnd = "It's an adequate catch!"
 battleStart = "So you've come, my prey! I'm going to get you all so prepare yourselves!"
