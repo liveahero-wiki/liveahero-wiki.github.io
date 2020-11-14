@@ -41,4 +41,3 @@ TRAINED = "Gaah, heroes are really amazing..!"
 
 ## Notes
 
-"Hey there, Mr. Operator! Would you let me interview you today? ...huh? You want me to fill in for you at your job? Good grief, aren't you a handful..."
