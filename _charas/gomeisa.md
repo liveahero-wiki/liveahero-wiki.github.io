@@ -19,6 +19,7 @@ Gomeisa is a young giant alien working as a waiter in a place where heroes gathe
 {% include sidekick-infobox.html stockId=10331 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="gomeisa"
+h_gachaResult = "Gomeisa here, the peace dancer!<br>May everyone can dance and have fun together!<br>This is my dream!"
 s_gachaResult = "Yes! Did you call me, Mr. Operator!<br>If you're looking for someone to liven things up, I can take care of it.<br>Gomeisa-style, Happy dance.<br>I'm going to show it off!"
 battleStart = "All right everybody, let's dance!<br>For the sake of mutual understanding, for the sake of peace!"
 action = "Please don't fight!"
