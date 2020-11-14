@@ -40,4 +40,3 @@ TRAINED = "Nuu..! Perhaps I need to take it seriously..!?"
 
 ## Notes
 
-"I’m Alchiba, just a plain old private detective, no biggie. Glad to meet such a wonderful client as yourself. Now then, let’s settle things up. What’s your request?"
