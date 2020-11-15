@@ -22,8 +22,11 @@ jobs:
       run: |
         sudo chmod 777 _site
     - name: Publish
-      uses: netlify/actions/build@master
+      uses: netlify/actions/cli@master
+      with:
+        args: deploy --dir=_site
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        NETLIFY_AUTH_TOKEN:  ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_DIR: _site
