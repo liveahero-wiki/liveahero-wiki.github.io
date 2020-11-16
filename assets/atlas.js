@@ -57,7 +57,17 @@ async function collectSprites(array) {
   return { manifest, select };
 }
 
-document.querySelectorAll(".atlas-gallery").forEach(async gallery => {
+const atlasObserver = new IntersectionObserver((entries, ob) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      atlasHandler(entry.target);
+
+      ob.unobserve(entry.target);
+    }
+  });
+});
+
+async function atlasHandler(gallery) {
   const sprites = gallery.dataset["sprites"].split(",");
   const dest_img = gallery.querySelector("img");
   const array = await getJson(sprites);
@@ -75,7 +85,9 @@ document.querySelectorAll(".atlas-gallery").forEach(async gallery => {
     img.src = `/cdn/Texture2D/${textureData["atlasName"]}.png`;
   });
   select.dispatchEvent(new Event('change'));
-});
+}
+
+document.querySelectorAll(".atlas-gallery").forEach(gallery => atlasObserver.observe(gallery));
 
 function intdiv(a, b) {
   return Math.floor(a / b);
