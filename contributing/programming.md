@@ -52,7 +52,7 @@ in some HTML elements and do more processing in client-side JS. Think: progressi
 1. Comment syntax in Jekyll/Liquid is `{% raw %}{% comment %}blah blah{% endcomment %}{% endraw %}`.
 
 1. Key of map/dictionary is type sensitive. `{1: "hello", 2: "world"}` uses integer as key. `{"1": "hello", "2": "world"}`
-   string as key. Make sure you the key is in correct type when you do `{% assign value = obj_map[key] %}`.
+   string as key. Make sure you the key is in correct type when you do `{% raw %}{% assign value = obj_map[key] %}{% endraw %}`.
 
 1. To convert string into integer, use `{% raw %}{% assign x_int = x_str | plus: 0 %}{% endraw %}`.
 
