@@ -328,14 +328,16 @@ figcaption {
 .heroBox .tabs span {
   padding: 0 10px;
 }
-.hero-gallery {
+.hero-gallery, .atlas-gallery {
   img {
     display: block;
   }
 }
 @media (min-width: 1064px) {
-  .hero-gallery img {
+  .hero-gallery, .atlas-gallery {
+    img {
       padding: 0 159px;
+    }
   }
 }
 .heroinfobox {
