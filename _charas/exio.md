@@ -3,4 +3,4 @@ title: Exio
 unreleased: true
 ---
 
-{% include hero-infobox-unreleased.html resourceName="exio" %}
+{% include hero-infobox-unreleased.html sprites="fg_exio_s01" %}
