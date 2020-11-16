@@ -51,6 +51,28 @@ def downloadProperties(masterVersion, filename):
   with open(os.path.join("_data", "processed", filename), "wb") as f:
     f.write(data.encode())
 
+def dumpJson(filename, obj, **kwargs):
+  with open(filename, "w", encoding="utf-8") as f:
+    json.dump(obj, f, ensure_ascii=False, indent="", **kwargs)
+
+def processPropertiesFile(raw_file, bio_file, serif_file):
+    with open(os.path.join("_data", "processed", raw_file), "r", encoding="utf-8") as f:
+        lines = f.readlines()
+
+    detail = {}
+    serif = {}
+    
+    for line in lines:
+        s = line.split("=")
+
+        if s[0].startswith("DETAIL"):
+            detail[s[0]] = s[1][:-1]
+
+        if s[0].startswith("SERIF"):
+            serif[s[0]] = s[1][:-1]
+
+    dumpJson(os.path.join("_data", "processed", bio_file), detail)
+    dumpJson(os.path.join("_data", "processed", serif_file), serif)
 
 if __name__ == '__main__':
   appV, mV = getVersion()
@@ -75,3 +97,6 @@ if __name__ == '__main__':
   ]
   for m in masterDataList:
     downloadMasterdata(mV, m)
+
+  downloadProperties(mV, "Japanese.properties")
+  processPropertiesFile("Japanese.properties", "jp_bio.json", "jp_serif.json")
