@@ -42,4 +42,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: JP Properties
+          if-no-files-found: ignore
           path: _data/processed/Japanese.properties
