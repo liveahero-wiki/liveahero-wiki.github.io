@@ -55,4 +55,4 @@ TRAINED = "Guh, what a healthy body ...!"
 
 ## Notes
 
-- He refers to gammei's eating habit in his relation line
+- He refers to Gammei's eating habit in his relation line
