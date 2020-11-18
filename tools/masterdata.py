@@ -30,6 +30,10 @@ def getVersion():
   if obj["result"] != True:
     raise Exception("Failed to get version")
 
+  if not obj.get("client") or not obj.get("master"):
+    print("No version")
+    sys.exit(0)
+
   return obj["client"], obj["master"]
 
 def getWikiVersion():
