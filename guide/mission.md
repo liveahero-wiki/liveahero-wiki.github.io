@@ -48,6 +48,8 @@ Standard missions are permanent missions that can be cleared at any point of tim
 |-|-|
 |Clear the main quest: Chapter 1, Episode 11| Hero {% chara_link Akashi %}|
 |Clear the main quest: Chapter 1|{%include item.html id=1%} x 10|
+|Clear the main quest: Chapter 2|{%include item.html id=1%} x 10|
+|Clear the main quest: Chapter 2|{%include item.html id=1%} x 29|
 
 #### Player Login
 
