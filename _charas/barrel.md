@@ -44,3 +44,5 @@ TRAINED = "Aghh! T-That's a big hit!"
 %}
 
 ## Notes
+
+- Hero lines refers to Suhail, Relation lines refers to Gammei
