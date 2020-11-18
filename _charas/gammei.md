@@ -3,7 +3,7 @@ title: Gammei
 ---
 
 {% capture BIO_H01 %}
-Ganmei transforms into Justy Arrester with a handcuff-shaped ring that has a long chain which infinitely extends. Due to the ring and chain's ability to expand and contract according to the captured target's size, he is able to "arrest" anyone and anything regardless of size. His fighting skills on the battlefield are backed up by his experience as a detective and a hero, as well as his memory of originating from a metropolitan area that was destroyed by kaibutsu
+Gammei transforms into Justy Arrester with a handcuff-shaped ring that has a long chain which infinitely extends. Due to the ring and chain's ability to expand and contract according to the captured target's size, he is able to "arrest" anyone and anything regardless of size. His fighting skills on the battlefield are backed up by his experience as a detective and a hero, as well as his memory of originating from a metropolitan area that was destroyed by kaibutsu
 {% endcapture %}
 
 {% capture BIO_H02 %}
