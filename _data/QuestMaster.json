@@ -766,6 +766,134 @@
     "hasBattle": true,
     "hasStockBattle": false
   },
+  "102001": {
+    "questId": 102001,
+    "questName": "こちらパラレルフライト社",
+    "subName": "第１話",
+    "questKind": 1,
+    "chapterId": 102,
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 1,
+    "enemyLevel": 10,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 7
+      },
+      {
+        "class": "QuestClear",
+        "questId": 101014
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaEarth_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "102002": {
+    "questId": 102002,
+    "questName": "売り言葉と買い言葉",
+    "subName": "第２話",
+    "questKind": 1,
+    "chapterId": 102,
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 2,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 102001
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false
+  },
+  "102003": {
+    "questId": 102003,
+    "questName": "動き出す影",
+    "subName": "第３話",
+    "questKind": 1,
+    "chapterId": 102,
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 3,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 102002
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false
+  },
   "201001": {
     "questId": 201001,
     "questName": "力を求めて",
@@ -4428,6 +4556,474 @@
     ],
     "hasAdv": false,
     "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "502001": {
+    "questId": 502001,
+    "questName": "うちのプロキー知りませんか？",
+    "subName": "第１話",
+    "questKind": 5,
+    "chapterId": 502,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false
+  },
+  "502002": {
+    "questId": 502002,
+    "questName": "ファイターvsガンマン",
+    "subName": "第２話",
+    "questKind": 5,
+    "chapterId": 502,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 5,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 402001
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "502003": {
+    "questId": 502003,
+    "questName": "北空輝く一番星",
+    "subName": "第３話",
+    "questKind": 5,
+    "chapterId": 502,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 5,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 402002
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "502004": {
+    "questId": 502004,
+    "questName": "癒しのちから",
+    "subName": "第４話",
+    "questKind": 5,
+    "chapterId": 502,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 6,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 402003
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "502005": {
+    "questId": 502005,
+    "questName": "薄紫のもや",
+    "subName": "第５話",
+    "questKind": 5,
+    "chapterId": 502,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 6,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 402004
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainEarth_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "502006": {
+    "questId": 502006,
+    "questName": "過去の影",
+    "subName": "第６話",
+    "questKind": 5,
+    "chapterId": 502,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 7,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 402005
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "502007": {
+    "questId": 502007,
+    "questName": "正義と悪",
+    "subName": "第７話",
+    "questKind": 5,
+    "chapterId": 502,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 402006
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false
+  },
+  "502008": {
+    "questId": 502008,
+    "questName": "平和に暮らすということ",
+    "subName": "第８話",
+    "questKind": 5,
+    "chapterId": 502,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 402007
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false
+  },
+  "502009": {
+    "questId": 502009,
+    "questName": "暁に発つ者たち",
+    "subName": "第９話",
+    "questKind": 5,
+    "chapterId": 502,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 8,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 402008
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "502010": {
+    "questId": 502010,
+    "questName": "ポイントYhへ",
+    "subName": "第10話",
+    "questKind": 5,
+    "chapterId": 502,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 9,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 402009
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "502011": {
+    "questId": 502011,
+    "questName": "彼の帰る場所",
+    "subName": "第11話",
+    "questKind": 5,
+    "chapterId": 502,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 9,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 402010
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultEarth_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "502012": {
+    "questId": 502012,
+    "questName": "明日の笑顔のために",
+    "subName": "第12話",
+    "questKind": 5,
+    "chapterId": 502,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 10,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 402011
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "502013": {
+    "questId": 502013,
+    "questName": "おかえり、プロキー",
+    "subName": "最終話",
+    "questKind": 5,
+    "chapterId": 502,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 402012
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
     "hasStockBattle": false
   }
 }

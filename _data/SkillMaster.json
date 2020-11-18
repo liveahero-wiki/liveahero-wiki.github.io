@@ -712,6 +712,121 @@
       }
     ]
   },
+  "1006101": {
+    "skillId": 1006101,
+    "skillName": "公務執行",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。60%の確率で1ターンの間DEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_gammei_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 60,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1006102": {
+    "skillId": 1006102,
+    "skillName": "事情聴取",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_spdDown",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に2ターンの間SPDダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_gammei_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 10,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1006103": {
+    "skillId": 1006103,
+    "skillName": "トゥワード・ザ・スター",
+    "useView": 14000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_spdDownAll",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。1ターンの間SPDダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_gammei_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "1006104": {
+    "skillId": 1006104,
+    "skillName": "事情聴取+",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_spdDown",
+    "subResourceName": "s_skill_antiBuffTeam",
+    "timing": 0,
+    "description": "敵単体に2ターンの間SPDダウンを付与。バフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_gammei_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 10,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 36,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
   "1007101": {
     "skillId": 1007101,
     "skillName": "狙い撃ちッス！",
@@ -2762,6 +2877,131 @@
       }
     ]
   },
+  "1030101": {
+    "skillId": 1030101,
+    "skillName": "マーチソン・メテオ",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に20%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_suhail_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 261,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "1030102": {
+    "skillId": 1030102,
+    "skillName": "ジャイアント・インパクト",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffAll",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。75%の確率で1ターンの間毒を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_suhail_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 89,
+        "prob": 75,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "1030103": {
+    "skillId": 1030103,
+    "skillName": "ブラキウム・エクス・マキナ",
+    "useView": 17000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffAll",
+    "timing": 0,
+    "description": "敵全体に100%ダメージ。1ターンの間火傷を付与 & 50%の確率でDEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_suhail_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 221,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 50,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "1030104": {
+    "skillId": 1030104,
+    "skillName": "ブラキウム・エクス・マキナ+",
+    "useView": 17000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffAll",
+    "timing": 0,
+    "description": "敵全体に120%ダメージ。1ターンの間火傷を付与 & 50%の確率でDEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_suhail_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 221,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 50,
+        "effectTarget": 4
+      }
+    ]
+  },
   "1032101": {
     "skillId": 1032101,
     "skillName": "マネー・イズ・タイム",
@@ -3458,6 +3698,96 @@
         "skillEffectId": 14,
         "prob": 100,
         "effectTarget": 0
+      }
+    ]
+  },
+  "2006101": {
+    "skillId": 2006101,
+    "skillName": "現場仕込みの捕縛術",
+    "useView": 2500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。60%の確率で1ターンの間SPDダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_gammei_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 60,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2006102": {
+    "skillId": 2006102,
+    "skillName": "現場仕込みの捕縛術+",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。60%の確率で1ターンの間SPDダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_gammei_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 60,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2006103": {
+    "skillId": 2006103,
+    "skillName": "現場仕込みの捕縛術++",
+    "useView": 1500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。60%の確率で1ターンの間SPDダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_gammei_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 60,
+        "effectTarget": 2
       }
     ]
   },
@@ -4976,6 +5306,96 @@
       }
     ]
   },
+  "2030101": {
+    "skillId": 2030101,
+    "skillName": "海賊流の略奪行動",
+    "useView": 1000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。60%の確率で1ターンの間毒を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_suhail_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 89,
+        "prob": 60,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2030102": {
+    "skillId": 2030102,
+    "skillName": "海賊流の略奪行動+",
+    "useView": 1000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。80%の確率で1ターンの間毒を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_suhail_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 89,
+        "prob": 80,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2030103": {
+    "skillId": 2030103,
+    "skillName": "海賊流の略奪行動++",
+    "useView": 1000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。1ターンの間毒を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_suhail_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 89,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
   "2032101": {
     "skillId": 2032101,
     "skillName": "ベテランの誇示",
@@ -5989,6 +6409,139 @@
     "effects": [
       {
         "skillEffectId": 85,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3006101": {
+    "skillId": 3006101,
+    "skillName": "質素倹約のツケⅠ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_gammei_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "Spd基礎値-5。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 80,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3006102": {
+    "skillId": 3006102,
+    "skillName": "質素倹約のツケⅡ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_gammei_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "Spd基礎値-5 & ATK+1%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 80,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 148,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3006103": {
+    "skillId": 3006103,
+    "skillName": "質素倹約のツケⅢ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_gammei_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "Spd基礎値-5 & ATK+2%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 80,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 149,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3006104": {
+    "skillId": 3006104,
+    "skillName": "質素倹約のツケⅣ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_gammei_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "Spd基礎値-5 & ATK+3%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 80,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 150,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3006105": {
+    "skillId": 3006105,
+    "skillName": "質素倹約のツケⅤ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_gammei_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "Spd基礎値-5 & ATK+4%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 80,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 151,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3006106": {
+    "skillId": 3006106,
+    "skillName": "質素倹約のツケⅥ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_gammei_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "Spd基礎値-5 & ATK+5%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 80,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 86,
         "prob": 100,
         "effectTarget": 0
       }
@@ -7959,6 +8512,114 @@
       {
         "skillEffectId": 237,
         "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3030101": {
+    "skillId": 3030101,
+    "skillName": "一番槍キャプテンⅠ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_suhail_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、15%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 15,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3030102": {
+    "skillId": 3030102,
+    "skillName": "一番槍キャプテンⅡ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_suhail_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、18%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 18,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3030103": {
+    "skillId": 3030103,
+    "skillName": "一番槍キャプテンⅢ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_suhail_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、21%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 21,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3030104": {
+    "skillId": 3030104,
+    "skillName": "一番槍キャプテンⅣ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_suhail_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、24%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 24,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3030105": {
+    "skillId": 3030105,
+    "skillName": "一番槍キャプテンⅤ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_suhail_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、27%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 27,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3030106": {
+    "skillId": 3030106,
+    "skillName": "一番槍キャプテンⅥ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_suhail_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、30%の確率で1ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 30,
         "effectTarget": 0
       }
     ]
