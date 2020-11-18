@@ -24,6 +24,8 @@ BIO_S01=BIO_S01
 %}
 
 {% include voice-table.html resourceName="gammei"
+h_gachaResult = "Orient City police detective, My name's Gammei.<br>Investigating a case or doing hero work, I can do both.<br>If you ever find a criminal, you can always report it to me."
+s_gachaResult = "Orient City Police Department, this is Detective Gammei.<br>Yeah, I'm accepting your request for assistance.<br>I won't have enough livelihood...if I didn't do so after all."
 APPRECIATION = "Yo, you look like you've had a long day.<br>Well, your work is a pretty hard one too.<br>It's important to take a complete break at times like this."
 DAILY = "Yo…eh, wait, wait!<br>I'm not here to investigate!<br>I just came to take this job to your company!"
 HERO = "I've been a detective and a hero for a long time, too, but..<br>I can't be as self-sacrificing as he is.<br>It certainly is the right thing to do as a hero, but…"
@@ -32,5 +34,4 @@ RELATION = "His aim…never got better at all.<br>Even his stray bullets don't h
 TOUCH = "Uo! W-what are you doing!<br>Stop, I can't take a proper bath on a stakeout.<br>I'm not dirty?…w-wahahah!"
 TRAIN = "Don't underestimate the strength of a cop, okay?"
 TRAINED = "Gah! Please give me a break...!"
-
 %}
