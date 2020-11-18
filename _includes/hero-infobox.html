@@ -48,7 +48,7 @@
 <summary>Personal Data 1</summary>
 <p>{{ site.data.processed.jp_bio[bio_h01] }}</p>
 </details>
-{% if include.BIO_H01 %}
+{% if include.BIO_H01 != "" %}
 <details open>
 <summary>Personal Data 1 (Translated)</summary>
 <div markdown="1">
@@ -61,7 +61,7 @@
 <summary>Personal Data 2</summary>
 <p>{{ site.data.processed.jp_bio[bio_h02] }}</p>
 </details>
-{% if include.BIO_H02 %}
+{% if include.BIO_H02 != "" %}
 <details open>
 <summary>Personal Data 2 (Translated)</summary>
 <div markdown="1">
