@@ -45,4 +45,4 @@ TRAINED = "Aghh! T-That's a big hit!"
 
 ## Notes
 
-- Hero lines refers to Suhail, Relation lines refers to Gammei
+- Hero lines refers to {% chara_link Suhail %}, Relation lines refers to {% chara_link Gammei %}
