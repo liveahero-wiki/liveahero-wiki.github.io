@@ -31,7 +31,7 @@ DAILY = "Yo…eh, wait, wait!<br>I'm not here to investigate!<br>I just came to 
 HERO = "I've been a detective and a hero for a long time, too, but..<br>I can't be as self-sacrificing as he is.<br>It certainly is the right thing to do as a hero, but…"
 PLAYER = "Those who follow a command system need some guts too, y'know.<br>It's the same for both heroes and the police.<br>Ah well, I expect you to command me well."
 RELATION = "His aim…never got better at all.<br>Even his stray bullets don't hit anything.<br>Well the good thing is he didn't do any unwarranted damage."
-TOUCH = "Uo! W-what are you doing!<br>Stop, I can't take a proper bath on a stakeout.<br>I'm not dirty?…w-wahahah!"
+TOUCH = "Uo! W-what are you doing!<br>Stop, I haven't took a proper bath since I'm on a stakeout.<br>I'm not dirty?…w-wahahah!"
 TRAIN = "Don't underestimate the strength of a cop, okay?"
 TRAINED = "Gah! Please give me a break...!"
 %}
