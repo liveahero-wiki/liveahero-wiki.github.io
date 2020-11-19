@@ -39,4 +39,4 @@ TRAINED = "Nuu..! Perhaps I need to take it seriously..!?"
 %}
 
 ## Notes
-
+- His Hero lines refers to {% chara_link Gammei %}
