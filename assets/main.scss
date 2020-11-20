@@ -402,12 +402,10 @@ $elementColor: #f07d75, #4e8ddf, #5fcb58, #ffb251, #9c76db;
 .hero-icon, .sidekick-icon {
   width: 128px;
   height: 128px;
+  position: relative;
   margin: calc((140px - 128px)/2);
 }
-.hero-icon {
-  position: relative;
-}
-.hero-icon .border {
+.chara-border {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -446,12 +444,23 @@ $elementName: fire, water, earth, light, shadow;
 .hero-6 {
   background-image: url(/assets/img/icon/ui_frame_h_04.png);
 }
+.sidekick-chara-icon {
+  position: absolute;
+}
 .sidekick-icon img {
   display: block;
-  height: 125px;
-  margin: auto;
-  -webkit-mask-image: url(/assets/img/icon/ui_frame_s_base_mask.png);
-  mask-image: url(/assets/img/icon/ui_frame_s_base_mask.png);
+  height: 128px;
+  right: 0;
+  bottom: 0;
+  clip-path: polygon(0% 10%, 50% 0%, 95% 10%, 95% 73%, 50% 95%, 0% 73%);
+}
+.sidekick-border-3 {
+  width: 124px;
+  background-image: url(/assets/img/icon/ui_frame_s_01.png);
+}
+.sidekick-border-4 {
+  width: 124px;
+  background-image: url(/assets/img/icon/ui_frame_s_02.png);
 }
 .sidekick-3 {
   background-image: url(/assets/img/icon/ui_frame_s_base_01.png);
