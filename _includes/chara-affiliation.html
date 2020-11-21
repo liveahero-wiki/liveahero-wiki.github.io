@@ -1,0 +1,6 @@
+{% assign a = site.data.wiki.Affiliation[include.affiliation] %}
+{% if a %}
+<abbr title="{{ include.affiliation }}">{{ a.en }}</abbr>
+{% else %}
+{{ include.affiliation }}
+{% endif %}
