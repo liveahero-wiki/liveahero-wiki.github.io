@@ -30,6 +30,10 @@ defaults:
     values:
       layout: event
   - scope:
+      type: "main_quests"
+    values:
+      layout: main_quest
+  - scope:
       path: "assets/img/fg"
     values:
       fg: true
@@ -48,6 +52,9 @@ collections:
   events:
     output: true
     sort_by: event_start_time
+  main_quests:
+    output: true
+    sort_by: chapterId
 
 exclude:
   - "*.py"

@@ -21,7 +21,7 @@ On the quest selection menu, by either hold tapping on the quest banner, or by t
 
 ## Main Quest
 
-This is the quest where you can read the game's main story.
+This is the quest where you can read the game's main story. Go to [Main Quests](/main_quests/) to a list of Main Quest chapters.
 
 ## Enhancement/ Training Quest
 
