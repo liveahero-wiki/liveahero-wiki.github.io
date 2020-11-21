@@ -6,8 +6,6 @@ timezone: Asia/Tokyo
 date_format: "%-d %b %Y %R JST"
 markdown: kramdown
 excerpt_separator: "<!--more-->"
-#kramdown:
-#  parse_block_html: true
 sass:
   style: compressed
 plugins:
@@ -33,10 +31,6 @@ defaults:
       type: "main_quests"
     values:
       layout: main_quest
-  - scope:
-      path: "assets/img/fg"
-    values:
-      fg: true
   - scope:
       path: "assets"
     values:
