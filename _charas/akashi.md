@@ -1,6 +1,7 @@
 ---
 title: Akashi
 occupation: "University Student (Part-timer)"
+Affiliation Office: "Parallel Flight"
 ---
 
 {% capture BIO_H01 %}
