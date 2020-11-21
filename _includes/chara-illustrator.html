@@ -1,6 +1,11 @@
-{% assign illu = site.data.wiki.Illustrator[include.illustrator] %}
-{% if illu %}
-<abbr title="{{ include.illustrator }}">{{ illu.en }}</abbr>
-{% else %}
-{{ include.illustrator }}
-{% endif %}
+{% assign names = include.illustrator | processVoiceActor %}
+{% for name in names %}
+{% assign en = site.data.wiki.Illustrator[name].en %}
+<a href="/illustrators/#{{ en | default: name | slugify }}">
+{%- if en %}
+<abbr title="{{ name }}">{{ en }}</abbr>
+{%- else %}
+{{ name }}
+{%- endif %}
+</a>
+{% endfor %}
