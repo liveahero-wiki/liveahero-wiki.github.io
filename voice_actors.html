@@ -1,0 +1,35 @@
+---
+title: Voice Actor
+banner: true
+---
+
+{% assign heroes = site.data.CardMaster | where: "stockOrder", 1 %}
+{% assign sidekicks = site.data.SidekickMaster | where: "levelZone", 1 %}
+
+{% assign groups = heroes | concat: sidekicks | processCharaGroup: "characterVoice", site.data.wiki.VoiceActor | sort: "en" %}
+
+<ul id="markdown-toc">
+{% for human in groups %}
+{% assign en = human.en | default: human.name %}
+<li><a href="#{{ en | slugify }}">{{ en }}</a></li>
+{% endfor %}
+</ul>
+
+{% for human in groups %}
+
+{% if human.en %}
+<h3 id="{{ human.en | slugify }}">{{ human.en }} ({{ human.name }})</h3>
+{% else %}
+<h3 id="{{ human.name | slugify }}">{{ human.name }}</h3>
+{% endif %}
+
+<ul class="card-list clearfix">
+{% for item in human.items %}
+{% if item.stockOrder %}
+{% include card-hero.html card=item %}
+{% else %}
+{% include card-sidekick.html card=item %}
+{% endif %}
+{% endfor %}
+</ul>
+{% endfor %}
