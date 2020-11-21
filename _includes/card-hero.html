@@ -1,0 +1,8 @@
+{% assign c = include.card %}
+{% assign page = c.resourceName | resourceNameToPage %}
+<li data-id="{{ c.stockId }}" data-rarity="{{ c.rarity }}" data-element="{{ c.element }}" data-name="{{ page.title }}">
+<div class="hero-icon">
+  <div class="chara-border hero-{{ c.rarity }}"></div>
+  <img class="hero-chara-icon" src="/assets/img/icon/icon_{{ c.resourceName }}_h01.png" loading="lazy">
+</div>
+<a href="{{ page.url }}#h{{ c.stockId }}">{{ page.title }}</a></li>

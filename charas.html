@@ -20,13 +20,7 @@ redirect_from: /heroes/
 {% assign cardInfos = site.data.CardMaster | where: "stockOrder", 1 %}
 <ul id="hero-list" class="card-list clearfix">
 {% for c in cardInfos %}
-{% assign page = c.resourceName | resourceNameToPage %}
-<li data-id="{{ c.stockId }}" data-rarity="{{ c.rarity }}" data-element="{{ c.element }}" data-name="{{ page.title }}">
-<div class="hero-icon">
-  <div class="chara-border hero-{{ c.rarity }}"></div>
-  <img class="hero-chara-icon" src="/assets/img/icon/icon_{{ c.resourceName }}_h01.png" loading="lazy">
-</div>
-  <a href="{{ page.url }}#h{{ c.stockId }}">{{ page.title }}</a></li>
+{% include card-hero.html card=c %}
 {% endfor %}
 </ul>
 
@@ -41,13 +35,7 @@ redirect_from: /heroes/
 {% assign cardInfos = site.data.SidekickMaster | where: "levelZone", 1 %}
 <ul id="sidekick-list" class="card-list clearfix">
 {% for c in cardInfos %}
-{% assign page = c.resourceName | resourceNameToPage %}
-<li data-id="{{ c.stockId }}" data-rarity="{{ c.rarity }}" data-name="{{ page.title }}">
-<div class="sidekick-icon sidekick-{{ c.rarity }}">
-  <div class="chara-border sidekick-border-{{ c.rarity }}"></div>
-  <img class="sidekick-chara-icon" src="/assets/img/icon/icon_{{ c.resourceName }}_s01.png" loading="lazy">
-</div>
-  <a href="{{ page.url }}#s{{ c.stockId }}">{{ page.title }}</a></li>
+{% include card-sidekick.html card=c %}
 {% endfor %}
 </ul>
 
