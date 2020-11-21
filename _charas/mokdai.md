@@ -1,6 +1,7 @@
 ---
 title: Mokdai
-occupation: "Video Production Staff (映像技術スタッフ)"
+occupation: "Video Production Staff"
+Affiliation Office: "Parallel Flight"
 ---
 
 {% capture BIO_H01 %}
