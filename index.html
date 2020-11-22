@@ -5,8 +5,6 @@ banner: true
 
 <style>
 #jst-time {
-    padding: 5px;
-    border: 1px solid #000;
     text-align: center;
 }
 #daily-quest-box img {
@@ -14,13 +12,28 @@ banner: true
     margin: 5px;
 }
 #daily-quest-box {
-    padding: 5px;
-    border: 1px solid #000;
     max-width: 320px;
+}
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: .5rem;
+    margin: .5rem 0;
+}
+section {
+    border: 1px solid;
+    padding: 10px;
+    background: #d3f8eb;
+}
+section h2 {
+    padding: 10px;
+    margin: 0 0 10px;
+    background: rgb(94 203 140);
+    text-align: center;
 }
 </style>
 
-<img src="/assets/img/lah_banner.png" style="margin-bottom: 30px" align="center" alt="Live A Hero banner">
+<img width="800" height="267" src="/assets/img/lah_banner.png" style="margin-bottom: 30px" align="center" alt="Live A Hero banner">
 
 <table class="event-infobox">
 <tr><th><a href="/events/">Current Event</a></th></tr>
@@ -28,17 +41,26 @@ banner: true
 {% for event in site.events reversed %}
 {% assign event_date = event.event_end_time | date: "%s" | plus: 0 %}
 {% if event_date < current_date %}{% break %}{% endif %}
+<tr><td><img width="600" height="191" style="width: 100%" src="/cdn/Sprite/{{ event.banner_image }}" loading="lazy"></td></tr>
 <tr><td data-expiry="{{ event.event_end_time }}"><a href="{{ event.url }}">{{ event.title }}</a> ({{ event.event_start_time | date: "%-d %b %Y" }} ~ {{ event.event_end_time | date: "%-d %b %Y" }})</td></tr>
 {% endfor %}
 </table>
 
-<p style="text-align: justify">Live A Hero (LAH) is a turn-based mobile RPG developed by Lifewonders.</p>
+<div class="grid-wrapper">
+
+<section>
+
+<h2>Overview</h2>
+
+<p>Live A Hero (LAH) is a turn-based mobile RPG developed by Lifewonders.</p>
 
 <p>The main character can play with a character selected from 4 types of appearance, 5 types of voice, and 3 types of gender identity.</p>
 <p>The setting of the main character, including the name, can be changed at any time later as an option.</p>
 
 <p>In addition, it is a turn-based command battle RPG that allows you to develop characters simply by forming a team in any combination and leaving it alone.</p>
+</section>
 
+<section>
 <h2>Core Information</h2>
 
 <ul>
@@ -49,12 +71,38 @@ banner: true
 <li><a href="https://play.google.com/store/apps/details?id=jp.co.lifewonders.liveahero">Download on Google Play</a></li>
 <li><a href="https://apps.apple.com/jp/app/id1474209512">Download on the Apple App Store</a></li>
 </ul>
+</section>
 
+</div>
+
+<section>
+<h2>Tokyo Time</h2>
 <div id="jst-time"></div>
-<details id="daily-quest-box" open>
-<summary>Daily Quest</summary>
-</details>
+</section>
 
+<div class="grid-wrapper">
+
+<section>
+<h2>Daily Quest</h2>
+<div id="daily-quest-box"></div>
+</section>
+
+<section>
+<h2>Community Links</h2>
+
+<ul>
+<li><a href="https://twitter.com/LAH_ENG">LAH English Twitter (Unofficial)</a></li>
+<li><a href="https://wikiwiki.jp/live-a-hero/">LAH Japanese Wiki</a></li>
+<li><a href="https://liveahero-community.github.io/">LAH Chinese Database</a></li>
+<li><a href="https://www.reddit.com/r/LiveAHero/">LAH Subreddit</a></li>
+<li><a href="https://discord.gg/zpc7PCk">LAH Discord (Herocord)</a></li>
+<li><a href="https://tiermaker.com/create/live-a-hero-characters-585406">Character Tier Maker</a></li>
+</ul>
+</section>
+
+</div>
+
+<section>
 <h2>Story</h2>
 
 <p>There's a theory that there are countless parallel universes outside of ours.</p>
@@ -71,24 +119,14 @@ banner: true
 
 <p>And you, through a strange turn of events, have been hired to support these very heroes. You shall become the source and beacon to provide power to the heroes by helping them to live stream their battles, by observing the infinite "possibilities" hidden deep within the people around you…</p>
 
-<p>&gt;&gt;&gt; <a href="/main_quests/">Main Quests</a></p>
-
-<h2>Community Links</h2>
-
-<ul>
-<li><a href="https://twitter.com/LAH_ENG">LAH English Twitter (Unofficial)</a></li>
-<li><a href="https://wikiwiki.jp/live-a-hero/">LAH Japanese Wiki</a></li>
-<li><a href="https://liveahero-community.github.io/">LAH Chinese Database</a></li>
-<li><a href="https://www.reddit.com/r/LiveAHero/">LAH Subreddit</a></li>
-<li><a href="https://discord.gg/zpc7PCk">LAH Discord (Herocord)</a></li>
-<li><a href="https://tiermaker.com/create/live-a-hero-characters-585406">Character Tier Maker</a></li>
-</ul>
+<p>&gt;&gt;&gt; Continue on <a href="/main_quests/">Main Quests</a></p>
+</section>
 
 <script>
 const jstTime = document.querySelector("#jst-time");
 const dailyBox = document.querySelector("#daily-quest-box");
 function updateJstTime() {
-    jstTime.textContent = "Tokyo time: " + new Date().toLocaleString('en-US', {timeZone: 'Asia/Tokyo'});
+    jstTime.textContent = new Date().toLocaleString('en-US', {timeZone: 'Asia/Tokyo'});
 }
 setInterval(updateJstTime, 1000);
 const dailys = [["earth", "shadow"], ["light"], ["fire"], ["water"], ["earth"], ["shadow"], ["light", "fire", "water"]];

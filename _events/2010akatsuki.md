@@ -2,6 +2,7 @@
 title: Akatsuki's Golden Spirit
 jp_title: 暁のゴールデン・スピリット
 news_link: https://live-a-hero.jp/info/692
+banner_image: banner_info_2010akatsuki.jpg
 gacha: true
 event_start_time: 2020-10-16T20:00:00+09
 event_end_time: 2020-11-13T20:00:00+09

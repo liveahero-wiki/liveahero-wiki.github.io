@@ -2,6 +2,7 @@
 title: Global Union Special Exercise!
 jp_title: 地球圏連合特別演習！
 news_link: https://live-a-hero.jp/campaign/822
+banner_image: banner_campaign_03_chikyuu.jpg
 event_start_time: 2020-11-11T18:00:00+09
 event_end_time: 2020-11-25T18:00:00+09
 ---

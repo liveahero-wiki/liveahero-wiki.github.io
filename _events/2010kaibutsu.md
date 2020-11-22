@@ -2,6 +2,7 @@
 title: Assault of the Kaibutsu
 jp_title: カイブツ・襲来
 news_link: https://live-a-hero.jp/campaign/628
+banner_image: banner_campaign_02_kaibutsu.jpg
 event_start_time: 2020-10-09T18:00:00+09
 event_end_time: 2020-10-16T14:00:00+09
 ---
