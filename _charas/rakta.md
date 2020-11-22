@@ -4,7 +4,7 @@ occupation: "Surgeon (外科医師)"
 ---
 
 {% capture BIO_H01 %}
-He transforms into the white-clad hero "Doctor R". Possessing several parallel weapons in the form of surgical instruments such as scalpels and forceps, which he can use in combat and rescue activities.
+He transforms into the white-clad hero "Doktor R". Possessing several parallel weapons in the form of surgical instruments such as scalpels and forceps, which he can use in combat and rescue activities.
 Due to his motto, "All lives that can be saved must be saved," his tools are designed to prevent him from killing even his enemies.
 As such, his heroic abilities shows its true value in "saving other people".
 {% endcapture %}
