@@ -4,11 +4,13 @@ occupation: "Nurse (看護師)"
 ---
 
 {% capture BIO_H01 %}
-As the literal "Angel in White", he descends onto the battlefield. His hero code name is "Praeger L".
+As the literal "Angel in White", he descends onto the battlefield. His hero code name is "Pfleger[^Loren_1] L".
 
 The wing-shaped parallel weapon is designed so that each feather turns into a healing tool as soon as you pick it up.
 
 He is mainly in charge of backup, using his feathers to treat the rescued civilians and attempting to recover his friends with the special tools he's obtained.
+
+[^Loren_1]: Pfleger(German) means Nurse
 {% endcapture %}
 
 {% capture BIO_H02 %}
