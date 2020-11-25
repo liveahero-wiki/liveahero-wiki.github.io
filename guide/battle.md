@@ -75,6 +75,7 @@ The available status modifiers are listed as follows:
 | {% include status.html id=6 %} | Invincible | Damage received from enemies is reduced to 0 once. |
 | {% include status.html id=7 %} | Good Luck | Activation rate of skills increased by 20%. Duration decreases after the Hero performs an action. |
 | {% include status.html id=8 %} | Awakening | View Power required for skills is halved. Duration decreases after the Hero performs an action. It is non-repeatable. |
+| {% include status.html id=9 %} | Resurrection | Restore HP when receiving fatal damage once. |
 | {% include status.html id=10 %} | Regen | Restores 10% HP at the end of turn. Duration decreases when the turn ends. |
 | {% include status.html id=26 %} | Damage Gathering | All enemy attacks apply to the target ally. Duration decreases when the turn ends. It does not repeat. |
 
