@@ -45,9 +45,9 @@ module Jekyll
         resourceName = CharaMap.path_to_resourceName(page.path)
 
         if page.data["unreleased"]
-          "<a href=\"#{page.url}\"><span class=\"item\"><img src=\"/assets/img/icon/icon_unknown_card.png\" loading=\"lazy\"></span> #{page.data["title"]}</a>"
+          "<a href=\"#{page.url}\"><span class=\"item\"><img src=\"/cdn/Sprite/icon_unknown_card.png\" loading=\"lazy\"></span> #{page.data["title"]}</a>"
         else
-          "<a href=\"#{page.url}\"><span class=\"item\"><img src=\"/assets/img/icon/icon_#{resourceName}_s01.png\" loading=\"lazy\"></span> #{page.data["title"]}</a>"
+          "<a href=\"#{page.url}\"><span class=\"item\"><img src=\"/cdn/Sprite/icon_#{resourceName}_s01.png\" loading=\"lazy\"></span> #{page.data["title"]}</a>"
         end
       else
         @input

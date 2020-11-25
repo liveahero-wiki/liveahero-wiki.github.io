@@ -30,26 +30,26 @@ Friend Point gacha uses {% include item-icon.html id=42 %} friend Points to obta
 <tbody>
 <tr>
 <td>
-  <img src="/assets/img/icon/item_piece_akashi.png">
-  <img src="/assets/img/icon/item_piece_sui.png">
+  <img src="/cdn/Sprite/item_piece_akashi.png">
+  <img src="/cdn/Sprite/item_piece_sui.png">
 </td>
 <td rowspan="2" style="width: 33%">
-  <img style="display: block; margin: auto" src="/assets/img/icon/item_recordcube.png">
+  <img style="display: block; margin: auto" src="/cdn/Sprite/item_recordcube.png">
 </td>
 <td>
-  <img src="/assets/img/icon/item_genericpiece_rank3.png">
-  <img src="/assets/img/icon/item_genericpiece_rank4.png">
-  <img src="/assets/img/icon/item_genericpiece_rank5.png">
+  <img src="/cdn/Sprite/item_genericpiece_rank3.png">
+  <img src="/cdn/Sprite/item_genericpiece_rank4.png">
+  <img src="/cdn/Sprite/item_genericpiece_rank5.png">
 </td>
 </tr>
 <tr>
 <td>
-  <img src="/assets/img/icon/item_heart_gomeisa.png">
-  <img src="/assets/img/icon/item_heart_huckle.png">
+  <img src="/cdn/Sprite/item_heart_gomeisa.png">
+  <img src="/cdn/Sprite/item_heart_huckle.png">
 </td>
 <td>
-  <img src="/assets/img/icon/item_genericheart_rank3.png">
-  <img src="/assets/img/icon/item_genericheart_rank4.png">
+  <img src="/cdn/Sprite/item_genericheart_rank3.png">
+  <img src="/cdn/Sprite/item_genericheart_rank4.png">
 </td>
 </tr>
 <tr>

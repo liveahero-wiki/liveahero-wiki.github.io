@@ -1,7 +1,7 @@
 {% assign qid = include.id | downcase %}
 {% assign Q = site.data.QuestMaster[qid] %}
 <details id="q{{ qid }}">
-<summary><span class="item"><img src="/assets/img/icon/{{ Q.iconFilename }}.png"></span> {{ Q.questName }}{% if Q.subName %} ({{ Q.subName }}){% endif %}</summary>
+<summary><span class="item"><img src="/cdn/Sprite/{{ Q.iconFilename }}.png"></span> {{ Q.questName }}{% if Q.subName %} ({{ Q.subName }}){% endif %}</summary>
 <table class="quest-infobox">
 <tr><th>Level</th><td>{{ Q.enemyLevel }}</td></tr>
 {% assign item_cost = "" | split: "," %}
@@ -37,7 +37,7 @@
 <tr><th>Enemies</th><td>
 {% for enemy in Q.enemies %}
 <div class="hero-icon" data-element="{{ enemy.battleInfoElement }}">
-<img class="hero-chara-icon" src="/assets/img/icon/{{ enemy.battleInfoIcon }}.png" loading="lazy">
+<img class="hero-chara-icon" src="/cdn/Sprite/{{ enemy.battleInfoIcon }}.png" loading="lazy">
 </div>
 {% endfor %}
 </td></tr>

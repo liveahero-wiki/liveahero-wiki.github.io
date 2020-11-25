@@ -1,1 +1,1 @@
-{% assign id = include.id | downcase %}{% assign status = site.data.StatusMaster[id] %}{% assign icon = site.data.wiki.StatusIcons[id] %}<span class="status" title="{{ status.description }}"><img src="/assets/img/icon/{{ icon }}.png" height="13px"> {{ status.statusName }}</span>
+{% assign id = include.id | downcase %}{% assign status = site.data.StatusMaster[id] %}{% assign icon = site.data.wiki.StatusIcons[id] %}<span class="status" title="{{ status.description }}"><img src="/cdn/Sprite/{{ icon }}.png" height="13px"> {{ status.statusName }}</span>
