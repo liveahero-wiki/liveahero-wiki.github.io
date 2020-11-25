@@ -16,6 +16,6 @@ and {% chara_link Kirsch %}. Sidekick skills that remove debuffs such as {% char
 
 ### Limited Time Mission
 
-Commplete all three quests will give you one {% include item.html id=10 %}.
+Complete all three quests will give you one {% include item.html id=10 %}.
 
 {% include quest-group.html chapterId=405 %}
