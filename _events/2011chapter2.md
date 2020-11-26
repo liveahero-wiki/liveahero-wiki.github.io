@@ -26,4 +26,4 @@ In commemoration of the new chapter release, a limited time gacha summon is also
 
 Finish all chapter 2 main quest for mission rewards, rewards details can be found in [Mission](/guide/mission/#main-quest)
 
-{% include quest-group.html chapterId=102 %}
+Detailed lists of main quest can be found in [Main quest ch02](main_quests/chapter02/)
