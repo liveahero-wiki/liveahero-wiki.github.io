@@ -5,7 +5,7 @@ module Jekyll
   module CatalogFilter
     def processVoiceActor(name)
       if name == '？？？'
-        name = '天野ユウ,岩永悠平,戸板優衣,樹元オリエ'
+        name = '後藤ヒロキ,岩永悠平,天野ユウ,戸板優衣,樹元オリエ'
       end
       name.split(",")
     end
