@@ -33,8 +33,8 @@ Here is a list of Limited time Missions:
 | 5  | Win a challenge quest with 15000 total damage             | 10000 {% include item-icon.html id=35 %}    |
 | 6  | Buy something from store                                  | 5000 {% include item-icon.html id=11 %} |
 | 7  | Finish all 4 challenge quest                              | 1 {% include item-icon.html id=10 %}   |
-| 8  | Use Suhail to finish challenge quest rank A (support unit included)              | 10000 {% include item-icon.html id=35 %}    |
-| 9  | Use Gammei to finish challenge quest rank A (support unit included)              | 10000 {% include item-icon.html id=35 %}     |
+| 8  | Use Suhail to finish challenge quest rank A (NPC or support unit included)          | 10000 {% include item-icon.html id=35 %}    |
+| 9  | Use Gammei to finish challenge quest rank A (NPC or support unit included)          | 10000 {% include item-icon.html id=35 %}     |
 | 10 | Win a challenge quest at 7 turn or more               | 10000 {% include item-icon.html id=35 %}     |
 | 11 | Win a challenge quest while reaching 100000 view one time | 10000 {% include item-icon.html id=35 %}     |
 | 12 | Finish 3 {% include item-icon.html id=11 %} sales         | 5000 {% include item-icon.html id=11 %}  |
