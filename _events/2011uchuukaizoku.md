@@ -14,11 +14,11 @@ The limited time quests will feature special battle condition. Normally, you can
 In "Clash! Space Pirate", the enemy uses a skill with the new effect {% include status-icon.html id=9 %} Resurrection.
 The {% include status-icon.html id=9 %} Resurrection effect can let the defeated allies to re-enter battles with their HP restored.
 
-In order to defeat enemies that are resurrected many times, heroes with powerful general attacks and those that can defeat enemies with a single blow, for example {% chara_link Kyoichi %}, {% chara_link Victom %} or {% chara_link Toshu %}, will be effective.
+In order to defeat enemies that are resurrected many times, heroes with powerful general attacks and those that can defeat enemies with a single blow, will be effective. 
 
 ### Limited Time Mission
 
-A new high difficulity "S class" quest will be newly introduced. 
+A new high difficulty "S class" quest will be newly introduced. 
 
 There are also time-limited Quest Missions and Training Missions during the event. Quest Missions will require you to clear Event Quests while satisfying specific conditions. Meanwhile Training Missions' requirements will be clearing specific sales or buying items from the shop during event's duration. Completion of all missions will give you one {% include item-icon.html id=29 %} Legendary Medal. 
 
