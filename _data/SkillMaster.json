@@ -9441,6 +9441,106 @@
       }
     ]
   },
+  "4030101": {
+    "skillId": 4030101,
+    "skillName": "鼓舞",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "b_skill_buffAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方全体に3ターンの間ATKアップを付与。戦闘不能の場合、100%のHPで復活。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_suhail_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 3,
+        "prob": 100,
+        "effectTarget": 3
+      },
+      {
+        "skillEffectId": 260,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "4030102": {
+    "skillId": 4030102,
+    "skillName": "ブラキウム・エクス・マキナ",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "敵全体に50%ダメージ。味方全体に3ターンの間ATKアップを付与。戦闘不能の場合、100%のHPで復活。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_suhail_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 3,
+        "prob": 100,
+        "effectTarget": 3
+      },
+      {
+        "skillEffectId": 260,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "4030103": {
+    "skillId": 4030103,
+    "skillName": "ブラキウム・エクス・マキナ+",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "敵全体に100%ダメージ。味方全体に3ターンの間ATKアップを付与。戦闘不能の場合、100%のHPで復活。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_suhail_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 3,
+        "prob": 100,
+        "effectTarget": 3
+      },
+      {
+        "skillEffectId": 260,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
   "4032101": {
     "skillId": 4032101,
     "skillName": "マネー・イズ・タイム",
@@ -9826,6 +9926,31 @@
       }
     ]
   },
+  "4041107": {
+    "skillId": 4041107,
+    "skillName": "スラッシュ！",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villain_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
   "4046101": {
     "skillId": 4046101,
     "skillName": "爪",
@@ -10115,6 +10240,24 @@
     "effects": [
       {
         "skillEffectId": 255,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "6000003": {
+    "skillId": 6000003,
+    "skillName": "ダメージ制限10000",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "相手から受けるダメージの上限を10000にする。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 262,
         "prob": 100,
         "effectTarget": 0
       }
