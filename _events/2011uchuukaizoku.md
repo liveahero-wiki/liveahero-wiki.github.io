@@ -32,7 +32,7 @@ Here is a list of Limited time Missions:
 | 4  | Use 1 Light attuned hero in challenge quest rank A (support unit included)      | 10000 {% include item-icon.html id=35 %}      |
 | 5  | Use 1 dark attuned hero in challenge quest rank A (support unit included)        | 10000 {% include item-icon.html id=35 %}     |
 | 6  | Finish Challenge quest rank A within 5 turn               | 10000 {% include item-icon.html id=35 %}       |
-| 7  | Win a challenge quest with 15000 total damage             | 10000 {% include item-icon.html id=35 %}    |
+| 7  | Win a challenge quest with 15000 total damage in one skill once| 10000 {% include item-icon.html id=35 %}    |
 | 8  | Win a challenge quest at 7 turn or more               | 10000 {% include item-icon.html id=35 %}     |
 | 9  | Win a challenge quest while reaching 100000 view one time | 10000 {% include item-icon.html id=35 %}     |
 | 10 | Buy something from store                                  | 5000 {% include item-icon.html id=11 %} |
