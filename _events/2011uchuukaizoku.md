@@ -18,8 +18,28 @@ In order to defeat enemies that are resurrected many times, heroes with powerful
 
 ### Limited Time Mission
 
-A new high difficulity "S class" quest will be newly introduced. Complete all four quests will give you one {% include item-icon.html id=10 %} Ether Ticket.
+A new high difficulity "S class" quest will be newly introduced. 
 
 There are also time-limited Quest Missions and Training Missions during the event. Quest Missions will require you to clear Event Quests while satisfying specific conditions. Meanwhile Training Missions' requirements will be clearing specific sales or buying items from the shop during event's duration. Completion of all missions will give you one {% include item-icon.html id=29 %} Legendary Medal. 
+
+Here is a list of Limited time Missions:
+
+| No  | Description      | Rewards      |
+|----|-----------------------------------------------------------|----------------|
+| 1  | Use 1 water attuned hero in challenge quest rank A (support unit included)       | 10000 {% include item-icon.html id=35 %}    |
+| 2  | Use 1 Light attuned hero in challenge quest rank A (support unit included)      | 10000 {% include item-icon.html id=35 %}      |
+| 3  | Use 1 dark attuned hero in challenge quest rank A (support unit included)        | 10000 {% include item-icon.html id=35 %}     |
+| 4  | Finish Challenge quest rank A within 5 turn               | 10000 {% include item-icon.html id=35 %}       |
+| 5  | Win a challenge quest with 15000 total damage             | 10000 {% include item-icon.html id=35 %}    |
+| 6  | Buy something from store                                  | 5000 {% include item-icon.html id=11 %} |
+| 7  | Finish all 4 challenge quest                              | 1 {% include item-icon.html id=10 %}   |
+| 8  | Use Suhail to finish challenge quest rank A (support unit included)              | 10000 {% include item-icon.html id=35 %}    |
+| 9  | Use Gammei to finish challenge quest rank A (support unit included)              | 10000 {% include item-icon.html id=35 %}     |
+| 10 | Win a challenge quest at 7 turn or more               | 10000 {% include item-icon.html id=35 %}     |
+| 11 | Win a challenge quest while reaching 100000 view one time | 10000 {% include item-icon.html id=35 %}     |
+| 12 | Finish 3 {% include item-icon.html id=11 %} sales         | 5000 {% include item-icon.html id=11 %}  |
+| 13 | Finish 3 {% include item-icon.html id=35 %} Sales         | 5000 {% include item-icon.html id=11 %} |
+| 14 | Finish 3 {% include item-icon.html id=30 %} Sales         | 5000 {% include item-icon.html id=11 %} |
+| 15 | Finish All Limited mission                                | 1 {% include item-icon.html id=29 %} |
 
 {% include quest-group.html chapterId=406 %}
