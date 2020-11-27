@@ -26,20 +26,20 @@ Here is a list of Limited time Missions:
 
 | No  | Description      | Rewards      |
 |----|-----------------------------------------------------------|----------------|
-| 1  | Use 1 water attuned hero in challenge quest rank A (support unit included)       | 10000 {% include item-icon.html id=35 %}    |
-| 2  | Use 1 Light attuned hero in challenge quest rank A (support unit included)      | 10000 {% include item-icon.html id=35 %}      |
-| 3  | Use 1 dark attuned hero in challenge quest rank A (support unit included)        | 10000 {% include item-icon.html id=35 %}     |
-| 4  | Finish Challenge quest rank A within 5 turn               | 10000 {% include item-icon.html id=35 %}       |
-| 5  | Win a challenge quest with 15000 total damage             | 10000 {% include item-icon.html id=35 %}    |
-| 6  | Buy something from store                                  | 5000 {% include item-icon.html id=11 %} |
-| 7  | Finish all 4 challenge quest                              | 1 {% include item-icon.html id=10 %}   |
-| 8  | Use Suhail to finish challenge quest rank A (NPC or support unit included)          | 10000 {% include item-icon.html id=35 %}    |
-| 9  | Use Gammei to finish challenge quest rank A (NPC or support unit included)          | 10000 {% include item-icon.html id=35 %}     |
-| 10 | Win a challenge quest at 7 turn or more               | 10000 {% include item-icon.html id=35 %}     |
-| 11 | Win a challenge quest while reaching 100000 view one time | 10000 {% include item-icon.html id=35 %}     |
-| 12 | Finish 3 {% include item-icon.html id=11 %} sales         | 5000 {% include item-icon.html id=11 %}  |
-| 13 | Finish 3 {% include item-icon.html id=35 %} Sales         | 5000 {% include item-icon.html id=11 %} |
-| 14 | Finish 3 {% include item-icon.html id=30 %} Sales         | 5000 {% include item-icon.html id=11 %} |
+| 1  | Use Suhail to finish challenge quest rank A (NPC or support unit included)          | 10000 {% include item-icon.html id=35 %}    |
+| 2  | Use Gammei to finish challenge quest rank A (NPC or support unit included)          | 10000 {% include item-icon.html id=35 %}     |
+| 3  | Use 1 water attuned hero in challenge quest rank A (support unit included)       | 10000 {% include item-icon.html id=35 %}    |
+| 4  | Use 1 Light attuned hero in challenge quest rank A (support unit included)      | 10000 {% include item-icon.html id=35 %}      |
+| 5  | Use 1 dark attuned hero in challenge quest rank A (support unit included)        | 10000 {% include item-icon.html id=35 %}     |
+| 6  | Finish Challenge quest rank A within 5 turn               | 10000 {% include item-icon.html id=35 %}       |
+| 7  | Win a challenge quest with 15000 total damage             | 10000 {% include item-icon.html id=35 %}    |
+| 8  | Win a challenge quest at 7 turn or more               | 10000 {% include item-icon.html id=35 %}     |
+| 9  | Win a challenge quest while reaching 100000 view one time | 10000 {% include item-icon.html id=35 %}     |
+| 10 | Buy something from store                                  | 5000 {% include item-icon.html id=11 %} |
+| 11 | Finish 3 {% include item-icon.html id=11 %} sales         | 5000 {% include item-icon.html id=11 %}  |
+| 12 | Finish 3 {% include item-icon.html id=35 %} Sales         | 5000 {% include item-icon.html id=11 %} |
+| 13 | Finish 3 {% include item-icon.html id=30 %} Sales         | 5000 {% include item-icon.html id=11 %} |
+| 14 | Finish all 4 challenge quest                              | 1 {% include item-icon.html id=10 %}   |
 | 15 | Finish All Limited mission                                | 1 {% include item-icon.html id=29 %} |
 
 {% include quest-group.html chapterId=406 %}
