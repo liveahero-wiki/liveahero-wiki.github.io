@@ -20,6 +20,6 @@ In order to defeat enemies that are resurrected many times, heroes with powerful
 
 A new high difficulity "S class" quest will be newly introduced. Complete all four quests will give you one {% include item-icon.html id=10 %} Ether Ticket.
 
-There are also time-limited Quest Missions and Training Missions during the event. Quest Missions will require you to clear Event Quests while satisfying specific conditions. Meanwhile Training Missions' requirements will be clearing specific sales or buying items from the shop during event's duration. Completion of all missions will give you one {% include item-icon.html id=29 %} Legendary Medal.
+There are also time-limited Quest Missions and Training Missions during the event. Quest Missions will require you to clear Event Quests while satisfying specific conditions. Meanwhile Training Missions' requirements will be clearing specific sales or buying items from the shop during event's duration. Completion of all missions will give you one {% include item-icon.html id=29 %} Legendary Medal. 
 
 {% include quest-group.html chapterId=406 %}
