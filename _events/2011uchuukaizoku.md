@@ -35,10 +35,10 @@ Here is a list of Limited time Missions:
 | 7  | Win a challenge quest with 15000 total damage in one skill once| 10000 {% include item-icon.html id=35 %}    |
 | 8  | Win a challenge quest at 7 turn or more               | 10000 {% include item-icon.html id=35 %}     |
 | 9  | Win a challenge quest while reaching 100000 view one time | 10000 {% include item-icon.html id=35 %}     |
-| 10 | Buy something from store                                  | 5000 {% include item-icon.html id=11 %} |
-| 11 | Finish 3 {% include item-icon.html id=11 %} sales         | 5000 {% include item-icon.html id=11 %}  |
-| 12 | Finish 3 {% include item-icon.html id=35 %} sales         | 5000 {% include item-icon.html id=11 %} |
-| 13 | Finish 3 {% include item-icon.html id=30 %} sales         | 5000 {% include item-icon.html id=11 %} |
+| 10 | Finish 3 {% include item-icon.html id=11 %} sales         | 5000 {% include item-icon.html id=11 %}  |
+| 11 | Finish 3 {% include item-icon.html id=35 %} sales         | 5000 {% include item-icon.html id=11 %} |
+| 12 | Finish 3 {% include item-icon.html id=30 %} sales         | 5000 {% include item-icon.html id=11 %} |
+| 13 | Buy something from store                                  | 5000 {% include item-icon.html id=11 %} |
 | 14 | Finish all 4 challenge quest                              | 1 {% include item-icon.html id=10 %}   |
 | 15 | Finish all limited mission                                | 1 {% include item-icon.html id=29 %} |
 
