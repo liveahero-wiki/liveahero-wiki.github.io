@@ -29,6 +29,8 @@ Daily missions will only reset after the daily rotation, which is scheduled to h
 
 Limited-time missions are special missions that is only avaiable during a specific period of time. They are usually tied behind an ongoing event, in which the mission will no longer be available to clear after the time duration has ended.
 
+> To see a list of limited-time missions during an event, head over to the event page listed in [Events](/events/) or [Homepage](/).
+
 ### Standard Mission
 
 Standard missions are permanent missions that can be cleared at any point of time. They can only be cleared once and their progress will not reset.
