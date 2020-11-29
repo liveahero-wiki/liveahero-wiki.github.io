@@ -1,0 +1,20 @@
+---
+title: Basic Stats Hero Ranking
+banner: true
+---
+
+<p>For simplicity sake, only 5 star heroes are ranked here.</p>
+
+{% assign cardInfos = site.data.CardMaster | where: "rarity", 5 %}
+
+<table class="sort-table">
+<tr><th data-type="string">Hero</th><th>HP</th><th>ATK</th><th>View</th><th>Speed</th></tr>
+{% for c in cardInfos %}
+{% assign page = c.resourceName | resourceNameToPage %}
+{% assign g = c.growths[3] %}
+<tr>
+<td><a class="item" href="{{ page.url }}"><img src="/cdn/Sprite/icon_{{ c.resourceName }}_h02.png" loading="lazy"> {{ page.title }}</a></td>
+<td>{{ g.hp }}</td><td>{{ g.attack }}</td><td>{{ g.addView }}</td><td>{{ g.agility }}</td>
+</tr>
+{% endfor %}
+</table>
