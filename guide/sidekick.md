@@ -14,6 +14,8 @@ During the battle, the sidekick's parameter will be added up along with the hero
 
 Sidekick's parameter will increase when the relation level with the hero increases.
 
+> Tips: See [Sidekick Skill List](/misc/sidekick_skill/) for all sidekick skills in one page.
+
 ### Sidekick Level table
 
 |Level|Required EXP|Cumulative|
