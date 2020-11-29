@@ -16,7 +16,28 @@ Sidekick's parameter will increase when the relation level with the hero increas
 
 ### Sidekick Level table
 
-{% include sidekick-xp-table.html %}
+|Level|Required EXP|Cumulative|
+|-|-|-|
+| 90 -> 100 | 25180 | 95188 |
+| 80 -> 90 | 20248 | 70008 |
+| 70 -> 80 | 12742 | 49760 |
+| 60 -> 70 | 12017 | 33902 |
+| 50 -> 60 | 8719 | 21885 |
+| 1 -> 50 | 13166 | 13166 |
+
+See full EXP table [^bigtable].
+
+[^bigtable]:
+    <table>
+    <tr>
+      <th>Level</th><th>XP to lv up</th><th>Total XP</th>
+    </tr>
+    {% for pair in site.data.SidekickCardExpMaster %}
+    <tr>
+      <td>{{ pair[1].level }}</td><td>{{ pair[1].nextExp }}</td><td>{{ pair[1].totalExp }}</td>
+    </tr>
+    {% endfor %}
+    </table>
 
 ## Sidekick Limit Breakthrough
 

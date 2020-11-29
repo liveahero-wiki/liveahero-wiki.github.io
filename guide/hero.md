@@ -60,7 +60,26 @@ When the hero gains a level, their parameters will increase, excluding their SPD
 
 ### Hero Level Table
 
-{% include hero-xp-table.html %}
+|Level|Required EXP|Cumulative|
+|-|-|-|
+| 50 -> 60 | 648591 | 896684 |
+| 40 -> 50 | 189023 | 248093 |
+| 30 -> 40 | 47256 | 59070 |
+| 1 -> 30 | 11814 | 11814 |
+
+See full EXP table [^bigtable].
+
+[^bigtable]:
+    <table>
+    <tr>
+      <th>Level</th><th>XP to lv up</th><th>Total XP</th>
+    </tr>
+    {% for pair in site.data.HeroCardExpMaster %}
+    <tr>
+      <td>{{ pair[1].level }}</td><td>{{ pair[1].nextExp }}</td><td>{{ pair[1].totalExp }}</td>
+    </tr>
+    {% endfor %}
+    </table>
 
 ## Hero Rank
 
