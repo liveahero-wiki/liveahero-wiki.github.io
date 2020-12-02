@@ -1078,6 +1078,142 @@
     "hasBattle": true,
     "hasStockBattle": false
   },
+  "102007": {
+    "questId": 102007,
+    "questName": "宇宙海賊",
+    "subName": "第７話",
+    "questKind": 1,
+    "chapterId": 102,
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": "2020-12-02 18:00:00",
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 7,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 102006
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false
+  },
+  "102008": {
+    "questId": 102008,
+    "questName": "不可視",
+    "subName": "第８話",
+    "questKind": 1,
+    "chapterId": 102,
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": "2020-12-02 18:00:00",
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 8,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 102007
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false
+  },
+  "102009": {
+    "questId": 102009,
+    "questName": "タイムリミット",
+    "subName": "第９話",
+    "questKind": 1,
+    "chapterId": 102,
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": "2020-12-02 18:00:00",
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 9,
+    "enemyLevel": 15,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 35,
+        "objectValue": 250,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 7
+      },
+      {
+        "class": "QuestClear",
+        "questId": 102008
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
   "201001": {
     "questId": 201001,
     "questName": "力を求めて",
