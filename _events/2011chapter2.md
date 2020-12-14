@@ -18,7 +18,7 @@ More episodes will be released at the following schedule (subject to changes).
 | 2020/11/25 | 4~6 |
 | 2020/12/2 | 7~9 |
 | 2020/12/9 | 10~11 |
-| 2020/12/14 | 12~Final |
+| ~~2020/12/14~~ 2020/12/16 | 12~Final |
 
 In commemoration of the new chapter release, a limited time gacha summon is also released which include {% chara_link Gammei %} (Hero and Sidekick), {% chara_link Suhail %} (Hero and Sidekick) and {% chara_link Mokdai %} (Hero and Sidekick).
 
