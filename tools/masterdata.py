@@ -56,7 +56,7 @@ def downloadProperties(masterVersion, filename):
     f.write(data.encode())
 
 def dumpJson(filename, obj, **kwargs):
-  with open(filename, "w", encoding="utf-8") as f:
+  with open(filename, "w", encoding="utf-8", newline='\n') as f:
     json.dump(obj, f, ensure_ascii=False, indent="", **kwargs)
 
 def processPropertiesFile(raw_file, bio_file, serif_file):
