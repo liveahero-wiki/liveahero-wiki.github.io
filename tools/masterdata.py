@@ -98,6 +98,9 @@ if __name__ == '__main__':
     'CardMaster',
     'ShopMaster',
     'QuestMaster',
+    'HeroCardExpMaster',
+    'SidekickCardExpMaster',
+    'UserRankMaster',
   ]
   for m in masterDataList:
     downloadMasterdata(mV, m)
