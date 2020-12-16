@@ -62,7 +62,7 @@ When the hero gains a level, their parameters will increase, excluding their SPD
 
 |Level|Required EXP|Cumulative|
 |-|-|-|
-| 50 -> 60 | 648591 | 896684 |
+| 50 -> 60 | 1014310 | 1262403 |
 | 40 -> 50 | 189023 | 248093 |
 | 30 -> 40 | 47256 | 59070 |
 | 1 -> 30 | 11814 | 11814 |
