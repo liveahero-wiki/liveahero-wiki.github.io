@@ -54,4 +54,4 @@ TRAINED = "This body, move...!"
 
 ## Notes
 
-- He refers to {% chara_link Subaru %}'s eating habit in his hero line
+- He refers to {% chara_link Subaru %} in his hero line
