@@ -430,6 +430,15 @@
     "description": "謎を探して見つけた手がかり。交換所でアイテムと交換してもらえる。",
     "effect": []
   },
+  "50": {
+    "itemId": 50,
+    "itemName": "クリスマスオーナメント",
+    "resourceName": "Xmas2012_exchange",
+    "rarity": 3,
+    "itemType": 512,
+    "description": "クリスマスを祝う飾り。交換所でアイテムと交換してもらえる。",
+    "effect": []
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -507,6 +516,26 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 5
+      }
+    ]
+  },
+  "110042": {
+    "itemId": 110042,
+    "itemName": "酔虎のライキの記憶片",
+    "resourceName": "piece_ryekieXmas2012",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "酔虎のライキのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10042
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
       }
     ]
   },
@@ -954,19 +983,19 @@
     "itemId": 110271,
     "itemName": "スバルの記憶片",
     "resourceName": "piece_subaru",
-    "rarity": 3,
+    "rarity": 4,
     "itemType": 1024,
     "description": "スバルのファン数を増やすことが出来る不思議な結晶。",
     "effect": [
       {
         "class": "HeroPieceItemEffect",
-        "addFan": 10,
+        "addFan": 50,
         "rarity": 0,
         "stockId": 10271
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
-        "exchangeValue": 1
+        "exchangeValue": 5
       }
     ]
   },
@@ -1083,6 +1112,26 @@
         "addFan": 200,
         "rarity": 0,
         "stockId": 10331
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ]
+  },
+  "110511": {
+    "itemId": 110511,
+    "itemName": "ネッセンの記憶片",
+    "resourceName": "piece_nessen",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "ネッセンのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10511
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
@@ -1771,6 +1820,25 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 5
+      }
+    ]
+  },
+  "210511": {
+    "itemId": 210511,
+    "itemName": "ネッセンの心",
+    "resourceName": "heart_nessen",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "ネッセンのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 10511
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
       }
     ]
   },

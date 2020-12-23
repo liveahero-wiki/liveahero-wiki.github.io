@@ -1323,7 +1323,7 @@
       "statusId": 17,
       "canDispel": true,
       "parameter": false,
-      "description": "困惑",
+      "description": "過消費",
       "isImmediate": false,
       "persistence": false,
       "canDuplicate": false
@@ -5983,6 +5983,123 @@
       "isImmediate": false,
       "persistence": true,
       "canDuplicate": true
+    }
+  },
+  "263": {
+    "skillEffectId": 263,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ElementPenetrateDamage",
+          "parameter": {
+            "value": 150,
+            "element": true
+          }
+        }
+      ],
+      "trigger": "[]",
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "150%ダメージの有利属性攻撃",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false
+    }
+  },
+  "264": {
+    "skillEffectId": 264,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeSkillProve",
+          "parameter": {
+            "value": -20
+          }
+        }
+      ],
+      "filename": "status_unlucky",
+      "statusId": 16,
+      "canDispel": true,
+      "parameter": false,
+      "description": "不幸",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true
+    }
+  },
+  "265": {
+    "skillEffectId": 265,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeSkillProve",
+          "parameter": {
+            "value": -20
+          }
+        }
+      ],
+      "filename": "status_unlucky",
+      "statusId": 16,
+      "canDispel": true,
+      "parameter": false,
+      "description": "不幸",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true
+    }
+  },
+  "266": {
+    "skillEffectId": 266,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewChange",
+          "parameter": {
+            "value": 200
+          }
+        }
+      ],
+      "filename": "status_useless",
+      "statusId": 17,
+      "canDispel": true,
+      "parameter": false,
+      "description": "過消費",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false
+    }
+  },
+  "267": {
+    "skillEffectId": 267,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Damage",
+          "parameter": {
+            "value": 160
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "160%ダメージ",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false
     }
   }
 }

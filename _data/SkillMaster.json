@@ -587,6 +587,126 @@
       }
     ]
   },
+  "1004201": {
+    "skillId": 1004201,
+    "skillName": "エレクトロ・スラッシュ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。50%の確率で1ターンの間SPDダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_ryekieXmas2012_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 50,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1004202": {
+    "skillId": 1004202,
+    "skillName": "ディスチャージ・バンケット",
+    "useView": 2500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_spdUpTeam",
+    "timing": 0,
+    "description": "味方単体に1ターンの間ATKアップを付与 & SPDアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_ryekieXmas2012_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "1004203": {
+    "skillId": 1004203,
+    "skillName": "ギガボルト・ブレイカー",
+    "useView": 14000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_cureAll",
+    "timing": 0,
+    "description": "敵全体に90%ダメージ。味方全体のデバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_ryekieXmas2012_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "1004204": {
+    "skillId": 1004204,
+    "skillName": "ギガボルト・ブレイカー+",
+    "useView": 11000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_cureAll",
+    "timing": 0,
+    "description": "敵全体に90%ダメージ。味方全体のデバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_ryekieXmas2012_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
   "1005101": {
     "skillId": 1005101,
     "skillName": "マシン・クラック",
@@ -2642,6 +2762,126 @@
       }
     ]
   },
+  "1027101": {
+    "skillId": 1027101,
+    "skillName": "運は貴方を見放した",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。40%の確率で1ターンの間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_subaru_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 40,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1027102": {
+    "skillId": 1027102,
+    "skillName": "この世は常に盛者必衰",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffAll",
+    "timing": 0,
+    "description": "敵全体に50%ダメージ。50%の確率で1ターンの間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_subaru_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 50,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "1027103": {
+    "skillId": 1027103,
+    "skillName": "人界撰述",
+    "useView": 16000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に150%ダメージ。2ターンの間過消費を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_subaru_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 11,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 58,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1027104": {
+    "skillId": 1027104,
+    "skillName": "運は貴方を見放した+",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。1ターンの間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_subaru_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
   "1028101": {
     "skillId": 1028101,
     "skillName": "メレンゲ・メイキング",
@@ -3194,6 +3434,126 @@
         "skillEffectId": 251,
         "prob": 100,
         "effectTarget": 3
+      }
+    ]
+  },
+  "1051101": {
+    "skillId": 1051101,
+    "skillName": "源泉流刃",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_cureOwn",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。自身のデバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_nessen_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1051102": {
+    "skillId": 1051102,
+    "skillName": "超加温閃",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に100%ダメージ。1ターンの間DEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_nessen_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1051103": {
+    "skillId": 1051103,
+    "skillName": "極楽湯流斬",
+    "useView": 10000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に160%ダメージ。自身に1ターンの間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_nessen_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 267,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1051104": {
+    "skillId": 1051104,
+    "skillName": "極楽湯流斬+",
+    "useView": 10000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に180%ダメージ。自身に1ターンの間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_nessen_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 21,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 0
       }
     ]
   },
@@ -5121,6 +5481,96 @@
       }
     ]
   },
+  "2027101": {
+    "skillId": 2027101,
+    "skillName": "戦意喪失の流れ",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。40%の確率で2ターンの間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_subaru_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 16,
+        "prob": 40,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2027102": {
+    "skillId": 2027102,
+    "skillName": "戦意喪失の流れ+",
+    "useView": 2500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。40%の確率で2ターンの間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_subaru_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 16,
+        "prob": 40,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2027103": {
+    "skillId": 2027103,
+    "skillName": "戦意喪失の流れ++",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。40%の確率で2ターンの間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_subaru_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 16,
+        "prob": 40,
+        "effectTarget": 2
+      }
+    ]
+  },
   "2028101": {
     "skillId": 2028101,
     "skillName": "ひと摘みの隠し味",
@@ -5643,6 +6093,96 @@
         "skillEffectId": 88,
         "prob": 100,
         "effectTarget": 1
+      }
+    ]
+  },
+  "2051101": {
+    "skillId": 2051101,
+    "skillName": "掛け湯斬り",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_cureOwn",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。自身のデバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_nessen_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2051102": {
+    "skillId": 2051102,
+    "skillName": "掛け湯斬り+",
+    "useView": 2500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_cureOwn",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。自身のデバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_nessen_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2051103": {
+    "skillId": 2051103,
+    "skillName": "掛け湯斬り++",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_cureOwn",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。自身のデバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_nessen_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 0
       }
     ]
   },
@@ -8280,6 +8820,114 @@
       }
     ]
   },
+  "3027101": {
+    "skillId": 3027101,
+    "skillName": "行動書き換えⅠ",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "icon_subaru_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、敵単体に5%の確率で1ターンの間ATKダウンを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 5,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "3027102": {
+    "skillId": 3027102,
+    "skillName": "行動書き換えⅡ",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "icon_subaru_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、敵単体に6%の確率で1ターンの間ATKダウンを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 6,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "3027103": {
+    "skillId": 3027103,
+    "skillName": "行動書き換えⅢ",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "icon_subaru_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、敵単体に7%の確率で1ターンの間ATKダウンを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 7,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "3027104": {
+    "skillId": 3027104,
+    "skillName": "行動書き換えⅣ",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "icon_subaru_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、敵単体に8%の確率で1ターンの間ATKダウンを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 8,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "3027105": {
+    "skillId": 3027105,
+    "skillName": "行動書き換えⅤ",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "icon_subaru_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、敵単体に9%の確率で1ターンの間ATKダウンを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 9,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "3027106": {
+    "skillId": 3027106,
+    "skillName": "行動書き換えⅥ",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "icon_subaru_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、敵単体に10%の確率で1ターンの間ATKダウンを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 10,
+        "effectTarget": 2
+      }
+    ]
+  },
   "3028101": {
     "skillId": 3028101,
     "skillName": "師匠譲りのド根性Ⅰ",
@@ -8924,6 +9572,114 @@
       {
         "skillEffectId": 131,
         "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3051101": {
+    "skillId": 3051101,
+    "skillName": "温浴の恵みⅠ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_nessen_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、25%の確率でデバフを１つ解除。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 25,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3051102": {
+    "skillId": 3051102,
+    "skillName": "温浴の恵みⅡ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_nessen_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、30%の確率でデバフを１つ解除。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 30,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3051103": {
+    "skillId": 3051103,
+    "skillName": "温浴の恵みⅢ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_nessen_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、35%の確率でデバフを１つ解除。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 35,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3051104": {
+    "skillId": 3051104,
+    "skillName": "温浴の恵みⅣ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_nessen_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、40%の確率でデバフを１つ解除。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 40,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3051105": {
+    "skillId": 3051105,
+    "skillName": "温浴の恵みⅤ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_nessen_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、45%の確率でデバフを１つ解除。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 45,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3051106": {
+    "skillId": 3051106,
+    "skillName": "温浴の恵みⅥ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_nessen_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、50%の確率でデバフを１つ解除。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 50,
         "effectTarget": 0
       }
     ]
@@ -10184,6 +10940,121 @@
     "effects": [
       {
         "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "4052101": {
+    "skillId": 4052101,
+    "skillName": "叩き付け",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。Viewを3000獲得。1ターンの間SPDアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuXmas2012_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 24,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "4052102": {
+    "skillId": 4052102,
+    "skillName": "横薙ぎ",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffAll",
+    "timing": 0,
+    "description": "敵全体に100%ダメージ。1ターンの間DEFダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuXmas2012_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "4052103": {
+    "skillId": 4052103,
+    "skillName": "エネルギー射出",
+    "useView": 8000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に120%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuXmas2012_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "4052104": {
+    "skillId": 4052104,
+    "skillName": "エネルギー射出+",
+    "useView": 8000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に180%ダメージ+Viewに応じてダメージ量が上昇。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuXmas2012_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 214,
         "prob": 100,
         "effectTarget": 4
       }
