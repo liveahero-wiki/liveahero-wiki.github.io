@@ -48,3 +48,4 @@ TRAINED = "Guh...my head is still ringing..."
 
 ## Notes
 
+- He refers to {% chara_link Subaru %} in his hero line
