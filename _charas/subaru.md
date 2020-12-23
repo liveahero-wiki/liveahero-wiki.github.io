@@ -26,6 +26,17 @@ He tends to dislike unnecessary outings and situations where he is disturbed by 
 {% include sidekick-infobox.html stockId=10271 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="subaru"
+h_gachaResult = "Nobeyama Subaru, more or less a writer.<br>Please don't call me too often.<br>I'm better suited and prefer to create my story alone in a quiet place."
+s_gachaResult = "I am Nobeyama Subaru, a writer, in some sense.<br>Sidekick's Job?<br>Well alright…<br>Sometimes I need alone time to concentrate on my writing, okay?"
+APPRECIATION = "Are you working to ruin your body?<br>In my opinion, whether a good creation, or a good job being done,<br>the first prerequisite is a sound mind and body."
+DAILY = "Please don't come late after calling me.<br>…Well, I have just finished this batch of writing.<br>I can help with your work while I search for additional material."
+HERO = "An alien and japanese samurai armor…a strange combination.<br>The way he handle a sword and also his conduct is different than a samurai…but,<br>that harshness is certainly a samurai's trait."
+PLAYER = "I cannot say anything in regards to your work.<br>After all we are of a different profession…but,<br>I think that the way you give your all at it, is a beautiful sight to behold."
+RELATION = "I have known Kyouichi since elementary school but,<br>if he's going to pick up teaching, he should at least act a little bit more cultured.<br>Since back then, he has always been someone who is only good at sports."
+TOUCH = "N...w-why are you touching me.<br>Is it because you find it funny, this old fashioned clothes , or because of my figure...<br>E, this is fine? A-alright…"
+TRAIN = "Training is not in my nature, but there are some things I want to try."
+TRAINED = "I-i think that's enough... can I go home?"
+
 %}
 
 ## Notes
