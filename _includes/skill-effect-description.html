@@ -92,6 +92,8 @@ Gain {{ effect.parameter.value }}% extra XP
 Apply Damage Aggregation status to {{ target }}: <abbr title="Does not include single target attack">{{ target }} takes full damage of all-ranged attack done to their team</abbr>
 {% when "DamageLimit" %}
 Enemy hits cannot deal over {{ effect.parameter.value }} damage to {{ target }}
+{% when "Ressurection" %}
+Resurrect {{ target }} to {{ effect.parameter.value }}% HP
 {% else %}
 Unknown effect class ({{ effect.class }})
 {% endcase %}
