@@ -11,10 +11,10 @@ After putting on a pure white mantle and utilizing the power of lightning, he tr
 {% endcapture %}
 {% include hero-infobox.html stockId=10041 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% capture BIO_H01V %}
+{% capture BIO_H01 %}
 He should have been resting due to an injury, but he was temporarily revived as a new hero, triggered by a certain thought and an event/incident. He is in a drunken state due to the fact that he is hypersensitive to a certain plant that gives ecstasy to certain species. However, it can be said that this appearance was obtained due to being drunk as a result of the emotions that had been accumulated, exploding and accelerating the feelings toward "a certain wish". The injured part of his body seems to be reinforced/strengthened firmly.
 {% endcapture %}
-{% include hero-infobox.html stockId=10042 BIO_H01V=BIO_H01V %}
+{% include hero-infobox.html stockId=10042 BIO_H01=BIO_H01 %}
 
 {% capture BIO_S01 %}
 The strongest sales employee in the company where the Protagonist works at; he's a superhero who takes pride in his top-class achievements all around the world.
