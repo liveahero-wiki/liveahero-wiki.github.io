@@ -27,6 +27,12 @@ sprites="fg_kaibutsuAdultFireBarrier_h01"
 sprites="fg_kaibutsuLarvaEarth_h01,fg_kaibutsuLarvaFire_h01,fg_kaibutsuLarvaLight_h01,fg_kaibutsuLarvaShadow_h01,fg_kaibutsuLarvaWater_h01"
 %}
 
+### Kaibutsu (xmas)
+
+{% include hero-infobox-unreleased.html name="Kaibutsu (xmas)" mob=true
+sprites="fg_kaibutsuXmas2012_h01"
+%}
+
 ### Villain (hero)
 
 {% include hero-infobox-unreleased.html name="Villain (hero)" mob=true

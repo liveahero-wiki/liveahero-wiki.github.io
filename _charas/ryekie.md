@@ -11,6 +11,8 @@ After putting on a pure white mantle and utilizing the power of lightning, he tr
 {% endcapture %}
 {% include hero-infobox.html stockId=10041 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
+{% include hero-infobox.html stockId=10042 %}
+
 {% capture BIO_S01 %}
 The strongest sales employee in the company where the Protagonist works at; he's a superhero who takes pride in his top-class achievements all around the world.
 
@@ -20,7 +22,7 @@ He is a hot-blooded man fully aware and confident in his role as a hero, and bec
 
 His voice is always loud.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10041 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10041 BIO_S01=BIO_S01 extra_sprites="fg_ADV_ryekie_s01" %}
 
 {% include voice-table.html resourceName="ryekie"
 h_gachaResult = "My name’s Ryekie! And my other name is…<br>Zap the Justice!!<br>Now then, let us begin the legend of the hero of absolute justice!!!!"
@@ -46,6 +48,9 @@ TOUCH = "Oh?! Do you want a hug, Partner? Then.... JUSTICE HUUUUG!! Haha, how wa
 RELATION = "Huckle has always been my dearest friend! Back when he was a hero, no, even now, he's always lived up to the faith I had in him! That's why he's the man I look up to!"
 TRAIN = "I'll go easy on you. Let's go!"
 TRAINED = "G-GHNN! It's hard to make me groan!..."
+%}
+
+{% include voice-table.html resourceName="ryekieXmas2012"
 %}
 
 ## Notes
