@@ -56,7 +56,16 @@ module Jekyll
   end
 
   module CharaFilter
+    @@temp_fix = {
+      "ryekieXmas2012" => "ryekie"
+    }
+
     def resourceNameToPage(resourceName)
+      # temp fix until we have more data
+      if @@temp_fix.has_key?(resourceName)
+        return CharaMap.resourceName_to_pages[@@temp_fix[resourceName]]
+      end
+
       CharaMap.resourceName_to_pages[resourceName]
     end
   end

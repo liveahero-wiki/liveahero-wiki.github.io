@@ -78,6 +78,15 @@ def processPropertiesFile(raw_file, bio_file, serif_file):
     dumpJson(os.path.join("_data", "processed", bio_file), detail)
     dumpJson(os.path.join("_data", "processed", serif_file), serif)
 
+def processShopFile():
+  with open(os.path.join("_data", "ShopMaster.json"), "r", encoding="utf-8") as f:
+    obj = json.load(f)
+
+  stores = obj["stores"]
+
+  for id in stores:
+    dumpJson(os.path.join("_data", "stores", id + ".json"), stores[id])
+
 if __name__ == '__main__':
   appV, mV = getVersion()
 
@@ -104,6 +113,8 @@ if __name__ == '__main__':
   ]
   for m in masterDataList:
     downloadMasterdata(mV, m)
+
+  processShopFile()
 
   downloadProperties(mV, "Japanese.properties")
   processPropertiesFile("Japanese.properties", "jp_bio.json", "jp_serif.json")
