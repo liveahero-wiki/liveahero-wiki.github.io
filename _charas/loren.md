@@ -1,5 +1,6 @@
 ---
 title: Loren
+characterId: 21
 occupation: "Nurse (看護師)"
 ---
 

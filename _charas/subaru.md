@@ -1,5 +1,6 @@
 ---
 title: Subaru
+characterId: 27
 ---
 
 {% capture BIO_H01 %}

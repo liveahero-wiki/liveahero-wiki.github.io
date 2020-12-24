@@ -1,5 +1,6 @@
 ---
 title: Polaris Mask
+characterId: 15
 occupation: "Professional Wrestler (プロレスラー)"
 permalink: /charas/polaris_mask/
 ---

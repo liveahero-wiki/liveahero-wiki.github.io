@@ -1,5 +1,6 @@
 ---
 title: Mokdai
+characterId: 2
 occupation: "Video Production Staff"
 Affiliation Office: "Parallel Flight"
 ---

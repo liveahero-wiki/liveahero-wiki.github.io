@@ -1,5 +1,6 @@
 ---
 title: Sui
+characterId: 3
 occupation: "Fashion Designer (服飾デザイナー)"
 ---
 

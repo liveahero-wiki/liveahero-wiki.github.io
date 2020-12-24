@@ -1,5 +1,6 @@
 ---
 title: Kouki & Sirius
+characterId: 18
 occupation: "Child actor - Entertainer & Dog entertainer"
 permalink: /charas/kouki_and_sirius/
 ---

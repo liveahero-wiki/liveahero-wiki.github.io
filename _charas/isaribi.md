@@ -1,5 +1,6 @@
 ---
 title: Isaribi
+characterId: 22
 occupation: "Fisherman"
 ---
 

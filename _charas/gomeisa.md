@@ -1,5 +1,6 @@
 ---
 title: Gomeisa
+characterId: 33
 ---
 
 {% capture BIO_H01 %}

@@ -1,5 +1,6 @@
 ---
 title: Gammei
+characterId: 6
 ---
 
 {% capture BIO_H01 %}

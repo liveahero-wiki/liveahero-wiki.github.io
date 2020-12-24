@@ -1,5 +1,6 @@
 ---
 title: Akashi
+characterId: 1
 occupation: "University Student (Part-timer)"
 Affiliation Office: "Parallel Flight"
 ---

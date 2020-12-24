@@ -1,5 +1,6 @@
 ---
 title: Kyoichi
+characterId: 10
 occupation: "Elementary School Teacher (小学校教諭)"
 ---
 

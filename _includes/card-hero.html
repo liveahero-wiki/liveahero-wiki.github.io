@@ -1,5 +1,5 @@
 {% assign c = include.card %}
-{% assign page = c.resourceName | resourceNameToPage %}
+{% assign page = c.characterId | characterIdToPage %}
 <li data-id="{{ c.stockId }}" data-rarity="{{ c.rarity }}" data-element="{{ c.element }}" data-name="{{ page.title }}">
 <div class="hero-icon {{ include.class }}">
   <div class="chara-border hero-{{ c.rarity }}"></div>

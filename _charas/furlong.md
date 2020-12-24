@@ -1,5 +1,6 @@
 ---
 title: Furlong
+characterId: 8
 occupation: "Firefighter"
 ---
 

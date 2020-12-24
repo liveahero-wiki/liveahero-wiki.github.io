@@ -1,5 +1,6 @@
 ---
 title: Toshu
+characterId: 13
 occupation: "Kendo Artist (剣道家)"
 ---
 

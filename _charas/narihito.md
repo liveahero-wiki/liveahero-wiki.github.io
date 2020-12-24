@@ -1,5 +1,6 @@
 ---
 title: Narihito
+characterId: 29
 occupation: "Reporter (取材記者)"
 ---
 

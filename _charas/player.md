@@ -1,5 +1,6 @@
 ---
 title: Player
+characterId: 999
 occupation: "Hero operator"
 ---
 

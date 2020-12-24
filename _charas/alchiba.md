@@ -1,5 +1,6 @@
 ---
 title: Alchiba
+characterId: 26
 occupation: "Private Investigator"
 ---
 

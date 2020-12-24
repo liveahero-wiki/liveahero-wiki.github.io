@@ -1,5 +1,6 @@
 ---
 title: Shoen
+characterId: 12
 occupation: "Calligrapher (書道家)"
 ---
 

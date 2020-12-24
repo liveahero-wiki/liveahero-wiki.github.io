@@ -10,7 +10,7 @@ banner: true
 <table class="sort-table">
 <tr><th data-type="string">Hero</th><th>SPD</th><th data-type="string">Active</th><th>Active VP</th><th data-type="string">Passive</th></tr>
 {% for c in cardInfos %}
-{% assign page = c.resourceName | resourceNameToPage %}
+{% assign page = c.characterId | characterIdToPage %}
 {% assign g = c.growths[0] %}
 <tr>
 <td><a class="item" href="{{ page.url }}/#s{{ c.stockId }}-stats"><img src="/cdn/Sprite/icon_{{ c.resourceName }}_s01.png" loading="lazy"> {{ page.title }}</a></td>

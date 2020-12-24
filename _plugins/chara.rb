@@ -9,20 +9,23 @@ module Jekyll
       @@name_to_pages
     end
 
-    def self.resourceName_to_pages
-      @@resourceName_to_pages
+    def self.characterId_to_pages
+      @@characterId_to_pages
     end
 
     def self.generate(site)
       @@name_to_pages = {}
-      @@resourceName_to_pages = {}
+      @@characterId_to_pages = {}
       puts "Initializing chara page map"
 
       site.collections["charas"].docs.each do |chara|
         name = chara.data["title"]
-        resourceName = path_to_resourceName(chara.path)
         @@name_to_pages[name] = chara
-        @@resourceName_to_pages[resourceName] = chara
+
+        if !chara.data["unreleased"]
+          characterId = chara.data["characterId"]
+          @@characterId_to_pages[characterId] = chara
+        end
       end
     end
 
@@ -33,6 +36,14 @@ module Jekyll
   end
 
   class CharaLinkTag < Liquid::Tag
+
+    def self.sidekick_master(context)
+      @@sidekick_master ||= context.registers[:site].data["SidekickMaster"]
+    end
+
+    def self.card_master(context)
+      @@card_master ||= context.registers[:site].data["CardMaster"]
+    end
   
     def initialize(tag_name, input, tokens)
       super
@@ -40,33 +51,48 @@ module Jekyll
     end
 
     def render(context)
-      page = CharaMap.name_to_pages[@input.strip]
-      if page
-        resourceName = CharaMap.path_to_resourceName(page.path)
 
-        if page.data["unreleased"]
-          "<a href=\"#{page.url}\"><span class=\"item\"><img src=\"/cdn/Sprite/icon_unknown_card.png\" loading=\"lazy\"></span> #{page.data["title"]}</a>"
-        else
-          "<a href=\"#{page.url}\"><span class=\"item\"><img src=\"/cdn/Sprite/icon_#{resourceName}_s01.png\" loading=\"lazy\"></span> #{page.data["title"]}</a>"
-        end
-      else
-        @input
+      tokens = @input.strip.split("|")
+      title = tokens[0]
+
+      page = CharaMap.name_to_pages[title]
+      if !page
+        return @input
       end
+
+      if page.data["unreleased"]
+        return "<a href=\"#{page.url}\"><span class=\"item\"><img src=\"/cdn/Sprite/icon_unknown_card.png\" loading=\"lazy\"></span> #{title}</a>"
+      end
+
+      if tokens.length == 2
+        suffix = tokens[1]
+      else
+        suffix = "s1"
+      end
+
+      variant = suffix[1].to_i
+      characterId = page.data["characterId"]
+      stockId = (1000 + characterId) * 10 + variant
+      cardId = stockId * 10 + 1
+      
+      if suffix[0] == "h"
+        resourceName = CharaLinkTag.card_master(context).dig(cardId.to_s, "resourceName")
+      else
+        resourceName = CharaLinkTag.sidekick_master(context).dig(cardId.to_s, "resourceName")
+      end
+
+      if variant > 1
+        title = page.data.dig(suffix, "title") || title
+      end
+
+      "<a href=\"#{page.url}/##{suffix[0]}#{stockId}\"><span class=\"item\"><img src=\"/cdn/Sprite/icon_#{resourceName}_#{suffix[0]}01.png\" loading=\"lazy\"></span> #{title}</a>"
     end
   end
 
   module CharaFilter
-    @@temp_fix = {
-      "ryekieXmas2012" => "ryekie"
-    }
 
-    def resourceNameToPage(resourceName)
-      # temp fix until we have more data
-      if @@temp_fix.has_key?(resourceName)
-        return CharaMap.resourceName_to_pages[@@temp_fix[resourceName]]
-      end
-
-      CharaMap.resourceName_to_pages[resourceName]
+    def characterIdToPage(id)
+      CharaMap.characterId_to_pages[id]
     end
   end
 end

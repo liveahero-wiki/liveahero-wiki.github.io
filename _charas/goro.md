@@ -1,5 +1,6 @@
 ---
 title: Goro
+characterId: 23
 occupation: "Carpenter"
 ---
 

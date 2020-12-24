@@ -1,5 +1,6 @@
 ---
 title: Victom
+characterId: 9
 occupation: "Rescue squad captain"
 ---
 

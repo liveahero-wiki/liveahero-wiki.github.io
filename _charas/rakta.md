@@ -1,5 +1,6 @@
 ---
 title: Rakta
+characterId: 20
 occupation: "Surgeon (外科医師)"
 ---
 

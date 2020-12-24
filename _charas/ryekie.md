@@ -1,6 +1,9 @@
 ---
 title: Ryekie
+characterId: 4
 occupation: "Hero Office Employee (Salesperson)"
+h2:
+  title: "\"Drunken Tiger\" Ryekie"
 ---
 {% capture BIO_H01 %}
 After putting on a pure white mantle and utilizing the power of lightning, he transforms into the S rank licensed hero "Zap the justice" to fight evil. He has the ability to create and store energy and electricity in his body. Once he balls his paws into fists or uses his feet, he is able to create an attack made from lightning which resembles that of lighting that rains down from the sky. He can adjust the power of his electricity between the levels of a stun gun and a furious lightning storm.

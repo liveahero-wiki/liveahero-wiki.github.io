@@ -1,5 +1,6 @@
 ---
 title: Procy
+characterId: 32
 occupation: "Bartender (バーテンダー)"
 ---
 

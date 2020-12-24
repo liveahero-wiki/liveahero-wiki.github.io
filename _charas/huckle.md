@@ -1,5 +1,6 @@
 ---
 title: Huckle
+characterId: 34
 occupation: "Hero Office Manager)"
 ---
 

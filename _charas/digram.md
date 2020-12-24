@@ -1,5 +1,6 @@
 ---
 title: Digram
+characterId: 24
 occupation: "Railroad Staff"
 ---
 

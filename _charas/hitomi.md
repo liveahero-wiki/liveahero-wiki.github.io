@@ -1,5 +1,6 @@
 ---
 title: Hitomi
+characterId: 19
 occupation: "Idol Singer"
 ---
 
