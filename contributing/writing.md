@@ -247,3 +247,17 @@ there. {% chara_link Kouki & Sirius %}'s performance was playing on the TV
 
 {% chara_link Player %} got so drunk he saw {% chara_link Broker %}
 in their dream that night.
+
+```
+{% raw %}
+- {% chara_link Ryekie %}
+- {% chara_link Ryekie|h1 %}
+- {% chara_link Ryekie|h2 %}
+- {% chara_link Ryekie|s1 %}
+{% endraw %}
+```
+
+- {% chara_link Ryekie %}
+- {% chara_link Ryekie|h1 %}
+- {% chara_link Ryekie|h2 %}
+- {% chara_link Ryekie|s1 %}
