@@ -1,0 +1,30 @@
+---
+title: Variant List
+banner: true
+---
+
+<style>
+.grey {
+    filter: grayscale(100%);
+}
+</style>
+
+<p>Each hero has one entry in this table. Hero with no variant at all will be displayed in grayscale.
+For hero that has multiple variants, the latest one will be displayed.
+</p>
+
+<p>For simplicity's sake, sidekick-only characters are not included here.</p>
+
+{% assign cardInfos = site.data.CardMaster | where: "stockOrder", 1 %}
+{% assign group = cardInfos | group_by: "characterId" %}
+
+<ul id="hero-list" class="card-list clearfix">
+{% for gp in group %}
+{% assign c = gp.items | last %}
+{% if gp.items.size == 1 %}
+{% include card-hero.html card=c class="grey" %}
+{% else %}
+{% include card-hero.html card=c %}
+{% endif %}
+{% endfor %}
+</ul>
