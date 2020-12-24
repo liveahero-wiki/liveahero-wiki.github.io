@@ -26,8 +26,8 @@ Here is a list of Limited time Missions:
 
 | No  | Description      | Rewards      |
 |----|-----------------------------------------------------------|----------------|
-| 1  | Use {% chara_link Suhail %} to finish challenge quest rank A (NPC/support unit included)| 10000 {% include item-icon.html id=35 %}    |
-| 2  | Use {% chara_link Gammei %} to finish challenge quest rank A (NPC/support unit included)| 10000 {% include item-icon.html id=35 %}     |
+| 1  | Use {% chara_link Suhail|h1 %} to finish challenge quest rank A (NPC/support unit included)| 10000 {% include item-icon.html id=35 %}    |
+| 2  | Use {% chara_link Gammei|h1 %} to finish challenge quest rank A (NPC/support unit included)| 10000 {% include item-icon.html id=35 %}     |
 | 3  | Use 1 water attuned hero in challenge quest rank A (support unit included)       | 10000 {% include item-icon.html id=35 %}    |
 | 4  | Use 1 light attuned hero in challenge quest rank A (support unit included)      | 10000 {% include item-icon.html id=35 %}      |
 | 5  | Use 1 dark attuned hero in challenge quest rank A (support unit included)        | 10000 {% include item-icon.html id=35 %}     |
