@@ -22,15 +22,15 @@ The event has event specific free quest and sales, with bonus using the banner u
 
 | Hero | +Bonus (%)| Sidekick | +Bonus (%) |
 |------------|--------------|-------------|---------------|
-| {% chara_link Gomeisa %} | 30 | {% chara_link Gomeisa %} | 10 | 
-| {% chara_link Barrel %}  | 30 | {% chara_link Barrel %}  | 10 | 
+| {% chara_link Gomeisa|h1 %} | 30 | {% chara_link Gomeisa %} | 10 | 
+| {% chara_link Barrel|h1 %}  | 30 | {% chara_link Barrel %}  | 10 | 
 
 ### Event Sales Bonus
 
 | Hero | +Bonus (%) |
 |------------+---------------|
-| {% chara_link Gomeisa %} | 25 |
-| {% chara_link Barrel %}  | 25 |
+| {% chara_link Gomeisa|h1 %} | 25 |
+| {% chara_link Barrel|h1 %}  | 25 |
 
 Note: Support unit (the one you borrow from other player) doesn't give any bonus in free quest
 

@@ -11,8 +11,8 @@ event_end_time: 2020-11-25T18:00:00+09
 
 The Global Union Hero Detachment have prepared three new limited-time quests that will test the player's skill in a disadvantageous situation. The heroes and combatants from this organization will fight with debuffs such as ATK Down and Poison before they deal significant damage to the hero that has these afflictions on them.
 
-Overcome these disadvantageous situations by removing debuffs with Heroes such as {% chara_link Digram %}, {% chara_link Rakta %},
-and {% chara_link Kirsch %}. Sidekick skills that remove debuffs such as {% chara_link Gomeisa %} and {% chara_link Digram %} will also be preferred.
+Overcome these disadvantageous situations by removing debuffs with Heroes such as {% chara_link Digram|h1 %}, {% chara_link Rakta|h1 %},
+and {% chara_link Kirsch|h1 %}. Sidekick skills that remove debuffs such as {% chara_link Gomeisa|s1 %} and {% chara_link Digram|s1 %} will also be preferred.
 
 ### Limited Time Mission
 
