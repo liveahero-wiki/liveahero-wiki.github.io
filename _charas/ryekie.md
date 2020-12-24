@@ -14,7 +14,11 @@ After putting on a pure white mantle and utilizing the power of lightning, he tr
 {% capture BIO_H01 %}
 He should have been resting due to an injury, but he was temporarily revived as a new hero, triggered by a certain thought and an event/incident. He is in a drunken state due to the fact that he is hypersensitive to a certain plant that gives ecstasy to certain species. However, it can be said that this appearance was obtained due to being drunk as a result of the emotions that had been accumulated, exploding and accelerating the feelings toward "a certain wish". The injured part of his body seems to be reinforced/strengthened firmly.
 {% endcapture %}
-{% include hero-infobox.html stockId=10042 BIO_H01=BIO_H01 %}
+
+{% capture BIO_H02 %}
+Like a banquet dancer, he wears a flashy kimono and dances on the battlefield with a fan and thunder. It is a one-time costume that he's put on that was born out of the desire to at least end the battle early and hold a feast for his junior colleagues. Due to his drunken state, he has feelings of guilt towards the junior colleagues that he has burdened due to him being on leave, as well as the fact that he is restricted from activities that make him who he is. After waking up from his drunkenness, he will surely fall into self-pity and tell himself that he was selfish.
+{% endcapture %}
+{% include hero-infobox.html stockId=10042 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 The strongest sales employee in the company where the Protagonist works at; he's a superhero who takes pride in his top-class achievements all around the world.
@@ -54,6 +58,16 @@ TRAINED = "G-GHNN! It's hard to make me groan!..."
 %}
 
 {% include voice-table.html resourceName="ryekieXmas2012"
+h_gachaResult = "A gallant revival at the end of the year!<br>S class hero ZAP! THE! JUSTICEEEEE!! HAAA-!<br>There's something about today - I'm in a great mood!"
+s_gachaResult = "Did you call for me, dear junior?!<br>Leave the sidekick work to me!<br>Both the battle and the feast! I'll make it exciting!"
+APPRECIATION = "Hah-hah-ha! Let's go to the free gathering, partner!<br>When it's time to do your best, do it, and when it's time to relax, relax as much as you can!<br>It's important to switch on and off for work!"
+DAILY = "How are you feeling, partner? I'm full of life and feeling great!<br>What? Why's my face red? It's been like that since the beginning!"
+HERO = "The owner of that inn seems to be using a very interesting technique!<br>Just thinking about a hot spring reaching its boiling point makes him get a rush of blood to his head!"
+PLAYER = "I'm very happy that you came to our company.<br>You're doing your best every day; allow me to properly thank you today."
+TOUCH = "Oh?! You wish for a hug, partner?<br>Alright, I'll give you something hotter than usual!<br>I'll make you go numb to the core of your body!"
+RELATION = "Mokdai is the first employee to come to our company.<br>He was adorable since the very beginning!<br>Even someone like him has become a hero..."
+TRAIN = "Alright, let's have an endurance contest!"
+TRAINED = "H-Hnn.. C-Complete defeat..."
 %}
 
 ## Notes
