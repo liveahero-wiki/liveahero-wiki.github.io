@@ -39,6 +39,7 @@ win = "Mission accomplished, returning back.<br>Aa, this injury is of no concern
 lose = "Aa, once again…once again, I can't save the life in front of me…."
 assist = "I'll make an opening!"
 assisted = "Thank you."
+rankMax = "If you want to change, then you will change, huh…<br>Ah, it's because you have supported me that I could move forward.<br>With your love in my heart, I will... save much more lives."
 APPRECIATION = "Accumulation of fatigue is the worst thing that can happen during a mission.<br>If the commander is exhausted, it will affect morale.<br>In other words... take a little break. Don't worry me too much."
 DAILY = "Oh, you are here.<br>In that case, what sort of mission are we going to embark on?<br>Don't worry, I won't die."
 HERO = "That young one is forever immature.<br>Despite his timid personality, he is way too reckless.<br>But ... I don't hate him."
