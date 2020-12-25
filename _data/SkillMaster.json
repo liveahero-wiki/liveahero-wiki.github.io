@@ -11060,6 +11060,41 @@
       }
     ]
   },
+  "4052105": {
+    "skillId": 4052105,
+    "skillName": "叩き付け+",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。Viewを5000獲得。HPを基礎ATKの50%回復する。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuXmas2012_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 30,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
   "6000001": {
     "skillId": 6000001,
     "skillName": "ダメージ制限20000",
