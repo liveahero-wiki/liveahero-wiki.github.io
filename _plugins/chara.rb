@@ -85,7 +85,7 @@ module Jekyll
         title = page.data.dig(suffix, "title") || title
       end
 
-      "<a href=\"#{page.url}/##{suffix[0]}#{stockId}\"><span class=\"item\"><img src=\"/cdn/Sprite/icon_#{resourceName}_#{suffix[0]}01.png\" loading=\"lazy\"></span> #{title}</a>"
+      "<a href=\"#{page.url}##{suffix[0]}#{stockId}\"><span class=\"item\"><img src=\"/cdn/Sprite/icon_#{resourceName}_#{suffix[0]}01.png\" loading=\"lazy\"></span> #{title}</a>"
     end
   end
 
