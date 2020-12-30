@@ -29,16 +29,16 @@ Limited Time Missions:
 
 | No  | Description      | Rewards      |
 |----|-----------------------------------------------------------|----------------|
-| 1  | Clear New year's Gift Mission 5 times in total | 1 {% include item-icon.html id=10 %}    |
-| 2  | Clear New year's Gift Mission 10 times in total | 1 {% include item-icon.html id=29 %}    |
-| 3  | Clear New year's Gift Mission 15 times in total | 10 {% include item-icon.html id=1 %}    |
-| 4  | Clear New year's Gift Mission 20 times in total | 1 {% include item-icon.html id=29 %}    |
-| 5  | Clear New year's Gift Mission 25 times in total| 15 {% include item-icon.html id=1 %}    |
-| 6  | Clear New year's Gift Mission 30 times in total | 1 {% include item-icon.html id=29 %}    |
+| 1  | Clear New Year's Gift Mission 5 times in total | 1 {% include item-icon.html id=10 %}    |
+| 2  | Clear New Year's Gift Mission 10 times in total | 1 {% include item-icon.html id=29 %}    |
+| 3  | Clear New Year's Gift Mission 15 times in total | 10 {% include item-icon.html id=1 %}    |
+| 4  | Clear New Year's Gift Mission 20 times in total | 1 {% include item-icon.html id=29 %}    |
+| 5  | Clear New Year's Gift Mission 25 times in total| 15 {% include item-icon.html id=1 %}    |
+| 6  | Clear New Year's Gift Mission 30 times in total | 1 {% include item-icon.html id=29 %}    |
 
 ### Special Pack Sales 
 
-From 1 Jan 2021 until 15 Jan 2021 14:00 JST There will be Special Pack Sales for 4900¥ 
+From 1 Jan 2021 until 15 Jan 2021 14:00 JST There will be special pack sales for 4900¥ 
 
 The special pack will include:
 - 1 Special Ether Ticket
@@ -46,7 +46,7 @@ The special pack will include:
 - 1 {% include item-icon.html id=29 %} 
 - 100,000 {% include item-icon.html id=35 %} 
 
-Special Ether ticket will be used for ten roll at Happy new year 2021! Ether Search Gacha where the tenth roll will guarantee one of the following six 5*:
+Special Ether Ticket will be used for ten roll at Happy new year 2021! Ether Search Gacha where the tenth roll will guarantee one of the following six 5*:
 - {% chara_link Kouki & Sirius|h1 %}
 - {% chara_link Marfik|h1 %}
 - {% chara_link Suhail|h1 %}
