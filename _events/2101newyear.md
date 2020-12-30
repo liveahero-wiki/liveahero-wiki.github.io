@@ -38,6 +38,7 @@ Limited Time Missions:
 ### Special Pack Sales 
 
 From 1 Jan 2021 until 15 Jan 2021 14:00 JST There will be Special Pack Sales for 4900¥ 
+
 The special pack will include:
 - 1 Special Ether Ticket
 - 50 {% include item-icon.html id=1 %}  (Free)
@@ -57,7 +58,7 @@ Special Ether ticket will be used for ten roll at Happy new year 2021! Ether Sea
 
 ### Maintenance Announcement
 
-Maintenance is scheduled at:
+Maintenance is scheduled at
 31 Dec 2020 18:00～24:00 JST
 
 Please note that any battle or quest that is still ongoing by the time maintenance start may not be able to be resumed after maintenance end.
