@@ -9,8 +9,9 @@ event_end_time: 2021-01-15T14:00:00+09
 ## Event Details
 
 Lifewonders is launching their first new year campaign, together with the event
-there will be a special scenario "In an unforgettable year". Completion of the scenario will give you
-one {% include item.html id=10 %}.
+there will be a special scenario "In an unforgettable year". 
+
+Completion of the scenario will give you one {% include item.html id=10 %}.
 
 ### New Year's Gift Missions
 
