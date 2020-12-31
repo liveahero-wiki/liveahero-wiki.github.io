@@ -43,6 +43,7 @@ win = "Obstacle clearance confirmed, mission complete. Mode Transaver release.<b
 lose = "The transport system...I will not let this symbol of peace to be broken...!"
 assist = "I will cover you."
 assisted = "Thank you for your cooperation."
+loveIndexMax = "Feelings are not necessary for an operation coordinator.<br>However…this unit cannot contain his emotion.<br>You being here with me…my heart, is heating up."
 APPRECIATION = "…The body of organic lifeforms are said to lose performance when exhausted,<br>Master… Please take an early rest."
 DAILY = "You are 34 seconds late, Master.<br>It will be trouble if we don't arrive on time.<br>Let's go to the site immediately to recover from this delay."
 TOUCH = "Physical contact with this machine, is there any meaning in such a thing?<br>Maybe this is just something a machine like myself can't comprehend.<br>Though, I do feel the warmth of your hand..."
