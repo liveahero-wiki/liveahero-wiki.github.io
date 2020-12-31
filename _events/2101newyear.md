@@ -15,7 +15,7 @@ Completion of the scenario will give you one {% include item.html id=10 %}.
 
 ### New Year's Gift Missions
 
-From 1 Jan 2021 until 14 Jan 2021 23:59 JST there will be special daily missions and limited time missions
+From 1 Jan 2021 until 14 Jan 2021 23:59 JST there will be special additional daily missions and limited time missions
 
 Daily Missions:
 
@@ -41,12 +41,12 @@ Limited Time Missions:
 From 1 Jan 2021 until 15 Jan 2021 14:00 JST There will be special pack sales for 4900¥ 
 
 The special pack will include:
-- 1 Special Ether Ticket
+- 1 {% include item-icon.html id=51 %}
 - 50 {% include item-icon.html id=1 %}  (Free)
 - 1 {% include item-icon.html id=29 %} 
 - 100,000 {% include item-icon.html id=35 %} 
 
-Special Ether Ticket will be used for ten roll at Happy new year 2021! Ether Search Gacha where the tenth roll will guarantee one of the following six 5*:
+{% include item-icon.html id=51 %} will be used for ten roll at Happy new year 2021! Ether Search Gacha where the tenth roll will guarantee one of the following six 5*:
 - {% chara_link Kouki & Sirius|h1 %}
 - {% chara_link Marfik|h1 %}
 - {% chara_link Suhail|h1 %}
@@ -55,12 +55,3 @@ Special Ether Ticket will be used for ten roll at Happy new year 2021! Ether Sea
 - {% chara_link Gomeisa|h1 %}
 
 > This special pack can only be bought once per account
-
-
-### Maintenance Announcement
-
-Maintenance is scheduled at
-31 Dec 2020 18:00～24:00 JST
-
-Please note that any battle or quest that is still ongoing by the time maintenance start may not be able to be resumed after maintenance end.
-It's advised to finish these before maintenance start.
