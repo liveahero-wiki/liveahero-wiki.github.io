@@ -17,6 +17,7 @@ His physique and good judgment on the battlefield can be attributed to this back
 
 {% include voice-table.html resourceName="huckle"
 s_gachaResult = "My name's Huckle<br>I'm the president of this company.<br>We welcome a newcomer like you.<br>I will give you a good workplace environment."
+loveIndexMax = "I am happy that I can always fight beside you.<br>Aa…you're very reliable and I hold you very dearly."
 APPRECIATION = "Oh, it looks like you're tired. <br>Well, that's it for today.<br>I know a great place, how about we go together?"
 DAILY = "Hey, There's a lot of work coming in today.<br>Go ahead and do the one you prefer to do."
 HERO = "I have faith in that guy as a hero.<br>That single-minded commitment to justice that makes him who he is.<br>It's never going to be something that anyone can copy, is it?"
