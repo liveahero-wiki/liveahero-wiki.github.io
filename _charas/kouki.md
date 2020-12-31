@@ -34,6 +34,7 @@ action = "Finally my turn."
 attack = "There!"
 skill = "Do it spectacularly!"
 special = "Dogs and kids get the ratings!<br>Remarks! [^Kouki1] Prime-time Emperor!
+
 [^Kouki1]: 集注 ,Literally: Collection of Comments"
 smallDamage = "U-"
 bigDamage = "Uwa!"
