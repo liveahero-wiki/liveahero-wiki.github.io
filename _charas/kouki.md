@@ -33,7 +33,7 @@ battleStart = "Let's go Sirius!<br>Let's show them how to fights for views!"
 action = "Finally my turn."
 attack = "There!"
 skill = "Do it spectacularly!"
-special = "Dogs and kids get the ratings!<br>Remarks![^Kouki1] Prime-time Emperor!
+special = "Dogs and kids get the ratings!<br>Remarks! [^Kouki1] Prime-time Emperor!
 [^Kouki1]: 集注 ,Literally: Collection of Comments"
 smallDamage = "U-"
 bigDamage = "Uwa!"
