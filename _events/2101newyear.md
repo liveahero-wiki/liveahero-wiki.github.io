@@ -41,12 +41,12 @@ Limited Time Missions:
 From 1 Jan 2021 until 15 Jan 2021 14:00 JST There will be special pack sales for 4900¥ 
 
 The special pack will include:
-- 1 {% include item-icon.html id=51 %}
+- 1 Special Ether Ticket
 - 50 {% include item-icon.html id=1 %}  (Free)
 - 1 {% include item-icon.html id=29 %} 
 - 100,000 {% include item-icon.html id=35 %} 
 
-{% include item-icon.html id=51 %} will be used for ten roll at Happy new year 2021! Ether Search Gacha where the tenth roll will guarantee one of the following six 5*:
+Special Ether Ticket will be used for ten roll at Happy new year 2021! Ether Search Gacha where the tenth roll will guarantee one of the following six 5*:
 - {% chara_link Kouki & Sirius|h1 %}
 - {% chara_link Marfik|h1 %}
 - {% chara_link Suhail|h1 %}
