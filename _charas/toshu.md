@@ -50,6 +50,7 @@ win = "I'm not so immature that I give in to my victory.<br>I'm going to be even
 lose = "Guu...I'm halfway to my aspiration...<br>I'm sorry..."
 assist = "Leave it to me!"
 assisted = "I appreciate it!"
+rankMax = "My armor…!? Is this your power too?<br>Hm, it can’t be helped then.<br>As long as you do not dissapoint me, I will serve you."
 loveIndexMax = "Hmm…You are a very interesting fellow.<br>When I'm with you, my swordmanship also get sharper.<br>That's why...um...don't leave me."
 APPRECIATION = "You're not confident in your physical strength, are you?  After all ... your expertise lies in other fields. Here, I've prepared some tea. Take a break."
 DAILY = "Hn, is it finally time to go?  I was tired of maintaining my armor.  Let's go then, off to war."
