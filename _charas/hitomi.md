@@ -30,7 +30,7 @@ battleStart = "Idol warrior, Doki Doki Red!<br>I will take your gaze!"
 action = "Here I go!"
 attack = "Eei!"
 skill = "Doki Doki Charge!"
-special = "Sing![^Hitomi1] LOVE ME☆HITO-MIー!<br>Cameraman! Over here!
+special = "Sing! [^Hitomi1] LOVE ME☆HITO-MIー!<br>Cameraman! Over here!
 [^Hitomi1]: 愛唱 ,Literally: Love to sing"
 smallDamage = "Aa!"
 bigDamage = "The mike is-!"
