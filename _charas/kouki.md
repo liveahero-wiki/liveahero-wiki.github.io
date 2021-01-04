@@ -22,7 +22,7 @@ Both originate from Nagoya, Japan. Their full names are Kouki Inukura and Sirius
 
 Kouki has risen as a first-class actor thanks to his talent as a performer, acknowledged and esteemed by peers in the field. Because of that, his personality differs depending on wheter there is a presence or an absence of a camera. When a camera is recording he acts as a meek good kid. The second the cameras are off however he lays bare his haugthy and arrogant demeanour. The driving force behind his doings seems to be the existence of a long-lost mother.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10181 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10181 BIO_S01=BIO_S01 extra_sprites="fg_ADV_kouki_s01" %}
 
 {% include voice-table.html resourceName="kouki"
 h_gachaResult = "Heyy, I'm Inukura kouki!<br>This here is Sirius!<br>...Eh, the camera is not rolling?<br>Hmmm...well,<br>Don't drag me down, okay?"
