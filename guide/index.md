@@ -100,8 +100,8 @@ The grand prize in Friend Gacha is a player sidekick dupe {% include item-icon.h
 
 ## Friend Code/Friend
 
-Despite the game being relatively new there are a lot of players who has max leveled unit (level 50) and if you're lucky enough to be accepted as friend by them, 
-you will now have a Support that can carry your party all on their own at least until the middle difficulty quest, and the best part of this is that friend supports characters cost nothing to borrow in fact it gives friend point to you and your friend.
+Despite the game being relatively new there are a lot of players who has max leveled unit (level 60) and if you're lucky enough to be accepted as friend by them, 
+you will now have a Support that can carry your party all on their own for most of the quests, and the best part of this is that friend supports characters cost nothing to borrow in fact it gives friend point to you and your friend.
 
 To gain friends quickly, you will want to share your friend code, which is a 9-digit code (found in the Friends section of the game), in various places. A good place for now is LAH community discord.
 
