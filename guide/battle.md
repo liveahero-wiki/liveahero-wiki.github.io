@@ -58,7 +58,7 @@ By tapping on the List button located at the bottom right of the battle screen, 
 
 During the battle, the character can be affected by several statuses. The number of actions left in a status could decrease under various conditions, such as number of actions, or they may last until the end of the turn. In the case of defensive buffs, actions are called attacks. When action counter reaches 0, the status is removed.
 
-Statuses that grant positive effects on the hero are displayed as a yellow icon, also known as "Buffs". Conversely, statuses that afflict the hero with negative effects are displayed as a red icon, also known as "Debuffs".
+Statuses that grant positive effects on the hero are displayed as a yellow icon, also known as "Buffs". Conversely, statuses that afflict the hero with negative effects are displayed as a blue icon, also known as "Debuffs".
 
 The available status modifiers are listed as follows:
 
