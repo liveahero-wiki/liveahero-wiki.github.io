@@ -64,6 +64,8 @@ Standard missions are permanent missions that can be cleared at any point of tim
 |Log in on the 50th day|{%include item.html id=1%} x 10|
 |Log in on the 75th day|{%include item.html id=1%} x 5|
 |Log in on the 100th day|{%include item.html id=1%} x 20|
+|Log in on the 150th day|{%include item.html id=1%} x 10|
+|Log in on the 200th day|{%include item.html id=1%} x 20|
 
 #### Player Rank
 
