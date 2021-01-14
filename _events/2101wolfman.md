@@ -37,10 +37,10 @@ Additionally their 3rd skill will at first be locked and unusable in battle unti
 
 ### Hero's Fan Count
 
-Hero units with initial rank of 1 or 2 can only gain fan count from their own personal Hero's Memories items. Said items will also can't be exchanged for {% include item.html id=40 %}.
+Hero units with initial rank of 1 or 2 can only gain fan count from their own personal Hero's Memories items. Said items will also can't be exchanged for {% include item-icon.html id=40 %} Record Cube.
 
 Their fan count will only increase by 1 with each item used.
 
 ### Sidekick's Limit Breakthrough
 
-Sidekick units of rank 1 or 2 can only be upgraded with their own personal Sidekick's Heart items. Said items will also can't be exchanged for {% include item.html id=40 %}.
+Sidekick units of rank 1 or 2 can only be upgraded with their own personal Sidekick's Heart items. Said items will also can't be exchanged for {% include item-icon.html id=40 %} Record Cube.
