@@ -89,6 +89,10 @@ The initial hero rank will be the rarity of the hero being first obtained.
 
 Hero that rank up will have their max level limit increased.
 
+Hero with initial rank of 1 or 2 can rank up to rank 4 while hero with initial rank of 3 or above can rank up to rank 6.
+
+At rank 3 the 3rd skill of the hero will be unlocked and become usable in battle.
+
 At rank 5 the hero will take on a different figure.
 
 Ranking up increases the basic ability value, and while on a specific hero rank, the skill will also be strengthened.
