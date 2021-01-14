@@ -74,7 +74,7 @@ The "Sidekick's Mind" can be used to increase the "Sidekick's Limit Breakthrough
 
 ### Buying Record Cubes
 
-Record Cubes can be obtained by exchanging Hero's Memories or Sidekick's Mind.
+Record Cubes can be obtained by exchanging Hero's Memories or Sidekick's Mind of rank 3 or above.
 
 | Original Items | Record Cubes that can be exchanged |
 |-|-|
@@ -84,10 +84,12 @@ Record Cubes can be obtained by exchanging Hero's Memories or Sidekick's Mind.
 | {% include item-icon.html id=210041 %} Ryekie Sidekick's Mind (3 ☆) x 1 | {% include item-icon.html id=40 %} x 1  |
 | {% include item-icon.html id=210341 %} Hucke Sidekick's Mind (4 ☆) x 1 | {% include item-icon.html id=40 %} x 5  |
 
+Hero's Memories or Sidekick's Mind of rank 1 or 2 can't be exchanged for Record Cubes.
+
 ### Exchanging Record Cubes
 
 You can use record cubes to exchange for generic hero/sidekick duplicates which works the same way as "Hero's Memories"/"Sidekick's Mind",
-except there is no restriction on which character they can be used on.
+except there is no restriction on which character they can be used on other than initial rank.
 
 | Generic Duplicates | Record Cubes needed |
 |-|-|
@@ -96,3 +98,5 @@ except there is no restriction on which character they can be used on.
 | {% include item.html id=45 %} x 1 | {% include item-icon.html id=40 %} x 40 |
 | {% include item.html id=39 %} x 1 | {% include item-icon.html id=40 %} x 2  |
 | {% include item.html id=46 %} x 1 | {% include item-icon.html id=40 %} x 10 |
+
+There's no generic duplicate for rank 1 or 2. Those units can only be upgraded with personal Hero's Memories/Sidekick's Mind.
