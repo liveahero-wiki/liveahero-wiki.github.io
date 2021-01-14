@@ -66,9 +66,10 @@ The "Hero's Memories" can be used to increase the "Hero's Fan Count". Max fan co
 
 | Hero's Memories | Hero's Fan Count |
 |-|-|
-| {% include item-icon.html id=110011 %} Akashi Hero's Memories (3 ☆) x 1 | +10  |
-| {% include item-icon.html id=110131 %} Toshu Hero's Memories (4 ☆) x 1 | +50  |
-| {% include item-icon.html id=110151 %} Polaris Mask Hero's Memories (5 ☆) x 1 | +200 |
+| Wood Wolfman Hero's Memories (1 ☆) x 1 | +1 |
+| {% include item.html id=110011 %} (3 ☆) x 1 | +10 |
+| {% include item.html id=110131 %} (4 ☆) x 1 | +50 |
+| {% include item.html id=110151 %} (5 ☆) x 1 | +200 |
 
 The "Sidekick's Mind" can be used to increase the "Sidekick's Limit Breakthrough". Each item will increase the level cap by 10 regardless of character's rarity. Max level is 100.
 
