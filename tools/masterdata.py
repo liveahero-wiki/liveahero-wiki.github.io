@@ -88,7 +88,10 @@ def processShopFile():
     dumpJson(os.path.join("_data", "stores", id + ".json"), stores[id])
 
 if __name__ == '__main__':
-  appV, mV = getVersion()
+  if len(sys.argv) > 1:
+    mV = int(sys.argv[1])
+  else:
+    appV, mV = getVersion()
 
   cur_ver = int(getWikiVersion())
   if mV <= cur_ver:
