@@ -2,7 +2,11 @@
 
 {% assign firstCardInfo = cardInfos | first %}
 {% assign r = firstCardInfo.resourceName %}
+{% if firstCardInfo.rarity >= 3 %}
 {% capture sprites %}fg_{{ r }}_h01,fg_{{ r }}_h01_skin1,fg_{{ r }}_h02,fg_{{ r }}_h02_skin1{% endcapture %}
+{% else %}
+{% capture sprites %}fg_{{ r }}_h01,fg_{{ r }}_h01_skin1{% endcapture %}
+{% endif %}
 {% if include.extra_sprites %}
 {% assign sprites = sprites | append: "," | append: include.extra_sprites %}
 {% endif %}
@@ -56,6 +60,7 @@
 </div></details>
 {% endif %}
 
+{% if firstCardInfo.rarity >= 3 %}
 {% assign bio_h02 = detail_prefix | append: "_H02" %}
 <details>
 <summary>Personal Data 2</summary>
@@ -68,6 +73,7 @@
 {{ include.BIO_H02 }}
 </div>
 </details>
+{% endif %}
 {% endif %}
 
 

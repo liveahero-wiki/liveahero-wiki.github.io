@@ -1,11 +1,13 @@
 {% assign names = include.cv | processVoiceActor %}
 {% for name in names %}
 {% assign en = site.data.wiki.VoiceActor[name].en %}
+{%- if name != "—" %}
 <a href="/voice_actors/#{{ en | default: name | slugify }}">
+{%- endif %}
 {%- if en %}
 <abbr title="{{ name }}">{{ en }}</abbr>
 {%- else %}
 {{ name }}
 {%- endif %}
-</a>
+{%- if name != "—" %}</a>{%- endif %}
 {% endfor %}
