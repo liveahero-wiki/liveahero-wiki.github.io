@@ -18,7 +18,7 @@ DAILY = "Oh, what kind of work are you going to do today?  I'll do anything for 
 HERO = "There are villains who wanted to be a hero but cannot do so. For them, being a hero is something to be envious of."
 PLAYER = "You can't participate in the battle, but still, you're on the front line.  You keep yourself outta trouble, yeah? I'm not used to fighting to protect someone."
 RELATION = "Heroes are heroes, Villains are Villains, we all follow our own own justice. My justice?  Of course, it's Mofumofu !!"
-TOUCH = "Woops!? What the hell, don’t touch me as you please!<br>You're making me nervous for nothing!…what?<br>It's like touching a cat's fur? T- thanks…"
+TOUCH = "Hey!? What's this, don't be so clingy! I'll get excited for no reason! ... Eh? There were cat hair on me, thank you... "
 TRAIN = "Now, brace yourself!"
 TRAINED = "Damn it, do what you want!"
 %}
