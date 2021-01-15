@@ -9,7 +9,7 @@
   {% assign product = productData.product %}
   {% assign currency = productData.currency %}
   <tr>
-    <td>{% include item.html id=product.objectId %} x{{ product.objectValue }}</td>
+    <td>{% include item.html id=product.objectId rewardType=product.rewardType %} x{{ product.objectValue }}</td>
     <td>{% include item.html id=currency.objectId %} x{{ currency.objectValue }}</td>
     <td>{% if productData.exchangeLimit == 0 %}Infinite{% else %}{{ productData.exchangeLimit }}{% endif %}</td>
     <td>{% if productData.exchangeLimit == 0 %}-{% else %}{{ currency.objectValue | times: productData.exchangeLimit }}{% endif %}</td>

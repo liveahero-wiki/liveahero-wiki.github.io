@@ -47,7 +47,7 @@
 <tr><th>Rewards</th><td>
 <ul>
 {% for reward in Q.rewards %}
-<li>{% include item.html id=reward.objectId %} x {{ reward.objectValue }}</li>
+<li>{% include item.html id=reward.objectId rewardType=reward.rewardType %} x {{ reward.objectValue }}</li>
 {% endfor %}
 </ul>
 </td></tr>
