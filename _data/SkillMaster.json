@@ -3437,6 +3437,91 @@
       }
     ]
   },
+  "1043101": {
+    "skillId": 1043101,
+    "skillName": "スラッシュ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_wolfmanEarth_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1043102": {
+    "skillId": 1043102,
+    "skillName": "毒突き",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。80%の確率で1ターンの間毒を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_wolfmanEarth_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 89,
+        "prob": 80,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1043103": {
+    "skillId": 1043103,
+    "skillName": "木狼の意地",
+    "useView": 3500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に110%ダメージ。自身に30%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_wolfmanEarth_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 30,
+        "effectTarget": 0
+      }
+    ]
+  },
   "1051101": {
     "skillId": 1051101,
     "skillName": "源泉流刃",
@@ -6093,6 +6178,81 @@
         "skillEffectId": 88,
         "prob": 100,
         "effectTarget": 1
+      }
+    ]
+  },
+  "2043101": {
+    "skillId": 2043101,
+    "skillName": "援護スラッシュ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に55%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_wolfmanEarth_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 268,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2043102": {
+    "skillId": 2043102,
+    "skillName": "援護スラッシュ+",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に65%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_wolfmanEarth_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 269,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2043103": {
+    "skillId": 2043103,
+    "skillName": "援護スラッシュ++",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に75%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_wolfmanEarth_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 270,
+        "prob": 100,
+        "effectTarget": 2
       }
     ]
   },
@@ -9576,6 +9736,114 @@
       }
     ]
   },
+  "3043101": {
+    "skillId": 3043101,
+    "skillName": "木狼の声援Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_wolfmanEarth_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "ATK+1%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 148,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3043102": {
+    "skillId": 3043102,
+    "skillName": "木狼の声援Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_wolfmanEarth_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "ATK+2%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 149,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3043103": {
+    "skillId": 3043103,
+    "skillName": "木狼の声援Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_wolfmanEarth_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "ATK+3%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 150,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3043104": {
+    "skillId": 3043104,
+    "skillName": "木狼の声援Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_wolfmanEarth_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "ATK+4%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 151,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3043105": {
+    "skillId": 3043105,
+    "skillName": "木狼の声援Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_wolfmanEarth_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "ATK+5%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 86,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3043106": {
+    "skillId": 3043106,
+    "skillName": "木狼の声援Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_wolfmanEarth_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "ATK+6%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 156,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
   "3051101": {
     "skillId": 3051101,
     "skillName": "温浴の恵みⅠ",
@@ -10942,6 +11210,146 @@
         "skillEffectId": 1,
         "prob": 100,
         "effectTarget": 4
+      }
+    ]
+  },
+  "4046114": {
+    "skillId": 4046114,
+    "skillName": "爪",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に50%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuAdult_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "4046115": {
+    "skillId": 4046115,
+    "skillName": "攻めの雄たけび",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "敵単体に50%ダメージ。味方全体に1ターンの間ATKアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuAdult_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "4046116": {
+    "skillId": 4046116,
+    "skillName": "オールレンジビーム",
+    "useView": 8000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に100%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuAdult_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "4046118": {
+    "skillId": 4046118,
+    "skillName": "守りの雄たけび",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "敵単体に50%ダメージ。味方全体に1ターンの間DEFアップを付与。自身に2ターンの間挑発を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuAdult_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 3
+      },
+      {
+        "skillEffectId": 49,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "4046119": {
+    "skillId": 4046119,
+    "skillName": "強化爪",
+    "useView": 8000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に100%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuAdult_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 2
       }
     ]
   },

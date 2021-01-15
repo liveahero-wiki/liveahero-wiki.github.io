@@ -322,15 +322,6 @@
     "description": "記憶や記録が封じられているキューブ。ショップで商品と交換できる。",
     "effect": []
   },
-  "41": {
-    "itemId": 41,
-    "itemName": "イベントチケット",
-    "resourceName": "eventticket_01",
-    "rarity": 5,
-    "itemType": 512,
-    "description": "イベントボスに挑戦するために必要なチケット",
-    "effect": []
-  },
   "42": {
     "itemId": 42,
     "itemName": "フレンドポイント",
@@ -446,6 +437,24 @@
     "rarity": 3,
     "itemType": 4,
     "description": "謹賀新年2021！エーテル・サーチを行うことができるチケット",
+    "effect": []
+  },
+  "52": {
+    "itemId": 52,
+    "itemName": "勲章",
+    "resourceName": "ContractWolfmanEarth2101_exchange01",
+    "rarity": 3,
+    "itemType": 512,
+    "description": "功績を称える章飾。交換所でアイテムと交換してもらえる。",
+    "effect": []
+  },
+  "53": {
+    "itemId": 53,
+    "itemName": "ヒーローの証",
+    "resourceName": "rank_hero_token",
+    "rarity": 3,
+    "itemType": 16,
+    "description": "ヒーローとして認められた功績。特定のヒーローのランクアップに必要なアイテム",
     "effect": []
   },
   "110011": {
@@ -1125,6 +1134,22 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 20
+      }
+    ]
+  },
+  "110431": {
+    "itemId": 110431,
+    "itemName": "木のウルフマンの記憶片",
+    "resourceName": "piece_wolfmanEarth",
+    "rarity": 1,
+    "itemType": 1024,
+    "description": "木のウルフマンのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 1,
+        "rarity": 0,
+        "stockId": 10431
       }
     ]
   },
@@ -1829,6 +1854,21 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 5
+      }
+    ]
+  },
+  "210431": {
+    "itemId": 210431,
+    "itemName": "木のウルフマンの心",
+    "resourceName": "heart_wolfmanEarth",
+    "rarity": 1,
+    "itemType": 2048,
+    "description": "木のウルフマンのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 10431
       }
     ]
   },

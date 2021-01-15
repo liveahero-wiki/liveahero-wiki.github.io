@@ -5918,6 +5918,369 @@
     "hasBattle": false,
     "hasStockBattle": false
   },
+  "410001": {
+    "questId": 410001,
+    "questName": "ヴィラン更生、俺がヒーローに！？",
+    "subName": "プロローグ",
+    "questKind": 5,
+    "chapterId": 410,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2021-01-01 14:00:00",
+    "endAt": "2021-02-05 18:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false
+  },
+  "410002": {
+    "questId": 410002,
+    "questName": "実戦訓練終了、そして……",
+    "subName": "エピローグ",
+    "questKind": 5,
+    "chapterId": 410,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2021-01-29 18:00:00",
+    "endAt": "2021-02-05 18:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 410001
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false
+  },
+  "411001": {
+    "questId": 411001,
+    "questName": "ヒーロー特訓中！",
+    "subName": "D級",
+    "questKind": 6,
+    "chapterId": 411,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2021-01-01 14:00:00",
+    "endAt": "2021-01-29 18:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 1,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 10,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 410001
+      },
+      {
+        "class": "Stamina",
+        "stamina": 4
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultWater_h01",
+        "battleInfoElement": 2
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "411002": {
+    "questId": 411002,
+    "questName": "ヒーロー特訓中！",
+    "subName": "C級",
+    "questKind": 6,
+    "chapterId": 411,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2021-01-01 14:00:00",
+    "endAt": "2021-01-29 18:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 15,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 10,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 410001
+      },
+      {
+        "class": "Stamina",
+        "stamina": 8
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultWater_h01",
+        "battleInfoElement": 2
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "411003": {
+    "questId": 411003,
+    "questName": "ヒーロー特訓中！",
+    "subName": "B級",
+    "questKind": 6,
+    "chapterId": 411,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2021-01-01 14:00:00",
+    "endAt": "2021-01-29 18:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 30,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 10,
+        "prob": 30
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 410001
+      },
+      {
+        "class": "Stamina",
+        "stamina": 12
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultWater_h01",
+        "battleInfoElement": 2
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "411004": {
+    "questId": 411004,
+    "questName": "ヒーロー特訓中！",
+    "subName": "A級",
+    "questKind": 6,
+    "chapterId": 411,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2021-01-01 14:00:00",
+    "endAt": "2021-01-29 18:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 45,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 40,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 40,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 10,
+        "prob": 80
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 410001
+      },
+      {
+        "class": "Stamina",
+        "stamina": 16
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultWater_h01",
+        "battleInfoElement": 2
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
   "502001": {
     "questId": 502001,
     "questName": "うちのプロキー知りませんか？",
@@ -6381,6 +6744,264 @@
         "questId": 402012
       }
     ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false
+  },
+  "505001": {
+    "questId": 505001,
+    "questName": "トンネルを抜けると湯の街だった",
+    "subName": "第１話",
+    "questKind": 5,
+    "chapterId": 505,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false
+  },
+  "505002": {
+    "questId": 505002,
+    "questName": "湯けむりに消ゆ",
+    "subName": "第２話",
+    "questKind": 5,
+    "chapterId": 505,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 5,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 407001
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "505003": {
+    "questId": 505003,
+    "questName": "背負い込むには小さな背中",
+    "subName": "第３話",
+    "questKind": 5,
+    "chapterId": 505,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 6,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 407002
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "505004": {
+    "questId": 505004,
+    "questName": "ヒーローとジレンマと",
+    "subName": "第４話",
+    "questKind": 5,
+    "chapterId": 505,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 7,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 407003
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "505005": {
+    "questId": 505005,
+    "questName": "聖夜の熱湯戦線",
+    "subName": "第５話",
+    "questKind": 5,
+    "chapterId": 505,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 10,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 407004
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuXmas2012_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false
+  },
+  "505006": {
+    "questId": 505006,
+    "questName": "諸人こぞりて",
+    "subName": "最終話",
+    "questKind": 5,
+    "chapterId": 505,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 407005
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false
+  },
+  "505007": {
+    "questId": 505007,
+    "questName": "宴の後、クリスマスの夜に",
+    "subName": "エピローグ",
+    "questKind": 5,
+    "chapterId": 505,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 407006
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false
+  },
+  "506001": {
+    "questId": 506001,
+    "questName": "忘れられない一年に",
+    "subName": "特別話",
+    "questKind": 5,
+    "chapterId": 506,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "rewards": [],
+    "drops": [],
+    "conditions": [],
     "enemies": [],
     "hasAdv": true,
     "hasBattle": false,
