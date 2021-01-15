@@ -2,8 +2,10 @@
 title: Wood Wolfman
 characterId: 43
 ---
-
-{% include hero-infobox.html stockId=10431 %}
+{% capture BIO_H01 %}
+Their species tends to prefer clothes that are easy to move in and lightweight tools and weapons in order to take advantage of their innate high physical abilities. This can be seen in their clothes and weapons after their transformation. Also, in exchange for having well-developed ears and nose, their eyes are sensitive to strong sunlight, as such many of them prefers to use visual aid such as sunglasses or eye scope. It may seems like their species wear sunglasses for style, but there is actually some serious reason for it.
+{% endcapture %}
+{% include hero-infobox.html stockId=10431 BIO_H01=BIO_H01 %}
 
 {% capture BIO_S01 %}
 An alien youth with a wolf-like appearance, one of the species that more commonly migrates to Earth.
