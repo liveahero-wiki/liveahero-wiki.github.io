@@ -10,12 +10,14 @@ banner: true
 
 <ul id="markdown-toc">
 {% for human in groups %}
+{% if human.name == "—" %}{% continue %}{% endif %}
 {% assign en = human.en | default: human.name %}
 <li><a href="#{{ en | slugify }}">{{ en }}</a></li>
 {% endfor %}
 </ul>
 
 {% for human in groups %}
+{% if human.name == "—" %}{% continue %}{% endif %}
 
 {% if human.en %}
 <h3 id="{{ human.en | slugify }}">{{ human.en }} ({{ human.name }})</h3>
