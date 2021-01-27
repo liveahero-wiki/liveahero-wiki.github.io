@@ -21,7 +21,7 @@ Friend Point gacha uses {% include item-icon.html id=42 %} friend Points to obta
 
 ## Duplication System
 
-### Tl;dr
+### TL;DR
 
 <table class="bordered">
 <thead>
@@ -66,7 +66,7 @@ The "Hero's Memories" can be used to increase the "Hero's Fan Count". Max fan co
 
 | Hero's Memories | Hero's Fan Count |
 |-|-|
-| Wood Wolfman Hero's Memories (1 ☆) x 1 | +1 |
+| {% include item-icon.html id=110431 %} Wood Wolfman Hero's Memories (1 ☆) x 1 | +1 |
 | {% include item-icon.html id=110011 %} Akashi Hero's Memories (3 ☆) x 1 | +10 |
 | {% include item-icon.html id=110131 %} Toshu Hero's Memories (4 ☆) x 1 | +50 |
 | {% include item-icon.html id=110151 %} Polaris Mask Hero's Memories(5 ☆) x 1 | +200 |
