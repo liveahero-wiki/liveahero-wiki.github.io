@@ -8,7 +8,7 @@ event_start_time: 2021-02-01T18:00:00+09
 event_end_time: 2021-02-15T18:00:00+09
 ---
 
-New character quests are introduced which acts as side stories to learn more about a character.
+New [character quests](/chara_quests/) are introduced which acts as side stories to learn more about a character.
 
 These quests will be playable when you own either the Hero or Sidekick of the character as well as
 having completed some other quests.
