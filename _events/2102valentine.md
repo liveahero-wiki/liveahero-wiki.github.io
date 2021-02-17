@@ -16,6 +16,9 @@ sales_end_time: 2021-03-22T14:00:00+09
 
 Live A Hero's long long long await Valentine event is here, introducing the game's first tradable named character {% chara_link Hisaki %}. Event gacha summon includes a new character {% chara_link Flamier %} (Hero & Sidekick) and two time-limited variants {% chara_link Kyoichi|h2 %} (Hero) and {% chara_link Shoen|h2 %} (Hero).
 
+Maintenance is set to commence on 22 Feb 2021 14:00 - 22:00 JST
+As usual, please make sure you have finished any ongoing quests before maintenance.
+
 ### Free Quest Bonus
 
 ### Event Sales Bonus
