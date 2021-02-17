@@ -57,3 +57,5 @@ TRAINED = "Guh, what a healthy body ...!"
 ## Notes
 
 - He refers to {% chara_link Gammei %}'s eating habit in his relation line
+- His first name "Rakta" likely come from sanskrit language Rakta (रक्त) which means Blood/Red
+- His last name "Salya" likely come from sanskrit language śalya (शल्य) which means to remove extraneous substance or just general surgery
