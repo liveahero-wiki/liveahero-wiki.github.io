@@ -36,3 +36,7 @@ TOUCH = "Whoa, want a skinship with me?<br>Even my henchmen don't have this kind
 TRAIN = "How about opening yer treasures, too?"
 TRAINED = "Yer waving me around, yer good...!"
 %}
+
+## Notes
+
+- His Full name is Suhail Bautista (スハイル バウティスタ)
