@@ -57,7 +57,7 @@ Characters in Live A Hero are divided into two categories, namely Heroes and Sid
 
 You can get both heroes and sidekicks from the Premium Gacha
 
-Premium Gachas are mainly based on the current event, which as of now only one is available (Akatsuki's Golden Spirit).
+Premium Gachas are mainly based on the current event.
 
 ### Ether Stones (Premium Event Gacha/Premium Standard Gacha)
 
