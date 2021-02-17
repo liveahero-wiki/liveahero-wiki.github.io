@@ -11,3 +11,23 @@ farm_end_time: 2021-03-22T14:00:00+09
 sales_start_time: 2021-02-22T20:00:00+09
 sales_end_time: 2021-03-22T14:00:00+09
 ---
+
+## Event Details
+
+Live A Hero's long long long await Valentine event is here, introducing the game's first tradable named character {% chara_link Hisaki %}. Event gacha summon includes a new character {% chara_link Flamier %} (Hero & Sidekick) and two time-limited variants {% chara_link Kyoichi|h2 %} (Hero) and {% chara_link Shoen|h2 %} (Hero).
+
+### Free Quest Bonus
+
+### Event Sales Bonus
+
+### Limited Time Mission
+
+## Event Shop
+
+## Quest Details
+
+### Main Quests
+
+### Free Quests
+
+## Event Sales Report
