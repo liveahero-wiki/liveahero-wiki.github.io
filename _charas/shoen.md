@@ -2,6 +2,8 @@
 title: Shoen
 characterId: 12
 occupation: "Calligrapher (書道家)"
+h2:
+  title: "\"Secret Agent\" Shoen"
 ---
 
 {% capture BIO_H01 %}
