@@ -36,3 +36,7 @@ TOUCH = "Uo! W-what are you doing!<br>Stop, I haven't took a proper bath since I
 TRAIN = "Don't underestimate the strength of a cop, okay?"
 TRAINED = "Gah! Please give me a break...!"
 %}
+
+## Notes
+
+- His full name is Tsukinowa Gammei (月輪 ガンメイ)
