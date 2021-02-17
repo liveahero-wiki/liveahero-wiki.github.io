@@ -47,3 +47,4 @@ TRAINED = "Aghh! T-That's a big hit!"
 ## Notes
 
 - Relation lines refers to {% chara_link Gammei %}
+- His Full name is Barrel Crankrack (バレル・クランクラック)
