@@ -54,3 +54,6 @@ TRAINED = "Owowow! I'm going to charge for medical treatment!"
 %}
 
 ## Notes
+
+- His full name is Procyon Floud (プロキオン・フラウド)
+- [Procyon](https://en.wikipedia.org/wiki/Procyon)(Alpha Canis Minoris) is the brightest star of the [Canis Minor Constellation](https://en.wikipedia.org/wiki/Canis_Minor), with Gomeisa (Beta Canis Minoris) being the second brightest star there
