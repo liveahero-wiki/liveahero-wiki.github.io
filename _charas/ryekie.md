@@ -88,3 +88,5 @@ TRAINED = "H-Hnn.. C-Complete defeat..."
 %}
 
 ## Notes
+
+- His species is very fond and sensitive to kiwi fruits and will go nuts when given sufficient doses similar to how some cats is with catnip
