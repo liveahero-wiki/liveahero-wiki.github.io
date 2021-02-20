@@ -43,5 +43,5 @@ TRAINED = "I-i think that's enough... can I go home?"
 ## Notes
 
 - His full name is Nobeyama Subaru (野辺山 スバル)
-- Subaru is likely based on the star cluster [Pleiades] (https://en.wikipedia.org/wiki/Pleiades) (which is known as subaru in japan)
-- Nobeyama is likely based on [Nobeyama] (https://en.wikipedia.org/wiki/Nobeyama_radio_observatory) radio observatory located in Nagano prefecture and part of National Astronomical Observatory of Japan, this is the highest station among other radio observatory in japan at 1350 Metres altitude above sea level 
+- Subaru is likely based on the star cluster [Pleiades](https://en.wikipedia.org/wiki/Pleiades) (which is known as subaru in japan)
+- Nobeyama is likely based on [Nobeyama](https://en.wikipedia.org/wiki/Nobeyama_radio_observatory) radio observatory located in Nagano prefecture and part of National Astronomical Observatory of Japan, this is the highest station among other radio observatory in japan at 1350 Metres altitude above sea level 
