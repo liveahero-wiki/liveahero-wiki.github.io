@@ -8,7 +8,7 @@ With a lab coat flapping like a cape, she transforms into a hero who fights usin
 
 However, since her goal is not \[to kill or injure her enemies with explosions\], but \[to make beautiful flames for everyone to see\], her techniques are not as destructive as they are flashy.
 
-Nevertheless, she is a fearsome hero since her goal also means make the surroundings a \[Sea of Fire\], literally. 
+Nevertheless, she is a fearsome hero since her goal also means to make the surroundings a \[Sea of Fire\], literally. 
 {% endcapture %}
 
 {% capture BIO_H02 %}
@@ -18,7 +18,7 @@ Combustion can only occur where there is an atmosphere, and on some planets, the
 
 There are many substances that do not even burn in the first place.
 
-That's why to pursue her astounding ideals, she dedicate herself to the research of combustible substance everyday.
+That's why to pursue her astounding ideals, she dedicate herself to the research of combustible substances everyday.
 
 Her unusual obsession with fire is probably second to none.
 {% endcapture %}
