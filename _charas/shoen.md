@@ -26,7 +26,21 @@ In his hand, he has a brush that is disguised as an umbrella.
 In the event of an emergency in enemy territory, he pulls out his brush and uses the ink in his suitcase to protect people's secrets.
 {% endcapture %}
 
-{% include hero-infobox.html stockId=10122 BIO_H01=BIO_H01 %}
+{% capture BIO_H02 %}
+Modesty is a virtue, for a poor talker and cowardly person like him,
+
+What he fears most is that others will find out about his greedy side.
+
+The root of this is a bitter memory of falling in love with those he work for.
+
+Understanding his position and being confused with his gushing feelings, he hold the trauma of saying the last farewell without conveying his feelings.
+
+His desire and his cowardice ashamed him greatly, and so he lock this memory deep down in his heart.
+
+Telling himself to never expose it again…or so it should be.
+{% endcapture %}
+
+{% include hero-infobox.html stockId=10122 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 A calligrapher who owns a small calligraphy one-room school in Orient City. He is also an educator registered as visiting scholar at university's literature department.
