@@ -22,9 +22,55 @@ As usual, please make sure you have finished any ongoing quests before maintenan
 
 ### Free Quest Bonus
 
+| Hero | +Bonus (%)|
+|------------|--------------|
+| {% chara_link Ryekie|h2 %} | 40 |
+| {% chara_link Shoen|h2 %}  | 30 |
+| {% chara_link Flamier|h1 %}  | 30 |
+| {% chara_link Hisaki|h1 %} | 20 |
+| {% chara_link Kyoichi|h1 %}  | 20 |
+| {% chara_link Akashi|h1 %} | 10 | 
+| {% chara_link Nessen|h1 %} | 20 | 
+| {% chara_link Wood Wolfman|h1 %} | 10 | 
+
+| Sidekick | +Bonus (%) |
+|-------------|---------------|
+| {% chara_link Flamier %} | 20 | 
+| {% chara_link Kyoichi %}  | 10 | 
+| {% chara_link Shoen %}  | 10 | 
+| {% chara_link Hisaki %} | 10 | 
+| {% chara_link Akashi %} | 10 | 
+| {% chara_link Nessen %} | 10 | 
+| {% chara_link Wood Wolfman %} | 10 | 
+| {% chara_link Player %} | 10 | 
+
 ### Event Sales Bonus
 
+Event sales bonus added according to how much event Hero you have in a single sales, Which is
+{% chara_link Ryekie|h2 %}, {% chara_link Nessen|h1 %} and {% chara_link Subaru|h1 %}  
+
+Here is the bonus:
+
+| Hero   | +Bonus(%) |
+|--------|-----------|
+| 1 Event Hero   |     10    |
+| 2 Event Heroes |     30    |
+| 3 Event Heroes |     50    |
+| 4 Event Heroes |     70    |
+
 ### Limited Time Mission
+
+Here is a list of this event's limited time Missions:
+
+| No  | Description      | Rewards      |
+|----|-----------------------------------------------------------|----------------|
+| 1  | Finish any rank event quest 10 times | 1 {% include item-icon.html id=34 %}    |
+| 2  | Finish any rank event quest 20 times | 1 {% include item-icon.html id=34 %}    |
+| 3  | Finish any rank event quest 30 times | 1 {% include item-icon.html id=34 %}    |
+| 4  | Finish any rank event quest 40 times | 1 {% include item-icon.html id=34 %}    |
+| 5  | Finish any rank event quest 50 times | 1 {% include item-icon.html id=34 %}    |
+| 6  | Finish event sales 10 times | 1 {% include item-icon.html id=34 %}    |
+
 
 ## Event Shop
 
