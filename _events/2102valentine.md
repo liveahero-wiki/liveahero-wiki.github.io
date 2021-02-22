@@ -50,7 +50,7 @@ Live A Hero's long long long await Valentine event is here, introducing the game
 | {% chara_link Shoen|h2 %}  | 30 |
 | {% chara_link Flamier|h1 %}  | 30 |
 | {% chara_link Hisaki|h1 %} | 20 |
-| {% chara_link Kyoichi|h1 %}  | 20 |
+| {% chara_link Shoen|h1 %}  | 20 |
 | {% chara_link Ryekie|h2 %} | 20 | 
 | {% chara_link Subaru|h1 %} | 10 | 
 | {% chara_link Wood Wolfman|h1 %} | 10 | 
