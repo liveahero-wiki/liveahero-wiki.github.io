@@ -4,7 +4,7 @@
 {% capture target %}{% include skill-effect-target.html target=effect.effectTarget %}{% endcapture %}
 {% assign target = target | strip %}
 
-{% if skillEffectJson.trigger %}(<span class="skill-trigger" data-trigger="{{ skillEffectJson.trigger | escape }}"></span>){% endif %}
+{% if skillEffectJson.trigger %}{{ skillEffectJson.trigger | skill_trigger }}{% endif %}
 {% for effect in skillEffectJson.effects %}
 {% assign turnDefinition = "action" %}
 {% case effect.class %}
