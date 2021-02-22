@@ -10,7 +10,11 @@ module LahWiki
 
   module Skills
     def self.status_wiki(context)
-      @@status_wiki ||= context.registers[:site].data["wiki"]["StatusIcons"]
+      @@status_wiki ||= context.registers[:site].data["wiki"]["Status"]
+    end
+
+    def self.status_master(context)
+      @@status_master ||= context.registers[:site].data["StatusMaster"]
     end
 
     def skill_trigger(trigger_s)
@@ -33,13 +37,24 @@ module LahWiki
         when "MaxHPTrigger"
           f.push("#{c['value']}-% HP")
         when "OwnStatusTrigger"
-          status_icon = Skills::status_wiki(@context)[c['value'].to_s]
+          status_icon = self.status_description(c['value'])
           f.push("possessing #{status_icon}")
         else
           f.push("unknown condition (#{c['class']}")
         end
       end
       return +"(triggered when " + f.join(" and ") + ")"
+    end
+
+    def status_description(id)
+      id_s = id.to_s
+
+      status = Skills::status_master(@context)[id_s]
+      wiki = Skills::status_wiki(@context)[id_s]
+
+      name = wiki['name'] || status['statusName']
+
+      "<span class=\"status\" data-id=\"#{id_s}\" title=\"#{status['description']}\"><img src=\"/cdn/Sprite/#{wiki['icon']}.png\" loading=\"lazy\"> #{name}</span>"      
     end
   end
 end

@@ -1,4 +1,4 @@
 {% capture timing %}{% include skill-timing.html timing=include.skill.timing %}{% endcapture %}
-{% for effect in include.skill.effects %}
-[{{ timing | strip }}]{% include skill-effect-description.html effect=effect %}/{{ effect.prob }}%<br>
+{% for skillEffect in include.skill.effects %}
+[{{ timing | strip }}]{% include skill-effect-description.html skillEffect=skillEffect %}/{{ skillEffect.prob }}%<br>
 {% endfor %}
