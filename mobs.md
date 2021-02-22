@@ -33,6 +33,18 @@ sprites="fg_kaibutsuLarvaEarth_h01,fg_kaibutsuLarvaFire_h01,fg_kaibutsuLarvaLigh
 sprites="fg_kaibutsuXmas2012_h01"
 %}
 
+### Mafia (hero)
+
+{% include hero-infobox-unreleased.html name="Mafia (hero)" mob=true
+sprites="fg_mafiaEarth_h01,fg_mafiaFire_h01,fg_mafiaLight_h01,fg_mafiaWater_h01"
+%}
+
+### Mafia (normal)
+
+{% include hero-infobox-unreleased.html name="Mafia (normal)" mob=true
+sprites="fg_mafiaFire_s01,fg_mafiaWater_s01"
+%}
+
 ### Villain (hero)
 
 {% include hero-infobox-unreleased.html name="Villain (hero)" mob=true
