@@ -18,7 +18,7 @@ He is proud of himself as a genius and acts confidently, asserting straightforwa
 
 This personality was shaped by his defiance against the people around him who kept pointing at him as a \[fake\] and his desire to make them recognize his existence.
 
-With the desire to assert his existence and be recognized by as many people as possible .....he continues to search for the development of cutting-edge technology that will surprise everyone.
+Wishing to assert his existence and be recognized by as many people as possible .....he continues to search for the development of cutting-edge technology that will surprise everyone.
 {% endcapture %}
 {% include hero-infobox.html stockId=10531 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
