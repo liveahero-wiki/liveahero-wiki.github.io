@@ -18,6 +18,8 @@ Live A Hero's long long long await Valentine event is here, introducing the game
 
 ### Free Quest Bonus
 
+Bonus for {% include item-icon.html id=57 %} 
+
 | Hero | +Bonus (%)|
 |------------|--------------|
 | {% chara_link Kyoichi|h2 %} | 40 |
