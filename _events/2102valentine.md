@@ -16,6 +16,11 @@ sales_end_time: 2021-03-22T14:00:00+09
 
 Live A Hero's long long long await Valentine event is here, introducing the game's first tradable named character {% chara_link Hisaki %}. Event gacha summon includes a new character {% chara_link Flamier %} (Hero & Sidekick) and two time-limited variants {% chara_link Kyoichi|h2 %} (Hero) and {% chara_link Shoen|h2 %} (Hero).
 
+For this event quest there are one-time boost items you can use before entering each stage, these items dropped from the event quest itself which is:
+- {% include item-icon.html id=54 %} Power Booster, increase team atk by 100 each for a maximum of 1000
+- {% include item-icon.html id=55 %} Energy Tank, increase team HP by 200 each for a maximum of 2000
+- {% include item-icon.html id=56 %} Defensive Shield, reduce received damage by 50 each for a maximum of 500
+
 ### Free Quest Bonus
 
 #### Bonus for {% include item-icon.html id=57 %} 
