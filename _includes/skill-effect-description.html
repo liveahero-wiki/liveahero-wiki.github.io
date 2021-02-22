@@ -49,7 +49,7 @@ Give {{ target }} Taunt: opponents can target only {{ target }}
 {% assign turnDefinition = "turn" %}
 Give {{ target }} Hide status
 {% when "HealthDamage" %}
-Deal {{ effect.parameter.value }}% -> {{ effect.parameter.value | times: 2 }}% damage to {{ target }} as HP goes from Max to 0
+Deal {% if effect.parameter.evaluationIsMax == true %}{{ effect.parameter.value | times: 2 }}% -> {{ effect.parameter.value }}%{% else %}{{ effect.parameter.value }}% -> {{ effect.parameter.value | times: 2 }}%{% endif %} damage to {{ target }} as HP goes from Max to 0
 {% when "DeleteTurn" %}
 Skip {{ effect.parameter.value }} enemy action(s)
 {% when "Silence" %}
