@@ -147,6 +147,85 @@
       }
     ]
   },
+  "8": {
+    "skillId": 8,
+    "skillName": "イベント用_アイテム効果エフェクト",
+    "useView": 0,
+    "targetFlag": 5,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "アイテム効果発動時のエフェクト再生用",
+    "cutin": [
+      {
+        "info": {
+          "class": "System"
+        },
+        "name": "skill_wait"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 281,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "9": {
+    "skillId": 9,
+    "skillName": "イベント用_アイテム効果HPアップ",
+    "useView": 0,
+    "targetFlag": 5,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "アイテム効果：HPアップ",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 278,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "10": {
+    "skillId": 10,
+    "skillName": "イベント用_アイテム効果ATKアップ",
+    "useView": 0,
+    "targetFlag": 5,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "アイテム効果：ATKアップ",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 279,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "11": {
+    "skillId": 11,
+    "skillName": "イベント用_アイテム効果被ダメージ減",
+    "useView": 0,
+    "targetFlag": 5,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "アイテム効果：被ダメージ減少",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 280,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
   "1001101": {
     "skillId": 1001101,
     "skillName": "燃ゆる白球",
@@ -1392,6 +1471,246 @@
       }
     ]
   },
+  "1010201": {
+    "skillId": 1010201,
+    "skillName": "奇襲指令",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。自身に隠蔽が付与されている場合、ダメージ増加。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kyoichiValentine2102_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 276,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1010202": {
+    "skillId": 1010202,
+    "skillName": "諜報活動",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_spdDown",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に1ターンの間SPDダウンを付与。自身に2ターンの間隠蔽を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kyoichiValentine2102_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 42,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 277,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1010203": {
+    "skillId": 1010203,
+    "skillName": "初教戦法180",
+    "useView": 8000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に180%ダメージ。自身に隠蔽が付与されている場合、隠蔽を解除し、もう１度行動をする。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_kyoichiValentine2102_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 21,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 274,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 275,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1010204": {
+    "skillId": 1010204,
+    "skillName": "諜報活動+",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_spdDown",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に1ターンの間SPDダウンを付与。自身に2ターンの間隠蔽を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kyoichiValentine2102_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 42,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 277,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1011101": {
+    "skillId": 1011101,
+    "skillName": "ラブリー・フレイム",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。60%の確率で2ターンの間火傷を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_flamier_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 2,
+        "prob": 60,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1011102": {
+    "skillId": 1011102,
+    "skillName": "クレイジー・フォー・ボム",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に2ターンの間DEFダウンを付与。50%の確率で1ターンの間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_flamier_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 9,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 50,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1011103": {
+    "skillId": 1011103,
+    "skillName": "ハッピー♡フラワータイム",
+    "useView": 9000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵全体に60%ダメージ。Viewを12000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_flamier_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 290,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1011104": {
+    "skillId": 1011104,
+    "skillName": "ハッピー♡フラワータイム+",
+    "useView": 9000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵全体に60%ダメージ。Viewを15000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_flamier_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 114,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
   "1012101": {
     "skillId": 1012101,
     "skillName": "「打」の墨跡",
@@ -1509,6 +1828,111 @@
         "skillEffectId": 46,
         "prob": 100,
         "effectTarget": 1
+      }
+    ]
+  },
+  "1012201": {
+    "skillId": 1012201,
+    "skillName": "「隠」の書成術",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に50%ダメージ。自身に60%の確率で2ターンの間隠蔽を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_shoenValentine2102_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 277,
+        "prob": 60,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1012202": {
+    "skillId": 1012202,
+    "skillName": "「秘」の書成術",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ+相手のデバフの数に応じてダメージ量が上昇。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_shoenValentine2102_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 289,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1012203": {
+    "skillId": 1012203,
+    "skillName": "九十九墨跡",
+    "useView": 11000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に60%ダメージ+HPが多いほどダメージ量が上昇する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_shoenValentine2102_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 288,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "1012204": {
+    "skillId": 1012204,
+    "skillName": "九十九墨跡+",
+    "useView": 10000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に60%ダメージ+HPが多いほどダメージ量が上昇する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_shoenValentine2102_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 288,
+        "prob": 100,
+        "effectTarget": 4
       }
     ]
   },
@@ -3642,6 +4066,116 @@
       }
     ]
   },
+  "1053101": {
+    "skillId": 1053101,
+    "skillName": "ステルスアタック",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に40%ダメージ。自身に80%の確率で2ターンの間隠蔽を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_hisaki_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 273,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 277,
+        "prob": 80,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1053102": {
+    "skillId": 1053102,
+    "skillName": "エネルギーシールド",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "味方単体に1ターンの間DEFアップを付与。Viewを6000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_hisaki_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 272,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1053103": {
+    "skillId": 1053103,
+    "skillName": "オープス・クリエイション",
+    "useView": 9000,
+    "targetFlag": 3,
+    "resourceName": "b_skill_buffAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方全体に1ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_hisaki_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "1053104": {
+    "skillId": 1053104,
+    "skillName": "オープス・クリエイション+",
+    "useView": 7000,
+    "targetFlag": 3,
+    "resourceName": "b_skill_buffAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方全体に1ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_hisaki_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
   "2001101": {
     "skillId": 2001101,
     "skillName": "一球入魂",
@@ -4567,6 +5101,111 @@
       {
         "skillEffectId": 68,
         "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2011101": {
+    "skillId": 2011101,
+    "skillName": "ポイズン・ボム",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に1ターンの間毒を付与 & 70%の確率で毒を付与 & 35%の確率で毒を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_flamier_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 89,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 89,
+        "prob": 70,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 89,
+        "prob": 35,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2011102": {
+    "skillId": 2011102,
+    "skillName": "ポイズン・ボム+",
+    "useView": 2500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に1ターンの間毒を付与 & 70%の確率で毒を付与 & 35%の確率で毒を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_flamier_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 89,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 89,
+        "prob": 70,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 89,
+        "prob": 35,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2011103": {
+    "skillId": 2011103,
+    "skillName": "ポイズン・ボム++",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に1ターンの間毒を付与 & 70%の確率で毒を付与 & 35%の確率で毒を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_flamier_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 89,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 89,
+        "prob": 70,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 89,
+        "prob": 35,
         "effectTarget": 2
       }
     ]
@@ -6346,6 +6985,81 @@
       }
     ]
   },
+  "2053101": {
+    "skillId": 2053101,
+    "skillName": "防具メンテナンス",
+    "useView": 3500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に2ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_hisaki_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2053102": {
+    "skillId": 2053102,
+    "skillName": "防具メンテナンス+",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に2ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_hisaki_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2053103": {
+    "skillId": 2053103,
+    "skillName": "防具メンテナンス++",
+    "useView": 2500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に2ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_hisaki_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
   "2999101": {
     "skillId": 2999101,
     "skillName": "類稀なる強運",
@@ -7656,6 +8370,114 @@
         "skillEffectId": 15,
         "prob": 20,
         "effectTarget": 0
+      }
+    ]
+  },
+  "3011101": {
+    "skillId": 3011101,
+    "skillName": "燃やすな危険Ⅰ",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "icon_flamier_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、敵全体に20%の確率で1ターンの間毒を付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 89,
+        "prob": 20,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "3011102": {
+    "skillId": 3011102,
+    "skillName": "燃やすな危険Ⅱ",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "icon_flamier_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、敵全体に24%の確率で1ターンの間毒を付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 89,
+        "prob": 24,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "3011103": {
+    "skillId": 3011103,
+    "skillName": "燃やすな危険Ⅲ",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "icon_flamier_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、敵全体に28%の確率で1ターンの間毒を付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 89,
+        "prob": 28,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "3011104": {
+    "skillId": 3011104,
+    "skillName": "燃やすな危険Ⅳ",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "icon_flamier_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、敵全体に32%の確率で1ターンの間毒を付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 89,
+        "prob": 32,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "3011105": {
+    "skillId": 3011105,
+    "skillName": "燃やすな危険Ⅴ",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "icon_flamier_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、敵全体に36%の確率で1ターンの間毒を付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 89,
+        "prob": 36,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "3011106": {
+    "skillId": 3011106,
+    "skillName": "燃やすな危険Ⅵ",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "icon_flamier_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、敵全体に40%の確率で1ターンの間毒を付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 89,
+        "prob": 40,
+        "effectTarget": 4
       }
     ]
   },
@@ -9952,6 +10774,114 @@
       }
     ]
   },
+  "3053101": {
+    "skillId": 3053101,
+    "skillName": "試作電磁シールドⅠ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_hisaki_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、10%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 10,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3053102": {
+    "skillId": 3053102,
+    "skillName": "試作電磁シールドⅡ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_hisaki_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、14%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 14,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3053103": {
+    "skillId": 3053103,
+    "skillName": "試作電磁シールドⅢ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_hisaki_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、18%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 18,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3053104": {
+    "skillId": 3053104,
+    "skillName": "試作電磁シールドⅣ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_hisaki_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、22%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 22,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3053105": {
+    "skillId": 3053105,
+    "skillName": "試作電磁シールドⅤ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_hisaki_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、26%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 26,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3053106": {
+    "skillId": 3053106,
+    "skillName": "試作電磁シールドⅥ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_hisaki_s01",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、30%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 30,
+        "effectTarget": 0
+      }
+    ]
+  },
   "3999101": {
     "skillId": 3999101,
     "skillName": "無意識下のアシストⅠ",
@@ -11500,6 +12430,166 @@
         "skillEffectId": 30,
         "prob": 100,
         "effectTarget": 0
+      }
+    ]
+  },
+  "4054101": {
+    "skillId": 4054101,
+    "skillName": "発砲",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMafia_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "4054102": {
+    "skillId": 4054102,
+    "skillName": "リロード",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に2ターンの間ATKアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMafia_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "4054103": {
+    "skillId": 4054103,
+    "skillName": "スモークグレネード",
+    "useView": 2000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に2ターンの間隠蔽を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMafia_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 277,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "4054104": {
+    "skillId": 4054104,
+    "skillName": "発砲",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。60%の確率で1ターンの間DEFダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMafia_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 60,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "4054105": {
+    "skillId": 4054105,
+    "skillName": "狙撃",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に130%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMafia_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 71,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "4054106": {
+    "skillId": 4054106,
+    "skillName": "乱射",
+    "useView": 10000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffAll",
+    "timing": 0,
+    "description": "敵全体に60%ダメージ。80%の確率で1ターンの間DEFダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMafia_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 80,
+        "effectTarget": 4
       }
     ]
   },
