@@ -24,7 +24,7 @@ As usual, please make sure you have finished any ongoing quests before maintenan
 
 | Hero | +Bonus (%)|
 |------------|--------------|
-| {% chara_link Ryekie|h2 %} | 40 |
+| {% chara_link Kyoichi|h2 %} | 40 |
 | {% chara_link Shoen|h2 %}  | 30 |
 | {% chara_link Flamier|h1 %}  | 30 |
 | {% chara_link Hisaki|h1 %} | 20 |
