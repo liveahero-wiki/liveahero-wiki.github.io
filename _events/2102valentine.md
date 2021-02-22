@@ -18,7 +18,7 @@ Live A Hero's long long long await Valentine event is here, introducing the game
 
 ### Free Quest Bonus
 
-Bonus for {% include item-icon.html id=57 %} 
+#### Bonus for {% include item-icon.html id=57 %} 
 
 | Hero | +Bonus (%)|
 |------------|--------------|
@@ -27,8 +27,8 @@ Bonus for {% include item-icon.html id=57 %}
 | {% chara_link Flamier|h1 %}  | 30 |
 | {% chara_link Hisaki|h1 %} | 20 |
 | {% chara_link Kyoichi|h1 %}  | 20 |
-| {% chara_link Akashi|h1 %} | 10 | 
 | {% chara_link Nessen|h1 %} | 20 | 
+| {% chara_link Akashi|h1 %} | 10 | 
 | {% chara_link Wood Wolfman|h1 %} | 10 | 
 
 | Sidekick | +Bonus (%) |
@@ -39,6 +39,29 @@ Bonus for {% include item-icon.html id=57 %}
 | {% chara_link Hisaki %} | 10 | 
 | {% chara_link Akashi %} | 10 | 
 | {% chara_link Nessen %} | 10 | 
+| {% chara_link Wood Wolfman %} | 10 | 
+| {% chara_link Player %} | 10 | 
+
+#### Bonus for {% include item-icon.html id=58 %} 
+
+| Hero | +Bonus (%)|
+|------------|--------------|
+| {% chara_link Kyoichi|h2 %} | 40 |
+| {% chara_link Shoen|h2 %}  | 30 |
+| {% chara_link Flamier|h1 %}  | 30 |
+| {% chara_link Hisaki|h1 %} | 20 |
+| {% chara_link Kyoichi|h1 %}  | 20 |
+| {% chara_link Ryekie|h2 %} | 20 | 
+| {% chara_link Subaru|h1 %} | 10 | 
+| {% chara_link Wood Wolfman|h1 %} | 10 | 
+
+| Sidekick | +Bonus (%) |
+|-------------|---------------|
+| {% chara_link Flamier %} | 20 | 
+| {% chara_link Kyoichi %}  | 10 | 
+| {% chara_link Shoen %}  | 10 | 
+| {% chara_link Hisaki %} | 10 | 
+| {% chara_link Subaru %} | 10 | 
 | {% chara_link Wood Wolfman %} | 10 | 
 | {% chara_link Player %} | 10 | 
 
