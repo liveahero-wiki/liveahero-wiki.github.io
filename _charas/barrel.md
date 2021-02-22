@@ -36,7 +36,7 @@ assist = "The showdown begins now!"
 assisted = "I owe you!"
 APPRECIATION = "Thank you for your hard work, partner!<br>Ah, if you meet someone troubling on your way home, don't hesitate to go to the police box!<br>I will solve it in a flash!"
 DAILY = "Thank you for your hard work! <br>Come on, come on, let's quickly go to the scene of the crime, there!<br>The scent of danger is waiting for us officials!"
-HERO = "That bomber guy is amazing!<br>I feel bad for them having to smell gunpowder all the time<br>... Eh? Hobby friend? What's that?"
+HERO = "That bomber lady is amazing!<br>I feel bad for her having to smell gunpowder all the time<br>... Eh? Hobby friend? What's that?"
 PLAYER = "Both you and I are newcomers!<br>I feel like us fellow rookies will be great friends!<br>Let's do our best and aim for the stars!"
 RELATION = "That detective is always sighing.<br>Looks like being in middle management is not easy at all..<br>..E, it's also partly my fault? No way!"
 TOUCH = "H-Hey! It tickles, hahaha!<br>If you keep doing that, I'll--"
@@ -46,5 +46,6 @@ TRAINED = "Aghh! T-That's a big hit!"
 
 ## Notes
 
-- Relation lines refers to {% chara_link Gammei %}
+- His relation lines refers to {% chara_link Gammei %}
+- His hero lines refers to {% chara_link Flamier %}
 - His Full name is Barrel Crankrack (バレル・クランクラック)
