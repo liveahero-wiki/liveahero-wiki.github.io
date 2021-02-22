@@ -1,7 +1,7 @@
 {% capture eid %}{{ include.effect.skillEffectId }}{% endcapture %}
 {% assign effectParent = site.data.SkillEffectMaster[eid] %}
 {% assign skillEffectJson = effectParent.skillEffectJson %}
-{% capture target %}{% include skill-effect-target.html target=effect.effectTarget %}{% endcapture %}
+{% capture target %}{% include skill-effect-target.html target=include.effect.effectTarget %}{% endcapture %}
 {% assign target = target | strip %}
 
 {% if skillEffectJson.trigger %}{{ skillEffectJson.trigger | skill_trigger }}{% endif %}
@@ -25,7 +25,7 @@ Add {{ effect.parameter.value }} views
 {% when "ChangeAgi" %}
 SPD {% if effect.parameter.value >= 0 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value }} to {{ target }}
 {% when "RemoveBuff" %}
-Remove {{ effect.parameter.value }} buffs from {{ target }}
+Remove {{ effect.parameter.value }} {% if effect.parameter.target %}{% include status.html id=effect.parameter.target %} status{% else %}buff(s){% endif %} from {{ target }}
 {% when "ComboPlus" %}
 Gain {{ effect.parameter.value }} combos
 {% when "ChangeSkillProve" %}
