@@ -45,7 +45,7 @@ Bonus for {% include item-icon.html id=57 %}
 ### Event Sales Bonus
 
 Event sales bonus added according to how much event Hero you have in a single sales, Which is
-{% chara_link Ryekie|h2 %}, {% chara_link Nessen|h1 %} and {% chara_link Subaru|h1 %}  
+{% chara_link Kyoichi|h2 %}, {% chara_link Shoen|h2 %}, {% chara_link Flamier|h1 %} and {% chara_link Hisaki|h1 %}  
 
 Here is the bonus:
 
