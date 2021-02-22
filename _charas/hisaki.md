@@ -3,7 +3,24 @@ title: Hisaki
 characterId: 53
 ---
 
-{% include hero-infobox.html stockId=10531 %}
+{% capture BIO_H01 %}
+He dreams of grasping a glorious future with his hand, and his parallel weapon is an equipment that can reproduce \[The Future\] in his hands.
+
+By accessing the brain of his future self, which has succeeded in reaching the cutting edge of the entire universe, 
+
+he can output things on his glove that cannot be created with modern technology and can be used as a weapon.
+
+These weapons, made up of unknown technology that can only be described as the product of magic, foreshadow the infinite development of science and technology.
+{% endcapture %}
+
+{% capture BIO_H02 %}
+He is proud of himself as a genius and acts confidently, asserting straightforwardly his desires for self-expression and approval, desires that are often perceived in a negative light.
+
+This personality was shaped by his defiance against the people around him who kept pointing at him as a \[fake\] and his desire to make them recognize his existence.
+
+With the desire to assert his existence and be recognized by as many people as possible .....he continues to search for the development of cutting-edge technology that will surprise everyone.
+{% endcapture %}
+{% include hero-infobox.html stockId=10531 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 A young man working at a medium sized factory of a heavy industry equipment manufacturer.
