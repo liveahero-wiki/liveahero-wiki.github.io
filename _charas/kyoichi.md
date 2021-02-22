@@ -16,6 +16,8 @@ His identity as  "Element Teacher" is kept secret from his students, as a specia
 
 {% include hero-infobox.html stockId=10101 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
+{% include hero-infobox.html stockId=10102 %}
+
 {% capture BIO_S01 %}
 A teacher working at an elementary school in Orient City
 
@@ -58,6 +60,9 @@ TOUCH = "Oops! Hoh…<br>Since you're the one who started it first,<br>that mean
 TRAIN = "Alright follow your teacher!"
 TRAINED = "Uwaa wait, I give up, I give up! Uhyaa!"
 
+%}
+
+{% include voice-table.html resourceName="kyoichiValentine2102"
 %}
 
 ## Notes

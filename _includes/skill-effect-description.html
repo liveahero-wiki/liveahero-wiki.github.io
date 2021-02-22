@@ -45,6 +45,9 @@ Remove {{ effect.parameter.value }} debuff(s) from {{ target }}
 {% when "Provocation" %}
 {% assign turnDefinition = "turn" %}
 Give {{ target }} Taunt: opponents can target only {{ target }}
+{% when "Hide" %}
+{% assign turnDefinition = "turn" %}
+Give {{ target }} Hide status
 {% when "HealthDamage" %}
 Deal {{ effect.parameter.value }}% -> {{ effect.parameter.value | times: 2 }}% damage to {{ target }} as HP goes from Max to 0
 {% when "DeleteTurn" %}
@@ -52,6 +55,8 @@ Skip {{ effect.parameter.value }} enemy action(s)
 {% when "Silence" %}
 {% assign turnDefinition = "turn" %}
 {{ target }} cannot use view-costing skills
+{% when "AddMultDamage" %}
+Deal {{ effect.parameter.value }}% of damage and extra {{ effect.parameter.addMult }}% of damage when possessing the status mentioned in trigger (needs experiment)
 {% when "ComboDamage" %}
 Deal {{ effect.parameter.value }}% of damage and {{ effect.parameter.value | times: effect.parameter.combpMult | divided_by: 100.0 }}% extra for each combo to {{ target }}
 {% when "ElementPenetrateDamage" %}

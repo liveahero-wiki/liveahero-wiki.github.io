@@ -28,10 +28,16 @@ As usual, please make sure you have finished any ongoing quests before maintenan
 
 ## Event Shop
 
+{% include shop-table.html id=7 %}
+
 ## Quest Details
 
 ### Main Quests
 
+{% include quest-group.html chapterId=412 %}
+
 ### Free Quests
+
+{% include quest-group.html chapterId=413 %}
 
 ## Event Sales Report

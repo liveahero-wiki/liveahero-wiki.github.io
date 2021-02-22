@@ -16,6 +16,8 @@ His hope is to "write 'living' characters." Every time he sees the letters writt
 
 {% include hero-infobox.html stockId=10121 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
+{% include hero-infobox.html stockId=10122 %}
+
 {% capture BIO_S01 %}
 A calligrapher who owns a small calligraphy one-room school in Orient City. He is also an educator registered as visiting scholar at university's literature department.
 
@@ -53,6 +55,9 @@ PLAYER = "I…didn't really understand master's job.<br>but…when master is not
 TOUCH = "Mmm ... you want to touch my belly ...?<br>Is this... what is known as skinship?<br>Hmm ... I see ..."
 TRAIN = "Will you train together with me?"
 TRAINED = "This body, move...!"
+%}
+
+{% include voice-table.html resourceName="shoenValentine2102"
 %}
 
 ## Notes
