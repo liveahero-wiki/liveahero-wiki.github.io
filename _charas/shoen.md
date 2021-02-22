@@ -16,7 +16,17 @@ His hope is to "write 'living' characters." Every time he sees the letters writt
 
 {% include hero-infobox.html stockId=10121 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10122 %}
+{% capture BIO_H01 %}
+Shoen stood up during the calamity in which everyone's secrets are revealed regardless of their intention/desire.
+
+Whilst wearing a mantle that hides his body, it resembles an outfit befitting of someone on a mission to infiltrate an enemy organisation, personifying the thought that "There are things that's better if kept hidden".
+
+In his hand, he has a brush that is disguised as an umbrella.
+
+In the event of an emergency in enemy territory, he pulls out his brush and uses the ink in his suitcase to protect people's secrets.
+{% endcapture %}
+
+{% include hero-infobox.html stockId=10122 BIO_H01=BIO_H01 %}
 
 {% capture BIO_S01 %}
 A calligrapher who owns a small calligraphy one-room school in Orient City. He is also an educator registered as visiting scholar at university's literature department.
