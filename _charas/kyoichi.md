@@ -16,7 +16,16 @@ His identity as  "Element Teacher" is kept secret from his students, as a specia
 
 {% include hero-infobox.html stockId=10101 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10102 %}
+{% capture BIO_H01 %}
+Kyoichi describes himself in this new form as "Agent of Love, E.T.L.".
+
+Transformed into this figure, he is a warrior of love on a mission to rescue children in the midst of terrorism.
+
+Because they perceive romance as embarrassing, the children mutually deride one another in a negative feedback loop and create their own hell full of anger and sadness, with all their secrets exposed. 
+
+As a mature adult, he rescues children and runs through enemy strongholds in a black suit, using chalk bullets as a weapon.
+{% endcapture %}
+{% include hero-infobox.html stockId=10102 BIO_H01=BIO_H01 %}
 
 {% capture BIO_S01 %}
 A teacher working at an elementary school in Orient City
