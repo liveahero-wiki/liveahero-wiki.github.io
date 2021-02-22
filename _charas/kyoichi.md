@@ -27,7 +27,15 @@ As a mature adult, he rescues children and runs through enemy strongholds in a b
 {% endcapture %}
 
 {% capture BIO_H02 %}
+Kyoichi is not good at keeping secrets, and so whatever feelings he has for the other party, he will advance and lay it bare.
 
+This is his own attitude developed in order to gain the trust of others.
+
+However, saying something honestly sometimes doesn't bring about a good result.
+
+When we communicate too straightforwardly, there will be times when others get hurt by it.
+
+And so when faced with a case which can be called the best example of this dilemma, he finds himself greatly perplexed.
 {% endcapture %}
 
 {% include hero-infobox.html stockId=10102 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
