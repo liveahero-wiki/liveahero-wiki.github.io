@@ -27,17 +27,7 @@ As a mature adult, he rescues children and runs through enemy strongholds in a b
 {% endcapture %}
 
 {% capture BIO_H02 %}
-Modesty is a virtue, and he is very afraid of being a timid person and a poor talker.
 
-This intense desire of his is to be known by others.
-
-The root of this is a bitter memory of falling in love with those he work for.
-
-Understanding his position and being confused with his gushing feelings, he hold the trauma of saying the last farewell without conveying his feelings.
-
-His desire and his timidity ashamed him greatly, and so he lock this memory deep down in his heart.
-
-Telling himself to never expose it again…or so it should be.
 {% endcapture %}
 
 {% include hero-infobox.html stockId=10102 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
