@@ -85,6 +85,7 @@ TRAINED = "Uwaa wait, I give up, I give up! Uhyaa!"
 %}
 
 {% include voice-table.html resourceName="kyoichiValentine2102"
+RELATION = "Subaru has always been that way. He seems to hate people, but actually he's really lonely. That's why I want to take care of him."
 %}
 
 ## Notes
