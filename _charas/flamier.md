@@ -50,4 +50,4 @@ TRAIN = "Thank you for your partnership in this experiment."
 TRAINED = "Ah, please be gentle ...!"
 %}
 
-%}
+## Notes
