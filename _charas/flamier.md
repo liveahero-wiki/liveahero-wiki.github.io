@@ -38,4 +38,14 @@ Her dream is to create fireworks that bloom beautifully in space.
 {% include sidekick-infobox.html stockId=10111 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="flamier"
+APPRECIATION = "Thank you for your hard work. I heated up some water in the office kitchenette and brewed tea. It looks like you're tired, so why don't you take a break ...?"
+DAILY = ""
+HERO = "That pastry chef lady is amazing. To bake baked goods at that speed. I wonder what kind of gunpowder she's using ..."
+PLAYER = "Everybody has to start somewhere. Don't rush, just get used to it little by little. That was how I fell in love with the flames ... aah..."
+RELATION = "That police officer hero seems to get along well with me. Firearms are also in my area of study after all. That momentary flash from the muzzle is just irresistible..."
+TOUCH = "Oh?  What are you doing? Ah, maybe there was some leftover gunpowder powder on me? Goodness, how embarrassing ..."
+TRAIN = ""
+TRAINED = ""
+%}
+
 %}
