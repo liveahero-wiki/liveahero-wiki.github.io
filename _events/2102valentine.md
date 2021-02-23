@@ -120,6 +120,11 @@ Here is a list of this event's limited time Missions:
 </p>
 </details>
 
+<details><summary>Sales Report 1 (Translated)</summary>
+<p> <code>character0</code> and <code>character1</code> are taking a job as a model for a bakery's new chocolate product promotional poster.<br><br>The both of them are trying to pose according to instructions,<br>but the cameraman doesn't seem to be satisfied,<br>and the instructions are getting more and more escalated.<br><br>\[Think of the other as your real lover!\]<br>\[Look at their eyes as if you're going to kiss!\]<br>\[Entwine your arms!\] \[Embrace their back!\]<br><br> <code>character0</code> and <code>character1</code> somehow finished the photo session with red faces, and are returning back.<br>However they can't get over the previous role,<br>and so the way back is filled with awkward embarassment.<br><br>Postscript:<br> <code>character0</code> and <code>character1</code> 's best photos are scheduled to be published in the supermarket and convenience store all around the globe for a limited time.
+</p>
+</details>
+
 <details><summary>Sales Report 2</summary>
 <p>料理番組のゲストの仕事で呼ばれた<br> <code>character0</code> と <code>character1</code> 。<br><br>特別企画として <code>character0</code> と <code>character1</code> も<br>チョコを手作りすることに。<br><br>順調にチョコは出来上がったが、<br>最後に作ったチョコをゲスト同士で<br>食べさせ合う企画と知り、<br>急に顔を赤くする <code>character0</code> 。<br><br> <code>character1</code> は迷いなくチョコを手に取り<br> <code>character0</code> の口元へと差し出す。<br><br>カメラを気にしながらも<br> <code>character1</code> のチョコを頬張る <code>character0</code> 。<br><br>その映像が放送されるやいなや、<br>「あーん」してもらい満更でもない表情だと<br> <code>character0</code> がSNSで話題になったという…
 </p>
