@@ -91,7 +91,7 @@ HERO = "There aren't many people who can speak so frankly and unabashedly as Kyo
 PLAYER = "Have you ever embraced a burning, passionate feeling? …What a rude question to ask. Recent events have gotten me a little sentimental it seems... My apologies."
 TOUCH = "My goal is acquire a heart as clear and serene as still water. Therefore, even when my true self[^shoen_n2] is touched...kuaagh?! <br>...I want you to say that you didn't hear that sound just now.
 
-[^shoen_n2]: 腹, Literally: belly/true self, Shoen is talking about meditating on his inner true self but the word also means belly so they just grabs a handful"
+[^shoen_n2]: 腹, Literally: belly/true self, Shoen is talking about meditating on his inner true self but the word also means belly so we just grabs a handful"
 TRAIN = "Calm your heart, here i go."
 TRAINED = "My shame is getting the better of me...!"
 %}
