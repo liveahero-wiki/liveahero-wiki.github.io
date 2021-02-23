@@ -41,7 +41,7 @@ He calls his college senior Crowne his big sis, and both trusts and lives in fea
 h_gachaResult = ""
 s_gachaResult = ""
 APPRECIATION = ""
-DAILY = "Yo,  client!  Look at this! A new invention I wrapped up work on yesterday... wait a minute! At least let me do a little presentation before you start playin' with it!"
+DAILY = "Yo,  client!  Look at this! A new invention I work on yesterday... wait a minute! At least let me do a little presentation before you start playin' with it!"
 HERO = "Applying your knowledge of chemistry to make explosives and fight. It's pretty noisy, but kinda fun. She and I share that experiment-loving spirit,  I think we'll get along."
 PLAYER = "Experiments fail, then you dust yourself off and figure out what was wrong and try again. It's the same with work. Let's move forward without fear!  Alrighty!"
 RELATION = "Big sis is reliable, but aw man. Back when we were students, you wouldn't believe how much she'd knock me around and make me cry... Ha! is big sis here?! She didn't hear that, right?!"
