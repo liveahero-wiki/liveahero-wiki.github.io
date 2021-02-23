@@ -82,14 +82,14 @@ TRAINED = "This body, move...!"
 %}
 
 {% include voice-table.html resourceName="shoenValentine2102"
-h_gachaResult = "Let us take back those peaceful days. In order to protect everyone's concealed hearts, I shall use my body as a shield, shaking this brush of mine..."
-s_gachaResult = "If my brush can save someone's heart then I will gladly wield it. With our hands--let's return the heart's peaceful days."
-APPRECIATION = "Do you enjoy making tea and spending time in calm tranquility? It will be a good rest for your heart. ...what? What do I want to say? ... I erm, I was inviting you to join me... "
-DAILY = "The time I spend writing is the most relaxing. ...I'm sorry, I made you wait. My heart is ready at last, let's go. "
-RELATION = "Because I am not well versed in technology, Hisaki's inventions seem so bizarre to me. The world is so vast and filled with things I do not know... "
-HERO = "There aren't many people who can speak so frankly and unabashedly as Kyoichi. If I could be like that man, I wonder, perhaps I wouldn't worry so much about seeming standoffish..."
-PLAYER = "Have you ever embraced a burning, passionate feeling? …What a rude question to ask. Recent events have gotten me a little sentimental it seems... My apologies."
-TOUCH = "My goal is acquire a heart as clear and serene as still water. Therefore, even when my true self[^shoen_n2] is touched...kuaagh?! <br>...I want you to say that you didn't hear that sound just now.
+h_gachaResult = "Let us take back those peaceful days.<br>In order to protect everyone's concealed hearts, I shall use my body as a shield, shaking this brush of mine..."
+s_gachaResult = "If my brush can save someone's heart then I will gladly wield it.<br>With our hands--let's return the heart's peaceful days."
+APPRECIATION = "Do you enjoy making tea and spending time in calm tranquility?<br>It will be a good rest for your heart. ...what? What do I want to say? ... I erm, I was inviting you to join me... "
+DAILY = "The time I spend writing is the most relaxing.<br>...I'm sorry, I made you wait. My heart is ready at last, let's go. "
+RELATION = "There aren't many people who can speak so frankly and unabashedly as Kyoichi.<br>If I could be like him, I wonder, perhaps I wouldn't worry so much about seeming standoffish..."
+HERO = "Because I am not well versed in technology, Hisaki's inventions seem so bizarre to me.<br>The world is so vast and filled with things I do not know..."
+PLAYER = "Have you ever embraced a burning, passionate feeling?<br>…What a rude question to ask.<br>Recent events have gotten me a little sentimental it seems... My apologies."
+TOUCH = "My goal is acquire a heart as clear and serene as still water.<br>Therefore, even when my true self[^shoen_n2] is touched...kuaagh?! <br>...I want you to say that you didn't hear that sound just now.
 
 [^shoen_n2]: 腹, Literally: belly/true self, Shoen is talking about meditating on his inner true self but the word also means belly so we just grabs a handful"
 TRAIN = "Calm your heart, here i go."
