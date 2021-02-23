@@ -38,14 +38,14 @@ Her dream is to create fireworks that bloom beautifully in space.
 {% include sidekick-infobox.html stockId=10111 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="flamier"
-h_gachaResult = "Nice to meet you. I am Flamier, a high school teacher. My speciality is... that's right, just to have a teensy bit of enjoyment for explosions. I'm a bit clumsy, but I'm in your hands."
-s_gachaResult = "How do you do. My name is Flamier, a high school teacher. I am happy to accept your sidekick job. However... Are you sure you don't want to use just a little boom or two? "
-APPRECIATION = "Thank you for your hard work. I heated up some water in the office kitchenette and brewed tea. It looks like you're tired, so why don't you take a break ...?"
-DAILY = "Hello. It ’s perfect weather for burning today ...Huh? Oh no, it's nothing. Well, let's work hard today."
-HERO = "That pastry chef lady is amazing. To bake baked goods at that speed. I wonder what kind of gunpowder she's using ..."
-PLAYER = "Everybody has to start somewhere. Don't rush, just get used to it little by little. That was how I fell in love with the flames ... aah..."
-RELATION = "That police officer hero seems to get along well with me. Firearms are also in my area of study after all. That momentary flash from the muzzle is just irresistible..."
-TOUCH = "Oh?  What are you doing? Ah, maybe there was some leftover gunpowder powder on me? Goodness, how embarrassing ..."
+h_gachaResult = "Nice to meet you. I am Flamier, a high school teacher.<br>My speciality is... that's right, just to have a teensy bit of enjoyment for explosions.<br>I'm a bit clumsy, but I'm in your hands."
+s_gachaResult = "How do you do. My name is Flamier, a high school teacher.<br>I am happy to accept your sidekick job. However... Are you sure you don't want to use just a little boom or two? "
+APPRECIATION = "Thank you for your hard work. I heated up some water in the office kitchenette and brewed tea.<br>It looks like you're tired, so why don't you take a break ...?"
+DAILY = "Hello. It ’s perfect weather for burning today ...<br>Huh? Oh no, it's nothing. Well, let's work hard today."
+HERO = "That pastry chef lady is amazing.<br>To bake baked goods at that speed.<br>I wonder what kind of gunpowder she's using ..."
+PLAYER = "Everybody has to start somewhere.<br>Don't rush, just get used to it little by little.<br>That was how I fell in love with the flames ... aah..."
+RELATION = "That police officer hero seems to get along well with me.<br>Firearms are also in my area of study after all.<br>That momentary flash from the muzzle is just irresistible..."
+TOUCH = "Oh?  What are you doing?<br>Ah, maybe there was some leftover gunpowder powder on me?<br>Goodness, how embarrassing ..."
 TRAIN = "Thank you for your partnership in this experiment."
 TRAINED = "Ah, please be gentle ...!"
 %}
