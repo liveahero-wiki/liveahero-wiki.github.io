@@ -57,3 +57,4 @@ TRAINED = "Kuu..! You're good..!"
 
 ## Notes
 
+- Her name "Kirsch" likely based on german word "Kirsche" means cherry, it's also an abbreviation of [kirschwasser](https://en.wikipedia.org/wiki/Kirsch) a distilled spirit made from cherries. Kirschwasser is often used in confectionery making, and a particular confectionary called [Schwarzwälder Kirschtorte](https://en.wikipedia.org/wiki/Black_Forest_gateau) is sometimes called Kirsch.
