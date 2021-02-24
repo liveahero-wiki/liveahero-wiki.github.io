@@ -130,6 +130,11 @@ Here is a list of this event's limited time Missions:
 </p>
 </details>
 
+<details><summary>Sales Report 2 (Translated)</summary>
+<p> <code>character0</code> and <code>character1</code> are called to be guests at a cooking show.<br><br>As part of a special project <code>character0</code> and <code>character1</code> took part in chocolate making.<br><br>The chocolates has been made smoothly,<br>but then they found out that at the end of the show the guests are going to give each other's chocolate to eat.<br> <code>character0</code> 's face suddenly turned red.<br><br> <code>character1</code> without hesitation took their chocolate and present it to <code>character0</code> 's mouth.<br><br> <code>character0</code> tried to stuff his mouth with <code>character1</code> 's chocolate while being conscious of the camera.<br><br>When the footage is broadcasted, <code>character0</code> 's SNS is filled with topics of how their face looks satisfied while being fed…
+</p>
+</details>
+
 <details><summary>Sales Report 3</summary>
 <p>休憩時間に、 <code>character0</code> を呼び出した<br>少し緊張した様子の <code>character1</code> 。<br> <code>character1</code> の手には、ラッピングされた箱が。<br><br>それを手渡しているところに<br>偶然出くわした <code>character2</code>  は、<br> <code>character0</code> へ羨望の視線を向ける。<br><br>自分も欲しいと抗議する <code>character2</code> に<br>弱った <code>character0</code> と <code>character1</code> 。<br>そこに救世主の <code>character3</code> が現れた。<br><br> <code>character3</code> は日頃の礼だと言って<br>大量のチョコ菓子をテーブルへと並べていく。<br><br> <code>character2</code> はそれに目を輝かせて、<br> <code>character0</code> も胸を撫で下ろすのだった。<br><br> <code>character3</code> 追記：<br>事務所の休憩室にあるチョコは<br>ご自由に召し上がってください。<br>
 </p>
