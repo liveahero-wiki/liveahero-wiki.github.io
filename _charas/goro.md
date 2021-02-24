@@ -50,3 +50,4 @@ TRAINED = "Guh...my head is still ringing..."
 ## Notes
 
 - He refers to {% chara_link Subaru %} in his hero line
+- Likely based on Kumagoro (熊五郎) a fictional character from a classical [Rakugo](https://en.wikipedia.org/wiki/Rakugo), share similar traits which is a carpenter, loves to drink, has a wife and children, many of his plays have family themes, such as "A Child's Farewell" and "Child's Homecoming".
