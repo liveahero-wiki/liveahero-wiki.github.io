@@ -27,7 +27,7 @@ Disadvantageous attribute will have increased incoming damage, along with a decr
 - Aether is advantageous against Nether, thus dealing more damage.
 - Nether is advantageous against Aether, thus dealing more damage.
 
-Advantagous attribute will deal 50% more damage, while disadvantagous attribute will deal 25% less damage.
+Advantageous attribute will deal 50% more damage, while disadvantageous attribute will deal 25% less damage.
 
 {:refdef: style="text-align: center;"}
 <img src="/assets/img/ui_tutorial_battle_2_1.png" alt="mainMenu" height=300px>
