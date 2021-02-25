@@ -98,3 +98,4 @@ TRAINED = "It hit me so hard…! "
 
 ## Notes
 
+- E.T.L is short for Element Teacher Love, as self-proclaimed by Kyoichi
