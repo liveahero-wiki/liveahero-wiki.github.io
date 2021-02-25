@@ -140,7 +140,18 @@ Here is a list of this event's limited time Missions:
 </p>
 </details>
 
+<details><summary>Sales Report 3 (Translated)</summary>
+<p> At recess, <code>character1</code> nervously called <code>character0</code> .<br>In <code>character1</code> 's hand, there was a wrapped box.<br><br>By coincidence <code>character2</code> saw the exchange, they looks at <code>character0</code> with envy.<br><br>I want a gift too so say <code>character2</code> to the troubled <code>character0</code> and <code>character1</code>.<br>Then <code>character3</code> arrived to save the day.<br><br>With their usual manner <code>character3</code> set  a large amount of chocolate pastries on the table.<br><br> <code>character2</code> gaze at the confectioneries with sparkling eyes,<br> <code>character0</code> pat their heart and heave a sigh of relief.<br><br> <code>character3</code> notes:<br>Feel free to eat the chocolate pastries that's available in the break room.
+</p>
+</details>
+
 <details><summary>Sales Report 4</summary>
 <p> <code>character0</code> に手作りお菓子で<br>日頃の感謝を伝えようとサプライズを<br>計画した <code>character1</code>  と <code>character2</code> 。<br><br>仕事終わりに集まり、これまでに無い<br>近未来的で革新的なオリジナルお菓子を<br>作る と意気込む二人。<br><br>しかし、 <code>character1</code> はオーブンを爆発させ、<br> <code>character2</code> は砂糖と塩を入れ間違えて…<br>焦げているのに半生で青紫色の<br>未確認物体を生成してしまう。<br><br>困って <code>character3</code> に相談すると、<br> <code>character0</code> と一緒に駆け付けてくれた。<br><br> <code>character3</code> の助言と <code>character0</code> の協力で、<br>四人で美味しいケーキを焼くことに成功。<br><br>サプライズにはならなかったが、<br> <code>character0</code> には喜んでもらえたようだ。
 </p>
 </details>
+
+<details><summary>Sales Report 4 (Translated)</summary>
+<p> <code>character1</code> and <code>character2</code> are planning a surprise present of handmade cake disguised as a normal thank you present for <code>character0</code>.<br><br>The both of them gather together after work and,<br>with vigor began devising an original and innovative cake.<br><br>However, <code>character2</code> mistook salt for sugar,<br>while <code>character1</code> involuntarily exploded the oven,<br>the results of their creation is an unidentified object with a combination of blue and purple hue.<br><br>They consult their troubles to <code>character3</code>,<br>who comes with <code>character0</code> to the rescue.<br><br>Advised by <code>character3</code> and <code>character0</code> ,<br>the four of them succeeded in making a delicious cake.<br><br>Even though it's not a surprise anymore,<br><code>character0</code> happily accepted the present.
+</p>
+</details>
+
