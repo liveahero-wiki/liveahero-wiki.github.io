@@ -51,3 +51,5 @@ TRAINED = "Ah, please be gentle ...!"
 %}
 
 ## Notes
+
+- Her full name is Flamier R. Astridam (フラミー・R・アストライダム)
