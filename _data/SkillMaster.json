@@ -12593,6 +12593,96 @@
       }
     ]
   },
+  "4054107": {
+    "skillId": 4054107,
+    "skillName": "陽動",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に25%ダメージ。自身に2ターンの間挑発を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMafia_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 259,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 49,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "4054108": {
+    "skillId": 4054108,
+    "skillName": "閃光弾",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。Viewを3000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMafia_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 24,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "4054109": {
+    "skillId": 4054109,
+    "skillName": "射撃支援",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "味方単体に1ターンの間ATKアップを付与。自身に1ターンの間ATKアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMafia_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
   "6000001": {
     "skillId": 6000001,
     "skillName": "ダメージ制限20000",

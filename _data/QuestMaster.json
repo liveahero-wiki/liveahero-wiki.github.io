@@ -6940,6 +6940,74 @@
     "hasStockBattle": false,
     "boostItems": []
   },
+  "412004": {
+    "questId": 412004,
+    "questName": "秘め続けた思いの行方",
+    "subName": "第４話",
+    "questKind": 5,
+    "chapterId": 412,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2021-03-01 18:00:00",
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 7,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 412003,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainMafiaFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaLight_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "boostItems": []
+  },
   "413001": {
     "questId": 413001,
     "questName": "出動！エージェント",
@@ -7465,6 +7533,627 @@
       {
         "battleInfoIcon": "icon_villainMafiaFire_h01",
         "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "boostItems": [
+      {
+        "itemId": 54,
+        "limitValue": 10
+      },
+      {
+        "itemId": 55,
+        "limitValue": 10
+      },
+      {
+        "itemId": 56,
+        "limitValue": 10
+      }
+    ]
+  },
+  "414001": {
+    "questId": 414001,
+    "questName": "潜入！ハイドアウト",
+    "subName": "D級",
+    "questKind": 6,
+    "chapterId": 414,
+    "iconFilename": "item_Valentine2102_exchange02",
+    "startAt": "2021-03-01 18:00:00",
+    "endAt": "2021-03-15 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 1,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 8,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 54,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 55,
+        "objectValue": 1,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 56,
+        "objectValue": 1,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 4,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 412002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainMafiaWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "boostItems": [
+      {
+        "itemId": 54,
+        "limitValue": 10
+      },
+      {
+        "itemId": 55,
+        "limitValue": 10
+      },
+      {
+        "itemId": 56,
+        "limitValue": 10
+      }
+    ]
+  },
+  "414002": {
+    "questId": 414002,
+    "questName": "潜入！ハイドアウト",
+    "subName": "C級",
+    "questKind": 6,
+    "chapterId": 414,
+    "iconFilename": "item_Valentine2102_exchange02",
+    "startAt": "2021-03-01 18:00:00",
+    "endAt": "2021-03-15 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 15,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 10,
+        "prob": 80
+      },
+      {
+        "rewardType": 3,
+        "objectId": 54,
+        "objectValue": 2,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 55,
+        "objectValue": 2,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 56,
+        "objectValue": 2,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 8,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 412002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainMafiaWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "boostItems": [
+      {
+        "itemId": 54,
+        "limitValue": 10
+      },
+      {
+        "itemId": 55,
+        "limitValue": 10
+      },
+      {
+        "itemId": 56,
+        "limitValue": 10
+      }
+    ]
+  },
+  "414003": {
+    "questId": 414003,
+    "questName": "潜入！ハイドアウト",
+    "subName": "B級",
+    "questKind": 6,
+    "chapterId": 414,
+    "iconFilename": "item_Valentine2102_exchange02",
+    "startAt": "2021-03-01 18:00:00",
+    "endAt": "2021-03-15 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 30,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 20,
+        "prob": 50
+      },
+      {
+        "rewardType": 3,
+        "objectId": 54,
+        "objectValue": 3,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 55,
+        "objectValue": 3,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 56,
+        "objectValue": 3,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 12,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 412002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainMafiaWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "boostItems": [
+      {
+        "itemId": 54,
+        "limitValue": 10
+      },
+      {
+        "itemId": 55,
+        "limitValue": 10
+      },
+      {
+        "itemId": 56,
+        "limitValue": 10
+      }
+    ]
+  },
+  "414004": {
+    "questId": 414004,
+    "questName": "潜入！ハイドアウト",
+    "subName": "A級",
+    "questKind": 6,
+    "chapterId": 414,
+    "iconFilename": "item_Valentine2102_exchange02",
+    "startAt": "2021-03-01 18:00:00",
+    "endAt": "2021-03-15 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 45,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 10,
+        "prob": 40
+      },
+      {
+        "rewardType": 3,
+        "objectId": 54,
+        "objectValue": 4,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 55,
+        "objectValue": 4,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 56,
+        "objectValue": 4,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 16,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 412002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainMafiaWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "boostItems": [
+      {
+        "itemId": 54,
+        "limitValue": 10
+      },
+      {
+        "itemId": 55,
+        "limitValue": 10
+      },
+      {
+        "itemId": 56,
+        "limitValue": 10
+      }
+    ]
+  },
+  "414005": {
+    "questId": 414005,
+    "questName": "潜入！ハイドアウト",
+    "subName": "S級",
+    "questKind": 6,
+    "chapterId": 414,
+    "iconFilename": "item_Valentine2102_exchange02",
+    "startAt": "2021-03-01 18:00:00",
+    "endAt": "2021-03-15 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 60,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 40,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 40,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 58,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 54,
+        "objectValue": 4,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 55,
+        "objectValue": 4,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 56,
+        "objectValue": 4,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 20,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 412002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainMafiaWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaShadow_h01",
+        "battleInfoElement": 5
       }
     ],
     "hasAdv": false,
