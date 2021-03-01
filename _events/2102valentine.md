@@ -90,12 +90,18 @@ Here is a list of this event's limited time Missions:
 
 | No  | Description      | Rewards      |
 |----|-----------------------------------------------------------|----------------|
-| 1  | Finish any rank event quest 10 times | 1 {% include item-icon.html id=34 %}    |
-| 2  | Finish any rank event quest 20 times | 1 {% include item-icon.html id=34 %}    |
-| 3  | Finish any rank event quest 30 times | 1 {% include item-icon.html id=34 %}    |
-| 4  | Finish any rank event quest 40 times | 1 {% include item-icon.html id=34 %}    |
-| 5  | Finish any rank event quest 50 times | 1 {% include item-icon.html id=34 %}    |
-| 6  | Finish event sales 10 times | 1 {% include item-icon.html id=34 %}    |
+| 1  | Finish any rank {% include item-icon.html id=57 %} event quest 10 times | 1 {% include item-icon.html id=34 %}    |
+| 2  | Finish any rank {% include item-icon.html id=57 %} event quest 20 times | 1 {% include item-icon.html id=34 %}    |
+| 3  | Finish any rank {% include item-icon.html id=57 %} event quest 30 times | 1 {% include item-icon.html id=34 %}    |
+| 4  | Finish any rank {% include item-icon.html id=57 %} event quest 40 times | 1 {% include item-icon.html id=34 %}    |
+| 5  | Finish any rank {% include item-icon.html id=57 %} event quest 50 times | 1 {% include item-icon.html id=34 %}    |
+| 6  | Finish {% include item-icon.html id=57 %} event sales 10 times | 1 {% include item-icon.html id=34 %}    |
+| 7  | Finish any rank {% include item-icon.html id=58 %} event quest 10 times | 1 {% include item-icon.html id=34 %}    |
+| 8  | Finish any rank {% include item-icon.html id=58 %} event quest 20 times | 1 {% include item-icon.html id=34 %}    |
+| 9  | Finish any rank {% include item-icon.html id=58 %} event quest 30 times | 1 {% include item-icon.html id=34 %}    |
+| 10  | Finish any rank {% include item-icon.html id=58 %} event quest 40 times | 1 {% include item-icon.html id=34 %}    |
+| 11  | Finish any rank {% include item-icon.html id=58 %} event quest 50 times | 1 {% include item-icon.html id=34 %}    |
+| 12  | Finish {% include item-icon.html id=58 %} event sales 10 times | 1 {% include item-icon.html id=34 %}    |
 
 
 ## Event Shop
