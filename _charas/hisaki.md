@@ -41,6 +41,7 @@ He calls his college senior Crowne his big sis, and both trusts and lives in fea
 h_gachaResult = "The rumored super inventor Hisaki's ready for action! Just leave it to me, client.<br>I'll show you the best technology of the whole universe!"
 s_gachaResult = "Did somebody call for the genius inventor Hisaki?<br>OKOK, I'll cooperate with you, you're the client an' all.<br>I will support you perfectly with the tech I put my heart and soul into! "
 rankMax = "I feel like I can go anywhere I want if I'm with you,<br>Let's go together my client, beyond the future and even further beyond that"
+loveIndexMax = "Somehow I'm always out of control when it's about you...,<br>Hey...from now on can you always be by my side?<br>..my future..needs you.."
 APPRECIATION = "Are you free tonight, client? Wanna go for a test drive of my latest work with me?<br>Eh, why the sudden invitation? heheh who knows.."
 DAILY = "Yo,  client!  Look at this! A new invention I work on yesterday... wait a minute!<br>At least let me do a little presentation before we start with work!"
 HERO = "Applying your knowledge of chemistry to make explosives and fight.<br>It's pretty noisy, but kinda fun. She and I share that experiment-loving spirit,  I think we'll get along."
