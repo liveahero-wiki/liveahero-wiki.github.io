@@ -54,3 +54,4 @@ TRAINED = "Yeah, that's g-good! You're real hot!"
 
 ## Notes
 
+- His real name is Kitakami Kensuke (北上 ケンスケ)
