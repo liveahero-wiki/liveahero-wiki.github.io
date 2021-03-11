@@ -42,3 +42,4 @@ TRAINED = "Gaah, heroes are really amazing..!"
 
 ## Notes
 
+- His full name is Karue Narihito (軽江 ナリヒト)
