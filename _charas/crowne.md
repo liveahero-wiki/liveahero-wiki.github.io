@@ -59,3 +59,4 @@ TRAINED = "You're using me as a test subject? That's some nerve...."
 
 ## Notes
 
+- Her full name is Crowne Applefield (クローネ・アップルフィールド)
