@@ -51,3 +51,4 @@ TRAINED = "Gyaaa~!! It's too intense!"
 
 ## Notes:
 
+- Her full name is Ayauta Hitomi (綾歌 ヒトミ)
