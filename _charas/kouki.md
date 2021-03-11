@@ -13,7 +13,7 @@ As two heroes, they transform into heroic entertainers wearing matching gorgeous
 Kouki continues to chase after the mother who disappeared from his life. Becoming an actor and, with special approval, becoming a hero are all done in the name of "if I become a big star, she'll find me." However,  despite the many achievements he has under his belt, his mother has yet to appear. It was his partner Sirius who became a hero with the desire to "always stay with Kouki", always snuggling up to Kouki when he becomes anxious.
 {% endcapture %}
 
-{% include hero-infobox.html stockId=10181 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+{% include hero-infobox.html stockId=10181 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_ADV_kouki_h01" %}
 
 {% capture BIO_S01 %}
 A duo of a child actor and a talented dog who display a wide range of activites centered on global video media. 
