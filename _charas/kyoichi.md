@@ -43,7 +43,7 @@ And so when faced with a case which can be called the best example of this dilem
 {% capture BIO_S01 %}
 A teacher working at an elementary school in Orient City
 
-An Earthling from Sendai Japan, his fullname is Kyouichi Ootomo
+An Earthling from Sendai Japan, his fullname is Kyoichi Ootomo
 
 A former senior of Akashi at university, now a teacher who just began his profession
 
@@ -98,4 +98,5 @@ TRAINED = "It hit me so hard…! "
 
 ## Notes
 
+- His full name is Ootomo Kyoichi (大友 キョウイチ)
 - E.T.L is short for Element Teacher Love, as self-proclaimed by Kyoichi
