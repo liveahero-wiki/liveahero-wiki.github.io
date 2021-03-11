@@ -65,3 +65,4 @@ TRAINED = "Uhh, Time-out! It's tough!"
 
 ## Notes
 
+- His full name is Loren Farland (ロレン・ファーランド)
