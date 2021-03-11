@@ -67,3 +67,5 @@ TRAINED = "E-even for me this is a little tough?!"
 %}
 
 ## Notes
+
+- His full name is Yodobashi Hisaki (淀橋 ヒサキ)
