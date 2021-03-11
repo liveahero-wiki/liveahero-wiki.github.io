@@ -54,3 +54,4 @@ TRAINED = "Stop, you're acting childish against a kid!?"
 
 ## Notes
 
+- His full name is Inukura Kouki (犬座 コウキ)
