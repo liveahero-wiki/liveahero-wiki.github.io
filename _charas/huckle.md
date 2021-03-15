@@ -30,3 +30,4 @@ TRAINED = "Hn! As I thought I'm not as good as I was in my prime."
 
 ## Notes:
 
+- His full name is Huckle Darlens (ハックル・ダーレンス。)
