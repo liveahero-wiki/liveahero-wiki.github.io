@@ -38,7 +38,7 @@ When we communicate too straightforwardly, there will be times when others get h
 And so when faced with a case which can be called the best example of this dilemma, he finds himself greatly perplexed.
 {% endcapture %}
 
-{% include hero-infobox.html stockId=10102 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+{% include hero-infobox.html stockId=10102 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_kyoichiValentine2102_h02_skin2" %}
 
 {% capture BIO_S01 %}
 A teacher working at an elementary school in Orient City

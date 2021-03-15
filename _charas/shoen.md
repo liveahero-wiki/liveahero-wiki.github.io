@@ -40,7 +40,7 @@ His desire and his cowardice ashamed him greatly, and so he lock this memory dee
 Telling himself to never expose it again…or so it should be.
 {% endcapture %}
 
-{% include hero-infobox.html stockId=10122 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+{% include hero-infobox.html stockId=10122 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_shoenValentine2102_h02_skin2" %}
 
 {% capture BIO_S01 %}
 A calligrapher who owns a small calligraphy one-room school in Orient City. He is also an educator registered as visiting scholar at university's literature department.
