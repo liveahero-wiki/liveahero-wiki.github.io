@@ -21,6 +21,7 @@
 {% assign cardId = id | times: 10 | plus: 1 | downcase %}
 {% assign resourceName = site.data.SidekickMaster[cardId].resourceName %}
 <li>Any form of <a class="item" href="{{ page.url }}"><img src="/cdn/Sprite/icon_{{ resourceName }}_s01.png" loading="lazy"> {{ page.title }}</a></li>
+{% break %}{% comment %}Only use the first stockId, since they are usually refer to the same chara anyway{% endcomment %}
 {% endfor %}
 </ul></td></tr>
 {% else %}
