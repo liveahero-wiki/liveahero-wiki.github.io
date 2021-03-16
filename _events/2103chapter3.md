@@ -1,0 +1,11 @@
+---
+title: Main Quest Chapter 3
+gacha: true
+no_limited_quest: true
+news_link: https://live-a-hero.jp/info/1694
+banner_image: banner_info_2103main3.jpg
+event_start_time: 2021-03-22T20:00:00+09
+event_end_time: 2021-04-15T14:00:00+09
+---
+
+In commemoration of the new chapter release, a limited time gacha summon is also released which include {% chara_link Andrew %} (Hero and Sidekick), {% chara_link Maculata %} (Hero and Sidekick) and {% chara_link Sui %} (Hero and Sidekick).
