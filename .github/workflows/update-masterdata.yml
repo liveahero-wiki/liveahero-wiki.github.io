@@ -38,9 +38,15 @@ jobs:
           else
             echo "Master data is already up to date."
           fi
-      - name: Upload properties files
+      - name: Upload JP properties files
         uses: actions/upload-artifact@v2
         with:
           name: JP Properties
           if-no-files-found: ignore
           path: _data/processed/Japanese.properties
+      - name: Upload EN properties files
+        uses: actions/upload-artifact@v2
+        with:
+          name: EN Properties
+          if-no-files-found: ignore
+          path: _data/processed/English.properties

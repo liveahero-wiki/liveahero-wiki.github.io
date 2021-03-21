@@ -87,14 +87,25 @@ def processShopFile():
   for id in stores:
     dumpJson(os.path.join("_data", "stores", id + ".json"), stores[id])
 
+def processMasterDataCatalog():
+  with open(os.path.join("_data", "MasterDataCatalog.json"), "r", encoding="utf-8") as f:
+    obj = json.load(f)
+
+  obj = list(obj)
+  obj.sort()
+
+  dumpJson(os.path.join("_data", "MasterDataCatalog_list.json"), obj)
+
 if __name__ == '__main__':
+  force_download = False
   if len(sys.argv) > 1:
     mV = int(sys.argv[1])
+    force_download = True
   else:
     appV, mV = getVersion()
 
   cur_ver = int(getWikiVersion())
-  if mV <= cur_ver:
+  if not force_download and mV <= cur_ver:
     print("Already up to date")
     sys.exit(0)
 
@@ -102,6 +113,7 @@ if __name__ == '__main__':
   updateWikiVersion(mV)
 
   masterDataList = [
+    'MasterDataCatalog',
     'SkillMaster',
     'SkillEffectMaster',
     'SidekickMaster',
@@ -117,7 +129,16 @@ if __name__ == '__main__':
   for m in masterDataList:
     downloadMasterdata(mV, m)
 
+  processMasterDataCatalog()
   processShopFile()
 
-  downloadProperties(mV, "Japanese.properties")
+  prop_files = [
+    "Japanese.properties",
+    "English.properties",
+    "ChineseTraditional.properties",
+    "ChineseSimplified.properties",
+  ]
+
+  for p in prop_files:
+    downloadProperties(mV, p)
   processPropertiesFile("Japanese.properties", "jp_bio.json", "jp_serif.json")
