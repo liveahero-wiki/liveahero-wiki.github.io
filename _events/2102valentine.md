@@ -120,7 +120,9 @@ Here is a list of this event's limited time Missions:
 
 {% include quest-group.html chapterId=414 %}
 
-### Speical Quests
+### Special Quests
+
+Fan translations for special quests can be found [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vSteXgd_GBI7LV_TmqDQ98bJgCWPErK5-mPhVCs7MqevLk21ATW-WSgL5OMrPI8T2jC6wLd6He-c8ca/pubhtml#)
 
 {% include quest-group.html chapterId=415 %}
 
