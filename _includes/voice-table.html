@@ -1,10 +1,10 @@
-{% assign whitelist = "APPRECIATION,DAILY,HERO,PLAYER,RELATION,TOUCH,TRAIN,TRAINED" | split: "," %}
+{% assign whitelist = "APPRECIATION,DAILY,EVENTA,EVENTB,HERO,PLAYER,RELATION,TOUCH,TRAIN,TRAINED" | split: "," %}
 {% assign names = include.resourceName | split: "," %}
 
 {% assign manual = "battleStart,action,attack,skill,special,smallDamage,bigDamage,win,lose,assist,assisted,loveIndexMax,rankMax,salesStart,salesEnd" | split: "," %}
 {% assign greeting = "h_gachaResult,s_gachaResult" | split: "," %}
 
-<h2>Voice Lines</h2>
+<h2>Voice Lines ({{ names | join: ", " }})</h2>
 <table class="voice-table">
 {% for n in names %}
   {% assign name = n | upcase | prepend: "_" | append: "_" %}
@@ -29,10 +29,10 @@
       {% assign p = key | replace: "SERIF_", "" %}
     {% endif %}
     {% assign translated = include[p] %}
-    <tr><th>{{ p }}</th>
+    {% if jp_line %}<tr><th>{{ p }}</th>
 <td markdown="1" class="translate" data-translate="{% if translated %}{{ jp_line | escape }}{% endif %}">
 {{ translated | default: jp_line }}
-</td></tr>
+</td></tr>{% endif %}
   {% endfor %}
 
   {% for part in manual %}
