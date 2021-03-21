@@ -25,7 +25,7 @@ Wishing to assert his existence and be recognized by as many people as possible 
 {% capture BIO_S01 %}
 A young man working at a medium sized factory of a heavy industry equipment manufacturer.
 
-He looks like a beast-human alien, but because he was adopted by a Japanese family, his full name is Yodobashi Hisaki.
+He looks like a beast-man alien, but because he was adopted by a Japanese family, his full name is Yodobashi Hisaki.
 
 He has a wide range of knowledge about science and engineering, and is a genius inventor as recognized by himself and his peers alike.
 
@@ -63,6 +63,8 @@ RELATION = "Big sis is reliable, but aw man.<br>Back when we were students, you 
 TOUCH = "Whoa, hey, no touching! <br>This fur coat's my pride and joy, I don't need it all mussed up...<br>wa-, you can't rub my belly either!?"
 TRAIN = "Come on, let's play!"
 TRAINED = "E-even for me this is a little tough?!"
+EVENTA = "To think that my latest invention is being used like this!<br>I admit that it's very clever, but I will not allow it!<br>This won't end with just a spanking!"
+EVENTB = "Heheh, I'm really popular you know!<br>At valentine's I usually get so many chocolate, it's a trouble.<br>….Eh, that's why I'm fat? L-leave it!"
 
 %}
 
