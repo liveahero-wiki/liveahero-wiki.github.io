@@ -56,3 +56,4 @@ TRAINED = "A..As of now, any more trial run is..meaningless..!"
 
 ## Notes
 
+- He refers to {% chara_link Andrew %} in his hero line
