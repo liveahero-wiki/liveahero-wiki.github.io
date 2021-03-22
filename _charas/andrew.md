@@ -1,5 +1,6 @@
 ---
 title: Andrew
+characterId: 25
 ---
 
 {% include hero-infobox.html stockId=10251 %}
