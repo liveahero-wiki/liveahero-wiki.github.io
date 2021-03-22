@@ -113,4 +113,4 @@ TRAINED = "My shame is getting the better of me...!"
 
 - He refers to {% chara_link Subaru %} in his hero line
 - Shoen (松煙) refers to a type of [inkstick](https://en.wikipedia.org/wiki/Inkstick) (墨) that is made from the soot of burnt pine branches and roots hardened with animal glue.
-- In the alternate art for his Valentine's variant, his gift is decorated with a pinecone and some pine leaves.
+  - In the alternate art for his Valentine's variant, his gift is decorated with a pinecone and some pine leaves.
