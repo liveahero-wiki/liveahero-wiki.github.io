@@ -48,3 +48,4 @@ RELATION = "That doggy at your place is wonderful!<br>That kind of power would b
 
 ## Notes:
 
+- He refers to {% chara_link Andrew %} in his Hero line
