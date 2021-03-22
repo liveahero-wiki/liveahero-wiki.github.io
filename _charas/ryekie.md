@@ -89,4 +89,4 @@ TRAINED = "H-Hnn.. C-Complete defeat..."
 
 ## Notes
 
-- His species is very fond and sensitive to kiwi fruits and will go nuts when given sufficient doses similar to how some cats is with catnip
+- Ryekie and his species' fondess and sensitivity to kiwifruits is a reference to a certain type of kiwifruit popularly called [silvervine](https://en.wikipedia.org/wiki/Actinidia_polygama) or matatabi (マタタビ) known for its cat attractant qualities that is reported to be stronger than that of [catnip](https://en.wikipedia.org/wiki/Catnip).
