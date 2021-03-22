@@ -8,6 +8,8 @@ event_start_time: 2021-03-22T20:00:00+09
 event_end_time: 2021-04-15T14:00:00+09
 ---
 
+The main quests of [chapter 3](/main_quests/chapter03/) has been released.
+
 In commemoration of the new chapter release, a limited time gacha summon is also released which include {% chara_link Andrew %} (Hero and Sidekick), {% chara_link Maculata %} (Hero and Sidekick) and {% chara_link Sui %} (Hero and Sidekick).
 
 Episodes will be released at the following schedule (subject to changes).
@@ -24,3 +26,9 @@ Episodes will be released at the following schedule (subject to changes).
 
 Maintenance is scheduled to start at 2021-03-22 14:00-20:00 JST
 As usual, please finish any ongoing quest before maintenance start
+
+## Main Quests
+
+Finish all chapter 3 main quest for mission rewards, rewards details can be found in [Mission](/guide/mission/#main-quest)
+
+Detailed lists of main quest can be found in [Main quest ch03](/main_quests/chapter03/)
