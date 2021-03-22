@@ -3066,6 +3066,136 @@
       }
     ]
   },
+  "1025101": {
+    "skillId": 1025101,
+    "skillName": "ヒューマンズ・デコイ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に50%ダメージ。自身に2ターンの間挑発を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_andrew_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 49,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1025102": {
+    "skillId": 1025102,
+    "skillName": "パッシブ・ジャマー",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_heal",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。70%の確率で1ターンの間ATKダウンを付与。自身に2ターンの間リジェネを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_andrew_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 70,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 64,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1025103": {
+    "skillId": 1025103,
+    "skillName": "ジェミニィズ・ディサイド",
+    "useView": 5000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "自身に2ターンの間DEFアップを付与 & ダメージ集約を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_andrew_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 217,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1025104": {
+    "skillId": 1025104,
+    "skillName": "パッシブ・ジャマー+",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_heal",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。70%の確率で1ターンの間ATKダウンを付与。自身に2ターンの間リジェネを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_andrew_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 70,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 64,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
   "1026101": {
     "skillId": 1026101,
     "skillName": "ピスタ・エピディオシ",
@@ -4173,6 +4303,121 @@
         "skillEffectId": 37,
         "prob": 100,
         "effectTarget": 3
+      }
+    ]
+  },
+  "1059101": {
+    "skillId": 1059101,
+    "skillName": "フィル・ダレニェ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に50%ダメージ。50%の確率で1ターンの間SPDダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_maculata_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 50,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1059102": {
+    "skillId": 1059102,
+    "skillName": "ヴォン・タリエール",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_spdUp",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1ターンの間SPDアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_maculata_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 1
+      }
+    ]
+  },
+  "1059103": {
+    "skillId": 1059103,
+    "skillName": "タイユール・ア・グリフェス",
+    "useView": 11000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdUpAll",
+    "timing": 0,
+    "description": "敵単体に100%ダメージ。味方全体に1ターンの間SPDアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_maculata_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "1059104": {
+    "skillId": 1059104,
+    "skillName": "フィル・ダレニェ+",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に50%ダメージ。1ターンの間SPDダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_maculata_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 100,
+        "effectTarget": 2
       }
     ]
   },
@@ -6130,6 +6375,96 @@
       }
     ]
   },
+  "2025101": {
+    "skillId": 2025101,
+    "skillName": "防護壁展開",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "味方単体に1ターンの間DEFアップを付与。Viewを5000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_andrew_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2025102": {
+    "skillId": 2025102,
+    "skillName": "防護壁展開+",
+    "useView": 3500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "味方単体に1ターンの間DEFアップを付与。Viewを5000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_andrew_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2025103": {
+    "skillId": 2025103,
+    "skillName": "防護壁展開++",
+    "useView": 3000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "味方単体に1ターンの間DEFアップを付与。Viewを5000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_andrew_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
   "2026101": {
     "skillId": 2026101,
     "skillName": "行動推理",
@@ -7057,6 +7392,81 @@
         "skillEffectId": 46,
         "prob": 100,
         "effectTarget": 0
+      }
+    ]
+  },
+  "2059101": {
+    "skillId": 2059101,
+    "skillName": "攻めの姿勢",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ+対象と自分のSPDの差だけダメージ量が上昇。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_maculata_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 294,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2059102": {
+    "skillId": 2059102,
+    "skillName": "攻めの姿勢+",
+    "useView": 2500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ+対象と自分のSPDの差だけダメージ量が上昇。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_maculata_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 294,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2059103": {
+    "skillId": 2059103,
+    "skillName": "攻めの姿勢++",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ+対象と自分のSPDの差だけダメージ量が上昇。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_maculata_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 294,
+        "prob": 100,
+        "effectTarget": 2
       }
     ]
   },
@@ -9694,6 +10104,114 @@
       }
     ]
   },
+  "3025101": {
+    "skillId": 3025101,
+    "skillName": "盾となる決意Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_andrew_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、15%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 15,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3025102": {
+    "skillId": 3025102,
+    "skillName": "盾となる決意Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_andrew_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、18%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 18,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3025103": {
+    "skillId": 3025103,
+    "skillName": "盾となる決意Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_andrew_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、21%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 21,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3025104": {
+    "skillId": 3025104,
+    "skillName": "盾となる決意Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_andrew_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、24%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 24,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3025105": {
+    "skillId": 3025105,
+    "skillName": "盾となる決意Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_andrew_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、27%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 27,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3025106": {
+    "skillId": 3025106,
+    "skillName": "盾となる決意Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_andrew_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、30%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 30,
+        "effectTarget": 0
+      }
+    ]
+  },
   "3026101": {
     "skillId": 3026101,
     "skillName": "敵情把握Ⅰ",
@@ -10878,6 +11396,114 @@
       {
         "skillEffectId": 37,
         "prob": 30,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3059101": {
+    "skillId": 3059101,
+    "skillName": "行動派の気質Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_maculata_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、50%の確率で1ターンの間SPDアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 50,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3059102": {
+    "skillId": 3059102,
+    "skillName": "行動派の気質Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_maculata_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、60%の確率で1ターンの間SPDアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 60,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3059103": {
+    "skillId": 3059103,
+    "skillName": "行動派の気質Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_maculata_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、70%の確率で1ターンの間SPDアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 70,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3059104": {
+    "skillId": 3059104,
+    "skillName": "行動派の気質Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_maculata_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、80%の確率で1ターンの間SPDアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 80,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3059105": {
+    "skillId": 3059105,
+    "skillName": "行動派の気質Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_maculata_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、90%の確率で1ターンの間SPDアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 90,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3059106": {
+    "skillId": 3059106,
+    "skillName": "行動派の気質Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_maculata_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、1ターンの間SPDアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 100,
         "effectTarget": 0
       }
     ]

@@ -1061,19 +1061,19 @@
     "itemId": 110251,
     "itemName": "アンドリューの記憶片",
     "resourceName": "piece_andrew",
-    "rarity": 3,
+    "rarity": 5,
     "itemType": 1024,
     "description": "アンドリューのファン数を増やすことが出来る不思議な結晶。",
     "effect": [
       {
         "class": "HeroPieceItemEffect",
-        "addFan": 10,
+        "addFan": 200,
         "rarity": 0,
         "stockId": 10251
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
-        "exchangeValue": 1
+        "exchangeValue": 20
       }
     ]
   },
@@ -1286,6 +1286,26 @@
         "addFan": 10,
         "rarity": 0,
         "stockId": 10531
+      }
+    ]
+  },
+  "110591": {
+    "itemId": 110591,
+    "itemName": "マクラータの記憶片",
+    "resourceName": "piece_maculata",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "マクラータのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 10591
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
       }
     ]
   },
@@ -2019,6 +2039,25 @@
         "class": "SidekickHeartItemEffect",
         "rarity": 0,
         "stockId": 10531
+      }
+    ]
+  },
+  "210591": {
+    "itemId": 210591,
+    "itemName": "マクラータの心",
+    "resourceName": "heart_maculata",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "マクラータのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 10591
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
       }
     ]
   },

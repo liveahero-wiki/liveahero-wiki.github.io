@@ -6918,5 +6918,174 @@
       "canDuplicate": false,
       "isDisplayPersistenceStatus": false
     }
+  },
+  "291": {
+    "skillEffectId": 291,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HealthDamage",
+          "parameter": {
+            "value": 100
+          }
+        }
+      ],
+      "filename": "damage",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "100%ダメージ+HPが減るほどダメージ量が上昇する",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "292": {
+    "skillEffectId": 292,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "DamageLimit",
+          "parameter": {
+            "value": 3000
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 27,
+      "canDispel": true,
+      "parameter": false,
+      "description": "ダメージ上限3000",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "293": {
+    "skillEffectId": 293,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HealthDamage",
+          "parameter": {
+            "value": 120
+          }
+        }
+      ],
+      "filename": "damage",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "120%ダメージ+HPが減るほどダメージ量が上昇する",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "294": {
+    "skillEffectId": 294,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SpdDeferenceDamage",
+          "parameter": {
+            "value": 70,
+            "spdMult": 10
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "70%ダメージ+対象と自分のSPDの差だけダメージ量が上昇",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "295": {
+    "skillEffectId": 295,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeView",
+          "parameter": {
+            "value": 4000
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "Viewを4000獲得",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "296": {
+    "skillEffectId": 296,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeView",
+          "parameter": {
+            "value": 4500
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "Viewを4500獲得",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "297": {
+    "skillEffectId": 297,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeHp",
+          "parameter": {
+            "value": -10
+          }
+        }
+      ],
+      "filename": "status_regenerate",
+      "statusId": 10,
+      "canDispel": true,
+      "parameter": false,
+      "description": "リジェネ",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
   }
 }
