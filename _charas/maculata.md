@@ -5,6 +5,18 @@ characterId: 59
 
 {% include hero-infobox.html stockId=10591 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
+{% capture BIO_S01 %}
+An alien woman who has an office in Orient City and is active as a fashion designer.
+
+Self-proclaimed "carnivorous woman",  with a bullish and courageous personality, there
+is always a spirit of not letting anyone else take charge.
+
+Taking advantage of her natural beauty and blessed body, she can be a model that stands on the runway herself.
+
+Because of her strict attitude toward herself and others, she has a slight temper.
+
+Although she is a master to Sui, the sense of distance from her best friend's daughter is a little delicate because of the circumstances.
+{% endcapture %}
 {% include sidekick-infobox.html stockId=10591 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="maculata"
