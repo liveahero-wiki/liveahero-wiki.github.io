@@ -56,4 +56,7 @@ TRAINED = "Owowow! I'm going to charge for medical treatment!"
 ## Notes
 
 - His full name is Procyon Floud (プロキオン・フラウド)
-- [Procyon](https://en.wikipedia.org/wiki/Procyon)(Alpha Canis Minoris) is the brightest star of the [Canis Minor Constellation](https://en.wikipedia.org/wiki/Canis_Minor), with Gomeisa (Beta Canis Minoris) being the second brightest star there
+- [Procyon](https://en.wikipedia.org/wiki/Procyon), also known as Alpha Canis Minoris, is the brightest star of the constellation [Canis Minor](https://en.wikipedia.org/wiki/Canis_Minor), with Gomeisa (Beta Canis Minoris) being the second brightest star there.
+- Procyon also refers to the genus of the [same name](https://en.wikipedia.org/wiki/Procyon_(genus)) that contains the three species of raccoons.
+- The name "Procyon" comes from Greek and translates to "before the dog".
+- Both he and {% chara_link Shoen %} have a similar circular marking on their bodies; Procy has it on his forehead while Shoen has it on his abdomen.
