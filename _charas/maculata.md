@@ -11,3 +11,4 @@ characterId: 59
 %}
 
 ## Notes
+- Maculata's name is Latin for "spotted" which also alludes to her being a leopard.
