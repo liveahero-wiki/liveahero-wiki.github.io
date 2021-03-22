@@ -5,7 +5,14 @@ characterId: 25
 
 {% include hero-infobox.html stockId=10251 %}
 
-{% include sidekick-infobox.html stockId=10251 %}
+{% capture BIO_S01 %}
+A truck driver for an interplanetary freight forwarding company.
+He looks like an adult earthling male, but is actually an android from the machine lifeform star Tronesion.
+Manufactured for espionage during the outbreak of the war between organic and mechanical lifeforms.
+Although he is a machine, he has a feeling of compassion and envy for organic life forms, and is conducting research every day, hoping to get closer to a living human being.
+The mental age is a little young and pure hearted contrary to the impression his appearance gives off.
+{% endcapture %}
+{% include sidekick-infobox.html stockId=10251 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="andrew" 
 h_gachaResult = "My name is Andrew, and I'm a space courier.<br>Yeah, I also take hero's work.<br>Organic lifeforms such as you…<br>I wish to protect them with this hands."
