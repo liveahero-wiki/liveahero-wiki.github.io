@@ -57,7 +57,7 @@ module Jekyll
 
       page = CharaMap.name_to_pages[title]
       if !page
-        return @input
+        return title
       end
 
       if page.data["unreleased"]
