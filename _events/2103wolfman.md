@@ -31,7 +31,7 @@ As usual, please finish any ongoing quests before maintenance start.
 
 The {% chara_link Shadow Wolfman|h1 %} character that can be obtained in this campaign comes as a rank 1 hero unit and a rank 1 sidekick unit.
 
-Rank 1/2 units can participate in battle and sale just like normal characters but there are several differents when it comes to upgrading them.
+Rank 1/2 units can participate in battle and sale just like normal characters but there are several differences when it comes to upgrading them.
 
 ### Hero's Promotion
 
