@@ -3,6 +3,25 @@ title: Maculata
 characterId: 59
 ---
 
+{% capture BIO_H01 %}
+As someone who has always been proactive, she transform into a hero with a form that fits her job as a designer and her strong offensive temperament.
+
+With the ability to produce threads with material that can be used to dominate her target from the tip of her finger, she can then knit those threads to create clothes with various characteristics.
+
+With her gorgeous glittering threads, her figure when she create her clothes capture the eyes of not only the viewer but also her enemy.
+{% endcapture %}
+
+{% capture BIO_H02 %}
+For her, "to attack" means "to fight," "to resist," and "to be yourself".
+
+She doesn't succumb to peer pressure, she doesn't dance with the trends, she makes them dance with her. 
+
+To take control and lead things to where she wants is her way of doing things.
+
+By the custom of her tribe, she was forced to live alone, and this bring about a rebellion by her against those adults,
+as she herself became an adult, she changes to hold the identity of "I am who I am" as her most important principles.
+{% endcapture %}
+
 {% include hero-infobox.html stockId=10591 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
