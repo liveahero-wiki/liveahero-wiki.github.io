@@ -2,8 +2,27 @@
 title: Andrew
 characterId: 25
 ---
+{% capture BIO_H01 %}
+His desire to be a living human is most strongly expressed in his appearance when he transforms into a hero. 
 
-{% include hero-infobox.html stockId=10251 %}
+When it comes to mechanical life forms, they have various advantages to them like high defense and their bodies are adorned with interchangeable heavy armaments, 
+but organic lifeforms have the advantage of being able to construct flexible and complex thoughts.
+
+Although it is a temporary one, his body as a hero, consists of flesh and blood, is literally full of life.
+{% endcapture %}
+
+{% capture BIO_H02 %}
+He was created during a period of war to collect information regarding organic lifeforms,
+but as he lived blending with other organic lifeforms, he came to be attached and envious of them.
+
+He was fascinated by them because they have flesh and blood unlike himself.
+
+Then the war ended, he was disposed at the outer space and somehow drifted to a place where people toil.
+
+Until the day he become the same as them, he will continue fighting to protect the warmth of people.
+{% endcapture %}
+
+{% include hero-infobox.html stockId=10251 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 A truck driver for an interplanetary freight forwarding company.
