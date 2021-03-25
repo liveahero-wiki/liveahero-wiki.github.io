@@ -4,9 +4,9 @@ characterId: 59
 ---
 
 {% capture BIO_H01 %}
-As someone who has always been proactive, she transform into a hero with a form that fits her job as a designer and her strong offensive temperament.
+As someone who has always "on the attack", she transform into a hero with a form that fits her job as a designer and her strong offensive temperament.
 
-With the ability to produce threads with material that can be used to dominate her target from the tip of her finger, she can then knit those threads to create clothes with various characteristics.
+With the ability to produce threads with material that can be used to "attack" her target from the tip of her finger, she can then knit those threads to create clothes with various characteristics.
 
 With her gorgeous glittering threads, her figure when she create her clothes capture the eyes of not only the viewer but also her enemy.
 {% endcapture %}
@@ -48,7 +48,7 @@ TRAINED = "Oh no, I'm losing on offense…!?"
 TRAIN = "Can you follow my sense?"
 DAILY = "Designing is a work that require an elaborate plan and communication.<br>That's why to compromise on my work is a no thank you.<br>Today too, let's attack it?"
 HERO =  "I see Sui-chan as a remnant of my best friend but,<br>she is someone with a very amazing talent.<br>I'm going to be with her, until the day she can be on her own."
-RELATION = "Crowne is a good kid, but her sense of fashion is awful,<br>I can't bear to see it sometimes.<br>She's killing the raw potential, I thought it's such a waste."
+RELATION = "Crowne is a good girl, but her sense of fashion is awful,<br>I can't bear to see it sometimes.<br>She's killing the raw potential, I thought it's such a waste."
 %}
 
 ## Notes
