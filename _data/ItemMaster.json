@@ -1253,6 +1253,26 @@
       }
     ]
   },
+  "110451": {
+    "itemId": 110451,
+    "itemName": "影のウルフマンの記憶片",
+    "resourceName": "piece_wolfmanShadow",
+    "rarity": 1,
+    "itemType": 1024,
+    "description": "影のウルフマンのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 1,
+        "rarity": 0,
+        "stockId": 10451
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 0
+      }
+    ]
+  },
   "110511": {
     "itemId": 110511,
     "itemName": "ネッセンの記憶片",
@@ -2005,6 +2025,25 @@
         "class": "SidekickHeartItemEffect",
         "rarity": 0,
         "stockId": 10431
+      }
+    ]
+  },
+  "210451": {
+    "itemId": 210451,
+    "itemName": "影のウルフマンの心",
+    "resourceName": "heart_wolfmanShadow",
+    "rarity": 1,
+    "itemType": 2048,
+    "description": "影のウルフマンのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 10451
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 0
       }
     ]
   },

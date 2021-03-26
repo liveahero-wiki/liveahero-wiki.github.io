@@ -4076,6 +4076,91 @@
       }
     ]
   },
+  "1045101": {
+    "skillId": 1045101,
+    "skillName": "スラッシュ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_wolfmanShadow_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1045102": {
+    "skillId": 1045102,
+    "skillName": "毒突き",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。80%の確率で1ターンの間毒を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_wolfmanShadow_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 89,
+        "prob": 80,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1045103": {
+    "skillId": 1045103,
+    "skillName": "影狼の意地",
+    "useView": 3500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に110%ダメージ。20%の確率で1ターンの間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_wolfmanShadow_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 20,
+        "effectTarget": 2
+      }
+    ]
+  },
   "1051101": {
     "skillId": 1051101,
     "skillName": "源泉流刃",
@@ -7220,6 +7305,81 @@
           "class": "SidekickSkill"
         },
         "name": "skill_wolfmanEarth_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 270,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2045101": {
+    "skillId": 2045101,
+    "skillName": "援護スラッシュ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に55%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_wolfmanShadow_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 268,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2045102": {
+    "skillId": 2045102,
+    "skillName": "援護スラッシュ+",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に65%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_wolfmanShadow_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 269,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "2045103": {
+    "skillId": 2045103,
+    "skillName": "援護スラッシュ++",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に75%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_wolfmanShadow_s01_01"
       }
     ],
     "effects": [
@@ -11179,6 +11339,114 @@
     "effects": [
       {
         "skillEffectId": 156,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3045101": {
+    "skillId": 3045101,
+    "skillName": "影狼の声援Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_wolfmanShadow_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "HP基礎値+1%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 298,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3045102": {
+    "skillId": 3045102,
+    "skillName": "影狼の声援Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_wolfmanShadow_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "HP基礎値+2%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 299,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3045103": {
+    "skillId": 3045103,
+    "skillName": "影狼の声援Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_wolfmanShadow_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "HP基礎値+3%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 300,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3045104": {
+    "skillId": 3045104,
+    "skillName": "影狼の声援Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_wolfmanShadow_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "HP基礎値+4%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 301,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3045105": {
+    "skillId": 3045105,
+    "skillName": "影狼の声援Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_wolfmanShadow_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "HP基礎値+5%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 227,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3045106": {
+    "skillId": 3045106,
+    "skillName": "影狼の声援Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_wolfmanShadow_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "HP基礎値+6%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 228,
         "prob": 100,
         "effectTarget": 0
       }
