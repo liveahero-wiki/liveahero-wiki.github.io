@@ -16,6 +16,8 @@ They are often seen as a species of rough people because all the young people wh
 {% include voice-table.html resourceName="wolfmanShadow"
 APPRECIATION = "Isn't it about time to finish up work and go drinking? The place is a little seedy, but I know a restaurant with real good food.
 Oh, that's right.  Well-behaved people like you may not know about that kinda place, haha."
+HERO = "There are villains who wanted to be heroes but cannot do so. For them, being a hero is something to be envious of."
+PLAYER = "You can't participate in the battle, but still, you're on the front line.  You keep yourself outta trouble, yeah? I'm not used to fighting to protect someone."
 TRAIN = "Now, brace yourself!"
 TRAINED = "Damn it, do what you want!"
 %}
