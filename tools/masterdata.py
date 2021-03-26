@@ -128,8 +128,8 @@ if __name__ == '__main__':
     'SidekickCardExpMaster',
     'UserRankMaster',
   ]
-  #for m in masterDataList:
-  #  downloadMasterdata(mV, m)
+  for m in masterDataList:
+    downloadMasterdata(mV, m)
 
   processMasterDataCatalog()
   processShopFile()
