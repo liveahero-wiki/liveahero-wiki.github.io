@@ -84,8 +84,10 @@ def processShopFile():
 
   stores = obj["stores"]
 
-  for id in stores:
-    dumpJson(os.path.join("_data", "stores", id + ".json"), stores[id])
+  for id, store in stores.items():
+    for p in store["products"]:
+      del p["storeProductNo"]
+    dumpJson(os.path.join("_data", "stores", id + ".json"), store)
 
 def processMasterDataCatalog():
   with open(os.path.join("_data", "MasterDataCatalog.json"), "r", encoding="utf-8") as f:
@@ -126,8 +128,8 @@ if __name__ == '__main__':
     'SidekickCardExpMaster',
     'UserRankMaster',
   ]
-  for m in masterDataList:
-    downloadMasterdata(mV, m)
+  #for m in masterDataList:
+  #  downloadMasterdata(mV, m)
 
   processMasterDataCatalog()
   processShopFile()
