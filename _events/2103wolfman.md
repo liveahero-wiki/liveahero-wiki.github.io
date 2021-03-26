@@ -13,9 +13,6 @@ farm_end_time: 2021-04-09T18:00:00+09
 
 Complete special scenario "Encounter with the shadow wolf" to unlock event free quests and event shop where you can obtain the rank 1 character {% chara_link Shadow Wolfman|h1 %}.
 
-Maintenance is set to start on 2021/03/26 14:00-18:00 JST
-
-As usual, please finish any ongoing quests before maintenance start.
 
 ### Limited Time Missions: 
 
