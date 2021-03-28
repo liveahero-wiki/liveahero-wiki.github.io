@@ -43,6 +43,7 @@ win = "Yosh, I made a fortune, I made a fortune!<br>That should lighten my debt,
 lose = "Damn it, it's a big loss...those who depends on me, I'm sorry..."
 assist = "Go get your earnings."
 assisted = "I'll give you your share later!"
+loveIndexMax= "I have changed a lot too.<br>Now, rather than counting money, always being with you make me much more happier."
 APPRECIATION = "Hey, you look pretty tired, don't you?<br>...Go ahead, let it all out.<br>I'll give you a free drink."
 DAILY = "Oi, welcome.<br>I know that look. You're looking for a hero.<br>The machine is less crowded, you can use it as much as you like."
 HERO = "That justice guy... I've known him for a long time.<br>Even if he does scratch everything and cause lightning strikes…<br> I wonder if there's a time I've ever been jealous of him."
