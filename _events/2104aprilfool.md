@@ -1,5 +1,6 @@
 ---
 title: April Fool 2021 Campaign
+timed_bomb: true
 no_limited_quest: true
 news_link: https://live-a-hero.jp/campaign/1370
 banner_image: banner_info_aprilfool2021_1.jpg
