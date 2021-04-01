@@ -9,7 +9,7 @@ banner: true
 <h2 id="{{ year.name }}">{{ year.name }}</h2>
 <ul>
   {% for event in year.items reversed %}
-  {% assign event_start_date = event.event_end_time | date: "%s" | plus: 0 %}
+  {% assign event_start_date = event.event_start_time | date: "%s" | plus: 0 %}
   {% if event.timed_bomb and event_start_date > current_date %}{% continue %}{% endif %}
   <li><a href="{{ event.url }}">{{ event.title }}</a> ({{ event.event_start_time | date: "%-d %b %Y" }} ~ {{ event.event_end_time | date: "%-d %b %Y" }})</li>
   {% endfor %}
