@@ -21,8 +21,6 @@ For LAH we have ASMRs (Akashi, Barrel, Mokdai) and Real sized Akashi's parallel 
 
 <h3><a href="https://www.youtube.com/watch?v=d-OShkcjWi4">Live A Hero Vs Tokyo Afterschool Summoners</a></h3>
 <table><tr><th>Time</th><th>Japanese</th><th>Translation</th></tr>
-<tr><td>1:53</td><td>オレのかわいい…Sweet Darling（かわいいひと）</td>
-<td>My sweet…Sweet Darling.</td></tr>
 <tr><td>0:02</td><td>「ゲームセットに持ち込むぜ！“必殺”！百烈打砲ぉっ！！」</td>
 <td>"Let’s bring this to game set. Special Move! Hundred Violent Strikes!"</td></tr>
 <tr><td>0:09</td><td>ライブ・ア・ヒーローより、魂群アカシが使用するパラレルウェポンが、</td>
