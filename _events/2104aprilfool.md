@@ -57,6 +57,8 @@ For LAH we have ASMRs (Akashi, Barrel, Mokdai) and Real sized Akashi's parallel 
 <td>Live A Hero, Parallel weapon.</td></tr>
 <tr><td>1:09</td><td>魂群アカシ、DXヒーローバット。</td>
 <td>Tamamura Akashi, DX Hero Bat.</td></tr>
+<tr><td>1:12</td><td>ただいま予約受付中。詳細はWEBで。</td>
+<td>Reservations are now open. visit the WEBsite for details.</td></tr>
 </table>
 
 <h3><a href="https://www.youtube.com/watch?v=rNlwF4Z1yoo">Akashi ASMR</a></h3>
