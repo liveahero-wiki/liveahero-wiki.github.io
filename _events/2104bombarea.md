@@ -13,3 +13,9 @@ The next limited time quests, first clear of each quest will grant 1 {% include 
 
 This quests will require no stamina to play.
 
+### Limited Time Missions: 
+
+## Quest Details
+
+{% include quest-group.html chapterId=418 %}
+
