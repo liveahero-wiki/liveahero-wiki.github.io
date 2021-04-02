@@ -15,6 +15,24 @@ This quests will require no stamina to play.
 
 ### Limited Time Missions: 
 
+| No  | Description      | Rewards      |
+|----|-----------------------------------------------------------|----------------|
+| 1  | Use {% chara_link Andrew|h1 %} to finish challenge quest rank A (NPC/support unit included)| 10000 {% include item-icon.html id=35 %}    |
+| 2  | Use {% chara_link Maculata|h1 %} to finish challenge quest rank A (NPC/support unit included)| 10000 {% include item-icon.html id=35 %}     |
+| 3  | Use 1 fire attuned hero in challenge quest rank A (support unit included)       | 10000 {% include item-icon.html id=35 %}    |
+| 4  | Use 1 wood attuned hero in challenge quest rank A (support unit included)      | 10000 {% include item-icon.html id=35 %}      |
+| 5  | Use 1 shadow attuned hero in challenge quest rank A (support unit included)        | 10000 {% include item-icon.html id=35 %}     |
+| 6  | Finish challenge quest rank A within 5 turn               | 10000 {% include item-icon.html id=35 %}       |
+| 7  | Win a challenge quest with 15000 total damage in one skill once| 10000 {% include item-icon.html id=35 %}    |
+| 8  | Win a challenge quest at 7 turn or more               | 10000 {% include item-icon.html id=35 %}     |
+| 9  | Win a challenge quest while reaching 100000 view one time | 10000 {% include item-icon.html id=35 %}     |
+| 10 | Finish 3 {% include item-icon.html id=11 %} sales         | 5000 {% include item-icon.html id=11 %}  |
+| 11 | Finish 3 {% include item-icon.html id=35 %} sales         | 5000 {% include item-icon.html id=11 %} |
+| 12 | Finish 3 {% include item-icon.html id=30 %} sales         | 5000 {% include item-icon.html id=11 %} |
+| 13 | Buy something from store                                  | 5000 {% include item-icon.html id=11 %} |
+| 14 | Finish all all challenge quest                            | 1 {% include item-icon.html id=10 %}   |
+| 15 | Finish 7 limited time mission                             | 1 {% include item-icon.html id=29 %} |
+
 ## Quest Details
 
 {% include quest-group.html chapterId=418 %}
