@@ -30,7 +30,7 @@ This quests will require no stamina to play.
 | 11 | Finish 3 {% include item-icon.html id=35 %} sales         | 5000 {% include item-icon.html id=11 %} |
 | 12 | Finish 3 {% include item-icon.html id=30 %} sales         | 5000 {% include item-icon.html id=11 %} |
 | 13 | Buy something from store                                  | 5000 {% include item-icon.html id=11 %} |
-| 14 | Finish all all challenge quest                            | 1 {% include item-icon.html id=10 %}   |
+| 14 | Finish all challenge quest                            | 1 {% include item-icon.html id=10 %}   |
 | 15 | Finish 7 limited time mission                             | 1 {% include item-icon.html id=29 %} |
 
 ## Quest Details
