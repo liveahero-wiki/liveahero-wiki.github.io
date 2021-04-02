@@ -12089,6 +12089,91 @@
       }
     ]
   },
+  "4011101": {
+    "skillId": 4011101,
+    "skillName": "ラブリーフレイム",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。Viewを5000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_flamier_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "4011102": {
+    "skillId": 4011102,
+    "skillName": "クレイジー・フォー・ボム",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方全体に1ターンの間覚醒を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_flamier_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 226,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "4011103": {
+    "skillId": 4011103,
+    "skillName": "ハッピー♡フラワータイム",
+    "useView": 12000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵全体に90%ダメージ。Viewを10000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_flamier_eh01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 25,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
   "4013101": {
     "skillId": 4013101,
     "skillName": "獅子武者剣舞",
@@ -13577,6 +13662,116 @@
       }
     ]
   },
+  "4054110": {
+    "skillId": 4054110,
+    "skillName": "暴発",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に50%ダメージ。味方全体に100%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMafia_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "4054111": {
+    "skillId": 4054111,
+    "skillName": "曲芸射撃",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に110%ダメージ。Viewを10000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMafia_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 25,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "4054112": {
+    "skillId": 4054112,
+    "skillName": "乱射",
+    "useView": 8000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に120%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMafia_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "4054113": {
+    "skillId": 4054113,
+    "skillName": "狙撃",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に140%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMafia_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 117,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
   "6000001": {
     "skillId": 6000001,
     "skillName": "ダメージ制限20000",
@@ -13626,6 +13821,24 @@
     "effects": [
       {
         "skillEffectId": 262,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "6000006": {
+    "skillId": 6000006,
+    "skillName": "妨害除去",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_cure",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、デバフを１つ解除。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 44,
         "prob": 100,
         "effectTarget": 0
       }
