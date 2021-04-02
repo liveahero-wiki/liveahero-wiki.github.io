@@ -9,7 +9,7 @@ event_end_time: 2021-04-16T18:00:00+09
 
 ## Event Details
 
-The next limited time quests, first clear of each quest will grant 1 {% include item.html id= 2%} , there will be limited time missions for this with rewards such as {% include item.html id=10 %}, {% include item.html id=29 %} and others, details will be available at a later date.
+The next limited time quests, first clear of each quest will grant 1 {% include item.html id= 2%}.
 
 This quests will require no stamina to play.
 
