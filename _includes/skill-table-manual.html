@@ -1,0 +1,25 @@
+<table>
+    <tr><th colspan="3">Main skills</th></tr>
+    <tr>
+        <th>Skill Name</th><th>Effect/Proc rate</th><th>View cost</th>
+    </tr>
+    {% assign skillIds = include.skillIds | split: "," %}
+    {% for id in skillIds %}
+    {% assign sid = id | downcase %}
+    {% assign skill = site.data.SkillMaster[sid] %}
+    <tr>
+        <td title="{{ sid }}" class="translate">{{ skill.skillName }}</td><td title="{{ skill.description }}">{% include skill-description.html skill=skill %}</td><td>{{ skill.useView }}</td>
+    </tr>
+    {% endfor %}
+    {% if include.equipmentSkills %}
+    {% assign equipmentSkills = include.equipmentSkills | split: "," %}
+    <tr><th colspan="3">Passive skills</th></tr>
+    {% for id in equipmentSkills %}
+    {% assign sid = id | downcase %}
+    {% assign skill = site.data.SkillMaster[sid] %}
+    <tr>
+        <td title="{{ sid }}" class="translate">{{ skill.skillName }}</td><td title="{{ skill.description }}">{% include skill-description.html skill=skill %}</td><td>{{ skill.useView }}</td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+</table>
