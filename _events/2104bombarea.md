@@ -37,3 +37,12 @@ This quests will require no stamina to play.
 
 {% include quest-group.html chapterId=418 %}
 
+## S Rank Challenge Guide
+
+### Flamier's skills
+
+{% include skill-table-manual.html skillIds="4011101,4011102,4011103" equipmentSkills="6000003,6000006" %}
+
+### Mafiosos' skills
+
+{% include skill-table-manual.html skillIds="4054110,4054111,4054112" equipmentSkills="6000003" %}
