@@ -24,8 +24,6 @@ Episodes will be released at the following schedule (subject to changes).
 | 2021/04/08 | 11~12 |
 | 2021/04/12 | Final |
 
-Maintenance is scheduled to start at 2021-03-22 14:00-20:00 JST
-As usual, please finish any ongoing quest before maintenance start
 
 ## Main Quests
 
