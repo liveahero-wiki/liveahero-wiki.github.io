@@ -6456,7 +6456,7 @@
       "statusId": 0,
       "canDispel": false,
       "parameter": false,
-      "description": "120%ダメージ+相手のバフの数に応じてダメージ量が上昇",
+      "description": "120%ダメージ+自身のバフの数に応じてダメージ量が上昇",
       "isImmediate": true,
       "persistence": false,
       "canDuplicate": false,
@@ -7181,6 +7181,78 @@
       "isImmediate": false,
       "persistence": true,
       "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "302": {
+    "skillEffectId": 302,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Provocation",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 35,
+      "canDispel": true,
+      "parameter": false,
+      "description": "カイブツの触手。",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "303": {
+    "skillEffectId": 303,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveBuff",
+          "parameter": {
+            "value": 1,
+            "target": 35
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "触手を１つ解除",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "304": {
+    "skillEffectId": 304,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MoreTurn",
+          "parameter": {
+            "value": 1
+          }
+        }
+      ],
+      "trigger": "[{\"value\":35,\"class\":\"OwnStatusTrigger\"}]",
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "自身に触手が付与されている場合、もう１度行動をする",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
       "isDisplayPersistenceStatus": false
     }
   }

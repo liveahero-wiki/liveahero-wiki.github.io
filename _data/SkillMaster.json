@@ -13772,6 +13772,96 @@
       }
     ]
   },
+  "4060101": {
+    "skillId": 4060101,
+    "skillName": "うねる触手",
+    "useView": 1000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。70%の確率で1ターンの間DEFダウンを付与。自身に触手が付与されている場合、触手を１つ解除し、もう１度行動をする。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuShizuku_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 70,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 304,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 303,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "4060102": {
+    "skillId": 4060102,
+    "skillName": "テンタクル・バインド",
+    "useView": 8000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に120%ダメージ+自身のバフの数に応じてダメージ量が上昇。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuShizuku_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 271,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "4060103": {
+    "skillId": 4060103,
+    "skillName": "テンタクル・ブロウ",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に50%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuShizuku_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
   "6000001": {
     "skillId": 6000001,
     "skillName": "ダメージ制限20000",
@@ -13839,6 +13929,34 @@
     "effects": [
       {
         "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "6000008": {
+    "skillId": 6000008,
+    "skillName": "触手の海",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "ターン開始時、1ターンの間触手×3を付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 302,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 302,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 302,
         "prob": 100,
         "effectTarget": 0
       }
