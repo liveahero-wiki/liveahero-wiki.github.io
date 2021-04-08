@@ -27,6 +27,12 @@ sprites="fg_kaibutsuAdultFireBarrier_h01"
 sprites="fg_kaibutsuLarvaEarth_h01,fg_kaibutsuLarvaFire_h01,fg_kaibutsuLarvaLight_h01,fg_kaibutsuLarvaShadow_h01,fg_kaibutsuLarvaWater_h01"
 %}
 
+### Kaibutsu (Shizuku)
+
+{% include hero-infobox-unreleased.html name="Kaibutsu (Shizuku)" mob=true
+sprites="fg_kaibutsuShizuku_h01"
+%}
+
 ### Kaibutsu (xmas)
 
 {% include hero-infobox-unreleased.html name="Kaibutsu (xmas)" mob=true
