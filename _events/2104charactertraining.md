@@ -11,14 +11,12 @@ event_end_time: 2021-04-23T14:00:00+09
 
 For a limited time there will be special training quest, consisting of two ranks (A and B) with three kinds of rewards (Exp, Laf, Training Band) for a total of 6 quests.
 
-| Character Training Campaign        |
-|------------------------------------|
-| \[A Rank\] Hero Training! {% include item-icon.html id=11 %}     |
-| \[B Rank\] Hero Training! {% include item-icon.html id=11 %}     |
-| \[A Rank\] Hero Training! {% include item-icon.html id=35 %}      |
-| \[B Rank\] Hero Training! {% include item-icon.html id=35 %}     |
-| \[A Rank\] Hero Training! {% include item-icon.html id=30 %} |
-| \[B Rank\] Hero Training! {% include item-icon.html id=30 %} |
+- \[A Rank\] Hero Training! {% include item-icon.html id=11 %}     
+- \[B Rank\] Hero Training! {% include item-icon.html id=11 %}     
+- \[A Rank\] Hero Training! {% include item-icon.html id=35 %}      
+- \[B Rank\] Hero Training! {% include item-icon.html id=35 %}     
+- \[A Rank\] Hero Training! {% include item-icon.html id=30 %} 
+- \[B Rank\] Hero Training! {% include item-icon.html id=30 %} 
 
 Each clear will grant 1 {% include item-icon.html id= 2%} Ether Stone.
 
