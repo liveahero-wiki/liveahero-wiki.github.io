@@ -18,7 +18,7 @@ For a limited time there will be special training quest, consisting of two ranks
 - \[A Rank\] Hero Training! {% include item-icon.html id=30 %} 
 - \[B Rank\] Hero Training! {% include item-icon.html id=30 %} 
 
-Each clear will grant 1 {% include item-icon.html id= 2%} Ether Stone.
+Each first clear will grant 1 {% include item-icon.html id= 2%} Ether Stone.
 
 Also, there will be daily missions and limited time missions for character training campaign, rewarding {% include item.html id= 10%} and {% include item.html id= 29%}.
 
