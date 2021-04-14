@@ -54,3 +54,11 @@ Please finish any ongoing quests before maintenance start.
 | 1  | Clear all challenge quest | 1 {% include item-icon.html id=10 %} |
 
 ## Quest Details
+
+### Character Training Campaign
+
+{% include quest-group.html chapterId=420 %}
+
+### A Challenge From the Fisherman
+
+{% include quest-group.html chapterId=419 %}
