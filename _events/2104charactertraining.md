@@ -24,10 +24,6 @@ Also, there will be daily missions and limited time missions for character train
 
 Lastly, together with this campaign we will get our next challenge quest, which is A Challenge From the Fisherman (Isaribi), this challenge quest will have 4 quests and clearing all of them will rewards 1 {% include item.html id= 10%}.
 
-Maintenance is set to start on 2021-04-14 14:00-18:00 JST
-
-Please finish any ongoing quests before maintenance start.
-
 ### Daily Missions: 
 
 | No | Description | Rewards |
