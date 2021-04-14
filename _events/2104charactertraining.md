@@ -38,10 +38,10 @@ Lastly, together with this campaign we will get our next challenge quest, which 
 
 | No | Description | Rewards |
 |----|-----------------------------------------------------------|----------------|
-| 1  | Clear \[Training Mission!\] quest 5 times | 5 {% include item-icon.html id=34 %} |
-| 2  | Clear \[Training Mission!\] quest 10 times  | 1 {% include item-icon.html id=10 %} |
-| 3  | Clear \[Training Mission!\] quest 15 times  | 1 {% include item-icon.html id=29 %} |
-| 4  | Clear \[Training Mission!\] quest 20 times  | 1 {% include item-icon.html id=10 %} |
+| 1  | Clear \[Training Mission!\] daily mission 5 times | 5 {% include item-icon.html id=34 %} |
+| 2  | Clear \[Training Mission!\] daily mission 10 times  | 1 {% include item-icon.html id=10 %} |
+| 3  | Clear \[Training Mission!\] daily mission 15 times  | 1 {% include item-icon.html id=29 %} |
+| 4  | Clear \[Training Mission!\] daily mission 20 times  | 1 {% include item-icon.html id=10 %} |
 
 #### A Challenge From the Fisherman
 
