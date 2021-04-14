@@ -12279,6 +12279,56 @@
       }
     ]
   },
+  "4022101": {
+    "skillId": 4022101,
+    "skillName": "ホーミング投網",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に90%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_isaribi_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "4022102": {
+    "skillId": 4022102,
+    "skillName": "見せたがり攻撃",
+    "useView": 8000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_isaribi_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
   "4026101": {
     "skillId": 4026101,
     "skillName": "探偵の鼓舞",
@@ -12864,6 +12914,61 @@
       }
     ]
   },
+  "4041108": {
+    "skillId": 4041108,
+    "skillName": "ド緊張",
+    "useView": 5000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "何も行動を行わない。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villain_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 306,
+        "prob": 0,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "4041109": {
+    "skillId": 4041109,
+    "skillName": "大暴れ",
+    "useView": 10000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。自身にもう１度行動をする。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villain_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
   "4046101": {
     "skillId": 4046101,
     "skillName": "爪",
@@ -13259,6 +13364,31 @@
         "skillEffectId": 61,
         "prob": 100,
         "effectTarget": 2
+      }
+    ]
+  },
+  "4046124": {
+    "skillId": 4046124,
+    "skillName": "オールレンジビーム",
+    "useView": 8000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuAdult_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4
       }
     ]
   },
