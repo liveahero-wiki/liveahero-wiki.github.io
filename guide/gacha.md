@@ -30,26 +30,26 @@ Friend Point gacha uses {% include item-icon.html id=42 %} friend Points to obta
 <tbody>
 <tr>
 <td>
-  <img src="/cdn/Sprite/item_piece_akashi.png">
-  <img src="/cdn/Sprite/item_piece_sui.png">
+  <img src="/cdn/Sprite/item_piece_akashi.png" loading="lazy">
+  <img src="/cdn/Sprite/item_piece_sui.png" loading="lazy">
 </td>
 <td rowspan="2" style="width: 33%">
-  <img style="display: block; margin: auto" src="/cdn/Sprite/item_recordcube.png">
+  <img style="display: block; margin: auto" src="/cdn/Sprite/item_recordcube.png"  loading="lazy">
 </td>
 <td>
-  <img src="/cdn/Sprite/item_genericpiece_rank3.png">
-  <img src="/cdn/Sprite/item_genericpiece_rank4.png">
-  <img src="/cdn/Sprite/item_genericpiece_rank5.png">
+  <img src="/cdn/Sprite/item_genericpiece_rank3.png" loading="lazy">
+  <img src="/cdn/Sprite/item_genericpiece_rank4.png" loading="lazy">
+  <img src="/cdn/Sprite/item_genericpiece_rank5.png" loading="lazy">
 </td>
 </tr>
 <tr>
 <td>
-  <img src="/cdn/Sprite/item_heart_gomeisa.png">
-  <img src="/cdn/Sprite/item_heart_huckle.png">
+  <img src="/cdn/Sprite/item_heart_gomeisa.png" loading="lazy">
+  <img src="/cdn/Sprite/item_heart_huckle.png" loading="lazy">
 </td>
 <td>
-  <img src="/cdn/Sprite/item_genericheart_rank3.png">
-  <img src="/cdn/Sprite/item_genericheart_rank4.png">
+  <img src="/cdn/Sprite/item_genericheart_rank3.png" loading="lazy">
+  <img src="/cdn/Sprite/item_genericheart_rank4.png" loading="lazy">
 </td>
 </tr>
 <tr>

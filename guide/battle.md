@@ -13,7 +13,7 @@ Pair a hero with a sidekick, and fight against monsters and other heroes. Winnin
 ## Battle Interface
 
 {:refdef: style="text-align: center;"}
-<img src="/assets/img/uipage_3_Number.png" alt="Battle Flow" height=500px>
+<img src="/assets/img/uipage_3_Number.png" alt="Battle Flow" height=500px loading="lazy">
 {: refdef}
 
 | Item                  | Description                                                |

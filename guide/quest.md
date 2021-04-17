@@ -7,7 +7,7 @@ banner: true
 {:toc}
 
 {:refdef: style="text-align: center;"}
-<img src="/assets/img/TLed_QuestMenu.png" alt="mainMenu" height=500px>
+<img src="/assets/img/TLed_QuestMenu.png" alt="mainMenu" height=500px loading="lazy">
 {: refdef}
 
 

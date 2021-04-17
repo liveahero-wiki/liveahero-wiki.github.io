@@ -43,7 +43,7 @@ If all of this is fulfilled you will be then redirected to the Home UI where you
 Here is the translated home menu screen:
 
 {:refdef: style="text-align: center;"}
-<img src="/assets/img/TLed_Main_menu.png" alt="mainMenu" height=500px>
+<img src="/assets/img/TLed_Main_menu.png" alt="mainMenu" height=500px loading="lazy">
 {: refdef}
 
 
@@ -124,7 +124,7 @@ A team is made of up of 4 of your own heroes ,4 of your sidekicks and, when you 
 ### Support Unit
 
 {:refdef: style="text-align: center;"}
-<img src="/assets/img/Support.png" alt="Team" height=500px>
+<img src="/assets/img/Support.png" alt="Team" height=500px loading="lazy">
 {: refdef}
 
 You can set your own support unit from the support setting button in team menu, select the hero and the corresponding sidekick to set as your support so that your friends can use your unit in battle (thus netting you friend points)
@@ -148,7 +148,7 @@ From the main menu, select "Friends" and then "Search for Friends".
 On the lower part of the screen you will find your Player ID. Noting this number down is recommended, as it is something Lifewonders will ask you if you have to contact their support to recover your account.
 
 {:refdef: style="text-align: center;"}
-<img src="/assets/img/Playerid.png" alt="Pid" height=500px>
+<img src="/assets/img/Playerid.png" alt="Pid" height=500px loading="lazy">
 {: refdef}
 
 ## How to Back-up Your Data
