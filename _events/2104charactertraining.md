@@ -58,3 +58,13 @@ Lastly, together with this campaign we will get our next challenge quest, which 
 ### A Challenge From the Fisherman
 
 {% include quest-group.html chapterId=419 %}
+
+## S Rank Challenge Guide
+
+### Isaribi's skills
+
+{% include skill-table-manual.html skillIds="4022101,4022102" equipmentSkills="6000003" %}
+
+### Wolfmen's skills
+
+{% include skill-table-manual.html skillIds="4041106,4041108,4041109" equipmentSkills="6000003" %}
