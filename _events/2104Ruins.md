@@ -10,7 +10,7 @@ event_end_time: 2021-05-21T14:00:00+09
 
 ## Event Details
 
-Live A Hero's next event is here. This Event's gacha summon includes a time-limited variants {% chara_link Marfik|h2 %} (Hero) and two new characters {% chara_link Rutilix %} (Hero & Sidekick) and {% chara_link Alphecca %} (Hero & Sidekick).
+Live A Hero's next event is here. This Event's gacha summon includes a time-limited variant "The Adventurer" Marfik (Hero) and two new characters {% chara_link Rutilix %} (Hero & Sidekick) and {% chara_link Alphecca %} (Hero & Sidekick).
 
 Maintenance is scheduled to start on 2021-04-23 14:00-20:00 JST
 
