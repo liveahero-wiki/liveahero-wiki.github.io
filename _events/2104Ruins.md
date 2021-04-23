@@ -6,6 +6,10 @@ banner_image: banner_info_2104Ruins.jpg
 gacha: true
 event_start_time: 2021-04-23T20:00:00+09
 event_end_time: 2021-05-21T14:00:00+09
+farm_start_time: 2021-04-23T20:00:00+09
+farm_end_time: 2021-04-14T20:00:00+09
+sales_start_time: 2021-04-23T20:00:00+09
+sales_end_time: 2021-04-14T20:00:00+09
 ---
 
 ## Event Details
@@ -48,7 +52,7 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 
 ### Event Sales Bonus
 
-Event sales bonus added according to how much event Hero you have in a single sales, Which is
+Event sales bonus added according to how much event hero you have in a single sales, Which is
 {% chara_link Marfik|h2 %}, {% chara_link Rutilix|h1 %}, and {% chara_link Alphecca|h1 %}  
 
 Here is the bonus:
