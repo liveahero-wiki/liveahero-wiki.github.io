@@ -517,6 +517,85 @@
     "description": "ガジェット開発用の部品。交換所でアイテムと交換してもらえる。",
     "effect": []
   },
+  "59": {
+    "itemId": 59,
+    "itemName": "パラレル・クオーツ",
+    "resourceName": "pwexp",
+    "rarity": 0,
+    "itemType": 8192,
+    "description": "パラレルウェポンを改造するのに必要なアイテム",
+    "effect": [
+      {
+        "exp": 1,
+        "class": "ParallelWeaponExpItemEffect"
+      }
+    ]
+  },
+  "60": {
+    "itemId": 60,
+    "itemName": "ベース・デザイン",
+    "resourceName": "stance_normal",
+    "rarity": 0,
+    "itemType": 16384,
+    "description": "パラレルウェポンのフォームを、平均的に能力値が増加する「ベースフォーム」に変更できるアイテム。",
+    "effect": [
+      {
+        "form": 0,
+        "class": "ParallelWeaponFormItemEffect"
+      }
+    ]
+  },
+  "61": {
+    "itemId": 61,
+    "itemName": "アタック・デザイン",
+    "resourceName": "stance_attack",
+    "rarity": 0,
+    "itemType": 16384,
+    "description": "パラレルウェポンのフォームを、Atkがより増加する「アタックフォーム」に変更できるアイテム。",
+    "effect": [
+      {
+        "form": 1,
+        "class": "ParallelWeaponFormItemEffect"
+      }
+    ]
+  },
+  "62": {
+    "itemId": 62,
+    "itemName": "フィジカル・デザイン",
+    "resourceName": "stance_physical",
+    "rarity": 0,
+    "itemType": 16384,
+    "description": "パラレルウェポンのフォームを、HPがより増加する「フィジカルフォーム」に変更できるアイテム。",
+    "effect": [
+      {
+        "form": 2,
+        "class": "ParallelWeaponFormItemEffect"
+      }
+    ]
+  },
+  "63": {
+    "itemId": 63,
+    "itemName": "ガード・デザイン",
+    "resourceName": "stance_guard",
+    "rarity": 0,
+    "itemType": 16384,
+    "description": "パラレルウェポンのフォームを、被ダメージがより減少する「ガードフォーム」に変更できるアイテム。",
+    "effect": [
+      {
+        "form": 3,
+        "class": "ParallelWeaponFormItemEffect"
+      }
+    ]
+  },
+  "64": {
+    "itemId": 64,
+    "itemName": "冒険マップ",
+    "resourceName": "Ruins2104_exchange01",
+    "rarity": 0,
+    "itemType": 512,
+    "description": "ダンジョン探索中にマッピングを行った冒険の地図。交換所でアイテムと交換してもらえる。",
+    "effect": []
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -850,6 +929,26 @@
         "addFan": 200,
         "rarity": 0,
         "stockId": 10141
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ]
+  },
+  "110142": {
+    "itemId": 110142,
+    "itemName": "探険のマルフィクの記憶片",
+    "resourceName": "piece_marfikRuins2104",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "探険のマルフィクのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10142
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
@@ -1322,6 +1421,46 @@
         "addFan": 50,
         "rarity": 0,
         "stockId": 10591
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ]
+  },
+  "110611": {
+    "itemId": 110611,
+    "itemName": "ルティリクスの記憶片",
+    "resourceName": "piece_rutilix",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "ルティリクスのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10611
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ]
+  },
+  "110621": {
+    "itemId": 110621,
+    "itemName": "アルフェッカの記憶片",
+    "resourceName": "piece_alphecca",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "アルフェッカのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 10621
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
@@ -2093,6 +2232,44 @@
         "class": "SidekickHeartItemEffect",
         "rarity": 0,
         "stockId": 10591
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ]
+  },
+  "210611": {
+    "itemId": 210611,
+    "itemName": "ルティリクスの心",
+    "resourceName": "heart_rutilix",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "ルティリクスのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 10611
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ]
+  },
+  "210621": {
+    "itemId": 210621,
+    "itemName": "アルフェッカの心",
+    "resourceName": "heart_alphecca",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "アルフェッカのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 10621
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",

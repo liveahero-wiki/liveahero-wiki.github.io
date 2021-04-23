@@ -7279,5 +7279,76 @@
       "canDuplicate": false,
       "isDisplayPersistenceStatus": false
     }
+  },
+  "307": {
+    "skillEffectId": 307,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Damage",
+          "parameter": {
+            "value": 85
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "85%ダメージ",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "308": {
+    "skillEffectId": 308,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HealthDamage",
+          "parameter": {
+            "value": 80,
+            "evaluationIsMax": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "80%ダメージ+HPが多いほどダメージ量が上昇する",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "309": {
+    "skillEffectId": 309,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Aggregation",
+          "parameter": []
+        }
+      ],
+      "filename": "status_damageAggregation",
+      "statusId": 26,
+      "canDispel": true,
+      "parameter": false,
+      "description": "ダメージ集約",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
   }
 }

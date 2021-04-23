@@ -2166,6 +2166,126 @@
       }
     ]
   },
+  "1014201": {
+    "skillId": 1014201,
+    "skillName": "ヒストリーハンティング",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。Viewを3000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_marfik_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 24,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1014202": {
+    "skillId": 1014202,
+    "skillName": "エクスプローラーズラック",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "味方単体に1ターンの間幸運を付与。Viewを12000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_marfik_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 69,
+        "prob": 100,
+        "effectTarget": 1
+      },
+      {
+        "skillEffectId": 290,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1014203": {
+    "skillId": 1014203,
+    "skillName": "ルインズ・サルベージ",
+    "useView": 12000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffAll",
+    "timing": 0,
+    "description": "敵全体に85%ダメージ。50%の確率で1ターンの間DEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_marfik_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 307,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 50,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "1014204": {
+    "skillId": 1014204,
+    "skillName": "ルインズ・サルベージ+",
+    "useView": 10000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffAll",
+    "timing": 0,
+    "description": "敵全体に85%ダメージ。50%の確率で1ターンの間DEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_marfik_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 307,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 50,
+        "effectTarget": 4
+      }
+    ]
+  },
   "1015101": {
     "skillId": 1015101,
     "skillName": "綺羅星バックブリーカー",
@@ -4503,6 +4623,246 @@
         "skillEffectId": 42,
         "prob": 100,
         "effectTarget": 2
+      }
+    ]
+  },
+  "1061101": {
+    "skillId": 1061101,
+    "skillName": "シーニングスヴァルド",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_heal",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。自身のHPを基礎ATKの30%回復する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_akashi_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 124,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1061102": {
+    "skillId": 1061102,
+    "skillName": "アクセレルスラッシュ",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ+対象と自分のSPDの差だけダメージ量が上昇。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_akashi_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 116,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1061103": {
+    "skillId": 1061103,
+    "skillName": "エドアブデ・ハイエリデン",
+    "useView": 7000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に180%ダメージ。1ターンの間DEFダウンを付与。バフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_akashi_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 21,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 59,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1061104": {
+    "skillId": 1061104,
+    "skillName": "エドアブデ・ハイエリデン+",
+    "useView": 7000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に180%ダメージ。1ターンの間DEFダウンを付与。バフを２つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_akashi_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 21,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 72,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1062101": {
+    "skillId": 1062101,
+    "skillName": "スクルォストレ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。自身に60%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_alphecca_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 60,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1062102": {
+    "skillId": 1062102,
+    "skillName": "コンゲンス・アンスヴァ",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に3ターンの間挑発を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_alphecca_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 255,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "1062103": {
+    "skillId": 1062103,
+    "skillName": "ヘリッグ・フランメライ",
+    "useView": 10000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に130%ダメージ。2ターンの間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_alphecca_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 71,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 16,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "1062104": {
+    "skillId": 1062104,
+    "skillName": "コンゲンス・アンスヴァ+",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "自身に3ターンの間挑発を付与。1ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_alphecca_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 255,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 0
       }
     ]
   },
@@ -7627,6 +7987,186 @@
         "skillEffectId": 294,
         "prob": 100,
         "effectTarget": 2
+      }
+    ]
+  },
+  "2061101": {
+    "skillId": 2061101,
+    "skillName": "我武者羅な突撃",
+    "useView": 1000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に110%ダメージ。自身に40%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_akashi_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 273,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2061102": {
+    "skillId": 2061102,
+    "skillName": "我武者羅な突撃+",
+    "useView": 1000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。自身に40%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_akashi_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 273,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2061103": {
+    "skillId": 2061103,
+    "skillName": "我武者羅な突撃++",
+    "useView": 1000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。自身に30%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_akashi_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 122,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2062101": {
+    "skillId": 2062101,
+    "skillName": "白騎士推参",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。自身に50%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_alphecca_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 50,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2062102": {
+    "skillId": 2062102,
+    "skillName": "白騎士推参+",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。自身に65%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_alphecca_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 65,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "2062103": {
+    "skillId": 2062103,
+    "skillName": "白騎士推参++",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。自身に80%の確率で1ターンの間DEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_alphecca_s01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 80,
+        "effectTarget": 0
       }
     ]
   },
@@ -11776,6 +12316,222 @@
       }
     ]
   },
+  "3061101": {
+    "skillId": 3061101,
+    "skillName": "芋騎士根性Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_rutilix_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "スキル発動確率+5%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 90,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3061102": {
+    "skillId": 3061102,
+    "skillName": "芋騎士根性Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_rutilix_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "スキル発動確率+6%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 152,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3061103": {
+    "skillId": 3061103,
+    "skillName": "芋騎士根性Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_rutilix_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "スキル発動確率+7%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 153,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3061104": {
+    "skillId": 3061104,
+    "skillName": "芋騎士根性Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_rutilix_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "スキル発動確率+8%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 154,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3061105": {
+    "skillId": 3061105,
+    "skillName": "芋騎士根性Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_rutilix_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "スキル発動確率+9%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 155,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3061106": {
+    "skillId": 3061106,
+    "skillName": "芋騎士根性Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_rutilix_s01",
+    "subResourceName": "",
+    "timing": 10,
+    "description": "スキル発動確率+10%。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 91,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3062101": {
+    "skillId": 3062101,
+    "skillName": "騎士王の覇気Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_alphecca_s01",
+    "subResourceName": "",
+    "timing": 6,
+    "description": "ピンチ状態になった時、15%の確率で1ターンの間無敵を付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 17,
+        "prob": 15,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3062102": {
+    "skillId": 3062102,
+    "skillName": "騎士王の覇気Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_alphecca_s01",
+    "subResourceName": "",
+    "timing": 6,
+    "description": "ピンチ状態になった時、18%の確率で1ターンの間無敵を付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 17,
+        "prob": 18,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3062103": {
+    "skillId": 3062103,
+    "skillName": "騎士王の覇気Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_alphecca_s01",
+    "subResourceName": "",
+    "timing": 6,
+    "description": "ピンチ状態になった時、21%の確率で1ターンの間無敵を付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 17,
+        "prob": 21,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3062104": {
+    "skillId": 3062104,
+    "skillName": "騎士王の覇気Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_alphecca_s01",
+    "subResourceName": "",
+    "timing": 6,
+    "description": "ピンチ状態になった時、24%の確率で1ターンの間無敵を付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 17,
+        "prob": 24,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3062105": {
+    "skillId": 3062105,
+    "skillName": "騎士王の覇気Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_alphecca_s01",
+    "subResourceName": "",
+    "timing": 6,
+    "description": "ピンチ状態になった時、27%の確率で1ターンの間無敵を付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 17,
+        "prob": 27,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "3062106": {
+    "skillId": 3062106,
+    "skillName": "騎士王の覇気Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_alphecca_s01",
+    "subResourceName": "",
+    "timing": 6,
+    "description": "ピンチ状態になった時、30%の確率で1ターンの間無敵を付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 17,
+        "prob": 30,
+        "effectTarget": 0
+      }
+    ]
+  },
   "3999101": {
     "skillId": 3999101,
     "skillName": "無意識下のアシストⅠ",
@@ -12684,6 +13440,66 @@
       }
     ]
   },
+  "4036105": {
+    "skillId": 4036105,
+    "skillName": "ダンジョン・バイト",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。Viewを1000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsu_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 34,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "4036106": {
+    "skillId": 4036106,
+    "skillName": "献身",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "自身に3ターンの間挑発を付与 & ダメージ集約を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsu_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 255,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 309,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
   "4037103": {
     "skillId": 4037103,
     "skillName": "巨大エネミーデバッグ用スキル",
@@ -13387,6 +14203,56 @@
     "effects": [
       {
         "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "4046125": {
+    "skillId": 4046125,
+    "skillName": "爪",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuAdult_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "4046126": {
+    "skillId": 4046126,
+    "skillName": "オールレンジビーム",
+    "useView": 12000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に60%ダメージ+HPが多いほどダメージ量が上昇する。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuAdult_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 288,
         "prob": 100,
         "effectTarget": 4
       }
