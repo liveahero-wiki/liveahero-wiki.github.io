@@ -16,7 +16,7 @@ The maximum level is 100, and increasing parallel weapon's level will enhance yo
 
 {% include item-icon.html id=59 %} Parallel Quartz can be obtained from event as of now.
 
-#### Parallel Weapon Form
+### Parallel Weapon Form
 
 Aside from level, Each parallel weapon will have multiple forms.
 
@@ -31,10 +31,11 @@ Each form will give different status enhancement according to parallel weapon's 
 
 The level of parallel weapon will stay the same even after changing forms.
 
-> as of now there is a bug where the change form function can't be used, there will be further notice when it's fixed
+> As of now there is a bug where the change form function can't be used, there will be further notice when it's fixed
 
 ### Parallel Weapon Level Table
 
+Here is the full exp table to level parallel weapon:
 
 See full EXP table [^bigtable].
 
