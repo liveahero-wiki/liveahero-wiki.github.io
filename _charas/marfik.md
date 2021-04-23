@@ -15,7 +15,15 @@ The supreme theory of life in Marfik's mind, who has an immense curiosity for su
 
 {% include hero-infobox.html stockId=10141 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10142 %}
+{% capture BIO_H01 %}
+After challenging a labyrinth full of puzzles and mystery, Marfik's curiosity couldn't stay in 1 place and thus, Marfik gained a new hero form. Optimized for adventures deep within said labyrinth, he is now equipped with a number of exploratory tools and a parallel weapon that can turn into a sword and a shovel. It is a costume fitting for Marfik's status, as someone who has been an adventurer for his entire life. However, he deemed the small amount/lack of fabrics a little too adventurous for him. Hearing about the labyrinth that only heroes and observers could interact with, he immediately set sail on his adventure.
+{% endcapture %}
+
+{% capture BIO_H02 %}
+A certain limit has been approaching for Marfik, who has traveled all around the universe to fulfill his childhood dream of being an "adventurer".  That limit is "age", the force that no one can resist.  The driving force behind this man, who feels his old age but never stops adventuring, is his curiosity and desire for knowledge.  He will continue to be a hero and an adventurer as long as the endless fountain of the mind continues to spring up.
+{% endcapture %}
+
+{% include hero-infobox.html stockId=10142 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 Archeologist enrolled in university, and an adventure-lover for as long as he remembers. An Earthling from Indianapolis, USA. Having vitality and toughness far from any ordinary person, he's a mischievous man in the prime of his life, who possesses both the composure and thinking power of a scholar, and the curiosity of a child.
