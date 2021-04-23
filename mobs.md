@@ -12,19 +12,13 @@ additional_scripts: ["/assets/atlas.min.js"]
 ### Kaibutsu (adult)
 
 {% include hero-infobox-unreleased.html name="Kaibutsu (adult)" mob=true
-sprites="fg_kaibutsuAdultEarth_h01,fg_kaibutsuAdultFire_h01,fg_kaibutsuAdultLight_h01,fg_kaibutsuAdultShadow_h01,fg_kaibutsuAdultWater_h01"
-%}
-
-### Kaibutsu (barrier)
-
-{% include hero-infobox-unreleased.html name="Kaibutsu (barrier)" mob=true
-sprites="fg_kaibutsuAdultFireBarrier_h01"
+sprites="fg_kaibutsuAdultEarth_h01,fg_kaibutsuAdultEarthSpace_h01,fg_kaibutsuAdultFire_h01,fg_kaibutsuAdultFireBarrier_h01,fg_kaibutsuAdultFireSpace_h01,fg_kaibutsuAdultLight_h01,fg_kaibutsuAdultLightSpace_h01,fg_kaibutsuAdultShadow_h01,fg_kaibutsuAdultShadowSpace_h01,fg_kaibutsuAdultWater_h01,fg_kaibutsuAdultWaterSpace_h01"
 %}
 
 ### Kaibutsu (juvenile)
 
 {% include hero-infobox-unreleased.html name="Kaibutsu (juvenile)" mob=true
-sprites="fg_kaibutsuLarvaEarth_h01,fg_kaibutsuLarvaFire_h01,fg_kaibutsuLarvaLight_h01,fg_kaibutsuLarvaShadow_h01,fg_kaibutsuLarvaWater_h01"
+sprites="fg_kaibutsuLarvaEarth_h01,fg_kaibutsuLarvaEarthSpace_h01,fg_kaibutsuLarvaFire_h01,fg_kaibutsuLarvaFireSpace_h01,fg_kaibutsuLarvaLight_h01,fg_kaibutsuLarvaLightSpace_h01,fg_kaibutsuLarvaShadow_h01,fg_kaibutsuLarvaShadowSpace_h01,fg_kaibutsuLarvaWater_h01,fg_kaibutsuLarvaWaterSpace_h01"
 %}
 
 ### Kaibutsu (Shizuku)
