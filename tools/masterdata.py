@@ -127,6 +127,8 @@ if __name__ == '__main__':
     'HeroCardExpMaster',
     'SidekickCardExpMaster',
     'UserRankMaster',
+    "ParallelWeaponExpMaster",
+    "ParallelWeaponFormMaster",
   ]
   for m in masterDataList:
     downloadMasterdata(mV, m)

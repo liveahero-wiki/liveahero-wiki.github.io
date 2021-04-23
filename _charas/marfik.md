@@ -2,6 +2,8 @@
 title: Marfik
 characterId: 14
 occupation: "University Professor (Archeology)"
+h2:
+  title: "\"The Adventurer\" Marfik"
 ---
 {% capture BIO_H01 %}
 Marfik transforms into a hero by dressing up with an adventurer-like appearance while handling two types of parallel weapons, a pickaxe and a rope. When he hits the ground with his pickaxe, he has the ability to evoke the "memory of the stars" that sleep deep within the stratum of the earth, and the rope can pull out the energy that embodies that memory and use it for attacks. However, he can only keep this power for a short time, usually just a few minutes.
@@ -12,6 +14,8 @@ The supreme theory of life in Marfik's mind, who has an immense curiosity for su
 {% endcapture %}
 
 {% include hero-infobox.html stockId=10141 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+
+{% include hero-infobox.html stockId=10142 %}
 
 {% capture BIO_S01 %}
 Archeologist enrolled in university, and an adventure-lover for as long as he remembers. An Earthling from Indianapolis, USA. Having vitality and toughness far from any ordinary person, he's a mischievous man in the prime of his life, who possesses both the composure and thinking power of a scholar, and the curiosity of a child.
@@ -44,6 +48,9 @@ TRAIN = "You think I'm just an old man?! Don't underestimate me!"
 DAILY = "Yo, young captain.<br>How do you feel about going on an adventure with this old man?<br>W-Wha-? Your job comes first?... I-...I know..."
 HERO =  "A child of a non-human, born of a mechanical star.<br>What kind of history and technology gave birth to that child?<br>It's pretty interesting..."
 RELATION = "That doggy at your place is wonderful!<br>That kind of power would be invaluable in an excavation site.<br>How is it? Mind if I borrow them?"
+%}
+
+{% include voice-table.html resourceName="marfikRuins2104"
 %}
 
 ## Notes:
