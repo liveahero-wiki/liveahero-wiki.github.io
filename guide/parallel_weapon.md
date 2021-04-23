@@ -20,7 +20,7 @@ The maximum level is 100, and increasing parallel weapon's level will enhance yo
 
 Aside from level, Each parallel weapon will have multiple forms.
 
-This form can be changed using item design from events such as:
+This form can be changed using item design from events:
 
 - {% include item-icon.html id=60 %} Base Design
 - {% include item-icon.html id=61 %} Attack Design
