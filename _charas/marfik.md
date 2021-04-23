@@ -6,29 +6,61 @@ h2:
   title: "\"The Adventurer\" Marfik"
 ---
 {% capture BIO_H01 %}
-Marfik transforms into a hero by dressing up with an adventurer-like appearance while handling two types of parallel weapons, a pickaxe and a rope. When he hits the ground with his pickaxe, he has the ability to evoke the "memory of the stars" that sleep deep within the stratum of the earth, and the rope can pull out the energy that embodies that memory and use it for attacks. However, he can only keep this power for a short time, usually just a few minutes.
+Marfik transforms into a hero by dressing up with an adventurer-like appearance while handling two types of parallel weapons, a pickaxe and a rope.
+
+When he hits the ground with his pickaxe, he has the ability to evoke the "memory of the stars" that sleep deep within the stratum of the earth, and the rope can pull out the energy that embodies that memory and use it for attacks. 
+
+However, he can only keep this power for a short time, usually just a few minutes.
 {% endcapture %}
 
 {% capture BIO_H02 %}
-The supreme theory of life in Marfik's mind, who has an immense curiosity for such things, is "to know the mystery of space life". He wishes to leave himself to the spirit of inquiry, to go where he wants to go, to do what he wants to do, and to know what he wants to know. Because of that, he always ends up breaking up with the partners he loves. If such an existence that occupies his unyielding obsession appears, it will be an existence full of mystery.
+The supreme theory of life in Marfik's mind, who has an immense curiosity for such things, is "to know the mystery of space life". 
+
+He wishes to leave himself to the spirit of inquiry, to go where he wants to go, to do what he wants to do, and to know what he wants to know. 
+
+Because of that, he always ends up breaking up with the partners he loves. 
+
+If such an existence that occupies his unyielding obsession appears, it will be an existence full of mystery.
 {% endcapture %}
 
 {% include hero-infobox.html stockId=10141 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_H01 %}
-After challenging a labyrinth full of puzzles and mystery, Marfik's curiosity couldn't stay in 1 place and thus, Marfik gained a new hero form. Optimized for adventures deep within said labyrinth, he is now equipped with a number of exploratory tools and a parallel weapon that can turn into a sword and a shovel. It is a costume fitting for Marfik's status, as someone who has been an adventurer for his entire life. However, he deemed the small amount/lack of fabrics a little too adventurous for him. Hearing about the labyrinth that only heroes and observers could interact with, he immediately set sail on his adventure.
+After challenging a labyrinth full of puzzles and mystery, Marfik's curiosity couldn't stay in 1 place and thus, Marfik gained a new hero form. 
+
+Optimized for adventures deep within said labyrinth, he is now equipped with a number of exploratory tools and a parallel weapon that can turn into a sword and a shovel. 
+
+It is a costume fitting for Marfik's status, as someone who has been an adventurer for his entire life.
+
+However, he deemed the small amount/lack of fabrics a little too adventurous for him. 
+
+Hearing about the labyrinth that only heroes and observers could interact with, he immediately set sail on his adventure.
 {% endcapture %}
 
 {% capture BIO_H02 %}
-A certain limit has been approaching for Marfik, who has traveled all around the universe to fulfill his childhood dream of being an "adventurer".  That limit is "age", the force that no one can resist.  The driving force behind this man, who feels his old age but never stops adventuring, is his curiosity and desire for knowledge.  He will continue to be a hero and an adventurer as long as the endless fountain of the mind continues to spring up.
+A certain limit has been approaching for Marfik, who has traveled all around the universe to fulfill his childhood dream of being an "adventurer".  
+
+That limit is "age", the force that no one can resist.
+
+The driving force behind this man, who feels his old age but never stops adventuring, is his curiosity and desire for knowledge.  
+
+He will continue to be a hero and an adventurer as long as the endless fountain of the mind continues to spring up.
 {% endcapture %}
 
 {% include hero-infobox.html stockId=10142 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
-Archeologist enrolled in university, and an adventure-lover for as long as he remembers. An Earthling from Indianapolis, USA. Having vitality and toughness far from any ordinary person, he's a mischievous man in the prime of his life, who possesses both the composure and thinking power of a scholar, and the curiosity of a child.
+Archeologist enrolled in university, and an adventure-lover for as long as he remembers. 
 
-He is interested in ancient civilizations from all sorts of planets, even the ones at the ends of the universe. It is said that if there is a place with rare ruins to explore, he will be there. On the other hand, he holds no interest whatsoever in the monetary value of the goods he digs out.
+An Earthling from Indianapolis, USA. 
+
+Having vitality and toughness far from any ordinary person, he's a mischievous man in the prime of his life, who possesses both the composure and thinking power of a scholar, and the curiosity of a child.
+
+He is interested in ancient civilizations from all sorts of planets, even the ones at the ends of the universe. 
+
+It is said that if there is a place with rare ruins to explore, he will be there. 
+
+On the other hand, he holds no interest whatsoever in the monetary value of the goods he digs out.
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10141 BIO_S01=BIO_S01 %}
 
