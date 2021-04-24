@@ -40,4 +40,16 @@ He invites the Rutilix, who has trouble achieving anything, to an exploration in
 {% include sidekick-infobox.html stockId=10621 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="alphecca"
+h_gachaResult = "I am a nameless white knight…no.<br>King of Ardisia kingdom, Alphecca Genma the 21st!<br>In my name, I promise to fulfill your expectation on the battlefield."
+s_gachaResult = "From Ardisia kingdom, I am Alphecca.<br>If I can be of help to the soldiers, then I will gladly offer you my assistance.<br>Protecting the people…is a king's duty after all. "
+APPRECIATION = "It seems earth's tactician actually has a lot of work.<br>I sincerely respect you for your hard works.<br>But, there is no need to push yourself so hard, okay?"
+DAILY = "Ooh, you have come Operator. Good.<br>You really don't need to bow at me every time.<br>Going to work right? Why don't you let me help you?"
+HERO = "Using a club to launch a fireball, that kind of attack.<br>That young man is a mystery, what an interesting technique.<br>As someone who also handles flame, I want to learn from him."
+PLAYER = "Seems like work as an operator require a lot of effort.<br>Fufu, I like people who spares no effort.<br>I think the way you work is very likeable."
+RELATION = "Why did I favor Rutilix?<br>Well..that reckless attitude,<br>Reminds me of my own long gone past, maybe that's why."
+TOUCH = "Oops. Hahah, are you interested in my body?<br>Fine, until your curiosity is sated I will permit this touching.<br>It's my first time being touched by another person since I ascended the throne, after all."
+TRAIN = "Stand up, receive my challenge!"
+TRAINED = "W-well aren't you skilled…!"
+EVENTA = "Hmm..mysterious, what an interesting labyrinth.<br>I'm usually bound to my throne, so just a little bit of adventure is fine, right?"
+EVENTB = "Hmm, the enigmatic white knight huh…I wonder what kind of person he is.<br>Mm? when he appears I am always nowhere to be seen you say?<br>Now…maybe that's not a coincidence?"
 %}
