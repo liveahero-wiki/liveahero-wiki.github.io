@@ -3,6 +3,21 @@ title: Rutilix
 characterId: 61
 ---
 
+{% capture BIO_H01 %}
+Growing up while watching the back of his father, who is a fine knight, he transform into a hero with a fine mane, a cloak at his back, and a set of dignified armor just like his father.
+
+Armed with a rapier made from light as a weapon, and a well-tempered body, even when wearing heavy armor, he dash around the battlefield in high speed.
+
+There is not much difference in his swordmanship before transformation, but his blow, filled with his passion, sometimes bring forth miraculous result.
+{% endcapture %}
+
+{% capture BIO_H02 %}
+In a country with an antiquated tradition where the eldest child is the one who will succeed the house, no matter how much a youngest child like him wishes to have an achievement to his name, society will not aid him in that.
+
+With no connection to use, and no one to teach him swordmanship, he who always put his effort in solitude, is compelled to aim high.
+
+Even with his situation, he keep his spirit and continue to aim to be a knight, what drives this is an immature dream of  "I want to be a fine knight that can protect the country and the people".
+{% endcapture %}
 {% include hero-infobox.html stockId=10611 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
