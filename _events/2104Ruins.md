@@ -7,9 +7,9 @@ gacha: true
 event_start_time: 2021-04-23T20:00:00+09
 event_end_time: 2021-05-21T14:00:00+09
 farm_start_time: 2021-04-23T20:00:00+09
-farm_end_time: 2021-04-14T20:00:00+09
+farm_end_time: 2021-05-14T20:00:00+09
 sales_start_time: 2021-04-23T20:00:00+09
-sales_end_time: 2021-04-14T20:00:00+09
+sales_end_time: 2021-05-14T20:00:00+09
 ---
 
 ## Event Details
