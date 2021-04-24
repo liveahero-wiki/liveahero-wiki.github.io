@@ -34,4 +34,16 @@ After accepting King Alphecca's invitation, he went out on a journey into a laby
 {% include sidekick-infobox.html stockId=10611 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="rutilix"
+h_gachaResult = "Ardisia Knight, Rutilix!<br>I'm here to be your blade!<br>For the honor of knighthood, I will give this duty my all!"
+s_gachaResult = "Ardisia Knight, Rutilix!<br>Please be at ease, tactician-dono..<br>In my name, I will make sure to help the soldiers! "
+APPRECIATION = "Tactician-dono. I have steamed some potatoes, would you like one?<br>It will be time to eat soon, so I thought this will be a good time for it.<br>Oh, I will peel it for you. Give it to me."
+DAILY = "Tactician-dono! Sorry for my late greetings.<br>I have been too focused in my training, I didn't realize you're here.<br>Eh, waah! The cut log is….Guee!"
+HERO = "Marfik-dono is a very reliable ally.<br>Having a lot of adventuring knowledge, and being accustomed to battle.<br>Such a person, I wonder why he isn't in a service?"
+PLAYER = "You don't have to bother with such small things tactician-dono,<br>Let me cut it! Hyaah!<br>…Gh, damn! Why can't I hit it!?"
+RELATION = "I really respect his majesty the king,<br>But his majesty can be a little bit mischievous at times, it's a source of concern.<br>Being close with the people is a good thing, but…"
+TOUCH = "S-stop! Don't touch me with that familiar attitude!<br>I dedicate this body to the path of pure noble knight…<br>Aah…Guu! K-kill…!"
+TRAIN = "I won't go easy, Come!"
+TRAINED = "Uoo, I will remember this…!"
+EVENTA = "My name is Rutilix, a proud knight!<br>It's the same even inside this mysterious labyrinth!<br>I will surely protect His Majesty!"
+EVENTB = "Please step back! Your Majesty, Tactician-dono!<br>I will defeat these kaibutsus...uwaa!?<br>Damn it…I will steam you like a potato someday!"
 %}
