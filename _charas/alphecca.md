@@ -51,5 +51,5 @@ TOUCH = "Oops. Hahah, are you interested in my body?<br>Fine, until your curiosi
 TRAIN = "Stand up, receive my challenge!"
 TRAINED = "W-well aren't you skilled…!"
 EVENTA = "Hmm..mysterious, what an interesting labyrinth.<br>I'm usually bound to my throne, so just a little bit of adventure is fine, right?"
-EVENTB = "Hmm, the enigmatic white knight huh…I wonder what kind of person he is.<br>Mm? when he appears I am always nowhere to be seen you say?<br>Now…maybe that's not a coincidence?"
+EVENTB = "Hmm, the enigmatic white knight huh…I wonder what kind of person he is.<br>Mm? when he appears I am always nowhere to be seen you say?<br>Now…isn't it just a coincidence?"
 %}
