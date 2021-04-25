@@ -91,6 +91,18 @@ RELATION = "That doggy at your place is wonderful!<br>That kind of power would b
 %}
 
 {% include voice-table.html resourceName="marfikRuins2104"
+h_gachaResult = "The elusive, immortal adventurer!<br>The Professor Marfik is me!<br>If it's about labyrinth then you can leave it to me!"
+s_gachaResult = "Adventure expert, professor Marfik!<br>Oh, leave the party's backup to me.<br>Properly and without mistake, I will look after them!"
+APPRECIATION = "Now, now captain. Let's take a break for now.<br>To rely on each other is why we form a party,<br>Don't forget that, alright? companions is essential in life!"
+PLAYER = "Wit, courage and willpower are the things necessary to be an adventurer.<br>Since you're still young, you can learn these from now on.<br>The adventures that you can do, even if you have to buy it, keep on doing it."
+TOUCH = "Wahahah, how is it? This new costume!<br>Very adventure-like right?<br>It's very light, and also a little bit chilly….a-achoo!<br>…this is a little too much."
+TRAINED = "I can't believe I'm being overwhelmed…!"
+TRAIN = "Let's test your courage!"
+DAILY = "Oh, let's go captain!<br>My heart and my tools are ready, I can go anytime.<br>Now, let's explore to the deepest part of this labyrinth!"
+HERO =  "That young man, his desire to take challenge is splendid,<br>But his action and attitude is very dangerous to himself.<br>Well, to fail and learn from it, is the privilege of the young…"
+RELATION = "That young king, he has a fine frame of mind but,<br>Don't you think it's still too early for him to give up on life?<br>The agony of those standing at the top, I don't understand it…."
+EVENTA = "Come on, come on, don't be afraid captain!<br>The labyrinth is still deep, the adventure is just starting!<br>Don't worry, I will be with you!"
+EVENTB = "A country with distorted cultural system, an unknown labyrinth…<br>Hmm, this is really interesting.<br>We have to investigate every inch of this place!"
 %}
 
 ## Notes:
