@@ -98,5 +98,5 @@ TRAINED = "It hit me so hard…! "
 
 ## Notes
 
-- His full name is Ootomo Kyoichi (大友 キョウイチ)
+- His full name is Kyoichi Ootomo(大友 キョウイチ)
 - E.T.L is short for Element Teacher Love, as self-proclaimed by Kyoichi
