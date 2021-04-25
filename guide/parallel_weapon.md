@@ -34,6 +34,7 @@ Each form will give different status enhancement according to parallel weapon's 
 | ATK              | 500                        |
 | Damage Reduction | 250                        |
 
+
 - {% include item-icon.html id=61 %} Attack Design
 
 | Status           | Max Enhancement at PLv 100 |
@@ -41,6 +42,7 @@ Each form will give different status enhancement according to parallel weapon's 
 | HP               | 750                        |
 | ATK              | 750                        |
 | Damage Reduction | 187                        |
+
 
 - {% include item-icon.html id=62 %} Physical Design
 
@@ -50,6 +52,7 @@ Each form will give different status enhancement according to parallel weapon's 
 | ATK              | 375                        |
 | Damage Reduction | 187                        |
 
+
 - {% include item-icon.html id=63 %} Guard Design
 
 | Status           | Max Enhancement at PLv 100 |
@@ -57,6 +60,7 @@ Each form will give different status enhancement according to parallel weapon's 
 | HP               | 750                        |
 | ATK              | 375                        |
 | Damage Reduction | 375                        |
+
 
 The level of parallel weapon will stay the same even after changing forms.
 
