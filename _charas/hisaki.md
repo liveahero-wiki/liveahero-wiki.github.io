@@ -70,4 +70,4 @@ EVENTB = "Heheh, I'm really popular you know!<br>At valentine's I usually get so
 
 ## Notes
 
-- His full name is Yodobashi Hisaki (淀橋 ヒサキ)
+- His full name is Hisaki Yodobashi (淀橋 ヒサキ)
