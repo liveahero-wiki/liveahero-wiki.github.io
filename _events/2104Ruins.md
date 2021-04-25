@@ -99,8 +99,18 @@ Here is a list of this event's limited time Missions:
 </p>
 </details>
 
+<details><summary>Sales Report 1 (Translated)</summary>
+<p> <code>character0</code> and <code>character1</code> accepted a secret job request from a certain country's king.<br><br>The prince has sneaked out of the castle to the direction of a dangerous dungeon,<br>And the request is to bring back this prince.<br><br>With haste the both of them set off to save the prince,<br>But on the way lots of traps await them.<br><br> <code>character0</code> who falls into a pitfall.<br> <code>character1</code> who somehow avoided a sudden spike trap.<br>Running away with full power from a rolling boulder <code>character0</code> and <code>character1</code> …<br><br>What awaits them when they finally reached the depth,<br>Is the prince who is in the process of setting a trap!<br><br>In the case of enemy nation's attack, traps are made to create a safe shelter,<br>But the prince's hobby got the better of him,<br>Knowing that this is the reason for those traps,<br>The two of them sat down weakly…
+</p>
+</details>
+
 <details><summary>Sales Report 2</summary>
 <p> <code>character0</code> と <code>character1</code> が<br>初めて訪れた星での仕事の依頼。<br><br>それは、カイブツ退治 で不在の現地のヒーローに<br>代わり、村の人々の相談を受けることだった。<br><br>「娘のために幻のハーブを手に入れて」<br>「洞窟からドラゴンの鳴き声がする」<br>「大猪獣の皮が欲しい」<br>「泉の妖精が見たい」……<br><br> <code>character0</code> は 北の謎多き地下迷宮へ、<br> <code>character1</code> は南の天空の塔へ……<br><br>次々に舞い込む依頼を何とかこなし、<br>ヘト ヘトになって帰ってきた<br> <code>character0</code> と <code>character1</code> 。<br><br>二人が事務所に戻った後も、数日は<br>「お願いしたいことがある」という言葉に<br>過敏な反応をしていたという…。<br>
+</p>
+</details>
+
+<details><summary>Sales Report 2 (Translated)</summary>
+<p> <code>character0</code> and <code>character1</code> received a job request from a planet they visited for the first time.<br><br>The request is to consult with some villagers on behalf of the local heroes who were away fighting kaibutsu.<br><br>/[For the sake of my daughter please obtain the phantom herb/]<br>/[We heard a dragon's cry from deep inside the cave system/]<br>/[I want the pelt of a great boar/]<br>/[I want to see the fairy of the spring/]…<br><br> <code>character0</code> heads north to the mysterious underground labyrinth,<br> <code>character1</code> heads south to the heaven piercing tower…<br><br>After somehow able to finish the unexpected requests,<br> <code>character0</code> and <code>character1</code> return with a ragged appearance.<br><br>For several days after they returned to the office,<br>The phrase /[I have a favor to ask of you/],<br>incite a hyper reaction from the both of them...
 </p>
 </details>
 
@@ -109,7 +119,17 @@ Here is a list of this event's limited time Missions:
 </p>
 </details>
 
+<details><summary>Sales Report 3 (Translated)</summary>
+<p> A certain request for the heroes came from a country who, with fear, call kaibutsu as /[Monsters/].<br><br>Monsters extermination, it feels like we are the traditional hero party says <code>character0</code> ,<br>then I will be the priest says <code>character1</code> .<br><br> <code>character0</code> is the wizard, then the hero is…<br>When the discussion reached here, <code>character2</code> and <code>character3</code> simultaneously appoint themselves.<br><br>They don't give in to each other, and so there will be a match to decide who has more hero qualities,<br> <code>character1</code> is shocked.<br><br> <code>character2</code> who boast about their strength,<br> <code>character3</code> who boast their courage.<br><br>While they are enjoying themselves with their match, <br> <code>character0</code> and <code>character1</code> have finished the request,<br>back at the office they are scolded to take their job more seriously.
+</p>
+</details>
+
 <details><summary>Sales Report 4</summary>
 <p>とある星での仕事を終えたが、観光もしたいと<br>王都での１泊を決めた <code>character0</code> たち。<br><br>のんびりと観光を楽しんでいたところに、<br>突如として、カイブツが襲来し、<br>穏やかな通りは悲鳴と混乱に溢れかえった。<br><br>カイブツを迎え撃つ <code>character0</code> 。<br> <code>character1</code> もそのサポートに向かい、<br> <code>character2</code>  と <code>character3</code> は<br>市民たちの安全確保に尽力する。<br><br>ヒーローたちの活躍で、被害は全く無く、<br>王都の 騎士団たちが駆け付けた時には<br>既に脅威は去り、民衆たちは歓声に沸いていた。<br><br>オフをもっと楽しみたいと、そそくさと<br>観光に戻っていく <code>character2</code> たち。<br><br>後日、名も知らぬ4人の英雄の銅像が<br>建てられた事は、本人たちは知る由もなかった。<br>
+</p>
+</details>
+
+<details><summary>Sales Report 4 (Translated)</summary>
+<p> After completing a request from a certain planet,<br>Wanting to do some sightseeing, <code>character0</code> and team decided to extend their stay at the royal capital for one more day.<br><br>While enjoying the sightseeing at their leisure,<br>there is a sudden kaibutsu invasion,<br>the formerly calm street is now filled with screams and confusion.<br><br> <code>character0</code> attack the kaibutsu.<br> <code>character1</code> is supporting,<br>while <code>character2</code> and <code>character3</code> ensure the safety of the citizens.<br><br>With the effort of these heroes, there is no casualty,<br>When the king and his knight troops arrived in haste,<br>the threats has passed, and the people shouting cheers of joy.<br><br>To enjoy more of their vacation,<br> <code>character2</code> and team hurriedly return to their sightseeing.<br><br>Later on, bronze statues of 4 nameless heroes are constructed there,<br>Though the person themselves don't know of this occurrence.
 </p>
 </details>
