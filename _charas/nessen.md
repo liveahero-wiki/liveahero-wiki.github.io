@@ -54,4 +54,4 @@ TRAINED = "I can't stop sweating…!"
 
 ## Notes
 
-- His full name is Mochizuki Nessen (望月 ネッセン)
+- His full name is Nessen Mochizuki (望月 ネッセン)
