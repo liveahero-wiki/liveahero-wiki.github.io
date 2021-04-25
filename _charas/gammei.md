@@ -52,4 +52,4 @@ TRAINED = "Gah! Please give me a break...!"
 
 ## Notes
 
-- His full name is Tsukinowa Gammei (月輪 ガンメイ)
+- His full name is Gammei Tsukinowa(月輪 ガンメイ)
