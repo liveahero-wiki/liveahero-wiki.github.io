@@ -14,24 +14,53 @@ Parallel weapon has level, and to increase this level {% include item-icon.html 
 
 The maximum level is 100, and increasing parallel weapon's level will enhance your hero's parameter.
 
-{% include item-icon.html id=59 %} Parallel Quartz can be obtained from event as of now.
+Parameter enhancement grows linearly with Parallel weapon's level.
+
+{% include item-icon.html id=59 %} Parallel Quartz can only be obtained from events as of now.
 
 ### Parallel Weapon Form
 
-Aside from level, Each parallel weapon will have multiple forms.
+Aside from level, Each parallel weapon will have a set of 4 forms.
 
-This form can be changed using item design from events:
+This form can be changed using item design from events.
+
+Each form will give different status enhancement according to parallel weapon's level, such as more ATK or HP:
 
 - {% include item-icon.html id=60 %} Base Design
+
+| Status           | Max Enhancement at PLv 100 |
+|------------------|----------------------------|
+| HP               | 1000                       |
+| ATK              | 500                        |
+| Damage Reduction | 250                        |
+
 - {% include item-icon.html id=61 %} Attack Design
+
+| Status           | Max Enhancement at PLv 100 |
+|------------------|----------------------------|
+| HP               | 750                        |
+| ATK              | 750                        |
+| Damage Reduction | 187                        |
+
 - {% include item-icon.html id=62 %} Physical Design
+
+| Status           | Max Enhancement at PLv 100 |
+|------------------|----------------------------|
+| HP               | 1500                       |
+| ATK              | 375                        |
+| Damage Reduction | 187                        |
+
 - {% include item-icon.html id=63 %} Guard Design
 
-Each form will give different status enhancement according to parallel weapon's level, such as more ATK or HP.
+| Status           | Max Enhancement at PLv 100 |
+|------------------|----------------------------|
+| HP               | 750                        |
+| ATK              | 375                        |
+| Damage Reduction | 375                        |
 
 The level of parallel weapon will stay the same even after changing forms.
 
-> As of now there is a bug where the change form function can't be used, there will be further notice when it's fixed
+> As of now there is a bug where the change form function can't be used, and so only base form is available, there will be further notice when it's fixed
 
 ### Parallel Weapon Level Table
 
