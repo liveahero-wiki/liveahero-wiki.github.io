@@ -45,5 +45,5 @@ TOUCH = "S-stop! Don't touch me with that familiar attitude!<br>I dedicate this 
 TRAIN = "I won't go easy, Come!"
 TRAINED = "Uoo, I will remember this…!"
 EVENTA = "My name is Rutilix, a proud knight!<br>It's the same even inside this mysterious labyrinth!<br>I will surely protect His Majesty!"
-EVENTB = "Please step back! Your Majesty, Tactician-dono!<br>I will defeat these kaibutsus...uwaa!?<br>Damn it…I will steam you like a potato someday!"
+EVENTB = "Please step back! Your Majesty, Magician-dono!, I will defeat these kaibutsus...uwaa!?<br>Damn it…I will steam you like a potato someday!"
 %}
