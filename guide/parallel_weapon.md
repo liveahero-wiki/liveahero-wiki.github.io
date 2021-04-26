@@ -64,8 +64,6 @@ Each form will give different status enhancement according to parallel weapon's 
 
 The level of parallel weapon will stay the same even after changing forms.
 
-> As of now there is a bug where the change form function can't be used, and so only base form is available, there will be further notice when it's fixed
-
 ### Parallel Weapon Level Table
 
 Here is the full exp table to level parallel weapon:
