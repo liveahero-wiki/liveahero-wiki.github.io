@@ -11676,6 +11676,62 @@
     "hasStockBattle": false,
     "boostItems": []
   },
+  "421003": {
+    "questId": 421003,
+    "questName": "めいきゅう",
+    "subName": "第３話",
+    "questKind": 5,
+    "chapterId": 421,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2021-04-28 18:00:00",
+    "endAt": "2021-05-21 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 6,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 421002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "boostItems": []
+  },
   "422001": {
     "questId": 422001,
     "questName": "地下迷宮の冒険",
