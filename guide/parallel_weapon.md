@@ -22,7 +22,17 @@ Parameter enhancement grows linearly with Parallel weapon's level.
 
 Aside from level, Each parallel weapon will have a set of 4 forms.
 
-This form can be changed using item design from events.
+This form can be changed using design item from events.
+
+A few points in regards to change form:
+
+- Changing form is only possible after a minimum of level 1 parallel weapon.
+
+- Changing form require one design item and override the previous form.
+
+- In the parallel weapon interface, you can change the weapon form by clicking the blue "変更" (change) button.
+
+- The level of parallel weapon will stay the same even after changing forms.
 
 Each form will give different status enhancement according to parallel weapon's level, such as more ATK or HP:
 
@@ -60,9 +70,6 @@ Each form will give different status enhancement according to parallel weapon's 
 | HP               | 750                        |
 | ATK              | 375                        |
 | Damage Reduction | 375                        |
-
-
-The level of parallel weapon will stay the same even after changing forms.
 
 ### Parallel Weapon Level Table
 
