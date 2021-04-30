@@ -5193,10 +5193,10 @@
       "statusId": 28,
       "canDispel": false,
       "parameter": false,
-      "description": "ATK+50%",
+      "description": "ATK+50%(クエストボーナス)",
       "isImmediate": false,
       "persistence": true,
-      "canDuplicate": true,
+      "canDuplicate": false,
       "isDisplayPersistenceStatus": false
     }
   },
@@ -5209,7 +5209,7 @@
         {
           "class": "MultipleAttack",
           "parameter": {
-            "value": 120
+            "value": 110
           }
         }
       ],
@@ -5217,10 +5217,10 @@
       "statusId": 28,
       "canDispel": false,
       "parameter": false,
-      "description": "ATK+20%",
+      "description": "ATK+10%(クエストボーナス)",
       "isImmediate": false,
       "persistence": true,
-      "canDuplicate": true,
+      "canDuplicate": false,
       "isDisplayPersistenceStatus": false
     }
   },
@@ -5851,10 +5851,10 @@
       "statusId": 28,
       "canDispel": false,
       "parameter": false,
-      "description": "ATK+30%",
+      "description": "ATK+30%(クエストボーナス)",
       "isImmediate": false,
       "persistence": true,
-      "canDuplicate": true,
+      "canDuplicate": false,
       "isDisplayPersistenceStatus": false
     }
   },
@@ -7348,6 +7348,197 @@
       "isImmediate": false,
       "persistence": false,
       "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "310": {
+    "skillEffectId": 310,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "DamageLimit",
+          "parameter": {
+            "value": 15000
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 27,
+      "canDispel": false,
+      "parameter": false,
+      "description": "ダメージ上限15000",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "311": {
+    "skillEffectId": 311,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MoreTurn",
+          "parameter": {
+            "value": 1
+          }
+        }
+      ],
+      "trigger": "[{\"value\":36,\"class\":\"OwnStatusTrigger\"}]",
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "自身に怒りが付与されている場合、もう１度行動をする",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "312": {
+    "skillEffectId": 312,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 36,
+      "canDispel": true,
+      "parameter": false,
+      "description": "怒り（ターン終了時にターン数経過）",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "313": {
+    "skillEffectId": 313,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ItemEffectMark",
+          "parameter": []
+        }
+      ],
+      "filename": "status_atkup",
+      "statusId": 37,
+      "canDispel": false,
+      "parameter": false,
+      "description": "ボーナス：ATKアップ",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": true
+    }
+  },
+  "314": {
+    "skillEffectId": 314,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveBuff",
+          "parameter": {
+            "value": 1,
+            "target": 36
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "特殊効果を１つ解除",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "315": {
+    "skillEffectId": 315,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "filename": "status_defdown",
+      "statusId": 12,
+      "canDispel": true,
+      "parameter": false,
+      "description": "DEFダウン",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "316": {
+    "skillEffectId": 316,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SpdDeferenceDamage",
+          "parameter": {
+            "value": 120,
+            "spdMult": 10
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "120%ダメージ+対象と自分のSPDの差だけダメージ量が上昇",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "317": {
+    "skillEffectId": 317,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -3000
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 36,
+      "canDispel": true,
+      "parameter": false,
+      "description": "View消費量-3000",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
       "isDisplayPersistenceStatus": false
     }
   }

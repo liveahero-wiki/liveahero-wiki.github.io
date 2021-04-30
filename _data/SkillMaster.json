@@ -65,7 +65,7 @@
     "resourceName": "",
     "subResourceName": "",
     "timing": 0,
-    "description": "0ターンの間ATK+50%を付与。",
+    "description": "ATK+50%（イベントボーナス）",
     "cutin": [],
     "effects": [
       {
@@ -105,7 +105,7 @@
     "cutin": [],
     "effects": [
       {
-        "skillEffectId": 87,
+        "skillEffectId": 219,
         "prob": 100,
         "effectTarget": 5
       }
@@ -221,6 +221,24 @@
     "effects": [
       {
         "skillEffectId": 280,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "12": {
+    "skillId": 12,
+    "skillName": "イベント用_ATKボーナス",
+    "useView": 0,
+    "targetFlag": 5,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "ボーナス：ATKアップ",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 313,
         "prob": 100,
         "effectTarget": 0
       }
@@ -14858,6 +14876,181 @@
       }
     ]
   },
+  "4061101": {
+    "skillId": 4061101,
+    "skillName": "シーニングスヴァルド",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_rutilix_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "4061102": {
+    "skillId": 4061102,
+    "skillName": "アクセレルスラッシュ",
+    "useView": 7000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ+対象と自分のSPDの差だけダメージ量が上昇。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_rutilix_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 316,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "4061105": {
+    "skillId": 4061105,
+    "skillName": "アクセレルスラッシュ+",
+    "useView": 7000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_antiBuffAll",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ+対象と自分のSPDの差だけダメージ量が上昇。味方全体のデバフを２つ解除。敵全体のバフを２つ解除。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_rutilix_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 316,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 73,
+        "prob": 100,
+        "effectTarget": 3
+      },
+      {
+        "skillEffectId": 72,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
+  "4062101": {
+    "skillId": 4062101,
+    "skillName": "スクルォストレ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。Viewを3000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_alphecca_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2
+      },
+      {
+        "skillEffectId": 24,
+        "prob": 100,
+        "effectTarget": 2
+      }
+    ]
+  },
+  "4062102": {
+    "skillId": 4062102,
+    "skillName": "王の威厳",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "s_skill_heal",
+    "timing": 0,
+    "description": "Viewを10000獲得。ルティリクスを復活。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_alphecca_eh01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 25,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 260,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "4062103": {
+    "skillId": 4062103,
+    "skillName": "ヘリッグ・フランメライ",
+    "useView": 14000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffAll",
+    "timing": 0,
+    "description": "敵全体に130%ダメージ。1ターンの間ATKダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_alphecca_eh01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 71,
+        "prob": 100,
+        "effectTarget": 4
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 4
+      }
+    ]
+  },
   "6000001": {
     "skillId": 6000001,
     "skillName": "ダメージ制限20000",
@@ -14955,6 +15148,142 @@
         "skillEffectId": 302,
         "prob": 100,
         "effectTarget": 0
+      }
+    ]
+  },
+  "6000009": {
+    "skillId": 6000009,
+    "skillName": "ダメージ制限15000",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、ダメージ上限15000。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 310,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "6000010": {
+    "skillId": 6000010,
+    "skillName": "不屈の心",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 9,
+    "description": "デバフを受けた時、自身に2ターンの間ATKアップを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "6000011": {
+    "skillId": 6000011,
+    "skillName": "不屈の心+",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 9,
+    "description": "デバフを受けた時、2ターンの間ATKアップを付与。1行動の間View消費量-3000を付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 317,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "6061101": {
+    "skillId": 6061101,
+    "skillName": "防具破壊",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 6,
+    "description": "ピンチ状態になった時、味方全体に1ターンの間DEFダウンを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 3
+      }
+    ]
+  },
+  "6061102": {
+    "skillId": 6061102,
+    "skillName": "騎士の意地",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、Viewを3000獲得。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 24,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "6061103": {
+    "skillId": 6061103,
+    "skillName": "騎士の意地",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、Viewを3000獲得。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 24,
+        "prob": 100,
+        "effectTarget": 0
+      }
+    ]
+  },
+  "6061104": {
+    "skillId": 6061104,
+    "skillName": "防具破壊+",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 6,
+    "description": "ピンチ状態になった時、自身に1ターンの間覚醒を付与。味方全体に1ターンの間DEFダウンを付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 226,
+        "prob": 100,
+        "effectTarget": 0
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 3
       }
     ]
   }
