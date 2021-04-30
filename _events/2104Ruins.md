@@ -76,20 +76,6 @@ Here is a list of this event's limited time Missions:
 | 5  | Finish any rank event quest 50 times | 1 {% include item-icon.html id=34 %}    |
 | 6  | Finish event sales 10 times | 1 {% include item-icon.html id=34 %}    |
 
-## Event Shop
-
-{% include shop-table.html id=9 %}
-
-## Quest Details
-
-### Main Quests
-
-{% include quest-group.html chapterId=421 %}
-
-### Free Quests
-
-{% include quest-group.html chapterId=422 %}
-
 ### Dungeon Quests
 
 Dungeon quest is a new quest mode with waves of enemy, for this event's dungeon quest there will be a score system where rewards can be claimed based on final score in the quest, the score is graded for each wave with conditions such as clear bonus, turn bonus, and damage score.
@@ -153,6 +139,21 @@ Here is a list of dungeon quest rewards based on the score:
 | 43 | 162000 | 4 {% include item.html id=32 %}    |
 | 44 | 166000 | 2 {% include item.html id=33 %}    |
 | 45 | 170000 | 1 {% include item.html id=10 %}    |
+
+## Event Shop
+
+{% include shop-table.html id=9 %}
+
+## Quest Details
+
+### Main Quests
+
+{% include quest-group.html chapterId=421 %}
+
+### Free Quests
+
+{% include quest-group.html chapterId=422 %}
+
 
 ## Event Sales Report
 
