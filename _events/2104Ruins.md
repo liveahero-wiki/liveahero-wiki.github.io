@@ -90,6 +90,70 @@ Here is a list of this event's limited time Missions:
 
 {% include quest-group.html chapterId=422 %}
 
+### Dungeon Quests
+
+Dungeon quest is a new quest mode with waves of enemy, for this event's dungeon quest there will be a score system where rewards can be claimed based on final score in the quest, the score is graded for each wave with conditions such as clear bonus, turn bonus, and damage score.
+
+Event heroes and sidekicks has Atk bonus in dungeon quest:
+
+| Hero   | +Atk Bonus(%) |
+|--------|-----------|
+| {% chara_link Marfik|h2 %}   |     50    |
+| {% chara_link Rutilix|h1 %}   |     50    |
+| {% chara_link Alphecca|h1 %}   |     30    |
+| {% chara_link Rutilix %}   |     10    |
+| {% chara_link Alphecca %}   |     10    |
+
+Here is a list of dungeon quest rewards based on the score:
+
+| No  | Score      | Rewards      |
+|----|-----------------------------------------------------------|----------------|
+| 1  | 4000 | 4000 {% include item.html id=11 %}    |
+| 2  | 8000 | 4000 {% include item.html id=30 %}     |
+| 3  | 12000 | 2 {% include item.html id=32 %}    |
+| 4  | 16000 | 1 {% include item.html id=33 %}    |
+| 5  | 20000 | 1 {% include item.html id=27 %}    |
+| 6  | 24000 | 4000 {% include item.html id=11 %}    |
+| 7  | 28000 | 4000 {% include item.html id=30 %}     |
+| 8  | 32000 | 2 {% include item.html id=32 %}    |
+| 9  | 36000 | 1 {% include item.html id=33 %}    |
+| 10 | 40000 | 1 {% include item.html id=28 %}    |
+| 11 | 44000 | 4000 {% include item.html id=11 %}    |
+| 12 | 48000 | 1 {% include item.html id=10 %}    |
+| 13 | 52000 | 4000 {% include item.html id=11 %}    |
+| 14  | 56000 | 1 {% include item.html id=33 %}    |
+| 15  | 60000 | 1 {% include item.html id=34 %}    |
+| 16  | 64000 | 5000 {% include item.html id=35 %}    |
+| 17  | 68000 | 6 {% include item.html id=59 %}    |
+| 18  | 72000 | 1 {% include item.html id=33 %}    |
+| 19 | 76000 | 1 {% include item.html id=10 %}    |
+| 20  | 80000 | 2 {% include item.html id=32 %}    |
+| 21  | 84000 | 6 {% include item.html id=59 %}    |
+| 22 | 88000 | 4000 {% include item.html id=30 %}     |
+| 23  | 92000 | 2 {% include item.html id=32 %}    |
+| 24  | 96000 | 1 {% include item.html id=33 %}    |
+| 25  | 100000 | 1 {% include item.html id=29 %}    |
+| 26  | 104000 | 5000 {% include item.html id=35 %}    |
+| 27  | 108000 | 1 {% include item.html id=34 %}    |
+| 28  | 112000 | 2 {% include item.html id=32 %}    |
+| 29  | 116000 | 1 {% include item.html id=33 %}    |
+| 30  | 120000 | 6 {% include item.html id=59 %}    |
+| 31  | 123000 | 4000 {% include item.html id=11 %}    |
+| 32 | 126000 | 2 {% include item.html id=32 %}    |
+| 33 | 129000 | 1 {% include item.html id=33 %}    |
+| 34 | 132000 | 5000 {% include item.html id=35 %}    |
+| 35 | 135000 | 4000 {% include item.html id=30 %}     |
+| 36  | 138000 | 6 {% include item.html id=59 %}    |
+| 37 | 141000 | 4 {% include item.html id=32 %}    |
+| 38 | 144000 | 5000 {% include item.html id=35 %}    |
+| 39 | 147000 | 4000 {% include item.html id=30 %}     |
+| 40 | 150000 | 6 {% include item.html id=59 %}    |
+| 41 | 154000 | 5000 {% include item.html id=35 %}    |
+| 42  | 158000 | 1 {% include item.html id=34 %}    |
+| 43 | 162000 | 4 {% include item.html id=32 %}    |
+| 44 | 166000 | 2 {% include item.html id=33 %}    |
+| 45 | 170000 | 1 {% include item.html id=10 %}    |
+
 ## Event Sales Report
 
 <details><summary>Sales Report 1</summary>
