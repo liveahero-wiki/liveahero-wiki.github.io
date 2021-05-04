@@ -1,0 +1,20 @@
+---
+title: Basic Stats Sidekick Ranking
+banner: true
+---
+
+<p>For simplicity sake, only sidekicks stats at level 50 are listed.</p>
+
+{% assign cardInfos = site.data.SidekickMaster | where: "levelZone", 1 %}
+
+<table class="sort-table">
+<tr><th data-type="string">Sidekick</th><th>HP</th><th>ATK</th><th>View</th><th>Speed</th></tr>
+{% for c in cardInfos %}
+{% assign page = c.characterId | characterIdToPage %}
+{% assign g = c.growths[1] %}
+<tr>
+<td><a class="item" href="{{ page.url }}/#s{{ c.stockId }}-stats"><img src="/cdn/Sprite/icon_{{ c.resourceName }}_s01.png" loading="lazy"> {{ page.title }}</a></td>
+<td>{{ g.hp }}</td><td>{{ g.attack }}</td><td>{{ g.addView }}</td><td>{{ g.agility }}</td>
+</tr>
+{% endfor %}
+</table>
