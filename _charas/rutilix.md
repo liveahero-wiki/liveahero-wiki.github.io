@@ -35,7 +35,7 @@ After accepting King Alphecca's invitation, he went out on a journey into a laby
 
 {% include voice-table.html resourceName="rutilix"
 h_gachaResult = "Ardisia Knight, Rutilix!<br>I'm here to be your blade!<br>For the honor of knighthood, I will give this duty my all!"
-s_gachaResult = "Ardisia Knight, Rutilix!<br>Please be at ease, tactician-dono..<br>In my name, I will make sure to help the soldiers! "
+s_gachaResult = "Ardisia Knight, Rutilix!<br>Please be at ease, magician-dono..<br>In my name, I will make sure to help the soldiers! "
 APPRECIATION = "Magician-dono. I have steamed some potatoes, would you like one?<br>It will be time to eat soon, so I thought this will be a good time for it.<br>Oh, I will peel it for you. Give it to me."
 DAILY = "Magician-dono! Sorry for my late greetings.<br>I have been too focused in my training, I didn't realize you're here.<br>Eh, waah! The cut log is….Guee!"
 HERO = "Marfik-dono is a very reliable ally.<br>Having a lot of adventuring knowledge, and being accustomed to battle.<br>Such a person, I wonder why he isn't in a service?"
