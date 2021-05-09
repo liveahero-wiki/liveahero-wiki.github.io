@@ -33,19 +33,19 @@ Drop rates for possible items as follows:
 
 Here is a breakdown for each item every 1,000 pulls (10,000 slots per row):
 
-|  No | {% include item-icon.html id=219991 %}  | {% include item-icon.html id=11 %}   | {% include item-icon.html id=30 %}  | {% include item-icon.html id=35 %} | {% include item-icon.html id=12 %} | {% include item-icon.html id=15 %} | {% include item-icon.html id=18 %} | {% include item-icon.html id=21 %} | {% include item-icon.html id=24 %} | {% include item-icon.html id=13 %}  | {% include item-icon.html id=16 %} | {% include item-icon.html id=19 %} | {% include item-icon.html id=22 %} | {% include item-icon.html id=25 %} | {% include item-icon.html id=31 %} | {% include item-icon.html id=32 %} | {% include item-icon.html id=33 %}  |
-|---|---|---------|---------|---------|-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|------|-----|------|
-| 1 | 1 | 132675  | 132775  | 181700  | 36  | 37  | 23  | 40  | 38  | 15  | 17  | 17  | 16  | 18  | 441  | 142 | 58  |
-| 2 | 2 | 131175  | 132975  | 189750  | 34  | 38  | 27  | 35  | 45  | 16  | 13  | 18  | 15  | 17  | 377  | 135 | 68  |
-| 3 | 0 | 132025  | 136475  | 181650  | 27  | 33  | 42  | 39  | 40  | 19  | 22  | 15  | 14  | 16  | 391  | 133 | 68  |
-| 4 | 0 | 138825  | 135075  | 182925  | 29  | 40  | 24  | 31  | 37  | 13  | 18  | 24  | 18  | 17  | 384  | 141 | 79  |
-| 5 | 2 | 130200  | 131450  | 188975  | 29  | 41  | 30  | 32  | 41  | 20  | 16  | 13  | 12  | 14  | 412  | 139 | 67  |
-| 6 | 1 | 137850  | 134550  | 179500  | 43  | 34  | 26  | 32  | 30  | 19  | 20  | 13  | 13  | 13  | 384  | 122 | 71  |
-| 7 | 1 | 132325  | 136900  | 185650  | 33  | 29  | 37  | 30  | 36  | 19  | 14  | 19  | 15  | 16  | 377  | 120 | 78  |
-| 8 | 0 | 137525  | 130875  | 184025  | 36  | 22  | 35  | 33  | 27  | 18  | 13  | 15  | 22  | 11  | 408  | 136 | 69  |
-| 9 | 1 | 133950  | 137450  | 182150  | 38  | 28  | 31  | 35  | 32  | 21  | 16  | 16  | 24  | 20  | 397  | 125 | 67  |
-| 10 | 1 | 132000  | 131275  | 185150  | 37  | 31  | 33  | 36  | 27  | 22  | 18  | 8   | 16  | 19  | 426  | 141  | 65  |
-| Total | 9 | 1338550 | 1339800 | 1841475 | 342 | 333 | 308 | 343 | 353 | 182 | 167 | 158 | 165 | 161 | 3997 | 1334 | 690 |
+|  No | {% include item-icon.html id=219991 %}  | {% include item-icon.html id=11 %}   | {% include item-icon.html id=30 %}  | {% include item-icon.html id=35 %} | {% include item-icon.html id=12 %} {% include item-icon.html id=15 %} {% include item-icon.html id=18 %} {% include item-icon.html id=21 %} {% include item-icon.html id=24 %} | {% include item-icon.html id=13 %} {% include item-icon.html id=16 %} {% include item-icon.html id=19 %} {% include item-icon.html id=22 %} {% include item-icon.html id=25 %} | {% include item-icon.html id=31 %} | {% include item-icon.html id=32 %} | {% include item-icon.html id=33 %}  |
+|---|---|---------|---------|---------|----- |-----|------|-----|------|
+| 1 | 1 | 132675  | 132775  | 181700  | 174  | 83  | 441  | 142 | 58  |
+| 2 | 2 | 131175  | 132975  | 189750  | 179  | 79  | 377  | 135 | 68  |
+| 3 | 0 | 132025  | 136475  | 181650  | 181  | 86  | 391  | 133 | 68  |
+| 4 | 0 | 138825  | 135075  | 182925  | 161  | 90  | 384  | 141 | 79  |
+| 5 | 2 | 130200  | 131450  | 188975  | 173  | 75  | 412  | 139 | 67  |
+| 6 | 1 | 137850  | 134550  | 179500  | 165 | 78  | 384  | 122 | 71  |
+| 7 | 1 | 132325  | 136900  | 185650  | 165 | 83  | 377  | 120 | 78  |
+| 8 | 0 | 137525  | 130875  | 184025  | 153 | 79  | 408  | 136 | 69  |
+| 9 | 1 | 133950  | 137450  | 182150  | 164 | 97  | 397  | 125 | 67  |
+| 10 | 1 | 132000  | 131275  | 185150  | 164 | 83  | 426  | 141  | 65  |
+| Total | 9 | 1338550 | 1339800 | 1841475 | 1679 | 833| 3997 | 1334 | 690 |
 
 > Credits for the data: Chase
 
