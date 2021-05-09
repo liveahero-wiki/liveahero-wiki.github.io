@@ -19,7 +19,7 @@ You can check for the details on the obtainable units for the gacha by tapping o
 
 Friend Point gacha uses {% include item-icon.html id=42 %} friend Points to obtain various items.
 
-Drop rates for possible items as follows:
+Below is the drop rates for possible items tested empirically from 10,000,000 friend points (10,000 multis)
 
 | Items | Drop rates |
 |------|------------|
@@ -31,7 +31,7 @@ Drop rates for possible items as follows:
 |  {% include item-icon.html id=12 %} {% include item-icon.html id=15 %} {% include item-icon.html id=18 %} {% include item-icon.html id=21 %} {% include item-icon.html id=24 %}    | 1.679%     |
 |  {% include item-icon.html id=11 %} {% include item-icon.html id=30 %} {% include item-icon.html id=35 %}   | 91.458%    |
 
-Here is a breakdown for each item every 1,000 pulls (10,000 slots per row):
+Here is a breakdown for each item every 1,000 multis (10,000 slots per row):
 
 |  No | {% include item-icon.html id=219991 %}  | {% include item-icon.html id=11 %}   | {% include item-icon.html id=30 %}  | {% include item-icon.html id=35 %} | {% include item-icon.html id=12 %} {% include item-icon.html id=15 %} {% include item-icon.html id=18 %} {% include item-icon.html id=21 %} {% include item-icon.html id=24 %} | {% include item-icon.html id=13 %} {% include item-icon.html id=16 %} {% include item-icon.html id=19 %} {% include item-icon.html id=22 %} {% include item-icon.html id=25 %} | {% include item-icon.html id=31 %} | {% include item-icon.html id=32 %} | {% include item-icon.html id=33 %}  |
 |---|---|---------|---------|---------|----- |-----|------|-----|------|
@@ -46,6 +46,7 @@ Here is a breakdown for each item every 1,000 pulls (10,000 slots per row):
 | 9 | 1 | 133950  | 137450  | 182150  | 164 | 97  | 397  | 125 | 67  |
 | 10 | 1 | 132000  | 131275  | 185150  | 164 | 83  | 426  | 141  | 65  |
 | Total | 9 | 1338550 | 1339800 | 1841475 | 1679 | 833| 3997 | 1334 | 690 |
+{:refdef style="display: block; overflow-x: scroll"}
 
 > Credits for the data: Chase
 
