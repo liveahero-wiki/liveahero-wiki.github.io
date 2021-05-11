@@ -12,7 +12,7 @@ additional_scripts: ["/assets/atlas.min.js"]
 ### Kaibutsu (adult)
 
 {% include hero-infobox-unreleased.html name="Kaibutsu (adult)" mob=true
-sprites="fg_kaibutsuAdultEarth_h01,fg_kaibutsuAdultFire_h01,fg_kaibutsuAdultFireBarrier_h01,fg_kaibutsuAdultFireSpace_h01,fg_kaibutsuAdultLight_h01,fg_kaibutsuAdultShadow_h01,fg_kaibutsuAdultWater_h01"
+sprites="fg_kaibutsuAdultEarth_h01,fg_kaibutsuAdultEarthSpace_h01,fg_kaibutsuAdultFire_h01,fg_kaibutsuAdultFireBarrier_h01,fg_kaibutsuAdultFireSpace_h01,fg_kaibutsuAdultLight_h01,fg_kaibutsuAdultLightSpace_h01,fg_kaibutsuAdultShadow_h01,fg_kaibutsuAdultShadowSpace_h01,fg_kaibutsuAdultWater_h01,fg_kaibutsuAdultWaterSpace_h01"
 %}
 
 ### Kaibutsu (juvenile)
