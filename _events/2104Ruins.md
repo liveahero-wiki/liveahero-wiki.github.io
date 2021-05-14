@@ -154,6 +154,9 @@ Here is a list of dungeon quest rewards based on the score:
 
 {% include quest-group.html chapterId=422 %}
 
+### Special Quests
+
+{% include quest-group.html chapterId=424 %}
 
 ## Event Sales Report
 
