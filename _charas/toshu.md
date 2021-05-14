@@ -63,3 +63,5 @@ TRAINED = "Ugh! You're barbaric!"
 %}
 
 ## Notes
+
+- {% chara_link Toshu %}, {% chara_link Rutilix %} and {% chara_link Alphecca %} hail from the same planet, which is the fourth planet (unknown planet name) in the Sooseft star system in [Perseus’s Arm](https://en.wikipedia.org/wiki/Perseus_Arm) , though unlike {% chara_link Rutilix %} and {% chara_link Alphecca %}, {% chara_link Toshu %} is not from Aradicia kingdom.
