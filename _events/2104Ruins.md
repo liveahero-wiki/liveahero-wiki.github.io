@@ -156,6 +156,8 @@ Here is a list of dungeon quest rewards based on the score:
 
 ### Special Quests
 
+Fan translations for special quests can be found [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vQnTC2Q1LU4VlyFFMXiGbJ8PFLEjLNzKRuOpw1oMuHNZeaP3H9go2AYXDv_s5GYVQ_fsLvsqMTlDi2W/pubhtml)
+
 {% include quest-group.html chapterId=424 %}
 
 ## Event Sales Report
