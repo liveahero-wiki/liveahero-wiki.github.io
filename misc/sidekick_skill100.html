@@ -16,7 +16,7 @@ banner: true
 <td><a class="item" href="{{ page.url }}/#s{{ c.stockId }}-stats"><img src="/cdn/Sprite/icon_{{ c.resourceName }}_s01.png" loading="lazy"> {{ page.title }}</a></td>
 <td>{{ g.agility }}</td>
 {% assign active = c.skillIds[0] | downcase %}
-{% assign passive = c.equipmentSkills[0] | downcase %}
+{% assign passive = c.equipmentSkills | last | downcase %}
 {% assign active_skill = site.data.SkillMaster[active] %}
 {% assign passive_skill = site.data.SkillMaster[passive] %}
 <td>{% include skill-description.html skill=active_skill %}</td>
