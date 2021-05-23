@@ -61,3 +61,7 @@ TRAINED = "Uoo, I will remember this…!"
 EVENTA = "My name is Rutilix, a proud knight!<br>It's the same even inside this mysterious labyrinth!<br>I will surely protect His Majesty!"
 EVENTB = "Please step back! Your Majesty, Magician-dono!, I will defeat these kaibutsus...uwaa!?<br>Damn it…I will steam you like a potato someday!"
 %}
+
+## Notes
+
+- In Knight and Ruins adventure event, he proclaims that he is 17 years old.
