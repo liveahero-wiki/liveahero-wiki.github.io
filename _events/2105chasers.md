@@ -37,8 +37,8 @@ Rates as follow:
 
 | Character                                                | Rates (single) | Rates (Multis) |
 |----------------------------------------------------------|----------------|----------------|
-| {% chara_link Alchiba\|h2 %}, {% chara_link Shaft\|h1 %} | 0.8 %            | 1.6 %            |
-| {% chara_link Kalaski\|h1 %}                             | 2 %              | 32 %             |
+| {% chara_link Alchiba|h2 %}, {% chara_link Shaft|h1 %} | 0.8 %            | 1.6 %            |
+| {% chara_link Kalaski|h1 %}                             | 2 %              | 32 %             |
 | {% chara_link Kalaski %}                                 | 5 %              | 0 %             |
 | {% chara_link Shaft %}                                   | 12 %             | 0 %             |
 | Offbanner 5 star hero                                    | 1.2 %            | 2.4 %            |
