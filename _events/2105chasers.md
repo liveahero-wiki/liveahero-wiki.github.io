@@ -29,6 +29,75 @@ A meeting with a battlefield cameraman that resemble a tiger cub,
 Battle against military-like villains!
 A galactic-scale mystery-solving and chase show is about to begin!
 
+## Event Banners
+
+This Event's gacha summon includes a time-limited variant {% chara_link Alchiba|h2 %} (Hero) and two new characters {% chara_link Shaft %} (Hero & Sidekick) and {% chara_link Kalaski %} (Hero & Sidekick).
+
+Rates as follow:
+
+| Character                                                | Rates (single) | Rates (Multis) |
+|----------------------------------------------------------|----------------|----------------|
+| {% chara_link Alchiba\|h2 %}, {% chara_link Shaft\|h1 %} | 0.8 %            | 1.6 %            |
+| {% chara_link Kalaski\|h1 %}                             | 2 %              | 32 %             |
+| {% chara_link Kalaski %}                                 | 5 %              | 0 %             |
+| {% chara_link Shaft %}                                   | 12 %             | 0 %             |
+| Offbanner 5 star hero                                    | 1.2 %            | 2.4 %            |
+| Offbanner 4 star hero                                    | 6 %              | 64 %             |
+| Offbanner 3 star hero                                    | 35 %             | 0 %              |
+| Offbanner 4 star sidekick                                | 5 %              | 0 %              |
+| Offbanner 3 star sidekick                                | 33 %             | 0 %              |
+
+### Free Quest Bonus
+
+Here is a list of heroes and sidekicks which grants bonus in this event:
+
+| Hero | +Bonus (%)|
+|------------|--------------|
+| {% chara_link Alchiba|h2 %} | 40 |
+| {% chara_link Shaft|h1 %}  | 40 |
+| {% chara_link Kalaski|h1 %}  | 30 |
+| {% chara_link Marfik|h2 %} | 20 |
+| {% chara_link Rutilix|h1 %}  | 20 |
+| {% chara_link Alphecca|h1 %} | 10 | 
+| {% chara_link Alchiba|h1 %} | 10 | 
+| {% chara_link Mokdai|h1 %} | 10 | 
+
+| Sidekick | +Bonus (%) |
+|-------------|---------------|
+| {% chara_link Kalaski %} | 20 | 
+| {% chara_link Shaft %}  | 10 | 
+| {% chara_link Alchiba %}  | 10 | 
+| {% chara_link Rutilix %} | 10 | 
+| {% chara_link Alphecca %} | 10 | 
+| {% chara_link Mokdai %} | 10 | 
+| {% chara_link Player %} | 10 | 
+
+### Event Sales Bonus
+
+Event sales bonus added according to how much event hero you have in a single sales, Which is
+{% chara_link Alchiba|h2 %}, {% chara_link Shaft|h1 %}, and {% chara_link Kalaski|h1 %}  
+
+Here is the bonus:
+
+| Hero   | +Bonus(%) |
+|--------|-----------|
+| 1 Event Hero   |     10    |
+| 2 Event Heroes |     30    |
+| 3 Event Heroes |     50    |
+
+### Limited Time Mission
+
+Here is a list of this event's limited time Missions:
+
+| No  | Description      | Rewards      |
+|----|-----------------------------------------------------------|----------------|
+| 1  | Finish any rank event quest 10 times | 1 {% include item-icon.html id=34 %}    |
+| 2  | Finish any rank event quest 20 times | 1 {% include item-icon.html id=34 %}    |
+| 3  | Finish any rank event quest 30 times | 1 {% include item-icon.html id=34 %}    |
+| 4  | Finish any rank event quest 40 times | 1 {% include item-icon.html id=34 %}    |
+| 5  | Finish any rank event quest 50 times | 1 {% include item-icon.html id=34 %}    |
+| 6  | Finish event sales 10 times | 1 {% include item-icon.html id=34 %}    |
+
 ## Event Shop
 
 {% include shop-table.html id=10 %}
