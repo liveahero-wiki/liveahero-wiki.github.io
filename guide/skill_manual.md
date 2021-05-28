@@ -1,5 +1,5 @@
 ---
-title: Skill Book
+title: Skill Manual
 banner: true
 ---
 
