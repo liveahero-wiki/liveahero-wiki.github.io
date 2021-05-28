@@ -19,7 +19,27 @@ As long as there is a black-and-white incident in front of him, he will continue
 
 {% include hero-infobox.html stockId=10261 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10262 %}
+{% capture BIO_H01 %}
+Alchiba gained the appearance of an "armed detective" who seeks to uncover the truth of the case with power as well as knowledge.
+
+He infers with calm and keen thoughts to counter the terrorist destruction of cultural heritage, and squeezes the trigger of his laser gun with righteous fury. 
+
+The gun resembles what he had in his police days, striking him as bitterly ironic, noting the painfully familiar feeling as it fits perfectly in his hand. 
+
+So, he will fly through the sandy dunes of Ten Teres with a new, highly mobile form.
+{% endcapture %}
+
+{% capture BIO_H02 %}
+In this new form, he wears black wings instead of white even after transformation. 
+
+This is a symbol of his old self, the officer past he was never able to put behind him as  "the black wings that bring misery." 
+
+Now that he has gained both wisdom and power, Alchiba looks back at the police organization that he turned away from years ago.  
+
+His distrust hasn't been wiped out yet, but his feelings for the police are beginning to show signs of change.
+{% endcapture %}
+
+{% include hero-infobox.html stockId=10262 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 A winged alien who runs a detective bureau.
