@@ -596,6 +596,43 @@
     "description": "ダンジョン探索中にマッピングを行った冒険の地図。交換所でアイテムと交換してもらえる。",
     "effect": []
   },
+  "65": {
+    "itemId": 65,
+    "itemName": "セカンド・アタックの技術書",
+    "resourceName": "equipskill_auto_2ndAttack",
+    "rarity": 3,
+    "itemType": 32768,
+    "description": "オート行動時に第2スキルを優先して使用する「セカンド・アタック」を習得できる技術書。",
+    "effect": [
+      {
+        "class": "SkillLearnItemEffect",
+        "skillId": 7000001
+      }
+    ]
+  },
+  "66": {
+    "itemId": 66,
+    "itemName": "サード・アタックの技術書",
+    "resourceName": "equipskill_auto_3rdAttack",
+    "rarity": 3,
+    "itemType": 32768,
+    "description": "オート行動時に第3スキルを優先して使用する「サード・アタック」を習得できる技術書。",
+    "effect": [
+      {
+        "class": "SkillLearnItemEffect",
+        "skillId": 7000002
+      }
+    ]
+  },
+  "67": {
+    "itemId": 67,
+    "itemName": "メディア・フォルダー",
+    "resourceName": "Chasers2105_exchange01",
+    "rarity": 0,
+    "itemType": 512,
+    "description": "現地の画像・映像データをまとめたスクラップブック用データ。交換所でアイテムと交換してもらえる。",
+    "effect": []
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -1196,6 +1233,26 @@
       }
     ]
   },
+  "110262": {
+    "itemId": 110262,
+    "itemName": "追跡のアルキバの記憶片",
+    "resourceName": "piece_alchibaChasers2105",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "追跡のアルキバのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10262
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ]
+  },
   "110271": {
     "itemId": 110271,
     "itemName": "スバルの記憶片",
@@ -1461,6 +1518,46 @@
         "addFan": 50,
         "rarity": 0,
         "stockId": 10621
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ]
+  },
+  "110631": {
+    "itemId": 110631,
+    "itemName": "シャフトの記憶片",
+    "resourceName": "piece_shaft",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "シャフトのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10631
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ]
+  },
+  "110641": {
+    "itemId": 110641,
+    "itemName": "カラスキの記憶片",
+    "resourceName": "piece_kalaski",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "カラスキのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 10641
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
@@ -2274,6 +2371,44 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 1
+      }
+    ]
+  },
+  "210631": {
+    "itemId": 210631,
+    "itemName": "シャフトの心",
+    "resourceName": "heart_shaft",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "シャフトのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 10631
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ]
+  },
+  "210641": {
+    "itemId": 210641,
+    "itemName": "カラスキの心",
+    "resourceName": "heart_kalaski",
+    "rarity": 4,
+    "itemType": 2048,
+    "description": "カラスキのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 10641
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
       }
     ]
   },

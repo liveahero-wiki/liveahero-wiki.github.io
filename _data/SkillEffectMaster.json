@@ -7541,5 +7541,248 @@
       "canDuplicate": true,
       "isDisplayPersistenceStatus": false
     }
+  },
+  "318": {
+    "skillEffectId": 318,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "DecideAutoSkill",
+          "parameter": {
+            "value": 1
+          }
+        }
+      ],
+      "trigger": "[]",
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "オート行動時に第2スキルを優先して使用する",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "319": {
+    "skillEffectId": 319,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "DecideAutoSkill",
+          "parameter": {
+            "value": 2
+          }
+        }
+      ],
+      "trigger": "[]",
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "オート行動時に第３スキルを優先して使用する。",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "320": {
+    "skillEffectId": 320,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AimLowestHPCharacter",
+          "parameter": {
+            "isTarget": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "オート行動時、敵を対象にするスキルは敵の中で一番HPが低いキャラクターを対象にする。",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "321": {
+    "skillEffectId": 321,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AimLowestHPCharacter",
+          "parameter": {
+            "isTarget": false
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "オート行動時、味方を対象にするスキルは味方の中で一番HPが低いキャラクターを対象にする。",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "322": {
+    "skillEffectId": 322,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AimHighestHPCharacter",
+          "parameter": {
+            "isTarget": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "オート行動時、敵を対象にするスキルは敵の中で一番HPが高いキャラクターを対象にする。",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "323": {
+    "skillEffectId": 323,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AimHighestHPCharacter",
+          "parameter": {
+            "isTarget": false
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "オート行動時、味方を対象にするスキルは味方の中で一番HPが高いキャラクターを対象にする。",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "324": {
+    "skillEffectId": 324,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RandomTeamAttack",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "ランダムな味方が追撃",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "325": {
+    "skillEffectId": 325,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeAgi",
+          "parameter": {
+            "value": -30
+          }
+        }
+      ],
+      "filename": "status_superagidown",
+      "statusId": 29,
+      "canDispel": true,
+      "parameter": false,
+      "description": "超SPDダウン",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "326": {
+    "skillEffectId": 326,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ComboDamage",
+          "parameter": {
+            "value": 80,
+            "combpMult": 10
+          }
+        }
+      ],
+      "filename": "damage",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "80%ダメージ+コンボ数に応じてダメージ量が上昇",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "327": {
+    "skillEffectId": 327,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddMultDamage",
+          "parameter": {
+            "value": 80,
+            "addMult": 40
+          }
+        }
+      ],
+      "trigger": "[{\"value\":2,\"class\":\"OwnStatusTrigger\"}]",
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "80%ダメージ。自身にDEFアップが付与されている場合、威力増加。",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
   }
 }
