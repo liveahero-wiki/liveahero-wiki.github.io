@@ -25,7 +25,7 @@ He considers it his mission to capture every moment of life's life, which is bor
 {% capture BIO_S01 %}
 A tiger-beast alien who is a battlefield photographer, he has photographed the situation and soldiers on numerous battlefields.
 
-His species takes nearly twice as long to grow as comparet to earthlings, he looks like a child but is actually in his late twenties.
+His species takes nearly twice as long to grow as compared to earthlings, he looks like a child but is actually in his late twenties.
 
 Aware of his job as a professional battlefield photographer, he tries to keep his feelings in check and stay away from another's private matters, he also does not like it when others get involved too deeply with him.
 
