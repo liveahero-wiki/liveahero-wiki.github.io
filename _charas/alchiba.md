@@ -1,6 +1,8 @@
 ---
 title: Alchiba
 characterId: 26
+h2:
+  title: "\"The Chaser\" Alchiba"
 occupation: "Private Investigator"
 ---
 
@@ -16,6 +18,8 @@ As long as there is a black-and-white incident in front of him, he will continue
 {% endcapture %}
 
 {% include hero-infobox.html stockId=10261 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+
+{% include hero-infobox.html stockId=10262 %}
 
 {% capture BIO_S01 %}
 A winged alien who runs a detective bureau.
@@ -50,6 +54,9 @@ RELATION = "That reporter's special intelligence gathering ability is quite scar
 TOUCH = "... Oops, you're aggressive, My Sweet.<br>It's fine, enjoy my feathers to your heart's content.<br>I won't ask anything in return…fufufu."
 TRAIN = "Now then, I wonder if you can parry me."
 TRAINED = "Nuu..! Perhaps I need to take it seriously..!?"
+%}
+
+{% include voice-table.html resourceName="alchibaChasers2105"
 %}
 
 ## Notes
