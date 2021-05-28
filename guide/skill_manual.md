@@ -24,4 +24,4 @@ As of now there is only two kinds of skill manuals available from the event shop
   - Grants the hero a passive skill "Third Attack"
   - In auto battle, the hero with Third Attack skill equipped will prioritize using their third skill
 
-> Without these equipment skill heroes in auto battle will always use the first skill.
+> Without these equipment skill, heroes in auto battle will always use the first skill.
