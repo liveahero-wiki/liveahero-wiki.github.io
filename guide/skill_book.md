@@ -1,5 +1,5 @@
 ---
-title: Technique scroll
+title: Skill Book
 banner: true
 ---
 
