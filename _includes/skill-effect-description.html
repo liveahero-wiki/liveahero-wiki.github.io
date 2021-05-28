@@ -74,7 +74,7 @@ View-costing skills for {{ target }} now target all allies/enemies
 {% when "AimHighestHPCharacter" %}
 During auto-action, set the target of the skill to the one with highest HP among {% if effect.parameter.isTarget %}enemies{% else %}allies{% endif %}
 {% when "RandomTeamAttack" %}
-Randomly target one ally
+After attack, if targeted enemy is still alive, random ally will use skill 1 on targeted enemy
 {% when "MultipleHp" %}
 HP Up by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "StatusNumberMultipleAttack" %}
