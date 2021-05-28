@@ -41,7 +41,7 @@ Rates as follow:
 | {% chara_link Kalaski|h1 %}                             | 2 %              | 32 %             |
 | {% chara_link Kalaski %}                                 | 5 %              | 0 %             |
 | {% chara_link Shaft %}                                   | 12 %             | 0 %             |
-| Offbanner 5 star hero                                    | 1.2 %            | 2.4 %            |
+| Offbanner 5 star hero                                    | 0.4 %            | 0.8 %            |
 | Offbanner 4 star hero                                    | 6 %              | 64 %             |
 | Offbanner 3 star hero                                    | 35 %             | 0 %              |
 | Offbanner 4 star sidekick                                | 5 %              | 0 %              |
