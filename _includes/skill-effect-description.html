@@ -71,6 +71,10 @@ ATK Up by {{ effect.parameter.spdMult }}% to {{ target }} for each point in spee
 Make {{ target }} ignore Taunt
 {% when "AllAttack" %}
 View-costing skills for {{ target }} now target all allies/enemies
+{% when "AimHighestHPCharacter" %}
+During auto-action, set the target of the skill to the one with highest HP among {% if effect.parameter.isTarget %}enemies{% else %}allies{% endif %}
+{% when "RandomTeamAttack" %}
+Randomly target one ally
 {% when "MultipleHp" %}
 HP Up by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "StatusNumberMultipleAttack" %}
