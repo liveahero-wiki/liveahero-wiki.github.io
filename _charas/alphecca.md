@@ -25,7 +25,7 @@ He summoned a confidant of his, an "observer" and proposed a concept....
 {% include hero-infobox.html stockId=10621 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_ADV_alphecca_h01,fg_ADV_alphecca_h01_skin1,fg_ADV_alphecca_h02,fg_ADV_alphecca_h02_skin1" %}
 
 {% capture BIO_S01 %}
-The ruler of a kingdom from another planet called Aradisia/Aradishia, his full name being Alphecca Genma the 21st. 
+The ruler of a kingdom from another planet called Aradicia, his full name being Alphecca Genma the 21st. 
 
 Although he had just recently inherited the throne, he was quite famous with the people and his soldiers due to his outstanding grace and dignity. 
 
@@ -53,3 +53,7 @@ TRAINED = "W-well aren't you skilled…!"
 EVENTA = "Hmm..mysterious, what an interesting labyrinth.<br>I'm usually bound to my throne, so just a little bit of adventure is fine, right?"
 EVENTB = "Hmm, the enigmatic white knight huh…I wonder what kind of person he is.<br>Mm? when he appears I am always nowhere to be seen you say?<br>Now…isn't it just a coincidence?"
 %}
+
+## Notes
+
+- His full name is Alphecca Genma The 21st (アルフェッカ・ゲンマ21世）
