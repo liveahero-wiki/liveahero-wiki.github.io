@@ -65,3 +65,5 @@ EVENTB = "Please step back! Your Majesty, Magician-dono!, I will defeat these ka
 ## Notes
 
 - In Knight and Ruins adventure event, he proclaims that he is 17 years old.
+- Has a flying dorc named Baraka (Looks similar to a [Pteranodon](https://en.wikipedia.org/wiki/Pteranodon)).
+  - Dorcs are dragon-like creature domesticated as beast of burden in Aradicia, they have friendly and gentle personalities similar to dogs on earth.
