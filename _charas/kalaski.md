@@ -36,6 +36,18 @@ He tries to act cool, but actually easily offended.
 {% include sidekick-infobox.html stockId=10641 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="kalaski"
+h_gachaResult = "My name is Kalaski, a professional photographer.<br>I can go to any battlefield for a fee.<br>Just so you know...<br>Don't confuse me with a kid, okay?"
+s_gachaResult = "My name is Kalaski.<br>I'm a war photographer.<br>Don't worry yourself, I know my way around a battlefield.<br>I'll be right behind my appointed hero."
+APPRECIATION = "Whoa, past your naptime or something? Haha, don't be mad.<br>Go lie down for a while.<br>I'll keep an eye on you, okay?"
+PLAYER = "I guess what you need is a little experience.<br>Well, that's true for anyone in any line of work.<br>Just don't do it so badly that you end up dead."
+TOUCH = "Ah! Hey, don't touch me!<br>Just because you're bigger than me doesn't mean you can...!<br>Hah...hang on, right there... Meow, purr..."
+TRAINED = "I've been pushed to this point...?"
+TRAIN = "I'll teach you how to get around."
+DAILY = "Photographs are a way to capture and preserve a moment.<br>It can capture everything, the happy moments, and the sad ones.<br>Now, what kind of pictures will you let me take next?"
+HERO =  "That detective. I thought he was just some frivolous playboy at first, but...<br>But he seems to be pretty sharp.<br>I can tell he's got a lot of field experience.<br>Is he really just a detective?"
+RELATION = "That bastard keeps making me take all these gossip pictures for some trashy tabloid.<br>What the hell do they think they're doing?<br>Ugh...  they're calling again.<br>...I guess I don't have a choice."
+EVENTA = "This kind of thing is a bit out of my wheelhouse, but... okay.<br>I'll at least help you out.<br>Just... I'll just have to take some pictures."
+EVENTB = "Spiritual support is very important for people in rough areas.<br>People who think they can take that away... we can't let them get away with it."
 %}
 
 ## Notes
