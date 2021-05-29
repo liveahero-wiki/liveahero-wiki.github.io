@@ -32,6 +32,18 @@ With a gentle and honest disposition, he has low self-esteem due to his clumsine
 {% include sidekick-infobox.html stockId=10631 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="shaft"
+h_gachaResult = "I am Shaft.<br>I'm a space cab driver.<br>Leave the navigation to me.<br>I will get you to your destination...<br>No, I will take you to the future!"
+s_gachaResult = "I'm Shaft, a cab driver. Let me see... You want me to be a sidekick?<br>That's a surprise.I'll make sure you won't get lost. Maybe... "
+APPRECIATION = "Operator, why don't we take a drive?<br>It would be a nice change of pace.<br>Oh, don't worry about fare. I'll leave the meter off."
+PLAYER = "Changing jobs is really hard, isn't it?<br>You have to adjust yourself to a new environment.<br>I feel like you and I can relate there."
+TOUCH = "What the?!　Huh, you're surprised how thick my body is for a cab driver?<br>Oh, I used to play rugby professionally back in the day.<br>I'm used to colliding with people."
+TRAINED = "My battery's going to die...!"
+TRAIN = "Let's go a little rough!"
+DAILY = "Are you in need of a cab, Operator?<br>Yes, please get in...what?<br>Hey, hey, hey! Where are the keys?!"
+HERO =  "There's something he wants to photograph even at the risk of his life.<br>I guess that drive's why his photos stick in my mind.<br>His passion for his work makes me feel a little nostalgic."
+RELATION = "That android truck driver has a very high work ethic, doesn't he?<br>I've always wanted to learn from him..."
+EVENTA = "I've been involved in some kind of terrible incident... oh no.<br>Don't worry, I'll get you all to your destination.<br>Erm... wait. Where are we...?"
+EVENTB = "I wonder what that thief's goal is.<br>I have a vague idea, but... it doesn't seem like he's just a prankster.<br>I can't make heads or tails of it."
 %}
 
 ## Notes
