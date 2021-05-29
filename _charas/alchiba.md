@@ -77,6 +77,17 @@ TRAINED = "Nuu..! Perhaps I need to take it seriously..!?"
 %}
 
 {% include voice-table.html resourceName="alchibaChasers2105"
+h_gachaResult = "I never thought I'd see the day when I'd pick up a gun again... No, this is fine.<br>I'll bring his crimes to light... I'm sure I'll be able to rehabilitate him."
+APPRECIATION = "In the middle of a serious mission, you need to be able to enjoy the occasional tea break, honey.<br>Hey now, don't get so ruffled up, I'm not going to hit on you until after the mission."
+DAILY = "Now, it's mission time, partner.<br>I'm a firm believer in getting the job done.<br>From here on, I'll be in serious mode."
+HERO = "Oh man, that guy's a dangerous driver in more ways than one.<br>I don't know, I guess I can relate to feeling apprehensive about changing careers..."
+PLAYER = "Don't you think you're stretching yourself a little too far, partner?<br>I love that you're trying so hard, but you can leave a little more to me.<br>I'm quite an accomodating man, you know?"
+TOUCH = "Hmm? Are you satisfied with just touching my feathers? I wouldn't mind doing something a little more exciting.<br>I don't know, later tonight perhaps?"
+RELATION = "I have a bit of a history with Vulpecula.<br>I know, I know, a thief and a detective with a past together.<br>Like something out of a detective novel, right?<br>That's why I want to make sure I catch him with my own two hands."
+TRAIN = "Can you take me seriously?"
+TRAINED = "You're quite a force to be reckoned with...!"
+EVENTA = "Looks like he's on the move.<br>Come on, let's go, partner.<br>We're going to have to go a little out of our way, are you ready?"
+EVENTB = "The mystery just keeps getting deeper and deeper...<br>Don't worry, partner. We'll get him.<br>I'll hunt him down."
 %}
 
 ## Notes
