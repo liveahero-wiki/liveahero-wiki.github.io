@@ -78,6 +78,7 @@ TRAINED = "Nuu..! Perhaps I need to take it seriously..!?"
 
 {% include voice-table.html resourceName="alchibaChasers2105"
 h_gachaResult = "I never thought I'd see the day when I'd pick up a gun again... No, this is fine.<br>I'll bring his crimes to light... I'm sure I'll be able to rehabilitate him."
+s_gachaResult = "Hmm, my power is necessary?<br>Well, it's alright, leave it to me.<br>This Alchiba will solve the mystery with splendor!"
 APPRECIATION = "In the middle of a serious mission, you need to be able to enjoy the occasional tea break, honey.<br>Hey now, don't get so ruffled up, I'm not going to hit on you until after the mission."
 DAILY = "Now, it's mission time, partner.<br>I'm a firm believer in getting the job done.<br>From here on, I'll be in serious mode."
 HERO = "Oh man, that guy's a dangerous driver in more ways than one.<br>I don't know, I guess I can relate to feeling apprehensive about changing careers..."
