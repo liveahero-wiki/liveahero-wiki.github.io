@@ -93,3 +93,4 @@ EVENTB = "The mystery just keeps getting deeper and deeper...<br>Don't worry, pa
 
 ## Notes
 - His Hero lines refers to {% chara_link Gammei %}
+- Alchiba is named after the fourth brightest star, also known as [Alpha Corvi](https://en.wikipedia.org/wiki/Alpha_Corvi), in the constellation [Corvus](https://en.wikipedia.org/wiki/Corvus_(constellation)) or the Crow.
