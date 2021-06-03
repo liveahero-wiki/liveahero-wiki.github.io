@@ -35,7 +35,7 @@ This Event's gacha summon includes a time-limited variant {% chara_link Alchiba|
 
 Rates as follow:
 
-| Character                                                | Rates (single) | Rates (Multis) |
+| Character                                                | Rates (Single) | Rates (Multis) |
 |----------------------------------------------------------|----------------|----------------|
 | {% chara_link Alchiba|h2 %}, {% chara_link Shaft|h1 %} | 0.8 %            | 1.6 %            |
 | {% chara_link Kalaski|h1 %}                             | 2 %              | 32 %             |
@@ -46,6 +46,8 @@ Rates as follow:
 | Offbanner 3 star hero                                    | 35 %             | 0 %              |
 | Offbanner 4 star sidekick                                | 5 %              | 0 %              |
 | Offbanner 3 star sidekick                                | 33 %             | 0 %              |
+
+>Rates (Multis) is the rate of the tenth pull in a multi pull, pull number 1-9 still use the Rates (Single)
 
 ### Free Quest Bonus
 
@@ -130,7 +132,7 @@ Here is a list of this event's limited time Missions:
 </details>
 
 <details><summary>Sales Report 2 (Translated)</summary>
-<p> In the beginning, <code>character0</code> and his team receive information on a new crime notice.<br>It was spread by a copycat of the villain that was causing so much uproar.<br><br>Poetic and difficult to understand , <code>character0</code> wracked their brain over the ambiguous content of the notice.<br> <code>character1</code> who have been watching the video suddenly stood up exclaiming that they got it, they excitedly tried to explain their reasoning.<br><br>The reasoning and explanation was too ridiculous.<br>Hearing such an absurd explanation, <code>character0</code> smile wryly.<br<However, if the reasoning was true, then the crime time will be near.<br>As precaution, they came to the deduced place.<br><br>The villains appeared just like <code>character1</code> 's deduction, and so they quickly got arrested.<br> <code>character1</code> has a satisfied face,<br> <code>character0</code> gaze at them with a puzzled look on their face.
+<p> In the beginning, <code>character0</code> and his team receive information on a new crime notice.<br>It was spread by a copycat of the villain that was causing so much uproar.<br><br>Poetic and difficult to understand , <code>character0</code> wracked their brain over the ambiguous content of the notice.<br> <code>character1</code> who have been watching the video suddenly stood up exclaiming that they got it, they excitedly tried to explain their reasoning.<br><br>The reasoning and explanation was too ridiculous.<br>Hearing such an absurd explanation, <code>character0</code> smile wryly.<br>However, if the reasoning was true, then the crime time will be near.<br>As precaution, they came to the deduced place.<br><br>The villains appeared just like <code>character1</code> 's deduction, and so they quickly got arrested.<br> <code>character1</code> has a satisfied face,<br> <code>character0</code> gaze at them with a puzzled look on their face.
 </p>
 </details>
 
@@ -150,6 +152,6 @@ Here is a list of this event's limited time Missions:
 </details>
 
 <details><summary>Sales Report 4 (Translated)</summary>
-<p> <code>character0</code> and team split up to guard the site of a crime notice by a phantom thief villain.<br>As the notified time draws near, the site were filled with tension.<br><br> <code>character1</code> was anxious about <code>character2</code> 's sudden lost of contact a while ago.<br>After heading to <code>character2</code> 's post, they found <code>character2</code> have been stripped and was asleep.<br><br>At the same time, <code>character2</code> appears in front of <code>character3</code> .<br>Why did you came here? While inquiring about this,<br>from the back of <code>character3</code> , <code>character0</code> yelled, that person is a fake.<br> <code>character1</code> has contacted <code>character0</code> .<br><br>The group was able to arrest the criminal by a hair's breadth.<br>Though the crime has been succesfully prevented,<br>There remained the problem of what to do about <code>character2</code> who was still sleeping naked….
+<p> <code>character0</code> and team split up to guard the site of a crime notice by a phantom thief villain.<br>As the notified time draws near, the site were filled with tension.<br><br> <code>character1</code> was anxious about <code>character2</code> 's sudden lost of contact a while ago.<br>After heading to <code>character2</code> 's post, they found <code>character2</code> have been stripped and was asleep.<br><br>At the same time, <code>character2</code> appears in front of <code>character3</code> .<br>Why did you came here? while inquiring about this,<br>from the back of <code>character3</code> , <code>character0</code> yelled, that person is a fake.<br> <code>character1</code> has contacted <code>character0</code> .<br><br>The group was able to arrest the criminal by a hair's breadth.<br>Though the crime has been succesfully prevented,<br>There remained the problem of what to do about <code>character2</code> who was still sleeping naked….
 </p>
 </details>
