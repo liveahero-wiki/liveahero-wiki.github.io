@@ -13020,6 +13020,71 @@
     "hasScoreAttack": false,
     "boostItems": []
   },
+  "425005": {
+    "questId": 425005,
+    "questName": "戦うための力を",
+    "subName": "第５話",
+    "questKind": 5,
+    "chapterId": 425,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2021-06-07 19:59:00",
+    "endAt": "2021-06-25 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 8,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 425004,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainMercenaryFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainMercenaryWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainMercenaryEarth_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": []
+  },
   "426001": {
     "questId": 426001,
     "questName": "手がかりを追って",
@@ -13469,6 +13534,51 @@
     "hasBattle": true,
     "hasStockBattle": false,
     "hasScoreAttack": false,
+    "boostItems": []
+  },
+  "427001": {
+    "questId": 427001,
+    "questName": "衝突！傭兵部隊！",
+    "subName": "スコアアタッククエスト",
+    "questKind": 6,
+    "chapterId": 427,
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2021-06-07 19:59:00",
+    "endAt": "2021-06-17 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 425002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainMercenaryLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainMercenaryEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainMercenaryShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": true,
     "boostItems": []
   },
   "502001": {

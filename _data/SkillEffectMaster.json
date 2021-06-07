@@ -7784,5 +7784,229 @@
       "canDuplicate": false,
       "isDisplayPersistenceStatus": false
     }
+  },
+  "328": {
+    "skillEffectId": 328,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AimBossCharacter",
+          "parameter": {
+            "isTarget": false
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "自身はオート行動時、味方を対象にするスキルはボスキャラクターを対象にする。（敵専用）",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "329": {
+    "skillEffectId": 329,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -2000
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 38,
+      "canDispel": true,
+      "parameter": false,
+      "description": "View消費量-2000",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "330": {
+    "skillEffectId": 330,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Cure",
+          "parameter": {
+            "value": 999,
+            "target": 18
+          }
+        }
+      ],
+      "trigger": "[]",
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "毒をすべて解除",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "331": {
+    "skillEffectId": 331,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Cure",
+          "parameter": {
+            "value": 999,
+            "target": 19
+          }
+        }
+      ],
+      "trigger": "[]",
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "火傷をすべて解除",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "332": {
+    "skillEffectId": 332,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Heal",
+          "parameter": {
+            "value": 0
+          }
+        }
+      ],
+      "trigger": "[{\"value\":50,\"class\":\"MaxHPTrigger\"}]",
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "ピンチ状態の時、HPを基礎ATKの0%回復する",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "333": {
+    "skillEffectId": 333,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddMultDamage",
+          "parameter": {
+            "value": 100,
+            "addMult": 40
+          }
+        }
+      ],
+      "trigger": "[{\"value\":2,\"class\":\"OwnStatusTrigger\"}]",
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "100%ダメージ。自身にDEFアップが付与されている場合、威力増加",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "334": {
+    "skillEffectId": 334,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 0
+          }
+        }
+      ],
+      "filename": "status_invincible",
+      "statusId": 6,
+      "canDispel": true,
+      "parameter": false,
+      "description": "無敵",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "335": {
+    "skillEffectId": 335,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveBuff",
+          "parameter": {
+            "value": 1,
+            "target": 1
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "ATKアップを1つ解除",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "336": {
+    "skillEffectId": 336,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": 4000
+          }
+        }
+      ],
+      "filename": "status_mosaic",
+      "statusId": 39,
+      "canDispel": true,
+      "parameter": false,
+      "description": "View消費量+4000",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
   }
 }

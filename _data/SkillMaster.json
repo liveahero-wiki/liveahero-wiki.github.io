@@ -18677,6 +18677,42 @@
       }
     ]
   },
+  "4066102": {
+    "skillId": 4066102,
+    "skillName": "スラグショット",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。バフを１つ解除。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMercenary_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 36,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4066103": {
     "skillId": 4066103,
     "skillName": "ボリー・ファイア",
@@ -18733,6 +18769,338 @@
       },
       {
         "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4066105": {
+    "skillId": 4066105,
+    "skillName": "違法配信",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "Viewを5000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMercenary_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4066106": {
+    "skillId": 4066106,
+    "skillName": "防御支援",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "ボスに1回分の無敵を付与。Viewを6000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMercenary_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 17,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 272,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4066107": {
+    "skillId": 4066107,
+    "skillName": "攻撃支援",
+    "useView": 5000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "ボスに1回の行動の間ATKアップ×2を付与。Viewを10000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMercenary_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 25,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4066108": {
+    "skillId": 4066108,
+    "skillName": "増援要請",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_healAll",
+    "subResourceName": "s_skill_antiBuffTeam",
+    "timing": 0,
+    "description": "味方全体に100%のHPで復活。自身に1回分のDEFアップを付与。Viewを4000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMercenary_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 260,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 295,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4066109": {
+    "skillId": 4066109,
+    "skillName": "ボリー・ファイア+",
+    "useView": 10000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に120%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMercenary_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4066110": {
+    "skillId": 4066110,
+    "skillName": "フラッシュ・バレット",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵全体に20%ダメージ。Viewを5000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMercenary_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 261,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4066111": {
+    "skillId": 4066111,
+    "skillName": "バースト",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "味方全体に50%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMercenary_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4066112": {
+    "skillId": 4066112,
+    "skillName": "攻撃支援+",
+    "useView": 5000,
+    "targetFlag": 3,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に20%ダメージ。ボスに1回の行動の間ATKアップ×2を付与。Viewを5000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMercenary_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 261,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4066113": {
+    "skillId": 4066113,
+    "skillName": "防御支援+",
+    "useView": 4000,
+    "targetFlag": 3,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "ボスに2回分の無敵を付与。Viewを10000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMercenary_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 334,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 25,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,
@@ -18870,7 +19238,7 @@
     "resourceName": "b_skill_special",
     "subResourceName": "",
     "timing": 1,
-    "description": "登場時、ダメージ上限15000。",
+    "description": "1回のスキル発動から受けるダメージを合計15000に制限。",
     "cutin": [],
     "effects": [
       {
@@ -19022,6 +19390,151 @@
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "triggerJson": null
+      }
+    ]
+  },
+  "6070001": {
+    "skillId": 6070001,
+    "skillName": "リーダー支援",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "味方を対象にするスキルはボスを対象にする。（敵専用）",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 328,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6070002": {
+    "skillId": 6070002,
+    "skillName": "傭兵の絆",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_antiBuffTeam",
+    "timing": 8,
+    "description": "ダメージを受けた時、ボスのHPを自身の基礎ATKの30%回復＆2回の行動の間View消費量-2000を付与＆ATKアップを1つ解除。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 124,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 329,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 335,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 24,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6070003": {
+    "skillId": 6070003,
+    "skillName": "ファーストエイドキット",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_cure",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、毒と火傷をすべて解除。（敵専用）",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 328,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 330,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 331,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6070004": {
+    "skillId": 6070004,
+    "skillName": "リーダーの証",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "味方が行う支援行動は自身を対象にする。（敵専用）",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 328,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6070005": {
+    "skillId": 6070005,
+    "skillName": "リーダー支援+",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "ダメージを受けた時、Viewを3000獲得。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 328,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
       }
     ]
   },
