@@ -7992,20 +7992,67 @@
       "count": 0,
       "effects": [
         {
-          "class": "NeedViewValueChange",
+          "class": "ChangeAgi",
           "parameter": {
-            "value": 4000
+            "value": 30
           }
         }
       ],
-      "filename": "status_mosaic",
-      "statusId": 39,
+      "filename": "status_superagiup",
+      "statusId": 20,
       "canDispel": true,
       "parameter": false,
-      "description": "View消費量+4000",
+      "description": "超SPDアップ",
       "isImmediate": false,
       "persistence": false,
       "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "337": {
+    "skillEffectId": 337,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 40,
+      "canDispel": true,
+      "parameter": false,
+      "description": "行動停止",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "338": {
+    "skillEffectId": 338,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SpdDeferenceDamage",
+          "parameter": {
+            "value": 40,
+            "spdMult": 10
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "40%ダメージ+対象と自分のSPDの差だけダメージ量が上昇",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
       "isDisplayPersistenceStatus": false
     }
   }
