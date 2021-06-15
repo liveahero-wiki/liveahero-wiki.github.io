@@ -47,3 +47,5 @@ EVENTB = "I wonder what that thief's goal is.<br>I have a vague idea, but... it 
 %}
 
 ## Notes
+
+- His surname is Todoroki (轟)
