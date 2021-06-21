@@ -66,26 +66,21 @@ module Jekyll
 
       if tokens.length == 2
         suffix = tokens[1]
+        if suffix[0] == "h"
+          type = 1
+        else
+          type = 2
+        end
+        variant = suffix[1].to_i
       else
-        suffix = "s1"
+        type = 2
+        variant = 1
       end
 
-      variant = suffix[1].to_i
       characterId = page.data["characterId"]
       stockId = (1000 + characterId) * 10 + variant
-      cardId = stockId * 10 + 1
-      
-      if suffix[0] == "h"
-        resourceName = CharaLinkTag.card_master(context).dig(cardId.to_s, "resourceName")
-      else
-        resourceName = CharaLinkTag.sidekick_master(context).dig(cardId.to_s, "resourceName")
-      end
 
-      if variant > 1
-        title = page.data.dig(suffix, "title") || title
-      end
-
-      "<a href=\"#{page.url}##{suffix[0]}#{stockId}\"><span class=\"item\"><img src=\"/cdn/Sprite/icon_#{resourceName}_#{suffix[0]}01.png\" loading=\"lazy\"></span> #{title}</a>"
+      return CharaFilter::stockIdToLink_impl(stockId, type, context, page)
     end
   end
 
@@ -94,6 +89,40 @@ module Jekyll
     def characterIdToPage(id)
       CharaMap.characterId_to_pages[id]
     end
+
+    def self.stockIdToLink_impl(stockId, type, ctx, page=nil)
+      cardId = stockId * 10 + 1
+      variant = stockId % 10
+      characterId = (stockId / 10) % 1000
+
+      if !page
+        page = CharaMap.characterId_to_pages[characterId]
+      end
+
+      if type == 1
+        resourceName = CharaLinkTag.card_master(ctx).dig(cardId.to_s, "resourceName")
+        suffix = "h"
+      else
+        resourceName = CharaLinkTag.sidekick_master(ctx).dig(cardId.to_s, "resourceName")
+        suffix = "s"
+      end
+
+      if variant > 1
+        title = page.data.dig(suffix + variant.to_s, "title") || page.data["title"]
+      else
+        title = page.data["title"]
+      end
+
+      return "<a href=\"#{page.url}##{suffix}#{stockId}\"><span class=\"item\"><img src=\"/cdn/Sprite/icon_#{resourceName}_#{suffix}01.png\" loading=\"lazy\"></span> #{title}</a>"
+    end
+
+    def stockIdToLink(stockId, type, ctx=nil, page=nil)
+      if !ctx
+        ctx = @context
+      end
+      return CharaFilter::stockIdToLink_impl(stockId, type, ctx, page)
+    end
+
   end
 end
 
