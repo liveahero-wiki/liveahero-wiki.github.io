@@ -15840,6 +15840,98 @@
       }
     ]
   },
+  "4002101": {
+    "skillId": 4002101,
+    "skillName": "ハーキュリアン・パンチ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_mokdai_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4002102": {
+    "skillId": 4002102,
+    "skillName": "ベスト・ディレクション",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "Viewを8000獲得。味方全体に1回の行動の間View消費量-3000を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_mokdai_h01_02"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 63,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 317,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4002103": {
+    "skillId": 4002103,
+    "skillName": "メガトン・クラッシャー",
+    "useView": 10000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に180%ダメージ+Viewに応じてダメージ量が上昇。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_mokdai_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 214,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4007102": {
     "skillId": 4007102,
     "skillName": "撃ちまくりッス！",
@@ -18325,6 +18417,98 @@
       }
     ]
   },
+  "4054115": {
+    "skillId": 4054115,
+    "skillName": "狙撃",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMafia_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4054116": {
+    "skillId": 4054116,
+    "skillName": "スモークグレネード",
+    "useView": 8000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に75%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMafia_h01_03"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 270,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4054118": {
+    "skillId": 4054118,
+    "skillName": "暴発",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に50%ダメージ。味方全体に100%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMafia_h01_01"
+      }
+    ],
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4060101": {
     "skillId": 4060101,
     "skillName": "うねる触手",
@@ -19514,6 +19698,35 @@
       }
     ]
   },
+  "6000016": {
+    "skillId": 6000016,
+    "skillName": "やられ映え",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、Viewを7000獲得。50%の確率で自身のデバフを１つ解除。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 40,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 50,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "6061101": {
     "skillId": 6061101,
     "skillName": "防具破壊",
@@ -19603,6 +19816,27 @@
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "triggerJson": null
+      }
+    ]
+  },
+  "6061105": {
+    "skillId": 6061105,
+    "skillName": "回線断絶",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 6,
+    "description": "ピンチ状態になった時、自身に2回の行動の間過消費を付与。",
+    "cutin": [],
+    "effects": [
+      {
+        "skillEffectId": 58,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
       }
     ]
   },
