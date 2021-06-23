@@ -11,7 +11,7 @@ event_end_time: 2021-07-05T14:00:00+09
 It's a pre-campaign event for chapter 4:
 
 - There will be a limited time quest "Search for the Quartz", where you can get {% include item-icon.html id=59 %} Parallel Quartz, entry to these quest will be limited each day (3 times per day reset at usual reset time 00:00 JST)
-- High difficulty quest where you fought Mokdai (Decisive Battle in The Forest Area), requires 0 stamina with limited time mission.
+- High difficulty quest where you fight Mokdai (Decisive Battle in The Forest Area), requires 0 stamina with limited time mission.
 - Pickup banner for each element (only for permanent heroes).
 - Training quests (Exp, Rank-up material, and ticket quest) will cost half-stamina for the duration of this event.
 
