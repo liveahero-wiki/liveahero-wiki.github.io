@@ -80,6 +80,7 @@ win = "Ha-ha, that's a complete victory. Well, if you want to challenge me to a 
 lose = "The adventure...is over...You really can't beat the waves of old age..."
 assist = "We're not done yet."
 assisted = "Thank you."
+loveIndexMax = "My abundant past, and the future from now on, I wanted to entrust all of this to you.<br>Don't laugh at how old I am."
 APPRECIATION = "Work is something you do at a pace you can do.<br>Once in a while is fine but,<br>Don't push yourself too much while you're still young, okay?"
 PLAYER = "Looking at you reminds me of my youth.<br>I was desperately hitting anything.<br>Such good times... Eh, I haven't changed much even now? Really!?"
 TOUCH = "Haha! How is it?<br>This old man's got a good body doesn't he?<br>These muscles are proof of being a true adventurer!"
