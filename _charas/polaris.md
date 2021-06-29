@@ -42,6 +42,7 @@ win = "Yes! Big win!<br>Villains who want to fight me! I will wait for your chal
 lose = "Damn it…I've done a lousy show…"
 assist = "Show me some guts!"
 assisted = "Thank you, Brother!"
+rankMax = "Super transformation that break the law, Polaris the Great!<br>Hahah, how is it, partner.<br>The seat of the no.1 champion in space, let's aim for it together."
 APPRECIATION = "Whoops, have I shown off too much?<br>Alright! Let's go eat some meat!<br>Eating meat is the best way to improve your physical strength!"
 DAILY = "Polaris mask is HERE!<br>Come on now, what kind of battle are we going to fight today?<br>Whether it be villain or a kaibutsu, let them all come at me!"
 HERO = "Hmm, that tiger hero called Justice...<br>I think his muscles are fit for professional wrestling.<br>I want to have a head-to-head battle with him!"
