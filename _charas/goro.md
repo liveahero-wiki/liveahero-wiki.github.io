@@ -37,6 +37,7 @@ win = "Hehe, good work. All right, let's drink, drink, drink!<br>...What, the ca
 lose = "Am I gonna lose it again…My family…My house…"
 assist = "Leave the foothold to me!"
 assisted = "I owe you!"
+loveIndexMax = "I'm sorry for always asking your company.<br>But, I like it, when I'm with you.<br>It feels like family, like how it is back then….,just kidding."
 APPRECIATION = "Hey! You in good spirits? What, not really?<br>Livin' life carefree is the best thing to do.<br>If you do, somethin' good will happen eventually."
 DAILY = "Whoa...what, there's work to do?<br>Then I guess now's not a good to be drinkin'. Alright alright, I'm going."
 HERO = "I may not look it, but I am a bookworm. I know all about that sensei. <br>He has the power to change the flow of time, pretty amazin'.<br>If I could do that, I could change my...oh, are we out of liquor?"
