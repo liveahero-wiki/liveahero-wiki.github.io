@@ -40,6 +40,7 @@ win = "Well then, that's one case solved, we have been flashy this time,<br>The 
 lose = "Damn it, a blunder, looks like I will have my pay cut again!?"
 assist = "Go get them!"
 assisted = "Thanks."
+loveIndexMax = "Man, this is bad.<br>While we are together, I have come to be attached to you.<br>For me, you are a big bad villain."
 APPRECIATION = "Yo, you look like you've had a long day.<br>Well, your work is a pretty hard one too.<br>It's important to take a complete break at times like this."
 DAILY = "Yo…eh, wait, wait!<br>I'm not here to investigate!<br>I just came to take this job to your company!"
 HERO = "I've been a detective and a hero for a long time, too, but..<br>I can't be as self-sacrificing as he is.<br>It certainly is the right thing to do as a hero, but…"
