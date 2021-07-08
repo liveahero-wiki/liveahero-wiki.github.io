@@ -52,3 +52,4 @@ EVENTB = "Spiritual support is very important for people in rough areas.<br>Peop
 
 ## Notes
 - Kalaski is the anglicized form of the word "karasuki" or plow, which was one of the Japanese names given to the three-star asterism known as [Orion's Belt](https://en.wikipedia.org/wiki/Orion%27s_Belt) in the constellation Orion.
+- He is 28 years old
