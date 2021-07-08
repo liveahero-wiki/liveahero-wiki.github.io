@@ -41,3 +41,4 @@ TRAINED = "Yer waving me around, yer good...!"
 
 - His Full name is Suhail Bautista (スハイル バウティスタ)
 - [Suhail](https://en.wikipedia.org/wiki/Lambda_Velorum) is the Lambda star in Constellation Vela (latin for the sails of a ship), It bore the traditional Arabic name السهيل الوزن suhayl al-wazn (Al Suhail al Wazn), but as a modern navigation star this was shortened to Suhail.
+- His skill 1, Murchison meteo borrows its name from a famous meteorite [Murchison Meteorite](https://en.wikipedia.org/wiki/Murchison_meteorite) that fell in Australia in 1969 near Murchison, Victoria.
