@@ -65,3 +65,7 @@ RELATION = "Crowne is a good girl, but her sense of fashion is awful,<br>I can't
 
 ## Notes
 - Maculata's name is Latin for "spotted" which also alludes to her being a leopard.
+- Her skill name is from french words:
+  - Fil Dernier : Last Thread
+  - Bon Taille : Correct Size
+  - Tailleur A Griffes : Tailor's Claws
