@@ -108,4 +108,6 @@ EVENTB = "A country with distorted cultural system, an unknown labyrinth…<br>H
 
 ## Notes:
 
+- His Full name is Marfik I.Jordan (マルフィク・I・ジョーダン)
 - He refers to {% chara_link Andrew %} in his Hero line
+- [Marfik](https://en.wikipedia.org/wiki/Lambda_Ophiuchi) is a lambda star in the constellation Ophiucus, from the Arabic word مرفق marfiq meaning "elbow".
