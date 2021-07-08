@@ -55,3 +55,6 @@ TRAINED = "Stop, you're acting childish against a kid!?"
 ## Notes
 
 - His full name is Inukura Kouki (犬座 コウキ)
+- [Sirius](https://en.wikipedia.org/wiki/Sirius) is the brightest star in the night sky, designated as Alpha canis Majoris, the name is derived from the Greek word Σείριος (Seirios, lit "Shining One")
+  - Kouki is presumably from japanese word 光輝 (Kouki) which means brightness/splendor.
+  - Sirius looks like a single star for the naked eye, but it's actually a [binary star](https://en.wikipedia.org/wiki/Binary_star) with another smaller star at its side
