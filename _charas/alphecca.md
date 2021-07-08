@@ -25,7 +25,7 @@ He summoned a confidant of his, an "observer" and proposed a concept....
 {% include hero-infobox.html stockId=10621 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_ADV_alphecca_h01,fg_ADV_alphecca_h01_skin1,fg_ADV_alphecca_h02,fg_ADV_alphecca_h02_skin1" %}
 
 {% capture BIO_S01 %}
-The ruler of a kingdom from another planet called Aradicia, his full name being Alphecca Genma the 21st. 
+The ruler of a kingdom from another planet called Aradicia, his full name being Alphecca Gemma the 21st. 
 
 Although he had just recently inherited the throne, he was quite famous with the people and his soldiers due to his outstanding grace and dignity. 
 
@@ -40,7 +40,7 @@ He invites the Rutilix, who has trouble achieving anything, to an exploration in
 {% include sidekick-infobox.html stockId=10621 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="alphecca"
-h_gachaResult = "I am a nameless white knight…no.<br>King of Ardisia kingdom, Alphecca Genma the 21st!<br>In my name, I promise to fulfill your expectation on the battlefield."
+h_gachaResult = "I am a nameless white knight…no.<br>King of Ardisia kingdom, Alphecca Gemma the 21st!<br>In my name, I promise to fulfill your expectation on the battlefield."
 s_gachaResult = "From Ardisia kingdom, I am Alphecca.<br>If I can be of help to the soldiers, then I will gladly offer you my assistance.<br>Protecting the people…is a king's duty after all. "
 APPRECIATION = "It seems earth's magician actually has a lot of work.<br>I sincerely respect you for your hard works.<br>But, there is no need to push yourself so hard, okay?"
 DAILY = "Ooh, you have come operator. Good.<br>You really don't need to bow at me every time.<br>Going to work right? Why don't you let me help you?"
@@ -56,4 +56,10 @@ EVENTB = "Hmm, the enigmatic white knight huh…I wonder what kind of person he 
 
 ## Notes
 
-- His full name is Alphecca Genma The 21st (アルフェッカ・ゲンマ21世）
+- His full name is Alphecca Gemma The 21st (アルフェッカ・ゲンマ21世）
+- Alphecca[https://en.wikipedia.org/wiki/Alpha_Coronae_Borealis] is the official name of the brightest star in the constellation of Corona Borealis (Alpha Corona Borealis), Alphecca is Arabic, short for نير الفكّة nayyir al-fakka "the bright (star) of the broken (ring of stars)"
+- Gemma ,another name for Alpha Corona Borealis, is latin for jewel
+- His Skill name is from Danish language:
+  - Skråstreg : literally Slash
+  - Kungens Ansvar : Kungens (The king's) Ansvar (Responsibility)
+  - Helig Flammerei : Helig (Holy) Flammerei (presumably flames which is flammer)
