@@ -94,3 +94,9 @@ EVENTB = "The mystery just keeps getting deeper and deeper...<br>Don't worry, pa
 ## Notes
 - His Hero lines refers to {% chara_link Gammei %}
 - Alchiba is named after the fourth brightest star, also known as [Alpha Corvi](https://en.wikipedia.org/wiki/Alpha_Corvi), in the constellation [Corvus](https://en.wikipedia.org/wiki/Corvus_(constellation)) or the Crow.
+- His skill name is from Greek language:
+  - Pista Epidiosi (πίστα  επιδίωξη) : Track Pursuit
+  - Vasanistírio (βασανιστήριο) : Torture/torment
+  - Mávro Áspro (μαύρο άσπρο) : Mávro is Black, Áspro is White
+  - Lepída Steréosis (λεπίδα στερέωσις) : Lepída is Blade, Steréosis is Fasten
+  - Sféra Katadíki̱ (σφαίρα καταδίκη) : Sféra means "bullet, sphere" and Katadíki̱ means "judgment, judge".
