@@ -54,3 +54,4 @@ TRAINED = "Gah! Please give me a break...!"
 ## Notes
 
 - His full name is Gammei Tsukinowa(月輪 ガンメイ)
+- He is 30 years old
