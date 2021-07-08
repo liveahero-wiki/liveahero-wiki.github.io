@@ -56,3 +56,4 @@ TRAINED = "Yeah, that's g-good! You're real hot!"
 ## Notes
 
 - His real name is Kensuke Kitakami (北上 ケンスケ)
+- [Polaris](https://en.wikipedia.org/wiki/Polaris) is the brightest star of the constellation Ursa Minor.
