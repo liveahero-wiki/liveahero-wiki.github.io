@@ -57,6 +57,7 @@ EVENTB = "Hmm, the enigmatic white knight huh…I wonder what kind of person he 
 ## Notes
 
 - His full name is Alphecca Gemma The 21st (アルフェッカ・ゲンマ21世）
+- He is 30 something years old
 - [Alphecca](https://en.wikipedia.org/wiki/Alpha_Coronae_Borealis) is the official name of the brightest star in the constellation of Corona Borealis (Alpha Corona Borealis), Alphecca is Arabic, short for نير الفكّة nayyir al-fakka "the bright (star) of the broken (ring of stars)"
 - Gemma ,another name for Alpha Corona Borealis, is latin for jewel
 - His Skill name is from Danish language:
