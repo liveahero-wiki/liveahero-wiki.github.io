@@ -69,4 +69,6 @@ TRAINED = "Gu..! I-it's hot..!"
 %}
 
 ## Notes
+
+- His full name is Hal Furlong Hale (ハル・ハロン・ヘイル) (in japanese it's Hal Halon Hale)
 - Furlong's Japanese name "ハロン" can be translated as "Halon" which refers to a group of chemicals that have multiple uses but with fire suppresants as being one of the more well known.
