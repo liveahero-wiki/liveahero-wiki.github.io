@@ -57,3 +57,4 @@ TRAINED = "Awawawa~! Stop, stop! This is impossible~!"
 
 ## Notes
 
+- His hero name is Mighty Knuckle (マイティ・ナックル) (self-proclaimed)
