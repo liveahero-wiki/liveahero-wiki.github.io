@@ -53,3 +53,4 @@ TRAINED = "Ghnnhg... Q-Quite formidable…"
 
 ## Notes
 
+- His full name is Victom Vincent (ヴィクトム・ヴィンセント)
