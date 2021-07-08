@@ -40,3 +40,4 @@ TRAINED = "Yer waving me around, yer good...!"
 ## Notes
 
 - His Full name is Suhail Bautista (スハイル バウティスタ)
+- [Suhail](https://en.wikipedia.org/wiki/Lambda_Velorum) is the Lambda star in Constellation Vela (latin for the sails of a ship), It bore the traditional Arabic name السهيل الوزن suhayl al-wazn (Al Suhail al Wazn), but as a modern navigation star this was shortened to Suhail.
