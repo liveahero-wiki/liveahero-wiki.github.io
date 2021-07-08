@@ -17,13 +17,13 @@ For Sui, who had a gap between her mind and body and felt distant from those aro
 {% capture BIO_S01 %}
 An apprentice clothing designer from Orient City studying design under tutorship.
 
-As someone born in the Lunar Capital, they are half-Lunarian and half-Earthling.
+As someone born in the Lunar Capital, she is half-Lunarian and half-Earthling.
 
-Since they were acquainted with clothes from an early age, they have a deep knowledge of clothing and fashion.
+Since she was acquainted with clothes from an early age, she has a deep knowledge of clothing and fashion.
 
-They posses a cool and dry personality and a somewhat poisonous tongue. Dialogue with customers is important while in the position of a designer, but they're not good at interacting with others.
+She posses a cool and dry personality and a somewhat poisonous tongue. Dialogue with customers is important while in the position of a designer, but she is not good at interacting with others.
 
-They have been afflicted by the gap between their body and mind ever since childhood.
+She has been afflicted by the gap between her body and mind ever since childhood.
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10031 BIO_S01=BIO_S01 %}
 
@@ -56,3 +56,4 @@ TRAINED = "My clothes are ripping…!"
 
 ## Notes
 
+- She is 19 years old
