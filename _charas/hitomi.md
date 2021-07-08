@@ -52,3 +52,4 @@ TRAINED = "Gyaaa~!! It's too intense!"
 ## Notes:
 
 - Her full name is Hitomi Ayauta (綾歌 ヒトミ)
+- She is 15 years old
