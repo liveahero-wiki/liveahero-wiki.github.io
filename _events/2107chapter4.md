@@ -69,7 +69,7 @@ There will be new training quest:
 ## Ticket Quest Renewal
 
 Ticket Quest will be revamped, as follows:
-- During Maintenance scheduled on 2021-07-14 any remaining quest ticket in each player account will be converted to 800 {% include item-icon.html id=11 %} each.
+- During Maintenance scheduled on 2021-07-14 any remaining quest tickets in each player account will be converted to 800 {% include item-icon.html id=11 %} each.
 - New ticket quest will be added, and some pre-existing ticket quest will have its content, rewards, and stamina cost adjusted.
   - Ticket quest that give {% include item-icon.html id=59 %} Parallel Quartz will be added.
   - New Difficulty level for {% include item-icon.html id=11 %} EXP, {% include item-icon.html id=30 %} Training Band, and rank up items ticket quest.
@@ -79,4 +79,5 @@ Ticket Quest will be revamped, as follows:
 ## Maintenance Notification
 
 Maintenance for main quest chapter 4 is scheduled to start at 2021-07-14 14:00 - 20:00 JST.
+
 Please finish any ongoing quest before maintenance starts.
