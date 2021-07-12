@@ -54,6 +54,8 @@ Standard missions are permanent missions that can be cleared at any point of tim
 |Clear the main quest: Chapter 2|{%include item.html id=29%} x 1|
 |Clear the main quest: Chapter 3|{%include item.html id=1%} x 10|
 |Clear the main quest: Chapter 3|{%include item.html id=29%} x 1|
+|Clear the main quest: Chapter 4|{%include item.html id=1%} x 10|
+|Clear the main quest: Chapter 4|{%include item.html id=29%} x 1|
 
 #### Player Login
 
@@ -68,6 +70,10 @@ Standard missions are permanent missions that can be cleared at any point of tim
 |Log in on the 100th day|{%include item.html id=1%} x 20|
 |Log in on the 150th day|{%include item.html id=1%} x 10|
 |Log in on the 200th day|{%include item.html id=1%} x 20|
+|Log in on the 250th day|{%include item.html id=1%} x 10|
+|Log in on the 300th day|{%include item.html id=1%} x 20|
+|Log in on the 350th day|{%include item.html id=1%} x 10|
+|Log in on the 400th day|{%include item.html id=1%} x 20|
 
 #### Player Rank
 
