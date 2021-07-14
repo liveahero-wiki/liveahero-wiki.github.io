@@ -47,6 +47,11 @@ async function collectSprites(array) {
   const select = document.createElement("select");
   const manifest = {};
   for (const res of array) {
+    if (res.status != 200) {
+      console.log(res);
+      continue;
+    }
+
     const json = await res.json();
     const name = json["m_Name"];
     manifest[name] = json;
