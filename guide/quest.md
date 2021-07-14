@@ -3,6 +3,8 @@ title: Quest
 banner: true
 ---
 
+{:toc)
+
 ## About Quest
 
 You can read scenarios, and battle to obtain items.
