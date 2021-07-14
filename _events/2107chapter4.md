@@ -76,8 +76,10 @@ Ticket Quest will be revamped, as follows:
 - You will still get 3 {% include item-icon.html id=38 %} Quest Ticket each day as login bonus.
 - The maximum amount of Ticket that you can hold will be limited to 3 Max.
 
-## Maintenance Notification
+## Store Update
 
-Maintenance for main quest chapter 4 is scheduled to start at 2021-07-14 14:00 - 20:00 JST.
+3 New items are available for purchase in the store (limit will reset monthly):
+- Another {% include item-icon.html id=29 %} Legend Medal, costing 300,000 {% include item-icon.html id=35 %} each, purchase limit 1
+- {% include item-icon.html id=28 %} Gold Medal, costing 50,000 {% include item-icon.html id=35 %} each, purchase limit 20
+- {% include item-icon.html id=28 %} Silver Medal, costing 10,000 {% include item-icon.html id=35 %} each, purchase limit 20
 
-Please finish any ongoing quest before maintenance starts.
