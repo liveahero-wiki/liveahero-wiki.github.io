@@ -30,6 +30,14 @@ The reason why she decided to live as a witch was to repay her debt to Exio.
 {% include sidekick-infobox.html stockId=10711 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="melide"
+APPRECIATION = "You always seem to be so busy.<br>If you are tired, how about some candy?<br>I have a lot of them, so I'll share some with you."
+DAILY = "Do you need my power? Then I'll lend you a hand.<br>Rather than being bullied and shunned...<br>It's a happy thing to be needed."
+HERO = "Monomasa's friend is a such a nice kaibutsu.<br>they have a much much warmer heart than any adult I've ever met."
+PLAYER = "Maybe you're a much more dangerous observer than I am.<br>It's just a vague feeling I have, but..."
+RELATION = "I'm really grateful to Exio-sama.<br>If he hadn't take me in, I would have…<br>I might have destroyed the world by mistake."
+TOUCH = "Oh... you're not afraid to touch me, are you?<br>I don't mind being touched.<br>Rather... I'm a little happy to feel the warmth of someone."
+TRAIN = "I hope I can keep up."
+TRAINED = "It's a little painful..."
 %}
 
 ## Notes
