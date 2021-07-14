@@ -41,6 +41,16 @@ Monomasa is a very quiet and timid young man while Drovain's personality is cool
 {% include sidekick-infobox.html stockId=10311 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="monomasa"
+h_gachaResult = "I'm Drovain-the one who borrows this body.<br>I will entrust you with the power of this horrifying Kaibutsu.<br>Let's work together to awaken Monomasa from his sleep."
+s_gachaResult = "...... Call me Osato Monomasa.<br>That's the name of the owner of this body,<br>and it's the name that I, who lives inside, should go by in public. "
+APPRECIATION = "You should take some time off, don't you think?<br>Nothing good will come from being overwhelmed.<br>Your own body….You need to take better care of it."
+DAILY = "How should you refer to me?<br>Oh, it's okay to use Monomasa.<br>I usually live as him in public... and when the time comes, I'll give this body back to him. "
+HERO = "That man can't know what I am.<br>Until the day comes when Monomasa can live according to his own will,<br>I can't allow myself to die."
+PLAYER = "Someone who have been reduced to a Kaibutsu…<br>The me that has lost my hero appearance, you were able to trust me.<br>That's enough reason for me to cooperate with you."
+RELATION = "Melide is indeed a powerful observer.<br>However, she is also a young girl who still needs protection.<br>I'm willing to protect her at all costs."
+TOUCH = "How is it? Monomasa has a pretty good body, doesn't he?<br>He ridicules himself as a body made to be a puppet, but<br>... Please, shower him with praise."
+TRAIN = "Monomasa wants to move too, so come with me."
+TRAINED = "Guh.. It's dripping out...!"
 %}
 
 ## Notes
