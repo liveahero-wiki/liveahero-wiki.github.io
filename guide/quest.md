@@ -3,14 +3,6 @@ title: Quest
 banner: true
 ---
 
-* this will be unordered
-{:toc}
-
-{:refdef: style="text-align: center;"}
-<img src="/assets/img/TLed_QuestMenu.png" alt="mainMenu" height=500px loading="lazy">
-{: refdef}
-
-
 ## About Quest
 
 You can read scenarios, and battle to obtain items.
@@ -25,11 +17,17 @@ This is the quest where you can read the game's main story. Go to [Main Quests](
 
 ## Enhancement/ Training Quest
 
-These quests are meant for gathering items that can be used to raise and rank up [Heroes](/guide/hero/) and [Sidekicks](/guide/sidekick/). Enhancement Quests are divided between Ticket Quests and Free Quests. Free Quests' only requirement to start is a sufficient amount of stamina while Ticket Quests also require 1 {% include item-icon.html id=38 %}Quest Ticket each time. In exchange, Ticket Quests consume less stamina and give better rewards. You can obtain 3 {% include item-icon.html id=38 %}Quest Tickets from login bonus everyday though the maximum number of tickets you can hold is also 3. Ticket Quests are depicted with orange color.
+These quests are meant for gathering items that can be used to raise and rank up [Heroes](/guide/hero/) and [Sidekicks](/guide/sidekick/). Enhancement Quests are divided between Ticket Quests and Free Quests.
+
+Free Quests' only requirement to start is a sufficient amount of stamina while Ticket Quests also require 1 {% include item-icon.html id=38 %}Quest Ticket each time. In exchange, Ticket Quests consume less stamina and give better rewards.
+
+You can obtain 3 {% include item-icon.html id=38 %}Quest Tickets from login bonus everyday though the maximum number of tickets you can hold is also 3. Ticket Quests are depicted with orange color.
 
 ### EXP Quests and Bond Quests
 
-EXP Quests and Bond Quests can be selected at any time. They each come in two ticket require ranks (Beginner & Expert) and five free ranks (D to S). These quests award each Hero and Sidekick with large, fixed amount of EXP/Bond, so it is recommended to bring along as many Heroes and Sidekicks as possible. There is a spillover effect for max level Heroes and Sidekicks. As such, the EXP a max level Hero would have received is converted into {% include item.html id=11 %}, whereas Sidekick's Bond is converted into {% include item.html id=30 %}. In addition, these quests drop {% include item.html id=11 %}, {% include item.html id=30 %}, and {% include item.html id=35 %}.
+EXP Quests and Bond Quests can be selected at any time. They each come in two ticket require ranks (Beginner & Expert) and five free ranks (D to S).
+
+These quests award each Hero and Sidekick with large, fixed amount of EXP/Bond, so it is recommended to bring along as many Heroes and Sidekicks as possible. There is a spillover effect for max level Heroes and Sidekicks. As such, the EXP a max level Hero would have received is converted into {% include item-icon.html id=11 %}EXP Items, whereas Sidekick's Bond is converted into {% include item-icon.html id=30 %}Training Bands.
 
 {% include quest-group.html chapterId=201 %}
 {% include quest-group.html chapterId=203 %}
