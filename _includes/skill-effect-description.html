@@ -19,9 +19,11 @@ ATK {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effe
 Base View {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "ChangeView" %}
 Add {{ effect.parameter.value }} views
+{% when "RateChangeView" %}
+Gain {{ effect.parameter.value }}% of self's base view
 {% when "MultipleDefence" %}
 {% assign turnDefinition = "next attack" %}
-{% if effect.parameter.value == 0 %}Ignore incoming damage{% else %}DEF {% if effect.parameter.value >= 100 %}Down{% else %}Up{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x{% endif %} to {{ target }}
+{% if effect.parameter.value == 0 %}Ignore incoming damage{% else %}Incoming damage {% if effect.parameter.value >= 100 %}increased{% else %}reduced{% endif %} to {{ effect.parameter.value | divided_by: 100.0 }}x{% endif %} to {{ target }}
 {% when "ChangeAgi" %}
 SPD {% if effect.parameter.value >= 0 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value }} to {{ target }}
 {% when "RemoveBuff" %}
@@ -56,7 +58,7 @@ Skip {{ effect.parameter.value }} enemy action(s)
 {% assign turnDefinition = "turn" %}
 {{ target }} cannot use view-costing skills
 {% when "AddMultDamage" %}
-Deal {{ effect.parameter.value }}% of damage and extra {{ effect.parameter.addMult }}% of damage when possessing the status mentioned in trigger (needs experiment)
+Deal {{ effect.parameter.value }}% of damage and extra {{ effect.parameter.addMult }}% of damage when condition in bracket is met
 {% when "ComboDamage" %}
 Deal {{ effect.parameter.value }}% of damage and {{ effect.parameter.value | times: effect.parameter.combpMult | divided_by: 100.0 }}% extra for each combo to {{ target }}
 {% when "ElementPenetrateDamage" %}
@@ -103,6 +105,14 @@ Apply Damage Aggregation status to {{ target }}: <abbr title="Does not include s
 Enemy hits cannot deal over {{ effect.parameter.value }} damage to {{ target }}
 {% when "Ressurection" %}
 Resurrect {{ target }} to {{ effect.parameter.value }}% HP
+{% when "AimLowestHPCharacter" %}
+(Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the lowest HP {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
+{% when "AimHighestHPCharacter" %}
+(Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the highest HP {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
+{% when "AimLowestAtkCharacter" %}
+(Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the lowest ATK {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
+{% when "AimHighestAtkCharacter" %}
+(Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the highest ATK {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
 {% else %}
 Unknown effect class ({{ effect.class }})
 {% endcase %}

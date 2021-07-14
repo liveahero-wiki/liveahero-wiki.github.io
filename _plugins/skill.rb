@@ -31,11 +31,11 @@ module LahWiki
       triggers.each do |c|
         case c["class"]
         when "MinComboTrigger"
-          f.push("#{c['value']}+ combos")
-        when "MinHPTrigger"
-          f.push("#{c['value']}+% HP")
-        when "MaxHPTrigger"
-          f.push("#{c['value']}-% HP")
+          f.push("Combo>=#{c['value']}")
+        when "NotPinchExecTrigger"
+          f.push("HP>=#{c['value']}%")
+        when "PinchExecTrigger"
+          f.push("HP<#{c['value']}%")
         when "OwnStatusTrigger"
           status_icon = self.status_description(c['value'])
           f.push("possessing #{status_icon}")
