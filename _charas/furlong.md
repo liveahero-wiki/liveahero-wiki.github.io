@@ -17,7 +17,7 @@ Furlong vowed/swore an oath to "become a firefighter hotter than flames" and tra
 {% capture BIO_S01 %}
 A firefighter belonging to Orient City's fire department.
 
-He's an alien from another world. His full name is Hull Furlong Hale.
+He's an alien from another world. His full name is Hal Furlong Hale.
 
 His basal body temperature is higher than average because he originates from a planet that has a relatively hotter climate in comparision to Earth's.
 
