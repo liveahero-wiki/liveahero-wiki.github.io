@@ -3,7 +3,7 @@ title: Quest
 banner: true
 ---
 
-{:toc)
+{:toc}
 
 ## About Quest
 
