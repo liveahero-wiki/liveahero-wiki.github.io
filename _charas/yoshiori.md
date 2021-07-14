@@ -45,6 +45,8 @@ He feels a strong debt of gratitude towards Exio.
 {% include sidekick-infobox.html stockId=10721 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="yoshiori"
+h_gachaResult = "I'm Yoshiori,<br>An ex-soldier bodyguard.<br>If you're asking me to do something,<br>that means there will be someone with holes in their body,<br>okay…?"
+s_gachaResult = "My name's Yoshiori, an ex-soldier bodyguard.<br>That you can see me,<br>means that you are also someone on this side.<br>….alright.<br>I will accept your request."
 APPRECIATION = "Huh, you're sloppy. You need to get stronger.<br>If you don't, you'll never make it in this business.<br>…come on, go to bed if you want to sleep. I'll carry you."
 DAILY = "In case you haven't noticed, My loyalty to Exio-san always comes first.<br>I obey you because I'm employed by you, but...<br>I'm not selling my soul, don't forget that."
 HERO = "Monomasa can be a bit of a nosy bastard.<br>But I know I can trust him.<br>Despite his looks, he unexpectedly got a lot of humanity in him."
