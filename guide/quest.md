@@ -25,20 +25,14 @@ This is the quest where you can read the game's main story. Go to [Main Quests](
 
 ## Enhancement/ Training Quest
 
-These quests are meant for gathering items that can be used to raise and rank up [Heroes](/guide/hero/) and [Sidekicks](/guide/sidekick/). Enhancement Quests are divided by rank, with higher ranks offering better rewards at the cost of being more difficult and consuming higher levels of stamina.
+These quests are meant for gathering items that can be used to raise and rank up [Heroes](/guide/hero/) and [Sidekicks](/guide/sidekick/). Enhancement Quests are divided between Ticket Quests and Free Quests. Free Quests' only requirement to start is a sufficient amount of stamina while Ticket Quests also require 1 {% include item-icon.html id=38 %}Quest Ticket each time. In exchange, Ticket Quests consume less stamina and give better rewards. You can obtain 3 {% include item-icon.html id=38 %}Quest Tickets from login bonus everyday though the maximum number of tickets you can hold is also 3. Ticket Quests are depicted with orange color.
 
-### EXP Item Quests
+### EXP Quests and Bond Quests
 
-EXP Item Quests can be selected at any time, and come in four ranks (D to A). These quests award each Hero and Sidekick with large, fixed amount of EXP, so it is recommended to bring along as many Heroes and Sidekicks as possible. There is a spillover effect for max level Heroes and Sidekicks. As such, the EXP a max level Hero would have received is converted into {% include item.html id=11 %}, whereas Sidekick EXP is converted into {% include item.html id=30 %}. In addition, EXP Item Quests drop {% include item.html id=11 %}, {% include item.html id=30 %}, and {% include item.html id=35 %}.
-
-| Rank | Enemy Level | Stamina Cost | Hero EXP | Sidekick EXP | EXP Item (average) | Training Band | Coin | Rank EXP |
-|:----:|:-----------:|:------------:|:--------:|:------------:|:------------------:|:-------------:|:----:|:--------:|
-|   D  |       1     |       6      |    135   |       60     |         150        |        0      |  120 |     60   |
-|   C  |      15     |      10      |    280   |      125     |         290        |       50      |  250 |    100   |
-|   B  |      30     |      14      |    472   |      210     |         445        |      100      |  420 |    140   |
-|   A  |      45     |      18      |    810   |      360     |         770        |      150      |  720 |    180   |
+EXP Quests and Bond Quests can be selected at any time. They each come in two ticket require ranks (Beginner & Expert) and five free ranks (D to S). These quests award each Hero and Sidekick with large, fixed amount of EXP/Bond, so it is recommended to bring along as many Heroes and Sidekicks as possible. There is a spillover effect for max level Heroes and Sidekicks. As such, the EXP a max level Hero would have received is converted into {% include item.html id=11 %}, whereas Sidekick's Bond is converted into {% include item.html id=30 %}. In addition, these quests drop {% include item.html id=11 %}, {% include item.html id=30 %}, and {% include item.html id=35 %}.
 
 {% include quest-group.html chapterId=201 %}
+{% include quest-group.html chapterId=203 %}
 
 ### Rank up Item Quests 
 
@@ -56,15 +50,25 @@ There are different Rank Up Items available each day. The attributes available d
 
 {% include quest-group.html chapterId=202 %}
 
-## Ticket Quest
+### Medal Quests
 
-This is the quest where activating it requires the Quest Ticket, which can be obtained from login bonus.
+{% include quest-group.html chapterId=205 %}
 
-Comparing with regular quests, you can get more rewards out of it.
+### Parallel Quartz Quests
 
-|          Name           | Enemy Level | Stamina Cost | Hero EXP | Sidekick EXP | EXP Item | Training Band | Coin | Rank EXP |
-|:-----------------------:|:-----------:|:------------:|:--------:|:------------:|:--------:|:-------------:|:----:|:--------:|
-| EXP Item Gathering      |      30     |      20      |   1000   |      420     |   2150   |         0     |  400 |    200   |
-| Training Band Gathering |      30     |      20      |    420   |     1000     |      0   |      2150     |  400 |    200   |
+{% include quest-group.html chapterId=206 %}
 
-{% include quest-group.html chapterId=204 %}
+## Challenge Simulator Quests
+
+These high difficulty quests are much harder than any other content in the game. They don't consume any resource to start but only offer rewards based on the highest score you can reach.
+
+Each challenge will consist of multiple waves. Any damage your heroes take during a wave will be carried over to the next wave. You can check the number of enemy waves before entering the battle. Some challenge will have bonus stats given to certain Heroes or Sidekicks.
+
+Doing a challenge will grant you a score, the score will be calculated based on Quest Score Evaluation Criteria shown on the quest selection screen. You will get {% include item-icon.html id=68 %}Heronium depending on your score, which can be used as currency in the simulator exchange. You can exchange Heronium for {% include item-icon.html id=29 %} Legend Medal, {% include item-icon.html id=59 %} Parallel Quartz, and more.
+
+Quest in simulator will reset after a period of time (normally within 14 days), after which the quest will be changed.  Any unused Heronium will be converted to 150 {% include item-icon.html id=35 %} each when the quest reset.
+
+### 1st batch (Jul 14th 2021 - Jul 28th 2021)
+{% include quest-group.html chapterId=601 %}
+{% include quest-group.html chapterId=606 %}
+{% include quest-group.html chapterId=607 %}
