@@ -54,3 +54,5 @@ TRAINED = "Guh.. It's dripping out...!"
 %}
 
 ## Notes
+
+- His full name is Monomasa Oosato (大里 モノマサ)
