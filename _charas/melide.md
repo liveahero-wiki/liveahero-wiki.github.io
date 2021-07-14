@@ -30,6 +30,7 @@ The reason why she decided to live as a witch was to repay her debt to Exio.
 {% include sidekick-infobox.html stockId=10711 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="melide"
+s_gachaResult = "My name is Melide.<br>The witch who attracts kaibutsu.<br>Somehow I think you and I can understand each other.<br>Whether we can be friends though….<br>That's another story."
 APPRECIATION = "You always seem to be so busy.<br>If you are tired, how about some candy?<br>I have a lot of them, so I'll share some with you."
 DAILY = "Do you need my power? Then I'll lend you a hand.<br>Rather than being bullied and shunned...<br>It's a happy thing to be needed."
 HERO = "Monomasa's friend is a such a nice kaibutsu.<br>they have a much much warmer heart than any adult I've ever met."
