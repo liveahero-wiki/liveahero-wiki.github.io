@@ -42,7 +42,7 @@ Monomasa is a very quiet and timid young man while Drovain's personality is cool
 
 {% include voice-table.html resourceName="monomasa"
 h_gachaResult = "I'm Drovain-the one who borrows this body.<br>I will entrust you with the power of this horrifying Kaibutsu.<br>Let's work together to awaken Monomasa from his sleep."
-s_gachaResult = "...... Call me Osato Monomasa.<br>That's the name of the owner of this body,<br>and it's the name that I, who lives inside, should go by in public. "
+s_gachaResult = "...... Call me Oosato Monomasa.<br>That's the name of the owner of this body,<br>and it's the name that I, who lives inside, should go by in public. "
 APPRECIATION = "You should take some time off, don't you think?<br>Nothing good will come from being overwhelmed.<br>Your own body….You need to take better care of it."
 DAILY = "How should you refer to me?<br>Oh, it's okay to use Monomasa.<br>I usually live as him in public... and when the time comes, I'll give this body back to him. "
 HERO = "That man can't know what I am.<br>Until the day comes when Monomasa can live according to his own will,<br>I can't allow myself to die."
