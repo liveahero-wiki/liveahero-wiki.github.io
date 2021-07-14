@@ -45,6 +45,14 @@ He feels a strong debt of gratitude towards Exio.
 {% include sidekick-infobox.html stockId=10721 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="yoshiori"
+APPRECIATION = "Huh, you're sloppy. You need to get stronger.<br>If you don't, you'll never make it in this business.<br>…come on, go to bed if you want to sleep. I'll carry you."
+DAILY = "In case you haven't noticed, My loyalty to Exio-san always comes first.<br>I obey you because I'm employed by you, but...<br>I'm not selling my soul, don't forget that."
+HERO = "Monomasa can be a bit of a nosy bastard.<br>But I know I can trust him.<br>Despite his looks, he unexpectedly got a lot of humanity in him."
+PLAYER = "There's only a handful of people who Exio-san value the ability of.<br>And you're one of them...<br>you must be pretty dangerous yourself."
+RELATION = "I wouldn't be where I am today if it wasn't for Exio-san.<br> I'll do anything to protect that man's life.<br>Even if it means losing this life that's on the verge of disappearing."
+TOUCH = "H-hey! You, just because you can see me doesn't mean you can touch me!<br>Don't touch my right arm!<br>It gives me the willies!"
+TRAIN = "Let's go for one tough round!?"
+TRAINED = "D-don't look at me..."
 %}
 
 ## Notes
