@@ -17,16 +17,16 @@ module LahWiki
       @@status_master ||= context.registers[:site].data["StatusMaster"]
     end
 
-    def skill_trigger_json(trigger_s)
+    def skill_trigger_json(trigger_s, timing)
       if !trigger_s
         return ""
       end
 
       triggers = JSON.parse(trigger_s)
-      return skill_trigger(triggers)
+      return skill_trigger(triggers, timing)
     end
 
-    def skill_trigger(triggers)
+    def skill_trigger(triggers, timing)
       if !triggers
         return ""
       end
@@ -51,7 +51,11 @@ module LahWiki
           f.push("unknown condition (#{c['class']}")
         end
       end
-      return +"(triggered when " + f.join(" and ") + ")"
+      if timing == 1
+        return +"(triggered when " + f.join(" and ") + ")"
+      else
+        return +"(extra_cond: " + f.join(" and ") + ")"
+      end
     end
 
     def status_description(id)
