@@ -30,12 +30,13 @@ Rates as follow:
 | {% chara_link Ryekie|h1 %}                               | 1 %              | 16 %             |
 | {% chara_link Melide %}                                  | 5 %              | 0 %              |
 | {% chara_link Huckle %}                                  | 3 %              | 0 %              |
+| {% chara_link Monomasa %}                                | 12 %             | 0 %              |
 | {% chara_link Yoshiori %}                                | 12 %             | 0 %              |
 | Offbanner 5 star hero                                    | 0.9 %            | 1.8 %            |
 | Offbanner 4 star hero                                    | 5 %              | 48 %             |
 | Offbanner 3 star hero                                    | 35 %             | 0 %              |
 | Offbanner 4 star sidekick                                | 2 %              | 0 %              |
-| Offbanner 3 star sidekick                                | 33 %             | 0 %              |
+| Offbanner 3 star sidekick                                | 21 %             | 0 %              |
 
 >Rates (Multis) is the rate of the tenth pull in a multi pull, pull number 1-9 still use the Rates (Single)
 
