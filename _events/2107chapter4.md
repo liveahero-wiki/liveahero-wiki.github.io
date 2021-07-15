@@ -19,6 +19,26 @@ Episodes will be released at the following schedule (subject to changes).
 | Scheduled release date | Episodes |
 |-|-|
 
+## Campaign Banners
+
+Rates as follow:
+
+| Character                                                | Rates (Single) | Rates (Multis) |
+|----------------------------------------------------------|----------------|----------------|
+| {% chara_link Monomasa|h1 %}                             | 1.1 %            | 2.2 %            |
+| {% chara_link Yoshiori|h1 %}                             | 2 %              | 32 %             |
+| {% chara_link Ryekie|h1 %}                               | 1 %              | 16 %             |
+| {% chara_link Melide %}                                  | 5 %              | 0 %              |
+| {% chara_link Huckle %}                                  | 3 %              | 0 %              |
+| {% chara_link Yoshiori %}                                | 12 %             | 0 %              |
+| Offbanner 5 star hero                                    | 0.9 %            | 1.8 %            |
+| Offbanner 4 star hero                                    | 5 %              | 48 %             |
+| Offbanner 3 star hero                                    | 35 %             | 0 %              |
+| Offbanner 4 star sidekick                                | 2 %              | 0 %              |
+| Offbanner 3 star sidekick                                | 33 %             | 0 %              |
+
+>Rates (Multis) is the rate of the tenth pull in a multi pull, pull number 1-9 still use the Rates (Single)
+
 ## Main Quests
 
 Finish all chapter 4 main quest for mission rewards, rewards details can be found in [Mission](/guide/mission/#main-quest)
