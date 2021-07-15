@@ -47,10 +47,10 @@ Remove {{ effect.parameter.value }} debuff(s) from {{ target }}
 {{ effect.parameter.value }}% chance to resist a debuff for {{ target }}
 {% when "Provocation" %}
 {% assign turnDefinition = "turn" %}
-Give {{ target }} Taunt: opponents can target only {{ target }}
+Give {{ target }} {{ 5 | status_description }}: opponents can target only {{ target }}
 {% when "Hide" %}
 {% assign turnDefinition = "turn" %}
-Give {{ target }} Hide status
+Give {{ target }} {{ 15 | status_description }}
 {% when "HealthDamage" %}
 Deal {% if effect.parameter.evaluationIsMax == true %}{{ effect.parameter.value | times: 2 }}% -> {{ effect.parameter.value }}%{% else %}{{ effect.parameter.value }}% -> {{ effect.parameter.value | times: 2 }}%{% endif %} damage to {{ target }} as HP goes from Max to 0
 {% when "DeleteTurn" %}
@@ -101,7 +101,7 @@ Gain {{ effect.parameter.value }}% extra gold
 Gain {{ effect.parameter.value }}% extra XP
 {% when "Aggregation" %}
 {% assign turnDefinition = "turn" %}
-Apply Damage Aggregation status to {{ target }}: <abbr title="Does not include single target attack">{{ target }} takes full damage of all-ranged attack done to their team</abbr>
+Apply {{ 26 | status_description }} to {{ target }}: <abbr title="Does not include single target attack">{{ target }} takes full damage of all-ranged attack done to their team</abbr>
 {% when "DamageLimit" %}
 Enemy hits cannot deal over {{ effect.parameter.value }} damage to {{ target }}
 {% when "Ressurection" %}
