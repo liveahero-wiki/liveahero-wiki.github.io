@@ -102,5 +102,5 @@ Ticket Quest will be revamped, as follows:
 3 New items are available for purchase in the store (limit will reset monthly):
 - Another {% include item-icon.html id=29 %} Legend Medal, costing 300,000 {% include item-icon.html id=35 %} each, purchase limit 1
 - {% include item-icon.html id=28 %} Gold Medal, costing 50,000 {% include item-icon.html id=35 %} each, purchase limit 20
-- {% include item-icon.html id=28 %} Silver Medal, costing 10,000 {% include item-icon.html id=35 %} each, purchase limit 20
+- {% include item-icon.html id=27 %} Silver Medal, costing 10,000 {% include item-icon.html id=35 %} each, purchase limit 20
 
