@@ -17,12 +17,20 @@ module LahWiki
       @@status_master ||= context.registers[:site].data["StatusMaster"]
     end
 
-    def skill_trigger(trigger_s)
+    def skill_trigger_json(trigger_s)
       if !trigger_s
         return ""
       end
 
       triggers = JSON.parse(trigger_s)
+      return skill_trigger(triggers)
+    end
+
+    def skill_trigger(triggers)
+      if !triggers
+        return ""
+      end
+
       if triggers.length == 0
         return ""
       end
