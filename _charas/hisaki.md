@@ -71,3 +71,4 @@ EVENTB = "Heheh, I'm really popular you know!<br>At valentine's I usually get so
 ## Notes
 
 - His full name is Hisaki Yodobashi (淀橋 ヒサキ)
+- Hisaki is the adopted child of the family behind Yodobashi Heavy Industries.<br>Lifewonder's previous doujin circle "四畳半的生活" game "Ultimate Factory" and  "UF Mahjong!" took place in a factory called Yodobashi Factory, with a character named Yamato Yodobashi as the factory's manager.
