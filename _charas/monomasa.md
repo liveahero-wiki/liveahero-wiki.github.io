@@ -67,3 +67,8 @@ TRAINED = "Guh.. It's dripping out...!"
 ## Notes
 
 - His full name is Monomasa Oosato (大里 モノマサ)
+- In shinto funeral, Monomasa (尸者) is someone who participate in festival and receive condolences on behalf of the dead person.
+- His skill names is in greek language:
+  - Kynigó Sylléktis (κυνηγώ συλλέκτης) : Kynigó = Hunt/Chase, Sylléktis= Collector
+  - Proteïkós Sóma (πρωτεϊκός σώμα) : Proteïkós = Protean (able to change shape), Sóma = Body
+  - Téras Prodosía (τέρας προδοσία) : Téras = Monster, Prodosía = Betrayal
