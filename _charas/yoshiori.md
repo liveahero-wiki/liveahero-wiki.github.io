@@ -38,7 +38,7 @@ He originally used to be an excellent soldier of the special ops unit of the Uni
 
 After having been almost digested by kaibutsu however, he can only be perceived by heroes and observers. 
 
-Despite a wild personality like his appearance suggest, towards those he approve of he possess doglike loyalty and thoroughly obedient.
+Despite a wild personality like his appearance suggest, towards those he approve of, he possess doglike loyalty and is thoroughly obedient.
 
 He feels a strong debt of gratitude towards Exio.
 {% endcapture %}
