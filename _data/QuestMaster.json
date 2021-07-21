@@ -3026,6 +3026,148 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
   },
+  "104005": {
+    "questId": 104005,
+    "questName": "同盟の誘い",
+    "subName": "第５話",
+    "questKind": 1,
+    "chapterId": 104,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": "2021-07-21 18:00:00",
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 5,
+    "enemyLevel": 35,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 340,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 104004,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "104006": {
+    "questId": 104006,
+    "questName": "酒場の闖入者",
+    "subName": "第６話",
+    "questKind": 1,
+    "chapterId": 104,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": "2021-07-21 18:00:00",
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 6,
+    "enemyLevel": 36,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 340,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 104005,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 2
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
   "201001": {
     "questId": 201001,
     "questName": "力を求めて",
