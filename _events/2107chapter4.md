@@ -14,11 +14,6 @@ In commemoration of the new chapter release, a limited time gacha summon is also
 
 For the period of Main Quest Chapter 4, there will be half stamina cost for every episode in Main Quest chapter 1-3.
 
-Episodes will be released at the following schedule (subject to changes).
-
-| Scheduled release date | Episodes |
-|-|-|
-
 ## Campaign Banners
 
 Rates as follow:
