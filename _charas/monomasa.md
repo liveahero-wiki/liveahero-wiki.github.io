@@ -28,7 +28,7 @@ Drovain's wish is for Monomasa to come out in the open again and be able to live
 {% capture BIO_S01 %}
 A rare sight to behold where a kaibutsu has willingly taken over the body of a therian alien.
 
-The name of the therian is Oosato Monomasa and the name of the kaibutsu is Drovain. 
+The name of the therian is Monomasa Oosato and the name of the kaibutsu is Drovain. 
 
 Monomasa's soul is always in a deep sleep, and so the outward personality is always Drovain's. 
 
@@ -42,7 +42,7 @@ Monomasa is a very quiet and timid young man while Drovain's personality is cool
 
 {% include voice-table.html resourceName="monomasa"
 h_gachaResult = "I'm Drovain-the one who borrows this body.<br>I will entrust you with the power of this horrifying Kaibutsu.<br>Let's work together to awaken Monomasa from his sleep."
-s_gachaResult = "...... Call me Oosato Monomasa.<br>That's the name of the owner of this body,<br>and it's the name that I, who lives inside, should go by in public. "
+s_gachaResult = "...... Call me Monomasa Oosato.<br>That's the name of the owner of this body,<br>and it's the name that I, who lives inside, should go by in public. "
 salesStart = "Alright, I'm off."
 salesEnd = "I have returned. May I rest the body?"
 battleStart = "This Monstrooper won't be merciful…even if all of you have similar existence as me!"
