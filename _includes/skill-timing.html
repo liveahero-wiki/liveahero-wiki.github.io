@@ -7,7 +7,9 @@ when appearing
 action start
 {% when 3 %}
 action end
-{% comment %}4, 5 (no skills with such timing){% endcomment %}
+{% when 4%}
+AI action start
+{% comment %}5 (no skills with such timing){% endcomment %}
 {% when 6 %}
 when self at &lt;50% HP
 {% when 7 %}
@@ -19,6 +21,8 @@ when taking damage
 permanent effect
 {% when 11 %}
 battle win
+{% when 12 %}
+AI choose target
 {% else %}
 unknown timing ({{ include.timing }})
 {% endcase %}

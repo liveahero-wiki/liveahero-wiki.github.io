@@ -41,9 +41,9 @@ module LahWiki
         when "MinComboTrigger"
           f.push("Combo>=#{c['value']}")
         when "NotPinchExecTrigger"
-          f.push("HP>=#{c['value']}%")
+          f.push("HP&gt;=50<!--#{c['value']}-->%")
         when "PinchExecTrigger"
-          f.push("HP<#{c['value']}%")
+          f.push("HP&lt;50<!--#{c['value']}-->%")
         when "OwnStatusTrigger"
           status_icon = self.status_description(c['value'])
           f.push("possessing #{status_icon}")
@@ -62,11 +62,11 @@ module LahWiki
       id_s = id.to_s
 
       status = Skills::status_master(@context)[id_s]
-      wiki = Skills::status_wiki(@context)[id_s]
+      wiki_icon = Skills::status_wiki(@context).dig(id_s, 'icon')
 
-      name = wiki['name'] || status['statusName']
+      name = Skills::status_wiki(@context).dig(id_s, name) || status['statusName']
 
-      "<span class=\"status\" data-id=\"#{id_s}\" title=\"#{status['description']}\"><img src=\"/cdn/Sprite/#{wiki['icon']}.png\" loading=\"lazy\"> #{name}</span>"      
+      "<span class=\"status\" data-id=\"#{id_s}\" title=\"#{status['description']}\"><img src=\"/cdn/Sprite/#{wiki_icon}.png\" loading=\"lazy\"> #{name}</span>"      
     end
   end
 end

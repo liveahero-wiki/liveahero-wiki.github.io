@@ -102,6 +102,9 @@ Gain {{ effect.parameter.value }}% extra XP
 {% when "Aggregation" %}
 {% assign turnDefinition = "turn" %}
 Apply {{ 26 | status_description }} to {{ target }}: <abbr title="Does not include single target attack">{{ target }} takes full damage of all-ranged attack done to their team</abbr>
+{% when "NoneEffect" %}
+{% assign turnDefinition = "turn" %}
+Apply {{ skillEffectJson.statusId | status_description }} to {{ target }}
 {% when "DamageLimit" %}
 Enemy hits cannot deal over {{ effect.parameter.value }} damage to {{ target }}
 {% when "Ressurection" %}
@@ -114,6 +117,8 @@ Resurrect {{ target }} to {{ effect.parameter.value }}% HP
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the lowest ATK {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
 {% when "AimHighestAtkCharacter" %}
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the highest ATK {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
+{% when "AimBossCharacter" %}
+(Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the boss {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
 {% else %}
 Unknown effect class ({{ effect.class }})
 {% endcase %}
