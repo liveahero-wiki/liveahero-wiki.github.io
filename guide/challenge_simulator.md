@@ -28,6 +28,30 @@ Quest in simulator will reset after a period of time (normally within 14 days), 
 
 ### Beware the exploding zone! (Difficulty: B)
 
+#### Flamier's skills
+
+{% include skill-table-manual.html skillIds="4011104,4011103" %}
+
+#### Mafiosos' skills
+
+{% include skill-table-manual.html skillIds="4054110,4054111,4054113" %}
+
 ### Clash! Space Pirate (Difficulty: A)
 
+### Suhail's skills
+
+{% include skill-table-manual.html skillIds="4030101,4030102" equipmentSkills="6000017" %}
+
+### Villain's skills
+
+{% include skill-table-manual.html skillIds="4041107" equipmentSkills="6000020,6000021" %}
+
 ### Simulated Anomalous Kaibutsu (Difficulty: S)
+
+### Shizuku?'s skills
+
+{% include skill-table-manual.html skillIds="4060105,4060101,4060104" equipmentSkills="6060102,6060101,6000024,6000023" %}
+
+### Kaibutsu's skills
+
+{% include skill-table-manual.html skillIds="4036107" equipmentSkills="6000015,6000022" %}
