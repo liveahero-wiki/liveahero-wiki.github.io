@@ -62,6 +62,10 @@ module LahWiki
       id_s = id.to_s
 
       status = Skills::status_master(@context)[id_s]
+      if !status
+        return "unknown status #{id}"
+      end
+
       wiki_icon = Skills::status_wiki(@context).dig(id_s, 'icon')
 
       name = Skills::status_wiki(@context).dig(id_s, name) || status['statusName']
