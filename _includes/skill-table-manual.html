@@ -8,7 +8,7 @@
     {% assign sid = id | downcase %}
     {% assign skill = site.data.SkillMaster[sid] %}
     <tr>
-        <td title="{{ sid }}" class="translate">{{ skill.skillName }}</td><td title="{{ skill.description }}">{% include skill-description.html skill=skill %}</td><td>{{ skill.useView }}</td>
+        <td title="{{ sid }}" data-effects="{{ skill.effects | map: 'skillEffectId' | join: ',' }}">{{ skill.skillName }}</td><td title="{{ skill.description }}">{% include skill-description.html skill=skill %}</td><td>{{ skill.useView }}</td>
     </tr>
     {% endfor %}
     {% if include.equipmentSkills %}
@@ -18,7 +18,7 @@
     {% assign sid = id | downcase %}
     {% assign skill = site.data.SkillMaster[sid] %}
     <tr>
-        <td title="{{ sid }}" class="translate">{{ skill.skillName }}</td><td title="{{ skill.description }}">{% include skill-description.html skill=skill %}</td><td>{{ skill.useView }}</td>
+        <td title="{{ sid }}" data-effects="{{ skill.effects | map: 'skillEffectId' | join: ',' }}">{{ skill.skillName }}</td><td title="{{ skill.description }}">{% include skill-description.html skill=skill %}</td><td>{{ skill.useView }}</td>
     </tr>
     {% endfor %}
     {% endif %}
