@@ -8632,7 +8632,7 @@
       "statusId": 21,
       "canDispel": true,
       "parameter": false,
-      "description": "弱体抵抗",
+      "description": "弱体抵抗+20",
       "isImmediate": false,
       "persistence": false,
       "canDuplicate": true,
@@ -9047,7 +9047,7 @@
         }
       ],
       "filename": "status_immunity",
-      "statusId": 21,
+      "statusId": 48,
       "canDispel": false,
       "parameter": false,
       "description": "毒無効",
@@ -9072,7 +9072,7 @@
         }
       ],
       "filename": "status_immunity",
-      "statusId": 21,
+      "statusId": 48,
       "canDispel": false,
       "parameter": false,
       "description": "火傷無効",
@@ -9274,6 +9274,233 @@
       "isDisplayPersistenceStatus": false
     }
   },
+  "389": {
+    "skillEffectId": 389,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 50
+          }
+        }
+      ],
+      "filename": "status_atkdown",
+      "statusId": 11,
+      "canDispel": true,
+      "parameter": false,
+      "description": "ATKダウン",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "390": {
+    "skillEffectId": 390,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeHp",
+          "parameter": {
+            "value": 5
+          }
+        }
+      ],
+      "filename": "status_poison",
+      "statusId": 18,
+      "canDispel": true,
+      "parameter": false,
+      "description": "毒",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "391": {
+    "skillEffectId": 391,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 18
+          }
+        }
+      ],
+      "trigger": "[{\"value\":18,\"class\":\"OwnStatusTrigger\"}]",
+      "filename": "status_immunity",
+      "statusId": 21,
+      "canDispel": false,
+      "parameter": false,
+      "description": "毒状態の時毒無効化",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "392": {
+    "skillEffectId": 392,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 19
+          }
+        }
+      ],
+      "trigger": "[{\"value\":19,\"class\":\"OwnStatusTrigger\"}]",
+      "filename": "status_immunity",
+      "statusId": 21,
+      "canDispel": false,
+      "parameter": false,
+      "description": "火傷状態の時火傷無効化",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "393": {
+    "skillEffectId": 393,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 0
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 21,
+      "canDispel": false,
+      "parameter": false,
+      "description": "デバフ無効化（解除不可）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": true
+    }
+  },
+  "394": {
+    "skillEffectId": 394,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 50,
+            "statusId": 0
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 21,
+      "canDispel": false,
+      "parameter": false,
+      "description": "50%の確率でデバフ抵抗",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": true
+    }
+  },
+  "395": {
+    "skillEffectId": 395,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 0
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 21,
+      "canDispel": false,
+      "parameter": false,
+      "description": "デバフ無効化（解除不可）",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "396": {
+    "skillEffectId": 396,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 18
+          }
+        }
+      ],
+      "trigger": "[{\"value\":19,\"class\":\"OwnStatusTrigger\"}]",
+      "filename": "status_immunity",
+      "statusId": 21,
+      "canDispel": false,
+      "parameter": false,
+      "description": "火傷状態の時毒無効化",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "397": {
+    "skillEffectId": 397,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 19
+          }
+        }
+      ],
+      "trigger": "[{\"value\":18,\"class\":\"OwnStatusTrigger\"}]",
+      "filename": "status_immunity",
+      "statusId": 21,
+      "canDispel": false,
+      "parameter": false,
+      "description": "毒状態の時火傷無効化",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
   "398": {
     "skillEffectId": 398,
     "skillEffectJson": {
@@ -9296,6 +9523,295 @@
       "persistence": true,
       "canDuplicate": false,
       "isDisplayPersistenceStatus": true
+    }
+  },
+  "399": {
+    "skillEffectId": 399,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Silence",
+          "parameter": []
+        }
+      ],
+      "filename": "status_silence",
+      "statusId": 22,
+      "canDispel": true,
+      "parameter": false,
+      "description": "沈黙",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "400": {
+    "skillEffectId": 400,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 0
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 44,
+      "canDispel": true,
+      "parameter": false,
+      "description": "弱体無効化",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "401": {
+    "skillEffectId": 401,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 130
+          }
+        }
+      ],
+      "trigger": "[{\"value\":50,\"class\":\"PinchExecTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 27,
+      "canDispel": false,
+      "parameter": false,
+      "description": "ピンチ状態の時、ATK+30%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "402": {
+    "skillEffectId": 402,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 42,
+      "canDispel": true,
+      "parameter": false,
+      "description": "特殊効果（デバフ）",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "403": {
+    "skillEffectId": 403,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 0
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 44,
+      "canDispel": true,
+      "parameter": false,
+      "description": "弱体無効化",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "404": {
+    "skillEffectId": 404,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 10000,
+            "statusId": 42
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 45,
+      "canDispel": true,
+      "parameter": false,
+      "description": "特殊効果42番無効化",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "405": {
+    "skillEffectId": 405,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Cure",
+          "parameter": {
+            "value": 999,
+            "target": 42
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "42番を全て解除",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "406": {
+    "skillEffectId": 406,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveBuff",
+          "parameter": {
+            "value": 999,
+            "target": 45
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "45番を全て解除",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "407": {
+    "skillEffectId": 407,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": -100,
+            "statusId": 42
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 47,
+      "canDispel": false,
+      "parameter": false,
+      "description": "特殊弱体有効化",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "408": {
+    "skillEffectId": 408,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 46,
+      "canDispel": true,
+      "parameter": false,
+      "description": "弱体抵抗+100",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "409": {
+    "skillEffectId": 409,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 0
+          }
+        }
+      ],
+      "trigger": "[{\"value\":46,\"class\":\"OwnStatusTrigger\"}]",
+      "filename": "",
+      "statusId": 47,
+      "canDispel": false,
+      "parameter": false,
+      "description": "弱体抵抗本体（バグ修正のための装備スキル用）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "410": {
+    "skillEffectId": 410,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 46,
+      "canDispel": true,
+      "parameter": false,
+      "description": "弱体抵抗+100",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
     }
   }
 }
