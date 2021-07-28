@@ -24,34 +24,68 @@ Quest in simulator will reset after a period of time (normally within 14 days), 
 {% include quest-group.html chapterId=606 %}
 {% include quest-group.html chapterId=607 %}
 
-## Guides
+#### Guides
 
-### Beware the exploding zone! (Difficulty: B)
+##### Beware the exploding zone! (Difficulty: B)
 
-#### Flamier's skills
+###### Flamier's skills
 
 {% include skill-table-manual.html skillIds="4011104,4011103" equipmentSkills="" %}
 
-#### Mafiosos' skills
+###### Mafiosos' skills
 
 {% include skill-table-manual.html skillIds="4054110,4054111,4054113" equipmentSkills="" %}
 
-### Clash! Space Pirate (Difficulty: A)
+##### Clash! Space Pirate (Difficulty: A)
 
-#### Suhail's skills
+###### Suhail's skills
 
 {% include skill-table-manual.html skillIds="4030101,4030102" equipmentSkills="6000017" %}
 
-#### Villain's skills
+###### Villain's skills
 
 {% include skill-table-manual.html skillIds="4041107" equipmentSkills="6000020,6000021" %}
 
-### Simulated Anomalous Kaibutsu (Difficulty: S)
+##### Simulated Anomalous Kaibutsu (Difficulty: S)
 
-#### Shizuku?'s skills
+###### Shizuku?'s skills
 
 {% include skill-table-manual.html skillIds="4060105,4060101,4060104" equipmentSkills="6060102,6060101,6000024,6000023" %}
 
-#### Kaibutsu's skills
+###### Kaibutsu's skills
 
 {% include skill-table-manual.html skillIds="4036107" equipmentSkills="6000015,6000022" %}
+
+### Jul 28th 2021 - Aug 11th 2021
+
+{% include quest-group.html chapterId=602 %}
+{% include quest-group.html chapterId=604 %}
+{% include quest-group.html chapterId=608 %}
+
+#### Guides
+
+##### Challenge from the Fisherman (Difficulty: B)
+
+###### Isaribi's skills
+
+{% include skill-table-manual.html skillIds="4022104,4022105" equipmentSkills="6000027" %}
+
+###### Villain' skills
+
+{% include skill-table-manual.html skillIds="4041101,4041108" equipmentSkills="" %}
+
+##### Assault of the Kaibutsu (Difficulty: A)
+
+###### Adult Kaibutsu's skills
+
+{% include skill-table-manual.html skillIds="4046130,4046129,4046128" equipmentSkills="6000014,6000029" %}
+
+##### Simulated Tree-type Kaibutsu (Difficulty: S)
+
+###### Tree-type Kaibutsu's skills
+
+{% include skill-table-manual.html skillIds="4052107,4052108,4052106" equipmentSkills="6000024,6000023,6052101,6052102" %}
+
+###### Kaibutsu's skills
+
+{% include skill-table-manual.html skillIds="4036108,4036109,4036110" equipmentSkills="6000021" %}
