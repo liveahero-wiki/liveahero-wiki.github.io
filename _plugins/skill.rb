@@ -69,8 +69,9 @@ module LahWiki
       wiki_icon = Skills::status_wiki(@context).dig(id_s, 'icon')
 
       name = Skills::status_wiki(@context).dig(id_s, 'name') || status['statusName']
+      description = Skills::status_wiki(@context).dig(id_s, 'description') || status['description']
 
-      "<span class=\"status\" data-id=\"#{id_s}\" title=\"#{status['description']}\"><img src=\"/cdn/Sprite/#{wiki_icon}.png\" loading=\"lazy\"> #{name}</span>"      
+      "<span class=\"status\" data-id=\"#{id_s}\" title=\"#{description}\"><img src=\"/cdn/Sprite/#{wiki_icon}.png\" loading=\"lazy\"> #{name}</span>"      
     end
   end
 end
