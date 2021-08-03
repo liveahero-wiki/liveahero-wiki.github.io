@@ -26,7 +26,7 @@ battleStart = "All right everybody, let's dance!<br>For the sake of mutual under
 action = "Please don't fight!"
 attack = "I'm sorry!"
 skill = "I want you to see this!"
-special = "Deep love, Dansaque Traepas!<br>Let's get along, don't fight each other!"
+special = "Deep love, Danza que Trae paz!<br>Let's get along, don't fight each other!"
 smallDamage = "It hurts!"
 bigDamage = "Suffering....!"
 win = "I want to understand them all. Maybe we can all live together in peace...!<br>That's why, I'm going to keep dancing!"
@@ -46,4 +46,4 @@ TRAINED = "T-This is my limit..."
 ## Notes
 
 - [Gomeisa](https://en.wikipedia.org/wiki/Beta_Canis_Minoris), also known as Beta Canis Minoris, is the second brightest star of the constellation [Canis Minor](https://en.wikipedia.org/wiki/Canis_Minor) or Lesser Dog; with the brightest star being [Procyon](https://en.wikipedia.org/wiki/Procyon) or Alpha Canis Minoris.
-- His skill 3, Danza que Trae paz is from Spanish language, means dance that brings peace
+- His skill 3, Danza que Trae paz is from Spanish language, means "dance that brings peace"
