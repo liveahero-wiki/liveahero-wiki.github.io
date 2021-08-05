@@ -21,6 +21,12 @@ sprites="fg_kaibutsuAdultEarth_h01,fg_kaibutsuAdultEarthSpace_h01,fg_kaibutsuAdu
 sprites="fg_kaibutsuLarvaEarth_h01,fg_kaibutsuLarvaEarthSpace_h01,fg_kaibutsuLarvaFire_h01,fg_kaibutsuLarvaFireSpace_h01,fg_kaibutsuLarvaLight_h01,fg_kaibutsuLarvaLightSpace_h01,fg_kaibutsuLarvaShadow_h01,fg_kaibutsuLarvaShadowSpace_h01,fg_kaibutsuLarvaWater_h01,fg_kaibutsuLarvaWaterSpace_h01"
 %}
 
+### Kaibutsu (Procy)
+
+{% include hero-infobox-unreleased.html name="Kaibutsu (Procy)" mob=true
+sprites="fg_procyBlack_h01"
+%}
+
 ### Kaibutsu (Shizuku)
 
 {% include hero-infobox-unreleased.html name="Kaibutsu (Shizuku)" mob=true
