@@ -3,18 +3,15 @@ title: Statuses
 banner: true
 ---
 
-<p>To add a status when writing a Wiki page, write <code>{% raw %}{% include status.html id=number %}{% endraw %}</code>.</p>
+<p>To add a status when writing a Wiki page, write <code>{% raw %}{{ id_number | status_description }}{% endraw %}</code>.</p>
 
-<p>Example: <code>{% raw %}{% include status.html id=1 %}{% endraw %}</code> will becomes {% include status.html id=1 %} when rendered.</p>
-
-<p>Example: <code>{% raw %}{% include status-icon.html id=20 %}{% endraw %}</code> will becomes {% include status-icon.html id=20 %} when rendered.</p>
+<p>Example: <code>{% raw %}{{ 1 | status_description }}{% endraw %}</code> will becomes {{ 1 | status_description }} when rendered.</p>
 
 <table>
 <tr><th>ID</th><th>Status</th></tr>
 {% for pair in site.data.StatusMaster %}
 {% assign id = pair[0] %}
 {% assign iid = id | plus: 0 %}
-{% if iid > 100000 %}{% break %}{% endif %}
-<tr><td>{{ id }}</td><td>{% include status.html id=id %}</td></tr>
+<tr><td>{{ id }}</td><td>{{ iid | status_description }}</td></tr>
 {% endfor %}
 </table>
