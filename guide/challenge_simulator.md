@@ -88,7 +88,7 @@ Quest in simulator will reset after a period of time (normally within 14 days), 
 
 {% include skill-table-manual.html skillIds="4036108,4036109,4036110" equipmentSkills="6000021" %}
 
-## Aug 11th 2021 - Aug 26th 2021
+## Aug 11th 2021 - Aug 25th 2021
 
 {% include quest-group.html chapterId=603 %}
 {% include quest-group.html chapterId=605 %}
