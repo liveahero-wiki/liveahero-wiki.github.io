@@ -9813,5 +9813,756 @@
       "canDuplicate": true,
       "isDisplayPersistenceStatus": false
     }
+  },
+  "411": {
+    "skillEffectId": 411,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SpdDeferenceDamage",
+          "parameter": {
+            "value": 75,
+            "spdMult": 10
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "75%ダメージ+対象と自分のSPDの差だけダメージ量が上昇",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "412": {
+    "skillEffectId": 412,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SpdDeferenceDamage",
+          "parameter": {
+            "value": 40,
+            "spdMult": 10
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "40%ダメージ+対象と自分のSPDの差だけダメージ量が上昇",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "413": {
+    "skillEffectId": 413,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 106.3
+          }
+        }
+      ],
+      "trigger": "[{\"value\":50,\"statusId\":0,\"class\":\"NotPinchExecTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 27,
+      "canDispel": false,
+      "parameter": false,
+      "description": "ピンチ状態で無い時、ATKが6.3%アップ",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "414": {
+    "skillEffectId": 414,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -18000
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 51,
+      "canDispel": true,
+      "parameter": false,
+      "description": "View消費量-18000",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "415": {
+    "skillEffectId": 415,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Provocation",
+          "parameter": []
+        }
+      ],
+      "filename": "status_target",
+      "statusId": 50,
+      "canDispel": true,
+      "parameter": false,
+      "description": "標的",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "416": {
+    "skillEffectId": 416,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -2000
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 49,
+      "canDispel": false,
+      "parameter": false,
+      "description": "クロックアップ②、View消費量-2000(解除不可)",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "417": {
+    "skillEffectId": 417,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeAgi",
+          "parameter": {
+            "value": 5
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 49,
+      "canDispel": false,
+      "parameter": false,
+      "description": "クロックアップ①SPD+5",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": true
+    }
+  },
+  "418": {
+    "skillEffectId": 418,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveBuff",
+          "parameter": {
+            "value": 999,
+            "target": 49,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "クロックアップ全削除",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "419": {
+    "skillEffectId": 419,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SpdDeferenceDamage",
+          "parameter": {
+            "value": 80,
+            "spdMult": 10
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "80%ダメージ+対象と自分のSPDの差だけダメージ量が上昇",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "420": {
+    "skillEffectId": 420,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SpdDeferenceDamage",
+          "parameter": {
+            "value": 110,
+            "spdMult": 10
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "110%ダメージ+対象と自分のSPDの差だけダメージ量が上昇",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "421": {
+    "skillEffectId": 421,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 110
+          }
+        }
+      ],
+      "filename": "status_defup",
+      "statusId": 49,
+      "canDispel": false,
+      "parameter": false,
+      "description": "クロックアップ③被ダメージ10%アップ",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "422": {
+    "skillEffectId": 422,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 10,
+            "statusId": 0
+          }
+        }
+      ],
+      "filename": "b_skill_buff",
+      "statusId": 52,
+      "canDispel": true,
+      "parameter": false,
+      "description": "弱体抵抗+10",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "423": {
+    "skillEffectId": 423,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 0
+          }
+        }
+      ],
+      "filename": "status_invincible",
+      "statusId": 6,
+      "canDispel": true,
+      "parameter": false,
+      "description": "無敵",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "424": {
+    "skillEffectId": 424,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Heal",
+          "parameter": {
+            "value": 180
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "HPを基礎ATKの180%回復する",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "425": {
+    "skillEffectId": 425,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ViewStock",
+          "parameter": {
+            "value": 2000
+          }
+        }
+      ],
+      "filename": "b_skill_view",
+      "statusId": 53,
+      "canDispel": true,
+      "parameter": false,
+      "description": "熱狂",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": true
+    }
+  },
+  "426": {
+    "skillEffectId": 426,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Heal",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "HPを基礎ATKの150%回復する",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "427": {
+    "skillEffectId": 427,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": 1,
+            "statusTypeValue": 1
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "バフ効果１ターン延長",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "428": {
+    "skillEffectId": 428,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveBuff",
+          "parameter": {
+            "value": 3,
+            "target": 53,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "高揚感を３つ解除",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "429": {
+    "skillEffectId": 429,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -2000,
+            "skillId": 1001203
+          }
+        }
+      ],
+      "trigger": "[{\"value\":1,\"statusId\":0,\"class\":\"OwnBuffNumberExecTrigger\"}]",
+      "filename": "status_awakening",
+      "statusId": 54,
+      "canDispel": false,
+      "parameter": false,
+      "description": "アカシ限定第３スキルView消費量マイナス。",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "430": {
+    "skillEffectId": 430,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 54,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "システム効果54番除去",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "431": {
+    "skillEffectId": 431,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -2000,
+            "skillId": 1001203
+          }
+        }
+      ],
+      "trigger": "[{\"value\":2,\"statusId\":0,\"class\":\"OwnBuffNumberExecTrigger\"}]",
+      "filename": "status_awakening",
+      "statusId": 54,
+      "canDispel": false,
+      "parameter": false,
+      "description": "アカシ限定第３スキルView消費量マイナス。",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "432": {
+    "skillEffectId": 432,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -2000,
+            "skillId": 1001203
+          }
+        }
+      ],
+      "trigger": "[{\"value\":3,\"statusId\":0,\"class\":\"OwnBuffNumberExecTrigger\"}]",
+      "filename": "status_awakening",
+      "statusId": 54,
+      "canDispel": false,
+      "parameter": false,
+      "description": "アカシ限定第３スキルView消費量マイナス。",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "433": {
+    "skillEffectId": 433,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -2000,
+            "skillId": 1001203
+          }
+        }
+      ],
+      "trigger": "[{\"value\":4,\"statusId\":0,\"class\":\"OwnBuffNumberExecTrigger\"}]",
+      "filename": "status_awakening",
+      "statusId": 54,
+      "canDispel": false,
+      "parameter": false,
+      "description": "アカシ限定第３スキルView消費量マイナス。",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "434": {
+    "skillEffectId": 434,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -2000,
+            "skillId": 1001203
+          }
+        }
+      ],
+      "trigger": "[{\"value\":5,\"statusId\":0,\"class\":\"OwnBuffNumberExecTrigger\"}]",
+      "filename": "status_awakening",
+      "statusId": 54,
+      "canDispel": false,
+      "parameter": false,
+      "description": "アカシ限定第３スキルView消費量マイナス。",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "435": {
+    "skillEffectId": 435,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -2000,
+            "skillId": 1001203
+          }
+        }
+      ],
+      "trigger": "[{\"value\":6,\"statusId\":0,\"class\":\"OwnBuffNumberExecTrigger\"}]",
+      "filename": "status_awakening",
+      "statusId": 54,
+      "canDispel": false,
+      "parameter": false,
+      "description": "アカシ限定第３スキルView消費量マイナス。",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "436": {
+    "skillEffectId": 436,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -2000,
+            "skillId": 1001203
+          }
+        }
+      ],
+      "trigger": "[{\"value\":7,\"statusId\":0,\"class\":\"OwnBuffNumberExecTrigger\"}]",
+      "filename": "status_awakening",
+      "statusId": 54,
+      "canDispel": false,
+      "parameter": false,
+      "description": "アカシ限定第３スキルView消費量マイナス。",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "437": {
+    "skillEffectId": 437,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -2000,
+            "skillId": 1001203
+          }
+        }
+      ],
+      "trigger": "[{\"value\":8,\"statusId\":0,\"class\":\"OwnBuffNumberExecTrigger\"}]",
+      "filename": "status_awakening",
+      "statusId": 54,
+      "canDispel": false,
+      "parameter": false,
+      "description": "アカシ限定第３スキルView消費量マイナス。",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "438": {
+    "skillEffectId": 438,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -2000,
+            "skillId": 1001203
+          }
+        }
+      ],
+      "trigger": "[{\"value\":9,\"statusId\":0,\"class\":\"OwnBuffNumberExecTrigger\"}]",
+      "filename": "status_awakening",
+      "statusId": 54,
+      "canDispel": false,
+      "parameter": false,
+      "description": "アカシ限定第３スキルView消費量マイナス。",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "439": {
+    "skillEffectId": 439,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -2000,
+            "skillId": 1001203
+          }
+        }
+      ],
+      "trigger": "[{\"value\":10,\"statusId\":0,\"class\":\"OwnBuffNumberExecTrigger\"}]",
+      "filename": "status_awakening",
+      "statusId": 54,
+      "canDispel": false,
+      "parameter": false,
+      "description": "アカシ限定第３スキルView消費量マイナス。",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "440": {
+    "skillEffectId": 440,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Ressurection",
+          "parameter": {
+            "value": 70
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "70%のHPで復活",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
   }
 }

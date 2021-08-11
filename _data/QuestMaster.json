@@ -24341,6 +24341,134 @@
     "scoreAttackHintTextKey": "HINT_SCORE_ATTACK_RYOUSHI_CHALLENGE",
     "scoreAttackBattleCount": 3
   },
+  "603001": {
+    "questId": 603001,
+    "questName": "森林地帯の決戦",
+    "subName": "強敵シミュレーター",
+    "questKind": 2,
+    "chapterId": 603,
+    "bannerResourceName": "ui_window_quest_06",
+    "iconFilename": "icon_mokdai_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 40,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_mokdai_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaEarth_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": true,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": [
+      {
+        "score": 0,
+        "iconAddress": "ui_symbol_estimation_C"
+      },
+      {
+        "score": 50000,
+        "iconAddress": "ui_symbol_estimation_B"
+      },
+      {
+        "score": 65000,
+        "iconAddress": "ui_symbol_estimation_A"
+      },
+      {
+        "score": 90000,
+        "iconAddress": "ui_symbol_estimation_S"
+      }
+    ],
+    "scoreAttackBonuses": [
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK20UP",
+        "characters": [
+          {
+            "stockId": 10181,
+            "cardType": 1
+          },
+          {
+            "stockId": 10511,
+            "cardType": 1
+          },
+          {
+            "stockId": 10591,
+            "cardType": 1
+          },
+          {
+            "stockId": 10071,
+            "cardType": 1
+          },
+          {
+            "stockId": 10201,
+            "cardType": 1
+          }
+        ]
+      },
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK10UP",
+        "characters": [
+          {
+            "stockId": 10011,
+            "cardType": 2
+          },
+          {
+            "stockId": 10021,
+            "cardType": 2
+          },
+          {
+            "stockId": 10041,
+            "cardType": 2
+          },
+          {
+            "stockId": 10631,
+            "cardType": 2
+          },
+          {
+            "stockId": 10201,
+            "cardType": 2
+          }
+        ]
+      }
+    ],
+    "scoreAttackStandards": [
+      {
+        "label": "UI_SCORE_ATTACK_CLEAR_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_CLEAR_BONUS_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_HP_SCORE_LABEL",
+        "description": "UI_SCORE_ATTACK_HP_SCORE_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_TURN_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_TURN_BONUS_DESCRIPTION"
+      }
+    ],
+    "scoreAttackHintTextKey": "HINT_SCORE_ATTACK_FOREST_AREA",
+    "scoreAttackBattleCount": 3
+  },
   "604001": {
     "questId": 604001,
     "questName": "カイブツ・襲来",
@@ -24460,6 +24588,140 @@
     ],
     "scoreAttackHintTextKey": "HINT_SCORE_ATTACK_KAIBUTSU_SHUURAI",
     "scoreAttackBattleCount": 3
+  },
+  "605001": {
+    "questId": 605001,
+    "questName": "地球圏連合特別演習！",
+    "subName": "強敵シミュレーター",
+    "questKind": 2,
+    "chapterId": 605,
+    "bannerResourceName": "ui_window_quest_04",
+    "iconFilename": "icon_furlong_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 102013,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_furlong_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_barrel_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_gammei_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_victom_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": true,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": [
+      {
+        "score": 0,
+        "iconAddress": "ui_symbol_estimation_C"
+      },
+      {
+        "score": 30000,
+        "iconAddress": "ui_symbol_estimation_B"
+      },
+      {
+        "score": 65000,
+        "iconAddress": "ui_symbol_estimation_A"
+      },
+      {
+        "score": 90000,
+        "iconAddress": "ui_symbol_estimation_S"
+      }
+    ],
+    "scoreAttackBonuses": [
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK20UP",
+        "characters": [
+          {
+            "stockId": 10181,
+            "cardType": 1
+          },
+          {
+            "stockId": 10511,
+            "cardType": 1
+          },
+          {
+            "stockId": 10591,
+            "cardType": 1
+          },
+          {
+            "stockId": 10071,
+            "cardType": 1
+          },
+          {
+            "stockId": 10201,
+            "cardType": 1
+          }
+        ]
+      },
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK10UP",
+        "characters": [
+          {
+            "stockId": 10011,
+            "cardType": 2
+          },
+          {
+            "stockId": 10021,
+            "cardType": 2
+          },
+          {
+            "stockId": 10041,
+            "cardType": 2
+          },
+          {
+            "stockId": 10631,
+            "cardType": 2
+          },
+          {
+            "stockId": 10201,
+            "cardType": 2
+          }
+        ]
+      }
+    ],
+    "scoreAttackStandards": [
+      {
+        "label": "UI_SCORE_ATTACK_ELAPSE_TURN_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_ELAPSE_TURN_BONUS_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_SURVIVAL_COUNT_LABEL",
+        "description": "UI_SCORE_ATTACK_SURVIVAL_COUNT_DESCRIPTION"
+      }
+    ],
+    "scoreAttackHintTextKey": "HINT_SCORE_ATTACK_SPECIAL_EXERCISES",
+    "scoreAttackBattleCount": 1
   },
   "606001": {
     "questId": 606001,
@@ -24861,6 +25123,140 @@
       }
     ],
     "scoreAttackHintTextKey": "HINT_SCORE_ATTACK_XMAS_KAIBUTSU",
+    "scoreAttackBattleCount": 1
+  },
+  "609001": {
+    "questId": 609001,
+    "questName": "シミュレート・怪盗ヴィラン",
+    "subName": "強敵シミュレーター",
+    "questKind": 2,
+    "chapterId": 609,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "icon_vulpecula_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 60,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 103013,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_vulpecula_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainMercenaryFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainMercenaryFire_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": true,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": [
+      {
+        "score": 0,
+        "iconAddress": "ui_symbol_estimation_C"
+      },
+      {
+        "score": 30000,
+        "iconAddress": "ui_symbol_estimation_B"
+      },
+      {
+        "score": 65000,
+        "iconAddress": "ui_symbol_estimation_A"
+      },
+      {
+        "score": 90000,
+        "iconAddress": "ui_symbol_estimation_S"
+      }
+    ],
+    "scoreAttackBonuses": [
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK20UP",
+        "characters": [
+          {
+            "stockId": 10181,
+            "cardType": 1
+          },
+          {
+            "stockId": 10511,
+            "cardType": 1
+          },
+          {
+            "stockId": 10591,
+            "cardType": 1
+          },
+          {
+            "stockId": 10071,
+            "cardType": 1
+          },
+          {
+            "stockId": 10201,
+            "cardType": 1
+          }
+        ]
+      },
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK10UP",
+        "characters": [
+          {
+            "stockId": 10011,
+            "cardType": 2
+          },
+          {
+            "stockId": 10021,
+            "cardType": 2
+          },
+          {
+            "stockId": 10041,
+            "cardType": 2
+          },
+          {
+            "stockId": 10631,
+            "cardType": 2
+          },
+          {
+            "stockId": 10201,
+            "cardType": 2
+          }
+        ]
+      }
+    ],
+    "scoreAttackStandards": [
+      {
+        "label": "UI_SCORE_ATTACK_CLEAR_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_CLEAR_BONUS_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_HP_SCORE_LABEL",
+        "description": "UI_SCORE_ATTACK_HP_SCORE_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_TURN_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_TURN_BONUS_DESCRIPTION"
+      }
+    ],
+    "scoreAttackHintTextKey": "HINT_SCORE_ATTACK_PHANTOM_THIEF",
     "scoreAttackBattleCount": 1
   }
 }
