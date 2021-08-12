@@ -134,6 +134,10 @@ This Simulator has different Score condition which is:
 
 {% include skill-table-manual.html skillIds="4065104,4065105,4065106" equipmentSkills="6000024,6000023,6065101,6065102" %}
 
-##### Mercenary's skills
+##### Mercenary 1's skills
+
+{% include skill-table-manual.html skillIds="4066117,4066119" %}
+
+##### Mercenary 2's skills
 
 {% include skill-table-manual.html skillIds="4066117,4066118" %}
