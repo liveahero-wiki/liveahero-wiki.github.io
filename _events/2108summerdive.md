@@ -8,9 +8,13 @@ event_start_time: 2021-08-16T18:00:00+09
 event_end_time: 2021-10-14T18:00:00+09
 ---
 
+This is just banner info, date is subject to change
+
+There will be event ticket quest for this event, where you use {% include item-icon.html id=38 %} Quest Ticket to get more event items than normal event free quest.
+
 ## Event Preview
 
-This happened a little before you met Meride and her friends.
+This happened a little before you met Melide and her friends.
 
 Sand!  Sunshine! And the spreading blue sea!
 A cruise on a sightseeing spaceship to a resort of uninhabited island "Resort Planet Gran Island" 
