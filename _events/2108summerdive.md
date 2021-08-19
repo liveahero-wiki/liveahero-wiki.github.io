@@ -3,14 +3,16 @@ title: Summer Dive Amusement!
 jp_title: サマーダイブ・アミューズメント！
 news_link: https://live-a-hero.jp/info/2593
 banner_image: banner_notice_Summerdive2108.jpg 
-gacha: false
-event_start_time: 2021-08-16T18:00:00+09
-event_end_time: 2021-10-14T18:00:00+09
+gacha: true
+event_start_time: 2021-08-23T18:00:00+09
+event_end_time: 2021-09-21T18:00:00+09
+farm_start_time: 2021-08-23T18:00:00+09
+farm_end_time: 2021-09-13T14:00:00+09
+sales_start_time: 2021-08-23T18:00:00+09
+sales_end_time: 2021-09-13T14:00:00+09
 ---
 
-This is just banner info, date is subject to change
-
-There will be event ticket quest for this event, where you use {% include item-icon.html id=38 %} Quest Ticket to get more event items than normal event free quest.
+There will be event ticket quest for this event, where you use Quest Ticket to get more event items than normal event free quest.
 
 ## Event Preview
 
@@ -28,3 +30,9 @@ Over it all can be heard a pirate villan's high laugh...!
 Work together with a bad attitude dragon hero who happens to visit his hometown.
 On an uninhabited island in the sea, separated from the outside world,
 Will our heroes be able to protect the midsummer resort?
+
+## Maintenance
+
+Maintenance is scheduled to start at 2021-08-23 14:00-20:00 JST
+
+Please finish any ongoing quest before maintenance start.
