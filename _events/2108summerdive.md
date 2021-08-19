@@ -4,12 +4,12 @@ jp_title: サマーダイブ・アミューズメント！
 news_link: https://live-a-hero.jp/info/2593
 banner_image: banner_notice_Summerdive2108.jpg 
 gacha: true
-event_start_time: 2021-08-23T18:00:00+09
-event_end_time: 2021-09-21T18:00:00+09
-farm_start_time: 2021-08-23T18:00:00+09
-farm_end_time: 2021-09-13T14:00:00+09
-sales_start_time: 2021-08-23T18:00:00+09
-sales_end_time: 2021-09-13T14:00:00+09
+event_start_time: 2021-08-23T20:00:00+09
+event_end_time: 2021-09-21T14:00:00+09
+farm_start_time: 2021-08-23T20:00:00+09
+farm_end_time: 2021-09-13T20:00:00+09
+sales_start_time: 2021-08-23T20:00:00+09
+sales_end_time: 2021-09-13T20:00:00+09
 ---
 
 There will be event ticket quest for this event, where you use Quest Ticket to get more event items than normal event free quest.
