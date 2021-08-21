@@ -24,47 +24,35 @@ Quest in simulator will reset after a period of time (normally within 14 days), 
 
 ### Guides
 
-<details><summary>Beware the exploding zone! (Difficulty: B)</summary>
-<p>
+#### Beware the exploding zone! (Difficulty: B)
 
-Flamier's skills
+##### Flamier's skills
 
 {% include skill-table-manual.html skillIds="4011104,4011103" equipmentSkills="" %}
 
-Mafiosos' skills
+##### Mafiosos' skills
 
 {% include skill-table-manual.html skillIds="4054110,4054111,4054113" equipmentSkills="" %}
-  
-</p>
-</details>
 
-<details><summary>Clash! Space Pirate (Difficulty: A)</summary>
-<p>
+#### Clash! Space Pirate (Difficulty: A)
 
-Suhail's skills
+##### Suhail's skills
 
 {% include skill-table-manual.html skillIds="4030101,4030102" equipmentSkills="6000017" %}
 
-Villain's skills
+##### Villain's skills
 
 {% include skill-table-manual.html skillIds="4041107" equipmentSkills="6000020,6000021" %}
-  
-</p>
-</details>
 
-<details><summary>Simulated Anomalous Kaibutsu (Difficulty: S)</summary>
-<p>
+#### Simulated Anomalous Kaibutsu (Difficulty: S)
 
-Shizuku?'s skills
+##### Shizuku?'s skills
 
 {% include skill-table-manual.html skillIds="4060105,4060101,4060104" equipmentSkills="6060102,6060101,6000024,6000023" %}
 
-Kaibutsu's skills
+##### Kaibutsu's skills
 
 {% include skill-table-manual.html skillIds="4036107" equipmentSkills="6000015,6000022" %}
-  
-</p>
-</details>
 
 ## Jul 28th 2021 - Aug 11th 2021
 
