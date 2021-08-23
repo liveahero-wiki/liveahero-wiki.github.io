@@ -14,6 +14,8 @@ For her, a 15-year-old girl, she has a complex about her physical abilities. Des
 
 {% include hero-infobox.html stockId=10191 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
+{% include hero-infobox.html stockId=10192 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+
 {% capture BIO_S01 %}
 A half-Earthling and half-alien girl, located in Japan, Earth, to perform idol activities. Born in Hiroshima, Japan. Her stage name is Ayauta Hitomi. A traditional school idol who is lively, friendly, and always does her best.
 
@@ -47,6 +49,9 @@ PLAYER = "Let's do our best together, partner!<br>Giving it your all is essentia
 TOUCH = "Hey, partner?!<br>That’s no good, alright?<br>Idols belong to everyone, so touching is strictly forbidden!"
 TRAIN = "Idols are always at their best!"
 TRAINED = "Gyaaa~!! It's too intense!"
+%}
+
+{% include voice-table.html resourceName="hitmoiSummerdive2108"
 %}
 
 ## Notes:

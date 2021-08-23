@@ -15,6 +15,8 @@ There was once a time when he got eaten by a Kaibutsu and he realised something 
 
 {% include hero-infobox.html stockId=10011 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
+{% include hero-infobox.html stockId=10012 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+
 {% capture BIO_S01 %}
 Akashi is born and raised in Orient City, a native Earthling. Full name's Tamamura Akashi.
 
@@ -49,6 +51,9 @@ RELATION = "Really, that sui is not honest with their feelings.<br>Forcing thems
 TOUCH = "Gyaah~! W-what's your deal, you haven't changed at all since we were kids...<br>da-haha-mnit, I'm ticklish there, hahaha!"
 TRAIN = "It's a light warm-up, properly receive it okay?"
 TRAINED = "Guu..! T-take it easy on me…"
+%}
+
+{% include voice-table.html resourceName="akashSummerdive2108"
 %}
 
 ## Notes
