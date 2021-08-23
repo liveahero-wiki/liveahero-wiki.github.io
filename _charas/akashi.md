@@ -22,7 +22,7 @@ He attacks by creating energy bullets from his baseball glove parallel weapon,
 The pitching form that fires from the powerful shoulders he honed as an outfielder is as quick as any fastball.
 In order to recapture the hijacked resort ship, Akashi confronts the pirate villains in a new form.
 {% endcapture %}
-{% include hero-infobox.html stockId=10012 BIO_H01=BIO_H01 %}
+{% include hero-infobox.html stockId=10012 BIO_H01=BIO_H01 passiveSkillIds="8001102" %}
 
 {% capture BIO_S01 %}
 Akashi is born and raised in Orient City, a native Earthling. Full name's Tamamura Akashi.

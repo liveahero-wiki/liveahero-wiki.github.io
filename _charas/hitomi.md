@@ -20,7 +20,7 @@ Refusing to lose to the heat of summer, "I'm an idol warrior who fights accordin
 The floating speaker-shaped parallel weapons generate sound waves to fight enemies.
 As the "Doki Doki☆Red.Mermaid," Hitomi sings and fights with all her voice to restore peace to the resort for all the fans to enjoy.
 {% endcapture %}
-{% include hero-infobox.html stockId=10192 BIO_H01=BIO_H01 %}
+{% include hero-infobox.html stockId=10192 BIO_H01=BIO_H01 passiveSkillIds="8019201" %}
 
 {% capture BIO_S01 %}
 A half-Earthling and half-alien girl, located in Japan, Earth, to perform idol activities. Born in Hiroshima, Japan. Her stage name is Ayauta Hitomi. A traditional school idol who is lively, friendly, and always does her best.

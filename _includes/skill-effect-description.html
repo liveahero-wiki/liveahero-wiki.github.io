@@ -68,6 +68,8 @@ Deal {{ effect.parameter.value }}% of damage and {{ effect.parameter.value | tim
 ATK {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} to {{ target }} by {{ effect.parameter.value | divided_by: 100.0 }}x against advantageous elements
 {% when "Wait" %}
 Make {{ target }} go last
+{% when "CounterAttack" %}
+Counter attack
 {% when "ComboMultipleAttack" %}
 ATK Up by {{ effect.parameter.value }}% to {{ target }} for each combo
 {% when "SpdDeferenceMultipleAttack" %}
@@ -76,8 +78,6 @@ ATK Up by {{ effect.parameter.spdMult }}% to {{ target }} for each point in spee
 Make {{ target }} ignore Taunt
 {% when "AllAttack" %}
 View-costing skills for {{ target }} now target all allies/enemies
-{% when "AimHighestHPCharacter" %}
-During auto-action, set the target of the skill to the one with highest HP among {% if effect.parameter.isTarget %}enemies{% else %}allies{% endif %}
 {% when "RandomTeamAttack" %}
 After attack, if targeted enemy is still alive, random ally will use skill 1 on targeted enemy
 {% when "MultipleHp" %}
