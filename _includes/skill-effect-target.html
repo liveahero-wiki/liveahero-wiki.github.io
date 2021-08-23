@@ -11,6 +11,10 @@ all allies
 all enemies
 {% when 5 %}
 event bonus unit
+{% when 7 %}
+random enemy
+{% when 9 %}
+random ally
 {% else %}
 Unknown target ({{ include.target }})
 {% endcase %}

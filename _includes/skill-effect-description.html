@@ -35,6 +35,8 @@ Gain {{ effect.parameter.value }} combos
 Proc rate {% if effect.parameter.value >= 0 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value }} for {{ target }}
 {% when "MoreTurn" %} 
 Perform {{ effect.parameter.value }} more action(s)
+{% when "SkillTurnExtension" %}
+Extend {{ target }}'s {% if effect.parameter.statusTypeValue == 1 %}buff{% else %}debuff{% endif %} status effect by {{ effect.parameter.value }} turn(s)
 {% when "Heal" %}
 {% assign turnDefinition = "turn" %}
 Heal {{ target }} for {{ effect.parameter.value }}% of own ATK value

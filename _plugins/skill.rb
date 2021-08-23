@@ -47,6 +47,14 @@ module LahWiki
         when "OwnStatusTrigger"
           status_icon = self.status_description(c['value'])
           f.push("possessing #{status_icon}")
+        when "OwnBuffNumberExecTrigger"
+          status_icon = self.status_description(c['statusId'])
+          count = c['value']
+          f.push("possessing &gt;#{count}x #{status_icon}")
+        when "OwnBuffNumberDontExecTrigger"
+          status_icon = self.status_description(c['statusId'])
+          count = c['value']
+          f.push("possessing &lt;=#{count}x #{status_icon}")
         else
           f.push("unknown condition (#{c['class']}")
         end
