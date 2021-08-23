@@ -22,3 +22,4 @@ Sometimes, he hears impossible to understand words from the pendant he was found
   - Metéoro Kidemónas (μετέωρο κηδεμόνας) : Meteor Guardian
   - évología Komíti (έβολογία κομήτη) : Comet Evology
   - Pénte Anamniseis (πέντε αναμνησεις) : Five Memories
+- His bio is censored, and will be fully available after the release of episode 7 of summer dive event
