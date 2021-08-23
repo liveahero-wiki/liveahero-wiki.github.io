@@ -14,6 +14,12 @@ For her, a 15-year-old girl, she has a complex about her physical abilities. Des
 
 {% include hero-infobox.html stockId=10191 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
+{% capture BIO_H01 %}
+Hitomi has acquired a new outfit suitable for her activities on the water planet Muilauka IV.
+Refusing to lose to the heat of summer, "I'm an idol warrior who fights according to TPO!".
+The floating speaker-shaped parallel weapons generate sound waves to fight enemies.
+As the "Doki Doki☆Red.Mermaid," Hitomi sings and fights with all her voice to restore peace to the resort for all the fans to enjoy.
+{% endcapture %}
 {% include hero-infobox.html stockId=10192 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
