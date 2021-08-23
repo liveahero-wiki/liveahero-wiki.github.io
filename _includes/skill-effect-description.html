@@ -69,7 +69,7 @@ ATK {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} to {{ targ
 {% when "Wait" %}
 Make {{ target }} go last
 {% when "CounterAttack" %}
-Counter attack
+Counter attack the hitting enemy (may consume attack buff as if this is normal attack)
 {% when "ComboMultipleAttack" %}
 ATK Up by {{ effect.parameter.value }}% to {{ target }} for each combo
 {% when "SpdDeferenceMultipleAttack" %}
