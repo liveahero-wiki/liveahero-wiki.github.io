@@ -3,6 +3,8 @@ title: Akashi
 characterId: 1
 occupation: "University Student (Part-timer)"
 Affiliation Office: "Parallel Flight"
+h2:
+  title: "\"Water Bullet\" Akashi"
 ---
 
 {% capture BIO_H01 %}

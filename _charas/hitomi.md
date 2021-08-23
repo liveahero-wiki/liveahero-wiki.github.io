@@ -2,6 +2,8 @@
 title: Hitomi
 characterId: 19
 occupation: "Idol Singer"
+h2:
+  title: "\"Ripple Sound\" Hitomi"
 ---
 
 {% capture BIO_H01 %}
