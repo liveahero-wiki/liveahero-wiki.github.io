@@ -61,6 +61,18 @@ TRAINED = "Guu..! T-take it easy on me…"
 %}
 
 {% include voice-table.html resourceName="akashiSummerdive2108"
+h_gachaResult = "I won't let you disturb the summer fun, okay?<br>I will protect the peace of this resort!<br>….eh, w-what's with this swimsuit!?"
+s_gachaResult = "I will get my job done even when I am at a resort!"
+APPRECIATION = "Yo, are you alright? You look very tired.<br>…eh, you want to refresh yourself at the resort...?<br>O-okay, I will bring you here next time!"
+DAILY = "Hey, there's a water slide over there, let's go!<br>…I-it's not like I'm excited, okay!?"
+RELATION = "Pubraseer is older, but somehow he feels like he can't be left alone.<br>That carefree way of life, I can't follow it…"
+HERO = "Idols are really amazing.<br>Even her swimsuit is sparkling…<br>I can see why she get so much attention."
+PLAYER = "…Y-you aren't going to wear a swimsuit?<br>No, you see, it's called dressing for the season!<br>If it's you….well, you will look good in it, don't you think so?"
+TOUCH = "Owa!? …w-what the hell, suddenly!?<br>…Hisaki ask you to retrieve data from the suit?<br>O-okay, okay, don't touch me so much…!"
+TRAIN = "Will you help me stretch before entering the water?"
+TRAINED = "T-this is too much…!?"
+EVENTA = "A job at a resort ship, huh…<br>There must be some attractions?<br>…ah, it's not like I'm interested in it!"
+EVENTB = "Pubraseer, he said he doesn't have any memories,<br>I wonder if there's anything I can do to help...<br>Somehow it doesn't feel like just someone else's problem."
 %}
 
 ## Notes
