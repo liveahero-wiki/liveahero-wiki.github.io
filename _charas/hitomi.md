@@ -21,7 +21,7 @@ A half-Earthling and half-alien girl, located in Japan, Earth, to perform idol a
 
 However, due to the genetic inheritance of her mother, an alien, she has acquired over-engineered physical capabilities for an Earthling. She often loses control of her abilities, so she's very prone to destroying equipment unintentionally. Because of this, she is especially afraid of situations in which she has to touch another person's body, such as handshake events.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10191 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10191 BIO_S01=BIO_S01 extra_sprites="fg_hitomi_s01_skin1" %}
 
 {% include voice-table.html resourceName="hitomi"
 h_gachaResult = "HIT☆ME with that gaze of yours! <br>Ayauta Hitomi here!<br>Pretty and strong is Hitomi's motto!<br>Let's work hard together, okay?<br>Partner-san!"

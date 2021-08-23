@@ -68,3 +68,9 @@ sprites="fg_villainEarth_h01,fg_villainFire_h01,fg_villainLight_h01,fg_villainSh
 {% include hero-infobox-unreleased.html name="Villain (normal)" mob=true
 sprites="fg_villainEarth_s01,fg_villainFire_s01,fg_villainLight_s01,fg_villainShadow_s01,fg_villainWater_s01"
 %}
+
+### Villain (summer)
+
+{% include hero-infobox-unreleased.html name="Villain (summer)" mob=true
+sprites="fg_villainEarth_s01_skin1,fg_villainFire_s01_skin1,fg_villainLight_s01_skin1,fg_villainShadow_s01_skin1,fg_villainWater_s01_skin1"
+%}
