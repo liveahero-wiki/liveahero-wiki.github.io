@@ -11,3 +11,7 @@ characterId: 73
 %}
 
 ## Notes
+- His skill names is in Greek language:
+  - Metéoro Kidemónas (μετέωρο κηδεμόνας) : Meteor Guardian
+  - évología Komíti (έβολογία κομήτη) : Comet Evology
+  - Pénte Anamniseis (πέντε αναμνησεις) : Five Memories
