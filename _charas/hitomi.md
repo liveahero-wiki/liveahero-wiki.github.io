@@ -51,7 +51,7 @@ TRAIN = "Idols are always at their best!"
 TRAINED = "Gyaaa~!! It's too intense!"
 %}
 
-{% include voice-table.html resourceName="hitmoiSummerdive2108"
+{% include voice-table.html resourceName="hitomiSummerdive2108"
 %}
 
 ## Notes:

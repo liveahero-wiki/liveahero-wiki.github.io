@@ -53,7 +53,7 @@ TRAIN = "It's a light warm-up, properly receive it okay?"
 TRAINED = "Guu..! T-take it easy on me…"
 %}
 
-{% include voice-table.html resourceName="akashSummerdive2108"
+{% include voice-table.html resourceName="akashiSummerdive2108"
 %}
 
 ## Notes
