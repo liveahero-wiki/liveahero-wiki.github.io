@@ -11,3 +11,7 @@ characterId: 17
 %}
 
 ## Notes
+- His skill names is in Greek language :
+  - Vieii Kýmata (βιαιη κύματα) : Violent Waves
+  - Ydromasáz Silotas (υδρομασάζ σιλωτας) : Whirlpool Molding
+  - Okeanós tou Drákos (ωκεανός του δράκος) : Ocean of the Dragon
