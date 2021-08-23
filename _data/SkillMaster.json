@@ -323,6 +323,28 @@
       }
     ]
   },
+  "14": {
+    "skillId": 14,
+    "skillName": "サマーダイブ用_獲得View半減",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "サマーダイブメインクエスト用のView半減スキル",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 441,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "1001101": {
     "skillId": 1001101,
     "skillName": "燃ゆる白球",
@@ -441,6 +463,138 @@
         "skillEffectId": 27,
         "prob": 100,
         "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1001201": {
+    "skillId": 1001201,
+    "skillName": "バブル・ボール",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_cureOwn",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。80%の確率で自身のデバフを１つ解除。ダメージを受けたとき、25%の確率でこのスキルで反撃。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_akashiSummerdive2108_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 80,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1001202": {
+    "skillId": 1001202,
+    "skillName": "入魂の一投",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。自身に1回の行動の間幸運を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_akashiSummerdive2108_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 69,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1001203": {
+    "skillId": 1001203,
+    "skillName": "百烈投砲",
+    "useView": 13000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に90%ダメージ+HPが減るほどダメージ量が上昇する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_akashiSummerdive2108_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 446,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1001204": {
+    "skillId": 1001204,
+    "skillName": "百烈投砲+",
+    "useView": 13000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に100%ダメージ+HPが減るほどダメージ量が上昇する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_akashiSummerdive2108_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 447,
+        "prob": 100,
+        "effectTarget": 4,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "triggerJson": []
@@ -2959,6 +3113,186 @@
       }
     ]
   },
+  "1017101": {
+    "skillId": 1017101,
+    "skillName": "ヴィエ・キーマタ",
+    "useView": 0,
+    "targetFlag": 7,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体からランダムに2回45%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_hydoor_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 449,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 449,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1017102": {
+    "skillId": 1017102,
+    "skillName": "イドロマサズ・シロダス",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に100%ダメージ。60%の確率で1回の行動の間SPDダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_hydoor_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 60,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1017103": {
+    "skillId": 1017103,
+    "skillName": "オケアノス・トゥ・ドラコス",
+    "useView": 16000,
+    "targetFlag": 7,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体からランダムに4回50%ダメージ＋対象と自分のSPDの差だけダメージ量が上昇。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_hydoor_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 450,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 450,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 450,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 450,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 3,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1017104": {
+    "skillId": 1017104,
+    "skillName": "オケアノス・トゥ・ドラコス+",
+    "useView": 13000,
+    "targetFlag": 7,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体からランダムに4回50%ダメージ＋対象と自分のSPDの差だけダメージ量が上昇。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_hydoor_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 450,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 450,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 450,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 450,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 3,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "1018101": {
     "skillId": 1018101,
     "skillName": "アピール・チャンス",
@@ -3220,6 +3554,254 @@
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "triggerJson": []
+      }
+    ]
+  },
+  "1019201": {
+    "skillId": 1019201,
+    "skillName": "戦う！常夏MARMAID",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_cureOwn",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。ランダムな味方のデバフを１つ解除。自身に熱狂を１つ付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_hitomiSummerdive2108_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 9,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 425,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1019202": {
+    "skillId": 1019202,
+    "skillName": "BUZZる・バブルアワー",
+    "useView": 5000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方単体に1回分のDEFアップを付与。2ターンの間弱体抵抗+100を付与。自身に熱狂を１つ付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_hitomiSummerdive2108_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 448,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 425,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1019203": {
+    "skillId": 1019203,
+    "skillName": "LOVE ME☆ヒット・ミー！",
+    "useView": 8000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_cureTeam",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの150%回復する。デバフを２つ解除。【熱狂が３つ以上】対象のバフ効果１ターン延長。自身の熱狂を３つ解除。【熱狂が２つ以下】自身に熱狂を１つ付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_hitomiSummerdive2108_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 426,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 73,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 427,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 2,
+            "statusId": 53
+          }
+        ]
+      },
+      {
+        "skillEffectId": 428,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 2,
+            "statusId": 53
+          }
+        ]
+      },
+      {
+        "skillEffectId": 425,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberDontExecTrigger",
+            "value": 2,
+            "statusId": 53
+          }
+        ]
+      }
+    ]
+  },
+  "1019204": {
+    "skillId": 1019204,
+    "skillName": "LOVE ME☆ヒット・ミー！+",
+    "useView": 8000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの150%回復する。デバフを２つ解除。【熱狂が３つ以上】対象のバフ効果１ターン延長。自身の熱狂を３つ解除。【熱狂が２つ以下】自身に熱狂を１つ付与。【バトル開始時】自身に熱狂×3を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_hitomiSummerdive2108_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 426,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 73,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 427,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 2,
+            "statusId": 53
+          }
+        ]
+      },
+      {
+        "skillEffectId": 428,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 2,
+            "statusId": 53
+          }
+        ]
+      },
+      {
+        "skillEffectId": 425,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberDontExecTrigger",
+            "value": 2,
+            "statusId": 53
+          }
+        ]
       }
     ]
   },
@@ -6792,6 +7374,146 @@
       }
     ]
   },
+  "1073101": {
+    "skillId": 1073101,
+    "skillName": "メテオロ・キデモナス",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_pubraseer_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1073102": {
+    "skillId": 1073102,
+    "skillName": "エヴロギア・コミティ",
+    "useView": 9000,
+    "targetFlag": 3,
+    "resourceName": "b_skill_healAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方全体のHPを基礎ATKの80%回復する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_pubraseer_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 45,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1073103": {
+    "skillId": 1073103,
+    "skillName": "ペンデ・アナムネーシス",
+    "useView": 9000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_cureTeam",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの160%回復する。デバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_pubraseer_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 240,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1073104": {
+    "skillId": 1073104,
+    "skillName": "ペンデ・アナムネーシス+",
+    "useView": 9000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの160%回復する。1回の行動の間ATKアップを付与。デバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_pubraseer_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 240,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "2001101": {
     "skillId": 2001101,
     "skillName": "一球入魂",
@@ -8453,6 +9175,117 @@
         "skillEffectId": 35,
         "prob": 100,
         "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2017101": {
+    "skillId": 2017101,
+    "skillName": "古海の暴れん坊",
+    "useView": 4000,
+    "targetFlag": 7,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体からランダムに2回60%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_hydoor_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2017102": {
+    "skillId": 2017102,
+    "skillName": "古海の暴れん坊+",
+    "useView": 3000,
+    "targetFlag": 7,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体からランダムに2回60%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_hydoor_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2017103": {
+    "skillId": 2017103,
+    "skillName": "古海の暴れん坊++",
+    "useView": 2500,
+    "targetFlag": 7,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体からランダムに2回60%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_hydoor_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 7,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "triggerJson": []
@@ -11287,6 +12120,93 @@
       }
     ]
   },
+  "2073101": {
+    "skillId": 2073101,
+    "skillName": "お気楽船員",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に1回の行動の間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_pubraseer_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2073102": {
+    "skillId": 2073102,
+    "skillName": "お気楽船員+",
+    "useView": 1500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に1回の行動の間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_pubraseer_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2073103": {
+    "skillId": 2073103,
+    "skillName": "お気楽船員++",
+    "useView": 1000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に1回の行動の間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_pubraseer_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "2999101": {
     "skillId": 2999101,
     "skillName": "類稀なる強運",
@@ -13558,6 +14478,138 @@
     "effects": [
       {
         "skillEffectId": 34,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3017101": {
+    "skillId": 3017101,
+    "skillName": "狩猟泳法Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_hydoor_s01",
+    "subResourceName": "",
+    "timing": 7,
+    "description": "自身の攻撃で敵をピンチ状態にした時、50%の確率で1回の行動の間SPDアップを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 50,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3017102": {
+    "skillId": 3017102,
+    "skillName": "狩猟泳法Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_hydoor_s01",
+    "subResourceName": "",
+    "timing": 7,
+    "description": "自身の攻撃で敵をピンチ状態にした時、60%の確率で1回の行動の間SPDアップを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 60,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3017103": {
+    "skillId": 3017103,
+    "skillName": "狩猟泳法Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_hydoor_s01",
+    "subResourceName": "",
+    "timing": 7,
+    "description": "自身の攻撃で敵をピンチ状態にした時、70%の確率で1回の行動の間SPDアップを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 70,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3017104": {
+    "skillId": 3017104,
+    "skillName": "狩猟泳法Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_hydoor_s01",
+    "subResourceName": "",
+    "timing": 7,
+    "description": "自身の攻撃で敵をピンチ状態にした時、80%の確率で1回の行動の間SPDアップを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 80,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3017105": {
+    "skillId": 3017105,
+    "skillName": "狩猟泳法Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_hydoor_s01",
+    "subResourceName": "",
+    "timing": 7,
+    "description": "自身の攻撃で敵をピンチ状態にした時、90%の確率で1回の行動の間SPDアップを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 90,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3017106": {
+    "skillId": 3017106,
+    "skillName": "狩猟泳法Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_hydoor_s01",
+    "subResourceName": "",
+    "timing": 7,
+    "description": "自身の攻撃で敵をピンチ状態にした時、1回の行動の間SPDアップを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 14,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,
@@ -17446,6 +18498,138 @@
       }
     ]
   },
+  "3073101": {
+    "skillId": 3073101,
+    "skillName": "無邪気な偉丈夫Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_pubraseer_s01",
+    "subResourceName": "",
+    "timing": 13,
+    "description": "ダメージを与えないスキルを使用した後、自身に30%の確率で1回分のDEFアップを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 30,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3073102": {
+    "skillId": 3073102,
+    "skillName": "無邪気な偉丈夫Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_pubraseer_s01",
+    "subResourceName": "",
+    "timing": 13,
+    "description": "ダメージを与えないスキルを使用した後、自身に36%の確率で1回分のDEFアップを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 36,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3073103": {
+    "skillId": 3073103,
+    "skillName": "無邪気な偉丈夫Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_pubraseer_s01",
+    "subResourceName": "",
+    "timing": 13,
+    "description": "ダメージを与えないスキルを使用した後、自身に42%の確率で1回分のDEFアップを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 42,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3073104": {
+    "skillId": 3073104,
+    "skillName": "無邪気な偉丈夫Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_pubraseer_s01",
+    "subResourceName": "",
+    "timing": 13,
+    "description": "ダメージを与えないスキルを使用した後、自身に48%の確率で1回分のDEFアップを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 48,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3073105": {
+    "skillId": 3073105,
+    "skillName": "無邪気な偉丈夫Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_pubraseer_s01",
+    "subResourceName": "",
+    "timing": 13,
+    "description": "ダメージを与えないスキルを使用した後、自身に54%の確率で1回分のDEFアップを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 54,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3073106": {
+    "skillId": 3073106,
+    "skillName": "無邪気な偉丈夫Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_pubraseer_s01",
+    "subResourceName": "",
+    "timing": 13,
+    "description": "ダメージを与えないスキルを使用した後、自身に60%の確率で1回分のDEFアップを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 60,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "3999101": {
     "skillId": 3999101,
     "skillName": "無意識下のアシストⅠ",
@@ -19793,6 +20977,197 @@
         "skillEffectId": 29,
         "prob": 100,
         "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4041112": {
+    "skillId": 4041112,
+    "skillName": "スラッシュ！",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。50%の確率で1回の行動の間ATKダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainSummerdive02_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 50,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4041113": {
+    "skillId": 4041113,
+    "skillName": "クリティカルヒット",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。80%の確率で1回分のDEFダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainSummerdive02_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 70,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4041114": {
+    "skillId": 4041114,
+    "skillName": "集中攻撃",
+    "useView": 7000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。対象にデバフが付与されている場合、ランダムな味方が追撃。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainSummerdive02_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 324,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "EnemyDeBuffNumberExecTrigger",
+            "value": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "4041115": {
+    "skillId": 4041115,
+    "skillName": "日焼けスラッシュ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。50%の確率で2ターンの間火傷を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainSummerdive01_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 2,
+        "prob": 50,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4041116": {
+    "skillId": 4041116,
+    "skillName": "スラッシュ！",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。50%の確率で1回の行動の間ATKダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainSummerdive01_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 50,
+        "effectTarget": 2,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "triggerJson": []
@@ -23423,6 +24798,28 @@
       }
     ]
   },
+  "6000036": {
+    "skillId": 6000036,
+    "skillName": "救命キット",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "b_skill_cureAll",
+    "subResourceName": "",
+    "timing": 14,
+    "description": "戦闘不能時、敵全体のデバフを１つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "6004101": {
     "skillId": 6004101,
     "skillName": "新しい接続",
@@ -24308,6 +25705,66 @@
     "effects": [
       {
         "skillEffectId": 322,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "8001102": {
+    "skillId": 8001102,
+    "skillName": "バブル・ボール",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた後に、スキル１で反撃。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 445,
+        "prob": 25,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "8019201": {
+    "skillId": 8019201,
+    "skillName": "LOVE ME☆ヒット・ミー！",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、×3を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 425,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 425,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 425,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,

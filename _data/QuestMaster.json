@@ -3658,7 +3658,7 @@
     "questId": 104014,
     "questName": "これは敗走ではない",
     "subName": "第１４話",
-    "questKind": 0,
+    "questKind": 1,
     "chapterId": 104,
     "bannerResourceName": "ui_window_quest_01",
     "iconFilename": "ui_icon_questicon_main",
@@ -19958,6 +19958,852 @@
       {
         "battleInfoIcon": "icon_gomeisa_h01",
         "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "431001": {
+    "questId": 431001,
+    "questName": "夏だ！海だ！リゾートだ！",
+    "subName": "第１話",
+    "questKind": 5,
+    "chapterId": 431,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 1,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "431002": {
+    "questId": 431002,
+    "questName": "ようこそ、海の監獄へ！",
+    "subName": "第２話",
+    "questKind": 5,
+    "chapterId": 431,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 2,
+    "enemyLevel": 5,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 431001,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "432001": {
+    "questId": 432001,
+    "questName": "真夏の砂浜パトロール",
+    "subName": "D級",
+    "questKind": 6,
+    "chapterId": 432,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Summerdive2108_exchange01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 1,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 8,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 4,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 431002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "432002": {
+    "questId": 432002,
+    "questName": "真夏の砂浜パトロール",
+    "subName": "C級",
+    "questKind": 6,
+    "chapterId": 432,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Summerdive2108_exchange01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 15,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 10,
+        "prob": 80
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 8,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 431002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "432003": {
+    "questId": 432003,
+    "questName": "真夏の砂浜パトロール",
+    "subName": "B級",
+    "questKind": 6,
+    "chapterId": 432,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Summerdive2108_exchange01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 30,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 20,
+        "prob": 50
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 12,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 431002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "432004": {
+    "questId": 432004,
+    "questName": "真夏の砂浜パトロール",
+    "subName": "A級",
+    "questKind": 6,
+    "chapterId": 432,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Summerdive2108_exchange01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 45,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 10,
+        "prob": 40
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 16,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 431002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "432005": {
+    "questId": 432005,
+    "questName": "真夏の砂浜パトロール",
+    "subName": "S級",
+    "questKind": 6,
+    "chapterId": 432,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Summerdive2108_exchange01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 60,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 40,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 40,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 20,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 20,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 431002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "432006": {
+    "questId": 432006,
+    "questName": "真夏の砂浜パトロール",
+    "subName": "ビギナー級",
+    "questKind": 6,
+    "chapterId": 432,
+    "bannerResourceName": "ui_window_quest_04",
+    "iconFilename": "item_Summerdive2108_exchange01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 25,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 70,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 60,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 50,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 50,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 10,
+        "prob": 25
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 15,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "ItemConsume",
+        "value": 3,
+        "itemId": 38,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 431002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "432007": {
+    "questId": 432007,
+    "questName": "真夏の砂浜パトロール",
+    "subName": "エキスパート級",
+    "questKind": 6,
+    "chapterId": 432,
+    "bannerResourceName": "ui_window_quest_04",
+    "iconFilename": "item_Summerdive2108_exchange01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 100,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 100,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 80,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 60,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 69,
+        "objectValue": 60,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "ItemConsume",
+        "value": 3,
+        "itemId": 38,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "Stamina",
+        "stamina": 20,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 431002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
       }
     ],
     "hasAdv": false,

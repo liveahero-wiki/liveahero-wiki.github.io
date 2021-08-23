@@ -700,6 +700,16 @@
     "effect": [],
     "limitValue": 0
   },
+  "69": {
+    "itemId": 69,
+    "itemName": "星の砂",
+    "resourceName": "Summerdive2108_exchange01",
+    "rarity": 0,
+    "itemType": 512,
+    "description": "ムイラウカⅣの海底で拾える綺麗な砂。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -717,6 +727,27 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 1
+      }
+    ],
+    "limitValue": 0
+  },
+  "110012": {
+    "itemId": 110012,
+    "itemName": "水弾のアカシの記憶片",
+    "resourceName": "piece_akashiSummerdive2108",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "水弾のアカシのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10012
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
       }
     ],
     "limitValue": 0
@@ -1124,19 +1155,19 @@
     "itemId": 110171,
     "itemName": "ハイドールの記憶片",
     "resourceName": "piece_hydoor",
-    "rarity": 3,
+    "rarity": 4,
     "itemType": 1024,
     "description": "ハイドールのファン数を増やすことが出来る不思議な結晶。",
     "effect": [
       {
         "class": "HeroPieceItemEffect",
-        "addFan": 10,
+        "addFan": 50,
         "rarity": 0,
         "stockId": 10171
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
-        "exchangeValue": 1
+        "exchangeValue": 5
       }
     ],
     "limitValue": 0
@@ -1175,6 +1206,27 @@
         "addFan": 50,
         "rarity": 0,
         "stockId": 10191
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "110192": {
+    "itemId": 110192,
+    "itemName": "波音のヒトミの記憶片",
+    "resourceName": "piece_hitomiSummerdive2108",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "波音のヒトミのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 10192
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
@@ -1696,6 +1748,27 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "110731": {
+    "itemId": 110731,
+    "itemName": "パブラシアの記憶片",
+    "resourceName": "piece_pubraseer",
+    "rarity": 3,
+    "itemType": 1024,
+    "description": "パブラシアのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 10,
+        "rarity": 0,
+        "stockId": 10731
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 0
       }
     ],
     "limitValue": 0
@@ -2628,6 +2701,26 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 1
+      }
+    ],
+    "limitValue": 0
+  },
+  "210731": {
+    "itemId": 210731,
+    "itemName": "パブラシアの心",
+    "resourceName": "heart_pubraseer",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "パブラシアのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 10731
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 0
       }
     ],
     "limitValue": 0
