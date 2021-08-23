@@ -15,6 +15,18 @@ Sometimes, he hears impossible to understand words from the pendant he was found
 {% include sidekick-infobox.html stockId=10731 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="pubraseer"
+h_gachaResult = "My name's Pubraseer.<br>Captain of the spaceship.<br>Somehow…I remember it now.<br>..n? the way I talk is different?<br>Don't worry, both are the real me."
+s_gachaResult = "I am Pubraseer.<br>Janitor of the resort!<br>I seem to have forgotten a lot of things.<br>Let me know if I'm saying something weird, okay?"
+APPRECIATION = "Oh, operator, are you tired?<br>I'm almost done with the cleaning,<br>Why don't you come and sit in the sun with me when you're done?"
+DAILY = "It's a beautiful day, let's go fishing!<br>...hmm, work?...Oh, yeah, yeah.<br>I haven't cleaned the restroom!"
+RELATION = "Hydoor lad has kind eyes.<br>His words is the opposite thought, is this what's called \"tsundere\"?<br>I learned it from you!"
+HERO = "Akashi's hero suit is very practical,<br>I feel refreshed just by seeing it.<br>…ah, I remember. This is what they say \"cool looking\" right?"
+PLAYER = "For someone who lost his memories like me,<br>Your concern made me really happy.<br>...I have faith that your memory will return."
+TOUCH = "…nn? What? Why are you poking my belly?<br>…it's all right. We all get anxious sometimes, even adults.<br>Come here, let's look at the stars together."
+TRAIN = "Will you accompany my training?"
+TRAINED = "P-please be gentle!"
+EVENTA = "Oh, pirates are such a fun bunch!<br>I'm starting to feel like dancing with them!"
+EVENTB = "Sometimes I do fishing in my break.<br>That rainbow fish I caught the other day was amazing!<br>It made me have a stomachache, but it was delicious!"
 %}
 
 ## Notes
