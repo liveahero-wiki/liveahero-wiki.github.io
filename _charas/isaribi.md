@@ -48,4 +48,4 @@ TRAINED = "Nuga…!? Ya idiot, do ya want to kill me!"
 %}
 
 ## Notes:
-
+- He refers to {% chara_link Hydoor %} in his hero line 
