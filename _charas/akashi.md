@@ -20,7 +20,7 @@ A new form of Akashi dressed in an amphibious hero suit.
 He has gained a lot of experience as a hero, and is slowly beginning to look like a full-fledged hero.
 He attacks by creating energy bullets from his baseball glove parallel weapon, 
 The pitching form that fires from the powerful shoulders he honed as an outfielder is as quick as any fastball.
-In order to recapture the hijacked resort ship, Akasi confronts the pirate villains in a new form.
+In order to recapture the hijacked resort ship, Akashi confronts the pirate villains in a new form.
 {% endcapture %}
 {% include hero-infobox.html stockId=10012 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
