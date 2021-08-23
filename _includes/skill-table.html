@@ -9,9 +9,10 @@
         <th>Skill Name</th><th>Effect/Proc rate</th><th>View cost</th>
     </tr>
     {% for id in include.skillIds %}
+    {% assign nid = id | plus: 0 %}
     {% assign sid = id | downcase %}
     {% assign skill = site.data.SkillMaster[sid] %}
-    {% assign skillName = site.data.wiki.SkillNameTranslation[id] %}
+    {% assign skillName = site.data.wiki.SkillNameTranslation[nid] %}
     <tr>
         <td title="{{ sid }}" class="translate" data-translate="{% if skillName %}{{ skill.skillName }}{% endif %}" data-effects="{{ skill.effects | map: 'skillEffectId' | join: ',' }}">{{ skillName | default: skill.skillName }}</td><td title="{{ skill.description }}">{% include skill-description.html skill=skill %}</td><td>{{ skill.useView }}</td>
     </tr>
