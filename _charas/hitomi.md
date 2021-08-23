@@ -58,6 +58,18 @@ TRAINED = "Gyaaa~!! It's too intense!"
 %}
 
 {% include voice-table.html resourceName="hitomiSummerdive2108"
+h_gachaResult = "I will get your gaze with my new outfit!<br>DokiDoki☆Red, Coming to the beach!<br>Hey, partner, do I look good…?"
+s_gachaResult = "HIT.ME with that gaze of yours!<br>Ayauta Hitomi here!<br>Today I will deliver my song in this beautiful resort!"
+APPRECIATION = "Let's take a little break, partner.<br>I bought you ice cream, would you like to eat some?<br>It's chilly and delicious! Here, aan!"
+DAILY = "The sunlight is strong today…<br>Won't it be too hot for you partner?<br>…if you want, how about sharing the parasol with me?"
+RELATION = "Akashi always looks so hardworking and sparkling.<br>It makes me feel like I can't lose too!"
+HERO = "Hy-kun might be rather scary,<br>but when speaking about the sea his serious eyes will have this amazing sparkle!<br>I'm sure he really likes the sea."
+PLAYER = "Partner, it's the pool!<br>Come on, quickly get changed, let's go for a swim!<br>Because summer pools are all about having fun!"
+TOUCH = "Kya!? P-partner!?<br>...Oh, I crushed my sunscreen...!<br>what a waste…oh yeah, let me apply it to your back!"
+TRAIN = "It's preparation to enjoy summer!"
+TRAINED = "I-it's too hot…!"
+EVENTA = "It's surprising, to think this huge resort island is a space ship….<br>Next day off, I want to come here and play around!"
+EVENTB = "Splash Horror...w-will there be ghosts coming out…H-hya!?<br>…ah, the wall is dented…"
 %}
 
 ## Notes:
