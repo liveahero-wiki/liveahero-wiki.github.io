@@ -12,7 +12,7 @@ sales_start_time: 2021-08-23T20:00:00+09
 sales_end_time: 2021-09-13T20:00:00+09
 ---
 
-There will be event ticket quest for this event, where you use Quest Ticket to get more event items than normal event free quest.
+There will be event ticket quest for this event, where you use {% include item-icon.html id=38 %} Quest Ticket to get more event items than normal event free quest.
 
 ## Event Preview
 
@@ -31,11 +31,86 @@ Work together with a bad attitude dragon hero who happens to visit his hometown.
 On an uninhabited island in the sea, separated from the outside world,
 Will our heroes be able to protect the midsummer resort?
 
-## Maintenance
+### Event Banners
 
-Maintenance is scheduled to start at 2021-08-23 14:00-20:00 JST
+This Event's gacha summon includes time-limited variant {% chara_link Akashi|h2 %} (Hero), {% chara_link Hitomi|h2 %} (Hero) and one new characters {% chara_link Hydoor %} (Hero & Sidekick).
 
-Please finish any ongoing quest before maintenance start.
+Rates as follow:
+
+| Character                                                | Rates (Single) | Rates (Multis) |
+|----------------------------------------------------------|----------------|----------------|
+| {% chara_link Akashi|h2 %}                               | 1.1 %            | 2.2 %            |
+| {% chara_link Hitomi|h2 %}                              | 2 %              | 16 %             |
+| {% chara_link Hydoor|h1 %}                                | 2 %              | 16 %             |
+| {% chara_link Hydoor %}                                   | 12 %             | 0 %             |
+| Offbanner 5 star hero                                    | 0.9 %            | 1.8 %            |
+| Offbanner 4 star hero                                    | 4 %              | 64 %             |
+| Offbanner 3 star hero                                    | 35 %             | 0 %              |
+| Offbanner 4 star sidekick                                | 10 %              | 0 %              |
+| Offbanner 3 star sidekick                                | 33 %             | 0 %              |
+
+>Rates (Multis) is the rate of the tenth pull in a multi pull, pull number 1-9 still use the Rates (Single)
+
+### Free Quest Bonus
+
+Here is a list of heroes and sidekicks which grants bonus in this event:
+
+| Hero | +Bonus (%)|
+|------------|--------------|
+| {% chara_link Akashi|h2 %} | 40 |
+| {% chara_link Hitomi|h2 %}  | 30 |
+| {% chara_link Hydoor|h1 %}  | 30 |
+| {% chara_link Pubraseer|h1 %} | 20 |
+| {% chara_link Monomasa|h1 %}  | 20 |
+| {% chara_link Yoshiori|h1 %} | 10 | 
+| {% chara_link Ryekie|h1 %} | 10 | 
+| {% chara_link Alchiba|h2 %} | 20 | 
+| {% chara_link Shaft|h1 %} | 20 | 
+| {% chara_link Kalaski|h1 %} | 10 | 
+| {% chara_link Akashi|h1 %} | 10 | 
+| {% chara_link Hitomi|h1 %} | 10 | 
+
+| Sidekick | +Bonus (%) |
+|-------------|---------------|
+| {% chara_link Hydoor %} | 10 | 
+| {% chara_link Pubraseer %}  | 10 | 
+| {% chara_link Monomasa %}  | 10 | 
+| {% chara_link Yoshiori %}  | 10 | 
+| {% chara_link Melide %}  | 10 | 
+| {% chara_link Huckle %}  | 10 | 
+| {% chara_link Shaft %}  | 10 | 
+| {% chara_link Kalaski %} | 10 | 
+| {% chara_link Akashi %} | 10 | 
+| {% chara_link Hitomi %} | 10 | 
+| {% chara_link Player %} | 10 | 
+
+### Event Sales Bonus
+
+Event sales bonus added according to how much event hero you have in a single sales, Which is
+{% chara_link Akashi|h2 %}, {% chara_link Hitomi|h2 %}, {% chara_link Hydoor|h1 %}  and {% chara_link Pubraseer|h1 %}  
+
+Here is the bonus:
+
+| Hero   | +Bonus(%) |
+|--------|-----------|
+| 1 Event Hero   |     10    |
+| 2 Event Heroes |     30    |
+| 3 Event Heroes |     50    |
+| 4 Event Heroes |     70    |
+
+### Limited Time Mission
+
+Here is a list of this event's limited time Missions:
+
+| No  | Description      | Rewards      |
+|----|-----------------------------------------------------------|----------------|
+| 1  | Finish any rank event quest 10 times | 1 {% include item-icon.html id=34 %}    |
+| 2  | Finish any rank event quest 20 times | 1 {% include item-icon.html id=34 %}    |
+| 3  | Finish any rank event quest 30 times | 1 {% include item-icon.html id=34 %}    |
+| 4  | Finish any rank event quest 40 times | 1 {% include item-icon.html id=34 %}    |
+| 5  | Finish any rank event quest 50 times | 1 {% include item-icon.html id=34 %}    |
+| 6  | Finish event sales 10 times | 1 {% include item-icon.html id=34 %}    |
+
 
 ## Event Shop
 
