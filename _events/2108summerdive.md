@@ -33,7 +33,7 @@ Will our heroes be able to protect the midsummer resort?
 
 ### Event Banners
 
-This Event's gacha summon includes time-limited variant {% chara_link Akashi|h2 %} (Hero), {% chara_link Hitomi|h2 %} (Hero) and one new characters {% chara_link Hydoor %} (Hero & Sidekick).
+This Event's gacha summon includes time-limited variant {% chara_link Akashi|h2 %} (Hero), {% chara_link Hitomi|h2 %} (Hero) and one new character {% chara_link Hydoor %} (Hero & Sidekick).
 
 Rates as follow:
 
