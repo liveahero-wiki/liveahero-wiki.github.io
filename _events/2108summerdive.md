@@ -133,12 +133,27 @@ Here is a list of this event's limited time Missions:
 </p>
 </details>
 
+<details><summary>Sales Report 1 (Translated)</summary>
+<p> <code>character0</code> came to the resort planet for a job.<br> The sun was shining mercilessly, blazing the skin, and within that,the breeze of a refreshing poolside came and entice <code>character0</code> .<br><br>They have no business with the pool, so they drank and drank and yet their throat is still dry.<br>Top it with the sound of customers having fun…<br> <code>character0</code> 's endurance nearly ran out.<br><br>Then, came the long awaited break.<br> <code>character0</code> took off their uniform there,and jumped into the pool.<br><br>The feelings of water touching the skin is very comfortable, <code>character0</code> involuntarily raise their voice.<br>That was truly the hour of bliss.<br> <code>character0</code> enjoyed themselves in the pool as long as the time permits.<br><br>And when the break was over, <code>character0</code> realized.<br>They have missed lunch…
+</p>
+</details>
+
 <details><summary>Sales Report 2</summary>
 <p>プールの監視員を任せられた<br> <code>character0</code> と <code>character1</code> 。<br>早速おぼれている子供を発見し、颯爽と飛び込む<br> <code>character1</code> だったが、準備体操が甘かったのか、<br>入水した途端に足がつってしまった。<br><br>ミイラ取りがミイラといった様相で<br>もがく <code>character1</code> 。<br> <code>character0</code> は慌てて飛び込み、まずは子供を、<br>次に <code>character1</code> を、必死になりながら救助する。<br><br>子供は幸いにしてすぐに意識を取り度したが、<br> <code>character1</code> は沢山水を飲み、完全に気を失っている。<br><br>直前の講習で教わった通り、 <code>character0</code> は<br>恐る恐る <code>character1</code> に人工呼吸を施す。<br><br>無事意識を取り戻した <code>character1</code> だったが、<br> <code>character0</code> に人工呼吸をされたという話を聞き、<br>恥ずかしいやら情けないやらで、<br>しばらくまともに <code>character0</code> の顔を<br>見られなかったという。
 </p>
 </details>
 
+<details><summary>Sales Report 2 (Translated)</summary>
+<p> <code>character0</code> and <code>character1</code> were put in charge as pool monitor.<br>Immediately discovering a drowning child, <code>character1</code> gallantly dove into the water, but maybe because their preparatory exercises are not enough, when in the water their feet suddenly cramped.<br><br> <code>character1</code> was struggling like a mummy.<br> <code>character0</code> panicked, they frantically save the child first,and then <code>character1</code> after.<br><br>The child, fortunately, regained consciousness quickly, but <code>character1</code> has drunk a lot of water and was completely unconscious.<br><br>As taught in the short course before, <code>character0</code> timidly gave <code>character1</code> artificial respiration.<br><br>Though <code>character1</code> returned safely, after knowing that <code>character0</code> has given them artificial respiration, they became embarassed and shameful, and for a while they cannot look at <code>character0</code> 's face.
+</p>
+</details>
+
 <details><summary>Sales Report 3</summary>
 <p>仕事の休憩時間にプールで<br>遊ぶことを提案する <code>character0</code> 。<br> <code>character1</code> は割と乗り気ではあったのだが、<br>子供じゃあるまいしと否定的な <code>character2</code> 。<br><br>そんな <code>character2</code> に、<br>すでにプールに行っていた <code>character3</code> が<br>水をかけるいたずらを仕掛ける。<br>びしょ濡れになった <code>character2</code> はムキになり、<br>プールに飛び込んで <code>character3</code> に反撃をしかける。<br><br> <code>character0</code> は浮き輪を持ち出して、<br> <code>character1</code> と共に<br>プールに向かい、そこに参戦。<br>水をかけ合い、泳いで追いかけっこをし、<br>時間の許す限り、目いっぱいプールを満喫した。<br><br>楽しい時間を過ごせたまではよかったのだが、<br>制服をびしょ濡れにしてしまった <code>character2</code> と、<br>元凶である <code>character3</code> は、その後現場監督に<br>目いっぱい絞られたという。
+</p>
+</details>
+
+<details><summary>Sales Report 3 (Translated)</summary>
+<p> <code>character0</code> proposes to have fun in the pool at break time.<br> <code>character1</code> was rather enthusiastic about the idea, but <code>character2</code> was not so sure, saying that it's childish.<br><br>Hearing that <code>character3</code> who is already in the pool, sprayed water at <code>character2</code> as a prank.<br>Soaked to the skin <code>character2</code> became angry, they immediately enter the pool and began their counterattack at <code>character3</code> .<br><br> <code>character0</code> took out their swim ring, and together with <code>character1</code> got into to the pool to participate in the war.<br><br>They splashed each other with water, swim and chased each other, enjoying the pool for as long as possible.<br><br>The fun time was good and all, but <code>character2</code> was soaked through their uniform, later <code>character3</code> as the ringleader was wrung out by the foreman.
 </p>
 </details>
