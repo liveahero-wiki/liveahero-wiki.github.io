@@ -25,7 +25,7 @@ She continues to work hard every day to become a "perfect idol". Despite her del
 {% include hero-infobox.html stockId=10191 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_H01 %}
-Hitomi has acquired a new outfit suitable for her activities on the water planet Muilauka IV.
+Hitomi has acquired a new outfit suitable for her activities on the water planet Muirauka IV.
 
 Refusing to lose to the heat of summer, "I'm an idol warrior who fights according to TPO!".
 
@@ -46,9 +46,17 @@ This summer's new song sung by Hitomi is now available at the music stores.
 {% include hero-infobox.html stockId=10192 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8019201" %}
 
 {% capture BIO_S01 %}
-A half-Earthling and half-alien girl, located in Japan, Earth, to perform idol activities. Born in Hiroshima, Japan. Her stage name is Ayauta Hitomi. A traditional school idol who is lively, friendly, and always does her best.
+A half-Earthling and half-alien girl, located in Japan, Earth, to perform idol activities. 
 
-However, due to the genetic inheritance of her mother, an alien, she has acquired over-engineered physical capabilities for an Earthling. She often loses control of her abilities, so she's very prone to destroying equipment unintentionally. Because of this, she is especially afraid of situations in which she has to touch another person's body, such as handshake events.
+Born in Hiroshima, Japan. Her stage name is Ayauta Hitomi. 
+
+A traditional school idol who is lively, friendly, and always does her best.
+
+However, due to the genetic inheritance of her mother, an alien, she has acquired over-engineered physical capabilities for an Earthling. 
+
+She often loses control of her abilities, so she's very prone to destroying equipment unintentionally. 
+
+Because of this, she is especially afraid of situations in which she has to touch another person's body, such as handshake events.
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10191 BIO_S01=BIO_S01 extra_sprites="fg_hitomi_s01_skin1" %}
 
