@@ -50,6 +50,7 @@ lose = "I'm not even close to being a knight yet…to think this is where it end
 assist = "Let me help you!"
 assisted = "That's reassuring!"
 rankMax = "I feel like I'm one step closer to become a noble knight.<br>You have my gratitude, Magician-dono. From now on, let's aim for greater heights together."
+loveIndexMax = "When I'm training and even when I'm in the middle of battle, my head is full of you.<br>Is this…the thing called love?"
 APPRECIATION = "Magician-dono. I have steamed some potatoes, would you like one?<br>It will be time to eat soon, so I thought this will be a good time for it.<br>Oh, I will peel it for you. Give it to me."
 DAILY = "Magician-dono! Sorry for my late greetings.<br>I have been too focused in my training, I didn't realize you're here.<br>Eh, waah! The cut log is….Guee!"
 HERO = "Marfik-dono is a very reliable ally.<br>Having a lot of adventuring knowledge, and being accustomed to battle.<br>Such a person, I wonder why he isn't in a service?"
