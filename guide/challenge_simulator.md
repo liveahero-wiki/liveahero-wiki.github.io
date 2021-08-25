@@ -141,3 +141,13 @@ This Simulator has different Score condition which is:
 ##### Mercenary 2's skills
 
 {% include skill-table-manual.html skillIds="4066117,4066118" %}
+
+## Aug 25th 2021 - Sep 08th 2021
+
+{% include quest-group.html chapterId=601 %}
+{% include quest-group.html chapterId=606 %}
+{% include quest-group.html chapterId=607 %}
+
+### Guides
+
+Refer to Jul 14th 2021 - Jul 28th 2021 Simulator
