@@ -68,7 +68,7 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 | {% chara_link Shaft|h1 %} | 20 | 
 | {% chara_link Kalaski|h1 %} | 10 | 
 | {% chara_link Akashi|h1 %} | 10 | 
-| {% chara_link Hitomi|h1 %} | 10 | 
+| {% chara_link Hitomi|h1 %} | 20 | 
 
 | Sidekick | +Bonus (%) |
 |-------------|---------------|
