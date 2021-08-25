@@ -32,6 +32,15 @@ TRAIN = "Will you accompany my training?"
 TRAINED = "P-please be gentle!"
 EVENTA = "Oh, pirates are such a fun bunch!<br>I'm starting to feel like dancing with them!"
 EVENTB = "Sometimes I do fishing in my break.<br>That rainbow fish I caught the other day was amazing!<br>It made me have a stomachache, but it was delicious!"
+battleStart = "Let's go, my friends!Find the star of hope in the endless universe!"
+action = "Leave it to me."
+attack = "Charge!"
+skill = "My friends, let me help you."
+special = "Flag of the battle party, fly into space!<br>Shine! Pénte Anamniseis!"
+smallDamage = "Guuh!!"
+bigDamage = "Are my friends safe?!"
+win = "Elipe, Damarki, Kahoni, Timbanos, Heiros ...<br>I believe this victory will reach you too..."
+lose = "I can't hear my friend's voices...<br>I wanted to see them again..."
 %}
 
 ## Notes
