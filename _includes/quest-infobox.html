@@ -69,5 +69,31 @@
 </ul>
 </td></tr>
 {% endif %}
+
+{% if Q.scoreAttackBonuses.size > 0 %}
+<tr><th>Atk Bonus</th><td><table>
+{% for bonus in Q.scoreAttackBonuses %}
+<tr><th>{{ site.data.wiki.UITranslation[bonus.description] | default: bonus.description }}</th>
+<td>
+{% for chara in bonus.characters %}
+{{ chara.stockId | stockIdToLink: chara.cardType }}
+{% endfor %}
+</td></tr>
+{% endfor %}
+</table></td></tr>
+{% endif %}
+
+{% if Q.scoreAttackStandards.size > 0 %}
+<tr><th>Score Standard</th><td>
+<ul>
+{% for bonus in Q.scoreAttackStandards %}
+<li>{{ site.data.wiki.UITranslation[bonus.label] | default: bonus.label }}
+({{ site.data.wiki.UITranslation[bonus.description] | default: bonus.description }})
+</li>
+{% endfor %}
+</ul>
+</td></tr>
+{% endif %}
+
 </table>
 </details>

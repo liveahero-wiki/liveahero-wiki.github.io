@@ -184,23 +184,6 @@ ul, ol {
 li {
   line-height: 1.5;
 }
-details {
-  border: 1px solid #aaa;
-
-  p, ul, ol, table {
-    margin: 15px;
-  }
-}
-td {
-  >p, >ul, >ol {
-    margin: 0;
-  }
-}
-summary {
-  cursor: pointer;
-  background: $colorGrey;
-  padding: 15px;
-}
 .footnotes {
   border-top: 1px dotted;
   margin-top: 40px;
@@ -250,6 +233,9 @@ th, td {
   padding: 5px 10px;
   border-bottom: 1px solid #e5e5e5;
 }
+th > table, td > table {
+  margin: 0;
+}
 th {
   background-color: $colorPrimary;
 }
@@ -261,6 +247,27 @@ th {
   th, td {
     border: 1px solid #000;
   }
+}
+details {
+  border: 1px solid #aaa;
+
+  p, ul, ol, table {
+    margin: 15px;
+  }
+
+  table {
+    width: calc(100% - 30px);
+  }
+}
+td {
+  >p, >ul, >ol {
+    margin: 0;
+  }
+}
+summary {
+  cursor: pointer;
+  background: $colorGrey;
+  padding: 15px;
 }
 hr {
   display: block;

@@ -16,6 +16,15 @@ Doing a challenge will grant you a score, the score will be calculated based on 
 
 Quest in simulator will reset after a period of time (normally within 14 days), after which the quest will be changed.  Any unused Heronium will be converted to 150 {% include item-icon.html id=35 %} each when the quest reset.
 
+## Score threshold
+
+| Score range | Grade |
+|---|---|
+| >= 90000 | S |
+| >= 65000 | A |
+| >= 30000 | B |
+| < 30000 | C |
+
 ## Jul 14th 2021 - Jul 28th 2021
 
 {% include quest-group.html chapterId=601 %}
