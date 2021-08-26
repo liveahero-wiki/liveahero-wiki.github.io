@@ -18,7 +18,7 @@ For hero that has multiple variants, the latest one will be displayed.
 {% assign cardInfos = site.data.CardMaster | where: "stockOrder", 1 %}
 {% assign group = cardInfos | group_by: "characterId" %}
 
-<ul id="hero-list" class="card-list clearfix">
+<ul id="hero-list" class="card-list">
 {% for gp in group %}
 {% assign c = gp.items | last %}
 {% if gp.items.size == 1 %}

@@ -18,7 +18,7 @@ redirect_from: /heroes/
 </div>
 
 {% assign cardInfos = site.data.CardMaster | where: "stockOrder", 1 %}
-<ul id="hero-list" class="card-list clearfix">
+<ul id="hero-list" class="card-list">
 {% for c in cardInfos %}
 {% include card-hero.html card=c %}
 {% endfor %}
@@ -33,7 +33,7 @@ redirect_from: /heroes/
 </div>
 
 {% assign cardInfos = site.data.SidekickMaster | where: "levelZone", 1 %}
-<ul id="sidekick-list" class="card-list clearfix">
+<ul id="sidekick-list" class="card-list">
 {% for c in cardInfos %}
 {% include card-sidekick.html card=c %}
 {% endfor %}

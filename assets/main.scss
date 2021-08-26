@@ -391,15 +391,16 @@ $elementColor: #f07d75, #4e8ddf, #5fcb58, #ffb251, #9c76db;
 }
 // Chara list page
 .card-list {
+  display: grid;
+  grid-auto-rows: minmax(176px, auto);
+  grid-template-columns: repeat(auto-fill, 140px);
   padding: 0;
   margin: 10px 0;
 }
 .card-list li {
   display: block;
   list-style: none;
-  float: left;
   border: 1px solid black;
-  width: 140px;
 }
 .card-list a {
   display: block;

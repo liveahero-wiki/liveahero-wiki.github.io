@@ -1,8 +1,9 @@
 {% assign c = include.card %}
 {% assign page = c.characterId | characterIdToPage %}
-<li data-id="{{ c.stockId }}" data-rarity="{{ c.rarity }}" data-element="{{ c.element }}" data-name="{{ page.title }}">
+{% assign title = c.stockId | stockIdToCharaTitle: 1 %}
+<li data-id="{{ c.stockId }}" data-rarity="{{ c.rarity }}" data-element="{{ c.element }}" data-name="{{ title | escape }}">
 <div class="hero-icon {{ include.class }}">
   <div class="chara-border hero-{{ c.rarity }}"></div>
   <img class="hero-chara-icon" src="/cdn/Sprite/icon_{{ c.resourceName }}_h01.png" loading="lazy">
 </div>
-<a href="{{ page.url }}#h{{ c.stockId }}">{{ page.title }}</a></li>
+<a href="{{ page.url }}#h{{ c.stockId }}">{{ title }}</a></li>

@@ -25,7 +25,7 @@ banner: true
 <h3 id="{{ human.name | slugify }}">{{ human.name }}</h3>
 {% endif %}
 
-<ul class="card-list clearfix">
+<ul class="card-list">
 {% for item in human.items %}
 {% if item.stockOrder %}
 {% include card-hero.html card=item %}
