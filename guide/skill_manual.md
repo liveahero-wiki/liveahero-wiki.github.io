@@ -14,7 +14,7 @@ The skill manual will be consumed after the hero learn the skills.
 
 This new equipment skills use the same slot and equipped in the same way as the usual passive skills from sidekick.
 
-As of now there is only two kinds of skill manuals available from the event shop (Space Taxi Chaser event) which is:
+As of now there is only two kinds of skill manuals, you can get it from shop exchange of biweekly challenge simulator, which is:
 
 - {% include item-icon.html id=65 %} Second attack skill manual 
   - Grants the hero a passive skill "Second Attack"
