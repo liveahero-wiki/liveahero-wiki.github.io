@@ -9,14 +9,16 @@ action start
 action end
 {% when 4%}
 AI action start
-{% comment %}5 (no skills with such timing){% endcomment %}
+{% when 5 %}
+turn end
 {% when 6 %}
 when self at &lt;50% HP
 {% when 7 %}
 after own attack puts enemy at &lt;50% HP
 {% when 8 %}
 when taking damage
-{% comment %}9 (no skills with such timing){% endcomment %}
+{% when 9 %}
+when debuffed
 {% when 10 %}
 permanent effect
 {% when 11 %}

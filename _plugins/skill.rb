@@ -48,11 +48,19 @@ module LahWiki
           status_icon = self.status_description(c['value'])
           f.push("possessing #{status_icon}")
         when "OwnBuffNumberExecTrigger"
-          status_icon = self.status_description(c['statusId'])
+          status_icon = self.status_description_unknown(c['statusId'], 1)
           count = c['value']
           f.push("possessing &gt;#{count}x #{status_icon}")
         when "OwnBuffNumberDontExecTrigger"
-          status_icon = self.status_description(c['statusId'])
+          status_icon = self.status_description_unknown(c['statusId'], 1)
+          count = c['value']
+          f.push("possessing &lt;=#{count}x #{status_icon}")
+        when "OwnDeBuffNumberExecTrigger"
+          status_icon = self.status_description_unknown(c['statusId'], 0)
+          count = c['value']
+          f.push("possessing &gt;#{count}x #{status_icon}")
+        when "OwnDeBuffNumberDontExecTrigger"
+          status_icon = self.status_description_unknown(c['statusId'], 0)
           count = c['value']
           f.push("possessing &lt;=#{count}x #{status_icon}")
         else
@@ -64,6 +72,16 @@ module LahWiki
       else
         return +"(extra_cond: " + f.join(" and ") + ")"
       end
+    end
+
+    def status_description_unknown(id, type)
+      if id == 0
+        if type == 0
+          return "debuff(s)"
+        end
+        return "buff(s)"
+      end
+      return self.status_description(id)
     end
 
     def status_description(id)
