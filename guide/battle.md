@@ -35,7 +35,7 @@ The battle timeline shows each character's order of actions. Order of action is 
 ### Battle Auto Mode
 
 By tapping on the Auto button located at the top right of the battle screen, auto battle mode will commence.
-Certain sidekick passives such as {% chara_link Kalaski|h1 %} or {% chara_link Melide|h1 %} will change unit behavior in auto mode.
+Certain sidekick passives such as {% chara_link Kalaski|h1 %} or {% chara_link Melide %} will change unit behavior in auto mode.
 You can also set the skills to be used in auto by giving [Skill Manual](https://liveahero-wiki.github.io/guide/skill_manual/) to the hero and equipping it.
 
 ### View Power
