@@ -29,7 +29,7 @@ As long as the object to be saved continues to exist in this world, he will cont
 {% capture BIO_S01 %}
 A Nurse Working at a general hospital in the lunar capital.
 
-An earthling from Birmingham, England. His Full name is Loren Farland
+An earthling from Birmingham, England. His Full name is Loren Farrand
 
 Because of his gentle and soft personality, he is popular within patients, but because his clumsiness often lead him to question "why does this always happen to me?", he is an oopsie nursie.
 
@@ -65,4 +65,6 @@ TRAINED = "Uhh, Time-out! It's tough!"
 
 ## Notes
 
-- His full name is Loren Farland (ロレン・ファーランド)
+- His full name is Loren Farrand (ロレン・ファーランド)
+- His name might come from the mother of modern nursing, [F<b>loren</b>ce Nightingale](https://en.wikipedia.org/wiki/Florence_Nightingale).
+- Farrand training school for nurse is the name of the school where the [Nightingale Pledge](https://en.wikipedia.org/wiki/Nightingale_Pledge) was created .
