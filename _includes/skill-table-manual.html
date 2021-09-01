@@ -5,20 +5,24 @@
     </tr>
     {% assign skillIds = include.skillIds | split: "," %}
     {% for id in skillIds %}
+    {% assign nid = id | plus: 0 %}
     {% assign sid = id | downcase %}
     {% assign skill = site.data.SkillMaster[sid] %}
+    {% assign skillName = site.data.wiki.SkillNameTranslation[nid] %}
     <tr>
-        <td title="{{ sid }}" data-effects="{{ skill.effects | map: 'skillEffectId' | join: ',' }}">{{ skill.skillName }}</td><td title="{{ skill.description }}">{% include skill-description.html skill=skill %}</td><td>{{ skill.useView }}</td>
+        <td title="{{ sid }}" class="translate" data-translate="{% if skillName %}{{ skill.skillName }}{% endif %}" data-effects="{{ skill.effects | map: 'skillEffectId' | join: ',' }}">{{ skillName | default: skill.skillName }}</td><td title="{{ skill.description }}">{% include skill-description.html skill=skill %}</td><td>{{ skill.useView }}</td>
     </tr>
     {% endfor %}
     {% if include.equipmentSkills %}
     {% assign equipmentSkills = include.equipmentSkills | split: "," %}
     <tr><th colspan="3">Passive skills</th></tr>
     {% for id in equipmentSkills %}
+    {% assign nid = id | plus: 0 %}
     {% assign sid = id | downcase %}
     {% assign skill = site.data.SkillMaster[sid] %}
+    {% assign skillName = site.data.wiki.SkillNameTranslation[nid] %}
     <tr>
-        <td title="{{ sid }}" data-effects="{{ skill.effects | map: 'skillEffectId' | join: ',' }}">{{ skill.skillName }}</td><td title="{{ skill.description }}">{% include skill-description.html skill=skill %}</td><td>{{ skill.useView }}</td>
+        <td title="{{ sid }}" class="translate" data-translate="{% if skillName %}{{ skill.skillName }}{% endif %}" data-effects="{{ skill.effects | map: 'skillEffectId' | join: ',' }}">{{ skillName | default: skill.skillName }}</td><td title="{{ skill.description }}">{% include skill-description.html skill=skill %}</td><td>{{ skill.useView }}</td>
     </tr>
     {% endfor %}
     {% endif %}
