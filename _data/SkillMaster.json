@@ -3559,7 +3559,7 @@
   },
   "1019201": {
     "skillId": 1019201,
-    "skillName": "戦う！常夏MARMAID",
+    "skillName": "戦う！常夏MERMAID",
     "useView": 0,
     "targetFlag": 2,
     "resourceName": "b_skill_damage",
@@ -20101,6 +20101,270 @@
       }
     ]
   },
+  "4030105": {
+    "skillId": 4030105,
+    "skillName": "マーチソン・メテオ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に75%ダメージ。ランダムな味方が追撃。【ピンチ状態時追加効果】対象にデバフがついている場合、再行動（１ターンに１度のみ発動）（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_suhail_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 270,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 1,
+        "probGroupId": 1,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 324,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "statusId": 57
+          },
+          {
+            "class": "EnemyDeBuffNumberExecTrigger",
+            "value": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 461,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "statusId": 57
+          }
+        ]
+      }
+    ]
+  },
+  "4030107": {
+    "skillId": 4030107,
+    "skillName": "ブラキウム・エクスマキナ",
+    "useView": 10000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に90%ダメージ+相手のデバフの数に応じてダメージ量が上昇。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_suhail_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 465,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4030108": {
+    "skillId": 4030108,
+    "skillName": "ジャイアント・インパクト",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "敵全体に50%ダメージ。80%の確率で2ターンの間毒を付与。戦闘不能の味方全体を100%のHPで復活。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_suhail_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 23,
+        "prob": 80,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 260,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4030109": {
+    "skillId": 4030109,
+    "skillName": "マーチソン・メテオ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に75%ダメージ。ランダムな味方が追撃。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_suhail_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 270,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 1,
+        "probGroupId": 1,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 324,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4030110": {
+    "skillId": 4030110,
+    "skillName": "ジャイアント・インパクト",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "敵全体に50%ダメージ。80%の確率で2ターンの間毒を付与。戦闘不能の味方全体を100%のHPで復活。【ピンチ状態時追加効果】更に80%の確率で2ターンの間毒を付与（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_suhail_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 23,
+        "prob": 80,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 23,
+        "prob": 80,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 260,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 462,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
   "4032101": {
     "skillId": 4032101,
     "skillName": "マネー・イズ・タイム",
@@ -21167,6 +21431,72 @@
       {
         "skillEffectId": 48,
         "prob": 50,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4042101": {
+    "skillId": 4042101,
+    "skillName": "スラッシュ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ+相手のデバフの数に応じてダメージ量が上昇。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainSummerdive02_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 289,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4042103": {
+    "skillId": 4042103,
+    "skillName": "スラッシュ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。2ターンの間毒を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainSummerdive01_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 23,
+        "prob": 100,
         "effectTarget": 2,
         "sequenceGroupId": 0,
         "probGroupId": 0,
@@ -24850,6 +25180,171 @@
       }
     ]
   },
+  "6030102": {
+    "skillId": 6030102,
+    "skillName": "抵抗性",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_cure",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "デバフの数×25%の弱体抵抗を持つ。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 455,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 456,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 457,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 458,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6030103": {
+    "skillId": 6030103,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "チーム全体にシステム効果57番を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 462,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "6030104": {
+    "skillId": 6030104,
+    "skillName": "ウォータースーツ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_element_water",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "このヒーローは水属性として扱われる。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": []
+  },
+  "6030105": {
+    "skillId": 6030105,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 6,
+    "description": "ピンチになった時に味方全体にシステム効果57番を付与。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 462,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "NotPinchExecTrigger",
+            "value": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "6030106": {
+    "skillId": 6030106,
+    "skillName": "踏ん張り",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 6,
+    "description": "ピンチ状態になった時、自身に2回分のDEFアップを付与。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "NotPinchExecTrigger",
+            "value": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "6030107": {
+    "skillId": 6030107,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 5,
+    "description": "チーム全体のシステム効果57番を解除。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 461,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "6032101": {
     "skillId": 6032101,
     "skillName": "強制再生",
@@ -24869,6 +25364,106 @@
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "triggerJson": []
+      }
+    ]
+  },
+  "6042102": {
+    "skillId": 6042102,
+    "skillName": "浸透",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、敵全体のデバフ効果１ターン延長。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 460,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6042103": {
+    "skillId": 6042103,
+    "skillName": "応急処置",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "b_skill_cure",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、味方全体のデバフ効果１ターン短縮。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 459,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6042104": {
+    "skillId": 6042104,
+    "skillName": "マーキング",
+    "useView": 0,
+    "targetFlag": 7,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "",
+    "timing": 5,
+    "description": "ボスがピンチ状態の場合、ターン終了時、敵単体に２ターンの標的を付与。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 464,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "statusId": 57
+          }
+        ]
+      }
+    ]
+  },
+  "6042105": {
+    "skillId": 6042105,
+    "skillName": "オブザーバー妨害",
+    "useView": 0,
+    "targetFlag": 7,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "",
+    "timing": 5,
+    "description": "ボスがピンチ状態の場合、ターン終了時、敵全体からランダムに1回の行動の間過消費を付与。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 266,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "statusId": 57
+          }
+        ]
       }
     ]
   },

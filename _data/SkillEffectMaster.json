@@ -10663,19 +10663,21 @@
   "444": {
     "skillEffectId": 444,
     "skillEffectJson": {
-      "turn": 2,
+      "turn": 5,
       "count": 0,
       "effects": [
         {
-          "class": "NoneEffectElapseTurnDamage",
-          "parameter": []
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 70
+          }
         }
       ],
-      "filename": "status_reincanate",
+      "filename": "b_skill_special",
       "statusId": 56,
-      "canDispel": true,
+      "canDispel": false,
       "parameter": false,
-      "description": "酸素ボンベ(永続15%回復)",
+      "description": "ウォータースーツ(高難易度専用特殊効果) 被ダメ-30%",
       "isImmediate": false,
       "persistence": false,
       "canDuplicate": false,
@@ -10826,6 +10828,406 @@
       "persistence": false,
       "canDuplicate": false,
       "isDisplayPersistenceStatus": false
+    }
+  },
+  "451": {
+    "skillEffectId": 451,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ElementPenetrateDamage",
+          "parameter": {
+            "value": 30,
+            "element": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "30%ダメージの有利属性攻撃",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "452": {
+    "skillEffectId": 452,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": 5,
+            "statusTypeValue": 2
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "システムスキル効果５ターン延長",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "453": {
+    "skillEffectId": 453,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -10000,
+            "skillId": 4030107
+          }
+        }
+      ],
+      "trigger": "[{\"value\":56,\"statusId\":0,\"class\":\"OwnStatusTrigger\"}]",
+      "filename": "status_awakening",
+      "statusId": 54,
+      "canDispel": false,
+      "parameter": false,
+      "description": "高難易度スハイル限定第３スキルView消費量マイナス。",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "454": {
+    "skillEffectId": 454,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "StatusNumDamage",
+          "parameter": {
+            "value": 70,
+            "statusMult": 10,
+            "isGoodStatus": false
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "70%ダメージ+相手のデバフの数に応じてダメージ量が上昇",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "455": {
+    "skillEffectId": 455,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 25,
+            "statusId": 0
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"statusId\":0,\"class\":\"OwnDeBuffNumberExecTrigger\"}]",
+      "filename": "status_immunity",
+      "statusId": 59,
+      "canDispel": false,
+      "parameter": false,
+      "description": "自身にデバフが１個以上ある時、弱体抵抗+25",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "456": {
+    "skillEffectId": 456,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 25,
+            "statusId": 0
+          }
+        }
+      ],
+      "trigger": "[{\"value\":1,\"statusId\":0,\"class\":\"OwnDeBuffNumberExecTrigger\"}]",
+      "filename": "status_immunity",
+      "statusId": 59,
+      "canDispel": false,
+      "parameter": false,
+      "description": "自身にデバフが２個以上ある時、弱体抵抗+25",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "457": {
+    "skillEffectId": 457,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 25,
+            "statusId": 0
+          }
+        }
+      ],
+      "trigger": "[{\"value\":2,\"statusId\":0,\"class\":\"OwnDeBuffNumberExecTrigger\"}]",
+      "filename": "status_immunity",
+      "statusId": 59,
+      "canDispel": false,
+      "parameter": false,
+      "description": "自身にデバフが３個以上ある時、弱体抵抗+25",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "458": {
+    "skillEffectId": 458,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 25,
+            "statusId": 0
+          }
+        }
+      ],
+      "trigger": "[{\"value\":3,\"statusId\":0,\"class\":\"OwnDeBuffNumberExecTrigger\"}]",
+      "filename": "status_immunity",
+      "statusId": 59,
+      "canDispel": false,
+      "parameter": false,
+      "description": "自身にデバフが４個以上ある時、弱体抵抗+25",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "459": {
+    "skillEffectId": 459,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": -1,
+            "statusTypeValue": 0
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "デバフ効果１ターン短縮",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "460": {
+    "skillEffectId": 460,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": 1,
+            "statusTypeValue": 0
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "デバフ効果１ターン延長",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "461": {
+    "skillEffectId": 461,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 57,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "システム効果57番除去",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "462": {
+    "skillEffectId": 462,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 57,
+      "canDispel": false,
+      "parameter": false,
+      "description": "システム効果57番付与",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "463": {
+    "skillEffectId": 463,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": 1000
+          }
+        }
+      ],
+      "filename": "status_mosaic",
+      "statusId": 58,
+      "canDispel": true,
+      "parameter": false,
+      "description": "View消費量+1000",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "464": {
+    "skillEffectId": 464,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Provocation",
+          "parameter": []
+        }
+      ],
+      "filename": "status_target",
+      "statusId": 50,
+      "canDispel": true,
+      "parameter": false,
+      "description": "標的",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "465": {
+    "skillEffectId": 465,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "StatusNumDamage",
+          "parameter": {
+            "value": 90,
+            "statusMult": 10,
+            "isGoodStatus": false
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "90%ダメージ+相手のデバフの数に応じてダメージ量が上昇",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "466": {
+    "skillEffectId": 466,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeSkillProve",
+          "parameter": {
+            "value": 20
+          }
+        }
+      ],
+      "filename": "status_lucky",
+      "statusId": 7,
+      "canDispel": true,
+      "parameter": false,
+      "description": "永続幸運",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": true
     }
   }
 }
