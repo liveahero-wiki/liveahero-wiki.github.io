@@ -49,6 +49,7 @@ a:hover {
   color: $colorPrimary;
 }
 .sidebar {
+  contain: content;
   background: $colorLight;
   visibility: hidden;
   width: 250px;
@@ -249,6 +250,7 @@ th {
   }
 }
 details {
+  contain: content;
   border: 1px solid #aaa;
 
   p, ul, ol, table {
@@ -347,6 +349,9 @@ figcaption {
     }
   }
 }
+.contain {
+  contain: content;
+}
 .heroinfobox {
   padding: 2px;
   margin-bottom: 10px;
@@ -396,6 +401,7 @@ $elementColor: #f07d75, #4e8ddf, #5fcb58, #ffb251, #9c76db;
   grid-template-columns: repeat(auto-fill, 140px);
   padding: 0;
   margin: 10px 0;
+  contain: content;
 }
 .card-list li {
   display: block;
