@@ -123,7 +123,7 @@ Listed enemy skill below is enemy skills at the 3rd phase:
 
 ##### Suhail's skills
 
-{% include skill-table-manual.html skillIds="4030105,4030110,4030107" equipmentSkills="6030104,6030102,6000024,6030106" %}
+{% include skill-table-manual.html skillIds="4030105,4030110,4030107" equipmentSkills="6030104,6030102,6000001,6030106" %}
 
 ##### Villain 1's skills
 
