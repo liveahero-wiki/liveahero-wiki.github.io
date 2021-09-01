@@ -63,6 +63,22 @@ module LahWiki
           status_icon = self.status_description_unknown(c['statusId'], 0)
           count = c['value']
           f.push("possessing &lt;=#{count}x #{status_icon}")
+        when "OwnSystemStatusNumberExecTrigger"
+          status_icon = self.status_description_unknown(c['statusId'], 2)
+          count = c['value']
+          f.push("possessing &gt;#{count}x #{status_icon}")
+        when "OwnSystemStatusNumberDontExecTrigger"
+          status_icon = self.status_description_unknown(c['statusId'], 2)
+          count = c['value']
+          f.push("possessing &lt;=#{count}x #{status_icon}")
+        when "EnemyDeBuffNumberExecTrigger"
+          status_icon = self.status_description_unknown(c['statusId'], 0)
+          count = c['value']
+          f.push("target enemy possessing &gt;#{count}x #{status_icon}")
+        when "EnemyDeBuffNumberDontExecTrigger"
+          status_icon = self.status_description_unknown(c['statusId'], 0)
+          count = c['value']
+          f.push("target enemy possessing &lt;=#{count}x #{status_icon}")
         else
           f.push("unknown condition (#{c['class']}")
         end
@@ -76,10 +92,14 @@ module LahWiki
 
     def status_description_unknown(id, type)
       if id == 0
-        if type == 0
+        case type
+        when 0
           return "debuff(s)"
+        when 1
+          return "buffs(s)"
+        when 2
+          return "system status(es)"
         end
-        return "buff(s)"
       end
       return self.status_description(id)
     end

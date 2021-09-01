@@ -29,6 +29,8 @@ Gain {{ effect.parameter.value }}% of self's base view
 SPD {% if effect.parameter.value >= 0 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value }} to {{ target }}
 {% when "RemoveBuff" %}
 Remove {{ effect.parameter.value }} {% if effect.parameter.target %}{{ effect.parameter.target | status_description }} status{% else %}buff(s){% endif %} from {{ target }}
+{% when "RemoveSystemEffect" %}
+Remove {{ effect.parameter.value }} {% if effect.parameter.target %}{{ effect.parameter.target | status_description }} status{% else %}system status(es){% endif %} from {{ target }}
 {% when "ComboPlus" %}
 Gain {{ effect.parameter.value }} combos
 {% when "ChangeSkillProve" %}
