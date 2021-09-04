@@ -45,6 +45,7 @@ win = "The procedure is complete. How's the condition? ...oh, the patient is sta
 lose = "Am i just gonna let them die right here in front of me again...!"
 assisted = "Thank you very much."
 rankMax = "You have my gratitude, client.<br>To think I have this kind of power sleeping in me.<br>With this, let us save much much more lives."
+loveIndexMax= "I have never been this comfortable with anybody else.<br>To be able to save people's lives with you,<br>Is a joy that can't be replaced by any other reward."
 APPRECIATION = "It looks like your health is being compromised.<br>Don't push yourself, take a quick rest.<br>Fatigue is the worst enemy of good work, you know?"
 DAILY = "Everyone is a novice at first.  You just have to get used to the work little by little.  I needed some encouragement as well, when I performed my first operation."
 HERO = "Loren is a very reliable nurse.  Despite some... peculiarities. But at the site, he can take care of himself.  That's the kind of man I need in both lines of work."
