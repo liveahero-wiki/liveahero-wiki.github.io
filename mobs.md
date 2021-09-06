@@ -27,6 +27,12 @@ sprites="fg_kaibutsuLarvaEarth_h01,fg_kaibutsuLarvaEarthSpace_h01,fg_kaibutsuLar
 sprites="fg_procyBlack_h01"
 %}
 
+### Kaibutsu (Shark)
+
+{% include hero-infobox-unreleased.html name="Kaibutsu (Shizuku)" mob=true
+sprites="fg_kaibutsuSharkWater_h01"
+%}
+
 ### Kaibutsu (Shizuku)
 
 {% include hero-infobox-unreleased.html name="Kaibutsu (Shizuku)" mob=true
