@@ -160,3 +160,13 @@ This Simulator has different Score condition which is:
 ### Guides
 
 Refer to Jul 14th 2021 - Jul 28th 2021 Simulator
+
+## Sep 08th 2021 - Sep 22th 2021
+
+{% include quest-group.html chapterId=602 %}
+{% include quest-group.html chapterId=604 %}
+{% include quest-group.html chapterId=608 %}
+
+### Guides
+
+Refer to Jul 28th 2021 - Aug 11th 2021 Simulator
