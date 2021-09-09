@@ -24498,6 +24498,117 @@
       }
     ]
   },
+  "4074101": {
+    "skillId": 4074101,
+    "skillName": "噛み付き",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。1回の行動の間SPDダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuShark_h01_01"
+      }
+    ],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4074102": {
+    "skillId": 4074102,
+    "skillName": "イマジナリダイブ",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ+対象と自分のSPDの差だけダメージ量が上昇。1回の行動の間ATKダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuShark_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 294,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4074103": {
+    "skillId": 4074103,
+    "skillName": "オーシャニックノイズ",
+    "useView": 9000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffAll",
+    "timing": 0,
+    "description": "敵全体に80%ダメージ。1回分のDEFダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuShark_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "6000001": {
     "skillId": 6000001,
     "skillName": "ダメージ制限20000",
