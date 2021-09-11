@@ -29,7 +29,7 @@ sprites="fg_procyBlack_h01"
 
 ### Kaibutsu (Shark)
 
-{% include hero-infobox-unreleased.html name="Kaibutsu (Shizuku)" mob=true
+{% include hero-infobox-unreleased.html name="Kaibutsu (Shark)" mob=true
 sprites="fg_kaibutsuSharkWater_h01"
 %}
 
