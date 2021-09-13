@@ -197,6 +197,10 @@ Here is a list of score attack quest rewards based on the score:
 
 {% include quest-group.html chapterId=432 %}
 
+### Special Quests
+
+{% include quest-group.html chapterId=434 %}
+
 ## Event Sales Report
 
 <details><summary>Sales Report 1</summary>
