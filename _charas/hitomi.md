@@ -43,7 +43,7 @@ It may still be a long way to go to reach her goal of becoming a "perfect idol",
 
 This summer's new song sung by Hitomi is now available at the music stores.
 {% endcapture %}
-{% include hero-infobox.html stockId=10192 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8019201" %}
+{% include hero-infobox.html stockId=10192 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_hitomiSummerdive2108_h02_skin2" passiveSkillIds="8019201" %}
 
 {% capture BIO_S01 %}
 A half-Earthling and half-alien girl, located in Japan, Earth, to perform idol activities. 

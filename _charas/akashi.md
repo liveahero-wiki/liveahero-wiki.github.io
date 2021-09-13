@@ -43,7 +43,7 @@ By deploying a bubble-shaped shield with the mechanical units floating around, i
 
 Akashi seems to be concerned about the degree of exposure of his new appearance, but Maculata, who was in charge of the design, seems to be satisfied with it. "The design has been completed to maximize his charm!".
 {% endcapture %}
-{% include hero-infobox.html stockId=10012 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8001102" %}
+{% include hero-infobox.html stockId=10012 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprite="fg_akashiSummerdive2108_h02_skin2,fg_akashiSummerdive2108_h02_skin3,fg_akashiSummerdive2108_h02_skin4" passiveSkillIds="8001102" %}
 
 {% capture BIO_S01 %}
 Akashi is born and raised in Orient City, a native Earthling. Full name's Tamamura Akashi.
