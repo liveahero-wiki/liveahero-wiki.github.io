@@ -57,5 +57,9 @@ Lastly, together with this campaign we will get our next challenge quest, which 
 
 ### Character Training Campaign
 
-{% include quest-group.html chapterId=420 %}
+{% include quest-group.html chapterId=435 %}
+
+### Practice! Bar Security Training!
+
+{% include quest-group.html chapterId=436 %}
 
