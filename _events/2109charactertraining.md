@@ -75,4 +75,4 @@ Lastly, together with this campaign we will get our next challenge quest, which 
 
 ### Mercenary's skills
 
-{% include skill-table-manual.html skillIds="4066401" equipmentSkills="6066402" %}
+{% include skill-table-manual.html skillIds="4066401" equipmentSkills="6066401,6066402" %}
