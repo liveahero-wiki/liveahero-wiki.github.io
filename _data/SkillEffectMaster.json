@@ -11229,5 +11229,398 @@
       "canDuplicate": true,
       "isDisplayPersistenceStatus": true
     }
+  },
+  "467": {
+    "skillEffectId": 467,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "DamageLimit",
+          "parameter": {
+            "value": 30000
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 27,
+      "canDispel": false,
+      "parameter": false,
+      "description": "ダメージ上限30000",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "468": {
+    "skillEffectId": 468,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewChange",
+          "parameter": {
+            "value": 50
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"statusId\":63,\"class\":\"OwnDeBuffNumberExecTrigger\"}]",
+      "filename": "status_awakening",
+      "statusId": 61,
+      "canDispel": false,
+      "parameter": false,
+      "description": "覚醒（永続システム効果） システム効果63番がある時のみ発動",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "469": {
+    "skillEffectId": 469,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 63,
+      "canDispel": false,
+      "parameter": false,
+      "description": "システム効果63番付与（永続）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": true
+    }
+  },
+  "470": {
+    "skillEffectId": 470,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewChange",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "filename": "status_useless",
+      "statusId": 62,
+      "canDispel": false,
+      "parameter": false,
+      "description": "過消費（効果半分）システム効果",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": true
+    }
+  },
+  "471": {
+    "skillEffectId": 471,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 62,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "システム効果62番除去",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "472": {
+    "skillEffectId": 472,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 63
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 65,
+      "canDispel": false,
+      "parameter": false,
+      "description": "デバフ63抵抗",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "473": {
+    "skillEffectId": 473,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 65
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 48,
+      "canDispel": false,
+      "parameter": false,
+      "description": "デバフ65抵抗",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "474": {
+    "skillEffectId": 474,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "OwnAttack",
+          "parameter": {
+            "index": 0
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "スキル１を追加発動",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "475": {
+    "skillEffectId": 475,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 50,
+            "statusId": 0
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 59,
+      "canDispel": true,
+      "parameter": false,
+      "description": "弱体抵抗+50",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "476": {
+    "skillEffectId": 476,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeViewCoefficient",
+          "parameter": {
+            "value": 125
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 60,
+      "canDispel": false,
+      "parameter": false,
+      "description": "ChangeViewスキルの効果が25%上昇",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "477": {
+    "skillEffectId": 477,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ViewPowerMultipleAttack",
+          "parameter": {
+            "value": 10,
+            "maxMult": 150,
+            "minMult": 100
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 60,
+      "canDispel": false,
+      "parameter": true,
+      "description": "ViewPowerに応じて味方全体のAtkを上昇",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "478": {
+    "skillEffectId": 478,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 63
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 65,
+      "canDispel": false,
+      "parameter": false,
+      "description": "デバフ63抵抗",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "479": {
+    "skillEffectId": 479,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 65
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 48,
+      "canDispel": false,
+      "parameter": false,
+      "description": "デバフ65抵抗",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "480": {
+    "skillEffectId": 480,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 64,
+      "canDispel": false,
+      "parameter": false,
+      "description": "システム効果64番付与（永続）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": true
+    }
+  },
+  "481": {
+    "skillEffectId": 481,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 48,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "parameter": false,
+      "description": "システム効果48番除去",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "482": {
+    "skillEffectId": 482,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 64
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 48,
+      "canDispel": false,
+      "parameter": false,
+      "description": "デバフ64抵抗",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
   }
 }

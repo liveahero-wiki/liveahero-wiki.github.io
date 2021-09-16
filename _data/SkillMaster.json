@@ -20452,6 +20452,94 @@
       }
     ]
   },
+  "4032104": {
+    "skillId": 4032104,
+    "skillName": "マネー・イズ・タイム",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_cureAll",
+    "timing": 0,
+    "description": "敵単体に60%ダメージの有利属性攻撃。味方全体のデバフを１つ解除。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_procy_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 360,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4032105": {
+    "skillId": 4032105,
+    "skillName": "ゴールドラッシュ・アワー",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "b_skill_view",
+    "subResourceName": "s_skill_spdUpAll",
+    "timing": 0,
+    "description": "Viewを25000獲得。味方全体に1回の行動の間超SPDアップを付与。【ピンチ状態時追加効果】味方全体のデバフを1つ解除（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_procy_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 57,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 38,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
   "4032106": {
     "skillId": 4032106,
     "skillName": "シャドウ・ハンマー",
@@ -20549,6 +20637,178 @@
         "skillEffectId": 48,
         "prob": 100,
         "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4032109": {
+    "skillId": 4032109,
+    "skillName": "ゴールドラッシュ・アワー",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "Viewを25000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_procy_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 57,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4033101": {
+    "skillId": 4033101,
+    "skillName": "日輪の踊り",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "b_skill_healAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "戦闘不能の味方全体を100%のHPで復活。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_gomeisa_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 260,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 471,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 472,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4033102": {
+    "skillId": 4033102,
+    "skillName": "大風の舞い",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に50%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_gomeisa_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4033103": {
+    "skillId": 4033103,
+    "skillName": "ダンサクェ・トラエパス",
+    "useView": 25000,
+    "targetFlag": 3,
+    "resourceName": "b_skill_buffAll",
+    "subResourceName": "s_skill_heal",
+    "timing": 0,
+    "description": "味方全体に3回の行動の間ATKアップ×2を付与。1回分の無敵を付与。戦闘不能の場合100%のHPで復活。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_gomeisa_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 3,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 3,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 17,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 260,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 471,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 472,
+        "prob": 100,
+        "effectTarget": 3,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "triggerJson": []
@@ -24498,6 +24758,35 @@
       }
     ]
   },
+  "4066401": {
+    "skillId": 4066401,
+    "skillName": "ウィーク・ショット",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に70%ダメージの有利属性攻撃。ダメージを受けたとき、30%の確率でこのスキルで反撃。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMercenary_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 224,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4074101": {
     "skillId": 4074101,
     "skillName": "噛み付き",
@@ -24839,6 +25128,28 @@
       }
     ]
   },
+  "6000013": {
+    "skillId": 6000013,
+    "skillName": "ダメージ制限50000",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "相手から受けるダメージの上限を50000にする。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 339,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "6000014": {
     "skillId": 6000014,
     "skillName": "生存本能",
@@ -24927,6 +25238,28 @@
     "effects": [
       {
         "skillEffectId": 358,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6000018": {
+    "skillId": 6000018,
+    "skillName": "光合成",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "ターン開始時、自身のHPを基礎ATKの500%回復する。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 341,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,
@@ -25261,6 +25594,50 @@
       }
     ]
   },
+  "6000039": {
+    "skillId": 6000039,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_cure",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "デバフ63抵抗。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 472,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6000040": {
+    "skillId": 6000040,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_cure",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "デバフ65抵抗。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 473,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "6004101": {
     "skillId": 6004101,
     "skillName": "新しい接続",
@@ -25470,6 +25847,56 @@
     "effects": [
       {
         "skillEffectId": 97,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6032102": {
+    "skillId": 6032102,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 6,
+    "description": "",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 469,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "NotPinchExecTrigger",
+            "value": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "6033101": {
+    "skillId": 6033101,
+    "skillName": "守るんデス！",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "プロキーがピンチ状態の時、自身のスキルに必要なViewが半分になる。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 468,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,
@@ -26112,6 +26539,50 @@
             "statusId": 0
           }
         ]
+      }
+    ]
+  },
+  "6066401": {
+    "skillId": 6066401,
+    "skillName": "ウィーク・ショット",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "自身に反撃スキル130%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 445,
+        "prob": 30,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6066402": {
+    "skillId": 6066402,
+    "skillName": "援護不可",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "",
+    "timing": 14,
+    "description": "このヒーローが戦闘不能になっている間、味方のViewを使うスキルのViewの消費量が50%増加する。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 470,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
       }
     ]
   },
