@@ -63,3 +63,16 @@ Lastly, together with this campaign we will get our next challenge quest, which 
 
 {% include quest-group.html chapterId=436 %}
 
+## S Rank Challenge Guide
+
+### Procy's skills
+
+{% include skill-table-manual.html skillIds="4032104,4032105" equipmentSkills="6000024" %}
+
+### Gomeisa's skills
+
+{% include skill-table-manual.html skillIds="4033101,4033102,4033103" equipmentSkills="6000013,6000018,6033101" %}
+
+### Mercenary's skills
+
+{% include skill-table-manual.html skillIds="4066401" equipmentSkills="6066402" %}
