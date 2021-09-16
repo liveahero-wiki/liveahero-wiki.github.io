@@ -22,7 +22,7 @@ Each first clear will grant 1 {% include item-icon.html id= 2%} Ether Stone.
 
 Also, there will be daily missions and limited time missions for character training campaign, rewarding {% include item.html id= 10%} and {% include item.html id= 29%}.
 
-Lastly, together with this campaign we will get our next challenge quest, which is A Challenge From the Fisherman (Isaribi), this challenge quest will have 4 quests and clearing all of them will rewards 1 {% include item.html id= 10%}.
+Lastly, together with this campaign we will get our next challenge quest, which is Practice! Bar Security Training! (Procy), this challenge quest will have 3 quests and clearing all of them will rewards 1 {% include item.html id= 10%}.
 
 ### Daily Missions: 
 
