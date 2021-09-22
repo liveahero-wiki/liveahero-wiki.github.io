@@ -2,7 +2,7 @@
 title: Character Training Campaign
 jp_title: キャラクター育成キャンペーン
 news_link: https://live-a-hero.jp/campaign/2789
-banner_image: banner_campaign_2104_charactertraining.jpg 
+banner_image: banner_campaign_Breed.jpg 
 event_start_time: 2021-09-16T18:00:00+09
 event_end_time: 2021-09-30T14:00:00+09
 ---
