@@ -26,7 +26,7 @@ There will be extra login bonus for 7 days as follow
 | 6  | 10 {% include item.html id=1 %} ; 100,000 {% include item.html id=11 %} |
 | 7  | 20 {% include item.html id=1 %} ; 5 {% include item.html id=29 %} ; 5 {% include item.html id=28 %} ; 5 {% include item.html id=27 %} |
 
-#### 1st Anniversary Ticket Exchange
+### 1st Anniversary Ticket Exchange
 
 You can exchange 1st anniversary ticket with a 4 star hero or 4 star sidekick of your choice.
 Exchange will be available until 2021/10/28 14:00 JST.
@@ -67,7 +67,7 @@ Here is a list of available hero/sidekick for exchange:
 ### Others
 
 - User rank limit will be increased from 80 to 100
-- {% include item.html id=59 %} Parallel Quartz will be added to the friend point gacha
+- {% include item-icon.html id=59 %} Parallel Quartz will be added to the friend point gacha
 - You will be able to set your preferred hero/sidekick to the homescreen
 - You will be able to change sidekick skin
 - You will be able to filter sidekick based on skill effect
