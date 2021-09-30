@@ -95,6 +95,19 @@ Here is the bonus:
 | 2 Event Heroes |     30    |
 | 3 Event Heroes |     50    |
 
+### Limited Time Mission
+
+Here is a list of this event's limited time Missions:
+
+| No  | Description      | Rewards      |
+|----|-----------------------------------------------------------|----------------|
+| 1  | Finish any rank event quest 10 times | 1 {% include item-icon.html id=34 %}    |
+| 2  | Finish any rank event quest 20 times | 1 {% include item-icon.html id=34 %}    |
+| 3  | Finish any rank event quest 30 times | 1 {% include item-icon.html id=34 %}    |
+| 4  | Finish any rank event quest 40 times | 1 {% include item-icon.html id=34 %}    |
+| 5  | Finish any rank event quest 50 times | 1 {% include item-icon.html id=34 %}    |
+| 6  | Finish event sales 10 times | 1 {% include item-icon.html id=34 %}    |
+
 ### Sidekick Skin
 
 New sidekick skin for everyone listed:
