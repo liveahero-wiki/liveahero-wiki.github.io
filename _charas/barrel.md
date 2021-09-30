@@ -60,6 +60,16 @@ TRAINED = "Aghh! T-That's a big hit!"
 %}
 
 {% include voice-table.html resourceName="barrelHerofesta2109"
+APPRECIATION = "Thank you for all your hard work, partner!<br>Why don't we go for a swim for a change? It's summer, and I want to enjoy it with you!<br>Come on, come on!"
+DAILY = "You might not've guessed, but I'm quite the summer man!<br>I'm really good at beach volleyball and swimming! What?<br>No, you've got it wrong! I don't swim with a dog paddle!!"
+HERO = "Chief is a very reliable commander!<br>I heard that he respects a military commander named Zhuge Liang Kongming... Or something like that!<br>Well, I don't know him, but...."
+PLAYER = "Do you like summer, Partner?<br>I love it so much! I've been itching to swim for a while now...<br>Oh, I wanna dive off the board!"
+RELATION = "Furlong is shy, but he's a really cool guy once you get to know him.<br>We've been going to the pool together lately,<br>but the fire on his head... doesn't go out even when he's in the water...what a mystery."
+TOUCH = "Whaaaaa! What's wrong with you, partner?<br>Do you want to get soaked too? Then...<br>Take this! I'll get you wet alright!"
+TRAIN = "Hope you don't mind if you get soaked!"
+TRAINED = "I'm soaked to the bone...!"
+EVENTA = "Heh heh! What do you think? Does it look good on me?<br>With this new costume and handsome face, the audience's eyes are gonna be all on us!<br>Oi, what're you laughing at?!"
+EVENTB = "It's nice to have a lively festival, it makes me feel excited!<br>Hey, partner, let's go visit the food stalls after the battle!<br>My stomach's growling!"
 %}
 
 ## Notes
