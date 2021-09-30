@@ -12,6 +12,29 @@ sales_start_time: 2021-09-30T20:00:00+09
 sales_end_time: 2021-10-21T20:00:00+09
 ---
 
+There will be event ticket quest for this event, where you use {% include item-icon.html id=38 %} Quest Ticket to get more event items than normal event free quest.
+
+## Event Preview
+
+This is a story of a certain summer day.
+
+Every summer, the seaside town Orient City holds a citywide festival of heroes, "Hero City Summer Festa".
+
+The highlight of the event was the "O-1 Hero Grand Prix",
+a battle competition between hero offices,
+Parallel Flight, which failed to meet the requirements for participation, 
+opened a beach cafe in the restaurant area and 
+worked tirelessly to serve customers and prepare food.
+
+...But then suddenly, 
+the friendly commander-in-chief of the Japanese branch of the UEHA appeared.
+He request your help as a hero operator for the duration of the tournament because he's short on staff...!?
+
+A gunfighter cop who wants to shine in a way that's appropriate for the summer,
+ a rescue captain who wants to get rid of his fearsome image, 
+and other familiar UEHA members join forces and get ready for a battle tournament!
+Can UEHA become the city's brightest hero office this summer!?
+
 ### Event Banners
 
 This Event's gacha summon includes time-limited variant {% chara_link Barrel|h2 %} (Hero), {% chara_link Victom|h2 %} (Hero) and one new character {% chara_link Okitaka %} (Hero & Sidekick).
