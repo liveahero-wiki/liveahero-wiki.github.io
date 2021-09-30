@@ -23,7 +23,7 @@ The water in the tank attached to his gun is infinite as long as he has energy t
 He had been practing his aim for a long time, longing to be a good-looking gunslinger, and it was quite a shock for him to be overpowered by another in terms of "attractiveness" in battle. It was as if he had been exposed to a weakness that gunslingers, who are always exposed to fire and heat, cannot avoid. What gave him inspiration was the intense water aiming skill of his friend, the fireman hero, at a water pistol target shooting stall. As a lover of summer and the water, it was inevitable that he would want to be a hero who deals with water and is appropriate for summer.
 {% endcapture %}
 
-{% include hero-infobox.html stockId=10072 BIO_H01=BIO_H01 %}
+{% include hero-infobox.html stockId=10072 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 A Police officer from Orient City's municipal police department, working in a police box. An alien who grew up in Houston, USA. Honest, straightforward and very friendly, a model police officer if not for his excessive adoration for western sheriffs and tendency to jump to conclusions at the drop of a hat. He uses a tranquilizer gun, but have very poor shooting skills, no matter how many rounds are fired he can't hit his target, not even the surrounding onlookers have ever got hit.
