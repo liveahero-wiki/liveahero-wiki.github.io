@@ -44,6 +44,7 @@ Here is a list of available hero/sidekick for exchange:
 | {% chara_link Kyoichi|h1 %}   |
 | {% chara_link Flamier|h1 %}   |
 | {% chara_link Toshu|h1 %}   |
+| {% chara_link Furlong|h1 %}   |
 | {% chara_link Hydoor|h1 %}   |
 | {% chara_link Hitomi|h1 %}   |
 | {% chara_link Subaru|h1 %}   |
@@ -58,7 +59,6 @@ Here is a list of available hero/sidekick for exchange:
 | {% chara_link Mokdai %}   |
 | {% chara_link Sui %}   |
 | {% chara_link Flamier %}   |
-| {% chara_link Furlong %}   |
 | {% chara_link Goro %}   |
 | {% chara_link Huckle %}   |
 | {% chara_link Kalaski %}   |
