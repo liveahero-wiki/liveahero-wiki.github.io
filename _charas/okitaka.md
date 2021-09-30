@@ -21,6 +21,16 @@ The tight-knit working relationship between UEHA and Parallel Flight is due to t
 {% include sidekick-infobox.html stockId=10751 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="okitaka"
+APPRECIATION = "Oh, you're tired, aren't you? Do you want me to rub your shoulders? Kidding!<br>Well, just don't let yourself get too stressed out.<br>Thanks for all your hard work."
+DAILY = "Hey! How are you doing? Hahaha, yeah, yeah. Don't be so nervous.<br>It's not the commander who's here now.<br>I'm just an old man who works for the city hall."
+HERO = "Barrel, you've really come out of your shell. Not just in appearance.<br>Your technique was rough, but now it's been honed beautifully.<br>I wonder if that's part of your power...?"
+PLAYER = "Kuru-Yan told me about you. I heard you're a very capable operator.<br>What do you say to joining our staff? I'd be happy to show you the ropes!"
+RELATION = "You're still a hard-ass, aren't you, Victom?<br>You should relax your shoulders a little more.<br>What, I'm too relaxed? Well, I think easy-going would be a more flattering term..."
+TOUCH = "Oh, what is it? Are you interested in an old man like me?<br>No, we mustn't, it is forbidden...! ...huh?<br>Then you'll stop? Wait no, come back!"
+TRAIN = "Let's show off what a veteran can do."
+TRAINED = "It's so hard! It's so hard! I can't do it anymore!"
+EVENTA = "The sun is shining, it's a perfect day for a battle!<br>Now let's plan our next battle plan together.<br>We're going to get another win today!"
+EVENTB = "Oh, you're making takoyaki? Let me borrow some.<br>I can make takoyaki with my eyes closed! Now lessee... didn't it go.... hm...<br>No, don't tell me! I have things under control!"
 %}
 
 ## Notes
