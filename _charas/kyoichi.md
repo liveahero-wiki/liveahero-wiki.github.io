@@ -53,7 +53,7 @@ Although he possesses the leadership and magnanimity that children idolize, ther
 
 By the way, it seems like "Elementary students are the base he's supposed to defend".
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10101 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10101 BIO_S01=BIO_S01 extra_sprites="fg_kyoichi_s01_skin1" %}
 
 {% include voice-table.html resourceName="kyoichi"
 h_gachaResult = "My name is Kyoichi Ootomo, <br>I'm the second home room teacher at Wangansan Elementary School for 4th grade class.<br>I'll partake in any battle to ensure my students' peaceful lives."

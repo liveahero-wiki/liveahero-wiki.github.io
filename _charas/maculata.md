@@ -36,7 +36,7 @@ Because of her strict attitude toward herself and others, she has a slight tempe
 
 Although she is a master to Sui, the sense of distance from her best friend's daughter is a little delicate because of the circumstances.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10591 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10591 BIO_S01=BIO_S01 extra_sprites="fg_maculata_s01_skin1" %}
 
 {% include voice-table.html resourceName="maculata"
 h_gachaResult = "My name is Maculata.<br>I'm a designer.<br>To think that you have an eye on me…<br>Looks like you are also an agressive one."

@@ -27,7 +27,7 @@ Usually shy and timid, he's a scaredy-cat that loves peace.
 
 He talks to everyone in an honorific form, except to Barrel who is close to his age and so the only one he speaks casually with.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10081 BIO_S01=BIO_S01 extra_sprites="fg_ADV_furlong_s01" %}
+{% include sidekick-infobox.html stockId=10081 BIO_S01=BIO_S01 extra_sprites="fg_furlong_s01_skin1,fg_ADV_furlong_s01" %}
 
 {% include voice-table.html resourceName="furlong"
 h_gachaResult = "With burning passion,Burn striker has arrived!<br>Come on!<br>Let's put out the fire!"

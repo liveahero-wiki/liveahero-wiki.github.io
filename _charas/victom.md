@@ -12,6 +12,8 @@ His desire/wish is "to have the power to rescue all the weak and powerless peopl
 {% endcapture %}
 {% include hero-infobox.html stockId=10091 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
+{% include hero-infobox.html stockId=10092 %}
+
 {% capture BIO_S01 %}
 The commanding officer of Orient City Fire Department's Hyper Rescue team, always wearing a full face helmet.
 
@@ -21,7 +23,7 @@ Calm and stoic, he is a man who is as much of a life saver as possible, possessi
 
 Even though he believes that all lives are precious, there is a side of him that follows the saying of "To Live for others, and to die for others", so he tends to look down on his life.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10091 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10091 BIO_S01=BIO_S01 extra_sprites="fg_victom_s01_skin1" %}
 
 {% include voice-table.html resourceName="victom"
 h_gachaResult = "Hyper Rescue Squad Captain, Victom.<br>Also known as Survive Taker.<br>I'll certainly protect your lives…"
@@ -49,6 +51,9 @@ RELATION = "I don't understand that waiter's idea.<br>There is no way I can get 
 TOUCH = "What is it? You want to see my face? Stop it.<br>There is nothing to see underneath the helmet.<br>If you still want to... maybe next time."
 TRAIN = "Don't think of this as training. Go!"
 TRAINED = "Ghnnhg... Q-Quite formidable…"
+%}
+
+{% include voice-table.html resourceName="victomHerofesta2109"
 %}
 
 ## Notes

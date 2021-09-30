@@ -12,11 +12,13 @@ He appears gallantly in front of evil-doers and punish them with his twin guns. 
 
 {% include hero-infobox.html stockId=10071 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
+{% include hero-infobox.html stockId=10072 %}
+
 {% capture BIO_S01 %}
 A Police officer from Orient City's municipal police department, working in a police box. An alien who grew up in Houston, USA. Honest, straightforward and very friendly, a model police officer if not for his excessive adoration for western sheriffs and tendency to jump to conclusions at the drop of a hat. He uses a tranquilizer gun, but have very poor shooting skills, no matter how many rounds are fired he can't hit his target, not even the surrounding onlookers have ever got hit.
 {% endcapture %}
 
-{% include sidekick-infobox.html stockId=10071 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10071 BIO_S01=BIO_S01 extra_sprites="fg_barrel_s01_skin1" %}
 
 {% include voice-table.html resourceName="barrel"
 h_gachaResult = "Orient City Police Department, I'm Officer Barrel!<br>In the name of justice,I will fight!<br>So, where's the crime scene!?<br>Come on,come on!!"
@@ -44,6 +46,9 @@ RELATION = "That detective is always sighing.<br>Looks like being in middle mana
 TOUCH = "H-Hey! It tickles, hahaha!<br>If you keep doing that, I'll--"
 TRAIN = "Don't worry, I won't really try to hit you!"
 TRAINED = "Aghh! T-That's a big hit!"
+%}
+
+{% include voice-table.html resourceName="barrelHerofesta2109"
 %}
 
 ## Notes

@@ -25,7 +25,7 @@ He hates excessive payments and very much prefers get-rich-quick schemes one way
 
 It seems like the bar's opening cost has him up to his neck in debt.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10321 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10321 BIO_S01=BIO_S01 extra_sprites="fg_procy_s01_skin1,fg_procy_s01_skin2" %}
 
 {% include voice-table.html resourceName="procy"
 h_gachaResult = "Never thought I'd get scouted by your place.<br>Well, leave to me anything related to money-making.<br>This procy will give you a crash course on how to make money."

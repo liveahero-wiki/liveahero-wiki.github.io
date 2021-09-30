@@ -72,6 +72,8 @@ Deal {{ effect.parameter.value }}% of damage to {{ target }} regardless of eleme
 Make {{ target }} go last
 {% when "CounterAttack" %}
 Counter attack the hitting enemy (may consume attack buff as if this is normal attack)
+{% when "OwnAttack" %}
+Activate self's skill {{ effect.parameter.index | plus: 1 }}
 {% when "ComboMultipleAttack" %}
 ATK Up by {{ effect.parameter.value }}% to {{ target }} for each combo
 {% when "SpdDeferenceMultipleAttack" %}
@@ -121,6 +123,10 @@ Resurrect {{ target }} to {{ effect.parameter.value }}% HP
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the lowest ATK {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
 {% when "AimHighestAtkCharacter" %}
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the highest ATK {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
+{% when "AimLowestSpdCharacter" %}
+(Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the lowest SPD {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
+{% when "AimHighestSpdCharacter" %}
+(Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the highest SPD {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
 {% when "AimBossCharacter" %}
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the boss {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
 {% else %}

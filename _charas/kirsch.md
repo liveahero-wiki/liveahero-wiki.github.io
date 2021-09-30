@@ -27,7 +27,7 @@ She took over the wishes of her teacher, who was eaten by a kaibutsu during his 
 
 Claiming to be indifferent about anything unrelated to confectionery, both her words and her deeds are conspicuous and tend to contradict each other.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10281 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10281 BIO_S01=BIO_S01 extra_sprites="fg_kirsch_s01_skin1" %}
 
 {% include voice-table.html resourceName="kirsch"
 h_gachaResult = "I’m Kirsch, a pâtissier!<br> I will keep on fighting until I can master the recipe of that fantastic sweet that made my teacher gasp in delight…!"

@@ -51,7 +51,7 @@ Due to his enormous size and the fact that he's taciturn and has an unfriendly f
 
 He has a habit of giving folded origami figures to the children he meets.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10121 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10121 BIO_S01=BIO_S01 extra_sprites="fg_shoen_s01_skin1" %}
 
 {% include voice-table.html resourceName="shoen"
 h_gachaResult = "...I am Shoen,<br>someone who makes good use of characters and spreads them around...<br>that’s the kind of man I am."

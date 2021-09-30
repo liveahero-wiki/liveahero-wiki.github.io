@@ -22,7 +22,7 @@ A man who manages both a hot spring resort in the southern part of Orient City a
 He has a stern expression on his face, his body is rugged and he has 2 sharp horns, due to which people are oftentimes scared of him when they meet for the first time. He is a gentle person with a soft demeanor, but he has a strong sense of responsibility. He loves taking baths and does so about 5 times a day.
 {% endcapture %}
 
-{% include sidekick-infobox.html stockId=10511 BIO_S01=BIO_S01%}
+{% include sidekick-infobox.html stockId=10511 BIO_S01=BIO_S01 extra_sprites="fg_nessen_s01_skin1,fg_nessen_s01_skin2" %}
 
 {% include voice-table.html resourceName="nessen"
 h_gachaResult = "I'm Nessen, a manager at a hot spring hotel.<br>With this heated body I will fight,<br>for the sake of those who wish to find a tranquil resting place."
