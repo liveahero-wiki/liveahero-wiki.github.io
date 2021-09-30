@@ -62,6 +62,16 @@ TRAINED = "Ghnnhg... Q-Quite formidable…"
 %}
 
 {% include voice-table.html resourceName="victomHerofesta2109"
+APPRECIATION = "Why don't you go play with the others?<br>...You seem tired.<br>Get some rest. I'll take care of the luggage."
+DAILY = "Don't forget we're here to work.<br>Don't stare at the stalls so much... I'll buy you one during breaktime, okay?<br>Just be patient for now."
+HERO = "I trust and respect the Chief.<br>But I can't get along with his frivolous personality.<br>It's not that he's not taking his work seriously, but...."
+PLAYER = "Do you like summer too? I...don't like it much.<br>Because everyone gets careless, and the chance of getting into an accident at leisure is higher.<br>Besides, the heat gets trapped inside my mask."
+RELATION = "Gammei can get pretty crazy when he's riled up.<br>It gets irritating sometimes. At the previous job..<br>Is he coming this way? Man's got a hell of an ear."
+TOUCH = "Stop, get off me!<br>It's hot enough already, you're making it even hotter....Huh.<br>At least do it in a cool place."
+TRAIN = "Have you done your preparatory exercises? Let's go."
+TRAINED = "I think I'm going to drown...!"
+EVENTA = "Is it so strange that I'm wearing light clothes?<br>It's not that I don't feel the heat.<br>I just don't like to expose too much skin, these scars are, unsightly..."
+EVENTB = "This appearance... well. You gave it to me, didn't you?<br>This way, that child won't be afraid of me.<br>I wonder if I can make them smile...?"
 %}
 
 ## Notes
