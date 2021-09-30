@@ -21,7 +21,7 @@ A detective from Orient City's municipal police department, positioned as a poli
 {% endcapture %}
 
 {% include sidekick-infobox.html stockId=10061
-BIO_S01=BIO_S01
+BIO_S01=BIO_S01 extra_sprites="fg_gammei_s01_skin1"
 %}
 
 {% include voice-table.html resourceName="gammei"

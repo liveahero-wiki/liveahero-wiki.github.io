@@ -13,7 +13,7 @@ He was "Hopper The Face", a S-class hero who once teamed up with Ryekie, aka Zap
 One day he suddenly awakened to the powers of an observer, and since then he could no longer transform into a hero, he decided to retire as a hero and put himself in a position to back them up.
 His physique and good judgment on the battlefield can be attributed to this background.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10341 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10341 BIO_S01=BIO_S01 extra_sprites="fg_huckle_s01_skin1" %}
 
 {% include voice-table.html resourceName="huckle"
 s_gachaResult = "My name's Huckle<br>I'm the president of this company.<br>We welcome a newcomer like you.<br>I will give you a good workplace environment."

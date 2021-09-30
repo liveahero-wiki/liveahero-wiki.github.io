@@ -25,7 +25,7 @@ Since he's a smart person, he can also partake in formulating strategies on the 
 
 Although his body is plump and looks soft, his bloodline carries an effect that grants him terrifying superhuman strength.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10021 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10021 BIO_S01=BIO_S01 extra_sprites="fg_mokdai_s01_skin1" %}
 
 {% include voice-table.html resourceName="mokdai"
 h_gachaResult = "I'm Mokdai, a cameraman.<br>If you need a battle live filmed, you can leave it to me!<br>...Eh!? y-you want me to do the fighting!?"

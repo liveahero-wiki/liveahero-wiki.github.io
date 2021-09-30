@@ -25,7 +25,7 @@ She posses a cool and dry personality and a somewhat poisonous tongue. Dialogue 
 
 She has been afflicted by the gap between her body and mind ever since childhood.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10031 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10031 BIO_S01=BIO_S01 extra_sprites="fg_sui_s01_skin1" %}
 
 {% include voice-table.html resourceName="sui"
 h_gachaResult = "I'm Sui.<br>I'm an apprentice designer.<br>If I can save people with my needlework, then…<br>Please, make use of it as you see fit."

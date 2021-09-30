@@ -17,7 +17,7 @@ He hates disputes, loves cute things and wants to get along with everyone. He ha
 Gomeisa is a young giant alien working as a waiter in a place where heroes gather under Procy's management. He is originally from a planet with a civilization that lives with giant trees. He loves dancing and praying to those very same trees and the gods above them. He is innocent, kind, naive and very unsuspecting of others. Having no qualm with being touched, showing no hesitation when asked to undress, causing tons of clumsy accidents due to his massive body; Procy's just at a loss with him.
 {% endcapture %}
 
-{% include sidekick-infobox.html stockId=10331 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10331 BIO_S01=BIO_S01 extra_sprites="fg_gomeisa_s01_skin1,fg_gomeisa_s01_skin2" %}
 
 {% include voice-table.html resourceName="gomeisa"
 h_gachaResult = "Gomeisa here, the peace dancer!<br>May everyone can dance and have fun together!<br>This is my dream!"

@@ -52,7 +52,7 @@ He is a childhood friend of the protagonist in this universe. Despite not necess
 
 He is a university student who attends the Hinowa University of Physical Education and Sports, a member of the baseball club and a part-timer. Although his batting average in practice games is at a professional level, he tends to be weak in tense situations and is unable to fully demonstrate his abilities in public.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10011 BIO_S01=BIO_S01 extra_sprites="fg_akashi_s01_skin1,fg_akashi_s01_skin2,fg_akashi_s01_skin3" %}
+{% include sidekick-infobox.html stockId=10011 BIO_S01=BIO_S01 extra_sprites="fg_akashi_s01_skin1,fg_akashi_s01_skin2,fg_akashi_s01_skin3,fg_akashi_s01_skin4" %}
 
 {% include voice-table.html resourceName="akashi"
 h_gachaResult = "I'm Akashi, a college baseball player.<br>I don’t exactly look like a hero, but it’s a part-time job.<br>Looking forward to working with you!"

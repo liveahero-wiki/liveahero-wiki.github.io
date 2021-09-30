@@ -29,7 +29,7 @@ Her arms are as strong as her spirit, and she abhors being treated with contempt
 
 Since she's a geek deeply interested in high tech, when she sees rare mechas or robots she has a bad habit of wanting to disassemble them and analyze their structure.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10051 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10051 BIO_S01=BIO_S01 extra_sprites="fg_crowne_s01_skin1"%}
 
 {% include voice-table.html resourceName="crowne"
 h_gachaResult = "I'm Crowne a Mechanic.<br>You will be my operator?<br>Well, this must be some sort of fate.<br>I'm counting on you."
