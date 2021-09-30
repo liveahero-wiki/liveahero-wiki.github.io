@@ -12,7 +12,7 @@ His desire/wish is "to have the power to rescue all the weak and powerless peopl
 {% endcapture %}
 {% include hero-infobox.html stockId=10091 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10092 %}
+{% include hero-infobox.html stockId=10092 passiveSkillIds="8009201,8009202,8009203" %}
 
 {% capture BIO_S01 %}
 The commanding officer of Orient City Fire Department's Hyper Rescue team, always wearing a full face helmet.
