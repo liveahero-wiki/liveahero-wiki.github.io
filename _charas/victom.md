@@ -2,6 +2,8 @@
 title: Victom
 characterId: 9
 occupation: "Rescue squad captain"
+h2:
+  title: "\"Dynamic Rescue\" Victom"
 ---
 
 {% capture BIO_H01 %}
@@ -12,7 +14,13 @@ His desire/wish is "to have the power to rescue all the weak and powerless peopl
 {% endcapture %}
 {% include hero-infobox.html stockId=10091 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10092 passiveSkillIds="8009201,8009202,8009203" %}
+{% capture BIO_H01 %}
+Victom, who sees the act of saving others' lives by throwing himself into the action a top priority, has gained a new hero outfit, specializing in lifesaving activities by the waterside. By skillfully controlling his paddle board, he slips through the gaps between the waves and cheers up those whose lives are in danger with a dazzling smile... and because that is very unusual for the usual Victom, people become quite frightened/surprised when they see him. Apparently something happened during the summer festival that lead to such a change.
+{% endcapture %}
+{% capture BIO_H02 %}
+A reticent, straightforward man who always wears a mask.  That is the impression that the public and hero fans have about Victor.  He doesn't deny that he's a gruff, even stoic man, but he seems to have some worries about being seen as scary because of his rigor.  The event in which he mistakenly caused a child on the beach to cry while returning their ball shook his heart. "I want to be the kind of hero who can make that child smile..." Maybe it was because he once had a family that he had such a desire.
+{% endcapture %}
+{% include hero-infobox.html stockId=10092 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8009201,8009202,8009203" %}
 
 {% capture BIO_S01 %}
 The commanding officer of Orient City Fire Department's Hyper Rescue team, always wearing a full face helmet.
