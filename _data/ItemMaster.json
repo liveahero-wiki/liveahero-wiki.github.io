@@ -710,6 +710,26 @@
     "effect": [],
     "limitValue": 0
   },
+  "70": {
+    "itemId": 70,
+    "itemName": "1stアニバーサリー交換チケット",
+    "resourceName": "1stAnniversaryTicket",
+    "rarity": 5,
+    "itemType": 4,
+    "description": "１周年記念に配布された、☆４ヒーロー・サイドキック交換所で使用できるチケット",
+    "effect": [],
+    "limitValue": 0
+  },
+  "71": {
+    "itemId": 71,
+    "itemName": "夏祭りのお面",
+    "resourceName": "Herofesta2109_exchange01",
+    "rarity": 0,
+    "itemType": 512,
+    "description": "夏祭りの露天で売っているお面。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -899,6 +919,27 @@
     ],
     "limitValue": 0
   },
+  "110072": {
+    "itemId": 110072,
+    "itemName": "清涼のバレルの記憶片",
+    "resourceName": "piece_barrelHerofesta2109",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "清涼のバレルのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10072
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
   "110081": {
     "itemId": 110081,
     "itemName": "ハロンの記憶片",
@@ -937,6 +978,27 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "110092": {
+    "itemId": 110092,
+    "itemName": "豪爽のヴィクトムの記憶片",
+    "resourceName": "piece_victomHerofesta2109",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "豪爽のヴィクトムのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10092
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
       }
     ],
     "limitValue": 0
@@ -1769,6 +1831,27 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 0
+      }
+    ],
+    "limitValue": 0
+  },
+  "110751": {
+    "itemId": 110751,
+    "itemName": "オキタカの記憶片",
+    "resourceName": "piece_okitaka",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "オキタカのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 10751
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
       }
     ],
     "limitValue": 0
@@ -2721,6 +2804,26 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 0
+      }
+    ],
+    "limitValue": 0
+  },
+  "210751": {
+    "itemId": 210751,
+    "itemName": "オキタカの心",
+    "resourceName": "heart_okitaka",
+    "rarity": 4,
+    "itemType": 2048,
+    "description": "オキタカのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 10751
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
       }
     ],
     "limitValue": 0
