@@ -65,7 +65,7 @@ sprites="fg_villainMercenaryEarth_h01,fg_villainMercenaryFire_h01,fg_villainMerc
 
 ### Trainee (hero)
 
-{% include hero-infobox-unreleased.html name="Trainee (normal)" mob=true
+{% include hero-infobox-unreleased.html name="Trainee (hero)" mob=true
 sprites="fg_villainTraineeEarth_h01,fg_villainTraineeFire_h01,fg_villainTraineeLight_h01,fg_villainTraineeShadow_h01,fg_villainTraineeWater_h01"
 %}
 ### Trainee (normal)
