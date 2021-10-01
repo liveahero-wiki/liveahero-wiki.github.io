@@ -497,7 +497,9 @@ $elementName: fire, water, earth, light, shadow;
   background-image: url(/cdn/Sprite/ui_frame_s_base_02.png);
 }
 .item, .status {
-  text-decoration: dotted;
+  text-decoration: underline dashed 1px;
+  text-underline-offset: 2px;
+  cursor: help;
   img {
     height: 2em;
     vertical-align: middle;
