@@ -63,6 +63,17 @@ sprites="fg_villainMafiaEarth_s01,fg_villainMafiaFire_s01,fg_villainMafiaLight_s
 sprites="fg_villainMercenaryEarth_h01,fg_villainMercenaryFire_h01,fg_villainMercenaryLight_h01,fg_villainMercenaryShadow_h01,fg_villainMercenaryWater_h01"
 %}
 
+### Trainee (hero)
+
+{% include hero-infobox-unreleased.html name="Trainee (normal)" mob=true
+sprites="fg_villainTraineeEarth_h01,fg_villainTraineeFire_h01,fg_villainTraineeLight_h01,fg_villainTraineeShadow_h01,fg_villainTraineeWater_h01"
+%}
+### Trainee (normal)
+
+{% include hero-infobox-unreleased.html name="Trainee (normal)" mob=true
+sprites="fg_villainTraineeEarth_s01,fg_villainTraineeFire_s01,fg_villainTraineeLight_s01,fg_villainTraineeShadow_s01,fg_villainTraineeWater_s01"
+%}
+
 ### Villain (hero)
 
 {% include hero-infobox-unreleased.html name="Villain (hero)" mob=true
