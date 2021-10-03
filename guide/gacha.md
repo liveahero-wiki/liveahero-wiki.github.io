@@ -19,36 +19,51 @@ You can check for the details on the obtainable units for the gacha by tapping o
 
 Friend Point gacha uses {% include item-icon.html id=42 %} friend Points to obtain various items.
 
-Below is the drop rates for possible items tested empirically from 10,000,000 friend points (10,000 multis)
+Below is the drop rates for possible items tested empirically.
+> Credits for the data: Chase
+
+#### May 9th 2021 (test size: 10,000 multis / 10,000,000 friend points)
 
 | Items | Drop rates |
-|------|------------|
-|  {% include item-icon.html id=219991 %}    | 0.009%     |
-|  {% include item-icon.html id=33 %}    | 0.69%      |
-|  {% include item-icon.html id=32 %}    | 1.334%     |
-|  {% include item-icon.html id=31 %}    | 3.997%     |
-|  {% include item-icon.html id=13 %} {% include item-icon.html id=16 %} {% include item-icon.html id=19 %} {% include item-icon.html id=22 %} {% include item-icon.html id=25 %} | 0.833%     |
-|  {% include item-icon.html id=12 %} {% include item-icon.html id=15 %} {% include item-icon.html id=18 %} {% include item-icon.html id=21 %} {% include item-icon.html id=24 %}    | 1.679%     |
-|  {% include item-icon.html id=11 %} {% include item-icon.html id=30 %} {% include item-icon.html id=35 %}   | 91.458%    |
+|-------|------------|
+| {% include item-icon.html id=219991 %} | 0.009% |
+| {% include item-icon.html id=33 %} | 0.69% |
+| {% include item-icon.html id=32 %} | 1.334% |
+| {% include item-icon.html id=31 %} | 3.997% |
+| {% include item-icon.html id=13 %} {% include item-icon.html id=16 %} {% include item-icon.html id=19 %} {% include item-icon.html id=22 %} {% include item-icon.html id=25 %} | 0.833% |
+| {% include item-icon.html id=12 %} {% include item-icon.html id=15 %} {% include item-icon.html id=18 %} {% include item-icon.html id=21 %} {% include item-icon.html id=24 %} | 1.679% |
+| {% include item-icon.html id=11 %} {% include item-icon.html id=30 %} {% include item-icon.html id=35 %} | 91.458% |
 
-Here is a breakdown for each item every 1,000 multis (10,000 slots per row):
+See a breakdown for each item every 1,000 multis (10,000 slots per row) [^bigtable].
 
-|  No | {% include item-icon.html id=219991 %}  | {% include item-icon.html id=11 %}   | {% include item-icon.html id=30 %}  | {% include item-icon.html id=35 %} | {% include item-icon.html id=12 %} {% include item-icon.html id=15 %} {% include item-icon.html id=18 %} {% include item-icon.html id=21 %} {% include item-icon.html id=24 %} | {% include item-icon.html id=13 %} {% include item-icon.html id=16 %} {% include item-icon.html id=19 %} {% include item-icon.html id=22 %} {% include item-icon.html id=25 %} | {% include item-icon.html id=31 %} | {% include item-icon.html id=32 %} | {% include item-icon.html id=33 %}  |
-|---|---|---------|---------|---------|----- |-----|------|-----|------|
-| 1 | 1 | 132675  | 132775  | 181700  | 174  | 83  | 441  | 142 | 58  |
-| 2 | 2 | 131175  | 132975  | 189750  | 179  | 79  | 377  | 135 | 68  |
-| 3 | 0 | 132025  | 136475  | 181650  | 181  | 86  | 391  | 133 | 68  |
-| 4 | 0 | 138825  | 135075  | 182925  | 161  | 90  | 384  | 141 | 79  |
-| 5 | 2 | 130200  | 131450  | 188975  | 173  | 75  | 412  | 139 | 67  |
-| 6 | 1 | 137850  | 134550  | 179500  | 165 | 78  | 384  | 122 | 71  |
-| 7 | 1 | 132325  | 136900  | 185650  | 165 | 83  | 377  | 120 | 78  |
-| 8 | 0 | 137525  | 130875  | 184025  | 153 | 79  | 408  | 136 | 69  |
-| 9 | 1 | 133950  | 137450  | 182150  | 164 | 97  | 397  | 125 | 67  |
-| 10 | 1 | 132000  | 131275  | 185150  | 164 | 83  | 426  | 141  | 65  |
-| Total | 9 | 1338550 | 1339800 | 1841475 | 1679 | 833| 3997 | 1334 | 690 |
-{:refdef style="display: block; overflow-x: scroll"}
+[^bigtable]:
+    |  No | {% include item-icon.html id=219991 %}  | {% include item-icon.html id=11 %}   | {% include item-icon.html id=30 %}  | {% include item-icon.html id=35 %} | {% include item-icon.html id=12 %} {% include item-icon.html id=15 %} {% include item-icon.html id=18 %} {% include item-icon.html id=21 %} {% include item-icon.html id=24 %} | {% include item-icon.html id=13 %} {% include item-icon.html id=16 %} {% include item-icon.html id=19 %} {% include item-icon.html id=22 %} {% include item-icon.html id=25 %} | {% include item-icon.html id=31 %} | {% include item-icon.html id=32 %} | {% include item-icon.html id=33 %}  |
+    |---|---|---------|---------|---------|----- |-----|------|-----|------|
+    |   1   |  1  | 132675  | 132775  | 181700  | 174  | 83  | 441  | 142  | 58  |
+    |   2   |  2  | 131175  | 132975  | 189750  | 179  | 79  | 377  | 135  | 68  |
+    |   3   |  0  | 132025  | 136475  | 181650  | 181  | 86  | 391  | 133  | 68  |
+    |   4   |  0  | 138825  | 135075  | 182925  | 161  | 90  | 384  | 141  | 79  |
+    |   5   |  2  | 130200  | 131450  | 188975  | 173  | 75  | 412  | 139  | 67  |
+    |   6   |  1  | 137850  | 134550  | 179500  | 165  | 78  | 384  | 122  | 71  |
+    |   7   |  1  | 132325  | 136900  | 185650  | 165  | 83  | 377  | 120  | 78  |
+    |   8   |  0  | 137525  | 130875  | 184025  | 153  | 79  | 408  | 136  | 69  |
+    |   9   |  1  | 133950  | 137450  | 182150  | 164  | 97  | 397  | 125  | 67  |
+    |   10  |  1  | 132000  | 131275  | 185150  | 164  | 83  | 426  | 141  | 65  |
+    | Total |  9  | 1338550 | 1339800 | 1841475 | 1679 | 833 | 3997 | 1334 | 690 |
+    {:refdef style="display: block; overflow-x: scroll"}
 
-> Credits for the data: Chase
+#### Oct 3rd 2021 (test size: 1,000 multis / 1,000,000 friend points)
+
+| Items | Drop rates |
+|-------|------------|
+| {% include item-icon.html id=219991 %} | 0.01% |
+| {% include item-icon.html id=59 %} | 0.96% |
+| {% include item-icon.html id=33 %} | 0.58% |
+| {% include item-icon.html id=32 %} | 1.05% |
+| {% include item-icon.html id=31 %} | 4.12% |
+| {% include item-icon.html id=13 %} {% include item-icon.html id=16 %} {% include item-icon.html id=19 %} {% include item-icon.html id=22 %} {% include item-icon.html id=25 %} | 0.74% |
+| {% include item-icon.html id=12 %} {% include item-icon.html id=15 %} {% include item-icon.html id=18 %} {% include item-icon.html id=21 %} {% include item-icon.html id=24 %} | 1.75% |
+| {% include item-icon.html id=11 %} {% include item-icon.html id=30 %} {% include item-icon.html id=35 %} | 90.79% |
 
 ## Duplication System
 
