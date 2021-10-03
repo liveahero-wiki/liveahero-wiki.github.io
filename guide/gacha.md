@@ -67,8 +67,6 @@ See a breakdown for each item every 1,000 multis (10,000 slots per row) [^bigtab
 
 ## Duplication System
 
-### TL;DR
-
 <table class="bordered">
 <thead>
 <tr><th>Specific Duplicates</th><th>Record Cubes</th><th>Generic Duplicates</th></tr>
