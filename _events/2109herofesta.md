@@ -1,5 +1,5 @@
 ---
-title: Hero festa
+title: Hero Festa in Midsummer
 jp_title: 闘え！真夏のヒーローフェスタ開催
 news_link: https://live-a-hero.jp/info/2836
 banner_image: banner_info_Herofesta2109.jpg 
