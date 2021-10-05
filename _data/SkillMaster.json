@@ -1656,7 +1656,7 @@
     "resourceName": "b_skill_damage",
     "subResourceName": "",
     "timing": 0,
-    "description": "敵単体に90%ダメージ。コンボ数が５以上の場合、スキル１を追加発動。",
+    "description": "敵単体に90%ダメージ。コンボ数が５以上かつ攻撃した敵が生存している場合、スキル１を追加発動。",
     "cutin": [
       {
         "info": {
@@ -1794,7 +1794,7 @@
     "resourceName": "b_skill_damage",
     "subResourceName": "s_skill_combo",
     "timing": 0,
-    "description": "敵単体に90%ダメージ。コンボ数が５以上の場合、スキル１を追加発動。コンボ数+2。",
+    "description": "敵単体に90%ダメージ。コンボ数が５以上かつ攻撃した敵が生存している場合、スキル１を追加発動。スキル発動後、コンボ数+2。",
     "cutin": [
       {
         "info": {
@@ -25745,6 +25745,80 @@
         "skillEffectId": 31,
         "prob": 100,
         "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4076101": {
+    "skillId": 4076101,
+    "skillName": "ストレートパンチ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。自身に30%の確率で1回の行動の間ATKアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainTrainee_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 30,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4076102": {
+    "skillId": 4076102,
+    "skillName": "アッパーカット",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に100%ダメージ。80%の確率で1回の行動の間SPDダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainTrainee_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 80,
+        "effectTarget": 2,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "triggerJson": []
