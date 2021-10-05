@@ -39,16 +39,10 @@ sprites="fg_kaibutsuSharkWater_h01"
 sprites="fg_kaibutsuShizuku_h01"
 %}
 
-### Kaibutsu (xmas)
+### Kaibutsu (Tree)
 
 {% include hero-infobox-unreleased.html name="Kaibutsu (xmas)" mob=true
 sprites="fg_kaibutsuXmas2012_h01"
-%}
-
-### Mafia (hero)
-
-{% include hero-infobox-unreleased.html name="Mafia (hero)" mob=true
-sprites="fg_villainMafiaEarth_h01,fg_villainMafiaFire_h01,fg_villainMafiaLight_h01,fg_villainMafiaShadow_h01,fg_villainMafiaWater_h01"
 %}
 
 ### Mafia (normal)
@@ -57,33 +51,40 @@ sprites="fg_villainMafiaEarth_h01,fg_villainMafiaFire_h01,fg_villainMafiaLight_h
 sprites="fg_villainMafiaEarth_s01,fg_villainMafiaFire_s01,fg_villainMafiaLight_s01,fg_villainMafiaShadow_s01,fg_villainMafiaWater_s01"
 %}
 
-### Mercenary (hero)
+### Mafia (transform)
+
+{% include hero-infobox-unreleased.html name="Mafia (hero)" mob=true
+sprites="fg_villainMafiaEarth_h01,fg_villainMafiaFire_h01,fg_villainMafiaLight_h01,fg_villainMafiaShadow_h01,fg_villainMafiaWater_h01"
+%}
+
+### Mercenary (transform)
 
 {% include hero-infobox-unreleased.html name="Mercenary (hero)" mob=true
 sprites="fg_villainMercenaryEarth_h01,fg_villainMercenaryFire_h01,fg_villainMercenaryLight_h01,fg_villainMercenaryShadow_h01,fg_villainMercenaryWater_h01"
 %}
 
-### Trainee (hero)
-
-{% include hero-infobox-unreleased.html name="Trainee (hero)" mob=true
-sprites="fg_villainTraineeEarth_h01,fg_villainTraineeFire_h01,fg_villainTraineeLight_h01,fg_villainTraineeShadow_h01,fg_villainTraineeWater_h01"
-%}
 ### Trainee (normal)
 
 {% include hero-infobox-unreleased.html name="Trainee (normal)" mob=true
 sprites="fg_villainTraineeEarth_s01,fg_villainTraineeFire_s01,fg_villainTraineeLight_s01,fg_villainTraineeShadow_s01,fg_villainTraineeWater_s01"
 %}
 
-### Villain (hero)
+### Trainee (transform)
 
-{% include hero-infobox-unreleased.html name="Villain (hero)" mob=true
-sprites="fg_villainEarth_h01,fg_villainFire_h01,fg_villainLight_h01,fg_villainShadow_h01,fg_villainWater_h01"
+{% include hero-infobox-unreleased.html name="Trainee (hero)" mob=true
+sprites="fg_villainTraineeEarth_h01,fg_villainTraineeFire_h01,fg_villainTraineeLight_h01,fg_villainTraineeShadow_h01,fg_villainTraineeWater_h01"
 %}
 
 ### Villain (normal)
 
 {% include hero-infobox-unreleased.html name="Villain (normal)" mob=true
 sprites="fg_villainEarth_s01,fg_villainFire_s01,fg_villainLight_s01,fg_villainShadow_s01,fg_villainWater_s01"
+%}
+
+### Villain (transform)
+
+{% include hero-infobox-unreleased.html name="Villain (hero)" mob=true
+sprites="fg_villainEarth_h01,fg_villainFire_h01,fg_villainLight_h01,fg_villainShadow_h01,fg_villainWater_h01"
 %}
 
 ### Villain (summer)
