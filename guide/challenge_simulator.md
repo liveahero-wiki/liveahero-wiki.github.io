@@ -63,6 +63,11 @@ Quest in simulator will reset after a period of time (normally within 14 days), 
 {% include quest-group.html chapterId=605 %}
 {% include quest-group.html chapterId=609 %}
 
+### Oct 07th 2021 - Oct 20th 2021
+
+{% include quest-group.html chapterId=601 %}
+{% include quest-group.html chapterId=606 %}
+{% include quest-group.html chapterId=607 %}
 
 ## Guides
 
