@@ -60,6 +60,8 @@ TRAINED = "Aghh! T-That's a big hit!"
 %}
 
 {% include voice-table.html resourceName="barrelHerofesta2109"
+h_gachaResult = "Dashing into summer waters!<br>Water gunman of burning eyes, officer Barrel!<br>Come, come!<br>Those who want to be soaked come here!"
+s_gachaResult = "Speaking about summer it'll be beach, when speaking beach it'll be me!<br>Beach police, officer Barrel!<br>With my prided water gun, I will manage things here, bang bang!"
 APPRECIATION = "Thank you for all your hard work, partner!<br>Why don't we go for a swim for a change? It's summer, and I want to enjoy it with you!<br>Come on, come on!"
 DAILY = "You might not've guessed, but I'm quite the summer man!<br>I'm really good at beach volleyball and swimming! What?<br>No, you've got it wrong! I don't swim with a dog paddle!!"
 HERO = "Chief is a very reliable commander!<br>I heard that he respects a military commander named Zhuge Liang Kongming... Or something like that!<br>Well, I don't know him, but...."
