@@ -21,6 +21,8 @@ The tight-knit working relationship between UEHA and Parallel Flight is due to t
 {% include sidekick-infobox.html stockId=10751 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="okitaka"
+h_gachaResult = "Japan's UEHA branch commander, Okitaka Takadono.<br>Come on, let's go, newbie.<br>I will show you an invincible strategy."
+s_gachaResult = "Japan's UEHA branch commander, Okitaka Takadono.<br>Okay, leave it to this old man!<br>I'm good at sidekick duty."
 APPRECIATION = "Oh, you're tired, aren't you? Do you want me to rub your shoulders? Kidding!<br>Well, just don't let yourself get too stressed out.<br>Thanks for all your hard work."
 DAILY = "Hey! How are you doing? Hahaha, yeah, yeah. Don't be so nervous.<br>It's not the commander who's here now.<br>I'm just an old man who works for the city hall."
 HERO = "Barrel, you've really come out of your shell. Not just in appearance.<br>Your technique was rough, but now it's been honed beautifully.<br>I wonder if that's part of your power...?"
