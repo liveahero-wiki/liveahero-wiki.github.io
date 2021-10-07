@@ -62,6 +62,8 @@ TRAINED = "Ghnnhg... Q-Quite formidable…"
 %}
 
 {% include voice-table.html resourceName="victomHerofesta2109"
+h_gachaResult = "Survive Taker, has arrived.<br>Leave the water rescue to me.<br>I'm a pretty good swimmer."
+s_gachaResult = "Survive Taker, has arrived.<br>I didn't really like summer, but… it can't be helped.<br>I will cooperate with the beach patrol."
 APPRECIATION = "Why don't you go play with the others?<br>...You seem tired.<br>Get some rest. I'll take care of the luggage."
 DAILY = "Don't forget we're here to work.<br>Don't stare at the stalls so much... I'll buy you one during breaktime, okay?<br>Just be patient for now."
 HERO = "I trust and respect the Chief.<br>But I can't get along with his frivolous personality.<br>It's not that he's not taking his work seriously, but...."
