@@ -18176,6 +18176,10 @@
       {
         "battleInfoIcon": "icon_rutilix_h01",
         "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_rutilix_h01",
+        "battleInfoElement": 1
       }
     ],
     "hasAdv": false,
@@ -21274,10 +21278,6 @@
       {
         "battleInfoIcon": "icon_villainWaterSummerdive02_h01",
         "battleInfoElement": 2
-      },
-      {
-        "battleInfoIcon": "icon_villainWaterSummerdive02_h01",
-        "battleInfoElement": 2
       }
     ],
     "hasAdv": false,
@@ -22480,6 +22480,71 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
   },
+  "437005": {
+    "questId": 437005,
+    "questName": "転身！光のレスキューヒーロー",
+    "subName": "第５話",
+    "questKind": 5,
+    "chapterId": 437,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2021-10-11 18:00:00",
+    "endAt": "2021-10-28 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 5,
+    "enemyLevel": 13,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 437004,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultWater_h01",
+        "battleInfoElement": 2
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
   "438001": {
     "questId": 438001,
     "questName": "激闘！ヒーローショー",
@@ -23182,6 +23247,141 @@
     "scoreAttackStandards": null,
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
+  },
+  "439001": {
+    "questId": 439001,
+    "questName": "ヒーロー・エキシビジョンマッチ！",
+    "subName": "スコアアタック",
+    "questKind": 8,
+    "chapterId": 439,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "icon_ryekie_h01",
+    "startAt": "2021-10-11 18:00:00",
+    "endAt": "2021-10-21 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 437002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainTraineeFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_maculata_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_kirsch_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_hisaki_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_akashi_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_ryekie_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_mokdai_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": true,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": [
+      {
+        "score": 0,
+        "iconAddress": "ui_symbol_estimation_C"
+      },
+      {
+        "score": 50000,
+        "iconAddress": "ui_symbol_estimation_B"
+      },
+      {
+        "score": 100000,
+        "iconAddress": "ui_symbol_estimation_A"
+      },
+      {
+        "score": 150000,
+        "iconAddress": "ui_symbol_estimation_S"
+      }
+    ],
+    "scoreAttackBonuses": [
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK50UP",
+        "characters": [
+          {
+            "stockId": 10072,
+            "cardType": 1
+          },
+          {
+            "stockId": 10092,
+            "cardType": 1
+          }
+        ]
+      },
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK30UP",
+        "characters": [
+          {
+            "stockId": 10751,
+            "cardType": 1
+          }
+        ]
+      },
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK10UP",
+        "characters": [
+          {
+            "stockId": 10751,
+            "cardType": 2
+          }
+        ]
+      }
+    ],
+    "scoreAttackStandards": [
+      {
+        "label": "UI_SCORE_ATTACK_CLEAR_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_CLEAR_BONUS_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_TOTAL_HP_SCORE_LABEL",
+        "description": "UI_SCORE_ATTACK_TOTAL_HP_SCORE_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_TURN_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_TURN_BONUS_DESCRIPTION"
+      }
+    ],
+    "scoreAttackHintTextKey": "HINT_SCORE_ATTACK_HEROFESTA",
+    "scoreAttackBattleCount": 3
   },
   "502001": {
     "questId": 502001,
@@ -27933,10 +28133,6 @@
       {
         "battleInfoIcon": "icon_villainMafiaFire_h01",
         "battleInfoElement": 1
-      },
-      {
-        "battleInfoIcon": "icon_villainMafiaFire_h01",
-        "battleInfoElement": 1
       }
     ],
     "hasAdv": false,
@@ -28056,10 +28252,6 @@
     "enemies": [
       {
         "battleInfoIcon": "icon_isaribi_h01",
-        "battleInfoElement": 2
-      },
-      {
-        "battleInfoIcon": "icon_villainWater_h01",
         "battleInfoElement": 2
       },
       {
@@ -28189,10 +28381,6 @@
       {
         "battleInfoIcon": "icon_villainMafiaEarth_h01",
         "battleInfoElement": 3
-      },
-      {
-        "battleInfoIcon": "icon_villainMafiaEarth_h01",
-        "battleInfoElement": 3
       }
     ],
     "hasAdv": false,
@@ -28312,6 +28500,10 @@
     "enemies": [
       {
         "battleInfoIcon": "icon_kaibutsuAdultFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFireBarrier_h01",
         "battleInfoElement": 1
       }
     ],
@@ -28715,10 +28907,6 @@
       {
         "battleInfoIcon": "icon_kaibutsuLarvaWater_h01",
         "battleInfoElement": 2
-      },
-      {
-        "battleInfoIcon": "icon_kaibutsuLarvaWater_h01",
-        "battleInfoElement": 2
       }
     ],
     "hasAdv": false,
@@ -28975,10 +29163,6 @@
       {
         "battleInfoIcon": "icon_vulpecula_h01",
         "battleInfoElement": 5
-      },
-      {
-        "battleInfoIcon": "icon_villainMercenaryFire_h01",
-        "battleInfoElement": 1
       },
       {
         "battleInfoIcon": "icon_villainMercenaryFire_h01",

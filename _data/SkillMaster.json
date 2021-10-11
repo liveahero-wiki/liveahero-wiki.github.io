@@ -19615,6 +19615,35 @@
       }
     ]
   },
+  "4001101": {
+    "skillId": 4001101,
+    "skillName": "百烈打砲",
+    "useView": 15000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に110%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_akashi_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4002101": {
     "skillId": 4002101,
     "skillName": "ハーキュリアン・パンチ",
@@ -19710,6 +19739,101 @@
       }
     ]
   },
+  "4002104": {
+    "skillId": 4002104,
+    "skillName": "ベスト・ディレクション",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "Viewを15000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_mokdai_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 114,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4002105": {
+    "skillId": 4002105,
+    "skillName": "パワー・ディレクション",
+    "useView": 5000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "Viewを15000獲得。味方全体に2回の行動の間ATKアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_mokdai_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 114,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4002106": {
+    "skillId": 4002106,
+    "skillName": "メガトン・クラッシャー",
+    "useView": 8000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に200%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_mokdai_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 19,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4004101": {
     "skillId": 4004101,
     "skillName": "キロボルト・スラッグ",
@@ -19797,6 +19921,43 @@
     "effects": [
       {
         "skillEffectId": 116,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4004106": {
+    "skillId": 4004106,
+    "skillName": "ギガボルト・ブレイカー",
+    "useView": 18000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_antiBuffAll",
+    "timing": 0,
+    "description": "敵全体に90%ダメージ+対象と自分のSPDの差だけダメージ量が上昇。バフを１つ解除。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_ryekie_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 116,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 36,
         "prob": 100,
         "effectTarget": 4,
         "sequenceGroupId": 0,
@@ -20821,6 +20982,80 @@
         "skillEffectId": 48,
         "prob": 100,
         "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4028101": {
+    "skillId": 4028101,
+    "skillName": "回転製菓術-火-",
+    "useView": 14000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffAll",
+    "timing": 0,
+    "description": "敵全体に90%ダメージ。1ターンの間火傷を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kirsch_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 221,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4028102": {
+    "skillId": 4028102,
+    "skillName": "メレンゲ・メイキング",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。2ターンの間火傷を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kirsch_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 2,
+        "prob": 100,
+        "effectTarget": 2,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "triggerJson": []
@@ -23735,6 +23970,51 @@
       }
     ]
   },
+  "4053101": {
+    "skillId": 4053101,
+    "skillName": "新・エネルギーシールド",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に2ターンの間隠蔽を付与。味方単体に1回分のDEFアップを付与。Viewを12000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_hisaki_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 277,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 290,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4054101": {
     "skillId": 4054101,
     "skillName": "発砲",
@@ -24257,6 +24537,80 @@
         "skillEffectId": 13,
         "prob": 100,
         "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4059101": {
+    "skillId": 4059101,
+    "skillName": "タイユール・ア・グリフェス",
+    "useView": 11000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_spdUpAll",
+    "timing": 0,
+    "description": "敵全体に100%ダメージ。味方全体に1回の行動の間SPDアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_maculata_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4059102": {
+    "skillId": 4059102,
+    "skillName": "フィル・ダレニェ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。1回の行動の間SPDダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_maculata_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 100,
+        "effectTarget": 2,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "triggerJson": []
@@ -25949,6 +26303,35 @@
       }
     ]
   },
+  "4076107": {
+    "skillId": 4076107,
+    "skillName": "アッパーカット",
+    "useView": 9000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ+Viewに応じてダメージ量が上昇。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainTrainee_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 215,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4077102": {
     "skillId": 4077102,
     "skillName": "作戦指示",
@@ -25982,6 +26365,35 @@
     "skillId": 4080101,
     "skillName": "決めポーズ",
     "useView": 5000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "Viewを10000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainTrainee_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 25,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4080102": {
+    "skillId": 4080102,
+    "skillName": "決めポーズ",
+    "useView": 3000,
     "targetFlag": 0,
     "resourceName": "b_skill_view",
     "subResourceName": "",
@@ -26744,6 +27156,132 @@
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "triggerJson": []
+      }
+    ]
+  },
+  "6000041": {
+    "skillId": 6000041,
+    "skillName": "会場のボルテージ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "ターン開始時、1ターンの間自身にダメージ上限3000を付与。【ViewPowerが30000以上の場合】代わりに、1ターンの間自身にダメージ上限5000を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 502,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "ViewDontExecTrigger",
+            "value": 29999,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 501,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "ViewTrigger",
+            "value": 29999,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "6000042": {
+    "skillId": 6000042,
+    "skillName": "会場のボルテージ+",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "ターン開始時、1ターンの間自身にダメージ上限5000を付与。【ViewPowerが30000以上の場合】代わりに、1ターンの間自身にダメージ上限10000を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 501,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "ViewDontExecTrigger",
+            "value": 29999,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 499,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "ViewTrigger",
+            "value": 29999,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "6000043": {
+    "skillId": 6000043,
+    "skillName": "会場のボルテージ++",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "ターン開始時、1ターンの間自身にダメージ上限10000を付与。【ViewPowerが30000以上の場合】代わりに、1ターンの間自身にダメージ上限20000を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 499,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "ViewDontExecTrigger",
+            "value": 29999,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 500,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "ViewTrigger",
+            "value": 29999,
+            "statusId": 0
+          }
+        ]
       }
     ]
   },
