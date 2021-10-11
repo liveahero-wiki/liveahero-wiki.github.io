@@ -38,7 +38,7 @@ They are considered to be a peculiar being, because they are "villains of justic
 
 Monomasa is a very quiet and timid young man while Drovain's personality is cool and collected.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10311 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10311 BIO_S01=BIO_S01 extra_sprites="fg_monomasa_s01_skin1" %}
 
 {% include voice-table.html resourceName="monomasa"
 h_gachaResult = "I'm Drovain-the one who borrows this body.<br>I will entrust you with the power of this horrifying Kaibutsu.<br>Let's work together to awaken Monomasa from his sleep."
