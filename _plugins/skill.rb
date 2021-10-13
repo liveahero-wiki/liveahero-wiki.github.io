@@ -119,6 +119,9 @@ module LahWiki
       end
 
       wiki_icon = Skills::status_wiki(@context).dig(id_s, 'icon')
+      if wiki_icon == ""
+        wiki_icon = "b_skill_special" # "ui_icon_stance_blank"
+      end
 
       name = Skills::status_wiki(@context).dig(id_s, 'name') || status['statusName']
       description = Skills::status_wiki(@context).dig(id_s, 'description') || status['description']
