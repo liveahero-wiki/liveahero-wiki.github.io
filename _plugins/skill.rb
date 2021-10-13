@@ -38,6 +38,12 @@ module LahWiki
 
       triggers.each do |c|
         case c["class"]
+        when "ViewTrigger"
+          count = c['value']
+          f.push("View&gt;#{count}")
+        when "ViewDontExecTrigger"
+          count = c['value']
+          f.push("View&lt;=#{count}")
         when "MinComboTrigger"
           f.push("Combo>=#{c['value']}")
         when "NotPinchExecTrigger"
