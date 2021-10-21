@@ -225,6 +225,8 @@ Here is a list of score attack quest rewards based on the score:
 
 ### Special Quests
 
+Fan translations for special quests can be found [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vSaZ-0s1X_TgKG_kf_t7lS5B0EwHxlYmR9KjzTCHYwRGGyfCPDuEJLmM57uzdjdmaBvshdzKA-0WwEp/pubhtml)
+
 {% include quest-group.html chapterId=440 %}
 
 ## Event Sales Report
