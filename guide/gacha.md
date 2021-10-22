@@ -22,7 +22,8 @@ Friend Point gacha uses {% include item-icon.html id=42 %} friend Points to obta
 Below is the drop rates for possible items tested empirically.
 > Credits for the data: Chase
 
-#### May 9th 2021 (test size: 10,000 multis / 10,000,000 friend points)
+Without Parallel Quartz (May 9th 2021)
+sample size: 10,000 multis / 10,000,000 friend points
 
 | Items | Drop rates |
 |-------|------------|
@@ -52,18 +53,19 @@ See a breakdown for each item every 1,000 multis (10,000 slots per row) [^bigtab
     | Total |  9  | 1338550 | 1339800 | 1841475 | 1679 | 833 | 3997 | 1334 | 690 |
     {:refdef style="display: block; overflow-x: scroll"}
 
-#### Oct 3rd 2021 (test size: 1,000 multis / 1,000,000 friend points)
+With Parallel Quartz (after Sept 30th 2021)
+sample size: 2,000 multis / 2,000,000 friend points)
 
 | Items | Drop rates |
 |-------|------------|
-| {% include item-icon.html id=219991 %} | 0.01% |
+| {% include item-icon.html id=219991 %} | 0.015% |
 | {% include item-icon.html id=59 %} | 0.96% |
-| {% include item-icon.html id=33 %} | 0.58% |
-| {% include item-icon.html id=32 %} | 1.05% |
-| {% include item-icon.html id=31 %} | 4.12% |
-| {% include item-icon.html id=13 %} {% include item-icon.html id=16 %} {% include item-icon.html id=19 %} {% include item-icon.html id=22 %} {% include item-icon.html id=25 %} | 0.74% |
-| {% include item-icon.html id=12 %} {% include item-icon.html id=15 %} {% include item-icon.html id=18 %} {% include item-icon.html id=21 %} {% include item-icon.html id=24 %} | 1.75% |
-| {% include item-icon.html id=11 %} {% include item-icon.html id=30 %} {% include item-icon.html id=35 %} | 90.79% |
+| {% include item-icon.html id=33 %} | 0.66% |
+| {% include item-icon.html id=32 %} | 1.23% |
+| {% include item-icon.html id=31 %} | 3.965% |
+| {% include item-icon.html id=13 %} {% include item-icon.html id=16 %} {% include item-icon.html id=19 %} {% include item-icon.html id=22 %} {% include item-icon.html id=25 %} | 0.79% |
+| {% include item-icon.html id=12 %} {% include item-icon.html id=15 %} {% include item-icon.html id=18 %} {% include item-icon.html id=21 %} {% include item-icon.html id=24 %} | 1.7% |
+| {% include item-icon.html id=11 %} {% include item-icon.html id=30 %} {% include item-icon.html id=35 %} | 90.68% |
 
 ## Duplication System
 
