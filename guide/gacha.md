@@ -22,7 +22,8 @@ Friend Point gacha uses {% include item-icon.html id=42 %} friend Points to obta
 Below is the drop rates for possible items tested empirically.
 > Credits for the data: Chase
 
-Without Parallel Quartz (May 9th 2021)
+#### Rates without Parallel Quartz (before Oct 30th 2021)
+
 sample size: 10,000 multis / 10,000,000 friend points
 
 | Items | Drop rates |
@@ -53,8 +54,9 @@ See a breakdown for each item every 1,000 multis (10,000 slots per row) [^bigtab
     | Total |  9  | 1338550 | 1339800 | 1841475 | 1679 | 833 | 3997 | 1334 | 690 |
     {:refdef style="display: block; overflow-x: scroll"}
 
-With Parallel Quartz (after Sept 30th 2021)
-sample size: 2,000 multis / 2,000,000 friend points)
+#### Rates with Parallel Quartz (after Sept 30th 2021)
+
+sample size: 2,000 multis / 2,000,000 friend points
 
 | Items | Drop rates |
 |-------|------------|
