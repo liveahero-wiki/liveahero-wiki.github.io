@@ -6,7 +6,7 @@ banner: true
 * unordered
 {:toc}
 
-## 2021-10-26: Survey Result
+## 2021-10-31: Survey Result
 
 Thank you for those who have participated! Sorry for the delay, I actually started curating the result since 7 Oct, but procrastinated to finish it...
 
@@ -39,7 +39,7 @@ In terms of age, we can see that majority of the respondents are in their 20s. N
 </figure>
 
 
-More than 70% of the respondents have some degree of Japanese understanding, with 13.4% of them having studied Japanese at various N* level. 2 of them are even native speakers! (Hello Japanese people :wave:)
+More than 70% of the respondents have some degree of Japanese understanding, with 13.4% of them having studied Japanese at various N* level. 2 respondents are even native speakers! (Hello Japanese people :wave:)
 
 ~~Hope you all like my choice of "important Japanese words".~~
 
@@ -158,7 +158,7 @@ Highlights:
 I know that some wiki features aren't very visible, and I do plan to increase their visibility in more places.
 
 I also recently learnt that many people (mostly on Reddit) have been playing this game without understanding
-the story at all, so I want to take this opportunity to advertise [Fan Translation Summaries](https://housamosummaries.blogspot.com/) by Roureem (link also found in wiki homepage).
+the story at all, so I want to take this opportunity to advertise [Fan Translation Summaries](https://housamosummaries.blogspot.com/) by Roureem (link also found in wiki homepage). If you prefer videos, there is also a [Youtube channel by Ayato K](https://www.youtube.com/channel/UCz6Yn6nD_TkVKHbnER9VdWA).
 
 ---
 
