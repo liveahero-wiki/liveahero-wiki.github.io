@@ -5,7 +5,7 @@ news_link: https://live-a-hero.jp/info/2994
 banner_image: banner_info_Xmas2012Revival.jpg
 gacha: true
 event_start_time: 2021-11-01T20:00:00+09
-event_end_time: 2021-11-22T20:00:00+09
+event_end_time: 2021-11-22T14:00:00+09
 farm_start_time: 2021-11-01T20:00:00+09
 farm_end_time: 2021-11-15T20:00:00+09
 sales_start_time: 2021-11-01T20:00:00+09
