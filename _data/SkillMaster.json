@@ -7937,7 +7937,7 @@
         "probGroupId": 0,
         "triggerJson": [
           {
-            "class": "OwnSystemStatusNumberExecTrigger",
+            "class": "NowAttackingTrigger",
             "value": 0,
             "statusId": 68
           }
@@ -19966,6 +19966,104 @@
       }
     ]
   },
+  "4004201": {
+    "skillId": 4004201,
+    "skillName": "酔虎の鼓舞",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間ATKアップ×2を付与。Viewを5000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_ryekieXmas2012_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4004202": {
+    "skillId": 4004202,
+    "skillName": "酔虎の鼓舞+",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間ATKアップ×3を付与。Viewを5000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_ryekieXmas2012_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4006101": {
     "skillId": 4006101,
     "skillName": "公務執行",
@@ -20982,6 +21080,96 @@
         "skillEffectId": 48,
         "prob": 100,
         "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4027101": {
+    "skillId": 4027101,
+    "skillName": "一場春夢",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に1回の行動の間ATKダウン×2を付与。Viewを7000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_subaru_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 40,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4027102": {
+    "skillId": 4027102,
+    "skillName": "一場春夢+",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に1回の行動の間ATKダウン×2を付与。Viewを7000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_subaru_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 40,
+        "prob": 100,
+        "effectTarget": 0,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "triggerJson": []
@@ -27115,6 +27303,28 @@
       }
     ]
   },
+  "6000037": {
+    "skillId": 6000037,
+    "skillName": "ボス支援",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 12,
+    "description": "味方を対象にするスキルはボスキャラクターを対象にする。（敵専用）",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 328,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "6000039": {
     "skillId": 6000039,
     "skillName": "",
@@ -27309,6 +27519,72 @@
         "skillEffectId": 272,
         "prob": 100,
         "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6004201": {
+    "skillId": 6004201,
+    "skillName": "酩酊",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_antiBuff",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、ボスのATKアップを1つ解除。（敵専用）",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 335,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6004202": {
+    "skillId": 6004202,
+    "skillName": "乾杯の挨拶",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "ターン開始時、Viewを4000獲得。（敵専用）",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 295,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6027101": {
+    "skillId": 6027101,
+    "skillName": "書き損じ",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "b_skill_cureAll",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、敵全体のATKダウンを1つ解除。（敵専用）",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 601,
+        "prob": 100,
+        "effectTarget": 4,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "triggerJson": []
@@ -27651,6 +27927,47 @@
         ]
       }
     ]
+  },
+  "6051101": {
+    "skillId": 6051101,
+    "skillName": "湯治の力",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "ターン開始時、ピンチ状態の時、自身に1回分のDEFアップを付与。（敵専用）",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "6051102": {
+    "skillId": 6051102,
+    "skillName": "火照った体",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_element_fire",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "このヒーローは火属性として扱われる。（敵専用）",
+    "cutin": [],
+    "isEquip": false,
+    "effects": []
   },
   "6052101": {
     "skillId": 6052101,
@@ -28529,6 +28846,28 @@
     "effects": [
       {
         "skillEffectId": 322,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "7000007": {
+    "skillId": 7000007,
+    "skillName": "強敵狙い",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "敵を対象にするスキルは敵の中で一番Atkが高いキャラクターを対象にする。（敵専用）",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 600,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,

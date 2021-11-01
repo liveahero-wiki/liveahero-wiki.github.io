@@ -13384,5 +13384,85 @@
       "canDuplicate": false,
       "isDisplayPersistenceStatus": false
     }
+  },
+  "503": {
+    "skillEffectId": 503,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 130
+          }
+        }
+      ],
+      "filename": "status_atkup",
+      "statusId": 41,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "ATK30%アップ(解除不可)",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": true
+    }
+  },
+  "600": {
+    "skillEffectId": 600,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AimHighestAtkCharacter",
+          "parameter": {
+            "isTarget": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        13
+      ],
+      "parameter": false,
+      "description": "オート行動時、敵を対象にするスキルは敵の中で一番Atkが高いキャラクターを対象にする",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "601": {
+    "skillEffectId": 601,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Cure",
+          "parameter": {
+            "value": 1,
+            "target": 11
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "ATKダウンを1つ解除",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
   }
 }
