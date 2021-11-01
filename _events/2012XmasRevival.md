@@ -68,17 +68,21 @@ Here is a list of this event's limited time Missions:
 
 ## Event Shop
 
-{% include shop-table.html id=5 %}
+{% include shop-table.html id=15 %}
 
 ## Quest Details
 
 ### Main Quests
 
-{% include quest-group.html chapterId=407 %}
+{% include quest-group.html chapterId=441 %}
 
 ### Free Quests
 
-{% include quest-group.html chapterId=408 %}
+{% include quest-group.html chapterId=442 %}
+
+### Dungeon Quests
+
+{% include quest-group.html chapterId=443 %}
 
 ## Event Sales Report
 
