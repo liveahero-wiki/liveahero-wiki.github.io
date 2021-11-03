@@ -75,6 +75,12 @@ Quest in simulator will reset after a period of time (normally within 14 days), 
 {% include quest-group.html chapterId=604 %}
 {% include quest-group.html chapterId=608 %}
 
+### Nov 03rd 2021 - Nov 17th 2021
+
+{% include quest-group.html chapterId=603 %}
+{% include quest-group.html chapterId=605 %}
+{% include quest-group.html chapterId=609 %}
+
 ## Guides
 
 ### Beware the exploding zone! (Difficulty: B)
