@@ -74,6 +74,8 @@ Standard missions are permanent missions that can be cleared at any point of tim
 |Log in on the 300th day|{%include item.html id=1%} x 20|
 |Log in on the 350th day|{%include item.html id=1%} x 10|
 |Log in on the 400th day|{%include item.html id=1%} x 20|
+|Log in on the 450th day|{%include item.html id=1%} x 10|
+|Log in on the 500th day|{%include item.html id=1%} x 20|
 
 #### Player Rank
 
@@ -87,3 +89,5 @@ Standard missions are permanent missions that can be cleared at any point of tim
 |Achieve player rank 60|{%include item.html id=34%} x2|
 |Achieve player rank 70|{%include item.html id=34%} x2|
 |Achieve player rank 80|{%include item.html id=34%} x2|
+|Achieve player rank 90|{%include item.html id=34%} x2|
+|Achieve player rank 100|{%include item.html id=34%} x2|
