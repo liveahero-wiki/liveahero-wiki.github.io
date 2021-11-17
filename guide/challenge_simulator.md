@@ -195,7 +195,7 @@ This Simulator has different Score condition which is:
 
 #### Shark Kaibutsu (Water)'s skills
 
-{% include skill-table-manual.html skillIds="4074105,4074106,4074107" equipmentSkills="6074103,6074104,6000024,6000023" %}
+{% include skill-table-manual.html skillIds="4074105,4074106,4074107" equipmentSkills="6074101,6074104,6000024,6000023" %}
 
 #### Shark Kaibutsu (Dark)'s skills
 
