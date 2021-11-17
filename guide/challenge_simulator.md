@@ -81,6 +81,12 @@ Quest in simulator will reset after a period of time (normally within 14 days), 
 {% include quest-group.html chapterId=605 %}
 {% include quest-group.html chapterId=609 %}
 
+### Nov 17th 2021 - Dec 01st 2021
+
+{% include quest-group.html chapterId=601 %}
+{% include quest-group.html chapterId=606 %}
+{% include quest-group.html chapterId=610 %}
+
 ## Guides
 
 ### Beware the exploding zone! (Difficulty: B)
@@ -184,3 +190,14 @@ This Simulator has different Score condition which is:
 #### Mercenary 2's skills
 
 {% include skill-table-manual.html skillIds="4066117,4066118" %}
+
+### Simulated Shark-type Kaibutsu (Difficulty: S)
+
+#### Shark Kaibutsu (Water)'s skills
+
+{% include skill-table-manual.html skillIds="4074105,4074106,4074107" equipmentSkills="6074103,6074104,6000028,6000023" %}
+
+#### Shark Kaibutsu (Dark)'s skills
+
+{% include skill-table-manual.html skillIds="4074104,4074108" equipmentSkills="6074102,6074105,6000028" %}
+
