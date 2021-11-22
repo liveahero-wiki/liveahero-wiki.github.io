@@ -14,6 +14,28 @@ farm_end_time: 2021-12-09T14:00:00+09
 
 Do event free quests and event shop where you can obtain the rank 1 character {% chara_link Fire Mercenary|h1 %}, {% chara_link Water Mercenary|h1 %}, {% chara_link Wood Mercenary|h1 %}, {% chara_link Light Mercenary|h1 %} and {% chara_link Shadow Mercenary|h1 %}.
 
+## About Rank 1 Characters
+
+The characters that can be obtained in this campaign comes as rank 1 hero units and rank 1 sidekick units.
+
+Rank 1 units can participate in battle and sale just like normal characters but there are several differences when it comes to upgrading them.
+
+### Hero's Promotion
+
+Hero units with initial rank of 1 can be promoted up to rank 6. Aside from regular rank up materials their promotions will also require a new item {% include item-icon.html id=53 %} "Proof of Hero".
+
+Additionally their 3rd skill will at first be locked and unusable in battle until they are promoted to rank 3, and one specific skill will be upgraded when they are promoted to rank 5 (there is no rank 5 art for units with initial rank of 1).
+
+### Hero's Fan Count
+
+Hero units with initial rank of 1 can only gain fan count from their own personal Hero's Memories items. Said items will also can't be exchanged for {% include item-icon.html id=40 %} Record Cube.
+
+Their fan count will only increase by 1 with each item used.
+
+### Sidekick's Limit Breakthrough
+
+Sidekick units of rank 1 can only be upgraded with their own personal Sidekick's Heart items. Said items will also can't be exchanged for {% include item-icon.html id=40 %} Record Cube.
+
 ### Limited Time Mission
 
 Here is a list of this campaign's limited time Missions:
