@@ -6491,6 +6491,43 @@
       }
     ]
   },
+  "1043104": {
+    "skillId": 1043104,
+    "skillName": "木狼の意地+",
+    "useView": 3500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に130%ダメージ。自身に30%の確率で1回分のDEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_wolfmanEarth_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 71,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 30,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "1045101": {
     "skillId": 1045101,
     "skillName": "スラッシュ",
@@ -6578,6 +6615,43 @@
     "effects": [
       {
         "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 20,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1045104": {
+    "skillId": 1045104,
+    "skillName": "影狼の意地+",
+    "useView": 3500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に130%ダメージ。20%の確率で1回の行動の間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_wolfmanShadow_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 71,
         "prob": 100,
         "effectTarget": 2,
         "sequenceGroupId": 0,
@@ -7608,6 +7682,741 @@
         "skillEffectId": 42,
         "prob": 100,
         "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1066101": {
+    "skillId": 1066101,
+    "skillName": "オープン・ファイア",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_mercenary_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1066102": {
+    "skillId": 1066102,
+    "skillName": "援護要請",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの80%回復する。対象が火属性の場合、1回の行動の間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_mercenary_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 45,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 1,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1066103": {
+    "skillId": 1066103,
+    "skillName": "ボリー・ファイア",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。ランダムな味方1体に1回分のDEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_mercenary_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 6,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1066104": {
+    "skillId": 1066104,
+    "skillName": "ボリー・ファイア+",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。ランダムな味方１体に2回分のDEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_mercenary_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 6,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1067101": {
+    "skillId": 1067101,
+    "skillName": "オープン・ファイア",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_mercenary_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1067102": {
+    "skillId": 1067102,
+    "skillName": "援護要請",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの80%回復する。対象が水属性の場合、1回の行動の間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_mercenary_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 45,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 2,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1067103": {
+    "skillId": 1067103,
+    "skillName": "ボリー・ファイア",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。ランダムな味方1体に1回分のDEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_mercenary_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 6,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1067104": {
+    "skillId": 1067104,
+    "skillName": "ボリー・ファイア+",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。ランダムな味方１体に2回分のDEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_mercenary_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 6,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1068101": {
+    "skillId": 1068101,
+    "skillName": "オープン・ファイア",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_mercenary_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1068102": {
+    "skillId": 1068102,
+    "skillName": "援護要請",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの80%回復する。対象が木属性の場合、1回の行動の間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_mercenary_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 45,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 3,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1068103": {
+    "skillId": 1068103,
+    "skillName": "ボリー・ファイア",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。ランダムな味方1体に1回分のDEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_mercenary_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 6,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1068104": {
+    "skillId": 1068104,
+    "skillName": "ボリー・ファイア+",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。ランダムな味方１体に2回分のDEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_mercenary_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 6,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1069101": {
+    "skillId": 1069101,
+    "skillName": "オープン・ファイア",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_mercenary_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1069102": {
+    "skillId": 1069102,
+    "skillName": "援護要請",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの80%回復する。対象が光属性の場合、1回の行動の間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_mercenary_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 45,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 4,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1069103": {
+    "skillId": 1069103,
+    "skillName": "ボリー・ファイア",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。ランダムな味方1体に1回分のDEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_mercenary_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 6,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1069104": {
+    "skillId": 1069104,
+    "skillName": "ボリー・ファイア+",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。ランダムな味方１体に2回分のDEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_mercenary_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 6,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1070101": {
+    "skillId": 1070101,
+    "skillName": "オープン・ファイア",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_mercenary_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1070102": {
+    "skillId": 1070102,
+    "skillName": "援護要請",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの80%回復する。対象が影属性の場合、1回の行動の間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_mercenary_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 45,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 5,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1070103": {
+    "skillId": 1070103,
+    "skillName": "ボリー・ファイア",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。ランダムな味方1体に1回分のDEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_mercenary_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 6,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1070104": {
+    "skillId": 1070104,
+    "skillName": "ボリー・ファイア+",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。ランダムな味方１体に2回分のDEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_mercenary_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 6,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "triggerJson": []
@@ -12442,6 +13251,441 @@
         "skillEffectId": 28,
         "prob": 100,
         "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2066101": {
+    "skillId": 2066101,
+    "skillName": "行動準備",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間View消費量-500を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_mercenary_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 602,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2066102": {
+    "skillId": 2066102,
+    "skillName": "行動準備+",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間View消費量-750を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_mercenary_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 603,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2066103": {
+    "skillId": 2066103,
+    "skillName": "行動準備++",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間View消費量-1000を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_mercenary_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 604,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2067101": {
+    "skillId": 2067101,
+    "skillName": "行動準備",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間View消費量-500を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_mercenary_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 602,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2067102": {
+    "skillId": 2067102,
+    "skillName": "行動準備+",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間View消費量-750を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_mercenary_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 603,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2067103": {
+    "skillId": 2067103,
+    "skillName": "行動準備++",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間View消費量-1000を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_mercenary_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 604,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2068101": {
+    "skillId": 2068101,
+    "skillName": "行動準備",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間View消費量-500を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_mercenary_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 602,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2068102": {
+    "skillId": 2068102,
+    "skillName": "行動準備+",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間View消費量-750を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_mercenary_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 603,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2068103": {
+    "skillId": 2068103,
+    "skillName": "行動準備++",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間View消費量-1000を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_mercenary_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 604,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2069101": {
+    "skillId": 2069101,
+    "skillName": "行動準備",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間View消費量-500を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_mercenary_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 602,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2069102": {
+    "skillId": 2069102,
+    "skillName": "行動準備+",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間View消費量-750を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_mercenary_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 603,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2069103": {
+    "skillId": 2069103,
+    "skillName": "行動準備++",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間View消費量-1000を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_mercenary_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 604,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2070101": {
+    "skillId": 2070101,
+    "skillName": "行動準備",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間View消費量-500を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_mercenary_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 602,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2070102": {
+    "skillId": 2070102,
+    "skillName": "行動準備+",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間View消費量-750を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_mercenary_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 603,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2070103": {
+    "skillId": 2070103,
+    "skillName": "行動準備++",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間View消費量-1000を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_mercenary_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 604,
+        "prob": 100,
+        "effectTarget": 1,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "triggerJson": []
@@ -18816,6 +20060,666 @@
       {
         "skillEffectId": 88,
         "prob": 30,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3066101": {
+    "skillId": 3066101,
+    "skillName": "火傭兵の準備Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryFire_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "火傷が付与される確率-10%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 605,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3066102": {
+    "skillId": 3066102,
+    "skillName": "火傭兵の準備Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryFire_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "火傷が付与される確率-12%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 606,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3066103": {
+    "skillId": 3066103,
+    "skillName": "火傭兵の準備Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryFire_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "火傷が付与される確率-14%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 607,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3066104": {
+    "skillId": 3066104,
+    "skillName": "火傭兵の準備Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryFire_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "火傷が付与される確率-16%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 608,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3066105": {
+    "skillId": 3066105,
+    "skillName": "火傭兵の準備Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryFire_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "火傷が付与される確率-18%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 609,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3066106": {
+    "skillId": 3066106,
+    "skillName": "火傭兵の準備Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryFire_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "火傷が付与される確率-20%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 610,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3067101": {
+    "skillId": 3067101,
+    "skillName": "水傭兵の準備Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryWater_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "ATKダウンが付与される確率-10%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 611,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3067102": {
+    "skillId": 3067102,
+    "skillName": "水傭兵の準備Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryWater_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "ATKダウンが付与される確率-12%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 612,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3067103": {
+    "skillId": 3067103,
+    "skillName": "水傭兵の準備Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryWater_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "ATKダウンが付与される確率-14%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 613,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3067104": {
+    "skillId": 3067104,
+    "skillName": "水傭兵の準備Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryWater_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "ATKダウンが付与される確率-14%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 614,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3067105": {
+    "skillId": 3067105,
+    "skillName": "水傭兵の準備Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryWater_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "ATKダウンが付与される確率-18%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 615,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3067106": {
+    "skillId": 3067106,
+    "skillName": "水傭兵の準備Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryWater_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "ATKダウンが付与される確率-20%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 616,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3068101": {
+    "skillId": 3068101,
+    "skillName": "木傭兵の準備Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryEarth_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "毒が付与される確率-15%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 617,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3068102": {
+    "skillId": 3068102,
+    "skillName": "木傭兵の準備Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryEarth_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "毒が付与される確率-18%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 618,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3068103": {
+    "skillId": 3068103,
+    "skillName": "木傭兵の準備Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryEarth_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "毒が付与される確率-21%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 619,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3068104": {
+    "skillId": 3068104,
+    "skillName": "木傭兵の準備Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryEarth_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "毒が付与される確率-24%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 620,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3068105": {
+    "skillId": 3068105,
+    "skillName": "木傭兵の準備Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryEarth_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "毒が付与される確率-27%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 621,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3068106": {
+    "skillId": 3068106,
+    "skillName": "木傭兵の準備Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryEarth_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "毒が付与される確率-30%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 622,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3069101": {
+    "skillId": 3069101,
+    "skillName": "光傭兵の準備Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryLight_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "SPDダウンが付与される確率-10%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 623,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3069102": {
+    "skillId": 3069102,
+    "skillName": "光傭兵の準備Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryLight_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "SPDダウンが付与される確率-10%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 624,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3069103": {
+    "skillId": 3069103,
+    "skillName": "光傭兵の準備Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryLight_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "SPDダウンが付与される確率-14%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 625,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3069104": {
+    "skillId": 3069104,
+    "skillName": "光傭兵の準備Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryLight_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "SPDダウンが付与される確率-16%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 626,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3069105": {
+    "skillId": 3069105,
+    "skillName": "光傭兵の準備Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryLight_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "SPDダウンが付与される確率-18%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 627,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3069106": {
+    "skillId": 3069106,
+    "skillName": "光傭兵の準備Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryLight_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "SPDダウンが付与される確率-20%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 628,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3070101": {
+    "skillId": 3070101,
+    "skillName": "影傭兵の準備Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryShadow_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "DEFダウンが付与される確率-10%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 629,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3070102": {
+    "skillId": 3070102,
+    "skillName": "影傭兵の準備Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryShadow_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "DEFダウンが付与される確率-12%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 630,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3070103": {
+    "skillId": 3070103,
+    "skillName": "影傭兵の準備Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryShadow_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "DEFダウンが付与される確率-14%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 631,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3070104": {
+    "skillId": 3070104,
+    "skillName": "影傭兵の準備Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryShadow_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "DEFダウンが付与される確率-16%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 632,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3070105": {
+    "skillId": 3070105,
+    "skillName": "影傭兵の準備Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryShadow_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "DEFダウンが付与される確率-18%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 633,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3070106": {
+    "skillId": 3070106,
+    "skillName": "影傭兵の準備Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_mercenaryShadow_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "DEFダウンが付与される確率-20%。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 634,
+        "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,
         "probGroupId": 0,
