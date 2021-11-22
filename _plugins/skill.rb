@@ -9,6 +9,14 @@ module LahWiki
   end
 
   module Skills
+    @@element_map = {
+      1 => "Fire",
+      2 => "Water",
+      3 => "Wood",
+      4 => "Light",
+      5 => "Shadow",
+    }
+
     def self.status_wiki(context)
       @@status_wiki ||= context.registers[:site].data["wiki"]["Status"]
     end
@@ -85,6 +93,9 @@ module LahWiki
           status_icon = self.status_description_unknown(c['statusId'], 0)
           count = c['value']
           f.push("target enemy possessing &lt;=#{count}x #{status_icon}")
+        when "TargetElementExecTrigger"
+          element = @@element_map[c['element']] || "Unknown"
+          f.push("target is #{element}")
         else
           f.push("unknown condition (#{c['class']}")
         end
