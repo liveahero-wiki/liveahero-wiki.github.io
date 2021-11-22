@@ -3,6 +3,7 @@ title: Character Contract Campaign - Mercenary
 jp_title: キャラクター契約締結キャンペーン -マーセナリー-
 news_link: https://live-a-hero.jp/campaign/3053
 banner_image: banner_campaign_ContractMercenary2111.jpg
+no_limited_quest: true
 event_start_time: 2021-11-22T20:00:00+09
 event_end_time: 2021-12-16T14:00:00+09
 farm_start_time: 2021-11-22T20:00:00+09git
