@@ -11,7 +11,7 @@ farm_end_time: 2021-12-16T14:00:00+09
 
 ## Event Details
 
-Complete special scenario "Encounter with the shadow wolf" to unlock event free quests and event shop where you can obtain the rank 1 character {% chara_link Fire Mercenary|h1 %}, {% chara_link Water Mercenary|h1 %}, {% chara_link Wood Mercenary|h1 %}, {% chara_link Light Mercenary|h1 %} and {% chara_link Shadow Mercenary|h1 %}.
+Do event free quests and event shop where you can obtain the rank 1 character {% chara_link Fire Mercenary|h1 %}, {% chara_link Water Mercenary|h1 %}, {% chara_link Wood Mercenary|h1 %}, {% chara_link Light Mercenary|h1 %} and {% chara_link Shadow Mercenary|h1 %}.
 
 ## Event Shop
 
