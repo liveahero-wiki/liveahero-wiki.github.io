@@ -6,8 +6,8 @@ banner_image: banner_campaign_ContractMercenary2111.jpg
 no_limited_quest: true
 event_start_time: 2021-11-22T20:00:00+09
 event_end_time: 2021-12-16T14:00:00+09
-farm_start_time: 2021-11-22T20:00:00+09git
-farm_end_time: 2021-12-16T14:00:00+09
+farm_start_time: 2021-11-22T20:00:00+09
+farm_end_time: 2021-12-09T14:00:00+09
 ---
 
 ## Event Details
