@@ -28,4 +28,13 @@ For that reason, they have an unspoken agreement that showing their true face to
 {% include sidekick-infobox.html stockId=10661 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="mercenaryFire"
+APPRECIATION = "You look tired, my employer.<br>You won't make any progress with your job like this, you know?<br>...would you go out with me for a bit, do you like alcohol?"
+DAILY = "...a job? if you are asking me then is it an enemy?<br>I will deal with anyone as long as you pay me.<br>...children? hero show? are you for real....?"
+HERO = "Whether i'm a hero or a villain, i don't care either way.<br>Work for the sake of your pay, and protect yourself when being attacked.<br>What I have to do is the right thing, for the sake of living on."
+PLAYER = "...you, is it true that you lost your memories?<br>What a disaster.<br>Well even if you remember the past i'm sure there are lots of painful things there."
+RELATION = "Mercenaries don't get along with each other.<br>Even when we have an intelligence network, we won't have relations with each other.<br>Because we might become enemies tomorrow."
+TOUCH = "...What? i'm in preparation for a dispatch, maybe later....<br>Hey, listen to me, that, tickles....nyahahah!<br>...if you value your life then forget that just now!!"
+TRAIN = "I will teach you mercenary's way of greeting!"
+TRAINED = "Gh...I haven't seen anything this intense in a long time...!"
+EVENTA = "So, you're hiring me, i don't mind if you want to test me first.<br>I will show that you can put your trust in me my employer.<br>....wait, you seriously want me to advertise some business sales?"
 %}
