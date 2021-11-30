@@ -13,7 +13,7 @@ banner: true
 {% assign page = c.characterId | characterIdToPage %}
 {% assign g = c.growths[4] %}
 <tr>
-<td><a class="item" href="{{ page.url }}/#h{{ c.stockId }}-stats"><img src="/cdn/Sprite/icon_{{ c.resourceName }}_h02.png" loading="lazy"> {{ page.title }}</a></td>
+<td><a class="item" href="{{ page.url }}/#h{{ c.stockId }}-stats"><img src="/cdn/Sprite/icon_{{ c.resourceName }}_{% if c.stockOrder >= 5 %}h01{% else %}h02{% endif %}.png" loading="lazy"> {{ page.title }}</a></td>
 <td>{{ g.hp }}</td><td>{{ g.attack }}</td><td>{{ g.addView }}</td><td>{{ g.agility }}</td>
 </tr>
 {% endfor %}
