@@ -63,11 +63,11 @@ sample size: 5,000 multis / 5,000,000 friend points
 | {% include item-icon.html id=219991 %} | 0.008% |
 | {% include item-icon.html id=59 %} | 0.974% |
 | {% include item-icon.html id=33 %} | 0.636% |
-| {% include item-icon.html id=32 %} | 1.302% |
-| {% include item-icon.html id=31 %} | 3.86% |
+| {% include item-icon.html id=32 %} | 1.304% |
+| {% include item-icon.html id=31 %} | 3.862% |
 | {% include item-icon.html id=13 %} {% include item-icon.html id=16 %} {% include item-icon.html id=19 %} {% include item-icon.html id=22 %} {% include item-icon.html id=25 %} | 0.79% |
 | {% include item-icon.html id=12 %} {% include item-icon.html id=15 %} {% include item-icon.html id=18 %} {% include item-icon.html id=21 %} {% include item-icon.html id=24 %} | 1.804% |
-| {% include item-icon.html id=11 %} {% include item-icon.html id=30 %} {% include item-icon.html id=35 %} | 90.626% |
+| {% include item-icon.html id=11 %} {% include item-icon.html id=30 %} {% include item-icon.html id=35 %} | 90.622% |
 
 ## Duplication System
 
