@@ -12,7 +12,28 @@ The main quests of [chapter 5](/main_quests/chapter05/) has been released.
 
 In commemoration of the new chapter release, a limited time gacha summon is also released which include {% chara_link Sadayoshi %} (Hero and Sidekick), {% chara_link Huckle %} (Hero and Sidekick), {% chara_link Exio %} (Sidekick), {% chara_link Crowne %} (Hero and Sidekick).
 
-For the period of Main Quest Chapter 4, there will be half stamina cost for every episode in Main Quest chapter 1-3.
+For the period of Main Quest Chapter 5, there will be half stamina cost for every episode in Main Quest chapter 1-4.
+
+## Campaign Banners
+
+Rates as follow:
+
+| Character                                                | Rates (Single) | Rates (Multis) |
+|----------------------------------------------------------|----------------|----------------|
+| {% chara_link Sadayoshi|h1 %}                            | 1.1 %            | 2.2 %            |
+| {% chara_link Huckle|h1 %}                               | 2 %              | 32 %             |
+| {% chara_link Crowne|h1 %}                               | 1 %              | 16 %             |
+| {% chara_link Exio %}                                    | 5 %              | 0 %              |
+| {% chara_link Huckle %}                                  | 3 %              | 0 %              |
+| {% chara_link Crowne %}                                  | 12 %             | 0 %              |
+| {% chara_link Sadayoshi %}                                | 12 %             | 0 %              |
+| Offbanner 5 star hero                                    | 0.9 %            | 1.8 %            |
+| Offbanner 4 star hero                                    | 5 %              | 48 %             |
+| Offbanner 3 star hero                                    | 35 %             | 0 %              |
+| Offbanner 4 star sidekick                                | 2 %              | 0 %              |
+| Offbanner 3 star sidekick                                | 21 %             | 0 %              |
+
+>Rates (Multis) is the rate of the tenth pull in a multi pull, pull number 1-9 still use the Rates (Single)
 
 ## Main Quests
 
