@@ -44,7 +44,7 @@ TRAIN = "Please go out on a dancing lesson with me!"
 TRAINED = "T-This is my limit..."
 %}
 
-## Notes
+## Notes:
 
 - [Gomeisa](https://en.wikipedia.org/wiki/Beta_Canis_Minoris), also known as Beta Canis Minoris, is the second brightest star of the constellation [Canis Minor](https://en.wikipedia.org/wiki/Canis_Minor) or Lesser Dog; with the brightest star being [Procyon](https://en.wikipedia.org/wiki/Procyon) or Alpha Canis Minoris.
 - His skill 3, Danza que Trae paz is from Spanish language, means "dance that brings peace"
