@@ -20,7 +20,7 @@ Of course, he has desires and emotions that he keeps hidden from the public.
 
 What he doesn't know is that when he unleashes the desires he has locked away, he will become a stronger and more resilient hero than ever before.
 {% endcapture %}
-{% include hero-infobox.html stockId=10811 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+{% include hero-infobox.html stockId=10811 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8081101" %}
 
 {% capture BIO_S01 %}
 A military officer who is the commander of the 1st hero batallion at the 'Japan defense bureau', which is a military organization involved in the national protection of Japan. 
