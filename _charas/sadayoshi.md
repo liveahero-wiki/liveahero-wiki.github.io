@@ -38,6 +38,8 @@ Due to him following the path in his life laid out for him, he has a bad time ge
 {% include sidekick-infobox.html stockId=10811 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="sadayoshi"
+h_gachaResult = "Colonel Sadayoshi Ikusabata, from defense bureau of Japan.<br>I am now under your direct command.<br>I hope we can protect the order together."
+s_gachaResult = "Defense bureau of Japan, Colonel Sadayoshi Ikusabata.<br>Assuming the role of sidekick, I am now under your command.<br>Let us try to maintain the peace together with the heroes."
 APPRECIATION = "Thank you for your hard work on today's mission, Chief of Staff.<br>There, please have a seat.<br>I can make a pot of tea... Oh, The tea leaves have overflowed from the cup..."
 DAILY = "Good morning, Chief of Staff.<br>I am fully prepared for today.<br>I'm ready to face any mission with all my might.<br>Now, give me your orders."
 HERO = "I've heard of his exploits from my parents, but I never thought I'd see his return with my own eyes.<br>I am... deeply moved."
