@@ -4,6 +4,25 @@ characterId: 34
 occupation: "Hero Office Manager"
 ---
 
+{% capture BIO_H01 %}
+The most famous characteristics of the S-class hero "Hopper the Face" were his unbelievably high leg strength, the intricate footwork he could perform with his legs, and his outstandingly superior intellect. 
+
+This has not changed even now that he has been reawakened. 
+
+With his pure white cloak fluttering, he leaps high into the air, accelerates and descends in a single bound with a kick so powerful that even his partner Zap the Justice is amazed. 
+
+He pretends to be ignorant of the fact that the weight he has put on since those days have made the attack even more potent.
+{% endcapture %}
+
+{% capture BIO_H02 %}
+Although he was born with strong legs, his upbringing has a lot to do with how he came to strengthen them and use them as a major feature in his arsenal.
+
+He was once a bird in a cage, not allowed to roam freely. 
+
+This made him yearn for the outside world more and more, which led to his desire to "save the world and travel it with my own two feet". 
+
+His parallel weapon, which amplifies the abilities of his legs and feet, and his costume, which is reminiscent of a traveler in old tales, are born from the longing of that child.
+{% endcapture %}
 {% include hero-infobox.html stockId=10341 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
