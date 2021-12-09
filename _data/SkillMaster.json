@@ -6388,6 +6388,161 @@
       }
     ]
   },
+  "1034101": {
+    "skillId": 1034101,
+    "skillName": "ザ・グレート・ステップ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdUpOwn",
+    "timing": 0,
+    "description": "敵単体に50%ダメージ。自身に60%の確率で2回の行動の間SPDアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_akashi_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 18,
+        "prob": 60,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1034102": {
+    "skillId": 1034102,
+    "skillName": "エスケイプ・フロム・ケイジ",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。1回分のDEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_akashi_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1034103": {
+    "skillId": 1034103,
+    "skillName": "ソニックブーム・ペネトレイション",
+    "useView": 7000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に150%ダメージ。自身のSPDが130以上かつ攻撃した敵が生存している場合、スキル１を追加発動。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_akashi_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 11,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 486,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "AboveSpdValueTrigger",
+            "value": 129,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1034104": {
+    "skillId": 1034104,
+    "skillName": "ザ・グレート・ステップ+",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdUpOwn",
+    "timing": 0,
+    "description": "敵単体に50%ダメージ。自身に80%の確率で2回の行動の間SPDアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_akashi_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 18,
+        "prob": 80,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "1043101": {
     "skillId": 1043101,
     "skillName": "スラッシュ",
@@ -8843,6 +8998,146 @@
         "skillEffectId": 3,
         "prob": 100,
         "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1081101": {
+    "skillId": 1081101,
+    "skillName": "戦略武術",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。ダメージを受けたとき、25%の確率でこのスキルで反撃。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_sadayoshi_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1081102": {
+    "skillId": 1081102,
+    "skillName": "陽動指令",
+    "useView": 6000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "自身に2ターンの間挑発 & 弱体抵抗+100を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_sadayoshi_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 49,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 448,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1081103": {
+    "skillId": 1081103,
+    "skillName": "破邪光煌拳",
+    "useView": 13000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ+HPが減るほどダメージ量が上昇する。味方全体に1回分のDEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_sadayoshi_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 293,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1081104": {
+    "skillId": 1081104,
+    "skillName": "陽動指令+",
+    "useView": 4500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "自身に2ターンの間挑発 & 弱体抵抗+100を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_sadayoshi_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 49,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 448,
+        "prob": 100,
+        "effectTarget": 0,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "triggerJson": []
@@ -12402,6 +12697,93 @@
       }
     ]
   },
+  "2035101": {
+    "skillId": 2035101,
+    "skillName": "覚醒の「ツボ」",
+    "useView": 5000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に3ターンの間、狂乱を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_exio_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 661,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2035102": {
+    "skillId": 2035102,
+    "skillName": "覚醒の「ツボ」+",
+    "useView": 4500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に3ターンの間、狂乱を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_exio_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 661,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2035103": {
+    "skillId": 2035103,
+    "skillName": "覚醒の「ツボ」++",
+    "useView": 4000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に3ターンの間、狂乱を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_exio_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 661,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "2043101": {
     "skillId": 2043101,
     "skillName": "援護スラッシュ",
@@ -14082,6 +14464,117 @@
         "skillEffectId": 120,
         "prob": 100,
         "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2081101": {
+    "skillId": 2081101,
+    "skillName": "援護拳撃",
+    "useView": 2500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_antiBuffTeam",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。50%の確率でバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_sadayoshi_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 36,
+        "prob": 50,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2081102": {
+    "skillId": 2081102,
+    "skillName": "援護拳撃+",
+    "useView": 2500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_antiBuffTeam",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。60%の確率でバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_sadayoshi_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 36,
+        "prob": 60,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2081103": {
+    "skillId": 2081103,
+    "skillName": "援護拳撃++",
+    "useView": 2500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_antiBuffTeam",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。70%の確率でバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_sadayoshi_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 36,
+        "prob": 70,
+        "effectTarget": 2,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "triggerJson": []
@@ -18831,6 +19324,138 @@
       }
     ]
   },
+  "3035101": {
+    "skillId": 3035101,
+    "skillName": "接続パス強制拡張Ⅰ",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "icon_exio_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、現在戦闘中の味方全体のATK+3.5%。同種・範囲の効果が重複した場合、一番高い効果のみ適用される。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 653,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3035102": {
+    "skillId": 3035102,
+    "skillName": "接続パス強制拡張Ⅱ",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "icon_exio_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、現在戦闘中の味方全体のATK+4.3%。同種・範囲の効果が重複した場合、一番高い効果のみ適用される。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 655,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3035103": {
+    "skillId": 3035103,
+    "skillName": "接続パス強制拡張Ⅲ",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "icon_exio_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、現在戦闘中の味方全体のATK+5.1%。同種・範囲の効果が重複した場合、一番高い効果のみ適用される。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 654,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3035104": {
+    "skillId": 3035104,
+    "skillName": "接続パス強制拡張Ⅳ",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "icon_exio_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、現在戦闘中の味方全体のATK+5.9%。同種・範囲の効果が重複した場合、一番高い効果のみ適用される。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 656,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3035105": {
+    "skillId": 3035105,
+    "skillName": "接続パス強制拡張Ⅴ",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "icon_exio_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、現在戦闘中の味方全体のATK+6.7%。同種・範囲の効果が重複した場合、一番高い効果のみ適用される。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 657,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3035106": {
+    "skillId": 3035106,
+    "skillName": "接続パス強制拡張Ⅵ",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "icon_exio_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、現在戦闘中の味方全体のATK+7.5%。同種・範囲の効果が重複した場合、一番高い効果のみ適用される。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 658,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "3043101": {
     "skillId": 3043101,
     "skillName": "木狼の声援Ⅰ",
@@ -21387,6 +22012,138 @@
       }
     ]
   },
+  "3081101": {
+    "skillId": 3081101,
+    "skillName": "忠兵の精神Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_sadayoshi_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、50%の確率で1ターンの間自身に弱体抵抗+100を付与。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 660,
+        "prob": 50,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3081102": {
+    "skillId": 3081102,
+    "skillName": "忠兵の精神Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_sadayoshi_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、60%の確率で1ターンの間自身に弱体抵抗+100を付与。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 660,
+        "prob": 60,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3081103": {
+    "skillId": 3081103,
+    "skillName": "忠兵の精神Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_sadayoshi_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、70%の確率で1ターンの間自身に弱体抵抗+100を付与。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 660,
+        "prob": 70,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3081104": {
+    "skillId": 3081104,
+    "skillName": "忠兵の精神Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_sadayoshi_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、80%の確率で1ターンの間自身に弱体抵抗+100を付与。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 660,
+        "prob": 80,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3081105": {
+    "skillId": 3081105,
+    "skillName": "忠兵の精神Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_sadayoshi_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、90%の確率で1ターンの間自身に弱体抵抗+100を付与。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 660,
+        "prob": 90,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3081106": {
+    "skillId": 3081106,
+    "skillName": "忠兵の精神Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_sadayoshi_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、1ターンの間自身に弱体抵抗+100を付与。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 660,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "3999101": {
     "skillId": 3999101,
     "skillName": "無意識下のアシストⅠ",
@@ -22198,6 +22955,43 @@
         "prob": 100,
         "effectTarget": 7,
         "sequenceGroupId": 4,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4007108": {
+    "skillId": 4007108,
+    "skillName": "撃ちまくりッス！+",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。1回の行動の間SPDダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_barrel_eh01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
         "probGroupId": 0,
         "triggerJson": []
       }
@@ -30991,6 +31785,28 @@
       }
     ]
   },
+  "6081101": {
+    "skillId": 6081101,
+    "skillName": "増員要請",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "b_skill_healAll",
+    "subResourceName": "",
+    "timing": 5,
+    "description": "ターン終了時、味方全体を100%のHPで復活。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 260,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "7000001": {
     "skillId": 7000001,
     "skillName": "セカンド・アタック",
@@ -31308,6 +32124,28 @@
       {
         "skillEffectId": 484,
         "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "8081101": {
+    "skillId": 8081101,
+    "skillName": "戦略武術",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた後に、スキル１で反撃。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 445,
+        "prob": 25,
         "effectTarget": 0,
         "sequenceGroupId": 0,
         "probGroupId": 0,
