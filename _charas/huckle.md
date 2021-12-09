@@ -37,6 +37,7 @@ His physique and good judgment on the battlefield can be attributed to this back
 {% include sidekick-infobox.html stockId=10341 BIO_S01=BIO_S01 extra_sprites="fg_huckle_s01_skin1" %}
 
 {% include voice-table.html resourceName="huckle"
+h_gachaResult = "Hopper the Face, I have arrived.<br>From now on, our company will accomplish justice.<br>...are you prepared, newbie?"
 s_gachaResult = "My name's Huckle<br>I'm the president of this company.<br>We welcome a newcomer like you.<br>I will give you a good workplace environment."
 loveIndexMax = "I am happy that I can always fight beside you.<br>Aa…you're very reliable and I hold you very dearly."
 APPRECIATION = "Oh, it looks like you're tired. <br>Well, that's it for today.<br>I know a great place, how about we go together?"
