@@ -6402,7 +6402,7 @@
         "info": {
           "class": "NormalAttack"
         },
-        "name": "skill_akashi_h01_01"
+        "name": "skill_huckle_h01_01"
       }
     ],
     "isEquip": false,
@@ -6439,7 +6439,7 @@
         "info": {
           "class": "NormalAttack"
         },
-        "name": "skill_akashi_h01_02"
+        "name": "skill_huckle_h01_02"
       }
     ],
     "isEquip": false,
@@ -6476,7 +6476,7 @@
         "info": {
           "class": "CutIn"
         },
-        "name": "skill_akashi_h01_03"
+        "name": "skill_huckle_h01_03"
       }
     ],
     "isEquip": false,
@@ -6520,7 +6520,7 @@
         "info": {
           "class": "NormalAttack"
         },
-        "name": "skill_akashi_h01_01"
+        "name": "skill_huckle_h01_01"
       }
     ],
     "isEquip": false,
@@ -29492,6 +29492,72 @@
         "skillEffectId": 25,
         "prob": 100,
         "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4081101": {
+    "skillId": 4081101,
+    "skillName": "戦略武術",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。ダメージを受けたとき、25%の確率でこのスキルで反撃。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_sadayoshi_eh01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4081103": {
+    "skillId": 4081103,
+    "skillName": "破邪光煌拳",
+    "useView": 13000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ+HPが減るほどダメージ量が上昇する。味方全体に1回分のDEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_sadayoshi_eh01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 293,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 3,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "triggerJson": []
