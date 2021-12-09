@@ -72,7 +72,7 @@ Make {{ target }} go last
 {% when "CounterAttack" %}
 Counter attack the hitting enemy (may consume attack buff as if this is normal attack)
 {% when "OwnAttack" %}
-Activate self's skill {{ effect.parameter.index | plus: 1 }}
+Activate self's skill {{ effect.parameter.index | plus: 1 }} if {{ target }} is still alive
 {% when "ComboMultipleAttack" %}
 ATK Up by {{ effect.parameter.value }}% to {{ target }} for each combo
 {% when "SpdDeferenceMultipleAttack" %}
