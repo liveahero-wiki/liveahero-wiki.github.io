@@ -1,6 +1,11 @@
 ---
 title: Exio
-unreleased: true
+characterId: 35
 ---
 
-{% include hero-infobox-unreleased.html sprites="fg_exio_s01" %}
+{% include sidekick-infobox.html stockId=10351 %}
+
+{% include voice-table.html resourceName="exio"
+%}
+
+# Notes

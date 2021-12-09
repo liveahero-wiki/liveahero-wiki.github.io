@@ -1,8 +1,7 @@
 {% capture eid %}{{ include.skillEffect.skillEffectId }}{% endcapture %}
 {% assign effectParent = site.data.SkillEffectMaster[eid] %}
 {% assign skillEffectJson = effectParent.skillEffectJson %}
-{% capture target %}{% include skill-effect-target.html target=include.skillEffect.effectTarget %}{% endcapture %}
-{% assign target = target | strip %}
+{% assign target = include.skillEffect.effectTarget | skill_target %}
 
 {{ include.skillEffect.triggerJson | skill_trigger: include.timing }}
 {% if skillEffectJson.trigger %}{{ skillEffectJson.trigger | skill_trigger_json: include.timing }}{% endif %}
@@ -78,12 +77,17 @@ Activate self's skill {{ effect.parameter.index | plus: 1 }}
 ATK Up by {{ effect.parameter.value }}% to {{ target }} for each combo
 {% when "SpdDeferenceMultipleAttack" %}
 ATK Up by {{ effect.parameter.spdMult }}% to {{ target }} for each point in speed difference (???)
+{% when "HighestMultipleAttack" %}
+ATK Up by {{ effect.parameter.value }}% to {{ effect.parameter.target | skill_target }}
+(If there are overlapping effects with the same type and range, only the one with highest value will be applied)
 {% when "Penetration" %}
 Make {{ target }} ignore Taunt
 {% when "AllAttack" %}
 View-costing skills for {{ target }} now target all allies/enemies
 {% when "RandomTeamAttack" %}
 After attack, if targeted enemy is still alive, random ally will use skill 1 on targeted enemy
+{% when "ForceAuto" %}
+Force auto action to {{ target }}
 {% when "MultipleHp" %}
 HP Up by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "StatusNumberMultipleAttack" %}
@@ -133,4 +137,5 @@ Resurrect {{ target }} to {{ effect.parameter.value }}% HP
 Unknown effect class ({{ effect.class }})
 {% endcase %}
 {% if skillEffectJson.persistence == true %}permanently{% else %}{% if skillEffectJson.turn != 0 %}for {{ skillEffectJson.turn }} {{ turnDefinition | strip }}(s){% endif %}{% endif %}
+{% if forloop.last == false %}<br>&nbsp;&nbsp;&nbsp;&nbsp;{% endif %}
 {% endfor %}

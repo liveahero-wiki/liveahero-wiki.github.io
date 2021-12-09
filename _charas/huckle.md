@@ -1,8 +1,10 @@
 ---
 title: Huckle
 characterId: 34
-occupation: "Hero Office Manager)"
+occupation: "Hero Office Manager"
 ---
+
+{% include hero-infobox.html stockId=10341 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 The founder and current president of the company where the Protagonist works at. He is a former hero, nowadays taking command on the battlefield as a hero operator. Despite being an alien from another world, he is completely acclimatized to life on Earth.

@@ -58,6 +58,8 @@ module LahWiki
           f.push("HP&gt;=50<!--#{c['value']}-->%")
         when "PinchExecTrigger"
           f.push("HP&lt;50<!--#{c['value']}-->%")
+        when "AboveSpdValueTrigger"
+          f.push("SPD&gt;#{c['value']}")
         when "OwnStatusTrigger"
           status_icon = self.status_description(c['value'])
           f.push("possessing #{status_icon}")
@@ -138,6 +140,28 @@ module LahWiki
       description = Skills::status_wiki(@context).dig(id_s, 'description') || status['description']
 
       "<span class=\"status\" data-id=\"#{id_s}\" title=\"#{description}\"><img src=\"/cdn/Sprite/#{wiki_icon}.png\" loading=\"lazy\"> #{name}</span>"      
+    end
+
+    def skill_target(target)
+      case target
+      when 0
+        return "self"
+      when 2
+        return "target enemy"
+      when 3
+        return "all allies"
+      when 4
+        return "all enemies"
+      when 5
+        return "event bonus unit"
+      when 6
+        return "random ally"
+      when 7
+        return "random enemy"
+      when 9
+        return "random ally"
+      end
+      return "Unknown target #{target}"
     end
   end
 end
