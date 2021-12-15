@@ -93,6 +93,12 @@ Quest in simulator will reset after a period of time (normally within 14 days), 
 {% include quest-group.html chapterId=604 %}
 {% include quest-group.html chapterId=608 %}
 
+### Dec 15th 2021 - Dec 29th 2021
+
+{% include quest-group.html chapterId=603 %}
+{% include quest-group.html chapterId=605 %}
+{% include quest-group.html chapterId=611 %}
+
 ## Guides
 
 ### Beware the exploding zone! (Difficulty: B)
@@ -206,4 +212,15 @@ This Simulator has different Score condition which is:
 #### Shark Kaibutsu (Dark)'s skills
 
 {% include skill-table-manual.html skillIds="4074104,4074108" equipmentSkills="6074102,6074105,6000024" %}
+
+### Simulated Labyrinth Beast (Difficulty: S)
+
+#### Labyrinth Beast's skills
+
+{% include skill-table-manual.html skillIds="4046131,4046133,4046132" equipmentSkills="6046102,6046101,6046104,6000044" %}
+
+#### Labyrinth Beast (Juvenile)'s skills
+
+{% include skill-table-manual.html skillIds="4036111" equipmentSkills="6036101,6000037" %}
+
 
