@@ -31427,15 +31427,15 @@
         "description": "UI_SCORE_ATTACK_BONUS_ATK20UP",
         "characters": [
           {
-            "stockId": 10631,
+            "stockId": 10811,
             "cardType": 1
           },
           {
-            "stockId": 10511,
+            "stockId": 10181,
             "cardType": 1
           },
           {
-            "stockId": 10081,
+            "stockId": 10341,
             "cardType": 1
           },
           {
@@ -31443,7 +31443,7 @@
             "cardType": 1
           },
           {
-            "stockId": 10011,
+            "stockId": 10241,
             "cardType": 1
           }
         ]
@@ -31452,7 +31452,7 @@
         "description": "UI_SCORE_ATTACK_BONUS_ATK10UP",
         "characters": [
           {
-            "stockId": 10641,
+            "stockId": 10351,
             "cardType": 2
           },
           {
@@ -31460,15 +31460,15 @@
             "cardType": 2
           },
           {
-            "stockId": 10271,
+            "stockId": 10051,
             "cardType": 2
           },
           {
-            "stockId": 10071,
+            "stockId": 10811,
             "cardType": 2
           },
           {
-            "stockId": 10261,
+            "stockId": 10151,
             "cardType": 2
           }
         ]
@@ -31685,15 +31685,15 @@
         "description": "UI_SCORE_ATTACK_BONUS_ATK20UP",
         "characters": [
           {
-            "stockId": 10631,
+            "stockId": 10811,
             "cardType": 1
           },
           {
-            "stockId": 10511,
+            "stockId": 10181,
             "cardType": 1
           },
           {
-            "stockId": 10081,
+            "stockId": 10341,
             "cardType": 1
           },
           {
@@ -31701,7 +31701,7 @@
             "cardType": 1
           },
           {
-            "stockId": 10011,
+            "stockId": 10241,
             "cardType": 1
           }
         ]
@@ -31710,7 +31710,7 @@
         "description": "UI_SCORE_ATTACK_BONUS_ATK10UP",
         "characters": [
           {
-            "stockId": 10641,
+            "stockId": 10351,
             "cardType": 2
           },
           {
@@ -31718,15 +31718,15 @@
             "cardType": 2
           },
           {
-            "stockId": 10271,
+            "stockId": 10051,
             "cardType": 2
           },
           {
-            "stockId": 10071,
+            "stockId": 10811,
             "cardType": 2
           },
           {
-            "stockId": 10261,
+            "stockId": 10151,
             "cardType": 2
           }
         ]
@@ -32401,6 +32401,136 @@
       }
     ],
     "scoreAttackHintTextKey": "HINT_SCORE_ATTACK_SHARK_KAIBUTSU",
+    "scoreAttackBattleCount": 1
+  },
+  "611001": {
+    "questId": 611001,
+    "questName": "シミュレート・迷宮の魔獣",
+    "subName": "強敵シミュレーター",
+    "questKind": 2,
+    "chapterId": 611,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "icon_kaibutsuAdultFireSpace_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 60,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 103013,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFireSpace_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFireSpace_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": true,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": [
+      {
+        "score": 0,
+        "iconAddress": "ui_symbol_estimation_C"
+      },
+      {
+        "score": 30000,
+        "iconAddress": "ui_symbol_estimation_B"
+      },
+      {
+        "score": 65000,
+        "iconAddress": "ui_symbol_estimation_A"
+      },
+      {
+        "score": 90000,
+        "iconAddress": "ui_symbol_estimation_S"
+      }
+    ],
+    "scoreAttackBonuses": [
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK20UP",
+        "characters": [
+          {
+            "stockId": 10811,
+            "cardType": 1
+          },
+          {
+            "stockId": 10181,
+            "cardType": 1
+          },
+          {
+            "stockId": 10341,
+            "cardType": 1
+          },
+          {
+            "stockId": 10051,
+            "cardType": 1
+          },
+          {
+            "stockId": 10241,
+            "cardType": 1
+          }
+        ]
+      },
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK10UP",
+        "characters": [
+          {
+            "stockId": 10351,
+            "cardType": 2
+          },
+          {
+            "stockId": 10341,
+            "cardType": 2
+          },
+          {
+            "stockId": 10051,
+            "cardType": 2
+          },
+          {
+            "stockId": 10811,
+            "cardType": 2
+          },
+          {
+            "stockId": 10151,
+            "cardType": 2
+          }
+        ]
+      }
+    ],
+    "scoreAttackStandards": [
+      {
+        "label": "UI_SCORE_ATTACK_CLEAR_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_CLEAR_BONUS_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_HP_SCORE_LABEL",
+        "description": "UI_SCORE_ATTACK_HP_SCORE_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_TURN_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_TURN_BONUS_DESCRIPTION"
+      }
+    ],
+    "scoreAttackHintTextKey": "HINT_SCORE_ATTACK_LABYRINTH_KAIBUTSU",
     "scoreAttackBattleCount": 1
   }
 }

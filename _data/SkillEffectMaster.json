@@ -14471,7 +14471,7 @@
   "638": {
     "skillEffectId": 638,
     "skillEffectJson": {
-      "turn": 1,
+      "turn": 0,
       "count": 0,
       "effects": [
         {
@@ -15355,6 +15355,39 @@
       "description": "火傷無効",
       "isImmediate": false,
       "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "671": {
+    "skillEffectId": 671,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 0
+          }
+        },
+        {
+          "class": "DamageLimit",
+          "parameter": {
+            "value": 0
+          }
+        }
+      ],
+      "filename": "status_defup",
+      "statusId": 2,
+      "canDispel": true,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "DEFアップ&ダメージ制限10000",
+      "isImmediate": false,
+      "persistence": false,
       "canDuplicate": true,
       "isDisplayPersistenceStatus": false
     }
