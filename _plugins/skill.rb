@@ -146,6 +146,8 @@ module LahWiki
       case target
       when 0
         return "self"
+      when 1
+        return "target ally"
       when 2
         return "target enemy"
       when 3
