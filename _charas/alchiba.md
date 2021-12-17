@@ -92,7 +92,6 @@ win = "Now, come on, you've got to give up.<br>All your sins have been exposed,�
 lose = "Kuh...., there's a mystery I haven't uncovered yet, will it be left out again…"
 assisted = "I'm saved."
 rankMax = "Armed detective, here I come!..like that.<br>...with you by my side to support me, I think I'm going to be stronger.<br>….Thank you, my honey."
-loveIndexMax= "I've admired heroes plenty of times but,<br>To like someone this much, is a first for me.<br>That's why! I want you to always be with me."
 APPRECIATION = "In the middle of a serious mission, you need to be able to enjoy the occasional tea break, honey.<br>Hey now, don't get so ruffled up, I'm not going to hit on you until after the mission."
 DAILY = "Now, it's mission time, partner.<br>I'm a firm believer in getting the job done.<br>From here on, I'll be in serious mode."
 HERO = "Oh man, that guy's a dangerous driver in more ways than one.<br>I don't know, I guess I can relate to feeling apprehensive about changing careers..."
