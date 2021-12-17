@@ -19,6 +19,7 @@ Those who come into contact with his life and learn his true intentions will lea
 
 {% include voice-table.html resourceName="exio"
 s_gachaResult = "My my, I never thought I'd be working with you again.<br>Oh, let me introduce myself again.<br>I am Exio, the Observer of all things."
+loveIndexMax = "Stop thinking about it, I want you to entrust everything to me.<br>I won't let anything bad happen. Because I…<br>As a man, has fell in love with you."
 APPRECIATION = "You know, you're not keeping your guard up around a former enemy near as much as you should... Ha, I'm not up to anything, I promise.<br>Let me have a look at that shoulder.<br>I'll give it a squeeze."
 DAILY = "Hey, you look tired.<br>Would you like a massage? No no, I don't have any ulterior motives.<br>I'm sure you'll be better able to concentrate on your work after you've relaxed."
 HERO = "That man's dazzling heroism is... enviable.<br>Believe it or not, I once fancied the idea of being on that side myself.<br>It's very reassuring to have him around."
