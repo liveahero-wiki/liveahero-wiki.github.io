@@ -28,6 +28,7 @@ RELATION = "I can't look into his mind.<br>I can't look into his heart, it's so 
 TOUCH = "Oh, this is a surprise.<br>Touching me so suddenly.<br>Were you trying to probe into my mind, like I was? Or... did you find me attractive as a man?"
 TRAIN = "Now, let's see how useful you are."
 TRAINED = "I see, what staggering power...!"
+assist = "Ask for me!"
 %}
 
 ## Notes:
