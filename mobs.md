@@ -15,6 +15,24 @@ additional_scripts: ["/assets/atlas.min.js"]
 sprites="fg_kaibutsuAdultEarth_h01,fg_kaibutsuAdultEarthSpace_h01,fg_kaibutsuAdultFire_h01,fg_kaibutsuAdultFireBarrier_h01,fg_kaibutsuAdultFireSpace_h01,fg_kaibutsuAdultLight_h01,fg_kaibutsuAdultLightSpace_h01,fg_kaibutsuAdultShadow_h01,fg_kaibutsuAdultShadowSpace_h01,fg_kaibutsuAdultWater_h01,fg_kaibutsuAdultWaterSpace_h01"
 %}
 
+### Kaibutsu (Armor)
+
+{% include hero-infobox-unreleased.html name="Kaibutsu (Armor)" mob=true
+sprites="fg_kaibutsuArmorBlack_h01"
+%}
+
+### Kaibutsu (Gomeisa)
+
+{% include hero-infobox-unreleased.html name="Kaibutsu (Gomeisa)" mob=true
+sprites="fg_gomeisaBlack_h01"
+%}
+
+### Kaibutsu (Jelly Fish)
+
+{% include hero-infobox-unreleased.html name="Kaibutsu (Jelly Fish)" mob=true
+sprites="fg_kaibutsuJellyfishEarth_h01,fg_kaibutsuJellyfishFire_h01,fg_kaibutsuJellyfishLight_h01,fg_kaibutsuJellyfishShadow_h01,fg_kaibutsuJellyfishWater_h01"
+%}
+
 ### Kaibutsu (juvenile)
 
 {% include hero-infobox-unreleased.html name="Kaibutsu (juvenile)" mob=true
@@ -39,9 +57,15 @@ sprites="fg_kaibutsuSharkWater_h01"
 sprites="fg_kaibutsuShizuku_h01"
 %}
 
+### Kaibutsu (Tentacle)
+
+{% include hero-infobox-unreleased.html name="Kaibutsu (Tentacle)" mob=true
+sprites="fg_kaibutsuTentacle_h01"
+%}
+
 ### Kaibutsu (Tree)
 
-{% include hero-infobox-unreleased.html name="Kaibutsu (xmas)" mob=true
+{% include hero-infobox-unreleased.html name="Kaibutsu (Tree)" mob=true
 sprites="fg_kaibutsuXmas2012_h01"
 %}
 
