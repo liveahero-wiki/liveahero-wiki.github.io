@@ -9,9 +9,9 @@ additional_scripts: ["/assets/atlas.min.js"]
 
 <!-- Keep this sorted alphabatically -->
 
-### Kaibutsu (adult)
+### Kaibutsu (Adult)
 
-{% include hero-infobox-unreleased.html name="Kaibutsu (adult)" mob=true
+{% include hero-infobox-unreleased.html name="Kaibutsu (Adult)" mob=true
 sprites="fg_kaibutsuAdultEarth_h01,fg_kaibutsuAdultEarthSpace_h01,fg_kaibutsuAdultFire_h01,fg_kaibutsuAdultFireBarrier_h01,fg_kaibutsuAdultFireSpace_h01,fg_kaibutsuAdultLight_h01,fg_kaibutsuAdultLightSpace_h01,fg_kaibutsuAdultShadow_h01,fg_kaibutsuAdultShadowSpace_h01,fg_kaibutsuAdultWater_h01,fg_kaibutsuAdultWaterSpace_h01"
 %}
 
@@ -27,15 +27,15 @@ sprites="fg_kaibutsuArmorBlack_h01"
 sprites="fg_gomeisaBlack_h01"
 %}
 
-### Kaibutsu (Jelly Fish)
+### Kaibutsu (Jellyfish)
 
-{% include hero-infobox-unreleased.html name="Kaibutsu (Jelly Fish)" mob=true
+{% include hero-infobox-unreleased.html name="Kaibutsu (Jellyfish)" mob=true
 sprites="fg_kaibutsuJellyfishEarth_h01,fg_kaibutsuJellyfishFire_h01,fg_kaibutsuJellyfishLight_h01,fg_kaibutsuJellyfishShadow_h01,fg_kaibutsuJellyfishWater_h01"
 %}
 
-### Kaibutsu (juvenile)
+### Kaibutsu (Juvenile)
 
-{% include hero-infobox-unreleased.html name="Kaibutsu (juvenile)" mob=true
+{% include hero-infobox-unreleased.html name="Kaibutsu (Juvenile)" mob=true
 sprites="fg_kaibutsuLarvaEarth_h01,fg_kaibutsuLarvaEarthSpace_h01,fg_kaibutsuLarvaFire_h01,fg_kaibutsuLarvaFireSpace_h01,fg_kaibutsuLarvaLight_h01,fg_kaibutsuLarvaLightSpace_h01,fg_kaibutsuLarvaShadow_h01,fg_kaibutsuLarvaShadowSpace_h01,fg_kaibutsuLarvaWater_h01,fg_kaibutsuLarvaWaterSpace_h01"
 %}
 
@@ -48,7 +48,7 @@ sprites="fg_procyBlack_h01"
 ### Kaibutsu (Shark)
 
 {% include hero-infobox-unreleased.html name="Kaibutsu (Shark)" mob=true
-sprites="fg_kaibutsuSharkWater_h01"
+sprites="fg_kaibutsuSharkEarth_h01,fg_kaibutsuSharkFire_h01,fg_kaibutsuSharkLight_h01,fg_kaibutsuSharkShadow_h01,fg_kaibutsuSharkWater_h01"
 %}
 
 ### Kaibutsu (Shizuku)
@@ -69,50 +69,56 @@ sprites="fg_kaibutsuTentacle_h01"
 sprites="fg_kaibutsuXmas2012_h01"
 %}
 
-### Mafia (normal)
+### Mafia
 
-{% include hero-infobox-unreleased.html name="Mafia (normal)" mob=true
+{% include hero-infobox-unreleased.html name="Mafia" mob=true
 sprites="fg_villainMafiaEarth_s01,fg_villainMafiaFire_s01,fg_villainMafiaLight_s01,fg_villainMafiaShadow_s01,fg_villainMafiaWater_s01"
 %}
 
-### Mafia (transform)
+### Mafia (Transform)
 
-{% include hero-infobox-unreleased.html name="Mafia (hero)" mob=true
+{% include hero-infobox-unreleased.html name="Mafia (Transform)" mob=true
 sprites="fg_villainMafiaEarth_h01,fg_villainMafiaFire_h01,fg_villainMafiaLight_h01,fg_villainMafiaShadow_h01,fg_villainMafiaWater_h01"
 %}
 
-### Mercenary (transform)
+### Mercenary
+
+{% include hero-infobox-unreleased.html name="Mercenary" mob=true
+sprites="fg_villainMercenaryEarth_s01,fg_villainMercenaryFire_s01,fg_villainMercenaryLight_s01,fg_villainMercenaryShadow_s01,fg_villainMercenaryWater_s01"
+%}
+
+### Mercenary (Transform)
 
 {% include hero-infobox-unreleased.html name="Mercenary (hero)" mob=true
 sprites="fg_villainMercenaryEarth_h01,fg_villainMercenaryFire_h01,fg_villainMercenaryLight_h01,fg_villainMercenaryShadow_h01,fg_villainMercenaryWater_h01"
 %}
 
-### Trainee (normal)
+### Trainee
 
-{% include hero-infobox-unreleased.html name="Trainee (normal)" mob=true
+{% include hero-infobox-unreleased.html name="Trainee" mob=true
 sprites="fg_villainTraineeEarth_s01,fg_villainTraineeFire_s01,fg_villainTraineeLight_s01,fg_villainTraineeShadow_s01,fg_villainTraineeWater_s01"
 %}
 
-### Trainee (transform)
+### Trainee (Transform)
 
-{% include hero-infobox-unreleased.html name="Trainee (hero)" mob=true
+{% include hero-infobox-unreleased.html name="Trainee (Transform)" mob=true
 sprites="fg_villainTraineeEarth_h01,fg_villainTraineeFire_h01,fg_villainTraineeLight_h01,fg_villainTraineeShadow_h01,fg_villainTraineeWater_h01"
 %}
 
-### Villain (normal)
+### Villain
 
-{% include hero-infobox-unreleased.html name="Villain (normal)" mob=true
+{% include hero-infobox-unreleased.html name="Villain" mob=true
 sprites="fg_villainEarth_s01,fg_villainFire_s01,fg_villainLight_s01,fg_villainShadow_s01,fg_villainWater_s01"
 %}
 
-### Villain (transform)
+### Villain (Transform)
 
-{% include hero-infobox-unreleased.html name="Villain (hero)" mob=true
+{% include hero-infobox-unreleased.html name="Villain (Transform)" mob=true
 sprites="fg_villainEarth_h01,fg_villainFire_h01,fg_villainLight_h01,fg_villainShadow_h01,fg_villainWater_h01"
 %}
 
-### Villain (summer)
+### Villain (Summer)
 
-{% include hero-infobox-unreleased.html name="Villain (summer)" mob=true
+{% include hero-infobox-unreleased.html name="Villain (Summer)" mob=true
 sprites="fg_villainEarth_s01_skin1,fg_villainFire_s01_skin1,fg_villainLight_s01_skin1,fg_villainShadow_s01_skin1,fg_villainWater_s01_skin1"
 %}
