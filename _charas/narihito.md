@@ -78,6 +78,16 @@ TRAINED = "Gaah, heroes are really amazing..!"
 %}
 
 {% include voice-table.html resourceName="narihitoMeteorite2112"
+APPRECIATION = "Operator, about today's interview…oh.<br>Looks like you're resting, my bad.<br>…the present.., maybe when you're awake. "
+DAILY = "Eh, my christmas plans?<br>First of all, I'm going to attend a hero show or an event, and then I'm going to do an interview... what's with that expression on your face...?"
+HERO = "To think the day has come where I fight together with that Conductor villain who travel across the galaxies…<br>Somehow, I managed to get an exclusive... oh, no, it's nothing!"
+PLAYER = "Borealis and the members of the emergency task force…<br>You really are connected with so many people.<br>As a reporter, I envy you."
+RELATION = "This is Mighty Knuckle's new suit…!<br>It's amazing, I wonder if I can see it closer!<br>Ah, don't run away! I still want to do more interview! "
+TOUCH = "…eh, you want a christmas present…?<br>You will have to ask santa for that…<br>Eh, w-wait even if you poke around nothing will come out…wahya!?"
+TRAIN = "Even for training let's go Super!"
+TRAINED = "W-wait, I'm not ready…!"
+EVENTA = "Ah, it's already christmas season.<br>That means, The heroes will be very busy.<br>I will have great interviews then!"
+EVENTB = "Merry Christmas!<br>I'm so excited to be dressed up as Santa, it's like I'm a kid again!"
 %}
 
 ## Notes
