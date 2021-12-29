@@ -40,6 +40,16 @@ Only a handful of supporters and favored guests are invited to personally attend
 {% include sidekick-infobox.html stockId=10821 BIO_S01=BIO_S01 extra_sprites="fg_borealis_s01_skin1" %}
 
 {% include voice-table.html resourceName="borealis"
+APPRECIATION = "What's wrong, the sound of your heart is disturbed Operator.<br>Music is the best way to change the mood. Do you have time?<br>Let's do a performance for you."
+DAILY = "Everywhere is full of sound.<br>But do you ever listen to music properly?<br>First of all, just being aware of it will change things, try it."
+HERO = "Mokdai, is he, that cameraman.<br>The direction matching the situation and target audience…<br>I can see that he has a very good sense."
+PLAYER = "I'm sorry for putting my best friend's image on you.<br>I have always looking for them…<br>I had never heard such a similar and soothing sound before."
+RELATION = "What's with that reporter... Coverage this, coverage that, what a noisy man.<br>If just watching is fine then he can follow me to the backstage.<br>It's a good thing he listens quietly when I start conducting..."
+TOUCH = "...Hmm? Your tone is as clear as ever, but...<br>The rhythm changed when you touch me.<br>Let's hear more of your sound."
+TRAIN = "It's a rehearsal, prepare yourself."
+TRAINED = "Guh, obey my direction…!"
+EVENTA = "What's with this unfashionable outfit…a protective clothing for the mission?<br>Absolutely rejected. My concert is for the sake of the audience.<br>I will show you what refined production is all about."
+EVENTB = "Christmas, a day to spend with family and friends…huh.<br>A good tradition, even if one day they get separated from each other, that memories will keep the heart warm."
 %}
 
 ## Notes
