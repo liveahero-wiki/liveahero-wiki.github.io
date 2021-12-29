@@ -55,3 +55,9 @@ EVENTB = "Christmas, a day to spend with family and friends…huh.<br>A good tra
 %}
 
 ## Notes
+
+- His skill name is in latin:
+  - Sixto Cantus : Sixth Chant/Song
+  - Stellaris Elegia : Elegy of the Stars
+  - Grandioloqua : A person speaking in researched words
+    - The full word might be Oratio Grandioloqua which is synonymous with [Rhapsody](https://en.wikipedia.org/wiki/Rhapsody_(music))
