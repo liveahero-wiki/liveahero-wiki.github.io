@@ -27,7 +27,19 @@ The secondary sled-shaped parallel weapon allow him to deliver wherever the targ
 Mokdai rushes through the holy night sky to those who are waiting for Christmas.
 {% endcapture %}
 
-{% include hero-infobox.html stockId=10022 BIO_H01=BIO_H01 extra_sprites="fg_mokdaiMeteorite2112_h01_skin2,fg_mokdaiMeteorite2112_h01_skin3,fg_mokdaiMeteorite2112_h02_skin2,fg_mokdaiMeteorite2112_h02_skin3" %}
+{% capture BIO_H02 %}
+For Mokdai, Christmas is the most anticipated day of the year.
+
+By the time he was old enough to remember, Mokdai was already living his life on Earth.
+
+His childhood memories were of the camp for refugees from the destruction of their planet by Kaibutsu.
+
+Although they could not shake off the horror of the Kaibutsu, they still celebrated Christmas with a warm, though not sumptuous, meal together.
+
+With that warmth in his heart, Mokdai sincerely hopes that happiness will come equally to all people on this one day.
+{% endcapture %}
+
+{% include hero-infobox.html stockId=10022 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_mokdaiMeteorite2112_h01_skin2,fg_mokdaiMeteorite2112_h01_skin3,fg_mokdaiMeteorite2112_h02_skin2,fg_mokdaiMeteorite2112_h02_skin3" %}
 
 {% capture BIO_S01 %}
 A friendly young man, senior employee of the company where the protagonist works at. Mainly in charge of camera work and video direction.
