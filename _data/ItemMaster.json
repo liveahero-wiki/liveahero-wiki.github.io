@@ -730,6 +730,16 @@
     "effect": [],
     "limitValue": 0
   },
+  "72": {
+    "itemId": 72,
+    "itemName": "隕石のかけら",
+    "resourceName": "Meteorite2112_exchange01",
+    "rarity": 0,
+    "itemType": 512,
+    "description": "聖夜に降り注いだ隕石のかけら。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -789,6 +799,27 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 1
+      }
+    ],
+    "limitValue": 0
+  },
+  "110022": {
+    "itemId": 110022,
+    "itemName": "聖夜のモクダイの記憶片",
+    "resourceName": "piece_mokdaiMeteorite2112",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "聖夜のモクダイのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10022
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
       }
     ],
     "limitValue": 0
@@ -1528,6 +1559,27 @@
     ],
     "limitValue": 0
   },
+  "110292": {
+    "itemId": 110292,
+    "itemName": "彗星のナリヒトの記憶片",
+    "resourceName": "piece_narihitoMeteorite2112",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "彗星のナリヒトのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10292
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
   "110301": {
     "itemId": 110301,
     "itemName": "スハイルの記憶片",
@@ -1979,6 +2031,27 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
+  "110821": {
+    "itemId": 110821,
+    "itemName": "ボレアリスの記憶片",
+    "resourceName": "piece_borealis",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "ボレアリスのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 10821
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
       }
     ],
     "limitValue": 0
@@ -3047,6 +3120,26 @@
         "class": "SidekickHeartItemEffect",
         "rarity": 0,
         "stockId": 10811
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ],
+    "limitValue": 0
+  },
+  "210821": {
+    "itemId": 210821,
+    "itemName": "ボレアリスの心",
+    "resourceName": "heart_borealis",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "ボレアリスのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 10821
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
