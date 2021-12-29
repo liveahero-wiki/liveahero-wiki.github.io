@@ -16,7 +16,7 @@ He pursues information on heroes, villains, and Kaibutsu with a terrifying obses
 
 {% include hero-infobox.html stockId=10291 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10292 %}
+{% include hero-infobox.html stockId=10292 extra_sprites="fg_narihitoMeteorite2112_h01_skin2,fg_narihitoMeteorite2112_h01_skin3,fg_narihitoMeteorite2112_h02_skin2,fg_narihitoMeteorite2112_h02_skin3" %}
 
 {% capture BIO_S01 %}
 An elusive news reporter, working for the news broadcast company Taiyou News Network.
