@@ -26,7 +26,17 @@ In addition, the right arm can be transformed into a cannon capable of firing en
 To protect the children's Christmas, Narihito swear an oath on his right arm.
 {% endcapture %}
 
-{% include hero-infobox.html stockId=10292 BIO_H01=BIO_H01 extra_sprites="fg_narihitoMeteorite2112_h01_skin2,fg_narihitoMeteorite2112_h01_skin3,fg_narihitoMeteorite2112_h02_skin2,fg_narihitoMeteorite2112_h02_skin3" %}
+{% capture BIO_H02 %}
+As the meteorite impact looms, Narihito remembers the superhero he longed to be as a child.
+
+A fictional hero who appears in front of grieving citizens and solves even the most difficult problems.
+
+As an adult, Narihito has learned about reality and can no longer hope to be this hero of his dreams but, only now, like that hero, he believe in the peace that will come, and strongly wish to protect everyone.
+
+Whether real or imaginary, his life and heart, saved by heroes, will shine hotly in this reality to save someone else, and light up the world.
+{% endcapture %}
+
+{% include hero-infobox.html stockId=10292 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_narihitoMeteorite2112_h01_skin2,fg_narihitoMeteorite2112_h01_skin3,fg_narihitoMeteorite2112_h02_skin2,fg_narihitoMeteorite2112_h02_skin3" %}
 
 {% capture BIO_S01 %}
 An elusive news reporter, working for the news broadcast company Taiyou News Network.
