@@ -82,6 +82,16 @@ TRAINED = "Awawawa~! Stop, stop! This is impossible~!"
 %}
 
 {% include voice-table.html resourceName="mokdaiMeteorite2112"
+APPRECIATION = "Hello, have you finished your work yet?<br>You've worked so hard all day, let's reward you with something... Ah, yes!<br>I have a cake I set aside for you, would you like to eat it together?"
+DAILY = "…ah, it's good you're here!<br>I brought out the tree that I had stored in the office warehouse.<br>Let's decorate it together!"
+HERO = "Narihito's new hero suit, it somehow can transform the right hand into a cannon!<br>It's so cool! It's just like the manga I used to read!"
+PLAYER = "Hey, do you have any plans for christmas?<br>If you'd like, we can watch a special effects movie together...<br>Ah, no, it's not like there is a deeper meaning to it...!"
+RELATION = "I wonder why Borealis's music can shake my heart like that…<br>It makes me want to listen to it forever."
+TOUCH = "…cold!? …oh, you scared me!<br>Really…did your hand gets cold because you did too many pranks?<br>I will lend you my robe, make sure you stay warm."
+TRAIN = "I'm going all out tonight!"
+TRAINED = "Waah, my robe will get torn!"
+EVENTA = "Emergency response headquarters…if it's like the one in the hero movie then it must have a huge underground facility, and then there will be fighting with evil organizations…eh, wait for me..!"
+EVENTB = "Hmm, hmhmm♪  …ah, hey, hey.<br>Should I bring a bucket? I want to make a snowman.<br>We don't get snow around here, so I look forward to it!"
 %}
 
 ## Notes
