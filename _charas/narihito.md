@@ -16,7 +16,17 @@ He pursues information on heroes, villains, and Kaibutsu with a terrifying obses
 
 {% include hero-infobox.html stockId=10291 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10292 extra_sprites="fg_narihitoMeteorite2112_h01_skin2,fg_narihitoMeteorite2112_h01_skin3,fg_narihitoMeteorite2112_h02_skin2,fg_narihitoMeteorite2112_h02_skin3" %}
+{% capture BIO_H01 %}
+Tracing the ever-fading memories of his childhood, Narihito appears dressed in a bright red and gold hero suit.
+
+The suit's armor is very sturdy, recreating "a material developed by Doctor X that blocks any heat and absorbs most shock" from Narihito's memory.
+
+In addition, the right arm can be transformed into a cannon capable of firing energy bullets, and at maximum power, it is powerful enough to blow away mountains.
+
+To protect the children's Christmas, Narihito swear an oath on his right arm.
+{% endcapture %}
+
+{% include hero-infobox.html stockId=10292 BIO_H01=BIO_H01 extra_sprites="fg_narihitoMeteorite2112_h01_skin2,fg_narihitoMeteorite2112_h01_skin3,fg_narihitoMeteorite2112_h02_skin2,fg_narihitoMeteorite2112_h02_skin3" %}
 
 {% capture BIO_S01 %}
 An elusive news reporter, working for the news broadcast company Taiyou News Network.
