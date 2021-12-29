@@ -1,4 +1,17 @@
 {% capture timing %}{% include skill-timing.html timing=include.skill.timing %}{% endcapture %}
-{% for skillEffect in include.skill.effects %}
-[{{ timing | strip }}]{% include skill-effect-description.html skillEffect=skillEffect timing=include.skill.timing %}/{{ skillEffect.prob }}%<br>
+{% assign timing = timing | strip %}
+{% assign randomGroups = include.skill.effects | group_by: "randomGroupId" %}
+
+{% for randomGroup in randomGroups %}
+{%- if randomGroup.name != "0" %}
+<fieldset class="s-rand-g">
+<legend>One of the effect in this group will be activated at random</legend>
+{%- endif %}
+
+{% for skillEffect in randomGroup.items %}
+[{{ timing }}]{% include skill-effect-description.html skillEffect=skillEffect timing=include.skill.timing %}/{{ skillEffect.prob }}%<br>
+{% endfor %}
+
+{%- if randomGroup.name != "0" %}</fieldset>{% endif %}
+
 {% endfor %}
