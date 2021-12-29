@@ -82,6 +82,8 @@ TRAINED = "Awawawa~! Stop, stop! This is impossible~!"
 %}
 
 {% include voice-table.html resourceName="mokdaiMeteorite2112"
+h_gachaResult = "Merry Christmas!<br>Ehehe!<br>Today is a special day after all!<br>I've got a great present for you!"
+s_gachaResult = "I wish everyone a happy day today,<br>I will do my best for sidekick duty!<br>…eh.<br>My job is to pull the sled!?"
 APPRECIATION = "Hello, have you finished your work yet?<br>You've worked so hard all day, let's reward you with something... Ah, yes!<br>I have a cake I set aside for you, would you like to eat it together?"
 DAILY = "…ah, it's good you're here!<br>I brought out the tree that I had stored in the office warehouse.<br>Let's decorate it together!"
 HERO = "Narihito's new hero suit, it somehow can transform the right hand into a cannon!<br>It's so cool! It's just like the manga I used to read!"
