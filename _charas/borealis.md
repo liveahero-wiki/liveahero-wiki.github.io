@@ -40,6 +40,8 @@ Only a handful of supporters and favored guests are invited to personally attend
 {% include sidekick-infobox.html stockId=10821 BIO_S01=BIO_S01 extra_sprites="fg_borealis_s01_skin1" %}
 
 {% include voice-table.html resourceName="borealis"
+h_gachaResult = "I am Borealis,The one who take command.<br>Your sound…<br>It's very nostalgic.<br>It would be an honor to be on stage with you."
+s_gachaResult = "Do you wish for my performance, operator?<br>Now, let's tune up for the next concert......<br>Sidekick duty?<br>Yeah, I will do that later."
 APPRECIATION = "What's wrong, the sound of your heart is disturbed Operator.<br>Music is the best way to change the mood. Do you have time?<br>Let's do a performance for you."
 DAILY = "Everywhere is full of sound.<br>But do you ever listen to music properly?<br>First of all, just being aware of it will change things, try it."
 HERO = "Mokdai, is he, that cameraman.<br>The direction matching the situation and target audience…<br>I can see that he has a very good sense."
