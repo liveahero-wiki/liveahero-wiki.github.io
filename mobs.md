@@ -39,6 +39,13 @@ sprites="fg_kaibutsuJellyfishEarth_h01,fg_kaibutsuJellyfishFire_h01,fg_kaibutsuJ
 sprites="fg_kaibutsuLarvaEarth_h01,fg_kaibutsuLarvaEarthSpace_h01,fg_kaibutsuLarvaFire_h01,fg_kaibutsuLarvaFireSpace_h01,fg_kaibutsuLarvaLight_h01,fg_kaibutsuLarvaLightSpace_h01,fg_kaibutsuLarvaShadow_h01,fg_kaibutsuLarvaShadowSpace_h01,fg_kaibutsuLarvaWater_h01,fg_kaibutsuLarvaWaterSpace_h01"
 %}
 
+
+### Kaibutsu (Meteorite)
+
+{% include hero-infobox-unreleased.html name="Kaibutsu (Meteorite)" mob=true
+sprites="fg_kaibutsuMeteorEarth_h01,fg_kaibutsuMeteorFire_h01,fg_kaibutsuMeteorLight_h01,fg_kaibutsuMeteorShadow_h01,fg_kaibutsuMeteorWater_h01"
+%}
+
 ### Kaibutsu (Procy)
 
 {% include hero-infobox-unreleased.html name="Kaibutsu (Procy)" mob=true
@@ -55,6 +62,12 @@ sprites="fg_kaibutsuSharkEarth_h01,fg_kaibutsuSharkFire_h01,fg_kaibutsuSharkLigh
 
 {% include hero-infobox-unreleased.html name="Kaibutsu (Shizuku)" mob=true
 sprites="fg_kaibutsuShizuku_h01"
+%}
+
+### Kaibutsu (Small Meteorite)
+
+{% include hero-infobox-unreleased.html name="Kaibutsu (Small Meteorite)" mob=true
+sprites="fg_kaibutsuMeteorSmallEarth_h01,fg_kaibutsuMeteorSmallFire_h01,fg_kaibutsuMeteorSmallLight_h01,fg_kaibutsuMeteorSmallShadow_h01,fg_kaibutsuMeteorSmallWater_h01"
 %}
 
 ### Kaibutsu (Tentacle)
