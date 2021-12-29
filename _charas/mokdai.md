@@ -3,6 +3,8 @@ title: Mokdai
 characterId: 2
 occupation: "Video Production Staff"
 Affiliation Office: "Parallel Flight"
+h2:
+  title: "\"Holy Night\" Mokdai"
 ---
 
 {% capture BIO_H01 %}
@@ -14,6 +16,8 @@ For Mokdai, who has a vast array of knowledge regarding heroes,  he himself was 
 {% endcapture %}
 
 {% include hero-infobox.html stockId=10021 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+
+{% include hero-infobox.html stockId=10022 %}
 
 {% capture BIO_S01 %}
 A friendly young man, senior employee of the company where the protagonist works at. Mainly in charge of camera work and video direction.
@@ -53,6 +57,9 @@ RELATION = "Akashi sure can be an amazing hero when he puts his mind to it.<br> 
 TOUCH = "Eh?! Wha-wha-what, what are you grabbing at?!<br>...Eh? not as soft as you imagined?<br>E-even if you say that…"
 TRAIN = "Alright! I'm raring to go!"
 TRAINED = "Awawawa~! Stop, stop! This is impossible~!"
+%}
+
+{% include voice-table.html resourceName="mokdaiMeteorite2112"
 %}
 
 ## Notes

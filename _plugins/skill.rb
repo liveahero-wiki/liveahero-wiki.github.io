@@ -58,6 +58,8 @@ module LahWiki
           f.push("HP&gt;=50<!--#{c['value']}-->%")
         when "PinchExecTrigger"
           f.push("HP&lt;50<!--#{c['value']}-->%")
+        when "KillExecTrigger"
+          f.push("target enemy is killed")
         when "AboveSpdValueTrigger"
           f.push("SPD&gt;#{c['value']}")
         when "OwnStatusTrigger"
@@ -162,6 +164,8 @@ module LahWiki
         return "random enemy"
       when 9
         return "random ally"
+      when 11
+        return "ally with lowest HP"
       end
       return "Unknown target #{target}"
     end

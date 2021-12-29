@@ -2,6 +2,8 @@
 title: Narihito
 characterId: 29
 occupation: "Reporter (取材記者)"
+h2:
+  title: "\"The Comet\" Narihito"
 ---
 
 {% capture BIO_H01 %}
@@ -13,6 +15,8 @@ He pursues information on heroes, villains, and Kaibutsu with a terrifying obses
 {% endcapture %}
 
 {% include hero-infobox.html stockId=10291 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+
+{% include hero-infobox.html stockId=10292 %}
 
 {% capture BIO_S01 %}
 An elusive news reporter, working for the news broadcast company Taiyou News Network.
@@ -51,6 +55,9 @@ RELATION = "The president at your place, I think I saw him before.<br>Didn't he 
 TOUCH = "Oops! Are you looking for my notebook?<br>It's a pity, but the matter of yesterday I have properly wrote it in…<br>Wahyaa!? S-stop it! I didn't write it at all!"
 TRAIN = "I'm practicing my memory withdrawal, please accompany me."
 TRAINED = "Gaah, heroes are really amazing..!"
+%}
+
+{% include voice-table.html resourceName="narihitoMeteorite2112"
 %}
 
 ## Notes

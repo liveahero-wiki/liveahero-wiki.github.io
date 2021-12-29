@@ -19,6 +19,8 @@ ATK {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effe
 Base View {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "ChangeView" %}
 Add {{ effect.parameter.value }} views
+{% when "ChangeViewCoefficient" %}
+View gained with view acquisition skill {% if effect.parameter.value >= 100 %}increased{% else %}decreased{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "RateChangeView" %}
 Gain {{ effect.parameter.value }}% of self's base view
 {% when "MultipleDefence" %}
