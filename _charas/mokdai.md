@@ -17,7 +17,17 @@ For Mokdai, who has a vast array of knowledge regarding heroes,  he himself was 
 
 {% include hero-infobox.html stockId=10021 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10022 extra_sprites="fg_mokdaiMeteorite2112_h01_skin2,fg_mokdaiMeteorite2112_h01_skin3,fg_mokdaiMeteorite2112_h02_skin2,fg_mokdaiMeteorite2112_h02_skin3" %}
+{% capture BIO_H01 %}
+Even as a fierce battle loomed, Mokdai's desire to deliver joy and gorgeous sights to viewers gave him a new form and power.
+
+The inside of his present bag-shaped parallel weapon is filled with ether, and generates an energy that revitalizes the person who touches it.
+
+The secondary sled-shaped parallel weapon allow him to deliver wherever the target is, and since the it is composed of energy, it can also be used to attack enemies.
+
+Mokdai rushes through the holy night sky to those who are waiting for Christmas.
+{% endcapture %}
+
+{% include hero-infobox.html stockId=10022 BIO_H01=BIO_H01 extra_sprites="fg_mokdaiMeteorite2112_h01_skin2,fg_mokdaiMeteorite2112_h01_skin3,fg_mokdaiMeteorite2112_h02_skin2,fg_mokdaiMeteorite2112_h02_skin3" %}
 
 {% capture BIO_S01 %}
 A friendly young man, senior employee of the company where the protagonist works at. Mainly in charge of camera work and video direction.
