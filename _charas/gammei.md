@@ -55,3 +55,8 @@ TRAINED = "Gah! Please give me a break...!"
 
 - His full name is Gammei Tsukinowa(月輪 ガンメイ)
 - He is 30 years old
+- Tsukinowa = black bear (tsukinowa guma) = Ursa Major (Oogumaza)
+  - Gammei = Gamma
+  - Gamma star in Ursa Major : Phecda
+  - Phecda means "thigh of the great bear" in Arabic.
+  - The design of Gammei's hero costume matches the design of the animal's nose (probably a bear) around his waist and the larger thighs.
