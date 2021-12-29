@@ -78,6 +78,8 @@ TRAINED = "Gaah, heroes are really amazing..!"
 %}
 
 {% include voice-table.html resourceName="narihitoMeteorite2112"
+h_gachaResult = "Great Memorias, dashing into the holy night!<br>Like the superheroes I admired as a child, I will protect the peace of this city!"
+s_gachaResult = "My assist is needed right, Operator!<br>Leave it to me!<br>I'm proud to say that I know more information about heroes than anyone!"
 APPRECIATION = "Operator, about today's interview…oh.<br>Looks like you're resting, my bad.<br>…the present.., maybe when you're awake. "
 DAILY = "Eh, my christmas plans?<br>First of all, I'm going to attend a hero show or an event, and then I'm going to do an interview... what's with that expression on your face...?"
 HERO = "To think the day has come where I fight together with that Conductor villain who travel across the galaxies…<br>Somehow, I managed to get an exclusive... oh, no, it's nothing!"
@@ -93,3 +95,4 @@ EVENTB = "Merry Christmas!<br>I'm so excited to be dressed up as Santa, it's lik
 ## Notes
 
 - His full name is Narihito Karue (軽江 ナリヒト)
+- His hero name is Great Memorias (グレート・メモリアス)
