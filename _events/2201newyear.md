@@ -32,7 +32,7 @@ There will be extra login bonus for 10 days as follow
 Aside from the current challenge simulator, there will be 11 additional separate simulator.
 
 Clearing these will rewards player with "New Year Gift" depending on score, 
-"New Year Gift" can be exchanged for items such as: {% include item.html id=29 %}, {% include item.html id=59 %}, {% include item.html id=11 %}, etc.
+"New Year Gift" can be exchanged for items such as: {% include item.html id=29 %}, {% include item.html id=59 %}, {% include item.html id=10 %}, etc.
 
 Heroes eligible for bonus atk in this simulator will change daily, schedule as follows:
 
@@ -205,7 +205,7 @@ There will be a special Ether Search, pulling in this Ether Search will guarante
 - {% chara_link Ryekie|h2 %}
 - {% chara_link Victom|h2 %}
 
-You can only pull in this Ether Search with 50 paid 1 {% include item.html id=1 %}
+You can only pull in this Ether Search with 50 paid {% include item.html id=1 %}
 
 ## Maintenance Notice
 
