@@ -8,10 +8,7 @@ event_end_time: 2022-01-14T00:00:00+09
 
 ## Event Details
 
-Lifewonders is launching their first new year campaign, together with the event
-there will be a special scenario "To an unforgettable year". 
-
-Completion of the scenario will give you one {% include item.html id=10 %}.
+New year 2022!
 
 ### Login Bonus
 
