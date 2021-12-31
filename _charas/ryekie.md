@@ -32,7 +32,7 @@ He is a hot-blooded man fully aware and confident in his role as a hero, and bec
 
 His voice is always loud.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10041 BIO_S01=BIO_S01 extra_sprites="fg_ryekie_s01_skin1,fg_ADV_ryekie_s01" %}
+{% include sidekick-infobox.html stockId=10041 BIO_S01=BIO_S01 extra_sprites="fg_ryekie_s01_skin1,fg_ryekie_s01_skin2,fg_ADV_ryekie_s01,fg_ryekieNewyear2201_s01" %}
 
 {% include voice-table.html resourceName="ryekie"
 h_gachaResult = "My name’s Ryekie! And my other name is…<br>Zap the Justice!!<br>Now then, let us begin the legend of the hero of absolute justice!!!!"
@@ -85,6 +85,9 @@ TOUCH = "Oh?! You wish for a hug, partner?<br>Alright, I'll give you something h
 RELATION = "Mokdai is the first employee to come to our company.<br>He was adorable since the very beginning!<br>Even someone like him has become a hero..."
 TRAIN = "Alright, let's have an endurance contest!"
 TRAINED = "H-Hnn.. C-Complete defeat..."
+%}
+
+{% include voice-table.html resourceName="ryekieNewYear2201"
 %}
 
 ## Notes
