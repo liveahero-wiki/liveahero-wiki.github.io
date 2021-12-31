@@ -192,6 +192,24 @@ Heroes eligible for bonus atk in this simulator will change daily, schedule as f
 | {% chara_link Light Mercenary %}   |     10    |
 | {% chara_link Shadow Mercenary %}   |     10    |
 
+{% comment %}
+{% include quest-group.html chapterId=449 %}
+{% include quest-group.html chapterId=450 %}
+{% include quest-group.html chapterId=451 %}
+{% include quest-group.html chapterId=452 %}
+{% include quest-group.html chapterId=453 %}
+{% include quest-group.html chapterId=454 %}
+{% include quest-group.html chapterId=455 %}
+{% include quest-group.html chapterId=456 %}
+{% include quest-group.html chapterId=457 %}
+{% include quest-group.html chapterId=458 %}
+{% include quest-group.html chapterId=459 %}
+{% endcomment %}
+
+### New Year 2022 Shop
+
+{% include shop-table.html id=18 %}
+
 ### Happy New Year 2022 Ether Search
 
 There will be a special Ether Search, pulling in this Ether Search will guarantee one of the 8 limited 5* which is:
