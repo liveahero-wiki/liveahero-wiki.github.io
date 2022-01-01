@@ -194,17 +194,17 @@ Heroes eligible for bonus atk in this simulator will change daily, schedule as f
 
 ### Limited Simulator
 
-{% include quest-group.html chapterId=449 %}
-{% include quest-group.html chapterId=450 %}
-{% include quest-group.html chapterId=451 %}
-{% include quest-group.html chapterId=452 %}
-{% include quest-group.html chapterId=453 %}
-{% include quest-group.html chapterId=454 %}
-{% include quest-group.html chapterId=455 %}
-{% include quest-group.html chapterId=456 %}
-{% include quest-group.html chapterId=457 %}
-{% include quest-group.html chapterId=458 %}
-{% include quest-group.html chapterId=459 %}
+{% include quest-group.html chapterId=601 %}
+{% include quest-group.html chapterId=602 %}
+{% include quest-group.html chapterId=603 %}
+{% include quest-group.html chapterId=604 %}
+{% include quest-group.html chapterId=605 %}
+{% include quest-group.html chapterId=606 %}
+{% include quest-group.html chapterId=607 %}
+{% include quest-group.html chapterId=608 %}
+{% include quest-group.html chapterId=609 %}
+{% include quest-group.html chapterId=610 %}
+{% include quest-group.html chapterId=611 %}
 
 ### New Year 2022 Shop
 
