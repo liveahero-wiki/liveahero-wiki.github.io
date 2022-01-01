@@ -88,6 +88,9 @@ TRAINED = "H-Hnn.. C-Complete defeat..."
 %}
 
 {% include voice-table.html resourceName="ryekieNewYear2201"
+
+EVENTA = "Happy new year, Partner!<br>I have been in your care a lot last year!!<br>Let's also have a great one this year!!!"
+
 %}
 
 ## Notes
