@@ -225,8 +225,3 @@ There will be a special Ether Search, pulling in this Ether Search will guarante
 
 You can only pull in this Ether Search once and with 50 paid {% include item.html id=1 %}
 
-## Maintenance Notice
-
-Maintenance is scheduled to start at 2021/12/31 16:00 - 24:00 JST
-
-Please finish any quest before maintenance start.
