@@ -15530,7 +15530,7 @@
         {
           "class": "ViewChangeHp",
           "parameter": {
-            "value": 50
+            "value": 25
           }
         }
       ],
@@ -15541,7 +15541,7 @@
         1
       ],
       "parameter": false,
-      "description": "現在のViewPowerの50%分HPが減少",
+      "description": "現在のViewPowerの25%分HPが減少",
       "isImmediate": true,
       "persistence": false,
       "canDuplicate": false,
@@ -15881,24 +15881,22 @@
       "count": 0,
       "effects": [
         {
-          "class": "MultipleDefence",
-          "parameter": {
-            "value": 0
-          }
+          "class": "ForceAuto",
+          "parameter": []
         }
       ],
-      "filename": "status_invincible",
-      "statusId": 6,
+      "filename": "status_berserk",
+      "statusId": 27,
       "canDispel": false,
       "filterIds": [
-        5
+        13
       ],
       "parameter": false,
-      "description": "無敵",
+      "description": "オート行動",
       "isImmediate": false,
       "persistence": true,
       "canDuplicate": false,
-      "isDisplayPersistenceStatus": true
+      "isDisplayPersistenceStatus": false
     }
   },
   "687": {
@@ -15908,9 +15906,9 @@
       "count": 0,
       "effects": [
         {
-          "class": "ChangeHp",
+          "class": "AimHighestTurnViewConsumeCharacter",
           "parameter": {
-            "value": 5
+            "isTarget": false
           }
         }
       ],
@@ -15918,13 +15916,124 @@
       "statusId": 0,
       "canDispel": false,
       "filterIds": [
-        1
+        13
       ],
       "parameter": false,
-      "description": "最大HPの5%のダメージ",
+      "description": "オート行動時、対象の中で一番このターンにViewを消費したキャラクターを対象にする",
       "isImmediate": true,
       "persistence": false,
       "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "688": {
+    "skillEffectId": 688,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 50,
+            "statusId": 18
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 59,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "毒抵抗50",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "689": {
+    "skillEffectId": 689,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 50,
+            "statusId": 19
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 59,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "火傷抵抗50",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "690": {
+    "skillEffectId": 690,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeViewCoefficient",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "filename": "status_concert",
+      "statusId": 82,
+      "canDispel": true,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "協奏",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "691": {
+    "skillEffectId": 691,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 22
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 59,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "沈黙無効",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
       "isDisplayPersistenceStatus": false
     }
   }

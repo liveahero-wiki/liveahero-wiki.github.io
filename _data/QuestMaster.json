@@ -26623,6 +26623,75 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
   },
+  "445004": {
+    "questId": 445004,
+    "questName": "英雄の為の練習曲",
+    "subName": "第４話",
+    "questKind": 5,
+    "chapterId": 445,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2022-01-07 19:00:00",
+    "endAt": "2022-01-26 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 4,
+    "enemyLevel": 12,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 445003,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuMeteorSmallFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuMeteorSmallFire_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
   "446001": {
     "questId": 446001,
     "questName": "襲い来る流星群",
@@ -27297,6 +27366,121 @@
     "scoreAttackStandards": null,
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
+  },
+  "447001": {
+    "questId": 447001,
+    "questName": "聖夜のプレ・コンサート",
+    "subName": "スコアアタック",
+    "questKind": 8,
+    "chapterId": 447,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "icon_borealis_h01",
+    "startAt": "2022-01-07 19:00:00",
+    "endAt": "2022-01-19 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 445002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_borealis_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": true,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": [
+      {
+        "score": 0,
+        "iconAddress": "ui_symbol_estimation_C"
+      },
+      {
+        "score": 50000,
+        "iconAddress": "ui_symbol_estimation_B"
+      },
+      {
+        "score": 100000,
+        "iconAddress": "ui_symbol_estimation_A"
+      },
+      {
+        "score": 150000,
+        "iconAddress": "ui_symbol_estimation_S"
+      }
+    ],
+    "scoreAttackBonuses": [
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK50UP",
+        "characters": [
+          {
+            "stockId": 10022,
+            "cardType": 1
+          },
+          {
+            "stockId": 10292,
+            "cardType": 1
+          }
+        ]
+      },
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK30UP",
+        "characters": [
+          {
+            "stockId": 10821,
+            "cardType": 1
+          }
+        ]
+      },
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK10UP",
+        "characters": [
+          {
+            "stockId": 10821,
+            "cardType": 2
+          }
+        ]
+      }
+    ],
+    "scoreAttackStandards": [
+      {
+        "label": "UI_SCORE_ATTACK_CLEAR_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_CLEAR_BONUS_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_HP_SCORE_LABEL",
+        "description": "UI_SCORE_ATTACK_HP_SCORE_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_TURN_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_TURN_BONUS_DESCRIPTION"
+      }
+    ],
+    "scoreAttackHintTextKey": "HINT_SCORE_ATTACK_METEORITE2112",
+    "scoreAttackBattleCount": 3
   },
   "449001": {
     "questId": 449001,

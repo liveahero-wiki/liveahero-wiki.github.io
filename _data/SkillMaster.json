@@ -28001,6 +28001,135 @@
       }
     ]
   },
+  "4043101": {
+    "skillId": 4043101,
+    "skillName": "激情のスラッシュ+",
+    "useView": 20000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に180%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villain_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 21,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4043102": {
+    "skillId": 4043102,
+    "skillName": "躍り出る",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "Viewを6000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villain_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 272,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4043103": {
+    "skillId": 4043103,
+    "skillName": "荘厳なスラッシュ",
+    "useView": 8000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。Viewを12000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villain_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 290,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4043104": {
+    "skillId": 4043104,
+    "skillName": "激情のスラッシュ",
+    "useView": 20000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に140%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villain_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 117,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4046101": {
     "skillId": 4046101,
     "skillName": "爪",
@@ -32203,6 +32332,114 @@
       }
     ]
   },
+  "4082101": {
+    "skillId": 4082101,
+    "skillName": "シークト・カントゥス",
+    "useView": 0,
+    "targetFlag": 7,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。ランダムな味方に1回の行動の間View消費量-3000を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_borealis_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 317,
+        "prob": 100,
+        "effectTarget": 6,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4082102": {
+    "skillId": 4082102,
+    "skillName": "ステラリス・エレジア",
+    "useView": 7000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵全体に80%ダメージ。Viewを10000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_borealis_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 25,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4082103": {
+    "skillId": 4082103,
+    "skillName": "グランディオロクア",
+    "useView": 13000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に現在のViewPowerの25%分の固定ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_borealis_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 673,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4083101": {
     "skillId": 4083101,
     "skillName": "触手のムチ",
@@ -33475,6 +33712,79 @@
       }
     ]
   },
+  "6000046": {
+    "skillId": 6000046,
+    "skillName": "毒・火傷抵抗50",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_cure",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "毒・火傷が付与される確率が50%減少する。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 688,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 689,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6000047": {
+    "skillId": 6000047,
+    "skillName": "デバフ抵抗",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_cure",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "毒・火傷が付与される確率が50%減少する。沈黙無効。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 688,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 689,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 691,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "6004101": {
     "skillId": 6004101,
     "skillName": "新しい接続",
@@ -33948,6 +34258,29 @@
             "statusId": 57
           }
         ]
+      }
+    ]
+  },
+  "6043101": {
+    "skillId": 6043101,
+    "skillName": "レクイエム",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 14,
+    "description": "戦闘不能時、味方単体に3回の行動の間協奏を付与。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 690,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
       }
     ]
   },
@@ -35116,6 +35449,98 @@
         "skillEffectId": 260,
         "prob": 100,
         "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6082101": {
+    "skillId": 6082101,
+    "skillName": "ソリスト招集",
+    "useView": 0,
+    "targetFlag": 10,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 5,
+    "description": "ターン終了時、このターン一番ViewPowerを使用したキャラクターに１回の行動の間、覚醒を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 226,
+        "prob": 100,
+        "effectTarget": 10,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6082102": {
+    "skillId": 6082102,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "自身にオート行動時、対象の中で一番このターンにViewを消費したキャラクターを対象にする。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 687,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6082103": {
+    "skillId": 6082103,
+    "skillName": "招待状",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "バトル開始時、Viewを30000獲得。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 39,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6082104": {
+    "skillId": 6082104,
+    "skillName": "ソリスト招集+",
+    "useView": 0,
+    "targetFlag": 10,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 5,
+    "description": "ターン終了時、このターン一番ViewPowerを使用したキャラクターに２回の行動の間、覚醒を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "effects": [
+      {
+        "skillEffectId": 41,
+        "prob": 100,
+        "effectTarget": 10,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "randomGroupId": 0,
