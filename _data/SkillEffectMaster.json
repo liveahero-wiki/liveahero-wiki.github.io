@@ -16036,5 +16036,85 @@
       "canDuplicate": true,
       "isDisplayPersistenceStatus": false
     }
+  },
+  "692": {
+    "skillEffectId": 692,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": 5,
+            "statusTypeValue": 0
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "バフ効果３ターン短縮",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "693": {
+    "skillEffectId": 693,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 0
+          }
+        }
+      ],
+      "filename": "status_invincible",
+      "statusId": 6,
+      "canDispel": false,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "無敵",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": true
+    }
+  },
+  "694": {
+    "skillEffectId": 694,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeHp",
+          "parameter": {
+            "value": 5
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "最大HPの5%のダメージ",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
   }
 }

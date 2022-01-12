@@ -26675,6 +26675,193 @@
       }
     ]
   },
+  "4032111": {
+    "skillId": 4032111,
+    "skillName": "シャドウ・ラッシュ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "敵単体に100%のダメージ。Viewを12000獲得。味方全体からランダムな対象に２回のランダムなバフ効果を付与（ATKアップ、DEFアップから抽選）を３回繰り返す。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_procyBlack_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 290,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 6,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 1,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 6,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 1,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 6,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 2,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 6,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 2,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 6,
+        "sequenceGroupId": 3,
+        "probGroupId": 0,
+        "randomGroupId": 3,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 6,
+        "sequenceGroupId": 3,
+        "probGroupId": 0,
+        "randomGroupId": 3,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4032112": {
+    "skillId": 4032112,
+    "skillName": "シャドウ・ハンマー",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。Viewを4000獲得。自身にデバフがついていない場合、味方全体に1回の行動の間、ATKアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_procyBlack_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 295,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "4032113": {
+    "skillId": 4032113,
+    "skillName": "シャドウ・プレス",
+    "useView": 12000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵全体に115%ダメージ。Viewを10000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_procyBlack_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 258,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 25,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4033101": {
     "skillId": 4033101,
     "skillName": "日輪の踊り",
@@ -26903,6 +27090,116 @@
         "probGroupId": 0,
         "randomGroupId": 0,
         "triggerJson": []
+      }
+    ]
+  },
+  "4033106": {
+    "skillId": 4033106,
+    "skillName": "シャドウ・ダンス",
+    "useView": 6000,
+    "targetFlag": 3,
+    "resourceName": "b_skill_buffAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方全体に1回の行動の間ATKアップを付与。1回分のDEFアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_gomeisaBlack_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4033107": {
+    "skillId": 4033107,
+    "skillName": "シャドウ・アタック",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に100%ダメージ。Viewを3000獲得。自身にデバフがついていない場合、自身のHPを基礎ATKの150%回復 & 1回の行動の間ATKアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_gomeisaBlack_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 24,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 426,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
       }
     ]
   },
@@ -34111,6 +34408,79 @@
       }
     ]
   },
+  "6032103": {
+    "skillId": 6032103,
+    "skillName": "連係解除",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_antiBuff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "ゴメイサ型カイブツが戦闘不能になった時、自身のバフを全て解除。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": []
+  },
+  "6032104": {
+    "skillId": 6032104,
+    "skillName": "応急処置",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_cureAll",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "毒・火傷を無効化。行動開始時、自身がピンチ状態の場合、味方全体のデバフを１つ解除。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "6032105": {
+    "skillId": 6032105,
+    "skillName": "パス接続",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "ターン開始時、自身がピンチ状態の場合、味方単体に2回の行動の間ATKアップを付与。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
   "6033101": {
     "skillId": 6033101,
     "skillName": "守るんデス！",
@@ -34125,6 +34495,56 @@
     "effects": [
       {
         "skillEffectId": 468,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6033102": {
+    "skillId": 6033102,
+    "skillName": "エネルギー補充",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "",
+    "timing": 14,
+    "description": "戦闘不能時、100%のHPで復活。復活したターンは行動しない。",
+    "cutin": [],
+    "isEquip": false,
+    "effects": [
+      {
+        "skillEffectId": 260,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 53,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 12,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 262,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,
