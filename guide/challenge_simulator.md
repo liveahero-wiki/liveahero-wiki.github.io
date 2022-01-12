@@ -105,6 +105,12 @@ Quest in simulator will reset after a period of time (normally within 14 days), 
 {% include quest-group.html chapterId=606 %}
 {% include quest-group.html chapterId=610 %}
 
+### Jan 12th 2021 - Jan 26th 2021
+
+{% include quest-group.html chapterId=602 %}
+{% include quest-group.html chapterId=604 %}
+{% include quest-group.html chapterId=612 %}
+
 ## Guides
 
 ### Beware the exploding zone! (Difficulty: B)
@@ -228,5 +234,16 @@ This Simulator has different Score condition which is:
 #### Labyrinth Beast (Juvenile)'s skills
 
 {% include skill-table-manual.html skillIds="4036111" equipmentSkills="6036101,6000037" %}
+
+### Simulated Particular Hero Kaibutsu (Difficulty: S)
+
+#### Procy Shaped Kaibutsu's skills
+
+{% include skill-table-manual.html skillIds="4032112,4032111,4032113" equipmentSkills="6032103,6000024,6032104,6032105" %}
+
+#### Gomeisa Shaped Kaibutsu's skills
+
+{% include skill-table-manual.html skillIds="4033107,4033106" equipmentSkills="6033102,6000003" %}
+
 
 
