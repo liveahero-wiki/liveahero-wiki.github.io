@@ -14,7 +14,8 @@ As an information warfare specialist, the hero he transforms into is armed with 
 He pursues information on heroes, villains, and Kaibutsu with a terrifying obsession because of his desire to meet the hero that once saved him. A glorious hero who saved the lives of many citizens and vanished without so much as a name. A phantom who now exists only in Narihito's hazy memories. Chasing after this idol, he puts in his all as a reporter and hero to this day.
 {% endcapture %}
 
-{% include hero-infobox.html stockId=10291 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+{% include hero-infobox.html stockId=10291 BIO_H01=BIO_H01 BIO_H02=BIO_H02
+extra_sprites="fg_narihito_h01_skin2,fg_narihito_h01_skin3" %}
 
 {% capture BIO_H01 %}
 Tracing the ever-fading memories of his childhood, Narihito appears dressed in a bright red and gold hero suit.
