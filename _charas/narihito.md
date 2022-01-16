@@ -68,6 +68,7 @@ win = "This victory might become a legend! I have to immediately write it!<br>Eh
 lose = "Even if I use the power of the legends….in the end…it's a borrowed power…"
 assist = "Tomorrow's front page will be about you!"
 assisted = "Thanks for the coverage!"
+loveIndexMax= "This is weird, you should be just an interviewee, but I find myself kind of yearn for you.<br>A scandal with you, that doesn't sound bad."
 APPRECIATION = "Oh, should I stop interviewing?<br>yeah, it's fine take a rest.<br>I could at least make you a cup of coffee."
 DAILY = "Good day, Operator-san!<br>Would you be willing to do an interview with me today? e?<br>In return I should help with your work? Really, I'm no match for you."
 HERO = "Oh yeah, now I remember! That little guy in the bar!<br>Even the bounty hunters are speechless, he was the legendary money-grubber hero.<br>Awesome, awesome, I'd love to write an interview story about him!"
