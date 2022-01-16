@@ -56,6 +56,8 @@ smallDamage = "Guuh!!"
 bigDamage = "Are my friends safe?!"
 win = "Elipe, Damarki, Kahoni, Timbanos, Heiros ...<br>I believe this victory will reach you too..."
 lose = "I can't hear my friend's voices...<br>I wanted to see them again..."
+rankMax = "I can say that I'm here right now because of you. Truly, thank you.<br>This gratitude filled my heart, the power of my friends, let me use it for your sake."
+loveIndexMax= "I don't want to lose someone precious again.<br>That’s why until this body turned into stardust…<br>I promise I will never leave your side, not even for a moment."
 %}
 
 ## Notes
