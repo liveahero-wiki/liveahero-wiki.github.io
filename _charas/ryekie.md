@@ -50,6 +50,7 @@ win = "Justice execution! Complete victory! Come let us shout our cry of triumph
 lose = "My…Justice…is breaking…"
 assist = "Justice Assist!"
 assisted = "Thank you! Hero!!"
+rankMax = "Justice, Final Change!!<br>Now, let's go together, partner!!!<br>You and I are absolute justice!!!!"
 loveIndexMax = "Hey, from now on let's keep going together, My comrade.<br>For me, to be able to accomplish justice with you,<br>and to be able to love your being, is the greatest honor."
 APPRECIATION = "Hahaha! Good work today! Your hard work in supporting is just as vital!  In other words, you are our hero!"
 DAILY = "Let's go!  Good morning, partner!  This body tempered by business and muscle training!  I'll use it to fight for justice today too!"
