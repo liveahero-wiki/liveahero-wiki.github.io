@@ -15,7 +15,8 @@ Transforms into a hero that combines his own image of a "cool hero" with a paral
 For Mokdai, who has a vast array of knowledge regarding heroes,  he himself was the furthest thing from his own ideal. From his appearance self evaluated as uncool, to the trauma of facing down countless kaibutsu, to worries of losing his nerve in the face of a horde, being a hero seemed like an unattainable dream. It was also the existence of that particular hero and operator that changed his mind.
 {% endcapture %}
 
-{% include hero-infobox.html stockId=10021 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+{% include hero-infobox.html stockId=10021 BIO_H01=BIO_H01 BIO_H02=BIO_H02 
+extra_sprites="fg_mokdai_h01_skin2" %}
 
 {% capture BIO_H01 %}
 Even as a fierce battle loomed, Mokdai's desire to deliver joy and gorgeous sights to viewers gave him a new form and power.
