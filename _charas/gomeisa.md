@@ -33,6 +33,7 @@ win = "I want to understand them all. Maybe we can all live together in peace...
 lose = "Why...why do everyone keep fighting..."
 assist = "Let us move smoothly!"
 assisted = "I'm happy for your cheers!"
+rankMax = "This is amazing, I can show a more brilliant dance!<br>I will try harder from now on, for the sake of peace.<br>So, from now on, let's dance together!"
 loveIndexMax= "Don't know why, but I feel all warm and fuzzy when I'm with you.<br>It's like when I'm under the sun, my mind is at ease...<br>So... can I...stay with you forever?"
 APPRECIATION = "If you want to feel better, basking in the light's radiance is the best thing to do!<br>The sun's light helps you relax and feel warm.<br>Your heart and body will feel recover and feel refreshed."
 DAILY = "Welcome, operator!<br>If you're here for the machine, it's currently free!<br>Here you go! It's good to connect with heroes!"
