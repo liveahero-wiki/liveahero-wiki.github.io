@@ -56,7 +56,7 @@ assisted = "Ashamed…!"
 rankMax = "Is this…a power given to me so that I can further work, officer?<br>Then…it won't do for me to not show you a work that answer your expectations."
 loveIndexMax= "I…no,I right now [^sada1] , someone who is in a position to devote himself to his country, have come to desire you.<br>With your own hand…please punish me.
 
-[^sada1]: he start the phrase with a formal I (私) and then change it to a masculine I (俺)"
+[^sada1]: he start the phrase with a formal I (私/Watashi) and then change it to a masculine and informal I (俺/Ore)"
 APPRECIATION = "Thank you for your hard work on today's mission, officer.<br>There, please have a seat.<br>I can make a pot of tea... Oh, The tea leaves have overflowed from the cup..."
 DAILY = "Good morning, officer.<br>I am fully prepared for today.<br>I'm ready to face any mission with all my might.<br>Now, give me your orders."
 HERO = "I've heard of his exploits from my parents, but I never thought I'd see his return with my own eyes.<br>I am... deeply moved."
