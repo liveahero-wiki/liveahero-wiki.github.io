@@ -13512,6 +13512,59 @@
       "isDisplayPersistenceStatus": false
     }
   },
+  "508": {
+    "skillEffectId": 508,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HealMultipleDefence",
+          "parameter": {
+            "value": 0
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 57,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "回復無効",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "509": {
+    "skillEffectId": 509,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistBuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 10
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 81,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "リジェネ無効",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
   "600": {
     "skillEffectId": 600,
     "skillEffectJson": {
