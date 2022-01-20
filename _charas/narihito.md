@@ -37,7 +37,7 @@ As an adult, Narihito has learned about reality and can no longer hope to be thi
 Whether real or imaginary, his life and heart, saved by heroes, will shine hotly in this reality to save someone else, and light up the world.
 {% endcapture %}
 
-{% include hero-infobox.html stockId=10292 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_narihitoMeteorite2112_h01_skin2,fg_narihitoMeteorite2112_h01_skin3,fg_narihitoMeteorite2112_h02_skin2,fg_narihitoMeteorite2112_h02_skin3" %}
+{% include hero-infobox.html stockId=10292 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_narihitoMeteorite2112_h01_skin2,fg_narihitoMeteorite2112_h01_skin3,fg_narihitoMeteorite2112_h02_skin2,fg_narihitoMeteorite2112_h02_skin3,fg_narihitoMeteorite2112_h02_skin4,fg_narihitoMeteorite2112_h02_skin5" %}
 
 {% capture BIO_S01 %}
 An elusive news reporter, working for the news broadcast company Taiyou News Network.
