@@ -21,6 +21,26 @@ For this event quest there are one-time boost items you can use before entering 
 - {% include item-icon.html id=55 %} Energy Tank, increase team HP by 200 each for a maximum of 2000
 - {% include item-icon.html id=56 %} Defensive Shield, reduce received damage by 50 each for a maximum of 500
 
+### Event Banners
+
+This Event's gacha summon includes time-limited variant {% chara_link Kyoichi|h2 %} (Hero), {% chara_link Shoen|h2 %} (Hero) and one new character {% chara_link Flamier %} (Hero & Sidekick).
+
+Rates as follow:
+
+| Character                                                | Rates (Single) | Rates (Multis) |
+|----------------------------------------------------------|----------------|----------------|
+| {% chara_link Kyoichi|h2 %}                               | 1.1 %            | 2.2 %            |
+| {% chara_link Shoen|h2 %}                              | 2 %             | 16 %             |
+| {% chara_link Flamier|h1 %}                                | 2 %              | 16 %             |
+| {% chara_link Flamier %}                                   | 5 %             | 0 %             |
+| Offbanner 5 star hero                                    | 0.9 %            | 1.8 %            |
+| Offbanner 4 star hero                                    | 4 %              | 64 %             |
+| Offbanner 3 star hero                                    | 35 %             | 0 %              |
+| Offbanner 4 star sidekick                                | 5 %              | 0 %              |
+| Offbanner 3 star sidekick                                | 45 %             | 0 %              |
+
+>Rates (Multis) is the rate of the tenth pull in a multi pull, pull number 1-9 still use the Rates (Single)
+
 ### Free Quest Bonus
 
 #### Bonus for {% include item.html id=57 %} 
