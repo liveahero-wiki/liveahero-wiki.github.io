@@ -76,6 +76,7 @@ Here is a list of this event's limited time Missions:
 ## Event Shop
 
 > If you already got {% chara_link Hisaki %} Hero and Sidekick from past event, you won't be able to trade for them in this event
+
 > For {% chara_link Hisaki %} memory fragments and hearts you can only exchange for the amount required to increase them to the maximum limit.
 
 {% include shop-table.html id=19 %}
