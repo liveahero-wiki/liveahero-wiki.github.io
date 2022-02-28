@@ -14,7 +14,16 @@ Furlong vowed/swore an oath to "become a firefighter hotter than flames" and tra
 
 {% include hero-infobox.html stockId=10081 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10082 passiveSkillIds="8008201"%}
+{% capture BIO_H01 %}
+When performing acrobatics at the circus, Furlong made the decision to transform "to entertain people" instead of "to save people's lives".
+
+Besides just for the sake of agility and catching the eyes of onlookers, Furlong's outfit also pushes his physical ability to its utmost limit.
+
+He practices and trains every day to save lives, learns difficult martial arts and absorbs them like a sponge, and dances dazzlingly in the air in the spotlight.
+
+It's as if his original shy personality was an act. 
+{% endcapture %}
+{% include hero-infobox.html stockId=10082 BIO_H01=BIO_H01 passiveSkillIds="8008201"%}
 
 {% capture BIO_S01 %}
 A firefighter belonging to Orient City's fire department.
