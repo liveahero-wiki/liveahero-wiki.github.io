@@ -3,7 +3,7 @@ title: Vulpecula
 characterId: 65
 ---
 
-{% include hero-infobox.html stockId=10651 %}
+{% include hero-infobox.html stockId=10651 passiveSkillIds="8065101,8065102" %}
 
 {% include sidekick-infobox.html stockId=10651 %}
 
