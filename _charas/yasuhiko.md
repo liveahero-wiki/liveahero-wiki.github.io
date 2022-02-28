@@ -6,7 +6,7 @@ characterId: 100
 {% capture BIO_H01 %}
 Yasuhiko transform into a hero with flashy golden costume, he fights with his most accomplished performance skills, acrobatics with fierce animals.
 
-From his memory, he construct and summon the animals who accompany him to polish his skill in energy bodies.
+From his memory, he construct and summon the animals who used to accompany him when polishing his skill as energy bodies.
 
 There are four of them, the friendly lion Renato, the Calm elephant Rufina, the gentle tiger Bogdan, and the proud giraffe Darya.
 
