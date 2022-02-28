@@ -23,7 +23,17 @@ He practices and trains every day to save lives, learns difficult martial arts a
 
 It's as if his original shy personality was an act. 
 {% endcapture %}
-{% include hero-infobox.html stockId=10082 BIO_H01=BIO_H01 passiveSkillIds="8008201"%}
+
+{% capture BIO_H02 %}
+Originally, his transformation was "for himself", that is to hide his weak self.
+
+He transform because with that he can disguise his cowardly self, ecouraging himself, and acting confidently.
+
+But, in front of his deep-rooted trauma it's impossible to conceal his weakness.
+
+That's why by changing his reason from "for himself" to "for other people", he can transform into a new form.
+{% endcapture %}
+{% include hero-infobox.html stockId=10082 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8008201"%}
 
 {% capture BIO_S01 %}
 A firefighter belonging to Orient City's fire department.
