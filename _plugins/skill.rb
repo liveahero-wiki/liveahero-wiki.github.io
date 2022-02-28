@@ -58,6 +58,8 @@ module LahWiki
           f.push("HP&gt;=50<!--#{c['value']}-->%")
         when "PinchExecTrigger"
           f.push("HP&lt;50<!--#{c['value']}-->%")
+        when "MinHPTrigger"
+          f.push("HP&gt;=#{c['value']}%")
         when "KillExecTrigger"
           f.push("target enemy is killed")
         when "AboveSpdValueTrigger"
@@ -100,6 +102,9 @@ module LahWiki
         when "TargetElementExecTrigger"
           element = @@element_map[c['element']] || "Unknown"
           f.push("target is #{element}")
+        when "TargetElementDontExecTrigger"
+          element = @@element_map[c['element']] || "Unknown"
+          f.push("target is not #{element}")
         else
           f.push("unknown condition (#{c['class']}")
         end
