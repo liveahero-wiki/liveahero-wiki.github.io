@@ -2,6 +2,8 @@
 title: Furlong
 characterId: 8
 occupation: "Firefighter"
+h2:
+  title: "\"Jumping Actor\" Furlong"
 ---
 
 {% capture BIO_H01 %}
