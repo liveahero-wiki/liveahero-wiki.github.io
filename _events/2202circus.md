@@ -63,8 +63,6 @@ Rates as follow:
 
 ### Free Quest Bonus
 
-#### Bonus for {% include item.html id=57 %} 
-
 | Hero | +Bonus (%)|
 |------------|--------------|
 | {% chara_link Furlong|h2 %} | 40 |
