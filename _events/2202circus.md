@@ -68,7 +68,7 @@ Rates as follow:
 | {% chara_link Furlong|h2 %} | 40 |
 | {% chara_link Vulpecula|h1 %}  | 40 |
 | {% chara_link Yasuhiko|h1 %}  | 30 |
-| {% chara_link Kyouichi|h2 %} | 20 |
+| {% chara_link Kyoichi|h2 %} | 20 |
 | {% chara_link Shoen|h2 %}  | 10 |
 | {% chara_link Flamier|h1 %}  | 10 |
 | {% chara_link Hisaki|h1 %} | 10 | 
