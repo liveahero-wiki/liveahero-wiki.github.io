@@ -94,6 +94,12 @@ sprites="fg_villainMafiaEarth_s01,fg_villainMafiaFire_s01,fg_villainMafiaLight_s
 sprites="fg_villainMafiaEarth_h01,fg_villainMafiaFire_h01,fg_villainMafiaLight_h01,fg_villainMafiaShadow_h01,fg_villainMafiaWater_h01"
 %}
 
+### Mercenary (Clown)
+
+{% include hero-infobox-unreleased.html name="Mercenary (Clown)" mob=true
+sprites="fg_mercenaryCircus2202Earth_h01,fg_mercenaryCircus2202Fire_h01,fg_mercenaryCircus2202Light_h01,fg_mercenaryCircus2202Shadow_h01,fg_mercenaryCircus2202Water_h01"
+%}
+
 ### Mercenary (Transform)
 
 {% include hero-infobox-unreleased.html name="Mercenary (hero)" mob=true
