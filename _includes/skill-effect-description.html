@@ -28,7 +28,7 @@ Gain {{ effect.parameter.value }}% of self's base view
 {% if effect.parameter.value == 0 %}Ignore incoming damage{% else %}Incoming damage {% if effect.parameter.value >= 100 %}increased{% else %}reduced{% endif %} to {{ effect.parameter.value | divided_by: 100.0 }}x{% endif %} to {{ target }}
 {% when "SpdRateEmitDefence" %}
 {% assign turnDefinition = "next attack" %}
-If {{ effect.parameter.rate }} x "absolute SPD difference" &gt;= ??, {% if effect.parameter.mult == 0 %}ignore incoming damage{% else %}incoming damage {% if effect.parameter.mult >= 100 %}increased{% else %}reduced{% endif %} to {{ effect.parameter.mult | divided_by: 100.0 }}x{% endif %} to {{ target }}
+With "absolute SPD difference" x{{ effect.parameter.rate }}% chance, {% if effect.parameter.mult == 0 %}ignore incoming damage{% else %}incoming damage {% if effect.parameter.mult >= 100 %}increased{% else %}reduced{% endif %} to {{ effect.parameter.mult | divided_by: 100.0 }}x{% endif %} to {{ target }}
 {% when "ChangeAgi" %}
 SPD {% if effect.parameter.value >= 0 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value }} to {{ target }}
 {% when "RemoveBuff" %}
