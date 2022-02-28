@@ -1,9 +1,11 @@
 ---
 title: Vulpecula
-unreleased: true
+characterId: 65
 ---
 
-{% include hero-infobox-unreleased.html sprites="fg_vulpecula_h01,fg_vulpecula_h01_skin1,fg_vulpecula_s01" %}
+{% include hero-infobox.html stockId=10651 %}
+
+{% include sidekick-infobox.html stockId=10651 %}
 
 ## Note: anything here can change in the future till actual release
 

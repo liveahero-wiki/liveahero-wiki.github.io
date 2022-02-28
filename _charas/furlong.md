@@ -14,6 +14,8 @@ Furlong vowed/swore an oath to "become a firefighter hotter than flames" and tra
 
 {% include hero-infobox.html stockId=10081 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
+{% include hero-infobox.html stockId=10082 %}
+
 {% capture BIO_S01 %}
 A firefighter belonging to Orient City's fire department.
 
@@ -66,6 +68,9 @@ RELATION = "Barrel is a good colleague and comrade-in-arms.<br>He always managed
 TOUCH = "Whoa, what's going on, captain!<br>I have a pretty high body temperature.<br>You'll get scalded if you touch me carelessly."
 TRAIN = "Thank you for your cooperation in training!"
 TRAINED = "Gu..! I-it's hot..!"
+%}
+
+{% include voice-table.html resourceName="furlongCircus2202"
 %}
 
 ## Notes
