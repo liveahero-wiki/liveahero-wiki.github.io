@@ -6,13 +6,13 @@ characterId: 65
 {% include hero-infobox.html stockId=10651 passiveSkillIds="8065101,8065102" %}
 
 {% capture BIO_S01 %}
-Vulpecula, a phantom thief known for stealing valuable cultural artifacts and destroying cultural heritage sites he cannot steal.
+A phantom thief by the name of Vulpecula who is known to steal valuable cultural properties and destroy places of cultural heritage. 
 
-He describes these acts as "stealing the landscape," and before the crime, a mysterious and poetic notice video is always distributed on illegal sites.
+He describes these acts as "stealing the landscape", and before the crime, a mysterious and poetic notice video is always distributed on illegal sites.
 
 Some people sympathize with his ideals and he has attained a level of cult popularity, and enthusiastic fans often become his subordinate villains.
 
-He always wears a fox mask and no one knows his true face, but because of that many copycats have used his likeness against his ideals.
+He always wears a fox mask and no one knows his true face, but because of that many copycats have appeared and begun to disturb society.
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10651 BIO_S01=BIO_S01 %}
 
