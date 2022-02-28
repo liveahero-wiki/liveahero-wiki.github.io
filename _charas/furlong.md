@@ -2,8 +2,6 @@
 title: Furlong
 characterId: 8
 occupation: "Firefighter"
-h2:
-  title: "\"Jumping Actor\" Furlong"
 ---
 
 {% capture BIO_H01 %}
@@ -16,7 +14,7 @@ Furlong vowed/swore an oath to "become a firefighter hotter than flames" and tra
 
 {% include hero-infobox.html stockId=10081 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10082 %}
+{% include hero-infobox.html stockId=10082 passiveSkillIds="8008201"%}
 
 {% capture BIO_S01 %}
 A firefighter belonging to Orient City's fire department.
