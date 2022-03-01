@@ -38,6 +38,18 @@ He is a young man who is cheerful, determined, and most of all loves to entertai
 {% include sidekick-infobox.html stockId=11001 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="yasuhiko"
+h_gachaResult = "I'm Yasuhiko, Ringmaster of Yatomi circus troupe.<br>From now on, I will take you to the world you dreamed of…<br>Just kidding!<br>Nice to meet you!"
+s_gachaResult = "I'm Yasuhiko, Ringmaster of Yatomi circus troupe.<br>Well, leave it to me!<br>I'm very good at leading the team to entertain an audience!"
+APPRECIATION = "Whoa operator, you look pretty tired.<br>Ok, let me hear it, whether a trouble or a complaint.<br>After all, you cannot entertain the customer with a withered heart."
+DAILY = "Zdravstvuyte, Operator!<br>Dilligence everyday, let's continue to practice our performance today!<br>Eh, afterwork? I know, I know, after that!"
+HERO = "I think phantom thief Vulpecula's essence is that beautiful illusion.<br>If only I can recruit him to our troupe…"
+PLAYER = "I think you have a considerably good muscle.<br>I'm sure the audience will love it.<br>Why don't we try something more challenging next time? Like tightrope walking or trapeze!"
+RELATION = "I have ever been to nessen-san's resort in a business trip.<br>The customer service is the best, and then the onsen after work…<br>I'm thankful that we are in the same office."
+TOUCH = "Waa!? Wait, wait! touching me is prohibited!<br>If you want to touch then our animals…eh, you want to touch me?<br>Please stop, don't squish me!"
+TRAIN = "Why don't you entertain me first!"
+TRAINED = "Stop, stop! You're too eager!"
+EVENTA = "We cannot start the entertainment without customers…!<br>I have to somehow get this circus back to it's feet, for the sake of the troupe!"
+EVENTB = "This lion is Renato, This tiger is Bogdan.<br>They are all good obedient kids.<br>Look, they want you to pet them, don't you think?"
 %}
 
 ## Notes
