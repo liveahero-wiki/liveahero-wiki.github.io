@@ -22,7 +22,7 @@ But now that he is in a position to lead the circus troupe that he had admired s
 
 Yasuhiko's passion for the circus and his strong sense of responsibility are the driving force that overcomes his negative feelings toward his father.
 {% endcapture %}
-{% include hero-infobox.html stockId=11001 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+{% include hero-infobox.html stockId=11001 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8100101" %}
 
 {% capture BIO_S01 %}
 A young leader of a long-established circus troupe based in Orient City.
