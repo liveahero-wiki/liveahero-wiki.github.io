@@ -38,7 +38,6 @@ He always wears a fox mask and no one knows his true face, but because of that m
 {% include voice-table.html resourceName="vulpecula"
 h_gachaResult = "Phantom thief Vulpecula, I have arrived.<br>At the end of silent twilight, I will leave with your pale and fragile heart of the past."
 s_gachaResult = "A sweet thought behind the shadow of a rose.<br>To request professional cooperation from this Vulpecula.<br>You are also an eccentric person…fufu."
-salesStart = "Departing to give out the presents!"
 APPRECIATION = "Like giving water to a withering flower.<br>I simply cannot let someone ,with the potential as a symbol of a beautiful future, such as you to wilt.<br>Right now, please take a rest."
 DAILY = "How do you do? The Light of justice Operator-sama.<br>What will be your request? The destruction of the past, or the creation of the future.<br>Now, please give me your command."
 HERO = "Detective Alchiba... there is no one more incomprehensible to me.<br>Hating his own past, but protecting other's past.<br>It's not beautiful."
