@@ -92,6 +92,18 @@ TRAINED = "Gu..! I-it's hot..!"
 %}
 
 {% include voice-table.html resourceName="furlongCircus2202"
+h_gachaResult = "With eyes that hold a burning flame, Burn Striker arrived at the stage!<br>Come! It's gonna be intense and mesmerizing!"
+s_gachaResult = "Eh…I-I will be standing on stage!?<br>Oh, I will be on the backstage as sidekick…<br>I-if so then….<br>Uhm, I will do, my best…"
+APPRECIATION = "You look tired…it's a lot of practice after all.<br>Well…shall I take you home...?<br>I'm accustomed with...bringing someone on my back, so…."
+DAILY = "H-hello…! Do your best on today's acrobatic practice…!<br>I will also try to do my best.<br>But, scary thing is scary…"
+HERO = "As a hero, I cannot pardon a villain who has done a lot of crimes!<br>But, conducting himself in an imposing manner, in front of a great number of audience..<br>I'm a little envious of Vulpecula…"
+PLAYER = "Do you feel a satisfaction with a job that stands in front of people?<br>I'm not good at it if I didn't cheer myself.<br>That's why, if you have a secret for it, please tell me!"
+RELATION = "Yasuhiko-san is amazing.<br>We are not that different in age, yet he keep the circus together as the ringmaster.<br>I'm sure he also has a lot of trouble…"
+TOUCH = "Heheh, how is it?<br>I have trained enough to be able to do any kind of acrobatics!<br>Ah, not there…! T-that tickles!"
+TRAIN = "I'm going with a bold move!"
+TRAINED = "Wait, you're way too adventurous…!"
+EVENTA = "I can do it, I can do it, I can do it…!<br>Uoo, It's burning! I can go now!<br>I will show you an intense acrobatics!"
+EVENTB = "It's decided that I will be on stage but…<br>Honestly, I wonder if I can do it.<br>Failure is a scary thing after all…"
 %}
 
 ## Notes
