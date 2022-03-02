@@ -22,7 +22,7 @@ But now that he is in a position to lead the circus troupe that he had admired s
 
 Yasuhiko's passion for the circus and his strong sense of responsibility are the driving force that overcomes his negative feelings toward his father.
 {% endcapture %}
-{% include hero-infobox.html stockId=11001 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8100101" %}
+{% include hero-infobox.html stockId=11001 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 A young leader of a long-established circus troupe based in Orient City.
@@ -35,7 +35,7 @@ He has seen many circus performances from his early childhood, and with his fath
 
 He is a young man who is cheerful, determined, and most of all loves to entertain, but his feud with his father and the dilemma of not being able to run the circus as he wishes cast a dark shadow on his mind.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=11001 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=11001 BIO_S01=BIO_S01 extraPassiveSkillIds="8100101" %}
 
 {% include voice-table.html resourceName="yasuhiko"
 h_gachaResult = "I'm Yasuhiko, Ringmaster of Yatomi circus troupe.<br>From now on, I will take you to the world you dreamed of…<br>Just kidding!<br>Nice to meet you!"
