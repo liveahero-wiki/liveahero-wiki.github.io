@@ -31,7 +31,7 @@ Will the  show succeed?
 
 And what is the true identity of the mysterious consultant...?
 
-### Event Banners
+## Event Banners
 
 This Event's gacha summon includes time-limited variant {% chara_link Furlong|h2 %} (Hero), and two new character {% chara_link Vulpecula %} (Hero & Sidekick) & {% chara_link Yasuhiko %} (Hero & Sidekick).
 
@@ -61,7 +61,7 @@ Rates as follow:
 
 >Rates (Multis) is the rate of the tenth pull in a multi pull, pull number 1-9 still use the Rates (Single)
 
-### Free Quest Bonus
+## Free Quest Bonus
 
 | Hero | +Bonus (%)|
 |------------|--------------|
@@ -83,7 +83,7 @@ Rates as follow:
 | {% chara_link Furlong %} | 10 | 
 | {% chara_link Player %} | 10 | 
 
-### Event Sales Bonus
+## Event Sales Bonus
 
 Event sales bonus added according to how much event Hero you have in a single sales, Which is
 {% chara_link Furlong|h2 %}, {% chara_link Vulpecula|h1 %}, and {% chara_link Yasuhiko|h1 %}. 
@@ -96,7 +96,7 @@ Here is the bonus:
 | 2 Event Heroes |     30    |
 | 3 Event Heroes |     50    |
 
-### Limited Time Mission
+## Limited Time Mission
 
 Here is a list of this event's limited time Missions:
 
@@ -109,7 +109,7 @@ Here is a list of this event's limited time Missions:
 | 5  | Finish any rank {% include item-icon.html id=76 %} event quest 50 times | 1 {% include item-icon.html id=34 %}    |
 | 6  | Finish {% include item-icon.html id=76 %} event sales 10 times | 1 {% include item-icon.html id=34 %}    |
 
-### Event Challenge Quests
+## Event Challenge Quests
 
 - Cost 0 stamina
 - There will be 3 challenge quests for this event, released sequentially
@@ -127,13 +127,13 @@ Here is a list of this event's limited time Missions:
 
 Listed enemy skills below are enemy skills for S Difficulty:
 
-#### Underwater Escape Show
+### Underwater Escape Show
 
-##### Hydoor's skills
+#### Hydoor's skills
 
 {% include skill-table-manual.html skillIds="1017101,4017103,4017104" equipmentSkills="6017101" %}
 
-##### Isaribi's skills
+#### Isaribi's skills
 
 {% include skill-table-manual.html skillIds="1022101,4022106,4022107" equipmentSkills="6017101" %}
 
