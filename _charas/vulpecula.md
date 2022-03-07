@@ -49,3 +49,12 @@ TRAINED = "This kind of thing, is not beautiful…!"
 EVENTA = "Ladies and gentlemen trapped in the past, good day to all of you.<br>Tonight this phantom thief Vulpecula….<br>Will gracefully scatter all the petals of the past, please look forward to it."
 EVENTB = "It's showtime, Alchiba-kun.<br>That not-so-beautiful state of yours,<br>I will transform it into something artistic with my own hands."
 %}
+
+## Notes
+
+- His name is a latin language for little fox
+- [Vulpecula](https://en.wikipedia.org/wiki/Vulpecula) is a constellation located in the middle of summer triangle (Deneb, Vega, Altair)
+- His skills is in German language:
+  - Böse Phantom : Evil Phantom (Böse = Evil / sinister)
+  - Zeit Sprung : Time Leap (Zeit = Time, Sprung = Leap)
+  - Vergiss Mein Nicht : Forget Me Not (Vergiss = Forget, Mein = Me, Nicht = not)
