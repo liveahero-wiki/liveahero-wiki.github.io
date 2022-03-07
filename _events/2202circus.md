@@ -114,6 +114,7 @@ Here is a list of this event's limited time Missions:
 - Cost 0 stamina
 - There will be 3 challenge quests for this event, released sequentially
 - There will be special effects for this event's challenge quest, activated for all enemies and allies
+
 | Special Effect   | Effect |
 |--------|-----------|
 | Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
@@ -124,11 +125,10 @@ Here is a list of this event's limited time Missions:
 
 {% include quest-group.html chapterId=467 %}
 
-#### Enemy skills:
 
 Listed enemy skill below is enemy skills for S Difficulty:
 
-#### Underwater Escape Show:
+#### Underwater Escape Show
 
 ##### Hydoor's skills
 
