@@ -118,15 +118,14 @@ Here is a list of this event's limited time Missions:
 | Special Effect   | Effect |
 |--------|-----------|
 | Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
-| Critical  |    When hitting enemy with lower Speed There is a chance to deal 30% more damage (chance is based on speed difference)  |
-| Reduction  |   When hit by enemy that has lower Speed There is a chance to reduce 30% damage (chance is based on speed difference)  |
+| Critical  |    When hitting enemy with lower Speed there is a chance to deal 30% more damage (chance is based on speed difference)  |
+| Reduction  |   When hit by enemy that has lower Speed there is a chance to reduce 30% damage (chance is based on speed difference)  |
 
-> Reduction Effect calculated separately from {% chara_link Furlong|h2 %} 's passive, and if both trigger then damage will be reduced by both.
+> Reduction Effect is calculated separately from {% chara_link Furlong|h2 %} 's passive, and if both trigger then damage will be reduced by both.
 
 {% include quest-group.html chapterId=467 %}
 
-
-Listed enemy skill below is enemy skills for S Difficulty:
+Listed enemy skills below are enemy skills for S Difficulty:
 
 #### Underwater Escape Show
 
