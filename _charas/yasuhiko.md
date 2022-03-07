@@ -55,3 +55,8 @@ EVENTB = "This lion is Renato, This tiger is Bogdan.<br>They are all good obedie
 ## Notes
 
 - His full name is Yasuhiko Yatomi (弥富 ヤスヒコ)
+- The badge on his chest reads ЯТОМИ ЦИРК (YATOMI TSIRK) = YATOMI CIRCUS
+- His skills is in Russian language:
+  - потрясающе порка (Potryasayushche Porka) : Fabulous Flogging (Potryasayushche = Fabulous/Amazing, Porka = Spanking/Flogging)
+  - звериный рёв (Zverinyĭ Rëv) : Animal Roar (Zverinyĭ = Animal, Rëv = Roar)
+  - любимый клоун (lyubimyy kloun) : Favorite Clown (lyubimyy = Favorite/Beloved, kloun = Clown)
