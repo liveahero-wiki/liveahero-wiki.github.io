@@ -109,6 +109,35 @@ Here is a list of this event's limited time Missions:
 | 5  | Finish any rank {% include item-icon.html id=76 %} event quest 50 times | 1 {% include item-icon.html id=34 %}    |
 | 6  | Finish {% include item-icon.html id=76 %} event sales 10 times | 1 {% include item-icon.html id=34 %}    |
 
+### Event Challenge Quests
+
+- Cost 0 stamina
+- There will be 3 challenge quests for this event, released sequentially
+- There will be special effects for this event's challenge quest, activated for all enemies and allies
+| Special Effect   | Effect |
+|--------|-----------|
+| Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
+| Critical  |    When hitting enemy with lower Speed There is a chance to deal 30% more damage (chance is based on speed difference)  |
+| Reduction  |   When hit by enemy that has lower Speed There is a chance to reduce 30% damage (chance is based on speed difference)  |
+
+> Reduction Effect calculated separately from {% chara_link Furlong|h2 %} 's passive, and if both trigger then damage will be reduced by both.
+
+{% include quest-group.html chapterId=467 %}
+
+#### Enemy skills:
+
+Listed enemy skill below is enemy skills for S Difficulty:
+
+#### Underwater Escape Show:
+
+##### Hydoor's skills
+
+{% include skill-table-manual.html skillIds="1017101,4017103,4017104" equipmentSkills="6017101" %}
+
+##### Isaribi's skills
+
+{% include skill-table-manual.html skillIds="1022101,4022106,4022107" equipmentSkills="6017101" %}
+
 ## Event Shop
 
 {% include shop-table.html id=21 %}
