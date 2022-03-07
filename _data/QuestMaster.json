@@ -60020,6 +60020,84 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
   },
+  "464004": {
+    "questId": 464004,
+    "questName": "誰がために",
+    "subName": "第４話",
+    "questKind": 5,
+    "chapterId": 464,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2022-03-07 18:00:00",
+    "endAt": "2022-03-28 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 7,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 464003,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_yasuhiko_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeEarth_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
   "465001": {
     "questId": 465001,
     "questName": "演目練習！",
@@ -60714,6 +60792,150 @@
       },
       {
         "battleInfoIcon": "icon_mercenaryCircus2202Water_h01",
+        "battleInfoElement": 2
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "467001": {
+    "questId": 467001,
+    "questName": "水中からの脱出ショー！",
+    "subName": "A級",
+    "questKind": 6,
+    "chapterId": 467,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "icon_isaribi_h01",
+    "startAt": "2022-03-07 18:00:00",
+    "endAt": "2022-03-21 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 20000,
+        "bonus": 100,
+        "fixAddValue": 0
+      },
+      {
+        "rewardType": 3,
+        "objectId": 27,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      },
+      {
+        "rewardType": 3,
+        "objectId": 28,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      },
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 20000,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_hydoor_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_isaribi_h01",
+        "battleInfoElement": 2
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "467002": {
+    "questId": 467002,
+    "questName": "水中からの脱出ショー！",
+    "subName": "S級",
+    "questKind": 0,
+    "chapterId": 467,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "icon_isaribi_h01",
+    "startAt": "2022-03-07 18:00:00",
+    "endAt": "2022-03-21 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 60,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 10,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      },
+      {
+        "rewardType": 3,
+        "objectId": 34,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_hydoor_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_isaribi_h01",
         "battleInfoElement": 2
       }
     ],

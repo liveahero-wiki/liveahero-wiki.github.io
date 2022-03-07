@@ -16531,7 +16531,7 @@
         }
       ],
       "filename": "",
-      "statusId": 27,
+      "statusId": 88,
       "canDispel": false,
       "filterIds": [
         13
@@ -16554,7 +16554,7 @@
           "class": "Critical",
           "parameter": {
             "mult": 130,
-            "rate": 10
+            "rate": 5
           }
         }
       ],
@@ -16582,7 +16582,7 @@
           "class": "SpdRateEmitDefence",
           "parameter": {
             "mult": 70,
-            "rate": 10
+            "rate": 5
           }
         }
       ],
@@ -16647,6 +16647,60 @@
       ],
       "parameter": false,
       "description": "Viewを7500獲得",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "713": {
+    "skillEffectId": 713,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Heal",
+          "parameter": {
+            "value": 200
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "HPを基礎ATKの200%回復する",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "714": {
+    "skillEffectId": 714,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RateChangeView",
+          "parameter": {
+            "value": 100
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "自身のView分のViewPowerを獲得",
       "isImmediate": true,
       "persistence": false,
       "canDuplicate": false,
