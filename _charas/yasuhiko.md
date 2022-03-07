@@ -8,7 +8,7 @@ Yasuhiko transform into a hero with flashy golden costume, he fights with his mo
 
 From his memory, he construct and summon the animals who used to accompany him when polishing his skill as energy bodies.
 
-There are four of them, the friendly lion Renato, the Calm elephant Rufina, the gentle tiger Bogdan, and the proud giraffe Darya.
+There are four of them, the friendly lion Renat, the Calm elephant Rufina, the gentle tiger Bogdan, and the proud giraffe Dar'ya.
 
 With a signal from his whip, they move in unison against the enemy, which is just like an entertainment show and draws applause from the audience.
 {% endcapture %}
@@ -60,3 +60,8 @@ EVENTB = "This lion is Renato, This tiger is Bogdan.<br>They are all good obedie
   - потрясающе порка (Potryasayushche Porka) : Fabulous Flogging (Potryasayushche = Fabulous/Amazing, Porka = Spanking/Flogging)
   - звериный рёв (Zverinyĭ Rëv) : Animal Roar (Zverinyĭ = Animal, Rëv = Roar)
   - любимый клоун (lyubimyy kloun) : Favorite Clown (lyubimyy = Favorite/Beloved, kloun = Clown)
+- His animal companions' name is Russian name:
+  - Ренат (Renat) : A male name, meaning Ressurection/Revival
+  - Руфина (Rufina) : A female name, meaning Red
+  - Богдан (Bogdan) : A male name, meaning A Gift from God
+  - Дарья (Dar'ya) : A female name, meaning Owner of Goodness/Virtue
