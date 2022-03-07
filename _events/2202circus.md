@@ -125,9 +125,10 @@ Here is a list of this event's limited time Missions:
 
 {% include quest-group.html chapterId=467 %}
 
-Listed enemy skills below are enemy skills for S Difficulty:
 
 ### Underwater Escape Show
+
+Listed enemy skills below are enemy skills for S Difficulty:
 
 #### Hydoor's skills
 
