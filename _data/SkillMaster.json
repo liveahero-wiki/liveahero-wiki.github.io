@@ -4880,8 +4880,9 @@
         "randomGroupId": 0,
         "triggerJson": [
           {
-            "class": "OwnBuffNumberExecTrigger",
+            "class": "OwnSystemStatusNumberExecTrigger",
             "value": 2,
+            "element": 0,
             "statusId": 53
           }
         ]
@@ -4895,8 +4896,9 @@
         "randomGroupId": 0,
         "triggerJson": [
           {
-            "class": "OwnBuffNumberExecTrigger",
+            "class": "OwnSystemStatusNumberExecTrigger",
             "value": 2,
+            "element": 0,
             "statusId": 53
           }
         ]
@@ -4910,8 +4912,9 @@
         "randomGroupId": 0,
         "triggerJson": [
           {
-            "class": "OwnBuffNumberDontExecTrigger",
+            "class": "OwnSystemStatusNumberDontExecTrigger",
             "value": 2,
+            "element": 0,
             "statusId": 53
           }
         ]
@@ -4965,8 +4968,9 @@
         "randomGroupId": 0,
         "triggerJson": [
           {
-            "class": "OwnBuffNumberExecTrigger",
+            "class": "OwnSystemStatusNumberExecTrigger",
             "value": 2,
+            "element": 0,
             "statusId": 53
           }
         ]
@@ -4980,8 +4984,9 @@
         "randomGroupId": 0,
         "triggerJson": [
           {
-            "class": "OwnBuffNumberExecTrigger",
+            "class": "OwnSystemStatusNumberExecTrigger",
             "value": 2,
+            "element": 0,
             "statusId": 53
           }
         ]
@@ -4995,8 +5000,9 @@
         "randomGroupId": 0,
         "triggerJson": [
           {
-            "class": "OwnBuffNumberDontExecTrigger",
+            "class": "OwnSystemStatusNumberDontExecTrigger",
             "value": 2,
+            "element": 0,
             "statusId": 53
           }
         ]
@@ -9198,7 +9204,14 @@
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "randomGroupId": 0,
-        "triggerJson": []
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 86
+          }
+        ]
       },
       {
         "skillEffectId": 486,
@@ -9216,6 +9229,22 @@
           },
           {
             "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 86
+          }
+        ]
+      },
+      {
+        "skillEffectId": 698,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
             "value": 0,
             "element": 0,
             "statusId": 86
