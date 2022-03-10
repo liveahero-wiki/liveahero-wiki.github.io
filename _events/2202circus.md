@@ -140,7 +140,7 @@ Listed enemy skills below are enemy skills for S Difficulty:
 
 ### Challenge! Ring of Fire
 
-Listed enemy skills below are enemy skills for S Difficulty (tentative):
+Listed enemy skills below are enemy skills for S Difficulty:
 
 #### Yasuhiko's skills
 
@@ -148,11 +148,11 @@ Listed enemy skills below are enemy skills for S Difficulty (tentative):
 
 #### Mercenary 1's skills
 
-{% include skill-table-manual.html skillIds="4066123,4066124,4066125" equipmentSkills="6017101" %}
+{% include skill-table-manual.html skillIds="4066123,4066124,4066125" equipmentSkills="" %}
 
 #### Mercenary 2's skills
 
-{% include skill-table-manual.html skillIds="4066123,4066126,4066127" equipmentSkills="6017101" %}
+{% include skill-table-manual.html skillIds="4066123,4066126,4066127" equipmentSkills="" %}
 
 ## Event Shop
 
