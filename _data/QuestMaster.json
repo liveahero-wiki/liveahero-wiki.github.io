@@ -60147,6 +60147,84 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
   },
+  "464006": {
+    "questId": 464006,
+    "questName": "秘められたメッセージ",
+    "subName": "第６話",
+    "questKind": 5,
+    "chapterId": 464,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2022-03-14 18:00:00",
+    "endAt": "2022-03-28 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 9,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464005,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_yasuhiko_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_mercenaryCircus2202Fire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_mercenaryCircus2202Earth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_mercenaryCircus2202Water_h01",
+        "battleInfoElement": 2
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
   "465001": {
     "questId": 465001,
     "questName": "演目練習！",
@@ -61117,6 +61195,159 @@
       {
         "battleInfoIcon": "icon_mercenaryCircus2202Fire_h01",
         "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "467005": {
+    "questId": 467005,
+    "questName": "アクロバット・バトル！",
+    "subName": "S級",
+    "questKind": 6,
+    "chapterId": 467,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "icon_furlongCircus2202_h01",
+    "startAt": "2022-03-14 18:00:00",
+    "endAt": "2022-03-21 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 60,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 32,
+        "objectValue": 20,
+        "bonus": 100,
+        "fixAddValue": 0
+      },
+      {
+        "rewardType": 3,
+        "objectId": 33,
+        "objectValue": 10,
+        "bonus": 100,
+        "fixAddValue": 0
+      },
+      {
+        "rewardType": 3,
+        "objectId": 59,
+        "objectValue": 30,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_furlongCircus2202_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_mercenaryCircus2202Shadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_mercenaryCircus2202Earth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_mercenaryCircus2202Light_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "467006": {
+    "questId": 467006,
+    "questName": "アクロバット・バトル！",
+    "subName": "SS級",
+    "questKind": 6,
+    "chapterId": 467,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "icon_furlongCircus2202_h01",
+    "startAt": "2022-03-14 18:00:00",
+    "endAt": "2022-03-21 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 70,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 10,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      },
+      {
+        "rewardType": 3,
+        "objectId": 34,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_furlongCircus2202_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_mercenaryCircus2202Shadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_mercenaryCircus2202Earth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_mercenaryCircus2202Light_h01",
+        "battleInfoElement": 4
       }
     ],
     "hasAdv": false,
