@@ -168,7 +168,7 @@ Listed enemy skills below are enemy skills for SS Difficulty:
 
 #### Mercenary 2's skills
 
-{% include skill-table-manual.html skillIds="4066406,4066501,4066404" equipmentSkills="" %}.
+{% include skill-table-manual.html skillIds="4066406,4066501,4066404" equipmentSkills="" %}
 
 #### Mercenary 3's skills
 
