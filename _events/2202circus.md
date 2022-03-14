@@ -154,6 +154,26 @@ Listed enemy skills below are enemy skills for S Difficulty:
 
 {% include skill-table-manual.html skillIds="4066123,4066126,4066127" equipmentSkills="" %}
 
+### Acrobat Battle!
+
+Listed enemy skills below are enemy skills for SS Difficulty:
+
+#### Jumping Actor Furlong's skills
+
+{% include skill-table-manual.html skillIds="4008201,4008202,1008203" equipmentSkills="6008201" %}
+
+#### Mercenary 1's skills
+
+{% include skill-table-manual.html skillIds="4066406,4066405,4066404" equipmentSkills="" %}
+
+#### Mercenary 2's skills
+
+{% include skill-table-manual.html skillIds="4066406,4066501,4066404" equipmentSkills="" %}.
+
+#### Mercenary 3's skills
+
+{% include skill-table-manual.html skillIds="4066303,4066301,4066302" equipmentSkills="" %}
+
 ## Event Shop
 
 {% include shop-table.html id=21 %}
