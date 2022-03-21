@@ -188,6 +188,10 @@ Listed enemy skills below are enemy skills for SS Difficulty:
 
 {% include quest-group.html chapterId=465 %}
 
+### Special Quests
+
+{% include quest-group.html chapterId=466 %}
+
 ## Event Sales Report
 
 <details><summary>Sales Report 1</summary>
