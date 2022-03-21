@@ -190,6 +190,8 @@ Listed enemy skills below are enemy skills for SS Difficulty:
 
 ### Special Quests
 
+Fan translations for special quests can be found [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vQPdrZKnPez_noV1gVCedCSZFMl2PXbAuZ2KxoGwVC_yc_OHuT_xA0gwRxpqUWBp1yn4ndPtYgbUYwh/pubhtml)
+
 {% include quest-group.html chapterId=466 %}
 
 ## Event Sales Report
