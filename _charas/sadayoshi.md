@@ -70,4 +70,4 @@ TRAINED = "I guess I didn't train hard enough..."
 ## Notes:
 
 - His full name is Sadayoshi Ikusabata (軍畑 サダヨシ)
-- He's 40 years old as per his valentine special quest
+- He's in his forties as per his valentine special quest
