@@ -15,10 +15,6 @@ sales_end_time: 2022-04-11T14:00:00+09
 * this will be unordered
 {:toc}
 
-## Event Details
-
-Live A Hero's next event is here. This Event's gacha summon includes a time-limited variant {% chara_link Marfik|h2 %} (Hero) and two new characters {% chara_link Rutilix %} (Hero & Sidekick) and {% chara_link Alphecca %} (Hero & Sidekick).
-
 ## Event Banners
 
 This Event's gacha summon includes time-limited variant {% chara_link Marfik|h2 %} (Hero), and two new character {% chara_link Rutilix %} (Hero & Sidekick) 
