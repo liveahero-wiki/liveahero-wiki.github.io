@@ -10072,7 +10072,8 @@
       {
         "class": "HavingStockCard",
         "stockIds": [
-          10011
+          10011,
+          10012
         ],
         "isBannerDisplay": true
       }
@@ -10184,7 +10185,8 @@
       {
         "class": "HavingStockCard",
         "stockIds": [
-          10141
+          10141,
+          10142
         ],
         "isBannerDisplay": true
       }
@@ -62355,6 +62357,1345 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
   },
+  "468001": {
+    "questId": 468001,
+    "questName": "たびだち",
+    "subName": "第１話",
+    "questKind": 5,
+    "chapterId": 468,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": "2022-04-18 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "468002": {
+    "questId": 468002,
+    "questName": "はじまりのまち",
+    "subName": "第２話",
+    "questKind": 5,
+    "chapterId": 468,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": "2022-04-18 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 5,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 468001,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "468003": {
+    "questId": 468003,
+    "questName": "めいきゅう",
+    "subName": "第３話",
+    "questKind": 5,
+    "chapterId": 468,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": "2022-04-18 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 6,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 468002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "468004": {
+    "questId": 468004,
+    "questName": "たんさくちゅう",
+    "subName": "第４話",
+    "questKind": 5,
+    "chapterId": 468,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": "2022-04-18 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 7,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 468003,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFireSpace_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "468005": {
+    "questId": 468005,
+    "questName": "めいふのもん",
+    "subName": "第５話",
+    "questKind": 5,
+    "chapterId": 468,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": "2022-04-18 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 8,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 468004,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadowSpace_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultShadowSpace_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadowSpace_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "468006": {
+    "questId": 468006,
+    "questName": "おうごんのみやこ",
+    "subName": "第６話",
+    "questKind": 5,
+    "chapterId": 468,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": "2022-04-18 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 9,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 468005,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFireSpace_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultLightSpace_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultEarthSpace_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "468007": {
+    "questId": 468007,
+    "questName": "だっしゅつ",
+    "subName": "第７話",
+    "questKind": 5,
+    "chapterId": 468,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": "2022-04-18 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 10,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 468006,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFireSpaceBig_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "468008": {
+    "questId": 468008,
+    "questName": "がいせん",
+    "subName": "最終話",
+    "questKind": 5,
+    "chapterId": 468,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": "2022-04-18 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 468007,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "469001": {
+    "questId": 469001,
+    "questName": "地下迷宮の冒険",
+    "subName": "D級",
+    "questKind": 6,
+    "chapterId": 469,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Ruins2104_exchange01",
+    "startAt": null,
+    "endAt": "2022-04-11 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 1,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 8,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 468002,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 4,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFireSpace_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFireSpace_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "469002": {
+    "questId": 469002,
+    "questName": "地下迷宮の冒険",
+    "subName": "C級",
+    "questKind": 6,
+    "chapterId": 469,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Ruins2104_exchange01",
+    "startAt": null,
+    "endAt": "2022-04-11 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 15,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 10,
+        "prob": 80
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 468002,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 8,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFireSpace_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFireSpace_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "469003": {
+    "questId": 469003,
+    "questName": "地下迷宮の冒険",
+    "subName": "B級",
+    "questKind": 6,
+    "chapterId": 469,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Ruins2104_exchange01",
+    "startAt": null,
+    "endAt": "2022-04-11 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 30,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 20,
+        "prob": 50
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 468002,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 12,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFireSpace_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFireSpace_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "469004": {
+    "questId": 469004,
+    "questName": "地下迷宮の冒険",
+    "subName": "A級",
+    "questKind": 6,
+    "chapterId": 469,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Ruins2104_exchange01",
+    "startAt": null,
+    "endAt": "2022-04-11 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 45,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 10,
+        "prob": 40
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 468002,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 16,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFireSpace_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFireSpace_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "469005": {
+    "questId": 469005,
+    "questName": "地下迷宮の冒険",
+    "subName": "S級",
+    "questKind": 6,
+    "chapterId": 469,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Ruins2104_exchange01",
+    "startAt": null,
+    "endAt": "2022-04-11 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 60,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 40,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 40,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 20,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 468002,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 20,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFireSpace_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFireSpace_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "469006": {
+    "questId": 469006,
+    "questName": "地下迷宮の冒険",
+    "subName": "ビギナー級",
+    "questKind": 6,
+    "chapterId": 469,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Ruins2104_exchange01",
+    "startAt": null,
+    "endAt": "2022-04-11 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 25,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 70,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 60,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 50,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 50,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 10,
+        "prob": 25
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 468002,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 15,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "ItemConsume",
+        "value": 3,
+        "itemId": 38,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFireSpace_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFireSpace_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "469007": {
+    "questId": 469007,
+    "questName": "地下迷宮の冒険",
+    "subName": "エキスパート級",
+    "questKind": 6,
+    "chapterId": 469,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Ruins2104_exchange01",
+    "startAt": null,
+    "endAt": "2022-04-11 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 100,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 100,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 80,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 60,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 64,
+        "objectValue": 60,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 468002,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 20,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "ItemConsume",
+        "value": 3,
+        "itemId": 38,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFireSpace_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFireSpace_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "470014": {
+    "questId": 470014,
+    "questName": "マルフィクと冒険の後に",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 470,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_marfikRuins2104_h01",
+    "startAt": null,
+    "endAt": "2022-04-18 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 986,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 468008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10141,
+          10142
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "470061": {
+    "questId": 470061,
+    "questName": "ルティリクスと冒険の後に",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 470,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_rutilix_h01",
+    "startAt": null,
+    "endAt": "2022-04-18 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 939,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 468008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10611
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "470062": {
+    "questId": 470062,
+    "questName": "アルフェッカと冒険の後に",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 470,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_alphecca_h01",
+    "startAt": null,
+    "endAt": "2022-04-18 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 938,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 468008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10621
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
   "502001": {
     "questId": 502001,
     "questName": "うちのプロキー知りませんか？",
@@ -63792,7 +65133,8 @@
       {
         "class": "HavingStockCard",
         "stockIds": [
-          10011
+          10011,
+          10012
         ],
         "isBannerDisplay": true
       },
@@ -63845,7 +65187,8 @@
       {
         "class": "HavingStockCard",
         "stockIds": [
-          10021
+          10021,
+          10022
         ],
         "isBannerDisplay": true
       },
@@ -64111,7 +65454,8 @@
       {
         "class": "HavingStockCard",
         "stockIds": [
-          10071
+          10071,
+          10072
         ],
         "isBannerDisplay": true
       },
@@ -64164,7 +65508,8 @@
       {
         "class": "HavingStockCard",
         "stockIds": [
-          10081
+          10081,
+          10082
         ],
         "isBannerDisplay": true
       },
@@ -64217,7 +65562,8 @@
       {
         "class": "HavingStockCard",
         "stockIds": [
-          10091
+          10091,
+          10092
         ],
         "isBannerDisplay": true
       },
@@ -64484,7 +65830,8 @@
       {
         "class": "HavingStockCard",
         "stockIds": [
-          10141
+          10141,
+          10142
         ],
         "isBannerDisplay": true
       },
@@ -64643,7 +65990,8 @@
       {
         "class": "HavingStockCard",
         "stockIds": [
-          10191
+          10191,
+          10192
         ],
         "isBannerDisplay": true
       },
@@ -64961,7 +66309,8 @@
       {
         "class": "HavingStockCard",
         "stockIds": [
-          10261
+          10261,
+          10262
         ],
         "isBannerDisplay": true
       },
@@ -65120,7 +66469,8 @@
       {
         "class": "HavingStockCard",
         "stockIds": [
-          10291
+          10291,
+          10292
         ],
         "isBannerDisplay": true
       },
@@ -68232,6 +69582,1368 @@
       {
         "class": "QuestClear",
         "questId": 448082,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514001": {
+    "questId": 514001,
+    "questName": "犯行未達成",
+    "subName": "第１話",
+    "questKind": 5,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 2000,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514002": {
+    "questId": 514002,
+    "questName": "サーカスへの招待",
+    "subName": "第２話",
+    "questKind": 5,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 2000,
+    "enemyLevel": 5,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464001,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_yasuhiko_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_mercenaryCircus2202Fire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_mercenaryCircus2202Earth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_mercenaryCircus2202Water_h01",
+        "battleInfoElement": 2
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514003": {
+    "questId": 514003,
+    "questName": "ホワイトデー",
+    "subName": "第３話",
+    "questKind": 5,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 2000,
+    "enemyLevel": 6,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_yasuhiko_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeEarth_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514004": {
+    "questId": 514004,
+    "questName": "誰がために",
+    "subName": "第４話",
+    "questKind": 5,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 2000,
+    "enemyLevel": 7,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464003,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_yasuhiko_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeEarth_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514005": {
+    "questId": 514005,
+    "questName": "早朝の真実",
+    "subName": "第５話",
+    "questKind": 5,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 2000,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464004,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514006": {
+    "questId": 514006,
+    "questName": "秘められたメッセージ",
+    "subName": "第６話",
+    "questKind": 5,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 2000,
+    "enemyLevel": 9,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464005,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_yasuhiko_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_mercenaryCircus2202Fire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_mercenaryCircus2202Earth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_mercenaryCircus2202Water_h01",
+        "battleInfoElement": 2
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514007": {
+    "questId": 514007,
+    "questName": "決行日",
+    "subName": "第７話",
+    "questKind": 5,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 2000,
+    "enemyLevel": 10,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464006,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_vulpecula_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainMercenaryShadow_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainMercenaryFire_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainMercenaryWater_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514008": {
+    "questId": 514008,
+    "questName": "つなぐ記憶",
+    "subName": "最終話",
+    "questKind": 5,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 2000,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464007,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514009": {
+    "questId": 514009,
+    "questName": "ハロンへ思いを込めて",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_furlongCircus2202_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 1000,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10081,
+          10082
+        ],
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 466008,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514010": {
+    "questId": 514010,
+    "questName": "ハイドールへ思いを込めて",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_hydoor_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 983,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10171
+        ],
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 466017,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514011": {
+    "questId": 514011,
+    "questName": "アンドリューへ思いを込めて",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_andrew_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 975,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10251
+        ],
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 466025,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514012": {
+    "questId": 514012,
+    "questName": "モノマサへ思いを込めて",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_monomasa_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 969,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10311
+        ],
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 466031,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514013": {
+    "questId": 514013,
+    "questName": "エクシオへ思いを込めて",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_exio_s01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 965,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10351
+        ],
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 466035,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514014": {
+    "questId": 514014,
+    "questName": "マクラータへ思いを込めて",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_maculata_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 941,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10591
+        ],
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 466059,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514015": {
+    "questId": 514015,
+    "questName": "ルティリクスへ思いを込めて",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_rutilix_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 939,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10611
+        ],
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 466061,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514016": {
+    "questId": 514016,
+    "questName": "アルフェッカへ思いを込めて",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_alphecca_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 938,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10621
+        ],
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 466062,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514017": {
+    "questId": 514017,
+    "questName": "シャフトへ思いを込めて",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_shaft_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 937,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10631
+        ],
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 466063,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514018": {
+    "questId": 514018,
+    "questName": "カラスキへ思いを込めて",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_kalaski_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 936,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10641
+        ],
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 466064,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514019": {
+    "questId": 514019,
+    "questName": "ウルペクラへ思いを込めて",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_vulpecula_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 1000,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10651
+        ],
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 466065,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514020": {
+    "questId": 514020,
+    "questName": "メリデへ思いを込めて",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_melide_s01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 929,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10711
+        ],
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 466071,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514021": {
+    "questId": 514021,
+    "questName": "ヨシオリへ思いを込めて",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_yoshiori_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 928,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10721
+        ],
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 466072,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514022": {
+    "questId": 514022,
+    "questName": "パブラシアへ思いを込めて",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_pubraseer_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 927,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10731
+        ],
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 466073,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514023": {
+    "questId": 514023,
+    "questName": "オキタカへ思いを込めて",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_okitaka_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 925,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10751
+        ],
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 466075,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514024": {
+    "questId": 514024,
+    "questName": "サダヨシへ思いを込めて",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_sadayoshi_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 919,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10811
+        ],
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 466081,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514025": {
+    "questId": 514025,
+    "questName": "ボレアリスへ思いを込めて",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_borealis_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 918,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10821
+        ],
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 466082,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "514026": {
+    "questId": 514026,
+    "questName": "ヤスヒコへ思いを込めて",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 514,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_yasuhiko_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 1000,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 464008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          11001
+        ],
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 466100,
         "isBannerDisplay": false
       }
     ],
