@@ -87,7 +87,7 @@ Here is a list of this event's limited time Missions:
 
 ## Event Shop
 
-{% include shop-table.html id=9 %}
+{% include shop-table.html id=22 %}
 
 ## Quest Details
 
