@@ -1,5 +1,7 @@
+// ==ClosureCompiler==
 // @compilation_level SIMPLE_OPTIMIZATIONS
 // @language_out ECMASCRIPT_2019
+// ==/ClosureCompiler==
 
 class AtlasStitcher {
   constructor() {
@@ -72,14 +74,55 @@ const atlasObserver = new IntersectionObserver((entries, ob) => {
   });
 });
 
+const aprilFoolSpriteMap = {
+  "alphecca": "takemaru01",
+  "akashi": "gunzou01",
+  "andrew": "jacob01",
+  "furlong": "xolotl01",
+  "gammei": "https@//api.housamo.xyz/housamo/unity/atlas/?mode=png&asset=/housamo/adv/Android/texture/character/fg_kyouma01&name=fg_kyouma01&use_filename=asset.png",
+  "gomeisa": "wakantanka01",
+  "hisaki": "cusith01",
+  "huckle": "leib01",
+  "isaribi": "typhon01",
+  "kyoichi": "taurus01_skin1",
+  "marfik": "amatsumara01",
+  "polaris": "aegir01",
+  "procy": "shino01_skin2",
+  "pubraseer": "breke01",
+  "sui": "arc01",
+}
+
+const APRIL_FOOL = "april_fool"
+
+function addAprilFoolSprite(sprites, select) {
+  const resourceName = sprites[0].split("_")[1]; // fg_<resourceName>_*
+  const standIn = aprilFoolSpriteMap[resourceName];
+  if (standIn !== undefined) {
+    const value = `${APRIL_FOOL}:${standIn}`;
+    select.prepend(new Option(APRIL_FOOL, value));
+    select.value = value;
+  }
+}
+
 async function atlasHandler(gallery) {
   const sprites = gallery.dataset["sprites"].split(",");
   const dest_img = gallery.querySelector("img");
   const array = await getJson(sprites);
   const { manifest, select } = await collectSprites(array);
+  addAprilFoolSprite(sprites, select);
+
   gallery.appendChild(select);
   select.addEventListener("change", () => {
     const comp = select.value.split(":");
+    if (comp[0] == APRIL_FOOL) {
+      if (comp[1].startsWith("http")) {
+        dest_img.src = comp[1].replace("@", ":");
+      } else {
+        dest_img.src = `https://cdn.housamo.xyz/housamo/unity/Android/fg/fg_${comp[1]}.png`;
+      }
+      return;
+    }
+
     const atlas_json = manifest[comp[0]];
     const textureData = atlas_json["textureDataList"].find(t => t["name"] == comp[1]);
     const img = new Image();
