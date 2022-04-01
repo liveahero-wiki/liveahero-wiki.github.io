@@ -11,6 +11,8 @@ event_end_time: 2022-04-02T00:00:00+09
 
 As per LifeWonders' tradition, we are also getting some April Fool stunts this year.
 
+- [Web archive of https://lifewonders.info/Naughty-company/](http://web.archive.org/web/20220331150248/https://lifewonders.info/Naughty-company/)
+
 ## Video Translations
 
 <h3><a href="https://www.youtube.com/watch?v=aOL0BwLjGKU">Hakkenshi Channel</a></h3>
