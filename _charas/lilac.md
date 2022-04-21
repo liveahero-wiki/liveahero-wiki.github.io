@@ -37,6 +37,18 @@ He believes that flowers, which are often used as gifts to convey feelings, have
 {% include sidekick-infobox.html stockId=11011 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="lilac"
+h_gachaResult = "My name is Lilac.<br>I work in a florist shop.<br>This smell......<br>You're in the business of exterminating kaibutsu.<br>Leave it to me, I'll cut 'em down with these shears."
+s_gachaResult = "My name is Lilac. A florist.<br>I'm in charge of sidekicking this time, right?<br>Of course I can do it. I just finished a bouquet.<br>What do you think, beautiful, right?"
+APPRECIATION = "Thank you for your hard work. But please don't overdo it.<br>I'll make you a cup of herbal tea with a calming aroma.<br>I'll make it in your favorite fragrance."
+DAILY = "My brother taught me about herbs and flowers a long time ago.<br>Each one smells different, has its meaning in the language of flowers...<br>It makes me happy when I see people enjoying flowers, too."
+HERO = "I smell gunpowder on Flamier-san.<br>That's because she's a hero who attacks with bombs, huh?<br>...She doesn't just carry gunpowder all the time, right?"
+PLAYER = "Hmm?　This scent...oh, excuse me.<br>I smell flowers pretty often, so I've gotten into a habit...<br>But your smell is kind of calming."
+RELATION = "I 've done some work with Goro-san over at Laborer's Site before.<br>He bought me a drink at my welcome party...<br>We've talked a lot since then."
+TOUCH = "Oh, what's wrong?<br>You're surprised at my physique because I'm a florist?<br>I do a lot of heavy lifting, so I get a good workout."
+TRAIN = "Sorry if I made it too strenuous."
+TRAINED = "Wait a minute...!"
+EVENTA = "Welcome to Wemalt, the city of flowers.<br>Please enjoy the blooming flowers and plants.<br>If you like, I can show you around the city."
+EVENTB = "There is a strange smell in the city...<br>What's going on? Is it really true that it is the work of ghosts?"
 %}
 
 ## Notes
