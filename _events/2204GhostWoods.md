@@ -18,19 +18,24 @@ sales_end_time:  2022-05-12T14:00:00+09
 ## Event Preview
 
 After being urged to take your paid vacation, you visit a peaceful city on a certain planet.
+
 A grand flower festival ceremony is being held there.
+
 
 Together with a chemistry teacher who is volunteering to help in the ceremony and
 a drunk carpenter who is tasked with setting up the stage,
 you awaits the coming of flower festival…
 
 However, behind the festival there is something unusual about the people in this town…
+
 There is rumor about someone who should no longer exist,
 and sighting of something vague walking into the deep woods…
+
 
 To find out the truth of the "black shadow" you've seen,
 you join hands with a local florist hero,
 setting out to solve the problem and lift the city's restless atmosphere.
+
 
 …As if guided by something invisible,
 the heroes also walk into the deep woods…
