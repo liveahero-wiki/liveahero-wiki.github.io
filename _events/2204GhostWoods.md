@@ -69,6 +69,57 @@ Rates as follow:
 
 >Rates (Multis) is the rate of the tenth pull in a multi pull, pull number 1-9 still use the Rates (Single)
 
+## Free Quest Bonus
+
+Here is a list of heroes and sidekicks which grants bonus in this event:
+
+| Hero | +Bonus (%)|
+|------------|--------------|
+| {% chara_link Goro|h2 %} | 40 |
+| {% chara_link Lilac|h1 %} | 40 |
+| {% chara_link Flamier|h2 %} | 30 |
+| {% chara_link Marfik|h2 %} | 20 |
+| {% chara_link Rutilix|h1 %}  | 20 |
+| {% chara_link Alphecca|h1 %}  | 10 |
+| {% chara_link Flamier|h1 %} | 10 |
+| {% chara_link Goro|h1 %}  | 10 |
+
+| Sidekick | +Bonus (%) |
+|-------------|---------------|
+| {% chara_link Goro %} | 10 | 
+| {% chara_link Lilac %} | 10 | 
+| {% chara_link Flamier %} | 10 | 
+| {% chara_link Rutilix %} | 10 | 
+| {% chara_link Alphecca %}  | 10 | 
+| {% chara_link Marfik %}  | 10 | 
+| {% chara_link Player %} | 10 | 
+
+## Event Sales Bonus
+
+Event sales bonus added according to how much event hero you have in a single sales, Which is
+{% chara_link Goro|h2 %}, {% chara_link Lilac|h1 %}, and {% chara_link Flamier|h2 %}  
+
+Here is the bonus:
+
+| Hero   | +Bonus(%) |
+|--------|-----------|
+| 1 Event Hero   |     10    |
+| 2 Event Heroes |     30    |
+| 3 Event Heroes |     50    |
+
+## Limited Time Mission
+
+Here is a list of this event's limited time Missions:
+
+| No  | Description      | Rewards      |
+|----|-----------------------------------------------------------|----------------|
+| 1  | Finish any rank event quest 10 times | 1 {% include item-icon.html id=34 %}    |
+| 2  | Finish any rank event quest 20 times | 1 {% include item-icon.html id=34 %}    |
+| 3  | Finish any rank event quest 30 times | 1 {% include item-icon.html id=34 %}    |
+| 4  | Finish any rank event quest 40 times | 1 {% include item-icon.html id=34 %}    |
+| 5  | Finish any rank event quest 50 times | 1 {% include item-icon.html id=34 %}    |
+| 6  | Finish event sales 10 times | 1 {% include item-icon.html id=34 %}    |
+
 ## Event Shop
 
 {% include shop-table.html id=23 %}
