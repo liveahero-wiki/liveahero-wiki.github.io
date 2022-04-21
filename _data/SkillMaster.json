@@ -3396,7 +3396,7 @@
         "info": {
           "class": "NormalAttack"
         },
-        "name": "skill_flamier_h01_01"
+        "name": "skill_flamierGhostWoods2204_h01_01"
       }
     ],
     "isEquip": false,
@@ -3463,7 +3463,7 @@
         "info": {
           "class": "NormalAttack"
         },
-        "name": "skill_flamier_h01_02"
+        "name": "skill_flamierGhostWoods2204_h01_02"
       }
     ],
     "isEquip": false,
@@ -3563,7 +3563,7 @@
         "info": {
           "class": "CutIn"
         },
-        "name": "skill_flamier_h01_03"
+        "name": "skill_flamierGhostWoods2204_h01_03"
       }
     ],
     "isEquip": false,
@@ -3603,7 +3603,7 @@
         "info": {
           "class": "CutIn"
         },
-        "name": "skill_flamier_h01_03"
+        "name": "skill_flamierGhostWoods2204_h01_03"
       }
     ],
     "isEquip": false,
@@ -5874,7 +5874,7 @@
     "resourceName": "b_skill_damage",
     "subResourceName": "s_skill_heal",
     "timing": 0,
-    "description": "敵単体に60%ダメージ。チームで一番ATKが高いヒーローのHPを基礎ATKの30%回復する。",
+    "description": "敵単体に60%ダメージ。チームで一番ATKが高いヒーローのHPを自身の基礎ATKの30%回復する。",
     "cutin": [
       {
         "info": {
@@ -6001,7 +6001,7 @@
     "useView": 8000,
     "targetFlag": 1,
     "resourceName": "b_skill_buff",
-    "subResourceName": "",
+    "subResourceName": "s_skill_cureTeam",
     "timing": 0,
     "description": "味方単体に3回の行動の間ATKアップを付与。デバフを１つ解除。対象がランダムな敵にスキル１で追撃。",
     "cutin": [
@@ -41710,14 +41710,7 @@
     "subResourceName": "",
     "timing": 1,
     "description": "自身に3ターンの間挑発を付与。【ダメージ時】敵とのSpd差に応じて「軽減」が発動。「軽減」が発動した場合、ダメージを30%減少する。自身に挑発が付与されている間、この効果の発動率が２倍になる。",
-    "cutin": [
-      {
-        "info": {
-          "class": "NormalAttack"
-        },
-        "name": "skill_furlong_h01_02"
-      }
-    ],
+    "cutin": [],
     "isEquip": false,
     "isHeroSkill": false,
     "effects": [
@@ -42113,14 +42106,7 @@
     "subResourceName": "",
     "timing": 4,
     "description": "コンボ数に応じてダメージが上昇（最大10コンボ+20%）",
-    "cutin": [
-      {
-        "info": {
-          "class": "NormalAttack"
-        },
-        "name": "skill_akashi_h01_02"
-      }
-    ],
+    "cutin": [],
     "isEquip": false,
     "isHeroSkill": false,
     "effects": [
@@ -42144,14 +42130,7 @@
     "subResourceName": "",
     "timing": 19,
     "description": "コンボ数増加スキル発動時、更に+1する。",
-    "cutin": [
-      {
-        "info": {
-          "class": "NormalAttack"
-        },
-        "name": ""
-      }
-    ],
+    "cutin": [],
     "isEquip": false,
     "isHeroSkill": false,
     "effects": [
@@ -42175,14 +42154,7 @@
     "subResourceName": "",
     "timing": 14,
     "description": "システム効果除去",
-    "cutin": [
-      {
-        "info": {
-          "class": "NormalAttack"
-        },
-        "name": "skill_akashi_h01_02"
-      }
-    ],
+    "cutin": [],
     "isEquip": false,
     "isHeroSkill": false,
     "effects": [
