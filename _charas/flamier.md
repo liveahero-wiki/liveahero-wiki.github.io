@@ -36,7 +36,17 @@ When the shoes shine, people's eyes naturally gather, and the trail of light  le
 Based on her grandfather's teaching that "Enjoy that which sparks your passion with all your might",  Flamier overwhelms the enemy like a  flower petal dancing in the wind.
 {% endcapture %}
 
-{% include hero-infobox.html stockId=10112 BIO_H01=BIO_H01 %}
+{% capture BIO_H02 %}
+Since childhood, Flamier has loved to dance. 
+
+However, she was disciplined by her educator to behave in a manner befitting her status, and even as a child, Flamier suppressed her feelings and played the role of what she thought was expected of her. 
+
+It was her grandfather who treated her not only as his granddaughter, but also as a human being, who recognized her feelings and became a person who understood her. 
+
+Her late grandfather's advice that she should be able to love herself with all her heart, no matter who she is, is the foundation on which Flamier now stands. 
+{% endcapture %}
+
+{% include hero-infobox.html stockId=10112 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 A chemistry teacher who teaches at one of the top class elite high schools in the Lunar capital.
