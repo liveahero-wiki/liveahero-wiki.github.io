@@ -26,8 +26,17 @@ Her unusual obsession with fire is probably second to none.
 {% endcapture %}
 {% include hero-infobox.html stockId=10111 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10112
-%}
+{% capture BIO_H01 %}
+Flamier volunteered to help Hisaki's research and transformed into a hero suit suitable for the Wemalt flower festival.
+
+She wears parallel weapons similar to the dance shoes presented to her by her grandfather as a child.
+
+When the shoes shine, people's eyes naturally gather, and the trail of light  left in the wake of her dance confuses and dazzles the enemy.
+
+Based on her grandfather's teaching that "Enjoy that which sparks your passion with all your might",  Flamier overwhelms the enemy like a  flower petal dancing in the wind.
+{% endcapture %}
+
+{% include hero-infobox.html stockId=10112 BIO_H01=BIO_H01 %}
 
 {% capture BIO_S01 %}
 A chemistry teacher who teaches at one of the top class elite high schools in the Lunar capital.
