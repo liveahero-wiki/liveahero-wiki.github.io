@@ -780,6 +780,16 @@
     "effect": [],
     "limitValue": 0
   },
+  "77": {
+    "itemId": 77,
+    "itemName": "フラワードーム",
+    "resourceName": "GhostWoods2204_exchange01",
+    "rarity": 0,
+    "itemType": 512,
+    "description": "ウェーマルトで人気の花のおみやげ。交換所でアイテムと交換して貰える。",
+    "effect": [],
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -1158,6 +1168,27 @@
     ],
     "limitValue": 0
   },
+  "110112": {
+    "itemId": 110112,
+    "itemName": "花踊のフラミーの記憶片",
+    "resourceName": "piece_flamierGhostWoods2204",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "花踊のフラミーのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 10112
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
   "110121": {
     "itemId": 110121,
     "itemName": "ショウエンの記憶片",
@@ -1469,6 +1500,27 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 1
+      }
+    ],
+    "limitValue": 0
+  },
+  "110232": {
+    "itemId": 110232,
+    "itemName": "奏楽のゴロウの記憶片",
+    "resourceName": "piece_goroGhostWoods2204",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "奏楽のゴロウのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10232
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
       }
     ],
     "limitValue": 0
@@ -2155,6 +2207,27 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "111011": {
+    "itemId": 111011,
+    "itemName": "ライラックの記憶片",
+    "resourceName": "piece_lilac",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "ライラックのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 11011
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
       }
     ],
     "limitValue": 0
@@ -3287,6 +3360,26 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "211011": {
+    "itemId": 211011,
+    "itemName": "ライラックの心",
+    "resourceName": "heart_lilac",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "ライラックのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 11011
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
       }
     ],
     "limitValue": 0

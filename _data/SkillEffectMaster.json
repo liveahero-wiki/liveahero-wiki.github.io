@@ -13028,8 +13028,8 @@
         {
           "class": "ViewPowerMultipleAttack",
           "parameter": {
-            "value": 5,
             "maxMult": 150,
+            "maxView": 100000,
             "minMult": 100
           }
         }
@@ -16994,6 +16994,628 @@
       ],
       "parameter": false,
       "description": "未行動の味方の数×1000のViewを獲得",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "721": {
+    "skillEffectId": 721,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HighestComboMultipleAttack",
+          "parameter": {
+            "value": 0,
+            "target": 1,
+            "maxMult": 150,
+            "minMult": 100,
+            "maxCombo": 25
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"InvokerAliveTrigger\"}]",
+      "filename": "status_defdown",
+      "statusId": 94,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "コンボ数に応じてダメージが上昇（最大+50%）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "722": {
+    "skillEffectId": 722,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddPlusCombo",
+          "parameter": {
+            "value": 1
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "スキル増加スキル発動時、更に１増加",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "723": {
+    "skillEffectId": 723,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 200
+          }
+        }
+      ],
+      "trigger": "[{\"value\":1,\"element\":0,\"statusId\":0,\"class\":\"RemainInternalTurnTrigger\"}]",
+      "filename": "status_defdown",
+      "statusId": 95,
+      "canDispel": true,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "爆弾",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "724": {
+    "skillEffectId": 724,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "OwnAttack",
+          "parameter": {
+            "index": 1
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "スキル２を追加発動",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "725": {
+    "skillEffectId": 725,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "NeedViewChange",
+          "parameter": {
+            "value": 0,
+            "skillId": 1011202
+          }
+        },
+        {
+          "class": "MultipleBaseView",
+          "parameter": {
+            "value": 0
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 95,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "花踊フラミー用システム効果",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "726": {
+    "skillEffectId": 726,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 95,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果95番除去",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "727": {
+    "skillEffectId": 727,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Heal",
+          "parameter": {
+            "value": 60
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "HPを基礎ATKの60%回復する",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "728": {
+    "skillEffectId": 728,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 92.5
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":24,\"class\":\"BeforeSkillTrigger\"}]",
+      "filename": "status_defup",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "自身が未行動の時、被ダメージ-7.5%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "729": {
+    "skillEffectId": 729,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 91
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":24,\"class\":\"BeforeSkillTrigger\"}]",
+      "filename": "status_defup",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "自身が未行動の時、被ダメージ-9%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "730": {
+    "skillEffectId": 730,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 89.5
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":24,\"class\":\"BeforeSkillTrigger\"}]",
+      "filename": "status_defup",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "自身が未行動の時、被ダメージ-10.5%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "731": {
+    "skillEffectId": 731,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 88
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":24,\"class\":\"BeforeSkillTrigger\"}]",
+      "filename": "status_defup",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "自身が未行動の時、被ダメージ-12%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "732": {
+    "skillEffectId": 732,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 85
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":24,\"class\":\"BeforeSkillTrigger\"}]",
+      "filename": "status_defup",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "自身が未行動の時、被ダメージ-15%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "733": {
+    "skillEffectId": 733,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 86.5
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":24,\"class\":\"BeforeSkillTrigger\"}]",
+      "filename": "status_defup",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "自身が未行動の時、被ダメージ-13.5%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "734": {
+    "skillEffectId": 734,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TeamAttackRandomEnemy",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "味方がランダムな敵にスキル１で追撃",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "735": {
+    "skillEffectId": 735,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 110
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"EnemyBuffNumberExecTrigger\"},{\"value\":1,\"element\":0,\"statusId\":0,\"class\":\"EnemyBuffNumberDontExecTrigger\"},{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"InvokerAliveTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 96,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "付与されているバフが1つの時、ATKが10％アップ。",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "736": {
+    "skillEffectId": 736,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 120
+          }
+        }
+      ],
+      "trigger": "[{\"value\":1,\"element\":0,\"statusId\":0,\"class\":\"EnemyBuffNumberExecTrigger\"},{\"value\":2,\"element\":0,\"statusId\":0,\"class\":\"EnemyBuffNumberDontExecTrigger\"},{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"InvokerAliveTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 97,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "付与されているバフが2つの時、ATKが20％アップ。",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "737": {
+    "skillEffectId": 737,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 130
+          }
+        }
+      ],
+      "trigger": "[{\"value\":2,\"element\":0,\"statusId\":0,\"class\":\"EnemyBuffNumberExecTrigger\"},{\"value\":3,\"element\":0,\"statusId\":0,\"class\":\"EnemyBuffNumberDontExecTrigger\"},{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"InvokerAliveTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 98,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "付与されているバフが3つの時、ATKが30％アップ。",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "738": {
+    "skillEffectId": 738,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 140
+          }
+        }
+      ],
+      "trigger": "[{\"value\":3,\"element\":0,\"statusId\":0,\"class\":\"EnemyBuffNumberExecTrigger\"},{\"value\":4,\"element\":0,\"statusId\":0,\"class\":\"EnemyBuffNumberDontExecTrigger\"},{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"InvokerAliveTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 99,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "付与されているバフが4つの時、ATKが40％アップ。",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "739": {
+    "skillEffectId": 739,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "trigger": "[{\"value\":4,\"element\":0,\"statusId\":0,\"class\":\"EnemyBuffNumberExecTrigger\"},{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"InvokerAliveTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 100,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "付与されているバフが5つ以上の時、ATKが50％アップ。",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "740": {
+    "skillEffectId": 740,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HighestComboMultipleAttack",
+          "parameter": {
+            "value": 0,
+            "target": 1,
+            "maxMult": 150,
+            "minMult": 100,
+            "maxCombo": 25
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":101,\"class\":\"OwnSystemStatusNumberExecTrigger\"}]",
+      "filename": "status_defdown",
+      "statusId": 94,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "コンボ数に応じてダメージが上昇（最大+50%） 重複不可",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "741": {
+    "skillEffectId": 741,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 101,
+      "canDispel": false,
+      "filterIds": [
+        1,
+        3
+      ],
+      "parameter": false,
+      "description": "システム効果101番付与",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "742": {
+    "skillEffectId": 742,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 101,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果101番除去",
       "isImmediate": true,
       "persistence": false,
       "canDuplicate": false,
