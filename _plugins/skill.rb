@@ -105,6 +105,14 @@ module LahWiki
           status_icon = self.status_description_unknown(c['statusId'], 0)
           count = c['value']
           f.push("target enemy possessing &lt;=#{count}x #{status_icon}")
+        when "EnemyBuffNumberExecTrigger"
+          status_icon = self.status_description_unknown(c['statusId'], 1)
+          count = c['value']
+          f.push("target enemy possessing &gt;#{count}x #{status_icon}")
+        when "EnemyBuffNumberDontExecTrigger"
+          status_icon = self.status_description_unknown(c['statusId'], 1)
+          count = c['value']
+          f.push("target enemy possessing &lt;=#{count}x #{status_icon}")
         when "TargetElementExecTrigger"
           element = @@element_map[c['element']] || "Unknown"
           f.push("target is #{element}")
@@ -183,6 +191,8 @@ module LahWiki
         return "random ally"
       when 11
         return "ally with lowest HP"
+      when 12
+        return "each ally"
       when 13
         return "ally with highest ATK"
       end

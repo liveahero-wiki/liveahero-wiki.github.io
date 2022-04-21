@@ -38,7 +38,9 @@ Copy {{ effect.parameter.value }} {% if effect.parameter.target %}{{ effect.para
 {% when "RemoveSystemEffect" %}
 Remove {{ effect.parameter.value }} {% if effect.parameter.target %}{{ effect.parameter.target | status_description }} status{% else %}system status(es){% endif %} from {{ target }}
 {% when "ComboPlus" %}
-Gain {{ effect.parameter.value }} combos
+Gain {{ effect.parameter.value }} combo(s)
+{% when "AddPlusCombo %}
+Gain {{ effect.parameter.value }} combo(s) (Not counted by "when using skill that increases combo")
 {% when "ChangeSkillProve" %}
 Proc rate {% if effect.parameter.value >= 0 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value }} for {{ target }}
 {% when "MoreTurn" %} 
