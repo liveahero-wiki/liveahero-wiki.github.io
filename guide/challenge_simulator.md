@@ -105,7 +105,7 @@ Quest in simulator will reset after a period of time (normally within 14 days), 
 {% include quest-group.html chapterId=606 %}
 {% include quest-group.html chapterId=610 %}
 
-### Jan 12th 2021 - Jan 26th 2021
+### Jan 12th 2022 - Jan 26th 2022
 
 {% include quest-group.html chapterId=602 %}
 {% include quest-group.html chapterId=604 %}
@@ -123,13 +123,13 @@ Quest in simulator will reset after a period of time (normally within 14 days), 
 {% include quest-group.html chapterId=606 %}
 {% include quest-group.html chapterId=610 %}
 
-### Feb 23th 2022 - Mar 09th 2021
+### Feb 23th 2022 - Mar 09th 2022
 
 {% include quest-group.html chapterId=602 %}
 {% include quest-group.html chapterId=604 %}
 {% include quest-group.html chapterId=612 %}
 
-### Mar 09th 2021 - Mar 23th 2022
+### Mar 09th 2022 - Mar 23th 2022
 
 {% include quest-group.html chapterId=603 %}
 {% include quest-group.html chapterId=605 %}
@@ -141,11 +141,17 @@ Quest in simulator will reset after a period of time (normally within 14 days), 
 {% include quest-group.html chapterId=606 %}
 {% include quest-group.html chapterId=607 %}
 
-### Apr 06th 2021 - Apr 20th 2021
+### Apr 06th 2022 - Apr 20th 2022
 
 {% include quest-group.html chapterId=602 %}
 {% include quest-group.html chapterId=604 %}
 {% include quest-group.html chapterId=608 %}
+
+### Apr 20th 2022 - May 04th 2022
+
+{% include quest-group.html chapterId=603 %}
+{% include quest-group.html chapterId=605 %}
+{% include quest-group.html chapterId=609 %}
 
 ## Guides
 
