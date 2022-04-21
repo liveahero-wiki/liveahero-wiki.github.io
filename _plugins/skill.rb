@@ -145,12 +145,18 @@ module LahWiki
       end
 
       wiki_icon = Skills::status_wiki(@context).dig(id_s, 'icon')
-      if wiki_icon == ""
+      if !wiki_icon || wiki_icon == ""
         wiki_icon = "b_skill_special" # "ui_icon_stance_blank"
       end
 
       name = Skills::status_wiki(@context).dig(id_s, 'name') || status['statusName']
       description = Skills::status_wiki(@context).dig(id_s, 'description') || status['description']
+
+      status_type = status["statusType"]
+      if status_type == 2 && name == ""
+        name = "system status #{id}"
+        wiki_icon = "ui_button_square_02"
+      end
 
       "<span class=\"status\" data-id=\"#{id_s}\" title=\"#{description}\"><img src=\"/cdn/Sprite/#{wiki_icon}.png\" loading=\"lazy\"> #{name}</span>"      
     end
