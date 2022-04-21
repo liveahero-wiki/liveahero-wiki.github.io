@@ -5,7 +5,7 @@ characterId: 101
 
 
 {% include hero-infobox.html stockId=11011
-%}
+passiveSkillIds="8101101,8101102" %}
 
 {% capture BIO_S01 %}
 A young man born and raised in Wemalt, a peaceful city in a temperate alien region.
