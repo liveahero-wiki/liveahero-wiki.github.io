@@ -1,6 +1,8 @@
 ---
 title: Flamier
 characterId: 11
+h2:
+  title: "\"Flower Dancer\" Flamier"
 ---
 
 {% capture BIO_H01 %}
@@ -23,6 +25,9 @@ That's why to pursue her astounding ideals, she dedicate herself to the research
 Her unusual obsession with fire is probably second to none.
 {% endcapture %}
 {% include hero-infobox.html stockId=10111 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+
+{% include hero-infobox.html stockId=10112
+%}
 
 {% capture BIO_S01 %}
 A chemistry teacher who teaches at one of the top class elite high schools in the Lunar capital.
@@ -62,6 +67,9 @@ RELATION = "That police officer hero seems to get along well with me.<br>Firearm
 TOUCH = "Oh?  What are you doing?<br>Ah, maybe there was some leftover gunpowder powder on me?<br>Goodness, how embarrassing ..."
 TRAIN = "Thank you for your partnership in this experiment."
 TRAINED = "Ah, please be gentle ...!"
+%}
+
+{% include voice-table.html resourceName="flamierghostwoods2204"
 %}
 
 ## Notes

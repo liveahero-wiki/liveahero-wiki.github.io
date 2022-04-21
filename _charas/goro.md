@@ -2,6 +2,8 @@
 title: Goro
 characterId: 23
 occupation: "Carpenter"
+h2:
+  title: "\"Delightful Performer\" Goro"
 ---
 
 {% capture BIO_H01 %}
@@ -13,6 +15,9 @@ In his home town, he was raising a family and living a normal life as a carpente
 {% endcapture %}
 
 {% include hero-infobox.html stockId=10231 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+
+{% include hero-infobox.html stockId=10232
+%}
 
 {% capture BIO_S01 %}
 He is a diligent man who works as a shipwright in charge of repairs and onboard construction in a shipboard city in the ocean planet of Muirauqa IV. Originating from a different planet, he eventually arrived to Muirauqa IV after wandering.
@@ -46,6 +51,9 @@ RELATION = "I've known Isaribi for quite a long time, ya know.<br>I've known him
 TOUCH = "Whoa.  Hey, what's up?<br>So you want that kind of skinship, huh?<br>It's not my style to turn anyone down, so feel free."
 TRAIN = "It's just a bit of training.  So c'mon, hang out with me."
 TRAINED = "Guh...my head is still ringing..."
+%}
+
+{% include voice-table.html resourceName="goroghostwoods2204"
 %}
 
 ## Notes

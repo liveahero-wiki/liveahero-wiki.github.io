@@ -53,7 +53,9 @@ module LahWiki
           count = c['value']
           f.push("View&lt;=#{count}")
         when "MinComboTrigger"
-          f.push("Combo>=#{c['value']}")
+          f.push("Combo&gt;=#{c['value']}")
+        when "MaxComboTrigger"
+          f.push("Combo&lt;=#{c['value']}")
         when "NotPinchExecTrigger"
           f.push("HP&gt;=50<!--#{c['value']}-->%")
         when "PinchExecTrigger"
@@ -62,6 +64,10 @@ module LahWiki
           f.push("HP&gt;=#{c['value']}%")
         when "KillExecTrigger"
           f.push("target enemy is killed")
+        when "InvokerAliveTrigger"
+          f.push("when invoker is alive")
+        when "BeforeSkillTrigger"
+          f.push("before skill activates (need verification)")
         when "AboveSpdValueTrigger"
           f.push("SPD&gt;#{c['value']}")
         when "OwnStatusTrigger"
@@ -171,6 +177,8 @@ module LahWiki
         return "random ally"
       when 11
         return "ally with lowest HP"
+      when 13
+        return "ally with highest ATK"
       end
       return "Unknown target #{target}"
     end

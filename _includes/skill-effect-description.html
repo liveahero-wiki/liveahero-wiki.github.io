@@ -93,6 +93,14 @@ Make {{ target }} ignore Taunt
 View-costing skills for {{ target }} now target all allies/enemies
 {% when "RandomTeamAttack" %}
 After attack, if targeted enemy is still alive, random ally will use skill 1 on targeted enemy
+{% when "TeamAttackRandomEnemy" %}
+Target ally use skill 1 on random enemy
+{% when "ViewPowerMultipleAttack" %}
+ATK Up by {{ effect.parameter.minMult }}% ~ {{ effect.parameter.maxMult }}% to all allies, scaled from 0 to {{ effect.parameter.maxView }} view power
+{% when "HighestViewPowerMultipleAttack" %}
+ATK Up by {{ effect.parameter.minMult }}% ~ {{ effect.parameter.maxMult }}% to {{ effect.parameter.target | skill_target }}, scaled from 0 to {{ effect.parameter.maxView }} view power
+{% when "HighestComboMultipleAttack" %}
+ATK Up by {{ effect.parameter.minMult }}% ~ {{ effect.parameter.maxMult }}% to {{ effect.parameter.target | skill_target }}, scaled from 0 to {{ effect.parameter.maxCombo }} combo
 {% when "ForceAuto" %}
 Force auto action to {{ target }}
 {% when "MultipleHp" %}
