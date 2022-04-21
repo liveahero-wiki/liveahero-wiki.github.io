@@ -26,7 +26,19 @@ His toy-shaped parallel weapon, which takes the form of various devices to amuse
 In addition, from the instrument-shaped parallel weapon that looks like an accordion, he can emit sound energy that gives vitality to those around him, and play a powerful but gentle sound.
 {% endcapture %}
 
-{% include hero-infobox.html stockId=10232 BIO_H01=BIO_H01 
+{% capture BIO_H02 %}
+"I don't drink when dealing with children," is a self-imposed a rule he lives by. 
+
+It may have been a small promise made as a parent because his beloved child didn't like the smell of alcohol.  
+
+Goro, who had lost his child, his family, and even his home to return to, played the gentle melody of a lullaby. 
+
+Goro has lived through happy days that he can never get back, and the desire to have it back makes him want to break down and cry, with a regret that will never wither.
+
+Nonetheless, he is still alive.
+{% endcapture %}
+
+{% include hero-infobox.html stockId=10232 BIO_H01=BIO_H01 BIO_H02=BIO_H02
 passiveSkillIds="8023201" %}
 
 {% capture BIO_S01 %}
