@@ -49,7 +49,6 @@ Search point for this ether search can be exchanged for:
 - {% chara_link Goro|h2 %} : 200 point
 - {% chara_link Lilac|h1 %} : 200 point
 - {% chara_link Flamier|h2 %} : 100 point
-- {% chara_link Lilac %} : 100 point
 
 > any unused point by the end of the event will be converted into {% include item-icon.html id=75 %} Search Structure, which has it's own shop for exchange
 
