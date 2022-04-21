@@ -26,7 +26,8 @@ His toy-shaped parallel weapon, which takes the form of various devices to amuse
 In addition, from the instrument-shaped parallel weapon that looks like an accordion, he can emit sound energy that gives vitality to those around him, and play a powerful but gentle sound.
 {% endcapture %}
 
-{% include hero-infobox.html stockId=10232 BIO_H01=BIO_H01 %}
+{% include hero-infobox.html stockId=10232 BIO_H01=BIO_H01 
+passiveSkillIds="8023201" %}
 
 {% capture BIO_S01 %}
 He is a diligent man who works as a shipwright in charge of repairs and onboard construction in a shipboard city in the ocean planet of Muirauqa IV. Originating from a different planet, he eventually arrived to Muirauqa IV after wandering.
