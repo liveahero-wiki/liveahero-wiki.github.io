@@ -16,8 +16,17 @@ In his home town, he was raising a family and living a normal life as a carpente
 
 {% include hero-infobox.html stockId=10231 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10232
-%}
+{% capture BIO_H01 %}
+Based on the design of the costume used at the Wemalt flower festival, Goro got a new hero suit.
+
+In his hand, toys and musical instruments made by his specialty craftsmanship are reproduced in the form of pure energy.
+
+His toy-shaped parallel weapon, which takes the form of various devices to amuse children, acts independently to protect allies.
+
+In addition, from the instrument-shaped parallel weapon that looks like an accordion, he can emit sound energy that gives vitality to those around him, and play a powerful but gentle sound.
+{% endcapture %}
+
+{% include hero-infobox.html stockId=10232 BIO_H01=BIO_H01 %}
 
 {% capture BIO_S01 %}
 He is a diligent man who works as a shipwright in charge of repairs and onboard construction in a shipboard city in the ocean planet of Muirauqa IV. Originating from a different planet, he eventually arrived to Muirauqa IV after wandering.
