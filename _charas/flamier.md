@@ -89,6 +89,17 @@ TRAINED = "Ah, please be gentle ...!"
 %}
 
 {% include voice-table.html resourceName="flamierghostwoods2204"
+APPRECIATION = "Oh, my...? You look tired.<br>I found some beautiful flowers and put them in a vase.<br>Would you like to take a break while looking at the greenery?"
+DAILY = "The festival site is so lively and fun, isn't it?<br>If you like, why don't you join me to look around the stalls?<br>Let me know what your favorite food is and we can have lunch!"
+HERO = "Goro-san has a surprising knack for music, doesn't he?<br>It has such a soothing and gentle tone... It's like a lullaby."
+PLAYER = "Do you think ghosts exist?<br>Ectoplasm, demonic fire...it's a bit...intriguing, isn't it?<br>Aren't you intrigued? Hmmm.... ehehe..."
+RELATION = "You know a lot about flowers, don't you, Lilac?<br>Knowledge of plants is akin to that of fireworks.<br>I would like to learn a lot from you."
+TOUCH = "Oh, is this an invitation to dance?<br>Yes, of course I would like to join you.<br>Please be gentle with me."
+TRAIN = "Would you like to dance with me for a song?"
+TRAINED = "Oh, you're being too rough...!"
+EVENTA = "Wemalt's festivals are so lively and exciting.<br>It makes my heart skip a beat just to watch!<br>When was the last time you danced?"
+EVENTB = "I'm helping to coordinate the fireworks on the last day of the festival.<br>Ahhh...the beautiful flowers of light...I can't wait to see them...!
+"
 %}
 
 ## Notes
