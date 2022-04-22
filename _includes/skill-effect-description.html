@@ -153,6 +153,9 @@ Resurrect {{ target }} to {{ effect.parameter.value }}% HP
 {% else %}
 Unknown effect class ({{ effect.class }})
 {% endcase %}
-{% if skillEffectJson.persistence == true %}permanently{% else %}{% if skillEffectJson.turn != 0 %}for {{ skillEffectJson.turn }} {{ turnDefinition | strip }}(s){% endif %}{% endif %}
+{% if skillEffectJson.persistence == true %}
+{% if skillEffectJson.isDisplayPersistenceStatus == true %}permanently{% else %}(recalculated in every turn){% endif %}
+{% else %}{% if skillEffectJson.turn != 0 %}for {{ skillEffectJson.turn }} {{ turnDefinition | strip }}(s){% endif %}
+{% endif %}
 {% if forloop.last == false %}<br>&nbsp;&nbsp;&nbsp;&nbsp;{% endif %}
 {% endfor %}
