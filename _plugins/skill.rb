@@ -108,11 +108,11 @@ module LahWiki
         when "EnemyBuffNumberExecTrigger"
           status_icon = self.status_description_unknown(c['statusId'], 1)
           count = c['value']
-          f.push("target enemy possessing &gt;#{count}x #{status_icon}")
+          f.push("target possessing &gt;#{count}x #{status_icon}")
         when "EnemyBuffNumberDontExecTrigger"
           status_icon = self.status_description_unknown(c['statusId'], 1)
           count = c['value']
-          f.push("target enemy possessing &lt;=#{count}x #{status_icon}")
+          f.push("target possessing &lt;=#{count}x #{status_icon}")
         when "TargetElementExecTrigger"
           element = @@element_map[c['element']] || "Unknown"
           f.push("target is #{element}")
