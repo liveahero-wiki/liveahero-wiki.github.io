@@ -52,3 +52,8 @@ EVENTB = "There is a strange smell in the city...<br>What's going on? Is it real
 %}
 
 ## Notes
+
+- His skills is in German language:
+  - Unsterblich : Immortal/Eternal
+  - Ferne Erinnerung : Memories of distant past (Ferne = distant past, Erinnerung = memories)
+  - Niemals Vergessen : Never forget (Niemals = never, Vergessen = forget)
