@@ -26819,7 +26819,7 @@
     "resourceName": "icon_lilac_s01",
     "subResourceName": "",
     "timing": 1,
-    "description": "自身が未行動の時、、被ダメージ-15%。",
+    "description": "自身が未行動の時、被ダメージ-15%。",
     "cutin": [],
     "isEquip": true,
     "isHeroSkill": false,
@@ -41508,6 +41508,30 @@
     "isEquip": true,
     "isHeroSkill": false,
     "effects": []
+  },
+  "6106101": {
+    "skillId": 6106101,
+    "skillName": "幽体",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "ダメージ時、敵とのSpd差に応じて「軽減」が発動。「軽減」が発動した場合、ダメージを30%減少する。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 743,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
   },
   "7000001": {
     "skillId": 7000001,
