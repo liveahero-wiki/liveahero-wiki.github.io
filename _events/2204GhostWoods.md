@@ -119,6 +119,33 @@ Here is a list of this event's limited time Missions:
 | 5  | Finish any rank event quest 50 times | 1 {% include item-icon.html id=34 %}    |
 | 6  | Finish event sales 10 times | 1 {% include item-icon.html id=34 %}    |
 
+## Event Challenge Quests
+
+- Cost 0 stamina
+- There will be 3 challenge quests for this event, released sequentially
+- There will be special effects for this event's challenge quest, activated for all enemies and allies
+
+| Special Effect   | Effect |
+|--------|-----------|
+| Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
+| Damage Increase by View  |    When starting action if view is 20000 or more, grant Uplift status for one action  |
+
+> Uplift : increase atk by 1.5, does not count as a buff
+
+{% include quest-group.html chapterId=477 %}
+
+### Handle fireworks with care
+
+Listed enemy skills below are enemy skills for S Difficulty:
+
+#### Flamier's skills
+
+{% include skill-table-manual.html skillIds="4011101,4011109,4011110" equipmentSkills="" %}
+
+#### Mafia's skills
+
+{% include skill-table-manual.html skillIds="4054120,4054102,4054119" equipmentSkills="" %}
+
 ## Event Shop
 
 {% include shop-table.html id=23 %}
