@@ -64672,6 +64672,80 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
   },
+  "474004": {
+    "questId": 474004,
+    "questName": "途絶えぬ記憶",
+    "subName": "第４話",
+    "questKind": 5,
+    "chapterId": 474,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2022-04-28 18:00:00",
+    "endAt": "2022-05-19 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 4,
+    "enemyLevel": 12,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 474003,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuGhostLarvaFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuGhostLarvaFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuGhostLarvaFire_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
   "475001": {
     "questId": 475001,
     "questName": "幽霊の潜む森",
@@ -65367,6 +65441,158 @@
       {
         "battleInfoIcon": "icon_kaibutsuGhostLarvaWater_h01",
         "battleInfoElement": 2
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "477001": {
+    "questId": 477001,
+    "questName": "花火は取扱注意！",
+    "subName": "A級",
+    "questKind": 6,
+    "chapterId": 477,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_flamier_h01",
+    "startAt": "2022-04-28 18:00:00",
+    "endAt": "2022-05-12 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 20000,
+        "bonus": 100,
+        "fixAddValue": 0
+      },
+      {
+        "rewardType": 3,
+        "objectId": 27,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      },
+      {
+        "rewardType": 3,
+        "objectId": 28,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      },
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 20000,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 474002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_flamier_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaFire_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "477002": {
+    "questId": 477002,
+    "questName": "花火は取扱注意！",
+    "subName": "S級",
+    "questKind": 6,
+    "chapterId": 477,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_flamier_h01",
+    "startAt": "2022-04-28 18:00:00",
+    "endAt": "2022-05-12 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 60,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 10,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      },
+      {
+        "rewardType": 3,
+        "objectId": 34,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 474002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_flamier_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainMafiaFire_h01",
+        "battleInfoElement": 1
       }
     ],
     "hasAdv": false,
