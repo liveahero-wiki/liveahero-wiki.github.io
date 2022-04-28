@@ -125,16 +125,16 @@ Here is a list of this event's limited time Missions:
 - There will be 3 challenge quests for this event, released sequentially
 - There will be special effects for this event's challenge quest, activated for all enemies and allies
 
+{% include quest-group.html chapterId=477 %}
+
+### Handle fireworks with care
+
 | Special Effect   | Effect |
 |--------|-----------|
 | Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
 | Damage Increase by View  |    When starting action if view is 20000 or more, grant Uplift status for one action  |
 
-> Uplift : increase atk by 1.5, does not count as a buff
-
-{% include quest-group.html chapterId=477 %}
-
-### Handle fireworks with care
+> Uplift : multiply atk by 1.5, does not count as a buff
 
 Listed enemy skills below are enemy skills for S Difficulty:
 
