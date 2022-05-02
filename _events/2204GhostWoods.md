@@ -146,6 +146,18 @@ Listed enemy skills below are enemy skills for S Difficulty:
 
 {% include skill-table-manual.html skillIds="4054120,4054102,4054119" equipmentSkills="" %}
 
+### Festival site preparation
+
+Listed enemy skills below are enemy skills for S Difficulty (tentative):
+
+#### Goro's skills
+
+{% include skill-table-manual.html skillIds="1023101,4023101,4023102" equipmentSkills="6023101" %}
+
+#### Villain's skills
+
+{% include skill-table-manual.html skillIds="4041119,4041120,4041121" equipmentSkills="6023101" %}
+
 ## Event Shop
 
 {% include shop-table.html id=23 %}
