@@ -148,11 +148,18 @@ Listed enemy skills below are enemy skills for S Difficulty:
 
 ### Festival site preparation
 
-Listed enemy skills below are enemy skills for S Difficulty (tentative):
+| Special Effect   | Effect |
+|--------|-----------|
+| Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
+| Increase damage received by view  |    When starting action if view is 20000 or more, grant fatigue status for one action  |
+
+> Fatigue : multiply damage received by 1.5, does not count as a debuff
+
+Listed enemy skills below are enemy skills for S Difficulty:
 
 #### Goro's skills
 
-{% include skill-table-manual.html skillIds="1023101,4023101,4023102" equipmentSkills="6023101" %}
+{% include skill-table-manual.html skillIds="1023101,4023101,4023102" equipmentSkills="6030104,6023101" %}
 
 #### Villain's skills
 
