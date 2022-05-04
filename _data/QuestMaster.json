@@ -64816,6 +64816,80 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
   },
+  "474006": {
+    "questId": 474006,
+    "questName": "追想の愛",
+    "subName": "第６話",
+    "questKind": 5,
+    "chapterId": 474,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2022-05-05 18:00:00",
+    "endAt": "2022-05-19 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 6,
+    "enemyLevel": 14,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 474005,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuGhostLarvaFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuGhostLarvaFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuGhostLarvaFire_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
   "475001": {
     "questId": 475001,
     "questName": "幽霊の潜む森",
@@ -65794,6 +65868,151 @@
       {
         "battleInfoIcon": "icon_villainWater_h01",
         "battleInfoElement": 2
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "477005": {
+    "questId": 477005,
+    "questName": "フラワーフェスティバル！",
+    "subName": "S級",
+    "questKind": 6,
+    "chapterId": 477,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_lilac_h01",
+    "startAt": "2022-05-05 18:00:00",
+    "endAt": "2022-05-12 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 60,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 32,
+        "objectValue": 20,
+        "bonus": 100,
+        "fixAddValue": 0
+      },
+      {
+        "rewardType": 3,
+        "objectId": 33,
+        "objectValue": 10,
+        "bonus": 100,
+        "fixAddValue": 0
+      },
+      {
+        "rewardType": 3,
+        "objectId": 59,
+        "objectValue": 30,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 474002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_lilac_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeLight_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "477006": {
+    "questId": 477006,
+    "questName": "フラワーフェスティバル！",
+    "subName": "SS級",
+    "questKind": 6,
+    "chapterId": 477,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_lilac_h01",
+    "startAt": "2022-05-05 18:00:00",
+    "endAt": "2022-05-12 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 70,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 10,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      },
+      {
+        "rewardType": 3,
+        "objectId": 34,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 474002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_lilac_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeLight_h01",
+        "battleInfoElement": 4
       }
     ],
     "hasAdv": false,
@@ -73135,23 +73354,23 @@
         "description": "UI_SCORE_ATTACK_BONUS_ATK20UP",
         "characters": [
           {
-            "stockId": 10082,
+            "stockId": 11011,
             "cardType": 1
           },
           {
-            "stockId": 10631,
+            "stockId": 10092,
             "cardType": 1
           },
           {
-            "stockId": 10061,
+            "stockId": 10271,
             "cardType": 1
           },
           {
-            "stockId": 10191,
+            "stockId": 10112,
             "cardType": 1
           },
           {
-            "stockId": 10211,
+            "stockId": 10221,
             "cardType": 1
           }
         ]
@@ -73160,23 +73379,23 @@
         "description": "UI_SCORE_ATTACK_BONUS_ATK10UP",
         "characters": [
           {
-            "stockId": 10021,
+            "stockId": 10231,
             "cardType": 2
           },
           {
-            "stockId": 10031,
+            "stockId": 10711,
             "cardType": 2
           },
           {
-            "stockId": 10091,
+            "stockId": 10331,
             "cardType": 2
           },
           {
-            "stockId": 10201,
+            "stockId": 10081,
             "cardType": 2
           },
           {
-            "stockId": 10271,
+            "stockId": 10251,
             "cardType": 2
           }
         ]
@@ -73780,23 +73999,23 @@
         "description": "UI_SCORE_ATTACK_BONUS_ATK20UP",
         "characters": [
           {
-            "stockId": 10082,
+            "stockId": 11011,
             "cardType": 1
           },
           {
-            "stockId": 10631,
+            "stockId": 10092,
             "cardType": 1
           },
           {
-            "stockId": 10061,
+            "stockId": 10271,
             "cardType": 1
           },
           {
-            "stockId": 10191,
+            "stockId": 10112,
             "cardType": 1
           },
           {
-            "stockId": 10211,
+            "stockId": 10221,
             "cardType": 1
           }
         ]
@@ -73805,23 +74024,23 @@
         "description": "UI_SCORE_ATTACK_BONUS_ATK10UP",
         "characters": [
           {
-            "stockId": 10021,
+            "stockId": 10231,
             "cardType": 2
           },
           {
-            "stockId": 10031,
+            "stockId": 10711,
             "cardType": 2
           },
           {
-            "stockId": 10091,
+            "stockId": 10331,
             "cardType": 2
           },
           {
-            "stockId": 10201,
+            "stockId": 10081,
             "cardType": 2
           },
           {
-            "stockId": 10271,
+            "stockId": 10251,
             "cardType": 2
           }
         ]
@@ -74304,23 +74523,23 @@
         "description": "UI_SCORE_ATTACK_BONUS_ATK20UP",
         "characters": [
           {
-            "stockId": 10012,
+            "stockId": 11011,
             "cardType": 1
           },
           {
-            "stockId": 10141,
+            "stockId": 10092,
             "cardType": 1
           },
           {
-            "stockId": 10122,
+            "stockId": 10271,
             "cardType": 1
           },
           {
-            "stockId": 10131,
+            "stockId": 10112,
             "cardType": 1
           },
           {
-            "stockId": 10031,
+            "stockId": 10221,
             "cardType": 1
           }
         ]
@@ -74333,19 +74552,19 @@
             "cardType": 2
           },
           {
-            "stockId": 10751,
+            "stockId": 10711,
             "cardType": 2
           },
           {
-            "stockId": 10281,
+            "stockId": 10331,
             "cardType": 2
           },
           {
-            "stockId": 19991,
+            "stockId": 10081,
             "cardType": 2
           },
           {
-            "stockId": 10221,
+            "stockId": 10251,
             "cardType": 2
           }
         ]
