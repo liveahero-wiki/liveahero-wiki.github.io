@@ -170,9 +170,11 @@ Listed enemy skills below are enemy skills for S Difficulty:
 | Special Effect   | Effect |
 |--------|-----------|
 | Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
-| Reduce damage received by view  |    When starting action if view is 20000 or more, grant Excitement status for one action  |
+| Hero strengthening by view  |    If view is 20000 or more, when starting action grant uplift status for one action, when turn start grant excitement for one action  |
 
 > Excitement : reduce damage received by 50%, does not count as a buff
+
+> Uplift : multiply atk by 1.5, does not count as a buff
 
 Listed enemy skills below are enemy skills for S Difficulty:
 
