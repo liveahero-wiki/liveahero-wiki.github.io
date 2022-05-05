@@ -165,6 +165,29 @@ Listed enemy skills below are enemy skills for S Difficulty:
 
 {% include skill-table-manual.html skillIds="4041119,4041120,4041121" equipmentSkills="6023101" %}
 
+### Flower Festival!
+
+| Special Effect   | Effect |
+|--------|-----------|
+| Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
+| Reduce damage received by view  |    When starting action if view is 20000 or more, grant Excitement status for one action  |
+
+> Excitement : reduce damage received by 50%, does not count as a buff
+
+Listed enemy skills below are enemy skills for S Difficulty:
+
+#### Lilac's skills
+
+{% include skill-table-manual.html skillIds="4101101,4101102,4101103" equipmentSkills="6000046" %}
+
+#### Trainee (Water)'s skills
+
+{% include skill-table-manual.html skillIds="4077103,4077104,4076109" equipmentSkills="6000046,6077101" %}
+
+#### Trainee (Light)'s skills
+
+{% include skill-table-manual.html skillIds="4079101,4079102,4079103" equipmentSkills="6000046" %}
+
 ## Event Shop
 
 {% include shop-table.html id=23 %}
