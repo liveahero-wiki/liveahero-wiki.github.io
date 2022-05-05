@@ -27,7 +27,7 @@ In addition, from the instrument-shaped parallel weapon that looks like an accor
 {% endcapture %}
 
 {% capture BIO_H02 %}
-"I don't drink when dealing with children," is a self-imposed a rule he lives by. 
+"I don't drink when dealing with children," is a self-imposed rule he lives by. 
 
 It may have been a small promise made as a parent because his beloved child didn't like the smell of alcohol.  
 
