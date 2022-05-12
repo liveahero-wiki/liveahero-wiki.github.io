@@ -204,6 +204,12 @@ Listed enemy skills below are enemy skills for S Difficulty:
 
 {% include quest-group.html chapterId=475 %}
 
+### Special Quests
+
+Fan translations for special quests can be found [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vS9WNT5IU0NiXr4HI7KRIdZwebqQY9KS2lmZ4iLHlknH1tqrkI4lbvpjnISU82l_veY6iv1pVKIm6EJ/pubhtml)
+
+{% include quest-group.html chapterId=476 %}
+
 ## Event Sales Report
 
 <details><summary>Sales Report 1</summary>
