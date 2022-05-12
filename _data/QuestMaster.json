@@ -64964,6 +64964,55 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
   },
+  "474008": {
+    "questId": 474008,
+    "questName": "追憶",
+    "subName": "最終話",
+    "questKind": 5,
+    "chapterId": 474,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2022-05-12 18:00:00",
+    "endAt": "2022-05-19 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 8,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 474007,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
   "475001": {
     "questId": 475001,
     "questName": "幽霊の潜む森",
@@ -65663,6 +65712,152 @@
     ],
     "hasAdv": false,
     "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "476011": {
+    "questId": 476011,
+    "questName": "フラミーに花束を",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 476,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_flamierGhostWoods2204_h01",
+    "startAt": "2022-05-12 18:00:00",
+    "endAt": "2022-05-19 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 989,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 474008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10111,
+          10112
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "476023": {
+    "questId": 476023,
+    "questName": "ゴロウに花束を",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 476,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_goroGhostWoods2204_h01",
+    "startAt": "2022-05-12 18:00:00",
+    "endAt": "2022-05-19 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 977,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 474008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10231,
+          10232
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "476101": {
+    "questId": 476101,
+    "questName": "ライラックに花束を",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 476,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_lilac_h01",
+    "startAt": "2022-05-12 18:00:00",
+    "endAt": "2022-05-19 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 899,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 474008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          11011
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
     "hasStockBattle": false,
     "hasScoreAttack": false,
     "boostItems": [],
