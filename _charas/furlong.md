@@ -35,7 +35,8 @@ But, in front of his deep-rooted trauma it's impossible to conceal his weakness.
 
 That's why by changing his reason from "for himself" to "for other people", he can transform into a new form.
 {% endcapture %}
-{% include hero-infobox.html stockId=10082 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8008201"%}
+{% include hero-infobox.html stockId=10082 
+extra_sprites="fg_furlongCircus2202_h02_skin2" BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8008201"%}
 
 {% capture BIO_S01 %}
 A firefighter belonging to Orient City's fire department.
