@@ -39,7 +39,7 @@ Nonetheless, he is still alive.
 {% endcapture %}
 
 {% include hero-infobox.html stockId=10232 BIO_H01=BIO_H01 BIO_H02=BIO_H02
-passiveSkillIds="8023201" %}
+extra_sprites="fg_goroGhostWoods2204_h02_skin2" passiveSkillIds="8023201" %}
 
 {% capture BIO_S01 %}
 He is a diligent man who works as a shipwright in charge of repairs and onboard construction in a shipboard city in the ocean planet of Muirauqa IV. Originating from a different planet, he eventually arrived to Muirauqa IV after wandering.
