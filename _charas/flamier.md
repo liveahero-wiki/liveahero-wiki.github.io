@@ -46,7 +46,8 @@ It was her grandfather who treated her not only as his granddaughter, but also a
 Her late grandfather's advice that she should be able to love herself with all her heart, no matter who she is, is the foundation on which Flamier now stands. 
 {% endcapture %}
 
-{% include hero-infobox.html stockId=10112 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+{% include hero-infobox.html stockId=10112 BIO_H01=BIO_H01 BIO_H02=BIO_H02 
+extra_sprites="fg_flamierGhostWoods2204_h02_skin2,fg_flamierGhostWoods2204_h02_skin3,fg_flamierGhostWoods2204_h02_skin4,fg_flamierGhostWoods2204_h02_skin5" %}
 
 {% capture BIO_S01 %}
 A chemistry teacher who teaches at one of the top class elite high schools in the Lunar capital.
