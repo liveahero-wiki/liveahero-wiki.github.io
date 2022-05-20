@@ -4,9 +4,12 @@ title: Characters
 banner: true
 permalink: /charas/
 redirect_from: /heroes/
+additional_scripts: ["/assets/chara.js"]
 ---
 
 <h2>Released units</h2>
+
+<button id="collection-btn">Activate Collection Mode</button>
 
 <h3 id="heroes">Heroes</h3>
 
@@ -49,35 +52,3 @@ redirect_from: /heroes/
   </li>
 {% endfor %}
 </ul>
-
-<script>
-function sortList(list, column, btn) {
-  const oldOrder = parseInt(btn.dataset.order || '-1', 10);
-  const newOrder = 0 - oldOrder;
-  btn.dataset.order = newOrder;
-
-  const array = [];
-  for (const item of list.children) {
-    const value = column == "name" ? item.dataset.name : parseInt(item.dataset[column], 10);
-    array.push({value: value, element: item});
-  }
-  array.sort((lhs, rhs) => {
-    return lhs.value > rhs.value ? newOrder : lhs.value < rhs.value ? oldOrder : 0;
-  });
-
-  for (const x of array) {
-    list.appendChild(x.element);
-  }
-}
-document.querySelectorAll(".chara-sort").forEach(ele => {
-  const list = document.querySelector(ele.dataset.list);
-  for (const btn of ele.children) {
-    btn.addEventListener("click", () => sortList(list, btn.dataset.sort, btn));
-  }
-  ele.addEventListener("click", (e) => {
-    for (const btn of ele.children) {
-      if (e.target.dataset.sort !== btn.dataset.sort) btn.dataset.order = "-1";
-    }
-  });
-});
-</script>
