@@ -10129,7 +10129,8 @@
       {
         "class": "HavingStockCard",
         "stockIds": [
-          10231
+          10231,
+          10232
         ],
         "isBannerDisplay": true
       }
@@ -10187,6 +10188,63 @@
         "stockIds": [
           10141,
           10142
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "301004": {
+    "questId": 301004,
+    "questName": "先輩ヒーローの熱血指導！",
+    "subName": "ライキキャラクエスト",
+    "questKind": 4,
+    "chapterId": 301,
+    "bannerResourceName": "ui_window_quest_03",
+    "iconFilename": "icon_ryekie_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 101014,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10041,
+          10042
         ],
         "isBannerDisplay": true
       }
@@ -68065,6 +68123,606 @@
       {
         "battleInfoIcon": "icon_hitomiSummerdive2108_h01",
         "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "483001": {
+    "questId": 483001,
+    "questName": "実戦トレーニング！ ラフ",
+    "subName": "B級",
+    "questKind": 6,
+    "chapterId": 483,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_lah",
+    "startAt": null,
+    "endAt": "2022-06-30 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 30,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 35,
+        "objectValue": 600,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 35,
+        "objectValue": 600,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 35,
+        "objectValue": 500,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 35,
+        "objectValue": 400,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 35,
+        "objectValue": 400,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 105,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 100,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 10,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainTraineeFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "483002": {
+    "questId": 483002,
+    "questName": "実戦トレーニング！ ラフ",
+    "subName": "A級",
+    "questKind": 6,
+    "chapterId": 483,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_lah",
+    "startAt": null,
+    "endAt": "2022-06-30 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 45,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 35,
+        "objectValue": 1200,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 35,
+        "objectValue": 1100,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 35,
+        "objectValue": 1000,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 35,
+        "objectValue": 900,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 35,
+        "objectValue": 800,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 150,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 120,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 100,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 15,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainTraineeFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "483003": {
+    "questId": 483003,
+    "questName": "実戦トレーニング！ リレーション",
+    "subName": "B級",
+    "questKind": 6,
+    "chapterId": 483,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_trainingband",
+    "startAt": null,
+    "endAt": "2022-06-30 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 30,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 500,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 500,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 400,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 400,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 105,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 100,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 10,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainTraineeWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeLight_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "483004": {
+    "questId": 483004,
+    "questName": "実戦トレーニング！ リレーション",
+    "subName": "A級",
+    "questKind": 6,
+    "chapterId": 483,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_trainingband",
+    "startAt": null,
+    "endAt": "2022-06-30 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 45,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 1050,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 900,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 800,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 500,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 150,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 120,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 100,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 15,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainTraineeWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeLight_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "483005": {
+    "questId": 483005,
+    "questName": "実戦トレーニング！ EXP",
+    "subName": "B級",
+    "questKind": 6,
+    "chapterId": 483,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_exp",
+    "startAt": null,
+    "endAt": "2022-06-30 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 30,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 500,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 500,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 400,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 400,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 105,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 100,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 10,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainTraineeEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "483006": {
+    "questId": 483006,
+    "questName": "実戦トレーニング！ EXP",
+    "subName": "A級",
+    "questKind": 6,
+    "chapterId": 483,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_exp",
+    "startAt": null,
+    "endAt": "2022-06-30 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 45,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 1050,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 900,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 800,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 500,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 150,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 120,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 52,
+        "objectValue": 100,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 15,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainTraineeEarth_h01",
+        "battleInfoElement": 3
       },
       {
         "battleInfoIcon": "icon_villainTraineeShadow_h01",

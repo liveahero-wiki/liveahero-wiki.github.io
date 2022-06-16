@@ -11124,6 +11124,786 @@
       }
     ]
   },
+  "1076101": {
+    "skillId": 1076101,
+    "skillName": "アッパーカット",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_traineeFire_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1076102": {
+    "skillId": 1076102,
+    "skillName": "決めポーズ",
+    "useView": 1500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "Viewを5000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_traineeFire_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1076103": {
+    "skillId": 1076103,
+    "skillName": "必殺攻撃",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。攻撃対象が木属性の時、Viewを10000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_traineeFire_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 25,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 3,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1076104": {
+    "skillId": 1076104,
+    "skillName": "必殺攻撃+",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。攻撃対象が木属性の時、Viewを11000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_traineeFire_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 676,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 3,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1077101": {
+    "skillId": 1077101,
+    "skillName": "アッパーカット",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_traineeWater_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1077102": {
+    "skillId": 1077102,
+    "skillName": "決めポーズ",
+    "useView": 1500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "Viewを5000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_traineeWater_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1077103": {
+    "skillId": 1077103,
+    "skillName": "必殺攻撃",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。攻撃対象が火属性の時、Viewを10000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_traineeWater_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 25,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 1,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1077104": {
+    "skillId": 1077104,
+    "skillName": "必殺攻撃+",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。攻撃対象が火属性の時、Viewを11000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_traineeWater_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 676,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 1,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1078101": {
+    "skillId": 1078101,
+    "skillName": "アッパーカット",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_traineeEarth_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1078102": {
+    "skillId": 1078102,
+    "skillName": "決めポーズ",
+    "useView": 1500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "Viewを5000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_traineeEarth_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1078103": {
+    "skillId": 1078103,
+    "skillName": "必殺攻撃",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。攻撃対象が水属性の時、Viewを10000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_traineeEarth_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 25,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 2,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1078104": {
+    "skillId": 1078104,
+    "skillName": "必殺攻撃+",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。攻撃対象が水属性の時、Viewを11000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_traineeEarth_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 676,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 2,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1079101": {
+    "skillId": 1079101,
+    "skillName": "アッパーカット",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_traineeLight_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1079102": {
+    "skillId": 1079102,
+    "skillName": "決めポーズ",
+    "useView": 1500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "Viewを5000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_traineeLight_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1079103": {
+    "skillId": 1079103,
+    "skillName": "必殺攻撃",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。攻撃対象が影属性の時、Viewを10000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_traineeLight_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 25,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 5,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1079104": {
+    "skillId": 1079104,
+    "skillName": "必殺攻撃+",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。攻撃対象が影属性の時、Viewを11000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_traineeLight_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 676,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 5,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1080101": {
+    "skillId": 1080101,
+    "skillName": "アッパーカット",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_traineeShadow_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1080102": {
+    "skillId": 1080102,
+    "skillName": "決めポーズ",
+    "useView": 1500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "Viewを5000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_traineeShadow_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1080103": {
+    "skillId": 1080103,
+    "skillName": "必殺攻撃",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。攻撃対象が光属性の時、Viewを10000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_traineeShadow_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 25,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 4,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1080104": {
+    "skillId": 1080104,
+    "skillName": "必殺攻撃+",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。攻撃対象が光属性の時、Viewを11000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_traineeShadow_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 676,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 4,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
   "1081101": {
     "skillId": 1081101,
     "skillName": "戦略武術",
@@ -17639,6 +18419,471 @@
       }
     ]
   },
+  "2076101": {
+    "skillId": 2076101,
+    "skillName": "視聴者アピール",
+    "useView": 500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に1回の行動の間注目を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_traineeFire_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 216,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2076102": {
+    "skillId": 2076102,
+    "skillName": "視聴者アピール+",
+    "useView": 500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間注目を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_traineeFire_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 216,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2076103": {
+    "skillId": 2076103,
+    "skillName": "視聴者アピール++",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間注目を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_traineeFire_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 216,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2077101": {
+    "skillId": 2077101,
+    "skillName": "視聴者アピール",
+    "useView": 500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に1回の行動の間注目を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_traineeWater_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 216,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2077102": {
+    "skillId": 2077102,
+    "skillName": "視聴者アピール+",
+    "useView": 500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間注目を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_traineeWater_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 216,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2077103": {
+    "skillId": 2077103,
+    "skillName": "視聴者アピール++",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間注目を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_traineeWater_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 216,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2078101": {
+    "skillId": 2078101,
+    "skillName": "視聴者アピール",
+    "useView": 500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に1回の行動の間注目を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_traineeEarth_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 216,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2078102": {
+    "skillId": 2078102,
+    "skillName": "視聴者アピール+",
+    "useView": 500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間注目を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_traineeEarth_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 216,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2078103": {
+    "skillId": 2078103,
+    "skillName": "視聴者アピール++",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間注目を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_traineeEarth_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 216,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2079101": {
+    "skillId": 2079101,
+    "skillName": "視聴者アピール",
+    "useView": 500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に1回の行動の間注目を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_traineeLight_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 216,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2079102": {
+    "skillId": 2079102,
+    "skillName": "視聴者アピール+",
+    "useView": 500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間注目を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_traineeLight_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 216,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2079103": {
+    "skillId": 2079103,
+    "skillName": "視聴者アピール++",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間注目を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_traineeLight_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 216,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2080101": {
+    "skillId": 2080101,
+    "skillName": "視聴者アピール",
+    "useView": 500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に1回の行動の間注目を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_traineeShadow_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 216,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2080102": {
+    "skillId": 2080102,
+    "skillName": "視聴者アピール+",
+    "useView": 500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間注目を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_traineeShadow_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 216,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2080103": {
+    "skillId": 2080103,
+    "skillName": "視聴者アピール++",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間注目を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_traineeShadow_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 216,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "2081101": {
     "skillId": 2081101,
     "skillName": "援護拳撃",
@@ -17959,7 +19204,7 @@
         "info": {
           "class": "SidekickSkill"
         },
-        "name": "skill_akashi_s01_01"
+        "name": "skill_lilac_s01_01"
       }
     ],
     "isEquip": false,
@@ -17999,7 +19244,7 @@
         "info": {
           "class": "SidekickSkill"
         },
-        "name": "skill_akashi_s01_01"
+        "name": "skill_lilac_s01_01"
       }
     ],
     "isEquip": false,
@@ -18039,7 +19284,7 @@
         "info": {
           "class": "SidekickSkill"
         },
-        "name": "skill_akashi_s01_01"
+        "name": "skill_lilac_s01_01"
       }
     ],
     "isEquip": false,
@@ -26313,6 +27558,726 @@
       {
         "skillEffectId": 474,
         "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3076101": {
+    "skillId": 3076101,
+    "skillName": "火見習いの援護Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeFire_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、10%の確率で1回の行動の間幸運を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 69,
+        "prob": 10,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3076102": {
+    "skillId": 3076102,
+    "skillName": "火見習いの援護Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeFire_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、12%の確率で1回の行動の間幸運を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 69,
+        "prob": 12,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3076103": {
+    "skillId": 3076103,
+    "skillName": "火見習いの援護Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeFire_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、14%の確率で1回の行動の間幸運を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 69,
+        "prob": 14,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3076104": {
+    "skillId": 3076104,
+    "skillName": "火見習いの援護Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeFire_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、16%の確率で1回の行動の間幸運を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 69,
+        "prob": 16,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3076105": {
+    "skillId": 3076105,
+    "skillName": "火見習いの援護Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeFire_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、18%の確率で1回の行動の間幸運を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 69,
+        "prob": 18,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3076106": {
+    "skillId": 3076106,
+    "skillName": "火見習いの援護Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeFire_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、20%の確率で1回の行動の間幸運を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 69,
+        "prob": 20,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3077101": {
+    "skillId": 3077101,
+    "skillName": "水見習いの援護Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeWater_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、10%の確率でデバフを１つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 10,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3077102": {
+    "skillId": 3077102,
+    "skillName": "水見習いの援護Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeWater_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、12%の確率でデバフを１つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 12,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3077103": {
+    "skillId": 3077103,
+    "skillName": "水見習いの援護Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeWater_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、14%の確率でデバフを１つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 14,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3077104": {
+    "skillId": 3077104,
+    "skillName": "水見習いの援護Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeWater_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、16%の確率でデバフを１つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 16,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3077105": {
+    "skillId": 3077105,
+    "skillName": "水見習いの援護Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeWater_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、18%の確率でデバフを１つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 18,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3077106": {
+    "skillId": 3077106,
+    "skillName": "水見習いの援護Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeWater_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、20%の確率でデバフを１つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 20,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3078101": {
+    "skillId": 3078101,
+    "skillName": "木見習いの援護Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeEarth_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、10%の確率でView消費量-1000を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 604,
+        "prob": 10,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3078102": {
+    "skillId": 3078102,
+    "skillName": "木見習いの援護Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeEarth_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、12%の確率でView消費量-1000を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 604,
+        "prob": 12,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3078103": {
+    "skillId": 3078103,
+    "skillName": "木見習いの援護Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeEarth_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、14%の確率でView消費量-1000を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 604,
+        "prob": 14,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3078104": {
+    "skillId": 3078104,
+    "skillName": "木見習いの援護Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeEarth_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、16%の確率でView消費量-1000を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 604,
+        "prob": 16,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3078105": {
+    "skillId": 3078105,
+    "skillName": "木見習いの援護Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeEarth_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、18%の確率でView消費量-1000を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 604,
+        "prob": 18,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3078106": {
+    "skillId": 3078106,
+    "skillName": "木見習いの援護Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeEarth_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、20%の確率でView消費量-1000を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 604,
+        "prob": 20,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3079101": {
+    "skillId": 3079101,
+    "skillName": "光見習いの援護Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeLight_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、10%の確率で1ターンの間リジェネを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 297,
+        "prob": 10,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3079102": {
+    "skillId": 3079102,
+    "skillName": "光見習いの援護Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeLight_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、12%の確率で1ターンの間リジェネを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 297,
+        "prob": 12,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3079103": {
+    "skillId": 3079103,
+    "skillName": "光見習いの援護Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeLight_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、14%の確率で1ターンの間リジェネを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 297,
+        "prob": 14,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3079104": {
+    "skillId": 3079104,
+    "skillName": "光見習いの援護Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeLight_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、16%の確率で1ターンの間リジェネを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 297,
+        "prob": 16,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3079105": {
+    "skillId": 3079105,
+    "skillName": "光見習いの援護Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeLight_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、18%の確率で1ターンの間リジェネを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 297,
+        "prob": 18,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3079106": {
+    "skillId": 3079106,
+    "skillName": "光見習いの援護Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeLight_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、20%の確率で1ターンの間リジェネを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 297,
+        "prob": 20,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3080101": {
+    "skillId": 3080101,
+    "skillName": "影見習いの援護Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeShadow_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、5%の確率で1回分のDEFアップを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 5,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3080102": {
+    "skillId": 3080102,
+    "skillName": "影見習いの援護Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeShadow_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、7%の確率で1回分のDEFアップを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 7,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3080103": {
+    "skillId": 3080103,
+    "skillName": "影見習いの援護Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeShadow_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、9%の確率で1回分のDEFアップを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 9,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3080104": {
+    "skillId": 3080104,
+    "skillName": "影見習いの援護Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeShadow_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、11%の確率で1回分のDEFアップを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 11,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3080105": {
+    "skillId": 3080105,
+    "skillName": "影見習いの援護Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeShadow_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、13%の確率で1回分のDEFアップを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 13,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3080106": {
+    "skillId": 3080106,
+    "skillName": "影見習いの援護Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_traineeShadow_s01",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、15%の確率で1回分のDEFアップを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 15,
         "effectTarget": 0,
         "sequenceGroupId": 0,
         "probGroupId": 0,
@@ -37776,6 +39741,100 @@
       }
     ]
   },
+  "4076110": {
+    "skillId": 4076110,
+    "skillName": "必殺攻撃",
+    "useView": 10000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に80%ダメージ。自身に注目が付与されている場合、ダメージ増加。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainTrainee_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 4
+          }
+        ]
+      },
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 4
+          }
+        ]
+      }
+    ]
+  },
+  "4076111": {
+    "skillId": 4076111,
+    "skillName": "アッパーカット",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。自身に1回の行動の間注目を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainTrainee_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 216,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4077102": {
     "skillId": 4077102,
     "skillName": "作戦指示",
@@ -38189,6 +40248,46 @@
     "effects": [
       {
         "skillEffectId": 25,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4080103": {
+    "skillId": 4080103,
+    "skillName": "決めポーズ",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "自身に1回の行動の間ATKアップを付与。Viewを3000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainTrainee_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 24,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,
