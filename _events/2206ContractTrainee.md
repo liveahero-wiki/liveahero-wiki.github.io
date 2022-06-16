@@ -46,8 +46,3 @@ Their fan count will only increase by 1 with each item used.
 
 Sidekick units of rank 1 or 2 can only be upgraded with their own personal Sidekick's Heart items. Said items will also can't be exchanged for {% include item-icon.html id=40 %} Record Cube.
 
-## Quest Details
-
-### Free Quests
-
-{% include quest-group.html chapterId=301 %}
