@@ -54,4 +54,4 @@ Sidekick units of rank 1 or 2 can only be upgraded with their own personal Sidek
 
 ### Free Quests
 
-{% include quest-group.html chapterId=301 %}
+{% include quest-group.html chapterId=483 %}
