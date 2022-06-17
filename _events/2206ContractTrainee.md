@@ -32,7 +32,7 @@ Rank 1/2 units can participate in battle and sale just like normal characters bu
 
 ### Hero's Promotion
 
-Hero units with initial rank of 1 or 2 can only be promoted up to rank 4. Aside from regular rank up materials their promotions will also require {% include item-icon.html id=53 %} "Proof of Hero".
+Hero units with initial rank of 1 or 2, aside from regular rank up materials, require {% include item-icon.html id=53 %} "Proof of Hero" to promote. The necessary amount increases every rank.
 
 Additionally their 3rd skill will at first be locked and unusable in battle until they are promoted to rank 3.
 
