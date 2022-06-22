@@ -26,7 +26,7 @@ and their helmet and outfit are designed based on aliens.
 {% endcapture %}
 {% include sidekick-infobox.html stockId=10781 BIO_S01=BIO_S01 %}
 
-{% include voice-table.html resourceName="traineeWood"
+{% include voice-table.html resourceName="traineeEarth"
 APPRECIATION = "Good work, Operator!<br>Even in training it's necessary to cool down,Proper break is also important in work!<br>Now, Rest up!"
 DAILY = "Good morning!<br>I have finished my morning run, dispatch preparation complete!<br>Let's start our superhero time!"
 HERO = "Of course I admire the alien heroes.<br>But, I also have my pride as an earthling.<br>I'm sure there are something only we can protect."
