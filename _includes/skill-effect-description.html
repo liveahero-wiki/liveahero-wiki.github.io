@@ -134,6 +134,8 @@ Apply {{ 26 | status_description }} to {{ target }}: <abbr title="Does not inclu
 Apply {{ skillEffectJson.statusId | status_description }} to {{ target }}
 {% when "DamageLimit" %}
 Enemy hits cannot deal over {{ effect.parameter.value }} damage to {{ target }}
+{% when "AbsorbDamage" %}
+Deal {{ effect.parameter.value }}% of damage to {{ target }}. Heal {{ effect.parameter.target | skill_target }} with {{ effect.parameter.healMult }}% damage it caused
 {% when "Ressurection" %}
 Resurrect {{ target }} to {{ effect.parameter.value }}% HP
 {% when "AimLowestHPCharacter" %}
