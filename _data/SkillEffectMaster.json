@@ -13820,6 +13820,141 @@
       "isDisplayPersistenceStatus": false
     }
   },
+  "519": {
+    "skillEffectId": 519,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AbsorbDamage",
+          "parameter": {
+            "value": 100,
+            "target": 3,
+            "healMult": 50
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "100%ダメージ+ダメージの50%を回復",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "520": {
+    "skillEffectId": 520,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 300
+          }
+        }
+      ],
+      "filename": "status_atkup",
+      "statusId": 108,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "攻撃力3倍。スキルによる解除不可。",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": true
+    }
+  },
+  "521": {
+    "skillEffectId": 521,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -6000
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 109,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "Viewの消費を-6000する。スキルによる解除不可。",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": true
+    }
+  },
+  "522": {
+    "skillEffectId": 522,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeAgi",
+          "parameter": {
+            "value": 20
+          }
+        }
+      ],
+      "filename": "status_agiup",
+      "statusId": 110,
+      "canDispel": false,
+      "filterIds": [
+        6
+      ],
+      "parameter": true,
+      "description": "SPDが+20される。スキルによる解除不可。",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": true
+    }
+  },
+  "523": {
+    "skillEffectId": 523,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 50
+          }
+        }
+      ],
+      "filename": "status_defup",
+      "statusId": 111,
+      "canDispel": false,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "相手からのダメージが半分になる。スキルによる解除不可。",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": true
+    }
+  },
   "600": {
     "skillEffectId": 600,
     "skillEffectJson": {
@@ -17695,7 +17830,7 @@
           }
         }
       ],
-      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":101,\"class\":\"OwnSystemStatusNumberExecTrigger\"}]",
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":101,\"class\":\"EnemySystemStatusNumberExecTrigger\"}]",
       "filename": "status_defdown",
       "statusId": 94,
       "canDispel": false,
@@ -17745,7 +17880,7 @@
         {
           "class": "RemoveSystemEffect",
           "parameter": {
-            "value": 999,
+            "value": 1,
             "target": 101,
             "isForce": true
           }
@@ -17829,6 +17964,846 @@
       "isImmediate": false,
       "persistence": false,
       "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "747": {
+    "skillEffectId": 747,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 115,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果115番付与",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "748": {
+    "skillEffectId": 748,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 115,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果115番強制除去",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "749": {
+    "skillEffectId": 749,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "trigger": "[]",
+      "filename": "",
+      "statusId": 118,
+      "canDispel": false,
+      "filterIds": [
+        13
+      ],
+      "parameter": false,
+      "description": "サンテツ用クリティカルー文言表示用",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "750": {
+    "skillEffectId": 750,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 1,
+            "target": 116,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "サンテツ用クリティカルを１つ除去",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "751": {
+    "skillEffectId": 751,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SpdDeferenceDamage",
+          "parameter": {
+            "value": 100,
+            "spdMult": 20
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "100%ダメージ+対象と自分のSPDの差だけダメージ量が大上昇",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "752": {
+    "skillEffectId": 752,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeAgi",
+          "parameter": {
+            "value": 1
+          }
+        }
+      ],
+      "filename": "status_agiup",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        6
+      ],
+      "parameter": true,
+      "description": "SPD+1",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "753": {
+    "skillEffectId": 753,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleBaseView",
+          "parameter": {
+            "value": 102
+          }
+        }
+      ],
+      "filename": "status_attention",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": true,
+      "description": "View基礎値+2%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "754": {
+    "skillEffectId": 754,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleBaseView",
+          "parameter": {
+            "value": 103
+          }
+        }
+      ],
+      "filename": "status_attention",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": true,
+      "description": "View基礎値+3%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "755": {
+    "skillEffectId": 755,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleBaseView",
+          "parameter": {
+            "value": 104
+          }
+        }
+      ],
+      "filename": "status_attention",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": true,
+      "description": "View基礎値+4%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "756": {
+    "skillEffectId": 756,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "StatusNumberMultipleAttack",
+          "parameter": {
+            "statusMult": 2.5,
+            "isGoodStatus": true,
+            "limitStatusNum": 4
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 114,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "バフ1つにつきATK+2.5%（ロイカー）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "757": {
+    "skillEffectId": 757,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "StatusNumberMultipleAttack",
+          "parameter": {
+            "statusMult": 3,
+            "isGoodStatus": true,
+            "limitStatusNum": 4
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 114,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "バフ1つにつきATK+3%（ロイカー）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "758": {
+    "skillEffectId": 758,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "StatusNumberMultipleAttack",
+          "parameter": {
+            "statusMult": 3.5,
+            "isGoodStatus": true,
+            "limitStatusNum": 4
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 114,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "バフ1つにつきATK+3.8%（ロイカー）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "759": {
+    "skillEffectId": 759,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "StatusNumberMultipleAttack",
+          "parameter": {
+            "statusMult": 4,
+            "isGoodStatus": true,
+            "limitStatusNum": 4
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 114,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "バフ1つにつきATK+4.2%（ロイカー）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "760": {
+    "skillEffectId": 760,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "StatusNumberMultipleAttack",
+          "parameter": {
+            "statusMult": 4.5,
+            "isGoodStatus": true,
+            "limitStatusNum": 4
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 114,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "バフ1つにつきATK+4.6%（ロイカー）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "761": {
+    "skillEffectId": 761,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "StatusNumberMultipleAttack",
+          "parameter": {
+            "statusMult": 5,
+            "isGoodStatus": true,
+            "limitStatusNum": 4
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 114,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "バフ1つにつきATK+5%（ロイカー）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "762": {
+    "skillEffectId": 762,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AbsorbDamage",
+          "parameter": {
+            "value": 100,
+            "target": 11,
+            "healMult": 50
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "100%ダメージ+ダメージの50%HPが最も減っている味方を回復。",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "763": {
+    "skillEffectId": 763,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HidePenetration",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_buff",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        12
+      ],
+      "parameter": false,
+      "description": "敵の隠蔽を無視",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "764": {
+    "skillEffectId": 764,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AbsorbDamage",
+          "parameter": {
+            "value": 0,
+            "target": 0,
+            "healMult": 10
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "100%ダメージ+ダメージの10%自身のHPを回復。",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "765": {
+    "skillEffectId": 765,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -2000
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 74,
+      "canDispel": true,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View消費量-2000",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "766": {
+    "skillEffectId": 766,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -2500
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 74,
+      "canDispel": true,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View消費量-2500",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "767": {
+    "skillEffectId": 767,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -3000
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 74,
+      "canDispel": true,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View消費量-3000",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "770": {
+    "skillEffectId": 770,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RateChangeView",
+          "parameter": {
+            "value": -100
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "自身のView数を消費",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "771": {
+    "skillEffectId": 771,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Critical",
+          "parameter": {
+            "mult": 130,
+            "rate": 5
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":3,\"class\":\"EnemyBuffNumberExecTrigger\"},{\"value\":116,\"element\":0,\"statusId\":116,\"class\":\"EnemyStatusTrigger\"}]",
+      "filename": "status_speedatk",
+      "statusId": 117,
+      "canDispel": false,
+      "filterIds": [
+        13
+      ],
+      "parameter": false,
+      "description": "サンテツ用クリティカル SPDアップが付与されている時用",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "772": {
+    "skillEffectId": 772,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 1,
+            "target": 117,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "サンテツ用クリティカル2を１つ除去",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "794": {
+    "skillEffectId": 794,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeAgi",
+          "parameter": {
+            "value": 5
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":113,\"class\":\"OwnSystemStatusNumberExecTrigger\"}]",
+      "filename": "",
+      "statusId": 86,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": true,
+      "description": "SPD+5(永続システム効果）システム効果113番がある時のみ発動",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "795": {
+    "skillEffectId": 795,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 112,
+      "canDispel": false,
+      "filterIds": [
+        6
+      ],
+      "parameter": false,
+      "description": "システム効果112番付与（永続）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "796": {
+    "skillEffectId": 796,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 113,
+      "canDispel": false,
+      "filterIds": [
+        6
+      ],
+      "parameter": false,
+      "description": "システム効果113番付与（永続）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "797": {
+    "skillEffectId": 797,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeAgi",
+          "parameter": {
+            "value": 5
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":112,\"class\":\"OwnSystemStatusNumberExecTrigger\"}]",
+      "filename": "",
+      "statusId": 86,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": true,
+      "description": "SPD+5(永続システム効果）システム効果112番がある時のみ発動",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "798": {
+    "skillEffectId": 798,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Critical",
+          "parameter": {
+            "mult": 130,
+            "rate": 2.5
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":3,\"class\":\"EnemyBuffNumberDontExecTrigger\"},{\"value\":116,\"element\":0,\"statusId\":116,\"class\":\"EnemyStatusTrigger\"}]",
+      "filename": "status_speedatk",
+      "statusId": 117,
+      "canDispel": false,
+      "filterIds": [
+        13
+      ],
+      "parameter": false,
+      "description": "サンテツ用クリティカル SPDが付与されてない時用",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "799": {
+    "skillEffectId": 799,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 116,
+      "canDispel": false,
+      "filterIds": [
+        1,
+        6
+      ],
+      "parameter": false,
+      "description": "システム効果116番付与",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "800": {
+    "skillEffectId": 800,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 1,
+            "target": 116,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果116番除去",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
       "isDisplayPersistenceStatus": false
     }
   }
