@@ -119,6 +119,8 @@ module LahWiki
         when "TargetElementDontExecTrigger"
           element = @@element_map[c['element']] || "Unknown"
           f.push("target is not #{element}")
+        when "BeforeSkillTriggerWithoutInvoker"
+          f.push("target has not acted yet")
         else
           f.push("unknown condition (#{c['class']}")
         end
