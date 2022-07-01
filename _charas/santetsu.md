@@ -9,3 +9,10 @@ characterId: 112
 
 {% include voice-table.html resourceName="santetsu"
 %}
+
+## Notes
+
+His skill name is in Hungarian and German language:
+ - Előretekint = looking to the future
+ - Brüche Sieg(German) = fractions victory
+ - Olvasó Mozgások = reading movements
