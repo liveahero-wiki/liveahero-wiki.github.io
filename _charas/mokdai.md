@@ -112,4 +112,4 @@ EVENTB = "Hmm, hmhmm♪  …ah, hey, hey.<br>Should I bring a bucket? I want to 
 
 ## Notes
 
-- His hero name is Mighty Knuckle (マイティ・ナックル) (self-proclaimed)
+- His hero name is Mighty Knuckle (マイティ・ナックル)
