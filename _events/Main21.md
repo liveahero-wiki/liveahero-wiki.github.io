@@ -12,7 +12,7 @@ The main quests of Book 2 chapter 1 has been released.
 
 In commemoration of the new chapter release, a limited time gacha summon is also released which include {% chara_link Santetsu %} (Hero and Sidekick), {% chara_link Roiker %} (Hero and Sidekick), {% chara_link Seiichiro %} (Sidekick).
 
-For the period of Main Quest Book 2 Chapter 1, there will be half stamina cost for every episode in Main Quest chapter 1-5.
+For the period of Main Quest Book 2 Chapter 1, there will be half stamina cost for every episode in Main Quest.
 
 ## Campaign Banners
 
