@@ -8,7 +8,7 @@ event_start_time: 2022-06-30T20:00:00+09
 event_end_time: 2022-07-20T14:00:00+09
 ---
 
-The main quests of Book 2 chapter 1 has been released.
+The main quests of Book 2 [chapter 1](/main_quests/chapter06/) has been released.
 
 In commemoration of the new chapter release, a limited time gacha summon is also released which include {% chara_link Santetsu %} (Hero and Sidekick), {% chara_link Roiker %} (Hero and Sidekick), {% chara_link Seiichiro %} (Sidekick).
 
@@ -36,6 +36,8 @@ Rates as follow:
 ## Main Quests
 
 Finish all book 2 chapter 1 main quest for mission rewards, rewards details can be found in [Mission](/guide/mission/#main-quest)
+
+Detailed lists of main quest can be found in [chapter 1](/main_quests/chapter06/)
 
 ### Limited Time Mission
 
