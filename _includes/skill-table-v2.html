@@ -1,0 +1,16 @@
+{% unless include.hide_banner == true %}
+<p>Hover over dive effect description to see original japanese description. Please help report any bug related to skill effect <a href="https://gidivub.com/liveahero-wiki/liveahero-wiki.gidivub.io/issues/7">here</a>.</p>
+
+<p>Want to help in translating skill names? Please see <a href="https://gidivub.com/liveahero-wiki/liveahero-wiki.gidivub.io/issues/26">here</a>.</p>
+{% endunless %}
+
+<div class="re-table">
+    <div class="re-A re-head">Skill Name</div><div class="re-C re-head">View cost</div><div class="re-B re-head">Effect/Proc rate</div>
+{% for id in include.skillIds %}
+{% assign nid = id | plus: 0 %}
+{% assign sid = id | downcase %}
+{% assign skill = site.data.SkillMaster[sid] %}
+{% assign skillName = site.data.wiki.SkillNameTranslation[nid] %}
+    <div title="{{ sid }}" class="translate re-A" data-translate="{% if skillName %}{{ skill.skillName }}{% endif %}" data-effects="{{skill.effects | map: 'skillEffectId' | join: ',' }}">{{ skillName | default: skill.skillName }}</div><div class="re-C">{{ skill.useView}}</div><div class="re-B" title="{{ skill.description }}">{% include skill-description.html skill=skill %}</div>
+{% endfor %}
+</div>

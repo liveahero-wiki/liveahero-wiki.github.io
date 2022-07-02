@@ -356,6 +356,30 @@ figcaption {
 .contain {
   contain: content;
 }
+.re-table {
+  display: grid;
+  grid-template-columns: minmax(min-content, 20%) min-content auto;
+  grid-auto-flow: dense;
+  margin-bottom: 20px;
+}
+.re-table div {
+  padding: 5px 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.re-A {
+  background: #d5d5d5;
+}
+.re-head {
+  background: $colorPrimary;
+}
+@media (max-width: 550px) {
+  .re-table {
+      grid-template-columns: auto 55px;
+  }
+  .re-B {
+      grid-column: span 2;
+  }
+}
 .heroinfobox {
   padding: 2px;
   margin-bottom: 10px;
@@ -366,11 +390,11 @@ figcaption {
 .heroinfobox table {
   margin: 0;
 }
-$elementColor: #f07d75, #4e8ddf, #5fcb58, #ffb251, #9c76db;
+$elementColor: #f07d75, #88bcff, #5fcb58, #ffb251, #b88dff;
 @for $i from 1 to 6 {
   .element#{$i} {
     $color: nth($elementColor, $i);
-    th, .header {
+    th, .header, .re-head {
       background: $color;
     }
     .heroinfobox {
@@ -385,7 +409,7 @@ $elementColor: #f07d75, #4e8ddf, #5fcb58, #ffb251, #9c76db;
   }
 }
 .elementNone {
-  th, .header {
+  th, .header, .re-head {
     background: $colorGrey;
   }
   .heroinfobox {
