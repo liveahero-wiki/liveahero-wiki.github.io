@@ -12,7 +12,7 @@ characterId: 112
 
 ## Notes
 
-His skill name is in Hungarian and German language:
+His skill name is in Hungarian language:
  - Előretekint = looking to the future
- - Brüche Sieg(German) = fractions victory
+ - Bölcsesség = Wisdom
  - Olvasó Mozgások = reading movements
