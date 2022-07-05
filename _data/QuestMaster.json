@@ -4233,11 +4233,6 @@
         "class": "QuestClear",
         "questId": 105005,
         "isBannerDisplay": false
-      },
-      {
-        "class": "Stamina",
-        "stamina": 7,
-        "isBannerDisplay": true
       }
     ],
     "enemies": [
@@ -4988,6 +4983,55 @@
     ],
     "hasAdv": true,
     "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "106004": {
+    "questId": 106004,
+    "questName": "「ユニーク」",
+    "subName": "第４話",
+    "questKind": 1,
+    "chapterId": 106,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": "2022-07-05 18:00:00",
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 4,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 106003,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
     "hasStockBattle": false,
     "hasScoreAttack": false,
     "boostItems": [],
