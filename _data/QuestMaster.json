@@ -5043,6 +5043,84 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
   },
+  "106005": {
+    "questId": 106005,
+    "questName": "図書館の番人",
+    "subName": "第５話",
+    "questKind": 1,
+    "chapterId": 106,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_questicon_main",
+    "startAt": "2022-07-07 18:00:00",
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 5,
+    "enemyLevel": 48,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 410,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 106004,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainTraineeNinjaFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeNinjaWater_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeNinjaEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeNinjaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
   "201001": {
     "questId": 201001,
     "questName": "力を求めて",

@@ -46969,6 +46969,69 @@
       }
     ]
   },
+  "6080101": {
+    "skillId": 6080101,
+    "skillName": "変わり身の術",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "",
+    "timing": 14,
+    "description": "戦闘不能時、1度だけ100%のHPで復活。復活したターンは行動しない。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 260,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 83
+          }
+        ]
+      },
+      {
+        "skillEffectId": 53,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 83
+          }
+        ]
+      },
+      {
+        "skillEffectId": 504,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 83
+          }
+        ]
+      }
+    ]
+  },
   "6081101": {
     "skillId": 6081101,
     "skillName": "増員要請",
