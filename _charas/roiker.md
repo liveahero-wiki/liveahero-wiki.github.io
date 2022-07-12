@@ -19,3 +19,6 @@ TOUCH = "Nn!? …Ah, no…Ahem.<br>Pretend you didn't hear that just now.<br>I h
 TRAIN = "Come. I will accept everything."
 TRAINED = "Gh, can't catch it…!"
 %}
+
+## Notes
+- His Full name is Roiker Chandra Shen (ロイカー・チャンドラ・シェン)
