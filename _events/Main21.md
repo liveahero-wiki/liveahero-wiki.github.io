@@ -5,7 +5,7 @@ no_limited_quest: true
 news_link: https://live-a-hero.jp/info/4025
 banner_image: banner_info_main21.jpg 
 event_start_time: 2022-06-30T20:00:00+09
-event_end_time: 2022-07-20T14:00:00+09
+event_end_time: 2022-08-01T14:00:00+09
 ---
 
 The main quests of Book 2 [chapter 1](/main_quests/chapter06/) has been released.
