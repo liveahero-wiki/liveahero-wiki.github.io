@@ -18806,5 +18806,241 @@
       "canDuplicate": false,
       "isDisplayPersistenceStatus": false
     }
+  },
+  "801": {
+    "skillEffectId": 801,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 119,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "粘質武装",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": true
+    }
+  },
+  "802": {
+    "skillEffectId": 802,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 100
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 119,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "粘質武装",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "803": {
+    "skillEffectId": 803,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Hide",
+          "parameter": []
+        }
+      ],
+      "filename": "status_hide",
+      "statusId": 15,
+      "canDispel": true,
+      "filterIds": [
+        12
+      ],
+      "parameter": false,
+      "description": "隠蔽",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "804": {
+    "skillEffectId": 804,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "DamageLimit",
+          "parameter": {
+            "value": 3000
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":119,\"class\":\"EnemySystemStatusNumberExecTrigger\"}]",
+      "filename": "",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "粘質武装が付与されている場合ダメージ上限3000",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "805": {
+    "skillEffectId": 805,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":119,\"class\":\"OwnSystemStatusNumberDontExecTrigger\"}]",
+      "filename": "",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "粘質武装が付与されていない場合ダメージ1.5倍",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "806": {
+    "skillEffectId": 806,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveBuff",
+          "parameter": {
+            "value": 1,
+            "target": 119,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "粘質武装を１つ解除",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "807": {
+    "skillEffectId": 807,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "filename": "status_defdown",
+      "statusId": 120,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "武装解除状態",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "808": {
+    "skillEffectId": 808,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 0
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":122,\"class\":\"EnemySystemStatusNumberDontExecTrigger\"}]",
+      "filename": "status_invincible",
+      "statusId": 121,
+      "canDispel": false,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "ダメージ無効",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "809": {
+    "skillEffectId": 809,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 100
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 122,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "2部1章ボス用システム効果",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
   }
 }
