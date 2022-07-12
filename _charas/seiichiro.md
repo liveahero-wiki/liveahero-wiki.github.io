@@ -18,3 +18,6 @@ TOUCH = "Oops…no matter how much you find me attractive, body touching in duty
 TRAIN = "Follow me, I will discipline you."
 TRAINED = "Can't believe I'm being pinned down…!"
 %}
+
+## Notes
+- His full name is Seiichiro Tenma (天満 セイイチロウ)
