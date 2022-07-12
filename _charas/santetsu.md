@@ -23,6 +23,6 @@ TRAINED = "G-got it! I will do it!"
 ## Notes
 - His full name is Santetsu Tokuhara (徳原 サンテツ)
 - His skill name is in Hungarian language:
- - Előretekint = looking to the future
- - Bölcsesség = Wisdom
- - Olvasó Mozgások = reading movements
+  - Előretekint = looking to the future
+  - Bölcsesség = Wisdom
+  - Olvasó Mozgások = reading movements
