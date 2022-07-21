@@ -42446,6 +42446,37 @@
       }
     ]
   },
+  "4080109": {
+    "skillId": 4080109,
+    "skillName": "一斉攻撃",
+    "useView": 5000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "生存している味方全体がスキル１で攻撃。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainTraineeNinja_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 734,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4081101": {
     "skillId": 4081101,
     "skillName": "戦略武術",
@@ -47366,6 +47397,30 @@
     "isEquip": true,
     "isHeroSkill": false,
     "effects": []
+  },
+  "6080103": {
+    "skillId": 6080103,
+    "skillName": "後方指示",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、3ターンの間隠蔽を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 803,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
   },
   "6081101": {
     "skillId": 6081101,
