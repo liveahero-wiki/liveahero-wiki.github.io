@@ -790,6 +790,369 @@
     "effect": [],
     "limitValue": 0
   },
+  "78": {
+    "itemId": 78,
+    "itemName": "承認のハンコ",
+    "resourceName": "hanko_01",
+    "rarity": 3,
+    "itemType": 4,
+    "description": "稟議を通すために集めたハンコ。オフィスで稟議を通すのに使用できる。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "79": {
+    "itemId": 79,
+    "itemName": "会社実印",
+    "resourceName": "hanko_02",
+    "rarity": 5,
+    "itemType": 4,
+    "description": "強い力を持った承認のハンコ。オフィスで稟議を通すのに使用できる。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "80": {
+    "itemId": 80,
+    "itemName": "経験の技術書",
+    "resourceName": "equipskill_exp",
+    "rarity": 3,
+    "itemType": 32768,
+    "description": "「EXPアイテムクエスト」で獲得できるEXPが+3%される「経験の蓄積」を習得できる技術書。",
+    "effect": [
+      {
+        "class": "SkillLearnItemEffect",
+        "skillId": 7000008
+      }
+    ],
+    "limitValue": 0
+  },
+  "81": {
+    "itemId": 81,
+    "itemName": "交流の技術書",
+    "resourceName": "equipskill_relation",
+    "rarity": 3,
+    "itemType": 32768,
+    "description": "「トレーニングバンド獲得クエスト」で獲得できるリレーションが+3%される「交流の蓄積」を習得できる技術書。",
+    "effect": [
+      {
+        "class": "SkillLearnItemEffect",
+        "skillId": 7000009
+      }
+    ],
+    "limitValue": 0
+  },
+  "82": {
+    "itemId": 82,
+    "itemName": "荒稼ぎの技術書",
+    "resourceName": "equipskill_lah",
+    "rarity": 3,
+    "itemType": 32768,
+    "description": "クエストで獲得できるラフが+3%される「荒稼ぎ」を習得できる技術書。",
+    "effect": [
+      {
+        "class": "SkillLearnItemEffect",
+        "skillId": 7000010
+      }
+    ],
+    "limitValue": 0
+  },
+  "93": {
+    "itemId": 93,
+    "itemName": "ノーマルディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "いつものBGMのディスク。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_main",
+        "bgmTitleKey": "TITLE_BGM_MAIN_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "94": {
+    "itemId": 94,
+    "itemName": "戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "いつもの戦闘BGMのディスク。所持しているとオフィスの改善度が1上がる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_battle",
+        "bgmTitleKey": "TITLE_BGM_BATTLE_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "95": {
+    "itemId": 95,
+    "itemName": "黒の試練ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "第１部４章のBGMのディスク。所持しているとオフィスの改善度が1上がる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_main4",
+        "bgmTitleKey": "TITLE_BGM_MAIN4_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "96": {
+    "itemId": 96,
+    "itemName": "光の道標ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "第１部５章のBGMのディスク。所持しているとオフィスの改善度が1上がる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_main5_adv",
+        "bgmTitleKey": "TITLE_BGM_MAIN5_ADV_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "97": {
+    "itemId": 97,
+    "itemName": "光の道標戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "第１部５章の戦闘BGMのディスク。所持しているとオフィスの改善度が1上がる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_main5_battle",
+        "bgmTitleKey": "TITLE_BGM_MAIN5_BATTLE_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "98": {
+    "itemId": 98,
+    "itemName": "ゴールデン・スピリッツ戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "暁のゴールデン・スピリッツの戦闘BGMのディスク。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_akatsuki_battle",
+        "bgmTitleKey": "TITLE_BGM_AKATSUKI_BATTLE_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "99": {
+    "itemId": 99,
+    "itemName": "オフィスルーム",
+    "resourceName": "icon_bg_battle_office",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景を元の背景に戻すアイテム。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_office",
+        "bgTitleKey": "TITLE_BG_BATTLE_OFFICE_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
+  "100": {
+    "itemId": 100,
+    "itemName": "トレーニングルームホログラム",
+    "resourceName": "icon_bg_battle_trainingroom",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景にレストランの映像を投影するホログラム。所持しているとオフィスの改善度が1上がる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_trainingroom",
+        "bgTitleKey": "TITLE_BG_BATTLE_TRAININGROOM_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
+  "101": {
+    "itemId": 101,
+    "itemName": "レストランホログラム",
+    "resourceName": "icon_bg_battle_restaurant",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景にレストランの映像を投影するホログラム。所持しているとオフィスの改善度が1上がる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_restaurant",
+        "bgTitleKey": "TITLE_BG_BATTLE_RESTAURANT_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
+  "102": {
+    "itemId": 102,
+    "itemName": "温泉ホログラム",
+    "resourceName": "icon_bg_battle_garden_japanese",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景に温泉の映像を投影するホログラム。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_garden_japanese",
+        "bgTitleKey": "TITLE_BG_BATTLE_GARDEN_JAPANESE_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
+  "108": {
+    "itemId": 108,
+    "itemName": "シルバーメダルの技術書",
+    "resourceName": "equipskill_silver_medal",
+    "rarity": 3,
+    "itemType": 32768,
+    "description": "「メダル獲得クエスト」でシルバーメダルを消費スタミナ×1%の確率で追加ドロップする「シルバーメダルの獲得法」を習得できる技術書。",
+    "effect": [
+      {
+        "class": "SkillLearnItemEffect",
+        "skillId": 7000026
+      }
+    ],
+    "limitValue": 0
+  },
+  "109": {
+    "itemId": 109,
+    "itemName": "ゴールドメダルの技術書",
+    "resourceName": "equipskill_gold_medal",
+    "rarity": 3,
+    "itemType": 32768,
+    "description": "「メダル獲得クエスト」でゴールドメダルを消費スタミナ×0.2%の確率で追加ドロップする「ゴールドメダルの獲得法」を習得できる技術書。",
+    "effect": [
+      {
+        "class": "SkillLearnItemEffect",
+        "skillId": 7000027
+      }
+    ],
+    "limitValue": 0
+  },
+  "110": {
+    "itemId": 110,
+    "itemName": "クオーツの技術書",
+    "resourceName": "equipskill_quartz",
+    "rarity": 3,
+    "itemType": 32768,
+    "description": "「パラレル・クオーツ獲得クエスト」でパラレル・クオーツを消費スタミナ×0.5%の確率で追加ドロップする「クオーツの探索法」を習得できる技術書。",
+    "effect": [
+      {
+        "class": "SkillLearnItemEffect",
+        "skillId": 7000028
+      }
+    ],
+    "limitValue": 0
+  },
+  "111": {
+    "itemId": 111,
+    "itemName": "小覚醒石の技術書",
+    "resourceName": "equipskill_small_stone",
+    "rarity": 3,
+    "itemType": 32768,
+    "description": "「ランクアップアイテムクエスト」でクエストの属性の小覚醒石を消費スタミナ×2%の確率で追加ドロップする「小覚醒石の探索法」を習得できる技術書。",
+    "effect": [
+      {
+        "class": "SkillLearnItemEffect",
+        "skillId": 7000029
+      }
+    ],
+    "limitValue": 0
+  },
+  "112": {
+    "itemId": 112,
+    "itemName": "中覚醒石の技術書",
+    "resourceName": "equipskill_middle_stone",
+    "rarity": 3,
+    "itemType": 32768,
+    "description": "「ランクアップアイテムクエスト」でクエストの属性の中覚醒石を消費スタミナ×1%の確率で追加ドロップする「中覚醒石の探索法」を習得できる技術書。",
+    "effect": [
+      {
+        "class": "SkillLearnItemEffect",
+        "skillId": 7000030
+      }
+    ],
+    "limitValue": 0
+  },
+  "113": {
+    "itemId": 113,
+    "itemName": "大覚醒の技術書",
+    "resourceName": "equipskill_large_stone",
+    "rarity": 3,
+    "itemType": 32768,
+    "description": "「ランクアップアイテムクエスト」でクエストの属性の大覚醒石を消費スタミナ×0.5%の確率で追加ドロップする「大覚醒石の探索法」を習得できる技術書。",
+    "effect": [
+      {
+        "class": "SkillLearnItemEffect",
+        "skillId": 7000031
+      }
+    ],
+    "limitValue": 0
+  },
+  "114": {
+    "itemId": 114,
+    "itemName": "熱湯戦線戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "極楽！聖夜の熱湯戦線の戦闘BGMのディスク。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_yukemuri_battle",
+        "bgmTitleKey": "TITLE_BGM_YUKEMURI_BATTLE_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "115": {
+    "itemId": 115,
+    "itemName": "熱湯戦線ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "極楽！聖夜の熱湯戦線のBGMのディスク。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_yukemuri_adv",
+        "bgmTitleKey": "TITLE_BGM_YUKEMURI_ADV_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "116": {
+    "itemId": 116,
+    "itemName": "荒野ホログラム",
+    "resourceName": "icon_bg_battle_wasteland",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景に荒野の映像を投影するホログラム。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_wasteland",
+        "bgTitleKey": "TITLE_BG_BATTLE_WASTELAND_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",

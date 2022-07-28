@@ -19021,7 +19021,7 @@
   "809": {
     "skillEffectId": 809,
     "skillEffectJson": {
-      "turn": 1,
+      "turn": 3,
       "count": 0,
       "effects": [
         {
@@ -19031,15 +19031,731 @@
           }
         }
       ],
-      "filename": "",
+      "filename": "b_skill_special",
       "statusId": 122,
       "canDispel": false,
       "filterIds": [],
       "parameter": false,
       "description": "2部1章ボス用システム効果",
       "isImmediate": false,
-      "persistence": true,
+      "persistence": false,
       "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "810": {
+    "skillEffectId": 810,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "IncreaseRelation",
+          "parameter": {
+            "value": 3,
+            "questIds": [
+              203001,
+              203002,
+              203003,
+              203004,
+              203005,
+              203006,
+              203007
+            ],
+            "isPercent": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "「トレーニングバンド獲得クエスト」での獲得リレーション+3%",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "811": {
+    "skillEffectId": 811,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddDropItem",
+          "parameter": {
+            "value": 1,
+            "itemId": 12,
+            "baseProb": 2,
+            "questIds": [
+              202001,
+              202002,
+              202003,
+              202016,
+              202017,
+              202018
+            ]
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "火の小覚醒石をスタミナ×2%の確率で追加ドロップ",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "812": {
+    "skillEffectId": 812,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddDropItem",
+          "parameter": {
+            "value": 1,
+            "itemId": 13,
+            "baseProb": 1,
+            "questIds": [
+              202001,
+              202002,
+              202003,
+              202016,
+              202017,
+              202018
+            ]
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "火の中覚醒石をスタミナ×1%の確率で追加ドロップ",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "813": {
+    "skillEffectId": 813,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddDropItem",
+          "parameter": {
+            "value": 1,
+            "itemId": 15,
+            "baseProb": 2,
+            "questIds": [
+              202004,
+              202005,
+              202006,
+              202019,
+              202020,
+              202021
+            ]
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "水の小覚醒石をスタミナ×2%の確率で追加ドロップ",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "814": {
+    "skillEffectId": 814,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddDropItem",
+          "parameter": {
+            "value": 1,
+            "itemId": 16,
+            "baseProb": 1,
+            "questIds": [
+              202004,
+              202005,
+              202006,
+              202019,
+              202020,
+              202021
+            ]
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "水の中覚醒石をスタミナ×1%の確率で追加ドロップ",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "815": {
+    "skillEffectId": 815,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddDropItem",
+          "parameter": {
+            "value": 1,
+            "itemId": 18,
+            "baseProb": 2,
+            "questIds": [
+              202007,
+              202008,
+              202009,
+              202022,
+              202023,
+              202024
+            ]
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "木の小覚醒石をスタミナ×2%の確率で追加ドロップ",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "816": {
+    "skillEffectId": 816,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddDropItem",
+          "parameter": {
+            "value": 1,
+            "itemId": 19,
+            "baseProb": 1,
+            "questIds": [
+              202007,
+              202008,
+              202009,
+              202022,
+              202023,
+              202024
+            ]
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "木の中覚醒石をスタミナ×1%の確率で追加ドロップ",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "817": {
+    "skillEffectId": 817,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddDropItem",
+          "parameter": {
+            "value": 1,
+            "itemId": 21,
+            "baseProb": 2,
+            "questIds": [
+              202010,
+              202011,
+              202012,
+              202025,
+              202026,
+              202027
+            ]
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "光の小覚醒石をスタミナ×2%の確率で追加ドロップ",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "818": {
+    "skillEffectId": 818,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddDropItem",
+          "parameter": {
+            "value": 1,
+            "itemId": 22,
+            "baseProb": 1,
+            "questIds": [
+              202010,
+              202011,
+              202012,
+              202025,
+              202026,
+              202027
+            ]
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "光の中覚醒石をスタミナ×1%の確率で追加ドロップ",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "819": {
+    "skillEffectId": 819,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddDropItem",
+          "parameter": {
+            "value": 1,
+            "itemId": 24,
+            "baseProb": 2,
+            "questIds": [
+              202013,
+              202014,
+              202015,
+              202028,
+              202029,
+              202030
+            ]
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "影の小覚醒石をスタミナ×2%の確率で追加ドロップ",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "820": {
+    "skillEffectId": 820,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddDropItem",
+          "parameter": {
+            "value": 1,
+            "itemId": 25,
+            "baseProb": 1,
+            "questIds": [
+              202013,
+              202014,
+              202015,
+              202028,
+              202029,
+              202030
+            ]
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "影の中覚醒石をスタミナ×1%の確率で追加ドロップ",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "821": {
+    "skillEffectId": 821,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddDropItem",
+          "parameter": {
+            "value": 1,
+            "itemId": 14,
+            "baseProb": 0.5,
+            "questIds": [
+              202001,
+              202002,
+              202003,
+              202016,
+              202017,
+              202018
+            ]
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "火の大覚醒石をスタミナ×0.5%の確率で追加ドロップ",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "822": {
+    "skillEffectId": 822,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddDropItem",
+          "parameter": {
+            "value": 1,
+            "itemId": 17,
+            "baseProb": 0.5,
+            "questIds": [
+              202004,
+              202005,
+              202006,
+              202019,
+              202020,
+              202021
+            ]
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "水の大覚醒石をスタミナ×0.5%の確率で追加ドロップ",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "823": {
+    "skillEffectId": 823,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddDropItem",
+          "parameter": {
+            "value": 1,
+            "itemId": 20,
+            "baseProb": 0.5,
+            "questIds": [
+              202007,
+              202008,
+              202009,
+              202022,
+              202023,
+              202024
+            ]
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "木の大覚醒石をスタミナ×0.5%の確率で追加ドロップ",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "824": {
+    "skillEffectId": 824,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddDropItem",
+          "parameter": {
+            "value": 1,
+            "itemId": 23,
+            "baseProb": 0.5,
+            "questIds": [
+              202010,
+              202011,
+              202012,
+              202025,
+              202026,
+              202027
+            ]
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "光の大覚醒石をスタミナ×0.5%の確率で追加ドロップ",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "825": {
+    "skillEffectId": 825,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddDropItem",
+          "parameter": {
+            "value": 1,
+            "itemId": 26,
+            "baseProb": 0.5,
+            "questIds": [
+              202013,
+              202014,
+              202015,
+              202028,
+              202029,
+              202030
+            ]
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "影の大覚醒石をスタミナ×0.5%の確率で追加ドロップ",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "826": {
+    "skillEffectId": 826,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddDropItem",
+          "parameter": {
+            "value": 1,
+            "itemId": 27,
+            "baseProb": 1,
+            "questIds": [
+              205001,
+              205002,
+              205003
+            ]
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "「メダル獲得クエスト」でシルバーメダルをスタミナ×1%の確率で追加ドロップする。",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "827": {
+    "skillEffectId": 827,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddDropItem",
+          "parameter": {
+            "value": 1,
+            "itemId": 28,
+            "baseProb": 0.2,
+            "questIds": [
+              205001,
+              205002,
+              205003
+            ]
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "「メダル獲得クエスト」でゴールドメダルをスタミナ×0.2%の確率で追加ドロップする。",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "828": {
+    "skillEffectId": 828,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddDropItem",
+          "parameter": {
+            "value": 1,
+            "itemId": 59,
+            "baseProb": 0.5,
+            "questIds": [
+              206001,
+              206002
+            ]
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "「パラレル・クオーツ獲得クエスト」でパラレル・クオーツをスタミナ×1%の確率で追加ドロップする。",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "829": {
+    "skillEffectId": 829,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "IncreaseExp",
+          "parameter": {
+            "value": 3,
+            "questIds": [
+              201001,
+              201002,
+              201003,
+              201004,
+              201005,
+              201006,
+              201007
+            ],
+            "isPercent": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "「EXPアイテムクエスト」獲得Exp+3%",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "isDisplayPersistenceStatus": false
+    }
+  },
+  "830": {
+    "skillEffectId": 830,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "DamageLimit",
+          "parameter": {
+            "value": 1000
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":122,\"class\":\"EnemySystemStatusNumberDontExecTrigger\"}]",
+      "filename": null,
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "強制干渉が付与されていない時ダメージ上限1000",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
       "isDisplayPersistenceStatus": false
     }
   }
