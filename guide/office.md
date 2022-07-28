@@ -18,6 +18,7 @@ you can open up functions such as having a sidekick accompany the sales person, 
 ### Approval Process
 
 In the office you can apply for an approval process, which is your request to the president to improve the company.
+
 By applying an approval process, you can release new functions or obtain new items.
 
 Two special items are needed to do this, the {% include item-icon.html id=79 %} Company Seal and {% include item-icon.html id=78 %} Stamp of Approval.
@@ -29,6 +30,7 @@ For {% include item-icon.html id=79 %} Company Seal, it will be from mission rew
 ### Office improvement and atmosphere level
 
 This level indicate how well an office has been improved.
+
 Office improvement level is raised by passing some certain approval process, 
 while office atmosphere level will be raised after office improvement level reaches certain number.
 
@@ -40,7 +42,8 @@ You can purchase new skill manual by going through the approval process.
 
 The new skill manual will give passive that increase exp gained or increase amount of items gained when going to a specific quest.
 
-The new passive will not overlap with existing same effect passive, only the highest value will take effect, 
+The new passive will not overlap with existing same effect passive, only the highest value will take effect.
+
 Eg: when equiping Huckle's passive with 1% exp bonus and the new passive with 3% exp bonus together, the exp bonus will be 3% if the condition of the new passive is met, else it will be 1% bonus.
 
 You can read [Skill Manual](/guide/skill_manual/) for more info.
