@@ -57,6 +57,11 @@ The Office BGM can be changed by having the BGM Disk, which can be obtained by a
 
 The Office Background can be changed by possessing a Background Hologram, which can be obtained by approval process or from the limited-time event shop.
 
+### Office Mission
+
+You can check and receive the contents of "Office Missions" from the office.
+
+As rewards for accomplishing Office Missions, you can obtain {% include item-icon.html id=79 %} Company Seal and {% include item-icon.html id=78 %} Stamp of Approval.
 
 
 
