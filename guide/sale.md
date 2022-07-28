@@ -74,7 +74,7 @@ Stopping an ongoing sale will instantly complete the sale, but with no rewards.
 
 ## Sidekick Accompaniment
 
-As of ver 2.5.0 sidekick can accompany heroes on sale, each sidekick has their own bonus you can check it in game.
+As of ver 2.5.0 after approval process from the office feature, sidekick can accompany heroes on sale, each sidekick has their own bonus you can check it in game.
 
 ## Sale Report
 
