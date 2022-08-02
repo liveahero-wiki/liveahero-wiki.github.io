@@ -973,7 +973,7 @@
     "resourceName": "icon_bg_battle_trainingroom",
     "rarity": 3,
     "itemType": 131072,
-    "description": "オフィスの背景にレストランの映像を投影するホログラム。所持しているとオフィスの改善度が1上がる。",
+    "description": "オフィスの背景にトレーニングルームの映像を投影するホログラム。所持しているとオフィスの改善度が1上がる。",
     "effect": [
       {
         "class": "OfficeWallpaperItemEffect",
@@ -1149,6 +1149,54 @@
         "class": "OfficeWallpaperItemEffect",
         "bgAddress": "bg_battle_wasteland",
         "bgTitleKey": "TITLE_BG_BATTLE_WASTELAND_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
+  "117": {
+    "itemId": 117,
+    "itemName": "チェイサーズ戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "スペース・タクシー・チェイサーズの戦闘BGMのディスク。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_chasers_battle",
+        "bgmTitleKey": "TITLE_BGM_CHASERS_BATTLE_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "118": {
+    "itemId": 118,
+    "itemName": "チェイサーズディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "スペース・タクシー・チェイサーズのBGMのディスク。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_chasers_adv",
+        "bgmTitleKey": "TITLE_BGM_CHASERS_ADV_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "119": {
+    "itemId": 119,
+    "itemName": "戦場ホログラム",
+    "resourceName": "icon_bg_battle_warzone_day_cenotaph",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景に戦場の映像を投影するホログラム。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_warzone_day_cenotaph",
+        "bgTitleKey": "TITLE_BG_BATTLE_WARZONE_WALLPAPER"
       }
     ],
     "limitValue": 0
