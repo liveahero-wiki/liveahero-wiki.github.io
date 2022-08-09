@@ -103,6 +103,75 @@ Here is a list of this event's limited time Missions:
 | 5  | Finish any rank event quest 50 times | 1 {% include item-icon.html id=34 %}    |
 | 6  | Finish event sales 10 times | 1 {% include item-icon.html id=34 %}    |
 
+### Score Attack Quests
+
+Score Attack Quest is a quest mode with waves of enemy, for this event's score attack quest there will be a score system where rewards can be claimed based on final score in the quest, the score is graded for each wave with conditions such as clear bonus, turn bonus, and damage score.
+
+{% include quest-group.html chapterId=487 %}
+
+#### Enemy skills:
+
+Listed enemy skill below is enemy skills at the 3rd phase:
+
+##### Wood Merc's skills
+
+{% include skill-table-manual.html skillIds="4066102,4066108,4066109" equipmentSkills="6000009,6070003" %}
+
+##### Light Merc's skills
+
+{% include skill-table-manual.html skillIds="4066102,4066112" equipmentSkills="6070005,6070002" %}
+
+##### Shadow Merc's skills
+
+{% include skill-table-manual.html skillIds="4066110,4066113" equipmentSkills="6070005,6070002" %}
+
+Here is a list of score attack quest rewards based on the score:
+
+| No  | Score      | Rewards      |
+|----|-----------------------------------------------------------|----------------|
+| 1  | 4000 | 2000 {% include item.html id=11 %}    |
+| 2  | 8000 | 2000 {% include item.html id=30 %}     |
+| 3  | 12000 | 1 {% include item.html id=32 %}    |
+| 4  | 16000 | 1 {% include item.html id=33 %}    |
+| 5  | 20000 | 1 {% include item.html id=27 %}    |
+| 6  | 24000 | 2000 {% include item.html id=11 %}    |
+| 7  | 28000 | 2000 {% include item.html id=30 %}     |
+| 8  | 32000 | 1 {% include item.html id=32 %}    |
+| 9  | 36000 | 1 {% include item.html id=33 %}    |
+| 10 | 40000 | 1 {% include item.html id=28 %}    |
+| 11 | 44000 | 2000 {% include item.html id=11 %}    |
+| 12 | 48000 | 1500 {% include item.html id=35 %}    |
+| 13 | 52000 | 1 {% include item.html id=32 %}    |
+| 14  | 56000 | 1 {% include item.html id=33 %}    |
+| 15  | 60000 | 1 {% include item.html id=34 %}    |
+| 16  | 64000 | 1500 {% include item.html id=35 %}     |
+| 17  | 68000 | 2000 {% include item.html id=11 %}    |
+| 18  | 72000 | 2000 {% include item.html id=30 %}    |
+| 19 | 76000 | 1 {% include item.html id=32 %}   |
+| 20  | 80000 | 1 {% include item.html id=33 %}    |
+| 21  | 84000 | 1500 {% include item.html id=35 %}    |
+| 22 | 88000 | 4 {% include item.html id=59 %}     |
+| 23  | 92000 | 1500 {% include item.html id=35 %}    |
+| 24  | 96000 | 2000 {% include item.html id=30 %}    |
+| 25  | 100000 | 1 {% include item.html id=29 %}    |
+| 26  | 104000 | 1500 {% include item.html id=35 %}   |
+| 27  | 108000 | 2000 {% include item.html id=30 %}    |
+| 28  | 112000 | 1 {% include item.html id=32 %}    |
+| 29  | 116000 | 1500 {% include item.html id=35 %}    |
+| 30  | 120000 | 4 {% include item.html id=59 %}    |
+| 31 | 126000 | 1 {% include item.html id=34 %}    |
+| 32 | 132000 | 1500 {% include item.html id=35 %}    |
+| 33  | 138000 | 2000 {% include item.html id=11 %}    |
+| 34 | 144000 | 1 {% include item.html id=33 %}    |
+| 35 | 150000 | 4 {% include item.html id=59 %}    |
+| 36 | 154000 | 1500 {% include item.html id=35 %}    |
+| 37  | 158000 | 1 {% include item.html id=32 %}    |
+| 38 | 162000 | 1 {% include item.html id=33 %}    |
+| 39 | 166000 | 1500 {% include item.html id=35 %}    |
+| 40 | 170000 | 1 {% include item.html id=10 %}    |
+
+
+
 ## Event Shop
 
 {% include shop-table.html id=26 %}
