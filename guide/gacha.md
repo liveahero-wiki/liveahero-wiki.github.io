@@ -22,7 +22,7 @@ Friend Point gacha uses {% include item-icon.html id=42 %} friend Points to obta
 Below is the drop rates for possible items tested empirically.
 > Credits for the data: Chase
 
-#### Rates without Parallel Quartz (before Oct 30th 2021)
+#### Original rates (before Sept 30th 2021)
 
 sample size: 10,000 multis / 10,000,000 friend points
 
@@ -56,18 +56,18 @@ See a breakdown for each item every 1,000 multis (10,000 slots per row) [^bigtab
 
 #### Rates with Parallel Quartz (after Sept 30th 2021)
 
-sample size: 20,000 multis / 20,000,000 friend points
+sample size: 30,000 multis / 30,000,000 friend points
 
 | Items | Drop rates |
 |-------|------------|
-| {% include item-icon.html id=219991 %} | 0.0055% |
-| {% include item-icon.html id=59 %} | 1.0025% |
-| {% include item-icon.html id=33 %} | 0.6245% |
-| {% include item-icon.html id=32 %} | 1.3080% |
-| {% include item-icon.html id=31 %} | 3.9655% |
-| {% include item-icon.html id=13 %} {% include item-icon.html id=16 %} {% include item-icon.html id=19 %} {% include item-icon.html id=22 %} {% include item-icon.html id=25 %} | 0.8375% |
-| {% include item-icon.html id=12 %} {% include item-icon.html id=15 %} {% include item-icon.html id=18 %} {% include item-icon.html id=21 %} {% include item-icon.html id=24 %} | 1.7340% |
-| {% include item-icon.html id=11 %} {% include item-icon.html id=30 %} {% include item-icon.html id=35 %} | 90.5225% |
+| {% include item-icon.html id=219991 %} | 0.0070% |
+| {% include item-icon.html id=59 %} | 0.9983% |
+| {% include item-icon.html id=33 %} | 0.6443% |
+| {% include item-icon.html id=32 %} | 1.3013% |
+| {% include item-icon.html id=31 %} | 3.9453% |
+| {% include item-icon.html id=13 %} {% include item-icon.html id=16 %} {% include item-icon.html id=19 %} {% include item-icon.html id=22 %} {% include item-icon.html id=25 %} | 0.8486% |
+| {% include item-icon.html id=12 %} {% include item-icon.html id=15 %} {% include item-icon.html id=18 %} {% include item-icon.html id=21 %} {% include item-icon.html id=24 %} | 1.7046% |
+| {% include item-icon.html id=11 %} {% include item-icon.html id=30 %} {% include item-icon.html id=35 %} | 90.5503% |
 
 ## Duplication System
 
@@ -79,7 +79,7 @@ sample size: 20,000 multis / 20,000,000 friend points
 <tr>
 <td>
   <img src="/cdn/Sprite/item_piece_akashi.png" loading="lazy">
-  <img src="/cdn/Sprite/item_piece_sui.png" loading="lazy">
+  <img src="/cdn/Sprite/item_piece_mokdai.png" loading="lazy">
 </td>
 <td rowspan="2" style="width: 33%">
   <img style="display: block; margin: auto" src="/cdn/Sprite/item_recordcube.png"  loading="lazy">
@@ -92,8 +92,8 @@ sample size: 20,000 multis / 20,000,000 friend points
 </tr>
 <tr>
 <td>
-  <img src="/cdn/Sprite/item_heart_gomeisa.png" loading="lazy">
   <img src="/cdn/Sprite/item_heart_huckle.png" loading="lazy">
+  <img src="/cdn/Sprite/item_heart_exio.png" loading="lazy">
 </td>
 <td>
   <img src="/cdn/Sprite/item_genericheart_rank3.png" loading="lazy">
@@ -116,8 +116,8 @@ The "Hero's Memories" can be used to increase the "Hero's Fan Count". Max fan co
 |-|-|
 | {% include item-icon.html id=110431 %} Wood Wolfman Hero's Memories (1 ☆) x 1 | +1 |
 | {% include item-icon.html id=110011 %} Akashi Hero's Memories (3 ☆) x 1 | +10 |
-| {% include item-icon.html id=110131 %} Toshu Hero's Memories (4 ☆) x 1 | +50 |
-| {% include item-icon.html id=110151 %} Polaris Mask Hero's Memories(5 ☆) x 1 | +200 |
+| {% include item-icon.html id=110041 %} Ryekie Hero's Memories (4 ☆) x 1 | +50 |
+| {% include item-icon.html id=110331 %} Gomeisa Hero's Memories(5 ☆) x 1 | +200 |
 
 The "Sidekick's Mind" can be used to increase the "Sidekick's Limit Breakthrough". Each item will increase the level cap by 10 regardless of character's rarity. Max level is 100.
 
@@ -128,10 +128,10 @@ Record Cubes can be obtained by exchanging Hero's Memories or Sidekick's Mind of
 | Original Items | Record Cubes that can be exchanged |
 |-|-|
 | {% include item-icon.html id=110011 %} Akashi Hero's Memories (3 ☆) x 1 | {% include item-icon.html id=40 %} x 1  |
-| {% include item-icon.html id=110131 %} Toshu Hero's Memories (4 ☆) x 1 | {% include item-icon.html id=40 %} x 5  |
-| {% include item-icon.html id=110151 %} Polaris Mask Hero's Memories (5 ☆) x 1 | {% include item-icon.html id=40 %} x 20 |
+| {% include item-icon.html id=110041 %} Ryekie Hero's Memories (4 ☆) x 1 | {% include item-icon.html id=40 %} x 5  |
+| {% include item-icon.html id=110331 %} Gomeisa Hero's Memories (5 ☆) x 1 | {% include item-icon.html id=40 %} x 20 |
 | {% include item-icon.html id=210041 %} Ryekie Sidekick's Mind (3 ☆) x 1 | {% include item-icon.html id=40 %} x 1  |
-| {% include item-icon.html id=210341 %} Hucke Sidekick's Mind (4 ☆) x 1 | {% include item-icon.html id=40 %} x 5  |
+| {% include item-icon.html id=210011 %} Akashi Sidekick's Mind (4 ☆) x 1 | {% include item-icon.html id=40 %} x 5  |
 
 Hero's Memories or Sidekick's Mind of rank 1 or 2 can't be exchanged for Record Cubes.
 
