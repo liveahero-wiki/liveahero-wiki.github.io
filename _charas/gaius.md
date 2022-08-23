@@ -30,3 +30,10 @@ He has a tattoo-esque pattern on his body, and often wears a wetsuit to hide it 
 
 {% include voice-table.html resourceName="gaius"
 %}
+
+## Notes
+
+- His skill name is from Latin language:
+  - Sagitta Aqua : Water arrow
+  - Fluctus Caeruleum  : Azure Wave
+  - Lacus Serpens Ira : Lake Serpent Wrath
