@@ -1201,6 +1201,64 @@
     ],
     "limitValue": 0
   },
+  "120": {
+    "itemId": 120,
+    "itemName": "オーパーツ",
+    "resourceName": "LostAncients2208_exchange01",
+    "rarity": 0,
+    "itemType": 512,
+    "description": "湖に沈んでいる古代超文明の遺産。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "121": {
+    "itemId": 121,
+    "itemName": "ロストエンシェンツ戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "蒼碧のロスト・エンシェンツの戦闘BGMのディスク。オフィスのBGMを変更する。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_lostancients_battle1",
+        "bgmTitleKey": "TITLE_BGM_LOSTANCIENTS_BATTLE1_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "123": {
+    "itemId": 123,
+    "itemName": "ロストエンシェンツディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "蒼碧のロスト・エンシェンツの湖畔BGMのディスク。オフィスのBGMを変更する。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_lostancients_adv1",
+        "bgmTitleKey": "TITLE_BGM_LOSTANCIENTS_ADV1_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "125": {
+    "itemId": 125,
+    "itemName": "湖の浅瀬ホログラム",
+    "resourceName": "icon_bg_battle_underwater_day",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景に湖の浅瀬の映像を投影するホログラム。オフィスで背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_underwater_day",
+        "bgTitleKey": "TITLE_BG_BATTLE_UNDERWATER_DAY_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -1978,6 +2036,27 @@
     ],
     "limitValue": 0
   },
+  "110252": {
+    "itemId": 110252,
+    "itemName": "激流のアンドリューの記憶片",
+    "resourceName": "piece_andrewLostAncients2208",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "激流のアンドリューのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 10252
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
   "110261": {
     "itemId": 110261,
     "itemName": "アルキバの記憶片",
@@ -2281,6 +2360,27 @@
         "addFan": 10,
         "rarity": 0,
         "stockId": 10531
+      }
+    ],
+    "limitValue": 0
+  },
+  "110532": {
+    "itemId": 110532,
+    "itemName": "潜遊のヒサキの記憶片",
+    "resourceName": "piece_hisakiLostAncients2208",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "潜遊のヒサキのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10532
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
       }
     ],
     "limitValue": 0
@@ -2786,6 +2886,27 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "111151": {
+    "itemId": 111151,
+    "itemName": "ガイウスの記憶片",
+    "resourceName": "piece_gaius",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "ガイウスのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 11151
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
       }
     ],
     "limitValue": 0
@@ -4098,6 +4219,26 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "211151": {
+    "itemId": 211151,
+    "itemName": "ガイウスの心",
+    "resourceName": "heart_gaius",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "ガイウスのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 11151
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
       }
     ],
     "limitValue": 0
