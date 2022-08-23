@@ -63,6 +63,9 @@ You can check and receive the contents of "Office Missions" from the office.
 
 As rewards for accomplishing Office Missions, you can obtain {% include item-icon.html id=79 %} Company Seal and {% include item-icon.html id=78 %} Stamp of Approval.
 
+### Present
+
+Every 24 hours one of the hero in the office will give you a present, present seems to be randomly chosen between {% include item-icon.html id=11 %} Exp, {% include item-icon.html id=30 %} Training Band, {% include item-icon.html id=35 %} Lah, and {% include item-icon.html id=34 %} Stamina drink.
 
 
 
