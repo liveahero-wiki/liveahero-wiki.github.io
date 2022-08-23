@@ -24,7 +24,7 @@ Wishing to assert his existence and be recognized by as many people as possible 
 {% endcapture %}
 {% include hero-infobox.html stockId=10531 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10532 extra_sprites="fg_andrewLostAncients2208_h02_skin2" %}
+{% include hero-infobox.html stockId=10532 extra_sprites="fg_hisakiLostAncients2208_h02_skin2" %}
 
 {% capture BIO_S01 %}
 A young man working at a medium sized factory of a heavy industry equipment manufacturer.
