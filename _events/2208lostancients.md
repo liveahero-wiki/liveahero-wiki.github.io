@@ -1,15 +1,15 @@
 ---
-title: Lost Ancients of Azure
+title: Lost Ancients of Blue
 jp_title: 蒼碧のロスト・エンシェンツ
 news_link: https://live-a-hero.jp/info/4352
-banner_image: banner_info_LostAncients2208.png
+banner_image: banner_info_LostAncients2208.jpg
 gacha: true
 event_start_time: 2022-08-23T20:00:00+09
 event_end_time: 2022-09-20T14:00:00+09
 farm_start_time: 2022-08-23T20:00:00+09
 farm_end_time: 2022-09-13T20:00:00+09
 sales_start_time: 2022-08-23T20:00:00+09
-sales_end_time:  2022-09-20T14:00:00+09
+sales_end_time:  2022-09-13T14:00:00+09
 ---
 
 * this will be unordered
