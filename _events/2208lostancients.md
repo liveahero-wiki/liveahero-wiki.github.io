@@ -17,6 +17,22 @@ sales_end_time:  2022-09-13T14:00:00+09
 
 ## Event Preview
 
+One day in the heat of summer.
+
+You and Melide are assigned by Huckle for a business affairs, going to a tourist attraction on a certain planet.
+
+A huge lake in there was rumored to have sightings of a legendary UMA.
+
+A mysterious ruins that suddenly appeared on the surface of the lake.
+
+The both of you are tasked to protect this ruins, assisting in the investigation is the genius inventor,
+an android who works at the transportation company that handle the planet's logistic,
+and local diving instructor that acts as a guide.
+
+It should have been just a patrol around the refreshing site, but the heroes inadvertently opened the door that leads to the truth…
+
+> UMA = Unidentified Mysterious Animal
+
 ## Event Banners
 
 This Event's gacha summon includes time-limited variants {% chara_link Hisaki|h2 %} (Hero), {% chara_link Andrew|h2 %} (Hero), {% chara_link Melide %} (Sidekick) , and a new character {% chara_link Gaius %} (Hero & Sidekick).
