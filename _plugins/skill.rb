@@ -197,6 +197,8 @@ module LahWiki
         return "each ally"
       when 13
         return "ally with highest ATK"
+      when 14
+        return "all allies except self"
       end
       return "Unknown target #{target}"
     end

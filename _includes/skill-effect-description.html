@@ -2,6 +2,7 @@
 {% assign effectParent = site.data.SkillEffectMaster[eid] %}
 {% assign skillEffectJson = effectParent.skillEffectJson %}
 {% assign target = include.skillEffect.effectTarget | skill_target %}
+{% assign skip_effect = false %}
 
 {{ include.skillEffect.triggerJson | skill_trigger: include.timing }}
 {% if skillEffectJson.trigger %}{{ skillEffectJson.trigger | skill_trigger_json: include.timing }}{% endif %}
@@ -91,6 +92,10 @@ ATK Up by {{ effect.parameter.value }}% to {{ effect.parameter.target | skill_ta
 (If there are overlapping effects with the same type and range, only the one with highest value will be applied)
 {% when "Penetration" %}
 Make {{ target }} ignore Taunt
+{% when "TargetMark" %}
+{{ effect.parameter.target | skill_target }} will have higher chance of being targeted when opponent is in auto action Mode
+{% when "NoneEffectElapseTurnDamageAndTurnEnd" %}
+Doesn't seem to do anything (NoneEffectElapseTurnDamageAndTurnEnd)
 {% when "AllAttack" %}
 View-costing skills for {{ target }} now target all allies/enemies
 {% when "RandomTeamAttack" %}
