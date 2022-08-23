@@ -26,7 +26,28 @@ Until the day he become the same as them, he will continue fighting to protect t
 
 {% include hero-infobox.html stockId=10251 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10252 extra_sprites="fg_andrewLostAncients2208_h02_skin2" %}
+{% capture BIO_H01 %}
+During his patrol near a lake, Andrew earned a newfound hero suit that allows him to do underwater tasks.
+
+Although without water jets, by kicking the water with his feet, Andrew is free to make laps around any body of water with ease. 
+
+And with parallel weapons covering the mechanical parts of both arms, he is able to convert ether into energy, creating water currents and enabling violent knuckle attacks.
+
+His body, which has  characteristics of both a machine and a human body, is a physical manifestation of Andrew's newfound determination.
+{% endcapture %}
+
+{% capture BIO_H02 %}
+There is a bond between robots and organics that transcends the gap between the two. 
+
+Andrew came to know this when he came into contact with the "soul" of livjng beings, where the fact of his own cessation of functionality caused grief for others. 
+
+Andrew's thought process changed, and he decided to protect that bond. 
+
+No one knows if this behavior can be called a "soul," but Andrew began to search for what only he, a mechanical life form, can do in his new form.
+
+While carefully embracing the massive overflow of errors that he is unable to process.
+{% endcapture %}
+{% include hero-infobox.html stockId=10252 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_andrewLostAncients2208_h02_skin2" %}
 
 {% capture BIO_S01 %}
 A truck driver for an interplanetary freight forwarding company.
