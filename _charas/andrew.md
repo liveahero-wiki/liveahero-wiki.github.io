@@ -89,4 +89,4 @@ TRAINED = "My body's heating up…!"
 
 %}
 
-{% include voice-table.html resourceName="andrewLostAncient2208" %}
+{% include voice-table.html resourceName="andrewLostAncients2208" %}
