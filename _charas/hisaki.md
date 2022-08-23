@@ -1,6 +1,8 @@
 ---
 title: Hisaki
 characterId: 53
+h2:
+  title: "\"Joyful Diver\" Hisaki"
 ---
 
 {% capture BIO_H01 %}
@@ -21,6 +23,8 @@ This personality was shaped by his defiance against the people around him who ke
 Wishing to assert his existence and be recognized by as many people as possible .....he continues to search for the development of cutting-edge technology that will surprise everyone.
 {% endcapture %}
 {% include hero-infobox.html stockId=10531 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+
+{% include hero-infobox.html stockId=10532 %}
 
 {% capture BIO_S01 %}
 A young man working at a medium sized factory of a heavy industry equipment manufacturer.

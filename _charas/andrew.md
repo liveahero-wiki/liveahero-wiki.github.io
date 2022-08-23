@@ -1,6 +1,8 @@
 ---
 title: Andrew
 characterId: 25
+h2:
+  title: "\"The Riptide\" Andrew"
 ---
 {% capture BIO_H01 %}
 His desire to be a living human is most strongly expressed in his appearance when he transforms into a hero. 
@@ -23,6 +25,8 @@ Until the day he become the same as them, he will continue fighting to protect t
 {% endcapture %}
 
 {% include hero-infobox.html stockId=10251 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+
+{% include hero-infobox.html stockId=10252 %}
 
 {% capture BIO_S01 %}
 A truck driver for an interplanetary freight forwarding company.
