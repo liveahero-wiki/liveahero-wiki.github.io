@@ -72,6 +72,8 @@ EVENTB = "Heheh, I'm really popular you know!<br>At valentine's I usually get so
 
 %}
 
+{% include voice-table.html resourceName="hisakiLostAncient2208" %}
+
 ## Notes
 
 - His full name is Hisaki Yodobashi (淀橋 ヒサキ)
