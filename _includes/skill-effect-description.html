@@ -56,7 +56,7 @@ Skill View cost {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %
 {% when "Cure" %}
 Remove {{ effect.parameter.value }} debuff(s) from {{ target }}
 {% when "RegistDebuff" %}
-{{ effect.parameter.value }}% chance to resist {% if effect.parameter.statusId == 0 %}one debuff{% else %}{{ effect.parameter.statusId | status_description }}{% endif %} for {{ target }}
+&quot;{{ effect.parameter.value }}% chance to resist {% if effect.parameter.statusId == 0 %}one debuff{% else %}{{ effect.parameter.statusId | status_description }}{% endif %}&quot; for {{ target }}
 {% when "Provocation" %}
 {% assign turnDefinition = "turn" %}
 Give {{ target }} {{ 5 | status_description }}: opponents can target only {{ target }}
