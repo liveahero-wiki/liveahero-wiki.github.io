@@ -89,7 +89,7 @@ EVENTB = "Heheh, I'm really popular you know!<br>At valentine's I usually get so
 
 %}
 
-{% include voice-table.html resourceName="hisakiLostAncient2208" %}
+{% include voice-table.html resourceName="hisakiLostAncients2208" %}
 
 ## Notes
 
