@@ -108,7 +108,7 @@ sprites="fg_villainTraineeNinjaEarth_h01,fg_villainTraineeNinjaFire_h01,fg_villa
 ### Salvager
 
 {% include hero-infobox-unreleased.html name="Salvager" mob=true
-sprites="fg_villainSalvagerEarth_s01,fg_villainTraineeFire_s01,fg_villainSalvagerLight_s01,fg_villainSalvagerShadow_s01,fg_villainSalvagerWater_s01"
+sprites="fg_villainSalvagerEarth_s01,fg_villainSalvagerFire_s01,fg_villainSalvagerLight_s01,fg_villainSalvagerShadow_s01,fg_villainSalvagerWater_s01"
 %}
 
 ### Salvager (Transform)
