@@ -24,7 +24,24 @@ Wishing to assert his existence and be recognized by as many people as possible 
 {% endcapture %}
 {% include hero-infobox.html stockId=10531 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10532 extra_sprites="fg_hisakiLostAncients2208_h02_skin2" %}
+{% capture BIO_H01 %}
+Hisaki has taken on a new form through guarding the underwater ruins on the planet Sama'ad.
+
+The robot that takes the appearance of a fish acts independently to protect Hisaki, and also assists him in battle by creating a small bubble of protection when he is attacked by enemies. 
+
+As an inventor, Hisaki devoted himself to previously unheard of technology. 
+
+The result is a single person and a single machine that move together as one underwater as if they have a heart-to-heart communication.
+{% endcapture %}
+
+{% capture BIO_H02 %}
+The life's work that another Hisaki completed in the parallel universe this power draws from was a new "way of life" in which both organics and robots could live in harmony with each other. 
+
+It is precisely because Hisaki has a history of misuse of the technology he invented that he was able to realize the nature of the bond between human and machines. 
+
+What is it that he really wants to create, what kind of relationship can be built between humans and robots, and how should technology be utilized? The flame of his passion will never burn out.
+{% endcapture %}
+{% include hero-infobox.html stockId=10532 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_hisakiLostAncients2208_h02_skin2" %}
 
 {% capture BIO_S01 %}
 A young man working at a medium sized factory of a heavy industry equipment manufacturer.
