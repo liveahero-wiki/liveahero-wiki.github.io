@@ -27,7 +27,7 @@ From Exio, she received the love that her parents could not give her.
 
 The reason why she decided to live as a witch was to repay her debt to Exio.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10711 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10711 BIO_S01=BIO_S01 extra_sprites="fg_melide_s01_skin1,fg_melide_s01_skin2" %}
 
 {% include voice-table.html resourceName="melide"
 s_gachaResult = "My name is Melide.<br>The witch who attracts kaibutsu.<br>Somehow I think you and I can understand each other.<br>Whether we can be friends though….<br>That's another story."

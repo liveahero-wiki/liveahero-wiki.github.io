@@ -24,7 +24,7 @@ Wishing to assert his existence and be recognized by as many people as possible 
 {% endcapture %}
 {% include hero-infobox.html stockId=10531 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10532 %}
+{% include hero-infobox.html stockId=10532 extra_sprites="fg_andrewLostAncients2208_h02_skin2" %}
 
 {% capture BIO_S01 %}
 A young man working at a medium sized factory of a heavy industry equipment manufacturer.
@@ -39,7 +39,7 @@ He is a self-confident person with a sociable and cheerful personality, but at t
 
 He calls his college senior Crowne his big sis, and both trusts and lives in fear of her at the same time.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10531 BIO_S01=BIO_S01 extra_sprites="fg_hisaki_s01_skin1,fg_hisaki_s01_skin2" %}
+{% include sidekick-infobox.html stockId=10531 BIO_S01=BIO_S01 extra_sprites="fg_hisaki_s01_skin1,fg_hisaki_s01_skin2,fg_hisaki_s01_skin3" %}
 
 {% include voice-table.html resourceName="hisaki"
 h_gachaResult = "The rumored super inventor Hisaki's ready for action! Just leave it to me, client.<br>I'll show you the best technology of the whole universe!"

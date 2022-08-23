@@ -26,7 +26,7 @@ Until the day he become the same as them, he will continue fighting to protect t
 
 {% include hero-infobox.html stockId=10251 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10252 %}
+{% include hero-infobox.html stockId=10252 extra_sprites="fg_andrewLostAncients2208_h02_skin2" %}
 
 {% capture BIO_S01 %}
 A truck driver for an interplanetary freight forwarding company.
@@ -39,7 +39,7 @@ Although he is a machine, he has a feeling of compassion and envy for organic li
 
 The mental age is a little young and pure hearted contrary to the impression his appearance gives off.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10251 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10251 BIO_S01=BIO_S01 extra_sprites="fg_andrew_s01_skin1" %}
 
 {% include voice-table.html resourceName="andrew" 
 h_gachaResult = "My name is Andrew, and I'm a space courier.<br>Yeah, I also take hero's work.<br>Organic lifeforms such as you…<br>I wish to protect them with this hands."
