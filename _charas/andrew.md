@@ -67,3 +67,5 @@ TRAIN = "It's a little test, will you accompany me?"
 TRAINED = "My body's heating up…!"
 
 %}
+
+{% include voice-table.html resourceName="andrewLostAncient2208" %}
