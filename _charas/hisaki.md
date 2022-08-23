@@ -39,7 +39,7 @@ He is a self-confident person with a sociable and cheerful personality, but at t
 
 He calls his college senior Crowne his big sis, and both trusts and lives in fear of her at the same time.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10531 BIO_S01=BIO_S01 extra_sprites="fg_hisaki_s01_skin1,fg_hisaki_s01_skin2,fg_hisaki_s01_skin3" %}
+{% include sidekick-infobox.html stockId=10531 BIO_S01=BIO_S01 extra_sprites="fg_hisaki_s01_skin1,fg_hisaki_s01_skin2,fg_hisaki_s01_skin3,fg_hisaki_s01_skin4" %}
 
 {% include voice-table.html resourceName="hisaki"
 h_gachaResult = "The rumored super inventor Hisaki's ready for action! Just leave it to me, client.<br>I'll show you the best technology of the whole universe!"
