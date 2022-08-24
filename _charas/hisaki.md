@@ -89,7 +89,20 @@ EVENTB = "Heheh, I'm really popular you know!<br>At valentine's I usually get so
 
 %}
 
-{% include voice-table.html resourceName="hisakiLostAncients2208" %}
+{% include voice-table.html resourceName="hisakiLostAncients2208" 
+h_gachaResult = "The genius inventor and the nice guy who looks good in the water!<br>Hisaki-kun is here!<br>I will show you the hot and cool inventions, look forward to it will you?"
+s_gachaResult = "Ooh! I thought you're coming to seduce me, turns out it's a sidekick duty.<br>Okay, client!<br>I will demonstrate to you my latest masterpiece that won't lose to my good looks in the water!"
+APPRECIATION = "Hey client, can I have a little of your time after this?<br>Ah, leave out the work talk!<br>You look tired, let's have tea in the lounge with a view of the lake, shall we?"
+DAILY = "Client, what's the matter?<br>Ah is it a date? Ahah, how troubling!<br>…nn? You want me to fix a broken cooler? Uh…"
+HERO = "Gaius, he's kinda the same as me.<br>That's why…I kind of get what he's feeling.<br>I was also an orphan until dad takes me in."
+PLAYER = "Yo client! I just took a break from my research.<br>Why don't we have some sweet moments by the lake…eh!<br>Wait, don't leave!"
+RELATION = "I'd like to look into the unknown ancient civilization that appeared in the lake, but I'm also quite curious about the technology that was poured into Andrew.<br>From Earth's perspective, it's an extraordinary future technology, you know?"
+TOUCH = "Ooh, aggressive aren't you?<br>Fine, if you want to enjoy my charm we can do this again at night…eh?<br>You just want to take a closer look at the new suit? That's all there is to it!?"
+TRAIN = "Taste the unknown technology!"
+TRAINED = "I-I haven't finished the adjustment!"
+EVENTA = "Buildings of ancient civilizations made of unknown materials and technologies...<br>Khh! It tickles my romance!<br>Come on, come on, let's get on with the investigation!"
+EVENTB = "The sightings of a plesiosaur in the lake, the legacy of an ancient civilization that suddenly float to the surface…<br>This, I don't think it's a coincidence…?"
+%}
 
 ## Notes
 
