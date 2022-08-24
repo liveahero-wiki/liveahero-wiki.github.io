@@ -29,6 +29,18 @@ He has a tattoo-esque pattern on his body, and often wears a wetsuit to hide it 
 {% include sidekick-infobox.html stockId=11151 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="gaius"
+h_gachaResult = "I am Gaius, a diver hero.<br>…so, you're the operator.<br>If it's for the lake, I will cooperate with you.<br>Just…don't get in my way."
+s_gachaResult = "I am Gaius, I'm the guide for this lake.<br>Sidekick duty…all right.<br>Anything is fine, let's get this over with."
+APPRECIATION = "You look tired.<br>You probably force yourself to swim.<br>Get some rest already.<br>There are dangers in the water, it will be a problem if you get hurt."
+DAILY = "You want to know my hobby? I have nothing in particular.<br>…but I like diving in the lake.<br>It's peaceful and silent in the water, and sometimes I get to meet keetos."
+HERO = "I wonder if Andrew can swim freely if he transform.<br>…I'm the guide after all, I'm thinking what to do if he suddenly cannot move and sink down."
+PLAYER = "You don't have your memory, right?<br>Are you not curious about yourself? …I want to know.<br>The reason I was born, this pattern on my body, everything."
+RELATION = "That inventor…he has a tatoo on his arm.<br>It's not I wonder about the meaning or anything like that.<br>Just…it piques my interest the first time I saw it."
+TOUCH = "What, what do you want? …oh, about this pattern.<br>You say it's cool....seriously?<br>Are you crazy, that's the first time someone has ever said that to me."
+TRAIN = "I won't adjust, good luck."
+TRAINED = "I can't do this kind of intensity!"
+EVENTA = "Hello, I will be your guide, my name's Gaius.<br>Let me know if anyone throws trash into the lake.<br>I will throw them out."
+EVENTB = "This lake has a guardian deity.<br>Sometimes they appear on the water and watch over the lake.<br>If you're lucky then maybe it will also swim alongside you."
 %}
 
 ## Notes
