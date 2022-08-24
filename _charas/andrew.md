@@ -89,4 +89,17 @@ TRAINED = "My body's heating up…!"
 
 %}
 
-{% include voice-table.html resourceName="andrewLostAncients2208" %}
+{% include voice-table.html resourceName="andrewLostAncients2208"
+h_gachaResult = "Master. My dream has a new mission.<br>I want to protect the bonds born when humans and machines lean on each other.<br>For that, I will even dive to the bottom of the lake."
+s_gachaResult = "Today is sidekick duty right? Leave it to me.<br>I have inputted the route for the lake patrol.<br>Let's go, Master!"
+APPRECIATION = "I detected an increase in fatigue value, is this what's called heat exhaustion?<br>Humans has increased efficiency with appropriate rest.<br>How about a stroll along the lake? I will go with you."
+DAILY = "Master! Do you have some time now?<br>I've been practicing my guitar playing and for the first time I got it right.<br>I hope you will hear it!"
+TOUCH = "Oof, are you interested in my new form?<br>Having such a wonderful body, I'm very happy!<br>You can freely touch and make sure of it if you want!"
+HERO = "Did you see Hisaki-san's new parallel weapon?<br>Underwater drones and the way they support and fight each other... yeah!<br>That's the bond I want to protect, Master!"
+PLAYER = "I heard that some individual is not good at swimming, how about master?<br>Would you like to stroll underwater with me?<br>I'm completely waterproof, I can also help you swim!"
+RELATION = "Gaius is searching for his own roots.<br>I don't remember the time when I was manufactured though…<br>For humans, is the past somehing so important?"
+TRAIN = "Come on, let's bond over training!"
+TRAINED = "Ugh...so this is the power of bonds...!"
+EVENTA = "The inventor Hisaki-san.<br>It's amazing how he can make devices that made breathing and fighting underwater possible!<br>I wonder if he will be willing to do some maintenance on me?"
+EVENTB = "It's a very rare cobalt blue lake!<br>If the water is this clear, we will be able to see the guardian deity right away.<br>Okay, let's search for it!"
+%}
