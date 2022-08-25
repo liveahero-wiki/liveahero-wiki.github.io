@@ -22945,5 +22945,67 @@
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
     }
+  },
+  "837": {
+    "skillEffectId": 837,
+    "skillEffectJson": {
+      "turn": 5,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeHp",
+          "parameter": {
+            "value": 5
+          }
+        }
+      ],
+      "filename": "status_poison",
+      "statusId": 18,
+      "canDispel": true,
+      "filterIds": [
+        11
+      ],
+      "parameter": false,
+      "description": "毒",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "838": {
+    "skillEffectId": 838,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeAgi",
+          "parameter": {
+            "value": -10
+          }
+        }
+      ],
+      "filename": "status_agidown",
+      "statusId": 13,
+      "canDispel": true,
+      "filterIds": [
+        7
+      ],
+      "parameter": false,
+      "description": "SPDダウン(永続)",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": false
+    }
   }
 }

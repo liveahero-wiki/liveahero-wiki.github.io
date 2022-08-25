@@ -72012,7 +72012,7 @@
     "startAt": null,
     "endAt": "2022-09-20 14:00:00",
     "dayOfWeek": 0,
-    "sortWeight": 0,
+    "sortWeight": 1,
     "enemyLevel": 0,
     "canNotRetire": false,
     "canNotContinue": false,
@@ -72056,7 +72056,7 @@
     "startAt": null,
     "endAt": "2022-09-20 14:00:00",
     "dayOfWeek": 0,
-    "sortWeight": 0,
+    "sortWeight": 2,
     "enemyLevel": 10,
     "canNotRetire": false,
     "canNotContinue": false,
@@ -72109,6 +72109,73 @@
       {
         "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
         "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "489003": {
+    "questId": 489003,
+    "questName": "パトロール・ダイバーズ",
+    "subName": "第３話",
+    "questKind": 5,
+    "chapterId": 489,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2022-08-25 18:00:00",
+    "endAt": "2022-09-20 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 3,
+    "enemyLevel": 11,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 489002,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuSharkWater_h01",
+        "battleInfoElement": 2
       }
     ],
     "hasAdv": true,
