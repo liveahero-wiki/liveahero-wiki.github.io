@@ -22847,7 +22847,7 @@
         5
       ],
       "parameter": false,
-      "description": "バブルシールド",
+      "description": "シールド",
       "isImmediate": false,
       "persistence": false,
       "canDuplicate": false,
@@ -22949,6 +22949,69 @@
   "837": {
     "skillEffectId": 837,
     "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeHp",
+          "parameter": {
+            "value": 90
+          }
+        }
+      ],
+      "trigger": "[{\"value\":1,\"element\":0,\"statusId\":0,\"class\":\"RemainInternalTurnTrigger\"}]",
+      "filename": "status_flame",
+      "statusId": 125,
+      "canDispel": true,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "メカ爆弾",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "overrideStatusName": "メカ爆弾",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "0ターン目になる瞬間、HP最大値の90%のダメージを受ける。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "838": {
+    "skillEffectId": 838,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeAgi",
+          "parameter": {
+            "value": -5
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 57,
+      "canDispel": false,
+      "filterIds": [
+        7
+      ],
+      "parameter": false,
+      "description": "SPDダウン(永続)",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "Spd-5",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "このバトル中、Spdが-5される。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "839": {
+    "skillEffectId": 839,
+    "skillEffectJson": {
       "turn": 5,
       "count": 0,
       "effects": [
@@ -22977,34 +23040,34 @@
       "isOverrideStatusDescription": false
     }
   },
-  "838": {
-    "skillEffectId": 838,
+  "840": {
+    "skillEffectId": 840,
     "skillEffectJson": {
       "turn": 0,
       "count": 0,
       "effects": [
         {
-          "class": "ChangeAgi",
+          "class": "AbsorbDamage",
           "parameter": {
-            "value": -10
+            "value": 80,
+            "target": 3,
+            "healMult": 50
           }
         }
       ],
-      "filename": "status_agidown",
-      "statusId": 13,
-      "canDispel": true,
-      "filterIds": [
-        7
-      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
       "parameter": false,
-      "description": "SPDダウン(永続)",
-      "isImmediate": false,
-      "persistence": true,
-      "canDuplicate": true,
+      "description": "80%ダメージ+ダメージの50%を回復",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
-      "isDisplayPersistenceStatus": true,
+      "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
     }
   }
