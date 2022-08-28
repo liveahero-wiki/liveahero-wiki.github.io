@@ -132,3 +132,18 @@ Here is a list of this event's limited time Missions:
 {% include quest-group.html chapterId=490 %}
 
 ## Event Sales Report
+
+<details><summary>Sales Report 1</summary>
+<p> <code>character0</code> はとある湖の観光地で、<br>写真撮影会に臨んでいた。<br><br>湖を背に、集まってくれた<br>ファンたちにサービスをしながら<br>一緒に写真を撮る <code>character0</code> 。<br><br>順調に進み、最後のヒトと<br>写真を撮ると撮影会は無事に終了<br><br>しかし翌日、事件は起こった。<br><br>その時撮影された写真の一枚。<br> <code>character0</code> たちの後ろ、湖の上に<br>見たことのない生き物らしき<br>巨大な影が写り込んでいたのだ。<br><br>SNSで公開されるやいなや、大きな<br>話題となり、笑顔で写っていた<br> <code>character0</code> の名前にちなんだ<br>愛称が付けられているという。<br>
+</p>
+</details>
+
+<details><summary>Sales Report 2</summary>
+<p>避暑地での撮影の仕事をこなす<br> <code>character0</code> と <code>character1</code> 。<br><br>今回の番組は <code>character0</code> と <code>character1</code> の<br>オフショットを特集するというもの。<br><br>スタッフたちも同行せず、<br>２人はカメラだけを渡されて<br>湖畔のスイートホテルで時間を過ごす。<br><br>休暇を過ごすだけで仕事になると<br>喜ぶ <code>character1</code> に対して、少し<br>落ち着かない様子の <code>character0</code> 。<br><br>２人は湖畔を散歩したり、<br>ダイビングしたり、花火をしたりと<br>湖での時間を楽しみながら、<br>撮影を進めて、収録は完了した。<br><br>追記：<br>翌日、そのまま休暇を取りたいと申請が<br> <code>character0</code> からあったので承認します。<br>
+</p>
+</details>
+
+<details><summary>Sales Report 3</summary>
+<p>湖で休暇を楽しむヒーローたち。<br> <code>character0</code> と <code>character1</code> は薪を集め、<br>バーベキューの準備を進めていた。<br><br>せっかくなら獲れたての魚が<br>食べたいと言い出す <code>character2</code> 。<br> <code>character3</code> も楽しそうだと<br>２人で素潜りをすることに。<br><br>どちらがより大物を捕まえられるかを<br>勝負しようと、２人は湖へと潜っていく。<br><br> <code>character0</code> は火を起こして、<br> <code>character1</code> は調理を進めていると、<br> <code>character2</code> が大声で２人を呼んだ。<br>慌てて駆け付けると、そこには巨大な何かの<br>部品らしき物を持つ <code>character3</code> の姿が。<br><br>これは食べられないと、笑う４人。<br><br>後日、バーベキューをした会場の近くで<br>古代文明の遺物が見つかったという…
+</p>
+</details>
