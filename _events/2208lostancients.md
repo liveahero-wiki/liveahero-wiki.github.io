@@ -116,6 +116,51 @@ Here is a list of this event's limited time Missions:
 | 4  | Finish any rank event quest 40 times | 1 {% include item-icon.html id=34 %}    |
 | 5  | Finish any rank event quest 50 times | 1 {% include item-icon.html id=34 %}    |
 | 6  | Finish event sales 10 times | 1 {% include item-icon.html id=34 %}    |
+| 7  | Clear 2 event challenge quest without using guest NPC | 1 {% include item-icon.html id=10 %}    |
+| 8  | Clear 4 event challenge quest without using guest NPC | 1 {% include item-icon.html id=10 %}    |
+| 9  | Clear 6 event challenge quest without using guest NPC | 1 {% include item-icon.html id=10 %}    |
+
+## Event Challenge Quests
+
+- Cost 0 stamina
+- There will be special effects for this event's challenge quest, activated for all enemies and allies
+
+{% include quest-group.html chapterId=491 %}
+
+### Chapter 2 Challenge Quest
+
+| Special Effect   | Effect |
+|--------|-----------|
+| Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
+
+#### Monster (Juvenile)'s skills
+
+{% include skill-table-manual.html skillIds="4036113,4036115" equipmentSkills="6040101" %}
+
+### Chapter 3 Challenge Quest
+
+| Special Effect   | Effect |
+|--------|-----------|
+| Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
+| Critical  |    When hitting enemy with lower Speed there is a chance to deal 30% more damage (chance is based on speed difference)  |
+
+#### Shark's skills
+
+{% include skill-table-manual.html skillIds="4074109,4074110,4074111" equipmentSkills="6074108" %}
+
+### Chapter 4 Challenge Quest
+
+| Special Effect   | Effect |
+|--------|-----------|
+| Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
+
+#### Salvager (Fire)'s skills
+
+{% include skill-table-manual.html skillIds="4116101,4116104,4119102" equipmentSkills="6119101" %}
+
+#### Salvager (Light)'s skills
+
+{% include skill-table-manual.html skillIds="4116101,4119104,4119102" equipmentSkills="6119101" %}
 
 ## Event Shop
 
