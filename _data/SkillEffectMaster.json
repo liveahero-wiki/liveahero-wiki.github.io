@@ -22960,7 +22960,7 @@
         }
       ],
       "trigger": "[{\"value\":1,\"element\":0,\"statusId\":0,\"class\":\"RemainInternalTurnTrigger\"}]",
-      "filename": "status_flame",
+      "filename": "status_bomb",
       "statusId": 125,
       "canDispel": true,
       "filterIds": [
@@ -23051,7 +23051,7 @@
           "parameter": {
             "value": 80,
             "target": 3,
-            "healMult": 50
+            "healMult": 100
           }
         }
       ],
@@ -23060,10 +23060,168 @@
       "canDispel": false,
       "filterIds": [],
       "parameter": false,
-      "description": "80%ダメージ+ダメージの50%を回復",
+      "description": "80%ダメージ+ダメージの100%を回復",
       "isImmediate": true,
       "persistence": false,
       "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "841": {
+    "skillEffectId": 841,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Cure",
+          "parameter": {
+            "value": 999,
+            "target": 125
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "メカ爆弾を全解除",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "842": {
+    "skillEffectId": 842,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeHp",
+          "parameter": {
+            "value": 90
+          }
+        }
+      ],
+      "trigger": "[{\"value\":1,\"element\":0,\"statusId\":0,\"class\":\"RemainInternalTurnTrigger\"}]",
+      "filename": "status_bomb",
+      "statusId": 125,
+      "canDispel": true,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "メカ爆弾",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "overrideStatusName": "メカ爆弾",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "0ターン目になる瞬間、HP最大値の90%のダメージを受ける。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "843": {
+    "skillEffectId": 843,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 50,
+            "statusId": 0
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 57,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "弱体抵抗+50",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "弱体抵抗50",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被デバフ付与率が50%減少する。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "844": {
+    "skillEffectId": 844,
+    "skillEffectJson": {
+      "turn": 999,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewChange",
+          "parameter": {
+            "value": 50
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 57,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "覚醒",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "覚醒(解除不可)",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "スキルに必要なViewPowerが半分になる。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "845": {
+    "skillEffectId": 845,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 105
+          }
+        }
+      ],
+      "filename": "status_atkup",
+      "statusId": 57,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATK+5%（システム）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
