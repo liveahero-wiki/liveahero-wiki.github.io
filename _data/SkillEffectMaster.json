@@ -23207,7 +23207,7 @@
         {
           "class": "MultipleAttack",
           "parameter": {
-            "value": 105
+            "value": 107.5
           }
         }
       ],
@@ -23218,7 +23218,97 @@
         4
       ],
       "parameter": false,
-      "description": "ATK+5%（システム）",
+      "description": "ATK+7.5%（システム）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "ATK+7.5%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATKを永続的に+7.5%する。解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "846": {
+    "skillEffectId": 846,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Silence",
+          "parameter": []
+        }
+      ],
+      "filename": "status_silence",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [
+        9
+      ],
+      "parameter": false,
+      "description": "システム沈黙",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "847": {
+    "skillEffectId": 847,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 99,
+            "target": 126,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果126番除去",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "848": {
+    "skillEffectId": 848,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [
+        1,
+        6
+      ],
+      "parameter": false,
+      "description": "システム効果127番付与",
       "isImmediate": false,
       "persistence": true,
       "canDuplicate": true,
@@ -23227,6 +23317,42 @@
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
+    }
+  },
+  "849": {
+    "skillEffectId": 849,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HealMultipleDefence",
+          "parameter": {
+            "value": 0
+          }
+        },
+        {
+          "class": "RegistBuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 10
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "回復・リジェネ無効",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "回復とリジェネを無効化する。",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "回復・リジェネ無効",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
     }
   }
 }

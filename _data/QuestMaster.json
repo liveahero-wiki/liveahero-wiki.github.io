@@ -72262,6 +72262,81 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
   },
+  "489005": {
+    "questId": 489005,
+    "questName": "生まれ変わる日を夢見て",
+    "subName": "第５話",
+    "questKind": 5,
+    "chapterId": 489,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2022-09-01 18:00:00",
+    "endAt": "2022-09-20 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 5,
+    "enemyLevel": 13,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 489004,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFireSpace_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFireSpace_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFireSpace_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
   "490001": {
     "questId": 490001,
     "questName": "湖の水中警備",
@@ -73177,6 +73252,93 @@
       {
         "battleInfoIcon": "icon_villainSalvagerLight_h01",
         "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "491005": {
+    "questId": 491005,
+    "questName": "生まれ変わる日を夢見て",
+    "subName": "第５話高難易度",
+    "questKind": 6,
+    "chapterId": 491,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2022-09-01 18:00:00",
+    "endAt": "2022-09-20 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 5,
+    "enemyLevel": 60,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 32,
+        "objectValue": 5,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 33,
+        "objectValue": 5,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 34,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 124,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 489005,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFireSpace_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFireSpace_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFireSpace_h01",
+        "battleInfoElement": 1
       }
     ],
     "hasAdv": false,
