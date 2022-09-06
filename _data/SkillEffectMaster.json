@@ -23156,7 +23156,7 @@
         2
       ],
       "parameter": false,
-      "description": "弱体抵抗+50",
+      "description": "弱体抵抗+50(システム効果)",
       "isImmediate": false,
       "persistence": true,
       "canDuplicate": false,
@@ -23170,7 +23170,7 @@
   "844": {
     "skillEffectId": 844,
     "skillEffectJson": {
-      "turn": 999,
+      "turn": 1,
       "count": 0,
       "effects": [
         {
@@ -23180,22 +23180,23 @@
           }
         }
       ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"PinchExecTrigger\"}]",
       "filename": "status_awakening",
-      "statusId": 57,
+      "statusId": 127,
       "canDispel": false,
       "filterIds": [
         3
       ],
       "parameter": false,
-      "description": "覚醒",
+      "description": "ピンチ時、消費View半減",
       "isImmediate": false,
       "persistence": true,
-      "canDuplicate": false,
+      "canDuplicate": true,
       "overrideStatusName": "覚醒(解除不可)",
-      "isOverrideStatusName": true,
+      "isOverrideStatusName": false,
       "overrideStatusDescription": "スキルに必要なViewPowerが半分になる。",
-      "isDisplayPersistenceStatus": true,
-      "isOverrideStatusDescription": true
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
     }
   },
   "845": {
@@ -23353,6 +23354,226 @@
       "overrideStatusDescription": "回復・リジェネ無効",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
+    }
+  },
+  "850": {
+    "skillEffectId": 850,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HealthMultipleAttack",
+          "parameter": {
+            "evaluationIsMax": false
+          }
+        }
+      ],
+      "trigger": "[]",
+      "filename": "status_firepower",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "凶暴化",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "凶暴化",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "HPが減少するほどATKが上昇する。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "851": {
+    "skillEffectId": 851,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 125
+          }
+        }
+      ],
+      "filename": "status_atkup",
+      "statusId": 57,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATK+25%（システム）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "ATK+25%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATKを永続的に+25%する。解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "852": {
+    "skillEffectId": 852,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 75
+          }
+        }
+      ],
+      "filename": "status_defup",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "被ダメージ-25%（システム）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "被ダメージ-25%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメ―ジを永続的に-25%する。解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "853": {
+    "skillEffectId": 853,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 130
+          }
+        }
+      ],
+      "filename": "status_defdown",
+      "statusId": 128,
+      "canDispel": false,
+      "filterIds": [
+        12,
+        4
+      ],
+      "parameter": false,
+      "description": "被ダメージ+30%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "被ダメージ+30%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "相手からのダメージが1.3倍になる。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "854": {
+    "skillEffectId": 854,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "filename": "status_atkup",
+      "statusId": 130,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATK+50%（システム）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "ATK+50%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATKを永続的に+50%する。解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "855": {
+    "skillEffectId": 855,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 50,
+            "statusId": 0
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"PinchExecTrigger\"}]",
+      "filename": "status_immunity",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "弱体抵抗+50(システム効果)",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "弱体抵抗50",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "被デバフ付与率が50%減少する。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "856": {
+    "skillEffectId": 856,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 128,
+      "canDispel": false,
+      "filterIds": [
+        1,
+        6
+      ],
+      "parameter": false,
+      "description": "システム効果128番付与",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
     }
   }
 }
