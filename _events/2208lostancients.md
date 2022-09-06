@@ -162,6 +162,43 @@ Here is a list of this event's limited time Missions:
 
 {% include skill-table-manual.html skillIds="4116101,4119104,4119102" equipmentSkills="6119101" %}
 
+### Chapter 5 Challenge Quest
+
+| Special Effect   | Effect |
+|--------|-----------|
+| Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
+
+#### Monster (Juvenile) 1's skills
+
+{% include skill-table-manual.html skillIds="4036118" equipmentSkills="6000037,6036106" %}
+
+#### Monster (Juvenile) 2's skills
+
+{% include skill-table-manual.html skillIds="4036117" equipmentSkills="6000037,6036106" %}
+
+#### Monster's skills
+
+{% include skill-table-manual.html skillIds="4046134,4046136,4046138" equipmentSkills="6000048" %}
+
+### Chapter 6 Challenge Quest
+
+| Special Effect   | Effect |
+|--------|-----------|
+| Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
+
+#### Salvager (Wood)'s skills
+
+{% include skill-table-manual.html skillIds="4118101,4118102,4119102" equipmentSkills="6120101,6118101" %}
+
+#### Salvager (Water)'s skills
+
+{% include skill-table-manual.html skillIds="4117103,4117102" equipmentSkills="6120101" %}
+
+#### Salvager (Shadow)'s skills
+
+{% include skill-table-manual.html skillIds="4120101,4120102" equipmentSkills="6120101" %}
+
+
 ## Event Shop
 
 {% include shop-table.html id=27 %}
