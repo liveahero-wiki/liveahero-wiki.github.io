@@ -198,6 +198,15 @@ Here is a list of this event's limited time Missions:
 
 {% include skill-table-manual.html skillIds="4120101,4120102" equipmentSkills="6120101" %}
 
+### Chapter 7 Challenge Quest
+
+| Special Effect   | Effect |
+|--------|-----------|
+| Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
+
+#### Cetus's skills
+
+{% include skill-table-manual.html skillIds="4121104,4121105,4121106" equipmentSkills="6121102,6121103" %}
 
 ## Event Shop
 
