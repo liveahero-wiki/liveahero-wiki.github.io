@@ -32,7 +32,7 @@ He has a tattoo-esque pattern on his body, and often wears a wetsuit to hide it 
 h_gachaResult = "I am Gaius, a diver hero.<br>…so, you're the operator.<br>If it's for the lake, I will cooperate with you.<br>Just…don't get in my way."
 s_gachaResult = "I am Gaius, I'm the guide for this lake.<br>Sidekick duty…all right.<br>Anything is fine, let's get this over with."
 APPRECIATION = "You look tired.<br>You probably force yourself to swim.<br>Get some rest already.<br>There are dangers in the water, it will be a problem if you get hurt."
-DAILY = "You want to know my hobby? I have nothing in particular.<br>…but I like diving in the lake.<br>It's peaceful and silent in the water, and sometimes I get to meet keetos."
+DAILY = "You want to know my hobby? I have nothing in particular.<br>…but I like diving in the lake.<br>It's peaceful and silent in the water, and sometimes I get to meet Cetus."
 HERO = "I wonder if Andrew can swim freely if he transform.<br>…I'm the guide after all, I'm thinking what to do if he suddenly cannot move and sink down."
 PLAYER = "You don't have your memory, right?<br>Are you not curious about yourself? …I want to know.<br>The reason I was born, this pattern on my body, everything."
 RELATION = "That inventor…he has a tatoo on his arm.<br>It's not I wonder about the meaning or anything like that.<br>Just…it piques my interest the first time I saw it."
