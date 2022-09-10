@@ -204,7 +204,7 @@ Here is a list of this event's limited time Missions:
 |--------|-----------|
 | Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
 
-#### Cetus's skills
+#### Cetus' skills
 
 {% include skill-table-manual.html skillIds="4121104,4121105,4121106" equipmentSkills="6121102,6121103" %}
 
