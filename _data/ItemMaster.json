@@ -1092,7 +1092,7 @@
   },
   "113": {
     "itemId": 113,
-    "itemName": "大覚醒の技術書",
+    "itemName": "大覚醒石の技術書",
     "resourceName": "equipskill_large_stone",
     "rarity": 3,
     "itemType": 32768,
@@ -1303,6 +1303,54 @@
         "class": "OfficeWallpaperItemEffect",
         "bgAddress": "bg_battle_ancientcity",
         "bgTitleKey": "TITLE_BG_BATTLE_ANCIENTCITY_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
+  "127": {
+    "itemId": 127,
+    "itemName": "ヒーローフェスタ戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "闘え！真夏のヒーローフェスタの戦闘BGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_herofesta_battle",
+        "bgmTitleKey": "TITLE_BGM_HEROFESTA_BATTLE_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "128": {
+    "itemId": 128,
+    "itemName": "ヒーローフェスタディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "闘え！真夏のヒーローフェスタのBGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_herofesta_adv",
+        "bgmTitleKey": "TITLE_BGM_HEROFESTA_ADV_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "129": {
+    "itemId": 129,
+    "itemName": "スタジアムホログラム",
+    "resourceName": "icon_bg_battle_stadium",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景にスタジアムの映像を投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_stadium",
+        "bgTitleKey": "TITLE_BG_BATTLE_STADIUM_WALLPAPER"
       }
     ],
     "limitValue": 0
