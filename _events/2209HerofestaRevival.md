@@ -1,7 +1,7 @@
 ---
 title: Hero Festa in Midsummer! (Reprint)
 jp_title: 【復刻】闘え！真夏のヒーローフェスタ開催
-news_link: https://live-a-hero.jp/info/2836
+news_link: https://live-a-hero.jp/info/4494
 banner_image: banner_info_HerofestaRevival2209.jpg 
 gacha: true
 event_start_time: 2022-09-15T20:00:00+09
