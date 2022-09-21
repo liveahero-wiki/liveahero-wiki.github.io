@@ -113,7 +113,7 @@ Force auto action to {{ target }}
 {% when "MultipleHp" %}
 HP Up by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "StatusNumberMultipleAttack" %}
-ATK Up by {{ effect.parameter.value }}% to {{ target }} for each {% if effect.parameter.isGoodStatus == true %}buff{% else %}debuff{% endif %}
+ATK Up by {{ effect.parameter.statusMult | default: effect.parameter.value }}% to {{ target }} for each {% if effect.parameter.isGoodStatus == true %}buff{% else %}debuff{% endif %}{% if effect.parameter.limitStatusNum %}, can stack up to {{ effect.parameter.limitStatusNum }} time(s){% endif %}
 {% when "NeedViewValueChange" %}
 {% assign turnDefinition = "turn" %}
 Change skill view cost by {{ effect.parameter.value }} for {{ target }}
