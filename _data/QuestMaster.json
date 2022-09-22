@@ -75050,6 +75050,142 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
   },
+  "495001": {
+    "questId": 495001,
+    "questName": "ヒーロー・エキシビジョンマッチ！",
+    "subName": "スコアアタック",
+    "questKind": 8,
+    "chapterId": 495,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "icon_ryekie_h01",
+    "startAt": "2022-09-22 18:00:00",
+    "endAt": "2022-09-29 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 493002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainTraineeFire_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_maculata_h01",
+        "battleInfoElement": 2
+      },
+      {
+        "battleInfoIcon": "icon_kirsch_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_hisaki_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_akashi_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_ryekie_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_mokdai_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": true,
+    "boostItems": [],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": [
+      {
+        "score": 0,
+        "iconAddress": "ui_symbol_estimation_C"
+      },
+      {
+        "score": 50000,
+        "iconAddress": "ui_symbol_estimation_B"
+      },
+      {
+        "score": 100000,
+        "iconAddress": "ui_symbol_estimation_A"
+      },
+      {
+        "score": 150000,
+        "iconAddress": "ui_symbol_estimation_S"
+      }
+    ],
+    "scoreAttackBonuses": [
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK50UP",
+        "characters": [
+          {
+            "stockId": 10072,
+            "cardType": 1
+          },
+          {
+            "stockId": 10092,
+            "cardType": 1
+          }
+        ]
+      },
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK30UP",
+        "characters": [
+          {
+            "stockId": 10751,
+            "cardType": 1
+          }
+        ]
+      },
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK10UP",
+        "characters": [
+          {
+            "stockId": 10751,
+            "cardType": 2
+          }
+        ]
+      }
+    ],
+    "scoreAttackStandards": [
+      {
+        "label": "UI_SCORE_ATTACK_CLEAR_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_CLEAR_BONUS_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_TOTAL_HP_SCORE_LABEL",
+        "description": "UI_SCORE_ATTACK_TOTAL_HP_SCORE_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_TURN_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_TURN_BONUS_DESCRIPTION"
+      }
+    ],
+    "scoreAttackHintTextKey": "HINT_SCORE_ATTACK_HEROFESTA",
+    "scoreAttackBattleCount": 3
+  },
   "496007": {
     "questId": 496007,
     "questName": "祭りの後にバレルと",
