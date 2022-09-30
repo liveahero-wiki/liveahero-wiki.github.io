@@ -31,7 +31,11 @@ There will be extra login bonus for 7 days as follow
 
 ### 2nd Anniversary Ticket Exchange
 
-You can exchange 1st anniversary ticket with a 4 star hero or 4 star sidekick or items of your choice. Exchange will be available until 2022/10/31 23:59 JST.
+You can exchange 2nd anniversary ticket with a 4 star hero or 4 star sidekick or items of your choice. 
+Exchange will be available until 2022/10/31 23:59 JST.
+
+> only permanent 4 star will be available for exchange
+> If you already have the character, Record Cube and Engravement level will be added, if Engravement level is already max, you will get {% include item-icon.html id=74 %} Record cube fragments instead.
 
 Here is a list of available hero/sidekick for exchange:
 
