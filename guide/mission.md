@@ -99,3 +99,6 @@ Standard missions are permanent missions that can be cleared at any point of tim
 |Achieve player rank 80|{%include item.html id=34%} x2|
 |Achieve player rank 90|{%include item.html id=34%} x2|
 |Achieve player rank 100|{%include item.html id=34%} x2|
+|Achieve player rank 110|{%include item.html id=34%} x2|
+|Achieve player rank 120|{%include item.html id=34%} x2|
+|Achieve player rank 130|{%include item.html id=34%} x2|
