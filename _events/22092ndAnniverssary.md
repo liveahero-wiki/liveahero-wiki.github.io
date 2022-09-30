@@ -127,7 +127,7 @@ Also, there will be daily missions and limited time missions for character train
 | No | Description | Rewards |
 |----|-----------------------------------------------------------|----------------|
 | 1  | Clear \[Hero Training!\] daily mission 4 times in total | 1 {% include item-icon.html id=34 %} |
-| 2  | Clear \[Hero Training!\] daily mission 8 times in total | 1 {% include item-icon.html id=34 %}} |
+| 2  | Clear \[Hero Training!\] daily mission 8 times in total | 1 {% include item-icon.html id=34 %} |
 | 3  | Clear \[Hero Training!\] daily mission 12 times in total | 1 {% include item-icon.html id=34 %} |
 | 4  | Clear \[Hero Training!\] daily mission 16 times in total | 1 {% include item-icon.html id=34 %} |
 | 5  | Clear \[Hero Training!\] daily mission 20 times in total | 1 {% include item-icon.html id=34 %} |
