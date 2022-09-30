@@ -22,7 +22,7 @@ There will be extra login bonus for 7 days as follow
 
 | Day| Rewards |
 |----|-----------------------------------------------------------|
-| 1  | 50 {% include item.html id=1 %} ; 100,000 {% include item.html id=11 %} ; 2 Second Anniversary ticket |
+| 1  | 50 {% include item.html id=1 %} ; 100,000 {% include item.html id=11 %} ; 2 {% include item.html id=136 %} |
 | 2  | 10 {% include item.html id=1 %} ; 15,000 {% include item.html id=30 %} ; 125,000 {% include item.html id=35 %} |
 | 3  | 10 {% include item.html id=1 %} ; 125,000 {% include item.html id=35 %} ; 100 {% include item.html id=59 %} |
 | 4  | 10 {% include item.html id=1 %} ; 5 {% include item.html id=29 %} ; 5 {% include item.html id=28 %} ; 5 {% include item.html id=27 %} |
@@ -92,9 +92,11 @@ Here is a list of available hero/sidekick for exchange:
 
 For the duration of the campaign, challenge quests held in the past will be reprinted.
 
-It rewards {% include item-icon.html id=68 %} Heronium, which can be exchanged in the campaign shop for training items such as {% include item.html id=29 %} , {% include item.html id=59 %} , etc.
+It rewards {% include item-icon.html id=137 %} Heronium, which can be exchanged in the campaign shop for training items such as {% include item.html id=29 %} , {% include item.html id=59 %} , etc.
 
-Unused {% include item-icon.html id=68 %} Heronium at the end of the campaign will be deleted automatically.
+Unused {% include item-icon.html id=137 %} Heronium at the end of the campaign will be deleted automatically.
+
+{% include shop-table.html id=30 %}
 
 The challenge quests will be added sequentially.
 
@@ -106,7 +108,7 @@ Character training quest will be available.
 
 The quests contains two ranks (A and B) with three kinds of rewards ({% include item-icon.html id=11 %}, {% include item-icon.html id=35 %}, {% include item-icon.html id=30 %} ) for a total of 6 quests.
 
-{% include quest-group.html chapterId=473 %}
+{% include quest-group.html chapterId=497 %}
 
 Each first clear will grant 1 {% include item-icon.html id= 2%} Ether Stone.
 
