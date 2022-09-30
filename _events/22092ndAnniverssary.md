@@ -11,6 +11,7 @@ event_end_time: 2022-10-25T23:59:00+09
 {:toc}
 
 Live A Hero is about to celebrate its second anniversary since release.
+
 The 2nd Anniversary Campaign will be held from 14:00 JST (scheduled) on Friday, September 30, 2022.
 
 ## Campaign Details
@@ -32,9 +33,11 @@ There will be extra login bonus for 7 days as follow
 ### 2nd Anniversary Ticket Exchange
 
 You can exchange 2nd anniversary ticket with a 4 star hero or 4 star sidekick or items of your choice. 
+
 Exchange will be available until 2022/10/31 23:59 JST.
 
 > only permanent 4 star will be available for exchange
+
 > If you already have the character, Record Cube and Engravement level will be added, if Engravement level is already max, you will get {% include item-icon.html id=74 %} Record cube fragments instead.
 
 Here is a list of available hero/sidekick for exchange:
@@ -88,7 +91,9 @@ Here is a list of available hero/sidekick for exchange:
 ### Challenge Quests (reprint)
 
 For the duration of the campaign, challenge quests held in the past will be reprinted.
+
 It rewards {% include item-icon.html id=68 %} Heronium, which can be exchanged in the campaign shop for training items such as {% include item.html id=29 %} , {% include item.html id=59 %} , etc.
+
 Unused {% include item-icon.html id=68 %} Heronium at the end of the campaign will be deleted automatically.
 
 The challenge quests will be added sequentially.
@@ -98,6 +103,7 @@ The challenge quests will be added sequentially.
 From September 30, 2022 till October 11, 2022
 
 Character training quest will be available.
+
 The quests contains two ranks (A and B) with three kinds of rewards ({% include item-icon.html id=11 %}, {% include item-icon.html id=35 %}, {% include item-icon.html id=30 %} ) for a total of 6 quests.
 
 {% include quest-group.html chapterId=473 %}
