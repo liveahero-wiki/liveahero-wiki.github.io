@@ -85,7 +85,7 @@ Here is a list of available hero/sidekick for exchange:
 
 | Items| 
 |----|
-| 150 {% include item.html id=59 %}  |
+| 100 {% include item.html id=59 %}  |
 | 500,000 {% include item.html id=35 %}   |
 
 ### Challenge Quests (reprint)
