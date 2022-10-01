@@ -112,7 +112,7 @@ The quests contains two ranks (A and B) with three kinds of rewards ({% include 
 
 Each first clear will grant 1 {% include item-icon.html id= 2%} Ether Stone.
 
-Also, there will be daily missions and limited time missions for character training campaign, rewarding {% include item.html id= 10%} and {% include item.html id= 29%}.
+Also, there will be daily missions and limited time missions for character training campaign.
 
 #### Daily Missions: 
 
@@ -149,7 +149,7 @@ Also, there will be daily missions and limited time missions for character train
 - User rank limit will be increased from 100 to 130
 - Half stamina for all main quest chapter for the duration of this campaign
 - Modify the enhancement UI for Rank up, relation up, and SK breakthrough to make it easier to see the effect before and after
-- Other features will be announced on update version 2.5.3
+- Accesories badge for {% chara_link Akashi|h1 %} , {% chara_link Mokdai|h1 %} , and {% chara_link Sui|h1 %}
 
 ### Plans for future improvements
 
