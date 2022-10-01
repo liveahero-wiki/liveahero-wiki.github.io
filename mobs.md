@@ -15,6 +15,12 @@ additional_scripts: ["/assets/atlas.min.js"]
 sprites="fg_kaibutsuArmorBlack_h01"
 %}
 
+### Cetus
+
+{% include hero-infobox-unreleased.html name="Cetus" mob=true
+sprites="fg_cetus_s01,fg_cetus_s01_skin1,fg_cetus_h01"
+%}
+
 ### Ghost Kaibutsu (Adult)
 
 {% include hero-infobox-unreleased.html name="Ghost Kaibutsu (Adult)" mob=true
