@@ -1,7 +1,7 @@
 title: Live A Hero Wiki
 url: https://liveahero-wiki.github.io
 github_edit: https://github.com/liveahero-wiki/liveahero-wiki.github.io/edit/master
-permalink: /news/:year/:month/:title/
+permalink: /blog/:year/:title/
 timezone: Asia/Tokyo
 date_format: "%-d %b %Y %R JST"
 markdown: kramdown
@@ -36,6 +36,10 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+  - scope:
+      type: "posts"
+    values:
+      layout: post
   - scope:
       path: "google9c8bdece57d6fa9c.html"
     values:
