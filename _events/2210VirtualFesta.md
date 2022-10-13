@@ -119,6 +119,28 @@ Here is a list of this event's limited time Missions:
 | 5  | Finish any rank event quest 50 times | 1 {% include item-icon.html id=34 %}    |
 | 6  | Finish event sales 10 times | 1 {% include item-icon.html id=34 %}    |
 
+### Sidekick Skin
+
+New sidekick skin for everyone listed:
+
+| Sidekick | 
+|-------------|
+| {% chara_link Shaft %}  | 
+| {% chara_link Okitaka %}  |
+| {% chara_link Flamier %}  | 
+| {% chara_link Hydoor %}  | 
+| {% chara_link Kouki %}  | 
+| {% chara_link Narihito %}  | 
+| {% chara_link Alchiba %}  | 
+| {% chara_link Subaru %}  | 
+| {% chara_link Alphecca %}  | 
+| {% chara_link Rutilix %}  | 
+| {% chara_link Kalaski %}  | 
+| {% chara_link Pubraseer %}  | 
+| {% chara_link Yoshiori %}  | 
+| {% chara_link Sadayoshi %}  | 
+| {% chara_link Lilac %}  | 
+
 ## Event Shop
 
 {% include shop-table.html id=31 %}
