@@ -3196,7 +3196,7 @@
     "resourceName": "b_skill_damage",
     "subResourceName": "",
     "timing": 0,
-    "description": "敵単体に70%ダメージ。自身に隠蔽が付与されている場合、ダメージ増加。",
+    "description": "敵単体に70%ダメージ。自身に隠蔽が付与されている場合、与えるダメージが100%に増加。",
     "cutin": [
       {
         "info": {
@@ -13689,7 +13689,7 @@
     "resourceName": "b_skill_damage",
     "subResourceName": "",
     "timing": 0,
-    "description": "敵単体に120%ダメージ。攻撃対象にバフが付与されている場合、ダメージ増加。【常時発動】敵の隠蔽を無視。",
+    "description": "敵単体に120%ダメージ。攻撃対象にバフが付与されている場合、与えるダメージが180%に増加。【常時発動】敵の隠蔽を無視。",
     "cutin": [
       {
         "info": {
@@ -14074,7 +14074,7 @@
     "resourceName": "b_skill_damageAll",
     "subResourceName": "",
     "timing": 0,
-    "description": "敵全体に70%ダメージ。【常時発動】自身の攻撃で敵を戦闘不能にした時、自身に1回の行動の間View消費量-2000を付与。",
+    "description": "敵全体に70%ダメージ。【常時発動】自身の攻撃で敵を戦闘不能にした時、戦闘不能にした敵の数だけ自身に1回の行動の間View消費量-2000を付与。",
     "cutin": [
       {
         "info": {
@@ -14090,6 +14090,15 @@
         "skillEffectId": 1,
         "prob": 100,
         "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 874,
+        "prob": 0,
+        "effectTarget": 0,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "randomGroupId": 0,
@@ -35182,7 +35191,7 @@
     "useView": 5000,
     "targetFlag": 1,
     "resourceName": "b_skill_buff",
-    "subResourceName": "",
+    "subResourceName": "s_skill_buffTeam",
     "timing": 0,
     "description": "味方単体に2ターンの間挑発を付与。2回分のDEFアップを付与。（敵専用）",
     "cutin": [
