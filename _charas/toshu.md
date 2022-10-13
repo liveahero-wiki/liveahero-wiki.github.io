@@ -21,7 +21,18 @@ He will continue to wield his sword on the battlefield until the day he can reco
 
 {% include hero-infobox.html stockId=10131 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10132 passiveSkillIds="8013201" %}
+{% capture BIO_H01 %}
+During battles in the newfound space, Toshu fought against mysterious enemies and realized his own weaknesses. 
+
+He faced those weaknesses with rigorous training, and in result of that, obtained a new form. 
+
+With a calm mind as clear as water, he sharpens his spirit, feels the environment on his skin and follows the path his sword need to take to claim victory. 
+
+The reason for that, is because he wanted to win against his passionate emotions, as well as to guide his allies to victory. 
+
+It is a strategy used in order to embody his "samurai" way of doing things.
+{% endcapture %}
+{% include hero-infobox.html stockId=10132 BIO_H01=BIO_H01 passiveSkillIds="8013201" %}
 
 {% capture BIO_S01 %}
 A Kendo artist who is a teacher at Hinowa University of Physical Education, serving as an advisor to the institution's kendo club
