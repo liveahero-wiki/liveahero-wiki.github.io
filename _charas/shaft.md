@@ -31,7 +31,17 @@ With the agility and appearance of a rickshaw puller, he uses his parallel weapo
 
 The faith in his leg strength back from his rugby days, as well as his desire to not leave anyone behind and save everyone are the reasons for this.
 {% endcapture %}
-{% include hero-infobox.html stockId=10632 BIO_H01=BIO_H01 %}
+
+{% capture BIO_H02 %}
+Shaft's life has always revolved around his team.
+
+That is something he felt even more strongly ever since he started working as a space taxi driver.
+
+He who values harmony and bonds of his companion, will try his best to bring even a makeshift team together.
+
+It's not because he clings to his past, but because he believes that creating a place for himself within the team and ensuring the smooth running of the team is the way to make the most of what he has cultivated.
+{% endcapture %}
+{% include hero-infobox.html stockId=10632 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 A former professional rugby player, he is now an Earthling who drives a space cab.
