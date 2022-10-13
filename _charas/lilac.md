@@ -34,7 +34,7 @@ Influenced by his brother Hashidoi in his childhood, he became interested in pla
 
 He believes that flowers, which are often used as gifts to convey feelings, have the power to convey some sentiments better than words.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=11011 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=11011 BIO_S01=BIO_S01 extra_sprites="fg_lilac_s01_skin1" %}
 
 {% include voice-table.html resourceName="lilac"
 h_gachaResult = "My name is Lilac.<br>I work in a florist shop.<br>This smell......<br>You're in the business of exterminating kaibutsu.<br>Leave it to me, I'll cut 'em down with these shears."

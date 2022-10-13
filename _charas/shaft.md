@@ -22,7 +22,7 @@ Even if he's not confident in himself yet, even if it's not as glamorous a life 
 
 He realized that it was important to pave the way to the future with confidence, not cling feebly to the past, and he grasped the steering wheel praying he would not be too late.
 {% endcapture %}
-{% include hero-infobox.html stockId=10631 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+{% include hero-infobox.html stockId=10631 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_shaft_s01_skin1,fg_shaft_s01_skin2" %}
 
 {% include hero-infobox.html stockId=10632 %}
 

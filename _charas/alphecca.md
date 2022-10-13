@@ -37,7 +37,7 @@ It seems to have something to do with "The white knight" who appears on the batt
 
 He invites the Rutilix, who has trouble achieving anything, to an exploration into a labyrinth which has quickly caused some turmoil.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10621 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10621 BIO_S01=BIO_S01 extra_sprites="fg_alphecca_s01_skin1" %}
 
 {% include voice-table.html resourceName="alphecca"
 h_gachaResult = "I am a nameless white knight…no.<br>King of Ardisia kingdom, Alphecca Gemma the 21st!<br>In my name, I promise to fulfill your expectation on the battlefield."

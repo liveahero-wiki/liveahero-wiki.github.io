@@ -48,7 +48,7 @@ Because of his good-looking facial features and captivating narrow eyes, he's a 
 
 He tends to speak incessant bickering that could set anyone's teeth on edge. Nevertheless, he firmly follows his creed that "He will fulfill any requests recieved even if he dies in the process". This is because of his established reputation for laboral perfection, which has the detective industry thriving beyond expectation.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10261 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10261 BIO_S01=BIO_S01 extra_sprites="fg_alchiba_s01_skin1" %}
 
 {% include voice-table.html resourceName="alchiba"
 h_gachaResult = "I'm Alchiba, your humble private investigator.<br>To meet such a wonderful client like you.<br>I'm very happy.<br>Well then, what's your request?<br>Let me see the truth in black and white."

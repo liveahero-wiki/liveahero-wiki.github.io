@@ -18,7 +18,7 @@ An earthling from Osaka, Japan, his full name is Takadono Okitaka.
 With his cheerful and sociable personality and affable manner, he doesn't come across like a person in a key internal management position, but his wisdom as a commander is outstanding.
 The tight-knit working relationship between UEHA and Parallel Flight is due to the fact that he, Ryekie and Huckle formed a deep bond after a joint battle.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10751 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10751 BIO_S01=BIO_S01 extra_sprites="fg_okitaka_s01_skin1" %}
 
 {% include voice-table.html resourceName="okitaka"
 h_gachaResult = "Japan's UEHA branch commander, Okitaka Takadono.<br>Come on, let's go, newbie.<br>I will show you an invincible strategy."

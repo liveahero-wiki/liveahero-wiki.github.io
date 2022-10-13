@@ -35,7 +35,7 @@ His combat capabilities are also very well-developed.
 
 Due to him following the path in his life laid out for him, he has a bad time getting along with people who go don't follow their own path.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10811 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10811 BIO_S01=BIO_S01 extra_sprites="fg_sadayoshi_s01_skin1" %}
 
 {% include voice-table.html resourceName="sadayoshi"
 h_gachaResult = "Colonel Sadayoshi Ikusabata, from defense bureau of Japan.<br>I am now under your direct command.<br>I hope we can protect the order together."

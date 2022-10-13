@@ -24,7 +24,7 @@ Subaru is a novelist who lives and works in Orient city. He is an earthling from
 He tends to dislike unnecessary outings and situations where he is disturbed by others, because it throws his life into disorder, which is why he also tends to withdraw from things.
 {% endcapture %}
 
-{% include sidekick-infobox.html stockId=10271 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10271 BIO_S01=BIO_S01 extra_sprites="fg_subaru_s01_skin1" %}
 
 {% include voice-table.html resourceName="subaru"
 h_gachaResult = "Nobeyama Subaru, more or less a writer.<br>Please don't call me too often.<br>I'm better suited and prefer to create my story alone in a quiet place."

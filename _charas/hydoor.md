@@ -31,7 +31,7 @@ As a former pirate, he has a bad temper and a lot of blood on his hands, but bec
 
 He is very susceptible to both flattery and provocation, so he can be easily manipulated at times.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10171 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10171 BIO_S01=BIO_S01 extra_sprites="fg_hydoor_s01_skin1" %}
 
 {% include voice-table.html resourceName="hydoor"
 h_gachaResult = "Oi oi, it's you?<br>The one who is trying to tame this Hydoor.<br>Hee, interesting.<br>You have some guts."

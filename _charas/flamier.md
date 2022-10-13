@@ -60,7 +60,7 @@ She has a strange obsession with "beautiful burning things" and possesses extrao
 
 Her dream is to create fireworks that bloom beautifully in space.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10111 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10111 BIO_S01=BIO_S01 extra_sprites="fg_flamier_s01_skin1,fg_flamier_s01_skin2" %}
 
 {% include voice-table.html resourceName="flamier"
 h_gachaResult = "Nice to meet you. I am Flamier, a high school teacher.<br>My speciality is... that's right, just to have a teensy bit of enjoyment for explosions.<br>I'm a bit clumsy, but I'm in your hands."

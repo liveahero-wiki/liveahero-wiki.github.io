@@ -50,7 +50,7 @@ He is always running around people in search of hero-related scoops.
 
 As a knowledgeable connoisseur, he experts at profiling information about heroes, villains, and kaibutsu from all times and places.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10291 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10291 BIO_S01=BIO_S01 extra_sprites="fg_narihito_s01_skin1" %}
 
 {% include voice-table.html resourceName="narihito"
 h_gachaResult = "From Taiyou News Network, I'm Narihito Karue!<br>You there, Mr. Hero and Operator!<br>By all means!<br>Let me do an interview!"

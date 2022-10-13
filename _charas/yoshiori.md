@@ -42,7 +42,7 @@ Despite a wild personality like his appearance suggest, towards those he approve
 
 He feels a strong debt of gratitude towards Exio.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10721 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10721 BIO_S01=BIO_S01 extra_sprites="fg_yoshiori_s01_skin1" %}
 
 {% include voice-table.html resourceName="yoshiori"
 h_gachaResult = "I'm Yoshiori,<br>An ex-soldier bodyguard.<br>If you're asking me to do something,<br>that means there will be someone with holes in their body,<br>okay…?"

@@ -33,7 +33,7 @@ However, he can't dismiss others' friendly attitude towards him, he act like it'
 
 He tries to act cool, but actually easily offended.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10641 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10641 BIO_S01=BIO_S01 extra_sprites="fg_kalaski_s01_skin1" %}
 
 {% include voice-table.html resourceName="kalaski"
 h_gachaResult = "My name is Kalaski, a professional photographer.<br>I can go to any battlefield for a fee.<br>Just so you know...<br>Don't confuse me with a kid, okay?"
