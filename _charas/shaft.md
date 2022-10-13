@@ -22,7 +22,7 @@ Even if he's not confident in himself yet, even if it's not as glamorous a life 
 
 He realized that it was important to pave the way to the future with confidence, not cling feebly to the past, and he grasped the steering wheel praying he would not be too late.
 {% endcapture %}
-{% include hero-infobox.html stockId=10631 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_shaft_s01_skin1,fg_shaft_s01_skin2" %}
+{% include hero-infobox.html stockId=10631 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% include hero-infobox.html stockId=10632 %}
 
@@ -33,7 +33,7 @@ When he was a rugby player, his motto was to be a player who could carry the bal
 
 With a gentle and honest disposition, he has low self-esteem due to his clumsiness, whenever he makes a blunder he always reflect that he needs "to pull himself together".
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10631 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10631 BIO_S01=BIO_S01  extra_sprites="fg_shaft_s01_skin1,fg_shaft_s01_skin2" %}
 
 {% include voice-table.html resourceName="shaft"
 h_gachaResult = "I am Shaft.<br>I'm a space cab driver.<br>Leave the navigation to me.<br>I will get you to your destination...<br>No, I will take you to the future!"
