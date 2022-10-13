@@ -31,7 +31,7 @@ Even so, he is quite liked by King Alphecca due to his dedication to his knight 
 
 After accepting King Alphecca's invitation, he went out on a journey into a labyrinth that is rumored to be difficult to escape.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10611 BIO_S01=BIO_S01 %}
+{% include sidekick-infobox.html stockId=10611 BIO_S01=BIO_S01 extra_sprites="fg_rutilix_s01_skin1" %}
 
 {% include voice-table.html resourceName="rutilix"
 h_gachaResult = "Ardisia Knight, Rutilix!<br>I'm here to be your blade!<br>For the honor of knighthood, I will give this duty my all!"
