@@ -70,7 +70,7 @@ Deal {% if effect.parameter.evaluationIsMax == true %}{{ effect.parameter.value 
 Skip {{ effect.parameter.value }} enemy action(s)
 {% when "Silence" %}
 {% assign turnDefinition = "turn" %}
-{{ target }} cannot use view-costing skills
+{% if effect.parameter.index %}{{ target }} cannot use skill {{ effect.parameter.index | plus: 1 }} again{% else %}{{ target }} cannot use view-costing skills{% endif %}
 {% when "AddMultDamage" %}
 Deal {{ effect.parameter.value }}% of damage and extra {{ effect.parameter.addMult }}% of damage when condition in bracket is met
 {% when "ComboDamage" %}
