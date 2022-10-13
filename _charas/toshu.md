@@ -2,6 +2,8 @@
 title: Toshu
 characterId: 13
 occupation: "Kendo Artist (剣道家)"
+h2:
+  title: "\"Swordman Spirit\" Toshu"
 ---
 
 {% capture BIO_H01 %}
@@ -18,6 +20,8 @@ He will continue to wield his sword on the battlefield until the day he can reco
 {% endcapture %}
 
 {% include hero-infobox.html stockId=10131 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+
+{% include hero-infobox.html stockId=10132 %}
 
 {% capture BIO_S01 %}
 A Kendo artist who is a teacher at Hinowa University of Physical Education, serving as an advisor to the institution's kendo club
@@ -60,6 +64,9 @@ RELATION = "Typically one should take close care with the elderly, but it is rar
 TOUCH = "Ngh..!! Damn you...! Don't stroke my mane as you please! I didn't grow it to be your stress relief!"
 TRAIN = "Let's go! Today is the time to hone the skills of a warrior!"
 TRAINED = "Ugh! You're barbaric!"
+%}
+
+{% include voice-table.html resourceName="toshuVirtualFesta2210"
 %}
 
 ## Notes

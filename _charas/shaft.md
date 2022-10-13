@@ -1,6 +1,8 @@
 ---
 title: Shaft
 characterId: 63
+h2:
+  title: "\"The Runner\" Shaft"
 ---
 
 {% capture BIO_H01 %}
@@ -21,6 +23,8 @@ Even if he's not confident in himself yet, even if it's not as glamorous a life 
 He realized that it was important to pave the way to the future with confidence, not cling feebly to the past, and he grasped the steering wheel praying he would not be too late.
 {% endcapture %}
 {% include hero-infobox.html stockId=10631 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+
+{% include hero-infobox.html stockId=10632 %}
 
 {% capture BIO_S01 %}
 A former professional rugby player, he is now an Earthling who drives a space cab.
@@ -59,6 +63,9 @@ HERO =  "There's something he wants to photograph even at the risk of his life.<
 RELATION = "That android truck driver has a very high work ethic, doesn't he?<br>I've always wanted to learn from him..."
 EVENTA = "I've been involved in some kind of terrible incident... oh no.<br>Don't worry, I'll get you all to your destination.<br>Erm... wait. Where are we...?"
 EVENTB = "I wonder what that thief's goal is.<br>I have a vague idea, but... it doesn't seem like he's just a prankster.<br>I can't make heads or tails of it."
+%}
+
+{% include voice-table.html resourceName="shaftVirtualFesta2210"
 %}
 
 ## Notes
