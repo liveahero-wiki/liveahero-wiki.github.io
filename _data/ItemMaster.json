@@ -1375,6 +1375,80 @@
     "effect": [],
     "limitValue": 0
   },
+  "138": {
+    "itemId": 138,
+    "itemName": "勝利の褒賞",
+    "resourceName": "VirtualFesta2210_exchange01",
+    "rarity": 0,
+    "itemType": 512,
+    "description": "O-1ヒーローグランプリで勝利すると入手できる褒賞。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "139": {
+    "itemId": 139,
+    "itemName": "桟橋ホログラム",
+    "resourceName": "icon_bg_battle_wharf",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景に桟橋を投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_wharf",
+        "bgTitleKey": "TITLE_BG_BATTLE_WHARF_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
+  "140": {
+    "itemId": 140,
+    "itemName": "砂浜ホログラム",
+    "resourceName": "icon_bg_battle_coast",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景に砂浜を投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_coast",
+        "bgTitleKey": "TITLE_BG_BATTLE_COAST_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
+  "141": {
+    "itemId": 141,
+    "itemName": "バーチャルフェスタディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "バーチャルフェスタ・ロワイアルのBGMのディスク。オフィスのBGMを変更する。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_virtualfesta_adv",
+        "bgmTitleKey": "TITLE_BGM_VIRTUALFESTA_ADV_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "142": {
+    "itemId": 142,
+    "itemName": "バーチャルフェスタ戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "バーチャルフェスタ・ロワイアルの戦闘BGMのディスク。オフィスのBGMを変更する。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_virtualfesta_battle",
+        "bgmTitleKey": "TITLE_BGM_VIRTUALFESTA_BATTLE_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -1833,6 +1907,27 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "110132": {
+    "itemId": 110132,
+    "itemName": "流離のトウシュウの記憶片",
+    "resourceName": "piece_toshuVirtualFesta2210",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "流離のトウシュウのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10132
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
       }
     ],
     "limitValue": 0
@@ -2585,6 +2680,27 @@
     ],
     "limitValue": 0
   },
+  "110632": {
+    "itemId": 110632,
+    "itemName": "疾走のシャフトの記憶片",
+    "resourceName": "piece_shaftVirtualFesta2210",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "疾走のシャフトのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10632
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
   "110641": {
     "itemId": 110641,
     "itemName": "カラスキの記憶片",
@@ -3023,6 +3139,48 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
+  "111221": {
+    "itemId": 111221,
+    "itemName": "リグザの記憶片",
+    "resourceName": "piece_rexer",
+    "rarity": 3,
+    "itemType": 1024,
+    "description": "リグザのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 10,
+        "rarity": 0,
+        "stockId": 11221
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ],
+    "limitValue": 0
+  },
+  "111231": {
+    "itemId": 111231,
+    "itemName": "セラスティウムの記憶片",
+    "resourceName": "piece_cerastium",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "セラスティウムのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 11231
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
       }
     ],
     "limitValue": 0
@@ -4355,6 +4513,46 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 1
+      }
+    ],
+    "limitValue": 0
+  },
+  "211221": {
+    "itemId": 211221,
+    "itemName": "リグザの心",
+    "resourceName": "heart_rexer",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "リグザのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 11221
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ],
+    "limitValue": 0
+  },
+  "211231": {
+    "itemId": 211231,
+    "itemName": "セラスティウムの心",
+    "resourceName": "heart_cerastium",
+    "rarity": 4,
+    "itemType": 2048,
+    "description": "セラスティウムのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 11231
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
       }
     ],
     "limitValue": 0
