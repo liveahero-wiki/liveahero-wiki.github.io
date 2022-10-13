@@ -41,3 +41,4 @@ She is an overzealous fan of Zap the Justice, respects greatly, almost the point
 %}
 
 ## Notes
+- Her full name is Cerastium la Forge (セラスティウム・ラ・フォルジュ)
