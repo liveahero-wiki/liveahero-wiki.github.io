@@ -32,7 +32,17 @@ The reason for that, is because he wanted to win against his passionate emotions
 
 It is a strategy used in order to embody his "samurai" way of doing things.
 {% endcapture %}
-{% include hero-infobox.html stockId=10132 BIO_H01=BIO_H01 passiveSkillIds="8013201" %}
+
+{% capture BIO_H02 %}
+He is a stoic man who has trained himself to overcome his various weaknesses, but there are things he could not overcome no matter how hard he tried.
+
+One of it is water. Unable to swim and having a fear of water, he is extremely afraid of fighting around any body of water.
+
+It is never easy to overcome a deep-rooted sense of weakness. However, he can never move forward by avoiding it.
+
+His choice in this, is not to conquer the water, but to temper himself so that he can have inner calm even in the presence of water.
+{% endcapture %}
+{% include hero-infobox.html stockId=10132 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8013201" %}
 
 {% capture BIO_S01 %}
 A Kendo artist who is a teacher at Hinowa University of Physical Education, serving as an advisor to the institution's kendo club
