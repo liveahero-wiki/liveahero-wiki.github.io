@@ -21,7 +21,7 @@ He will continue to wield his sword on the battlefield until the day he can reco
 
 {% include hero-infobox.html stockId=10131 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10132 %}
+{% include hero-infobox.html stockId=10132 passiveSkillIds="8013201" %}
 
 {% capture BIO_S01 %}
 A Kendo artist who is a teacher at Hinowa University of Physical Education, serving as an advisor to the institution's kendo club
