@@ -24,7 +24,14 @@ He realized that it was important to pave the way to the future with confidence,
 {% endcapture %}
 {% include hero-infobox.html stockId=10631 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10632 %}
+{% capture BIO_H01 %}
+In a place where there are no space taxis, what should he be? Shaft's conclusion was that he will work to get and deliver passengers on foot. 
+
+With the agility and appearance of a rickshaw puller, he uses his parallel weapon of two wheels and freely overpowers anyone with speed on the field. 
+
+The faith in his leg strength back from his rugby days, as well as his desire to not leave anyone behind and save everyone are the reasons for this.
+{% endcapture %}
+{% include hero-infobox.html stockId=10632 BIO_H01=BIO_H01 %}
 
 {% capture BIO_S01 %}
 A former professional rugby player, he is now an Earthling who drives a space cab.
