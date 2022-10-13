@@ -31,7 +31,7 @@ Rates as follow:
 | {% chara_link Cerastium|h1 %}                                | 2 %              | 32 %             |
 | {% chara_link Cerastium %}                                   | 5 %             | 0 %             |
 | {% chara_link Hydoor %}                                   | 3 %             | 0 %             |
-| {% chara_link Kouki %}                                   | 3 %             | 0 %             |
+| {% chara_link Kouki & Sirius %}                          | 3 %             | 0 %             |
 | {% chara_link Alchiba %}                                   | 3 %             | 0 %             |
 | {% chara_link Cerastium %}                                   | 3 %             | 0 %             |
 | {% chara_link Subaru %}                                   | 3 %             | 0 %             |
@@ -79,7 +79,7 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 | {% chara_link Victom %}  | 10 | 
 | {% chara_link Flamier %}  | 10 | 
 | {% chara_link Hydoor %}  | 10 | 
-| {% chara_link Kouki %}  | 10 | 
+| {% chara_link Kouki & Sirius %}  | 10 | 
 | {% chara_link Narihito %}  | 10 | 
 | {% chara_link Alchiba %}  | 10 | 
 | {% chara_link Subaru %}  | 10 | 
@@ -129,7 +129,7 @@ New sidekick skin for everyone listed:
 | {% chara_link Okitaka %}  |
 | {% chara_link Flamier %}  | 
 | {% chara_link Hydoor %}  | 
-| {% chara_link Kouki %}  | 
+| {% chara_link Kouki & Sirius %}  | 
 | {% chara_link Narihito %}  | 
 | {% chara_link Alchiba %}  | 
 | {% chara_link Subaru %}  | 
