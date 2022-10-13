@@ -66,8 +66,6 @@ module LahWiki
           f.push("target enemy is killed")
         when "InvokerAliveTrigger"
           f.push("when invoker is alive")
-        when "BeforeSkillTrigger"
-          f.push("before skill activates (need verification)")
         when "AboveSpdValueTrigger"
           f.push("SPD&gt;#{c['value']}")
         when "OwnStatusTrigger"
@@ -119,8 +117,12 @@ module LahWiki
         when "TargetElementDontExecTrigger"
           element = @@element_map[c['element']] || "Unknown"
           f.push("target is not #{element}")
+        when "BeforeSkillTrigger"
+          f.push("target has not acted before invoker in current turn")
+        when "AfterSkillTrigger"
+          f.push("target has acted before invoker in current turn")
         when "BeforeSkillTriggerWithoutInvoker"
-          f.push("target has not acted yet")
+          f.push("target has not acted yet in current turn")
         else
           f.push("unknown condition (#{c['class']}")
         end

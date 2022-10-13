@@ -14,7 +14,7 @@ turn end
 {% when 6 %}
 when self at &lt;50% HP
 {% when 7 %}
-after own attack puts enemy at &lt;50% HP
+after invoker's attack puts enemy at &lt;50% HP
 {% when 8 %}
 when taking damage
 {% when 9 %}
@@ -33,6 +33,8 @@ when leaving
 when current attack kills the enemy
 {% when 19 %}
 when activating a skill that increases combo
+{% when 20 %}
+when invoker's attack causes damage to enemy
 {% else %}
 unknown timing ({{ include.timing }})
 {% endcase %}
