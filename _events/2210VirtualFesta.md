@@ -154,3 +154,20 @@ New sidekick skin for everyone listed:
 ### Free Quests
 
 {% include quest-group.html chapterId=1011 %}
+
+## Sales Report
+
+<details><summary>Sales Report 1</summary>
+<p>営業先のヒトから最新のゲームを勧められ、<br>試してみようと、ログインする <code>character0</code> 。<br><br>目の前に広がるのは、まるでファンタジーの<br>世界を再現したかのような景色。<br><br>その本物と見間違える程の世界を<br>わくわくしながら <code>character0</code> は進んでいく。<br><br>新たな仲間と出会い、迷いの森を抜け、<br>精霊の守り手に会いに行き、<br>行く先を阻む獣たちと戦い、<br>伝説の武器を探してさまよい――<br><br>順調に見えた <code>character0</code> の旅だが、<br>ある恐怖が忍び寄っていることに<br> <code>character0</code> はまだ気付いていなかった。<br><br>――そう、明日は仕事で<br>既に深夜を回っているという事実を<br>勇者： <code>character0</code> は、まだ知らない……<br>
+</p>
+</details>
+
+<details><summary>Sales Report 2</summary>
+<p> <code>character0</code> は仕事を終えて、<br>家に帰ると、ゲームを起動する。<br><br>新しく追加されたステージを遊んでいると、<br>見知らぬギミックが発動し、<br>多くの攻撃が <code>character0</code> へと牙をむいた。<br><br>もうダメだと諦めそうになったその時、<br>突然颯爽と現れた見知らぬプレイヤーのアシストで<br>その窮地を逃れることができた <code>character0</code> 。<br><br>しかし、お礼を伝える間もなく、そのプレイヤーは<br>急用が出来たと唐突にログアウトしてしまう。<br><br>翌日、その出来事を <code>character1</code> に話すと、<br> <code>character1</code> は驚いたように<br> <code>character0</code> のプレイヤーネームを呼んだ。<br><br>その時のプレイヤーが <code>character1</code> だと知り、<br>ゲームの話で盛り上がる２人は、今度は一緒に<br>遊ぼうと約束をし合うのだった。<br>
+</p>
+</details>
+
+<details><summary>Sales Report 3</summary>
+<p>今回の仕事は、超仮想現実のゲームについて<br>体験レポートを行うというもの。<br><br>話題の最新対戦ゲームが遊べると、楽し気な雰囲気の<br> <code>character0</code> と <code>character1</code> 。<br>対する <code>character2</code> と <code>character3</code> は、<br>絶対勝つと真剣な表情で頷き合う。<br><br>的確なアクションを決める <code>character2</code> に<br>それを楽し気に避ける <code>character0</code> 。<br> <code>character1</code> はアシストでポイントを稼ぎ、<br>それを戦略的に迎え撃つ <code>character3</code> ――<br><br>両チーム互角のまま、最終決戦へ。<br>結果は、僅差で <code>character3</code> たちの勝利！<br><br>悔しがりながらも楽しかったと<br>レポートをする <code>character0</code> たちに、<br>勝負の健闘を称える <code>character2</code> 。<br><br> <code>character1</code> の提案で、仕事の後に<br>楽し気に再戦する４人の姿があったという。<br>
+</p>
+</details>
