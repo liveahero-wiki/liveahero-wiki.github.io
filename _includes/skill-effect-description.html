@@ -7,6 +7,9 @@
 {{ include.skillEffect.triggerJson | skill_trigger: include.timing }}
 {% if skillEffectJson.trigger %}{{ skillEffectJson.trigger | skill_trigger_json: include.timing }}{% endif %}
 {% for effect in skillEffectJson.effects %}
+
+{% if effect.class == "NoneEffect" and skillEffectJson.effects.size > 1 %}{% continue %}{% endif %}
+
 {% assign turnDefinition = "action" %}
 {% case effect.class %}
 {% when "Damage" %}
