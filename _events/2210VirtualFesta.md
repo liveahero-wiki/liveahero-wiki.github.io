@@ -63,7 +63,7 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 | {% chara_link Cerastium|h1 %}  | 30 |
 | {% chara_link reXer|h1 %} | 20 |
 | {% chara_link Shaft|h1 %} | 20 |
-| {% chara_link Toshu|h2 %}  | 10 |
+| {% chara_link Toshu|h1 %}  | 10 |
 | {% chara_link Barrel|h2 %} | 20 | 
 | {% chara_link Victom|h2 %} | 20 | 
 | {% chara_link Okitaka|h1 %} | 10 |
