@@ -30,6 +30,18 @@ He used to work as a hero in the real world, but nowadays he seems to have disap
 {% include sidekick-infobox.html stockId=11221 BIO_S01=BIO_S01 extra_sprites="fg_rexer_s01_skin1" %}
 
 {% include voice-table.html resourceName="rexer"
+h_gachaResult = "Pro-Gamer, and virtual hero reXer.<br>Let's win the next game together for sure.<br>Well…you can look forward to it. "
+s_gachaResult = "Pro-Gamer, I'm also a virtual hero reXer's the name.<br>I will do my best at sidekick job.<br>…yes, professionals aren't picky."
+APPRECIATION = "I don't know about the operation, but it seems to take a lot of mental strength.<br>Why don't we take a break and play some game? Don't worry I will hold back."
+DAILY = "Yosh! That combo will finish it!<br>..ah, ahem. You saw it. What, the job?<br>Ah, I'm not playing around. This is independent training."
+HERO = "Ceras is amazing, she can use such a huge shield.<br>She has a very good spec in offense and defense, and her merit is also enough,<br>why though, does she not take the initiative to lead the team?"
+PLAYER = "Do you have a goal? An ideal?<br>…I have it. I have someone I need to surpass.<br>That's why, I continue to be reXer."
+RELATION = "I have mock battle with Toshu, and all along he lectures me on battle etiquette…it feels like I'm in class.<br>…eh, he's actually a teacher? Ahh, that's why he's so strict."
+TOUCH = "What, are you interested in this avatar?<br>hehe, it's great right.<br>Even if it's a virtual world, I make sure to temper myself.<br>I'm a hero after all."
+TRAIN = "Come, follow me."
+TRAINED = "N-no more leeway…!"
+EVENTA = "I don't know the word defeat in this game.<br>I'm going to win for myself. That's all there is to it.<br>…I absolutely won't lose."
+EVENTB = "Gentle and strong, very cool.<br>I have come this far by chasing that person's back.<br>I want to be a perfect hero, just like them."
 %}
 
 ## Notes
