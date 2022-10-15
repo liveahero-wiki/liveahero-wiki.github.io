@@ -88,6 +88,18 @@ TRAINED = "Ugh! You're barbaric!"
 %}
 
 {% include voice-table.html resourceName="toshuVirtualFesta2210"
+h_gachaResult = "I have seen the essence of swordmanship in the raging waves of electrons.<br>With the skills I acquired in this world, I have find the way to become a true samurai.<br>Now forward, with honor!"
+s_gachaResult = "So you need my help.<br>Very well.<br>I'm still not accustomed on how to carry myself in this form, but this is also a training.<br>I will accept this challenge."
+APPRECIATION = "No matter where you go, you keep the tendency to always push yourself beyond your limit…rest for a bit.<br>I'm used to organizing paperwork at the university."
+DAILY = "Why the long face you say? Hm..i guess it shows on my face.<br>No, I'm just concerned about the fact that it will be a waterfront battle.<br>I, uh…can't swim…"
+HERO = "Shaft-dono is not a careless person.<br>That eye that discerns the surroundings. His attitude of wanting to fight together.<br>I find it very agreeable."
+PLAYER = "I never thought I'd be working with you.<br>But, I'm thankful that I can work with someone I already know.<br>I know you have the skills after all….T-that's not a compliment!"
+RELATION = "Pursuing his ideal and honor, reXer is a passionate man.<br>He's sometimes clumsy, but that feeling is genuine.<br>…how nostalgic. I used to be like that too."
+TOUCH = "Y-you! How many times I have told you not to touch my mane!<br>I-I'm not moaning!<br>Forget it now, sit there properly!"
+TRAIN = "We will fight together, Let's go!"
+TRAINED = "Nuu…! I'm still inexperienced…!"
+EVENTA = "Hmm..i can't seem to move like usual.<br>I usually rely on how it feels in my body.<br>This is also a training, I will have to concentrate…"
+EVENTB = "Stealing a hero's form and technique, and using it to do evil is a very grave insult!<br>No matter how many weird tricks you're using, I will make sure to beat you myself!"
 %}
 
 ## Notes
