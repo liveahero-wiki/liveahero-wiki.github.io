@@ -83,6 +83,18 @@ EVENTB = "I wonder what that thief's goal is.<br>I have a vague idea, but... it 
 %}
 
 {% include voice-table.html resourceName="shaftVirtualFesta2210"
+h_gachaResult = "Even if in an electronic sea, I will be there to welcome you with my body.<br>And I will surely take you to your destination.<br>I have confidence in my legs!"
+s_gachaResult = "I receive this sidekick duty.<br>Well then, let's go.<br>….It's all right.<br>Even without a navi system, I won't get lost."
+APPRECIATION = "Good work, Operator.<br>I will give you a ride home. Come, get on my back.<br>Then, here I go..…eh, are you asleep?"
+PLAYER = "I think someone who can give you hint on what to do when you're lost, is someone important.<br>You helped me a lot…heheh."
+TOUCH = "Whoa, what's the matter? Ah, this wound.<br>It even recreate my old wound from rugby days.<br>Look, there is also a wound here…ah. I-I'm sorry!"
+TRAINED = "Guoo!? I-intense…!"
+TRAIN = "Let me show you my full effort!"
+DAILY = "I'm alone when I work as a taxi driver, but when I'm a hero I can work together with a team.<br>Working together with others is a very good thing after all."
+HERO =  "I guess there is something you can see only when you have been lost once.<br>I think I kind of understand what seems to cause reXer's setback."
+RELATION = "With that strong heart, toshu doesn't look like someone who will lost his way when making a decision.<br>As someone indecisive, I have a lot to learn….memo memo."
+EVENTA = "Since it will be a team battle, i think teamwork is very important…<br>Okay, let's start with a scrum!<br>We have to get along!"
+EVENTB = "No matter how far, I will certainly get there…!<br>If there is no taxi, then just this legs will do!<br>I…won't give up again!"
 %}
 
 ## Notes
