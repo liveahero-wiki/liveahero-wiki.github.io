@@ -162,12 +162,27 @@ New sidekick skin for everyone listed:
 </p>
 </details>
 
+<details><summary>Sales Report 1 (Translated)</summary>
+<p> Having been recommended by a business associate to try a latest game <code>character0</code> was logging in into it.<br><br>The recreated landscape before their eyes was like a fantasy world.<br><br>It's such a realistic game, <code>character0</code> excitedly move forward.<br><br>Meeting new companions, getting lost in a forest,<br>encounter with a spirit guardian, fighting against the blocking beasts,<br>wandering around in search of legendary weapons…<br><br>The journey was going well,<br>but <code>character0</code> doesn't realize that a certain terror was creeping up on them.<br><br>…The day after was workday,<br>and it's already very late into the night.<br>The hero: character0 didn't realize….
+</p>
+</details>  
+
 <details><summary>Sales Report 2</summary>
 <p> <code>character0</code> は仕事を終えて、<br>家に帰ると、ゲームを起動する。<br><br>新しく追加されたステージを遊んでいると、<br>見知らぬギミックが発動し、<br>多くの攻撃が <code>character0</code> へと牙をむいた。<br><br>もうダメだと諦めそうになったその時、<br>突然颯爽と現れた見知らぬプレイヤーのアシストで<br>その窮地を逃れることができた <code>character0</code> 。<br><br>しかし、お礼を伝える間もなく、そのプレイヤーは<br>急用が出来たと唐突にログアウトしてしまう。<br><br>翌日、その出来事を <code>character1</code> に話すと、<br> <code>character1</code> は驚いたように<br> <code>character0</code> のプレイヤーネームを呼んだ。<br><br>その時のプレイヤーが <code>character1</code> だと知り、<br>ゲームの話で盛り上がる２人は、今度は一緒に<br>遊ぼうと約束をし合うのだった。<br>
 </p>
 </details>
 
+<details><summary>Sales Report 2 (Translated)</summary>
+<p> Leaving work and came home, <code>character0</code> starts the game.<br><br>While playing in a newly added stage, without knowing it's gimmick,<br> <code>character0</code> was cornered by a lot of onslaught.<br><br>When <code>character0</code> was about to give up, suddenly an unknown player came to assist them,<br>and they succesfully escape their predicament.<br><br>However, before they can convey their gratitude,<br>that player suddenly logged out saying they have an urgent business.<br><br>The next day, while telling the story to <code>character1</code> ,<br> <code>character1</code> exclaim <code>character0</code> 's player name in surprise.<br><br>Knowing that the player at that time was <code>character1</code> ,<br> the both of them excitedly discuss the game,<br> and promised to play together again next time.
+</p>
+</details>  
+
 <details><summary>Sales Report 3</summary>
 <p>今回の仕事は、超仮想現実のゲームについて<br>体験レポートを行うというもの。<br><br>話題の最新対戦ゲームが遊べると、楽し気な雰囲気の<br> <code>character0</code> と <code>character1</code> 。<br>対する <code>character2</code> と <code>character3</code> は、<br>絶対勝つと真剣な表情で頷き合う。<br><br>的確なアクションを決める <code>character2</code> に<br>それを楽し気に避ける <code>character0</code> 。<br> <code>character1</code> はアシストでポイントを稼ぎ、<br>それを戦略的に迎え撃つ <code>character3</code> ――<br><br>両チーム互角のまま、最終決戦へ。<br>結果は、僅差で <code>character3</code> たちの勝利！<br><br>悔しがりながらも楽しかったと<br>レポートをする <code>character0</code> たちに、<br>勝負の健闘を称える <code>character2</code> 。<br><br> <code>character1</code> の提案で、仕事の後に<br>楽し気に再戦する４人の姿があったという。<br>
 </p>
 </details>
+
+<details><summary>Sales Report 3 (Translated)</summary>
+<p>The job was to do a hands-on report on a super virtual reality game.<br><br> <code>character0</code> and <code>character1</code> were having an excited atmosphere because they got to try the most popular fighting game.<br>In contrast, <code>character2</code> and <code>character3</code> were having a serious expression, saying that they would win.<br><br> <code>character2</code> launch a precise action, but <code>character0</code> avoids it like they're having fun.<br> <code>character1</code> was trying to get point by assisting, but they got strategically intercepted by <code>character3</code> ….<br><br>Both teams remained evenly matched heading into the final showdown.<br>The result was a narrow victory by <code>character3</code> 's team!<br><br> <code>character0</code> and team were frustrated and yet had fun,<br> they're doing the report while <code>character2</code> praise them for their effort in the battle.<br><br>At <code>character1</code> 's suggestion, the 4 of them have a fun rematch afterwork.
+</p>
+</details>  
