@@ -27,7 +27,7 @@ And so she is in distress. Her utmost priority now is to find her own justice an
 {% capture BIO_S01 %}
 She is a riot policeman belonging to the Mobile Gendarmerie of the French National Gendarmerie, and also a member of the French branch of the UEHA. 
 
-She is an earthling from Leon, France, but because she is half-alien, she has horns on her head. 
+She is an earthling from Lyon, France, but because she is half-alien, she has horns on her head. 
 
 She had the intention of joining the mobile military force since she was a child, and really did manage to enlist. 
 
