@@ -140,9 +140,41 @@ Special effect as follows:
 | Damage received by all enemies except Boss -30%   |   
 | All allies atk +50% (support)   |         
 
+New Hero & sidekick has bonus atk for this event's challenge quest:
+
+| Chara | +Bonus atk (%)|
+|------------|--------------|
+| {% chara_link Shaft|h2 %} | 50 |
+| {% chara_link Toshu|h2 %}  | 50 |
+| {% chara_link Cerastium|h1 %}  | 30 |
+| {% chara_link reXer|h1 %} | 20 |
+| {% chara_link Cerastium %} | 10 |
+| {% chara_link reXer %} | 10 |
+
 {% include quest-group.html chapterId=1012 %}
 
-### Sidekick Skin
+### Water pistol Battle!
+
+Listed below are the enemies skills:
+
+#### Water Mercenary's skills
+
+{% include skill-table-manual.html skillIds="4066201,4066202,4066203" equipmentSkills="6007201" %}
+
+#### Cool Gunfighter Barrel's skills
+
+{% include skill-table-manual.html skillIds="4007201,4007202,4007203" equipmentSkills="6000046,6007203" %}
+
+#### Water Villain's skills
+
+{% include skill-table-manual.html skillIds="4042107,4042108" equipmentSkills="6000045,6007201" %}
+
+#### Water Mafia's skills
+
+{% include skill-table-manual.html skillIds="4055101,4055102,4055103" equipmentSkills="6007201" %}
+
+
+## Sidekick Skin
 
 New sidekick skin for everyone listed:
 
