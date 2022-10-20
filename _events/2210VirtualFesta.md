@@ -159,7 +159,8 @@ Listed below are the enemies skills:
 
 #### Water Mercenary's skills
 
-{% include skill-table-manual.html skillIds="4066201,4066202,4066203" equipmentSkills="6007201" %}
+{% include skill-table-manual.html skillIds="4066201,4066202,4066203" equipmentSkills="" %}
+
 
 #### Cool Gunfighter Barrel's skills
 
@@ -169,11 +170,11 @@ Listed below are the enemies skills:
 
 #### Water Villain's skills
 
-{% include skill-table-manual.html skillIds="4042107,4042108" equipmentSkills="6000045,6007201" %}
+{% include skill-table-manual.html skillIds="4042107,4042108" equipmentSkills="6000045" %}
 
 #### Water Mafia's skills
 
-{% include skill-table-manual.html skillIds="4055101,4055102,4055103" equipmentSkills="6007201" %}
+{% include skill-table-manual.html skillIds="4055101,4055102,4055103" equipmentSkills="" %}
 
 
 ## Sidekick Skin
