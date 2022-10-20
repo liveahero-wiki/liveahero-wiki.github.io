@@ -118,6 +118,29 @@ Here is a list of this event's limited time Missions:
 | 4  | Finish any rank event quest 40 times | 1 {% include item-icon.html id=34 %}    |
 | 5  | Finish any rank event quest 50 times | 1 {% include item-icon.html id=34 %}    |
 | 6  | Finish event sales 10 times | 1 {% include item-icon.html id=34 %}    |
+| 7  | Finish event challenge quest with 4 cumulative achievement target | 1 {% include item-icon.html id=10 %}    |
+| 8  | Finish event challenge quest with 8 cumulative achievement target | 1 {% include item-icon.html id=10 %}    |
+| 9  | Finish event challenge quest with 12 cumulative achievement target | 1 {% include item-icon.html id=10 %}    |
+| 10  | Finish event challenge quest 1 times | 4000 {% include item-icon.html id=11 %}    |
+| 11  | Finish event challenge quest 2 times | 4000 {% include item-icon.html id=35 %}    |
+| 12  | Finish event challenge quest 3 times | 4000 {% include item-icon.html id=30 %}    |
+
+## Event Challenge Quests
+
+- Cost 0 stamina
+- There will be special effects you can choose for this event's challenge quest, 3 achievement target that increase the difficulty, and 1 support effect for allies
+- Using support effect will negate some mission count even if you also use the achievement target
+
+Special effect as follows:
+
+| Special Effect   | 
+|--------|
+| Buff and Debuff cannot be stacked   |    
+| All enemies atk +30%   |   
+| Damage received by all enemies except Boss -30%   |   
+| All allies atk +50% (support)   |         
+
+{% include quest-group.html chapterId=1012 %}
 
 ### Sidekick Skin
 
