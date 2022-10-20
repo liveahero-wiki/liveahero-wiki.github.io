@@ -165,6 +165,8 @@ Listed below are the enemies skills:
 
 {% include skill-table-manual.html skillIds="4007201,4007202,4007203" equipmentSkills="6000046,6007203" %}
 
+> His last passive reduce damage received by 25% for every allies still alive, and reduce his view cost by 2000 for every dead ally
+
 #### Water Villain's skills
 
 {% include skill-table-manual.html skillIds="4042107,4042108" equipmentSkills="6000045,6007201" %}
