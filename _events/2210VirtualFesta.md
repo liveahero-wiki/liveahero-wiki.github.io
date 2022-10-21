@@ -121,9 +121,9 @@ Here is a list of this event's limited time Missions:
 | 7  | Finish event challenge quest with 4 cumulative achievement target | 1 {% include item-icon.html id=10 %}    |
 | 8  | Finish event challenge quest with 8 cumulative achievement target | 1 {% include item-icon.html id=10 %}    |
 | 9  | Finish event challenge quest with 12 cumulative achievement target | 1 {% include item-icon.html id=10 %}    |
-| 10  | Finish event challenge quest 1 times | 4000 {% include item-icon.html id=11 %}    |
-| 11  | Finish event challenge quest 2 times | 4000 {% include item-icon.html id=35 %}    |
-| 12  | Finish event challenge quest 3 times | 4000 {% include item-icon.html id=30 %}    |
+| 10  | Finish event challenge quest with 1 achievement target | 4000 {% include item-icon.html id=11 %}    |
+| 11  | Finish event challenge quest with 2 achievement target | 4000 {% include item-icon.html id=35 %}    |
+| 12  | Finish event challenge quest with 3 achievement target | 4000 {% include item-icon.html id=30 %}    |
 
 ## Event Challenge Quests
 
