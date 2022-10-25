@@ -741,6 +741,61 @@
       }
     ]
   },
+  "32": {
+    "skillId": 32,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "status_defup",
+    "subResourceName": "",
+    "timing": 21,
+    "description": "敵全員の被ダメージ-30%",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 879,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 142
+          }
+        ]
+      }
+    ]
+  },
+  "33": {
+    "skillId": 33,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "status_awakening",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "ターン開始時、敵全体に1回の行動の間覚醒付与",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 226,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "35": {
     "skillId": 35,
     "skillName": "",
@@ -33178,6 +33233,108 @@
       }
     ]
   },
+  "4001201": {
+    "skillId": 4001201,
+    "skillName": "バブル・ボール",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_akashiSummerdive2108_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4001202": {
+    "skillId": 4001202,
+    "skillName": "入魂の一投",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に100%ダメージ。自身に2ターンの間挑発を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_akashiSummerdive2108_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 49,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4001203": {
+    "skillId": 4001203,
+    "skillName": "百烈投砲",
+    "useView": 10000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に90%ダメージ+HPが減るほどダメージ量が上昇する。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_akashiSummerdive2108_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 446,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4002101": {
     "skillId": 4002101,
     "skillName": "ハーキュリアン・パンチ",
@@ -35067,6 +35224,68 @@
     "effects": [
       {
         "skillEffectId": 220,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4010101": {
+    "skillId": 4010101,
+    "skillName": "教師の鉄拳",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kyoichi_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 876,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4010102": {
+    "skillId": 4010102,
+    "skillName": "初教戦法180°",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に180%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_kyoichi_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 877,
         "prob": 100,
         "effectTarget": 2,
         "sequenceGroupId": 0,
@@ -51672,6 +51891,37 @@
       }
     ]
   },
+  "6001201": {
+    "skillId": 6001201,
+    "skillName": "プレイボール！",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "自身にバフが付与された状態でダメージを受けた時、スキル1で反撃。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 445,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
   "6002101": {
     "skillId": 6002101,
     "skillName": "演出意識",
@@ -51995,6 +52245,78 @@
         "skillEffectId": 24,
         "prob": 100,
         "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6010101": {
+    "skillId": 6010101,
+    "skillName": "積極的アプローチ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 12,
+    "description": "敵を対象にするスキルは敵の中で一番Atkが高いキャラクターを対象にする。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 600,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6010102": {
+    "skillId": 6010102,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵がダメージを受けた時、敵に2ターンの間二撃必殺を付与。二撃必殺が付与されているキャラクターに自身が攻撃した時、与えるダメージが3倍になる。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 875,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6010103": {
+    "skillId": 6010103,
+    "skillName": "二撃必殺",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身の攻撃で敵がダメージを受けた時、敵に2ターンの間二撃必殺を付与。二撃必殺が付与されているキャラクターに自身が攻撃した時、与えるダメージが3倍になる。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 875,
+        "prob": 100,
+        "effectTarget": 2,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "randomGroupId": 0,

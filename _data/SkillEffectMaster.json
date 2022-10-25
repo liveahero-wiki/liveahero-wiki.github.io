@@ -24130,6 +24130,99 @@
       "isOverrideStatusDescription": false
     }
   },
+  "875": {
+    "skillEffectId": 875,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "status_costumedamage",
+      "statusId": 140,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "二撃必殺",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "876": {
+    "skillEffectId": 876,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddMultDamage",
+          "parameter": {
+            "value": 80,
+            "addMult": 160
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":140,\"class\":\"EnemySystemStatusNumberExecTrigger\"}]",
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "80％ダメージ。敵に二撃必殺が付与されている場合、240％ダメージ。",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "877": {
+    "skillEffectId": 877,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddMultDamage",
+          "parameter": {
+            "value": 180,
+            "addMult": 360
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":140,\"class\":\"EnemySystemStatusNumberExecTrigger\"}]",
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "180％ダメージ。敵に二撃必殺が付与されている場合、540％ダメージ。",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "878": {
     "skillEffectId": 878,
     "skillEffectJson": {
