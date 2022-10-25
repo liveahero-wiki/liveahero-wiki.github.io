@@ -121,24 +121,18 @@ Here is a list of this event's limited time Missions:
 | 7  | Finish event challenge quest with 4 cumulative achievement target | 1 {% include item-icon.html id=10 %}    |
 | 8  | Finish event challenge quest with 8 cumulative achievement target | 1 {% include item-icon.html id=10 %}    |
 | 9  | Finish event challenge quest with 12 cumulative achievement target | 1 {% include item-icon.html id=10 %}    |
-| 10  | Finish event challenge quest with 1 achievement target | 4000 {% include item-icon.html id=11 %}    |
-| 11  | Finish event challenge quest with 2 achievement target | 4000 {% include item-icon.html id=35 %}    |
-| 12  | Finish event challenge quest with 3 achievement target | 4000 {% include item-icon.html id=30 %}    |
+| 10  | Finish event challenge quest Water pistol battle! with 1 achievement target | 4000 {% include item-icon.html id=11 %}    |
+| 11  | Finish event challenge quest Water pistol battle! with 2 achievement target | 4000 {% include item-icon.html id=35 %}    |
+| 12  | Finish event challenge quest Water pistol battle! with 3 achievement target | 4000 {% include item-icon.html id=30 %}    |
+| 13  | Finish event challenge quest Playboy on the sand with 1 achievement target | 4000 {% include item-icon.html id=11 %}    |
+| 14  | Finish event challenge quest Playboy on the sand with 2 achievement target | 4000 {% include item-icon.html id=35 %}    |
+| 15  | Finish event challenge quest Playboy on the sand with 3 achievement target | 4000 {% include item-icon.html id=30 %}    |
 
 ## Event Challenge Quests
 
 - Cost 0 stamina
 - There will be special effects you can choose for this event's challenge quest, 3 achievement target that increase the difficulty, and 1 support effect for allies
 - Using support effect will negate some mission count even if you also use the achievement target
-
-Special effect as follows:
-
-| Special Effect   | 
-|--------|
-| Buff and Debuff cannot be stacked   |    
-| All enemies atk +30%   |   
-| Damage received by all enemies except Boss -30%   |   
-| All allies atk +50% (support)   |         
 
 New Hero & sidekick has bonus atk for this event's challenge quest:
 
@@ -154,6 +148,15 @@ New Hero & sidekick has bonus atk for this event's challenge quest:
 {% include quest-group.html chapterId=1012 %}
 
 ### Water pistol Battle!
+
+Special effect for this quest as follows:
+
+| Special Effect   | 
+|--------|
+| Buff and Debuff cannot be stacked   |    
+| All enemies atk +30%   |   
+| Damage received by all enemies except Boss -30%   |   
+| All allies atk +50% (support)   |         
 
 Listed below are the enemies skills:
 
@@ -176,6 +179,26 @@ Listed below are the enemies skills:
 
 {% include skill-table-manual.html skillIds="4055101,4055102,4055103" equipmentSkills="" %}
 
+### Playboy on the sand
+
+Special effect for this quest as follows:
+
+| Special Effect   | 
+|--------|
+| All enemies gain {{ 8 | status_description }} on the start of turn for 1 turn |    
+| All enemies atk +30%   |   
+| Damage received by all enemies except Boss -30%   |   
+| All allies atk +50% (support)   |         
+
+Listed below are the enemies skills:
+
+#### Water bullet Akashi's skills
+
+{% include skill-table-manual.html skillIds="4001201,4001202,4001203" equipmentSkills="6001201" %}
+
+#### Kyoichi's skills
+
+{% include skill-table-manual.html skillIds="4010101,4010102" equipmentSkills="6010101,6010103" %}
 
 ## Sidekick Skin
 
