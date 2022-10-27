@@ -220,6 +220,8 @@ Listed below are the enemies skills:
 
 {% include skill-table-manual.html skillIds="4008204,4008205" equipmentSkills="6008204,6008205,6008206" %}
 
+> His second passive only remove any form of speed down on self at the start of turn (not all debuff)
+
 #### Kirsch's skills
 
 {% include skill-table-manual.html skillIds="4028103,4028104" equipmentSkills="6008204,6008206" %}
