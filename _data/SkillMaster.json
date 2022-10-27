@@ -655,6 +655,30 @@
       }
     ]
   },
+  "28": {
+    "skillId": 28,
+    "skillName": "バフ・デバフ重複無効",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵味方全員のバフ・デバフ重複無効",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 885,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "29": {
     "skillId": 29,
     "skillName": "",
@@ -35020,6 +35044,95 @@
       }
     ]
   },
+  "4008204": {
+    "skillId": 4008204,
+    "skillName": "エシェクタンテ・ドゥロ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。50%の確率で1回分のDEFダウンを付与。自身に1回の行動の間SPDダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_furlongCircus2202_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 50,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4008205": {
+    "skillId": 4008205,
+    "skillName": "アクロバタ・デ・アクアリオ",
+    "useView": 3000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間ATKアップを付与。Viewを8000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_furlongCircus2202_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 63,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4009101": {
     "skillId": 4009101,
     "skillName": "デスペラード・マインド",
@@ -36446,6 +36559,77 @@
       }
     ]
   },
+  "4019101": {
+    "skillId": 4019101,
+    "skillName": "強烈♡攻め恋GIRL",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_hitomi_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4019102": {
+    "skillId": 4019102,
+    "skillName": "LOVE ME☆ヒット・ミー！",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "敵全体に90%ダメージ。味方全体に2回の行動の間幸運を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_hitomi_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 35,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4019201": {
     "skillId": 4019201,
     "skillName": "戦う！常夏MERMAID",
@@ -37674,6 +37858,95 @@
         "skillEffectId": 2,
         "prob": 100,
         "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4028103": {
+    "skillId": 4028103,
+    "skillName": "メレンゲ・メイキング",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。50%の確率で1ターンの間火傷を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kirsch_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 221,
+        "prob": 50,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4028104": {
+    "skillId": 4028104,
+    "skillName": "スイーツ・ファクトリー",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの200%回復する。1回の行動の間ATKアップを付与。Viewを4000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kirsch_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 713,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 295,
+        "prob": 100,
+        "effectTarget": 0,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "randomGroupId": 0,
@@ -52051,6 +52324,102 @@
       }
     ]
   },
+  "6004108": {
+    "skillId": 6004108,
+    "skillName": "リソースローダー",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、Viewを8000獲得。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 63,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6004109": {
+    "skillId": 6004109,
+    "skillName": "ライトプロテクト",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "被ダメージ-25%。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 852,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6004110": {
+    "skillId": 6004110,
+    "skillName": "データコンプレッション",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、自身に永続的な覚醒を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 892,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6004111": {
+    "skillId": 6004111,
+    "skillName": "アクセラレーター",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_spdUp",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、SPD+1。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 752,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "6004201": {
     "skillId": 6004201,
     "skillName": "酩酊",
@@ -52245,6 +52614,87 @@
         "skillEffectId": 24,
         "prob": 100,
         "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6008204": {
+    "skillId": 6008204,
+    "skillName": "チームワーク",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "味方を対象にするスキルは味方の中で一番Atkが高いキャラクターを対象にする。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 344,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6008205": {
+    "skillId": 6008205,
+    "skillName": "仕切り直し",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_cure",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "行動開始時、自身のSPDダウンと超SPDダウンをすべて解除。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 526,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 527,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6008206": {
+    "skillId": 6008206,
+    "skillName": "スイーツシェア",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "b_skill_buffAll",
+    "subResourceName": "",
+    "timing": 14,
+    "description": "戦闘不能時、味方全員のATK+50%。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 854,
+        "prob": 100,
+        "effectTarget": 3,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "randomGroupId": 0,

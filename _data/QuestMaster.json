@@ -89113,6 +89113,74 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
   },
+  "1010006": {
+    "questId": 1010006,
+    "questName": "『正義』を騙る者",
+    "subName": "第６話",
+    "questKind": 5,
+    "chapterId": 1010,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2022-10-27 18:00:00",
+    "endAt": "2022-11-10 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 6,
+    "enemyLevel": 13,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1010005,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
   "1011001": {
     "questId": 1011001,
     "questName": "激闘！ヒーローロワイアル！",
@@ -90000,6 +90068,87 @@
     "questEffects": [
       {
         "skillId": 33,
+        "isBuff": false
+      },
+      {
+        "skillId": 29,
+        "isBuff": false
+      },
+      {
+        "skillId": 32,
+        "isBuff": false
+      },
+      {
+        "skillId": 31,
+        "isBuff": true
+      }
+    ],
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "1012003": {
+    "questId": 1012003,
+    "questName": "サマースイーツトルネード",
+    "subName": "高難易度クエスト",
+    "questKind": 6,
+    "chapterId": 1012,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_kirsch_h01",
+    "startAt": "2022-10-27 18:00:00",
+    "endAt": "2022-11-10 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 60,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 29,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1010002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_furlongCircus2202_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_kirsch_h01",
+        "battleInfoElement": 1
+      },
+      {
+        "battleInfoIcon": "icon_hitomi_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": [
+      {
+        "skillId": 28,
         "isBuff": false
       },
       {

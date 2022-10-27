@@ -16074,6 +16074,70 @@
       "isOverrideStatusDescription": true
     }
   },
+  "526": {
+    "skillEffectId": 526,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Cure",
+          "parameter": {
+            "value": 999,
+            "target": 13
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "SPDダウンをすべて解除",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "527": {
+    "skillEffectId": 527,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Cure",
+          "parameter": {
+            "value": 999,
+            "target": 29
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "超SPDダウンをすべて解除",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "600": {
     "skillEffectId": 600,
     "skillEffectJson": {
@@ -24464,6 +24528,237 @@
       "overrideStatusName": "バフ・デバフ重複無効",
       "isOverrideStatusName": true,
       "overrideStatusDescription": "バフ・デバフが重複して付与されなくなる。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "886": {
+    "skillEffectId": 886,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NowViewDamage",
+          "parameter": {
+            "value": 50,
+            "viewMult": 10
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1,
+        3
+      ],
+      "parameter": false,
+      "description": "50%ダメージ+Viewに応じてダメージ量が上昇",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "887": {
+    "skillEffectId": 887,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NowViewDamage",
+          "parameter": {
+            "value": 45,
+            "viewMult": 10
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1,
+        3
+      ],
+      "parameter": false,
+      "description": "45%ダメージ+Viewに応じてダメージ量が上昇",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "888": {
+    "skillEffectId": 888,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AbsorbDamage",
+          "parameter": {
+            "value": 140,
+            "target": 3,
+            "healMult": 250
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "140%ダメージ+ダメージの250%味方全体を回復。",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "889": {
+    "skillEffectId": 889,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HealthMultipleAttack",
+          "parameter": {
+            "evaluationIsMax": false
+          }
+        }
+      ],
+      "trigger": "[]",
+      "filename": "status_firepower",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "HPが減るほどダメージが上昇",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "890": {
+    "skillEffectId": 890,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Provocation",
+          "parameter": []
+        },
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 130
+          }
+        },
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "status_target",
+      "statusId": 123,
+      "canDispel": true,
+      "filterIds": [
+        12,
+        4
+      ],
+      "parameter": false,
+      "description": "エネミー専用照準",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "891": {
+    "skillEffectId": 891,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewChange",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "filename": "status_useless",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [
+        9
+      ],
+      "parameter": false,
+      "description": "View消費量+50%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "View消費量+50%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "View消費量+50%",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "892": {
+    "skillEffectId": 892,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewChange",
+          "parameter": {
+            "value": 50
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 8,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "覚醒(永続効果)",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "スキルに必要なViewPowerが半分になる。解除不可。",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
     }
