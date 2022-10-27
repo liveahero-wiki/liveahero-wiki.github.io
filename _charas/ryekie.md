@@ -12,7 +12,7 @@ After putting on a pure white mantle and utilizing the power of lightning, he tr
 {% capture BIO_H02 %}
 "To remain a superhero who embodies/personifies justice" is the lightning hero's wish.  It was something that he once spoke to his former partner who fought together with him in a tag team, and was also a vow that he declared to his friends/allies who fell on the battlefield.  Before he became the superhero "Zap the Justice", who laughed loudly in the face of any predicament and showed majestic dignity, there were days of extraordinary efforts and regretful and tearful battles.
 {% endcapture %}
-{% include hero-infobox.html stockId=10041 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_ryekiePU_h01" %}
+{% include hero-infobox.html stockId=10041 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_ryekiePU_h01,fg_ADV_ryekiefake_h01" %}
 
 {% capture BIO_H01 %}
 He should have been resting due to an injury, but he was temporarily revived as a new hero, triggered by a certain thought and an event/incident. He is in a drunken state due to the fact that he is hypersensitive to a certain plant that gives ecstasy to certain species. However, it can be said that this appearance was obtained due to being drunk as a result of the emotions that had been accumulated, exploding and accelerating the feelings toward "a certain wish". The injured part of his body seems to be reinforced/strengthened firmly.
