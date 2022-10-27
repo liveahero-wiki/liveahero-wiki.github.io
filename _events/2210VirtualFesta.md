@@ -127,6 +127,9 @@ Here is a list of this event's limited time Missions:
 | 13  | Finish event challenge quest Playboy on the sand with 1 achievement target | 4000 {% include item-icon.html id=11 %}    |
 | 14  | Finish event challenge quest Playboy on the sand with 2 achievement target | 4000 {% include item-icon.html id=35 %}    |
 | 15  | Finish event challenge quest Playboy on the sand with 3 achievement target | 4000 {% include item-icon.html id=30 %}    |
+| 16  | Finish event challenge quest Summer sweets tornado with 1 achievement target | 4000 {% include item-icon.html id=11 %}    |
+| 17  | Finish event challenge quest Summer sweets tornado with 2 achievement target | 4000 {% include item-icon.html id=35 %}    |
+| 18  | Finish event challenge quest Summer sweets tornado with 3 achievement target | 4000 {% include item-icon.html id=30 %}    |
 
 ## Event Challenge Quests
 
@@ -199,6 +202,31 @@ Listed below are the enemies skills:
 #### Kyoichi's skills
 
 {% include skill-table-manual.html skillIds="4010101,4010102" equipmentSkills="6010101,6010103" %}
+
+### Summer Sweets Tornado
+
+Special effect for this quest as follows:
+
+| Special Effect   | 
+|--------|
+| Buff and Debuff cannot be stacked   |    
+| All enemies atk +30%   |   
+| Damage received by all enemies except Boss -30%   |   
+| All allies atk +50% (support)   |         
+
+Listed below are the enemies skills:
+
+#### Jumping Actor Furlong's skills
+
+{% include skill-table-manual.html skillIds="4008204,4008205" equipmentSkills="6008204,6008205,6008206" %}
+
+#### Kirsch's skills
+
+{% include skill-table-manual.html skillIds="4028103,4028104" equipmentSkills="6008204,6008206" %}
+
+#### Hitomi's skills
+
+{% include skill-table-manual.html skillIds="4019101,4019102" equipmentSkills="6008206" %}
 
 ## Sidekick Skin
 
