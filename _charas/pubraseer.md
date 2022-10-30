@@ -32,7 +32,7 @@ but because he has a lot more curiosity than others, he has managed to absorb ho
 
 Sometimes, he hears impossible to understand words from the pendant he was found with, which always give him a headache.
 {% endcapture %}
-{% include sidekick-infobox.html stockId=10731 extra_sprites="fg_ADV_pubraseer_s01" BIO_S01=BIO_S01 extra_sprites="fg_pubraseer_s01_skin1,fg_ADV_pubraseer_s01_skin1" %}
+{% include sidekick-infobox.html stockId=10731 BIO_S01=BIO_S01 extra_sprites="fg_pubraseer_s01_skin1,fg_ADV_pubraseer_s01,fg_ADV_pubraseer_s01_skin1" %}
 
 {% include voice-table.html resourceName="pubraseer"
 h_gachaResult = "My name's Pubraseer.<br>Captain of the spaceship.<br>Somehow…I remember it now.<br>..n? the way I talk is different?<br>Don't worry, both are the real me."
