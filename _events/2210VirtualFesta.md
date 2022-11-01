@@ -130,6 +130,9 @@ Here is a list of this event's limited time Missions:
 | 16  | Finish event challenge quest Summer sweets tornado with 1 achievement target | 4000 {% include item-icon.html id=11 %}    |
 | 17  | Finish event challenge quest Summer sweets tornado with 2 achievement target | 4000 {% include item-icon.html id=35 %}    |
 | 18  | Finish event challenge quest Summer sweets tornado with 3 achievement target | 4000 {% include item-icon.html id=30 %}    |
+| 19  | Finish event challenge quest Aim! Aim! Aim! with 1 achievement target | 4000 {% include item-icon.html id=11 %}    |
+| 20  | Finish event challenge quest Aim! Aim! Aim! with 2 achievement target | 4000 {% include item-icon.html id=35 %}    |
+| 21  | Finish event challenge quest Aim! Aim! Aim! with 3 achievement target | 4000 {% include item-icon.html id=30 %}    |
 
 ## Event Challenge Quests
 
@@ -152,9 +155,9 @@ New Hero & sidekick has bonus atk for this event's challenge quest:
 
 ### Water pistol Battle!
 
-Special effect for this quest as follows:
+Achievement target for this quest as follows:
 
-| Special Effect   | 
+| Achievement target   | 
 |--------|
 | Buff and Debuff cannot be stacked   |    
 | All enemies atk +30%   |   
@@ -184,9 +187,9 @@ Listed below are the enemies skills:
 
 ### Playboy on the sand
 
-Special effect for this quest as follows:
+Achievement target for this quest as follows:
 
-| Special Effect   | 
+| Achievement target   | 
 |--------|
 | All enemies gain {{ 8 | status_description }} on the start of turn for 1 turn |    
 | All enemies atk +30%   |   
@@ -205,13 +208,13 @@ Listed below are the enemies skills:
 
 ### Summer Sweets Tornado
 
-Special effect for this quest as follows:
+Achievement target for this quest as follows:
 
-| Special Effect   | 
+| Achievement target   | 
 |--------|
 | Buff and Debuff cannot be stacked   |    
 | All enemies atk +30%   |   
-| Damage received by all enemies except Boss -30%   |   
+| Damage received by all enemies -30%   |   
 | All allies atk +50% (support)   |         
 
 Listed below are the enemies skills:
@@ -229,6 +232,35 @@ Listed below are the enemies skills:
 #### Hitomi's skills
 
 {% include skill-table-manual.html skillIds="4019101,4019102" equipmentSkills="6008206" %}
+
+### Aim! Aim! Aim!
+
+Special effect for this quest:
+
+| Buff and Debuff cannot be stacked   |   
+
+Achievement target for this quest as follows:
+
+| Achievement target   | 
+|--------| 
+| All enemies have +50% atk when under 50% health   |    
+| Damage received by all enemies -30%   |   
+| All enemies remove one debuff at the start of turn  |   
+| All enemies view cost +50% (support)   |         
+
+Listed below are the enemies skills:
+
+#### Shaft's skills
+
+{% include skill-table-manual.html skillIds="1063101,1063104,1063103" equipmentSkills="6063101" %}
+
+#### Hydoor's skills
+
+{% include skill-table-manual.html skillIds="4017108,4017109" equipmentSkills="6017102" %}
+
+#### Roiker's skills
+
+{% include skill-table-manual.html skillIds="4113102,4113101" equipmentSkills="6113102,6113101" %}
 
 ## Sidekick Skin
 
