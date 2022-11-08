@@ -16138,6 +16138,147 @@
       "isOverrideStatusDescription": false
     }
   },
+  "528": {
+    "skillEffectId": 528,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 50
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":133,\"class\":\"OwnSystemStatusNumberDontExecTrigger\"}]",
+      "filename": "status_defup",
+      "statusId": 132,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "被ダメージ-50%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "バグの障壁",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメージ-50%",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "529": {
+    "skillEffectId": 529,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "trigger": "[{\"value\":1,\"element\":0,\"statusId\":133,\"class\":\"OwnSystemStatusNumberDontExecTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 132,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "ATK+50%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "オーバーフロー",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATK+50%",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "530": {
+    "skillEffectId": 530,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "status_defdown",
+      "statusId": 133,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "バグ修復",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "バグ修復",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "バグの障壁を無効化する。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "531": {
+    "skillEffectId": 531,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "status_atkdown",
+      "statusId": 133,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "データキャスト",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "データキャスト",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "オーバーフローを無効化する。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "532": {
+    "skillEffectId": 532,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 133,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "ストップシグナル",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "ストップシグナル",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "回復を無効化する。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
   "600": {
     "skillEffectId": 600,
     "skillEffectJson": {
