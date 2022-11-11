@@ -29,7 +29,7 @@ View gained with view acquisition skill {% if effect.parameter.value >= 100 %}in
 Gain {{ effect.parameter.value }}% of self's base view
 {% when "MultipleDefence" %}
 {% assign turnDefinition = "next attack" %}
-{% if effect.parameter.value == 0 %}Ignore incoming damage to {{ target }}{% else %}Incoming damage to {{ target }} {% if effect.parameter.value >= 100 %}increased{% else %}reduced{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x{% endif %}
+{% if effect.parameter.value == 0 %}Nullify incoming damage to {{ target }}{% else %}Incoming damage to {{ target }} {% if effect.parameter.value >= 100 %}increased{% else %}reduced{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x{% endif %}
 {% when "SpdRateEmitDefence" %}
 {% assign turnDefinition = "next attack" %}
 With "absolute SPD difference" x{{ effect.parameter.rate }}% chance, {% if effect.parameter.mult == 0 %}ignore incoming damage{% else %}incoming damage {% if effect.parameter.mult >= 100 %}increased{% else %}reduced{% endif %} to {{ effect.parameter.mult | divided_by: 100.0 }}x{% endif %} to {{ target }}
