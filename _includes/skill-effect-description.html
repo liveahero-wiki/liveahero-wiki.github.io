@@ -1,9 +1,14 @@
-{% capture eid %}{{ include.skillEffect.skillEffectId }}{% endcapture %}
+{% assign eid = include.skillEffect.skillEffectId | downcase %}
 {% assign effectParent = site.data.SkillEffectMaster[eid] %}
 {% assign skillEffectJson = effectParent.skillEffectJson %}
 {% assign target = include.skillEffect.effectTarget | skill_target %}
 {% assign skip_effect = false %}
 
+{% unless skillEffectJson.statusId == 74 or skillEffectJson.statusId == 136 or skillEffectJson.statusId == 137 %}
+
+{% capture timing %}{% include skill-timing.html timing=include.timing %}{% endcapture %}
+{% assign timing = timing | strip %}
+[{{ timing }}]
 {{ include.skillEffect.triggerJson | skill_trigger: include.timing }}
 {% if skillEffectJson.trigger %}{{ skillEffectJson.trigger | skill_trigger_json: include.timing }}{% endif %}
 {% for effect in skillEffectJson.effects %}
@@ -169,3 +174,5 @@ Unknown effect class ({{ effect.class }})
 {% endif %}
 {% if forloop.last == false %}<br>&nbsp;&nbsp;&nbsp;&nbsp;{% endif %}
 {% endfor %}
+/{{ include.skillEffect.prob }}%<br>
+{% endunless %}{% comment %}status blacklist check{% endcomment %}
