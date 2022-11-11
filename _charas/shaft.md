@@ -41,7 +41,7 @@ He who values harmony and bonds of his companion, will try his best to bring eve
 
 It's not because he clings to his past, but because he believes that creating a place for himself within the team and ensuring the smooth running of the team is the way to make the most of what he has cultivated.
 {% endcapture %}
-{% include hero-infobox.html stockId=10632 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+{% include hero-infobox.html stockId=10632 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprite="fg_shaftVirtualFesta2210_h02_skin2 %}
 
 {% capture BIO_S01 %}
 A former professional rugby player, he is now an Earthling who drives a space cab.
