@@ -24452,7 +24452,7 @@
       "canDuplicate": false,
       "overrideStatusName": "ATK+30%",
       "isOverrideStatusName": true,
-      "overrideStatusDescription": "ATKを永続的に+30%する。解除不可。",
+      "overrideStatusDescription": "ATKを永続的に+30%する。解除不可。(この状態変化はバフにカウントされない)",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
     }
@@ -24481,7 +24481,7 @@
       "canDuplicate": false,
       "overrideStatusName": "被ダメージ-30%",
       "isOverrideStatusName": true,
-      "overrideStatusDescription": "被ダメージを-30%する。解除不可。",
+      "overrideStatusDescription": "被ダメージを-30%する。解除不可。(この状態変化はバフにカウントされない)",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
     }
@@ -24588,8 +24588,8 @@
         {
           "class": "AddMultDamage",
           "parameter": {
-            "value": 100,
-            "addMult": 100
+            "value": 80,
+            "addMult": 80
           }
         }
       ],
@@ -24601,7 +24601,7 @@
         1
       ],
       "parameter": false,
-      "description": "100%ダメージ。対象が未行動の場合、200％ダメージ。",
+      "description": "80%ダメージ。対象が未行動の場合、160％ダメージ。",
       "isImmediate": true,
       "persistence": false,
       "canDuplicate": false,
@@ -24625,7 +24625,7 @@
           }
         }
       ],
-      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":24,\"class\":\"AfterSkillTrigger\"},{\"value\":0,\"element\":0,\"statusId\":13,\"class\":\"OwnDeBuffNumberDontExecTrigger\"}]",
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":24,\"class\":\"AfterSkillTrigger\"},{\"value\":0,\"element\":0,\"statusId\":13,\"class\":\"OwnDeBuffNumberDontExecTrigger\"},{\"value\":0,\"element\":0,\"statusId\":29,\"class\":\"OwnDeBuffNumberDontExecTrigger\"}]",
       "filename": "status_defup",
       "statusId": 27,
       "canDispel": false,

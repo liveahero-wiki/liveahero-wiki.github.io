@@ -995,6 +995,61 @@
       }
     ]
   },
+  "42": {
+    "skillId": 42,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "status_immunity",
+    "subResourceName": "",
+    "timing": 9,
+    "description": "敵はデバフを付与された時、1ターンの間自身に弱体抵抗+100を付与。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 660,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "43": {
+    "skillId": 43,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "status_awakening",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "敵はピンチ状態の時、ターン開始時に1回の行動の間View消費量-3000を付与。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 317,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 130
+          }
+        ]
+      }
+    ]
+  },
   "1001101": {
     "skillId": 1001101,
     "skillName": "燃ゆる白球",
@@ -34191,6 +34246,108 @@
       }
     ]
   },
+  "4004113": {
+    "skillId": 4004113,
+    "skillName": "キロボルト・スラッグ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。攻撃対象が未行動の場合、与えるダメージが160％に増加。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_ryekie_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 882,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4004114": {
+    "skillId": 4004114,
+    "skillName": "メガボルト・クラッシュ",
+    "useView": 4000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_spdUp",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "自身に2回の行動の間SPDアップを付与。1回の行動の間覚醒を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_ryekie_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 18,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 226,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4004115": {
+    "skillId": 4004115,
+    "skillName": "ギガボルト・ブレイカー",
+    "useView": 8000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に80%ダメージ。攻撃対象が未行動の場合、与えるダメージが160％に増加。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_ryekie_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 883,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4004201": {
     "skillId": 4004201,
     "skillName": "酔虎の鼓舞",
@@ -47997,6 +48154,167 @@
       }
     ]
   },
+  "4076112": {
+    "skillId": 4076112,
+    "skillName": "ブルートフォースアタック",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_antiBuffTeam",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。自身にバフが付与されている場合、バフを1つ解除してもう一度行動する。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainGiansar_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 36,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "4076113": {
+    "skillId": 4076113,
+    "skillName": "マリシャス・エクスプロイト",
+    "useView": 6000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_antiBuffTeam",
+    "timing": 0,
+    "description": "敵単体に150%ダメージの有利属性攻撃。自身にバフが付与されている場合、バフを全て解除してもう一度行動する。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainGiansar_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 263,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 12,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "4076115": {
+    "skillId": 4076115,
+    "skillName": "コード・インジェクション",
+    "useView": 3000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_antiBuffAll",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。攻撃対象に付与されているバフの内1つを自身に付与＋対象のバフを全解除。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainGiansar_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 699,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 12,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4077102": {
     "skillId": 4077102,
     "skillName": "作戦指示",
@@ -52886,6 +53204,54 @@
       }
     ]
   },
+  "6004106": {
+    "skillId": 6004106,
+    "skillName": "光速回避",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "行動済みの時、相手から受けるダメージが半分になる。この効果はSPDダウンまたは超SPDダウンが付与されている時、無効化される。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 884,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6004107": {
+    "skillId": 6004107,
+    "skillName": "存在偽装",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 14,
+    "description": "HPが0になった時、正体を表す。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 260,
+        "prob": 100,
+        "effectTarget": 14,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "6004108": {
     "skillId": 6004108,
     "skillName": "リソースローダー",
@@ -52973,6 +53339,54 @@
     "effects": [
       {
         "skillEffectId": 752,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6004112": {
+    "skillId": 6004112,
+    "skillName": "加速",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "ターン開始時、自身のSPD+1。（上昇したSPDはHPが0になった時に解除される）",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 752,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6004113": {
+    "skillId": 6004113,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 21,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 708,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,
@@ -55783,6 +56197,70 @@
     "isEquip": false,
     "isHeroSkill": false,
     "effects": []
+  },
+  "6076101": {
+    "skillId": 6076101,
+    "skillName": "ノイズカモフラージュ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "ピンチ状態の時、ターン開始時に自身に3回分のDEFアップを付与。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 70,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "6076102": {
+    "skillId": 6076102,
+    "skillName": "ステータス操作",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "ターン開始時、ランダムな敵1体に1回分のDEFダウン&1回の行動の間SPDダウンを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
   },
   "6077101": {
     "skillId": 6077101,
