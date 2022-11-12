@@ -15,10 +15,8 @@ sales_end_time: 2022-11-10T14:00:00+09
 * this will be unordered
 {:toc}
 
-## Event Preview
 
-
-### Event Banners
+## Event Banners
 
 This Event's gacha summon includes time-limited variant {% chara_link Toshu|h2 %} (Hero), {% chara_link Shaft|h2 %} (Hero) and one new character {% chara_link Cerastium %} (Hero & Sidekick).
 
@@ -52,7 +50,7 @@ Rates as follow:
 
 >Rates (Multis) is the rate of the tenth pull in a multi pull, pull number 1-9 still use the Rates (Single)
 
-### Free Quest Bonus
+## Free Quest Bonus
 
 Here is a list of heroes and sidekicks which grants bonus in this event:
 
@@ -92,7 +90,7 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 | {% chara_link Lilac %}  | 10 |
 | {% chara_link Player %} | 10 | 
 
-### Event Sales Bonus
+## Event Sales Bonus
 
 Event sales bonus added according to how much event hero you have in a single sales, Which is
 {% chara_link Shaft|h2 %}, {% chara_link Toshu|h2 %}, {% chara_link Cerastium|h1 %} and {% chara_link reXer|h1 %}
@@ -106,7 +104,7 @@ Here is the bonus:
 | 3 Event Heroes |     50    |
 | 4 Event Heroes |     70    |
 
-### Limited Time Mission
+## Limited Time Mission
 
 Here is a list of this event's limited time Missions:
 
