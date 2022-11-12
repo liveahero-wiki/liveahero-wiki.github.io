@@ -298,6 +298,10 @@ New sidekick skin for everyone listed:
 
 {% include quest-group.html chapterId=1011 %}
 
+### Special Quests
+
+Fan translations for special quests can be found [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vSK4lvzCsEVdif20CL1N_EKrktwXRtT94WezCDufrMtjWK-pdmVmOKLfirh9G6VwHIONU7zn8qX6lMy/pubhtml#)
+
 ## Sales Report
 
 <details><summary>Sales Report 1</summary>
