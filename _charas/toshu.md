@@ -42,7 +42,7 @@ It is never easy to overcome a deep-rooted sense of weakness. However, he can ne
 
 His choice in this, is not to conquer the water, but to temper himself so that he can have inner calm even in the presence of water.
 {% endcapture %}
-{% include hero-infobox.html stockId=10132 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8013201" %}
+{% include hero-infobox.html stockId=10132 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8013201" extra_sprites="fg_toshuVirtualFesta2210_h02_skin2" %}
 
 {% capture BIO_S01 %}
 A Kendo artist who is a teacher at Hinowa University of Physical Education, serving as an advisor to the institution's kendo club
