@@ -16,7 +16,7 @@ You do not have permission to acces this file
 
 (Access privileges will be available when the final episode of the Virtual Festa Royale is released.)
 {% endcapture %}
-{% include hero-infobox.html stockId=11221 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8122101" %}
+{% include hero-infobox.html stockId=11221 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8122101" extra_sprites="fg_rexer_h01_skin2,fg_rexer_h01_skin3,fg_rexer_h02_skin2,fg_rexer_h02_skin3" %}
 
 {% capture BIO_S01 %}
 reXer is a pro gamer with an unknown age belonging to the Neotalents Production's pro gamer team "μ-Hyperions".
