@@ -12,9 +12,15 @@ However, at some point, there has been a change in his fighting style, and fans 
 {% endcapture %}
 
 {% capture BIO_H02 %}
-You do not have permission to acces this file
+The reXer that exist now, is a different entity than the reXer in the past.
 
-(Access privileges will be available when the final episode of the Virtual Festa Royale is released.)
+His true identity, is the former reXer's real son.
+
+He inherits this avatar from his father, who goes missing when fighting against a kaibutsu in real life, and he continues to use the name reXer.
+
+Oddly enough, he also has the talent for games, although he is able to work as a professional gamer, he did not inherit his heroic activities.
+
+He has only one wish. To bring back to the world the hero reXer that his father raised.
 {% endcapture %}
 {% include hero-infobox.html stockId=11221 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8122101" extra_sprites="fg_rexer_h01_skin2,fg_rexer_h01_skin3,fg_rexer_h02_skin2,fg_rexer_h02_skin3" %}
 
