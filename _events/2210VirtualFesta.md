@@ -133,6 +133,9 @@ Here is a list of this event's limited time Missions:
 | 19  | Finish event challenge quest Aim! Aim! Aim! with 1 achievement target | 4000 {% include item-icon.html id=11 %}    |
 | 20  | Finish event challenge quest Aim! Aim! Aim! with 2 achievement target | 4000 {% include item-icon.html id=35 %}    |
 | 21  | Finish event challenge quest Aim! Aim! Aim! with 3 achievement target | 4000 {% include item-icon.html id=30 %}    |
+| 22  | Finish event challenge quest Facing the Distorted Justice with 1 achievement target | 4000 {% include item-icon.html id=11 %}    |
+| 23  | Finish event challenge quest Facing the Distorted Justice with 2 achievement target | 4000 {% include item-icon.html id=35 %}    |
+| 24  | Finish event challenge quest Facing the Distorted Justice with 3 achievement target | 4000 {% include item-icon.html id=30 %}    |
 
 ## Event Challenge Quests
 
@@ -261,6 +264,31 @@ Listed below are the enemies skills:
 #### Roiker's skills
 
 {% include skill-table-manual.html skillIds="4113102,4113101" equipmentSkills="6113102,6113101" %}
+
+### Facing the Distorted Justice
+
+Special effect for this quest:
+
+| Buff and Debuff cannot be stacked   |   
+
+Achievement target for this quest as follows:
+
+| Achievement target   | 
+|--------| 
+| Enemies get 1 turn 100% debuff resistance when debuffed  |    
+| Enemies get -3000 view cost at the start of turn when under 50% HP  |   
+| All enemies atk +30% |   
+| All enemies view cost +50% (support)   |         
+
+Listed below are the enemies skills:
+
+#### Ryekie?'s skills
+
+{% include skill-table-manual.html skillIds="4004113,4004114,4004115" equipmentSkills="6004112,6004106,6004107" %}
+
+#### Giansar's skills
+
+{% include skill-table-manual.html skillIds="4076112,4076115,4076113" equipmentSkills="6076102,6076101,6001104" %}
 
 ## Sidekick Skin
 
