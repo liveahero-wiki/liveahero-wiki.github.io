@@ -33,6 +33,18 @@ sprites="fg_kaibutsuGhostAdultEarth_h01,fg_kaibutsuGhostAdultFire_h01,fg_kaibuts
 sprites="fg_kaibutsuGhostLarvaEarth_h01,fg_kaibutsuGhostLarvaFire_h01,fg_kaibutsuGhostLarvaLight_h01,fg_kaibutsuGhostLarvaShadow_h01,fg_kaibutsuGhostLarvaWater_h01"
 %}
 
+### Giant Meteorite Kaibutsu
+
+{% include hero-infobox-unreleased.html name="Giant Meteorite Kaibutsu" mob=true
+sprites="fg_kaibutsuMeteorBigEarth_h01,fg_kaibutsuMeteorBigFire_h01,fg_kaibutsuMeteorBigLight_h01,fg_kaibutsuMeteorBigShadow_h01,fg_kaibutsuMeteorBigWater_h01"
+%}
+
+### Giant Meteorite Kaibutsu (Virtual)
+
+{% include hero-infobox-unreleased.html name="Giant Meteorite Kaibutsu" mob=true
+sprites="fg_kaibutsuMeteorDigitalBigEarth_h01,fg_kaibutsuMeteorDigitalBigFire_h01,fg_kaibutsuMeteorDigitalBigLight_h01,fg_kaibutsuMeteorDigitalBigShadow_h01,fg_kaibutsuMeteorDigitalBigWater_h01"
+%}
+
 ### Jellyfish Kaibutsu
 
 {% include hero-infobox-unreleased.html name="Jellyfish Kaibutsu" mob=true
