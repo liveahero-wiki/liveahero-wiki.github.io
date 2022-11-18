@@ -5,7 +5,7 @@ banner: true
 
 <p>For simplicity sake, only 5 star heroes are ranked here.</p>
 
-{% assign cardInfos = site.data.CardMaster | where: "rarity", 5 %}
+{% assign cardInfos = site.data.CardMaster | where: "rarity", 5 | where_exp: "item", "item.stockId < 90000" %}
 
 <table class="sort-table">
 <tr><th data-type="string">Hero</th><th>HP</th><th>ATK</th><th>View</th><th>Speed</th></tr>
