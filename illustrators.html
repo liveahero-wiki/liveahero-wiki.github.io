@@ -3,7 +3,7 @@ title: Illustrator
 banner: true
 ---
 
-{% assign heroes = site.data.CardMaster | where: "stockOrder", 1 %}
+{% assign heroes = site.data.CardMaster | where: "stockOrder", 1 | where_exp: "item", "item.stockId < 90000" %}
 {% assign sidekicks = site.data.SidekickMaster | where: "levelZone", 1 %}
 
 {% assign groups = heroes | concat: sidekicks | processCharaGroup: "illustrator", site.data.wiki.Illustrator | sort: "en" %}
