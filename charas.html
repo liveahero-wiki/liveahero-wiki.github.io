@@ -20,7 +20,7 @@ additional_scripts: ["/assets/chara.js"]
 <button data-sort="element">Element</button>
 </div>
 
-{% assign cardInfos = site.data.CardMaster | where: "stockOrder", 1 %}
+{% assign cardInfos = site.data.CardMaster | where: "stockOrder", 1 | where_exp: "item", "item.stockId < 90000" %}
 <ul id="hero-list" class="card-list">
 {% for c in cardInfos %}
 {% include card-hero.html card=c %}
