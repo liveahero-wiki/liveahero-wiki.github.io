@@ -1,3 +1,6 @@
+{% assign skillOverride = site.data.wiki.SkillManualOverride[include.skillId] %}
+{% if skillOverride %}{{ skillOverride }}{% else %}
+
 {% assign randomGroups = include.skill.effects | group_by: "randomGroupId" %}
 
 {% for randomGroup in randomGroups %}
@@ -13,3 +16,4 @@
 {%- if randomGroup.name != "0" %}</fieldset>{% endif %}
 
 {% endfor %}
+{% endif %}{% comment %}skillOverride{% endcomment %}

@@ -2,9 +2,9 @@
 {% assign effectParent = site.data.SkillEffectMaster[eid] %}
 {% assign skillEffectJson = effectParent.skillEffectJson %}
 {% assign target = include.skillEffect.effectTarget | skill_target %}
-{% assign skip_effect = false %}
+{% assign skip_effect = skillEffectJson | should_skip_skill_effect %}
 
-{% unless skillEffectJson.statusId == 74 or skillEffectJson.statusId == 136 or skillEffectJson.statusId == 137 %}
+{% unless skip_effect %}
 
 {% capture timing %}{% include skill-timing.html timing=include.timing %}{% endcapture %}
 {% assign timing = timing | strip %}
@@ -175,4 +175,4 @@ Unknown effect class ({{ effect.class }})
 {% if forloop.last == false %}<br>&nbsp;&nbsp;&nbsp;&nbsp;{% endif %}
 {% endfor %}
 /{{ include.skillEffect.prob }}%<br>
-{% endunless %}{% comment %}status blacklist check{% endcomment %}
+{% endunless %}{% comment %}skip_effect{% endcomment %}

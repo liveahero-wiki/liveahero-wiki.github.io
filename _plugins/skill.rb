@@ -34,6 +34,10 @@ module LahWiki
       return skill_trigger(triggers, timing)
     end
 
+    def should_skip_skill_effect(skillEffectJson)
+      return (skillEffectJson["effects"][0]["class"] == "NoneEffect" and [74, 136, 137].include?(skillEffectJson["statusId"]))
+    end
+
     def skill_trigger(triggers, timing)
       if !triggers
         return ""
