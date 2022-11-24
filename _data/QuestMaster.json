@@ -93283,6 +93283,123 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
   },
+  "1016001": {
+    "questId": 1016001,
+    "questName": "聖夜のプレ・コンサート",
+    "subName": "スコアアタック",
+    "questKind": 8,
+    "chapterId": 1016,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "icon_borealis_h01",
+    "startAt": "2022-11-24 18:00:00",
+    "endAt": "2022-12-01 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1014002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_borealis_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_villainEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_villainLight_h01",
+        "battleInfoElement": 4
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": true,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": [
+      {
+        "score": 0,
+        "iconAddress": "ui_symbol_estimation_C"
+      },
+      {
+        "score": 50000,
+        "iconAddress": "ui_symbol_estimation_B"
+      },
+      {
+        "score": 100000,
+        "iconAddress": "ui_symbol_estimation_A"
+      },
+      {
+        "score": 150000,
+        "iconAddress": "ui_symbol_estimation_S"
+      }
+    ],
+    "scoreAttackBonuses": [
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK50UP",
+        "characters": [
+          {
+            "stockId": 10022,
+            "cardType": 1
+          },
+          {
+            "stockId": 10292,
+            "cardType": 1
+          }
+        ]
+      },
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK30UP",
+        "characters": [
+          {
+            "stockId": 10821,
+            "cardType": 1
+          }
+        ]
+      },
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK10UP",
+        "characters": [
+          {
+            "stockId": 10821,
+            "cardType": 2
+          }
+        ]
+      }
+    ],
+    "scoreAttackStandards": [
+      {
+        "label": "UI_SCORE_ATTACK_CLEAR_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_CLEAR_BONUS_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_HP_SCORE_LABEL",
+        "description": "UI_SCORE_ATTACK_HP_SCORE_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_TURN_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_TURN_BONUS_DESCRIPTION"
+      }
+    ],
+    "scoreAttackHintTextKey": "HINT_SCORE_ATTACK_METEORITE2112",
+    "scoreAttackBattleCount": 3
+  },
   "1017002": {
     "questId": 1017002,
     "questName": "聖なる夜にモクダイと",
