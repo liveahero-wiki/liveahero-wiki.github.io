@@ -117,15 +117,15 @@ Listed enemy skill below is enemy skills at the 3rd phase:
 
 ##### Borealis's skills
 
-{% include skill-table-manual.html skillIds="4082101,4082102" equipmentSkills="6082103,6082101" %}
+{% include skill-table-manual.html skillIds="4082101,4082102,4082103" equipmentSkills="6082103,6082104,6000001,6000047" %}
 
 ##### Wood Villain's skills
 
-{% include skill-table-manual.html skillIds="4043102,4043103" equipmentSkills="6070005,6070002" %}
+{% include skill-table-manual.html skillIds="4043102,4043103,4043101" equipmentSkills="6000037,6043101" %}
 
 ##### Light Villain's skills
 
-{% include skill-table-manual.html skillIds="4043102,4043103" equipmentSkills="6070005,6070002" %}
+{% include skill-table-manual.html skillIds="4043102,4043103,4043101" equipmentSkills="6000037,6043101" %}
 
 Here is a list of score attack quest rewards based on the score:
 
