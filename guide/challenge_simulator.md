@@ -165,13 +165,13 @@ Quest in simulator will reset after a period of time (normally within 14 days), 
 {% include quest-group.html chapterId=604 %}
 {% include quest-group.html chapterId=612 %}
 
-### Jun 01st 2022 - Jun 15th 2021
+### Jun 01st 2022 - Jun 15th 2022
 
 {% include quest-group.html chapterId=603 %}
 {% include quest-group.html chapterId=605 %}
 {% include quest-group.html chapterId=611 %}
 
-### Jun 15th 2021 - Jun 29th 2021
+### Jun 15th 2022 - Jun 29th 2022
 
 {% include quest-group.html chapterId=601 %}
 {% include quest-group.html chapterId=606 %}
@@ -201,17 +201,47 @@ Quest in simulator will reset after a period of time (normally within 14 days), 
 {% include quest-group.html chapterId=604 %}
 {% include quest-group.html chapterId=612 %}
 
-### Aug 24th 2022 - Sep 7th 2021
+### Aug 24th 2022 - Sep 7th 2022
 
 {% include quest-group.html chapterId=603 %}
 {% include quest-group.html chapterId=605 %}
 {% include quest-group.html chapterId=611 %}
 
-### Sep 7th 2021 - Sep 21th 2021
+### Sep 7th 2022 - Sep 21th 2022
 
 {% include quest-group.html chapterId=601 %}
 {% include quest-group.html chapterId=606 %}
 {% include quest-group.html chapterId=607 %}
+
+### Sep 21th 2022 - Oct 5th 2022
+
+{% include quest-group.html chapterId=602 %}
+{% include quest-group.html chapterId=604 %}
+{% include quest-group.html chapterId=608 %}
+
+### Oct 5th 2022 - Oct 19th 2022
+
+{% include quest-group.html chapterId=603 %}
+{% include quest-group.html chapterId=605 %}
+{% include quest-group.html chapterId=609 %}
+
+### Oct 19th 2022 - Nov 2nd 2022
+
+{% include quest-group.html chapterId=601 %}
+{% include quest-group.html chapterId=606 %}
+{% include quest-group.html chapterId=610 %}
+
+### Nov 2nd 2022 - Nov 16th 2022
+
+{% include quest-group.html chapterId=602 %}
+{% include quest-group.html chapterId=604 %}
+{% include quest-group.html chapterId=612 %}
+
+### Nov 16th 2022 - Nov 30th 2022
+
+{% include quest-group.html chapterId=603 %}
+{% include quest-group.html chapterId=605 %}
+{% include quest-group.html chapterId=611 %}
 
 
 ## Guides
