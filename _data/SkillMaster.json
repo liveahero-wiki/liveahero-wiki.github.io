@@ -4520,7 +4520,7 @@
     "useView": 11000,
     "targetFlag": 2,
     "resourceName": "b_skill_damage",
-    "subResourceName": "s_skill_debuffTeam",
+    "subResourceName": "",
     "timing": 0,
     "description": "敵単体に150%ダメージ+コンボ数に応じてダメージ量が上昇。",
     "cutin": [
@@ -9945,6 +9945,441 @@
         "probGroupId": 0,
         "randomGroupId": 0,
         "triggerJson": []
+      }
+    ]
+  },
+  "1054101": {
+    "skillId": 1054101,
+    "skillName": "牽制射撃",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に50%ダメージ。70%の確率で1回の行動の間モザイクを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_guardman_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 346,
+        "prob": 70,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1054102": {
+    "skillId": 1054102,
+    "skillName": "警戒態勢",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に1ターンの間照準を付与。自身に1回分のDEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_guardman_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 832,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1054103": {
+    "skillId": 1054103,
+    "skillName": "チャージマグナム",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。70%の確率で1ターンの間火傷を付与。対象が木属性の時、火傷の効果が2ターンになる。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_guardman_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 221,
+        "prob": 70,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementDontExecTrigger",
+            "value": 0,
+            "element": 3,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 2,
+        "prob": 70,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 3,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1054104": {
+    "skillId": 1054104,
+    "skillName": "牽制射撃+",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に50%ダメージ。1回の行動の間モザイクを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_guardman_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 346,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1055103": {
+    "skillId": 1055103,
+    "skillName": "チャージマグナム",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。70%の確率で1ターンの間火傷を付与。対象が火属性の時、火傷の効果が2ターンになる。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_guardman_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 221,
+        "prob": 70,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementDontExecTrigger",
+            "value": 0,
+            "element": 1,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 2,
+        "prob": 70,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 1,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1056103": {
+    "skillId": 1056103,
+    "skillName": "チャージマグナム",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。70%の確率で1ターンの間火傷を付与。対象が水属性の時、火傷の効果が2ターンになる。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_guardman_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 221,
+        "prob": 70,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementDontExecTrigger",
+            "value": 0,
+            "element": 2,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 2,
+        "prob": 70,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 2,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1057103": {
+    "skillId": 1057103,
+    "skillName": "チャージマグナム",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。70%の確率で1ターンの間火傷を付与。対象が影属性の時、火傷の効果が2ターンになる。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_guardman_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 221,
+        "prob": 70,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementDontExecTrigger",
+            "value": 0,
+            "element": 5,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 2,
+        "prob": 70,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 5,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1058103": {
+    "skillId": 1058103,
+    "skillName": "チャージマグナム",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。70%の確率で1ターンの間火傷を付与。対象が光属性の時、火傷の効果が2ターンになる。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_guardman_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 221,
+        "prob": 70,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementDontExecTrigger",
+            "value": 0,
+            "element": 4,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 2,
+        "prob": 70,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 4,
+            "statusId": 0
+          }
+        ]
       }
     ]
   },
@@ -19081,6 +19516,606 @@
       }
     ]
   },
+  "2054101": {
+    "skillId": 2054101,
+    "skillName": "視線カット",
+    "useView": 2000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "味方単体に1回分のDEFアップを付与。1回の行動の間モザイクを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_guardman_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 346,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2054102": {
+    "skillId": 2054102,
+    "skillName": "視線カット+",
+    "useView": 1500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "味方単体に1回分のDEFアップを付与。1回の行動の間モザイクを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_guardman_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 346,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2054103": {
+    "skillId": 2054103,
+    "skillName": "視線カット++",
+    "useView": 1000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "味方単体に1回分のDEFアップを付与。1回の行動の間モザイクを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_guardman_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 346,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2055101": {
+    "skillId": 2055101,
+    "skillName": "視線カット",
+    "useView": 2000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "味方単体に1回分のDEFアップを付与。1回の行動の間モザイクを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_guardman_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 346,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2055102": {
+    "skillId": 2055102,
+    "skillName": "視線カット+",
+    "useView": 1500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "味方単体に1回分のDEFアップを付与。1回の行動の間モザイクを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_guardman_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 346,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2055103": {
+    "skillId": 2055103,
+    "skillName": "視線カット++",
+    "useView": 1000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "味方単体に1回分のDEFアップを付与。1回の行動の間モザイクを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_guardman_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 346,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2056101": {
+    "skillId": 2056101,
+    "skillName": "視線カット",
+    "useView": 2000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "味方単体に1回分のDEFアップを付与。1回の行動の間モザイクを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_guardman_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 346,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2056102": {
+    "skillId": 2056102,
+    "skillName": "視線カット+",
+    "useView": 1500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "味方単体に1回分のDEFアップを付与。1回の行動の間モザイクを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_guardman_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 346,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2056103": {
+    "skillId": 2056103,
+    "skillName": "視線カット++",
+    "useView": 1000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "味方単体に1回分のDEFアップを付与。1回の行動の間モザイクを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_guardman_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 346,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2057101": {
+    "skillId": 2057101,
+    "skillName": "視線カット",
+    "useView": 2000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "味方単体に1回分のDEFアップを付与。1回の行動の間モザイクを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_guardman_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 346,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2057102": {
+    "skillId": 2057102,
+    "skillName": "視線カット+",
+    "useView": 1500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "味方単体に1回分のDEFアップを付与。1回の行動の間モザイクを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_guardman_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 346,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2057103": {
+    "skillId": 2057103,
+    "skillName": "視線カット++",
+    "useView": 1000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "味方単体に1回分のDEFアップを付与。1回の行動の間モザイクを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_guardman_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 346,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2058101": {
+    "skillId": 2058101,
+    "skillName": "視線カット",
+    "useView": 2000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "味方単体に1回分のDEFアップを付与。1回の行動の間モザイクを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_guardman_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 346,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2058102": {
+    "skillId": 2058102,
+    "skillName": "視線カット+",
+    "useView": 1500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "味方単体に1回分のDEFアップを付与。1回の行動の間モザイクを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_guardman_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 346,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2058103": {
+    "skillId": 2058103,
+    "skillName": "視線カット++",
+    "useView": 1000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "味方単体に1回分のDEFアップを付与。1回の行動の間モザイクを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_guardman_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 346,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "2059101": {
     "skillId": 2059101,
     "skillName": "攻めの姿勢",
@@ -28187,6 +29222,726 @@
       {
         "skillEffectId": 37,
         "prob": 30,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3054101": {
+    "skillId": 3054101,
+    "skillName": "火警備員の連携Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanFire_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、2.5%の確率でコンボ数+1。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 2,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3054102": {
+    "skillId": 3054102,
+    "skillName": "火警備員の連携Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanFire_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、3%の確率でコンボ数+1。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 3,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3054103": {
+    "skillId": 3054103,
+    "skillName": "火警備員の連携Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanFire_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、3.5%の確率でコンボ数+1。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 4,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3054104": {
+    "skillId": 3054104,
+    "skillName": "火警備員の連携Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanFire_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、4%の確率でコンボ数+1。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 4,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3054105": {
+    "skillId": 3054105,
+    "skillName": "火警備員の連携Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanFire_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、4.5%の確率でコンボ数+1。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 4,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3054106": {
+    "skillId": 3054106,
+    "skillName": "火警備員の連携Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanFire_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、5%の確率でコンボ数+1。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 5,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3055101": {
+    "skillId": 3055101,
+    "skillName": "水警備員の連携Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanWater_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、10%の確率で自身のHPを基礎ATKの10%回復する。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 97,
+        "prob": 10,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3055102": {
+    "skillId": 3055102,
+    "skillName": "水警備員の連携Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanWater_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、12%の確率で自身のHPを基礎ATKの10%回復する。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 97,
+        "prob": 12,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3055103": {
+    "skillId": 3055103,
+    "skillName": "水警備員の連携Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanWater_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、14%の確率でHPを基礎ATKの10%回復する。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 97,
+        "prob": 14,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3055104": {
+    "skillId": 3055104,
+    "skillName": "水警備員の連携Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanWater_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、16%の確率でHPを基礎ATKの10%回復する。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 97,
+        "prob": 16,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3055105": {
+    "skillId": 3055105,
+    "skillName": "水警備員の連携Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanWater_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、18%の確率でHPを基礎ATKの10%回復する。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 97,
+        "prob": 18,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3055106": {
+    "skillId": 3055106,
+    "skillName": "水警備員の連携Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanWater_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、20%の確率でHPを基礎ATKの10%回復する。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 97,
+        "prob": 20,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3056101": {
+    "skillId": 3056101,
+    "skillName": "木警備員の連携Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanEarth_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、5%の確率で自身のデバフを１つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 5,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3056102": {
+    "skillId": 3056102,
+    "skillName": "木警備員の連携Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanEarth_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、6%の確率で自身のデバフを１つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 6,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3056103": {
+    "skillId": 3056103,
+    "skillName": "木警備員の連携Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanEarth_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、7%の確率で自身のデバフを１つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 7,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3056104": {
+    "skillId": 3056104,
+    "skillName": "木警備員の連携Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanEarth_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、8%の確率で自身のデバフを１つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 8,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3056105": {
+    "skillId": 3056105,
+    "skillName": "木警備員の連携Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanEarth_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、9%の確率で自身のデバフを１つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 9,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3056106": {
+    "skillId": 3056106,
+    "skillName": "木警備員の連携Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanEarth_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、10%の確率で自身のデバフを１つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 44,
+        "prob": 10,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3057101": {
+    "skillId": 3057101,
+    "skillName": "光警備員の連携Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanLight_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵がダメージを受けた時、7.5%の確率で敵に1回の行動の間View消費量+500を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 913,
+        "prob": 8,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3057102": {
+    "skillId": 3057102,
+    "skillName": "光警備員の連携Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanLight_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵がダメージを受けた時、9%の確率で敵に1回の行動の間View消費量+500を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 913,
+        "prob": 9,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3057103": {
+    "skillId": 3057103,
+    "skillName": "光警備員の連携Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanLight_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵がダメージを受けた時、10.5%の確率で敵に1回の行動の間View消費量+500を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 913,
+        "prob": 10,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3057104": {
+    "skillId": 3057104,
+    "skillName": "光警備員の連携Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanLight_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵がダメージを受けた時、12%の確率で敵に1回の行動の間View消費量+500を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 913,
+        "prob": 12,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3057105": {
+    "skillId": 3057105,
+    "skillName": "光警備員の連携Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanLight_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵がダメージを受けた時、13.5%の確率で敵に1回の行動の間View消費量+500を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 913,
+        "prob": 14,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3057106": {
+    "skillId": 3057106,
+    "skillName": "光警備員の連携Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanLight_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵がダメージを受けた時、15%の確率で敵に1回の行動の間View消費量+500を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 913,
+        "prob": 15,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3058101": {
+    "skillId": 3058101,
+    "skillName": "影警備員の連携Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanShadow_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、7.5%の確率で自身に1回の行動の間View消費量-500を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 602,
+        "prob": 8,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3058102": {
+    "skillId": 3058102,
+    "skillName": "影警備員の連携Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanShadow_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、9%の確率で自身に1回の行動の間View消費量-500を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 602,
+        "prob": 9,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3058103": {
+    "skillId": 3058103,
+    "skillName": "影警備員の連携Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanShadow_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、10.5%の確率で自身に1回の行動の間View消費量-500を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 602,
+        "prob": 10,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3058104": {
+    "skillId": 3058104,
+    "skillName": "影警備員の連携Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanShadow_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、12%の確率で自身に1回の行動の間View消費量-500を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 602,
+        "prob": 12,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3058105": {
+    "skillId": 3058105,
+    "skillName": "影警備員の連携Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanShadow_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、13.5%の確率で自身に1回の行動の間View消費量-500を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 602,
+        "prob": 14,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3058106": {
+    "skillId": 3058106,
+    "skillName": "影警備員の連携Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_guardmanShadow_s01",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "自身の攻撃で敵にダメージを与えた時、15%の確率で自身に1回の行動の間View消費量-500を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 602,
+        "prob": 15,
         "effectTarget": 0,
         "sequenceGroupId": 0,
         "probGroupId": 0,
@@ -44132,6 +45887,77 @@
       }
     ]
   },
+  "4054121": {
+    "skillId": 4054121,
+    "skillName": "牽制射撃",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMafia_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4054122": {
+    "skillId": 4054122,
+    "skillName": "チャージマグナム",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。70%の確率で2ターンの間火傷を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainMafia_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 2,
+        "prob": 70,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4055101": {
     "skillId": 4055101,
     "skillName": "拡散水鉄砲？",
@@ -49428,6 +51254,144 @@
       }
     ]
   },
+  "4089101": {
+    "skillId": 4089101,
+    "skillName": "バリアブレイク",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。1回分のDEFダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuMeteorSmall_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4089102": {
+    "skillId": 4089102,
+    "skillName": "流星群",
+    "useView": 7000,
+    "targetFlag": 7,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "敵全体からランダムに３回110%ダメージ。味方全体に1回の行動の間ATKアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuMeteorSmall_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 3,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 3,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4089103": {
+    "skillId": 4089103,
+    "skillName": "石つぶて",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffAll",
+    "timing": 0,
+    "description": "敵全体に30%ダメージ。40%の確率で1ターンの間火傷を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuMeteorSmall_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 122,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 221,
+        "prob": 40,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4091102": {
     "skillId": 4091102,
     "skillName": "コスモパワー",
@@ -49743,6 +51707,297 @@
       },
       {
         "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4095103": {
+    "skillId": 4095103,
+    "skillName": "薙ぎ払い",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdUpOwn",
+    "timing": 0,
+    "description": "【単体狙い付与時】敵単体に90%ダメージ。自身に1回の行動の間SPDアップを付与。<br>【全体狙い付与時】敵全体に70%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuMeteor_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 126
+          }
+        ]
+      },
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 126
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 127
+          }
+        ]
+      }
+    ]
+  },
+  "4095104": {
+    "skillId": 4095104,
+    "skillName": "叩きつけ",
+    "useView": 7000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "【単体狙い付与時】敵単体に120%ダメージ。自身に2回の行動の間ATKアップを付与。<br>【全体狙い付与時】敵全体に90%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuMeteor_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 126
+          }
+        ]
+      },
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 126
+          }
+        ]
+      },
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 127
+          }
+        ]
+      }
+    ]
+  },
+  "4095105": {
+    "skillId": 4095105,
+    "skillName": "重力波",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に150%ダメージ。自身に付与されている隕石の欠片1つにつき、ダメージが30%増加（最大300%まで）。攻撃後、自身に付与されている隕石の欠片をすべて解除。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuMeteor_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 11,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 130
+          }
+        ]
+      },
+      {
+        "skillEffectId": 21,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 130
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 130
+          }
+        ]
+      },
+      {
+        "skillEffectId": 662,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 130
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 130
+          }
+        ]
+      },
+      {
+        "skillEffectId": 542,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 130
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 3,
+            "element": 0,
+            "statusId": 130
+          }
+        ]
+      },
+      {
+        "skillEffectId": 543,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 3,
+            "element": 0,
+            "statusId": 130
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 4,
+            "element": 0,
+            "statusId": 130
+          }
+        ]
+      },
+      {
+        "skillEffectId": 664,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 4,
+            "element": 0,
+            "statusId": 130
+          }
+        ]
+      },
+      {
+        "skillEffectId": 544,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,
@@ -56728,6 +58983,367 @@
     "effects": [
       {
         "skillEffectId": 686,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6095101": {
+    "skillId": 6095101,
+    "skillName": "方針決定",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 4,
+    "description": "ターン開始時、攻撃対象の範囲を決定する。攻撃を受けるたびに、単体狙い・全体狙いが切り替わる。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 533,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 1,
+        "triggerJson": [
+          {
+            "class": "TurnTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "TurnDontExecTrigger",
+            "value": 3,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 534,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 1,
+        "triggerJson": [
+          {
+            "class": "TurnTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "TurnDontExecTrigger",
+            "value": 3,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 533,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 2,
+        "triggerJson": [
+          {
+            "class": "TurnTrigger",
+            "value": 5,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "TurnDontExecTrigger",
+            "value": 7,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 534,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 2,
+        "triggerJson": [
+          {
+            "class": "TurnTrigger",
+            "value": 5,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "TurnDontExecTrigger",
+            "value": 7,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "6095102": {
+    "skillId": 6095102,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 5,
+    "description": "方針決定でつけた状態変化を削除",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 535,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 536,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6095104": {
+    "skillId": 6095104,
+    "skillName": "免疫獲得",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 9,
+    "description": "毒・火傷を無効化。デバフを受けた時、自身に弱体抵抗+20&ATK+10%を付与 。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 537,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 539,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6095105": {
+    "skillId": 6095105,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "単体狙い・全体狙いの切り替え",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 533,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 127
+          }
+        ]
+      },
+      {
+        "skillEffectId": 534,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 126
+          }
+        ]
+      },
+      {
+        "skillEffectId": 535,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 536,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6095106": {
+    "skillId": 6095106,
+    "skillName": "質量増加",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "ターン開始時、隕石の欠片を1つ付与 & 50%の確率で追加で隕石の欠片を1つ付与。ダメージ時、隕石の欠片を1つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 540,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 540,
+        "prob": 50,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6095107": {
+    "skillId": 6095107,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_cure",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "毒・火傷無効。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 669,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 670,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6095108": {
+    "skillId": 6095108,
+    "skillName": "破片再生",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "5ターン目開始時、死亡している味方を100%のHPで復活。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 260,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TurnTrigger",
+            "value": 5,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "TurnDontExecTrigger",
+            "value": 5,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "6095109": {
+    "skillId": 6095109,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、隕石の欠片解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 541,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,
