@@ -121,7 +121,7 @@ module Jekyll
     end
 
     def stockIdToCharaTitle(stockId, type)
-      title, link = CharaFilter::stockIdToLink_impl(stockId, type, @context, page)
+      title, link = CharaFilter::stockIdToLink_impl(stockId, type, @context)
       return title
     end
 
