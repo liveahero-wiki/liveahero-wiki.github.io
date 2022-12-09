@@ -107,34 +107,21 @@ module Jekyll
         suffix = "s"
       end
 
-      if variant > 1
-        title = page.data.dig(suffix + variant.to_s, "title") || page.data["title"]
+      if page
+        if variant > 1
+          title = page.data.dig(suffix + variant.to_s, "title") || page.data["title"]
+        else
+          title = page.data["title"]
+        end
       else
-        title = page.data["title"]
+        title = resourceName
       end
 
-      return "<a href=\"#{page.url}##{suffix}#{stockId}\"><span class=\"item\"><img src=\"/cdn/Sprite/icon_#{resourceName}_#{suffix}01.png\" loading=\"lazy\"></span> #{title}</a>"
+      return title, "<a href=\"#{page.url}##{suffix}#{stockId}\"><span class=\"item\"><img src=\"/cdn/Sprite/icon_#{resourceName}_#{suffix}01.png\" loading=\"lazy\"></span> #{title}</a>"
     end
 
-    def stockIdToCharaTitle(stockId, type, page=nil)
-      cardId = stockId * 10 + 1
-      variant = stockId % 10
-      characterId = (stockId / 10) % 1000
-
-      page = CharaMap.characterId_to_pages[characterId]
-
-      if type == 1
-        suffix = "h"
-      else
-        suffix = "s"
-      end
-
-      if variant > 1
-        title = page.data.dig(suffix + variant.to_s, "title") || page.data["title"]
-      else
-        title = page.data["title"]
-      end
-
+    def stockIdToCharaTitle(stockId, type)
+      title, link = CharaFilter::stockIdToLink_impl(stockId, type, @context, page)
       return title
     end
 
@@ -142,7 +129,8 @@ module Jekyll
       if !ctx
         ctx = @context
       end
-      return CharaFilter::stockIdToLink_impl(stockId, type, ctx, page)
+      title, link = CharaFilter::stockIdToLink_impl(stockId, type, ctx, page)
+      return link
     end
 
   end
