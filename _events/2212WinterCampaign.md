@@ -14,7 +14,7 @@ farm_end_time: 2022-12-22T14:00:00+09
 
 - Do event free quests and event shop where you can obtain the new rank 1 characters
 - New event score attack
-- New character quests ({% chara_link Kouki %}, {% chara_link Huckle %}, {% chara_link Procy %})
+- New character quests ({% chara_link Kouki & Sirius %}, {% chara_link Huckle %}, {% chara_link Procy %})
 
 ### About Rank 1 Characters
 
