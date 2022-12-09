@@ -113,11 +113,13 @@ module Jekyll
         else
           title = page.data["title"]
         end
+        url = page.url
       else
         title = resourceName
+        url = "/charas/"
       end
 
-      return title, "<a href=\"#{page.url}##{suffix}#{stockId}\"><span class=\"item\"><img src=\"/cdn/Sprite/icon_#{resourceName}_#{suffix}01.png\" loading=\"lazy\"></span> #{title}</a>"
+      return title, "<a href=\"#{url}##{suffix}#{stockId}\"><span class=\"item\"><img src=\"/cdn/Sprite/icon_#{resourceName}_#{suffix}01.png\" loading=\"lazy\"></span> #{title}</a>"
     end
 
     def stockIdToCharaTitle(stockId, type)
