@@ -80,7 +80,8 @@ module Jekyll
       characterId = page.data["characterId"]
       stockId = (1000 + characterId) * 10 + variant
 
-      return CharaFilter::stockIdToLink_impl(stockId, type, context, page)
+      title, link = CharaFilter::stockIdToLink_impl(stockId, type, context, page)
+      return link
     end
   end
 
