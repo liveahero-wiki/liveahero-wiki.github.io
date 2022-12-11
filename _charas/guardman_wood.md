@@ -13,6 +13,7 @@ Because they value trust, they prefer efficient equipment.
 {% endcapture %}
 {% include hero-infobox.html stockId=10561 BIO_H01=BIO_H01 %}
 
+{% capture BIO_S01 %}
 These aliens are characterized with large horns, their stern faces and muscular, muscular bodies. 
 
 The dark side of society, likened to shade and darkness, is where they belong. 
