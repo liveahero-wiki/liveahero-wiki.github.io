@@ -51,11 +51,22 @@ Here is a list of this campaign's limited time Missions:
 | 5  | Finish any rank campaign quest 75 times | 1500 {% include item-icon.html id=52 %}    |
 | 6  | Finish any rank campaign quest 100 times | 2000 {% include item-icon.html id=52 %}    |
 
-### Score Attack Quests
+### Campaign Score Attack Quests
 
-Score Attack Quest is a quest mode with waves of enemy, for this event's score attack quest there will be a score system where rewards can be claimed based on final score in the quest, the score is graded for each wave with conditions such as clear bonus, turn bonus, and damage score.
+Score Attack Quest is a quest mode with waves of enemy, for this event's score attack quest there will be a score system where rewards can be claimed based on final score in the quest, the score is graded for each wave with conditions such as clear bonus, turn bonus, damage score and survival score.
 
-{% include quest-group.html chapterId=1019 %}
+{% include quest-group.html chapterId=1016 %}
+
+#### Enemy skills:
+
+##### Meteorite Kaibutsu's skills
+
+{% include skill-table-manual.html skillIds="4095103,4095104,4095105" equipmentSkills="6095101,6095104,6095106,6095108" %}
+
+##### Small Meteorite Kaibutsu's skills
+
+{% include skill-table-manual.html skillIds="4089103,4089101,4089102" equipmentSkills="" %}
+
 
 ## Event Shop
 
