@@ -10,6 +10,9 @@ farm_start_time: 2022-12-08T20:00:00+09
 farm_end_time: 2022-12-22T14:00:00+09
 ---
 
+* this will be unordered
+{:toc}
+
 ## Event Details
 
 - Do event free quests and event shop where you can obtain the new rank 1 characters
@@ -55,7 +58,7 @@ Here is a list of this campaign's limited time Missions:
 
 Score Attack Quest is a quest mode with waves of enemy, for this event's score attack quest there will be a score system where rewards can be claimed based on final score in the quest, the score is graded for each wave with conditions such as clear bonus, turn bonus, damage score and survival score.
 
-{% include quest-group.html chapterId=1016 %}
+{% include quest-group.html chapterId=1019 %}
 
 #### Enemy skills:
 
