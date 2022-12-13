@@ -93842,6 +93842,130 @@
     "scoreAttackHintTextKey": "HINT_SCORE_ATTACK_METEOR",
     "scoreAttackBattleCount": 1
   },
+  "1020001": {
+    "questId": 1020001,
+    "questName": "スコアアタック・幽霊型カイブツ",
+    "subName": "キャンペーンスコアアタック",
+    "questKind": 8,
+    "chapterId": 1020,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "icon_kaibutsuGhostAdultEarth_h01",
+    "startAt": "2022-12-13 18:00:00",
+    "endAt": "2022-12-22 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 60,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuGhostLarvaLight_h01",
+        "battleInfoElement": 4
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuGhostAdultEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuGhostLarvaShadow_h01",
+        "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": true,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": [
+      {
+        "score": 0,
+        "iconAddress": "ui_symbol_estimation_C"
+      },
+      {
+        "score": 30000,
+        "iconAddress": "ui_symbol_estimation_B"
+      },
+      {
+        "score": 65000,
+        "iconAddress": "ui_symbol_estimation_A"
+      },
+      {
+        "score": 90000,
+        "iconAddress": "ui_symbol_estimation_S"
+      }
+    ],
+    "scoreAttackBonuses": [
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK50UP",
+        "characters": [
+          {
+            "stockId": 10181,
+            "cardType": 1
+          }
+        ]
+      },
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK30UP",
+        "characters": [
+          {
+            "stockId": 10341,
+            "cardType": 1
+          }
+        ]
+      },
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK20UP",
+        "characters": [
+          {
+            "stockId": 10321,
+            "cardType": 1
+          }
+        ]
+      },
+      {
+        "description": "UI_SCORE_ATTACK_BONUS_ATK10UP",
+        "characters": [
+          {
+            "stockId": 10181,
+            "cardType": 2
+          },
+          {
+            "stockId": 10341,
+            "cardType": 2
+          },
+          {
+            "stockId": 10321,
+            "cardType": 2
+          }
+        ]
+      }
+    ],
+    "scoreAttackStandards": [
+      {
+        "label": "UI_SCORE_ATTACK_CLEAR_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_CLEAR_BONUS_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_HP_SCORE_LABEL",
+        "description": "UI_SCORE_ATTACK_HP_SCORE_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_TURN_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_TURN_BONUS_DESCRIPTION"
+      }
+    ],
+    "scoreAttackHintTextKey": "HINT_SCORE_ATTACK_GHOST",
+    "scoreAttackBattleCount": 1
+  },
   "1021001": {
     "questId": 1021001,
     "questName": "実戦式・警備訓練！ ラフ",

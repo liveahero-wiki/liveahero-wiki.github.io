@@ -52628,6 +52628,108 @@
       }
     ]
   },
+  "4104101": {
+    "skillId": 4104101,
+    "skillName": "体当たり",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuGhostLarva_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4104102": {
+    "skillId": 4104102,
+    "skillName": "道連れ",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に1ターンの間怨念を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuGhostLarva_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 916,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4104103": {
+    "skillId": 4104103,
+    "skillName": "鬼火",
+    "useView": 7000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に60%ダメージ。40%の確率で1ターンの間火傷を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuGhostLarva_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 221,
+        "prob": 40,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4106101": {
     "skillId": 4106101,
     "skillName": "体当たり",
@@ -52838,6 +52940,269 @@
         "probGroupId": 0,
         "randomGroupId": 0,
         "triggerJson": []
+      }
+    ]
+  },
+  "4109101": {
+    "skillId": 4109101,
+    "skillName": "デスサイズ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。自身に付与されている彷徨う魂の数×20%基礎ダメージが上昇（最大120%まで）。ピンチ状態の時、自身に2ターンの間挑発を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuGhostAdult_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 147
+          }
+        ]
+      },
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 147
+          },
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 147
+          }
+        ]
+      },
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 147
+          },
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 147
+          }
+        ]
+      },
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 147
+          }
+        ]
+      },
+      {
+        "skillEffectId": 49,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "4109102": {
+    "skillId": 4109102,
+    "skillName": "魂集め",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "自身に彷徨う魂を最大で4つになるまで付与。このスキルを発動時に彷徨う魂が3つ以上付与されていた場合、味方全体に2回分のATKアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuGhostAdult_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 147
+          }
+        ]
+      },
+      {
+        "skillEffectId": 917,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 147
+          }
+        ]
+      },
+      {
+        "skillEffectId": 917,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 147
+          }
+        ]
+      },
+      {
+        "skillEffectId": 917,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 147
+          }
+        ]
+      },
+      {
+        "skillEffectId": 917,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 3,
+            "element": 0,
+            "statusId": 147
+          }
+        ]
+      }
+    ]
+  },
+  "4109103": {
+    "skillId": 4109103,
+    "skillName": "ソウルクラッシュ",
+    "useView": 6000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に120%ダメージ。自身に彷徨う魂が2つ以上付与されている場合、スキル１を追加発動。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuGhostAdult_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 486,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 147
+          }
+        ]
       }
     ]
   },
@@ -59524,6 +59889,46 @@
       }
     ]
   },
+  "6104102": {
+    "skillId": 6104102,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 14,
+    "description": "怨念が付与された状態で死亡した時、敵全体に最大HPの30%のダメージ。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 914,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 148
+          }
+        ]
+      },
+      {
+        "skillEffectId": 918,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "6106101": {
     "skillId": 6106101,
     "skillName": "幽体",
@@ -59565,6 +59970,190 @@
         "skillEffectId": 260,
         "prob": 100,
         "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6109101": {
+    "skillId": 6109101,
+    "skillName": "魂の衆合",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "バトル開始時、自身に彷徨う魂を3つ付与。自身に付与されている彷徨う魂1つにつき、相手から受けるダメージが20%減少する。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 917,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 917,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 917,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6109102": {
+    "skillId": 6109102,
+    "skillName": "魂の分割",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_healAll",
+    "subResourceName": "s_skill_antiBuffTeam",
+    "timing": 4,
+    "description": "ターン開始時、味方全体を50%のHPで復活させる。ピンチ状態時、復活させる味方のHPが100%になる。復活させた味方と同じ数だけ、自身に付与されている彷徨う魂を解除する。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 505,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "NotPinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 149
+          }
+        ]
+      },
+      {
+        "skillEffectId": 260,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 149
+          }
+        ]
+      },
+      {
+        "skillEffectId": 915,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 149
+          }
+        ]
+      },
+      {
+        "skillEffectId": 915,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 149
+          }
+        ]
+      }
+    ]
+  },
+  "6109103": {
+    "skillId": 6109103,
+    "skillName": "高度耐性",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_cure",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "毒・火傷が付与される確率が50%減少＆沈黙無効。相手から受けるダメージの上限を25000にする。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 381,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 688,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 689,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 691,
+        "prob": 100,
+        "effectTarget": 0,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "randomGroupId": 0,
@@ -59804,6 +60393,30 @@
     "effects": [
       {
         "skillEffectId": 855,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6121109": {
+    "skillId": 6121109,
+    "skillName": "凶暴化",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "HPが低くなるほど、攻撃力が上昇する。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 901,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,
