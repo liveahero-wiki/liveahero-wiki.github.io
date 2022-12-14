@@ -60,6 +60,8 @@ Score Attack Quest is a quest mode with waves of enemy, for this event's score a
 
 {% include quest-group.html chapterId=1019 %}
 
+{% include quest-group.html chapterId=1020 %}
+
 ### Enemy skills:
 
 #### Meteorite-shaped Kaibutsu:
