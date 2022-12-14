@@ -21,16 +21,20 @@
     </header>
     <nav class="sidebar__nav">
       <div class="sidebar__nav-interior">
+        <form action="https://www.google.com/search" method="get">
+          <input class="search-box" type="search" name="q" placeholder="Search" aria-label="Search" autocomplete="off"/>
+          <input type="hidden" name="sitesearch" value="{{ site.url }}" />
+        </form>
         <h3 class="section__header">Wiki</h3>
         <ul>
           <li>
             <a href="/">Main page</a>
           </li>
           <li>
-            <a href="https://github.com/liveahero-wiki/liveahero-wiki.github.io/commits/master">Recent changes</a>
+            <a href="{{ site.github_repo }}/commits/master">Recent changes</a>
           </li>
           <li>
-            <a href="https://github.com/liveahero-wiki/liveahero-wiki.github.io/">Open source</a>
+            <a href="{{ site.github_repo }}/">Open source</a>
           </li>
           <li>
             <a href="/blog/">Wiki Blog</a>
