@@ -62,6 +62,8 @@ Score Attack Quest is a quest mode with waves of enemy, for this event's score a
 
 {% include quest-group.html chapterId=1020 %}
 
+{% include quest-group.html chapterId=1019 %}
+
 ### Enemy skills:
 
 #### Meteorite-shaped Kaibutsu:
@@ -84,6 +86,11 @@ Score Attack Quest is a quest mode with waves of enemy, for this event's score a
 
 {% include skill-table-manual.html skillIds="4104101,4104102,4104103" equipmentSkills="" %}
 
+#### Plesiosaur-shaped Kaibutsu:
+
+##### Cetus' skills
+
+{% include skill-table-manual.html skillIds="4121110,4121108,4121109" equipmentSkills="6121109,6121103,6121111,6000050" %}
 
 ## Event Shop
 
