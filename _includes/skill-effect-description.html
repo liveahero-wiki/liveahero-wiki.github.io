@@ -32,7 +32,7 @@ Add {{ effect.parameter.value }} views
 View gained with view acquisition skill {% if effect.parameter.value >= 100 %}increased{% else %}decreased{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "RateChangeView" %}
 Gain {{ effect.parameter.value }}% of self's base view
-{% when NotDamageSkillNeedViewValueChange %}
+{% when "NotDamageSkillNeedViewValueChange" %}
 View cost of self's non-damaging skill changed by {{ effect.parameter.value }}
 {% when "MultipleDefence" %}
 {% assign turnDefinition = "next attack" %}
