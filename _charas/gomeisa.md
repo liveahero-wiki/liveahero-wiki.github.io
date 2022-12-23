@@ -15,7 +15,19 @@ He hates disputes, loves cute things and wants to get along with everyone. He ha
 
 {% include hero-infobox.html stockId=10331 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
-{% include hero-infobox.html stockId=10332 %}
+{% capture BIO_H01 %}
+I want everyone, adults and children alike, to enjoy Christmas with a smile on their faces.<br>
+Its too sad that the festival is being threatened by someone and canceled!<br>
+Thinking this, Gomeisa has a new hero form obtained from his past memories.<br>
+From his palms and feet, the ice wall builds up to envelop and protect everyone.<br>
+The shining smile ever etched upon his face and charming dances are meant to brighten up the day of the festival.<br>
+As a blessed dancer, his wish is sure to make those who see him happy.
+{% endcapture %}
+
+{% capture BIO_H02 %}
+The sacred tree in his homeland one winter day had become frozen in a protective layer of ice in order to protect itself from the freezing winter wind.<br>The snowy Christmas Day Kamakura, which Procy had offered to make with him to cheer him up.<br>These things taught Gomeisa about the inner warmth that can be found within the ice and snow.<br>The knowledge he gained in his homeland and the warm memories of Christmas strengthened Gomeisa's feelings and led him to this new form.
+{% endcapture %}
+{% include hero-infobox.html stockId=10332 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
 
 {% capture BIO_S01 %}
 Gomeisa is a young giant alien working as a waiter in a place where heroes gather under Procy's management. He is originally from a planet with a civilization that lives with giant trees. He loves dancing and praying to those very same trees and the gods above them. He is innocent, kind, naive and very unsuspecting of others. Having no qualm with being touched, showing no hesitation when asked to undress, causing tons of clumsy accidents due to his massive body; Procy's just at a loss with him.
@@ -50,6 +62,16 @@ TRAINED = "T-This is my limit..."
 %}
 
 {% include voice-table.html resourceName="gomeisaxmasmelt2212"
+APPRECIATION = "Operator, don't work too hard or you'll get a fever!!<br>Let's cool down with Gomeisa's special tasty popsicles!"
+DAILY = "Put on some ears, a necklace, and a loin cloth...<br>Ta-da! My snowman alter ego!<br>When I'm not around, you can hug him instead!"
+HERO = "Mr. Viscanum is really kind!<br>He gave me lots of super cool inventions! By the way...<br>How do you use this? What do you do with it?"
+PLAYER = "Operator, will you dance with me?<br>If you dance with all your heart, your heart and body will be warm!<br>Come on! Put your hands here!"
+RELATION = "Her voice is so beautiful...<br>It makes me want to dance!<br>I hope Procy can hear her perform next time!"
+TOUCH = "Are you interested in my new outfit?<br>It's warmer than it looks!<br>See, try putting your hand here!"
+TRAIN = "It's okay, I'll warm you up! "
+TRAINED = "The ice will melt...!"
+EVENTA = "If it's this warm, we won't be able to hold the event and everyone will be troubled...!<br>Let's bring back the normal weather soon!"
+EVENTB = "Look at this! A beautiful crown handed out at the festival!<br>It's called a wreath! What do you think?<br>Does it look good on me? Huh? That's the wrong way to use it?"
 %}
 
 ## Notes:
