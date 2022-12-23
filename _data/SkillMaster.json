@@ -6640,7 +6640,7 @@
     "resourceName": "b_skill_buff",
     "subResourceName": "",
     "timing": 0,
-    "description": "味方単体に3回の行動の間ATKアップを付与。対象がランダムな敵にスキル１で追撃。",
+    "description": "味方単体に3回の行動の間ATKアップを付与。対象のスキル１を誘発。",
     "cutin": [
       {
         "info": {
@@ -6680,7 +6680,7 @@
     "resourceName": "b_skill_buff",
     "subResourceName": "s_skill_cureTeam",
     "timing": 0,
-    "description": "味方単体に3回の行動の間ATKアップを付与。デバフを１つ解除。対象がランダムな敵にスキル１で追撃。",
+    "description": "味方単体に3回の行動の間ATKアップを付与。デバフを１つ解除。対象のスキル１を誘発。",
     "cutin": [
       {
         "info": {
@@ -8994,6 +8994,200 @@
       }
     ]
   },
+  "1033201": {
+    "skillId": 1033201,
+    "skillName": "ダンサ・フェリス",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_spdUpTeam",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間幸運を付与。Viewが5000以上ある場合、対象に1回の行動の間SPDアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_gomeisaXmasMelt2212_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 69,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "ViewTrigger",
+            "value": 5000,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1033202": {
+    "skillId": 1033202,
+    "skillName": "ムロデ・ヒエロ",
+    "useView": 5000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "自身に2ターンの間挑発を付与。2回分のDEFアップを付与。【ダメージ時】自身に鼓舞を1つ付与。【行動開始時】自身に付与されている鼓舞の数×2000のViewを獲得し、鼓舞を全て解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_gomeisaXmasMelt2212_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 49,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 949,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1033203": {
+    "skillId": 1033203,
+    "skillName": "ダンサクェ・トラエパス",
+    "useView": 10000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "自身に1ターンの間弱体抵抗+100を付与。自身以外の味方全体に1ターンの間シールドを付与。このスキルは発動後、3ターンの間使用できなくなる。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_gomeisaXmasMelt2212_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 660,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 833,
+        "prob": 100,
+        "effectTarget": 14,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 911,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1033204": {
+    "skillId": 1033204,
+    "skillName": "ムロデ・ヒエロ+",
+    "useView": 4000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "自身に2ターンの間挑発を付与。2回分のDEFアップを付与。【ダメージ時】自身に鼓舞を1つ付与。【行動開始時】自身に付与されている鼓舞の数×2000のViewを獲得し、鼓舞を全て解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_gomeisaXmasMelt2212_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 49,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 949,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "1034101": {
     "skillId": 1034101,
     "skillName": "ザ・グレート・ステップ",
@@ -10942,7 +11136,7 @@
     "resourceName": "b_skill_damage",
     "subResourceName": "s_skill_debuffTeam",
     "timing": 0,
-    "description": "敵単体に120%ダメージ。1回分のDEFダウンを付与。攻撃後、攻撃した敵が生存している場合、自身以外のランダムな味方がスキル１で追撃。",
+    "description": "敵単体に120%ダメージ。1回分のDEFダウンを付与。攻撃後、ランダムな味方が追撃。",
     "cutin": [
       {
         "info": {
@@ -12666,7 +12860,7 @@
     "resourceName": "b_skill_antiBuff",
     "subResourceName": "",
     "timing": 0,
-    "description": "敵単体のバフを１つ解除。自身の行動時にこのスキルを発動した場合、自身以外のランダムな味方がスキル１で追撃。",
+    "description": "敵単体のバフを１つ解除。自身の行動時にこのスキルを発動した場合、ランダムな味方が追撃。",
     "cutin": [
       {
         "info": {
@@ -14253,7 +14447,7 @@
     "resourceName": "b_skill_spdDown",
     "subResourceName": "",
     "timing": 0,
-    "description": "敵単体に1回の行動の間SPDダウンを付与。このターン、このスキルを使用していない場合、もう一度行動する。再行動が発動した場合、行動終了時、Viewを獲得できない。",
+    "description": "敵単体に1回の行動の間SPDダウンを付与。自身の行動時にこのスキルを発動した時、自身に索引が付与されている場合、索引を解除しもう1度行動をする。【ターン開始時】自身に1ターンの間索引を付与。",
     "cutin": [
       {
         "info": {
@@ -14265,15 +14459,6 @@
     "isEquip": false,
     "isHeroSkill": true,
     "effects": [
-      {
-        "skillEffectId": 42,
-        "prob": 100,
-        "effectTarget": 2,
-        "sequenceGroupId": 0,
-        "probGroupId": 0,
-        "randomGroupId": 0,
-        "triggerJson": []
-      },
       {
         "skillEffectId": 29,
         "prob": 100,
@@ -14287,6 +14472,12 @@
             "value": 0,
             "element": 0,
             "statusId": 115
+          },
+          {
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
           }
         ]
       },
@@ -14303,12 +14494,40 @@
             "value": 0,
             "element": 0,
             "statusId": 115
+          },
+          {
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
           }
         ]
       },
       {
         "skillEffectId": 748,
         "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 115
+          },
+          {
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 952,
+        "prob": 0,
         "effectTarget": 0,
         "sequenceGroupId": 0,
         "probGroupId": 0,
@@ -15187,6 +15406,419 @@
             "statusId": 137
           }
         ]
+      }
+    ]
+  },
+  "1125101": {
+    "skillId": 1125101,
+    "skillName": "マン・メキャニキ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_combo",
+    "timing": 0,
+    "description": "敵単体に2～4回、20%のダメージ。2回目以降はコンボ数+1の追加効果。自身のスキル発動確率上昇効果が高いほど、回数が多くなりやすくなる。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_viscunam_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 261,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 261,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 2,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 2,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 261,
+        "prob": 50,
+        "effectTarget": 2,
+        "sequenceGroupId": 3,
+        "probGroupId": 2,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 50,
+        "effectTarget": 2,
+        "sequenceGroupId": 3,
+        "probGroupId": 2,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 261,
+        "prob": 25,
+        "effectTarget": 2,
+        "sequenceGroupId": 4,
+        "probGroupId": 3,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 25,
+        "effectTarget": 2,
+        "sequenceGroupId": 4,
+        "probGroupId": 3,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1125102": {
+    "skillId": 1125102,
+    "skillName": "プリゾンテッション",
+    "useView": 500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_view",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "Viewを2000獲得。味方単体に3回の行動後に発動するランダムな発明品を1つ付与。同種の発明品は5個までしか付与できない。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_viscunam_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 919,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 924,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 1,
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 4,
+            "element": 0,
+            "statusId": 152
+          }
+        ]
+      },
+      {
+        "skillEffectId": 925,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 1,
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 4,
+            "element": 0,
+            "statusId": 153
+          }
+        ]
+      },
+      {
+        "skillEffectId": 926,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 1,
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 4,
+            "element": 0,
+            "statusId": 154
+          }
+        ]
+      }
+    ]
+  },
+  "1125103": {
+    "skillId": 1125103,
+    "skillName": "グラン・アンヴァンシオン",
+    "useView": 6000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に3回の行動の間ATKアップを付与。【常時発動】自身の使用するダメージを与えないスキルのView消費量-500。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_viscunam_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 3,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1125104": {
+    "skillId": 1125104,
+    "skillName": "グラン・アンヴァンシオン+",
+    "useView": 6000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_cureTeam",
+    "timing": 0,
+    "description": "味方単体に3回の行動の間ATKアップを付与。デバフを２つ解除。【常時発動】自身の使用するダメージを与えないスキルのView消費量-500。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_viscunam_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 3,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 73,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1126101": {
+    "skillId": 1126101,
+    "skillName": "ゲザングフォル",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_combo",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。コンボ数+1。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_sensettia_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1126102": {
+    "skillId": 1126102,
+    "skillName": "ヘフティヒ・シュライ",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に130%ダメージ。70%の確率で2回分のDEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_sensettia_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 71,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 9,
+        "prob": 70,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1126103": {
+    "skillId": 1126103,
+    "skillName": "グレンツェント・ゼンガー",
+    "useView": 11000,
+    "targetFlag": 7,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_heal",
+    "timing": 0,
+    "description": "敵全体からランダムに3回50%ダメージ。ダメージの度にチームで一番HPが減っているヒーローのHPを敵に与えたダメージの50％回復。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_sensettia_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 909,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 909,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 909,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "1126104": {
+    "skillId": 1126104,
+    "skillName": "グレンツェント・ゼンガー+",
+    "useView": 9000,
+    "targetFlag": 7,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_heal",
+    "timing": 0,
+    "description": "敵全体からランダムに3回50%ダメージ。ダメージの度にチームで一番HPが減っているヒーローのHPを敵に与えたダメージの50％回復。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_sensettia_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 909,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 909,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 909,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
       }
     ]
   },
@@ -23329,6 +23961,267 @@
         "probGroupId": 0,
         "randomGroupId": 0,
         "triggerJson": []
+      }
+    ]
+  },
+  "2125101": {
+    "skillId": 2125101,
+    "skillName": "先進的大発明",
+    "useView": 3500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_spdUp",
+    "subResourceName": "s_skill_combo",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間SPDアップを付与。コンボ数+2。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_viscunam_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 120,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2125102": {
+    "skillId": 2125102,
+    "skillName": "先進的大発明+",
+    "useView": 3000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_spdUp",
+    "subResourceName": "s_skill_combo",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間SPDアップを付与。コンボ数+2。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_viscunam_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 120,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2125103": {
+    "skillId": 2125103,
+    "skillName": "先進的大発明++",
+    "useView": 2500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_spdUp",
+    "subResourceName": "s_skill_combo",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間SPDアップを付与。コンボ数+2。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_viscunam_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 120,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "2126101": {
+    "skillId": 2126101,
+    "skillName": "天使の歌声",
+    "useView": 5000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの90%回復する。対象がピンチ状態の時、1回分のDEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_sensettia_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 675,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "ReceiverPinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "2126102": {
+    "skillId": 2126102,
+    "skillName": "天使の歌声+",
+    "useView": 4500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの90%回復する。対象がピンチ状態の時、1回分のDEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_sensettia_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 675,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "ReceiverPinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "2126103": {
+    "skillId": 2126103,
+    "skillName": "天使の歌声++",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方単体のHPを基礎ATKの90%回復する。対象がピンチ状態の時、1回分のDEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_sensettia_s01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 675,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "ReceiverPinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
       }
     ]
   },
@@ -34576,6 +35469,294 @@
       }
     ]
   },
+  "3125101": {
+    "skillId": 3125101,
+    "skillName": "発明家のひらめきⅠ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_viscunam_s01",
+    "subResourceName": "",
+    "timing": 15,
+    "description": "自身にバフが付与された時、15%の確率でコンボ数+1。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 15,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3125102": {
+    "skillId": 3125102,
+    "skillName": "発明家のひらめきⅡ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_viscunam_s01",
+    "subResourceName": "",
+    "timing": 15,
+    "description": "自身にバフが付与された時、18%の確率でコンボ数+1。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 18,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3125103": {
+    "skillId": 3125103,
+    "skillName": "発明家のひらめきⅢ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_viscunam_s01",
+    "subResourceName": "",
+    "timing": 15,
+    "description": "自身にバフが付与された時、21%の確率でコンボ数+1。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 21,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3125104": {
+    "skillId": 3125104,
+    "skillName": "発明家のひらめきⅣ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_viscunam_s01",
+    "subResourceName": "",
+    "timing": 15,
+    "description": "自身にバフが付与された時、24%の確率でコンボ数+1。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 24,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3125105": {
+    "skillId": 3125105,
+    "skillName": "発明家のひらめきⅤ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_viscunam_s01",
+    "subResourceName": "",
+    "timing": 15,
+    "description": "自身にバフが付与された時、27%の確率でコンボ数+1。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 27,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3125106": {
+    "skillId": 3125106,
+    "skillName": "発明家のひらめきⅥ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_viscunam_s01",
+    "subResourceName": "",
+    "timing": 15,
+    "description": "自身にバフが付与された時、30%の確率でコンボ数+1。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 15,
+        "prob": 30,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3126101": {
+    "skillId": 3126101,
+    "skillName": "癒しのリズムⅠ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_sensettia_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "自身が使用する回復スキルのHP回復量+5%。オート行動時、味方を対象にするスキルは味方の中で一番ダメージを受けているキャラクターを対象にする",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 936,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3126102": {
+    "skillId": 3126102,
+    "skillName": "癒しのリズムⅡ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_sensettia_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "自身が使用する回復スキルのHP回復量+6%。オート行動時、味方を対象にするスキルは味方の中で一番ダメージを受けているキャラクターを対象にする",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 937,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3126103": {
+    "skillId": 3126103,
+    "skillName": "癒しのリズムⅢ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_sensettia_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "自身が使用する回復スキルのHP回復量+7%。オート行動時、味方を対象にするスキルは味方の中で一番ダメージを受けているキャラクターを対象にする",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 938,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3126104": {
+    "skillId": 3126104,
+    "skillName": "癒しのリズムⅣ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_sensettia_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "自身が使用する回復スキルのHP回復量+8%。オート行動時、味方を対象にするスキルは味方の中で一番ダメージを受けているキャラクターを対象にする",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 939,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3126105": {
+    "skillId": 3126105,
+    "skillName": "癒しのリズムⅤ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_sensettia_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "自身が使用するスキルのHP回復量+9%。オート行動時、味方を対象にするスキルは味方の中で一番ダメージを受けているキャラクターを対象にする",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 940,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "3126106": {
+    "skillId": 3126106,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_sensettia_s01",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "自身が使用するスキルのHP回復量+10%。オート行動時、味方を対象にするスキルは味方の中で一番ダメージを受けているキャラクターを対象にする",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 941,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "3999101": {
     "skillId": 3999101,
     "skillName": "無意識下のアシストⅠ",
@@ -42322,6 +43503,77 @@
       }
     ]
   },
+  "4036121": {
+    "skillId": 4036121,
+    "skillName": "カイブツ・チャージ",
+    "useView": 4000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に2回の行動の間ATKアップを付与。1回分のDEFアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsu_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4036122": {
+    "skillId": 4036122,
+    "skillName": "成長促進",
+    "useView": 4000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に2回の行動の間ATKアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsu_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4037103": {
     "skillId": 4037103,
     "skillName": "巨大エネミーデバッグ用スキル",
@@ -42373,6 +43625,46 @@
         "skillEffectId": 46,
         "prob": 100,
         "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4038101": {
+    "skillId": 4038101,
+    "skillName": "連続噛み付き",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に100%ダメージ。スキル１を追加発動。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsu_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 486,
+        "prob": 100,
+        "effectTarget": 2,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "randomGroupId": 0,
@@ -51254,6 +52546,77 @@
       }
     ]
   },
+  "4088103": {
+    "skillId": 4088103,
+    "skillName": "うねるツル",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuTentacle_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4088104": {
+    "skillId": 4088104,
+    "skillName": "からみつくツル",
+    "useView": 6000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に130%ダメージ。2回の行動の間SPDダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuTentacle_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 71,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 10,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4089101": {
     "skillId": 4089101,
     "skillName": "バリアブレイク",
@@ -57406,6 +58769,30 @@
       }
     ]
   },
+  "6036107": {
+    "skillId": 6036107,
+    "skillName": "支援行動",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 12,
+    "description": "オート行動時、味方を対象にするスキルは味方の中で一番Atkが高いキャラクターを対象にする。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 344,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "6039101": {
     "skillId": 6039101,
     "skillName": "",
@@ -61732,6 +63119,92 @@
       }
     ]
   },
+  "8033201": {
+    "skillId": 8033201,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 912,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "8033202": {
+    "skillId": 8033202,
+    "skillName": "ムロデ・ヒエロ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 920,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 144
+          }
+        ]
+      }
+    ]
+  },
+  "8033203": {
+    "skillId": 8033203,
+    "skillName": "ムロデ・ヒエロ+",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 920,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 144
+          }
+        ]
+      }
+    ]
+  },
   "8063201": {
     "skillId": 8063201,
     "skillName": "",
@@ -61998,13 +63471,13 @@
   },
   "8112101": {
     "skillId": 8112101,
-    "skillName": "",
+    "skillName": "エルレテキント",
     "useView": 0,
     "targetFlag": 2,
     "resourceName": "b_skill_damage",
     "subResourceName": "s_skill_spdDownTeam",
     "timing": 4,
-    "description": "システム効果115付与",
+    "description": "索引付与",
     "cutin": [],
     "isEquip": false,
     "isHeroSkill": false,
@@ -62320,6 +63793,78 @@
             "statusId": 136
           }
         ]
+      }
+    ]
+  },
+  "8125101": {
+    "skillId": 8125101,
+    "skillName": "グラン・アンヴァンシオン",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 934,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "8125102": {
+    "skillId": 8125102,
+    "skillName": "グラン・アンヴァンシオン+",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 934,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "8126101": {
+    "skillId": 8126101,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 12,
+    "description": "オート行動時、味方を対象にするスキルは味方の中で一番Spdが低いキャラクターを対象にする。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 942,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
       }
     ]
   }

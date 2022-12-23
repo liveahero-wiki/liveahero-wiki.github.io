@@ -1513,6 +1513,96 @@
     ],
     "limitValue": 0
   },
+  "147": {
+    "itemId": 147,
+    "itemName": "クリスタル・プレゼント",
+    "resourceName": "XmasMelt2212_exchange01",
+    "rarity": 0,
+    "itemType": 512,
+    "description": "現地のお土産として人気があるクリスタルのペンダントトップ。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "148": {
+    "itemId": 148,
+    "itemName": "クリスマスメルト戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "クリスマスメルト・カウントダウンの戦闘BGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_xmasmelt_battle1",
+        "bgmTitleKey": "TITLE_BGM_XMASMELT_BATTLE1_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "149": {
+    "itemId": 149,
+    "itemName": "クリスマスメルトボス戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "クリスマスメルト・カウントダウンのボス戦闘BGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_xmasmelt_battle2",
+        "bgmTitleKey": "TITLE_BGM_XMASMELT_BATTLE2_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "150": {
+    "itemId": 150,
+    "itemName": "クリスマスメルトディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "クリスマスメルト・カウントダウンのBGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_xmasmelt_adv",
+        "bgmTitleKey": "TITLE_BGM_XMASMELT_ADV_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "151": {
+    "itemId": 151,
+    "itemName": "クリスタルタワーホログラム",
+    "resourceName": "icon_bg_battle_crystaltower",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景にクリスタルタワー内部の映像を投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_crystaltower",
+        "bgTitleKey": "TITLE_CRYSTALTOWER_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
+  "152": {
+    "itemId": 152,
+    "itemName": "クリスタルタワー最奥部ホログラム",
+    "resourceName": "icon_bg_battle_crystaltowerdeepest",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景にクリスタルタワー最奥部の映像を投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_crystaltowerdeepest",
+        "bgTitleKey": "TITLE_CRYSTALTOWER_DEEPEST_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -2542,6 +2632,27 @@
     ],
     "limitValue": 0
   },
+  "110332": {
+    "itemId": 110332,
+    "itemName": "聖氷のゴメイサの記憶片",
+    "resourceName": "piece_gomeisaXmasMelt2212",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "聖氷のゴメイサのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10332
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
   "110341": {
     "itemId": 110341,
     "itemName": "ハックルの記憶片",
@@ -3346,6 +3457,48 @@
         "addFan": 50,
         "rarity": 0,
         "stockId": 11231
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "111251": {
+    "itemId": 111251,
+    "itemName": "ヴィスカナムの記憶片",
+    "resourceName": "piece_viscunam",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "ヴィスカナムのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 11251
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
+  "111261": {
+    "itemId": 111261,
+    "itemName": "センセチアの記憶片",
+    "resourceName": "piece_sensettia",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "センセチアのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 11261
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
@@ -4818,6 +4971,46 @@
         "class": "SidekickHeartItemEffect",
         "rarity": 0,
         "stockId": 11231
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "211251": {
+    "itemId": 211251,
+    "itemName": "ヴィスカナムの心",
+    "resourceName": "heart_viscunam",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "ヴィスカナムのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 11251
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ],
+    "limitValue": 0
+  },
+  "211261": {
+    "itemId": 211261,
+    "itemName": "センセチアの心",
+    "resourceName": "heart_sensettia",
+    "rarity": 4,
+    "itemType": 2048,
+    "description": "センセチアのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 11261
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",

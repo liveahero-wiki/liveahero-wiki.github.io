@@ -9833,7 +9833,7 @@
         }
       ],
       "filename": "",
-      "statusId": 0,
+      "statusId": 155,
       "canDispel": false,
       "filterIds": [
         1
@@ -20887,7 +20887,7 @@
         }
       ],
       "filename": "",
-      "statusId": 0,
+      "statusId": 158,
       "canDispel": false,
       "filterIds": [
         1
@@ -21311,14 +21311,14 @@
           "parameter": []
         }
       ],
-      "filename": "",
+      "filename": "b_skill_special",
       "statusId": 115,
       "canDispel": false,
       "filterIds": [],
       "parameter": false,
-      "description": "システム効果115番付与",
+      "description": "サンテツ専用【索引】",
       "isImmediate": false,
-      "persistence": true,
+      "persistence": false,
       "canDuplicate": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
@@ -25745,6 +25745,39 @@
       "isOverrideStatusDescription": false
     }
   },
+  "908": {
+    "skillEffectId": 908,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ComboDamage",
+          "parameter": {
+            "value": 90,
+            "combpMult": 10
+          }
+        }
+      ],
+      "filename": "damage",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        10,
+        1
+      ],
+      "parameter": false,
+      "description": "90%ダメージ+コンボ数に応じてダメージ量が上昇",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "909": {
     "skillEffectId": 909,
     "skillEffectJson": {
@@ -25812,11 +25845,11 @@
   "911": {
     "skillEffectId": 911,
     "skillEffectJson": {
-      "turn": 2,
+      "turn": 3,
       "count": 0,
       "effects": [
         {
-          "class": "NoneEffectElapseTurnBeforeSkill",
+          "class": "NoneEffect",
           "parameter": []
         },
         {
@@ -25826,7 +25859,7 @@
           }
         }
       ],
-      "filename": "",
+      "filename": "status_skillct",
       "statusId": 145,
       "canDispel": false,
       "filterIds": [],
@@ -25835,38 +25868,40 @@
       "isImmediate": false,
       "persistence": false,
       "canDuplicate": false,
-      "overrideStatusName": "",
-      "isOverrideStatusName": false,
-      "overrideStatusDescription": "",
+      "overrideStatusName": "スキル3使用不可",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "スキル3使用不可。ターン経過で解除される。",
       "isDisplayPersistenceStatus": false,
-      "isOverrideStatusDescription": false
+      "isOverrideStatusDescription": true
     }
   },
   "912": {
     "skillEffectId": 912,
     "skillEffectJson": {
-      "turn": 1,
+      "turn": 0,
       "count": 0,
       "effects": [
         {
-          "class": "NoneEffect",
-          "parameter": []
+          "class": "RemoveGainViewStock",
+          "parameter": {
+            "value": 2000
+          }
         }
       ],
-      "filename": "",
+      "filename": "b_skill_special",
       "statusId": 144,
-      "canDispel": false,
+      "canDispel": true,
       "filterIds": [],
       "parameter": false,
-      "description": "システム効果144番付与",
+      "description": "解除された時にViewを2000獲得",
       "isImmediate": false,
-      "persistence": false,
-      "canDuplicate": false,
-      "overrideStatusName": "",
-      "isOverrideStatusName": false,
-      "overrideStatusDescription": "",
-      "isDisplayPersistenceStatus": false,
-      "isOverrideStatusDescription": false
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "鼓舞",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "特殊なスキルで発動。バフでもデバフでも無い状態。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
     }
   },
   "913": {
@@ -26046,6 +26081,1038 @@
       "isImmediate": false,
       "persistence": false,
       "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "919": {
+    "skillEffectId": 919,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeView",
+          "parameter": {
+            "value": 2000
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "Viewを2000獲得",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "920": {
+    "skillEffectId": 920,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 144,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果144番全除去",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "921": {
+    "skillEffectId": 921,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 150,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果150番付与",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "922": {
+    "skillEffectId": 922,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 150,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果150番除去",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "923": {
+    "skillEffectId": 923,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ViewStock",
+          "parameter": {
+            "value": 5000
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 151,
+      "canDispel": true,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "観測集中5000",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "924": {
+    "skillEffectId": 924,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "PersistenceIconChangeMultipleAttack",
+          "parameter": {
+            "value": 110,
+            "isDisplay": true,
+            "persistence": true,
+            "iconFileName": "status_atkup",
+            "avoidExtensionTurn": true,
+            "overrideStatusDescription": "ATK+10%"
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"RemainNowTurnTrigger\"}]",
+      "filename": "status_countdown_buff",
+      "statusId": 152,
+      "canDispel": true,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "3ターン後に永続ATK+10%になる状態変化",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "925": {
+    "skillEffectId": 925,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "PersistenceIconChangeMultipleDefence",
+          "parameter": {
+            "value": 90,
+            "isDisplay": true,
+            "persistence": true,
+            "iconFileName": "status_defup",
+            "avoidExtensionTurn": true,
+            "overrideStatusDescription": "被ダメージ-10%"
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"RemainNowTurnTrigger\"}]",
+      "filename": "status_countdown_buff",
+      "statusId": 153,
+      "canDispel": true,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "3ターン後に永続被ダメージ-10%になる状態変化",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "926": {
+    "skillEffectId": 926,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeHpExecBeforeSkill",
+          "parameter": {
+            "value": -20,
+            "avoidExtensionTurn": true
+          }
+        }
+      ],
+      "trigger": "[{\"value\":1,\"element\":0,\"statusId\":0,\"class\":\"RemainNowTurnTrigger\"}]",
+      "filename": "status_countdown_heal",
+      "statusId": 154,
+      "canDispel": true,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "3ターン後にHP20%回復",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "overrideStatusName": "メカ爆弾",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "0ターン目になる瞬間、HP最大値の90%のダメージを受ける。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "927": {
+    "skillEffectId": 927,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -600
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 74,
+      "canDispel": true,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View消費量-600",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "928": {
+    "skillEffectId": 928,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -700
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 74,
+      "canDispel": true,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View消費量-700",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "929": {
+    "skillEffectId": 929,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -800
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 74,
+      "canDispel": true,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View消費量-800",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "930": {
+    "skillEffectId": 930,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -900
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 74,
+      "canDispel": true,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View消費量-900",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "931": {
+    "skillEffectId": 931,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -1000
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 74,
+      "canDispel": true,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View消費量-1000",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "932": {
+    "skillEffectId": 932,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AimHighestSpdCharacter",
+          "parameter": {
+            "isTarget": false
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        13
+      ],
+      "parameter": false,
+      "description": "オート行動時、味方を対象にするスキルは味方の中で一番Spdが高いキャラクターを対象にする",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "933": {
+    "skillEffectId": 933,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": 1000
+          }
+        }
+      ],
+      "filename": "status_useless",
+      "statusId": 58,
+      "canDispel": true,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View消費量+1000",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "overrideStatusName": "View消費量+500",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "Viewを消費するスキルのView消費量が500増加する。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "934": {
+    "skillEffectId": 934,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NotDamageSkillNeedViewValueChange",
+          "parameter": {
+            "value": -500,
+            "skillId": 0
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "ダメージを与えないスキルのView消費量-500",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "936": {
+    "skillEffectId": 936,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HealMultipleAttack",
+          "parameter": {
+            "value": 105
+          }
+        }
+      ],
+      "filename": "status_attention",
+      "statusId": 156,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": true,
+      "description": "自身が使用するスキルのHP回復量+5%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "937": {
+    "skillEffectId": 937,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HealMultipleAttack",
+          "parameter": {
+            "value": 106
+          }
+        }
+      ],
+      "filename": "status_attention",
+      "statusId": 156,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": true,
+      "description": "自身が使用するスキルのHP回復量+6%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "938": {
+    "skillEffectId": 938,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HealMultipleAttack",
+          "parameter": {
+            "value": 107
+          }
+        }
+      ],
+      "filename": "status_attention",
+      "statusId": 156,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": true,
+      "description": "自身が使用するスキルのHP回復量+7%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "939": {
+    "skillEffectId": 939,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HealMultipleAttack",
+          "parameter": {
+            "value": 108
+          }
+        }
+      ],
+      "filename": "status_attention",
+      "statusId": 156,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": true,
+      "description": "自身が使用するスキルのHP回復量+8%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "940": {
+    "skillEffectId": 940,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HealMultipleAttack",
+          "parameter": {
+            "value": 109
+          }
+        }
+      ],
+      "filename": "status_attention",
+      "statusId": 156,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": true,
+      "description": "自身が使用するスキルのHP回復量+9%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "941": {
+    "skillEffectId": 941,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HealMultipleAttack",
+          "parameter": {
+            "value": 110
+          }
+        }
+      ],
+      "filename": "status_attention",
+      "statusId": 156,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": true,
+      "description": "自身が使用するスキルのHP回復量+10%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "942": {
+    "skillEffectId": 942,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AimMostDamagedCharacter",
+          "parameter": {
+            "isTarget": false
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        13
+      ],
+      "parameter": false,
+      "description": "オート行動時、味方を対象にするスキルは味方の中で一番ダメージを受けているキャラクターを対象にする",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "943": {
+    "skillEffectId": 943,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RateChangeView",
+          "parameter": {
+            "value": 100
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "自身のViewの100%を獲得",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "944": {
+    "skillEffectId": 944,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RateChangeView",
+          "parameter": {
+            "value": 106
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "自身のViewの106%を獲得",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "945": {
+    "skillEffectId": 945,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RateChangeView",
+          "parameter": {
+            "value": 112
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "自身のViewの112%を獲得",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "946": {
+    "skillEffectId": 946,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RateChangeView",
+          "parameter": {
+            "value": 118
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "自身のViewの118%を獲得",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "947": {
+    "skillEffectId": 947,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RateChangeView",
+          "parameter": {
+            "value": 124
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "自身のViewの124%を獲得",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "948": {
+    "skillEffectId": 948,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RateChangeView",
+          "parameter": {
+            "value": 130
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "自身のViewの130%を獲得",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "949": {
+    "skillEffectId": 949,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 144,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "鼓舞効果説明用",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "鼓舞",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "特殊なスキルで発動。バフでもデバフでも無い状態。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "950": {
+    "skillEffectId": 950,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffectElapseTurnDamageAndTurnEnd",
+          "parameter": []
+        },
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 0
+          }
+        }
+      ],
+      "filename": "status_invincible",
+      "statusId": 157,
+      "canDispel": true,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "氷壁",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "シールド",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "相手からのダメージを無効化する。ターン終了時に解除される。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "951": {
+    "skillEffectId": 951,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Cure",
+          "parameter": {
+            "value": 999,
+            "target": 157
+          }
+        }
+      ],
+      "trigger": "[]",
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "氷壁全解除",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "952": {
+    "skillEffectId": 952,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 115,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "サンテツ専用【索引】表示用",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
