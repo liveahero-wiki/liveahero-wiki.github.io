@@ -68,6 +68,8 @@ module LahWiki
           f.push("HP&gt;=#{c['value']}%")
         when "KillExecTrigger"
           f.push("target enemy is killed")
+        when "ReceiverPinchExecTrigger"
+          f.push("skill receiver's HP&lt;50")
         when "InvokerAliveTrigger"
           f.push("when invoker is alive")
         when "AboveSpdValueTrigger"
