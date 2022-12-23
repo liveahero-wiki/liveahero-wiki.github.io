@@ -1,6 +1,8 @@
 ---
 title: Gomeisa
 characterId: 33
+h2:
+  title: "\"Holy Frost\" Gomeisa"
 ---
 
 {% capture BIO_H01 %}
@@ -12,6 +14,8 @@ He hates disputes, loves cute things and wants to get along with everyone. He ha
 {% endcapture %}
 
 {% include hero-infobox.html stockId=10331 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
+
+{% include hero-infobox.html stockId=10332 %}
 
 {% capture BIO_S01 %}
 Gomeisa is a young giant alien working as a waiter in a place where heroes gather under Procy's management. He is originally from a planet with a civilization that lives with giant trees. He loves dancing and praying to those very same trees and the gods above them. He is innocent, kind, naive and very unsuspecting of others. Having no qualm with being touched, showing no hesitation when asked to undress, causing tons of clumsy accidents due to his massive body; Procy's just at a loss with him.
@@ -43,6 +47,9 @@ RELATION = "The shop manager is sooooo cute!<br>Petting him gently is really soo
 TOUCH = "Hmm? Is there something on me?<br>Ohhh, I get it! You want a hug!<br>I love Hugs! *squeeze*!"
 TRAIN = "Please go out on a dancing lesson with me!"
 TRAINED = "T-This is my limit..."
+%}
+
+{% include voice-table.html resourceName="gomeisaxmasmelt2212"
 %}
 
 ## Notes:
