@@ -66,6 +66,8 @@ Increase recovery amount of {{ target }}'s healing skill by {{ effect.parameter.
 {% when "NeedViewChange" %}
 {% assign turnDefinition = "turn" %}
 Skill View cost {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x for {{ target }}
+{% when "RemoveGainViewStock" %}
+Apply {{ skillEffectJson.statusId | status_description }} to {{ target}}<br>&nbsp;&nbsp;&nbsp;&nbsp;Gain {{ effect.parameter.value }} View when {{ skillEffectJson.statusId | status_description }} is removed
 {% when "Cure" %}
 Remove {{ effect.parameter.value }} debuff(s) from {{ target }}
 {% when "RegistDebuff" %}
@@ -176,7 +178,7 @@ Resurrect {{ target }} to {{ effect.parameter.value }}% HP
 {% else %}
 Unknown effect class ({{ effect.class }})
 {% endcase %}
-{% if skillEffectJson.persistence == true %}
+{% if skillEffectJson.persistence == true and skillEffectJson.isOverrideStatusDescription == false %}
 {% if skillEffectJson.isDisplayPersistenceStatus == true %}permanently{% else %}(recalculated in every turn){% endif %}
 {% else %}{% if skillEffectJson.turn != 0 %}for {{ skillEffectJson.turn }} {{ turnDefinition | strip }}(s){% endif %}
 {% endif %}

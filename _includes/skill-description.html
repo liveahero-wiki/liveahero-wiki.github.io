@@ -10,7 +10,9 @@
 {%- endif %}
 
 {% for skillEffect in randomGroup.items %}
+{% if skillEffect.prob > 0 %}
 {% include skill-effect-description.html skillEffect=skillEffect timing=include.skill.timing %}
+{% endif %}
 {% endfor %}
 
 {%- if randomGroup.name != "0" %}</fieldset>{% endif %}
