@@ -8,13 +8,13 @@ banner: true
 
 ## Buying Ether Stone
 
-You can purchase Ether Stones using in-app purchasing methods.
+You can purchase {% include item.html id=1 %} using in-app purchasing methods.
 
 ## Restrictions on buying Ether Stone
 
-To purchase Ether Stones, you are required to input your birth date.
+To purchase {% include item.html id=1 %}, you are required to input your birth date.
 This is to ensure that both minor customers and their parents could have a piece of mind while using their services, by setting a maximum purchasing limit as according to their age.
-The monthly purchasing limit of Ether Stones for various age groups are listed as follows.
+The monthly purchasing limit of {% include item.html id=1 %} for various age groups are listed as follows.
 
 - <16: Up to 5000 yen every month.
 - 16-19: Up to 20000 yen every month.
@@ -32,6 +32,6 @@ Items can be exchanged using {% include item.html id=35 %} or {% include item.ht
 
 ## Search Structure Exchange
 
-Items can be ecxhanged using {% include item-icon.html id=75 %} Search Structure, items are restocked monthly.
+Items can be exchanged using {% include item.html id=75 %}, items are restocked monthly.
 
 {% include shop-table.html id=20 %}

@@ -28,38 +28,38 @@ You can get two kinds of skill manuals shop exchange of biweekly challenge simul
 
 You can get these skill manuals from the approval process of office feature:
 
-- {% include item-icon.html id=80 %} Experience skill manual 
+- {% include item.html id=80 %}
   - Grants the hero a passive skill "Experience Accumulation"
   - In Exp item quest, gain 3% more {% include item.html id=11 %}
 
-- {% include item-icon.html id=81 %} Interaction skill manual 
+- {% include item.html id=81 %}
   - Grants the hero a passive skill "Interaction Accumulation"
   - In Training Band item quest, gain 3% more {% include item.html id=30 %}
 
-- {% include item-icon.html id=82 %} Robbery skill manual 
-  - Grants the hero a passive skill "Robbery"
+- {% include item.html id=82 %}
+  - Grants the hero a passive skill "Quick Money"
   - In Lah item quest, gain 3% more {% include item.html id=35 %}
 
-- {% include item-icon.html id=108 %} Silver Medal skill manual 
+- {% include item.html id=108 %}
   - Grants the hero a passive skill "How to Get Silver Medal"
   - In Medal item quest, gain additional drop of {% include item.html id=27 %} with a chance of 1% * stamina consumed
 
-- {% include item-icon.html id=109 %} Gold Medal skill manual 
+- {% include item.html id=109 %} 
   - Grants the hero a passive skill "How to Get Gold Medal"
   - In Medal item quest, gain additional drop of {% include item.html id=28 %} with a chance of 0.2% * stamina consumed
 
-- {% include item-icon.html id=110 %} Parallel Quartz skill manual 
+- {% include item.html id=110 %} 
   - Grants the hero a passive skill "How to Search for Quartz"
   - In Quartz item quest, gain additional drop of {% include item.html id=59 %} with a chance of 0.5% * stamina consumed
 
-- {% include item-icon.html id=111 %} Small Awakening Stone skill manual 
+- {% include item.html id=111 %}
   - Grants the hero a passive skill "How to Search for Small Awakening Stones"
   - In Rank up item quest, gain additional drop of Small Awakening Stones with a chance of 2% * stamina consumed
 
-- {% include item-icon.html id=112 %} Medium Awakening Stone skill manual 
+- {% include item.html id=112 %} 
   - Grants the hero a passive skill "How to Search for Medium Awakening Stones"
   - In Rank up item quest, gain additional drop of Medium Awakening Stones with a chance of 1% * stamina consumed
 
-- {% include item-icon.html id=113 %} Large Awakening Stone skill manual 
+- {% include item.html id=113 %} 
   - Grants the hero a passive skill "How to Search for Large Awakening Stones"
   - In Rank up item quest, gain additional drop of Large Awakening Stones with a chance of 0.5% * stamina consumed
