@@ -65,9 +65,9 @@ Sale Shortening Tickets can be used to shorten the duration of a sale. Sale Shor
 
 | Tier   | Shortening amount (mins) |
 |:--------:|:------------------------:|
-| Bronze {% include item-icon.html id=31 %} | 10                     |
-| Silver {% include item-icon.html id=32 %} | 30                     |
-| Gold   {% include item-icon.html id=33 %} | 60                     |
+| {% include item.html id=31 %} | 10                     |
+| {% include item.html id=32 %} | 30                     |
+| {% include item.html id=33 %} | 60                     |
 
 
 Stopping an ongoing sale will instantly complete the sale, but with no rewards.

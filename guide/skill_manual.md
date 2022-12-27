@@ -16,11 +16,11 @@ This new equipment skills use the same slot and equipped in the same way as the 
 
 You can get two kinds of skill manuals shop exchange of biweekly challenge simulator, which is:
 
-- {% include item-icon.html id=65 %} Second attack skill manual 
+- {% include item.html id=65 %} 
   - Grants the hero a passive skill "Second Attack"
   - In auto battle, the hero with Second Attack skill equipped will prioritize using their second skill
 
-- {% include item-icon.html id=66 %} Third attack skill manual
+- {% include item.html id=66 %}
   - Grants the hero a passive skill "Third Attack"
   - In auto battle, the hero with Third Attack skill equipped will prioritize using their third skill
 
@@ -30,27 +30,27 @@ You can get these skill manuals from the approval process of office feature:
 
 - {% include item-icon.html id=80 %} Experience skill manual 
   - Grants the hero a passive skill "Experience Accumulation"
-  - In Exp item quest, gain 3% more {% include item-icon.html id=11 %} Exp 
+  - In Exp item quest, gain 3% more {% include item.html id=11 %}
 
 - {% include item-icon.html id=81 %} Interaction skill manual 
   - Grants the hero a passive skill "Interaction Accumulation"
-  - In Training Band item quest, gain 3% more {% include item-icon.html id=30 %} Training Band
+  - In Training Band item quest, gain 3% more {% include item.html id=30 %}
 
 - {% include item-icon.html id=82 %} Robbery skill manual 
   - Grants the hero a passive skill "Robbery"
-  - In Lah item quest, gain 3% more {% include item-icon.html id=35 %} Lah
+  - In Lah item quest, gain 3% more {% include item.html id=35 %}
 
 - {% include item-icon.html id=108 %} Silver Medal skill manual 
   - Grants the hero a passive skill "How to Get Silver Medal"
-  - In Medal item quest, gain additional drop of {% include item-icon.html id=27 %} Silver Medal with a chance of 1% * stamina consumed
+  - In Medal item quest, gain additional drop of {% include item.html id=27 %} with a chance of 1% * stamina consumed
 
 - {% include item-icon.html id=109 %} Gold Medal skill manual 
   - Grants the hero a passive skill "How to Get Gold Medal"
-  - In Medal item quest, gain additional drop of {% include item-icon.html id=28 %} Gold Medal with a chance of 0.2% * stamina consumed
+  - In Medal item quest, gain additional drop of {% include item.html id=28 %} with a chance of 0.2% * stamina consumed
 
 - {% include item-icon.html id=110 %} Parallel Quartz skill manual 
   - Grants the hero a passive skill "How to Search for Quartz"
-  - In Quartz item quest, gain additional drop of {% include item-icon.html id=59 %} Parallel Quartz with a chance of 0.5% * stamina consumed
+  - In Quartz item quest, gain additional drop of {% include item.html id=59 %} with a chance of 0.5% * stamina consumed
 
 - {% include item-icon.html id=111 %} Small Awakening Stone skill manual 
   - Grants the hero a passive skill "How to Search for Small Awakening Stones"

@@ -47,16 +47,16 @@ For the period of Main quest chapter 4, there will be extra login rewards:
 
 | Number of days login  | Rewards      |
 |----|----------------|
-| 1  | 1 {% include item-icon.html id=1 %} , 1 {% include item-icon.html id=34 %}   |
-| 2  | 1 {% include item-icon.html id=1 %} , 10 {% include item-icon.html id=33 %}  |
-| 3  | 1 {% include item-icon.html id=1 %} , 1 {% include item-icon.html id=34 %}   |
-| 4  | 1 {% include item-icon.html id=1 %} , 10 {% include item-icon.html id=33 %}  |
-| 5  | 1 {% include item-icon.html id=1 %} , 1 {% include item-icon.html id=10 %}   |
-| 6  | 1 {% include item-icon.html id=1 %} , 1 {% include item-icon.html id=34 %}   |
-| 7  | 1 {% include item-icon.html id=1 %} , 10 {% include item-icon.html id=33 %}  |
-| 8  | 1 {% include item-icon.html id=1 %} , 1 {% include item-icon.html id=34 %}   |
-| 9  | 1 {% include item-icon.html id=1 %} , 10 {% include item-icon.html id=33 %}  |
-| 10 | 1 {% include item-icon.html id=1 %} , 1 {% include item-icon.html id=29 %}  |
+| 1  | 1 {% include item.html id=1 %} , 1 {% include item.html id=34 %}   |
+| 2  | 1 {% include item.html id=1 %} , 10 {% include item.html id=33 %}  |
+| 3  | 1 {% include item.html id=1 %} , 1 {% include item.html id=34 %}   |
+| 4  | 1 {% include item.html id=1 %} , 10 {% include item.html id=33 %}  |
+| 5  | 1 {% include item.html id=1 %} , 1 {% include item.html id=10 %}   |
+| 6  | 1 {% include item.html id=1 %} , 1 {% include item.html id=34 %}   |
+| 7  | 1 {% include item.html id=1 %} , 10 {% include item.html id=33 %}  |
+| 8  | 1 {% include item.html id=1 %} , 1 {% include item.html id=34 %}   |
+| 9  | 1 {% include item.html id=1 %} , 10 {% include item.html id=33 %}  |
+| 10 | 1 {% include item.html id=1 %} , 1 {% include item.html id=29 %}  |
 
 You can get the rewards from the mission menu
 
@@ -71,9 +71,9 @@ A few rules in regards to it:
   - Some simulator will have bonus for certain characters.
 - Doing the simulator will grant you a score, the score will be calculated based on Quest Score Evaluation Criteria shown on the quest selection screen.
 - You will get Heronium depending on your score, which can be used as currency in the simulator exchange.
-- You can exchange Heronium for {% include item-icon.html id=29 %} Legend Medal, {% include item-icon.html id=59 %} Parallel Quartz, and more.
+- You can exchange Heronium for {% include item.html id=29 %}, {% include item.html id=59 %}, and more.
 - Quest in simulator will reset after a period of time (normally within 14 days), after which the quest will be changed. 
-  - Any unused Heronium will be converted to 150 {% include item-icon.html id=35 %} each when the quest reset.
+  - Any unused Heronium will be converted to 150 {% include item.html id=35 %} each when the quest reset.
 
 ## New Training Quest
 
@@ -85,17 +85,17 @@ There will be new training quest:
 ## Ticket Quest Renewal
 
 Ticket Quest will be revamped, as follows:
-- During Maintenance scheduled on 2021-07-14 any remaining quest tickets in each player account will be converted to 800 {% include item-icon.html id=11 %} each.
+- During Maintenance scheduled on 2021-07-14 any remaining quest tickets in each player account will be converted to 800 {% include item.html id=11 %} each.
 - New ticket quest will be added, and some pre-existing ticket quest will have its content, rewards, and stamina cost adjusted.
-  - Ticket quest that give {% include item-icon.html id=59 %} Parallel Quartz will be added.
-  - New Difficulty level for {% include item-icon.html id=11 %} EXP, {% include item-icon.html id=30 %} Training Band, and rank up items ticket quest.
-- You will still get 3 {% include item-icon.html id=38 %} Quest Ticket each day as login bonus.
+  - Ticket quest that give {% include item.html id=59 %} will be added.
+  - New Difficulty level for {% include item.html id=11 %}, {% include item.html id=30 %}, and rank up items ticket quest.
+- You will still get 3 {% include item.html id=38 %} each day as login bonus.
 - The maximum amount of Ticket that you can hold will be limited to 3 Max.
 
 ## Store Update
 
 3 New items are available for purchase in the store (limit will reset monthly):
-- Another {% include item-icon.html id=29 %} Legend Medal, costing 300,000 {% include item-icon.html id=35 %} each, purchase limit 1
-- {% include item-icon.html id=28 %} Gold Medal, costing 50,000 {% include item-icon.html id=35 %} each, purchase limit 20
-- {% include item-icon.html id=27 %} Silver Medal, costing 10,000 {% include item-icon.html id=35 %} each, purchase limit 20
+- Another {% include item.html id=29 %}, costing 300,000 {% include item.html id=35 %} each, purchase limit 1
+- {% include item.html id=28 %}, costing 50,000 {% include item.html id=35 %} each, purchase limit 20
+- {% include item.html id=27 %}, costing 10,000 {% include item.html id=35 %} each, purchase limit 20
 

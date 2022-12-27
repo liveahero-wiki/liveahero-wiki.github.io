@@ -22,19 +22,19 @@ Rank 1 units can participate in battle and sale just like normal characters but 
 
 ### Hero's Promotion
 
-Hero units with initial rank of 1 can be promoted up to rank 6. Aside from regular rank up materials their promotions will also require a new item {% include item-icon.html id=53 %} "Proof of Hero".
+Hero units with initial rank of 1 can be promoted up to rank 6. Aside from regular rank up materials their promotions will also require a new item {% include item.html id=53 %} "Proof of Hero".
 
 Additionally their 3rd skill will at first be locked and unusable in battle until they are promoted to rank 3, and one specific skill will be upgraded when they are promoted to rank 5 (there is no rank 5 art for units with initial rank of 1).
 
 ### Hero's Fan Count
 
-Hero units with initial rank of 1 can only gain fan count from their own personal Hero's Memories items. Said items will also can't be exchanged for {% include item-icon.html id=40 %} Record Cube.
+Hero units with initial rank of 1 can only gain fan count from their own personal Hero's Memories items. Said items will also can't be exchanged for {% include item.html id=40 %}.
 
 Their fan count will only increase by 1 with each item used.
 
 ### Sidekick's Limit Breakthrough
 
-Sidekick units of rank 1 can only be upgraded with their own personal Sidekick's Heart items. Said items will also can't be exchanged for {% include item-icon.html id=40 %} Record Cube.
+Sidekick units of rank 1 can only be upgraded with their own personal Sidekick's Heart items. Said items will also can't be exchanged for {% include item.html id=40 %}.
 
 ### Limited Time Mission
 
@@ -42,12 +42,12 @@ Here is a list of this campaign's limited time Missions:
 
 | No  | Description      | Rewards      |
 |----|-----------------------------------------------------------|----------------|
-| 1  | Finish any rank campaign quest 10 times | 500 {% include item-icon.html id=52 %}    |
-| 2  | Finish any rank campaign quest 20 times | 750 {% include item-icon.html id=52 %}    |
-| 3  | Finish any rank campaign quest 30 times | 1000 {% include item-icon.html id=52 %}    |
-| 4  | Finish any rank campaign quest 50 times | 1250 {% include item-icon.html id=52 %}    |
-| 5  | Finish any rank campaign quest 75 times | 1500 {% include item-icon.html id=52 %}    |
-| 6  | Finish any rank campaign quest 100 times | 2000 {% include item-icon.html id=52 %}    |
+| 1  | Finish any rank campaign quest 10 times | 500 {% include item.html id=52 %}    |
+| 2  | Finish any rank campaign quest 20 times | 750 {% include item.html id=52 %}    |
+| 3  | Finish any rank campaign quest 30 times | 1000 {% include item.html id=52 %}    |
+| 4  | Finish any rank campaign quest 50 times | 1250 {% include item.html id=52 %}    |
+| 5  | Finish any rank campaign quest 75 times | 1500 {% include item.html id=52 %}    |
+| 6  | Finish any rank campaign quest 100 times | 2000 {% include item.html id=52 %}    |
 
 ## Event Shop
 

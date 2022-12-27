@@ -12,7 +12,7 @@ sales_start_time: 2021-09-30T20:00:00+09
 sales_end_time: 2021-10-21T20:00:00+09
 ---
 
-There will be event ticket quest for this event, where you use {% include item-icon.html id=38 %} Quest Ticket to get more event items than normal event free quest.
+There will be event ticket quest for this event, where you use {% include item.html id=38 %} to get more event items than normal event free quest.
 
 ## Event Preview
 
@@ -101,12 +101,12 @@ Here is a list of this event's limited time Missions:
 
 | No  | Description      | Rewards      |
 |----|-----------------------------------------------------------|----------------|
-| 1  | Finish any rank event quest 10 times | 1 {% include item-icon.html id=34 %}    |
-| 2  | Finish any rank event quest 20 times | 1 {% include item-icon.html id=34 %}    |
-| 3  | Finish any rank event quest 30 times | 1 {% include item-icon.html id=34 %}    |
-| 4  | Finish any rank event quest 40 times | 1 {% include item-icon.html id=34 %}    |
-| 5  | Finish any rank event quest 50 times | 1 {% include item-icon.html id=34 %}    |
-| 6  | Finish event sales 10 times | 1 {% include item-icon.html id=34 %}    |
+| 1  | Finish any rank event quest 10 times | 1 {% include item.html id=34 %}    |
+| 2  | Finish any rank event quest 20 times | 1 {% include item.html id=34 %}    |
+| 3  | Finish any rank event quest 30 times | 1 {% include item.html id=34 %}    |
+| 4  | Finish any rank event quest 40 times | 1 {% include item.html id=34 %}    |
+| 5  | Finish any rank event quest 50 times | 1 {% include item.html id=34 %}    |
+| 6  | Finish event sales 10 times | 1 {% include item.html id=34 %}    |
 
 ### Sidekick Skin
 

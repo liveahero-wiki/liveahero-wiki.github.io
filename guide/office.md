@@ -21,11 +21,11 @@ In the office you can apply for an approval process, which is your request to th
 
 By applying an approval process, you can release new functions or obtain new items.
 
-Two special items are needed to do this, the {% include item-icon.html id=79 %} Company Seal and {% include item-icon.html id=78 %} Stamp of Approval.
+Two special items are needed to do this, the {% include item.html id=79 %} and {% include item.html id=78 %}.
 
-You can get {% include item-icon.html id=78 %} Stamp of Approval as mission reward or from the new enhancement quests released at the same time with office feature.
+You can get {% include item.html id=78 %} as mission reward or from the new enhancement quests released at the same time with office feature.
 
-For {% include item-icon.html id=79 %} Company Seal, it will be from mission reward, or limited event shop.
+For {% include item.html id=79 %}, it will be from mission reward, or limited event shop.
 
 ### Office improvement and atmosphere level
 
@@ -61,11 +61,11 @@ The Office Background can be changed by possessing a Background Hologram, which 
 
 You can check and receive the contents of "Office Missions" from the office.
 
-As rewards for accomplishing Office Missions, you can obtain {% include item-icon.html id=79 %} Company Seal and {% include item-icon.html id=78 %} Stamp of Approval.
+As rewards for accomplishing Office Missions, you can obtain {% include item.html id=79 %} and {% include item.html id=78 %}.
 
 ### Present
 
-Every 24 hours one of the hero in the office will give you a present, present seems to be randomly chosen between {% include item-icon.html id=11 %} Exp, {% include item-icon.html id=30 %} Training Band, {% include item-icon.html id=35 %} Lah, and {% include item-icon.html id=34 %} Stamina drink.
+Every 24 hours one of the hero in the office will give you a present, present seems to be randomly chosen between {% include item.html id=11 %}, {% include item.html id=30 %}, {% include item.html id=35 %}, and {% include item.html id=34 %}.
 
 
 

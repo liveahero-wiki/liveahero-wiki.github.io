@@ -9,22 +9,22 @@ banner: true
 ## About Gacha
 
 One of the primary methods of acquiring heroes and sidekicks is through the gacha;
-you can either consume five {% include item-icon.html id=1 %} Ether Stones for a single pull,
+you can either consume five {% include item.html id=1 %} for a single pull,
 or consume fifty for a multi-roll of ten. Multirolls guarantees that the tenth pull must be a 4 star hero or 5 star hero.
-A {% include item-icon.html id=10 %} Ether Ticket can be used in place of a single role of 5 stones; rates using a ticket does not offer any functional changes.
+A {% include item.html id=10 %} can be used in place of a single role of 5 stones; rates using a ticket does not offer any functional changes.
 
 You can check for the details on the obtainable units for the gacha by tapping on the "Offer Ratio" button.
 
 ### Friend Point Gacha
 
-Friend Point gacha uses {% include item-icon.html id=42 %} friend Points to obtain various items.
+Friend Point gacha uses {% include item.html id=42 %} to obtain various items.
 
 Below is the drop rates for possible items tested empirically.
 > Credits for the data: Chase
 
 #### Original rates (before Sept 30th 2021)
 
-sample size: 10,000 multis / 10,000,000 friend points
+sample size: 10,000 multis / 10,000,000 {% include item.html id=42 %}
 
 | Items | Drop rates |
 |-------|------------|
@@ -142,10 +142,10 @@ except there is no restriction on which character they can be used on other than
 
 | Generic Duplicates | Record Cubes needed |
 |-|-|
-| {% include item.html id=43 %} x 1 | {% include item-icon.html id=40 %} x 2  |
-| {% include item.html id=44 %} x 1 | {% include item-icon.html id=40 %} x 10 |
-| {% include item.html id=45 %} x 1 | {% include item-icon.html id=40 %} x 40 |
-| {% include item.html id=39 %} x 1 | {% include item-icon.html id=40 %} x 2  |
-| {% include item.html id=46 %} x 1 | {% include item-icon.html id=40 %} x 10 |
+| {% include item.html id=43 %} x 1 | {% include item.html id=40 %} x 2  |
+| {% include item.html id=44 %} x 1 | {% include item.html id=40 %} x 10 |
+| {% include item.html id=45 %} x 1 | {% include item.html id=40 %} x 40 |
+| {% include item.html id=39 %} x 1 | {% include item.html id=40 %} x 2  |
+| {% include item.html id=46 %} x 1 | {% include item.html id=40 %} x 10 |
 
 There's no generic duplicate for rank 1 or 2. Those units can only be upgraded with personal Hero's Memories/Sidekick's Mind.

@@ -47,15 +47,15 @@ For the period of Main quest chapter 5, there will be extra login rewards:
 
 | Number of days login  | Rewards      |
 |----|----------------|
-| 1  | 1 {% include item-icon.html id=1 %} , 1 {% include item-icon.html id=34 %}   |
-| 2  | 1 {% include item-icon.html id=1 %} , 10 {% include item-icon.html id=33 %}  |
-| 3  | 1 {% include item-icon.html id=1 %} , 1 {% include item-icon.html id=34 %}   |
-| 4  | 1 {% include item-icon.html id=1 %} , 10 {% include item-icon.html id=33 %}  |
-| 5  | 1 {% include item-icon.html id=1 %} , 1 {% include item-icon.html id=10 %}   |
-| 6  | 1 {% include item-icon.html id=1 %} , 1 {% include item-icon.html id=34 %}   |
-| 7  | 1 {% include item-icon.html id=1 %} , 10 {% include item-icon.html id=33 %}  |
-| 8  | 1 {% include item-icon.html id=1 %} , 1 {% include item-icon.html id=34 %}   |
-| 9  | 1 {% include item-icon.html id=1 %} , 10 {% include item-icon.html id=33 %}  |
-| 10 | 1 {% include item-icon.html id=1 %} , 1 {% include item-icon.html id=29 %}  |
+| 1  | 1 {% include item.html id=1 %} , 1 {% include item.html id=34 %}   |
+| 2  | 1 {% include item.html id=1 %} , 10 {% include item.html id=33 %}  |
+| 3  | 1 {% include item.html id=1 %} , 1 {% include item.html id=34 %}   |
+| 4  | 1 {% include item.html id=1 %} , 10 {% include item.html id=33 %}  |
+| 5  | 1 {% include item.html id=1 %} , 1 {% include item.html id=10 %}   |
+| 6  | 1 {% include item.html id=1 %} , 1 {% include item.html id=34 %}   |
+| 7  | 1 {% include item.html id=1 %} , 10 {% include item.html id=33 %}  |
+| 8  | 1 {% include item.html id=1 %} , 1 {% include item.html id=34 %}   |
+| 9  | 1 {% include item.html id=1 %} , 10 {% include item.html id=33 %}  |
+| 10 | 1 {% include item.html id=1 %} , 1 {% include item.html id=29 %}  |
 
 You can get the rewards from the mission menu

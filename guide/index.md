@@ -83,7 +83,7 @@ Here are some ways to earn more free stones:
 
 Give a variety of items such as: {% include item.html id=11 %}, {% include item.html id=35 %}, {% include item.html id=31 %}
 
-The grand prize in Friend Gacha is a player sidekick dupe {% include item-icon.html id=219991 %}.
+The grand prize in Friend Gacha is a player sidekick dupe {% include item.html id=219991 %}.
 
 - Gain +50 {% include item.html id=42 %} every time you use other player's support
 - Gain +50 {% include item.html id=42 %} every time other player use your support

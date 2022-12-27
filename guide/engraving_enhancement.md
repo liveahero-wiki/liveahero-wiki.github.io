@@ -15,8 +15,8 @@ The system is as follows:
 - You get Engraving level(s) for every time you pull a duplicate of a hero, 1 level for a 3 star, 5 levels for a 4 star, and 20 levels for a 5 star
 - Maximum Engraving level is 100
 - Engraving level increase Max HP, ATK and reduce VP Consumption of skills.
-- If you get another duplicate of a hero who already has 100 engraving level, you will be rewarded with {% include item-icon.html id=74 %} Record Cube Fragment instead
-- As of now {% include item-icon.html id=74 %} Record Cube Fragment can only be exchanged to {% include item-icon.html id=40 %} Record Cube
+- If you get another duplicate of a hero who already has 100 engraving level, you will be rewarded with {% include item.html id=74 %} instead
+- As of now {% include item.html id=74 %} can only be exchanged to {% include item.html id=40 %}
 - You can turn off the VP consumption reduction by tapping on the blue button in the Engraving and Fan View menu
 - You can also control the amount of Fan count (bonus view) each hero has in battle by moving the slider on the bottom of that same menu
 
