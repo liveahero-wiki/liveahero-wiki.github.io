@@ -16,7 +16,7 @@ You can leave the hero for a set amount of time during the business. Sales rewar
 
 ## Sale Slot
 
-There are four Sale slots. Initially, only two are unlocked. An additional slot is unlocked after beating Chapter 1 of the [Main Quest](/guide/quest/#main-quest), while the fourth slot is unlockable with a Sale Slot Unlock Ticket purchasable from the [Shop](/guide/shop/) for 10 {% include item.html id=1 %}.
+There are four Sale slots. Initially, only two are unlocked. An additional slot is unlocked after beating Chapter 1 of the [Main Quest](/guide/quest/#main-quest), while the fourth slot is unlockable with a Sale Slot Unlock Ticket purchasable from the [Shop](/guide/shop/) for 10 {% include item.html id=2 %}.
 
 Heroes departed onto an ongoing Sale cannot be assigned onto a different business. However, they are free to participate in [Quests](/guide/quest/).
 

@@ -9,7 +9,7 @@ banner: true
 ## About Gacha
 
 One of the primary methods of acquiring heroes and sidekicks is through the gacha;
-you can either consume five {% include item.html id=1 %} for a single pull,
+you can either consume five {% include item.html id=2 %} for a single pull,
 or consume fifty for a multi-roll of ten. Multirolls guarantees that the tenth pull must be a 4 star hero or 5 star hero.
 A {% include item.html id=10 %} can be used in place of a single role of 5 stones; rates using a ticket does not offer any functional changes.
 

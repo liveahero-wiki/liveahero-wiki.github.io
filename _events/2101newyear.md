@@ -31,9 +31,9 @@ Limited Time Missions:
 |----|-----------------------------------------------------------|----------------|
 | 1  | Clear \[New Year's Gift Mission\] 5 times in total | 1 {% include item-icon.html id=10 %}    |
 | 2  | Clear \[New Year's Gift Mission\] 10 times in total | 1 {% include item-icon.html id=29 %}    |
-| 3  | Clear \[New Year's Gift Mission\] 15 times in total | 10 {% include item-icon.html id=1 %}    |
+| 3  | Clear \[New Year's Gift Mission\] 15 times in total | 10 {% include item-icon.html id=2 %}    |
 | 4  | Clear \[New Year's Gift Mission\] 20 times in total | 1 {% include item-icon.html id=29 %}    |
-| 5  | Clear \[New Year's Gift Mission\] 25 times in total| 15 {% include item-icon.html id=1 %}    |
+| 5  | Clear \[New Year's Gift Mission\] 25 times in total| 15 {% include item-icon.html id=2 %}    |
 | 6  | Clear \[New Year's Gift Mission\] 30 times in total | 1 {% include item-icon.html id=29 %}    |
 
 ### Special Pack Sales 
@@ -42,7 +42,7 @@ From 1 Jan 2021 until 15 Jan 2021 14:00 JST There will be special pack sales for
 
 The special pack will include:
 - 1 {% include item-icon.html id=51 %}
-- 50 {% include item-icon.html id=1 %}  (Free)
+- 50 {% include item-icon.html id=2 %}  (Free)
 - 1 {% include item-icon.html id=29 %} 
 - 100,000 {% include item-icon.html id=35 %} 
 

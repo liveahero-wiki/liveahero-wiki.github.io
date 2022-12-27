@@ -20,7 +20,7 @@ Daily missions will only reset after the daily rotation, which is scheduled to h
 |-|-|
 |Clear 2 rounds of quests.|{%include item.html id=11%} x 500|
 |Embark on 2 rounds of sales.|{%include item.html id=30%} x 500|
-|Clear the daily mission|{%include item.html id=1%} x 1|
+|Clear the daily mission|{%include item.html id=2%} x 1|
 
 * Clearing an Upgrade/ Event quest will also contributes towards the quest mission completion.
 * Aborting a sale will also contributes towards the sales mission completion.
@@ -42,48 +42,48 @@ Standard missions are permanent missions that can be cleared at any point of tim
 |Hero: Akashi reaches rank 4|{%include item.html id=11%} x 5000|
 |Hero: Akashi reaches rank 5|{%include item.html id=10%} x 1, {% include item.html id=110011 %} x 1|
 |Any character and the protagonist reaches relationship level 50|{% include item.html id=219991 %} x 1| 
-|Any character and the protagonist reaches relationship level 100|{%include item.html id=1%} x 10|
+|Any character and the protagonist reaches relationship level 100|{%include item.html id=2%} x 10|
 
 #### Main Quest
 
 |Task Details|Reward|
 |-|-|
 |Clear the main quest: Book 1 Chapter 1, Episode 11| Hero {% chara_link Akashi|h1 %}|
-|Clear the main quest: Book 1 Chapter 1|{%include item.html id=1%} x 10|
-|Clear the main quest: Book 1 Chapter 2|{%include item.html id=1%} x 10|
+|Clear the main quest: Book 1 Chapter 1|{%include item.html id=2%} x 10|
+|Clear the main quest: Book 1 Chapter 2|{%include item.html id=2%} x 10|
 |Clear the main quest: Book 1 Chapter 2|{%include item.html id=29%} x 1|
-|Clear the main quest: Book 1 Chapter 3|{%include item.html id=1%} x 10|
+|Clear the main quest: Book 1 Chapter 3|{%include item.html id=2%} x 10|
 |Clear the main quest: Book 1 Chapter 3|{%include item.html id=29%} x 1|
-|Clear the main quest: Book 1 Chapter 4|{%include item.html id=1%} x 10|
+|Clear the main quest: Book 1 Chapter 4|{%include item.html id=2%} x 10|
 |Clear the main quest: Book 1 Chapter 4|{%include item.html id=29%} x 1|
-|Clear the main quest: Book 1 Chapter 5|{%include item.html id=1%} x 10|
+|Clear the main quest: Book 1 Chapter 5|{%include item.html id=2%} x 10|
 |Clear the main quest: Book 1 Chapter 5|{%include item.html id=29%} x 1|
-|Clear the main quest: Book 2 Chapter 1|{%include item.html id=1%} x 10|
+|Clear the main quest: Book 2 Chapter 1|{%include item.html id=2%} x 10|
 |Clear the main quest: Book 2 Chapter 1|{%include item.html id=29%} x 1|
 
 #### Player Login
 
 |Task Details|Reward|
 |-|-|
-|Log in on the 10th day|{%include item.html id=1%} x 5|
-|Log in on the 20th day|{%include item.html id=1%} x 5|
-|Log in on the 30th day|{%include item.html id=1%} x 5|
-|Log in on the 40th day|{%include item.html id=1%} x 5|
-|Log in on the 50th day|{%include item.html id=1%} x 10|
-|Log in on the 75th day|{%include item.html id=1%} x 5|
-|Log in on the 100th day|{%include item.html id=1%} x 20|
-|Log in on the 150th day|{%include item.html id=1%} x 10|
-|Log in on the 200th day|{%include item.html id=1%} x 20|
-|Log in on the 250th day|{%include item.html id=1%} x 10|
-|Log in on the 300th day|{%include item.html id=1%} x 20|
-|Log in on the 350th day|{%include item.html id=1%} x 10|
-|Log in on the 400th day|{%include item.html id=1%} x 20|
-|Log in on the 450th day|{%include item.html id=1%} x 10|
-|Log in on the 500th day|{%include item.html id=1%} x 20|
-|Log in on the 550th day|{%include item.html id=1%} x 10|
-|Log in on the 600th day|{%include item.html id=1%} x 20|
-|Log in on the 650th day|{%include item.html id=1%} x 10|
-|Log in on the 700th day|{%include item.html id=1%} x 20|
+|Log in on the 10th day|{%include item.html id=2%} x 5|
+|Log in on the 20th day|{%include item.html id=2%} x 5|
+|Log in on the 30th day|{%include item.html id=2%} x 5|
+|Log in on the 40th day|{%include item.html id=2%} x 5|
+|Log in on the 50th day|{%include item.html id=2%} x 10|
+|Log in on the 75th day|{%include item.html id=2%} x 5|
+|Log in on the 100th day|{%include item.html id=2%} x 20|
+|Log in on the 150th day|{%include item.html id=2%} x 10|
+|Log in on the 200th day|{%include item.html id=2%} x 20|
+|Log in on the 250th day|{%include item.html id=2%} x 10|
+|Log in on the 300th day|{%include item.html id=2%} x 20|
+|Log in on the 350th day|{%include item.html id=2%} x 10|
+|Log in on the 400th day|{%include item.html id=2%} x 20|
+|Log in on the 450th day|{%include item.html id=2%} x 10|
+|Log in on the 500th day|{%include item.html id=2%} x 20|
+|Log in on the 550th day|{%include item.html id=2%} x 10|
+|Log in on the 600th day|{%include item.html id=2%} x 20|
+|Log in on the 650th day|{%include item.html id=2%} x 10|
+|Log in on the 700th day|{%include item.html id=2%} x 20|
 
 #### Player Rank
 

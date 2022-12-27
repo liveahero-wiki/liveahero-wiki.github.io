@@ -23,11 +23,11 @@ There are 8 days in total, and upon receiving the Day 8 reward, the reward for t
 |Day 1|{%include item.html id=11%} x 2000|{%include item.html id=31%} x 3|{%include item.html id=38%} x 3|
 |Day 2|{%include item.html id=35%} x 3000|{%include item.html id=31%} x 3|{%include item.html id=38%} x 3|
 |Day 3|{%include item.html id=33%} x 4|{%include item.html id=31%} x 3|{%include item.html id=38%} x 3|
-|Day 4|{%include item.html id=1%} x 2|{%include item.html id=31%} x 3|{%include item.html id=38%} x 3|
+|Day 4|{%include item.html id=2%} x 2|{%include item.html id=31%} x 3|{%include item.html id=38%} x 3|
 |Day 5|{%include item.html id=30%} x 8000|{%include item.html id=31%} x 3|{%include item.html id=38%} x 3|
 |Day 6|{%include item.html id=35%} x 3000|{%include item.html id=31%} x 3|{%include item.html id=38%} x 3|
 |Day 7|{%include item.html id=34%} x 1|{%include item.html id=31%} x 3|{%include item.html id=38%} x 3|
-|Day 8|{%include item.html id=1%} x 4|{%include item.html id=31%} x 3|{%include item.html id=38%} x 3|
+|Day 8|{%include item.html id=2%} x 4|{%include item.html id=31%} x 3|{%include item.html id=38%} x 3|
 
 ### Cumulative Login
 
@@ -35,10 +35,10 @@ Unlike the continuous login system, the cumulative login accounts for all number
 
 |Day No.|Reward|
 |-|-|
-|Day 10|{%include item.html id=1%} x 5|
-|Day 20|{%include item.html id=1%} x 5|
-|Day 30|{%include item.html id=1%} x 5|
-|Day 40|{%include item.html id=1%} x 5|
-|Day 50|{%include item.html id=1%} x 10|
-|Day 75|{%include item.html id=1%} x 5|
-|Day 100|{%include item.html id=1%} x 20|
+|Day 10|{%include item.html id=2%} x 5|
+|Day 20|{%include item.html id=2%} x 5|
+|Day 30|{%include item.html id=2%} x 5|
+|Day 40|{%include item.html id=2%} x 5|
+|Day 50|{%include item.html id=2%} x 10|
+|Day 75|{%include item.html id=2%} x 5|
+|Day 100|{%include item.html id=2%} x 20|

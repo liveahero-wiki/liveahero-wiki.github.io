@@ -18,13 +18,13 @@ There will be extra login bonus for 7 days as follow
 
 | Day| Rewards |
 |----|-----------------------------------------------------------|
-| 1  | 50 {% include item.html id=1 %} ; 50,000 {% include item.html id=11 %} ; 100,000 {% include item.html id=35 %}; 1 First Anniversary ticket |
-| 2  | 5 {% include item.html id=1 %} ; 30,000 {% include item.html id=30 %} ; 100,000 {% include item.html id=35 %} |
-| 3  | 5 {% include item.html id=1 %} ; 200,000 {% include item.html id=35 %} |
-| 4  | 5 {% include item.html id=1 %} ; 100,000 {% include item.html id=11 %} |
-| 5  | 5 {% include item.html id=1 %} ; 100 {% include item.html id=59 %} |
-| 6  | 10 {% include item.html id=1 %} ; 100,000 {% include item.html id=11 %} |
-| 7  | 20 {% include item.html id=1 %} ; 5 {% include item.html id=29 %} ; 5 {% include item.html id=28 %} ; 5 {% include item.html id=27 %} |
+| 1  | 50 {% include item.html id=2 %} ; 50,000 {% include item.html id=11 %} ; 100,000 {% include item.html id=35 %}; 1 First Anniversary ticket |
+| 2  | 5 {% include item.html id=2 %} ; 30,000 {% include item.html id=30 %} ; 100,000 {% include item.html id=35 %} |
+| 3  | 5 {% include item.html id=2 %} ; 200,000 {% include item.html id=35 %} |
+| 4  | 5 {% include item.html id=2 %} ; 100,000 {% include item.html id=11 %} |
+| 5  | 5 {% include item.html id=2 %} ; 100 {% include item.html id=59 %} |
+| 6  | 10 {% include item.html id=2 %} ; 100,000 {% include item.html id=11 %} |
+| 7  | 20 {% include item.html id=2 %} ; 5 {% include item.html id=29 %} ; 5 {% include item.html id=28 %} ; 5 {% include item.html id=27 %} |
 
 ### 1st Anniversary Ticket Exchange
 

@@ -223,5 +223,5 @@ There will be a special Ether Search, pulling in this Ether Search will guarante
 - {% chara_link Ryekie|h2 %}
 - {% chara_link Victom|h2 %}
 
-You can only pull in this Ether Search once and with 50 paid {% include item.html id=1 %}
+You can only pull in this Ether Search once and with 50 {% include item.html id=1 %}
 

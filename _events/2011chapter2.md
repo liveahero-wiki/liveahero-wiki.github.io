@@ -8,7 +8,7 @@ event_start_time: 2020-11-18T20:00:00+09
 event_end_time: 2020-12-18T20:00:00+09
 ---
 
-The main quests of [chapter 2](/main_quests/chapter02/) has been released. Completion of chapter 2 main quests will give you {% include item.html id=29 %} x 1 and {% include item.html id=1 %} x 10.
+The main quests of [chapter 2](/main_quests/chapter02/) has been released. Completion of chapter 2 main quests will give you {% include item.html id=29 %} x 1 and {% include item.html id=2 %} x 10.
 
 More episodes will be released at the following schedule (subject to changes).
 
