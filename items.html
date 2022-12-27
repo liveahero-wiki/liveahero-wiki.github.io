@@ -15,6 +15,6 @@ banner: true
 {% assign id = pair[0] %}
 {% assign iid = id | plus: 0 %}
 {% if iid > 100000 %}{% break %}{% endif %}
-<tr><td>{{ id }}</td><td>{% include item.html id=id %}</td></tr>
+<tr><td>{{ id }}</td><td>{% include item.html id=iid %}</td></tr>
 {% endfor %}
 </table>
