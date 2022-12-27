@@ -31,19 +31,19 @@ Rank 1/2 units can participate in battle and sale just like normal characters bu
 
 ### Hero's Promotion
 
-Hero units with initial rank of 1 or 2 can only be promoted up to rank 4. Aside from regular rank up materials their promotions will also require a new item {% include item-icon.html id=53 %} "Proof of Hero".
+Hero units with initial rank of 1 or 2 can only be promoted up to rank 4. Aside from regular rank up materials their promotions will also require a new item {% include item.html id=53 %}.
 
 Additionally their 3rd skill will at first be locked and unusable in battle until they are promoted to rank 3.
 
 ### Hero's Fan Count
 
-Hero units with initial rank of 1 or 2 can only gain fan count from their own personal Hero's Memories items. Said items will also can't be exchanged for {% include item-icon.html id=40 %} Record Cube.
+Hero units with initial rank of 1 or 2 can only gain fan count from their own personal Hero's Memories items. Said items will also can't be exchanged for {% include item.html id=40 %}.
 
 Their fan count will only increase by 1 with each item used.
 
 ### Sidekick's Limit Breakthrough
 
-Sidekick units of rank 1 or 2 can only be upgraded with their own personal Sidekick's Heart items. Said items will also can't be exchanged for {% include item-icon.html id=40 %} Record Cube.
+Sidekick units of rank 1 or 2 can only be upgraded with their own personal Sidekick's Heart items. Said items will also can't be exchanged for {% include item.html id=40 %}.
 
 ## Event Shop
 
