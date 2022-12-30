@@ -29,13 +29,14 @@ document.querySelectorAll(".chara-sort").forEach(ele => {
 });
 
 // Format: #collection/h:<compressed_ids>/s:<compressed_ids>
-// compressed_ids is computed by taking difference of array[i]-array[i-1] for i>1, converted to base32, then joined by ','
+// compressed_ids is computed by taking difference of array[i]-array[i-1] for i>1
+// do one run-length encoding, converted to base32, then joined by ','
 
 let collectionMode = false;
 const collectionBtn = document.querySelector("#collection-btn");
 const hasUnit = "has-unit";
-const heroList = document.querySelector("#hero-list");
-const sidekickList = document.querySelector("#sidekick-list");
+const heroList = Array.from(document.querySelector("#hero-list").children);
+const sidekickList = Array.from(document.querySelector("#sidekick-list").children);
 const base = 32;
 
 function parseCollectionHash(hash) {
@@ -106,19 +107,19 @@ function runLengthDecompress(input) {
   let result = [];
   for (const code of input) {
     if (code.indexOf("$") != -1) {
-      const [count, c] = code.split("$")
+      const [count, c] = code.split("$");
       for (let i = 0; i < parseInt(count, base); i++) {
         result.push(c);
       }
     } else {
-      result.push(code)
+      result.push(code);
     }
   }
   return result
 }
 
 function highlightUnit(list, unitSet) {
-  for (const unit of list.children) {
+  for (const unit of list) {
     if (unitSet.has(unit.dataset.id)) {
       unit.classList.add(hasUnit);
     } else {
@@ -129,7 +130,7 @@ function highlightUnit(list, unitSet) {
 
 function calculateHash(list) {
   let array = [];
-  for (const unit of list.children) {
+  for (const unit of list) {
     if (unit.classList.contains(hasUnit)) {
       array.push(parseInt(unit.dataset.id, 10));
     }
@@ -168,10 +169,10 @@ function onLoad() {
       alert("Collection url is invalid");
     }
   }
-  for (const unit of heroList.children) {
+  for (const unit of heroList) {
     unit.addEventListener("click", onClick, false);
   }
-  for (const unit of sidekickList.children) {
+  for (const unit of sidekickList) {
     unit.addEventListener("click", onClick, false);
   }
 }
