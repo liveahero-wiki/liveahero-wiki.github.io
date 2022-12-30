@@ -47,7 +47,7 @@ function parseCollectionHash(hash) {
   for (let i = 1; i < comp.length; i++) {
     const comp2 = comp[i].split(":");
     const prefix = comp2[0];
-    const ids = comp2[1].split(",").map(s => parseInt(s, base));
+    const ids = runLengthDecompress(comp2[1].split(",")).map(s => parseInt(s, base));
     const stringIds = decompressIds(ids).map(i => i.toString());
     if (prefix == "h") {
       heroes = new Set(stringIds);
@@ -79,6 +79,44 @@ function decompressIds(input) {
   return input
 }
 
+function encodeOneRunLength(prev, count) {
+  return count > 1 ? `${count.toString(base)}$${prev}` : prev;
+}
+
+function runLengthCompress(input) {
+  if (input.length <= 1) return input;
+
+  let result = [];
+  let prev = input[0];
+  let count = 1;
+  for (let i = 1; i < input.length; i++) {
+    if (prev == input[i]) {
+      count++;
+    } else {
+      result.push(encodeOneRunLength(prev, count))
+      prev = input[i];
+      count = 1;
+    }
+  }
+  result.push(encodeOneRunLength(prev, count))
+  return result
+}
+
+function runLengthDecompress(input) {
+  let result = [];
+  for (const code of input) {
+    if (code.indexOf("$") != -1) {
+      const [count, c] = code.split("$")
+      for (let i = 0; i < parseInt(count, base); i++) {
+        result.push(c);
+      }
+    } else {
+      result.push(code)
+    }
+  }
+  return result
+}
+
 function highlightUnit(list, unitSet) {
   for (const unit of list.children) {
     if (unitSet.has(unit.dataset.id)) {
@@ -96,7 +134,7 @@ function calculateHash(list) {
       array.push(parseInt(unit.dataset.id, 10));
     }
   }
-  return compressIds(array).map(i => i.toString(base)).join(",")
+  return runLengthCompress(compressIds(array).map(i => i.toString(base))).join(",")
 }
 
 function onClick(e) {
