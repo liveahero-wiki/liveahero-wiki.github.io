@@ -9,9 +9,7 @@ banner: true
 
 <div class="table-scroll">
 <table class="sort-table">
-<thead>
 <tr><th data-type="string">Hero</th><th>SPD</th><th data-type="string">Active</th><th>Active VP</th><th data-type="string">Passive</th></tr>
-</thead>
 {% for c in cardInfos %}
 {% assign page = c.characterId | characterIdToPage %}
 {% assign g = c.growths[0] %}
