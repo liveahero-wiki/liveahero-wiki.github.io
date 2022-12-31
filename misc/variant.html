@@ -28,37 +28,3 @@ For hero that has multiple variants, the latest one will be displayed.
 {% endif %}
 {% endfor %}
 </ul>
-
-<script>
-const SVG_NS = "http://www.w3.org/2000/svg";
-
-function screenshot() {
-    const svg = document.createElementNS(SVG_NS, "svg");
-    svg.setAttribute("xmlns", SVG_NS);
-    const herolist = document.querySelector("#hero-list");
-    svg.setAttribute("width", herolist.clientWidth + "px");
-    svg.setAttribute("height", herolist.clientHeight + "px");
-    const foreign = document.createElementNS(SVG_NS, "foreignObject");
-    foreign.appendChild(herolist.cloneNode(true));
-    foreign.setAttribute("x", 0);
-    foreign.setAttribute("y", 0);
-    foreign.setAttribute("width", herolist.clientWidth + "px");
-    foreign.setAttribute("height", herolist.clientHeight + "px");
-    svg.appendChild(foreign);
-    console.log(svg);
-
-    const canvas = document.createElement("canvas");
-    canvas.width = herolist.clientWidth;
-    canvas.height = herolist.clientHeight;
-    const ctx = canvas.getContext("2d");
-
-    const xml = new XMLSerializer().serializeToString(svg);
-    const img = new Image();
-    img.onload = function() {
-        ctx.drawImage(img, 0, 0);
-        console.log(canvas.toDataURL("image/png"));
-    }
-    img.src = 'data:image/svg+xml;base64,' + btoa(xml);
-}
-screenshot();
-</script>
