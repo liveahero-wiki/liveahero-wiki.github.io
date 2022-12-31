@@ -7,6 +7,7 @@ banner: true
 
 {% assign cardInfos = site.data.SidekickMaster | where: "levelZone", 6 %}
 
+<div class="table-scroll">
 <table class="sort-table">
 <tr><th data-type="string">Sidekick</th><th>HP</th><th>ATK</th><th>View</th><th>Speed</th></tr>
 {% for c in cardInfos %}
@@ -18,3 +19,4 @@ banner: true
 </tr>
 {% endfor %}
 </table>
+</div>

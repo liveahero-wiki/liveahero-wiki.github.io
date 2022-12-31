@@ -247,6 +247,9 @@ table {
   width: 100%;
   border-collapse: collapse;
 }
+.table-scroll {
+  overflow-x: auto;
+}
 th, td {
   text-align: left;
   padding: 5px 10px;
@@ -355,13 +358,16 @@ figcaption {
 .heroBox .tabs span {
   padding: 0 10px;
 }
-.hero-gallery, .atlas-gallery {
+.atlas-gallery {
   img {
     display: block;
   }
+  select {
+    width: 100%;
+  }
 }
 @media (min-width: 1064px) {
-  .hero-gallery, .atlas-gallery {
+  .atlas-gallery {
     img {
       padding: 0 159px;
     }
