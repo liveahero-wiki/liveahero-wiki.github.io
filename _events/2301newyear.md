@@ -46,6 +46,7 @@ Clearing these will rewards player with {% include item.html id=29 %}, {% includ
 
 {% include quest-group.html chapterId=1027 %}
 
+
 | Special effect  | 
 |--------|
 | Buff and Debuff cannot be stacked   |    
