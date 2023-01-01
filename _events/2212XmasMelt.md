@@ -103,6 +103,30 @@ Here is a list of this event's limited time Missions:
 | 4  | Finish any rank event quest 40 times | 1 {% include item-icon.html id=34 %}    |
 | 5  | Finish any rank event quest 50 times | 1 {% include item-icon.html id=34 %}    |
 
+## Event Challenge Quests
+
+{% include quest-group.html chapterId=1024 %}
+
+### Holy Night's Dancing Battle!
+
+| Special effect  | 
+|--------|
+| Buff and Debuff cannot be stacked   |    
+
+Listed below are the enemies skills in S difficulty:
+
+#### Holy Frost Gomeisa's skills
+
+{% include skill-table-manual.html skillIds="4033203,4033202,4033204" equipmentSkills="6033201,6033202" %}
+
+#### Shadow Guardman's skills
+
+{% include skill-table-manual.html skillIds="4057101,4057103,4057102" equipmentSkills="" %}
+
+#### Shadow Trainee's skills
+
+{% include skill-table-manual.html skillIds="4079107,4079108,4079109" equipmentSkills="" %}
+
 ## Event Shop
 
 {% include shop-table.html id=35 %}
