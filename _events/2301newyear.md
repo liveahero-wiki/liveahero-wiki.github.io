@@ -46,6 +46,31 @@ Clearing these will rewards player with {% include item.html id=29 %}, {% includ
 
 {% include quest-group.html chapterId=1027 %}
 
+| Special effect  | 
+|--------|
+| Buff and Debuff cannot be stacked   |    
+| Apply Special Gadget to the fastest character each turn |  
+
+> Special Gadget: Multiply atk by 1.5, more likely to be targeted by enemies
+
+Listed below are the enemies skills in S difficulty:
+
+#### Kirsch's skills
+
+{% include skill-table-manual.html skillIds="4028105,4028106,4028107" equipmentSkills="6028101" %}
+
+#### Rakta's skills
+
+{% include skill-table-manual.html skillIds="4020102,1020102,4020101" equipmentSkills="6020102" %}
+
+#### Loren's skills
+
+{% include skill-table-manual.html skillIds="4021106,4021104,4021105" equipmentSkills="6021101" %}
+
+#### Huckle's skills
+
+{% include skill-table-manual.html skillIds="4034105,1034102,4034104" equipmentSkills="6034104" %}
+
 ### New Year 2023 Shop
 
 {% include shop-table.html id=36 %}
