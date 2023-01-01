@@ -33,11 +33,11 @@ Here is a list of this campaign's limited time Missions:
 
 | No  | Description      | Rewards      |
 |----|-----------------------------------------------------------|----------------|
-| 1  | Finish any rank campaign quest 10 times | 10000 {% include item.html id=11 %}    |
-| 2  | Finish any rank campaign quest 20 times | 10000 {% include item.html id=30 %}    |
-| 3  | Finish any rank campaign quest 30 times | 12500 {% include item.html id=11 %}    |
-| 4  | Finish any rank campaign quest 45 times | 12500 {% include item.html id=30 %}    |
-| 5  | Finish any rank campaign quest 60 times | 15000 {% include item.html id=11 %} ; 15000 {% include item.html id=30 %} |
+| 1  | Finish any quest 10 times | 10000 {% include item.html id=11 %}    |
+| 2  | Finish any quest 20 times | 10000 {% include item.html id=30 %}    |
+| 3  | Finish any quest 30 times | 12500 {% include item.html id=11 %}    |
+| 4  | Finish any quest 45 times | 12500 {% include item.html id=30 %}    |
+| 5  | Finish any quest 60 times | 15000 {% include item.html id=11 %} ; 15000 {% include item.html id=30 %} |
 
 ### New Year Commemoration Challenge Quest
 Challenge quest for New Year 2023.
