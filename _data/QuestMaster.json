@@ -95042,6 +95042,83 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
   },
+  "1022006": {
+    "questId": 1022006,
+    "questName": "君子危うきに近寄らず",
+    "subName": "第６話",
+    "questKind": 5,
+    "chapterId": 1022,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2023-01-05 18:00:00",
+    "endAt": "2023-01-20 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 6,
+    "enemyLevel": 14,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1022005,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuTentacleTree_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaEarth_h01",
+        "battleInfoElement": 3
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuTentacleTree_h01",
+        "battleInfoElement": 3
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
   "1023001": {
     "questId": 1023001,
     "questName": "探索！クリスタルタワーの謎",
@@ -95895,6 +95972,137 @@
       {
         "battleInfoIcon": "icon_villainTraineeShadow_h01",
         "battleInfoElement": 5
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "1024003": {
+    "questId": 1024003,
+    "questName": "影に生きるヤツら",
+    "subName": "A級",
+    "questKind": 6,
+    "chapterId": 1024,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "icon_viscunam_h01",
+    "startAt": "2023-01-05 18:00:00",
+    "endAt": "2023-01-20 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 55,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 29,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1022002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_viscunam_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_sensettia_h01",
+        "battleInfoElement": 1
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "1024004": {
+    "questId": 1024004,
+    "questName": "影に生きるヤツら",
+    "subName": "S級",
+    "questKind": 6,
+    "chapterId": 1024,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "icon_viscunam_h01",
+    "startAt": "2023-01-05 18:00:00",
+    "endAt": "2023-01-20 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 65,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 10,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 34,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1022002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_viscunam_h01",
+        "battleInfoElement": 5
+      },
+      {
+        "battleInfoIcon": "icon_sensettia_h01",
+        "battleInfoElement": 1
       }
     ],
     "hasAdv": false,

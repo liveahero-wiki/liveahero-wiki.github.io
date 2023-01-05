@@ -27274,5 +27274,309 @@
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
     }
+  },
+  "958": {
+    "skillEffectId": 958,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeViewCoefficient",
+          "parameter": {
+            "value": 0
+          }
+        }
+      ],
+      "filename": "status_mosaic",
+      "statusId": 125,
+      "canDispel": true,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View獲得スキルに依るView獲得不可",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "断絶",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "View獲得スキルでViewを獲得できなくなる。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "959": {
+    "skillEffectId": 959,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": 3000
+          }
+        }
+      ],
+      "filename": "status_useless",
+      "statusId": 58,
+      "canDispel": true,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View消費量+3000",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "View消費量+3000",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "Viewを消費するスキルのView消費量が3000増加する。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "960": {
+    "skillEffectId": 960,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 102
+          }
+        }
+      ],
+      "filename": "status_atkup",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "ATK+2%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "ATK+2%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "自身のATKを+2%。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "961": {
+    "skillEffectId": 961,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AbsorbDamage",
+          "parameter": {
+            "value": 70,
+            "target": 11,
+            "healMult": 100
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "70%ダメージ+ダメージの100%HPが最も減っている味方を回復。",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "962": {
+    "skillEffectId": 962,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 80
+          }
+        }
+      ],
+      "trigger": "[{\"value\":10000,\"element\":0,\"statusId\":0,\"class\":\"ViewTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "Viewが10000以上の時、ATK-20%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "963": {
+    "skillEffectId": 963,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleBaseView",
+          "parameter": {
+            "value": 10
+          }
+        }
+      ],
+      "filename": "status_mosaic",
+      "statusId": 14,
+      "canDispel": false,
+      "filterIds": [
+        9
+      ],
+      "parameter": false,
+      "description": "9割モザイク（解除不可）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "9割モザイク",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "自身のViewが90%減少。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "964": {
+    "skillEffectId": 964,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "trigger": "[{\"value\":1,\"element\":0,\"statusId\":133,\"class\":\"OwnSystemStatusNumberDontExecTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 132,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "ATK+50%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "レクイエム",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATK+50%",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "965": {
+    "skillEffectId": 965,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TeamAttackRandomEnemy",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "味方がランダムな敵にスキル１で追撃(ヘルプ表示無)",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "966": {
+    "skillEffectId": 966,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 158,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "効果なし・誘発ヘルプ表示用",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "967": {
+    "skillEffectId": 967,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 0
+          }
+        }
+      ],
+      "filename": "status_invincible",
+      "statusId": 162,
+      "canDispel": true,
+      "filterIds": [],
+      "parameter": false,
+      "description": "ダメージ無効（クリスマスメルト7話バトル用）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": false
+    }
   }
 }

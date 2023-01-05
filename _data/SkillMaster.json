@@ -57047,6 +57047,471 @@
       }
     ]
   },
+  "4125103": {
+    "skillId": 4125103,
+    "skillName": "マン・メキャニキ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に2～4回、25%のダメージ。自身のスキル発動確率上昇効果が高いほど、回数が多くなりやすくなる。(敵専用)",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_viscunam_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 259,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 259,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 2,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 259,
+        "prob": 50,
+        "effectTarget": 2,
+        "sequenceGroupId": 3,
+        "probGroupId": 2,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 259,
+        "prob": 25,
+        "effectTarget": 2,
+        "sequenceGroupId": 4,
+        "probGroupId": 3,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 965,
+        "prob": 100,
+        "effectTarget": 14,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "ViewDontExecTrigger",
+            "value": 10000,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "4125104": {
+    "skillId": 4125104,
+    "skillName": "プリゾンテッション",
+    "useView": 9000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_spdDownAll",
+    "timing": 0,
+    "description": "敵全体に80%ダメージ。敵全体に70%の確率で2回の行動の間SPDダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_viscunam_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 10,
+        "prob": 70,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 965,
+        "prob": 100,
+        "effectTarget": 14,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "ViewDontExecTrigger",
+            "value": 10000,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "4125105": {
+    "skillId": 4125105,
+    "skillName": "グラン・アンヴァンシオン",
+    "useView": 15000,
+    "targetFlag": 3,
+    "resourceName": "b_skill_buffAll",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方全体に2回の行動の間ATKアップ & 幸運を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_viscunam_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 35,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 965,
+        "prob": 100,
+        "effectTarget": 14,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "ViewDontExecTrigger",
+            "value": 10000,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "4126101": {
+    "skillId": 4126101,
+    "skillName": "ゲザングフォル",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_cureTeam",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。味方のデバフを１つ解除。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_sensettia_eh01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 9,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "ViewDontExecTrigger",
+            "value": 10000,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 132
+          },
+          {
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 896,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "ViewDontExecTrigger",
+            "value": 10000,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "4126102": {
+    "skillId": 4126102,
+    "skillName": "ヘフティヒ・シュライ",
+    "useView": 7000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。80%の確率で2回分のDEFダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_sensettia_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 9,
+        "prob": 80,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "ViewDontExecTrigger",
+            "value": 10000,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 132
+          },
+          {
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 896,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "ViewDontExecTrigger",
+            "value": 10000,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "4126103": {
+    "skillId": 4126103,
+    "skillName": "グレンツェント・ゼンガー",
+    "useView": 14000,
+    "targetFlag": 7,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_heal",
+    "timing": 0,
+    "description": "敵全体からランダムに3回70%ダメージ。ダメージの度にチームで一番HPが減っているヒーローのHPを敵に与えたダメージだけ回復。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_sensettia_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 961,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 961,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 961,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "ViewDontExecTrigger",
+            "value": 10000,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 132
+          },
+          {
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 896,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "ViewDontExecTrigger",
+            "value": 10000,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
   "6000001": {
     "skillId": 6000001,
     "skillName": "ダメージ制限20000",
@@ -63689,6 +64154,206 @@
         "skillEffectId": 445,
         "prob": 50,
         "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6125102": {
+    "skillId": 6125102,
+    "skillName": "やられ映え",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "s_skill_heal",
+    "timing": 8,
+    "description": "ダメージを受けた時、Viewを5000獲得。50%の確率でデバフを１つ解除。自身以外の味方全体のHPを基礎ATKの150%回復する。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 50,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 426,
+        "prob": 100,
+        "effectTarget": 14,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6125104": {
+    "skillId": 6125104,
+    "skillName": "目立たせてやろう！",
+    "useView": 0,
+    "targetFlag": 14,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "行動終了時、Viewが10000以下の場合、味方単体のスキル１を誘発。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 966,
+        "prob": 0,
+        "effectTarget": 5,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6125106": {
+    "skillId": 6125106,
+    "skillName": "ド派手な登場",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、Viewを20000獲得。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 7,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6125107": {
+    "skillId": 6125107,
+    "skillName": "やられ映え",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、Viewを5000獲得。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6126101": {
+    "skillId": 6126101,
+    "skillName": "目立ってやる！",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、Viewが10000以下の場合、もう１度行動をする。1ターンに1度だけ発動。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": []
+  },
+  "6126102": {
+    "skillId": 6126102,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 897,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6126103": {
+    "skillId": 6126103,
+    "skillName": "リズムアップ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "行動終了時、自身のATK+2%。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 960,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6126104": {
+    "skillId": 6126104,
+    "skillName": "レクイエム",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 14,
+    "description": "戦闘不能時、このバトル中ヴィスカナムのATK+50%。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 964,
+        "prob": 100,
+        "effectTarget": 3,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "randomGroupId": 0,
