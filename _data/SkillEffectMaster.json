@@ -27747,7 +27747,7 @@
       ],
       "filename": "status_burst",
       "statusId": 164,
-      "canDispel": false,
+      "canDispel": true,
       "filterIds": [],
       "parameter": false,
       "description": "回復量減少10%",
@@ -27768,10 +27768,8 @@
       "count": 0,
       "effects": [
         {
-          "class": "ChangeHp",
-          "parameter": {
-            "value": -50
-          }
+          "class": "NoneEffect",
+          "parameter": []
         }
       ],
       "filename": "status_regenerate",
@@ -27787,7 +27785,7 @@
       "canDuplicate": false,
       "overrideStatusName": "超再生",
       "isOverrideStatusName": true,
-      "overrideStatusDescription": "ターン終了時にHPを最大値の50%回復する。スキルによる解除不可。",
+      "overrideStatusDescription": "ターン開始時にHPを最大値の30%回復する。スキルによる解除不可。",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
     }
@@ -28105,6 +28103,95 @@
       "isImmediate": false,
       "persistence": true,
       "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "985": {
+    "skillEffectId": 985,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 166,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果166番付与",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "986": {
+    "skillEffectId": 986,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeHp",
+          "parameter": {
+            "value": -30
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "最大HPの30%回復",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "987": {
+    "skillEffectId": 987,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveBuff",
+          "parameter": {
+            "value": 2,
+            "target": 164,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "回復量減少を２つ解除",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
