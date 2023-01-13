@@ -141,6 +141,10 @@ Listed below are the enemies skills in S difficulty:
 
 {% include quest-group.html chapterId=1023 %}
 
+### Special Quests
+
+{% include quest-group.html chapterId=1025 %}
+
 ## Sales Report
 
 <details><summary>Sales Report 1</summary>
