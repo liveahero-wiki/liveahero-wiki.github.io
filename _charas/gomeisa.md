@@ -27,7 +27,7 @@ As a blessed dancer, his wish is sure to make those who see him happy.
 {% capture BIO_H02 %}
 The sacred tree in his homeland one winter day had become frozen in a protective layer of ice in order to protect itself from the freezing winter wind.<br>The snowy Christmas Day Kamakura, which Procy had offered to make with him to cheer him up.<br>These things taught Gomeisa about the inner warmth that can be found within the ice and snow.<br>The knowledge he gained in his homeland and the warm memories of Christmas strengthened Gomeisa's feelings and led him to this new form.
 {% endcapture %}
-{% include hero-infobox.html stockId=10332 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8033201,8033202,8033203" %}
+{% include hero-infobox.html stockId=10332 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8033201,8033202,8033203" extra_sprites="fg_gomeisaXmasMelt2212_h02_skin2" %}
 
 {% capture BIO_S01 %}
 Gomeisa is a young giant alien working as a waiter in a place where heroes gather under Procy's management. He is originally from a planet with a civilization that lives with giant trees. He loves dancing and praying to those very same trees and the gods above them. He is innocent, kind, naive and very unsuspecting of others. Having no qualm with being touched, showing no hesitation when asked to undress, causing tons of clumsy accidents due to his massive body; Procy's just at a loss with him.
