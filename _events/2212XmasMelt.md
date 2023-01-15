@@ -127,6 +127,42 @@ Listed below are the enemies skills in S difficulty:
 
 {% include skill-table-manual.html skillIds="4079107,4079108,4079109" equipmentSkills="" %}
 
+### Those that live in the shadow
+
+| Special effect  | 
+|--------|
+| Buff and Debuff cannot be stacked   |    
+
+Listed below are the enemies skills in S difficulty:
+
+#### Viscunam's skills
+
+{% include skill-table-manual.html skillIds="4125103,4125104,4125105" equipmentSkills="6125106,6125102,6125104" %}
+
+#### Sensettia's skills
+
+{% include skill-table-manual.html skillIds="4126101,4126102,4126103" equipmentSkills="6126101,6126103,6126104" %}
+
+### Threats in the Crystal
+
+| Special effect  | 
+|--------|
+| Buff and Debuff cannot be stacked   |    
+
+Listed below are the enemies skills in S difficulty:
+
+#### Tentacle Kaibutsu 1's skills
+
+{% include skill-table-manual.html skillIds="4088105,4088106" equipmentSkills="6088103,6088105" %}
+
+#### Tree Tentacle Kaibutsu's skills
+
+{% include skill-table-manual.html skillIds="4127104,4127107,4127106" equipmentSkills="6127103,6127105,6000047" %}
+
+#### Tentacle Kaibutsu 2's skills
+
+{% include skill-table-manual.html skillIds="4088105,4088106" equipmentSkills="6088104,6088105" %}
+
 ## Event Shop
 
 {% include shop-table.html id=35 %}
