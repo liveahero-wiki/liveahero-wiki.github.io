@@ -34,3 +34,9 @@ TRAINED = "Not yet! We can't lose!"
 EVENTA = "Oh...I hear chanting from somewhere!<br>I love Christmas... it's all about the singing!<br>I love it, I wanna be a part of it!"
 EVENTB = "Christmas decorations are so beautiful!<br>Especially the top star on the tree!<br>I wish I could be like that someday..."
 %}
+
+## Notes
+- Her skills are in German language:
+  - Gesangvoll = Like singing (an action done in a smooth, lyrical, flowing style)
+  - Heftig Schrei = Ardent Shout
+  - Glänzend Sänger = Brilliant Singer
