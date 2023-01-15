@@ -33,3 +33,10 @@ TRAINED = "I can't take it!"
 EVENTA = "The energy to power all this illumination...<br>I can make all the devices and medicines I want...<br>Christmas is indeed a dream come true..."
 EVENTB = ""
 %}
+
+## Notes
+- His skill name is in French language:
+  - Main Mécanique = Hand of Machine
+  - Présentation = Presentation
+  - Grand Invention = Great Invention
+
