@@ -63,6 +63,8 @@ Extend {{ target }}'s {% if effect.parameter.statusTypeValue == 1 %}buff{% else 
 Heal {{ target }} for {{ effect.parameter.value }}% of own ATK value
 {% when "HealMultipleAttack" %}
 Increase recovery amount of {{ target }}'s healing skill by {{ effect.parameter.value }}%
+{% when "HealMultipleDefence" %}
+Reduce recovery amount of {{ target }}'s healing skill by {{ effect.parameter.value }}%
 {% when "NeedViewChange" %}
 {% assign turnDefinition = "turn" %}
 Skill View cost {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x for {{ target }}
