@@ -67,6 +67,8 @@ def main():
                     front_matter.setdefault("sidekicks", []).append(card)
             elif "voice-table.html" == comp[1]:
                 voices.append(tag)
+            elif "hero-infobox-unreleased.html" == comp[1]:
+                front_matter["sprites"] = comp[2].split("=")[1]
 
         prev_match = m
 
@@ -76,7 +78,7 @@ def main():
         f.write("---\n\n")
         for v in voices:
             f.write("{{% {}\n%}}\n".format(v))
-        f.write(text[prev_match.end(0):])
+        f.write(text[prev_match.end(0):].strip())
 
     #break
 
