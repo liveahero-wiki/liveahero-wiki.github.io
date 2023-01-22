@@ -71,6 +71,8 @@ def main():
                 voices.append(tag)
             elif "hero-infobox-unreleased.html" == comp[1]:
                 front_matter["sprites"] = comp[2].split("=")[1]
+        else:
+            continue
 
         prev_match = m
 
