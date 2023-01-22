@@ -2,65 +2,79 @@
 title: Flamier
 characterId: 11
 h2:
-  title: "\"Flower Dancer\" Flamier"
+  title: '"Flower Dancer" Flamier'
+heroes:
+- stockId: 10111
+  BIO_H01: |-
+    With a lab coat flapping like a cape, she transforms into a hero who fights
+    using all kinds of equipment to synthesize and burn chemicals.
+
+    However, since her goal is not \[to kill or injure her enemies with
+    explosions\], but \[to make beautiful flames for everyone to see\], her
+    techniques are not as destructive as they are flashy.
+
+    Nevertheless, she is a fearsome hero since her goal also means to make the
+    surroundings a \[Sea of Fire\], literally.
+  BIO_H02: |-
+    Her wish is to \[Make the most beautiful fireworks in the universe blooms at the
+    most beautiful place\].
+
+    Combustion can only occur where there is an atmosphere, and on some planets, the
+    reaction does not occur as expected due to the components that make up the
+    atmosphere.
+
+    There are many substances that do not even burn in the first place.
+
+    That's why to pursue her astounding ideals, she dedicate herself to the research
+    of combustible substances everyday.
+
+    Her unusual obsession with fire is probably second to none.
+- stockId: 10112
+  BIO_H01: |-
+    Flamier volunteered to help Hisaki's research and transformed into a hero suit
+    suitable for the Wemalt flower festival.
+
+    She wears parallel weapons similar to the dance shoes presented to her by her
+    grandfather as a child.
+
+    When the shoes shine, people's eyes naturally gather, and the trail of light
+    left in the wake of her dance confuses and dazzles the enemy.
+
+    Based on her grandfather's teaching that "Enjoy that which sparks your passion
+    with all your might",  Flamier overwhelms the enemy like a  flower petal dancing
+    in the wind.
+  BIO_H02: |-
+    Since childhood, Flamier has loved to dance.
+
+    However, she was disciplined by her educator to behave in a manner befitting her
+    status, and even as a child, Flamier suppressed her feelings and played the role
+    of what she thought was expected of her.
+
+    It was her grandfather who treated her not only as his granddaughter, but also
+    as a human being, who recognized her feelings and became a person who understood
+    her.
+
+    Her late grandfather's advice that she should be able to love herself with all
+    her heart, no matter who she is, is the foundation on which Flamier now stands.
+  extra_sprites: fg_flamierGhostWoods2204_h01_skin2,fg_flamierGhostWoods2204_h01_skin3,fg_flamierGhostWoods2204_h02_skin2,fg_flamierGhostWoods2204_h02_skin3,fg_flamierGhostWoods2204_h02_skin4,fg_flamierGhostWoods2204_h02_skin5
+sidekicks:
+- stockId: 10111
+  BIO_S01: |-
+    A chemistry teacher who teaches at one of the top class elite high schools in
+    the Lunar capital.
+
+    She is a lunarian from the moon and is the daughter of a businessman who is in
+    charge of mining mineral resources from asteroid belts.
+
+    Thanks to her intelligence, talent and beauty she has a lot of admirers inside
+    and outside the school.
+
+    She has a strange obsession with "beautiful burning things" and possesses
+    extraordinary knowledge of combustibles such as gunpowder and explosives.
+
+    Her dream is to create fireworks that bloom beautifully in space.
+  extra_sprites: fg_flamier_s01_skin1,fg_flamier_s01_skin2
 ---
-
-{% capture BIO_H01 %}
-With a lab coat flapping like a cape, she transforms into a hero who fights using all kinds of equipment to synthesize and burn chemicals.
-
-However, since her goal is not \[to kill or injure her enemies with explosions\], but \[to make beautiful flames for everyone to see\], her techniques are not as destructive as they are flashy.
-
-Nevertheless, she is a fearsome hero since her goal also means to make the surroundings a \[Sea of Fire\], literally. 
-{% endcapture %}
-
-{% capture BIO_H02 %}
-Her wish is to \[Make the most beautiful fireworks in the universe blooms at the most beautiful place\].
-
-Combustion can only occur where there is an atmosphere, and on some planets, the reaction does not occur as expected due to the components that make up the atmosphere.
-
-There are many substances that do not even burn in the first place.
-
-That's why to pursue her astounding ideals, she dedicate herself to the research of combustible substances everyday.
-
-Her unusual obsession with fire is probably second to none.
-{% endcapture %}
-{% include hero-infobox.html stockId=10111 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_H01 %}
-Flamier volunteered to help Hisaki's research and transformed into a hero suit suitable for the Wemalt flower festival.
-
-She wears parallel weapons similar to the dance shoes presented to her by her grandfather as a child.
-
-When the shoes shine, people's eyes naturally gather, and the trail of light  left in the wake of her dance confuses and dazzles the enemy.
-
-Based on her grandfather's teaching that "Enjoy that which sparks your passion with all your might",  Flamier overwhelms the enemy like a  flower petal dancing in the wind.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-Since childhood, Flamier has loved to dance. 
-
-However, she was disciplined by her educator to behave in a manner befitting her status, and even as a child, Flamier suppressed her feelings and played the role of what she thought was expected of her. 
-
-It was her grandfather who treated her not only as his granddaughter, but also as a human being, who recognized her feelings and became a person who understood her. 
-
-Her late grandfather's advice that she should be able to love herself with all her heart, no matter who she is, is the foundation on which Flamier now stands. 
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10112 BIO_H01=BIO_H01 BIO_H02=BIO_H02 
-extra_sprites="fg_flamierGhostWoods2204_h01_skin2,fg_flamierGhostWoods2204_h01_skin3,fg_flamierGhostWoods2204_h02_skin2,fg_flamierGhostWoods2204_h02_skin3,fg_flamierGhostWoods2204_h02_skin4,fg_flamierGhostWoods2204_h02_skin5" %}
-
-{% capture BIO_S01 %}
-A chemistry teacher who teaches at one of the top class elite high schools in the Lunar capital.
-
-She is a lunarian from the moon and is the daughter of a businessman who is in charge of mining mineral resources from asteroid belts.
-
-Thanks to her intelligence, talent and beauty she has a lot of admirers inside and outside the school.
-
-She has a strange obsession with "beautiful burning things" and possesses extraordinary knowledge of combustibles such as gunpowder and explosives.
-
-Her dream is to create fireworks that bloom beautifully in space.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=10111 BIO_S01=BIO_S01 extra_sprites="fg_flamier_s01_skin1,fg_flamier_s01_skin2" %}
 
 {% include voice-table.html resourceName="flamier"
 h_gachaResult = "Nice to meet you. I am Flamier, a high school teacher.<br>My speciality is... that's right, just to have a teensy bit of enjoyment for explosions.<br>I'm a bit clumsy, but I'm in your hands."

@@ -1,61 +1,74 @@
 ---
 title: Toshu
 characterId: 13
-occupation: "Kendo Artist (剣道家)"
+occupation: Kendo Artist (剣道家)
 h2:
-  title: "\"Swordman Spirit\" Toshu"
+  title: '"Swordman Spirit" Toshu'
+heroes:
+- stockId: 10131
+  BIO_H01: |-
+    In honor of a man he once met when he landed on Earth, a samurai he acknowledges
+    as "the noblest spirit on Earth", he transforms into a hero who mimics the
+    appearance of a samurai on the battlefield. His weapon is a sword with a blade
+    made up of an energy, and he attacks his opponents by slashing at them in one
+    fell swoop, a style of fighting that is unique to his hot-blooded nature. His
+    "offensive" approach has the weakness in that his "defense" becomes thin.
+  BIO_H02: |-
+    "To catch up with the true samurai he met that day" is his goal and his belief
+    in the path of the sword. He once studied under a samurai who called himself
+    "Sakimori" and learned the way of the sword on this planet. The man's way of
+    life, whose whereabout is unknown, is the ultimate ideal and his goal. He will
+    continue to wield his sword on the battlefield until the day he can recognize
+    himself as "a true samurai".
+- stockId: 10132
+  BIO_H01: |-
+    During battles in the newfound space, Toshu fought against mysterious enemies
+    and realized his own weaknesses.
+
+    He faced those weaknesses with rigorous training, and in result of that,
+    obtained a new form.
+
+    With a calm mind as clear as water, he sharpens his spirit, feels the
+    environment on his skin and follows the path his sword need to take to claim
+    victory.
+
+    The reason for that, is because he wanted to win against his passionate
+    emotions, as well as to guide his allies to victory.
+
+    It is a strategy used in order to embody his "samurai" way of doing things.
+  BIO_H02: |-
+    He is a stoic man who has trained himself to overcome his various weaknesses,
+    but there are things he could not overcome no matter how hard he tried.
+
+    One of it is water. Unable to swim and having a fear of water, he is extremely
+    afraid of fighting around any body of water.
+
+    It is never easy to overcome a deep-rooted sense of weakness. However, he can
+    never move forward by avoiding it.
+
+    His choice in this, is not to conquer the water, but to temper himself so that
+    he can have inner calm even in the presence of water.
+  passiveSkillIds:
+  - '8013201'
+  extra_sprites: fg_toshuVirtualFesta2210_h02_skin2
+sidekicks:
+- stockId: 10131
+  BIO_S01: |-
+    A Kendo artist who is a teacher at Hinowa University of Physical Education,
+    serving as an advisor to the institution's kendo club
+
+    He is an extraordinary disciplined and rigid warrior, raised in a strict family
+    that has served as knights for generation in his alien hometown.
+
+    Although he partakes in spiritual training, he has a short temper and is quite
+    hotheaded, so if you touch his mane, there's a high chance that he will snap.
+
+    Because of his personality, which can only be considered as strait-laced, he
+    can't quite express honest feelings of happiness or fondness.
+
+    Dare someone tease him and call him a "tsundere" he WILL snap.
+  extra_sprites: fg_toshu_s01_skin1,fg_toshu_s01_skin2
 ---
-
-{% capture BIO_H01 %}
-In honor of a man he once met when he landed on Earth, a samurai he acknowledges as "the noblest spirit on Earth", he transforms into a hero who mimics the appearance of a samurai on the battlefield.
-His weapon is a sword with a blade made up of an energy, and he attacks his opponents by slashing at them in one fell swoop, a style of fighting that is unique to his hot-blooded nature.
-His "offensive" approach has the weakness in that his "defense" becomes thin.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-"To catch up with the true samurai he met that day" is his goal and his belief in the path of the sword.
-He once studied under a samurai who called himself "Sakimori" and learned the way of the sword on this planet.
-The man's way of life, whose whereabout is unknown, is the ultimate ideal and his goal.
-He will continue to wield his sword on the battlefield until the day he can recognize himself as "a true samurai".
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10131 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_H01 %}
-During battles in the newfound space, Toshu fought against mysterious enemies and realized his own weaknesses. 
-
-He faced those weaknesses with rigorous training, and in result of that, obtained a new form. 
-
-With a calm mind as clear as water, he sharpens his spirit, feels the environment on his skin and follows the path his sword need to take to claim victory. 
-
-The reason for that, is because he wanted to win against his passionate emotions, as well as to guide his allies to victory. 
-
-It is a strategy used in order to embody his "samurai" way of doing things.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-He is a stoic man who has trained himself to overcome his various weaknesses, but there are things he could not overcome no matter how hard he tried.
-
-One of it is water. Unable to swim and having a fear of water, he is extremely afraid of fighting around any body of water.
-
-It is never easy to overcome a deep-rooted sense of weakness. However, he can never move forward by avoiding it.
-
-His choice in this, is not to conquer the water, but to temper himself so that he can have inner calm even in the presence of water.
-{% endcapture %}
-{% include hero-infobox.html stockId=10132 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8013201" extra_sprites="fg_toshuVirtualFesta2210_h02_skin2" %}
-
-{% capture BIO_S01 %}
-A Kendo artist who is a teacher at Hinowa University of Physical Education, serving as an advisor to the institution's kendo club
-
-He is an extraordinary disciplined and rigid warrior, raised in a strict family that has served as knights for generation in his alien hometown.
-
-Although he partakes in spiritual training, he has a short temper and is quite hotheaded, so if you touch his mane, there's a high chance that he will snap.
-
-Because of his personality, which can only be considered as strait-laced, he can't quite express honest feelings of happiness or fondness.
-
-Dare someone tease him and call him a "tsundere" he WILL snap.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=10131 BIO_S01=BIO_S01 extra_sprites="fg_toshu_s01_skin1,fg_toshu_s01_skin2" %}
 
 {% include voice-table.html resourceName="toshu"
 h_gachaResult = "My name's Toshu.<br>I seek to master the way of the sword,<br>and become a samurai like &quot;Sakimori&quot;.<br>The will that you hold in your heart,<br>Show it to me."

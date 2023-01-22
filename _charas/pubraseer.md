@@ -1,38 +1,50 @@
 ---
 title: Pubraseer
 characterId: 73
+heroes:
+- stockId: 10731
+  extra_sprites: fg_ADV_pubraseer_h01
+  BIO_H01: |-
+    Pubraseer has regained his memory and awakened to his power as a hero.
+
+    His parallel weapon is a sign of his determination to walk with his men in the
+    future, and in his hand he holds a flag to be set up in the uncharted land they
+    sought.
+
+    The flag-shaped Parallel Weapon is usually closed and used as a spear, but it
+    flutters widely when protecting friends or leading them to a safe zone.
+
+    Pubraseer's hero suit also resembles the design he wore back in those days, when
+    he was a starship captain.
+  BIO_H02: |-
+    Pubraseer's original personality as a young man was carefree and jovial, but the
+    responsibility and pressure of being  a spaceship captain hardened him into a
+    serious leader with a strong sense of responsibility, almost to the point of
+    self-sacrifice.
+
+    In a memory flashback, Pubraseer recovered his memories of the past and thinks
+    of his now deceased subordinates, buckling under the weight of his own life that
+    was saved by his five friends, and realizing that this life is no longer his
+    alone, he raises the flag symbolizing that vow in his hand and stares at the
+    bright star of the future.
+sidekicks:
+- stockId: 10731
+  BIO_S01: |-
+    A sailor handyman who is in charge of clean-up at a spaceship resort.
+
+    He is a beastman alien with a cheerful and carefree personality.
+
+    During the spaceship resort's construction, he protected the nearby sea area.
+
+    He lost his memories pertaining to his time protecting it, and even
+    conversations about it are difficult for him,  but because he has a lot more
+    curiosity than others, he has managed to absorb how to speak, as well as
+    knowledge.
+
+    Sometimes, he hears impossible to understand words from the pendant he was found
+    with, which always give him a headache.
+  extra_sprites: fg_pubraseer_s01_skin1,fg_ADV_pubraseer_s01,fg_ADV_pubraseer_s01_skin1
 ---
-
-{% capture BIO_H01 %}
-Pubraseer has regained his memory and awakened to his power as a hero. 
-
-His parallel weapon is a sign of his determination to walk with his men in the future, and in his hand he holds a flag to be set up in the uncharted land they sought. 
-
-The flag-shaped Parallel Weapon is usually closed and used as a spear, but it flutters widely when protecting friends or leading them to a safe zone. 
-
-Pubraseer's hero suit also resembles the design he wore back in those days, when he was a starship captain. 
-{% endcapture %}
-
-{% capture BIO_H02 %}
-Pubraseer's original personality as a young man was carefree and jovial, but the responsibility and pressure of being  a spaceship captain hardened him into a serious leader with a strong sense of responsibility, almost to the point of self-sacrifice. 
-
-In a memory flashback, Pubraseer recovered his memories of the past and thinks of his now deceased subordinates, buckling under the weight of his own life that was saved by his five friends, and realizing that this life is no longer his alone, he raises the flag symbolizing that vow in his hand and stares at the bright star of the future.
-{% endcapture %}
-{% include hero-infobox.html stockId=10731 extra_sprites="fg_ADV_pubraseer_h01" BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_S01 %}
-A sailor handyman who is in charge of clean-up at a spaceship resort. 
-
-He is a beastman alien with a cheerful and carefree personality. 
-
-During the spaceship resort's construction, he protected the nearby sea area. 
-
-He lost his memories pertaining to his time protecting it, and even conversations about it are difficult for him, 
-but because he has a lot more curiosity than others, he has managed to absorb how to speak, as well as knowledge. 
-
-Sometimes, he hears impossible to understand words from the pendant he was found with, which always give him a headache.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=10731 BIO_S01=BIO_S01 extra_sprites="fg_pubraseer_s01_skin1,fg_ADV_pubraseer_s01,fg_ADV_pubraseer_s01_skin1" %}
 
 {% include voice-table.html resourceName="pubraseer"
 h_gachaResult = "My name's Pubraseer.<br>Captain of the spaceship.<br>Somehow…I remember it now.<br>..n? the way I talk is different?<br>Don't worry, both are the real me."

@@ -11,7 +11,7 @@
 {% assign sprites = sprites | append: "," | append: include.extra_sprites %}
 {% endif %}
 
-<div id="h{{ include.stockId }}" class="contain element{{ firstCardInfo.element }}">
+<div id="h{{ include.stockId }}" role="tabpanel" tabindex="0"  class="tabcontent contain element{{ firstCardInfo.element }}">
     <div class="heroinfobox">
         <div class="header">
             <div class="name">{{ firstCardInfo.stockId | stockIdToCharaTitle: 1 }}</div>
@@ -131,7 +131,6 @@
 
 {% if include.passiveSkillIds %}
 <h3>Passive skills</h3>
-{% assign passiveSkillIds = include.passiveSkillIds | split: "," %}
-{% include skill-table-v2.html skillIds=passiveSkillIds hide_banner=true %}
+{% include skill-table-v2.html skillIds=include.passiveSkillIds hide_banner=true %}
 {% endif %}
 </div>

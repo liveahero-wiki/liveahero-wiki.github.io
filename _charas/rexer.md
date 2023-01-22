@@ -1,39 +1,51 @@
 ---
 title: reXer
 characterId: 122
+heroes:
+- stockId: 11221
+  BIO_H01: |-
+    Transforming into a hero with a bright colored visor and armor, his parallel
+    weapon is a huge sword that can also transform into a battle axe.
+
+    His fighting style, in which he transforms freely according to the battle
+    situation and the opponent to then rounds up all his enemies, is exactly like
+    that of a hunter who stands up against a huge monster in a video game world.
+
+    However, at some point, there has been a change in his fighting style, and fans
+    are concerned about what happened.
+  BIO_H02: |-
+    The reXer that exist now, is a different entity than the reXer in the past.
+
+    His true identity, is the former reXer's real son.
+
+    He inherits this avatar from his father, who goes missing when fighting against
+    a kaibutsu in real life, and he continues to use the name reXer.
+
+    Oddly enough, he also has the talent for games, although he is able to work as a
+    professional gamer, he did not inherit his heroic activities.
+
+    He has only one wish. To bring back to the world the hero reXer that his father
+    raised.
+  passiveSkillIds:
+  - '8122101'
+  extra_sprites: fg_rexer_h01_skin2,fg_rexer_h01_skin3,fg_rexer_h02_skin2,fg_rexer_h02_skin3
+sidekicks:
+- stockId: 11221
+  BIO_S01: |-
+    reXer is a pro gamer with an unknown age belonging to the Neotalents
+    Production's pro gamer team "μ-Hyperions".
+
+    Besides just working as a professional gamer, he also works as a cyber hero TV
+    personality in the virtual space.
+
+    He is top ranked in every gaming field in terms of skill, and while he does give
+    off the vibe of a mature man who possesses a calm way of speaking, he is very
+    childish on the inside.
+
+    He used to work as a hero in the real world, but nowadays he seems to have
+    disappeared.
+  extra_sprites: fg_rexer_s01_skin1
 ---
-
-{% capture BIO_H01 %}
-Transforming into a hero with a bright colored visor and armor, his parallel weapon is a huge sword that can also transform into a battle axe.
-
-His fighting style, in which he transforms freely according to the battle situation and the opponent to then rounds up all his enemies, is exactly like that of a hunter who stands up against a huge monster in a video game world.
-
-However, at some point, there has been a change in his fighting style, and fans are concerned about what happened.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-The reXer that exist now, is a different entity than the reXer in the past.
-
-His true identity, is the former reXer's real son.
-
-He inherits this avatar from his father, who goes missing when fighting against a kaibutsu in real life, and he continues to use the name reXer.
-
-Oddly enough, he also has the talent for games, although he is able to work as a professional gamer, he did not inherit his heroic activities.
-
-He has only one wish. To bring back to the world the hero reXer that his father raised.
-{% endcapture %}
-{% include hero-infobox.html stockId=11221 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8122101" extra_sprites="fg_rexer_h01_skin2,fg_rexer_h01_skin3,fg_rexer_h02_skin2,fg_rexer_h02_skin3" %}
-
-{% capture BIO_S01 %}
-reXer is a pro gamer with an unknown age belonging to the Neotalents Production's pro gamer team "μ-Hyperions".
-
-Besides just working as a professional gamer, he also works as a cyber hero TV personality in the virtual space.
-
-He is top ranked in every gaming field in terms of skill, and while he does give off the vibe of a mature man who possesses a calm way of speaking, he is very childish on the inside. 
-
-He used to work as a hero in the real world, but nowadays he seems to have disappeared. 
-{% endcapture %}
-{% include sidekick-infobox.html stockId=11221 BIO_S01=BIO_S01 extra_sprites="fg_rexer_s01_skin1" %}
 
 {% include voice-table.html resourceName="rexer"
 h_gachaResult = "Pro-Gamer, and virtual hero reXer.<br>Let's win the next game together for sure.<br>Well…you can look forward to it. "

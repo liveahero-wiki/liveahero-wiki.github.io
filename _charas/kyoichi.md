@@ -1,59 +1,69 @@
 ---
 title: Kyoichi
 characterId: 10
-occupation: "Elementary School Teacher (小学校教諭)"
+occupation: Elementary School Teacher (小学校教諭)
 h2:
-  title: "\"Active Agent\" Kyoichi"
+  title: '"Active Agent" Kyoichi'
+heroes:
+- stockId: 10101
+  BIO_H01: |-
+    The first time Kyoichi confronted Kaibutsu was at an elementary school he
+    visited for TA training. His natural older brother instinct and his desire to
+    protect younger children gave him the determination to "protect the world for
+    his students," and gave birth to the hero "Element Teacher." On the battlefield,
+    he wields weapons resembling the balls, vaulting boxes, and set squares that he
+    handles in elementary school classes, and shows students "why evil doesn't pay".
+  BIO_H02: |-
+    His identity as  "Element Teacher" is kept secret from his students, as a
+    special consideration to not endanger the children close to him, and because he
+    does not want to show off his achievements. Even so, he watches with a fond
+    smile as his students play "Element Teacher" at recess.
+- stockId: 10102
+  BIO_H01: |-
+    Kyoichi describes himself in this new form as "Agent of Love, E.T.L.".
+
+    Transformed into this figure, he is a warrior of love on a mission to rescue
+    children in the midst of terrorism.
+
+    Because they perceive romance as embarrassing, the children mutually deride one
+    another in a negative feedback loop and create their own hell full of anger and
+    sadness, with all their secrets exposed.
+
+    As a mature adult, he rescues children and runs through enemy strongholds in a
+    black suit, using chalk bullets as a weapon.
+  BIO_H02: |-
+    Kyoichi is not good at keeping secrets, and so whatever feelings he has for the
+    other party, he will advance and lay it bare.
+
+    This is his own attitude developed in order to gain the trust of others.
+
+    However, saying something honestly sometimes doesn't bring about a good result.
+
+    When we communicate too straightforwardly, there will be times when others get
+    hurt by it.
+
+    And so when faced with a case which can be called the best example of this
+    dilemma, he finds himself greatly perplexed.
+  extra_sprites: fg_kyoichiValentine2102_h02_skin2
+sidekicks:
+- stockId: 10101
+  BIO_S01: |-
+    A teacher working at an elementary school in Orient City
+
+    An Earthling from Sendai Japan, his fullname is Kyoichi Ootomo
+
+    A former senior of Akashi at university, now a teacher who just began his
+    profession
+
+    since he originally aim to be a baseball player, he has exceptional reflexes.
+
+    Although he possesses the leadership and magnanimity that children idolize,
+    there is a part of him that aggravates things with his younger friends.
+
+    By the way, it seems like "Elementary students are the base he's supposed to
+    defend".
+  extra_sprites: fg_kyoichi_s01_skin1
 ---
-
-{% capture BIO_H01 %}
-The first time Kyoichi confronted Kaibutsu was at an elementary school he visited for TA training. His natural older brother instinct and his desire to protect younger children gave him the determination to "protect the world for his students," and gave birth to the hero "Element Teacher." On the battlefield, he wields weapons resembling the balls, vaulting boxes, and set squares that he handles in elementary school classes, and shows students "why evil doesn't pay".
-{% endcapture %}
-
-{% capture BIO_H02 %}
-His identity as  "Element Teacher" is kept secret from his students, as a special consideration to not endanger the children close to him, and because he does not want to show off his achievements. Even so, he watches with a fond smile as his students play "Element Teacher" at recess.
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10101 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_H01 %}
-Kyoichi describes himself in this new form as "Agent of Love, E.T.L.".
-
-Transformed into this figure, he is a warrior of love on a mission to rescue children in the midst of terrorism.
-
-Because they perceive romance as embarrassing, the children mutually deride one another in a negative feedback loop and create their own hell full of anger and sadness, with all their secrets exposed. 
-
-As a mature adult, he rescues children and runs through enemy strongholds in a black suit, using chalk bullets as a weapon.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-Kyoichi is not good at keeping secrets, and so whatever feelings he has for the other party, he will advance and lay it bare.
-
-This is his own attitude developed in order to gain the trust of others.
-
-However, saying something honestly sometimes doesn't bring about a good result.
-
-When we communicate too straightforwardly, there will be times when others get hurt by it.
-
-And so when faced with a case which can be called the best example of this dilemma, he finds himself greatly perplexed.
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10102 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_kyoichiValentine2102_h02_skin2" %}
-
-{% capture BIO_S01 %}
-A teacher working at an elementary school in Orient City
-
-An Earthling from Sendai Japan, his fullname is Kyoichi Ootomo
-
-A former senior of Akashi at university, now a teacher who just began his profession
-
-since he originally aim to be a baseball player, he has exceptional reflexes.
-
-Although he possesses the leadership and magnanimity that children idolize, there is a part of him that aggravates things with his younger friends.
-
-By the way, it seems like "Elementary students are the base he's supposed to defend".
-{% endcapture %}
-{% include sidekick-infobox.html stockId=10101 BIO_S01=BIO_S01 extra_sprites="fg_kyoichi_s01_skin1" %}
 
 {% include voice-table.html resourceName="kyoichi"
 h_gachaResult = "My name is Kyoichi Ootomo, <br>I'm the second home room teacher at Wangansan Elementary School for 4th grade class.<br>I'll partake in any battle to ensure my students' peaceful lives."

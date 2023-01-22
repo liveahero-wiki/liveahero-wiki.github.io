@@ -11,7 +11,7 @@
 {% assign sprites = sprites | append: "," | append: include.extra_sprites %}
 {% endif %}
 
-<div id="s{{ include.stockId }}" class="contain elementNone">
+<div id="s{{ include.stockId }}" role="tabpanel" tabindex="0"  class="tabcontent contain elementNone">
     <div class="heroinfobox">
         <div class="header">
             <div class="name">{{ page.title }}</div>
@@ -49,7 +49,7 @@
 {% if include.BIO_S01 != "" %}
 <details open>
 <summary>Side Story (Translated)</summary>
-<div markdown="1">
+<div markdown="block">
 {{ include.BIO_S01 }}
 </div>
 </details>
@@ -96,15 +96,13 @@
     {% include skill-table-v2.html skillIds=skillIdsActive %}
  
     {% if include.extraActiveSkillIds %}
-    {% assign extraActiveSkillIds = include.extraActiveSkillIds | split: "," %}
-    {% include skill-table-v2.html skillIds=extraActiveSkillIds hide_banner=true %}
+    {% include skill-table-v2.html skillIds=include.extraActiveSkillIds hide_banner=true %}
     {% endif %}
 
     <h3>Passive</h3>
     {% include skill-table-v2.html skillIds=skillIdsPassive %}
 
     {% if include.extraPassiveSkillIds %}
-    {% assign extraPassiveSkillIds = include.extraPassiveSkillIds | split: "," %}
-    {% include skill-table-v2.html skillIds=extraPassiveSkillIds hide_banner=true %}
+    {% include skill-table-v2.html skillIds=include.extraPassiveSkillIds hide_banner=true %}
     {% endif %}
 </div>

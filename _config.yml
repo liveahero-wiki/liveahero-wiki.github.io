@@ -21,6 +21,7 @@ defaults:
   - scope:
       type: "charas"
     values:
+      layout: chara
       unreleased: false
       additional_scripts: ["/assets/atlas.min.js"]
   - scope:
@@ -62,3 +63,7 @@ exclude:
   - CONTRIBUTING.md
   - ".git"
   - "cdn/.git"
+
+compress_html:
+  ignore:
+    envs: ["development"]

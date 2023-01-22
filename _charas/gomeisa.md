@@ -2,38 +2,58 @@
 title: Gomeisa
 characterId: 33
 h2:
-  title: "\"Holy Frost\" Gomeisa"
+  title: '"Holy Frost" Gomeisa'
+heroes:
+- stockId: 10331
+  BIO_H01: |-
+    Gomeisa wears a costume that resembles the costume he wore when he prayed to the
+    sacred tree in his home town, and fights on the battlefield as a dancer hero.
+    However, due to him being a pacifist who hates hurting others, he rarely ever
+    does his opponent any harm. His value comes from the healing crystals made of
+    pure sunlight that are produced on the surface of his body. Through dance, he is
+    able to scatter those crystals around, and any allies that are exposed to said
+    light will be healed.
+  BIO_H02: |-
+    He hates disputes, loves cute things and wants to get along with everyone. He
+    has the desire to be friends with anyone, dance and play with them, which is why
+    he chose the path that he is on, going to the battlefield for that reason only.
+    He believes that any villain, even Kaibutsu can one day get to know each other
+    and get along with everyone. He dances on the battlefield for peace, hoping that
+    one day that desire will be fulfilled.
+- stockId: 10332
+  BIO_H01: |-
+    I want everyone, adults and children alike, to enjoy Christmas with a smile on
+    their faces.<br> Its too sad that the festival is being threatened by someone
+    and canceled!<br> Thinking this, Gomeisa has a new hero form obtained from his
+    past memories.<br> From his palms and feet, the ice wall builds up to envelop
+    and protect everyone.<br> The shining smile ever etched upon his face and
+    charming dances are meant to brighten up the day of the festival.<br> As a
+    blessed dancer, his wish is sure to make those who see him happy.
+  BIO_H02: |-
+    The sacred tree in his homeland one winter day had become frozen in a protective
+    layer of ice in order to protect itself from the freezing winter wind.<br>The
+    snowy Christmas Day Kamakura, which Procy had offered to make with him to cheer
+    him up.<br>These things taught Gomeisa about the inner warmth that can be found
+    within the ice and snow.<br>The knowledge he gained in his homeland and the warm
+    memories of Christmas strengthened Gomeisa's feelings and led him to this new
+    form.
+  passiveSkillIds:
+  - '8033201'
+  - '8033202'
+  - '8033203'
+  extra_sprites: fg_gomeisaXmasMelt2212_h02_skin2
+sidekicks:
+- stockId: 10331
+  BIO_S01: |-
+    Gomeisa is a young giant alien working as a waiter in a place where heroes
+    gather under Procy's management. He is originally from a planet with a
+    civilization that lives with giant trees. He loves dancing and praying to those
+    very same trees and the gods above them. He is innocent, kind, naive and very
+    unsuspecting of others. Having no qualm with being touched, showing no
+    hesitation when asked to undress, causing tons of clumsy accidents due to his
+    massive body; Procy's just at a loss with him.
+  extra_sprites: fg_gomeisa_s01_skin1,fg_gomeisa_s01_skin2
 ---
-
-{% capture BIO_H01 %}
-Gomeisa wears a costume that resembles the costume he wore when he prayed to the sacred tree in his home town, and fights on the battlefield as a dancer hero. However, due to him being a pacifist who hates hurting others, he rarely ever does his opponent any harm. His value comes from the healing crystals made of pure sunlight that are produced on the surface of his body. Through dance, he is able to scatter those crystals around, and any allies that are exposed to said light will be healed.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-He hates disputes, loves cute things and wants to get along with everyone. He has the desire to be friends with anyone, dance and play with them, which is why he chose the path that he is on, going to the battlefield for that reason only. He believes that any villain, even Kaibutsu can one day get to know each other and get along with everyone. He dances on the battlefield for peace, hoping that one day that desire will be fulfilled.
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10331 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_H01 %}
-I want everyone, adults and children alike, to enjoy Christmas with a smile on their faces.<br>
-Its too sad that the festival is being threatened by someone and canceled!<br>
-Thinking this, Gomeisa has a new hero form obtained from his past memories.<br>
-From his palms and feet, the ice wall builds up to envelop and protect everyone.<br>
-The shining smile ever etched upon his face and charming dances are meant to brighten up the day of the festival.<br>
-As a blessed dancer, his wish is sure to make those who see him happy.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-The sacred tree in his homeland one winter day had become frozen in a protective layer of ice in order to protect itself from the freezing winter wind.<br>The snowy Christmas Day Kamakura, which Procy had offered to make with him to cheer him up.<br>These things taught Gomeisa about the inner warmth that can be found within the ice and snow.<br>The knowledge he gained in his homeland and the warm memories of Christmas strengthened Gomeisa's feelings and led him to this new form.
-{% endcapture %}
-{% include hero-infobox.html stockId=10332 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8033201,8033202,8033203" extra_sprites="fg_gomeisaXmasMelt2212_h02_skin2" %}
-
-{% capture BIO_S01 %}
-Gomeisa is a young giant alien working as a waiter in a place where heroes gather under Procy's management. He is originally from a planet with a civilization that lives with giant trees. He loves dancing and praying to those very same trees and the gods above them. He is innocent, kind, naive and very unsuspecting of others. Having no qualm with being touched, showing no hesitation when asked to undress, causing tons of clumsy accidents due to his massive body; Procy's just at a loss with him.
-{% endcapture %}
-
-{% include sidekick-infobox.html stockId=10331 BIO_S01=BIO_S01 extra_sprites="fg_gomeisa_s01_skin1,fg_gomeisa_s01_skin2" %}
 
 {% include voice-table.html resourceName="gomeisa"
 h_gachaResult = "Gomeisa here, the peace dancer!<br>May everyone can dance and have fun together!<br>This is my dream!"

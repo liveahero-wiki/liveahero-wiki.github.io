@@ -1,30 +1,35 @@
 ---
 title: Fire Trainee
 characterId: 76
+heroes:
+- stockId: 10761
+  BIO_H01: |-
+    There are many scenes where alien heroes are active on Earth, and heroes with
+    high fame are usually aliens born with high physical abilities.
+
+    As earthlings, they are aware that they do not have such unique physical
+    abilities.
+
+    However, they believe that there are things only they can protect and confront
+    because they were born and raised on the earth.
+
+    With strong beliefs, they train hard everyday, and occasionally demonstrate
+    their ability to defeat even such physically capable aliens.
+sidekicks:
+- stockId: 10761
+  BIO_S01: |-
+    Earthling heroes that become heroes to protect Earth.
+
+    With strong awareness of their identity as heroes, they don't let go of their
+    helmet even when off duty.
+
+    After their work or on holiday, they are usually training in the neighborhood
+    sports gym or a hero training facility.
+
+    Maybe because the culture of heroes are brought by aliens, they hold high
+    admiration towards them, and their helmet and outfit are designed based on
+    aliens.
 ---
-
-{% capture BIO_H01 %}
-There are many scenes where alien heroes are active on Earth, and heroes with high fame are usually aliens born with high physical abilities.
-
-As earthlings, they are aware that they do not have such unique physical abilities.
-
-However, they believe that there are things only they can protect and confront because they were born and raised on the earth.
-
-With strong beliefs, they train hard everyday, and occasionally demonstrate their ability to defeat even such physically capable aliens.
-{% endcapture %}
-{% include hero-infobox.html stockId=10761 BIO_H01=BIO_H01 %}
-
-{% capture BIO_S01 %}
-Earthling heroes that become heroes to protect Earth.
-
-With strong awareness of their identity as heroes, they don't let go of their helmet even when off duty.
-
-After their work or on holiday, they are usually training in the neighborhood sports gym or a hero training facility.
-
-Maybe because the culture of heroes are brought by aliens, they hold high admiration towards them,
-and their helmet and outfit are designed based on aliens.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=10761 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="traineeFire"
 APPRECIATION = "Good work, Operator!<br>Even in training it's necessary to cool down,Proper break is also important in work!<br>Now, Rest up!"
@@ -37,3 +42,5 @@ TRAIN = "Now, bring it on!"
 TRAINED = "H-hero…won't lose…!"
 EVENTA = "Superhero has arrived!<br>Leave this to me!<br>I will finish any request quickly with this trained body!"
 %}
+
+

@@ -1,24 +1,38 @@
 ---
 title: Viscunam
 characterId: 125
+heroes:
+- stockId: 11251
+  BIO_H01: |-
+    His weapon of choice is a parallel weapon in the form of four mechanical
+    tentacles extending from his back.<br>These tentacles, born from his idea that
+    he "needs more hands to produce a perfect invention," can move as naturally as
+    physical appendages.<br>The tips of the tentacles are equipped with a mechanism
+    that allows them to emit three-pronged claws and lasers, which they use in
+    combat.<br>The tips of the arms are flexible and can be transformed into
+    whatever shape he needs at any given moment.
+  BIO_H02: |-
+    His father, whom he considers to be a great man, was once an inventor whose name
+    was known to everyone in the world.<br>However, during an attack by the
+    Kaibutsu, his father was eaten and disappeared from the world's memory.<br>He
+    was so upset and frustrated that no one remembered him that he set his sights on
+    becoming "an inventor that will never be forgotten.<br>The driving force that
+    keeps him going with his inventions, despite his daily screw-ups and repeated
+    failures, is the unforgettable frustration that he felt at that time.
+  passiveSkillIds:
+  - '8125101'
+  - '8125102'
+sidekicks:
+- stockId: 11251
+  BIO_S01: |-
+    An alien scientist who sells his inventions for a living in order to fund his
+    own pet projects on the side.<br> He is absolutely confident in his brains and
+    talent, and he is constantly researching to create the perfect invention.<br>
+    However, he has problems with his ability to properly interpret the requests of
+    his clients, so he keeps coming up with bizarre products one after another.<br>
+    Although his skills are solid, he has unusually bad luck, and his freewheeling
+    disposition often leads him to make mistakes.
 ---
-
-{% capture BIO_H01 %}
-His weapon of choice is a parallel weapon in the form of four mechanical tentacles extending from his back.<br>These tentacles, born from his idea that he "needs more hands to produce a perfect invention," can move as naturally as physical appendages.<br>The tips of the tentacles are equipped with a mechanism that allows them to emit three-pronged claws and lasers, which they use in combat.<br>The tips of the arms are flexible and can be transformed into whatever shape he needs at any given moment.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-His father, whom he considers to be a great man, was once an inventor whose name was known to everyone in the world.<br>However, during an attack by the Kaibutsu, his father was eaten and disappeared from the world's memory.<br>He was so upset and frustrated that no one remembered him that he set his sights on becoming "an inventor that will never be forgotten.<br>The driving force that keeps him going with his inventions, despite his daily screw-ups and repeated failures, is the unforgettable frustration that he felt at that time.
-{% endcapture %}
-{% include hero-infobox.html stockId=11251 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8125101,8125102" %}
-
-{% capture BIO_S01 %}
-An alien scientist who sells his inventions for a living in order to fund his own pet projects on the side.<br>
-He is absolutely confident in his brains and talent, and he is constantly researching to create the perfect invention.<br>
-However, he has problems with his ability to properly interpret the requests of his clients, so he keeps coming up with bizarre products one after another.<br>
-Although his skills are solid, he has unusually bad luck, and his freewheeling disposition often leads him to make mistakes.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=11251 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="viscunam"
 APPRECIATION = "Operator, are you feeling sleepy?<br>Lack of sleep is the enemy of inspiration.<br>If you must...
@@ -39,4 +53,3 @@ EVENTB = ""
   - Main Mécanique = Hand of Machine
   - Présentation = Presentation
   - Grand Invention = Great Invention
-
