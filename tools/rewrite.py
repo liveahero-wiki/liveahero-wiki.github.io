@@ -25,7 +25,7 @@ def main():
   files = next(os.walk("_charas"))[2]
 
   for file in files:
-    with open(os.path.join("_charas", file), "r", encoding="utf-8") as f:
+    with open(os.path.join("_charas2", file), "r", encoding="utf-8") as f:
         text = f.read()
     m = DETECT_YAML.match(text)
     front_matter: dict = yaml.safe_load(m.group(1))
@@ -59,6 +59,8 @@ def main():
                     name, value = c.split("=")
                     if name == "stockId":
                         value = int(value)
+                    if "Ids" in name:
+                        value = value.split(",")
                     if name in VAR:
                         value = VAR[name]
                     card[name] = value
@@ -76,7 +78,7 @@ def main():
 
         prev_match = m
 
-    with open(os.path.join("_temp", file), "w", encoding="utf-8", newline="\n") as f:
+    with open(os.path.join("_charas", file), "w", encoding="utf-8", newline="\n") as f:
         f.write("---\n")
         yaml.safe_dump(front_matter, f, sort_keys=False, allow_unicode=True)
         f.write("---\n\n")

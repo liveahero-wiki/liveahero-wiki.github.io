@@ -21,12 +21,9 @@ defaults:
   - scope:
       type: "charas"
     values:
+      layout: chara
       unreleased: false
       additional_scripts: ["/assets/atlas.min.js"]
-  - scope:
-      type: "temp"
-    values:
-      layout: chara
   - scope:
       type: "events"
     values:
@@ -51,8 +48,6 @@ defaults:
 
 collections:
   charas:
-    output: true
-  temp:
     output: true
   events:
     output: true

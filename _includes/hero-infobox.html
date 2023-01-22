@@ -131,7 +131,6 @@
 
 {% if include.passiveSkillIds %}
 <h3>Passive skills</h3>
-{% assign passiveSkillIds = include.passiveSkillIds | split: "," %}
-{% include skill-table-v2.html skillIds=passiveSkillIds hide_banner=true %}
+{% include skill-table-v2.html skillIds=include.passiveSkillIds hide_banner=true %}
 {% endif %}
 </div>
