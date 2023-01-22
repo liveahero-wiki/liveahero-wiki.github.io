@@ -1,21 +1,28 @@
 ---
 title: Exio
 characterId: 35
+sidekicks:
+- stockId: 10351
+  BIO_S01: |-
+    A mysterious "observer" who is a collaborator of Parallel Flight, Inc. Exio is
+    an Earthling from Sydney, Australia, and his full name is Exio Grant.
+
+    Ostensibly, he is a masseuse with a reputation for his excellent skills and
+    gentle personality, but behind the scenes, he is a member of an underground
+    organization that is working to complete a plan. He seems to harbor
+    extraordinary hostility toward the "Broker".
+
+    Even Melide, Yoshiori, and Monomasa, his closest allies, don't know much about
+    his true purpose.
+
+    However, everyone who is involved with him as a member of the underground
+    organization knows that he knows more about the ambitions of the Broker than
+    anyone else and is working to stop him.
+
+    Those who come into contact with his life and learn his true intentions will
+    learn about the position of "observers" in this world, how they are treated, and
+    even how "observers" were born.
 ---
-
-{% capture BIO_S01 %}
-A mysterious "observer" who is a collaborator of Parallel Flight, Inc. Exio is an Earthling from Sydney, Australia, and his full name is Exio Grant. 
-
-Ostensibly, he is a masseuse with a reputation for his excellent skills and gentle personality, but behind the scenes, he is a member of an underground organization that is working to complete a plan. He seems to harbor extraordinary hostility toward the "Broker".
-
-
-Even Melide, Yoshiori, and Monomasa, his closest allies, don't know much about his true purpose. 
-
-However, everyone who is involved with him as a member of the underground organization knows that he knows more about the ambitions of the Broker than anyone else and is working to stop him. 
-
-Those who come into contact with his life and learn his true intentions will learn about the position of "observers" in this world, how they are treated, and even how "observers" were born.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=10351 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="exio"
 s_gachaResult = "My my, I never thought I'd be working with you again.<br>Oh, let me introduce myself again.<br>I am Exio, the Observer of all things."

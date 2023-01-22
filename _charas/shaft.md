@@ -2,55 +2,71 @@
 title: Shaft
 characterId: 63
 h2:
-  title: "\"The Runner\" Shaft"
+  title: '"The Runner" Shaft'
+heroes:
+- stockId: 10631
+  BIO_H01: |-
+    Using a holographic car navigation type parallel weapon, he can point to the
+    path mapped to your feet.
+
+    With it, he can judge the danger of the planned course of action and find the
+    correct way to reach the destination safely.
+
+    In addition to detecting enemies and traps, it can also instruct allies to on
+    the most effective course of action, such as opportunities for surprise attacks
+    and displaying areas where enemy attacks can be avoided.
+
+    Shaft uses this to tackle any obstacle in his way.
+  BIO_H02: |-
+    Shaft has escaped from the drudgery of daily life with a new ideal of delivering
+    important people to their destination.
+
+    Even if he's not confident in himself yet, even if it's not as glamorous a life
+    as he used to have as a sports star, he stands up again with the desire to do
+    his best however he can now.
+
+    He realized that it was important to pave the way to the future with confidence,
+    not cling feebly to the past, and he grasped the steering wheel praying he would
+    not be too late.
+- stockId: 10632
+  BIO_H01: |-
+    In a place where there are no space taxis, what should he be? Shaft's conclusion
+    was that he will work to get and deliver passengers on foot.
+
+    With the agility and appearance of a rickshaw puller, he uses his parallel
+    weapon of two wheels and freely overpowers anyone with speed on the field.
+
+    The faith in his leg strength back from his rugby days, as well as his desire to
+    not leave anyone behind and save everyone are the reasons for this.
+  BIO_H02: |-
+    Shaft's life has always revolved around his team.
+
+    That is something he felt even more strongly ever since he started working as a
+    space taxi driver.
+
+    He who values harmony and bonds of his companion, will try his best to bring
+    even a makeshift team together.
+
+    It's not because he clings to his past, but because he believes that creating a
+    place for himself within the team and ensuring the smooth running of the team is
+    the way to make the most of what he has cultivated.
+  extra_sprites: fg_shaftVirtualFesta2210_h02_skin2
+sidekicks:
+- stockId: 10631
+  BIO_S01: |-
+    A former professional rugby player, he is now an Earthling who drives a space
+    cab.
+
+    When he was a rugby player, his motto was to be a player who could carry the
+    ball to the goal without falling down, and he was called "Iron Man" because of
+    his style of trying to take as many steps forward as possible even after being
+    tackled.
+
+    With a gentle and honest disposition, he has low self-esteem due to his
+    clumsiness, whenever he makes a blunder he always reflect that he needs "to pull
+    himself together".
+  extra_sprites: fg_shaft_s01_skin1,fg_shaft_s01_skin2
 ---
-
-{% capture BIO_H01 %}
-Using a holographic car navigation type parallel weapon, he can point to the path mapped to your feet.
-
-With it, he can judge the danger of the planned course of action and find the correct way to reach the destination safely.  
-
-In addition to detecting enemies and traps, it can also instruct allies to on the most effective course of action, such as opportunities for surprise attacks and displaying areas where enemy attacks can be avoided.  
-
-Shaft uses this to tackle any obstacle in his way.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-Shaft has escaped from the drudgery of daily life with a new ideal of delivering important people to their destination. 
-
-Even if he's not confident in himself yet, even if it's not as glamorous a life as he used to have as a sports star, he stands up again with the desire to do his best however he can now.  
-
-He realized that it was important to pave the way to the future with confidence, not cling feebly to the past, and he grasped the steering wheel praying he would not be too late.
-{% endcapture %}
-{% include hero-infobox.html stockId=10631 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_H01 %}
-In a place where there are no space taxis, what should he be? Shaft's conclusion was that he will work to get and deliver passengers on foot. 
-
-With the agility and appearance of a rickshaw puller, he uses his parallel weapon of two wheels and freely overpowers anyone with speed on the field. 
-
-The faith in his leg strength back from his rugby days, as well as his desire to not leave anyone behind and save everyone are the reasons for this.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-Shaft's life has always revolved around his team.
-
-That is something he felt even more strongly ever since he started working as a space taxi driver.
-
-He who values harmony and bonds of his companion, will try his best to bring even a makeshift team together.
-
-It's not because he clings to his past, but because he believes that creating a place for himself within the team and ensuring the smooth running of the team is the way to make the most of what he has cultivated.
-{% endcapture %}
-{% include hero-infobox.html stockId=10632 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_shaftVirtualFesta2210_h02_skin2" %}
-
-{% capture BIO_S01 %}
-A former professional rugby player, he is now an Earthling who drives a space cab.
-
-When he was a rugby player, his motto was to be a player who could carry the ball to the goal without falling down, and he was called "Iron Man" because of his style of trying to take as many steps forward as possible even after being tackled.
-
-With a gentle and honest disposition, he has low self-esteem due to his clumsiness, whenever he makes a blunder he always reflect that he needs "to pull himself together".
-{% endcapture %}
-{% include sidekick-infobox.html stockId=10631 BIO_S01=BIO_S01  extra_sprites="fg_shaft_s01_skin1,fg_shaft_s01_skin2" %}
 
 {% include voice-table.html resourceName="shaft"
 h_gachaResult = "I am Shaft.<br>I'm a space cab driver.<br>Leave the navigation to me.<br>I will get you to your destination...<br>No, I will take you to the future!"

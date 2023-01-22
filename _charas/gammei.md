@@ -1,28 +1,37 @@
 ---
 title: Gammei
 characterId: 6
+heroes:
+- stockId: 10061
+  BIO_H01: |-
+    Gammei transforms into Justy Arrester with a handcuff-shaped ring that has a
+    long chain which infinitely extends. Due to the ring and chain's ability to
+    expand and contract according to the captured target's size, he is able to
+    "arrest" anyone and anything regardless of size. His fighting skills on the
+    battlefield are backed up by his experience as a detective and a hero, as well
+    as his memory of originating from a metropolitan area that was destroyed by
+    kaibutsu
+  BIO_H02: |-
+    Self proclaimed "gutter cleaner", his work is by no means as glorious as his
+    hero name. There are very few clear evidences left in the cases involving
+    villain and kaibutsu. Since many of them could end up unresolved, the police
+    wanted a solution that only a hero could provide. Because of that he's going to
+    be put to work on everything, and he's going to have to tidy up everything. So
+    he goes to the scene of the crime today, complaining about it.
+sidekicks:
+- stockId: 10061
+  BIO_S01: |-
+    A detective from Orient City's municipal police department, positioned as a
+    police sergeant for the institution. He is assigned to be the one in charge of
+    investigating and supervising cases and incidents related to kaibutsu and
+    villains. An earthling from Chiba, Japan. His full name is Gammei Tsukinowa.
+    Despite looking apathetic and without a care, he takes his job as a policeman
+    very seriously. Because he belongs to the middle management, he is oftentimes
+    thrown several burdens from both above and below his position, So troubles never
+    seem to end for him. His old looking face and meagre salary are the roots of his
+    anguish.
+  extra_sprites: fg_gammei_s01_skin1
 ---
-
-{% capture BIO_H01 %}
-Gammei transforms into Justy Arrester with a handcuff-shaped ring that has a long chain which infinitely extends. Due to the ring and chain's ability to expand and contract according to the captured target's size, he is able to "arrest" anyone and anything regardless of size. His fighting skills on the battlefield are backed up by his experience as a detective and a hero, as well as his memory of originating from a metropolitan area that was destroyed by kaibutsu
-{% endcapture %}
-
-{% capture BIO_H02 %}
-Self proclaimed "gutter cleaner", his work is by no means as glorious as his hero name. There are very few clear evidences left in the cases involving villain and kaibutsu. Since many of them could end up unresolved, the police wanted a solution that only a hero could provide. Because of that he's going to be put to work on everything, and he's going to have to tidy up everything. So he goes to the scene of the crime today, complaining about it.
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10061
-BIO_H01=BIO_H01
-BIO_H02=BIO_H02
-%}
-
-{% capture BIO_S01 %}
-A detective from Orient City's municipal police department, positioned as a police sergeant for the institution. He is assigned to be the one in charge of investigating and supervising cases and incidents related to kaibutsu and villains. An earthling from Chiba, Japan. His full name is Gammei Tsukinowa. Despite looking apathetic and without a care, he takes his job as a policeman very seriously. Because he belongs to the middle management, he is oftentimes thrown several burdens from both above and below his position, So troubles never seem to end for him. His old looking face and meagre salary are the roots of his anguish.
-{% endcapture %}
-
-{% include sidekick-infobox.html stockId=10061
-BIO_S01=BIO_S01 extra_sprites="fg_gammei_s01_skin1"
-%}
 
 {% include voice-table.html resourceName="gammei"
 h_gachaResult = "Orient City police detective, My name's Gammei.<br>Investigating a case or doing hero work, I can do both.<br>If you ever find a criminal, you can always report it to me."

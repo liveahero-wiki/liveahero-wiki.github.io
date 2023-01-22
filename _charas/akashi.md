@@ -1,58 +1,75 @@
 ---
 title: Akashi
 characterId: 1
-occupation: "University Student (Part-timer)"
-Affiliation Office: "Parallel Flight"
+occupation: University Student (Part-timer)
+Affiliation Office: Parallel Flight
 h2:
-  title: "\"Water Bullet\" Akashi"
+  title: '"Water Bullet" Akashi'
+heroes:
+- stockId: 10011
+  BIO_H01: |-
+    Akashi transforms into a hero who fights with a mass of powerful flames and a
+    bat.
+
+    The ball of fire is created from 2 rings attached to both his arms, and by using
+    his own energy as a resource, he is able to throw the ball at incredible speeds
+    much like a slugger.
+  BIO_H02: |-
+    There was once a time when he got eaten by a Kaibutsu and he realised something
+    important.
+
+    During that time, he found out that things eaten by Kaibutsu not only die, but
+    they are removed from everyone's memories.
+
+    Everyone dies eventually, but those eaten by Kaibutsu aren't even allowed to be
+    remembered.
+
+    "Is there a way for me to leave some living proof...." Even today, he clasps his
+    bat and that idea looms over his thoughts.
+- stockId: 10012
+  BIO_H01: |-
+    A new form of Akashi dressed in an amphibious hero suit.
+
+    He has gained a lot of experience as a hero, and is slowly beginning to look
+    like a full-fledged hero.
+
+    He attacks by creating energy bullets from his baseball glove parallel weapon,
+    The pitching form that fires from the powerful shoulders he honed as an
+    outfielder is as quick as any fastball.
+
+    In order to recapture the hijacked resort ship, Akashi confronts the pirate
+    villains in a new form.
+  BIO_H02: |-
+    Developed by Hisaki's research team, the hero suit allow a certain degree of
+    directional transformation, in this new transformation the suit shows its true
+    value in places with a lot of water such as Muirauka IV.
+
+    By deploying a bubble-shaped shield with the mechanical units floating around,
+    it is possible to battle underwater even for a human.
+
+    Akashi seems to be concerned about the degree of exposure of his new appearance,
+    but Maculata, who was in charge of the design, seems to be satisfied with it.
+    "The design has been completed to maximize his charm!".
+  extra_sprites: fg_akashiSummerdive2108_h02_skin2,fg_akashiSummerdive2108_h02_skin3,fg_akashiSummerdive2108_h02_skin4
+  passiveSkillIds:
+  - '8001102'
+sidekicks:
+- stockId: 10011
+  BIO_S01: |-
+    Akashi is born and raised in Orient City, a native Earthling. Full name's
+    Tamamura Akashi.
+
+    He is a childhood friend of the protagonist in this universe. Despite not
+    necessarily being completely upright, he is a young man with a strong sense of
+    justice.
+
+    He is a university student who attends the Hinowa University of Physical
+    Education and Sports, a member of the baseball club and a part-timer. Although
+    his batting average in practice games is at a professional level, he tends to be
+    weak in tense situations and is unable to fully demonstrate his abilities in
+    public.
+  extra_sprites: fg_akashi_s01_skin1,fg_akashi_s01_skin2,fg_akashi_s01_skin3,fg_akashi_s01_skin4
 ---
-
-{% capture BIO_H01 %}
-Akashi transforms into a hero who fights with a mass of powerful flames and a bat. 
-
-The ball of fire is created from 2 rings attached to both his arms, and by using his own energy as a resource, he is able to throw the ball at incredible speeds much like a slugger.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-There was once a time when he got eaten by a Kaibutsu and he realised something important. 
-
-During that time, he found out that things eaten by Kaibutsu not only die, but they are removed from everyone's memories. 
-
-Everyone dies eventually, but those eaten by Kaibutsu aren't even allowed to be remembered. 
-
-"Is there a way for me to leave some living proof...." Even today, he clasps his bat and that idea looms over his thoughts.
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10011 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_H01 %}
-A new form of Akashi dressed in an amphibious hero suit.
-
-He has gained a lot of experience as a hero, and is slowly beginning to look like a full-fledged hero.
-
-He attacks by creating energy bullets from his baseball glove parallel weapon, 
-The pitching form that fires from the powerful shoulders he honed as an outfielder is as quick as any fastball.
-
-In order to recapture the hijacked resort ship, Akashi confronts the pirate villains in a new form.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-Developed by Hisaki's research team, the hero suit allow a certain degree of directional transformation, in this new transformation the suit shows its true value in places with a lot of water such as Muirauka IV.  
-
-By deploying a bubble-shaped shield with the mechanical units floating around, it is possible to battle underwater even for a human.  
-
-Akashi seems to be concerned about the degree of exposure of his new appearance, but Maculata, who was in charge of the design, seems to be satisfied with it. "The design has been completed to maximize his charm!".
-{% endcapture %}
-{% include hero-infobox.html stockId=10012 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_akashiSummerdive2108_h02_skin2,fg_akashiSummerdive2108_h02_skin3,fg_akashiSummerdive2108_h02_skin4" passiveSkillIds="8001102" %}
-
-{% capture BIO_S01 %}
-Akashi is born and raised in Orient City, a native Earthling. Full name's Tamamura Akashi.
-
-He is a childhood friend of the protagonist in this universe. Despite not necessarily being completely upright, he is a young man with a strong sense of justice.
-
-He is a university student who attends the Hinowa University of Physical Education and Sports, a member of the baseball club and a part-timer. Although his batting average in practice games is at a professional level, he tends to be weak in tense situations and is unable to fully demonstrate his abilities in public.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=10011 BIO_S01=BIO_S01 extra_sprites="fg_akashi_s01_skin1,fg_akashi_s01_skin2,fg_akashi_s01_skin3,fg_akashi_s01_skin4" %}
 
 {% include voice-table.html resourceName="akashi"
 h_gachaResult = "I'm Akashi, a college baseball player.<br>I don’t exactly look like a hero, but it’s a part-time job.<br>Looking forward to working with you!"

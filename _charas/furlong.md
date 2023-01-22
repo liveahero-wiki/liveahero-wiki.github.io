@@ -1,57 +1,70 @@
 ---
 title: Furlong
 characterId: 8
-occupation: "Firefighter"
+occupation: Firefighter
 h2:
-  title: "\"Jumping Actor\" Furlong"
+  title: '"Jumping Actor" Furlong'
+heroes:
+- stockId: 10081
+  BIO_H01: |-
+    Furlong vowed/swore an oath to "become a firefighter hotter than flames" and
+    transforms into a brave and hot hero "Burn Striker" who is the opposite of what
+    he usually is/does. Once he transforms, no matter how dangerous or perilous a
+    situation may be, he will dive head-first into the fierce fire whilst
+    proclaiming that lifesaving is the highest priority. The change in personality
+    is NOT due to the weapon (pump) on his back, but rather transformation itself
+    calls forth the 'sleeping' courage within him to overtake the fears he has.
+  BIO_H02: |-
+    "I wanted to change my wimpy, helplessly scared self"... This is how an
+    incredibly timid man came to be in charge of the lives of others. Because of
+    this responsibility, today too he summons up his courage and change to be his
+    incredibly confident self. Then, he bravely dive into the scene of fire, the
+    battlefield where the civilians get threatened.
+- stockId: 10082
+  extra_sprites: fg_furlongCircus2202_h02_skin2
+  BIO_H01: |-
+    When performing acrobatics at the circus, Furlong made the decision to transform
+    "to entertain people" instead of "to save people's lives".
+
+    Besides just for the sake of agility and catching the eyes of onlookers,
+    Furlong's outfit also pushes his physical ability to its utmost limit.
+
+    He practices and trains every day to save lives, learns difficult martial arts
+    and absorbs them like a sponge, and dances dazzlingly in the air in the
+    spotlight.
+
+    It's as if his original shy personality was an act.
+  BIO_H02: |-
+    Originally, his transformation was "for himself", that is to hide his weak self.
+
+    He transform because with that he can disguise his cowardly self, ecouraging
+    himself, and acting confidently.
+
+    But, in front of his deep-rooted trauma it's impossible to conceal his weakness.
+
+    That's why by changing his reason from "for himself" to "for other people", he
+    can transform into a new form.
+  passiveSkillIds:
+  - '8008201'
+sidekicks:
+- stockId: 10081
+  BIO_S01: |-
+    A firefighter belonging to Orient City's fire department.
+
+    He's an alien from another world. His full name is Hal Furlong Hale.
+
+    His basal body temperature is higher than average because he originates from a
+    planet that has a relatively hotter climate in comparision to Earth's.
+
+    Because he's resistant to high temperatures, he's helpful at rescuing lives from
+    fires.
+
+    Usually shy and timid, he's a scaredy-cat that loves peace.
+
+    He talks to everyone in an honorific form, except to Barrel who is close to his
+    age and so the only one he speaks casually with.
+  extra_sprites: fg_furlong_s01_skin1,fg_ADV_furlong_s01
 ---
-
-{% capture BIO_H01 %}
-Furlong vowed/swore an oath to "become a firefighter hotter than flames" and transforms into a brave and hot hero "Burn Striker" who is the opposite of what he usually is/does. Once he transforms, no matter how dangerous or perilous a situation may be, he will dive head-first into the fierce fire whilst proclaiming that lifesaving is the highest priority. The change in personality is NOT due to the weapon (pump) on his back, but rather transformation itself calls forth the 'sleeping' courage within him to overtake the fears he has.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-"I wanted to change my wimpy, helplessly scared self"... This is how an incredibly timid man came to be in charge of the lives of others. Because of this responsibility, today too he summons up his courage and change to be his incredibly confident self. Then, he bravely dive into the scene of fire, the battlefield where the civilians get threatened.
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10081 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_H01 %}
-When performing acrobatics at the circus, Furlong made the decision to transform "to entertain people" instead of "to save people's lives".
-
-Besides just for the sake of agility and catching the eyes of onlookers, Furlong's outfit also pushes his physical ability to its utmost limit.
-
-He practices and trains every day to save lives, learns difficult martial arts and absorbs them like a sponge, and dances dazzlingly in the air in the spotlight.
-
-It's as if his original shy personality was an act. 
-{% endcapture %}
-
-{% capture BIO_H02 %}
-Originally, his transformation was "for himself", that is to hide his weak self.
-
-He transform because with that he can disguise his cowardly self, ecouraging himself, and acting confidently.
-
-But, in front of his deep-rooted trauma it's impossible to conceal his weakness.
-
-That's why by changing his reason from "for himself" to "for other people", he can transform into a new form.
-{% endcapture %}
-{% include hero-infobox.html stockId=10082 
-extra_sprites="fg_furlongCircus2202_h02_skin2" BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8008201"%}
-
-{% capture BIO_S01 %}
-A firefighter belonging to Orient City's fire department.
-
-He's an alien from another world. His full name is Hal Furlong Hale.
-
-His basal body temperature is higher than average because he originates from a planet that has a relatively hotter climate in comparision to Earth's.
-
-Because he's resistant to high temperatures, he's helpful at rescuing lives from fires.
-
-Usually shy and timid, he's a scaredy-cat that loves peace.
-
-He talks to everyone in an honorific form, except to Barrel who is close to his age and so the only one he speaks casually with.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=10081 BIO_S01=BIO_S01 extra_sprites="fg_furlong_s01_skin1,fg_ADV_furlong_s01" %}
 
 {% include voice-table.html resourceName="furlong"
 h_gachaResult = "With burning passion,Burn striker has arrived!<br>Come on!<br>Let's put out the fire!"

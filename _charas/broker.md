@@ -1,6 +1,6 @@
 ---
 title: Broker
 unreleased: true
+sprites: fg_broker_s01
 ---
 
-{% include hero-infobox-unreleased.html sprites="fg_broker_s01" %}

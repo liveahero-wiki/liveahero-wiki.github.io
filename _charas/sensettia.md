@@ -1,25 +1,37 @@
 ---
 title: Sensettia
 characterId: 126
+heroes:
+- stockId: 11261
+  BIO_H01: |-
+    She wields a keyboard-shaped parallel weapon with a microphone and a
+    blade.<br>She can not only wield it as a melee weapon, but can also use it by
+    combining the tones she plays on the keyboard with her own singing voice.<br>Her
+    singing voice is beautiful to listen to, but when she uses it as a weapon
+    through her, its character changes.<br>Her voice and performance spread out like
+    a wave, sometimes empowering her allies, sometimes becoming a blade of sound
+    that damages her opponents.
+  BIO_H02: |-
+    In her native planet, the size of a person's wings was everything.<br>Their
+    society catered heavily in favor of those with larger wings, whether it was
+    singing talent or potential.<br>In such a society, she grew up ostracized due to
+    her tiny wings.<br>However, everyone has a dream that they want to fulfill, even
+    if they do not meet the expectations of those around them.<br>She has a dream of
+    becoming a singer-songwriter who is known throughout the galaxy, and while
+    battling her complex, she is taking the fight to the entire universe.
+sidekicks:
+- stockId: 11261
+  BIO_S01: |-
+    A winged alien girl who aims to be a singer-songwriter.<br> She has small wings
+    on her back.<br> She has a tendency to push people away, but she is
+    straightforward about her dreams and is a hard worker.<br> Her proficiency in
+    singing and playing is undeniable, and she earns her travel money by performing
+    on the streets wherever she goes on her wandering journey around the
+    universe.<br> Due to the environment she grew up in she has a complex about her
+    small wings, and can become defensive about them.
+  extraPassiveSkillIds:
+  - '8126101'
 ---
-
-{% capture BIO_H01 %}
-She wields a keyboard-shaped parallel weapon with a microphone and a blade.<br>She can not only wield it as a melee weapon, but can also use it by combining the tones she plays on the keyboard with her own singing voice.<br>Her singing voice is beautiful to listen to, but when she uses it as a weapon through her, its character changes.<br>Her voice and performance spread out like a wave, sometimes empowering her allies, sometimes becoming a blade of sound that damages her opponents.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-In her native planet, the size of a person's wings was everything.<br>Their society catered heavily in favor of those with larger wings, whether it was singing talent or potential.<br>In such a society, she grew up ostracized due to her tiny wings.<br>However, everyone has a dream that they want to fulfill, even if they do not meet the expectations of those around them.<br>She has a dream of becoming a singer-songwriter who is known throughout the galaxy, and while battling her complex, she is taking the fight to the entire universe.
-{% endcapture %}
-{% include hero-infobox.html stockId=11261 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_S01 %}
-A winged alien girl who aims to be a singer-songwriter.<br>
-She has small wings on her back.<br>
-She has a tendency to push people away, but she is straightforward about her dreams and is a hard worker.<br>
-Her proficiency in singing and playing is undeniable, and she earns her travel money by performing on the streets wherever she goes on her wandering journey around the universe.<br>
-Due to the environment she grew up in she has a complex about her small wings, and can become defensive about them.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=11261 BIO_S01=BIO_S01 extraPassiveSkillIds="8126101" %}
 
 {% include voice-table.html resourceName="sensettia"
 APPRECIATION = "Operator! Eat this!<br>It's gonna be rough on your throat managing everyone in battle.<br>This is my favorite throat lozenge! Take some for the road!"

@@ -1,42 +1,56 @@
 ---
 title: Santetsu
 characterId: 112
+heroes:
+- stockId: 11121
+  BIO_H01: |-
+    His quirk of having an unusual strong interest and knowledge of books is
+    probably reflected in his abilities as a hero.
+
+    By creating an "index" with arbitrary conditions, it is possible to manipulate
+    space-time and events, such as replacing the actions of an opponent or ally.
+
+    In addition, by embodying a book read in the past based on memory and "quoting"
+    a sentence from it, he can reflect the event in reality as per the extracted
+    sentence.
+
+    But, he need to close his eyes, concentrate, and not move to use it.
+  BIO_H02: |-
+    For him, who had been alone in his family since childhood, books were his
+    salvation and his life itself.
+
+    Therefore, he became a hero with a wish to read every book that exists in the
+    world.
+
+    To protect all the precious books from people who have no idea of their value.
+
+    With his love of books and his habit of reading each book to memory, he will
+    eventually become a person with a knowledge base that no one else in the world
+    can match.
+  passiveSkillIds:
+  - '8112101'
+  - '8112102'
+  - '8112103'
+  - '8112104'
+  extra_sprites: fg_santetsu_h01_skin2,fg_santetsu_h01_skin3
+sidekicks:
+- stockId: 11121
+  BIO_S01: |-
+    A librarian at the new national library. An earthling from Okayama, Japan, his
+    name is Santetsu Tokuhara.
+
+    He has zero interest in anything else that is not reading or collecting books,
+    his unkempt hair and unshaven beard is a testament to his slothful nature.
+
+    "so troublesome" is his favorite saying.
+
+    Despite this, he has the ability to memorize any book that he has already read
+    once, even remembering the contents of books that is no longer exist, making him
+    quite valuable to various organization.
+
+    He live by the rule of doing what's asked of him perfectly with the minimum
+    effort possible.
 ---
-{% capture BIO_H01 %}
-His quirk of having an unusual strong interest and knowledge of books is probably reflected in his abilities as a hero.
-
-By creating an "index" with arbitrary conditions, it is possible to manipulate space-time and events, such as replacing the actions of an opponent or ally. 
-
-In addition, by embodying a book read in the past based on memory and "quoting" a sentence from it, he can reflect the event in reality as per the extracted sentence.
-
-But, he need to close his eyes, concentrate, and not move to use it.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-For him, who had been alone in his family since childhood, books were his salvation and his life itself.
-
-Therefore, he became a hero with a wish to read every book that exists in the world.
-
-To protect all the precious books from people who have no idea of their value.
-
-With his love of books and his habit of reading each book to memory, he will eventually become a person with a knowledge base that no one else in the world can match.
-{% endcapture %}
-{% include hero-infobox.html stockId=11121 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8112101,8112102,8112103,8112104"
-extra_sprites="fg_santetsu_h01_skin2,fg_santetsu_h01_skin3"
-%}
-
-{% capture BIO_S01 %}
-A librarian at the new national library. An earthling from Okayama, Japan, his name is Santetsu Tokuhara.
-
-He has zero interest in anything else that is not reading or collecting books, his unkempt hair and unshaven beard is a testament to his slothful nature.
-
-"so troublesome" is his favorite saying. 
-
-Despite this, he has the ability to memorize any book that he has already read once, even remembering the contents of books that is no longer exist, making him quite valuable to various organization.
-
-He live by the rule of doing what's asked of him perfectly with the minimum effort possible.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=11121 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="santetsu"
 h_gachaResult = "I'm Santetsu, a librarian at the new national library.<br>Haah, request for hero work…<br>Can I finish reading this first?"

@@ -1,58 +1,72 @@
 ---
 title: Mokdai
 characterId: 2
-occupation: "Video Production Staff"
-Affiliation Office: "Parallel Flight"
+occupation: Video Production Staff
+Affiliation Office: Parallel Flight
 h2:
-  title: "\"Holy Night\" Mokdai"
+  title: '"Holy Night" Mokdai'
+heroes:
+- stockId: 10021
+  BIO_H01: |-
+    Transforms into a hero that combines his own image of a "cool hero" with a
+    parallel weapon that can make the most of his abilities. The gloves and shoes he
+    equips take his physical abilities to the limit, allowing him to jump high
+    altitudes and use martial arts with outstanding destructive power. This
+    equipment, which enhances his already formidable strength, is the perfect
+    armament to make him a hero.
+  BIO_H02: |-
+    For Mokdai, who has a vast array of knowledge regarding heroes,  he himself was
+    the furthest thing from his own ideal. From his appearance self evaluated as
+    uncool, to the trauma of facing down countless kaibutsu, to worries of losing
+    his nerve in the face of a horde, being a hero seemed like an unattainable
+    dream. It was also the existence of that particular hero and operator that
+    changed his mind.
+  extra_sprites: fg_mokdai_h01_skin2
+- stockId: 10022
+  BIO_H01: |-
+    Even as a fierce battle loomed, Mokdai's desire to deliver joy and gorgeous
+    sights to viewers gave him a new form and power.
+
+    The inside of his present bag-shaped parallel weapon is filled with ether, and
+    generates an energy that revitalizes the person who touches it.
+
+    The secondary sled-shaped parallel weapon allow him to deliver wherever the
+    target is, and since the it is composed of energy, it can also be used to attack
+    enemies.
+
+    Mokdai rushes through the holy night sky to those who are waiting for Christmas.
+  BIO_H02: |-
+    For Mokdai, Christmas is the most anticipated day of the year.
+
+    By the time he was old enough to remember, Mokdai was already living his life on
+    Earth.
+
+    His childhood memories were of the camp for refugees from the destruction of
+    their planet by Kaibutsu.
+
+    Although they could not shake off the horror of the Kaibutsu, they still
+    celebrated Christmas with a warm, though not sumptuous, meal together.
+
+    With that warmth in his heart, Mokdai sincerely hopes that happiness will come
+    equally to all people on this one day.
+  extra_sprites: fg_mokdaiMeteorite2112_h01_skin2,fg_mokdaiMeteorite2112_h01_skin3,fg_mokdaiMeteorite2112_h02_skin2,fg_mokdaiMeteorite2112_h02_skin3,fg_mokdaiMeteorite2112_h02_skin4,fg_mokdaiMeteorite2112_h02_skin5
+sidekicks:
+- stockId: 10021
+  BIO_S01: |-
+    A friendly young man, senior employee of the company where the protagonist works
+    at. Mainly in charge of camera work and video direction.
+
+    Although he has the qualities of a beastman-like alien, he was born and raised
+    in fukuoka, japan
+
+    He's a geek possessing a wide range of knowledge about heroes, villains, and
+    kaibutsu、 Since he's a smart person, he can also partake in formulating
+    strategies on the field.
+
+    Although his body is plump and looks soft, his bloodline carries an effect that
+    grants him terrifying superhuman strength.
+  extra_sprites: fg_mokdai_s01_skin1
 ---
-
-{% capture BIO_H01 %}
-Transforms into a hero that combines his own image of a "cool hero" with a parallel weapon that can make the most of his abilities. The gloves and shoes he equips take his physical abilities to the limit, allowing him to jump high altitudes and use martial arts with outstanding destructive power. This equipment, which enhances his already formidable strength, is the perfect armament to make him a hero.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-For Mokdai, who has a vast array of knowledge regarding heroes,  he himself was the furthest thing from his own ideal. From his appearance self evaluated as uncool, to the trauma of facing down countless kaibutsu, to worries of losing his nerve in the face of a horde, being a hero seemed like an unattainable dream. It was also the existence of that particular hero and operator that changed his mind.
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10021 BIO_H01=BIO_H01 BIO_H02=BIO_H02 
-extra_sprites="fg_mokdai_h01_skin2" %}
-
-{% capture BIO_H01 %}
-Even as a fierce battle loomed, Mokdai's desire to deliver joy and gorgeous sights to viewers gave him a new form and power.
-
-The inside of his present bag-shaped parallel weapon is filled with ether, and generates an energy that revitalizes the person who touches it.
-
-The secondary sled-shaped parallel weapon allow him to deliver wherever the target is, and since the it is composed of energy, it can also be used to attack enemies.
-
-Mokdai rushes through the holy night sky to those who are waiting for Christmas.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-For Mokdai, Christmas is the most anticipated day of the year.
-
-By the time he was old enough to remember, Mokdai was already living his life on Earth.
-
-His childhood memories were of the camp for refugees from the destruction of their planet by Kaibutsu.
-
-Although they could not shake off the horror of the Kaibutsu, they still celebrated Christmas with a warm, though not sumptuous, meal together.
-
-With that warmth in his heart, Mokdai sincerely hopes that happiness will come equally to all people on this one day.
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10022 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_mokdaiMeteorite2112_h01_skin2,fg_mokdaiMeteorite2112_h01_skin3,fg_mokdaiMeteorite2112_h02_skin2,fg_mokdaiMeteorite2112_h02_skin3,fg_mokdaiMeteorite2112_h02_skin4,fg_mokdaiMeteorite2112_h02_skin5" %}
-
-{% capture BIO_S01 %}
-A friendly young man, senior employee of the company where the protagonist works at. Mainly in charge of camera work and video direction.
-
-Although he has the qualities of a beastman-like alien, he was born and raised in fukuoka, japan
-
-He's a geek possessing a wide range of knowledge about heroes, villains, and kaibutsu、
-Since he's a smart person, he can also partake in formulating strategies on the field.
-
-Although his body is plump and looks soft, his bloodline carries an effect that grants him terrifying superhuman strength.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=10021 BIO_S01=BIO_S01 extra_sprites="fg_mokdai_s01_skin1" %}
 
 {% include voice-table.html resourceName="mokdai"
 h_gachaResult = "I'm Mokdai, a cameraman.<br>If you need a battle live filmed, you can leave it to me!<br>...Eh!? y-you want me to do the fighting!?"

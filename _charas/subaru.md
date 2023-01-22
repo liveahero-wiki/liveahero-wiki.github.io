@@ -1,30 +1,37 @@
 ---
 title: Subaru
 characterId: 27
+heroes:
+- stockId: 10271
+  BIO_H01: |-
+    As a writer, he transform into a hero with a very rare parallel weapon, capable
+    of rewriting the "flow" in a designated place. His parallel weapon, shaped like
+    his favourite fountain pen, has the potential to alter the future with the
+    condition that any changes made should fit naturally with the flow of the story,
+    he can change the battle situation by writing on a floating manuscript. However,
+    the weakness is that it is handwritten, so it takes time to write.
+  BIO_H02: |-
+    His desire is to write "The greatest masterpiece that approach the truth of
+    reality", His creative spirit is based in the Kaibutsu attack that took place in
+    his hometown. Each person who run about trying to escape has many bonds or loves
+    towards each other, and this experience prompt him to spun many drama about it.
+    Those are things one cannot experience by shutting themselves in a library
+    alone. Even though it feels inappropriate, back then he feels like his world has
+    been expanded, and so today too he picks up his fountain pen, for the sake of
+    creating a masterpiece that best reflect that reality.
+sidekicks:
+- stockId: 10271
+  BIO_S01: |-
+    Subaru is a novelist who lives and works in Orient city. He is an earthling from
+    Japan who comes from Hamamatsu, with his full name and pen name being Nobeyama
+    Subaru. With a slightly old-fashioned writing style and incredibly overwhelming
+    story composition, he has managed to gather a certain fan base. His literary
+    works consist a lot of humanity, but in actuality, he acts like an old man who
+    is an unfriendly, jerky and sarcastic cynic.  He tends to dislike unnecessary
+    outings and situations where he is disturbed by others, because it throws his
+    life into disorder, which is why he also tends to withdraw from things.
+  extra_sprites: fg_subaru_s01_skin1
 ---
-
-{% capture BIO_H01 %}
-As a writer, he transform into a hero with a very rare parallel weapon, capable of rewriting the "flow" in a designated place.
-His parallel weapon, shaped like his favourite fountain pen, has the potential to alter the future with the condition that any changes made should fit naturally with the flow of the story, he can change the battle situation by writing on a floating manuscript.
-However, the weakness is that it is handwritten, so it takes time to write.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-His desire is to write "The greatest masterpiece that approach the truth of reality", His creative spirit is based in the Kaibutsu attack that took place in his hometown.
-Each person who run about trying to escape has many bonds or loves towards each other, and this experience prompt him to spun many drama about it.
-Those are things one cannot experience by shutting themselves in a library alone.
-Even though it feels inappropriate, back then he feels like his world has been expanded,
-and so today too he picks up his fountain pen, for the sake of creating a masterpiece that best reflect that reality.
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10271 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_S01 %}
-Subaru is a novelist who lives and works in Orient city. He is an earthling from Japan who comes from Hamamatsu, with his full name and pen name being Nobeyama Subaru. With a slightly old-fashioned writing style and incredibly overwhelming story composition, he has managed to gather a certain fan base. His literary works consist a lot of humanity, but in actuality, he acts like an old man who is an unfriendly, jerky and sarcastic cynic. 
-He tends to dislike unnecessary outings and situations where he is disturbed by others, because it throws his life into disorder, which is why he also tends to withdraw from things.
-{% endcapture %}
-
-{% include sidekick-infobox.html stockId=10271 BIO_S01=BIO_S01 extra_sprites="fg_subaru_s01_skin1" %}
 
 {% include voice-table.html resourceName="subaru"
 h_gachaResult = "Nobeyama Subaru, more or less a writer.<br>Please don't call me too often.<br>I'm better suited and prefer to create my story alone in a quiet place."
@@ -52,11 +59,10 @@ RELATION = "I have known Kyoichi since elementary school but,<br>if he's going t
 TOUCH = "N...w-why are you touching me.<br>Is it because you find it funny, this old fashioned clothes , or because of my figure...<br>E, this is fine? A-alright…"
 TRAIN = "Training is not in my nature, but there are some things I want to try."
 TRAINED = "I-i think that's enough... can I go home?"
-
 %}
 
 ## Notes
 
 - His full name is Subaru Nobeyama (野辺山 スバル)
 - Subaru is likely based on the star cluster [Pleiades](https://en.wikipedia.org/wiki/Pleiades) (which is known as subaru in japan)
-- Nobeyama is likely based on [Nobeyama](https://en.wikipedia.org/wiki/Nobeyama_radio_observatory) radio observatory located in Nagano prefecture and part of National Astronomical Observatory of Japan, this is the highest station among other radio observatory in japan at 1350 Metres altitude above sea level 
+- Nobeyama is likely based on [Nobeyama](https://en.wikipedia.org/wiki/Nobeyama_radio_observatory) radio observatory located in Nagano prefecture and part of National Astronomical Observatory of Japan, this is the highest station among other radio observatory in japan at 1350 Metres altitude above sea level

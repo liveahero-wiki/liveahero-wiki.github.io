@@ -1,31 +1,40 @@
 ---
 title: Seiichiro
 characterId: 114
+sidekicks:
+- stockId: 11141
+  BIO_S01: |-
+    An observer who serves as the chief operator of UEHA japan branch, also the
+    Parliamentary Secretary at the Ministry of Regional Defense.
+
+    Born in Sakai, Japan, his full name is Seiichiro Tenma.
+
+    A confident man who boasts of his advantages: sharp mind, handsome, athletic,
+    and comes from a prominent family.
+
+    Often being shunned in the ministry due to his unyielding and unforgiving
+    attitude towards injustice.
+
+    Okitaka likes him due to His peerless ability to listen, compiling information
+    from others, and lead the team.
+
+    Since his awakening as an "observer" at an early age, it was his overwhelming
+    confidence and high pride that protected him from the inquisitive looks of those
+    around him.
+
+    A resolute attitude against irrationality, he overwrite discrimination with his
+    charisma and competence.
+
+    His somewhat narcissistic attitude is a testament to his life of resisting
+    external pressure.
+
+    The bizarre rebellious spirit is also directed at the intervenors, and he
+    continues to work in his underground organization to achieve revenge against
+    them.
+  extraPassiveSkillIds:
+  - '8114101'
+  extra_sprites: fg_seiichiro_s01_skin1,fg_seiichiro_s01_skin2,fg_seiichiro_s01_skin3
 ---
-
-{% capture BIO_S01 %}
-An observer who serves as the chief operator of UEHA japan branch, also the Parliamentary Secretary at the Ministry of Regional Defense.
-
-Born in Sakai, Japan, his full name is Seiichiro Tenma.
-
-A confident man who boasts of his advantages: sharp mind, handsome, athletic, and comes from a prominent family.
-
-Often being shunned in the ministry due to his unyielding and unforgiving attitude towards injustice.
-
-Okitaka likes him due to His peerless ability to listen, compiling information from others, and lead the team.
-
-
-Since his awakening as an "observer" at an early age, it was his overwhelming confidence and high pride that protected him from the inquisitive looks of those around him.
-
-A resolute attitude against irrationality, he overwrite discrimination with his charisma and competence.
-
-His somewhat narcissistic attitude is a testament to his life of resisting external pressure.
-
-The bizarre rebellious spirit is also directed at the intervenors, and he continues to work in his underground organization to achieve revenge against them.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=11141 BIO_S01=BIO_S01 extraPassiveSkillIds="8114101"
-extra_sprites="fg_seiichiro_s01_skin1,fg_seiichiro_s01_skin2,fg_seiichiro_s01_skin3"
-%}
 
 {% include voice-table.html resourceName="seiichiro"
 s_gachaResult = "Parliament secretary for country defense, Seiichiro Tenma.<br>Leave it to me.<br>Your security, and your growth as an operator, I will make sure take care all of it."

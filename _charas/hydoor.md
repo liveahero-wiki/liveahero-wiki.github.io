@@ -1,37 +1,48 @@
 ---
 title: Hydoor
 characterId: 17
+heroes:
+- stockId: 10171
+  BIO_H01: |-
+    He is a survivor of the indigenous tribe of his native planet Muirauka IV, and
+    the costume he wears as a hero is also that of his people's traditional best
+    clothes.
+
+    His parallel weapon, which takes the form of a course rope, can create an
+    "ocean" filled with liquid-like energy in the space where the rope is released.
+
+    As someone who lives together with the ocean, he can freely swim in that
+    "ocean", toying with his opponent, and using water current for combat.
+  BIO_H02: |-
+    Hot-blooded, greedy and ruffian like, but his wish is purely to "Protect the
+    Beautiful Ocean".
+
+    The ocean in his homeland and his tribe was once nearly destroyed, due to the
+    sudden influx of races from another planet and their development competition and
+    exploitation.
+
+    His grief and rebellion against the situation made his young mind fierce and
+    drove him to become a pirate.
+
+    That's why, he will never forgive anyone who pollute the ocean, the source of
+    life, even if that ocean is in another planet.
+sidekicks:
+- stockId: 10171
+  BIO_S01: |-
+    A swimmer employed by the sporting goods company Phalanx.
+
+    Long ago on the ocean planet Muilauka IV, he rampaged as a fearsome pirate
+    villain, but after being captured and rehabilitated by heroes, he has become a
+    pro swimmer and hero.
+
+    As a former pirate, he has a bad temper and a lot of blood on his hands, but
+    because he was a pirate, he has a strong sense of camaraderie and is very caring
+    towards his allies.
+
+    He is very susceptible to both flattery and provocation, so he can be easily
+    manipulated at times.
+  extra_sprites: fg_hydoor_s01_skin1
 ---
-
-{% capture BIO_H01 %}
-He is a survivor of the indigenous tribe of his native planet Muirauka IV, and the costume he wears as a hero is also that of his people's traditional best clothes.
-
-His parallel weapon, which takes the form of a course rope, can create an "ocean" filled with liquid-like energy in the space where the rope is released.
-
-As someone who lives together with the ocean, he can freely swim in that "ocean", toying with his opponent, and using water current for combat.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-Hot-blooded, greedy and ruffian like, but his wish is purely to "Protect the Beautiful Ocean".
-
-The ocean in his homeland and his tribe was once nearly destroyed, due to the sudden influx of races from another planet and their development competition and exploitation.
-
-His grief and rebellion against the situation made his young mind fierce and drove him to become a pirate.
-
-That's why, he will never forgive anyone who pollute the ocean, the source of life, even if that ocean is in another planet.
-{% endcapture %}
-{% include hero-infobox.html stockId=10171 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_S01 %}
-A swimmer employed by the sporting goods company Phalanx.
-
-Long ago on the ocean planet Muilauka IV, he rampaged as a fearsome pirate villain, but after being captured and rehabilitated by heroes, he has become a pro swimmer and hero.
-
-As a former pirate, he has a bad temper and a lot of blood on his hands, but because he was a pirate, he has a strong sense of camaraderie and is very caring towards his allies.
-
-He is very susceptible to both flattery and provocation, so he can be easily manipulated at times.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=10171 BIO_S01=BIO_S01 extra_sprites="fg_hydoor_s01_skin1" %}
 
 {% include voice-table.html resourceName="hydoor"
 h_gachaResult = "Oi oi, it's you?<br>The one who is trying to tame this Hydoor.<br>Hee, interesting.<br>You have some guts."

@@ -1,35 +1,42 @@
 ---
 title: Crowne
 characterId: 5
-occupation: "Mechanic"
+occupation: Mechanic
+heroes:
+- stockId: 10051
+  BIO_H01: |-
+    A young girl who dreamed of seeing the most advanced technology in the universe
+    remembers her dreams when she was an adult. She decides to hold that dream in
+    her heart again, and the result is a hero who fights with a tool that has the
+    ability to analyze a variety of mechanisms. The huge tool she carries accurately
+    analyzes the performance and structure of any object that she sees. It is also a
+    kind of supercomputer that can change into various forms of tools and
+    disassemble objects.
+  BIO_H02: |-
+    A "man" should be this way, a "woman" should be that way... The environment
+    around her was always filled with such words. With hobbies and personalities
+    that are "masculine" according to those around her, she has always feel out of
+    place and wanted to be a "woman" in her own right. The same thing was mentioned
+    about her dream, and she longed to have a "womanly" dream. It didn't take long
+    for her to abandon her dream once.
+sidekicks:
+- stockId: 10051
+  BIO_S01: |-
+    A mechanic affiliated with Ramjet: a spacecraft manufacturing company with the
+    largest market share on Earth.
+
+    She is an in-house mechanic and spaceship pilot who has a partnership agreement
+    with the company where the Protagonist works at. An Earthling from Seattle, USA.
+    Her full name is Crowne Applefield.
+
+    Her arms are as strong as her spirit, and she abhors being treated with contempt
+    "because she's a woman".
+
+    Since she's a geek deeply interested in high tech, when she sees rare mechas or
+    robots she has a bad habit of wanting to disassemble them and analyze their
+    structure.
+  extra_sprites: fg_crowne_s01_skin1
 ---
-
-{% capture BIO_H01 %}
-A young girl who dreamed of seeing the most advanced technology in the universe remembers her dreams when she was an adult.
-She decides to hold that dream in her heart again, and the result is a hero who fights with a tool that has the ability to analyze a variety of mechanisms.
-The huge tool she carries accurately analyzes the performance and structure of any object that she sees.
-It is also a kind of supercomputer that can change into various forms of tools and disassemble objects.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-A "man" should be this way, a "woman" should be that way... The environment around her was always filled with such words.
-With hobbies and personalities that are "masculine" according to those around her, she has always feel out of place and wanted to be a "woman" in her own right.
-The same thing was mentioned about her dream, and she longed to have a "womanly" dream.
-It didn't take long for her to abandon her dream once.
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10051 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_S01 %}
-A mechanic affiliated with Ramjet: a spacecraft manufacturing company with the largest market share on Earth.
-
-She is an in-house mechanic and spaceship pilot who has a partnership agreement with the company where the Protagonist works at. An Earthling from Seattle, USA. Her full name is Crowne Applefield.
-
-Her arms are as strong as her spirit, and she abhors being treated with contempt "because she's a woman".
-
-Since she's a geek deeply interested in high tech, when she sees rare mechas or robots she has a bad habit of wanting to disassemble them and analyze their structure.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=10051 BIO_S01=BIO_S01 extra_sprites="fg_crowne_s01_skin1"%}
 
 {% include voice-table.html resourceName="crowne"
 h_gachaResult = "I'm Crowne a Mechanic.<br>You will be my operator?<br>Well, this must be some sort of fate.<br>I'm counting on you."

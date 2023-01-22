@@ -1,40 +1,55 @@
 ---
 title: Huckle
 characterId: 34
-occupation: "Hero Office Manager"
+occupation: Hero Office Manager
+heroes:
+- stockId: 10341
+  BIO_H01: |-
+    The most famous characteristics of the S-class hero "Hopper the Face" were his
+    unbelievably high leg strength, the intricate footwork he could perform with his
+    legs, and his outstandingly superior intellect.
+
+    This has not changed even now that he has been reawakened.
+
+    With his pure white cloak fluttering, he leaps high into the air, accelerates
+    and descends in a single bound with a kick so powerful that even his partner Zap
+    the Justice is amazed.
+
+    He pretends to be ignorant of the fact that the weight he has put on since those
+    days have made the attack even more potent.
+  BIO_H02: |-
+    Although he was born with strong legs, his upbringing has a lot to do with how
+    he came to strengthen them and use them as a major feature in his arsenal.
+
+    He was once a bird in a cage, not allowed to roam freely.
+
+    This made him yearn for the outside world more and more, which led to his desire
+    to "save the world and travel it with my own two feet".
+
+    His parallel weapon, which amplifies the abilities of his legs and feet, and his
+    costume, which is reminiscent of a traveler in old tales, are born from the
+    longing of that child.
+sidekicks:
+- stockId: 10341
+  BIO_S01: |-
+    The founder and current president of the company where the Protagonist works at.
+    He is a former hero, nowadays taking command on the battlefield as a hero
+    operator. Despite being an alien from another world, he is completely
+    acclimatized to life on Earth.
+
+    Even though he is an adult with an easygoing personality and a high sense of
+    responsibility, he can be a bit absent-minded. He is also a worldly-wise man who
+    puts himself in a position as a mentor of the free-spirited Ryekie. In order to
+    command a hero, one must possess a "particular ability" to a relatively high
+    level.
+
+    He was "Hopper The Face", a S-class hero who once teamed up with Ryekie, aka Zap
+    The Justice. One day he suddenly awakened to the powers of an observer, and
+    since then he could no longer transform into a hero, he decided to retire as a
+    hero and put himself in a position to back them up. His physique and good
+    judgment on the battlefield can be attributed to this background.
+  extra_sprites: fg_huckle_s01_skin1
 ---
-
-{% capture BIO_H01 %}
-The most famous characteristics of the S-class hero "Hopper the Face" were his unbelievably high leg strength, the intricate footwork he could perform with his legs, and his outstandingly superior intellect. 
-
-This has not changed even now that he has been reawakened. 
-
-With his pure white cloak fluttering, he leaps high into the air, accelerates and descends in a single bound with a kick so powerful that even his partner Zap the Justice is amazed. 
-
-He pretends to be ignorant of the fact that the weight he has put on since those days have made the attack even more potent.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-Although he was born with strong legs, his upbringing has a lot to do with how he came to strengthen them and use them as a major feature in his arsenal.
-
-He was once a bird in a cage, not allowed to roam freely. 
-
-This made him yearn for the outside world more and more, which led to his desire to "save the world and travel it with my own two feet". 
-
-His parallel weapon, which amplifies the abilities of his legs and feet, and his costume, which is reminiscent of a traveler in old tales, are born from the longing of that child.
-{% endcapture %}
-{% include hero-infobox.html stockId=10341 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_S01 %}
-The founder and current president of the company where the Protagonist works at. He is a former hero, nowadays taking command on the battlefield as a hero operator. Despite being an alien from another world, he is completely acclimatized to life on Earth.
-
-Even though he is an adult with an easygoing personality and a high sense of responsibility, he can be a bit absent-minded. He is also a worldly-wise man who puts himself in a position as a mentor of the free-spirited Ryekie. In order to command a hero, one must possess a "particular ability" to a relatively high level.
-
-He was "Hopper The Face", a S-class hero who once teamed up with Ryekie, aka Zap The Justice.
-One day he suddenly awakened to the powers of an observer, and since then he could no longer transform into a hero, he decided to retire as a hero and put himself in a position to back them up.
-His physique and good judgment on the battlefield can be attributed to this background.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=10341 BIO_S01=BIO_S01 extra_sprites="fg_huckle_s01_skin1" %}
 
 {% include voice-table.html resourceName="huckle"
 h_gachaResult = "Hopper the Face, I have arrived.<br>From now on, our company will accomplish justice.<br>...are you prepared, newbie?"

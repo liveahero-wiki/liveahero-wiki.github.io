@@ -2,53 +2,66 @@
 title: Alchiba
 characterId: 26
 h2:
-  title: "\"The Chaser\" Alchiba"
-occupation: "Private Investigator"
+  title: '"The Chaser" Alchiba'
+occupation: Private Investigator
+heroes:
+- stockId: 10261
+  BIO_H01: |-
+    Alchiba has the belief that "finding the truth in black and white" is most
+    important, so he dyes even his jet-black wings white, transforming him into a
+    detective hero. His Parallel weapon, the monocle, has the ability to scan all
+    the information hidden by the subject and visualize it as a record, and by
+    reading, analyzing and inferring the record, the enemy's features and
+    weaknesses, even the truth of the incident that is occurring can come to light.
+  BIO_H02: |-
+    He was a police officer in the national police, but he was falsely accused of
+    uncovering the secrets that would reveal a large corruption. Since then, he has
+    been deeply distrustful of the police organization and has become obsessed with
+    "black and white". As long as there is a black-and-white incident in front of
+    him, he will continue to be a detective and hero.
+- stockId: 10262
+  BIO_H01: |-
+    Alchiba gained the appearance of an "armed detective" who seeks to uncover the
+    truth of the case with power as well as knowledge.
+
+    He infers with calm and keen thoughts to counter the terrorist destruction of
+    cultural heritage, and squeezes the trigger of his laser gun with righteous
+    fury.
+
+    The gun resembles what he had in his police days, striking him as bitterly
+    ironic, noting the painfully familiar feeling as it fits perfectly in his hand.
+
+    So, he will fly through the sandy dunes of Ten Teres with a new, highly mobile
+    form.
+  BIO_H02: |-
+    In this new form, he wears black wings instead of white even after
+    transformation.
+
+    This is a symbol of his old self, the officer past he was never able to put
+    behind him as  "the black wings that bring misery."
+
+    Now that he has gained both wisdom and power, Alchiba looks back at the police
+    organization that he turned away from years ago.
+
+    His distrust hasn't been wiped out yet, but his feelings for the police are
+    beginning to show signs of change.
+sidekicks:
+- stockId: 10261
+  BIO_S01: |-
+    A winged alien who runs a detective bureau.
+
+    Because of his good-looking facial features and captivating narrow eyes, he's a
+    self-proclaimed "nihilistic and cool" handsome detective. In reality, he's a
+    flirty playboy who tries to seduce even his own clients, showing just how
+    lecherous and greedy he is.
+
+    He tends to speak incessant bickering that could set anyone's teeth on edge.
+    Nevertheless, he firmly follows his creed that "He will fulfill any requests
+    recieved even if he dies in the process". This is because of his established
+    reputation for laboral perfection, which has the detective industry thriving
+    beyond expectation.
+  extra_sprites: fg_alchiba_s01_skin1
 ---
-
-{% capture BIO_H01 %}
-Alchiba has the belief that "finding the truth in black and white" is most important, so he dyes even his jet-black wings white, transforming him into a detective hero.
-His Parallel weapon, the monocle, has the ability to scan all the information hidden by the subject and visualize it as a record, and by reading, analyzing and inferring the record, the enemy's features and weaknesses, even the truth of the incident that is occurring can come to light.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-He was a police officer in the national police, but he was falsely accused of uncovering the secrets that would reveal a large corruption.
-Since then, he has been deeply distrustful of the police organization and has become obsessed with "black and white".
-As long as there is a black-and-white incident in front of him, he will continue to be a detective and hero.
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10261 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_H01 %}
-Alchiba gained the appearance of an "armed detective" who seeks to uncover the truth of the case with power as well as knowledge.
-
-He infers with calm and keen thoughts to counter the terrorist destruction of cultural heritage, and squeezes the trigger of his laser gun with righteous fury. 
-
-The gun resembles what he had in his police days, striking him as bitterly ironic, noting the painfully familiar feeling as it fits perfectly in his hand. 
-
-So, he will fly through the sandy dunes of Ten Teres with a new, highly mobile form.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-In this new form, he wears black wings instead of white even after transformation. 
-
-This is a symbol of his old self, the officer past he was never able to put behind him as  "the black wings that bring misery." 
-
-Now that he has gained both wisdom and power, Alchiba looks back at the police organization that he turned away from years ago.  
-
-His distrust hasn't been wiped out yet, but his feelings for the police are beginning to show signs of change.
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10262 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_S01 %}
-A winged alien who runs a detective bureau.
-
-Because of his good-looking facial features and captivating narrow eyes, he's a self-proclaimed "nihilistic and cool" handsome detective. In reality, he's a flirty playboy who tries to seduce even his own clients, showing just how lecherous and greedy he is.
-
-He tends to speak incessant bickering that could set anyone's teeth on edge. Nevertheless, he firmly follows his creed that "He will fulfill any requests recieved even if he dies in the process". This is because of his established reputation for laboral perfection, which has the detective industry thriving beyond expectation.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=10261 BIO_S01=BIO_S01 extra_sprites="fg_alchiba_s01_skin1" %}
 
 {% include voice-table.html resourceName="alchiba"
 h_gachaResult = "I'm Alchiba, your humble private investigator.<br>To meet such a wonderful client like you.<br>I'm very happy.<br>Well then, what's your request?<br>Let me see the truth in black and white."

@@ -1,42 +1,49 @@
 ---
 title: Maculata
 characterId: 59
+heroes:
+- stockId: 10591
+  BIO_H01: |-
+    As someone who has always "on the attack", she transform into a hero with a form
+    that fits her job as a designer and her strong offensive temperament.
+
+    With the ability to produce threads with material that can be used to "attack"
+    her target from the tip of her finger, she can then knit those threads to create
+    clothes with various characteristics.
+
+    With her gorgeous glittering threads, her figure when she create her clothes
+    capture the eyes of not only the viewer but also her enemy.
+  BIO_H02: |-
+    For her, "to attack" means "to fight," "to resist," and "to be yourself".
+
+    She doesn't succumb to peer pressure, she doesn't dance with the trends, she
+    makes them dance with her.
+
+    To take control and lead things to where she wants is her way of doing things.
+
+    By the custom of her tribe, she was forced to live alone, and this bring about a
+    rebellion by her against those adults, as she herself became an adult, she
+    changes to hold the identity of "I am who I am" as her most important
+    principles.
+sidekicks:
+- stockId: 10591
+  BIO_S01: |-
+    An alien woman who has an office in Orient City and is active as a fashion
+    designer.
+
+    Self-proclaimed "carnivorous woman",  with a bullish and courageous personality,
+    there is always a spirit of not letting anyone else take charge.
+
+    Taking advantage of her natural beauty and blessed body, she can be a model that
+    stands on the runway herself.
+
+    Because of her strict attitude toward herself and others, she has a slight
+    temper.
+
+    Although she is a master to Sui, the sense of distance from her best friend's
+    daughter is a little delicate because of the circumstances.
+  extra_sprites: fg_maculata_s01_skin1
 ---
-
-{% capture BIO_H01 %}
-As someone who has always "on the attack", she transform into a hero with a form that fits her job as a designer and her strong offensive temperament.
-
-With the ability to produce threads with material that can be used to "attack" her target from the tip of her finger, she can then knit those threads to create clothes with various characteristics.
-
-With her gorgeous glittering threads, her figure when she create her clothes capture the eyes of not only the viewer but also her enemy.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-For her, "to attack" means "to fight," "to resist," and "to be yourself".
-
-She doesn't succumb to peer pressure, she doesn't dance with the trends, she makes them dance with her. 
-
-To take control and lead things to where she wants is her way of doing things.
-
-By the custom of her tribe, she was forced to live alone, and this bring about a rebellion by her against those adults,
-as she herself became an adult, she changes to hold the identity of "I am who I am" as her most important principles.
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10591 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_S01 %}
-An alien woman who has an office in Orient City and is active as a fashion designer.
-
-Self-proclaimed "carnivorous woman",  with a bullish and courageous personality, there
-is always a spirit of not letting anyone else take charge.
-
-Taking advantage of her natural beauty and blessed body, she can be a model that stands on the runway herself.
-
-Because of her strict attitude toward herself and others, she has a slight temper.
-
-Although she is a master to Sui, the sense of distance from her best friend's daughter is a little delicate because of the circumstances.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=10591 BIO_S01=BIO_S01 extra_sprites="fg_maculata_s01_skin1" %}
 
 {% include voice-table.html resourceName="maculata"
 h_gachaResult = "My name is Maculata.<br>I'm a designer.<br>To think that you have an eye on me…<br>Looks like you are also an agressive one."

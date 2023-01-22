@@ -1,64 +1,79 @@
 ---
 title: Hitomi
 characterId: 19
-occupation: "Idol Singer"
+occupation: Idol Singer
 h2:
-  title: "\"Ripple Sound\" Hitomi"
+  title: '"Ripple Sound" Hitomi'
+heroes:
+- stockId: 10191
+  BIO_H01: |-
+    Dressed in gorgeous and cute stage costumes, she stands dashingly on the
+    battlefield and is active as an idol hero who calls herself "Doki doki Red".
+
+    By transmitting her own singing voice through a microphone-type parallel weapon,
+    she has the ability to give various effects to the surroundings, such as raising
+    the fighting spirit of allies and neutralizing enemies.
+
+    The idol-like behavior she has studied thoroughly catches the eyes of many
+    spectators.
+  BIO_H02: |-
+    For her, a 15-year-old girl, she has a complex about her physical abilities.
+
+    Despite being cute, she's struggling with her own abilities, which is the
+    opposite of the idol profession that is praised by everyone.
+
+    She continues to work hard every day to become a "perfect idol". Despite her
+    delicate position of "it seems to sell but not well known", her hard-working
+    appearance seems to heal and support the hearts of people who are chasing dreams
+    but are frustrated without knowing it.
+- stockId: 10192
+  BIO_H01: |-
+    Hitomi has acquired a new outfit suitable for her activities on the water planet
+    Muirauka IV.
+
+    Refusing to lose to the heat of summer, "I'm an idol warrior who fights
+    according to TPO!".
+
+    The floating speaker-shaped parallel weapons generate sound waves to fight
+    enemies.
+
+    As the "Doki Doki☆Red.Mermaid," Hitomi sings and fights with all her voice to
+    restore peace to the resort for all the fans to enjoy.
+  BIO_H02: |-
+    Hitomi's attitude toward costumes is very enthusiastic, and she spends a lot of
+    time choosing costumes that fit her concept for each of her singing activities
+    and program broadcasts.
+
+    It is only natural that Hitomi would be very interested in a hero transformation
+    research in regards to hero costume.
+
+    It may still be a long way to go to reach her goal of becoming a "perfect idol",
+    but Hitomi feels that she is one step closer to realizing her dream.
+
+    This summer's new song sung by Hitomi is now available at the music stores.
+  extra_sprites: fg_hitomiSummerdive2108_h02_skin2
+  passiveSkillIds:
+  - '8019201'
+sidekicks:
+- stockId: 10191
+  BIO_S01: |-
+    A half-Earthling and half-alien girl, located in Japan, Earth, to perform idol
+    activities.
+
+    Born in Hiroshima, Japan. Her stage name is Ayauta Hitomi.
+
+    A traditional school idol who is lively, friendly, and always does her best.
+
+    However, due to the genetic inheritance of her mother, an alien, she has
+    acquired over-engineered physical capabilities for an Earthling.
+
+    She often loses control of her abilities, so she's very prone to destroying
+    equipment unintentionally.
+
+    Because of this, she is especially afraid of situations in which she has to
+    touch another person's body, such as handshake events.
+  extra_sprites: fg_hitomi_s01_skin1
 ---
-
-{% capture BIO_H01 %}
-Dressed in gorgeous and cute stage costumes, she stands dashingly on the battlefield and is active as an idol hero who calls herself "Doki doki Red". 
-
-By transmitting her own singing voice through a microphone-type parallel weapon, she has the ability to give various effects to the surroundings, such as raising the fighting spirit of allies and neutralizing enemies. 
-
-The idol-like behavior she has studied thoroughly catches the eyes of many spectators.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-For her, a 15-year-old girl, she has a complex about her physical abilities. 
-
-Despite being cute, she's struggling with her own abilities, which is the opposite of the idol profession that is praised by everyone. 
-
-She continues to work hard every day to become a "perfect idol". Despite her delicate position of "it seems to sell but not well known", her hard-working appearance seems to heal and support the hearts of people who are chasing dreams but are frustrated without knowing it.
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10191 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_H01 %}
-Hitomi has acquired a new outfit suitable for her activities on the water planet Muirauka IV.
-
-Refusing to lose to the heat of summer, "I'm an idol warrior who fights according to TPO!".
-
-The floating speaker-shaped parallel weapons generate sound waves to fight enemies.
-
-As the "Doki Doki☆Red.Mermaid," Hitomi sings and fights with all her voice to restore peace to the resort for all the fans to enjoy.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-Hitomi's attitude toward costumes is very enthusiastic, and she spends a lot of time choosing costumes that fit her concept for each of her singing activities and program broadcasts.
-
-It is only natural that Hitomi would be very interested in a hero transformation research in regards to hero costume.
-
-It may still be a long way to go to reach her goal of becoming a "perfect idol", but Hitomi feels that she is one step closer to realizing her dream.
-
-This summer's new song sung by Hitomi is now available at the music stores.
-{% endcapture %}
-{% include hero-infobox.html stockId=10192 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_hitomiSummerdive2108_h02_skin2" passiveSkillIds="8019201" %}
-
-{% capture BIO_S01 %}
-A half-Earthling and half-alien girl, located in Japan, Earth, to perform idol activities. 
-
-Born in Hiroshima, Japan. Her stage name is Ayauta Hitomi. 
-
-A traditional school idol who is lively, friendly, and always does her best.
-
-However, due to the genetic inheritance of her mother, an alien, she has acquired over-engineered physical capabilities for an Earthling. 
-
-She often loses control of her abilities, so she's very prone to destroying equipment unintentionally. 
-
-Because of this, she is especially afraid of situations in which she has to touch another person's body, such as handshake events.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=10191 BIO_S01=BIO_S01 extra_sprites="fg_hitomi_s01_skin1" %}
 
 {% include voice-table.html resourceName="hitomi"
 h_gachaResult = "HIT☆ME with that gaze of yours! <br>Ayauta Hitomi here!<br>Pretty and strong is Hitomi's motto!<br>Let's work hard together, okay?<br>Partner-san!"

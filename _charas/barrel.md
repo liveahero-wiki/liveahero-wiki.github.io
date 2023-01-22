@@ -2,34 +2,53 @@
 title: Barrel
 characterId: 7
 h2:
-  title: "\"Cool Gunfighter\" Barrel"
+  title: '"Cool Gunfighter" Barrel'
+heroes:
+- stockId: 10071
+  BIO_H01: |-
+    He transforms into "Symphonic Trigger", a hero who wears a costume that
+    resembles the sheriff in a western movie that he has admired since he was a
+    child. With twin pistol-type parallel weapons, he subdue his target with quick
+    draw shots. When transformed, different from his usual poor skills, he can shoot
+    with one hundred percent accuracy. In battle, shooting energy bullets as much as
+    he wants, he always looks like he's having a lot of fun.
+  BIO_H02: |-
+    He appears gallantly in front of evil-doers and punish them with his twin guns.
+    Today, he keeps the peace in the city and leaves with the setting sun on his
+    back... a western movie that is often treated as old-fashioned, but he was
+    captivated by it. He wanted to be a "righteous gunman" like that sheriff who
+    fights to do justice. Such a wish transformed him into an unprecedented police
+    hero.
+- stockId: 10072
+  BIO_H01: |-
+    After displaying his desire to be able to have appropriate battles under the
+    scorching sun, Barrel managed to summon a new hero form for himself. Thanks to
+    Barrel's newfound motivation/fighting spirit given to him by his new form, he
+    equipped multiple water guns which shoot violent water splashes and he now
+    dances around the battlefield, managing to gain popularity and points while also
+    appealing to his audience with his refreshing, handsome face. The water in the
+    tank attached to his gun is infinite as long as he has energy to supply it with.
+  BIO_H02: |-
+    He had been practing his aim for a long time, longing to be a good-looking
+    gunslinger, and it was quite a shock for him to be overpowered by another in
+    terms of "attractiveness" in battle. It was as if he had been exposed to a
+    weakness that gunslingers, who are always exposed to fire and heat, cannot
+    avoid. What gave him inspiration was the intense water aiming skill of his
+    friend, the fireman hero, at a water pistol target shooting stall. As a lover of
+    summer and the water, it was inevitable that he would want to be a hero who
+    deals with water and is appropriate for summer.
+sidekicks:
+- stockId: 10071
+  BIO_S01: |-
+    A Police officer from Orient City's municipal police department, working in a
+    police box. An alien who grew up in Houston, USA. Honest, straightforward and
+    very friendly, a model police officer if not for his excessive adoration for
+    western sheriffs and tendency to jump to conclusions at the drop of a hat. He
+    uses a tranquilizer gun, but have very poor shooting skills, no matter how many
+    rounds are fired he can't hit his target, not even the surrounding onlookers
+    have ever got hit.
+  extra_sprites: fg_barrel_s01_skin1
 ---
-{% capture BIO_H01 %}
-He transforms into "Symphonic Trigger", a hero who wears a costume that resembles the sheriff in a western movie that he has admired since he was a child. With twin pistol-type parallel weapons, he subdue his target with quick draw shots. When transformed, different from his usual poor skills, he can shoot with one hundred percent accuracy. In battle, shooting energy bullets as much as he wants, he always looks like he's having a lot of fun.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-He appears gallantly in front of evil-doers and punish them with his twin guns. Today, he keeps the peace in the city and leaves with the setting sun on his back... a western movie that is often treated as old-fashioned, but he was captivated by it. He wanted to be a "righteous gunman" like that sheriff who fights to do justice. Such a wish transformed him into an unprecedented police hero.
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10071 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_H01 %}
-After displaying his desire to be able to have appropriate battles under the scorching sun, Barrel managed to summon a new hero form for himself. Thanks to Barrel's newfound motivation/fighting spirit given to him by his new form, he equipped multiple water guns which shoot violent water splashes and he now dances around the battlefield, managing to gain popularity and points while also appealing to his audience with his refreshing, handsome face.
-The water in the tank attached to his gun is infinite as long as he has energy to supply it with.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-He had been practing his aim for a long time, longing to be a good-looking gunslinger, and it was quite a shock for him to be overpowered by another in terms of "attractiveness" in battle. It was as if he had been exposed to a weakness that gunslingers, who are always exposed to fire and heat, cannot avoid. What gave him inspiration was the intense water aiming skill of his friend, the fireman hero, at a water pistol target shooting stall. As a lover of summer and the water, it was inevitable that he would want to be a hero who deals with water and is appropriate for summer.
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10072 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_S01 %}
-A Police officer from Orient City's municipal police department, working in a police box. An alien who grew up in Houston, USA. Honest, straightforward and very friendly, a model police officer if not for his excessive adoration for western sheriffs and tendency to jump to conclusions at the drop of a hat. He uses a tranquilizer gun, but have very poor shooting skills, no matter how many rounds are fired he can't hit his target, not even the surrounding onlookers have ever got hit.
-{% endcapture %}
-
-{% include sidekick-infobox.html stockId=10071 BIO_S01=BIO_S01 extra_sprites="fg_barrel_s01_skin1" %}
 
 {% include voice-table.html resourceName="barrel"
 h_gachaResult = "Orient City Police Department, I'm Officer Barrel!<br>In the name of justice,I will fight!<br>So, where's the crime scene!?<br>Come on,come on!!"

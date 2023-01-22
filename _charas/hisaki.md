@@ -2,61 +2,81 @@
 title: Hisaki
 characterId: 53
 h2:
-  title: "\"Joyful Diver\" Hisaki"
+  title: '"Joyful Diver" Hisaki'
+heroes:
+- stockId: 10531
+  BIO_H01: |-
+    He dreams of grasping a glorious future with his hand, and his parallel weapon
+    is an equipment that can reproduce \[The Future\] in his hands.
+
+    By accessing the brain of his future self, which has succeeded in reaching the
+    cutting edge of the entire universe,
+
+    he can output things on his glove that cannot be created with modern technology
+    and can be used as a weapon.
+
+    These weapons, made up of unknown technology that can only be described as the
+    product of magic, foreshadow the infinite development of science and technology.
+  BIO_H02: |-
+    He is proud of himself as a genius and acts confidently, asserting
+    straightforwardly his desires for self-expression and approval, desires that are
+    often perceived in a negative light.
+
+    This personality was shaped by his defiance against the people around him who
+    kept pointing at him as a \[fake\] and his desire to make them recognize his
+    existence.
+
+    Wishing to assert his existence and be recognized by as many people as possible
+    .....he continues to search for the development of cutting-edge technology that
+    will surprise everyone.
+- stockId: 10532
+  BIO_H01: |-
+    Hisaki has taken on a new form through guarding the underwater ruins on the
+    planet Sama'ad.
+
+    The robot that takes the appearance of a fish acts independently to protect
+    Hisaki, and also assists him in battle by creating a small bubble of protection
+    when he is attacked by enemies.
+
+    As an inventor, Hisaki devoted himself to previously unheard of technology.
+
+    The result is a single person and a single machine that move together as one
+    underwater as if they have a heart-to-heart communication.
+  BIO_H02: |-
+    The life's work that another Hisaki completed in the parallel universe this
+    power draws from was a new "way of life" in which both organics and robots could
+    live in harmony with each other.
+
+    It is precisely because Hisaki has a history of misuse of the technology he
+    invented that he was able to realize the nature of the bond between human and
+    machines.
+
+    What is it that he really wants to create, what kind of relationship can be
+    built between humans and robots, and how should technology be utilized? The
+    flame of his passion will never burn out.
+  extra_sprites: fg_hisakiLostAncients2208_h02_skin2
+sidekicks:
+- stockId: 10531
+  BIO_S01: |-
+    A young man working at a medium sized factory of a heavy industry equipment
+    manufacturer.
+
+    He looks like a beast-man alien, but because he was adopted by a Japanese
+    family, his full name is Yodobashi Hisaki.
+
+    He has a wide range of knowledge about science and engineering, and is a genius
+    inventor as recognized by himself and his peers alike.
+
+    He is usually devoted to developing suspicious "new products" in his personal
+    laboratory in a secluded corner of the factory.
+
+    He is a self-confident person with a sociable and cheerful personality, but at
+    the same time he is quite sloppy.
+
+    He calls his college senior Crowne his big sis, and both trusts and lives in
+    fear of her at the same time.
+  extra_sprites: fg_hisaki_s01_skin1,fg_hisaki_s01_skin2,fg_hisaki_s01_skin3,fg_hisaki_s01_skin4
 ---
-
-{% capture BIO_H01 %}
-He dreams of grasping a glorious future with his hand, and his parallel weapon is an equipment that can reproduce \[The Future\] in his hands.
-
-By accessing the brain of his future self, which has succeeded in reaching the cutting edge of the entire universe, 
-
-he can output things on his glove that cannot be created with modern technology and can be used as a weapon.
-
-These weapons, made up of unknown technology that can only be described as the product of magic, foreshadow the infinite development of science and technology.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-He is proud of himself as a genius and acts confidently, asserting straightforwardly his desires for self-expression and approval, desires that are often perceived in a negative light.
-
-This personality was shaped by his defiance against the people around him who kept pointing at him as a \[fake\] and his desire to make them recognize his existence.
-
-Wishing to assert his existence and be recognized by as many people as possible .....he continues to search for the development of cutting-edge technology that will surprise everyone.
-{% endcapture %}
-{% include hero-infobox.html stockId=10531 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_H01 %}
-Hisaki has taken on a new form through guarding the underwater ruins on the planet Sama'ad.
-
-The robot that takes the appearance of a fish acts independently to protect Hisaki, and also assists him in battle by creating a small bubble of protection when he is attacked by enemies. 
-
-As an inventor, Hisaki devoted himself to previously unheard of technology. 
-
-The result is a single person and a single machine that move together as one underwater as if they have a heart-to-heart communication.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-The life's work that another Hisaki completed in the parallel universe this power draws from was a new "way of life" in which both organics and robots could live in harmony with each other. 
-
-It is precisely because Hisaki has a history of misuse of the technology he invented that he was able to realize the nature of the bond between human and machines. 
-
-What is it that he really wants to create, what kind of relationship can be built between humans and robots, and how should technology be utilized? The flame of his passion will never burn out.
-{% endcapture %}
-{% include hero-infobox.html stockId=10532 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_hisakiLostAncients2208_h02_skin2" %}
-
-{% capture BIO_S01 %}
-A young man working at a medium sized factory of a heavy industry equipment manufacturer.
-
-He looks like a beast-man alien, but because he was adopted by a Japanese family, his full name is Yodobashi Hisaki.
-
-He has a wide range of knowledge about science and engineering, and is a genius inventor as recognized by himself and his peers alike.
-
-He is usually devoted to developing suspicious "new products" in his personal laboratory in a secluded corner of the factory.
-
-He is a self-confident person with a sociable and cheerful personality, but at the same time he is quite sloppy.
-
-He calls his college senior Crowne his big sis, and both trusts and lives in fear of her at the same time.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=10531 BIO_S01=BIO_S01 extra_sprites="fg_hisaki_s01_skin1,fg_hisaki_s01_skin2,fg_hisaki_s01_skin3,fg_hisaki_s01_skin4" %}
 
 {% include voice-table.html resourceName="hisaki"
 h_gachaResult = "The rumored super inventor Hisaki's ready for action! Just leave it to me, client.<br>I'll show you the best technology of the whole universe!"
@@ -86,7 +106,6 @@ TRAIN = "Come on, let's play!"
 TRAINED = "E-even for me this is a little tough?!"
 EVENTA = "To think that my latest invention is being used like this!<br>I admit that it's very clever, but I will not allow it!<br>This won't end with just a spanking!"
 EVENTB = "Heheh, I'm really popular you know!<br>At valentine's I usually get so many chocolate, it's a trouble.<br>….Eh, that's why I'm fat? L-leave it!"
-
 %}
 
 {% include voice-table.html resourceName="hisakiLostAncients2208" 

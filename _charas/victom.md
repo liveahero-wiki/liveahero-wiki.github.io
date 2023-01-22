@@ -1,37 +1,62 @@
 ---
 title: Victom
 characterId: 9
-occupation: "Rescue squad captain"
+occupation: Rescue squad captain
 h2:
-  title: "\"Dynamic Rescue\" Victom"
+  title: '"Dynamic Rescue" Victom'
+heroes:
+- stockId: 10091
+  BIO_H01: |-
+    Victom transforms into "Survive taker" when he dresses up in a suit and armor
+    closely resembling that of a rescue squad uniform. He possesses a rope which
+    allows him to reach his rescue target in the shortest distance possible even if
+    they are in the belly of a kaibutsu.  He makes the best use of his suit and rope
+    which have the ability to break through any obstacle; that allows him to carry
+    out rescue missions at the speed of sound.
+  BIO_H02: |-
+    His desire/wish is "to have the power to rescue all the weak and powerless
+    people who are threatened." It it something that he swore to do after he saw his
+    entire family that disappeared (died) in a city that was once attacked and
+    burned by a ravenous/aggressive kaibutsu. Despite having numerous injuries to
+    his face under the helmet he wears, the reason he continues to do his best to
+    help others is out of a desire for revenge against kaibutsu.
+- stockId: 10092
+  BIO_H01: |-
+    Victom, who sees the act of saving others' lives by throwing himself into the
+    action a top priority, has gained a new hero outfit, specializing in lifesaving
+    activities by the waterside. By skillfully controlling his paddle board, he
+    slips through the gaps between the waves and cheers up those whose lives are in
+    danger with a dazzling smile... and because that is very unusual for the usual
+    Victom, people become quite frightened/surprised when they see him. Apparently
+    something happened during the summer festival that lead to such a change.
+  BIO_H02: |-
+    A reticent, straightforward man who always wears a mask.  That is the impression
+    that the public and hero fans have about Victor.  He doesn't deny that he's a
+    gruff, even stoic man, but he seems to have some worries about being seen as
+    scary because of his rigor.  The event in which he mistakenly caused a child on
+    the beach to cry while returning their ball shook his heart. "I want to be the
+    kind of hero who can make that child smile..." Maybe it was because he once had
+    a family that he had such a desire.
+  passiveSkillIds:
+  - '8009201'
+  - '8009202'
+  - '8009203'
+sidekicks:
+- stockId: 10091
+  BIO_S01: |-
+    The commanding officer of Orient City Fire Department's Hyper Rescue team,
+    always wearing a full face helmet.
+
+    Originating from London, England. His full name is Victom Vincent.
+
+    Calm and stoic, he is a man who is as much of a life saver as possible,
+    possessing an oustanding situational awareness ability.
+
+    Even though he believes that all lives are precious, there is a side of him that
+    follows the saying of "To Live for others, and to die for others", so he tends
+    to look down on his life.
+  extra_sprites: fg_victom_s01_skin1
 ---
-
-{% capture BIO_H01 %}
-Victom transforms into "Survive taker" when he dresses up in a suit and armor closely resembling that of a rescue squad uniform. He possesses a rope which allows him to reach his rescue target in the shortest distance possible even if they are in the belly of a kaibutsu.  He makes the best use of his suit and rope which have the ability to break through any obstacle; that allows him to carry out rescue missions at the speed of sound.
-{% endcapture %}
-{% capture BIO_H02 %}
-His desire/wish is "to have the power to rescue all the weak and powerless people who are threatened." It it something that he swore to do after he saw his entire family that disappeared (died) in a city that was once attacked and burned by a ravenous/aggressive kaibutsu. Despite having numerous injuries to his face under the helmet he wears, the reason he continues to do his best to help others is out of a desire for revenge against kaibutsu.
-{% endcapture %}
-{% include hero-infobox.html stockId=10091 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_H01 %}
-Victom, who sees the act of saving others' lives by throwing himself into the action a top priority, has gained a new hero outfit, specializing in lifesaving activities by the waterside. By skillfully controlling his paddle board, he slips through the gaps between the waves and cheers up those whose lives are in danger with a dazzling smile... and because that is very unusual for the usual Victom, people become quite frightened/surprised when they see him. Apparently something happened during the summer festival that lead to such a change.
-{% endcapture %}
-{% capture BIO_H02 %}
-A reticent, straightforward man who always wears a mask.  That is the impression that the public and hero fans have about Victor.  He doesn't deny that he's a gruff, even stoic man, but he seems to have some worries about being seen as scary because of his rigor.  The event in which he mistakenly caused a child on the beach to cry while returning their ball shook his heart. "I want to be the kind of hero who can make that child smile..." Maybe it was because he once had a family that he had such a desire.
-{% endcapture %}
-{% include hero-infobox.html stockId=10092 BIO_H01=BIO_H01 BIO_H02=BIO_H02 passiveSkillIds="8009201,8009202,8009203" %}
-
-{% capture BIO_S01 %}
-The commanding officer of Orient City Fire Department's Hyper Rescue team, always wearing a full face helmet.
-
-Originating from London, England. His full name is Victom Vincent.
-
-Calm and stoic, he is a man who is as much of a life saver as possible, possessing an oustanding situational awareness ability.
-
-Even though he believes that all lives are precious, there is a side of him that follows the saying of "To Live for others, and to die for others", so he tends to look down on his life.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=10091 BIO_S01=BIO_S01 extra_sprites="fg_victom_s01_skin1" %}
 
 {% include voice-table.html resourceName="victom"
 h_gachaResult = "Hyper Rescue Squad Captain, Victom.<br>Also known as Survive Taker.<br>I'll certainly protect your lives…"

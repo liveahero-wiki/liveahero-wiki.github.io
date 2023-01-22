@@ -1,56 +1,70 @@
 ---
 title: Narihito
 characterId: 29
-occupation: "Reporter (取材記者)"
+occupation: Reporter (取材記者)
 h2:
-  title: "\"The Comet\" Narihito"
+  title: '"The Comet" Narihito'
+heroes:
+- stockId: 10291
+  BIO_H01: |-
+    As an information warfare specialist, the hero he transforms into is armed with
+    a vast hero database, said to be the best in the universe. From his records and
+    memories, he can search for battle data of heroes and Kaibutsu that are closest
+    to the current situation, determine the optimal means of attack, and incorporate
+    it into his own weapon. At first glance, it seems to be an incredibly versatile
+    ability, but if his data on a particular situation is lacking, its performance
+    declines dramatically.
+  BIO_H02: |-
+    He pursues information on heroes, villains, and Kaibutsu with a terrifying
+    obsession because of his desire to meet the hero that once saved him. A glorious
+    hero who saved the lives of many citizens and vanished without so much as a
+    name. A phantom who now exists only in Narihito's hazy memories. Chasing after
+    this idol, he puts in his all as a reporter and hero to this day.
+  extra_sprites: fg_narihito_h01_skin2,fg_narihito_h01_skin3
+- stockId: 10292
+  BIO_H01: |-
+    Tracing the ever-fading memories of his childhood, Narihito appears dressed in a
+    bright red and gold hero suit.
+
+    The suit's armor is very sturdy, recreating "a material developed by Doctor X
+    that blocks any heat and absorbs most shock" from Narihito's memory.
+
+    In addition, the right arm can be transformed into a cannon capable of firing
+    energy bullets, and at maximum power, it is powerful enough to blow away
+    mountains.
+
+    To protect the children's Christmas, Narihito swear an oath on his right arm.
+  BIO_H02: |-
+    As the meteorite impact looms, Narihito remembers the superhero he longed to be
+    as a child.
+
+    A fictional hero who appears in front of grieving citizens and solves even the
+    most difficult problems.
+
+    As an adult, Narihito has learned about reality and can no longer hope to be
+    this hero of his dreams but, only now, like that hero, he believe in the peace
+    that will come, and strongly wish to protect everyone.
+
+    Whether real or imaginary, his life and heart, saved by heroes, will shine hotly
+    in this reality to save someone else, and light up the world.
+  extra_sprites: fg_narihitoMeteorite2112_h01_skin2,fg_narihitoMeteorite2112_h01_skin3,fg_narihitoMeteorite2112_h02_skin2,fg_narihitoMeteorite2112_h02_skin3,fg_narihitoMeteorite2112_h02_skin4,fg_narihitoMeteorite2112_h02_skin5
+sidekicks:
+- stockId: 10291
+  BIO_S01: |-
+    An elusive news reporter, working for the news broadcast company Taiyou News
+    Network.
+
+    He's an earthling from Kobe, Japan. His full name is Narihito Karue.
+
+    Despite seeming like an adult at first glance, when the topic of heroes is put
+    on the table he becomes unexpectedly heated and passionate.
+
+    He is always running around people in search of hero-related scoops.
+
+    As a knowledgeable connoisseur, he experts at profiling information about
+    heroes, villains, and kaibutsu from all times and places.
+  extra_sprites: fg_narihito_s01_skin1
 ---
-
-{% capture BIO_H01 %}
-As an information warfare specialist, the hero he transforms into is armed with a vast hero database, said to be the best in the universe. From his records and memories, he can search for battle data of heroes and Kaibutsu that are closest to the current situation, determine the optimal means of attack, and incorporate it into his own weapon. At first glance, it seems to be an incredibly versatile ability, but if his data on a particular situation is lacking, its performance declines dramatically.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-He pursues information on heroes, villains, and Kaibutsu with a terrifying obsession because of his desire to meet the hero that once saved him. A glorious hero who saved the lives of many citizens and vanished without so much as a name. A phantom who now exists only in Narihito's hazy memories. Chasing after this idol, he puts in his all as a reporter and hero to this day.
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10291 BIO_H01=BIO_H01 BIO_H02=BIO_H02
-extra_sprites="fg_narihito_h01_skin2,fg_narihito_h01_skin3" %}
-
-{% capture BIO_H01 %}
-Tracing the ever-fading memories of his childhood, Narihito appears dressed in a bright red and gold hero suit.
-
-The suit's armor is very sturdy, recreating "a material developed by Doctor X that blocks any heat and absorbs most shock" from Narihito's memory.
-
-In addition, the right arm can be transformed into a cannon capable of firing energy bullets, and at maximum power, it is powerful enough to blow away mountains.
-
-To protect the children's Christmas, Narihito swear an oath on his right arm.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-As the meteorite impact looms, Narihito remembers the superhero he longed to be as a child.
-
-A fictional hero who appears in front of grieving citizens and solves even the most difficult problems.
-
-As an adult, Narihito has learned about reality and can no longer hope to be this hero of his dreams but, only now, like that hero, he believe in the peace that will come, and strongly wish to protect everyone.
-
-Whether real or imaginary, his life and heart, saved by heroes, will shine hotly in this reality to save someone else, and light up the world.
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10292 BIO_H01=BIO_H01 BIO_H02=BIO_H02 extra_sprites="fg_narihitoMeteorite2112_h01_skin2,fg_narihitoMeteorite2112_h01_skin3,fg_narihitoMeteorite2112_h02_skin2,fg_narihitoMeteorite2112_h02_skin3,fg_narihitoMeteorite2112_h02_skin4,fg_narihitoMeteorite2112_h02_skin5" %}
-
-{% capture BIO_S01 %}
-An elusive news reporter, working for the news broadcast company Taiyou News Network.
-
-He's an earthling from Kobe, Japan. His full name is Narihito Karue.
-
-Despite seeming like an adult at first glance, when the topic of heroes is put on the table he becomes unexpectedly heated and passionate.
-
-He is always running around people in search of hero-related scoops.
-
-As a knowledgeable connoisseur, he experts at profiling information about heroes, villains, and kaibutsu from all times and places.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=10291 BIO_S01=BIO_S01 extra_sprites="fg_narihito_s01_skin1" %}
 
 {% include voice-table.html resourceName="narihito"
 h_gachaResult = "From Taiyou News Network, I'm Narihito Karue!<br>You there, Mr. Hero and Operator!<br>By all means!<br>Let me do an interview!"

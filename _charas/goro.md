@@ -1,52 +1,69 @@
 ---
 title: Goro
 characterId: 23
-occupation: "Carpenter"
+occupation: Carpenter
 h2:
-  title: "\"Delightful Performer\" Goro"
+  title: '"Delightful Performer" Goro'
+heroes:
+- stockId: 10231
+  BIO_H01: |-
+    He transforms into a hero that can show off his best performance as a carpenter.
+    Even in this form, he's still undoubtedly a drunkard, but he can use his split-
+    toe-shoes-shaped parallel weapon to walk vertically on walls, and then, using
+    various tools from his toolbox-shaped parallel weapon, build high quality walls
+    and shelters at a speed that no normal person could do.
+  BIO_H02: |-
+    In his home town, he was raising a family and living a normal life as a
+    carpenter, when one day a giant monster attacked, bringing disaster and
+    separating him from his family before drifting ashore to Muirauqa IV.  This is
+    when he started drinking daily, and it's also when he began his dream of
+    building a house that could withstand even a giant monster attack.
+    Consequently, when he sees two lovers or two family members get seperated, he
+    loses his composure, even if they're strangers to him.
+- stockId: 10232
+  BIO_H01: |-
+    Based on the design of the costume used at the Wemalt flower festival, Goro got
+    a new hero suit.
+
+    In his hand, toys and musical instruments made by his specialty craftsmanship
+    are reproduced in the form of pure energy.
+
+    His toy-shaped parallel weapon, which takes the form of various devices to amuse
+    children, acts independently to protect allies.
+
+    In addition, from the instrument-shaped parallel weapon that looks like an
+    accordion, he can emit sound energy that gives vitality to those around him, and
+    play a powerful but gentle sound.
+  BIO_H02: |-
+    "I don't drink when dealing with children," is a self-imposed rule he lives by.
+
+    It may have been a small promise made as a parent because his beloved child
+    didn't like the smell of alcohol.
+
+    Goro, who had lost his child, his family, and even his home to return to, played
+    the gentle melody of a lullaby.
+
+    Goro has lived through happy days that he can never get back, and the desire to
+    have it back makes him want to break down and cry, with a regret that will never
+    wither.
+
+    Nonetheless, he is still alive.
+  extra_sprites: fg_goroGhostWoods2204_h02_skin2
+  passiveSkillIds:
+  - '8023201'
+sidekicks:
+- stockId: 10231
+  BIO_S01: |-
+    He is a diligent man who works as a shipwright in charge of repairs and onboard
+    construction in a shipboard city in the ocean planet of Muirauqa IV. Originating
+    from a different planet, he eventually arrived to Muirauqa IV after wandering.
+
+    He is a lewd optimist with a sloppy personality, a heavy drinker, and an
+    irresponsible carpenter that doesn't let go off his bottle of booze even at
+    work. Despite this, he possesses firm arms and dexterous fingers. Contrary to
+    expectations, he can easily assemble blueprints in his head and has the ability
+    to accomplish precise and perfect architecture.
 ---
-
-{% capture BIO_H01 %}
-He transforms into a hero that can show off his best performance as a carpenter.  Even in this form, he's still undoubtedly a drunkard, but he can use his split-toe-shoes-shaped parallel weapon to walk vertically on walls, and then, using various tools from his toolbox-shaped parallel weapon, build high quality walls and shelters at a speed that no normal person could do.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-In his home town, he was raising a family and living a normal life as a carpenter, when one day a giant monster attacked, bringing disaster and separating him from his family before drifting ashore to Muirauqa IV.  This is when he started drinking daily, and it's also when he began his dream of building a house that could withstand even a giant monster attack.  Consequently, when he sees two lovers or two family members get seperated, he loses his composure, even if they're strangers to him. 
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10231 BIO_H01=BIO_H01 BIO_H02=BIO_H02 %}
-
-{% capture BIO_H01 %}
-Based on the design of the costume used at the Wemalt flower festival, Goro got a new hero suit.
-
-In his hand, toys and musical instruments made by his specialty craftsmanship are reproduced in the form of pure energy.
-
-His toy-shaped parallel weapon, which takes the form of various devices to amuse children, acts independently to protect allies.
-
-In addition, from the instrument-shaped parallel weapon that looks like an accordion, he can emit sound energy that gives vitality to those around him, and play a powerful but gentle sound.
-{% endcapture %}
-
-{% capture BIO_H02 %}
-"I don't drink when dealing with children," is a self-imposed rule he lives by. 
-
-It may have been a small promise made as a parent because his beloved child didn't like the smell of alcohol.  
-
-Goro, who had lost his child, his family, and even his home to return to, played the gentle melody of a lullaby. 
-
-Goro has lived through happy days that he can never get back, and the desire to have it back makes him want to break down and cry, with a regret that will never wither.
-
-Nonetheless, he is still alive.
-{% endcapture %}
-
-{% include hero-infobox.html stockId=10232 BIO_H01=BIO_H01 BIO_H02=BIO_H02
-extra_sprites="fg_goroGhostWoods2204_h02_skin2" passiveSkillIds="8023201" %}
-
-{% capture BIO_S01 %}
-He is a diligent man who works as a shipwright in charge of repairs and onboard construction in a shipboard city in the ocean planet of Muirauqa IV. Originating from a different planet, he eventually arrived to Muirauqa IV after wandering.
-
-He is a lewd optimist with a sloppy personality, a heavy drinker, and an irresponsible carpenter that doesn't let go off his bottle of booze even at work. Despite this, he possesses firm arms and dexterous fingers. Contrary to expectations, he can easily assemble blueprints in his head and has the ability to accomplish precise and perfect architecture.
-{% endcapture %}
-{% include sidekick-infobox.html stockId=10231 BIO_S01=BIO_S01 %}
 
 {% include voice-table.html resourceName="goro"
 h_gachaResult = "Are you the chief this time? I am Goro, as you can see, a carpenter.<br>I can drink with you or do hero work. Nice to meet you."
