@@ -7,7 +7,7 @@ h2:
 ---
 
 {% capture BIO_H01 %}
-As an information warfare specialist, the hero he transforms into is armed with a vast hero database, said to be the best in the universe. From his records and memories, he can search for battle data of heroes and Kaibutsu that are closest to the current situation, determine the optimal means of attack, and incorporate it into his own weapon. At first glance, it seems to be an incredibly versatile ability, but if his data on a particular situation is lacking, its performance declines dramatically.。
+As an information warfare specialist, the hero he transforms into is armed with a vast hero database, said to be the best in the universe. From his records and memories, he can search for battle data of heroes and Kaibutsu that are closest to the current situation, determine the optimal means of attack, and incorporate it into his own weapon. At first glance, it seems to be an incredibly versatile ability, but if his data on a particular situation is lacking, its performance declines dramatically.
 {% endcapture %}
 
 {% capture BIO_H02 %}
