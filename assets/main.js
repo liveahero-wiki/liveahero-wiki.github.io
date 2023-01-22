@@ -68,3 +68,45 @@ document.querySelectorAll(".sort-table").forEach(T => {
     h.addEventListener("click", () => sortTable(T, k, h));
   })
 });
+
+// grab and stash elements
+const tabgroup     = document.querySelector('wiki-tabs')
+if (tabgroup !== null) {
+  const tabsection   = tabgroup.querySelector(':scope > wiki-tabcontent')
+  const tabnav       = tabgroup.querySelector(':scope nav')
+  const tabnavitems  = tabnav.querySelectorAll(':scope a')
+  
+  const setActiveTab = tabbtn => {
+    const t = tabnav.querySelector(':scope a[aria-selected="true"]')
+    if (t !== null) t.removeAttribute('aria-selected')
+  
+    tabbtn.setAttribute('aria-selected', 'true')
+    tabbtn.scrollIntoView()
+  }
+  
+  const determineActiveTabSection = () => {
+    const i = tabsection.scrollLeft / tabsection.clientWidth
+    const matchingNavItem = tabnavitems[i]
+  
+    matchingNavItem && setActiveTab(matchingNavItem)
+  }
+  
+  tabnav.addEventListener('click', e => {
+    if (e.target.nodeName !== "A") return
+    setActiveTab(e.target)
+  })
+  
+  tabsection.addEventListener('scroll', (e) => {
+    clearTimeout(tabsection.scrollEndTimer)               
+    tabsection.scrollEndTimer = setTimeout(determineActiveTabSection, 100)
+  })
+  
+  window.onload = () => {
+    if (location.hash) {
+      const tab = document.querySelector(location.hash)
+      if (tab !== null) tabsection.scrollLeft = tab.offsetLeft
+    }
+  
+    determineActiveTabSection()
+  }  
+}
