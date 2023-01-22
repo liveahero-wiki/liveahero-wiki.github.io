@@ -82,11 +82,12 @@ def main():
         f.write("---\n")
         yaml.safe_dump(front_matter, f, sort_keys=False, allow_unicode=True)
         f.write("---\n\n")
-        for v in voices:
-            f.write("{{% {}\n%}}\n".format(v))
-        f.write("\n")
+        if len(voices) > 0:
+            f.write("\n\n".join("{{% {}\n%}}".format(v) for v in voices))
+            f.write("\n\n")
         f.write(text[prev_match.end(0):].strip("\n "))
-        f.write("\n")
+        if not front_matter.get("unreleased"):
+            f.write("\n")
 
     #break
 
