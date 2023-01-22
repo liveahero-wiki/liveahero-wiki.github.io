@@ -57,6 +57,8 @@ def main():
 
                 for c in comp[2:]:
                     name, value = c.split("=")
+                    if name == "stockId":
+                        value = int(value)
                     if name in VAR:
                         value = VAR[name]
                     card[name] = value
@@ -78,7 +80,9 @@ def main():
         f.write("---\n\n")
         for v in voices:
             f.write("{{% {}\n%}}\n".format(v))
-        f.write(text[prev_match.end(0):].strip())
+        f.write("\n")
+        f.write(text[prev_match.end(0):].strip("\n "))
+        f.write("\n")
 
     #break
 
