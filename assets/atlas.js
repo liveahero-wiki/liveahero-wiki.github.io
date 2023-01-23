@@ -4,12 +4,12 @@
 // ==/ClosureCompiler==
 
 class AtlasStitcher {
-  constructor() {
-    this.canvas = document.createElement("canvas");
+  constructor(canvas) {
+    this.canvas = canvas;
     this.ctx = this.canvas.getContext('2d');
   }
 
-  draw(img, textureData, atlas_def, dest_img) {
+  draw(img, textureData, atlas_def) {
     const atlas_h = img.height;
     const atlas_w = img.width;
     const texture_w = textureData["width"];
@@ -36,8 +36,6 @@ class AtlasStitcher {
       }
       i++;
     }
-
-    dest_img.src = this.canvas.toDataURL("image/png");
   }
 };
 
@@ -45,8 +43,7 @@ async function getJson(sprites) {
   return await Promise.all(sprites.map(s => fetch(`/cdn/MonoBehaviour/${s}.json`)));
 }
 
-async function collectSprites(array) {
-  const select = document.createElement("select");
+async function collectSprites(array, select) {
   const manifest = {};
   for (const res of array) {
     if (res.status != 200) {
@@ -61,7 +58,7 @@ async function collectSprites(array) {
       select.add(new Option(t["name"], `${name}:${t["name"]}`));
     }
   }
-  return { manifest, select };
+  return manifest;
 }
 
 const atlasObserver = new IntersectionObserver((entries, ob) => {
@@ -74,6 +71,7 @@ const atlasObserver = new IntersectionObserver((entries, ob) => {
   });
 });
 
+/*
 const aprilFoolSpriteMap = {
   "alphecca": "takemaru01",
   "akashi": "gunzou01",
@@ -84,20 +82,26 @@ const aprilFoolSpriteMap = {
   "gammei": "https@//api.housamo.xyz/housamo/unity/atlas/?mode=png&asset=/housamo/adv/Android/texture/character/fg_kyouma01&name=fg_kyouma01&use_filename=asset.png",
   "gomeisa": "wakantanka01",
   "goro": "kimunkamui01",
+  "guardmanFire": "orgus01",
   "hisaki": "cusith01",
   "huckle": "leib01",
   "isaribi": "typhon01",
   "kyoichi": "taurus01_skin1",
   "marfik": "amatsumara01",
   "melide": "alice01",
+  "lilac": "sandayu01",
+  "loren": "ryouta01",
   "polaris": "aegir01",
   "procy": "shino01_skin2",
   "pubraseer": "breke01",
   "sadayoshi": "seth01",
+  "sensettia": "benten01_skin9",
+  "suhail": "jormungandr01",
   "sui": "arc01",
 }
 
 const APRIL_FOOL = "april_fool"
+*/
 
 function addAprilFoolSprite(sprites, select) {
   const resourceName = sprites[0].split("_")[1]; // fg_<resourceName>_*
@@ -111,29 +115,29 @@ function addAprilFoolSprite(sprites, select) {
 
 async function atlasHandler(gallery) {
   const sprites = gallery.dataset["sprites"].split(",");
-  const dest_img = gallery.querySelector("img");
+  const canvas = gallery.querySelector("canvas");
+  const select = gallery.querySelector("select");
   const array = await getJson(sprites);
-  const { manifest, select } = await collectSprites(array);
-  addAprilFoolSprite(sprites, select);
+  const manifest = await collectSprites(array, select);
+  // addAprilFoolSprite(sprites, select);
+  const atlasSticher = new AtlasStitcher(canvas);
 
-  gallery.appendChild(select);
   select.addEventListener("change", () => {
     const comp = select.value.split(":");
     if (comp[0] == APRIL_FOOL) {
-      if (comp[1].startsWith("http")) {
+      /*if (comp[1].startsWith("http")) {
         dest_img.src = comp[1].replace("@", ":");
       } else {
         dest_img.src = `https://cdn.housamo.xyz/housamo/unity/Android/fg/fg_${comp[1]}.png`;
       }
-      return;
+      return;*/
     }
 
     const atlas_json = manifest[comp[0]];
     const textureData = atlas_json["textureDataList"].find(t => t["name"] == comp[1]);
     const img = new Image();
     img.onload = () => {
-      window.atlasSticher = window.atlasSticher || new AtlasStitcher();
-      atlasSticher.draw(img, textureData, atlas_json, dest_img);
+      atlasSticher.draw(img, textureData, atlas_json);
     }
     img.src = `/cdn/Texture2D/${textureData["atlasName"]}.png`;
   });

@@ -358,8 +358,9 @@ figcaption {
   padding: 0 10px;
 }
 .atlas-gallery {
-  img {
+  img, canvas {
     display: block;
+    max-width: 100%;
   }
   select {
     width: 100%;
@@ -367,7 +368,7 @@ figcaption {
 }
 @media (min-width: 1064px) {
   .atlas-gallery {
-    img {
+    img, canvas {
       padding: 0 159px;
     }
   }
