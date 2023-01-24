@@ -76,7 +76,7 @@ See full EXP table [^bigtable].
     <tr>
       <th>Level</th><th>XP to lv up</th><th>Total XP</th>
     </tr>
-    {% for pair in site.data.HeroCardExpMaster %}
+    {% for pair in HeroCardExpMaster %}
     <tr>
       <td>{{ pair[1].level }}</td><td>{{ pair[1].nextExp }}</td><td>{{ pair[1].totalExp }}</td>
     </tr>

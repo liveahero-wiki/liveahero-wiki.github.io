@@ -4,27 +4,27 @@ layout: default
 
 <div class="page-header">
 <h1><a href="{{ page.url }}">
-{% if page.no_limited_quest %}Campaign{% else %}Event Quest{% endif %}:
-{{ page.title | default: page.jp_title }}</a></h1>
+{% if no_limited_quest %}Campaign{% else %}Event Quest{% endif %}:
+{{ title | default: jp_title }}</a></h1>
 </div>
 
 <table class="event-infobox">
-<tr><th colspan="2">{{ page.title | default: page.jp_title }}</th></tr>
-<tr><td colspan="2"><img width="600" height="191" style="width: 100%" src="/cdn/Sprite/{{ page.banner_image }}" loading="lazy"></td></tr>
+<tr><th colspan="2">{{ title | default: jp_title }}</th></tr>
+<tr><td colspan="2"><img width="600" height="191" style="width: 100%" src="/cdn/Sprite/{{ banner_image }}" loading="lazy"></td></tr>
 <tr><th colspan="2">Duration</th></tr>
-{% if page.gacha %}
-<tr><th>Gacha</th><td data-expiry="{{ page.event_end_time }}">{{ page.event_start_time | date: site.date_format }} to {{ page.event_end_time | date: site.date_format }}</td></tr>
+{% if gacha %}
+<tr><th>Gacha</th><td data-expiry="{{ event_end_time }}">{{ event_start_time | date: site.date_format }} to {{ event_end_time | date: site.date_format }}</td></tr>
 {% endif %}
-{% if page.no_limited_quest != true %}
-<tr><th>Main Quests</th><td data-expiry="{{ page.event_end_time }}">{{ page.event_start_time | date: site.date_format }} to {{ page.event_end_time | date: site.date_format }}</td></tr>
+{% if no_limited_quest != true %}
+<tr><th>Main Quests</th><td data-expiry="{{ event_end_time }}">{{ event_start_time | date: site.date_format }} to {{ event_end_time | date: site.date_format }}</td></tr>
 {% endif %}
-{% if page.farm_end_time %}
-<tr><th>Free Quests</th><td data-expiry="{{ page.farm_end_time }}">{{ page.farm_start_time | date: site.date_format }} to {{ page.farm_end_time | date: site.date_format }}</td></tr>
+{% if farm_end_time %}
+<tr><th>Free Quests</th><td data-expiry="{{ farm_end_time }}">{{ farm_start_time | date: site.date_format }} to {{ farm_end_time | date: site.date_format }}</td></tr>
 {% endif %}
-{% if page.sales_end_time %}
-<tr><th>Event Sales</th><td data-expiry="{{ page.sales_end_time }}">{{ page.sales_start_time | date: site.date_format }} to {{ page.sales_end_time | date: site.date_format }}</td></tr>
+{% if sales_end_time %}
+<tr><th>Event Sales</th><td data-expiry="{{ sales_end_time }}">{{ sales_start_time | date: site.date_format }} to {{ sales_end_time | date: site.date_format }}</td></tr>
 {% endif %}
-<tr><td colspan="2"><a href="{{ page.news_link }}">News link</a></td></tr>
+<tr><td colspan="2"><a href="{{ news_link }}">News link</a></td></tr>
 </table>
 
 {{ content }}

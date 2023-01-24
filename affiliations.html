@@ -3,10 +3,10 @@ title: Affiliations
 banner: true
 ---
 
-{% assign heroes = site.data.CardMaster | where: "stockOrder", 1 | where_exp: "item", "item.stockId < 90000" %}
-{% assign sidekicks = site.data.SidekickMaster | where: "levelZone", 1 %}
+{% assign heroes = CardMaster | where: "stockOrder", 1 | where_exp: "item", "item.stockId < 90000" %}
+{% assign sidekicks = SidekickMaster | where: "levelZone", 1 %}
 
-{% assign groups = heroes | concat: sidekicks | processCharaGroup: "affiliationOffice", site.data.wiki.Affiliation | sort: "en" %}
+{% assign groups = heroes | concat: sidekicks | processCharaGroup: "affiliationOffice", wiki.Affiliation | sort: "en" %}
 
 <ul id="markdown-toc">
 {% for human in groups %}

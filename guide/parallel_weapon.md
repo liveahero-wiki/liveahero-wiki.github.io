@@ -82,7 +82,7 @@ See full EXP table [^bigtable].
     <tr>
       <th>Level</th><th>XP to lv up</th><th>Total XP</th>
     </tr>
-    {% for x in site.data.ParallelWeaponExpMaster %}
+    {% for x in ParallelWeaponExpMaster %}
     <tr>
       <td>{{ x.level }}</td><td>{{ x.nextExp }}</td><td>{{ x.totalExp }}</td>
     </tr>

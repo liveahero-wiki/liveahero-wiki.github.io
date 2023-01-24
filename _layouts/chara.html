@@ -77,24 +77,24 @@ wiki-tabcontent {
 }
 </style>
 
-{% if page.unreleased %}
-{% include hero-infobox-unreleased.html sprites=page.sprites %}
+{% if unreleased %}
+{% include hero-infobox-unreleased.html sprites=sprites %}
 {% else %}
 <wiki-tabs>
 
 <wiki-header class="scroll-snap-x">
 <nav role="tablist">
-{% for hero in page.heroes %}
+{% for hero in heroes %}
 <a role="tab" aria-controls="h{{ hero.stockId }}" href="#h{{ hero.stockId }}">{{ hero.stockId | stockIdToCharaTitle: 1 }}</a>
 {% endfor %}
-{% for sk in page.sidekicks %}
+{% for sk in sidekicks %}
 <a role="tab" aria-controls="s{{ sk.stockId }}" href="#s{{ sk.stockId }}">{{ sk.stockId | stockIdToCharaTitle: 2 }}</a>
 {% endfor %}
 </nav>
 </wiki-header>
 
 <wiki-tabcontent class="scroll-snap-x">
-{% for hero in page.heroes %}
+{% for hero in heroes %}
 {% include hero-infobox.html
     stockId=hero.stockId
     BIO_H01=hero.BIO_H01
@@ -103,7 +103,7 @@ wiki-tabcontent {
     passiveSkillIds=hero.passiveSkillIds
 %}
 {% endfor %}
-{% for sk in page.sidekicks %}
+{% for sk in sidekicks %}
 {% include sidekick-infobox.html
     stockId=sk.stockId
     BIO_S01=sk.BIO_S01

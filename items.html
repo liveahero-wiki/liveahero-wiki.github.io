@@ -11,7 +11,7 @@ banner: true
 
 <table>
 <tr><th>ID</th><th>Item</th></tr>
-{% for pair in site.data.ItemMaster %}
+{% for pair in ItemMaster %}
 {% assign id = pair[0] %}
 {% assign iid = id | plus: 0 %}
 {% if iid > 100000 %}{% break %}{% endif %}

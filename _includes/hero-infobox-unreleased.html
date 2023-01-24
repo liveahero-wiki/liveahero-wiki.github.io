@@ -8,8 +8,8 @@ who do not wish to be spoiled about future content.</p>
 <div class="contain elementNone">
     <div class="heroinfobox">
         <div class="header">
-            <div class="name">{{ include.name | default: page.title }}</div>
-            <div class="sub">{{ include.jp_name | default: page.jp_name }}</div>
+            <div class="name">{{ include.name | default: title }}</div>
+            <div class="sub">{{ include.jp_name | default: jp_name }}</div>
         </div>
         {% include atlas-gallery.html sprites=include.sprites %}
     </div>

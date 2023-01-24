@@ -20,7 +20,7 @@ additional_scripts: ["/assets/chara.js"]
 <button data-sort="element">Element</button>
 </div>
 
-{% assign cardInfos = site.data.CardMaster | where: "stockOrder", 1 | where_exp: "item", "item.stockId < 90000" %}
+{% assign cardInfos = CardMaster | where: "stockOrder", 1 | where_exp: "item", "item.stockId < 90000" %}
 <ul id="hero-list" class="card-list">
 {% for c in cardInfos %}
 {% include card-hero.html card=c %}
@@ -35,7 +35,7 @@ additional_scripts: ["/assets/chara.js"]
 <button data-sort="rarity">Rarity</button>
 </div>
 
-{% assign cardInfos = site.data.SidekickMaster | where: "levelZone", 1 %}
+{% assign cardInfos = SidekickMaster | where: "levelZone", 1 %}
 <ul id="sidekick-list" class="card-list">
 {% for c in cardInfos %}
 {% include card-sidekick.html card=c %}
