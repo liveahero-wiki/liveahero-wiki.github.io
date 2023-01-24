@@ -3,10 +3,10 @@ title: Voice Actor
 banner: true
 ---
 
-{% assign heroes = site.data.CardMaster | where: "stockOrder", 1 | where_exp: "item", "item.stockId < 90000" %}
-{% assign sidekicks = site.data.SidekickMaster | where: "levelZone", 1 %}
+{% assign heroes = CardMaster | where: "stockOrder", 1 | where_exp: "item", "item.stockId < 90000" %}
+{% assign sidekicks = SidekickMaster | where: "levelZone", 1 %}
 
-{% assign groups = heroes | concat: sidekicks | processCharaGroup: "characterVoice", site.data.wiki.VoiceActor | sort: "en" %}
+{% assign groups = heroes | concat: sidekicks | processCharaGroup: "characterVoice", wiki.VoiceActor | sort: "en" %}
 
 <ul id="markdown-toc">
 {% for human in groups %}

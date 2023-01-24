@@ -9,7 +9,7 @@ banner: true
 
 <table>
 <tr><th>ID</th><th>Status</th></tr>
-{% for pair in site.data.StatusMaster %}
+{% for pair in StatusMaster %}
 {% assign id = pair[0] %}
 {% assign iid = id | plus: 0 %}
 <tr><td>{{ id }}</td><td>{{ iid | status_description }}</td></tr>
