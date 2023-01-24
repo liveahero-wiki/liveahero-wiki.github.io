@@ -2,7 +2,7 @@
 layout: none
 ---
 {%- assign array = "" | split: "," %}
-{%- for pair in site.data.SidekickMaster %}
+{%- for pair in SidekickMaster %}
 {%- assign unit = pair[1] %}
 {%- if unit.levelZone > 1 %}{%- continue %}{%- endif %}
 {%- capture info %}{"cardName":"{{ unit.stockId | stockIdToCharaTitle: 1 }}","resourceName":"{{ unit.resourceName}}"}{% endcapture %}
