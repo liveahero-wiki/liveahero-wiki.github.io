@@ -2,7 +2,7 @@
 <tr>
   <th>Rank</th><th>Max Stamina</th><th>XP to rank up</th><th>Total XP</th>
 </tr>
-{% for pair in site.data.UserRankMaster %}
+{% for pair in UserRankMaster %}
 <tr>
   <td>{{ pair[1].userRank }}</td><td>{{ pair[1].maxStamina }}</td><td>{{ pair[1].nextExp }}</td><td>{{ pair[1].totalExp }}</td>
 </tr>

@@ -1,8 +1,8 @@
 {%- assign id = include.id | downcase -%}
 {%- assign rewardType = include.rewardType | default: 3 %}
 {%- if rewardType == 3 %}
-{%- assign item = site.data.ItemMaster[id] -%}
-{%- assign itemWiki = site.data.wiki.Item[include.id] -%}
+{%- assign item = ItemMaster[id] -%}
+{%- assign itemWiki = wiki.Item[include.id] -%}
 <span class="item" title="{{ itemWiki.description | default: item.description }}"><img src="/cdn/Sprite/item_{{ item.resourceName }}.png" loading="lazy"> {{ itemWiki.name | default: item.itemName }}</span>
 {%- else %}
 {{ id | divided_by: 10 | stockIdToLink: rewardType }}

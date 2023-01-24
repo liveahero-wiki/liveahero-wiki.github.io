@@ -1,4 +1,4 @@
-{% assign cardInfos = site.data.CardMaster | where: "stockId", include.stockId %}
+{% assign cardInfos = CardMaster | where: "stockId", include.stockId %}
 
 {% assign firstCardInfo = cardInfos | first %}
 {% assign r = firstCardInfo.resourceName %}
@@ -50,7 +50,7 @@
 {% assign bio_h01 = detail_prefix | append: "_H01" %}
 <details>
 <summary>Personal Data 1</summary>
-<p>{{ site.data.processed.jp_bio[bio_h01] }}</p>
+<p>{{ processed.jp_bio[bio_h01] }}</p>
 </details>
 {% if include.BIO_H01 != "" %}
 <details open>
@@ -64,7 +64,7 @@
 {% assign bio_h02 = detail_prefix | append: "_H02" %}
 <details>
 <summary>Personal Data 2</summary>
-<p>{{ site.data.processed.jp_bio[bio_h02] }}</p>
+<p>{{ processed.jp_bio[bio_h02] }}</p>
 </details>
 {% if include.BIO_H02 != "" %}
 <details open>

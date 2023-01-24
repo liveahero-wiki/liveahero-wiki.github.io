@@ -1,4 +1,4 @@
-{% assign skillOverride = site.data.wiki.SkillManualOverride[include.skillId] %}
+{% assign skillOverride = wiki.SkillManualOverride[include.skillId] %}
 {% if skillOverride %}{{ skillOverride }}{% else %}
 
 {% assign randomGroups = include.skill.effects | group_by: "randomGroupId" %}

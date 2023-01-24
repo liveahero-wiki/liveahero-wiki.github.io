@@ -1,15 +1,15 @@
 {%- assign id = include.id | downcase -%}
 {%- assign rewardType = include.rewardType | default: 3 %}
 {%- if rewardType == 3 %}
-{%- assign item = site.data.ItemMaster[id] -%}
-{%- assign itemWiki = site.data.wiki.Item[include.id] -%}
+{%- assign item = ItemMaster[id] -%}
+{%- assign itemWiki = wiki.Item[include.id] -%}
 <span class="item" title="{{ itemWiki.description | default: item.description }}"><img src="/cdn/Sprite/item_{{ item.resourceName }}.png" loading="lazy"></span>
 {%- else %}
 {%- if rewardType == 1 %}
-{%- assign card = site.data.CardMaster[id] %}
+{%- assign card = CardMaster[id] %}
 {%- assign r = card.resourceName | append: "_h01" %}
 {%- else if rewardType == 2 %}
-{%- assign card = site.data.SidekickMaster[id] %}
+{%- assign card = SidekickMaster[id] %}
 {%- assign r = card.resourceName | append: "_s01" %}
 {%- endif %}
 <span class="item"><img src="/cdn/Sprite/icon_{{ r }}.png" loading="lazy"></span>

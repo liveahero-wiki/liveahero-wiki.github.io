@@ -1,4 +1,4 @@
 {%- assign id = include.id | downcase -%}
-{%- assign status = site.data.StatusMaster[id] -%}
-{%- assign icon = site.data.wiki.StatusIcons[id] -%}
+{%- assign status = StatusMaster[id] -%}
+{%- assign icon = wiki.StatusIcons[id] -%}
 <span class="status" title="{{ status.statusName }}"><img src="/cdn/Sprite/{{ icon }}.png" loading="lazy"></span>

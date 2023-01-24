@@ -1,5 +1,5 @@
 {% assign qid = include.id | downcase %}
-{% assign Q = site.data.QuestMaster[qid] %}
+{% assign Q = QuestMaster[qid] %}
 <details id="q{{ qid }}">
 <summary><span class="item"><img src="/cdn/Sprite/{{ Q.iconFilename }}.png"></span> {{ Q.questName }}{% if Q.subName %} ({{ Q.subName }}){% endif %}</summary>
 <table class="quest-infobox">
@@ -11,7 +11,7 @@
 <tr><th>Stamina</th><td>{{ cond.stamina }}</td></tr>
 {% when "QuestClear" %}
 {% assign pqid = cond.questId | downcase %}
-<tr><th>Required Quest</th><td><a href="#q{{ pqid }}">{{ site.data.QuestMaster[pqid].questName }}</a></td></tr>
+<tr><th>Required Quest</th><td><a href="#q{{ pqid }}">{{ QuestMaster[pqid].questName }}</a></td></tr>
 {% when "ItemConsume" %}
 {% assign item_cost = item_cost | push: cond %}
 {% when "HavingStockCard" %}
@@ -73,7 +73,7 @@
 {% if Q.scoreAttackBonuses.size > 0 %}
 <tr><th>Atk Bonus</th><td><table>
 {% for bonus in Q.scoreAttackBonuses %}
-<tr><th>{{ site.data.wiki.UITranslation[bonus.description] | default: bonus.description }}</th>
+<tr><th>{{ wiki.UITranslation[bonus.description] | default: bonus.description }}</th>
 <td>
 {% for chara in bonus.characters %}
 {{ chara.stockId | stockIdToLink: chara.cardType }}
@@ -87,8 +87,8 @@
 <tr><th>Score Standard</th><td>
 <ul>
 {% for bonus in Q.scoreAttackStandards %}
-<li>{{ site.data.wiki.UITranslation[bonus.label] | default: bonus.label }}
-({{ site.data.wiki.UITranslation[bonus.description] | default: bonus.description }})
+<li>{{ wiki.UITranslation[bonus.label] | default: bonus.label }}
+({{ wiki.UITranslation[bonus.description] | default: bonus.description }})
 </li>
 {% endfor %}
 </ul>

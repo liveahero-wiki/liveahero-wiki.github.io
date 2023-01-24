@@ -1,4 +1,4 @@
-{% assign cardInfos = site.data.SidekickMaster | where: "stockId", include.stockId %}
+{% assign cardInfos = SidekickMaster | where: "stockId", include.stockId %}
 
 {% assign firstCardInfo = cardInfos | first %}
 {% assign r = firstCardInfo.resourceName %}
@@ -44,7 +44,7 @@
 {% assign bio_s01 = detail_prefix | append: "_S01" %}
 <details>
 <summary>Side Story</summary>
-<p>{{ site.data.processed.jp_bio[bio_s01] }}</p>
+<p>{{ processed.jp_bio[bio_s01] }}</p>
 </details>
 {% if include.BIO_S01 != "" %}
 <details open>
