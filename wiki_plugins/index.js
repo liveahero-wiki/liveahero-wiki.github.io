@@ -40,6 +40,22 @@ module.exports = function(eleventyConfig) {
     return a;
   });
 
+  eleventyConfig.addFilter("skill_target", a => {
+    return a;
+  });
+
+  eleventyConfig.addFilter("skill_trigger", a => {
+    return "";
+  });
+
+  eleventyConfig.addFilter("skill_trigger_json", a => {
+    return "";
+  });
+
+  eleventyConfig.addFilter("should_skip_skill_effect", a => {
+    return false;
+  });
+
   eleventyConfig.addFilter("push", (array, element) => {
     const nArray = Array.from(array);
     nArray.push(element);

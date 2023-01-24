@@ -15,6 +15,7 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addPassthroughCopy({
 		"./assets/": "/assets/",
+        "./cdn/": "/cdn/",
 	});
 
 	// Run Eleventy when these files change:
@@ -133,6 +134,7 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.setLiquidOptions({
         dynamicPartials: false,
+        jekyllInclude: true,
         //strictFilters: false, // renamed from `strict_filters` in Eleventy 1.0
     });
 
