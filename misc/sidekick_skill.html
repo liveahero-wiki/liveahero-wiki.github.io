@@ -5,7 +5,7 @@ banner: true
 
 <p>For simplicity sake, only active and passive skills at level 50 are listed.</p>
 
-{% assign cardInfos = site.data.SidekickMaster | where: "levelZone", 1 %}
+{% assign cardInfos = SidekickMaster | where: "levelZone", 1 %}
 
 <div class="table-scroll">
 <table class="sort-table">
@@ -18,8 +18,8 @@ banner: true
 <td>{{ g.agility }}</td>
 {% assign active = c.skillIds[0] | downcase %}
 {% assign passive = c.equipmentSkills[0] | downcase %}
-{% assign active_skill = site.data.SkillMaster[active] %}
-{% assign passive_skill = site.data.SkillMaster[passive] %}
+{% assign active_skill = SkillMaster[active] %}
+{% assign passive_skill = SkillMaster[passive] %}
 <td>{% include skill-description.html skill=active_skill %}</td>
 <td>{{ active_skill.useView }}</td>
 <td>{% include skill-description.html skill=passive_skill %}</td>

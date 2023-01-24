@@ -5,7 +5,7 @@ banner: true
 
 <p>For simplicity sake, only 5 star heroes are ranked here.</p>
 
-{% assign cardInfos = site.data.CardMaster | where: "rarity", 5 | where_exp: "item", "item.stockId < 90000" %}
+{% assign cardInfos = CardMaster | where: "rarity", 5 | where_exp: "item", "item.stockId < 90000" %}
 
 <div class="table-scroll">
 <table class="sort-table">
