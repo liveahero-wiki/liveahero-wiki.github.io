@@ -45,6 +45,7 @@ additional_scripts: ["/assets/chara.js"]
 <h2 id="unreleased">Unreleased units</h2>
 
 {% assign unreleased = site.charas | where: "unreleased", true %}
+{{ site.charas.length }}
 <ul>
 {% for chara in unreleased %}
   <li>

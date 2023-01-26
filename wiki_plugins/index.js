@@ -1,3 +1,4 @@
+/** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 module.exports = function(eleventyConfig) {
   // Usage: {% uppercase myVar %} where myVar has a value of "alice"
   // Usage: {% uppercase "alice" %}
@@ -19,6 +20,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("date_to_xmlschema", s => {
     return new Date(s).toISOString();
   });
+
+  eleventyConfig.collections
 
   eleventyConfig.addFilter("stockIdToLink", s => {
     return `<a>${s}</a>`
