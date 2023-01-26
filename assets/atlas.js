@@ -38,8 +38,9 @@ class AtlasStitcher {
     }
 
     this.canvas.toBlob(blob => {
+      if (dest_img.src.startsWith("blob")) URL.revokeObjectURL(dest_img.src);
+
       dest_img.src = URL.createObjectURL(blob);
-      dest_img.onload = () => URL.revokeObjectURL(dest_img.src);
     }, "image/png");
   }
 };
@@ -126,7 +127,7 @@ async function atlasHandler(gallery) {
   // addAprilFoolSprite(sprites, select);
 
   gallery.appendChild(select);
-  select.addEventListener("change", () => {
+  const h = () => {
     const comp = select.value.split(":");
     /*if (comp[0] == APRIL_FOOL) {
       if (comp[1].startsWith("http")) {
@@ -145,8 +146,9 @@ async function atlasHandler(gallery) {
       atlasSticher.draw(img, textureData, atlas_json, dest_img);
     }
     img.src = `/cdn/Texture2D/${textureData["atlasName"]}.png`;
-  });
-  select.dispatchEvent(new Event('change'));
+  };
+  h();
+  select.addEventListener("change", h);
 }
 
 document.querySelectorAll(".atlas-gallery").forEach(gallery => atlasObserver.observe(gallery));
