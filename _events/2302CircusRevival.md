@@ -69,7 +69,7 @@ Rates as follow:
 | {% chara_link Vulpecula|h1 %}  | 40 |
 | {% chara_link Yasuhiko|h1 %}  | 30 |
 | {% chara_link Goro|h2 %} | 20 |
-| {% chara_link Lilac|h2 %}  | 20 |
+| {% chara_link Lilac|h1 %}  | 20 |
 | {% chara_link Flamier|h2 %}  | 10 |
 | {% chara_link Furlong|h1 %} | 10 |
 
