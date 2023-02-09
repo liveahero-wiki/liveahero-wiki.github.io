@@ -16646,6 +16646,35 @@
       "isOverrideStatusDescription": false
     }
   },
+  "545": {
+    "skillEffectId": 545,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddFixAttack",
+          "parameter": {
+            "value": 1000
+          }
+        }
+      ],
+      "filename": "status_atkup",
+      "statusId": 179,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "ATK+1000",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "ATK+1000",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATK+1000。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
   "600": {
     "skillEffectId": 600,
     "skillEffectJson": {
@@ -23507,7 +23536,7 @@
       "canDispel": false,
       "filterIds": [],
       "parameter": false,
-      "description": "限定アンドリュースキル3用ダミー効果",
+      "description": "ダミー効果",
       "isImmediate": true,
       "persistence": false,
       "canDuplicate": false,
@@ -23734,7 +23763,7 @@
       "canDuplicate": false,
       "overrideStatusName": "弱体抵抗50",
       "isOverrideStatusName": true,
-      "overrideStatusDescription": "被デバフ付与率が50%減少する。",
+      "overrideStatusDescription": "被デバフ付与率が50%減少する。バフでもデバフでもない状態。スキルによる解除不可。",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
     }
@@ -24017,7 +24046,7 @@
       "canDuplicate": true,
       "overrideStatusName": "被ダメージ-25%",
       "isOverrideStatusName": true,
-      "overrideStatusDescription": "被ダメ―ジを永続的に-25%する。解除不可。",
+      "overrideStatusDescription": "被ダメ―ジを-25%。バフでもデバフでもない状態。スキルによる解除不可。",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
     }
@@ -24848,7 +24877,7 @@
       "canDuplicate": false,
       "overrideStatusName": "被ダメージ-30%",
       "isOverrideStatusName": true,
-      "overrideStatusDescription": "被ダメージを-30%する。解除不可。(この状態変化はバフにカウントされない)",
+      "overrideStatusDescription": "被ダメージ-30%。バフでもデバフでもない状態。スキルによる解除不可。",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
     }
@@ -24908,7 +24937,7 @@
       "canDuplicate": false,
       "overrideStatusName": "ATK+50%",
       "isOverrideStatusName": true,
-      "overrideStatusDescription": "ATKを永続的に+50%する。解除不可。",
+      "overrideStatusDescription": "ATK+50%。バフでもデバフでもない状態。スキルによる解除不可。",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
     }
@@ -28197,6 +28226,778 @@
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
+    }
+  },
+  "988": {
+    "skillEffectId": 988,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewChange",
+          "parameter": {
+            "value": 50
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 167,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View消費量-50%（システム）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "View消費量-50%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "スキルに必要なViewPowerが半分になる。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "989": {
+    "skillEffectId": 989,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 50
+          }
+        }
+      ],
+      "filename": "status_atkdown",
+      "statusId": 168,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATK-50%（システム）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "ATK-50%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATK-50%。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "990": {
+    "skillEffectId": 990,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 130
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"EnemyDeBuffNumberExecTrigger\"}]",
+      "filename": "status_defdown",
+      "statusId": 169,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "デバフが付与されている時、相手からのダメージが1.3倍",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "デバフ時弱体化",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "デバフが付与されている時、被ダメージ+30%。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "991": {
+    "skillEffectId": 991,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewChange",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "filename": "status_useless",
+      "statusId": 170,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View消費量+50%（システム）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "View消費量+50%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "スキルに必要なViewPowerが1.5倍になる。バフでもデバフでもない扱い。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "992": {
+    "skillEffectId": 992,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "HealMultipleDefence",
+          "parameter": {
+            "value": 50
+          }
+        }
+      ],
+      "filename": "status_burst",
+      "statusId": 171,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "HP回復量50%減少",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "HP回復量50%減少",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "スキルや状態変化によるHPの回復量が50%減少する。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "993": {
+    "skillEffectId": 993,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 70
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"EnemyBuffNumberExecTrigger\"}]",
+      "filename": "status_defup",
+      "statusId": 172,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "バフが付与されている時、相手から受けるダメージが-30%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "バフ時強化",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "バフが付与されている時、相手から受けるダメージが-30%される。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "994": {
+    "skillEffectId": 994,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveBuff",
+          "parameter": {
+            "value": 1,
+            "target": 5
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "挑発を1つ解除",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "995": {
+    "skillEffectId": 995,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeHp",
+          "parameter": {
+            "value": 10
+          }
+        }
+      ],
+      "filename": "status_poison",
+      "statusId": 173,
+      "canDispel": false,
+      "filterIds": [
+        11
+      ],
+      "parameter": false,
+      "description": "ターン終了時HP減少10%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "毎ターンHP減少",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ターン終了時にHP最大値の10%のダメージを受ける。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "996": {
+    "skillEffectId": 996,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 50
+          }
+        }
+      ],
+      "filename": "status_defup",
+      "statusId": 142,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "被ダメージ-50%（重複不可）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "被ダメージ-50%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメージを-50%する。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "997": {
+    "skillEffectId": 997,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 50
+          }
+        }
+      ],
+      "trigger": "[{\"value\":2,\"element\":0,\"statusId\":0,\"class\":\"MaxComboTrigger\"}]",
+      "filename": "status_atkdown",
+      "statusId": 174,
+      "canDispel": false,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "コンボ数3未満の時ATK-50%（システム）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "コンボ弱体",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "コンボ数3未満の時ATK-50%。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "998": {
+    "skillEffectId": 998,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 50
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 175,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATK-50%（システム）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "ATK-50%",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "ATK-50%。解除不可。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "999": {
+    "skillEffectId": 999,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 130
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"BeforeSkillTrigger\"}]",
+      "filename": "status_defdown",
+      "statusId": 176,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "未行動時、被ダメージ+30%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "未行動時弱体",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "未行動時、被ダメージ+30%。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1000": {
+    "skillEffectId": 1000,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewChange",
+          "parameter": {
+            "value": 200
+          }
+        }
+      ],
+      "filename": "status_useless",
+      "statusId": 175,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View消費量2倍（システム）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "View消費量2倍",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "スキルに必要なViewPowerが2倍になる。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1001": {
+    "skillEffectId": 1001,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "DamageLimit",
+          "parameter": {
+            "value": 5000
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 178,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "ダメージ上限5000（アイコン表示有り）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "ダメージ上限5000",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "受けるダメージの上限が5000になる。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1002": {
+    "skillEffectId": 1002,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 177,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果177番",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1003": {
+    "skillEffectId": 1003,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 130
+          }
+        }
+      ],
+      "filename": "status_atkup",
+      "statusId": 179,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATK+30%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "ATK+30%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATK+30%。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1004": {
+    "skillEffectId": 1004,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 50
+          }
+        }
+      ],
+      "filename": "status_atkdown",
+      "statusId": 168,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATK-30%（システム）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "ATK-30%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATK-30%。解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1005": {
+    "skillEffectId": 1005,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeHp",
+          "parameter": {
+            "value": -20,
+            "avoidExtensionTurn": false
+          }
+        }
+      ],
+      "filename": "status_regenerate",
+      "statusId": 180,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "毎ターンHP回復",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "HP回復＆ATK増加",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ターン終了時にHP最大値の20%回復＆毎ターンATKが10%増加。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1006": {
+    "skillEffectId": 1006,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeViewCoefficient",
+          "parameter": {
+            "value": 0
+          }
+        },
+        {
+          "class": "MultipleBaseView",
+          "parameter": {
+            "value": 0
+          }
+        }
+      ],
+      "filename": "status_mosaic",
+      "statusId": 181,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View獲得スキル無効（システム）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "View獲得無効",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "あらゆる行動でViewの獲得ができなくなる。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1007": {
+    "skillEffectId": 1007,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -3000
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 181,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "View消費量-3000(システム）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "View消費量-3000",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "Viewの消費量が減少する。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1008": {
+    "skillEffectId": 1008,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HealthMultipleAttack",
+          "parameter": {
+            "evaluationIsMax": false
+          }
+        }
+      ],
+      "trigger": "[]",
+      "filename": "status_firepower",
+      "statusId": 182,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATK増加（HP減少に応じて）最大1.5倍",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "overrideStatusName": "火事場力",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "HPが減少するほどATKが上昇する。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1009": {
+    "skillEffectId": 1009,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -10000
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 184,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View消費量-10000",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "View消費量-10000",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "Viewの消費を-10000する。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1010": {
+    "skillEffectId": 1010,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 183,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果183番付与",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1011": {
+    "skillEffectId": 1011,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 50
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"EnemyDeBuffNumberDontExecTrigger\"}]",
+      "filename": "status_defup",
+      "statusId": 142,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "被ダメージ-50%（デバフが付与されていない時）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "非デバフ時強化",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "デバフが付与されていない時、被ダメージ-50%。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1012": {
+    "skillEffectId": 1012,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"EnemyDeBuffNumberExecTrigger\"}]",
+      "filename": "status_defdown",
+      "statusId": 142,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "被ダメージ+50%（デバフが付与されている時）",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "overrideStatusName": "デバフ時弱体化",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "デバフが付与されている時、被ダメージ+50%。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
     }
   }
 }
