@@ -5,7 +5,7 @@ news_link: https://live-a-hero.jp/info/5322
 banner_image: banner_info_CircusRevival2302.jpg
 gacha: true
 event_start_time: 2023-02-09T20:00:00+09
-event_end_time: 2023-03-028T14:00:00+09
+event_end_time: 2023-03-02T14:00:00+09
 farm_start_time: 2023-02-09T20:00:00+09
 farm_end_time: 2023-02-23T20:00:00+09
 sales_start_time: 2023-02-09T20:00:00+09
