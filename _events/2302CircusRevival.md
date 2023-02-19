@@ -158,6 +158,131 @@ Additional Login bonus for the date:
 | 9  | 1 {% include item.html id=2 %} ; 1 {% include item.html id=29 %} |
 | 10  | 1 {% include item.html id=10 %} |
 
+### Campaign high difficulty quest
+
+- Cost 0 stamina
+- There will be special effects you can choose for this event's challenge quest, 3 achievement target that increase the difficulty, and 1 support effect for allies
+- Using support effect will negate some mission count even if you also use the achievement target
+
+Hero & sidekick that has bonus atk for this event's challenge quest:
+
+| Chara | +Bonus atk (%)|
+|------------|--------------|
+| {% chara_link Kyoichi|h2 %} | 50 |
+| {% chara_link Marfik|h2 %}  | 50 |
+| {% chara_link Marfik|h1 %}  | 50 |
+| {% chara_link Shoen|h1 %}  | 50 |
+| {% chara_link Santetsu|h1 %}  | 50 |
+| {% chara_link Shoen|h2 %}  | 30 |
+| {% chara_link Kyoichi|h1 %} | 30 |
+| {% chara_link Flamier|h1 %} | 30 |
+| {% chara_link Toshu|h1 %} | 30 |
+| {% chara_link Roiker|h1 %} | 30 |
+| {% chara_link Flamier %} | 10 |
+| {% chara_link Kyoichi %} | 10 |
+| {% chara_link Marfik %} | 10 |
+| {% chara_link Shoen %} | 10 |
+| {% chara_link Roiker %} | 10 |
+| {% chara_link Toshu %} | 10 |
+| {% chara_link Santetsu %} | 10 |
+
+{% include quest-group.html chapterId=1038 %}
+
+### Showdown! Heroic Educators! B rank
+
+| Special effect   | 
+|--------|
+| Buff and Debuff cannot be stacked   |    
+
+Achievement target for this quest as follows:
+
+| Achievement target   | 
+|--------|
+| Attack -50% for allied hero with the role "Attack"   |    
+| All ally with debuff receive 30% more damage   |   
+| All enemies gain 50% VP cost reduction when under 50% hp   |   
+| All allies atk +50% and damage received -50% (support)   |         
+
+Listed below are the enemies skills:
+
+#### Flamier's skills
+
+{% include skill-table-manual.html skillIds="4011114,1011101,4011113" equipmentSkills="" %}
+
+#### Kyoichi's skills
+
+{% include skill-table-manual.html skillIds="1010101,4010103" equipmentSkills="" %}
+
+#### Shoen's skills
+
+{% include skill-table-manual.html skillIds="1012101,4012104,4012105" equipmentSkills="6012102" %}
+
+### Showdown! Heroic Educators! A rank
+
+| Special effect   | 
+|--------|
+| Buff and Debuff cannot be stacked   |    
+
+Achievement target for this quest as follows:
+
+| Achievement target   | 
+|--------|
+| Attack -50% for allied hero when combo is less than 3   |    
+| All ally who hasn't acted in a turn received 30% more damage   |   
+| All enemies remove all debuffs and gain 50% debuff rate reduction when under 50% hp   |   
+| All allies atk +1000 and damage received -30% (support)   |         
+
+Listed below are the enemies skills:
+
+#### Toshu's skills
+
+{% include skill-table-manual.html skillIds="1013101,1013102,4013103" equipmentSkills="6013101" %}
+
+#### Marfik's skills
+
+{% include skill-table-manual.html skillIds="1014101,4014101,1014103" equipmentSkills="6014101" %}
+
+#### Santetsu's skills
+
+{% include skill-table-manual.html skillIds="4112101,4112102,4112103" equipmentSkills="" %}
+
+#### Roiker's skills
+
+{% include skill-table-manual.html skillIds="1113104,1113102,1113103" equipmentSkills="6113104" %}
+
+### Showdown! Heroic Educators! S rank
+
+| Special effect   | 
+|--------|
+| Buff and Debuff cannot be stacked   |    
+
+Achievement target for this quest as follows:
+
+| Achievement target   | 
+|--------|
+| The first enemy to act get 10,000 VP reduction for one action every turn  |    
+| All ally with debuff receive 50% more damage    |   
+| Enemies without debuff receive 50% less damage   |   
+| All allies recover 20% hp and increase 10% Atk every turn (support)   |         
+
+Listed below are the enemies skills:
+
+#### Flamier's skills
+
+{% include skill-table-manual.html skillIds="4011202,4011201,4011203" equipmentSkills="6011201" %}
+
+#### Kyoichi's skills
+
+{% include skill-table-manual.html skillIds="1010201,1010203" equipmentSkills="6010202" %}
+
+#### Toshu's skills
+
+{% include skill-table-manual.html skillIds="4013202,4013201,4013203" equipmentSkills="6013201" %}
+
+#### Marfik's skills
+
+{% include skill-table-manual.html skillIds="4014207,4014208,4014209" equipmentSkills="6014202" %}
+
 ## Event Shop
 
 {% include shop-table.html id=38 %}
