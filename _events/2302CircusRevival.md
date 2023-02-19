@@ -109,6 +109,55 @@ Here is a list of this event's limited time Missions:
 | 5  | Finish any rank {% include item-icon.html id=76 %} event quest 50 times | 1 {% include item.html id=34 %}    |
 | 6  | Finish {% include item-icon.html id=76 %} event sales 10 times | 1 {% include item.html id=34 %}    |
 
+## Event Challenge Quests
+
+- Cost 0 stamina
+- There will be 3 challenge quests for this event, released sequentially
+- There will be special effects for this event's challenge quest, activated for all enemies and allies
+
+| Special Effect   | Effect |
+|--------|-----------|
+| Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
+| Critical  |    When hitting enemy with lower Speed there is a chance to deal 30% more damage (chance is based on speed difference)  |
+| Reduction  |   When hit by enemy that has lower Speed there is a chance to reduce 30% damage (chance is based on speed difference)  |
+
+> Reduction Effect is calculated separately from {% chara_link Furlong|h2 %} 's passive, and if both trigger then damage will be reduced by both.
+
+{% include quest-group.html chapterId=467 %}
+
+### Underwater Escape Show
+
+Listed enemy skills below are enemy skills for S Difficulty:
+
+#### Hydoor's skills
+
+{% include skill-table-manual.html skillIds="1017101,4017103,4017104" equipmentSkills="6017101" %}
+
+#### Isaribi's skills
+
+{% include skill-table-manual.html skillIds="1022101,4022106,4022107" equipmentSkills="6017101" %}
+
+## Valentine Campaign 2023
+
+Valentine campaign is also available from 9 Feb 2023 20:00 JST to 2 Mar 2023 14:00 JST
+
+### Login Bonus
+
+Additional Login bonus for the date:
+
+| Day| Rewards |
+|----|-----------------------------------------------------------|
+| 1  | 1 {% include item.html id=2 %} ; 1 {% include item.html id=34 %} |
+| 2  | 1 {% include item.html id=2 %} ; 5,000 {% include item.html id=11 %} |
+| 3  | 1 {% include item.html id=2 %} ; 5,000 {% include item.html id=35 %} |
+| 4  | 1 {% include item.html id=2 %} ; 10 {% include item.html id=59 %} |
+| 5  | 2 {% include item.html id=2 %} |
+| 6  | 1 {% include item.html id=2 %} ; 1 {% include item.html id=34 %} |
+| 7  | 1 {% include item.html id=2 %} ; 5,000 {% include item.html id=11 %} |
+| 8  | 1 {% include item.html id=2 %} ; 5,000 {% include item.html id=35 %} |
+| 9  | 1 {% include item.html id=2 %} ; 1 {% include item.html id=29 %} |
+| 10  | 1 {% include item.html id=10 %} |
+
 ## Event Shop
 
 {% include shop-table.html id=38 %}
