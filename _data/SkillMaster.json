@@ -1218,6 +1218,102 @@
       }
     ]
   },
+  "50": {
+    "skillId": 50,
+    "skillName": "敵全体のHPが毎ターン10%減少",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "status_poison",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全員はターン終了時にHP最大値の10%のダメージを受ける",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 995,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "51": {
+    "skillId": 51,
+    "skillName": "味方全員の回復量-50%",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "status_burst",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方全員の使用するHP回復スキルと状態変化によるHP回復量-50%",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 992,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "52": {
+    "skillId": 52,
+    "skillName": "バフが付与されている敵の被ダメージ-30%",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "status_defup",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "バフが付与されている敵の被ダメージ-30%",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 993,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "53": {
+    "skillId": 53,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "status_invincible",
+    "subResourceName": "",
+    "timing": 6,
+    "description": "敵全員はピンチ状態になった時、3回分の無敵を付与。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 423,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "54": {
     "skillId": 54,
     "skillName": "味方全員のATK+1000＆被ダメージ-30%",
@@ -1332,6 +1428,120 @@
       }
     ]
   },
+  "58": {
+    "skillId": 58,
+    "skillName": "役割が「補助」の味方ヒーローのView消費量2倍",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "status_useless",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "役割が「補助」の味方ヒーローのView消費量2倍",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 1000,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "59": {
+    "skillId": 59,
+    "skillName": "敵のマルフィクが受けるダメージの上限が5000になる",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵のマルフィクが受けるダメージの上限が5000になる",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 1002,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "60": {
+    "skillId": 60,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "status_atkup",
+    "subResourceName": "",
+    "timing": 14,
+    "description": "敵を1体撃破する毎に、敵全員のATK+30%",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 1003,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "61": {
+    "skillId": 61,
+    "skillName": "敵全員はバトル開始時にデバフ3つ付与",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_debuffAll",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "敵全員はバトル開始時に3回分のDEFダウン＆ATKダウン＆SPDダウンを付与",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 315,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 389,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 225,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "62": {
     "skillId": 62,
     "skillName": "",
@@ -1363,6 +1573,78 @@
       },
       {
         "skillEffectId": 87,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "63": {
+    "skillId": 63,
+    "skillName": "「View獲得」以外の味方ヒーローのView消費量+5000",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "status_useless",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "役割が「View獲得」以外の味方ヒーローのView消費量+5000",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 1017,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "64": {
+    "skillId": 64,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "status_awakening",
+    "subResourceName": "",
+    "timing": 14,
+    "description": "敵を1体撃破する毎に、敵全員のView消費量-3000",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 1007,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "65": {
+    "skillId": 65,
+    "skillName": "敵全員はHPが低くなるほど、攻撃力が上昇する（最大2倍）",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "status_firepower",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全員はHPが低くなるほど、攻撃力が上昇する（最大2倍）",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 1008,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,
@@ -1458,6 +1740,39 @@
     "effects": [
       {
         "skillEffectId": 1011,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "69": {
+    "skillId": 69,
+    "skillName": "味方全員のATK+50%＆被ダメージ-25%",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buffAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方全員のATK+50%＆被ダメージ-25%",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 881,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 852,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,
