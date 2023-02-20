@@ -163,6 +163,7 @@ Additional Login bonus for the date:
 - Cost 0 stamina
 - There will be special effects you can choose for this event's challenge quest, 3 achievement target that increase the difficulty, and 1 support effect for allies
 - Using support effect will negate some mission count even if you also use the achievement target
+- 2 set of achievement target, first set from 9 Feb 2023 20:00 JST to 20 Feb 2023 20:00 JST , second set from 20 Feb 2023 20:00 JST to 2 Mar 2023 14:00 JST
 
 Hero & sidekick that has bonus atk for this event's challenge quest:
 
@@ -196,12 +197,20 @@ Hero & sidekick that has bonus atk for this event's challenge quest:
 
 Achievement target for this quest as follows:
 
-| Achievement target   | 
+| Achievement target 1st set | 
 |--------|
 | Attack -50% for allied hero with the role "Attack"   |    
 | All ally with debuff receive 30% more damage   |   
 | All enemies gain 50% VP cost reduction when under 50% hp   |   
-| All allies atk +50% and damage received -50% (support)   |         
+| All allies atk +50% and damage received -50% (support)   |     
+
+| Achievement target 2nd set  | 
+|--------|
+| Allies receive 50% less hp from recovery effects  |    
+| Enemy with buff receive 30% less damage   |   
+| All enemies are granted invincible for 3 attack when under 50% hp   |   
+| All enemies receive 10% max hp damage every turn (support)   |         
+
 
 Listed below are the enemies skills:
 
@@ -225,12 +234,19 @@ Listed below are the enemies skills:
 
 Achievement target for this quest as follows:
 
-| Achievement target   | 
+| Achievement target 1st set  | 
 |--------|
 | Attack -50% for allied hero when combo is less than 3   |    
 | All ally who hasn't acted in a turn received 30% more damage   |   
 | All enemies remove all debuffs and gain 50% debuff rate reduction when under 50% hp   |   
-| All allies atk +1000 and damage received -30% (support)   |         
+| All allies atk +1000 and damage received -30% (support)   |        
+
+| Achievement target 2nd set  | 
+|--------|
+| VP cost for ally with support role is doubled  |    
+| Enemy Marfik has damage received cap of 5000 hp   |   
+| Each defeated enemy grants 30% attack to surviving one   |   
+| All enemies receive 3 times speed, atk, and defense down at the start of battle (support)   |         
 
 Listed below are the enemies skills:
 
@@ -258,12 +274,19 @@ Listed below are the enemies skills:
 
 Achievement target for this quest as follows:
 
-| Achievement target   | 
+| Achievement target 1st set  | 
 |--------|
 | The first enemy to act get 10,000 VP reduction for one action every turn  |    
 | All ally with debuff receive 50% more damage    |   
 | Enemies without debuff receive 50% less damage   |   
-| All allies recover 20% hp and increase 10% Atk every turn (support)   |         
+| All allies recover 20% hp and increase 10% Atk every turn (support)   |     
+
+| Achievement target 2nd set  | 
+|--------|
+| VP cost for ally without VP gain role +5000  |    
+| Each defeated enemy grants 3000 vp cost reduction to surviving one    |   
+| All enemies gain more attack the less hp they have (up to 2x atk)   |   
+| All allies gains +50% attack and receive 25% less damage (support)   |      
 
 Listed below are the enemies skills:
 
