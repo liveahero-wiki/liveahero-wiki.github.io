@@ -118,12 +118,6 @@ sprites="fg_villainTraineeNinjaEarth_s01,fg_villainTraineeNinjaFire_s01,fg_villa
 sprites="fg_villainTraineeNinjaEarth_h01,fg_villainTraineeNinjaFire_h01,fg_villainTraineeNinjaLight_h01,fg_villainTraineeNinjaShadow_h01,fg_villainTraineeNinjaWater_h01"
 %}
 
-### Salvager
-
-{% include hero-infobox-unreleased.html name="Salvager" mob=true
-sprites="fg_villainSalvagerEarth_s01,fg_villainSalvagerFire_s01,fg_villainSalvagerLight_s01,fg_villainSalvagerShadow_s01,fg_villainSalvagerWater_s01"
-%}
-
 ### Salvager (Transform)
 
 {% include hero-infobox-unreleased.html name="Salvager (Transform)" mob=true
@@ -157,7 +151,7 @@ sprites="fg_kaibutsuLarvaEarthSpace_h01,fg_kaibutsuLarvaFireSpace_h01,fg_kaibuts
 ### Tentacle Kaibutsu
 
 {% include hero-infobox-unreleased.html name="Tentacle Kaibutsu" mob=true
-sprites="fg_kaibutsuTentacle_h01"
+sprites="fg_kaibutsuTentacleTree_h01,fg_kaibutsuTentacle_h01"
 %}
 
 ### Trainee
