@@ -89,6 +89,8 @@ Skip {{ effect.parameter.value }} enemy action(s)
 {% if effect.parameter.index %}{{ target }} cannot use skill {{ effect.parameter.index | plus: 1 }} again{% else %}{{ target }} cannot use view-costing skills{% endif %}
 {% when "AddMultDamage" %}
 Deal {{ effect.parameter.value }}% of damage and extra {{ effect.parameter.addMult }}% of damage when condition in bracket is met
+{% when "AddMultHeal" %}
+Heal {{ effect.parameter.value }}% of self' ATK to {{ target }} + extra {{ effect.parameter.addMult }}% when condition in bracket is met
 {% when "ComboDamage" %}
 Deal {{ effect.parameter.value }}% of damage and {{ effect.parameter.value | times: effect.parameter.combpMult | divided_by: 100.0 }}% extra for each combo to {{ target }}
 {% when "ElementPenetrateDamage" %}

@@ -129,6 +129,17 @@ module LahWiki
           f.push("target has acted before invoker in current turn")
         when "BeforeSkillTriggerWithoutInvoker"
           f.push("target has not acted yet in current turn")
+        # Might be wrong
+        when "TurnTrigger"
+          f.push("turn&gt;=#{c['value']}")
+        when "TurnDontExecTrigger"
+          f.push("turn&lt;=#{c['value']}")
+        when "TargetIsOwnTrigger"
+          f.push("is targeting self")
+        when "TargetNotOwnTrigger"
+          f.push("is not targeting self")
+        when "NowAttackingTrigger"
+          f.push("current action is not activated by another skill")
         else
           f.push("unknown condition (#{c['class']}")
         end
