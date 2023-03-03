@@ -1,6 +1,8 @@
 ---
 title: Suhail
 characterId: 30
+h2:
+  title: '"Arousal Voice" Suhail'
 heroes:
 - stockId: 10301
   BIO_H01: |-
@@ -18,6 +20,7 @@ heroes:
     and laugh boldly at the scene, but behind his unconventional way of life, He
     keeps striving to fulfill the promise he once made to his "friend", he is very
     sincere when it comes to friendships.
+- stockId: 10302
 sidekicks:
 - stockId: 10301
   BIO_S01: |-
@@ -46,6 +49,9 @@ RELATION = "I will absolutely make that dragon fellow my henchman someday!<br>So
 TOUCH = "Whoa, want a skinship with me?<br>Even my henchmen don't have this kind of courage,<br>Ye've piqued my interest…well then, come here!"
 TRAIN = "How about opening yer treasures, too?"
 TRAINED = "Yer waving me around, yer good...!"
+%}
+
+{% include voice-table.html resourceName="suhailChocolatefes2303"
 %}
 
 ## Notes

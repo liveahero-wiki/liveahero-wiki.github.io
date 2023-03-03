@@ -2,6 +2,8 @@
 title: Procy
 characterId: 32
 occupation: Bartender (バーテンダー)
+h2:
+  title: '"Swift Knuckle" Procy'
 heroes:
 - stockId: 10321
   BIO_H01: |-
@@ -19,6 +21,7 @@ heroes:
     weapon, and his life changed completely. Realizing he could leverage his power
     as hero to make a fortune, he bets it all on one big gamble to change his life
     for the better.
+- stockId: 10322
 sidekicks:
 - stockId: 10321
   BIO_S01: |-
@@ -64,6 +67,9 @@ RELATION = "Being loved by the guests is good, but…<br>what the hell did that 
 TOUCH = "H-Hey, y-you! How many times are you going to pet me?!<br>This isn't free, b-but... maybe just one...<br>g-god damnit, do whatever you want!"
 TRAIN = "Pay for the training!"
 TRAINED = "Owowow! I'm going to charge for medical treatment!"
+%}
+
+{% include voice-table.html resourceName="procyChocolatefes2303"
 %}
 
 ## Notes
