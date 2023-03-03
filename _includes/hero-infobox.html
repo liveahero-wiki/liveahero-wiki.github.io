@@ -129,8 +129,18 @@
 
 {% include skill-table-v2.html skillIds=skillIds %}
 
-{% if include.passiveSkillIds %}
+{% assign emptyArray = "" | split: "," %}
+{% assign passiveSkillIds = firstCardInfo.passiveSkillIds | default: emptyArray %}
+{% for cardInfo in cardInfos %}
+{% unless forloop.first %}
+{% for id in cardInfo.passiveSkillIds %}
+{% unless passiveSkillIds contains id %}{% assign passiveSkillIds = passiveSkillIds | push: id %}{% endunless %}
+{% endfor %}
+{% endunless %}
+{% endfor %}
+
+{% if passiveSkillIds.size > 0 %}
 <h3>Passive skills</h3>
-{% include skill-table-v2.html skillIds=include.passiveSkillIds hide_banner=true %}
+{% include skill-table-v2.html skillIds=passiveSkillIds hide_banner=true %}
 {% endif %}
 </div>
