@@ -16715,6 +16715,98 @@
       "isOverrideStatusDescription": false
     }
   },
+  "547": {
+    "skillEffectId": 547,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddMultHeal",
+          "parameter": {
+            "value": 50,
+            "addMult": 50
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"ReceiverPinchExecTrigger\"}]",
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "効果条件回復テスト",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "548": {
+    "skillEffectId": 548,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "変身不全",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "変身不全",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ヒーロースーツが破損した状態になる。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "549": {
+    "skillEffectId": 549,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TeamAttackRandomEnemy",
+          "parameter": {
+            "isAutoSkill": true,
+            "executeTiming": 5
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "味方がランダムな敵にオート行動スキルを誘発",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "600": {
     "skillEffectId": 600,
     "skillEffectJson": {
@@ -24465,7 +24557,9 @@
       "effects": [
         {
           "class": "NoneEffectElapseTurnBeforeSkill",
-          "parameter": []
+          "parameter": {
+            "avoidExtensionTurn": true
+          }
         }
       ],
       "filename": "",
@@ -29204,6 +29298,10 @@
       "count": 0,
       "effects": [
         {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
           "class": "MultipleAttack",
           "parameter": {
             "value": 140
@@ -29221,6 +29319,8 @@
       "isImmediate": false,
       "persistence": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "ATK+40%",
       "isOverrideStatusName": true,
       "overrideStatusDescription": "ATK+40%。バフでもデバフでも無い状態。スキルによる解除不可。",
@@ -29234,6 +29334,10 @@
       "turn": 1,
       "count": 0,
       "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
         {
           "class": "MultipleAttack",
           "parameter": {
@@ -29252,6 +29356,8 @@
       "isImmediate": false,
       "persistence": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "ATK+50%",
       "isOverrideStatusName": true,
       "overrideStatusDescription": "ATK+50%。バフでもデバフでも無い状態。スキルによる解除不可。",
@@ -29265,6 +29371,10 @@
       "turn": 1,
       "count": 0,
       "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
         {
           "class": "MultipleAttack",
           "parameter": {
@@ -29283,6 +29393,8 @@
       "isImmediate": false,
       "persistence": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "ATK+60%",
       "isOverrideStatusName": true,
       "overrideStatusDescription": "ATK+60%。バフでもデバフでも無い状態。スキルによる解除不可。",
@@ -29296,6 +29408,10 @@
       "turn": 1,
       "count": 0,
       "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
         {
           "class": "MultipleAttack",
           "parameter": {
@@ -29314,6 +29430,8 @@
       "isImmediate": false,
       "persistence": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "ATK+70%",
       "isOverrideStatusName": true,
       "overrideStatusDescription": "ATK+70%。バフでもデバフでも無い状態。スキルによる解除不可。",
@@ -29327,6 +29445,10 @@
       "turn": 1,
       "count": 0,
       "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
         {
           "class": "MultipleAttack",
           "parameter": {
@@ -29345,6 +29467,8 @@
       "isImmediate": false,
       "persistence": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "ATK+80%",
       "isOverrideStatusName": true,
       "overrideStatusDescription": "ATK+80%。バフでもデバフでも無い状態。スキルによる解除不可。",
@@ -29358,6 +29482,10 @@
       "turn": 1,
       "count": 0,
       "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
         {
           "class": "MultipleAttack",
           "parameter": {
@@ -29376,6 +29504,8 @@
       "isImmediate": false,
       "persistence": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "ATK+90%",
       "isOverrideStatusName": true,
       "overrideStatusDescription": "ATK+90%。バフでもデバフでも無い状態。スキルによる解除不可。",
@@ -29389,6 +29519,10 @@
       "turn": 1,
       "count": 0,
       "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
         {
           "class": "MultipleAttack",
           "parameter": {
@@ -29407,6 +29541,8 @@
       "isImmediate": false,
       "persistence": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "ATK+100%",
       "isOverrideStatusName": true,
       "overrideStatusDescription": "ATK+100%。バフでもデバフでも無い状態。スキルによる解除不可。",
@@ -29417,7 +29553,7 @@
   "1026": {
     "skillEffectId": 1026,
     "skillEffectJson": {
-      "turn": 2,
+      "turn": 1,
       "count": 0,
       "effects": [
         {
@@ -29428,20 +29564,20 @@
           }
         }
       ],
-      "filename": "",
-      "statusId": 27,
+      "filename": "status_reincanate",
+      "statusId": 188,
       "canDispel": true,
       "filterIds": [],
       "parameter": false,
-      "description": "ダメージ上限最大HPの50%",
+      "description": "ダメージ上限50%",
       "isImmediate": false,
       "persistence": false,
       "canDuplicate": false,
-      "overrideStatusName": "",
-      "isOverrideStatusName": false,
-      "overrideStatusDescription": "",
+      "overrideStatusName": "ダメージ上限50%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "受けるダメージの上限が最大HPの50%までになる。",
       "isDisplayPersistenceStatus": false,
-      "isOverrideStatusDescription": false
+      "isOverrideStatusDescription": true
     }
   },
   "1027": {
@@ -29470,6 +29606,8 @@
       "isImmediate": true,
       "persistence": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -29497,6 +29635,8 @@
       "isImmediate": false,
       "persistence": true,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -29511,6 +29651,10 @@
       "count": 0,
       "effects": [
         {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
           "class": "MultipleAttack",
           "parameter": {
             "value": 110
@@ -29524,10 +29668,12 @@
         4
       ],
       "parameter": false,
-      "description": "ATK+10%バフでもデバフでも無い状態。スキルによる解除不可。",
+      "description": "ATK+10%バフでもデバフでも無い状態。スキルによる解除不可。ターン終了時に解除。",
       "isImmediate": false,
       "persistence": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "ATK+10%",
       "isOverrideStatusName": true,
       "overrideStatusDescription": "ATK+10%。バフでもデバフでも無い状態。スキルによる解除不可。",
@@ -29541,6 +29687,10 @@
       "turn": 1,
       "count": 0,
       "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
         {
           "class": "MultipleAttack",
           "parameter": {
@@ -29559,6 +29709,8 @@
       "isImmediate": false,
       "persistence": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "ATK+20%",
       "isOverrideStatusName": true,
       "overrideStatusDescription": "ATK+20%。バフでもデバフでも無い状態。スキルによる解除不可。",
@@ -29573,6 +29725,10 @@
       "count": 0,
       "effects": [
         {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
           "class": "MultipleAttack",
           "parameter": {
             "value": 130
@@ -29586,10 +29742,12 @@
         4
       ],
       "parameter": false,
-      "description": "ATK+30バフでもデバフでも無い状態。スキルによる解除不可。",
+      "description": "ATK+30%バフでもデバフでも無い状態。スキルによる解除不可。",
       "isImmediate": false,
       "persistence": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "ATK+30%",
       "isOverrideStatusName": true,
       "overrideStatusDescription": "ATK+30%。バフでもデバフでも無い状態。スキルによる解除不可。",
@@ -29621,6 +29779,299 @@
       "isImmediate": true,
       "persistence": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1037": {
+    "skillEffectId": 1037,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Aggregation",
+          "parameter": []
+        }
+      ],
+      "filename": "status_damageAggregation",
+      "statusId": 26,
+      "canDispel": true,
+      "filterIds": [
+        12
+      ],
+      "parameter": false,
+      "description": "ダメージ集約",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1038": {
+    "skillEffectId": 1038,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Heal",
+          "parameter": {
+            "value": 40
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "HPを基礎ATKの40%回復する",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1039": {
+    "skillEffectId": 1039,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Heal",
+          "parameter": {
+            "value": 35
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "HPを基礎ATKの35%回復する",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1040": {
+    "skillEffectId": 1040,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 158,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "味方がランダムな敵にオート行動スキルを誘発(誘発説明用)",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1041": {
+    "skillEffectId": 1041,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddMultHeal",
+          "parameter": {
+            "value": 60,
+            "addMult": 40
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"ReceiverPinchExecTrigger\"}]",
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "HPを基礎ATKの60%回復する。対象がピンチ状態の時、HPを基礎ATKの100%回復する",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1042": {
+    "skillEffectId": 1042,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Provocation",
+          "parameter": []
+        },
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 130
+          }
+        },
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "status_target",
+      "statusId": 123,
+      "canDispel": true,
+      "filterIds": [
+        12,
+        4
+      ],
+      "parameter": false,
+      "description": "照準（エネミー用）",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1043": {
+    "skillEffectId": 1043,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 185,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "効果なし・覇気ヘルプ表示用",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1044": {
+    "skillEffectId": 1044,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 189,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "オート行動説明用",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "鼓舞",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "特殊なスキルで発動。バフでもデバフでも無い状態。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1045": {
+    "skillEffectId": 1045,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "trigger": "[{\"value\":50,\"element\":0,\"statusId\":0,\"class\":\"NotPinchExecTrigger\"}]",
+      "filename": "",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        0
+      ],
+      "parameter": false,
+      "description": "ピンチ状態説明用",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
