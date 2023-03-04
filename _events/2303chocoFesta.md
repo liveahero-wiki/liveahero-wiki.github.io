@@ -2,7 +2,7 @@
 title: Chocolate Festa
 jp_title: 押忍！チョコ学園祭メモリーズ
 news_link: https://live-a-hero.jp/info/5460
-banner_image: 
+banner_image: banner_campaign_chocoFesta.jpg
 gacha: true
 event_start_time: 2023-03-03T20:00:00+09
 event_end_time: 2023-03-30T14:00:00+09
