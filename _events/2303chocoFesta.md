@@ -20,15 +20,15 @@ sales_end_time: 2023-03-24T20:00:00+09
 On one of your days off, you met A lively high school girl who wants to hold a school festival.
 
 She was worried that the school festival could not be held due to the lack of a hero.
-You and a small dragon mercenary are asked by Aether Search to work as security guards at the school festival.
+You and a small dragon mercenary accepted the aether search request to work as security guards for the school festival.
 
-However, behind the scenes, there is a bar master with a strong business spirit who wants to make a fortune with a chocolate machine.
-and a dynamic pirate who is looking to scout for powerful operators...
+However, behind the scenes, there is a bar master with a strong business spirit who wants to make a fortune with a chocolate machine
+and a mighty pirate who is looking to scout for powerful operators...
 
 Various thoughts intersect at the school festival to achieve their respective goals.
 And there is also a hint of a threat that is quietly swelling ......!
 
-Each past and chocolate that gives shape to your thoughts
+Each memories and chocolate that gives shape to your thoughts
 The bitter-sweet school festival begins now!
 
 ## Event Banners
