@@ -15,6 +15,12 @@ additional_scripts: ["/assets/atlas.min.js"]
 sprites="fg_kaibutsuArmorBlack_h01"
 %}
 
+### Bird Kaibutsu
+
+{% include hero-infobox-unreleased.html name="Bird Kaibutsu" mob=true
+sprites="fg_kaibutsuBirdSmallEarth_h01,fg_kaibutsuBirdSmallFire_h01,fg_kaibutsuBirdSmallLight_h01,fg_kaibutsuBirdSmallShadow_h01,fg_kaibutsuBirdSmallWater_h01"
+%}
+
 ### Cetus
 
 {% include hero-infobox-unreleased.html name="Cetus" mob=true
