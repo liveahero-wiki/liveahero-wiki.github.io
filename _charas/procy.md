@@ -22,6 +22,18 @@ heroes:
     as hero to make a fortune, he bets it all on one big gamble to change his life
     for the better.
 - stockId: 10322
+  BIO_H01: |-
+    Procy took the form as a hero and a reliable bancho with steel resolution.<br>
+    His willingness to face head-on the thoughts and feelings of someone he has overlooked because of his lack of honesty is reflected in his hero suit, 
+    which resembles a school uniform.<br>
+    He dreamed of becoming a wealthy billionaire when he was a poor student. While he has yet to achieve it, Procy has started to look beyond it.<br>
+    With his fist trained while having scuffles with his rowdy friends, he now takes the lead and uses this strength to protect his friends.<br>
+  BIO_H02: |-
+    One day, Procy decided to leave the slums, and determined to embark on a journey to earn money.<br>
+    There he found a boy waiting for him, he gave him a muffler, as a thanks for saving his life.<br>
+    With what kind of feelings did the boy give that tattered muffler to him…
+    right now he kind of understand the thoughts inside the heroes who never ask anything in return.<br>
+    With the scarf he didn't receive that day fluttering around his neck, Procy rushes to his friends faster than anyone else, his fists ready.
 sidekicks:
 - stockId: 10321
   BIO_S01: |-
