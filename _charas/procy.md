@@ -24,7 +24,7 @@ heroes:
 - stockId: 10322
   BIO_H01: |-
     Procy took the form as a hero and a reliable bancho with steel resolution.<br>
-    His willingness to face head-on the thoughts and feelings of someone he has overlooked because of his lack of honesty is reflected in his hero suit, 
+    His willingness to face head-on the thoughts and feelings of someone he had overlooked because of his lack of honesty is reflected in his hero suit, 
     which resembles a school uniform.<br>
     He dreamed of becoming a wealthy billionaire when he was a poor student. While he has yet to achieve it, Procy has started to look beyond it.<br>
     With his fist trained while having scuffles with his rowdy friends, he now takes the lead and uses this strength to protect his friends.<br>
