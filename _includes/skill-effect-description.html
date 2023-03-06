@@ -80,6 +80,8 @@ Give {{ target }} {{ 5 | status_description }}: opponents can target only {{ tar
 {% when "Hide" %}
 {% assign turnDefinition = "turn" %}
 Give {{ target }} {{ 15 | status_description }}
+{% when "HidePenetration" %}
+Ignore enemy's {{ 15 | status_description }}
 {% when "HealthDamage" %}
 Deal {% if effect.parameter.evaluationIsMax == true %}{{ effect.parameter.value | times: 2 }}% -> {{ effect.parameter.value }}%{% else %}{{ effect.parameter.value }}% -> {{ effect.parameter.value | times: 2 }}%{% endif %} damage to {{ target }} as HP goes from Max to 0
 {% when "DeleteTurn" %}
@@ -119,7 +121,7 @@ View-costing skills for {{ target }} now target all allies/enemies
 {% when "RandomTeamAttack" %}
 After attack, if targeted enemy is still alive, random ally will use skill 1 on targeted enemy
 {% when "TeamAttackRandomEnemy" %}
-Target ally use skill 1 on random enemy
+Target ally use {% if effect.parameter.isAutoSkill %}auto skill{% else %}skill 1{% endif %} on random enemy
 {% when "ViewPowerMultipleAttack" %}
 ATK Up by {{ effect.parameter.minMult }}% ~ {{ effect.parameter.maxMult }}% to all allies, scaled from 0 to {{ effect.parameter.maxView }} view power
 {% when "HighestViewPowerMultipleAttack" %}
