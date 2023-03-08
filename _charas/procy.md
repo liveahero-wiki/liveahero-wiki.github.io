@@ -51,7 +51,7 @@ sidekicks:
     or another.
 
     It seems like the bar's opening cost has him up to his neck in debt.
-  extra_sprites: fg_procy_s01_skin1,fg_procy_s01_skin2
+  extra_sprites: fg_procy_s01_skin1,fg_procy_s01_skin2,fg_procy_s01_skin3
 ---
 
 {% include voice-table.html resourceName="procy"
