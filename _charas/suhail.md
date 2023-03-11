@@ -21,6 +21,19 @@ heroes:
     keeps striving to fulfill the promise he once made to his "friend", he is very
     sincere when it comes to friendships.
 - stockId: 10302
+  BIO_H01: |-
+    The day Suhail landed on Tronesion, determined to become the best pirate in the universe, he encountered an inorganic life form, 
+    and that was the day he met his one and only friend.<br>
+    Memories of the past were awakened, and in response, 
+    the parts of his left arm entrusted to him by his friend transformed into the form of a loudspeaker.<br>
+    The suit, reminiscent of a cheering squad, interacted with the parallel weapon and became a voice that echoed far and wide.<br>
+    The overlapping voices of the friends and Suhail shake the stars and sweep all the attention of the listeners.
+  BIO_H02: |-
+    Suhail, who lost part of his memory after being attacked by a Kaibutsu, goes back to his memory to try to remember what he lost.<br>
+    He exchanged a promise with his friend, to become the best pirate in the universe, to steal all the attention, love and wealth.<br>
+    He didn't forget...the day he met his friend, the day he made the pirate gang, the day he lost his left arm<br>
+    It's because of this promise that Suhail can laugh heartily.<br>
+    If you encourage the universe with all your might, then the universe will resonate and also encourage you back, this is what he learned from his friend.
 sidekicks:
 - stockId: 10301
   BIO_S01: |-
