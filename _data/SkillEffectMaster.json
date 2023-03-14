@@ -16871,6 +16871,105 @@
       "isOverrideStatusDescription": true
     }
   },
+  "552": {
+    "skillEffectId": 552,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TeamAttackRandomEnemy",
+          "parameter": {
+            "isAutoSkill": false,
+            "executeTiming": 5
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":126,\"class\":\"EnemySystemStatusNumberExecTrigger\"}]",
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "連携準備がついている味方のスキル１を誘発",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "553": {
+    "skillEffectId": 553,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffectElapseTurnDamageAndTurnEnd",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "連携準備(システム効果126)",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "連携準備",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "味方の行動でスキル１を誘発する。バフでもデバフでもない状態。ダメージを受けるかターン終了時に解除される。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "554": {
+    "skillEffectId": 554,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 110
+          }
+        }
+      ],
+      "filename": "status_atkup",
+      "statusId": 129,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "ATK+10%(解除不可能)",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATK+10%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATK+10%。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
   "600": {
     "skillEffectId": 600,
     "skillEffectJson": {
@@ -30723,13 +30822,13 @@
           }
         }
       ],
-      "trigger": "[{\"value\":20000,\"element\":0,\"statusId\":0,\"class\":\"ViewDontExecTrigger\"}]",
+      "trigger": "[{\"value\":15000,\"element\":0,\"statusId\":0,\"class\":\"ViewDontExecTrigger\"}]",
       "filename": "b_skill_special",
-      "statusId": 193,
+      "statusId": 132,
       "canDispel": false,
       "filterIds": [],
       "parameter": false,
-      "description": "発動したスキルによって付与されるデバフのターンを1ターン延長する。Viewが20000以下の時のみ発動。",
+      "description": "発動したスキルによって付与されるデバフのターンを1ターン延長する。Viewが15000以下の時のみ発動。",
       "isImmediate": false,
       "persistence": true,
       "canDuplicate": true,
@@ -30756,13 +30855,13 @@
           }
         }
       ],
-      "trigger": "[{\"value\":20000,\"element\":0,\"statusId\":0,\"class\":\"ViewDontExecTrigger\"}]",
+      "trigger": "[{\"value\":15000,\"element\":0,\"statusId\":0,\"class\":\"ViewDontExecTrigger\"}]",
       "filename": "b_skill_special",
-      "statusId": 27,
+      "statusId": 133,
       "canDispel": false,
       "filterIds": [],
       "parameter": false,
-      "description": "発動したスキルによって付与されるバフのターンを1ターン延長する。Viewが20000以下の時のみ発動。",
+      "description": "発動したスキルによって付与されるバフのターンを1ターン延長する。Viewが15000以下の時のみ発動。",
       "isImmediate": false,
       "persistence": true,
       "canDuplicate": true,
@@ -30819,26 +30918,32 @@
           "parameter": {
             "value": 150
           }
+        },
+        {
+          "class": "MultipleBaseView",
+          "parameter": {
+            "value": 150
+          }
         }
       ],
       "filename": "status_concert",
-      "statusId": 82,
-      "canDispel": true,
+      "statusId": 27,
+      "canDispel": false,
       "filterIds": [
         3
       ],
       "parameter": false,
-      "description": "協奏",
+      "description": "常時View獲得量1.5倍",
       "isImmediate": false,
-      "persistence": false,
-      "canDuplicate": true,
+      "persistence": true,
+      "canDuplicate": false,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
-      "overrideStatusName": "",
-      "isOverrideStatusName": false,
-      "overrideStatusDescription": "",
-      "isDisplayPersistenceStatus": false,
-      "isOverrideStatusDescription": false
+      "overrideStatusName": "View獲得量1.5倍",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "Viewが1.5倍になる。スキルで獲得するViewが1.5倍。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
     }
   },
   "1067": {
@@ -30872,6 +30977,108 @@
       "overrideStatusDescription": "ATK+2%。バフでもデバフでも無い状態。スキルによる解除不可。",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
+    }
+  },
+  "1068": {
+    "skillEffectId": 1068,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewChange",
+          "parameter": {
+            "value": 50
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"PinchExecTrigger\"}]",
+      "filename": "status_awakening",
+      "statusId": 134,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "ピンチ時覚醒(永続効果)",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "スキルに必要なViewPowerが半分になる。解除不可。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1069": {
+    "skillEffectId": 1069,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 120
+          }
+        }
+      ],
+      "trigger": "[{\"value\":15000,\"element\":0,\"statusId\":0,\"class\":\"ViewDontExecTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "Viewが15000以下の時のみATK+20%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1070": {
+    "skillEffectId": 1070,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 80
+          }
+        }
+      ],
+      "trigger": "[{\"value\":15000,\"element\":0,\"statusId\":0,\"class\":\"ViewDontExecTrigger\"}]",
+      "filename": "",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "Viewが15000以下の時、被ダメージ-20%",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
     }
   }
 }
