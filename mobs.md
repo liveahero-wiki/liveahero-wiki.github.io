@@ -15,15 +15,21 @@ additional_scripts: ["/assets/atlas.min.js"]
 sprites="fg_kaibutsuArmorBlack_h01"
 %}
 
-### Bird Kaibutsu
+### Bird Kaibutsu (Small)
 
-{% include hero-infobox-unreleased.html name="Bird Kaibutsu" mob=true
+{% include hero-infobox-unreleased.html name="Bird Kaibutsu (Small)" mob=true
 sprites="fg_kaibutsuBirdSmallEarth_h01,fg_kaibutsuBirdSmallFire_h01,fg_kaibutsuBirdSmallLight_h01,fg_kaibutsuBirdSmallShadow_h01,fg_kaibutsuBirdSmallWater_h01"
 %}
 
-### Cetus
+### Bird Kaibutsu (Large)
 
-{% include hero-infobox-unreleased.html name="Cetus" mob=true
+{% include hero-infobox-unreleased.html name="Bird Kaibutsu (Large)" mob=true
+sprites="fg_kaibutsuBirdLargeEarth_h01,fg_kaibutsuBirdLargeFire_h01,fg_kaibutsuBirdLargeLight_h01,fg_kaibutsuBirdLargeShadow_h01,fg_kaibutsuBirdLargeWater_h01"
+%}
+
+### Cetus/Plesiosaur Kaibutsu
+
+{% include hero-infobox-unreleased.html name="Cetus/Plesiosaur Kaibutsu" mob=true
 sprites="fg_cetus_s01,fg_cetus_s01_skin1,fg_cetus_h01"
 %}
 
@@ -88,10 +94,16 @@ sprites="fg_mercenaryCircus2202Earth_h01,fg_mercenaryCircus2202Fire_h01,fg_merce
 sprites="fg_villainMercenaryEarth_h01,fg_villainMercenaryFire_h01,fg_villainMercenaryLight_h01,fg_villainMercenaryShadow_h01,fg_villainMercenaryWater_h01"
 %}
 
-### Meteorite Kaibutsu
+### Meteorite Kaibutsu (Large)
 
-{% include hero-infobox-unreleased.html name="Meteorite Kaibutsu" mob=true
+{% include hero-infobox-unreleased.html name="Meteorite Kaibutsu (Large)" mob=true
 sprites="fg_kaibutsuMeteorEarth_h01,fg_kaibutsuMeteorFire_h01,fg_kaibutsuMeteorLight_h01,fg_kaibutsuMeteorShadow_h01,fg_kaibutsuMeteorWater_h01"
+%}
+
+### Meteorite Kaibutsu (Small)
+
+{% include hero-infobox-unreleased.html name="Meteorite Kaibutsu (Small)" mob=true
+sprites="fg_kaibutsuMeteorSmallEarth_h01,fg_kaibutsuMeteorSmallFire_h01,fg_kaibutsuMeteorSmallLight_h01,fg_kaibutsuMeteorSmallShadow_h01,fg_kaibutsuMeteorSmallWater_h01"
 %}
 
 ### Mock-Gomeisa Kaibutsu
@@ -134,12 +146,6 @@ sprites="fg_villainSalvagerEarth_h01,fg_villainSalvagerFire_h01,fg_villainSalvag
 
 {% include hero-infobox-unreleased.html name="Shark Kaibutsu" mob=true
 sprites="fg_kaibutsuSharkEarth_h01,fg_kaibutsuSharkFire_h01,fg_kaibutsuSharkLight_h01,fg_kaibutsuSharkShadow_h01,fg_kaibutsuSharkWater_h01"
-%}
-
-### Small Meteorite Kaibutsu
-
-{% include hero-infobox-unreleased.html name="Small Meteorite Kaibutsu" mob=true
-sprites="fg_kaibutsuMeteorSmallEarth_h01,fg_kaibutsuMeteorSmallFire_h01,fg_kaibutsuMeteorSmallLight_h01,fg_kaibutsuMeteorSmallShadow_h01,fg_kaibutsuMeteorSmallWater_h01"
 %}
 
 ### Space Kaibutsu (Adult)
