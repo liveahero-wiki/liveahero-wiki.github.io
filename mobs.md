@@ -15,16 +15,16 @@ additional_scripts: ["/assets/atlas.min.js"]
 sprites="fg_kaibutsuArmorBlack_h01"
 %}
 
-### Bird Kaibutsu (Small)
-
-{% include hero-infobox-unreleased.html name="Bird Kaibutsu (Small)" mob=true
-sprites="fg_kaibutsuBirdSmallEarth_h01,fg_kaibutsuBirdSmallFire_h01,fg_kaibutsuBirdSmallLight_h01,fg_kaibutsuBirdSmallShadow_h01,fg_kaibutsuBirdSmallWater_h01"
-%}
-
 ### Bird Kaibutsu (Large)
 
 {% include hero-infobox-unreleased.html name="Bird Kaibutsu (Large)" mob=true
 sprites="fg_kaibutsuBirdLargeEarth_h01,fg_kaibutsuBirdLargeFire_h01,fg_kaibutsuBirdLargeLight_h01,fg_kaibutsuBirdLargeShadow_h01,fg_kaibutsuBirdLargeWater_h01"
+%}
+
+### Bird Kaibutsu (Small)
+
+{% include hero-infobox-unreleased.html name="Bird Kaibutsu (Small)" mob=true
+sprites="fg_kaibutsuBirdSmallEarth_h01,fg_kaibutsuBirdSmallFire_h01,fg_kaibutsuBirdSmallLight_h01,fg_kaibutsuBirdSmallShadow_h01,fg_kaibutsuBirdSmallWater_h01"
 %}
 
 ### Cetus/Plesiosaur Kaibutsu
