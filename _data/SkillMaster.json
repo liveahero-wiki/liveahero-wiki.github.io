@@ -62572,6 +62572,173 @@
       }
     ]
   },
+  "4131114": {
+    "skillId": 4131114,
+    "skillName": "バード・ストライク",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に250%ダメージ。自身に600%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuBirdSmallWater_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 663,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1085,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4131115": {
+    "skillId": 4131115,
+    "skillName": "グライダー・フォース",
+    "useView": 2000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "敵全体に40%のダメージ。ボスにランダムなバフを2ターン付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuBirdSmallWater_h01_05"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 273,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 1,
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1
+          }
+        ]
+      },
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 1,
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 2
+          }
+        ]
+      },
+      {
+        "skillEffectId": 18,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 1,
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 3
+          }
+        ]
+      },
+      {
+        "skillEffectId": 64,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 1,
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 10
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1076,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 1,
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 59
+          }
+        ]
+      },
+      {
+        "skillEffectId": 329,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 1,
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 38
+          }
+        ]
+      }
+    ]
+  },
   "4132101": {
     "skillId": 4132101,
     "skillName": "速度低下ついばみ",
@@ -62616,6 +62783,280 @@
             "statusId": 0
           }
         ]
+      }
+    ]
+  },
+  "4136101": {
+    "skillId": 4136101,
+    "skillName": "グランド・トルネード",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuBirdBig_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4136102": {
+    "skillId": 4136102,
+    "skillName": "スカイ・ストライク",
+    "useView": 4000,
+    "targetFlag": 7,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵全体からランダムに2回70%ダメージ＆1回の行動の間SPDダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuBirdBig_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4136103": {
+    "skillId": 4136103,
+    "skillName": "ストーム・ブレイク",
+    "useView": 8000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に80%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuBirdBig_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4136104": {
+    "skillId": 4136104,
+    "skillName": "グランド・トルネード",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に100%ダメージ。1ターンの間沈黙を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuBirdBig_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 399,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4136105": {
+    "skillId": 4136105,
+    "skillName": "スカイ・ストライク",
+    "useView": 5000,
+    "targetFlag": 7,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵全体からランダムに2回65%ダメージ＆1回の行動の間SPDダウンを付与。【ピンチ時追加効果】自身のスキル１を追加発動。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuBirdBig_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 269,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 269,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 486,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "4136106": {
+    "skillId": 4136106,
+    "skillName": "ストームブレイク",
+    "useView": 8000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に90%ダメージ。未行動の自身以外の味方のスキル1を誘発。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuBirdBig_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1089,
+        "prob": 100,
+        "effectTarget": 14,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
       }
     ]
   },
@@ -63840,6 +64281,88 @@
         "probGroupId": 0,
         "randomGroupId": 0,
         "triggerJson": []
+      }
+    ]
+  },
+  "6000054": {
+    "skillId": 6000054,
+    "skillName": "毒・火傷・沈黙・過消費無効",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_cure",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "毒・火傷・沈黙・過消費を無効化。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 669,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 670,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1090,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1078,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6000056": {
+    "skillId": 6000056,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_cure",
+    "subResourceName": "",
+    "timing": 21,
+    "description": "汎用ターン開始時行動停止発火",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 53,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "EnemyDeBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 40
+          }
+        ]
       }
     ]
   },
@@ -70552,6 +71075,156 @@
       }
     ]
   },
+  "6131102": {
+    "skillId": 6131102,
+    "skillName": "停滞する風",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "",
+    "timing": 14,
+    "description": "戦闘不能になるダメージを受けた時、最大HPの1%で耐える。その後、自身に2ターンの休眠を付与。休眠が解除された時、自身のHPを最大まで回復する。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 1082,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 53,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1083,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 897,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6131103": {
+    "skillId": 6131103,
+    "skillName": "ウィンド・ガード",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "ターン開始時、自身に1回分のDEFアップを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 40
+          }
+        ]
+      }
+    ]
+  },
+  "6131104": {
+    "skillId": 6131104,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 1084,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 40
+          },
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 132
+          }
+        ]
+      },
+      {
+        "skillEffectId": 896,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 40
+          },
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 132
+          }
+        ]
+      },
+      {
+        "skillEffectId": 708,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "6133101": {
     "skillId": 6133101,
     "skillName": "連携準備",
@@ -70628,6 +71301,112 @@
         "probGroupId": 0,
         "randomGroupId": 0,
         "triggerJson": []
+      }
+    ]
+  },
+  "6136101": {
+    "skillId": 6136101,
+    "skillName": "超音速",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 5,
+    "description": "ターン終了時、自身にバフが付与されている時、敵全体のバフを1ターン短縮＆自身のデバフを1ターン短縮。自身がピンチ状態の時、更に自身以外の味方全体のデバフを1ターン短縮。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 459,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "NotPinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 459,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1079,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "6136102": {
+    "skillId": 6136102,
+    "skillName": "バード・レイン",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 6,
+    "description": "ピンチ状態になった時、未行動の味方全体のスキル１を誘発。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 1089,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "NotPinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
       }
     ]
   },

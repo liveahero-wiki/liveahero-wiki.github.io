@@ -19164,11 +19164,13 @@
       "isImmediate": false,
       "persistence": true,
       "canDuplicate": true,
-      "overrideStatusName": "",
-      "isOverrideStatusName": false,
-      "overrideStatusDescription": "",
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "毒無効",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "毒が付与されない。",
       "isDisplayPersistenceStatus": false,
-      "isOverrideStatusDescription": false
+      "isOverrideStatusDescription": true
     }
   },
   "670": {
@@ -19196,11 +19198,13 @@
       "isImmediate": false,
       "persistence": true,
       "canDuplicate": true,
-      "overrideStatusName": "",
-      "isOverrideStatusName": false,
-      "overrideStatusDescription": "",
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "火傷無効",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "火傷が付与されない。",
       "isDisplayPersistenceStatus": false,
-      "isOverrideStatusDescription": false
+      "isOverrideStatusDescription": true
     }
   },
   "671": {
@@ -31333,7 +31337,7 @@
         }
       ],
       "filename": "status_immunity",
-      "statusId": 59,
+      "statusId": 81,
       "canDispel": false,
       "filterIds": [
         2
@@ -31348,6 +31352,256 @@
       "overrideStatusName": "過消費無効",
       "isOverrideStatusName": true,
       "overrideStatusDescription": "過消費が付与されない。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1079": {
+    "skillEffectId": 1079,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": -1,
+            "statusTypeValue": 1
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "バフ効果1ターン短縮",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1082": {
+    "skillEffectId": 1082,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Ressurection",
+          "parameter": {
+            "value": 1
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "1%のHPで復活",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1083": {
+    "skillEffectId": 1083,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 0
+          }
+        },
+        {
+          "class": "ChangeAgi",
+          "parameter": {
+            "value": -100
+          }
+        },
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 0
+          }
+        },
+        {
+          "class": "Hide",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_debuff",
+      "statusId": 40,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "行動停止",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "休眠",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "そのターン、行動が出来なくなる。敵のターゲットにならない。ダメージを受けず、デバフも付与されない。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1084": {
+    "skillEffectId": 1084,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeHp",
+          "parameter": {
+            "value": -100
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "最大HPの100%回復",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1085": {
+    "skillEffectId": 1085,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Damage",
+          "parameter": {
+            "value": 600
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "600%ダメージ",
+      "isImmediate": true,
+      "persistence": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1089": {
+    "skillEffectId": 1089,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TeamAttackRandomEnemy",
+          "parameter": {
+            "isAutoSkill": false,
+            "executeTiming": 5
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"BeforeSkillTrigger\"},{\"value\":0,\"element\":0,\"statusId\":40,\"class\":\"EnemyDeBuffNumberDontExecTrigger\"}]",
+      "filename": "",
+      "statusId": 158,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "未行動且つターン消去デバフを持っていない味方がランダムな敵にスキル１を誘発",
+      "isImmediate": false,
+      "persistence": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1090": {
+    "skillEffectId": 1090,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 22
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 81,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "沈黙無効",
+      "isImmediate": false,
+      "persistence": true,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "沈黙無効",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "沈黙が付与されない。",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
     }
