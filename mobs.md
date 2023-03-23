@@ -24,7 +24,7 @@ sprites="fg_kaibutsuBirdBigEarth_h01,fg_kaibutsuBirdBigFire_h01,fg_kaibutsuBirdB
 ### Bird Kaibutsu (Small)
 
 {% include hero-infobox-unreleased.html name="Small Bird Kaibutsu" mob=true
-sprites="fg_kaibutsuBirdSmallEarth_h01,fg_kaibutsuBirdSmallFire_h01,fg_kaibutsuBirdSmallLight_h01,fg_kaibutsuBirdSmallShadow_h01,fg_kaibutsuBirdSmallWater_h01"
+sprites="fg_kaibutsuBirdSmallEarth_h01,fg_kaibutsuBirdSmallFire_h01,fg_kaibutsuBirdSmallLight_h01,fg_kaibutsuBirdSmallShadow_h01,fg_kaibutsuBirdSmallWater_h01,fg_kaibutsuBirdSmallEarthEX_h01,fg_kaibutsuBirdSmallFireEX_h01,fg_kaibutsuBirdSmallLightEX_h01,fg_kaibutsuBirdSmallShadowEX_h01,fg_kaibutsuBirdSmallWaterEX_h01"
 %}
 
 ### Cetus/Plesiosaur Kaibutsu
@@ -43,12 +43,6 @@ sprites="fg_kaibutsuGhostAdultEarth_h01,fg_kaibutsuGhostAdultFire_h01,fg_kaibuts
 
 {% include hero-infobox-unreleased.html name="Juvenile Ghost Kaibutsu" mob=true
 sprites="fg_kaibutsuGhostLarvaEarth_h01,fg_kaibutsuGhostLarvaFire_h01,fg_kaibutsuGhostLarvaLight_h01,fg_kaibutsuGhostLarvaShadow_h01,fg_kaibutsuGhostLarvaWater_h01"
-%}
-
-### Giant Virtual Meteorite Kaibutsu
-
-{% include hero-infobox-unreleased.html name="Giant Virtual Meteorite Kaibutsu" mob=true
-sprites="fg_kaibutsuMeteorDigitalBigEarth_h01,fg_kaibutsuMeteorDigitalBigFire_h01,fg_kaibutsuMeteorDigitalBigLight_h01,fg_kaibutsuMeteorDigitalBigShadow_h01,fg_kaibutsuMeteorDigitalBigWater_h01"
 %}
 
 ### Jellyfish Kaibutsu
@@ -103,6 +97,13 @@ sprites="fg_kaibutsuMeteorEarth_h01,fg_kaibutsuMeteorFire_h01,fg_kaibutsuMeteorL
 
 {% include hero-infobox-unreleased.html name="Small Meteorite Kaibutsu" mob=true
 sprites="fg_kaibutsuMeteorSmallEarth_h01,fg_kaibutsuMeteorSmallFire_h01,fg_kaibutsuMeteorSmallLight_h01,fg_kaibutsuMeteorSmallShadow_h01,fg_kaibutsuMeteorSmallWater_h01"
+%}
+
+
+### Meteorite Kaibutsu (Virtual)
+
+{% include hero-infobox-unreleased.html name="Giant Virtual Meteorite Kaibutsu" mob=true
+sprites="fg_kaibutsuMeteorDigitalBigEarth_h01,fg_kaibutsuMeteorDigitalBigFire_h01,fg_kaibutsuMeteorDigitalBigLight_h01,fg_kaibutsuMeteorDigitalBigShadow_h01,fg_kaibutsuMeteorDigitalBigWater_h01"
 %}
 
 ### Mimic Kaibutsu (Gomeisa)
