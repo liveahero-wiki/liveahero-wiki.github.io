@@ -24,7 +24,7 @@ sprites="fg_kaibutsuBirdBigEarth_h01,fg_kaibutsuBirdBigFire_h01,fg_kaibutsuBirdB
 ### Bird Kaibutsu (Small)
 
 {% include hero-infobox-unreleased.html name="Small Bird Kaibutsu" mob=true
-sprites="fg_kaibutsuBirdSmallEarth_h01,fg_kaibutsuBirdSmallFire_h01,fg_kaibutsuBirdSmallLight_h01,fg_kaibutsuBirdSmallShadow_h01,fg_kaibutsuBirdSmallWater_h01,fg_kaibutsuBirdSmallEarthEX_h01,fg_kaibutsuBirdSmallFireEX_h01,fg_kaibutsuBirdSmallLightEX_h01,fg_kaibutsuBirdSmallShadowEX_h01,fg_kaibutsuBirdSmallWaterEX_h01"
+sprites="fg_kaibutsuBirdSmallEarth_h01,fg_kaibutsuBirdSmallFire_h01,fg_kaibutsuBirdSmallLight_h01,fg_kaibutsuBirdSmallShadow_h01,fg_kaibutsuBirdSmallWater_h01"
 %}
 
 ### Cetus/Plesiosaur Kaibutsu
