@@ -34,6 +34,7 @@ heroes:
     With what kind of feelings did the boy give that tattered muffler to him…
     right now he kind of understand the thoughts inside the heroes who never ask anything in return.<br>
     With the scarf he didn't receive that day fluttering around his neck, Procy rushes to his friends faster than anyone else, his fists ready.
+  extra_sprites: fg_procyChocolatefes2303_h02_skin2
 sidekicks:
 - stockId: 10321
   BIO_S01: |-

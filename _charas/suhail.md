@@ -34,6 +34,7 @@ heroes:
     He didn't forget...the day he met his friend, the day he made the pirate gang, the day he lost his left arm<br>
     It's because of this promise that Suhail can laugh heartily.<br>
     If you encourage the universe with all your might, then the universe will resonate and also encourage you back, this is what he learned from his friend.
+  extra_sprites: fg_suhailChocolatefes2303_h01_skin2,fg_suhailChocolatefes2303_h02_skin2,fg_suhailChocolatefes2303_h02_skin3
 sidekicks:
 - stockId: 10301
   BIO_S01: |-
