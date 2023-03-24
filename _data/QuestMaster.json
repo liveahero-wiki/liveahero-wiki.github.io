@@ -104498,6 +104498,58 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
   },
+  "1039008": {
+    "questId": 1039008,
+    "questName": "想いとカタチの贈り物",
+    "subName": "最終話",
+    "questKind": 5,
+    "chapterId": 1039,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2023-03-24 18:00:00",
+    "endAt": "2023-04-06 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 8,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1039007,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
   "1040001": {
     "questId": 1040001,
     "questName": "学園祭パトロール！",
@@ -105189,6 +105241,645 @@
     ],
     "hasAdv": false,
     "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "1041030": {
+    "questId": 1041030,
+    "questName": "スハイルが抱く想い",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 1041,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_suhailChocolatefes2303_h01",
+    "startAt": "2023-03-24 18:00:00",
+    "endAt": "2023-04-06 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 1000,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1039008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10301,
+          10302
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "1041032": {
+    "questId": 1041032,
+    "questName": "プロキーが抱く想い",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 1041,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_procyChocolatefes2303_h01",
+    "startAt": "2023-03-24 18:00:00",
+    "endAt": "2023-04-06 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 1000,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1039008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10321,
+          10322
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "1041101": {
+    "questId": 1041101,
+    "questName": "ライラックに贈る想い",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 1041,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_lilac_h01",
+    "startAt": "2023-03-24 18:00:00",
+    "endAt": "2023-04-06 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 899,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1039008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          11011
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "1041112": {
+    "questId": 1041112,
+    "questName": "サンテツに贈る想い",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 1041,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_santetsu_h01",
+    "startAt": "2023-03-24 18:00:00",
+    "endAt": "2023-04-06 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 888,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1039008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          11121
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "1041113": {
+    "questId": 1041113,
+    "questName": "ロイカーに贈る想い",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 1041,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_roiker_h01",
+    "startAt": "2023-03-24 18:00:00",
+    "endAt": "2023-04-06 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 887,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1039008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          11131
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "1041114": {
+    "questId": 1041114,
+    "questName": "セイイチロウに贈る想い",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 1041,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_seiichiro_s01",
+    "startAt": "2023-03-24 18:00:00",
+    "endAt": "2023-04-06 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 886,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1039008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          11141
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "1041115": {
+    "questId": 1041115,
+    "questName": "ガイウスに贈る想い",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 1041,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_gaius_h01",
+    "startAt": "2023-03-24 18:00:00",
+    "endAt": "2023-04-06 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 885,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1039008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          11151
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "1041122": {
+    "questId": 1041122,
+    "questName": "リグザに贈る想い",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 1041,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_rexer_h01",
+    "startAt": "2023-03-24 18:00:00",
+    "endAt": "2023-04-06 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 878,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1039008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          11221
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "1041123": {
+    "questId": 1041123,
+    "questName": "セラスティウムに贈る想い",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 1041,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_cerastium_h01",
+    "startAt": "2023-03-24 18:00:00",
+    "endAt": "2023-04-06 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 877,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1039008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          11231
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "1041125": {
+    "questId": 1041125,
+    "questName": "ヴィスカナムに贈る想い",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 1041,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_viscunam_h01",
+    "startAt": "2023-03-24 18:00:00",
+    "endAt": "2023-04-06 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 875,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1039008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          11251
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "1041126": {
+    "questId": 1041126,
+    "questName": "センセチアに贈る想い",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 1041,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_sensettia_h01",
+    "startAt": "2023-03-24 18:00:00",
+    "endAt": "2023-04-06 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 874,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1039008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          11261
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "1041128": {
+    "questId": 1041128,
+    "questName": "フェインが抱く想い",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 1041,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_phein_h01",
+    "startAt": "2023-03-24 18:00:00",
+    "endAt": "2023-04-06 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 1000,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1039008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          11281
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "1041129": {
+    "questId": 1041129,
+    "questName": "アンナが抱く想い",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 1041,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_anna_h01",
+    "startAt": "2023-03-24 18:00:00",
+    "endAt": "2023-04-06 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 1000,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "rewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1039008,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          11291
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
     "hasStockBattle": false,
     "hasScoreAttack": false,
     "boostItems": [],
