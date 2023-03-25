@@ -83,6 +83,18 @@ TRAINED = "Owowow! I'm going to charge for medical treatment!"
 %}
 
 {% include voice-table.html resourceName="procyChocolatefes2303"
+h_gachaResult = "The bancho like a storm, that's me!<br>For the sake of those who rely on me…<br>I'll use this power with reason!<br>If you need my fist,I can rampage for cheap!"
+s_gachaResult = "A request for sidekick?<br>Well, since you are my regular, I will provide you with some service!<br>Then, let's crack some knuckles..!"
+APPRECIATION = "Don't look so dispirited.<br>…I know you have a lot on your plate, but come here for a while.<br>The rooftop has a great breeze, it will feels like your toubles can be swept away!"
+DAILY = "The gakuran doesn't fit?<br>..as long as it's eyecatching then anything is fine, it's the same for business.<br>When they ask who's the bancho, then they will remember me!"
+HERO = "Phein…hasn't changed at all since that day.<br>That need to show a bitter and prickly attitude…it's like I'm seeing myself in the past.<br>All of that, to protect someone else."
+PLAYER = "Don't be rash and get hurt out there, okay?<br>I will be the first one to greet those who makes trouble in this territory!<br>That's what it means to be the bancho, right?"
+RELATION = "Suhail was also from a poor town?<br>Wealth and attention that doesn't lose to anyone.... I guess those who used to be poor have similar dream.<br>If he choose a different path, he could've been a hero."
+TOUCH = "Uoo!? Stupid, I told you not to hug me!<br>If someone see this it won't be a good example…!<br>…that doesn't mean it's alright if no one see it!"
+TRAIN = "Let's give them a good beating!"
+TRAINED = "Guh…this piece of…!"
+EVENTA = "I have to promote the chocolate machine more!<br>It's a school festival..okay, I can give flyers!<br>Then I will wait at the rooftop to give the chocolate one by one…hm? Will lead to misunderstanding? What?"
+EVENTB = "School…back then, for me who doesn't have any money, this was my only playground.<br>I was such a rascal.<br>…well, thanks to that I am a hero now!"
 %}
 
 ## Notes
