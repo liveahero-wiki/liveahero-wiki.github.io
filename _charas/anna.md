@@ -30,6 +30,18 @@ sidekicks:
 ---
 
 {% include voice-table.html resourceName="anna"
+h_gachaResult = "Yahoo, name's Anna.<br>Third year in Sakuramoto high!<br>My dance will help someone,right?<br>That's the best thing ever!<br>Nice to meet'cha!"
+s_gachaResult = "Third year in Sakuramoto high Anna! Hello!<br>…Sidekick?<br>Cheering for everyone right?<br>Leave it to me, I'm also very proud of my cheers!"
+APPRECIATION = "Oh no! Ope-kun you looks bad!?<br>See, I bought a loot of sweets!<br>Let's eat it together, do you like chocolate? Now, aahn."
+DAILY = "If there is something you want to do, do you think you have to hold back for it?<br>If you think hard and decided on it, then fully go for it!<br>Okay, Ope-san let's go on a trip together, right now!"
+HERO = "I wonder if Suhail-kun will stop doing bad things?<br>A passionate heart and a way of thinking that's straight to the core,<br>It will be nice if he lead his subordinates to also be a hero."
+PLAYER = "I love seeing someone who have fun with their hobbies.<br>When I do, I also feel happy!<br>Ope-san what kind of things do you like? Tell me all about it!"
+RELATION = "I wonder why Phei-kun wanted to be hated?<br>But, he oozes the aura of a truly good person, I like it.<br>Today I got a strawberry flavored candy! Delicious!"
+TOUCH = "Hm? What's the matter, are you lonely?<br>At that time, it's best to do something fun, let's dance!<br>Hold my hand! Let's move together!"
+TRAIN = "I will show you my serious side!"
+TRAINED = "Kya, wait this is bad…!"
+EVENTA = "We can actually hold the chocolate festival, isn't it amazing!?<br>Aah, how nice it will be if festival club can take root…!<br>Heheh, right now I can feel the youth! or something!"
+EVENTB = "Put your feelings in something sweet and give it to the others, isn't that such a cute culture?<br>I should make a handmade chocolate!<br>It's been ages since I tried cooking…oh well, it will work out!"
 %}
 
 ## Notes
