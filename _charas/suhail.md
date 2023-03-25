@@ -66,6 +66,18 @@ TRAINED = "Yer waving me around, yer good...!"
 %}
 
 {% include voice-table.html resourceName="suhailChocolatefes2303"
+h_gachaResult = "I heard it, your call for my name, comrade!<br>Hee, aren't you interesting!<br>No matter where you are in the universe, I can always give you an answer!"
+s_gachaResult = "Sidekick?<br>Supporting the heroes?<br>…Gahaha! Your eyes are serious!<br>Of course, I will agree,ooks like you have an interesting plan?"
+APPRECIATION = "What's with that gloomy look, comrade.<br>…good grief, oi henchman, it's a party, do the preparation!<br>Of course you will join! Bring something interesting!"
+DAILY = "There is only one person that I call my friend.<br>The one who steal a left arm from this pirate!<br>And now he live on as my arm, most interesting, right?"
+HERO = "His stuff reminds me of that fellow.<br>This left-arm was given by the best friend I ever had.<br>That's why I don't want to lose to him ever."
+PLAYER = "Inexperience is not a problem.<br>What matters is the person has to be interestin' to me.<br>Yer mine now, and I'm not going to let ye go easy, okay?"
+RELATION = "I will absolutely make that dragon fellow my henchman someday!<br>Someone who used to be a pirate, but is now a hero.<br>That kind of interestin' person is my favorite!"
+TOUCH = "Whoa, want a skinship with me?<br>Even my henchmen don't have this kind of courage,<br>Ye've piqued my interest…well then, come here!"
+TRAIN = "How about opening yer treasures, too?"
+TRAINED = "Yer waving me around, yer good...!"
+EVENTA = "This school is shrouded with a sweet smell..<br>I didn’t like sweet…what! This chocos are very good with alcohol!<br>Henchmans, try it!"
+EVENTB = "Gahaha, I caught you, comrade!<br>With this you're also a member of my pirates!<br>Well then, let's get back and party!...hm? what? that bird…?"
 %}
 
 ## Notes
