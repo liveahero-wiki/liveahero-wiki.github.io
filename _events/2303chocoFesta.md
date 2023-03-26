@@ -118,11 +118,11 @@ Here is a list of this event's limited time Missions:
 
 | Hero   | +Bonus(%) |
 |--------|-----------|
-| {% chara_link Procy|h2 %}   |     10    |
-| {% chara_link Suhail|h2 %} |     30    |
-| {% chara_link Phein|h1 %} |     50    |
-| {% chara_link Anna|h1 %} |     70    |
-| {% chara_link Phein %} , {% chara_link Anna %} |     70    |
+| {% chara_link Procy|h2 %}   |   Atk+50%    |
+| {% chara_link Suhail|h2 %}  |   Duration of self buff skill +1  |
+| {% chara_link Phein|h1 %}   |   Damage received -30%    |
+| {% chara_link Anna|h1 %}    |   HP recovery from self skill +50%|
+| {% chara_link Phein %} , {% chara_link Anna %} |    HP+1000 , Atk+500 , Damage received -250   |
 
 {% include quest-group.html chapterId=1042 %}
 
