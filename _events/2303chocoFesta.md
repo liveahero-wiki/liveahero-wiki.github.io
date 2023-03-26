@@ -5,7 +5,7 @@ news_link: https://live-a-hero.jp/info/5460
 banner_image: banner_campaign_chocoFesta.jpg
 gacha: true
 event_start_time: 2023-03-03T20:00:00+09
-event_end_time: 2023-03-30T14:00:00+09
+event_end_time: 2023-04-06T14:00:00+09
 farm_start_time: 2023-03-03T20:00:00+09
 farm_end_time: 2023-03-24T20:00:00+09
 sales_start_time: 2023-03-03T20:00:00+09
@@ -105,6 +105,117 @@ Here is a list of this event's limited time Missions:
 | 3  | Finish any rank event quest 30 times | 1 {% include item-icon.html id=34 %}    |
 | 4  | Finish any rank event quest 40 times | 1 {% include item-icon.html id=34 %}    |
 | 5  | Finish any rank event quest 50 times | 1 {% include item-icon.html id=34 %}    |
+| 6  | Finish event sales 10 times | 1 {% include item-icon.html id=34 %}    |
+| 7  | Clear 2 event challenge quest without using guest NPC | 1 {% include item-icon.html id=10 %}    |
+| 8  | Clear 4 event challenge quest without using guest NPC | 1 {% include item-icon.html id=10 %}    |
+| 9  | Clear 6 event challenge quest without using guest NPC | 1 {% include item-icon.html id=10 %}    |
+
+## Event Challenge Quests
+
+- Cost 0 stamina
+- There will be special effects for this event's challenge quest, activated for all enemies and allies
+- There will be bonus for certain characters in this challenge quest:
+
+| Hero   | +Bonus(%) |
+|--------|-----------|
+| {% chara_link Procy|h2 %}   |     10    |
+| {% chara_link Suhail|h2 %} |     30    |
+| {% chara_link Phein|h1 %} |     50    |
+| {% chara_link Anna|h1 %} |     70    |
+| {% chara_link Phein %} , {% chara_link Anna %} |     70    |
+
+{% include quest-group.html chapterId=1042 %}
+
+### Chapter 2 Challenge Quest
+
+| Special Effect   | Effect |
+|--------|-----------|
+| Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
+| First Action Bonus   |     Every turn, the first character to act gains +50%Atk    |
+
+#### Procy's skills
+
+{% include skill-table-manual.html skillIds="4032114,4032115,4032116" equipmentSkills="6032110,78" %}
+
+### Chapter 3 Challenge Quest
+
+| Special Effect   | Effect |
+|--------|-----------|
+| Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
+| Critical  |    When hitting enemy with lower Speed there is a chance to deal 30% more damage (chance is based on speed difference)  |
+
+#### Kaibutsu (Juvenile) Water's skills
+
+{% include skill-table-manual.html skillIds="4037106,4037105" equipmentSkills="6037101" %}
+
+#### Kaibutsu (Juvenile) Dark's skills
+
+{% include skill-table-manual.html skillIds="4040102,4040101" equipmentSkills="6040102" %}
+
+### Chapter 4 Challenge Quest
+
+| Special Effect   | Effect |
+|--------|-----------|
+| Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
+
+#### Villain (Light)'s skills
+
+{% include skill-table-manual.html skillIds="4043107,4043108,4043109" equipmentSkills="6000052,6000048,6044101" %}
+
+#### Suhail's skills
+
+{% include skill-table-manual.html skillIds="4030116,4030114,4030115" equipmentSkills="6030108,6000048,6030109,6044101" %}
+
+#### Villain (Fire)'s skills
+
+{% include skill-table-manual.html skillIds="4042111,4042110" equipmentSkills="6000051,6000048,6044101" %}
+
+### Chapter 5 Challenge Quest
+
+| Special Effect   | Effect |
+|--------|-----------|
+| Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
+
+#### Bird Kaibutsu (Wood)'s skills
+
+{% include skill-table-manual.html skillIds="4131106,4131105" equipmentSkills="6133101" %}
+
+#### Bird Kaibutsu (Light & Dark)'s skills
+
+{% include skill-table-manual.html skillIds="4131106,4131105" equipmentSkills="6133103" %}
+
+
+### Chapter 6 Challenge Quest
+
+| Special Effect   | Effect |
+|--------|-----------|
+| Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
+
+#### Bird Kaibutsu (Fire)'s skills
+
+{% include skill-table-manual.html skillIds="4130101,4130102,4130103" equipmentSkills="6130104,6130102,6130103" %}
+
+#### Bird Kaibutsu SP (Water)'s skills
+
+{% include skill-table-manual.html skillIds="4131107,4130102,4130103" equipmentSkills="6130104,6130102,6130103" %}
+
+#### Bird Kaibutsu (Wood)'s skills
+
+{% include skill-table-manual.html skillIds="4131108,4130102,4130103" equipmentSkills="6130104,6130102,6130103" %}
+
+### Chapter 7 Challenge Quest
+
+| Special Effect   | Effect |
+|--------|-----------|
+| Buff/Debuff Overlap Invalidation   |     Buff and Debuff cannot be stacked    |
+
+#### Bird Kaibutsu (Water)'s skills
+
+{% include skill-table-manual.html skillIds="4131114,4131115" equipmentSkills="6000037,6131102,6131103" %}
+
+#### Big Bird Kaibutsu's skills
+
+{% include skill-table-manual.html skillIds="4136104,4136105,4136106" equipmentSkills="6136101,6000054,6136102,6000013" %}
 
 ## Event Shop
 
