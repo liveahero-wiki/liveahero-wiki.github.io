@@ -104,7 +104,7 @@ const aprilFoolSpriteMap = {
   "sensettia": "benten01_skin9",
   "suhail": "jormungandr01",
   "sui": "arc01",
-  "victom", "algernon01",
+  "victom": "algernon01",
 }
 const APRIL_FOOL = "april_fool"
 
