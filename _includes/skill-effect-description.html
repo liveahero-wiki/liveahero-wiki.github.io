@@ -48,6 +48,8 @@ Remove {{ effect.parameter.value }} {% if effect.parameter.target %}{{ effect.pa
 Copy {{ effect.parameter.value }} {% if effect.parameter.target %}{{ effect.parameter.target | status_description }} status{% else %}buff(s){% endif %} from {{ target }}
 {% when "RemoveSystemEffect" %}
 Remove {{ effect.parameter.value }} {% if effect.parameter.target %}{{ effect.parameter.target | status_description }} status{% else %}system status(es){% endif %} from {{ target }}
+{% when "RegistBuffExecBuffed" %}
+Apply "Buff Immunity{% if effect.parameter.value !=0 %} {{ effect.parameter.value }}%{% endif %}" {% if effect.parameter.statusId != 0 %}(for {{ effect.parameter.statusId | status_description }}){% endif %} to {{ target }}
 {% when "ComboPlus" %}
 Gain {{ effect.parameter.value }} combo(s)
 {% when "AddPlusCombo" %}
@@ -109,6 +111,9 @@ ATK Up by {{ effect.parameter.value }}% to {{ target }} for each combo
 ATK Up by {{ effect.parameter.spdMult }}% to {{ target }} for each point in speed difference (???)
 {% when "HighestMultipleAttack" %}
 ATK Up by {{ effect.parameter.value }}% to {{ effect.parameter.target | skill_target }}
+(If there are overlapping effects with the same type and range, only the one with highest value will be applied)
+{% when "HighestMultipleDefence" %}
+Incoming damage increases by {{ effect.parameter.value }}% to {{ target }}
 (If there are overlapping effects with the same type and range, only the one with highest value will be applied)
 {% when "Penetration" %}
 Make {{ target }} ignore Taunt
