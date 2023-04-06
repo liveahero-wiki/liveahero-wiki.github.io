@@ -1819,6 +1819,16 @@
     "effect": [],
     "limitValue": 0
   },
+  "167": {
+    "itemId": 167,
+    "itemName": "新洛提灯",
+    "resourceName": "Rakusai2304_exchange01",
+    "rarity": 0,
+    "itemType": 512,
+    "description": "新洛祭の参加者に配布されるユニークな形の提灯。火袋からふんわりと桜の香りがする。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "limitValue": 0
+  },
   "168": {
     "itemId": 168,
     "itemName": "Evチケット",
@@ -1827,6 +1837,54 @@
     "itemType": 4,
     "description": "特定のクエストに出撃するために必要なチケット。３枚まで所持できる。",
     "effect": [],
+    "limitValue": 0
+  },
+  "169": {
+    "itemId": 169,
+    "itemName": "洛祭紀行ホログラム",
+    "resourceName": "icon_bg_battle_shinrakusquare_night_festival",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景に新洛広場を投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_shinrakusquare_night_festival",
+        "bgTitleKey": "TITLE_BG_BATTLE_SHINRAKUSQUARE_NIGHT_FESTIVAL_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
+  "170": {
+    "itemId": 170,
+    "itemName": "洛祭紀行ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "洛祭紀行～星つなぐとき～のBGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_rakusai_adv",
+        "bgmTitleKey": "TITLE_BGM_RAKUSAI_ADV_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "171": {
+    "itemId": 171,
+    "itemName": "洛祭紀行戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "洛祭紀行～星つなぐとき～の戦闘BGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_rakusai_battle",
+        "bgmTitleKey": "TITLE_BGM_RAKUSAI_BATTLE_RECORD"
+      }
+    ],
     "limitValue": 0
   },
   "110011": {
@@ -2014,6 +2072,27 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "110062": {
+    "itemId": 110062,
+    "itemName": "祭華のガンメイの記憶片",
+    "resourceName": "piece_gammeiRakusai2304",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "祭華のガンメイのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10062
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
       }
     ],
     "limitValue": 0
@@ -2430,6 +2509,27 @@
         "addFan": 200,
         "rarity": 0,
         "stockId": 10181
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
+  "110182": {
+    "itemId": 110182,
+    "itemName": "閃刃のコウキの記憶片",
+    "resourceName": "piece_koukiRakusai2304",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "閃刃のコウキのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10182
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
@@ -3809,6 +3909,27 @@
         "addFan": 50,
         "rarity": 0,
         "stockId": 11291
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "111401": {
+    "itemId": 111401,
+    "itemName": "ツネアキの記憶片",
+    "resourceName": "piece_tsuneaki",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "ツネアキのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 11401
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
@@ -5369,6 +5490,26 @@
     ],
     "limitValue": 0
   },
+  "211401": {
+    "itemId": 211401,
+    "itemName": "ツネアキの心",
+    "resourceName": "heart_tsuneaki",
+    "rarity": 4,
+    "itemType": 2048,
+    "description": "ツネアキのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 11401
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
   "219991": {
     "itemId": 219991,
     "itemName": "@playerNameの心",
@@ -5669,6 +5810,16 @@
     "effect": [],
     "limitValue": 0
   },
+  "21006201": {
+    "itemId": 21006201,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
   "21007101": {
     "itemId": 21007101,
     "itemName": "開花の波動",
@@ -5861,6 +6012,16 @@
   },
   "21018101": {
     "itemId": 21018101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21018201": {
+    "itemId": 21018201,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,
@@ -6531,6 +6692,16 @@
   },
   "21129101": {
     "itemId": 21129101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21140101": {
+    "itemId": 21140101,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,
