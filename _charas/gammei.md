@@ -1,6 +1,8 @@
 ---
 title: Gammei
 characterId: 6
+h2:
+  title: '"Intoxicating Festival" Gammei'
 heroes:
 - stockId: 10061
   BIO_H01: |-
@@ -18,6 +20,7 @@ heroes:
     wanted a solution that only a hero could provide. Because of that he's going to
     be put to work on everything, and he's going to have to tidy up everything. So
     he goes to the scene of the crime today, complaining about it.
+- stockId: 10062
 sidekicks:
 - stockId: 10061
   BIO_S01: |-
@@ -58,6 +61,9 @@ RELATION = "His aim…never got better at all.<br>Even his stray bullets don't h
 TOUCH = "Uo! W-what are you doing!<br>Stop, I haven't took a proper bath since I'm on a stakeout.<br>I'm not dirty?…w-wahahah!"
 TRAIN = "Don't underestimate the strength of a cop, okay?"
 TRAINED = "Gah! Please give me a break...!"
+%}
+
+{% include voice-table.html resourceName="gammeirakusai2304"
 %}
 
 ## Notes

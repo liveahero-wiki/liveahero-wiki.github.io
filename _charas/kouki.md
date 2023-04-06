@@ -1,6 +1,8 @@
 ---
 title: Kouki & Sirius
 characterId: 18
+h2:
+  title: '"Lightning Blade" Kouki & Sirius'
 occupation: Child actor - Entertainer & Dog entertainer
 permalink: /charas/kouki_and_sirius/
 heroes:
@@ -19,6 +21,7 @@ heroes:
     partner Sirius who became a hero with the desire to "always stay with Kouki",
     always snuggling up to Kouki when he becomes anxious.
   extra_sprites: fg_ADV_kouki_h01
+- stockId: 10182
 sidekicks:
 - stockId: 10181
   BIO_S01: |-
@@ -63,6 +66,9 @@ RELATION = "That elementary school teacher is so annoying. What does he care if 
 TOUCH = "U-ughya Hey!  No petting, we're celebrities!  Sirius, quit wagging your stupid tail already!"
 TRAIN = "Even if it was only a rehearsal I'll give it my all."
 TRAINED = "Stop, you're acting childish against a kid!?"
+%}
+
+{% include voice-table.html resourceName="koukirakusai2304"
 %}
 
 ## Notes
