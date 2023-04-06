@@ -70,7 +70,7 @@ def processPropertiesFile(raw_file, bio_file, serif_file):
         s = line.split("=")
 
         if s[0].startswith("DETAIL"):
-            detail[s[0]] = s[1][:-1]
+            detail[s[0]] = s[1][:-1].replace("<br><b><colo", "")
 
         if s[0].startswith("SERIF"):
             serif[s[0]] = s[1][:-1]
