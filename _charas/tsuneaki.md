@@ -1,6 +1,7 @@
 ---
 title: Tsuneaki
 characterId: 140
+masked: true
 heroes:
 - stockId: 11401
 sidekicks:
