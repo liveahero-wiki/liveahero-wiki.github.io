@@ -21,6 +21,19 @@ heroes:
     be put to work on everything, and he's going to have to tidy up everything. So
     he goes to the scene of the crime today, complaining about it.
 - stockId: 10062
+  BIO_H01: |-
+    In order to conduct an undercover operation in the city during the festival season, 
+    UEHA commissioned Gammei to transform into a fighting form through parallel queue.
+    After the strong light faded, he was dressed in a new hero suit, festival costume style.
+    The parallel weapon in his hand called matoi, in the old days was used by Japan's firemen, 
+    in present day it's used by the vanguard of festival procession.
+    Wielding that, he rampages around the battlefield as if it's a garden.
+  BIO_H02: |-
+    He recalls his hometown. Life in the devastated city was never easy.
+    But the experiences he had there were irreplaceable for Gammei as a boy and became his starting point.
+    Justy Arrester is a hero who protects citizens.
+    He realizes that it is a way of life that transcends position and role, and is the way he himself wants to live.
+    Wearing the outfit that signifies the sunny day that the citizens look forward to, he lifts his matoi high up.
   extra_sprites: fg_ADV_gammeiRakusai2304_h01,fg_ADV_gammeiRakusai2304_h01_skin1,fg_ADV_gammeiRakusai2304_h02,fg_ADV_gammeiRakusai2304_h02_skin1
 sidekicks:
 - stockId: 10061
