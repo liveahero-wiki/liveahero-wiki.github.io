@@ -22,6 +22,18 @@ heroes:
     always snuggling up to Kouki when he becomes anxious.
   extra_sprites: fg_ADV_kouki_h01
 - stockId: 10182
+  BIO_H01: |-
+    Citizens look forward to the festival. 
+    The hero suit called by him through parallel queue is for the sake of opposing the existence that threaten them.
+    Based on traditional costumes, it was created with both functionality and design, satisfying Kouki's high level of professionalism.
+    Even though it's the first time for him, he is a professional who says it is his job to charm people under any conditions,
+    so, together with Sirius he set off with their clapper shaped blade parallel weapon.
+  BIO_H02: |-
+    Kouki himself is actually troubled by his future prospect.
+    When growing up should he continue his good boy persona, will the audience accepts his real personality…
+    watching him searching for answer is his family Sirius who always snuggling up to him, never changing.
+    If Kouki, dressed in a glamorous tailcoat-like clothing, is the protecting figure, he is the offensive figure standing on the battlefield in festive attire.
+    Believing that one day the wish he held in his heart will come true, he paves the way to the future.
   extra_sprites: fg_ADV_koukionlyRakusai2304_h01,fg_ADV_koukionlyRakusai2304_h01_skin1,fg_ADV_siriusRakusai2304_h01,fg_ADV_siriusRakusai2304_h01_skin1
 
 sidekicks:
