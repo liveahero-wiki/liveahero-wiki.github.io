@@ -84,7 +84,7 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 ## Event Sales Bonus
 
 Event sales bonus added according to how much event hero you have in a single sales, Which is
-{% chara_link Gammei|h2 %}, {% chara_link Kouki|h2 %}, {% chara_link Tsuneaki|h1 %}, and {% chara_link Tsuneaki|h1 %}
+{% chara_link Gammei|h2 %}, {% chara_link Kouki & Sirius|h2 %}, {% chara_link Tsuneaki|h1 %}, and {% chara_link Tsuneaki|h1 %}
 
 Here is the bonus:
 
