@@ -12,3 +12,6 @@ sidekicks:
 %}
 
 ## Notes
+
+- His full name is Tsuneaki Toshuku (斗宿 ツネアキ)
+
