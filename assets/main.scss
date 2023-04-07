@@ -543,6 +543,9 @@ $elementName: fire, water, earth, light, shadow;
 .has-unit {
   background: $colorLight;
 }
+.hide-unmarked li:not(.has-unit) {
+  display: none;
+}
 .item, .status {
   text-decoration: underline dashed 1px;
   text-underline-offset: 2px;
