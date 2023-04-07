@@ -73,7 +73,7 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 | Sidekick | +Bonus (%) |
 |-------------|---------------|
 | {% chara_link Tsuneaki %} | 30 | 
-| {% chara_link Kouki %}  | 10 | 
+| {% chara_link Kouki & Sirius %}  | 10 | 
 | {% chara_link Gammei %}  | 10 | 
 | {% chara_link Suhail %}  | 10 | 
 | {% chara_link Procy %}  | 10 | 
