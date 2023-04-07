@@ -21,6 +21,7 @@ heroes:
     be put to work on everything, and he's going to have to tidy up everything. So
     he goes to the scene of the crime today, complaining about it.
 - stockId: 10062
+  extra_sprites: fg_ADV_gammeiRakusai2304_h01,fg_ADV_gammeiRakusai2304_h01_skin1,fg_ADV_gammeiRakusai2304_h02,fg_ADV_gammeiRakusai2304_h02_skin1
 sidekicks:
 - stockId: 10061
   BIO_S01: |-

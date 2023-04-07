@@ -22,6 +22,8 @@ heroes:
     always snuggling up to Kouki when he becomes anxious.
   extra_sprites: fg_ADV_kouki_h01
 - stockId: 10182
+  extra_sprites: fg_ADV_koukionlyRakusai2304_h01,fg_ADV_koukionlyRakusai2304_h01_skin1,fg_ADV_siriusRakusai2304_h01,fg_ADV_siriusRakusai2304_h01_skin1
+
 sidekicks:
 - stockId: 10181
   BIO_S01: |-
@@ -37,8 +39,10 @@ sidekicks:
     camera. When a camera is recording he acts as a meek good kid. The second the
     cameras are off however he lays bare his haugthy and arrogant demeanour. The
     driving force behind his doings seems to be the existence of a long-lost mother.
-  extra_sprites: fg_ADV_kouki_s01,fg_ADV_koukionly_s01,fg_kouki_s01_skin1,fg_ADV_kouki_s01_skin1,fg_ADV_koukionly_s01_skin1,fg_ADV_sirius_s01
+  extra_sprites: fg_ADV_kouki_s01,fg_ADV_koukionly_s01,fg_kouki_s01_skin1,fg_ADV_kouki_s01_skin1,fg_ADV_koukionly_s01_skin1,fg_ADV_kouki_s01_skin2,fg_ADV_kouki_s01_skin3,fg_ADV_koukionly_s01_skin2,fg_ADV_koukionly_s01_skin3,fg_ADV_koukionly_s01_skin4,fg_ADV_koukionly_s01_skin5,fg_ADV_sirius_s01,fg_ADV_sirius_s01_skin2,fg_ADV_sirius_s01_skin3
+
 ---
+
 
 {% include voice-table.html resourceName="kouki"
 h_gachaResult = "Heyy, I'm Inukura kouki!<br>This here is Sirius!<br>...Eh, the camera is not rolling?<br>Hmmm...well,<br>Don't drag me down, okay?"
