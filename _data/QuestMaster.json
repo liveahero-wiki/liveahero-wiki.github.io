@@ -94083,6 +94083,92 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
   },
+  "1043005": {
+    "questId": 1043005,
+    "questName": "いつかだれかと　すごしたきおく",
+    "subName": "第５話",
+    "questKind": 5,
+    "chapterId": 1043,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2023-04-18 18:00:00",
+    "endAt": "2023-05-04 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 5,
+    "enemyLevel": 13,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1043004,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainTraineeNinjaFire_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 106
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeNinjaEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 105
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeNinjaLight_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 104
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeNinjaShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 103
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
   "1044001": {
     "questId": 1044001,
     "questName": "幽霊神輿を調査せよ",
