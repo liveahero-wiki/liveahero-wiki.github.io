@@ -34,7 +34,7 @@ heroes:
     Justy Arrester is a hero who protects citizens.
     He realizes that it is a way of life that transcends position and role, and is the way he himself wants to live.
     Wearing the outfit that signifies the sunny day that the citizens look forward to, he lifts his matoi high up.
-  extra_sprites: fg_ADV_gammeiRakusai2304_h01,fg_ADV_gammeiRakusai2304_h01_skin1,fg_ADV_gammeiRakusai2304_h02,fg_ADV_gammeiRakusai2304_h02_skin1
+  extra_sprites: fg_gammeiRakusai2304_h02_skin2,fg_ADV_gammeiRakusai2304_h01,fg_ADV_gammeiRakusai2304_h01_skin1,fg_ADV_gammeiRakusai2304_h02,fg_ADV_gammeiRakusai2304_h02_skin1
 sidekicks:
 - stockId: 10061
   BIO_S01: |-
