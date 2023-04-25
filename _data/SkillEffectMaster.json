@@ -919,7 +919,10 @@
       "description": "もう１度行動をする",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -2052,7 +2055,10 @@
       "description": "ウェイト",
       "isImmediate": false,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -8307,7 +8313,10 @@
       "description": "75%ダメージ",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -10153,7 +10162,10 @@
       "description": "毒をすべて解除",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -10186,7 +10198,10 @@
       "description": "火傷をすべて解除",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -17239,6 +17254,75 @@
       "isOverrideStatusDescription": true
     }
   },
+  "592": {
+    "skillEffectId": 592,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "DamageLimit",
+          "parameter": {
+            "mult": 51,
+            "value": 0,
+            "isMult": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "1回の攻撃で最大HPの50%までしかダメージを受けない。",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "593": {
+    "skillEffectId": 593,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 25
+          }
+        }
+      ],
+      "trigger": "[{\"value\":50,\"element\":0,\"statusId\":0,\"class\":\"PinchExecTrigger\"}]",
+      "filename": "",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "ピンチ状態の時、被ダメージ-75%",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "600": {
     "skillEffectId": 600,
     "skillEffectJson": {
@@ -20873,7 +20957,10 @@
       "description": "Viewを50000獲得",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -22571,6 +22658,7 @@
       "description": "自身のView数を消費",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
@@ -26001,7 +26089,10 @@
       "description": "システム効果132番全除去",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -26028,7 +26119,10 @@
       "description": "システム効果132番付与",
       "isImmediate": false,
       "persistence": true,
+      "reaminDeath": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -28747,7 +28841,10 @@
       "description": "システム効果166番付与",
       "isImmediate": false,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -28778,7 +28875,10 @@
       "description": "最大HPの30%回復",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -28840,7 +28940,10 @@
       "description": "View消費量-50%（システム）",
       "isImmediate": false,
       "persistence": true,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "View消費量-50%",
       "isOverrideStatusName": true,
       "overrideStatusDescription": "スキルに必要なViewPowerが半分になる。バフでもデバフでもない状態。スキルによる解除不可。",
@@ -31894,6 +31997,70 @@
       "isOverrideStatusDescription": false
     }
   },
+  "1086": {
+    "skillEffectId": 1086,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 133,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果133番付与",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1087": {
+    "skillEffectId": 1087,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 133,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果133番全除去",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "1089": {
     "skillEffectId": 1089,
     "skillEffectJson": {
@@ -33111,6 +33278,246 @@
       "overrideStatusName": "ATKアップ",
       "isOverrideStatusName": true,
       "overrideStatusDescription": "攻撃力が1.5倍になる。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1146": {
+    "skillEffectId": 1146,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -500
+          }
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 128,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View消費量-500（システム）",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": true,
+      "isCountDownEffect": false,
+      "overrideStatusName": "View消費量-50%",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "スキルに必要なViewPowerが半分になる。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1147": {
+    "skillEffectId": 1147,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "OwnAttack",
+          "parameter": {
+            "index": 2,
+            "executeTiming": 5
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "スキル３を追加発動（状態変化版）",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1148": {
+    "skillEffectId": 1148,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeHp",
+          "parameter": {
+            "value": 10
+          }
+        },
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 200
+          }
+        },
+        {
+          "class": "ForceAuto",
+          "parameter": []
+        }
+      ],
+      "filename": "status_system_atkup",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [
+        4,
+        13
+      ],
+      "parameter": false,
+      "description": "オーバーフロー",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "オーバーフロー",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATK+50%。ターン終了時にHP最大値の10%のダメージを受ける。バフでもデバフでも無い状態。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1150": {
+    "skillEffectId": 1150,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "status_system_awakening",
+      "statusId": 134,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "激昂",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "激昂",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "現在HPに応じてView消費量減少。バフでもデバフでも無い状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1151": {
+    "skillEffectId": 1151,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeHp",
+          "parameter": {
+            "value": -20
+          }
+        }
+      ],
+      "filename": "status_regenerate",
+      "statusId": 129,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "住民の声援",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "住民の声援",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ターン終了時にHP最大値の20%の回復する。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1152": {
+    "skillEffectId": 1152,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 70
+          }
+        }
+      ],
+      "filename": "status_defup",
+      "statusId": 130,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "ネオタレンツの応援",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ネオタレンツの応援",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメージを-30%する。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1153": {
+    "skillEffectId": 1153,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 200
+          }
+        }
+      ],
+      "filename": "status_atkup",
+      "statusId": 131,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "ヒーローたちの支援",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ヒーローたちの支援",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "攻撃力が2倍になる。",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
     }

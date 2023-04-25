@@ -2109,6 +2109,78 @@
       }
     ]
   },
+  "84": {
+    "skillId": 84,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 12,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "洛祭紀行7話用",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 1151,
+        "prob": 100,
+        "effectTarget": 12,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "85": {
+    "skillId": 85,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 12,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "洛祭紀行7話用",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 1152,
+        "prob": 100,
+        "effectTarget": 12,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "86": {
+    "skillId": 86,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 12,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "洛祭紀行7話用",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 1153,
+        "prob": 100,
+        "effectTarget": 12,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "1001101": {
     "skillId": 1001101,
     "skillName": "燃ゆる白球",
@@ -64945,6 +65017,172 @@
       }
     ]
   },
+  "4147101": {
+    "skillId": 4147101,
+    "skillName": "巨大棍撃",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に100%ダメージ。1回の行動の間SPDダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuLantern_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4147102": {
+    "skillId": 4147102,
+    "skillName": "灯篭大炎舞",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に120%ダメージ。自身にデバフが付与されている時、与えるダメージが減少。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuLantern_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "4147103": {
+    "skillId": 4147103,
+    "skillName": "天衝ク大爆炎",
+    "useView": 10000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に40%ダメージ。スキルを発動できる場合、このスキルを追加発動(最大3回まで）。追加発動時、Viewを獲得できない。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuLantern_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 273,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1147,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 166
+          }
+        ]
+      },
+      {
+        "skillEffectId": 770,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 166
+          }
+        ]
+      },
+      {
+        "skillEffectId": 985,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4149101": {
     "skillId": 4149101,
     "skillName": "叩き潰し",
@@ -65103,6 +65341,77 @@
         "probGroupId": 0,
         "randomGroupId": 0,
         "triggerJson": []
+      }
+    ]
+  },
+  "4149104": {
+    "skillId": 4149104,
+    "skillName": "叩き潰し",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に75%ダメージ。1ターンの間火傷を付与。自身にオーバーフローが付与されている場合、スキル１を再度発動。（1ターンに1回まで）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuLantern_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 270,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 221,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1086,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 734,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 126
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 133
+          }
+        ]
       }
     ]
   },
@@ -66409,6 +66718,30 @@
             "statusId": 40
           }
         ]
+      }
+    ]
+  },
+  "6000058": {
+    "skillId": 6000058,
+    "skillName": "抵抗性",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "相手から受けるダメージの上限が最大HPの51%までになる。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 592,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
       }
     ]
   },
@@ -74686,6 +75019,329 @@
       }
     ]
   },
+  "6146102": {
+    "skillId": 6146102,
+    "skillName": "発動準備",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_wait",
+    "subResourceName": "s_skill_view",
+    "timing": 4,
+    "description": "「天衝ク大爆炎」を発動するターンの開始時、Viewを50000獲得し、ウェイトする。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 715,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 132
+          }
+        ]
+      },
+      {
+        "skillEffectId": 65,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 132
+          }
+        ]
+      }
+    ]
+  },
+  "6146105": {
+    "skillId": 6146105,
+    "skillName": "激昂",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "status_awakening",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "ターン開始時、現在のHPに応じて自身の使用するスキルのView消費量が減少する効果を付与。（HPが10%減少するごとにView消費量-500）",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 1150,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 134
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1146,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "MaxHPTrigger",
+            "value": 90,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 128
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1146,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "MaxHPTrigger",
+            "value": 80,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 128
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1146,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "MaxHPTrigger",
+            "value": 70,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 128
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1146,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "MaxHPTrigger",
+            "value": 60,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 3,
+            "element": 0,
+            "statusId": 128
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1146,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "MaxHPTrigger",
+            "value": 50,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 4,
+            "element": 0,
+            "statusId": 128
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1146,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "MaxHPTrigger",
+            "value": 40,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 5,
+            "element": 0,
+            "statusId": 128
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1146,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "MaxHPTrigger",
+            "value": 30,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 6,
+            "element": 0,
+            "statusId": 128
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1146,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "MaxHPTrigger",
+            "value": 20,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 7,
+            "element": 0,
+            "statusId": 128
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1146,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "MaxHPTrigger",
+            "value": 10,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 8,
+            "element": 0,
+            "statusId": 128
+          }
+        ]
+      }
+    ]
+  },
+  "6146107": {
+    "skillId": 6146107,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 5,
+    "description": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 897,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 132
+          }
+        ]
+      },
+      {
+        "skillEffectId": 896,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 132
+          }
+        ]
+      }
+    ]
+  },
   "6149101": {
     "skillId": 6149101,
     "skillName": "龍脈",
@@ -74701,6 +75357,232 @@
     "effects": [
       {
         "skillEffectId": 443,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6149102": {
+    "skillId": 6149102,
+    "skillName": "龍脈+",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 4,
+    "description": "ターン開始時、自身がピンチ状態で無い場合、自身に1ターンのオーバーフローを付与。自身がピンチ状態の場合、最大HPの30%のHPを回復+毒・火傷を解除。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 1148,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "NotPinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 986,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 330,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 331,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "6149103": {
+    "skillId": 6149103,
+    "skillName": "危機回避",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "ピンチ状態の時、被ダメージ-75%。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 593,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6149104": {
+    "skillId": 6149104,
+    "skillName": "攻撃激化",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_view",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 4,
+    "description": "5ターン目以降、自身のスキルによる消費View-50%。更に、スキル発動後、ピンチ状態で無い時、再行動する。（1ターンに1回まで）",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 988,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TurnTrigger",
+            "value": 5,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "TurnDontExecTrigger",
+            "value": 5,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 897,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "TurnTrigger",
+            "value": 5,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "6149105": {
+    "skillId": 6149105,
+    "skillName": "攻撃激化",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 132
+          },
+          {
+            "class": "NotPinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 896,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6149106": {
+    "skillId": 6149106,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 5,
+    "description": "狂乱が付与されている時再行動の１ターンに１回ロジックを担保する部分。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 1087,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,

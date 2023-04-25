@@ -94964,6 +94964,77 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
   },
+  "1043007": {
+    "questId": 1043007,
+    "questName": "ななつのほしぼし　みなつなぐとき",
+    "subName": "第７話",
+    "questKind": 5,
+    "chapterId": 1043,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2023-04-25 18:00:00",
+    "endAt": "2023-05-04 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 7,
+    "enemyLevel": 15,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1043006,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 106
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
   "1044001": {
     "questId": 1044001,
     "questName": "幽霊神輿を調査せよ",
@@ -96005,6 +96076,74 @@
         "battleInfoIcon": "icon_villainTraineeNinjaShadow_h01",
         "battleInfoElement": 5,
         "battleInfoSpd": 108
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "1046006": {
+    "questId": 1046006,
+    "questName": "むりょくなおのれを　いましめて",
+    "subName": "第６話高難易度",
+    "questKind": 6,
+    "chapterId": 1046,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2023-04-25 18:00:00",
+    "endAt": "2023-05-04 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 6,
+    "enemyLevel": 65,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 34,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 135,
+        "objectValue": 2,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1043006,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLantern_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 105
       }
     ],
     "hasAdv": false,
