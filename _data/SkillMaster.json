@@ -65017,6 +65017,284 @@
       }
     ]
   },
+  "4146101": {
+    "skillId": 4146101,
+    "skillName": "巨大棍撃",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdDownTeam",
+    "timing": 0,
+    "description": "敵単体に100%ダメージ。1回の行動の間SPDダウンを付与。【ピンチ状態時追加効果】スキル1を追加発動。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuLantern_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 486,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 57
+          }
+        ]
+      },
+      {
+        "skillEffectId": 461,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "4146102": {
+    "skillId": 4146102,
+    "skillName": "灯篭大炎舞",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に120%ダメージ。自身にバフが付与されている時、与えるダメージが増加。自身にデバフが付与されている時、与えるダメージが減少。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuLantern_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnDeBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnDeBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnDeBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 21,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnDeBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "4146103": {
+    "skillId": 4146103,
+    "skillName": "天衝ク大爆炎",
+    "useView": 10000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵全体に60%ダメージ。このスキルを発動する毎に、自身のATK+2%。スキルを発動できる場合、このスキルを追加発動(最大3回まで）。追加発動時、Viewを獲得できない。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuLantern_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1154,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 127
+          }
+        ]
+      },
+      {
+        "skillEffectId": 149,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1147,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 166
+          }
+        ]
+      },
+      {
+        "skillEffectId": 770,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 166
+          }
+        ]
+      },
+      {
+        "skillEffectId": 985,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
   "4147101": {
     "skillId": 4147101,
     "skillName": "巨大棍撃",
@@ -75066,6 +75344,79 @@
       }
     ]
   },
+  "6146103": {
+    "skillId": 6146103,
+    "skillName": "祭りの熱気",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "status_immunity",
+    "subResourceName": "s_skill_cureOwn",
+    "timing": 1,
+    "description": "毒・火傷・沈黙無効。【ピンチ状態時追加効果】ターン開始時、自身のデバフを全て解除。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 669,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 670,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1090,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": []
+      }
+    ]
+  },
+  "6146104": {
+    "skillId": 6146104,
+    "skillName": "不撓の闘気",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "ピンチ状態の時、ターン開始時に自身に3回分のDEFアップを付与。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 70,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
   "6146105": {
     "skillId": 6146105,
     "skillName": "激昂",
@@ -75290,6 +75641,43 @@
             "value": 8,
             "element": 0,
             "statusId": 128
+          }
+        ]
+      }
+    ]
+  },
+  "6146106": {
+    "skillId": 6146106,
+    "skillName": "祭りの熱気",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 209,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnDeBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
           }
         ]
       }
