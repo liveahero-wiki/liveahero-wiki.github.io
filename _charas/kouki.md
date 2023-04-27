@@ -34,7 +34,7 @@ heroes:
     watching him searching for answer is his family Sirius who always snuggling up to him, never changing.
     If Kouki, dressed in a glamorous tailcoat-like clothing, is the protecting figure, he is the offensive figure standing on the battlefield in festive attire.
     Believing that one day the wish he held in his heart will come true, he paves the way to the future.
-  extra_sprites: fg_ADV_koukionlyRakusai2304_h01,fg_ADV_koukionlyRakusai2304_h01_skin1,fg_ADV_siriusRakusai2304_h01,fg_ADV_siriusRakusai2304_h01_skin1
+  extra_sprites: fg_koukiRakusai2304_h02_skin2,fg_ADV_koukionlyRakusai2304_h01,fg_ADV_koukionlyRakusai2304_h01_skin1,fg_ADV_siriusRakusai2304_h01,fg_ADV_siriusRakusai2304_h01_skin1
 
 sidekicks:
 - stockId: 10181
