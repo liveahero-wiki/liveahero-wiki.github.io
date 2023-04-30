@@ -85,6 +85,16 @@ TRAINED = "Stop, you're acting childish against a kid!?"
 %}
 
 {% include voice-table.html resourceName="koukirakusai2304"
+APPRECIATION = "Here, Yakisoba, Okonomiyaki, and Apple candy.<br>…I brought it for you, you're tired aren't you?<br>When you feel better, let's go see the festival."
+DAILY = "He got me, that paparazzi!<br>Even though I'm confident that I won't get my pictures taken in private…<br>Dammit, just you wait this kind of scandal I will just blow it away!"
+HERO = "From my point of view, detective Gammei is already an old man<br>…but, for most of the world he should be still young.<br>Yet somehow he looks very tired, is he alright? How about I treat him to dinner?"
+PLAYER = "Operator-san, do you have something you wish to see in Kyoto?<br>…why did I want to know about it?<br>Well, when you're free I was thinking of inviting you to sightsee!<br>Be thankful for it."
+RELATION = "Shinraku's local actor…<br>well, he's familiar with photoshoot, and his acting is also not bad, but something is suspicious don't you think?<br>Even in his everyday attitude, it feels like he's still acting. Is it just me?"
+TOUCH = "Don't be touchy-feely with me….is what I want to say.<br>But, normally I am always in your care one way or another, <br>so I will overlook it this time.<br>Hey, Sirius too, come here!"
+TRAIN = "Okay, let's keep going till we hit the limit!"
+TRAINED = "No, impossible, give me a break already!"
+EVENTA = "Going to the local tourist attraction was fun,<br>but it looks like Sirius is very tired now…<br>He gets petted by everyone after all."
+EVENTB = "Ghost palanquin? Spirited away?<br>…well, I guess there are people who like that kind of things even as an adult.<br>Eh…it really happened? No way!"
 %}
 
 ## Notes
