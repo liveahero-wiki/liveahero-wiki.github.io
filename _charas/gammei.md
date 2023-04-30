@@ -78,6 +78,16 @@ TRAINED = "Gah! Please give me a break...!"
 %}
 
 {% include voice-table.html resourceName="gammeirakusai2304"
+APPRECIATION = "How is it, working in Kyoto?<br>It's just a change in place, but it's a nice change right?<br>Since we have come to Kyoto, how about taking a stroll around Kamogawa river?"
+DAILY = "Guee…my head hurts.<br>Even when it's a festival I should not have drank so much.<br>By the way, when I'm drunk did I do something to you?<br>…nothing, right?"
+HERO = "Good grief, that guy Tsuneaki.<br>Even though he's friendly and easy to get close to,<br>when it comes to the crucial talk he avoids and make it confusing.<br>Show me your real character even for a bit already."
+PLAYER = "Yo! Looking forward to work with you again today, heheh.<br>I only say this now, but working with you has always been fun for me.<br>That alone is enough for me to be pleased with you, you know?"
+RELATION = "That actor boy, he sure can move well even though he's small.<br>And that impudent attitude, he reminds me of myself when I was still a kid…<br>Well, the appearance is totally diferent though."
+TOUCH = "What's the matter. You wanted to be close with me?<br>Wahaha, fine. No need to hold back, come here!<br>Here, hugs…aa? smells like alcohol!?"
+TRAIN = "Be my drink buddy!"
+TRAINED = "P-please! Go easy with me today!"
+EVENTA = "A city created by alien immigrants, huh.<br>And then they come to like the Earth's, and even more Japan's culture,<br>I kinda feel happy about it."
+EVENTB = "Sightseeing? What are you saying, we are here for investigation.<br>With my position something like that is…haah alright.<br>When the work is over, I will go with you wherever you want."  
 %}
 
 ## Notes
