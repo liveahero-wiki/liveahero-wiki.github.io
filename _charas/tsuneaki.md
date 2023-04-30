@@ -29,6 +29,8 @@ sidekicks:
 ---
 
 {% include voice-table.html resourceName="tsuneaki"
+h_gachaResult = "Yo, good day.<br>My name is Tsuneaki Toshuku.<br>An exorcist hero is rare, right?<br>….eh?<br>No no, it's not a shady thing, truly!"
+s_gachaResult = "Hm, don't tell me you're…my fan?<br>Heheh, I'm just joking!<br>Uncle's called Tsuneaki.<br>Let's have a long and fun association shall we, Operator-kun?"
 APPRECIATION = "Are you not tired? You don't know when you're tired?<br>Don't slack off with today's work.<br>Afterwards let's go for a date with uncle!...eh, no?"
 DAILY = "Eeh? Do you have some interest with uncle's private life!?<br>Well…if you're fine with not going back, should we spend some time together?"
 HERO = "I'm a private practice hero, but my face is known by a lot of people, you know?<br>There is that famous joint effort with that person…<br>That person's name..who is it again?"
