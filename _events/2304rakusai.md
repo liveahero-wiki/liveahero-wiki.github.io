@@ -106,6 +106,17 @@ Here is a list of this event's limited time Missions:
 | 4  | Finish any rank event quest 40 times | 1 {% include item-icon.html id=34 %}    |
 | 5  | Finish any rank event quest 50 times | 1 {% include item-icon.html id=34 %}    |
 | 6  | Finish event sales 10 times | 1 {% include item-icon.html id=34 %}    |
+| 7  | Clear challenge quest chapter 4 using guest support | 10 {% include item-icon.html id=59 %}    |
+| 8  | Clear 2 challenge quest  | 1 {% include item-icon.html id=10 %}    |
+| 9  | Clear 4 challenge quest  | 1 {% include item-icon.html id=10 %}    |
+| 10  | Clear 6 challenge quest  | 1 {% include item-icon.html id=10 %}    |
+| 11 | Clear event free quest rank D  | 400 {% include item-icon.html id=167 %}    |
+| 12 | Clear event free quest rank C  | 400 {% include item-icon.html id=167 %}    |
+| 13 | Clear event free quest rank B  | 600 {% include item-icon.html id=167 %}    |
+| 14 | Clear event free quest rank A  | 600 {% include item-icon.html id=167 %}    |
+| 14 | Clear event free quest rank S  | 800 {% include item-icon.html id=167 %}    |
+| 15 | Clear event free quest beginner  | 600 {% include item-icon.html id=167 %}    |
+| 16 | Clear event free quest expert  | 800 {% include item-icon.html id=167 %}    |
 
 ## Event Shop
 
@@ -120,3 +131,7 @@ Here is a list of this event's limited time Missions:
 ### Free Quests
 
 {% include quest-group.html chapterId=1044 %}
+
+### Special Quests
+
+{% include quest-group.html chapterId=1045 %}
