@@ -231,6 +231,10 @@ Here is a list of this event's limited time Missions:
 
 {% include quest-group.html chapterId=1040 %}
 
+### Special Quests
+
+{% include quest-group.html chapterId=1041 %}
+
 ## Event Sales Report
 
 <details><summary>Sales Report 1</summary>
