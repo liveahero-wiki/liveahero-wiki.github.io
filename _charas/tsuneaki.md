@@ -29,6 +29,16 @@ sidekicks:
 ---
 
 {% include voice-table.html resourceName="tsuneaki"
+APPRECIATION = "Are you not tired? You don't know when you're tired?<br>Don't slack off with today's work.<br>Afterwards let's go for a date with uncle!...eh, no?"
+DAILY = "Eeh? Do you have some interest with uncle's private life!?<br>Well…if you're fine with not going back, should we spend some time together?"
+HERO = "I'm a private practice hero, but my face is known by a lot of people, you know?<br>There is that famous joint effort with that person…<br>That person's name..who is it again?"
+PLAYER = "I see, you are much more than rumored..<br>I can see why there are people who want to do something about you…<br>From who did I hear that? Secret!"
+RELATION = "Very good, Kouki-kun.<br>Whether acting or talent show he's brimming with energy, uncle is overwhelmed.<br>Though, I think it will be fine to be a little bit more carefree."
+TOUCH = "Hmm! Sorry, sorry, I avoid you without thinking,<br>but what do you mean by wanting to touch uncle?….nah i'm joking.<br>Alright, come here."
+TRAIN = "Can you endure my stroke?"
+TRAINED = "Hh…I-I'm close to my limit"
+EVENTA = "Welcome to Shinraku Festival!<br>I welcome you as the local here.<br>Then let's enjoy this to the fullest, make sure to watch your wallet~!"
+EVENTB = "Arara, Gammei-kun is wearing such an immodest outfit…well no matter.<br>In time of festival, even outdoor sex is fine, right?"
 %}
 
 ## Notes
