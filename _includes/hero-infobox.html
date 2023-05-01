@@ -143,4 +143,16 @@
 <h3>Passive skills</h3>
 {% include skill-table-v2.html skillIds=passiveSkillIds hide_banner=true %}
 {% endif %}
+
+{% assign lastCardInfo = cardInfos | last %}
+{% assign skillEvos = lastCardInfo.skillProvider.activeSkills | where: "skillUpgrade", 1 %}
+{% if skillEvos.size > 0 %}
+<h3>Skill evolutions</h3>
+
+{% for skill in skillEvos %}
+{% assign si = skill.skillId | downcase %}
+{{ site.data.processed.SkillUpgradeMaster[si] }}
+{% endfor %}
+{% endif %}
+
 </div>

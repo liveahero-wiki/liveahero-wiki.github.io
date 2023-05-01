@@ -13,6 +13,13 @@ jobs:
       MY_SECRET: ${{ github.token }}
     steps:
     - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.11
+    - name: Generate data files
+      run: |
+        python tools/skill_evo.py
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
