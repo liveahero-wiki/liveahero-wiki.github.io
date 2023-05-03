@@ -233,6 +233,8 @@ Here is a list of this event's limited time Missions:
 
 ### Special Quests
 
+Fan translations for special quests can be found [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vQRqvH0eDWo7qehduF2d8XIP4XCvN5vjbpo2rLreJhuALbqf2a2UBfkvZlvtXgcJ0X9x-kCYn-K_NzA/pubhtml)
+
 {% include quest-group.html chapterId=1041 %}
 
 ## Event Sales Report
