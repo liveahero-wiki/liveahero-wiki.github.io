@@ -1752,7 +1752,10 @@
       "description": "沈黙",
       "isImmediate": false,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -1907,7 +1910,10 @@
       "description": "バフを１つ解除",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -14326,7 +14332,10 @@
       "description": "システム効果57番付与",
       "isImmediate": false,
       "persistence": true,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -26952,7 +26961,10 @@
       "description": "凶暴化",
       "isImmediate": false,
       "persistence": true,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "凶暴化",
       "isOverrideStatusName": true,
       "overrideStatusDescription": "HPが減少するほどATKが上昇する。最大150%。",
@@ -26975,6 +26987,10 @@
           "parameter": {
             "value": 0
           }
+        },
+        {
+          "class": "NoneEffectElapseAfterTurnEnd",
+          "parameter": []
         }
       ],
       "filename": "status_burst",
@@ -26985,7 +27001,10 @@
       "description": "回復無効",
       "isImmediate": false,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -27020,7 +27039,10 @@
       "description": "シールド",
       "isImmediate": false,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "シールド",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "相手からのダメージを無効化する。ターン終了時に解除される。",
@@ -27053,7 +27075,10 @@
       "description": "100%ダメージ。自身にシールドが付与されている場合、威力増加",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -27115,7 +27140,10 @@
       "description": "シールド全解除",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -34589,6 +34617,437 @@
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1162": {
+    "skillEffectId": 1162,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AddMultDamage",
+          "parameter": {
+            "value": 70,
+            "addMult": 30
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"EnemyBuffNumberExecTrigger\"}]",
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "70%ダメージ。対象にデバフが付与されている場合、100％ダメージ。",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1163": {
+    "skillEffectId": 1163,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": -1,
+            "isRandom": true,
+            "statusNum": 1,
+            "statusTypeValue": 0
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "デバフのうちランダムに1つの持続を1ターン短縮",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1164": {
+    "skillEffectId": 1164,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HighestMultipleDefence",
+          "parameter": {
+            "isBig": true,
+            "value": 105
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"EnemyDeBuffNumberExecTrigger\"},{\"value\":1,\"element\":0,\"statusId\":0,\"class\":\"EnemyDeBuffNumberDontExecTrigger\"},{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"InvokerAliveTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 134,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "付与されているデバフが1つの時、被ダメージが5％アップ。",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1165": {
+    "skillEffectId": 1165,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HighestMultipleDefence",
+          "parameter": {
+            "isBig": true,
+            "value": 110
+          }
+        }
+      ],
+      "trigger": "[{\"value\":1,\"element\":0,\"statusId\":0,\"class\":\"EnemyDeBuffNumberExecTrigger\"},{\"value\":2,\"element\":0,\"statusId\":0,\"class\":\"EnemyDeBuffNumberDontExecTrigger\"},{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"InvokerAliveTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 134,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "付与されているデバフが2つの時、被ダメージが10％アップ。",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1166": {
+    "skillEffectId": 1166,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HighestMultipleDefence",
+          "parameter": {
+            "isBig": true,
+            "value": 115
+          }
+        }
+      ],
+      "trigger": "[{\"value\":2,\"element\":0,\"statusId\":0,\"class\":\"EnemyDeBuffNumberExecTrigger\"},{\"value\":3,\"element\":0,\"statusId\":0,\"class\":\"EnemyDeBuffNumberDontExecTrigger\"},{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"InvokerAliveTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 134,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "付与されているデバフが3つの時、被ダメージが15％アップ。",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1167": {
+    "skillEffectId": 1167,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HighestMultipleDefence",
+          "parameter": {
+            "isBig": true,
+            "value": 120
+          }
+        }
+      ],
+      "trigger": "[{\"value\":3,\"element\":0,\"statusId\":0,\"class\":\"EnemyDeBuffNumberExecTrigger\"},{\"value\":4,\"element\":0,\"statusId\":0,\"class\":\"EnemyDeBuffNumberDontExecTrigger\"},{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"InvokerAliveTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 134,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "付与されているデバフが4つの時、被ダメージが20％アップ。",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1168": {
+    "skillEffectId": 1168,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HighestMultipleDefence",
+          "parameter": {
+            "isBig": true,
+            "value": 125
+          }
+        }
+      ],
+      "trigger": "[{\"value\":4,\"element\":0,\"statusId\":0,\"class\":\"EnemyDeBuffNumberExecTrigger\"},{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"InvokerAliveTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 134,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "付与されているデバフが5つの時、被ダメージが25％アップ。",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1169": {
+    "skillEffectId": 1169,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HighestMultipleDefence",
+          "parameter": {
+            "isBig": true,
+            "value": 130
+          }
+        }
+      ],
+      "trigger": "[{\"value\":5,\"element\":0,\"statusId\":0,\"class\":\"EnemyDeBuffNumberExecTrigger\"},{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"InvokerAliveTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 134,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "付与されているデバフが6つの時、被ダメージが30％アップ。",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1170": {
+    "skillEffectId": 1170,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HighestMultipleDefence",
+          "parameter": {
+            "isBig": true,
+            "value": 135
+          }
+        }
+      ],
+      "trigger": "[{\"value\":6,\"element\":0,\"statusId\":0,\"class\":\"EnemyDeBuffNumberExecTrigger\"},{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"InvokerAliveTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 134,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "付与されているデバフが7つの時、被ダメージが35％アップ。",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1171": {
+    "skillEffectId": 1171,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HighestMultipleDefence",
+          "parameter": {
+            "isBig": true,
+            "value": 140
+          }
+        }
+      ],
+      "trigger": "[{\"value\":7,\"element\":0,\"statusId\":0,\"class\":\"EnemyDeBuffNumberExecTrigger\"},{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"InvokerAliveTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 134,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "付与されているデバフが8つの時、被ダメージが40％アップ。",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1172": {
+    "skillEffectId": 1172,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HighestMultipleDefence",
+          "parameter": {
+            "isBig": true,
+            "value": 145
+          }
+        }
+      ],
+      "trigger": "[{\"value\":8,\"element\":0,\"statusId\":0,\"class\":\"EnemyDeBuffNumberExecTrigger\"},{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"InvokerAliveTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 134,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "付与されているデバフが9つの時、被ダメージが45％アップ。",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1173": {
+    "skillEffectId": 1173,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HighestMultipleDefence",
+          "parameter": {
+            "isBig": true,
+            "value": 150
+          }
+        }
+      ],
+      "trigger": "[{\"value\":9,\"element\":0,\"statusId\":0,\"class\":\"EnemyDeBuffNumberExecTrigger\"},{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"InvokerAliveTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 134,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "付与されているデバフが10つの時、被ダメージが50％アップ。",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
