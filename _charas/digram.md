@@ -34,6 +34,7 @@ sidekicks:
     is capable of showing emotions since he is a life-form who was born with them.
 
     If he is given affection, he will meekly return the favor.
+  extra_sprites: fg_digram_s01_skin1,fg_digram_s01_skin2,fg_digram_s01_skin3
 ---
 
 {% include voice-table.html resourceName="digram"
