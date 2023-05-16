@@ -15,13 +15,10 @@ sales_end_time: 2023-06-06T20:00:00+09
 * this will be unordered
 {:toc}
 
-## Event Preview
-
-
 ## Event Banners
 
 This Event's gacha summon includes one time-limited variant {% chara_link Yoshiori|h2 %} (Hero),
-and a three character {% chara_link Tabit %} (Hero & Sidekick), {% chara_link Esperdica %} (Hero & Sidekick),
+and three new character {% chara_link Tabit %} (Hero & Sidekick), {% chara_link Esperdica %} (Hero & Sidekick),
 {% chara_link Raizi %} (Sidekick).
 
 Rates as follow:
