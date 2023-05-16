@@ -14,6 +14,7 @@
 {% for effect in skillEffectJson.effects %}
 
 {% if effect.class == "NoneEffect" and skillEffectJson.effects.size > 1 %}{% continue %}{% endif %}
+{% if effect.class == "ParticleStatus" %}{% continue %}{% endif %}
 
 {% assign turnDefinition = "action" %}
 {% case effect.class %}
@@ -112,6 +113,8 @@ ATK Up by {{ effect.parameter.spdMult }}% to {{ target }} for each point in spee
 {% when "HighestMultipleAttack" %}
 ATK Up by {{ effect.parameter.value }}% to {{ effect.parameter.target | skill_target }}
 (If there are overlapping effects with the same type and range, only the one with highest value will be applied)
+{% when "BeforeSkillTriggerMultipleAttack" %}
+ATK Up by {{ effect.parameter.value }}% to {{ target }} if target enemy has no acted yet
 {% when "HighestMultipleDefence" %}
 Incoming damage increases by {{ effect.parameter.value }}% to {{ target }}
 (If there are overlapping effects with the same type and range, only the one with highest value will be applied)
