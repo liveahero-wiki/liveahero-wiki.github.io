@@ -32,6 +32,7 @@ heroes:
 
     Today, he fights to have his existence recognized by the people he loves again.
 - stockId: 10722
+  extra_sprites: fg_yoshioriTrain2305_h01_skin2,fg_yoshioriTrain2305_h01_skin3
 sidekicks:
 - stockId: 10721
   BIO_S01: |-
@@ -75,6 +76,9 @@ RELATION = "I wouldn't be where I am today if it wasn't for Exio-san.<br> I'll d
 TOUCH = "H-hey! You, just because you can see me doesn't mean you can touch me!<br>Don't touch my right arm!<br>It gives me the willies!"
 TRAIN = "Let's go for one tough round!?"
 TRAINED = "D-don't look at me..."
+%}
+
+{% include voice-table.html resourceName="yoshioriTrain2305"
 %}
 
 ## Notes
