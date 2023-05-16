@@ -28,14 +28,16 @@ Rates as follow:
 | {% chara_link Yoshiori|h2 %}                               | 0.8 %            | 1.6 %            |
 | {% chara_link Tabit|h1 %}                              | 0.8 %            | 1.6 %            |
 | {% chara_link Esperdica|h1 %}                             | 2 %              | 32 %             |
+| {% chara_link Digram|h1 %}                             | 6 %              | 32 %             |
 | {% chara_link Raizi %}                                 | 3 %              | 0 %             |
 | {% chara_link Esperdica %}                                 | 3 %              | 0 %             |
 | {% chara_link Tabit %}                                 | 12 %              | 0 %             |
+| {% chara_link Digram %}                                 | 8 %              | 0 %             |
 | Offbanner 5 star hero                                    | 0.4 %            | 0.8 %            |
 | Offbanner 4 star hero                                    | 6 %              | 64 %             |
-| Offbanner 3 star hero                                    | 35 %             | 0 %              |
+| Offbanner 3 star hero                                    | 29 %             | 0 %              |
 | Offbanner 4 star sidekick                                | 4 %              | 0 %              |
-| Offbanner 3 star sidekick                                | 33 %             | 0 %              |
+| Offbanner 3 star sidekick                                | 25 %             | 0 %              |
 
 >Rates (Multis) is the rate of the tenth pull in a multi pull, pull number 1-9 still use the Rates (Single)
 
