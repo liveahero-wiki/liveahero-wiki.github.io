@@ -1,6 +1,8 @@
 ---
 title: Yoshiori
 characterId: 72
+h2:
+  title: '"The Brave Guard" Yoshiori'
 heroes:
 - stockId: 10721
   BIO_H01: |-
@@ -29,6 +31,7 @@ heroes:
     necessary.
 
     Today, he fights to have his existence recognized by the people he loves again.
+- stockId: 10722
 sidekicks:
 - stockId: 10721
   BIO_S01: |-
