@@ -620,7 +620,10 @@
       "description": "200%ダメージ",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -1075,7 +1078,10 @@
       "description": "50%ダメージ",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -1466,7 +1472,10 @@
       "description": "HPを基礎ATKの80%回復する",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -1660,7 +1669,10 @@
       "description": "60%ダメージ+HPが減るほどダメージ量が上昇する",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -2296,6 +2308,7 @@
       "description": "130%ダメージ",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
@@ -3087,7 +3100,10 @@
       "description": "敵の挑発を無視",
       "isImmediate": false,
       "persistence": true,
+      "reaminDeath": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -7533,7 +7549,10 @@
       "description": "HPを基礎ATKの120%回復する",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -9220,7 +9239,10 @@
       "description": "リジェネ",
       "isImmediate": false,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -18023,6 +18045,41 @@
       "isOverrideStatusDescription": false
     }
   },
+  "597": {
+    "skillEffectId": 597,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnDecideAutoSkill",
+          "parameter": {
+            "value": 1,
+            "modValue": 2
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        13
+      ],
+      "parameter": false,
+      "description": "オート行動時、2ターン毎に第2スキルを優先して使用する。",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "600": {
     "skillEffectId": 600,
     "skillEffectJson": {
@@ -18171,12 +18228,15 @@
       "description": "View消費量-1000",
       "isImmediate": false,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": true,
-      "overrideStatusName": "",
-      "isOverrideStatusName": false,
-      "overrideStatusDescription": "",
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "View消費量-1000",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "Viewの消費を-1000する。",
       "isDisplayPersistenceStatus": false,
-      "isOverrideStatusDescription": false
+      "isOverrideStatusDescription": true
     }
   },
   "605": {
@@ -22067,7 +22127,10 @@
       "description": "HPを基礎ATKの60%回復する",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -23330,12 +23393,15 @@
       "description": "View消費量-3000",
       "isImmediate": false,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": true,
-      "overrideStatusName": "",
-      "isOverrideStatusName": false,
-      "overrideStatusDescription": "",
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "View消費量-3000",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "Viewの消費を-3000する。",
       "isDisplayPersistenceStatus": false,
-      "isOverrideStatusDescription": false
+      "isOverrideStatusDescription": true
     }
   },
   "770": {
@@ -27936,7 +28002,10 @@
       "description": "View消費量-1000",
       "isImmediate": false,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -31262,7 +31331,10 @@
       "description": "HPを基礎ATKの35%回復する",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -31459,6 +31531,7 @@
       "description": "ピンチ状態説明用",
       "isImmediate": false,
       "persistence": true,
+      "reaminDeath": false,
       "canDuplicate": true,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
@@ -35048,6 +35121,351 @@
       "persistence": true,
       "reaminDeath": true,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1174": {
+    "skillEffectId": 1174,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AimHighestBuffCountCharacter",
+          "parameter": {
+            "isTarget": false
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        13
+      ],
+      "parameter": false,
+      "description": "オート行動時、味方を対象にするスキルは味方の中で一番バフが付与されているキャラクターを対象にする",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": true,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1175": {
+    "skillEffectId": 1175,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "ParticleStatus",
+          "parameter": {
+            "address": "yoshiori_taunt"
+          }
+        }
+      ],
+      "filename": "status_provocation",
+      "statusId": 216,
+      "canDispel": true,
+      "filterIds": [],
+      "parameter": false,
+      "description": "挑発のアイコン表示（限定ヨシオリ）",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "挑発",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "相手から狙われやすくなる。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1176": {
+    "skillEffectId": 1176,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 216,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果216番除去",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1177": {
+    "skillEffectId": 1177,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Provocation",
+          "parameter": []
+        }
+      ],
+      "trigger": "[{\"value\":100,\"element\":0,\"statusId\":0,\"class\":\"ReceiverNotPinchExecTrigger\"},{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"BeforeSkillTrigger\"}]",
+      "filename": "",
+      "statusId": 214,
+      "canDispel": false,
+      "filterIds": [
+        12
+      ],
+      "parameter": false,
+      "description": "非ピンチ状態かつ未行動の時のみ挑発",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1178": {
+    "skillEffectId": 1178,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -1000,
+            "skillId": 1072203
+          }
+        },
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -1000,
+            "skillId": 1072204
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 215,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "奮起",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "奮起",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "スキル３のView消費量が1000減少する。バフでもデバフでも無い状態。スキルによる解除不可。ターン経過で解除される。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1179": {
+    "skillEffectId": 1179,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AbsorbDamage",
+          "parameter": {
+            "value": 60,
+            "target": 11,
+            "healMult": 50
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "60%ダメージ+ダメージの50%HPが最も減っている味方を回復。",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1182": {
+    "skillEffectId": 1182,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "BeforeSkillTriggerMultipleAttack",
+          "parameter": {
+            "value": 20
+          }
+        }
+      ],
+      "filename": "status_atkup",
+      "statusId": 217,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "対象が未行動の場合ダメージ+20%",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1183": {
+    "skillEffectId": 1183,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 218,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果218番除去",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1184": {
+    "skillEffectId": 1184,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 218,
+      "canDispel": true,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果218番付与",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1186": {
+    "skillEffectId": 1186,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 215,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "効果なし・奮起ヘルプ表示用",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
