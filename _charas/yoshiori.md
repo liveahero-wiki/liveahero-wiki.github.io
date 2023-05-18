@@ -32,6 +32,25 @@ heroes:
 
     Today, he fights to have his existence recognized by the people he loves again.
 - stockId: 10722
+  BIO_H01: |-
+    Yoshiori gained a new look on his journey on the luxurious galactic mystery train.
+    
+    His parallel weapon is transformed into twin revolver which is used to protect the passenger, 
+    and a sunglasses with the capability to detect and project any possible danger in the surroundings, 
+    It represent a belief in protection while still maintaining Yoshiori's style in eliminating his enemies.
+    
+    The high mobility of the hero suit is adapted for assault, 
+    while the though physical and mental endurance allowed him to protect his target and sacrifice himself if necessary.
+  BIO_H02: |-
+    Being unrecognized for most people, Yoshiori sometimes feel like as if he's a ghost.
+    
+    The dreams he hold when he's still a child, the days when he trains himself desperately all the time to reach that…
+    
+    that kind of dreams will never come true now, was what he used as an excuse, 
+    but now he threw it away and wish for once more to be able to protect someone.
+    
+    As a security professional (SP), even with his vanished arm, 
+    he will still appear in front of any threat and put his life on the line against it.
   extra_sprites: fg_yoshioriTrain2305_h01_skin2,fg_yoshioriTrain2305_h01_skin3
 sidekicks:
 - stockId: 10721
