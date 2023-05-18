@@ -15,6 +15,28 @@ sales_end_time: 2023-06-06T20:00:00+09
 * this will be unordered
 {:toc}
 
+## Event Preview
+The Galactic Railroad - it is a passenger spaceship that connects the stars.
+
+To commemorate the completion of the cutting-edge galaxy sleeping train Model Stella Campanela,
+the company operate a train trip with a secret destination, the mystery train.
+
+Being entrusted by Huckle to inspect,
+you board the luxurious train with Yoshiori as your escort.
+
+
+There you meet a young canine working as a barista,
+while in the middle of an enjoyable cofee break,
+a disturbing ghostly commotion spreads like a ripple...
+
+The robot conductor who works as a doorman on the Stella Campanela,
+a snow leopard gambling in the casino, and
+the former commander of the Special Operations Forces who was on board as a security staff.
+While searching for the cause of the commotion, something unusual is happening to the train ......!
+
+An abyss of space from which there is no escape.
+Riding with the turbulence, the cruise train is running across the galaxy...
+
 ## Event Banners
 
 This Event's gacha summon includes one time-limited variant {% chara_link Yoshiori|h2 %} (Hero),
