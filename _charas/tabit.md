@@ -40,4 +40,16 @@ sidekicks:
 ---
 
 {% include voice-table.html resourceName="tabit"
+h_gachaResult = "Tabit, former head of the special operations unit.<br>Leader, from this day forward, at your service.<br>Use the power of Tabit as you wish."
+s_gachaResult = "Former head of special operations,Tabit.<br>Sidekick, request confirmed.<br>Accepted, gratitude.<br>Leader, give Tabit your order."
+APPRECIATION = "Are you awake? Leader, doze off for a while.<br>Be at ease. Tabit attended the strategy meeting on behalf.<br>Relaxation, important. Brought you water."
+DAILY = "Leader, today's order?…roger.<br>All members are to depart for hero show mission at 10.30 on the department store rooftop.<br>Will notify this to each soldier."
+HERO = "Digram, always put emphasis on being punctual,seems indifferent.<br>Despite that, actually has plenty of expression.<br>Sometimes tell jokes.<br>…Leader, looks too surprised."
+PLAYER = "Tabit, comrade, important. That's Leader's order.<br>Leader, your look when dealing with the other troops…<br>Tabit's ideal. <br>Very, nice."
+RELATION = "Soldier Yoshiori, bearing is refined…<br>That moves, must be a soldier with a lot of life or death situation.<br>Tabit's comrade…guidance, hopefully."
+TOUCH = "Leader, interested in Tabit's body framework?<br>Cell mechanisms are different.<br>But, no outward difference from yours…confirm, wish?"
+TRAIN = "Preparation complete, commence training!"
+TRAINED = "Guh…fierce..!"
+EVENTA = "Action inside the galaxy train, will follow leader.<br>But, Tabit has some problem in language system.<br>Cannot properly convey some word.<br>Pardon, leader."
+EVENTB = "That…Digram!?<br>Want to hear about Tronesion's circumstances!<br>…w,what? The train, shaking badly…?<br>…wait!"
 %}
