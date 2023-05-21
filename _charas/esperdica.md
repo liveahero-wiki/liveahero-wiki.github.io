@@ -40,4 +40,16 @@ sidekicks:
 ---
 
 {% include voice-table.html resourceName="esperdica"
+h_gachaResult = "I'm Esperdica, I run a coffee shop.<br>Yeah, I heard about you a long time ago.<br>From who…?<br>Heheh, It's a secret."
+s_gachaResult = "I work as a barista, my name's Esperdica.<br>Yeah, I've prepared for sidekick duty.<br>Also, I made you some coffee, Here."
+APPRECIATION = "Here, It's a little sweet blend.<br>For the tired you, just enough to alleviate it.<br>Doggy? It's a wolf latte art. Cute isn't it?"
+DAILY = "Fufu, is it rare to see an espresso machine?<br>For a barista like me, this guy is like a best friend.<br>…Let's make a lot. Please enjoy it."
+HERO = "Hmm..Tabit's body is composed of nanomachine, will he be able to digest something like coffee?<br>It's a job habit, I inadvertently think about the right coffee beans for him."
+PLAYER = "Your job is to understand someone deeply, and give them the optimum instruction…<br>Don't you think it's very similar to knowing the best beans required to make the best coffee?<br>We are matching."
+RELATION = "The mellow aroma of coffee, will arouse the interest of the drinker,then the refined taste, will make anybody less tense.<br>Even for Raizi when he's in concentration…heheh."
+TOUCH = "Oh, how can I help you?<br>Ah, perhaps, you want to know how to make a hand drip coffee?<br>Of course, I will teach you the way step by step."
+TRAIN = "Heheh, that's a very nice expression…!"
+TRAINED = "T-this is more than what I imagined…!"
+EVENTA = "Welcome, to galaxy railroad cafe lounge.<br>For your relaxing time how about a cup of coffee?<br>It's has a very nice aroma…fuu, I even calmed down too."
+EVENTB = "Will you tell Yoshiori that there is a very delicious cherry pie in the restaurant?<br>I think he will like it very much.<br> Heheh, it's just my hunch."
 %}
