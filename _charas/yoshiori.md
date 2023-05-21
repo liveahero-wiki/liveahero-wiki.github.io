@@ -98,6 +98,18 @@ TRAINED = "D-don't look at me..."
 %}
 
 {% include voice-table.html resourceName="yoshioriTrain2305"
+h_gachaResult = "With this body that's about to disappear,never thought that my dream would come true one day.<br>…yeah, leave bodyguard duty to me.<br>I will make sure you doesn't get hurt at all."
+s_gachaResult = "Sidekick job, huh.<br>…well, let's go already.<br>Always following the target, and don't let them out of my sight, right now I can do that."
+APPRECIATION = "…on the battlefield you always steel yourself for anything.<br>But, if you're going to collapse it will all be for naught.<br>…I told you to take a rest behind me."
+DAILY = "Different from the rumors, the real galaxy train looks really high-class.<br>…ah? Why do I know that? <br>Well I'm a man who knows a lot of things after all…why are you laughing!"
+HERO = "That Esperdica, always smiling without care, I can't fathom him…<br>Also, how did he know what kind of food I like to eat…"
+PLAYER = "Compared to Exio, of course you're still green.<br>Your experience is shallow, your arrangements are worse, your reactions are soft.<br>That's why, well…I have to protect you."
+RELATION = "Looks like Tabit treats his troops as his priority.<br>The feeling of camaraderie…he's truly human-like.<br>…seeing him, reminds me of the past."
+TOUCH = "…hah, what.<br>I'm in the middle of duty right now if you need anything then after…hey, I'm ticklish!?<br>Oi, if you want to be escorted then be obedient!"
+TRAIN = "I will take you on wherever it is!"
+TRAINED = "Guoo…Such intensity….!"
+EVENTA = "…G-ghost? Haah, there is no way it exist!<br>Aah, what a joke. Let's just go to the next carriage.<br>Eh, the door was opened by itself…n-no way, right…?"
+EVENTB = "To think that I will get to ride the galaxy train together with you.<br>…well since we're here, let's eat something delicious.<br>…what's with that face.<br>Do you think it's weird of me to eat sweet things, haa!?"
 %}
 
 ## Notes
