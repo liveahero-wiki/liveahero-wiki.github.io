@@ -85607,6 +85607,192 @@
       }
     ]
   },
+  "4154104": {
+    "skillId": 4154104,
+    "skillName": "アクセルウェポン",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_spdUpOwn",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。自身に1回の行動の間SPDアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainAndroidSoldier_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 14,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4155101": {
+    "skillId": 4155101,
+    "skillName": "カスタムウェポン",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。Viewを3000獲得。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainAndroidSoldier_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 24,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4155103": {
+    "skillId": 4155103,
+    "skillName": "アナライジング",
+    "useView": 6000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "敵単体に1回の行動の間ATKダウンを付与。ランダムな味方に2回の行動の間ATKアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainAndroidSoldier_h01_04"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 6,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4156101": {
+    "skillId": 4156101,
+    "skillName": "ハイウェポン",
+    "useView": 6000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に150%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainAndroidSoldier_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "effects": [
+      {
+        "skillEffectId": 11,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
   "6000001": {
     "skillId": 6000001,
     "skillName": "ダメージ制限20000",
@@ -98643,6 +98829,63 @@
         "conditionDescription": "",
         "subIconAddress": "",
         "triggerJson": []
+      }
+    ]
+  },
+  "6154101": {
+    "skillId": 6154101,
+    "skillName": "オートリアクション",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 8,
+    "description": "ダメージを受けた時、奇数ターンは自身のスキル1、偶数ターンは自身のスキル2を誘発。（1ターンに1度まで）",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "effects": [
+      {
+        "skillEffectId": 549,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 183
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1010,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 183
+          }
+        ]
       }
     ]
   },
