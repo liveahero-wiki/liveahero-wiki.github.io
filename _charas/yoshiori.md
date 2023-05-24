@@ -113,3 +113,4 @@ EVENTB = "To think that I will get to ride the galaxy train together with you.<b
 %}
 
 ## Notes
+- His full name is Yoshiori Underwood (ヨシオリ・アンダーウッド)
