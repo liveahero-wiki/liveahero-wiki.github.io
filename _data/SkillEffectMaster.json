@@ -3881,7 +3881,10 @@
       "description": "80%ダメージ+HPが減るほどダメージ量が上昇する",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -35477,6 +35480,41 @@
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1187": {
+    "skillEffectId": 1187,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 125
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"OwnBuffNumberExecTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 57,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATK+25%（システム）",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATK+25%",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "ATKを永続的に+25%する。解除不可。",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
     }
