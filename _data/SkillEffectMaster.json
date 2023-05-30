@@ -6867,7 +6867,10 @@
       "description": "150%ダメージ+HPが減るほどダメージ量が上昇する",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -21664,7 +21667,10 @@
       "description": "HPを基礎ATKの200%回復する",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -35515,6 +35521,114 @@
       "overrideStatusName": "ATK+25%",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "ATKを永続的に+25%する。解除不可。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1211": {
+    "skillEffectId": 1211,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AimLowestSpdCharacter",
+          "parameter": {
+            "isTarget": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        13
+      ],
+      "parameter": false,
+      "description": "オート行動時、敵を対象にするスキルは敵の中で一番SPDが低いキャラクターを対象にする。",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1213": {
+    "skillEffectId": 1213,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 200
+          }
+        }
+      ],
+      "filename": "status_costumedamage",
+      "statusId": 219,
+      "canDispel": true,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "解析",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "解析",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "相手からのダメージが2倍になる。バフでもデバフでもない状態。スキルによる解除不可。ターン経過で解除される。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1214": {
+    "skillEffectId": 1214,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 219,
+            "isForce": false
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "解析除去",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "解析無効",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "解析が付与されない。バフでもデバフでもない状態。スキルによる解除不可。",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
     }
