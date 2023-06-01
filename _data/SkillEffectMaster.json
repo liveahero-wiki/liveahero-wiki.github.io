@@ -1738,7 +1738,10 @@
       "description": "敵のターンを１ターン削減",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -10190,7 +10193,10 @@
       "description": "自身はオート行動時、味方を対象にするスキルはボスキャラクターを対象にする。（敵専用）",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -13272,7 +13278,10 @@
       "description": "バフ効果１ターン延長",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -21142,7 +21151,10 @@
       "description": "隠蔽",
       "isImmediate": false,
       "persistence": true,
+      "reaminDeath": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -25463,10 +25475,13 @@
       "description": "ATK+25%（システム）",
       "isImmediate": false,
       "persistence": true,
+      "reaminDeath": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "ATK+25%",
       "isOverrideStatusName": true,
-      "overrideStatusDescription": "ATKを永続的に+25%する。解除不可。",
+      "overrideStatusDescription": "ATK+25%。バフでもデバフでも無い状態。スキルによる解除不可。",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
     }
@@ -32688,6 +32703,7 @@
       "description": "1%のHPで復活",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
@@ -32773,6 +32789,7 @@
       "description": "最大HPの100%回復",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
@@ -35458,6 +35475,41 @@
       "isOverrideStatusDescription": false
     }
   },
+  "1185": {
+    "skillEffectId": 1185,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 0
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":132,\"class\":\"OwnSystemStatusNumberDontExecTrigger\"}]",
+      "filename": "status_invincible",
+      "statusId": 6,
+      "canDispel": false,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "無敵。システム効果132番が付与されていたら無効。",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "1186": {
     "skillEffectId": 1186,
     "skillEffectJson": {
@@ -35523,6 +35575,271 @@
       "overrideStatusDescription": "ATKを永続的に+25%する。解除不可。",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
+    }
+  },
+  "1190": {
+    "skillEffectId": 1190,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 0
+          }
+        },
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 0
+          }
+        },
+        {
+          "class": "Hide",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_debuff",
+      "statusId": 130,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "リブート待機",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "リブート待機",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "そのターン、行動が出来なくなる。敵のターゲットにならない。ダメージを受けず、デバフも付与されない。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1191": {
+    "skillEffectId": 1191,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Cure",
+          "parameter": {
+            "value": 999,
+            "target": 146,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "回復無効999つ解除",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1192": {
+    "skillEffectId": 1192,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffectElapseAfterTurnEnd",
+          "parameter": []
+        },
+        {
+          "class": "HealMultipleDefence",
+          "parameter": {
+            "value": 0
+          }
+        },
+        {
+          "class": "NoneEffectElapseAfterTurnEnd",
+          "parameter": []
+        }
+      ],
+      "filename": "status_burst",
+      "statusId": 146,
+      "canDispel": true,
+      "filterIds": [],
+      "parameter": false,
+      "description": "回復無効",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1193": {
+    "skillEffectId": 1193,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffectElapseAfterTurnEnd",
+          "parameter": []
+        },
+        {
+          "class": "HealMultipleDefence",
+          "parameter": {
+            "value": 0
+          }
+        },
+        {
+          "class": "NoneEffectElapseAfterTurnEnd",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 146,
+      "canDispel": true,
+      "filterIds": [],
+      "parameter": false,
+      "description": "回復無効 表示なし",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1194": {
+    "skillEffectId": 1194,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 130,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果130番全除去",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1195": {
+    "skillEffectId": 1195,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeHp",
+          "parameter": {
+            "value": -20
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "最大HPの20%回復",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1206": {
+    "skillEffectId": 1206,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeAgi",
+          "parameter": {
+            "value": 1000
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 3,
+      "canDispel": true,
+      "filterIds": [
+        6
+      ],
+      "parameter": false,
+      "description": "SPD+1000バフ　不可視",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
     }
   },
   "1211": {
