@@ -51,7 +51,7 @@ heroes:
     
     As a security professional (SP), even with his vanished arm, 
     he will still appear in front of any threat and put his life on the line against it.
-  extra_sprites: fg_yoshioriTrain2305_h01_skin2,fg_yoshioriTrain2305_h01_skin3
+  extra_sprites: fg_yoshioriTrain2305_h01_skin2,fg_yoshioriTrain2305_h01_skin3,fg_yoshioriTrain2305_h02_skin2
 sidekicks:
 - stockId: 10721
   BIO_S01: |-
