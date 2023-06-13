@@ -131,15 +131,23 @@
 {% include skill-table-v2.html skillIds=skillIds %}
 
 {% assign passiveSkillIds = "" | split: "," %}
+{% assign bloomingPassiveSkillIds = "" | split: "," %}
 {% for skill in lastCardInfo.skillProvider.passiveSkills %}
-{% if skill.skillUpgrade == 0 %}{% comment %}Exclude blooming passive for now{% endcomment %}
+{% if skill.skillUpgrade == 0 %}
 {% assign passiveSkillIds = passiveSkillIds | push: skill.skillId %}
+{% else %}
+{% assign bloomingPassiveSkillIds = bloomingPassiveSkillIds | push: skill.skillId %}
 {% endif %}
 {% endfor %}
 
 {% if passiveSkillIds.size > 0 %}
 <h3>Passive skills</h3>
 {% include skill-table-v2.html skillIds=passiveSkillIds hide_banner=true %}
+{% endif %}
+
+{% if bloomingPassiveSkillIds.size > 0 %}
+<h3>Blooming passive skills</h3>
+{% include skill-table-v2.html skillIds=bloomingPassiveSkillIds hide_banner=true %}
 {% endif %}
 
 {% assign skillEvos = lastCardInfo.skillProvider.activeSkills | where: "skillUpgrade", 1 %}
