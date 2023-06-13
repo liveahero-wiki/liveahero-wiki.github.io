@@ -1,6 +1,7 @@
 {% assign cardInfos = site.data.CardMaster | where: "stockId", include.stockId %}
 
 {% assign firstCardInfo = cardInfos | first %}
+{% assign lastCardInfo = cardInfos | last %}
 {% assign r = firstCardInfo.resourceName %}
 {% if firstCardInfo.rarity >= 3 %}
 {% capture sprites %}fg_{{ r }}_h01,fg_{{ r }}_h01_skin1,fg_{{ r }}_h02,fg_{{ r }}_h02_skin1{% endcapture %}
@@ -129,14 +130,11 @@
 
 {% include skill-table-v2.html skillIds=skillIds %}
 
-{% assign emptyArray = "" | split: "," %}
-{% assign passiveSkillIds = firstCardInfo.passiveSkillIds | default: emptyArray %}
-{% for cardInfo in cardInfos %}
-{% unless forloop.first %}
-{% for id in cardInfo.passiveSkillIds %}
-{% unless passiveSkillIds contains id %}{% assign passiveSkillIds = passiveSkillIds | push: id %}{% endunless %}
-{% endfor %}
-{% endunless %}
+{% assign passiveSkillIds = "" | split: "," %}
+{% for skill in lastCardInfo.skillProvider.passiveSkills %}
+{% if skill.skillUpgrade == 0 %}{% comment %}Exclude blooming passive for now{% endcomment %}
+{% assign passiveSkillIds = passiveSkillIds | push: skill.skillId %}
+{% endif %}
 {% endfor %}
 
 {% if passiveSkillIds.size > 0 %}
@@ -144,7 +142,6 @@
 {% include skill-table-v2.html skillIds=passiveSkillIds hide_banner=true %}
 {% endif %}
 
-{% assign lastCardInfo = cardInfos | last %}
 {% assign skillEvos = lastCardInfo.skillProvider.activeSkills | where: "skillUpgrade", 1 %}
 {% if skillEvos.size > 0 %}
 <h3>Skill evolutions</h3>
