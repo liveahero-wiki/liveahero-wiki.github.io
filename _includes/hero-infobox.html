@@ -154,6 +154,22 @@
 {% if skillEvos.size > 0 %}
 <h3>Skill evolutions</h3>
 
+{% if lastCardInfo.skillUpgradeQuestInfos.size > 0 %}
+<h4>Skill evolution quests</h4>
+{% for quest in lastCardInfo.skillUpgradeQuestInfos %}
+
+<h5>Evolution {{ forloop.index }}</h5>
+
+{% assign changeSkills = "" | split: "," %}
+{% for cs in quest.changeSkills %}
+{% assign changeSkills = changeSkills | push: cs.afterSkillId %}
+{% endfor %}
+{% include skill-table-v2.html skillIds=changeSkills hide_banner=true %}
+{% endfor %}
+{% endif %}
+
+<h4>Skill tree</h4>
+
 {% for skill in skillEvos %}
 {% assign si = skill.skillId | downcase %}
 {{ site.data.processed.SkillUpgradeMaster[si] }}
