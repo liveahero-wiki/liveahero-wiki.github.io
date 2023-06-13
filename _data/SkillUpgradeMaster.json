@@ -459,6 +459,238 @@
     ],
     "nextEntryIds": null
   },
+  "101510501": {
+    "skillEntryId": 101510501,
+    "skillId": 1015105,
+    "iconAddress": "skillTree_attention",
+    "description": "【綺羅星バックブリーカー+】の発動時、10%の確率で自身に1回の行動の間注目を付与",
+    "conditionIds": null,
+    "nextEntryIds": [
+      101510502,
+      101510503
+    ]
+  },
+  "101510502": {
+    "skillEntryId": 101510502,
+    "skillId": 1015105,
+    "iconAddress": "skillTree_attention",
+    "description": "【綺羅星バックブリーカー+】の注目発動率+15%",
+    "conditionIds": [
+      101510501
+    ],
+    "nextEntryIds": [
+      101510504
+    ]
+  },
+  "101510503": {
+    "skillEntryId": 101510503,
+    "skillId": 1015105,
+    "iconAddress": "skillTree_view",
+    "description": "【綺羅星バックブリーカー+】の常時発動効果によるView獲得量+100",
+    "conditionIds": [
+      101510501
+    ],
+    "nextEntryIds": [
+      101510505
+    ]
+  },
+  "101510504": {
+    "skillEntryId": 101510504,
+    "skillId": 1015105,
+    "iconAddress": "skillTree_attention",
+    "description": "【綺羅星バックブリーカー+】の注目発動率+20%",
+    "conditionIds": [
+      101510502
+    ],
+    "nextEntryIds": [
+      101510506
+    ]
+  },
+  "101510505": {
+    "skillEntryId": 101510505,
+    "skillId": 1015105,
+    "iconAddress": "skillTree_view",
+    "description": "【綺羅星バックブリーカー+】の常時発動効果によるView獲得量+150",
+    "conditionIds": [
+      101510503
+    ],
+    "nextEntryIds": [
+      101510507
+    ]
+  },
+  "101510506": {
+    "skillEntryId": 101510506,
+    "skillId": 1015105,
+    "iconAddress": "skillTree_attention",
+    "description": "【綺羅星バックブリーカー+】の注目発動率+25%",
+    "conditionIds": [
+      101510504
+    ],
+    "nextEntryIds": [
+      101510508
+    ]
+  },
+  "101510507": {
+    "skillEntryId": 101510507,
+    "skillId": 1015105,
+    "iconAddress": "skillTree_view",
+    "description": "【綺羅星バックブリーカー+】の常時発動効果によるView獲得量+250",
+    "conditionIds": [
+      101510505
+    ],
+    "nextEntryIds": [
+      101510508
+    ]
+  },
+  "101510508": {
+    "skillEntryId": 101510508,
+    "skillId": 1015105,
+    "iconAddress": "skillTree_attention",
+    "description": "【綺羅星バックブリーカー+】の注目発動率+30%",
+    "conditionIds": [
+      101510506,
+      101510507
+    ],
+    "nextEntryIds": null
+  },
+  "101510601": {
+    "skillEntryId": 101510601,
+    "skillId": 1015106,
+    "iconAddress": "skillTree_view",
+    "description": "【マイクパフォーマンス】の発動時に注目が付与されている場合、Viewを1000獲得",
+    "conditionIds": null,
+    "nextEntryIds": [
+      101510602,
+      101510603
+    ]
+  },
+  "101510602": {
+    "skillEntryId": 101510602,
+    "skillId": 1015106,
+    "iconAddress": "skillTree_view",
+    "description": "【マイクパフォーマンス】の注目が付与されている場合のView獲得量+2000",
+    "conditionIds": [
+      101510601
+    ],
+    "nextEntryIds": [
+      101510604
+    ]
+  },
+  "101510603": {
+    "skillEntryId": 101510603,
+    "skillId": 1015106,
+    "iconAddress": "skillTree_awakening",
+    "description": "【マイクパフォーマンス】常時発動効果に「ターン開始時にViewが20000以上ある場合、味方全体に1ターンの間歓声を付与」を追加",
+    "conditionIds": [
+      101510601
+    ],
+    "nextEntryIds": [
+      101510605
+    ]
+  },
+  "101510604": {
+    "skillEntryId": 101510604,
+    "skillId": 1015106,
+    "iconAddress": "skillTree_view",
+    "description": "【マイクパフォーマンス】の注目が付与されている場合のView獲得量+3000",
+    "conditionIds": [
+      101510602
+    ],
+    "nextEntryIds": [
+      101510606
+    ]
+  },
+  "101510605": {
+    "skillEntryId": 101510605,
+    "skillId": 1015106,
+    "iconAddress": "skillTree_awakening",
+    "description": "【マイクパフォーマンス】の歓声付与に必要なViewが5000減少",
+    "conditionIds": [
+      101510603
+    ],
+    "nextEntryIds": [
+      101510606
+    ]
+  },
+  "101510606": {
+    "skillEntryId": 101510606,
+    "skillId": 1015106,
+    "iconAddress": "skillTree_awakening",
+    "description": "【マイクパフォーマンス】の歓声付与に必要なViewが5000減少",
+    "conditionIds": [
+      101510604,
+      101510605
+    ],
+    "nextEntryIds": null
+  },
+  "101510701": {
+    "skillEntryId": 101510701,
+    "skillId": 1015107,
+    "iconAddress": "skillTree_awakening",
+    "description": "【ポラリス・バスター！！+】の最大ダメージ到達に必要なViewが10000減少",
+    "conditionIds": null,
+    "nextEntryIds": [
+      101510702
+    ]
+  },
+  "101510702": {
+    "skillEntryId": 101510702,
+    "skillId": 1015107,
+    "iconAddress": "skillTree_awakening",
+    "description": "【ポラリス・バスター！！+】の最大ダメージ到達に必要なViewが10000減少",
+    "conditionIds": [
+      101510701
+    ],
+    "nextEntryIds": [
+      101510703
+    ]
+  },
+  "101510703": {
+    "skillEntryId": 101510703,
+    "skillId": 1015107,
+    "iconAddress": "skillTree_awakening",
+    "description": "【ポラリス・バスター！！+】の最大ダメージ到達に必要なViewが15000減少",
+    "conditionIds": [
+      101510702
+    ],
+    "nextEntryIds": [
+      101510704
+    ]
+  },
+  "101510704": {
+    "skillEntryId": 101510704,
+    "skillId": 1015107,
+    "iconAddress": "skillTree_awakening",
+    "description": "【ポラリス・バスター！！+】の最大ダメージ到達に必要なViewが15000減少",
+    "conditionIds": [
+      101510703
+    ],
+    "nextEntryIds": [
+      101510705
+    ]
+  },
+  "101510705": {
+    "skillEntryId": 101510705,
+    "skillId": 1015107,
+    "iconAddress": "skillTree_awakening",
+    "description": "【ポラリス・バスター！！+】の最大ダメージ到達に必要なViewが20000減少",
+    "conditionIds": [
+      101510704
+    ],
+    "nextEntryIds": [
+      101510706
+    ]
+  },
+  "101510706": {
+    "skillEntryId": 101510706,
+    "skillId": 1015107,
+    "iconAddress": "skillTree_awakening",
+    "description": "【ポラリス・バスター！！+】の最大ダメージ到達に必要なViewが20000減少",
+    "conditionIds": [
+      101510705
+    ],
+    "nextEntryIds": null
+  },
   "101810501": {
     "skillEntryId": 101810501,
     "skillId": 1018105,
@@ -916,6 +1148,466 @@
     "conditionIds": [
       102010710,
       102010711
+    ],
+    "nextEntryIds": null
+  },
+  "102520501": {
+    "skillEntryId": 102520501,
+    "skillId": 1025205,
+    "iconAddress": "skillTree_defUp",
+    "description": "【トレント・ナックル+】のDEFアップ発動率+5%",
+    "conditionIds": null,
+    "nextEntryIds": [
+      102520502
+    ]
+  },
+  "102520502": {
+    "skillEntryId": 102520502,
+    "skillId": 1025205,
+    "iconAddress": "skillTree_defUp",
+    "description": "【トレント・ナックル+】のDEFアップ発動率+5%",
+    "conditionIds": [
+      102520501
+    ],
+    "nextEntryIds": [
+      102520503
+    ]
+  },
+  "102520503": {
+    "skillEntryId": 102520503,
+    "skillId": 1025205,
+    "iconAddress": "skillTree_defUp",
+    "description": "【トレント・ナックル+】のDEFアップ発動率+5%",
+    "conditionIds": [
+      102520502
+    ],
+    "nextEntryIds": [
+      102520504
+    ]
+  },
+  "102520504": {
+    "skillEntryId": 102520504,
+    "skillId": 1025205,
+    "iconAddress": "skillTree_defUp",
+    "description": "【トレント・ナックル+】のDEFアップ発動率+5%",
+    "conditionIds": [
+      102520503
+    ],
+    "nextEntryIds": [
+      102520505
+    ]
+  },
+  "102520505": {
+    "skillEntryId": 102520505,
+    "skillId": 1025205,
+    "iconAddress": "skillTree_defUp",
+    "description": "【トレント・ナックル+】のDEFアップ発動率+5%",
+    "conditionIds": [
+      102520504
+    ],
+    "nextEntryIds": [
+      102520506
+    ]
+  },
+  "102520506": {
+    "skillEntryId": 102520506,
+    "skillId": 1025205,
+    "iconAddress": "skillTree_defUp",
+    "description": "【トレント・ナックル+】のDEFアップ発動率+5%",
+    "conditionIds": [
+      102520505
+    ],
+    "nextEntryIds": [
+      102520507
+    ]
+  },
+  "102520507": {
+    "skillEntryId": 102520507,
+    "skillId": 1025205,
+    "iconAddress": "skillTree_defUp",
+    "description": "【トレント・ナックル+】のDEFアップ発動率+10%",
+    "conditionIds": [
+      102520506
+    ],
+    "nextEntryIds": null
+  },
+  "102520601": {
+    "skillEntryId": 102520601,
+    "skillId": 1025206,
+    "iconAddress": "skillTree_defDown",
+    "description": "【エヴァーラスト・リンク+】のDEFダウン発動率+5%",
+    "conditionIds": null,
+    "nextEntryIds": [
+      102520602,
+      102520603
+    ]
+  },
+  "102520602": {
+    "skillEntryId": 102520602,
+    "skillId": 1025206,
+    "iconAddress": "skillTree_defDown",
+    "description": "【エヴァーラスト・リンク+】のDEFダウン発動率+5%",
+    "conditionIds": [
+      102520601
+    ],
+    "nextEntryIds": [
+      102520604
+    ]
+  },
+  "102520603": {
+    "skillEntryId": 102520603,
+    "skillId": 1025206,
+    "iconAddress": "skillTree_defUp",
+    "description": "【エヴァーラスト・リンク+】の発動時、1HIT毎に5%の確率で自身に1回分のDEFアップを付与",
+    "conditionIds": [
+      102520601
+    ],
+    "nextEntryIds": [
+      102520605
+    ]
+  },
+  "102520604": {
+    "skillEntryId": 102520604,
+    "skillId": 1025206,
+    "iconAddress": "skillTree_defDown",
+    "description": "【エヴァーラスト・リンク+】のDEFダウン発動率+5%",
+    "conditionIds": [
+      102520602
+    ],
+    "nextEntryIds": [
+      102520606
+    ]
+  },
+  "102520605": {
+    "skillEntryId": 102520605,
+    "skillId": 1025206,
+    "iconAddress": "skillTree_defUp",
+    "description": "【エヴァーラスト・リンク+】のDEFアップ発動率+5%",
+    "conditionIds": [
+      102520603
+    ],
+    "nextEntryIds": [
+      102520607
+    ]
+  },
+  "102520606": {
+    "skillEntryId": 102520606,
+    "skillId": 1025206,
+    "iconAddress": "skillTree_defDown",
+    "description": "【エヴァーラスト・リンク+】のDEFダウン発動率+5%",
+    "conditionIds": [
+      102520604
+    ],
+    "nextEntryIds": [
+      102520608
+    ]
+  },
+  "102520607": {
+    "skillEntryId": 102520607,
+    "skillId": 1025206,
+    "iconAddress": "skillTree_defUp",
+    "description": "【エヴァーラスト・リンク+】のDEFアップ発動率+5%",
+    "conditionIds": [
+      102520605
+    ],
+    "nextEntryIds": [
+      102520608
+    ]
+  },
+  "102520608": {
+    "skillEntryId": 102520608,
+    "skillId": 1025206,
+    "iconAddress": "skillTree_defUp",
+    "description": "【エヴァーラスト・リンク+】のDEFアップ発動率+5%",
+    "conditionIds": [
+      102520606,
+      102520607
+    ],
+    "nextEntryIds": null
+  },
+  "102520701": {
+    "skillEntryId": 102520701,
+    "skillId": 1025207,
+    "iconAddress": "skillTree_special",
+    "description": "【ジェミニィズ・ディサイド】の1～4回ダメージ1HIT毎に5%の確率でコンボ数+1",
+    "conditionIds": null,
+    "nextEntryIds": [
+      102520702
+    ]
+  },
+  "102520702": {
+    "skillEntryId": 102520702,
+    "skillId": 1025207,
+    "iconAddress": "skillTree_special",
+    "description": "【ジェミニィズ・ディサイド】のコンボ数増加の発動率+5%",
+    "conditionIds": [
+      102520701
+    ],
+    "nextEntryIds": [
+      102520703
+    ]
+  },
+  "102520703": {
+    "skillEntryId": 102520703,
+    "skillId": 1025207,
+    "iconAddress": "skillTree_special",
+    "description": "【ジェミニィズ・ディサイド】のコンボ数増加の発動率+10%",
+    "conditionIds": [
+      102520702
+    ],
+    "nextEntryIds": [
+      102520704
+    ]
+  },
+  "102520704": {
+    "skillEntryId": 102520704,
+    "skillId": 1025207,
+    "iconAddress": "skillTree_special",
+    "description": "【ジェミニィズ・ディサイド】のコンボ数増加の発動率+10%",
+    "conditionIds": [
+      102520703
+    ],
+    "nextEntryIds": [
+      102520705
+    ]
+  },
+  "102520705": {
+    "skillEntryId": 102520705,
+    "skillId": 1025207,
+    "iconAddress": "skillTree_special",
+    "description": "【ジェミニィズ・ディサイド】の攻撃回数増加の条件がDEFアップから鋼拳の数に変化する。解除対象がDEFアップから鋼拳に変化する。",
+    "conditionIds": [
+      102520704
+    ],
+    "nextEntryIds": null
+  },
+  "111510501": {
+    "skillEntryId": 111510501,
+    "skillId": 1115105,
+    "iconAddress": "skillTree_defDown",
+    "description": "【サギッタ・アクア+】の発動時、5%の確率で1回分のDEFダウンを付与",
+    "conditionIds": null,
+    "nextEntryIds": [
+      111510502,
+      111510503
+    ]
+  },
+  "111510502": {
+    "skillEntryId": 111510502,
+    "skillId": 1115105,
+    "iconAddress": "skillTree_defDown",
+    "description": "【サギッタ・アクア+】のDEFダウン発動率+5%",
+    "conditionIds": [
+      111510501
+    ],
+    "nextEntryIds": [
+      111510504
+    ]
+  },
+  "111510503": {
+    "skillEntryId": 111510503,
+    "skillId": 1115105,
+    "iconAddress": "skillTree_immunity",
+    "description": "【サギッタ・アクア+】常時発動効果に「自身に付与されているバフ1つ毎に弱体抵抗+5」を追加",
+    "conditionIds": [
+      111510501
+    ],
+    "nextEntryIds": [
+      111510505
+    ]
+  },
+  "111510504": {
+    "skillEntryId": 111510504,
+    "skillId": 1115105,
+    "iconAddress": "skillTree_defDown",
+    "description": "【サギッタ・アクア+】のDEFダウン発動率+5%",
+    "conditionIds": [
+      111510502
+    ],
+    "nextEntryIds": [
+      111510506
+    ]
+  },
+  "111510505": {
+    "skillEntryId": 111510505,
+    "skillId": 1115105,
+    "iconAddress": "skillTree_immunity",
+    "description": "【サギッタ・アクア+】のバフ1つ毎の弱体抵抗の効果+5",
+    "conditionIds": [
+      111510503
+    ],
+    "nextEntryIds": [
+      111510507
+    ]
+  },
+  "111510506": {
+    "skillEntryId": 111510506,
+    "skillId": 1115105,
+    "iconAddress": "skillTree_defDown",
+    "description": "【サギッタ・アクア+】のDEFダウン発動率+10%",
+    "conditionIds": [
+      111510504
+    ],
+    "nextEntryIds": [
+      111510508
+    ]
+  },
+  "111510507": {
+    "skillEntryId": 111510507,
+    "skillId": 1115105,
+    "iconAddress": "skillTree_immunity",
+    "description": "【サギッタ・アクア+】のバフ1つ毎の弱体抵抗の効果+5",
+    "conditionIds": [
+      111510505
+    ],
+    "nextEntryIds": [
+      111510509
+    ]
+  },
+  "111510508": {
+    "skillEntryId": 111510508,
+    "skillId": 1115105,
+    "iconAddress": "skillTree_defDown",
+    "description": "【サギッタ・アクア+】のDEFダウン発動率+10%",
+    "conditionIds": [
+      111510506
+    ],
+    "nextEntryIds": [
+      111510510
+    ]
+  },
+  "111510509": {
+    "skillEntryId": 111510509,
+    "skillId": 1115105,
+    "iconAddress": "skillTree_immunity",
+    "description": "【サギッタ・アクア+】のバフ1つ毎の弱体抵抗の効果+10",
+    "conditionIds": [
+      111510507
+    ],
+    "nextEntryIds": [
+      111510510
+    ]
+  },
+  "111510510": {
+    "skillEntryId": 111510510,
+    "skillId": 1115105,
+    "iconAddress": "skillTree_defDown",
+    "description": "【サギッタ・アクア+】のDEFダウン発動率+15%",
+    "conditionIds": [
+      111510508,
+      111510509
+    ],
+    "nextEntryIds": null
+  },
+  "111510601": {
+    "skillEntryId": 111510601,
+    "skillId": 1115106,
+    "iconAddress": "skillTree_cureAll",
+    "description": "【フルクトゥス・カエルレウム+】のデバフが付与されている場合の味方全体のデバフ解除率+5%",
+    "conditionIds": null,
+    "nextEntryIds": [
+      111510602
+    ]
+  },
+  "111510602": {
+    "skillEntryId": 111510602,
+    "skillId": 1115106,
+    "iconAddress": "skillTree_cureAll",
+    "description": "【フルクトゥス・カエルレウム+】のデバフが付与されている場合の味方全体のデバフ解除率+5%",
+    "conditionIds": [
+      111510601
+    ],
+    "nextEntryIds": [
+      111510603
+    ]
+  },
+  "111510603": {
+    "skillEntryId": 111510603,
+    "skillId": 1115106,
+    "iconAddress": "skillTree_cureAll",
+    "description": "【フルクトゥス・カエルレウム+】のデバフが付与されている場合の味方全体のデバフ解除率+5%",
+    "conditionIds": [
+      111510602
+    ],
+    "nextEntryIds": [
+      111510604
+    ]
+  },
+  "111510604": {
+    "skillEntryId": 111510604,
+    "skillId": 1115106,
+    "iconAddress": "skillTree_cureAll",
+    "description": "【フルクトゥス・カエルレウム+】のデバフが付与されている場合の味方全体のデバフ解除率+10%",
+    "conditionIds": [
+      111510603
+    ],
+    "nextEntryIds": [
+      111510605
+    ]
+  },
+  "111510605": {
+    "skillEntryId": 111510605,
+    "skillId": 1115106,
+    "iconAddress": "skillTree_cureAll",
+    "description": "【フルクトゥス・カエルレウム+】のデバフが付与されている場合の味方全体のデバフ解除率+10%",
+    "conditionIds": [
+      111510604
+    ],
+    "nextEntryIds": [
+      111510606
+    ]
+  },
+  "111510606": {
+    "skillEntryId": 111510606,
+    "skillId": 1115106,
+    "iconAddress": "skillTree_cureAll",
+    "description": "【フルクトゥス・カエルレウム+】のデバフが付与されている場合の味方全体のデバフ解除率+15%",
+    "conditionIds": [
+      111510605
+    ],
+    "nextEntryIds": null
+  },
+  "111510701": {
+    "skillEntryId": 111510701,
+    "skillId": 1115107,
+    "iconAddress": "skillTree_damage",
+    "description": "【ラクス・セルペンス・イーラ】のデバフが付与されている場合のダメージ+5%",
+    "conditionIds": null,
+    "nextEntryIds": [
+      111510702
+    ]
+  },
+  "111510702": {
+    "skillEntryId": 111510702,
+    "skillId": 1115107,
+    "iconAddress": "skillTree_damage",
+    "description": "【ラクス・セルペンス・イーラ】のデバフが付与されている場合のダメージ+5%",
+    "conditionIds": [
+      111510701
+    ],
+    "nextEntryIds": [
+      111510703
+    ]
+  },
+  "111510703": {
+    "skillEntryId": 111510703,
+    "skillId": 1115107,
+    "iconAddress": "skillTree_damage",
+    "description": "【ラクス・セルペンス・イーラ】のデバフが付与されている場合のダメージ+10%",
+    "conditionIds": [
+      111510702
+    ],
+    "nextEntryIds": [
+      111510704
+    ]
+  },
+  "111510704": {
+    "skillEntryId": 111510704,
+    "skillId": 1115107,
+    "iconAddress": "skillTree_damage",
+    "description": "【ラクス・セルペンス・イーラ】のデバフが付与されている場合のダメージ+10%",
+    "conditionIds": [
+      111510703
     ],
     "nextEntryIds": null
   }

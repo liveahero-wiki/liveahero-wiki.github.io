@@ -9712,7 +9712,7 @@
     "resourceName": "b_skill_damage",
     "subResourceName": "",
     "timing": 0,
-    "description": "敵単体に150%ダメージ+Viewに応じてダメージ量が上昇。",
+    "description": "敵単体に150%ダメージ+スキル発動後のViewに応じてダメージ量が上昇。 （最大300%まで上昇。スキル発動後のViewが100000の時最大ダメージに到達。）",
     "cutin": [
       {
         "info": {
@@ -9752,7 +9752,7 @@
     "resourceName": "b_skill_damage",
     "subResourceName": "",
     "timing": 0,
-    "description": "敵単体に170%ダメージ+Viewに応じてダメージ量が上昇。",
+    "description": "敵単体に170%ダメージ+スキル発動後のViewに応じてダメージ量が上昇。 （最大340%まで上昇。スキル発動後のViewが100000の時最大ダメージに到達。）",
     "cutin": [
       {
         "info": {
@@ -9779,6 +9779,469 @@
         "conditionGroupId": 0,
         "conditionPriority": 0,
         "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "1015105": {
+    "skillId": 1015105,
+    "skillName": "綺羅星バックブリーカー+",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。Viewを3000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_polaris_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 24,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 216,
+        "prob": 10,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510501,
+        "conditionGroupId": 1,
+        "conditionPriority": 0,
+        "conditionDescription": "自身に10%の確率で1回の行動の間注目を付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 216,
+        "prob": 25,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510502,
+        "conditionGroupId": 1,
+        "conditionPriority": 1,
+        "conditionDescription": "自身に25%の確率で1回の行動の間注目を付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 216,
+        "prob": 45,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510504,
+        "conditionGroupId": 1,
+        "conditionPriority": 2,
+        "conditionDescription": "自身に45%の確率で1回の行動の間注目を付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 216,
+        "prob": 70,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510506,
+        "conditionGroupId": 1,
+        "conditionPriority": 3,
+        "conditionDescription": "自身に70%の確率で1回の行動の間注目を付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 216,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510508,
+        "conditionGroupId": 1,
+        "conditionPriority": 4,
+        "conditionDescription": "自身に1回の行動の間注目を付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 2,
+        "conditionPriority": 0,
+        "conditionDescription": "【常時発動】自身の攻撃で敵がダメージを受けた時、Viewを500獲得。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510503,
+        "conditionGroupId": 2,
+        "conditionPriority": 1,
+        "conditionDescription": "【常時発動】自身の攻撃で敵がダメージを受けた時、Viewを600獲得。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510505,
+        "conditionGroupId": 2,
+        "conditionPriority": 2,
+        "conditionDescription": "【常時発動】自身の攻撃で敵がダメージを受けた時、Viewを750獲得。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510507,
+        "conditionGroupId": 2,
+        "conditionPriority": 3,
+        "conditionDescription": "【常時発動】自身の攻撃で敵がダメージを受けた時、Viewを1000獲得。",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "1015106": {
+    "skillId": 1015106,
+    "skillName": "マイクパフォーマンス",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_polaris_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 216,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 1,
+        "conditionPriority": 0,
+        "conditionDescription": "自身に1回の行動の間注目を付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 345,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510601,
+        "conditionGroupId": 2,
+        "conditionPriority": 0,
+        "conditionDescription": "発動時、自身に注目が付与されている場合、Viewを1000獲得。",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 4
+          }
+        ]
+      },
+      {
+        "skillEffectId": 24,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510602,
+        "conditionGroupId": 2,
+        "conditionPriority": 1,
+        "conditionDescription": "発動時、自身に注目が付与されている場合、Viewを3000獲得。",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 4
+          }
+        ]
+      },
+      {
+        "skillEffectId": 272,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510604,
+        "conditionGroupId": 2,
+        "conditionPriority": 2,
+        "conditionDescription": "発動時、自身に注目が付与されている場合、Viewを6000獲得。",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 4
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1259,
+        "prob": 0,
+        "effectTarget": 5,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510603,
+        "conditionGroupId": 3,
+        "conditionPriority": 0,
+        "conditionDescription": "【常時発動】ターン開始時にViewが20000以上ある場合、味方全体に1ターンの間歓声を付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1259,
+        "prob": 0,
+        "effectTarget": 5,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510605,
+        "conditionGroupId": 3,
+        "conditionPriority": 1,
+        "conditionDescription": "【常時発動】ターン開始時にViewが15000以上ある場合、味方全体に1ターンの間歓声を付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1259,
+        "prob": 0,
+        "effectTarget": 5,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510606,
+        "conditionGroupId": 3,
+        "conditionPriority": 2,
+        "conditionDescription": "【常時発動】ターン開始時にViewが10000以上ある場合、味方全体に1ターンの間歓声を付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "1015107": {
+    "skillId": 1015107,
+    "skillName": "ポラリス・バスター！！+",
+    "useView": 10000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に170%ダメージ+",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_polaris_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 222,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 1,
+        "conditionPriority": 0,
+        "conditionDescription": "スキル発動後のViewに応じてダメージ量が上昇。 （最大340%まで上昇。スキル発動後のViewが100000の時最大ダメージに到達。）",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1227,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510701,
+        "conditionGroupId": 1,
+        "conditionPriority": 1,
+        "conditionDescription": "スキル発動後のViewに応じてダメージ量が上昇。 （最大340%まで上昇。スキル発動後のViewが90000の時最大ダメージに到達。）",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1228,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510702,
+        "conditionGroupId": 1,
+        "conditionPriority": 2,
+        "conditionDescription": "スキル発動後のViewに応じてダメージ量が上昇。 （最大340%まで上昇。スキル発動後のViewが80000の時最大ダメージに到達。）",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1229,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510703,
+        "conditionGroupId": 1,
+        "conditionPriority": 3,
+        "conditionDescription": "スキル発動後のViewに応じてダメージ量が上昇。 （最大340%まで上昇。スキル発動後のViewが65000の時最大ダメージに到達。）",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1230,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510704,
+        "conditionGroupId": 1,
+        "conditionPriority": 4,
+        "conditionDescription": "スキル発動後のViewに応じてダメージ量が上昇。 （最大340%まで上昇。スキル発動後のViewが50000の時最大ダメージに到達。）",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1231,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510705,
+        "conditionGroupId": 1,
+        "conditionPriority": 5,
+        "conditionDescription": "スキル発動後のViewに応じてダメージ量が上昇。 （最大340%まで上昇。スキル発動後のViewが30000の時最大ダメージに到達。）",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1232,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510706,
+        "conditionGroupId": 1,
+        "conditionPriority": 6,
+        "conditionDescription": "スキル発動後のViewに応じてダメージ量が上昇。 （最大340%まで上昇。スキル発動後のViewが10000の時最大ダメージに到達。）",
         "subIconAddress": "",
         "triggerJson": []
       }
@@ -13952,7 +14415,7 @@
     "resourceName": "b_skill_damage",
     "subResourceName": "",
     "timing": 0,
-    "description": "敵単体に1～4回50%ダメージ（自身に付与されているDEFアップの数だけ攻撃回数増加）＋100％ダメージ。自身のDEFアップを全て解除。",
+    "description": "敵単体に1～4回50%ダメージの連続攻撃+100%ダメージ。自身に付与されているDEFアップの数だけ連続攻撃の回数増加。自身のDEFアップを全解除。",
     "cutin": [
       {
         "info": {
@@ -14193,6 +14656,1349 @@
         "conditionEntityId": 0,
         "conditionGroupId": 0,
         "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "1025205": {
+    "skillId": 1025205,
+    "skillName": "トレント・ナックル+",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ+自身に付与されている鋼拳1つにつきダメージが10%上昇。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_andrewLostAncients2208_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 221
+          }
+        ]
+      },
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 221
+          },
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 221
+          }
+        ]
+      },
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 221
+          },
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 221
+          }
+        ]
+      },
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 221
+          }
+        ]
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 40,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 1,
+        "conditionPriority": 0,
+        "conditionDescription": "自身に40%の確率で1回分のDEFアップを付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 45,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520501,
+        "conditionGroupId": 1,
+        "conditionPriority": 1,
+        "conditionDescription": "自身に45%の確率で1回分のDEFアップを付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 50,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520502,
+        "conditionGroupId": 1,
+        "conditionPriority": 2,
+        "conditionDescription": "自身に50%の確率で1回分のDEFアップを付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 55,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520503,
+        "conditionGroupId": 1,
+        "conditionPriority": 3,
+        "conditionDescription": "自身に55%の確率で1回分のDEFアップを付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 60,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520504,
+        "conditionGroupId": 1,
+        "conditionPriority": 4,
+        "conditionDescription": "自身に60%の確率で1回分のDEFアップを付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 65,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520505,
+        "conditionGroupId": 1,
+        "conditionPriority": 5,
+        "conditionDescription": "自身に65%の確率で1回分のDEFアップを付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 70,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520506,
+        "conditionGroupId": 1,
+        "conditionPriority": 6,
+        "conditionDescription": "自身に70%の確率で1回分のDEFアップを付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 80,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520507,
+        "conditionGroupId": 1,
+        "conditionPriority": 7,
+        "conditionDescription": "自身に80%の確率で1回分のDEFアップを付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1220,
+        "prob": 0,
+        "effectTarget": 5,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 2,
+        "conditionPriority": 0,
+        "conditionDescription": "【常時発動】自身にDEFアップが付与された時、鋼拳を1つ付与。（最大で3つまで）",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "1025206": {
+    "skillId": 1025206,
+    "skillName": "エヴァーラスト・リンク+",
+    "useView": 4000,
+    "targetFlag": 7,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵全体からランダムに2回60%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_andrewLostAncients2208_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 30,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 1,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 35,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520601,
+        "conditionGroupId": 1,
+        "conditionPriority": 1,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 40,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520602,
+        "conditionGroupId": 1,
+        "conditionPriority": 2,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 45,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520604,
+        "conditionGroupId": 1,
+        "conditionPriority": 3,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 50,
+        "effectTarget": 7,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520606,
+        "conditionGroupId": 1,
+        "conditionPriority": 4,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 5,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 2,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520603,
+        "conditionGroupId": 3,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 10,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 2,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520605,
+        "conditionGroupId": 3,
+        "conditionPriority": 1,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 15,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 2,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520607,
+        "conditionGroupId": 3,
+        "conditionPriority": 2,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 20,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 2,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520608,
+        "conditionGroupId": 3,
+        "conditionPriority": 3,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 30,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 2,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 35,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520601,
+        "conditionGroupId": 2,
+        "conditionPriority": 1,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 40,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520602,
+        "conditionGroupId": 2,
+        "conditionPriority": 2,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 45,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520604,
+        "conditionGroupId": 2,
+        "conditionPriority": 3,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 50,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520606,
+        "conditionGroupId": 2,
+        "conditionPriority": 4,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 5,
+        "effectTarget": 0,
+        "sequenceGroupId": 1,
+        "probGroupId": 3,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520603,
+        "conditionGroupId": 4,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 10,
+        "effectTarget": 0,
+        "sequenceGroupId": 1,
+        "probGroupId": 3,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520605,
+        "conditionGroupId": 4,
+        "conditionPriority": 1,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 15,
+        "effectTarget": 0,
+        "sequenceGroupId": 1,
+        "probGroupId": 3,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520607,
+        "conditionGroupId": 4,
+        "conditionPriority": 2,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 20,
+        "effectTarget": 0,
+        "sequenceGroupId": 1,
+        "probGroupId": 3,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520608,
+        "conditionGroupId": 4,
+        "conditionPriority": 3,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 5,
+        "conditionPriority": 0,
+        "conditionDescription": "1HIT毎に30%の確率で1回分のDEFダウンを付与",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520601,
+        "conditionGroupId": 5,
+        "conditionPriority": 1,
+        "conditionDescription": "1HIT毎に35%の確率で1回分のDEFダウンを付与",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520602,
+        "conditionGroupId": 5,
+        "conditionPriority": 2,
+        "conditionDescription": "1HIT毎に40%の確率で1回分のDEFダウンを付与",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520604,
+        "conditionGroupId": 5,
+        "conditionPriority": 3,
+        "conditionDescription": "1HIT毎に45%の確率で1回分のDEFダウンを付与",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520606,
+        "conditionGroupId": 5,
+        "conditionPriority": 4,
+        "conditionDescription": "1HIT毎に50%の確率で1回分のDEFダウンを付与",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 5,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 6,
+        "conditionPriority": 0,
+        "conditionDescription": "。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520603,
+        "conditionGroupId": 6,
+        "conditionPriority": 1,
+        "conditionDescription": "+5%の確率で自身に1回分のDEFアップを付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520605,
+        "conditionGroupId": 6,
+        "conditionPriority": 2,
+        "conditionDescription": "+10%の確率で自身に1回分のDEFアップを付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520607,
+        "conditionGroupId": 6,
+        "conditionPriority": 3,
+        "conditionDescription": "+15%の確率で自身に1回分のDEFアップを付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520608,
+        "conditionGroupId": 6,
+        "conditionPriority": 4,
+        "conditionDescription": "+20%の確率で自身に1回分のDEFアップを付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "1025207": {
+    "skillId": 1025207,
+    "skillName": "ジェミニィズ・ディサイド",
+    "useView": 8000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に1～4回50%ダメージの連続攻撃+100%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_andrewLostAncients2208_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 1,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 5,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520701,
+        "conditionGroupId": 2,
+        "conditionPriority": 1,
+        "conditionDescription": "連続攻撃は5%の確率でコンボ数+1の追加効果。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 10,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520702,
+        "conditionGroupId": 2,
+        "conditionPriority": 2,
+        "conditionDescription": "連続攻撃は10%の確率でコンボ数+1の追加効果。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 20,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520703,
+        "conditionGroupId": 2,
+        "conditionPriority": 3,
+        "conditionDescription": "連続攻撃は20%の確率でコンボ数+1の追加効果。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 30,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520704,
+        "conditionGroupId": 2,
+        "conditionPriority": 4,
+        "conditionDescription": "連続攻撃は30%の確率でコンボ数+1の追加効果。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 3,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 2
+          }
+        ]
+      },
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520705,
+        "conditionGroupId": 3,
+        "conditionPriority": 1,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 221
+          }
+        ]
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 5,
+        "effectTarget": 2,
+        "sequenceGroupId": 1,
+        "probGroupId": 2,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520701,
+        "conditionGroupId": 4,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 2
+          }
+        ]
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 10,
+        "effectTarget": 2,
+        "sequenceGroupId": 1,
+        "probGroupId": 2,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520702,
+        "conditionGroupId": 4,
+        "conditionPriority": 1,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 2
+          }
+        ]
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 20,
+        "effectTarget": 2,
+        "sequenceGroupId": 1,
+        "probGroupId": 2,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520703,
+        "conditionGroupId": 4,
+        "conditionPriority": 2,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 2
+          }
+        ]
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 30,
+        "effectTarget": 2,
+        "sequenceGroupId": 1,
+        "probGroupId": 2,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520704,
+        "conditionGroupId": 4,
+        "conditionPriority": 3,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 2
+          }
+        ]
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 30,
+        "effectTarget": 2,
+        "sequenceGroupId": 1,
+        "probGroupId": 2,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520705,
+        "conditionGroupId": 4,
+        "conditionPriority": 4,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 221
+          }
+        ]
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 5,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 6,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 2
+          }
+        ]
+      },
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520705,
+        "conditionGroupId": 6,
+        "conditionPriority": 1,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 221
+          }
+        ]
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 5,
+        "effectTarget": 2,
+        "sequenceGroupId": 2,
+        "probGroupId": 3,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520701,
+        "conditionGroupId": 7,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 2
+          }
+        ]
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 10,
+        "effectTarget": 2,
+        "sequenceGroupId": 2,
+        "probGroupId": 3,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520702,
+        "conditionGroupId": 7,
+        "conditionPriority": 1,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 2
+          }
+        ]
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 20,
+        "effectTarget": 2,
+        "sequenceGroupId": 2,
+        "probGroupId": 3,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520703,
+        "conditionGroupId": 7,
+        "conditionPriority": 2,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 2
+          }
+        ]
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 30,
+        "effectTarget": 2,
+        "sequenceGroupId": 2,
+        "probGroupId": 3,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520704,
+        "conditionGroupId": 7,
+        "conditionPriority": 3,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 2
+          }
+        ]
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 30,
+        "effectTarget": 2,
+        "sequenceGroupId": 2,
+        "probGroupId": 3,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520705,
+        "conditionGroupId": 7,
+        "conditionPriority": 4,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 221
+          }
+        ]
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 8,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 3,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 9,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 2
+          }
+        ]
+      },
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 3,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520705,
+        "conditionGroupId": 9,
+        "conditionPriority": 1,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 221
+          }
+        ]
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 5,
+        "effectTarget": 2,
+        "sequenceGroupId": 3,
+        "probGroupId": 4,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520701,
+        "conditionGroupId": 10,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 2
+          }
+        ]
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 10,
+        "effectTarget": 2,
+        "sequenceGroupId": 3,
+        "probGroupId": 4,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520702,
+        "conditionGroupId": 10,
+        "conditionPriority": 1,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 2
+          }
+        ]
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 20,
+        "effectTarget": 2,
+        "sequenceGroupId": 3,
+        "probGroupId": 4,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520703,
+        "conditionGroupId": 10,
+        "conditionPriority": 2,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 2
+          }
+        ]
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 30,
+        "effectTarget": 2,
+        "sequenceGroupId": 3,
+        "probGroupId": 4,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520704,
+        "conditionGroupId": 10,
+        "conditionPriority": 3,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 2
+          }
+        ]
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 30,
+        "effectTarget": 2,
+        "sequenceGroupId": 3,
+        "probGroupId": 4,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520705,
+        "conditionGroupId": 10,
+        "conditionPriority": 4,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 221
+          }
+        ]
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 3,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 11,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 61,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 4,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 12,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 4,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 13,
+        "conditionPriority": 0,
+        "conditionDescription": "自身に付与されているDEFアップの数だけ連続攻撃の回数増加。自身のDEFアップを全解除。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 4,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520705,
+        "conditionGroupId": 13,
+        "conditionPriority": 1,
+        "conditionDescription": "自身に付与されている鋼拳の数だけ連続攻撃の回数増加。自身の鋼拳を全解除。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 834,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 4,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 14,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1219,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 4,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 102520705,
+        "conditionGroupId": 14,
+        "conditionPriority": 1,
         "conditionDescription": "",
         "subIconAddress": "",
         "triggerJson": []
@@ -25274,7 +27080,7 @@
     "resourceName": "b_skill_damageAll",
     "subResourceName": "s_skill_debuffOwn",
     "timing": 0,
-    "description": "敵全体に120％ダメージ。自身にデバフが付与されている場合、敵に与えるダメージが半減。自身に2回の行動の間SPDダウンを付与。",
+    "description": "敵全体に120％ダメージ。自身にデバフが付与されている場合、敵に与えるダメージが60%に減少。自身に2回の行動の間SPDダウンを付与。",
     "cutin": [
       {
         "info": {
@@ -25427,6 +27233,644 @@
             "statusId": 0
           }
         ]
+      }
+    ]
+  },
+  "1115105": {
+    "skillId": 1115105,
+    "skillName": "サギッタ・アクア+",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_gaius_h01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 5,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510501,
+        "conditionGroupId": 1,
+        "conditionPriority": 0,
+        "conditionDescription": "5%の確率で1回分のDEFダウンを付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 10,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510502,
+        "conditionGroupId": 1,
+        "conditionPriority": 1,
+        "conditionDescription": "10%の確率で1回分のDEFダウンを付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 15,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510504,
+        "conditionGroupId": 1,
+        "conditionPriority": 2,
+        "conditionDescription": "15%の確率で1回分のDEFダウンを付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 25,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510506,
+        "conditionGroupId": 1,
+        "conditionPriority": 3,
+        "conditionDescription": "25%の確率で1回分のDEFダウンを付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 35,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510508,
+        "conditionGroupId": 1,
+        "conditionPriority": 4,
+        "conditionDescription": "35%の確率で1回分のDEFダウンを付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 50,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510510,
+        "conditionGroupId": 1,
+        "conditionPriority": 5,
+        "conditionDescription": "50%の確率で1回分のDEFダウンを付与。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 2,
+        "conditionPriority": 0,
+        "conditionDescription": "【常時発動】デバフが付与されていない時、自身のATK+20%。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1253,
+        "prob": 0,
+        "effectTarget": 5,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510503,
+        "conditionGroupId": 3,
+        "conditionPriority": 0,
+        "conditionDescription": "自身に付与されているバフ1つ毎に弱体抵抗+5（最大で+20まで）",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1253,
+        "prob": 0,
+        "effectTarget": 5,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510505,
+        "conditionGroupId": 3,
+        "conditionPriority": 1,
+        "conditionDescription": "自身に付与されているバフ1つ毎に弱体抵抗+10（最大で+40まで）",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1253,
+        "prob": 0,
+        "effectTarget": 5,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510507,
+        "conditionGroupId": 3,
+        "conditionPriority": 2,
+        "conditionDescription": "自身に付与されているバフ1つ毎に弱体抵抗+15（最大で+60まで）",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1253,
+        "prob": 0,
+        "effectTarget": 5,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510509,
+        "conditionGroupId": 3,
+        "conditionPriority": 3,
+        "conditionDescription": "自身に付与されているバフ1つ毎に弱体抵抗+25（最大で+100まで）",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510503,
+        "conditionGroupId": 4,
+        "conditionPriority": 0,
+        "conditionDescription": "。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510505,
+        "conditionGroupId": 4,
+        "conditionPriority": 1,
+        "conditionDescription": "。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510507,
+        "conditionGroupId": 4,
+        "conditionPriority": 2,
+        "conditionDescription": "。",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510509,
+        "conditionGroupId": 4,
+        "conditionPriority": 3,
+        "conditionDescription": "。",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "1115106": {
+    "skillId": 1115106,
+    "skillName": "フルクトゥス・カエルレウム+",
+    "useView": 4000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_cureAll",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。自身にデバフが付与されている場合、",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_gaius_h01_02"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 2,
+        "conditionPriority": 0,
+        "conditionDescription": "自身のデバフを1つ解除+",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 836,
+        "prob": 0,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510606,
+        "conditionGroupId": 2,
+        "conditionPriority": 1,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 50,
+        "effectTarget": 14,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 3,
+        "conditionPriority": 0,
+        "conditionDescription": "自身を除く味方全体のデバフを50%の確率で1つ解除。",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 55,
+        "effectTarget": 14,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510601,
+        "conditionGroupId": 3,
+        "conditionPriority": 1,
+        "conditionDescription": "自身を除く味方全体のデバフを55%の確率で1つ解除。",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 60,
+        "effectTarget": 14,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510602,
+        "conditionGroupId": 3,
+        "conditionPriority": 2,
+        "conditionDescription": "自身を除く味方全体のデバフを60%の確率で1つ解除。",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 65,
+        "effectTarget": 14,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510603,
+        "conditionGroupId": 3,
+        "conditionPriority": 3,
+        "conditionDescription": "自身を除く味方全体のデバフを65%の確率で1つ解除。",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 75,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510604,
+        "conditionGroupId": 3,
+        "conditionPriority": 4,
+        "conditionDescription": "自身を除く味方全体のデバフを75%の確率で1つ解除。",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 85,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510605,
+        "conditionGroupId": 3,
+        "conditionPriority": 5,
+        "conditionDescription": "自身を除く味方全体のデバフを85%の確率で1つ解除。",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 44,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510606,
+        "conditionGroupId": 3,
+        "conditionPriority": 6,
+        "conditionDescription": "味方全体のデバフを1つ解除。",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1115107": {
+    "skillId": 1115107,
+    "skillName": "ラクス・セルペンス・イーラ",
+    "useView": 9000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffOwn",
+    "timing": 0,
+    "description": "敵全体に120％ダメージ。自身にデバフが付与されている場合、",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_gaius_h01_03"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 1,
+        "conditionPriority": 0,
+        "conditionDescription": "敵に与えるダメージが60%に減少。",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 269,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510701,
+        "conditionGroupId": 1,
+        "conditionPriority": 1,
+        "conditionDescription": "敵に与えるダメージが65%に減少。",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510702,
+        "conditionGroupId": 1,
+        "conditionPriority": 2,
+        "conditionDescription": "敵に与えるダメージが70%に減少。",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510703,
+        "conditionGroupId": 1,
+        "conditionPriority": 3,
+        "conditionDescription": "敵に与えるダメージが80%に減少。",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510704,
+        "conditionGroupId": 1,
+        "conditionPriority": 4,
+        "conditionDescription": "敵に与えるダメージが90%に減少。",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 2,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 10,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 3,
+        "conditionPriority": 0,
+        "conditionDescription": "自身に2回の行動の間SPDダウンを付与。",
+        "subIconAddress": "",
+        "triggerJson": []
       }
     ]
   },
@@ -30934,7 +33378,7 @@
     "useView": 5000,
     "targetFlag": 2,
     "resourceName": "b_skill_damage",
-    "subResourceName": "",
+    "subResourceName": "s_skill_buffOwn",
     "timing": 0,
     "description": "敵単体に120%ダメージ。自身に1回の行動の間ATKアップを付与。",
     "cutin": [
@@ -30988,7 +33432,7 @@
     "useView": 4500,
     "targetFlag": 2,
     "resourceName": "b_skill_damage",
-    "subResourceName": "",
+    "subResourceName": "s_skill_buffOwn",
     "timing": 0,
     "description": "敵単体に120%ダメージ。自身に1回の行動の間ATKアップを付与。",
     "cutin": [
@@ -31042,7 +33486,7 @@
     "useView": 4000,
     "targetFlag": 2,
     "resourceName": "b_skill_damage",
-    "subResourceName": "",
+    "subResourceName": "s_skill_buffOwn",
     "timing": 0,
     "description": "敵単体に120%ダメージ。自身に1回の行動の間ATKアップを付与。",
     "cutin": [
@@ -63391,6 +65835,60 @@
       }
     ]
   },
+  "4017101": {
+    "skillId": 4017101,
+    "skillName": "ヴィエ・キーマタ",
+    "useView": 0,
+    "targetFlag": 7,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体からランダムに2回45%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_hydoor_eh01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 449,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 1,
+        "randomGroupId": 1,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 449,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 2,
+        "probGroupId": 2,
+        "randomGroupId": 2,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
   "4017103": {
     "skillId": 4017103,
     "skillName": "イドロマサズ・シロダス",
@@ -69887,7 +72385,7 @@
         "triggerJson": []
       },
       {
-        "skillEffectId": 408,
+        "skillEffectId": 660,
         "prob": 100,
         "effectTarget": 3,
         "sequenceGroupId": 0,
@@ -75025,48 +77523,6 @@
         "conditionDescription": "",
         "subIconAddress": "",
         "triggerJson": []
-      },
-      {
-        "skillEffectId": 405,
-        "prob": 100,
-        "effectTarget": 0,
-        "sequenceGroupId": 0,
-        "probGroupId": 0,
-        "randomGroupId": 0,
-        "conditionEntityId": 0,
-        "conditionGroupId": 0,
-        "conditionPriority": 0,
-        "conditionDescription": "",
-        "subIconAddress": "",
-        "triggerJson": [
-          {
-            "class": "OwnStatusTrigger",
-            "value": 42
-          },
-          {
-            "class": "PinchExecTrigger",
-            "value": 0
-          }
-        ]
-      },
-      {
-        "skillEffectId": 406,
-        "prob": 100,
-        "effectTarget": 0,
-        "sequenceGroupId": 0,
-        "probGroupId": 0,
-        "randomGroupId": 0,
-        "conditionEntityId": 0,
-        "conditionGroupId": 0,
-        "conditionPriority": 0,
-        "conditionDescription": "",
-        "subIconAddress": "",
-        "triggerJson": [
-          {
-            "class": "OwnStatusTrigger",
-            "value": 45
-          }
-        ]
       }
     ]
   },
@@ -75136,17 +77592,21 @@
         "subIconAddress": "",
         "triggerJson": [
           {
-            "class": "OwnStatusTrigger",
-            "value": 42
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 57
           },
           {
             "class": "PinchExecTrigger",
-            "value": 0
+            "value": 0,
+            "element": 0,
+            "statusId": 0
           }
         ]
       },
       {
-        "skillEffectId": 405,
+        "skillEffectId": 641,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,
@@ -75159,17 +77619,21 @@
         "subIconAddress": "",
         "triggerJson": [
           {
-            "class": "OwnStatusTrigger",
-            "value": 42
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 57
           },
           {
             "class": "PinchExecTrigger",
-            "value": 0
+            "value": 0,
+            "element": 0,
+            "statusId": 0
           }
         ]
       },
       {
-        "skillEffectId": 404,
+        "skillEffectId": 461,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,
@@ -75182,31 +77646,16 @@
         "subIconAddress": "",
         "triggerJson": [
           {
-            "class": "OwnStatusTrigger",
-            "value": 42
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 57
           },
           {
             "class": "PinchExecTrigger",
-            "value": 0
-          }
-        ]
-      },
-      {
-        "skillEffectId": 406,
-        "prob": 100,
-        "effectTarget": 0,
-        "sequenceGroupId": 0,
-        "probGroupId": 0,
-        "randomGroupId": 0,
-        "conditionEntityId": 0,
-        "conditionGroupId": 0,
-        "conditionPriority": 0,
-        "conditionDescription": "",
-        "subIconAddress": "",
-        "triggerJson": [
-          {
-            "class": "OwnStatusTrigger",
-            "value": 45
+            "value": 0,
+            "element": 0,
+            "statusId": 0
           }
         ]
       }
@@ -75279,49 +77728,9 @@
         "triggerJson": [
           {
             "class": "PinchExecTrigger",
-            "value": 0
-          }
-        ]
-      },
-      {
-        "skillEffectId": 406,
-        "prob": 100,
-        "effectTarget": 0,
-        "sequenceGroupId": 0,
-        "probGroupId": 0,
-        "randomGroupId": 0,
-        "conditionEntityId": 0,
-        "conditionGroupId": 0,
-        "conditionPriority": 0,
-        "conditionDescription": "",
-        "subIconAddress": "",
-        "triggerJson": [
-          {
-            "class": "OwnStatusTrigger",
-            "value": 45
-          }
-        ]
-      },
-      {
-        "skillEffectId": 405,
-        "prob": 100,
-        "effectTarget": 0,
-        "sequenceGroupId": 0,
-        "probGroupId": 0,
-        "randomGroupId": 0,
-        "conditionEntityId": 0,
-        "conditionGroupId": 0,
-        "conditionPriority": 0,
-        "conditionDescription": "",
-        "subIconAddress": "",
-        "triggerJson": [
-          {
-            "class": "OwnStatusTrigger",
-            "value": 42
-          },
-          {
-            "class": "PinchExecTrigger",
-            "value": 0
+            "value": 0,
+            "element": 0,
+            "statusId": 0
           }
         ]
       }
@@ -75491,6 +77900,60 @@
         "skillEffectId": 272,
         "prob": 100,
         "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4053201": {
+    "skillId": 4053201,
+    "skillName": "コリメイション・アタック",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に40%ダメージ。1ターンの間照準を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_hisakiLostAncients2208_eh01_01"
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 273,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1042,
+        "prob": 100,
+        "effectTarget": 2,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "randomGroupId": 0,
@@ -101780,25 +104243,6 @@
     },
     "effects": [
       {
-        "skillEffectId": 402,
-        "prob": 100,
-        "effectTarget": 0,
-        "sequenceGroupId": 0,
-        "probGroupId": 0,
-        "randomGroupId": 0,
-        "conditionEntityId": 0,
-        "conditionGroupId": 0,
-        "conditionPriority": 0,
-        "conditionDescription": "",
-        "subIconAddress": "",
-        "triggerJson": [
-          {
-            "class": "PinchExecTrigger",
-            "value": 0
-          }
-        ]
-      },
-      {
         "skillEffectId": 346,
         "prob": 100,
         "effectTarget": 0,
@@ -101812,269 +104256,16 @@
         "subIconAddress": "",
         "triggerJson": [
           {
-            "class": "OwnStatusTrigger",
-            "value": 11
-          },
-          {
-            "class": "MinComboTrigger",
-            "value": 0
-          },
-          {
-            "class": "PinchExecTrigger",
-            "value": 0
-          }
-        ]
-      },
-      {
-        "skillEffectId": 346,
-        "prob": 100,
-        "effectTarget": 0,
-        "sequenceGroupId": 0,
-        "probGroupId": 0,
-        "randomGroupId": 0,
-        "conditionEntityId": 0,
-        "conditionGroupId": 0,
-        "conditionPriority": 0,
-        "conditionDescription": "",
-        "subIconAddress": "",
-        "triggerJson": [
-          {
-            "class": "OwnStatusTrigger",
-            "value": 12
+            "class": "OwnDeBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
           },
           {
             "class": "PinchExecTrigger",
-            "value": 0
-          }
-        ]
-      },
-      {
-        "skillEffectId": 346,
-        "prob": 100,
-        "effectTarget": 0,
-        "sequenceGroupId": 0,
-        "probGroupId": 0,
-        "randomGroupId": 0,
-        "conditionEntityId": 0,
-        "conditionGroupId": 0,
-        "conditionPriority": 0,
-        "conditionDescription": "",
-        "subIconAddress": "",
-        "triggerJson": [
-          {
-            "class": "OwnStatusTrigger",
-            "value": 13
-          },
-          {
-            "class": "PinchExecTrigger",
-            "value": 0
-          }
-        ]
-      },
-      {
-        "skillEffectId": 346,
-        "prob": 100,
-        "effectTarget": 0,
-        "sequenceGroupId": 0,
-        "probGroupId": 0,
-        "randomGroupId": 0,
-        "conditionEntityId": 0,
-        "conditionGroupId": 0,
-        "conditionPriority": 0,
-        "conditionDescription": "",
-        "subIconAddress": "",
-        "triggerJson": [
-          {
-            "class": "OwnStatusTrigger",
-            "value": 14
-          },
-          {
-            "class": "PinchExecTrigger",
-            "value": 0
-          }
-        ]
-      },
-      {
-        "skillEffectId": 346,
-        "prob": 100,
-        "effectTarget": 0,
-        "sequenceGroupId": 0,
-        "probGroupId": 0,
-        "randomGroupId": 0,
-        "conditionEntityId": 0,
-        "conditionGroupId": 0,
-        "conditionPriority": 0,
-        "conditionDescription": "",
-        "subIconAddress": "",
-        "triggerJson": [
-          {
-            "class": "OwnStatusTrigger",
-            "value": 17
-          },
-          {
-            "class": "PinchExecTrigger",
-            "value": 0
-          }
-        ]
-      },
-      {
-        "skillEffectId": 346,
-        "prob": 100,
-        "effectTarget": 0,
-        "sequenceGroupId": 0,
-        "probGroupId": 0,
-        "randomGroupId": 0,
-        "conditionEntityId": 0,
-        "conditionGroupId": 0,
-        "conditionPriority": 0,
-        "conditionDescription": "",
-        "subIconAddress": "",
-        "triggerJson": [
-          {
-            "class": "OwnStatusTrigger",
-            "value": 18
-          },
-          {
-            "class": "PinchExecTrigger",
-            "value": 0
-          }
-        ]
-      },
-      {
-        "skillEffectId": 346,
-        "prob": 100,
-        "effectTarget": 0,
-        "sequenceGroupId": 0,
-        "probGroupId": 0,
-        "randomGroupId": 0,
-        "conditionEntityId": 0,
-        "conditionGroupId": 0,
-        "conditionPriority": 0,
-        "conditionDescription": "",
-        "subIconAddress": "",
-        "triggerJson": [
-          {
-            "class": "OwnStatusTrigger",
-            "value": 19
-          },
-          {
-            "class": "PinchExecTrigger",
-            "value": 0
-          }
-        ]
-      },
-      {
-        "skillEffectId": 346,
-        "prob": 100,
-        "effectTarget": 0,
-        "sequenceGroupId": 0,
-        "probGroupId": 0,
-        "randomGroupId": 0,
-        "conditionEntityId": 0,
-        "conditionGroupId": 0,
-        "conditionPriority": 0,
-        "conditionDescription": "",
-        "subIconAddress": "",
-        "triggerJson": [
-          {
-            "class": "OwnStatusTrigger",
-            "value": 22
-          },
-          {
-            "class": "PinchExecTrigger",
-            "value": 0
-          }
-        ]
-      },
-      {
-        "skillEffectId": 346,
-        "prob": 100,
-        "effectTarget": 0,
-        "sequenceGroupId": 0,
-        "probGroupId": 0,
-        "randomGroupId": 0,
-        "conditionEntityId": 0,
-        "conditionGroupId": 0,
-        "conditionPriority": 0,
-        "conditionDescription": "",
-        "subIconAddress": "",
-        "triggerJson": [
-          {
-            "class": "OwnStatusTrigger",
-            "value": 29
-          },
-          {
-            "class": "PinchExecTrigger",
-            "value": 0
-          }
-        ]
-      },
-      {
-        "skillEffectId": 346,
-        "prob": 100,
-        "effectTarget": 0,
-        "sequenceGroupId": 0,
-        "probGroupId": 0,
-        "randomGroupId": 0,
-        "conditionEntityId": 0,
-        "conditionGroupId": 0,
-        "conditionPriority": 0,
-        "conditionDescription": "",
-        "subIconAddress": "",
-        "triggerJson": [
-          {
-            "class": "OwnStatusTrigger",
-            "value": 34
-          },
-          {
-            "class": "PinchExecTrigger",
-            "value": 0
-          }
-        ]
-      },
-      {
-        "skillEffectId": 346,
-        "prob": 100,
-        "effectTarget": 0,
-        "sequenceGroupId": 0,
-        "probGroupId": 0,
-        "randomGroupId": 0,
-        "conditionEntityId": 0,
-        "conditionGroupId": 0,
-        "conditionPriority": 0,
-        "conditionDescription": "",
-        "subIconAddress": "",
-        "triggerJson": [
-          {
-            "class": "OwnStatusTrigger",
-            "value": 39
-          },
-          {
-            "class": "PinchExecTrigger",
-            "value": 0
-          }
-        ]
-      },
-      {
-        "skillEffectId": 346,
-        "prob": 100,
-        "effectTarget": 0,
-        "sequenceGroupId": 0,
-        "probGroupId": 0,
-        "randomGroupId": 0,
-        "conditionEntityId": 0,
-        "conditionGroupId": 0,
-        "conditionPriority": 0,
-        "conditionDescription": "",
-        "subIconAddress": "",
-        "triggerJson": [
-          {
-            "class": "OwnStatusTrigger",
-            "value": 40
-          },
-          {
-            "class": "PinchExecTrigger",
-            "value": 0
+            "value": 0,
+            "element": 0,
+            "statusId": 0
           }
         ]
       }
@@ -102112,7 +104303,9 @@
         "triggerJson": [
           {
             "class": "NotPinchExecTrigger",
-            "value": 0
+            "value": 0,
+            "element": 0,
+            "statusId": 0
           }
         ]
       }
@@ -112107,6 +114300,170 @@
       }
     ]
   },
+  "8015101": {
+    "skillId": 8015101,
+    "skillName": "綺羅星バックブリーカー+",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 20,
+    "description": "",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_polaris_h01_01"
+      }
+    ],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 20,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 354,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 1,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 355,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510503,
+        "conditionGroupId": 1,
+        "conditionPriority": 1,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1226,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510505,
+        "conditionGroupId": 1,
+        "conditionPriority": 2,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 345,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510507,
+        "conditionGroupId": 1,
+        "conditionPriority": 3,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "8015102": {
+    "skillId": 8015102,
+    "skillName": "マイクパフォーマンス",
+    "useView": 0,
+    "targetFlag": 3,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 4,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1259,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510603,
+        "conditionGroupId": 1,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "ViewTrigger",
+            "value": 20000,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1259,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510605,
+        "conditionGroupId": 1,
+        "conditionPriority": 1,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "ViewTrigger",
+            "value": 15000,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1259,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 101510606,
+        "conditionGroupId": 1,
+        "conditionPriority": 2,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "ViewTrigger",
+            "value": 10000,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
   "8018101": {
     "skillId": 8018101,
     "skillName": "アピール・チャンス+",
@@ -112521,6 +114878,48 @@
         "conditionDescription": "",
         "subIconAddress": "",
         "triggerJson": []
+      }
+    ]
+  },
+  "8025201": {
+    "skillId": 8025201,
+    "skillName": "トレント・ナックル+",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 15,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 15,
+      "trigger": {
+        "statusId": 2
+      }
+    },
+    "effects": [
+      {
+        "skillEffectId": 1220,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 221
+          }
+        ]
       }
     ]
   },
@@ -113741,6 +116140,374 @@
         "conditionDescription": "",
         "subIconAddress": "",
         "triggerJson": []
+      }
+    ]
+  },
+  "8115101": {
+    "skillId": 8115101,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 1,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1236,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "8115102": {
+    "skillId": 8115102,
+    "skillName": "サギッタ・アクア+",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 21,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 21,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1216,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510503,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 220
+          }
+        ]
+      }
+    ]
+  },
+  "8115103": {
+    "skillId": 8115103,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 1,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1237,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510503,
+        "conditionGroupId": 1,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1241,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510505,
+        "conditionGroupId": 1,
+        "conditionPriority": 1,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1245,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510507,
+        "conditionGroupId": 1,
+        "conditionPriority": 2,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1249,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510509,
+        "conditionGroupId": 1,
+        "conditionPriority": 3,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1238,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510503,
+        "conditionGroupId": 2,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1242,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510505,
+        "conditionGroupId": 2,
+        "conditionPriority": 1,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1246,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510507,
+        "conditionGroupId": 2,
+        "conditionPriority": 2,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1250,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510509,
+        "conditionGroupId": 2,
+        "conditionPriority": 3,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1239,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510503,
+        "conditionGroupId": 3,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1243,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510505,
+        "conditionGroupId": 3,
+        "conditionPriority": 1,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1247,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510507,
+        "conditionGroupId": 3,
+        "conditionPriority": 2,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1251,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510509,
+        "conditionGroupId": 3,
+        "conditionPriority": 3,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1240,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510503,
+        "conditionGroupId": 4,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1244,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510505,
+        "conditionGroupId": 4,
+        "conditionPriority": 1,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1248,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510507,
+        "conditionGroupId": 4,
+        "conditionPriority": 2,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1252,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510509,
+        "conditionGroupId": 4,
+        "conditionPriority": 3,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "8115104": {
+    "skillId": 8115104,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 21,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 21,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1217,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 111510503,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 220
+          }
+        ]
       }
     ]
   },
