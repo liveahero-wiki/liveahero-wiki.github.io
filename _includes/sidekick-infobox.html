@@ -1,6 +1,7 @@
 {% assign cardInfos = site.data.SidekickMaster | where: "stockId", include.stockId %}
 
 {% assign firstCardInfo = cardInfos | first %}
+{% assign lastCardInfo = cardInfos | last %}
 {% assign r = firstCardInfo.resourceName %}
 {% if r == "player" %}
 {% capture sprites %}fg_player1_s01,fg_player2_s01,fg_player3_s01,fg_player4_s01{% endcapture %}
@@ -102,7 +103,9 @@
     <h3>Passive</h3>
     {% include skill-table-v2.html skillIds=skillIdsPassive %}
 
-    {% if include.extraPassiveSkillIds %}
-    {% include skill-table-v2.html skillIds=include.extraPassiveSkillIds hide_banner=true %}
+    {% if lastCardInfo.equipmentAppendSkills.size > 0 %}
+    {% assign extraPassiveSkillIds = "" | split: "," | push: lastCardInfo.equipmentAppendSkills[0] %}
+    {% include skill-table-v2.html skillIds=extraPassiveSkillIds hide_banner=true %}
     {% endif %}
+
 </div>
