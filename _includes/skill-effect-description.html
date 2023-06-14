@@ -138,6 +138,8 @@ ATK Up by {{ effect.parameter.minMult }}% ~ {{ effect.parameter.maxMult }}% to {
 ATK Up by {{ effect.parameter.minMult }}% ~ {{ effect.parameter.maxMult }}% to {{ effect.parameter.target | skill_target }}, scaled from 0 to {{ effect.parameter.maxCombo }} combo
 {% when "ForceAuto" %}
 Force auto action to {{ target }}
+{% when "TurnDecideAutoSkill" %}
+Prioritize using Skill {{ effect.parameter.value | plus: 1 }} for every {{ effect.parameter.modValue }} turn(s)
 {% when "MultipleHp" %}
 HP Up by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "StatusNumberMultipleAttack" %}
@@ -177,12 +179,20 @@ Resurrect {{ target }} to {{ effect.parameter.value }}% HP
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the highest HP {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
 {% when "AimLowestAtkCharacter" %}
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the lowest ATK {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
+{% when "AimHighestAtkCharacter" %}
+(Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the highest ATK {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
 {% when "AimLeastDamagedCharacter" %}
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the least damaged {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
 {% when "AimMostDamagedCharacter" %}
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the most damaged {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
-{% when "AimHighestAtkCharacter" %}
-(Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the highest ATK {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
+{% when "AimLowestDebuffCountCharacter" %}
+(Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the lowest debuff count {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
+{% when "AimHighestDebuffCountCharacter" %}
+(Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the highest debuff count {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
+{% when "AimLowestBuffCountCharacter" %}
+(Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the lowest buff count {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
+{% when "AimHighestBuffCountCharacter" %}
+(Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the highest buff count {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
 {% when "AimLowestSpdCharacter" %}
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the lowest SPD {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
 {% when "AimHighestSpdCharacter" %}
