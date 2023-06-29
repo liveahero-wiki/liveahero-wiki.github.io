@@ -103071,5 +103071,74 @@
     "scoreAttackStandards": null,
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
+  },
+  "1055006": {
+    "questId": 1055006,
+    "questName": "その技術は誰が為に",
+    "subName": "第６話高難易度",
+    "questKind": 6,
+    "chapterId": 1055,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2023-06-29 18:00:00",
+    "endAt": "2023-07-11 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 6,
+    "enemyLevel": 65,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 135,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1052006,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainSalvagerEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 110
+      },
+      {
+        "battleInfoIcon": "icon_villainSalvagerWater_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 114
+      },
+      {
+        "battleInfoIcon": "icon_villainSalvagerShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 105
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
   }
 }
