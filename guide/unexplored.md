@@ -16,9 +16,9 @@ banner: true
 > Help translate this page by filling [`SkillManualOverride.yml`](https://github.com/liveahero-wiki/liveahero-wiki.github.io/blob/master/_data/wiki/SkillManualOverride.yml). Skill Id can be obtained by mouse-over the skill name.
 
 <div class="table-scroll">
-<table>
+<table class="sort-table">
     <tr>
-        <th>Skill Name</th><th>Rarity</th><th>Effect/Proc rate</th>
+        <th data-type="string">Skill Name</th><th>Rarity</th><th data-type="string">Effect/Proc rate</th>
     </tr>
     {% for s in skills %}
     {% assign nid = s.baseSkillId | plus: 0 %}
