@@ -13,6 +13,8 @@ banner: true
 {% assign skills = skills | push: pair[1] %}
 {% endfor %}
 
+> Help translate this page by filling [`SkillManualOverride.yml`](https://github.com/liveahero-wiki/liveahero-wiki.github.io/blob/master/_data/wiki/SkillManualOverride.yml). Skill Id can be obtained by mouse-over the skill name.
+
 <div class="table-scroll">
 <table>
     <tr>
@@ -23,10 +25,12 @@ banner: true
     {% assign sid = s.baseSkillId | downcase %}
     {% assign skill = site.data.SkillMaster[sid] %}
     {% assign skillName = site.data.wiki.SkillNameTranslation[nid] %}
+    {% assign skillOverride = site.data.wiki.SkillManualOverride[sid] %}
+    {% capture autoSkillDesc %}{% include skill-description.html skillId=nid skill=skill %}{% endcapture %}
     <tr>
         <td title="{{ sid }}" class="translate" data-translate="{% if skillName %}{{ skill.skillName }}{% endif %}" data-effects="{{ skill.effects | map: 'skillEffectId' | join: ',' }}">{{ skillName | default: skill.skillName }}</td>
         <td>{{ s.rarity }}</td>
-        <td title="{{ skill.description }}">{% include skill-description.html skillId=nid skill=skill %}</td>
+        <td class="translate" data-translate="{{ autoSkillDesc | xml_escape }}">{{ skillOverride | default: skill.description }}</td>
     </tr>
     {% endfor %}
 </table>
