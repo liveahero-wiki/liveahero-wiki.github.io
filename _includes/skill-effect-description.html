@@ -61,6 +61,8 @@ Proc rate {% if effect.parameter.value >= 0 %}Up{% else %}Down{% endif %} by {{ 
 Perform {{ effect.parameter.value }} more action(s)
 {% when "SkillTurnExtension" %}
 Extend {{ target }}'s {% if effect.parameter.statusTypeValue == 1 %}buff{% else %}debuff{% endif %} status effect by {{ effect.parameter.value }} turn(s)
+{% when "InvokerSkillTurnExtension" %}
+Extend all allies' {% if effect.parameter.statusTypeValue == 1 %}buff{% else %}debuff{% endif %} status effect (bestowed by allies) by {{ effect.parameter.value }} turn(s)
 {% when "Heal" %}
 {% assign turnDefinition = "turn" %}
 Heal {{ target }} for {{ effect.parameter.value }}% of own ATK value
@@ -110,6 +112,8 @@ Activate self's skill {{ effect.parameter.index | plus: 1 }} if {{ target }} is 
 ATK Up by {{ effect.parameter.value }}% to {{ target }} for each combo
 {% when "SpdDeferenceMultipleAttack" %}
 ATK Up by {{ effect.parameter.spdMult }}% to {{ target }} for each point in speed difference (???)
+{% when "SpdDifferenceMultipleAttack" %}
+ATK Up by {{ effect.parameter.spdMult }}% to {{ target }} for each point in speed difference between {{ target }} and enemy, capped at {{ effect.parameter.maxMult }}%
 {% when "HighestMultipleAttack" %}
 ATK Up by {{ effect.parameter.value }}% to {{ effect.parameter.target | skill_target }}
 (If there are overlapping effects with the same type and range, only the one with highest value will be applied)
@@ -199,6 +203,8 @@ Resurrect {{ target }} to {{ effect.parameter.value }}% HP
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the highest SPD {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
 {% when "AimBossCharacter" %}
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the boss {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
+{% when "ChangeSkillProbElapseTurnEnd" %}
+Proc rate of skill {{ effect.parameter.skillId }} is multiplied by {{ effect.parameter.value }}{% if effect.parameter.isPercent %}%{% else %}x{% endif %}
 {% else %}
 Unknown effect class ({{ effect.class }})
 {% endcase %}

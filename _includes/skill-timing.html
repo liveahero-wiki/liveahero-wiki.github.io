@@ -39,6 +39,8 @@ when activating a skill that increases combo
 when invoker's attack causes damage to enemy
 {% when 22 %}
 when receiving damage
+{% when 27 %}
+current action end
 {% else %}
 unknown timing ({{ include.timing }})
 {% endcase %}
