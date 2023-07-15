@@ -9,6 +9,18 @@ additional_scripts: ["/assets/atlas.min.js"]
 
 <!-- Keep this sorted alphabatically -->
 
+### Android Soldier
+
+{% include hero-infobox-unreleased.html name="Android Soldier" mob=true
+sprites="fg_villainAndroidSoldierEarth_s01,fg_villainAndroidSoldierFire_s01,fg_villainAndroidSoldierLight_s01,fg_villainAndroidSoldierShadow_s01,fg_villainAndroidSoldierWater_s01"
+%}
+
+### Android Soldier (Transform)
+
+{% include hero-infobox-unreleased.html name="Transformed Android Soldier" mob=true
+sprites="fg_villainAndroidSoldierEarth_h01,fg_villainAndroidSoldierFire_h01,fg_villainAndroidSoldierLight_h01,fg_villainAndroidSoldierShadow_h01,fg_villainAndroidSoldierWater_h01"
+%}
+
 ### Armor Kaibutsu
 
 {% include hero-infobox-unreleased.html name="Armor Kaibutsu" mob=true
@@ -136,6 +148,12 @@ sprites="fg_villainTraineeNinjaEarth_s01,fg_villainTraineeNinjaFire_s01,fg_villa
 sprites="fg_villainTraineeNinjaEarth_h01,fg_villainTraineeNinjaFire_h01,fg_villainTraineeNinjaLight_h01,fg_villainTraineeNinjaShadow_h01,fg_villainTraineeNinjaWater_h01"
 %}
 
+### Palanquin Kaibutsu
+
+{% include hero-infobox-unreleased.html name="Palanquin Kaibutsu" mob=true
+sprites="fg_kaibutsuMikoshiEarth_h01,fg_kaibutsuMikoshiFire_h01,fg_kaibutsuMikoshiLight_h01,fg_kaibutsuMikoshiShadow_h01,fg_kaibutsuMikoshiWater_h01"
+%}
+
 ### Salvager (Transform)
 
 {% include hero-infobox-unreleased.html name="Transformed Salvager" mob=true
@@ -158,12 +176,6 @@ sprites="fg_kaibutsuAdultEarthSpace_h01,fg_kaibutsuAdultFireSpace_h01,fg_kaibuts
 
 {% include hero-infobox-unreleased.html name="Juvenile Space Kaibutsu" mob=true
 sprites="fg_kaibutsuLarvaEarthSpace_h01,fg_kaibutsuLarvaFireSpace_h01,fg_kaibutsuLarvaLightSpace_h01,fg_kaibutsuLarvaShadowSpace_h01,fg_kaibutsuLarvaWaterSpace_h01"
-%}
-
-### Tentacle Kaibutsu
-
-{% include hero-infobox-unreleased.html name="Tentacle Kaibutsu" mob=true
-sprites="fg_kaibutsuTentacleTree_h01,fg_kaibutsuTentacle_h01"
 %}
 
 ### Trainee
@@ -200,4 +212,10 @@ sprites="fg_villainEarth_s01_skin1,fg_villainFire_s01_skin1,fg_villainLight_s01_
 
 {% include hero-infobox-unreleased.html name="Transformed Villain" mob=true
 sprites="fg_villainEarth_h01,fg_villainFire_h01,fg_villainLight_h01,fg_villainShadow_h01,fg_villainWater_h01"
+%}
+
+### Vine Kaibutsu
+
+{% include hero-infobox-unreleased.html name="Vine Kaibutsu" mob=true
+sprites="fg_kaibutsuTentacleTree_h01,fg_kaibutsuTentacle_h01"
 %}
