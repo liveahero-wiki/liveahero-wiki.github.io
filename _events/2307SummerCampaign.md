@@ -55,4 +55,4 @@ New character quest for 4 characters:
 
 ## Unexplored Exploration
 
-Refer to [Unexplored Exploration](/guide/unexplored.md/)
+Refer to [Unexplored Exploration](/guide/unexplored/)
