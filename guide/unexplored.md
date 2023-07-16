@@ -15,7 +15,7 @@ banner: true
 - Exploration has its own map, which will be changed every attempt
 - Player choose the path they will advance to, available paths are indicated by blue lines while red lines indicate path already taken
 - Every node in path has different enemy depending on its symbol, winning the battle will advance the path
-- 3 Unexplored skills are available for choosing every time you win a battle, you can only choose one, list of unexpxlored skills available below
+- 3 Unexplored skills are available for choosing every time you win a battle, you can only choose one, list of unexplored skills available below
 - You can have a maximum of 7 skills every exploration 
 
 ## Unexplored skills
