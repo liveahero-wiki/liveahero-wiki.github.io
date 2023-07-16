@@ -6,6 +6,18 @@ banner: true
 * this will be unordered
 {:toc}
 
+## Unexplored Exploration
+
+- Player will challenge a roguelike game mode, with a boss fight at the end
+- Consume 0 stamina with unlimited attempt
+- Scores are calculated every time you play, the further you are the more scores are given
+- Rewards are given based on cumulative score
+- Exploration has its own map, which will be changed every attempt
+- Player choose the path they will advance to, available paths are indicated by blue lines while red lines indicate path already taken
+- Every node in path has different enemy depending on its symbol, winning the battle will advance the path
+- 3 Unexplored skills are available for choosing every time you win a battle, you can only choose one, list of unexpxlored skills available below
+- You can have a maximum of 7 skills every exploration 
+
 ## Unexplored skills
 
 {% assign skills = "" | split: "," %}
