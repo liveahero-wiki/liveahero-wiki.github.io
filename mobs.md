@@ -166,6 +166,12 @@ sprites="fg_villainSalvagerEarth_h01,fg_villainSalvagerFire_h01,fg_villainSalvag
 sprites="fg_kaibutsuSharkEarth_h01,fg_kaibutsuSharkFire_h01,fg_kaibutsuSharkLight_h01,fg_kaibutsuSharkShadow_h01,fg_kaibutsuSharkWater_h01"
 %}
 
+### Slime Kaibutsu
+
+{% include hero-infobox-unreleased.html name="Slime Kaibutsu" mob=true
+sprites="fg_kaibutsuSlimeEarth_h01,fg_kaibutsuSlineFire_h01,fg_kaibutsuSlimeLight_h01,fg_kaibutsuSlimeShadow_h01,fg_kaibutsuSlimeWater_h01"
+%}
+
 ### Space Kaibutsu (Adult)
 
 {% include hero-infobox-unreleased.html name="Adult Space Kaibutsu" mob=true
