@@ -2,6 +2,8 @@
 title: Rakta
 characterId: 20
 occupation: Surgeon (外科医師)
+h2:
+  title: '"Compassion Flow" Rakta'
 heroes:
 - stockId: 10201
   BIO_H01: |-
@@ -18,6 +20,7 @@ heroes:
     his hands while transforming will never hurt or kill others. This is his
     prerequisite and oath to continue being a hero. A restraint of sorts so that he
     remains the same even in the battlefield.
+- stockId: 10202
 sidekicks:
 - stockId: 10201
   BIO_S01: |-
