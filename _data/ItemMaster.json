@@ -1961,6 +1961,64 @@
     ],
     "limitValue": 0
   },
+  "177": {
+    "itemId": 177,
+    "itemName": "ハーバリウム",
+    "resourceName": "Thermae2307_exchange01",
+    "rarity": 0,
+    "itemType": 512,
+    "description": "水と樹の都アクウェス定番のお土産品。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "178": {
+    "itemId": 178,
+    "itemName": "テルマエパニックディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "アクアバケーション・テルマエパニック！のBGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_thermae_adv",
+        "bgmTitleKey": "TITLE_BGM_THERMAE_ADV_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "179": {
+    "itemId": 179,
+    "itemName": "テルマエパニック戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "アクアバケーション・テルマエパニック！の戦闘BGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_thermae_battle",
+        "bgmTitleKey": "TITLE_BGM_THERMAE_BATTLE_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "180": {
+    "itemId": 180,
+    "itemName": "水の都ホログラム",
+    "resourceName": "icon_bg_battle_cityofwater_urbanarea_day",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景に水の都を投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_cityofwater_urbanarea_day",
+        "bgTitleKey": "TITLE_BG_BATTLE_CITYOFWATER_URBANAREA_DAY_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -2675,6 +2733,27 @@
     ],
     "limitValue": 0
   },
+  "110202": {
+    "itemId": 110202,
+    "itemName": "慈恵のラクタの記憶片",
+    "resourceName": "piece_raktaThermae2307",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "慈恵のラクタのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 10202
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
   "110211": {
     "itemId": 110211,
     "itemName": "ロレンの記憶片",
@@ -3381,6 +3460,27 @@
     ],
     "limitValue": 0
   },
+  "110622": {
+    "itemId": 110622,
+    "itemName": "烈水のアルフェッカの記憶片",
+    "resourceName": "piece_alpheccaThermae2307",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "烈水のアルフェッカのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10622
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
   "110631": {
     "itemId": 110631,
     "itemName": "シャフトの記憶片",
@@ -4067,6 +4167,48 @@
         "addFan": 50,
         "rarity": 0,
         "stockId": 11521
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "111601": {
+    "itemId": 111601,
+    "itemName": "オブシディウスの記憶片",
+    "resourceName": "piece_obsidius",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "オブシディウスのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 11601
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
+  "111611": {
+    "itemId": 111611,
+    "itemName": "テオレオールの記憶片",
+    "resourceName": "piece_theoreol",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "テオレオールのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 11611
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
@@ -5707,6 +5849,46 @@
     ],
     "limitValue": 0
   },
+  "211601": {
+    "itemId": 211601,
+    "itemName": "オブシディウスの心",
+    "resourceName": "heart_obsidius",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "オブシディウスのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 11601
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ],
+    "limitValue": 0
+  },
+  "211611": {
+    "itemId": 211611,
+    "itemName": "テオレオールの心",
+    "resourceName": "heart_theoreol",
+    "rarity": 4,
+    "itemType": 2048,
+    "description": "テオレオールのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 11611
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
   "219991": {
     "itemId": 219991,
     "itemName": "@playerNameの心",
@@ -6287,6 +6469,16 @@
     "effect": [],
     "limitValue": 0
   },
+  "21020201": {
+    "itemId": 21020201,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
   "21021101": {
     "itemId": 21021101,
     "itemName": "開花の波動",
@@ -6627,6 +6819,16 @@
     "effect": [],
     "limitValue": 0
   },
+  "21062201": {
+    "itemId": 21062201,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
   "21063101": {
     "itemId": 21063101,
     "itemName": "開花の波動",
@@ -6959,6 +7161,26 @@
   },
   "21152101": {
     "itemId": 21152101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21160101": {
+    "itemId": 21160101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21161101": {
+    "itemId": 21161101,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,

@@ -13022,6 +13022,1726 @@
       }
     ]
   },
+  "1020201": {
+    "skillId": 1020201,
+    "skillName": "トータル・アプローチ",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。Viewを1000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_raktaThermae2307_h01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 34,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "1020202": {
+    "skillId": 1020202,
+    "skillName": "パッショネイトセラピー",
+    "useView": 3000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間ATKアップを付与。Viewを4000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_raktaThermae2307_h01_02",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 295,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "1020203": {
+    "skillId": 1020203,
+    "skillName": "グレイテスト・エンカレッジメント",
+    "useView": 8000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_buffTeam",
+    "timing": 0,
+    "description": "味方単体に3ターンの間ATK蓄積を付与。対象にATK蓄積が付与されている場合、ATK蓄積をバフ増強する。自身以外の味方全体に1回の行動の間View消費量-1500付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_raktaThermae2307_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 684,
+        "prob": 100,
+        "effectTarget": 14,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1421,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020201
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020202
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020203
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020204
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020205
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020206
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020207
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020208
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020209
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020210
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1422,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020201
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020202
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020203
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020204
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020205
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020206
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020207
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020208
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020209
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020210
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1423,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020201
+          },
+          {
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020202
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020203
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020204
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020205
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020206
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020207
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020208
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020209
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020210
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1424,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020201
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020202
+          },
+          {
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020203
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020204
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020205
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020206
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020207
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020208
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020209
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020210
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1425,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020201
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020202
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020203
+          },
+          {
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020204
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020205
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020206
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020207
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020208
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020209
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020210
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1426,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020201
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020202
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020203
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020204
+          },
+          {
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020205
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020206
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020207
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020208
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020209
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020210
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1427,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020201
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020202
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020203
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020204
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020205
+          },
+          {
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020206
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020207
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020208
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020209
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020210
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1428,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020201
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020202
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020203
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020204
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020205
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020206
+          },
+          {
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020207
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020208
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020209
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020210
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1429,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020201
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020202
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020203
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020204
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020205
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020206
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020207
+          },
+          {
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020208
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020209
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020210
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1430,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020201
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020202
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020203
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020204
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020205
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020206
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020207
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020208
+          },
+          {
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020209
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020210
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1430,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020201
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020202
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020203
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020204
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020205
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020206
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020207
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020208
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020209
+          },
+          {
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020210
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1431,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020201
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020202
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020203
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020204
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020205
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020206
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020207
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020208
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020209
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020210
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1432,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020201
+          },
+          {
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020202
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020203
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020204
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020205
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020206
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020207
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020208
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020209
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020210
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1433,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020201
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020202
+          },
+          {
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020203
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020204
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020205
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020206
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020207
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020208
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020209
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020210
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1434,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020201
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020202
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020203
+          },
+          {
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020204
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020205
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020206
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020207
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020208
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020209
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020210
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1435,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020201
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020202
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020203
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020204
+          },
+          {
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020205
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020206
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020207
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020208
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020209
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020210
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1436,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020201
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020202
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020203
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020204
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020205
+          },
+          {
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020206
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020207
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020208
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020209
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020210
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1437,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020201
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020202
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020203
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020204
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020205
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020206
+          },
+          {
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020207
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020208
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020209
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020210
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1438,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020201
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020202
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020203
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020204
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020205
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020206
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020207
+          },
+          {
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020208
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020209
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020210
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1439,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020201
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020202
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020203
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020204
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020205
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020206
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020207
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020208
+          },
+          {
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020209
+          },
+          {
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1020210
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1443,
+        "prob": 0,
+        "effectTarget": 5,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "1020204": {
+    "skillId": 1020204,
+    "skillName": "パッショネイトセラピー+",
+    "useView": 3000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "味方単体に1回の行動の間ATKアップを付与。Viewを5000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_raktaThermae2307_h01_02",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 88,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 52,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
   "1021101": {
     "skillId": 1021101,
     "skillName": "痛かったらゴメンナサイ",
@@ -21629,6 +23349,310 @@
       },
       {
         "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "1062201": {
+    "skillId": 1062201,
+    "skillName": "ハールアヴァン",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。【常時発動】コンボ数が5の倍数に達した時、敵全体に50%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_alpheccaThermae2307_h01_01",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1062203
+          }
+        ]
+      },
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_alpheccaThermae2307_h01_01_b",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1062203
+          }
+        ]
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1062203
+          }
+        ]
+      },
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1062203
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1410,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1062203
+          }
+        ]
+      }
+    ]
+  },
+  "1062202": {
+    "skillId": 1062202,
+    "skillName": "コンゲンスオルデン",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。1ターンの間照準を付与。コンボ数+1。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_alpheccaThermae2307_h01_02",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 832,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 15,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "1062203": {
+    "skillId": 1062203,
+    "skillName": "ヘリッグ・ヴァンスピッド",
+    "useView": 10000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に150%ダメージ+コンボ数に応じてダメージ量が上昇。1回分のDEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_alpheccaThermae2307_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 244,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "1062204": {
+    "skillId": 1062204,
+    "skillName": "コンゲンスオルデン+",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に120%ダメージ。1ターンの間照準を付与。コンボ数+2。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_alpheccaThermae2307_h01_02",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 832,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 120,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,
@@ -30251,6 +32275,869 @@
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "1160101": {
+    "skillId": 1160101,
+    "skillName": "エクスカベイト",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に50%ダメージ。自身に3ターンの間豪気を2つ付与。【常時発動】自身にバフが付与された時、3ターンの間豪気を1つ付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_obsidius_h01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1400,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1400,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "1160102": {
+    "skillId": 1160102,
+    "skillName": "ドリリング・ブレイク",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵全体からランダムに2回50%ダメージ。1HIT毎に50%の確率で1回分のDEFダウンを付与。【豪気が3つ以上】豪気を3つ解除し、ランダム攻撃の回数が1回増加。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_obsidius_h01_02",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 50,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 50,
+        "effectTarget": 7,
+        "sequenceGroupId": 2,
+        "probGroupId": 2,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 3,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 238
+          }
+        ]
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 50,
+        "effectTarget": 7,
+        "sequenceGroupId": 3,
+        "probGroupId": 3,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 238
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1418,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 3,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 238
+          }
+        ]
+      }
+    ]
+  },
+  "1160103": {
+    "skillId": 1160103,
+    "skillName": "ピアース・オール・アンノウンズ",
+    "useView": 12000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_antiBuffAll",
+    "timing": 0,
+    "description": "敵全体のバフを1つ解除した後、90%ダメージ。対象の数が少ないほどダメージ量が上昇(最大で180%まで上昇)。【豪気が5つ以上】豪気を5つ解除し、もう1度行動をする。（1ターンに1回まで）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_obsidius_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 59,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyTeamCountTrigger",
+            "value": 4,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyTeamCountTrigger",
+            "value": 3,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 117,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyTeamCountTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 21,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyTeamCountTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 4,
+            "element": 0,
+            "statusId": 238
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1160101
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1417,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 4,
+            "element": 0,
+            "statusId": 238
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1160101
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1442,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 4,
+            "element": 0,
+            "statusId": 238
+          }
+        ]
+      }
+    ]
+  },
+  "1160104": {
+    "skillId": 1160104,
+    "skillName": "ピアース・オール・アンノウンズ+",
+    "useView": 10000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_antiBuffAll",
+    "timing": 0,
+    "description": "敵全体のバフを1つ解除した後、90%ダメージ。対象の数が少ないほどダメージ量が上昇(最大で180%まで上昇)。【豪気が5つ以上】豪気を5つ解除し、もう1度行動をする。（1ターンに1回まで）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_obsidius_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 59,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 13,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyTeamCountTrigger",
+            "value": 4,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyTeamCountTrigger",
+            "value": 3,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 117,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyTeamCountTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 21,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemyTeamCountTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 4,
+            "element": 0,
+            "statusId": 238
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1160101
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1417,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 4,
+            "element": 0,
+            "statusId": 238
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1160101
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1442,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 4,
+            "element": 0,
+            "statusId": 238
+          }
+        ]
+      }
+    ]
+  },
+  "1161101": {
+    "skillId": 1161101,
+    "skillName": "エクストラクトゥム",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。70%の確率で2ターンの間毒を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_theoreol_h01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 23,
+        "prob": 70,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "1161102": {
+    "skillId": 1161102,
+    "skillName": "アクアエヴィーテ",
+    "useView": 6000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "s_skill_heal",
+    "timing": 0,
+    "description": "敵単体に1回の行動の間ATKダウンを付与。計2回、チームで一番HPが減っているヒーローのHPを基礎ATKの80%回復する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_theoreol_h01_02",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 45,
+        "prob": 100,
+        "effectTarget": 11,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 45,
+        "prob": 100,
+        "effectTarget": 11,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "1161103": {
+    "skillId": 1161103,
+    "skillName": "ラピス・フィロソフォルム",
+    "useView": 9000,
+    "targetFlag": 3,
+    "resourceName": "b_skill_buffAll",
+    "subResourceName": "s_skill_heal",
+    "timing": 0,
+    "description": "味方全体に1回分のDEFアップを付与。2ターンの転化を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_theoreol_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1406,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "1161104": {
+    "skillId": 1161104,
+    "skillName": "アクアエヴィーテ+",
+    "useView": 6000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "s_skill_heal",
+    "timing": 0,
+    "description": "敵単体に1回の行動の間ATKダウンを付与。計2回、チームで一番HPが減っているヒーローのHPを基礎ATKの90%回復する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_theoreol_h01_02",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 675,
+        "prob": 100,
+        "effectTarget": 11,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 675,
+        "prob": 100,
+        "effectTarget": 11,
+        "sequenceGroupId": 2,
         "probGroupId": 0,
         "randomGroupId": 0,
         "conditionEntityId": 0,
@@ -42648,6 +45535,336 @@
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "randomGroupId": 1,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "2160101": {
+    "skillId": 2160101,
+    "skillName": "掘削調査",
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。対象が行動済みの場合、与えるダメージが135%に増加。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_obsidius_s01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1404,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "2160102": {
+    "skillId": 2160102,
+    "skillName": "掘削調査+",
+    "useView": 2500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。対象が行動済みの場合、与えるダメージが135%に増加。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_obsidius_s01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1404,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "2160103": {
+    "skillId": 2160103,
+    "skillName": "掘削調査++",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。対象が行動済みの場合、与えるダメージが135%に増加。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_obsidius_s01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1404,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "2161101": {
+    "skillId": 2161101,
+    "skillName": "安心安全な薬",
+    "useView": 7000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buffAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体と自身とチームで一番HPが減っているヒーローに1回分のDEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_theoreol_s01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 11,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "2161102": {
+    "skillId": 2161102,
+    "skillName": "安心安全な薬+",
+    "useView": 6000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buffAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体と自身とチームで一番HPが減っているヒーローに1回分のDEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_theoreol_s01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 11,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "2161103": {
+    "skillId": 2161103,
+    "skillName": "安心安全な薬++",
+    "useView": 5000,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buffAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体と自身とチームで一番HPが減っているヒーローに1回分のDEFアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_theoreol_s01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 11,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
         "conditionEntityId": 0,
         "conditionGroupId": 0,
         "conditionPriority": 0,
@@ -59751,6 +62968,402 @@
         "skillEffectId": 44,
         "prob": 50,
         "effectTarget": 9,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3160101": {
+    "skillId": 3160101,
+    "skillName": "フィールドワーク主義Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_obsidius_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、15%の確率で攻撃してきた対象のバフを１つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 36,
+        "prob": 15,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3160102": {
+    "skillId": 3160102,
+    "skillName": "フィールドワーク主義Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_obsidius_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、18%の確率で攻撃してきた対象のバフを１つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 36,
+        "prob": 18,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3160103": {
+    "skillId": 3160103,
+    "skillName": "フィールドワーク主義Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_obsidius_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、21%の確率で攻撃してきた対象のバフを１つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 36,
+        "prob": 21,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3160104": {
+    "skillId": 3160104,
+    "skillName": "フィールドワーク主義Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_obsidius_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、24%の確率で攻撃してきた対象のバフを１つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 36,
+        "prob": 24,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3160105": {
+    "skillId": 3160105,
+    "skillName": "フィールドワーク主義Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_obsidius_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、27%の確率で攻撃してきた対象のバフを１つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 36,
+        "prob": 27,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3160106": {
+    "skillId": 3160106,
+    "skillName": "フィールドワーク主義Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_obsidius_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、30%の確率で攻撃してきた対象のバフを１つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 36,
+        "prob": 30,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3161101": {
+    "skillId": 3161101,
+    "skillName": "錬金術師の観察眼Ⅰ",
+    "useView": 0,
+    "targetFlag": 11,
+    "resourceName": "icon_theoreol_s01",
+    "subResourceName": "",
+    "timing": 13,
+    "description": "攻撃以外のスキル発動後、チームで一番HPが減っているヒーローに20%の確率で1回分のDEFアップを付与。オート行動時、ピンチの味方がいる時、第3スキルを優先して使用する。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 13,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 20,
+        "effectTarget": 11,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3161102": {
+    "skillId": 3161102,
+    "skillName": "錬金術師の観察眼Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_theoreol_s01",
+    "subResourceName": "",
+    "timing": 13,
+    "description": "攻撃以外のスキル発動後、チームで一番HPが減っているヒーローに24%の確率で1回分のDEFアップを付与。オート行動時、ピンチの味方がいる時、第3スキルを優先して使用する。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 13,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 24,
+        "effectTarget": 11,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3161103": {
+    "skillId": 3161103,
+    "skillName": "錬金術師の観察眼Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_theoreol_s01",
+    "subResourceName": "",
+    "timing": 13,
+    "description": "攻撃以外のスキル発動後、チームで一番HPが減っているヒーローに28%の確率で1回分のDEFアップを付与。オート行動時、ピンチの味方がいる時、第3スキルを優先して使用する。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 13,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 28,
+        "effectTarget": 11,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3161104": {
+    "skillId": 3161104,
+    "skillName": "錬金術師の観察眼Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_theoreol_s01",
+    "subResourceName": "",
+    "timing": 13,
+    "description": "攻撃以外のスキル発動後、チームで一番HPが減っているヒーローに32%の確率で1回分のDEFアップを付与。オート行動時、ピンチの味方がいる時、第3スキルを優先して使用する。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 13,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 32,
+        "effectTarget": 11,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3161105": {
+    "skillId": 3161105,
+    "skillName": "錬金術師の観察眼Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_theoreol_s01",
+    "subResourceName": "",
+    "timing": 13,
+    "description": "攻撃以外のスキル発動後、チームで一番HPが減っているヒーローに36%の確率で1回分のDEFアップを付与。オート行動時、ピンチの味方がいる時、第3スキルを優先して使用する。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 13,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 36,
+        "effectTarget": 11,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3161106": {
+    "skillId": 3161106,
+    "skillName": "錬金術師の観察眼Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_theoreol_s01",
+    "subResourceName": "",
+    "timing": 13,
+    "description": "攻撃以外のスキル発動後、チームで一番HPが減っているヒーローに40%の確率で1回分のDEFアップを付与。オート行動時、ピンチの味方がいる時、第3スキルを優先して使用する。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 13,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 40,
+        "effectTarget": 11,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "randomGroupId": 0,
@@ -101537,6 +105150,434 @@
       }
     ]
   },
+  "4162101": {
+    "skillId": 4162101,
+    "skillName": "飲み込む",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。80%の確率で1ターンの間火傷を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuSlimeLarva_h01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 221,
+        "prob": 80,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4162102": {
+    "skillId": 4162102,
+    "skillName": "強化再生",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_heal",
+    "timing": 0,
+    "description": "自身に2回分のDEFアップを付与。HPを基礎ATKの50%回復する。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuSlimeLarva_h01_02",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 30,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4165101": {
+    "skillId": 4165101,
+    "skillName": "かぶりつき",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。自身に1回分のDEFアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuSlimeLarva_h01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4165102": {
+    "skillId": 4165102,
+    "skillName": "膨潤",
+    "useView": 3000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に2回の行動の間ATKアップを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuSlimeLarva_h01_02",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4165103": {
+    "skillId": 4165103,
+    "skillName": "アシッドゲル",
+    "useView": 8000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffAll",
+    "timing": 0,
+    "description": "敵全体からランダムに4回60%ダメージ。1ターンの間火傷を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuSlimeLarva_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 221,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 221,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 2,
+        "probGroupId": 2,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 3,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 221,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 3,
+        "probGroupId": 3,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 4,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 221,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 4,
+        "probGroupId": 4,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4165104": {
+    "skillId": 4165104,
+    "skillName": "ノキサスシャワー",
+    "useView": 4000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵全体からランダムに2回40%ダメージ。1HIT毎に50%の確率で1ターンの間毒を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuSlimeLarva_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 273,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 89,
+        "prob": 50,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 273,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 89,
+        "prob": 50,
+        "effectTarget": 7,
+        "sequenceGroupId": 2,
+        "probGroupId": 2,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
   "6000001": {
     "skillId": 6000001,
     "skillName": "ダメージ制限20000",
@@ -121216,6 +125257,149 @@
       }
     ]
   },
+  "8062201": {
+    "skillId": 8062201,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 24,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 24,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1409,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 4,
+            "element": 0,
+            "statusId": 1062201
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1405,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 4,
+            "element": 0,
+            "statusId": 1062201
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1407,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 4,
+            "element": 0,
+            "statusId": 1062201
+          }
+        ]
+      }
+    ]
+  },
+  "8062202": {
+    "skillId": 8062202,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 32,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 32,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1408,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "MinComboTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1411,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "MaxComboTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
   "8063201": {
     "skillId": 8063201,
     "skillName": "",
@@ -122940,6 +127124,72 @@
     "effects": [
       {
         "skillEffectId": 1174,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "8160101": {
+    "skillId": 8160101,
+    "skillName": "エクスカベイト",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 15,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 15,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1400,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "8161101": {
+    "skillId": 8161101,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buffAll",
+    "subResourceName": "",
+    "timing": 12,
+    "description": "味方単体と自身とチームで一番HPが減っているヒーローに1回分のDEFアップを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 12,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1441,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,
