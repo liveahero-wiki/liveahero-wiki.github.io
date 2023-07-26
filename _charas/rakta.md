@@ -36,6 +36,7 @@ sidekicks:
     strength", he has undergone various health methods and attend the gym 5 times a
     week, which is an aspect of a health nut who spares no effort even when
     misguided.
+  extra_sprites: fg_rakta_s01_skin1,fg_rakta_s01_skin2
 ---
 
 {% include voice-table.html resourceName="rakta"
@@ -63,6 +64,9 @@ RELATION = "I can't help but wonder.<br>That detective's eating habit is going t
 TOUCH = "Hmm?  Are you interested in my body?  Yes, I am quite proud of this healthy body trained at the sports gym five times a week.  Come on!"
 TRAIN = "Let's take pride in our health!"
 TRAINED = "Guh, what a healthy body ...!"
+%}
+
+{% include voice-table.html resourceName="raktaThermae2307"
 %}
 
 ## Notes

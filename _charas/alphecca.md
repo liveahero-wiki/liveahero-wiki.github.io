@@ -52,7 +52,7 @@ sidekicks:
 
     He invites the Rutilix, who has trouble achieving anything, to an exploration
     into a labyrinth which has quickly caused some turmoil.
-  extra_sprites: fg_alphecca_s01_skin1
+  extra_sprites: fg_alphecca_s01_skin1,fg_alphecca_s01_skin2
 ---
 
 {% include voice-table.html resourceName="alphecca"
@@ -82,6 +82,9 @@ TRAIN = "Stand up, receive my challenge!"
 TRAINED = "W-well aren't you skilled…!"
 EVENTA = "Hmm..mysterious, what an interesting labyrinth.<br>I'm usually bound to my throne, so just a little bit of adventure is fine, right?"
 EVENTB = "Hmm, the enigmatic white knight huh…I wonder what kind of person he is.<br>Mm? when he appears I am always nowhere to be seen you say?<br>Now…isn't it just a coincidence?"
+%}
+
+{% include voice-table.html resourceName="alpheccaThermae2307"
 %}
 
 ## Notes
