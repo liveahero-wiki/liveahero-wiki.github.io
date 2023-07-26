@@ -21,6 +21,20 @@ heroes:
     prerequisite and oath to continue being a hero. A restraint of sorts so that he
     remains the same even in the battlefield.
 - stockId: 10202
+  BIO_H01: |-
+    Rakta went to visit a city famous as a summer retreat as a doctor.
+    What he saw there were people who kept themselves healthy in bathhouses that healed the body while using the beautiful scenery around     them to heal their minds.
+    He was so awestruck so much by this, that he vowed to become a doctor that will heal not only the body, but also the mind, which in       turn earned him a new hero form.
+    The water jug in his hands is his parallel weapon which gushes forth water that can nurture the city's beautiful scenery.
+    Those who touch the water feel more revitalized,
+    while the flowers that bloom on the water's surafce soothe the minds of those who look at them. 
+  BIO_H02: |-
+    One of the patients that Rakta was in charge of during his residency was a person who could not get out of bed no matter how healthy      his body became.
+    Regardless of the health of his body, his spirit was wracked with despair by the destruction of his home and the loss of everything       he had cared about.
+    Rakta had always regretted not being able to bring hope back to the man.
+    Swearing to accompany patients until they can stand up of their own volition and regain their mental and physical health,
+    his parallel weapon's flowing water nurtured a landscape of trees and flowers,
+    like the home that patient once loved. He is filled with renewed determination as a doctor.
 sidekicks:
 - stockId: 10201
   BIO_S01: |-
