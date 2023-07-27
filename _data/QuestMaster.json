@@ -104395,6 +104395,92 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
   },
+  "1057003": {
+    "questId": 1057003,
+    "questName": "王無き民の栄光",
+    "subName": "第３話",
+    "questKind": 5,
+    "chapterId": 1057,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2023-07-27 18:00:00",
+    "endAt": "2023-08-22 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 3,
+    "enemyLevel": 11,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1057002,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 99
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuSlimeLarvaEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 100
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuSlimeLarvaLight_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 107
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuSlimeLarvaEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 103
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
   "1058001": {
     "questId": 1058001,
     "questName": "清き水を取り戻せ！",

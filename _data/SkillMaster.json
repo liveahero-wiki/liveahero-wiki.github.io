@@ -105260,6 +105260,47 @@
       }
     ]
   },
+  "4164101": {
+    "skillId": 4164101,
+    "skillName": "溶液",
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "ターゲットのオブシディウスに60%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuSlimeLarva_h01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
   "4165101": {
     "skillId": 4165101,
     "skillName": "かぶりつき",
@@ -123013,6 +123054,86 @@
             "statusId": 130
           }
         ]
+      }
+    ]
+  },
+  "6160101": {
+    "skillId": 6160101,
+    "skillName": "民間人を守る",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "ターン開始時、自身に1回の行動の間スタンを付与。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 4,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1264,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "6160102": {
+    "skillId": 6160102,
+    "skillName": "激励",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_heal",
+    "timing": 1,
+    "description": "プレイヤーからの攻撃でダメージを受けない。プレイヤーからのダメージ対象になった時、自身のHPを回復する。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 1,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1185,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1444,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
       }
     ]
   },

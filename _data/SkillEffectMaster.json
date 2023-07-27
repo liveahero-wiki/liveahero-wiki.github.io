@@ -41440,5 +41440,44 @@
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
     }
+  },
+  "1444": {
+    "skillEffectId": 1444,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "HealExecDefenced",
+          "parameter": {
+            "value": 40
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"ReceiverTemporaryAliveTrigger\"},{\"value\":0,\"element\":0,\"statusId\":132,\"class\":\"OwnSystemStatusNumberDontExecTrigger\"}]",
+      "filename": "status_inversion",
+      "statusId": 133,
+      "canDispel": true,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "転化。システム効果。132番がある時無効。",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
   }
 }
