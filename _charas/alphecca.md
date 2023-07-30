@@ -128,7 +128,12 @@ EVENTB = "Mm, what's that stall with such a savory smell!?<br>This glittering wo
 - He is 30 something years old
 - [Alphecca](https://en.wikipedia.org/wiki/Alpha_Coronae_Borealis) is the official name of the brightest star in the constellation of Corona Borealis (Alpha Corona Borealis), Alphecca is Arabic, short for نير الفكّة nayyir al-fakka "the bright (star) of the broken (ring of stars)"
 - Gemma ,another name for Alpha Corona Borealis, is latin for jewel
-- His Skill name is from Danish language:
+- His Skill name is from Swedish language:
+- Base form
   - Skråstreg : literally Slash
   - Kungens Ansvar : Kungens (The king's) Ansvar (Responsibility)
   - Helig Flammerei : Helig (Holy) Flammerei (presumably flames which is flammer)
+- Variant form
+  - Här av Vann : Army of Water, Här is "army", av is "of", Vann is "water".
+  - Kungens Aldern : Age of Kings, Kungens (The king's) Aldern (Age)
+  - Helig Vann Spyd : Helig (Holy) Vann (Water) Spyd (Spear)
