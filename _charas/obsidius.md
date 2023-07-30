@@ -28,6 +28,8 @@ sidekicks:
 ---
 
 {% include voice-table.html resourceName="obsidius"
+h_gachaResult = "The rock driller who pierces through the unknown,<br>Obsidius is here!<br>Leave this to me!"
+s_gachaResult = "I am Obsidius, a mineralogist.<br>If there is any rare mineral ore I am….eh.<br>It's for sidekick job right, leave it to me!"
 APPRECIATION = "What? Why am I pattin' your head?<br>It's because you look so down in the dumps!<br>Come on, come on, let me pet you some more! Hahaha!"
 DAILY = "Oh, you've come to the right place!<br>You know how to operate this terminal, don't you?<br>I don't have a clue about these kinda non-work related machines!"
 HERO = "When I was a student, the Professor dragged me around all kinds of places,<br>He taught me a lot about fieldwork.<br>Hahaha! I can't tell you how many times we got in trouble!"
