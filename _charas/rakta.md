@@ -81,6 +81,18 @@ TRAINED = "Guh, what a healthy body ...!"
 %}
 
 {% include voice-table.html resourceName="raktaThermae2307"
+h_gachaResult = "The water, the trees, the everyday scenery.<br>It's medicines that supports the heart.<br>Let's start client, it's treatment time!"
+s_gachaResult = "Well called, client.<br>Doctor Rakta, will strive hard to protect your health!<br>First, a house call, let's go!"
+APPRECIATION = "You look a little bit tired.<br>It's fine if it's just a small thing, you can talk to me about anything.<br>As a doctor, caring for your heart is also my duty."
+DAILY = "Client, let's go to the pool, with me!<br>Actually, since I entered it so often, I no longer feel much from it….<br>So, I want to collect more data from your bodily experience!"
+HERO = "A curing method through alchemy…what a rare thing.<br>I wonder how much passionnate research and trial has he piled on…<br>I want to have a heated discussion about health with him!"
+PLAYER = "I heard that being an operator is a tough job..<br>But you always look so lively!<br>Tell me the secrets of that health!"
+RELATION = "That is…professor Obsidius!<br>Every time I was invited to the college for doing physical examination, he was always absent…<br>This is a good opportunity, I won't stop until I have examined every nook and cranny!"
+TOUCH = "Oh? As I thought you're curious,<br>This healthy body, polished by the medical water!<br>Here, check it however much you want! Here!"
+TRAIN = "Your body and heart, I will thoroughly care for it!"
+TRAINED = "Y-you're quite fierce!"
+EVENTA = "The capital of water and health, very interesting!<br>I should verify it with my own body right now!<br>The goal is the domination of all pools, let's go client!"
+EVENTB = "Glittering trees…for the people here this is an everyday things.<br>This hometown scenery, supports the heart.<br>…really, health is such a profound thing!"
 %}
 
 ## Notes
