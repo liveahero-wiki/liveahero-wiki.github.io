@@ -26,6 +26,8 @@ sidekicks:
 ---
 
 {% include voice-table.html resourceName="theoreol"
+h_gachaResult = "Well, well, this is the first time I see you around here.<br>I am the incomplete, Alchemist Theoreol.<br>I'm not some suspicious person, okay?"
+s_gachaResult = "To think you call upon this failure, Theoreol!<br>I won't hold back in supporting your eccentric self.<br>Now, what kind of alchemy do you wish for?"
 APPRECIATION = "What's with the unusual look on your face? Are you unwell?<br>Why don't you take a seat there, and I'll be with you in 10 or 20 years!"
 DAILY = "This solid thing is... candy. I know this!<br>Now let's get to it...eh? Are you not supposed to eat the wrapper?<br>I see...I will have to update my information."
 HERO = "I'd like you to hide me for a little while!<br>Obsidius' ore collection is really interesting,<br>He was very angry when I absorbed some of it..."
