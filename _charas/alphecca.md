@@ -45,10 +45,15 @@ heroes:
     The image of this Alphecca, is of a king who lead his army in the front, clearing the way for them.
   BIO_H02: |-
     Alphecca recalls the time he ascended the throne.
+  
     After losing his father and brother in quick succession, he found himself leading a nation very suddenly.
+  
     As a king and a knight, he has done his best to protect the country of Ardisia and the people who live there.
+  
     But Alphecca had a hidden feeling in his heart.
+  
     I want to not only protect what is here and now, but also make the country of Ardisia better and carve out a brighter future             together with my beloved people.
+  
     With this wish in mind, the gentle king raises the "Spear of Reclamation" high.
 sidekicks:
 - stockId: 10621
