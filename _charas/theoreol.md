@@ -39,3 +39,13 @@ TRAINED = "Too much information...too much information!"
 EVENTA = "Water like medicine, flowers and trees like stars in the night sky.<br>It looks like a city worth taking in.<br>Oh, I was talking to myself. Don't mind me."
 EVENTB = "These baths... you take the medicinal effects of the water into your body, don't you?<br>So, I will not hesitate to do the same....Don't drink the bath water?<br>Why not? Is it not far more efficient than soaking in it?"
 %}
+
+## Notes
+
+- His name is probably comes from ancient greek, θεωρέω (Theoreo) meaning: to theorize, to speculate, to observe. The origin of western alchemy is said to date back to ancient Egypt and ancient Greece.
+- His Skill name is from Latin language:
+  - Extractum : Extract, the English name "alchemy" is thought to be derived from the Arabic word "خيمياء" (al kimiya).
+Some believe that "al" is the definite article (English "the") and "kimiya" is derived from the ancient Greek word "χημεία" (khemeia), "the art of extracting juice".
+  - Aqua Vitae : Water of life, It was called "water of life" because it was considered by alchemists to be a medicinal drink with life-sustaining effects and a "medicine of immortality".
+  - Lapis Philosophorum : Philosopher's stone, An elixir thought by medieval European alchemists to be a catalyst in the transformation of base metals such as lead into gold.
+
