@@ -33,7 +33,16 @@ heroes:
   extra_sprites: fg_ADV_alphecca_h01,fg_ADV_alphecca_h01_skin1,fg_ADV_alphecca_h02,fg_ADV_alphecca_h02_skin1
 - stockId: 10622
   BIO_H01: |-
-  
+    While travelling incognito to the beautiful capital of water,
+    Alphecca heard the adventure story about the great king who cut open the path to the capital,
+    that frontier spirit and how he's remembered by his people, excite him.
+    
+    The new form he got, very closely resembled that king.
+    
+    The trident shaped parallel weapon in his hand move freely with his intention,
+    and is capable of making a path with the water it produced.
+    
+    The image of this Alphecca, is of a king who lead his army in the front, clearing the way for them.
   BIO_H02: |-
     Alphecca recalls the time he ascended the throne.
     After losing his father and brother in quick succession, he found himself leading a nation very suddenly.
@@ -94,6 +103,18 @@ EVENTB = "Hmm, the enigmatic white knight huh…I wonder what kind of person he 
 %}
 
 {% include voice-table.html resourceName="alpheccaThermae2307"
+h_gachaResult = "I am, Ardisia kingdom's…<br>No, I'm just a passing traveler,<br>My name's Alphecca!<br>Let's fully enjoy ourselves in this journey!"
+s_gachaResult = "Leave the rest to me!<br>Heheh, if it's a foreign country then no matter how noisy I am…<br>Ah, nothing, nothing at all!?"
+APPRECIATION = "Hey, isn't this a vacation journey?<br>Stretching yourself too much like this, it's a waste of this occasion.<br>How about I teach you my relaxation secrets!"
+DAILY = "Flowing clear water, beautiful trees and flowers abound…<br>It's very different from Ardisia.<br>This is great! It's exactly because this difference that they call it a journey!"
+HERO = "Such an earnest person when facing the afflicted, I like it!<br>I want to invite him to my country, and teach our…<br>Oops, I forgot I'm on vacation."
+PLAYER = "I want to know you, not as a magician but as a fellow traveler on the road…hm.<br>Nice timing, let's talk while we take a bath together!"
+RELATION = "Alchemy, I believe, is the study of the search for perfection....<br>I heard that there was once a researcher of it in our country.<br>I'm interested in knowing what kind of path this is."
+TOUCH = "Hahah, what's holding you back?<br>Right now, you and I are just tourists.<br>You can freely touch me however much you want, let's enjoy this travels!"
+TRAIN = "I won't hold back, have you prepared!?"
+TRAINED = "Kuh! You're playing me…!"
+EVENTA = "That legendary king who open the path to the capital alone…<br>How…full of adventurous spirit he is!<br>Haha! I can't control my excitement just thinking about it!"
+EVENTB = "Mm, what's that stall with such a savory smell!?<br>This glittering wooden sword souvenir is great!<br>…I'm too conspicuous?...uh.."
 %}
 
 ## Notes
