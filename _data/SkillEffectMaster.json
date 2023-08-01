@@ -10748,7 +10748,10 @@
       "description": "オート行動時、味方を対象にするスキルは味方の中で一番Atkが高いキャラクターを対象にする",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -25454,7 +25457,10 @@
       "description": "システム効果126番除去",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -32217,6 +32223,7 @@
       "description": "システム効果127番除去",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
@@ -41478,6 +41485,137 @@
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
+    }
+  },
+  "1445": {
+    "skillEffectId": 1445,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistSystemEffect",
+          "parameter": {
+            "value": 100,
+            "statusId": 126
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 133,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果126番抵抗。死亡しても継続。",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "1446": {
+    "skillEffectId": 1446,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "烈水（システム効果126番付与）",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "烈水",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "バフでもデバフでも無い状態。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1456": {
+    "skillEffectId": 1456,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 75
+          }
+        }
+      ],
+      "filename": "status_system_defup",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "水の守り被ダメージ-25%（システム効果127番）",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "水の守り",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメ―ジ-25%。バフでもデバフでもない状態。自身以外の味方１人につき１つ付与。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1457": {
+    "skillEffectId": 1457,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 75
+          }
+        }
+      ],
+      "filename": "status_system_defup",
+      "statusId": 128,
+      "canDispel": false,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "水の守り被ダメージ-25%（システム効果128番）",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "水の守り",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメ―ジ-25%。バフでもデバフでもない状態。自身以外の味方１人につき１つ付与。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
     }
   }
 }
