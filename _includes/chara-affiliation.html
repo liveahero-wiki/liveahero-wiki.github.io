@@ -2,7 +2,7 @@
 {% if include.masked %}
 ???
 {% elsif a %}
-<abbr title="{{ include.affiliation }}">{{ a.en }}</abbr>
+<abbr class="tippy" data-content="{{ include.affiliation }}">{{ a.en }}</abbr>
 {% else %}
 {{ include.affiliation }}
 {% endif %}

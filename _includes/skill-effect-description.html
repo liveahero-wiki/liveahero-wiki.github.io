@@ -167,7 +167,7 @@ Gain {{ effect.parameter.value }}% extra gold
 Gain {{ effect.parameter.value }}% extra XP
 {% when "Aggregation" %}
 {% assign turnDefinition = "turn" %}
-Apply {{ 26 | status_description }} to {{ target }}: <abbr title="Does not include single target attack">{{ target }} takes full damage of all-ranged attack done to their team</abbr>
+Apply {{ 26 | status_description }} to {{ target }}: <abbr class="tippy" data-content="Does not include single target attack">{{ target }} takes full damage of all-ranged attack done to their team</abbr>
 {% when "NoneEffect" %}
 {% assign turnDefinition = "turn" %}
 Apply {{ skillEffectJson.statusId | status_description }} to {{ target }}

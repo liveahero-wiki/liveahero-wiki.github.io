@@ -3,7 +3,7 @@
 {% assign en = site.data.wiki.Illustrator[name].en %}
 <a href="/illustrators/#{{ en | default: name | slugify }}">
 {%- if en %}
-<abbr title="{{ name }}">{{ en }}</abbr>
+<abbr class="tippy" data-content="{{ name }}">{{ en }}</abbr>
 {%- else %}
 {{ name }}
 {%- endif %}

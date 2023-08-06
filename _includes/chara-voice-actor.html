@@ -5,7 +5,7 @@
 <a href="/voice_actors/#{{ en | default: name | slugify }}">
 {%- endif %}
 {%- if en %}
-<abbr title="{{ name }}">{{ en }}</abbr>
+<abbr class="tippy" data-content="{{ name }}">{{ en }}</abbr>
 {%- else %}
 {{ name }}
 {%- endif %}
