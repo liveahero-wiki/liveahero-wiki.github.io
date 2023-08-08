@@ -38777,6 +38777,40 @@
       "isOverrideStatusDescription": false
     }
   },
+  "1299": {
+    "skillEffectId": 1299,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 120
+          }
+        }
+      ],
+      "filename": "status_system_atkup",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATK+20%（一体化）",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "一体化",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATK+20%。バフでもデバフでも無い状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
   "1300": {
     "skillEffectId": 1300,
     "skillEffectJson": {
@@ -40599,6 +40633,40 @@
       "isOverrideStatusDescription": false
     }
   },
+  "1414": {
+    "skillEffectId": 1414,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeAgi",
+          "parameter": {
+            "value": -100
+          }
+        }
+      ],
+      "filename": "status_superagidown",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [
+        7
+      ],
+      "parameter": false,
+      "description": "超SPDダウン",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "SPD-100",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "SPDが-100される。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
   "1417": {
     "skillEffectId": 1417,
     "skillEffectJson": {
@@ -41550,6 +41618,40 @@
       "isOverrideStatusDescription": true
     }
   },
+  "1448": {
+    "skillEffectId": 1448,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AbsorbDamage",
+          "parameter": {
+            "value": 30,
+            "target": 11,
+            "healMult": 50
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "30%ダメージ+ダメージの50%HPが最も減っている味方を回復。",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "1454": {
     "skillEffectId": 1454,
     "skillEffectJson": {
@@ -41678,6 +41780,38 @@
       "overrideStatusName": "水の守り",
       "isOverrideStatusName": true,
       "overrideStatusDescription": "被ダメ―ジ-25%。バフでもデバフでもない状態。自身以外の味方１人につき１つ付与。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "2001": {
+    "skillEffectId": 2001,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -3000
+          }
+        }
+      ],
+      "filename": "status_system_awakening",
+      "statusId": 181,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "View消費量-3000(システム）",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "View消費量-3000",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "Viewの消費量が減少する。バフでもデバフでもない状態。スキルによる解除不可。",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
     }

@@ -104643,6 +104643,77 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0
   },
+  "1057006": {
+    "questId": 1057006,
+    "questName": "峻厳たる水面",
+    "subName": "第６話",
+    "questKind": 5,
+    "chapterId": 1057,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2023-08-08 18:00:00",
+    "endAt": "2023-08-22 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 6,
+    "enemyLevel": 14,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1057005,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 105
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
   "1058001": {
     "questId": 1058001,
     "questName": "清き水を取り戻せ！",
@@ -105620,6 +105691,80 @@
         "battleInfoIcon": "icon_kaibutsuTentacleTree_h01",
         "battleInfoElement": 3,
         "battleInfoSpd": 119
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0
+  },
+  "1060005": {
+    "questId": 1060005,
+    "questName": "水都の夜間パトロール",
+    "subName": "高難易度クエスト４",
+    "questKind": 6,
+    "chapterId": 1060,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2023-08-08 18:00:00",
+    "endAt": "2023-08-22 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 5,
+    "enemyLevel": 60,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 135,
+        "objectValue": 3,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1057006,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuSlimeLarvaFire_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 111
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuSlimeLarvaShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 108
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuSlimeLarvaShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 105
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuSlimeLarvaFire_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 103
       }
     ],
     "hasAdv": false,
