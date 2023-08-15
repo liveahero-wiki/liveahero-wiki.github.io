@@ -55,6 +55,7 @@ heroes:
     I want to not only protect what is here and now, but also make the country of Ardisia better and carve out a brighter future             together with my beloved people.
   
     With this wish in mind, the gentle king raises the "Spear of Reclamation" high.
+  extra_sprites: fg_alpheccaThermae2307_h02_skin2
 sidekicks:
 - stockId: 10621
   BIO_S01: |-

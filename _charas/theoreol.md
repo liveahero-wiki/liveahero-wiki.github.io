@@ -23,6 +23,7 @@ sidekicks:
 
     He has lived for a very long time, and even after the destruction of his planet, he continues to wander on his own and study alchemy.     He has little interest in anything outside of alchemy, and because of that,
     he has made very little contact with people, making his knowledge of common courtesy very lacking.
+  extra_sprites: fg_theoreol_s01_skin1
 ---
 
 {% include voice-table.html resourceName="theoreol"

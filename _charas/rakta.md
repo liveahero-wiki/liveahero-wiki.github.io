@@ -35,6 +35,7 @@ heroes:
     Swearing to accompany patients until they can stand up of their own volition and regain their mental and physical health,
     his parallel weapon's flowing water nurtured a landscape of trees and flowers,
     like the home that patient once loved. He is filled with renewed determination as a doctor.
+  extra_sprites: fg_raktaThermae2307_h02_skin2
 sidekicks:
 - stockId: 10201
   BIO_S01: |-
