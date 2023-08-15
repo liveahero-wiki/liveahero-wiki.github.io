@@ -41891,6 +41891,49 @@
       "isOverrideStatusDescription": true
     }
   },
+  "1459": {
+    "skillEffectId": 1459,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Provocation",
+          "parameter": []
+        },
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 130
+          }
+        },
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "status_target",
+      "statusId": 123,
+      "canDispel": true,
+      "filterIds": [
+        12,
+        4
+      ],
+      "parameter": false,
+      "description": "照準（エネミー用）",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "1460": {
     "skillEffectId": 1460,
     "skillEffectJson": {
@@ -42306,6 +42349,40 @@
       "isOverrideStatusDescription": true
     }
   },
+  "4002": {
+    "skillEffectId": 4002,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeAgi",
+          "parameter": {
+            "value": 10
+          }
+        }
+      ],
+      "filename": "status_spdup",
+      "statusId": 133,
+      "canDispel": false,
+      "filterIds": [
+        6
+      ],
+      "parameter": false,
+      "description": "SPDアップ(永続・戦闘不能時も継続)",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "SPD+10",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "SPD+10。バフでもデバフでもない状態。戦闘不能後も継続。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
   "4003": {
     "skillEffectId": 4003,
     "skillEffectJson": {
@@ -42325,6 +42402,40 @@
       "description": "システム効果252番付与",
       "isImmediate": false,
       "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4004": {
+    "skillEffectId": 4004,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 252,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果252番除去",
+      "isImmediate": true,
+      "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
       "canDuplicateForce": false,
@@ -42397,6 +42508,46 @@
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
+    }
+  },
+  "4007": {
+    "skillEffectId": 4007,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "SkillSkip",
+          "parameter": []
+        },
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "filename": "b_skill_debuff",
+      "statusId": 258,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "形成不全",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "形成不全",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "相手からのダメージが1.5倍になる。行動が出来なくなる。ターン経過で解除される。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
     }
   }
 }
