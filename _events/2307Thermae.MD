@@ -123,3 +123,13 @@ Here is a list of this event's limited time Missions:
 ### Free Quests
 
 {% include quest-group.html chapterId=1058 %}
+
+### Special Quests
+
+Here is a list of fan translated special quests:
+
+| Character  | Translation      | 
+|------------|------------------|
+| {% chara_link Obsidius %}  | [yes](https://docs.google.com/spreadsheets/d/1td0UxSJUDnp5YHsdCrCUg-PPzzcxqLGBQTTc0iKIEFY/edit?usp=sharing) |
+
+{% include quest-group.html chapterId=1059 %}
