@@ -121,23 +121,23 @@ Here is a list of this event's limited time Missions:
 
 ## Event Shop
 
-{% include shop-table.html id=31 %}
+{% include shop-table.html id=45 %}
 
 ## Quest Details
 
 ### Main Quests
 
-{% include quest-group.html chapterId=1010 %}
+{% include quest-group.html chapterId=1061 %}
 
 ### Free Quests
 
-{% include quest-group.html chapterId=1011 %}
+{% include quest-group.html chapterId=1062 %}
 
 ### Special Quests
 
 Fan translations for special quests can be found [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vSK4lvzCsEVdif20CL1N_EKrktwXRtT94WezCDufrMtjWK-pdmVmOKLfirh9G6VwHIONU7zn8qX6lMy/pubhtml#)
 
-{% include quest-group.html chapterId=1013 %}
+{% include quest-group.html chapterId=1063 %}
 
 ## Sales Report
 
