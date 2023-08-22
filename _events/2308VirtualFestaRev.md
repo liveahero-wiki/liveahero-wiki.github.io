@@ -62,26 +62,28 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 | {% chara_link reXer|h1 %} | 20 |
 | {% chara_link Shaft|h1 %} | 20 |
 | {% chara_link Toshu|h1 %}  | 10 |
-| {% chara_link Barrel|h2 %} | 20 | 
-| {% chara_link Victom|h2 %} | 20 | 
-| {% chara_link Okitaka|h1 %} | 10 |
+| {% chara_link Alphecca|h2 %} | 20 | 
+| {% chara_link Obsidius|h1 %} | 20 | 
+| {% chara_link Rakta|h2 %} | 10 |
+| {% chara_link Theoreol|h1 %} | 10 | 
 
 | Sidekick | +Bonus (%) |
 |-------------|---------------|
-| {% chara_link Cerastium %} | 20 | 
-| {% chara_link reXer %}  | 10 | 
+| {% chara_link Cerastium %} | 30 | 
+| {% chara_link reXer %}  | 20 | 
 | {% chara_link Shaft %}  | 10 | 
 | {% chara_link Toshu %}  | 10 | 
+| {% chara_link Alphecca %}  | 10 | 
+| {% chara_link Obsidius %}  | 10 | 
+| {% chara_link Theoreol %}  | 10 | 
+| {% chara_link Rakta %}  | 10 | 
 | {% chara_link Okitaka %}  | 10 | 
-| {% chara_link Barrel %}  | 10 | 
-| {% chara_link Victom %}  | 10 | 
 | {% chara_link Flamier %}  | 10 | 
 | {% chara_link Hydoor %}  | 10 | 
 | {% chara_link Kouki & Sirius %}  | 10 | 
 | {% chara_link Narihito %}  | 10 | 
 | {% chara_link Alchiba %}  | 10 | 
 | {% chara_link Subaru %}  | 10 | 
-| {% chara_link Alphecca %}  | 10 | 
 | {% chara_link Rutilix %}  | 10 | 
 | {% chara_link Kalaski %}  | 10 | 
 | {% chara_link Pubraseer %}  | 10 | 
