@@ -42549,5 +42549,69 @@
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
     }
+  },
+  "4008": {
+    "skillEffectId": 4008,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 70
+          }
+        }
+      ],
+      "filename": "status_defup",
+      "statusId": 142,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "被ダメージ-30%（死亡時継続）",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "被ダメージ-30%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメージ-30%。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4026": {
+    "skillEffectId": 4026,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "CannotDuplicate",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 88,
+      "canDispel": false,
+      "filterIds": [
+        13
+      ],
+      "parameter": false,
+      "description": "ステータス重複不可状態にする（死亡しても継続）",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "バフ・デバフ重複無効",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "バフ・デバフが重複して付与されなくなる。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
   }
 }
