@@ -1,6 +1,8 @@
 ---
 title: Exio
 characterId: 35
+heroes:
+- stockId: 10351
 sidekicks:
 - stockId: 10351
   BIO_S01: |-

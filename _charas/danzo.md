@@ -1,6 +1,11 @@
 ---
 title: Danzo
-unreleased: true
-sprites: fg_danzo_h01,fg_danzo_s01
+characterId: 168
+heroes:
+- stockId: 11681
+sidekicks:
+- stockId: 11681
 ---
 
+{% include voice-table.html resourceName="danzo"
+%}
