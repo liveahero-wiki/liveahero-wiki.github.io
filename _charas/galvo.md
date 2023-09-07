@@ -1,5 +1,5 @@
 ---
-title: Garbo
+title: Galvo
 characterId: 169
 heroes:
 - stockId: 11691
