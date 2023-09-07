@@ -133,6 +133,8 @@ if __name__ == '__main__':
     "ParallelWeaponFormMaster",
     'AffiliationOfficeMaster',
     'UnexploredSkillMaster',
+    #'SerifMaster',
+    'SerifOverwriteMaster',
   ]
   for m in masterDataList:
     downloadMasterdata(mV, m)
