@@ -3,6 +3,7 @@ title: Exio
 characterId: 35
 heroes:
 - stockId: 10351
+  extra_sprites: fg_ADV_exio_h01,fg_ADV_exio_h01_skin1,fg_ADV_exio_h01_skin2
 sidekicks:
 - stockId: 10351
   BIO_S01: |-
