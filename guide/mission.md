@@ -60,6 +60,8 @@ Standard missions are permanent missions that can be cleared at any point of tim
 |Clear the main quest: Book 1 Chapter 5|{%include item.html id=29%} x 1|
 |Clear the main quest: Book 2 Chapter 1|{%include item.html id=2%} x 10|
 |Clear the main quest: Book 2 Chapter 1|{%include item.html id=29%} x 1|
+|Clear the main quest: Book 2 Chapter 2|{%include item.html id=2%} x 10|
+|Clear the main quest: Book 2 Chapter 2|{%include item.html id=135%} x 5|
 
 #### Player Login
 
