@@ -1,29 +1,43 @@
 ---
-title: Main Quest Chapter 2
+title: Main Quest Book 2 Chapter 2
 gacha: true
 no_limited_quest: true
-news_link: https://live-a-hero.jp/info/847
-banner_image: banner_info_2011_pt1chapter2.jpg
-event_start_time: 2020-11-18T20:00:00+09
-event_end_time: 2020-12-18T20:00:00+09
+news_link: https://live-a-hero.jp/info/6596
+banner_image: banner_campaign_01_main22.jpg 
+event_start_time: 2023-09-07T20:00:00+09
+event_end_time: 2023-09-28T14:00:00+09
 ---
 
-The main quests of [chapter 2](/main_quests/chapter02/) has been released. Completion of chapter 2 main quests will give you {% include item.html id=29 %} x 1 and {% include item.html id=2 %} x 10.
+The main quests of Book 2 [chapter 2](/main_quests/chapter07/) has been released.
 
-More episodes will be released at the following schedule (subject to changes).
+In commemoration of the new chapter release, a limited time gacha summon is also released which include {% chara_link Exio %} (Hero), {% chara_link Danzo %} (Hero and Sidekick), {% chara_link Galvo %} (Hero and Sidekick) , {% chara_link Grigory %} (Hero and Sidekick).
 
-| Scheduled release date | Episodes |
-|-|-|
-| 2020/11/18 | 1~3 |
-| 2020/11/25 | 4~6 |
-| 2020/12/2 | 7~9 |
-| 2020/12/9 | 10~11 |
-| ~~2020/12/14~~ 2020/12/16 | 12~Final |
+For the period of Main Quest Book 2 Chapter 2, there will be half stamina cost for every episode in Main Quest.
 
-In commemoration of the new chapter release, a limited time gacha summon is also released which include {% chara_link Gammei %} (Hero and Sidekick), {% chara_link Suhail %} (Hero and Sidekick) and {% chara_link Mokdai %} (Hero and Sidekick).
+## Campaign Banners
+
+Rates as follow:
+
+| Character                                                | Rates (Single) | Rates (Multis) |
+|----------------------------------------------------------|----------------|----------------|
+| {% chara_link Exio|h1 %}                            | 0.8 %            | 1.6 %            |
+| {% chara_link Danzo|h1 %}                            | 0.8 %            | 1.6 %           |
+| {% chara_link Galvo|h1 %}                               | 2 %              | 16 %             |
+| {% chara_link Grigory|h1 %}                               | 2 %              | 16 %             |
+| {% chara_link Galvo %}                                    | 3 %              | 0 %              |
+| {% chara_link Grigory %}                                  | 3 %              | 0 %              |
+| {% chara_link Exio %}                                  | 1.5 %             | 0 %              |
+| {% chara_link Danzo %}                                  | 12 %             | 0 %              |
+| Offbanner 5 star hero                                    | 0.4 %            | 0.8 %            |
+| Offbanner 4 star hero                                    | 6 %              | 64 %             |
+| Offbanner 3 star hero                                    | 35 %             | 0 %              |
+| Offbanner 4 star sidekick                                | 2.5 %              | 0 %              |
+| Offbanner 3 star sidekick                                | 33 %             | 0 %              |
+
+>Rates (Multis) is the rate of the tenth pull in a multi pull, pull number 1-9 still use the Rates (Single)
 
 ## Main Quests
 
-Finish all chapter 2 main quest for mission rewards, rewards details can be found in [Mission](/guide/mission/#main-quest)
+Finish all book 2 chapter 2 main quest for mission rewards, rewards details can be found in [Mission](/guide/mission/#main-quest)
 
-Detailed lists of main quest can be found in [Main quest ch02](/main_quests/chapter02/)
+Detailed lists of main quest can be found in [chapter 2](/main_quests/chapter07/)
