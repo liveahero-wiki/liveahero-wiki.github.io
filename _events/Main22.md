@@ -10,7 +10,7 @@ event_end_time: 2023-09-28T14:00:00+09
 
 The main quests of Book 2 [chapter 2](/main_quests/chapter07/) has been released.
 
-In commemoration of the new chapter release, a limited time gacha summon is also released which include {% chara_link Exio %} (Hero), {% chara_link Danzo %} (Hero and Sidekick), {% chara_link Galvo %} (Hero and Sidekick) , {% chara_link Grigory %} (Hero and Sidekick).
+In commemoration of the new chapter release, a limited time gacha summon is also released which include {% chara_link Exio|h1 %} (Hero), {% chara_link Danzo %} (Hero and Sidekick), {% chara_link Galvo %} (Hero and Sidekick) , {% chara_link Grigory %} (Hero and Sidekick).
 
 For the period of Main Quest Book 2 Chapter 2, there will be half stamina cost for every episode in Main Quest.
 
