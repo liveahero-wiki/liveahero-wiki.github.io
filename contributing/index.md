@@ -45,11 +45,13 @@ Take {% chara_link Ryekie %} for example [source code](https://github.com/liveah
   - New line should be written as `<br>`
 
 ```
+{% raw $}
 {% include voice-table.html resourceName="exio"
 ...
 RELATION = "hello world"
 ...
 %}
+{% endraw %}
 ```
 
 ### Translate skill name
