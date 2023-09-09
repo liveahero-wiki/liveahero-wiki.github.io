@@ -8,18 +8,11 @@ banner: true
 
 ## Foreword
 
-Welcome to the fan-made Live A Hero Wiki! It is still work in progress, so thanks for considering to contribute
-this project.
+Welcome to the fan-made Live A Hero Wiki! Basically all the contributors (which are like 2~3 people so far) discuss issues in `#lah-wiki` channel of [LAH Discord (Herocord)](https://discord.gg/zpc7PCk). Feel free to report bugs there.
 
-> Please go to our [Github Issue](https://github.com/liveahero-wiki/liveahero-wiki.github.io/issues) page to check if there is any existing tasks that you can help.
->
-> If you plan to contribute something big, such as starting a new group of pages, changing design of the websites and adding new feature, please create a new issue in our Github Issue page to discuss with other contributors before beginning your work. This is to avoid duplicated effort.
+## Create account for wiki edit
 
-## How to contribute
-
-For all potential wiki contributors, you must create a Github account beforehand (free plan is enough).
-If this is hosted with MediaWiki, we would have ask you to create a wiki account as well, so please don't
-be discouraged by the need to create a new account.
+For all potential wiki contributors, you need to [sign up for a free Github account](https://github.com/join), which is the website where this wiki is hosted.
 
 ### Edit a page
 
@@ -42,8 +35,49 @@ When editing articles, please try to write objectively and formally about the to
 - [Writing Guide](/contributing/writing/)
 - [Programming Guide](/contributing/programming/)
 
+## Instructions on specific tasks
+
+### Translate voice line
+
+Take {% chara_link Ryekie %} for example [source code](https://github.com/liveahero-wiki/liveahero-wiki.github.io/blob/master/_charas/ryekie.md)
+
+1. To translate the "relation" line, add `RELATION = "<translation>"`
+  - New line should be written as `<br>`
+
+```
+{% include voice-table.html resourceName="exio"
+...
+RELATION = "hello world"
+...
+%}
+```
+
+### Translate skill name
+
+Take {% chara_link Exio|h1 %} hero S1 skill for example:
+
+1. Hover your mouse cursor over the skill name, you will see the skill id (an integer)
+  - In this example, it is `1035101`
+1. Go to [`_data/wiki/SkillNameTranslation.yml``](https://github.com/liveahero-wiki/liveahero-wiki.github.io/blob/master/_data/wiki/SkillNameTranslation.yml)
+1. Add a new skill name translation like `1035101: "<new skill name>"`
+
+### Fix auto-generated skill description
+
+TODO
+
+### Manually override a skill description
+
+When the auto generated version is too long and simplifying by code is nearly impossible, we just override the description with a hand-written one
+
+Take {% chara_link Exio|h1 %} hero S1 skill for example:
+
+1. Hover your mouse cursor over the skill name, you will see the skill id (an integer)
+  - In this example, it is `1035101`
+1. Go to [`_data/wiki/SkillManualOverride.yml``](https://github.com/liveahero-wiki/liveahero-wiki.github.io/blob/master/_data/wiki/SkillManualOverride.yml)
+1. Add a new hand-written skill description like `1035101: "<new skill description>"`
+  - New line should be written as `<br>`
+  - Double quote needs to be written as `\"`
 <!--
-## More instructions on specific task
 
 ### Create page for new Hero `/charas/:name/`
 
