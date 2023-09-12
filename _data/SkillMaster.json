@@ -111444,6 +111444,253 @@
       }
     ]
   },
+  "4171101": {
+    "skillId": 4171101,
+    "skillName": "ミミック・バイト",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。60%の確率で1回の行動の間ATKダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuIdLarva_h01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 60,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4171102": {
+    "skillId": 4171102,
+    "skillName": "野性の襲撃",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ+HPが減るほどダメージ量が上昇する。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuIdLarva_h01_02",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 121,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4176101": {
+    "skillId": 4176101,
+    "skillName": "ペネトレイト・レーザー",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuIdAdult_h01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 4001,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4176102": {
+    "skillId": 4176102,
+    "skillName": "カイブツの群れ",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に1回分のDEFアップを付与。自身以外の味方全体がランダムな敵にスキル１を誘発。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuIdAdult_h01_02",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 37,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 734,
+        "prob": 100,
+        "effectTarget": 14,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4176103": {
+    "skillId": 4176103,
+    "skillName": "ミミック・ブロウル",
+    "useView": 8000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵全体に80%ダメージ。60%の確率で1回の行動の間SPDダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuIdAdult_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 60,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
   "6000001": {
     "skillId": 6000001,
     "skillName": "ダメージ制限20000",
@@ -132478,6 +132725,39 @@
         "skillEffectId": 642,
         "prob": 100,
         "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "6174101": {
+    "skillId": 6174101,
+    "skillName": "稚拙な模造",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "登場時、自身に稚拙な模造を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 1,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 3018,
+        "prob": 100,
+        "effectTarget": 0,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "randomGroupId": 0,
