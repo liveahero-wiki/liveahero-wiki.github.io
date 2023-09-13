@@ -47,7 +47,7 @@ sidekicks:
 
     Monomasa is a very quiet and timid young man while Drovain's personality is cool
     and collected.
-  extra_sprites: fg_monomasa_s01_skin1
+  extra_sprites: fg_monomasa_s01_skin1,fg_ADV_monomasa_s01
 ---
 
 {% include voice-table.html resourceName="monomasa"
