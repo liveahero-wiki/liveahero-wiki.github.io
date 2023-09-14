@@ -33398,6 +33398,946 @@
       }
     ]
   },
+  "1154101": {
+    "skillId": 1154101,
+    "skillName": "カスタムウェポン",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_antiBuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。50%の確率でバフを１つ解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_androidSoldier_h01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 36,
+        "prob": 50,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "1154102": {
+    "skillId": 1154102,
+    "skillName": "ランパートシフト",
+    "useView": 2000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_heal",
+    "timing": 0,
+    "description": "自身に2ターンの間挑発を付与。1ターンの間リジェネを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_androidSoldier_h01_02",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 49,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 297,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "1154103": {
+    "skillId": 1154103,
+    "skillName": "エナジーリゾネート",
+    "useView": 6000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に110%ダメージ。対象が木属性の場合、バフを1つ解除&1回の行動の間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_androidSoldier_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 36,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 3,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 3,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1154104": {
+    "skillId": 1154104,
+    "skillName": "エナジーリゾネート+",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に110%ダメージ。対象が木属性の場合、バフを1つ解除&1回の行動の間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_androidSoldier_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 36,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 3,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 3,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1155103": {
+    "skillId": 1155103,
+    "skillName": "エナジーリゾネート",
+    "useView": 6000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に110%ダメージ。対象が火属性の場合、バフを1つ解除&1回の行動の間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_androidSoldier_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 36,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 1,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 1,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1155104": {
+    "skillId": 1155104,
+    "skillName": "エナジーリゾネート+",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に110%ダメージ。対象が火属性の場合、バフを1つ解除&1回の行動の間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_androidSoldier_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 36,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 1,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 1,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1156103": {
+    "skillId": 1156103,
+    "skillName": "エナジーリゾネート",
+    "useView": 6000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に110%ダメージ。対象が水属性の場合、バフを1つ解除&1回の行動の間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_androidSoldier_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 36,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 2,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 2,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1156104": {
+    "skillId": 1156104,
+    "skillName": "エナジーリゾネート+",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に110%ダメージ。対象が水属性の場合、バフを1つ解除&1回の行動の間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_androidSoldier_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 36,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 2,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "element": 2,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1157103": {
+    "skillId": 1157103,
+    "skillName": "エナジーリゾネート",
+    "useView": 6000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に110%ダメージ。対象が影属性以外の場合、60%の確率でバフを1つ解除&1回の行動の間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_androidSoldier_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 36,
+        "prob": 60,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "TargetElementDontExecTrigger",
+            "value": 0,
+            "element": 5,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 60,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "TargetElementDontExecTrigger",
+            "value": 0,
+            "element": 5,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1157104": {
+    "skillId": 1157104,
+    "skillName": "エナジーリゾネート+",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に110%ダメージ。対象が影属性以外の場合、60%の確率でバフを1つ解除&1回の行動の間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_androidSoldier_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 36,
+        "prob": 60,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "TargetElementDontExecTrigger",
+            "value": 0,
+            "element": 5,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 60,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "TargetElementDontExecTrigger",
+            "value": 0,
+            "element": 5,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1158103": {
+    "skillId": 1158103,
+    "skillName": "エナジーリゾネート",
+    "useView": 6000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に110%ダメージ。対象が光属性以外の場合、60%の確率でバフを1つ解除&1回の行動の間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_androidSoldier_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 36,
+        "prob": 60,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "TargetElementDontExecTrigger",
+            "value": 0,
+            "element": 4,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 60,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "TargetElementDontExecTrigger",
+            "value": 0,
+            "element": 4,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "1158104": {
+    "skillId": 1158104,
+    "skillName": "エナジーリゾネート+",
+    "useView": 5000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に110%ダメージ。対象が光属性以外の場合、60%の確率でバフを1つ解除&1回の行動の間ATKダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_androidSoldier_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 36,
+        "prob": 60,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "TargetElementDontExecTrigger",
+            "value": 0,
+            "element": 4,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 60,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 1,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "TargetElementDontExecTrigger",
+            "value": 0,
+            "element": 4,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
   "1160101": {
     "skillId": 1160101,
     "skillName": "エクスカベイト",
@@ -47382,6 +48322,171 @@
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "randomGroupId": 1,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "2154101": {
+    "skillId": 2154101,
+    "skillName": "Abジェネレート",
+    "useView": 2500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "自身に2回分のDEFアップを付与。2ターンの間毒を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_androidSoldier_s01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 23,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "2154102": {
+    "skillId": 2154102,
+    "skillName": "Abジェネレート+",
+    "useView": 2000,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "自身に2回分のDEFアップを付与。2ターンの間毒を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_androidSoldier_s01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 23,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "2154103": {
+    "skillId": 2154103,
+    "skillName": "Abジェネレート++",
+    "useView": 1500,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "自身に2回分のDEFアップを付与。2ターンの間毒を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "SidekickSkill"
+        },
+        "name": "skill_androidSoldier_s01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 46,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 23,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
         "conditionEntityId": 0,
         "conditionGroupId": 0,
         "conditionPriority": 0,
@@ -65364,6 +66469,996 @@
       }
     ]
   },
+  "3154101": {
+    "skillId": 3154101,
+    "skillName": "火機械兵の尽力Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierFire_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、5%の確率で攻撃してきた対象に1ターンの間火傷を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 221,
+        "prob": 5,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3154102": {
+    "skillId": 3154102,
+    "skillName": "火機械兵の尽力Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierFire_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、6%の確率で攻撃してきた対象に1ターンの間火傷を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 221,
+        "prob": 6,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3154103": {
+    "skillId": 3154103,
+    "skillName": "火機械兵の尽力Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierFire_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、7%の確率で攻撃してきた対象に1ターンの間火傷を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 221,
+        "prob": 7,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3154104": {
+    "skillId": 3154104,
+    "skillName": "火機械兵の尽力Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierFire_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、8%の確率で攻撃してきた対象に1ターンの間火傷を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 221,
+        "prob": 8,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3154105": {
+    "skillId": 3154105,
+    "skillName": "火機械兵の尽力Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierFire_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、9%の確率で攻撃してきた対象に1ターンの間火傷を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 221,
+        "prob": 9,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3154106": {
+    "skillId": 3154106,
+    "skillName": "火機械兵の尽力Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierFire_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、10%の確率で攻撃してきた対象に1ターンの間火傷を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 221,
+        "prob": 10,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3155101": {
+    "skillId": 3155101,
+    "skillName": "水機械兵の尽力Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierWater_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、5%の確率で攻撃してきた対象に1回の行動の間ATKダウンを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 5,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3155102": {
+    "skillId": 3155102,
+    "skillName": "水機械兵の尽力Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierWater_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、6%の確率で攻撃してきた対象に1回の行動の間ATKダウンを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 6,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3155103": {
+    "skillId": 3155103,
+    "skillName": "水機械兵の尽力Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierWater_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、7%の確率で攻撃してきた対象に1回の行動の間ATKダウンを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 7,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3155104": {
+    "skillId": 3155104,
+    "skillName": "水機械兵の尽力Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierWater_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、8%の確率で攻撃してきた対象に1回の行動の間ATKダウンを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 8,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3155105": {
+    "skillId": 3155105,
+    "skillName": "水機械兵の尽力Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierWater_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、9%の確率で攻撃してきた対象に1回の行動の間ATKダウンを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 9,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3155106": {
+    "skillId": 3155106,
+    "skillName": "水機械兵の尽力Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierWater_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、10%の確率で攻撃してきた対象に1回の行動の間ATKダウンを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 48,
+        "prob": 10,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3156101": {
+    "skillId": 3156101,
+    "skillName": "木機械兵の尽力Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierEarth_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、5%の確率で攻撃してきた対象に1回分のDEFダウンを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 31,
+        "prob": 5,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3156102": {
+    "skillId": 3156102,
+    "skillName": "木機械兵の尽力Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierEarth_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、6%の確率で攻撃してきた対象に1回分のDEFダウンを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 31,
+        "prob": 6,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3156103": {
+    "skillId": 3156103,
+    "skillName": "木機械兵の尽力Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierEarth_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、7%の確率で攻撃してきた対象に1回分のDEFダウンを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 31,
+        "prob": 7,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3156104": {
+    "skillId": 3156104,
+    "skillName": "木機械兵の尽力Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierEarth_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、8%の確率で攻撃してきた対象に1回分のDEFダウンを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 31,
+        "prob": 8,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3156105": {
+    "skillId": 3156105,
+    "skillName": "木機械兵の尽力Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierEarth_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、9%の確率で攻撃してきた対象に1回分のDEFダウンを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 31,
+        "prob": 9,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3156106": {
+    "skillId": 3156106,
+    "skillName": "木機械兵の尽力Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierEarth_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、10%の確率で攻撃してきた対象に1回分のDEFダウンを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 31,
+        "prob": 10,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3157101": {
+    "skillId": 3157101,
+    "skillName": "光機械兵の尽力Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierLight_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、5%の確率で攻撃してきた対象のバフを1つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 36,
+        "prob": 5,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3157102": {
+    "skillId": 3157102,
+    "skillName": "光機械兵の尽力Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierLight_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、6%の確率で攻撃してきた対象のバフを1つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 36,
+        "prob": 6,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3157103": {
+    "skillId": 3157103,
+    "skillName": "光機械兵の尽力Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierLight_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、7%の確率で攻撃してきた対象のバフを1つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 36,
+        "prob": 7,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3157104": {
+    "skillId": 3157104,
+    "skillName": "光機械兵の尽力Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierLight_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、8%の確率で攻撃してきた対象のバフを1つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 36,
+        "prob": 8,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3157105": {
+    "skillId": 3157105,
+    "skillName": "光機械兵の尽力Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierLight_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、9%の確率で攻撃してきた対象のバフを1つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 36,
+        "prob": 9,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3157106": {
+    "skillId": 3157106,
+    "skillName": "光機械兵の尽力Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierLight_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、10%の確率で攻撃してきた対象のバフを1つ解除。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 36,
+        "prob": 10,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3158101": {
+    "skillId": 3158101,
+    "skillName": "影機械兵の尽力Ⅰ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierShadow_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、10%の確率で攻撃してきた対象に1ターンの間毒を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 89,
+        "prob": 10,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3158102": {
+    "skillId": 3158102,
+    "skillName": "影機械兵の尽力Ⅱ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierShadow_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、12%の確率で攻撃してきた対象に1ターンの間毒を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 89,
+        "prob": 12,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3158103": {
+    "skillId": 3158103,
+    "skillName": "影機械兵の尽力Ⅲ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierShadow_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、14%の確率で攻撃してきた対象に1ターンの間毒を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 89,
+        "prob": 14,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3158104": {
+    "skillId": 3158104,
+    "skillName": "影機械兵の尽力Ⅳ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierShadow_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、16%の確率で攻撃してきた対象に1ターンの間毒を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 89,
+        "prob": 16,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3158105": {
+    "skillId": 3158105,
+    "skillName": "影機械兵の尽力Ⅴ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierShadow_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、18%の確率で攻撃してきた対象に1ターンの間毒を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 89,
+        "prob": 18,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "3158106": {
+    "skillId": 3158106,
+    "skillName": "影機械兵の尽力Ⅵ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "icon_androidSoldierShadow_s01",
+    "subResourceName": "",
+    "timing": 22,
+    "description": "敵からダメージを受けた時、20%の確率で攻撃してきた対象に1ターンの間毒を付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 22,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 89,
+        "prob": 20,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
   "3160101": {
     "skillId": 3160101,
     "skillName": "フィールドワーク主義Ⅰ",
@@ -72543,6 +74638,61 @@
       }
     ]
   },
+  "4015104": {
+    "skillId": 4015104,
+    "skillName": "マイクパフォーマンス",
+    "useView": 5000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。自身に1回の行動の間注目を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_polaris_eh01_02",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 216,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
   "4017101": {
     "skillId": 4017101,
     "skillName": "ヴィエ・キーマタ",
@@ -77109,6 +79259,68 @@
         "conditionDescription": "",
         "subIconAddress": "",
         "triggerJson": []
+      }
+    ]
+  },
+  "4031101": {
+    "skillId": 4031101,
+    "skillName": "テラス・プロドスィア",
+    "useView": 7000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵単体に160%ダメージ。自身に1ターンの間隠蔽を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_monomasa_eh01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 267,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 287,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "NotPinchExecTrigger",
+            "value": 50,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
       }
     ]
   },
@@ -99349,6 +101561,89 @@
       }
     ]
   },
+  "4115101": {
+    "skillId": 4115101,
+    "skillName": "ラクス・セルペンス・イーラ",
+    "useView": 9000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffOwn",
+    "timing": 0,
+    "description": "敵全体に120％ダメージ。自身にデバフが付与されている場合、敵に与えるダメージが60%に減少。自身に2回の行動の間SPDダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_gaius_eh01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnDeBuffNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 10,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
   "4116101": {
     "skillId": 4116101,
     "skillName": "一本突き",
@@ -107795,6 +110090,47 @@
         "skillEffectId": 1199,
         "prob": 100,
         "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4154107": {
+    "skillId": 4154107,
+    "skillName": "フレンジーブラスター",
+    "useView": 7000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に60%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainAndroidSoldier_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 4,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "randomGroupId": 0,
