@@ -114027,6 +114027,171 @@
       }
     ]
   },
+  "4181101": {
+    "skillId": 4181101,
+    "skillName": "ラン・イミテーション",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。Viewを3000獲得。スキル発動後、もう一度行動する（1ターンに1回まで）。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_idReplica_h01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 24,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 985,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4181102": {
+    "skillId": 4181102,
+    "skillName": "フライング・イン・ザ・ミラー",
+    "useView": 4000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_antiBuffAll",
+    "subResourceName": "s_skill_debuffAll",
+    "timing": 0,
+    "description": "敵全体のバフを１つ解除。1回分のDEFダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_idReplica_h01_02",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 36,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4181103": {
+    "skillId": 4181103,
+    "skillName": "イド・レプリカ",
+    "useView": 7000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に110%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_idReplica_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 257,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
   "6000001": {
     "skillId": 6000001,
     "skillName": "ダメージ制限20000",
@@ -115110,6 +115275,39 @@
     "effects": [
       {
         "skillEffectId": 328,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "6000038": {
+    "skillId": 6000038,
+    "skillName": "ダメージ制限30000",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "相手から受けるダメージの上限を30000にする。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 1,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 467,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,
@@ -135103,6 +135301,502 @@
         "conditionDescription": "",
         "subIconAddress": "",
         "triggerJson": []
+      }
+    ]
+  },
+  "6181101": {
+    "skillId": 6181101,
+    "skillName": "再生専念",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 6,
+    "description": "ピンチ状態になった時、自身のHPを最大HPの50%回復&1回の行動の間スタンを付与。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 6,
+      "trigger": null
+    },
+    "effects": []
+  },
+  "6181102": {
+    "skillId": 6181102,
+    "skillName": "再生専念",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 24,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 24,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1207,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 132
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1264,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 132
+          }
+        ]
+      },
+      {
+        "skillEffectId": 896,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 132
+          }
+        ]
+      }
+    ]
+  },
+  "6181103": {
+    "skillId": 6181103,
+    "skillName": "再生専念",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 21,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 21,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1207,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 132
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1264,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 132
+          }
+        ]
+      },
+      {
+        "skillEffectId": 896,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 132
+          }
+        ]
+      }
+    ]
+  },
+  "6181104": {
+    "skillId": 6181104,
+    "skillName": "再生専念",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 5,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 5,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1207,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 132
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1264,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 132
+          }
+        ]
+      },
+      {
+        "skillEffectId": 896,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 132
+          }
+        ]
+      }
+    ]
+  },
+  "6181105": {
+    "skillId": 6181105,
+    "skillName": "防御態勢",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "status_invincible",
+    "subResourceName": "",
+    "timing": 6,
+    "description": "ピンチ状態の時、相手からのダメージを無効化する。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 6,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 4070,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "6181107": {
+    "skillId": 6181107,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 3,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 229
+          },
+          {
+            "class": "EnemyTeamCountTrigger",
+            "value": 1,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 166
+          }
+        ]
+      },
+      {
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 229
+          },
+          {
+            "class": "EnemyTeamCountTrigger",
+            "value": 2,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 166
+          }
+        ]
+      },
+      {
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 229
+          },
+          {
+            "class": "EnemyTeamCountTrigger",
+            "value": 3,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 166
+          }
+        ]
+      },
+      {
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 229
+          },
+          {
+            "class": "EnemyTeamCountTrigger",
+            "value": 4,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 166
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1268,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 229
+          },
+          {
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 166
+          }
+        ]
+      },
+      {
+        "skillEffectId": 1273,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 166
+          }
+        ]
       }
     ]
   },

@@ -14624,7 +14624,10 @@
       "description": "ダメージ上限30000",
       "isImmediate": false,
       "persistence": true,
+      "reaminDeath": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -36405,6 +36408,40 @@
       "isOverrideStatusDescription": true
     }
   },
+  "1207": {
+    "skillEffectId": 1207,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeHp",
+          "parameter": {
+            "value": -50
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "最大HPの50%回復",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "1210": {
     "skillEffectId": 1210,
     "skillEffectJson": {
@@ -44443,6 +44480,40 @@
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
+    }
+  },
+  "4070": {
+    "skillEffectId": 4070,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 0
+          }
+        }
+      ],
+      "filename": "status_invincible",
+      "statusId": 132,
+      "canDispel": true,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "無敵（システム効果132番）",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ダメージ無効化",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "相手から受けるダメージを無効化する。バフでもデバフでもない状態。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
     }
   }
 }
