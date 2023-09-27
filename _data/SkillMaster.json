@@ -69381,6 +69381,61 @@
       }
     ]
   },
+  "4001112": {
+    "skillId": 4001112,
+    "skillName": "百烈打砲",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "skill_damageAll_2",
+    "subResourceName": "s_skill_buffOwn",
+    "timing": 0,
+    "description": "敵全体に120%ダメージ。自身に3回の行動の間ATKアップを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_akashi_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 4,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 3,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
   "4001201": {
     "skillId": 4001201,
     "skillName": "バブル・ボール",
@@ -69931,6 +69986,61 @@
       }
     ]
   },
+  "4002110": {
+    "skillId": 4002110,
+    "skillName": "メガトン・クラッシャー",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "skill_damage_2",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に200%ダメージ。3回分のDEFダウンを付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_mokdai_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 19,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 315,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
   "4003101": {
     "skillId": 4003101,
     "skillName": "スーツ・フロッギング",
@@ -70079,6 +70189,75 @@
       },
       {
         "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 12,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4003104": {
+    "skillId": 4003104,
+    "skillName": "エギュイーユ・ド・サルー",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "skill_damage_2",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に180%ダメージ。2回分のDEFダウンを付与。バフを全て解除。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_sui_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 21,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 9,
         "prob": 100,
         "effectTarget": 2,
         "sequenceGroupId": 0,
@@ -81305,6 +81484,116 @@
         "prob": 100,
         "effectTarget": 2,
         "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4035104": {
+    "skillId": 4035104,
+    "skillName": "ラン・フィクション",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。2ターンの間毒を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_exio_h01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 23,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4035105": {
+    "skillId": 4035105,
+    "skillName": "イド・レプリカ",
+    "useView": 9000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に150%ダメージ。2回分のDEFダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_exio_eh01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 11,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 9,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
         "probGroupId": 0,
         "randomGroupId": 0,
         "conditionEntityId": 0,
@@ -114357,6 +114646,88 @@
       }
     ]
   },
+  "4181104": {
+    "skillId": 4181104,
+    "skillName": "ラン・イミテーション",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に90%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_idReplica_h01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 4001,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4181105": {
+    "skillId": 4181105,
+    "skillName": "イド・レプリカ",
+    "useView": 4000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に70%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_idReplica_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
   "6000001": {
     "skillId": 6000001,
     "skillName": "ダメージ制限20000",
@@ -116650,6 +117021,24 @@
         "triggerJson": []
       }
     ]
+  },
+  "6001107": {
+    "skillId": 6001107,
+    "skillName": "？？？",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "status_buff_special",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "HP基礎値+??%。ATK+??%。Spd基礎値+??。View基礎値+??% 。自身の使用するスキル3のViewの消費を0にする。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": []
   },
   "6001201": {
     "skillId": 6001201,
@@ -136166,6 +136555,81 @@
     "effects": [
       {
         "skillEffectId": 4070,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "6181106": {
+    "skillId": 6181106,
+    "skillName": "生への妄執",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "",
+    "timing": 14,
+    "description": "戦闘不能になるダメージを受けた時、最大HPの1%で耐える。その後、自身に2ターンの休眠を付与。休眠が解除された時、自身のHPを最大まで回復する。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 14,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1082,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 53,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 1083,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 897,
         "prob": 100,
         "effectTarget": 0,
         "sequenceGroupId": 0,
