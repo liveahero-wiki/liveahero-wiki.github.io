@@ -134,7 +134,7 @@ module LahWiki
           status_icon = self.status_description_unknown(c['statusId'], 1)
           count = c['value']
           #f.push("target possessing &lt;=#{count}x #{status_icon}")
-          h["statusEnemy_#{c['statusId']}_1"]['min'] = count
+          h["statusEnemy_#{c['statusId']}_1"]['max'] = count
         when "TargetElementExecTrigger"
           element = @@element_map[c['element']] || "Unknown"
           f.push("target is #{element}")
@@ -172,7 +172,11 @@ module LahWiki
           range = ""
 
           if min == INVALID
-            range = "x &lt;= #{max}"
+            if max == 0
+              range = "x = 0"
+            else
+              range = "x &lt;= #{max}"
+            end
           elsif max == INVALID
             range = "x &gt; #{min}"
           elsif min + 1 == max
