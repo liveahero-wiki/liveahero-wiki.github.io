@@ -12,6 +12,10 @@
 {% assign sprites = sprites | append: "," | append: include.extra_sprites %}
 {% endif %}
 
+{% assign stockId = include.stockId | downcase %}
+{% assign cardProfileOverride = site.data.processed.CardProfileOverride[stockId].hero %}
+{% assign overrideIllustrator = site.data.processed.jp_profile[cardProfileOverride.illustrator] %}
+
 <div id="h{{ include.stockId }}" role="tabpanel" tabindex="0"  class="tabcontent contain element{{ firstCardInfo.element }}">
     <div class="heroinfobox">
         <div class="header">
@@ -29,7 +33,7 @@
                 </tr>
                 <tr>
                     <th colspan="2">Illustration</th>
-                    <td colspan="2">{% include chara-illustrator.html illustrator=firstCardInfo.illustrator %}</td>
+                    <td colspan="2">{% include chara-illustrator.html illustrator=firstCardInfo.illustrator override=overrideIllustrator %}</td>
                 </tr>
                 <tr>
                     <th colspan="2">Voice</th>
@@ -75,6 +79,29 @@
 </div>
 </details>
 {% endif %}
+{% endif %}
+
+{% assign spoiler_detail_h01 = site.data.processed.jp_bio[cardProfileOverride.detail_h01] %}
+{% assign spoiler_detail_h02 = site.data.processed.jp_bio[cardProfileOverride.detail_h02] %}
+{% if spoiler_detail_h01 or spoiler_detail_h02 %}
+<details style="margin-top: 30px">
+<summary>Spoilers</summary>
+
+{% if spoiler_detail_h01 %}
+<details>
+<summary>Personal Data 1</summary>
+<p>{{ spoiler_detail_h01 }}</p>
+</details>
+{% endif %}
+
+{% if spoiler_detail_h02 %}
+<details>
+<summary>Personal Data 2</summary>
+<p>{{ spoiler_detail_h02 }}</p>
+</details>
+{% endif %}
+
+</details>
 {% endif %}
 
 
