@@ -3,6 +3,8 @@ import os.path
 import json
 import sys
 
+from preprocess import *
+
 HEADER = {
   "User-Agent": "LiveAHeroAPI",
   'Accept-Encoding': 'gzip, deflate',
@@ -55,49 +57,6 @@ def downloadProperties(masterVersion, filename):
   with open(os.path.join("_data", "processed", filename), "wb") as f:
     f.write(data.encode())
 
-def dumpJson(filename, obj, **kwargs):
-  with open(filename, "w", encoding="utf-8", newline='\n') as f:
-    json.dump(obj, f, ensure_ascii=False, indent="", **kwargs)
-
-def processPropertiesFile(raw_file, bio_file, serif_file):
-    with open(os.path.join("_data", "processed", raw_file), "r", encoding="utf-8") as f:
-        lines = f.readlines()
-
-    detail = {}
-    serif = {}
-    
-    for line in lines:
-        s = line.split("=")
-
-        if s[0].startswith("DETAIL"):
-            detail[s[0]] = s[1][:-1].replace("<br><b><colo", "")
-
-        if s[0].startswith("SERIF"):
-            serif[s[0]] = s[1][:-1]
-
-    dumpJson(os.path.join("_data", "processed", bio_file), detail)
-    dumpJson(os.path.join("_data", "processed", serif_file), serif)
-
-def processShopFile():
-  with open(os.path.join("_data", "ShopMaster.json"), "r", encoding="utf-8") as f:
-    obj = json.load(f)
-
-  stores = obj["stores"]
-
-  for id, store in stores.items():
-    for p in store["products"]:
-      del p["storeProductNo"]
-    dumpJson(os.path.join("_data", "stores", id + ".json"), store)
-
-def processMasterDataCatalog():
-  with open(os.path.join("_data", "MasterDataCatalog.json"), "r", encoding="utf-8") as f:
-    obj = json.load(f)
-
-  obj = list(obj)
-  obj.sort()
-
-  dumpJson(os.path.join("_data", "MasterDataCatalog_list.json"), obj)
-
 if __name__ == '__main__':
   force_download = False
   if len(sys.argv) > 1:
@@ -116,6 +75,8 @@ if __name__ == '__main__':
 
   masterDataList = [
     'MasterDataCatalog',
+    'CardProfileOverrideMaster',
+    #'BattleModelCustomMaster',
     'SkillMaster',
     'SkillEffectMaster',
     'SkillUpgradeMaster',
@@ -141,6 +102,7 @@ if __name__ == '__main__':
 
   processMasterDataCatalog()
   processShopFile()
+  processCardProfileOverride()
 
   prop_files = [
     "Japanese.properties",
