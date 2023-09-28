@@ -20,7 +20,7 @@ There will be extra login bonus for 7 days as follow
 |----|-----------------------------------------------------------|
 | 1  | 100 {% include item.html id=2 %} ; 25 {% include item.html id=135 %} ; 125,000 {% include item.html id=11 %} ; 3 {% include item.html id=184 %} |
 | 2  | 10 {% include item.html id=2 %} ; 10 {% include item.html id=27 %} ;10 {% include item.html id=28 %} ;15,000 {% include item.html id=30 %} ; 150,000 {% include item.html id=35 %} |
-| 3  | 10 {% include item.html id=2 %} ; 125,000 {% include item.html id=35 %} ; 15,000 {% include item.html id=30 %} ; 150,000 {% include item.html id=35 % |
+| 3  | 10 {% include item.html id=2 %} ; 125,000 {% include item.html id=35 %} ; 15,000 {% include item.html id=30 %} ; 150,000 {% include item.html id=35 %} |
 | 4  | 10 {% include item.html id=2 %} ; 5 {% include item.html id=29 %} ; 50 {% include item.html id=59 %} |
 | 5  | 10 {% include item.html id=2 %} ; 50 {% include item.html id=59 %} ; 125,000 {% include item.html id=11 %} ; 15,000 {% include item.html id=30 %} ; 150,000 {% include item.html id=35 %} |
 | 6  | 10 {% include item.html id=2 %} ; 50 {% include item.html id=59 %} ; 15,000 {% include item.html id=30 %} ; 150,000 {% include item.html id=35 %} |
