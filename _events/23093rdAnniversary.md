@@ -150,8 +150,8 @@ is as follows:
 |----|
 | {% chara_link Shoen|h1 %}   |
 | {% chara_link Marfik|h1 %}   |
-| {% chara_link Polaris_Mask|h1 %}   |
-| {% chara_link Kouki|h1 %}   |
+| {% chara_link Polaris Mask|h1 %}   |
+| {% chara_link Kouki & Sirius|h1 %}   |
 | {% chara_link Gomeisa|h1 %}   |
 
 ### Others
