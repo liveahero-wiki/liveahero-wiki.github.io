@@ -11,12 +11,13 @@ def dumpJson(filename, obj, **kwargs):
         json.dump(obj, f, ensure_ascii=False, **kwargs)
 
 
-def processPropertiesFile(raw_file, bio_file, serif_file):
+def processPropertiesFile(raw_file, bio_file, serif_file, profile_file):
     with open(os.path.join("_data", "processed", raw_file), "r", encoding="utf-8") as f:
         lines = f.readlines()
 
     detail = {}
     serif = {}
+    profile = {}
 
     for line in lines:
         s = line.split("=")
@@ -27,8 +28,12 @@ def processPropertiesFile(raw_file, bio_file, serif_file):
         if s[0].startswith("SERIF"):
             serif[s[0]] = s[1][:-1]
 
+        if s[0].startswith("PROFILE_"):
+            profile[s[0]] = s[1][:-1]
+
     dumpJson(os.path.join("_data", "processed", bio_file), detail)
     dumpJson(os.path.join("_data", "processed", serif_file), serif)
+    dumpJson(os.path.join("_data", "processed", profile_file), profile)
 
 
 def processShopFile():
@@ -81,3 +86,4 @@ def processCardProfileOverride():
 
 if __name__ == "__main__":
     processCardProfileOverride()
+    processPropertiesFile("Japanese.properties", "jp_bio.json", "jp_serif.json", "jp_profile.json")

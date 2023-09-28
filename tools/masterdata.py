@@ -113,4 +113,4 @@ if __name__ == '__main__':
 
   for p in prop_files:
     downloadProperties(mV, p)
-  processPropertiesFile("Japanese.properties", "jp_bio.json", "jp_serif.json")
+  processPropertiesFile("Japanese.properties", "jp_bio.json", "jp_serif.json", "jp_profile.json")
