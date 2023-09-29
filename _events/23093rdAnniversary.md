@@ -157,7 +157,7 @@ is as follows:
 ### Others
 
 - User rank limit will be increased from 130 to 160
-- Half stamina for all training mission for the duration of this campaign
+- Double drop for all training mission for the duration of this campaign
 - Modify the store UI 
 - Added SS rank training mission
 - Added medal exchange, you can now exchange silver to gold, and gold to legend medal
