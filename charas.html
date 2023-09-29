@@ -45,7 +45,8 @@ additional_scripts: ["/assets/chara.js"]
 {% endfor %}
 </ul>
 
-<h2 id="unreleased">Unreleased units</h2>
+<details>
+<summary id="unreleased">Unreleased units</summary>
 
 {% assign unreleased = site.charas | where: "unreleased", true %}
 <ul>
@@ -55,3 +56,5 @@ additional_scripts: ["/assets/chara.js"]
   </li>
 {% endfor %}
 </ul>
+
+</details>
