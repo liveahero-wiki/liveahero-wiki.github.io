@@ -45,6 +45,7 @@ sidekicks:
     delicious.
 
     Circumstances have restrained his hero activities, so he has few of it.
+  extra_sprites: fg_roiker3rdAnniversary2309_s01
 ---
 
 {% include voice-table.html resourceName="roiker"
