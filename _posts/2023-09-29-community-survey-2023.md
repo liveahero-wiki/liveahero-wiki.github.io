@@ -357,7 +357,7 @@ Please contact me if you are able to make some interesting data visualizations!
 
 ## Game Merchandise and Extra Content
 
-(Too lazy to summarize since they are pretty repetitive, just see the published [Google Sheet data]((https://docs.google.com/spreadsheets/d/e/2PACX-1vTrabTnCvuE7vTSMkQZCHZTovFX6zwI_L2uHIpaxfnXIqhH7WnUd-Fm8i8QFsIS87SPElcJgbD20838/pubhtml?gid=1595719675&single=true)) yourself)
+(Too lazy to summarize since they are pretty repetitive, just see the published [Google Sheet data](https://docs.google.com/spreadsheets/d/e/2PACX-1vTrabTnCvuE7vTSMkQZCHZTovFX6zwI_L2uHIpaxfnXIqhH7WnUd-Fm8i8QFsIS87SPElcJgbD20838/pubhtml?gid=1595719675&single=true)) yourself)
 
 **I want to take this opportunity to say: I want more official books in digital form, because the oversea shipping fee from Japan is outrageously expensive!!**
 
