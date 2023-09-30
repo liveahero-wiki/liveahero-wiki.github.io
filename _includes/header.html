@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 
+{% assign page_title = page.title %}
+{% if page.url != "/" %}
+{% assign page_title = page_title | append: " - Live A Hero Wiki" %}
+{% endif %}
+
 <head>
-  <title>{{ page.title }}{% if page.url != "/" %} - Live A Hero Wiki{% endif %}</title>
+  <title>{{ page_title }}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,minimum-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   {% if page.hidden %}<meta name="robots" content="noindex">{% endif %}
   <meta name="theme-color" content="#ffa726">
+
+  <link rel="apple-touch-icon" href="{{ site.url }}/assets/img/logo192.png"/>
+  <!--<link rel="manifest" href="{{ site.url }}/assets/img/manifest.json"/>-->
+  <meta name="description" content="Live A Hero Wiki"/>
+  <meta property="og:title" content="{{ page_title }}"/>
+  <meta property="og:site_name" content="Live A Hero Wiki"/>
+  <meta property="og:description" content="{{ page_title }}"/>
+  <meta property="og:image" content="{{ site.url }}/assets/img/logo512.png"/>
+
   <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
   <link rel="stylesheet" type="text/css" href="/assets/main.css">
