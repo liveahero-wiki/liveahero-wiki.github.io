@@ -56,18 +56,17 @@ See a breakdown for each item every 1,000 multis (10,000 slots per row) [^bigtab
 
 #### Rates with Parallel Quartz (after Sept 30th 2021)
 
-sample size: 50,000 multis / 50,000,000 friend points
-
+sample size: 150,000 multis / 150,000,000 {% include item.html id=42 %}
 | Items | Drop rates |
 |-------|------------|
-| {% include item-icon.html id=219991 %} | 0.0088% |
-| {% include item-icon.html id=59 %} | 1.0100% |
-| {% include item-icon.html id=33 %} | 0.6522% |
-| {% include item-icon.html id=32 %} | 1.3162% |
-| {% include item-icon.html id=31 %} | 3.9570% |
-| {% include item-icon.html id=13 %} {% include item-icon.html id=16 %} {% include item-icon.html id=19 %} {% include item-icon.html id=22 %} {% include item-icon.html id=25 %} | 0.8350% |
-| {% include item-icon.html id=12 %} {% include item-icon.html id=15 %} {% include item-icon.html id=18 %} {% include item-icon.html id=21 %} {% include item-icon.html id=24 %} | 1.6988% |
-| {% include item-icon.html id=11 %} {% include item-icon.html id=30 %} {% include item-icon.html id=35 %} | 90.5220% |
+| {% include item-icon.html id=219991 %} | 0.01013% |
+| {% include item-icon.html id=59 %} | 0.99033% |
+| {% include item-icon.html id=33 %} | 0.64546% |
+| {% include item-icon.html id=32 %} | 1.32500% |
+| {% include item-icon.html id=31 %} | 3.92500% |
+| {% include item-icon.html id=13 %} {% include item-icon.html id=16 %} {% include item-icon.html id=19 %} {% include item-icon.html id=22 %} {% include item-icon.html id=25 %} | 0.82913% |
+| {% include item-icon.html id=12 %} {% include item-icon.html id=15 %} {% include item-icon.html id=18 %} {% include item-icon.html id=21 %} {% include item-icon.html id=24 %} | 1.69740% |
+| {% include item-icon.html id=11 %} {% include item-icon.html id=30 %} {% include item-icon.html id=35 %} | 90.58753% |
 
 ## Duplication System
 
