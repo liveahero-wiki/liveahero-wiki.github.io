@@ -24,7 +24,7 @@ sprites="fg_villainAndroidSoldierEarth_h01,fg_villainAndroidSoldierFire_h01,fg_v
 ### Armor Kaibutsu
 
 {% include hero-infobox-unreleased.html name="Armor Kaibutsu" mob=true
-sprites="fg_kaibutsuArmorBlack_h01"
+sprites="fg_kaibutsuArmor_h01,fg_kaibutsuArmorBlack_h01"
 %}
 
 ### Bird Kaibutsu (Large)
@@ -55,6 +55,24 @@ sprites="fg_kaibutsuGhostAdultEarth_h01,fg_kaibutsuGhostAdultFire_h01,fg_kaibuts
 
 {% include hero-infobox-unreleased.html name="Juvenile Ghost Kaibutsu" mob=true
 sprites="fg_kaibutsuGhostLarvaEarth_h01,fg_kaibutsuGhostLarvaFire_h01,fg_kaibutsuGhostLarvaLight_h01,fg_kaibutsuGhostLarvaShadow_h01,fg_kaibutsuGhostLarvaWater_h01"
+%}
+
+### Id Kaibutsu (Adult)
+
+{% include hero-infobox-unreleased.html name="Adult Id Kaibutsu" mob=true
+sprites="fg_kaibutsuIdAdultEarth_h01,fg_kaibutsuIdAdultFire_h01,fg_kaibutsuIdAdultFireBarrier_h01,fg_kaibutsuIdAdultLight_h01,fg_kaibutsuIdAdultShadow_h01,fg_kaibutsuIdAdultWater_h01"
+%}
+
+### Id Kaibutsu (Juvenile)
+
+{% include hero-infobox-unreleased.html name="Juvenile Id Kaibutsu" mob=true
+sprites="fg_kaibutsuIdLarvaEarth_h01,fg_kaibutsuIdLarvaFire_h01,fg_kaibutsuIdLarvaLight_h01,fg_kaibutsuIdLarvaShadow_h01,fg_kaibutsuIdLarvaWater_h01"
+%}
+
+### Id Replica
+
+{% include hero-infobox-unreleased.html name="Id Replica" mob=true
+sprites="fg_idReplica_h01"
 %}
 
 ### Jellyfish Kaibutsu
