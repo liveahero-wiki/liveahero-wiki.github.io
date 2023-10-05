@@ -31,6 +31,7 @@ sidekicks:
     you praise him for his physical strength or his good looks, he will be in a good
     mood. He lives in the same shipboard city and neighborhood as the carpenter
     Gorou. They're bad friends, but good drinking friends.
+  extra_sprites: fg_isaribi_s01_skin1,fg_isaribi_s01_skin2
 ---
 
 {% include voice-table.html resourceName="isaribi"

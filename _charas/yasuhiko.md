@@ -46,7 +46,7 @@ sidekicks:
     He is a young man who is cheerful, determined, and most of all loves to
     entertain, but his feud with his father and the dilemma of not being able to run
     the circus as he wishes cast a dark shadow on his mind.
-  extra_sprites: fg_yasuhiko_s01_skin1
+  extra_sprites: fg_yasuhiko_s01_skin1,fg_yasuhiko_s01_skin2
   extraPassiveSkillIds:
   - '8100101'
 ---

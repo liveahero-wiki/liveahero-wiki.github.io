@@ -25,6 +25,7 @@ sidekicks:
     A man with few words, due to his excessive concerns he try to show prickly attitude and make his target of protection hates him,
     so that they won't follow him to the battlefield.<br>
     He always carry a candy that his brother used to like, and have given it many times to anyone who is hungry.
+  extra_sprites: fg_phein_s01_skin1
 ---
 
 {% include voice-table.html resourceName="phein"

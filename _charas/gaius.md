@@ -37,6 +37,7 @@ sidekicks:
 
     He has a tattoo-esque pattern on his body, and often wears a wetsuit to hide it
     all.
+  extra_sprites: fg_gaius_s01_skin1
 ---
 
 {% include voice-table.html resourceName="gaius"

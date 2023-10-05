@@ -46,7 +46,7 @@ sidekicks:
 
     Only a handful of supporters and favored guests are invited to personally attend
     the theatre spacecraft live.
-  extra_sprites: fg_borealis_s01_skin1
+  extra_sprites: fg_borealis_s01_skin1,fg_borealis_s01_skin2,fg_borealis_s01_skin3
 ---
 
 {% include voice-table.html resourceName="borealis"

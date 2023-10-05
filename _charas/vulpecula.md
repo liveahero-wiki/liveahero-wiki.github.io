@@ -46,6 +46,7 @@ sidekicks:
 
     He always wears a fox mask and no one knows his true face, but because of that
     many copycats have appeared and begun to disturb society.
+  extra_sprites: fg_vulpecula_s01_skin1
 ---
 
 {% include voice-table.html resourceName="vulpecula"

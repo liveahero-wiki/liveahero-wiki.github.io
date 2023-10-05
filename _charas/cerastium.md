@@ -44,6 +44,7 @@ sidekicks:
 
     She is an overzealous fan of Zap the Justice, respects greatly, almost the point
     of worship.
+  extra_sprites: fg_cerastium_s01_skin1
 ---
 
 {% include voice-table.html resourceName="cerastium"

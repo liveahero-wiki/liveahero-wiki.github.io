@@ -50,7 +50,7 @@ sidekicks:
 
     He live by the rule of doing what's asked of him perfectly with the minimum
     effort possible.
-  extra_sprites: fg_santetsu3rdAnniversary2309_s01
+  extra_sprites: fg_santetsu_s01_skin1,fg_santetsu3rdAnniversary2309_s01
 ---
 
 {% include voice-table.html resourceName="santetsu"

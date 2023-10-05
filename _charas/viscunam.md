@@ -32,6 +32,7 @@ sidekicks:
     his clients, so he keeps coming up with bizarre products one after another.<br>
     Although his skills are solid, he has unusually bad luck, and his freewheeling
     disposition often leads him to make mistakes.
+  extra_sprites: fg_viscunam_s01_skin1
 ---
 
 {% include voice-table.html resourceName="viscunam"

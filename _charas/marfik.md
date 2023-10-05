@@ -75,7 +75,7 @@ sidekicks:
 
     On the other hand, he holds no interest whatsoever in the monetary value of the
     goods he digs out.
-  extra_sprites: fg_marfik3rdAnniversary2309_s01
+  extra_sprites: fg_marfik_s01_skin1,fg_marfik3rdAnniversary2309_s01
 ---
 
 {% include voice-table.html resourceName="marfik"

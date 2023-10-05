@@ -32,6 +32,7 @@ heroes:
   passiveSkillIds:
   - '8081101'
 - stockId: 10812
+  extra_sprites: fg_sadayoshiSurvival2309_h01_skin2,fg_sadayoshiSurvival2309_h01_skin3
 sidekicks:
 - stockId: 10811
   BIO_S01: |-
@@ -51,7 +52,7 @@ sidekicks:
 
     Due to him following the path in his life laid out for him, he has a bad time
     getting along with people who go don't follow their own path.
-  extra_sprites: fg_sadayoshi_s01_skin1
+  extra_sprites: fg_sadayoshi_s01_skin1,fg_sadayoshi_s01_skin2,fg_sadayoshi_s01_skin3
 ---
 
 {% include voice-table.html resourceName="sadayoshi"
