@@ -29330,7 +29330,7 @@
     "resourceName": "b_skill_damage",
     "subResourceName": "s_skill_debuffTeam",
     "timing": 0,
-    "description": "敵単体に180%ダメージ。1回の強化無効を付与。このスキルで敵を戦闘不能にした場合、自身に付与されているバフ効果を１ターン延長。",
+    "description": "敵単体に180%ダメージ。1回分の強化無効を付与。このスキルで敵を戦闘不能にした場合、自身に付与されているバフ効果を１ターン延長。",
     "cutin": [
       {
         "info": {
@@ -29406,7 +29406,7 @@
     "resourceName": "b_skill_damage",
     "subResourceName": "s_skill_debuffTeam",
     "timing": 0,
-    "description": "敵単体に200%ダメージ。1回の強化無効を付与。このスキルで敵を戦闘不能にした場合、自身に付与されているバフ効果を１ターン延長。",
+    "description": "敵単体に200%ダメージ。1回分の強化無効を付与。このスキルで敵を戦闘不能にした場合、自身に付与されているバフ効果を１ターン延長。",
     "cutin": [
       {
         "info": {
@@ -37162,7 +37162,28 @@
           "class": "NormalAttack"
         },
         "name": "skill_zaniah_h01_02",
-        "triggerJson": []
+        "triggerJson": [
+          {
+            "class": "TargetNotOwnTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_zaniah_h01_04",
+        "triggerJson": [
+          {
+            "class": "TargetIsOwnTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
       }
     ],
     "isEquip": false,
@@ -37348,7 +37369,7 @@
     "resourceName": "b_skill_damage",
     "subResourceName": "s_skill_debuffTeam",
     "timing": 0,
-    "description": "敵単体に70%ダメージ。40%の確率で1ターンの間火傷を付与。",
+    "description": "敵単体に70%ダメージ。40%の確率で2ターンの間火傷を付与。",
     "cutin": [
       {
         "info": {
@@ -37380,7 +37401,7 @@
         "triggerJson": []
       },
       {
-        "skillEffectId": 221,
+        "skillEffectId": 2,
         "prob": 40,
         "effectTarget": 2,
         "sequenceGroupId": 0,
@@ -71315,7 +71336,7 @@
     "resourceName": "icon_yuhang_s01",
     "subResourceName": "",
     "timing": 1,
-    "description": "自身を対象とするスキルによるHP回復効果の回復量+7.5%。オート行動時、敵が2体以上存在する場合は第3スキルを優先して使用する。",
+    "description": "自身を対象とする回復スキルによるHP回復効果の回復量+7.5%。オート行動時、敵が2体以上存在する場合は第3スキルを優先して使用する。",
     "cutin": [],
     "isEquip": true,
     "isHeroSkill": false,
@@ -71348,7 +71369,7 @@
     "resourceName": "icon_yuhang_s01",
     "subResourceName": "",
     "timing": 1,
-    "description": "自身を対象とするスキルによるHP回復効果の回復量+9%。オート行動時、敵が2体以上存在する場合は第3スキルを優先して使用する。",
+    "description": "自身を対象とする回復スキルによるHP回復効果の回復量+9%。オート行動時、敵が2体以上存在する場合は第3スキルを優先して使用する。",
     "cutin": [],
     "isEquip": true,
     "isHeroSkill": false,
@@ -71381,7 +71402,7 @@
     "resourceName": "icon_yuhang_s01",
     "subResourceName": "",
     "timing": 1,
-    "description": "自身を対象とするスキルによるHP回復効果の回復量+10.5%。オート行動時、敵が2体以上存在する場合は第3スキルを優先して使用する。",
+    "description": "自身を対象とする回復スキルによるHP回復効果の回復量+10.5%。オート行動時、敵が2体以上存在する場合は第3スキルを優先して使用する。",
     "cutin": [],
     "isEquip": true,
     "isHeroSkill": false,
@@ -71414,7 +71435,7 @@
     "resourceName": "icon_yuhang_s01",
     "subResourceName": "",
     "timing": 1,
-    "description": "自身を対象とするスキルによるHP回復効果の回復量+12%。オート行動時、敵が2体以上存在する場合は第3スキルを優先して使用する。",
+    "description": "自身を対象とする回復スキルによるHP回復効果の回復量+12%。オート行動時、敵が2体以上存在する場合は第3スキルを優先して使用する。",
     "cutin": [],
     "isEquip": true,
     "isHeroSkill": false,
@@ -71447,7 +71468,7 @@
     "resourceName": "icon_yuhang_s01",
     "subResourceName": "",
     "timing": 1,
-    "description": "自身を対象とするスキルによるHP回復効果の回復量+13.5%。オート行動時、敵が2体以上存在する場合は第3スキルを優先して使用する。",
+    "description": "自身を対象とする回復スキルによるHP回復効果の回復量+13.5%。オート行動時、敵が2体以上存在する場合は第3スキルを優先して使用する。",
     "cutin": [],
     "isEquip": true,
     "isHeroSkill": false,
@@ -71480,7 +71501,7 @@
     "resourceName": "icon_yuhang_s01",
     "subResourceName": "",
     "timing": 1,
-    "description": "自身を対象とするスキルによるHP回復効果の回復量+15%。オート行動時、敵が2体以上存在する場合は第3スキルを優先して使用する。",
+    "description": "自身を対象とする回復スキルによるHP回復効果の回復量+15%。オート行動時、敵が2体以上存在する場合は第3スキルを優先して使用する。",
     "cutin": [],
     "isEquip": true,
     "isHeroSkill": false,
@@ -91502,12 +91523,12 @@
   "4053202": {
     "skillId": 4053202,
     "skillName": "フレア・リインフォース",
-    "useView": 6000,
+    "useView": 2000,
     "targetFlag": 0,
-    "resourceName": "b_skill_buff",
-    "subResourceName": "s_skill_view",
+    "resourceName": "b_skill_view",
+    "subResourceName": "",
     "timing": 0,
-    "description": "味方単体に2回の行動の間ATKアップを付与。Viewを5000獲得。（敵専用）",
+    "description": "Viewを5000獲得。（敵専用）",
     "cutin": [
       {
         "info": {
@@ -91518,33 +91539,12 @@
       }
     ],
     "isEquip": false,
-    "isHeroSkill": true,
+    "isHeroSkill": false,
     "timingEntity": {
       "timing": 0,
       "trigger": null
     },
     "effects": [
-      {
-        "skillEffectId": 27,
-        "prob": 100,
-        "effectTarget": 1,
-        "sequenceGroupId": 0,
-        "probGroupId": 0,
-        "randomGroupId": 0,
-        "conditionEntityId": 0,
-        "conditionGroupId": 0,
-        "conditionPriority": 0,
-        "conditionDescription": "",
-        "subIconAddress": "",
-        "triggerJson": [
-          {
-            "class": "TargetElementDontExecTrigger",
-            "value": 0,
-            "element": 1,
-            "statusId": 0
-          }
-        ]
-      },
       {
         "skillEffectId": 52,
         "prob": 100,
@@ -107267,7 +107267,7 @@
         "info": {
           "class": "NormalAttack"
         },
-        "name": "skill_rexer_h01_01",
+        "name": "skill_rexer_eh01_01",
         "triggerJson": []
       }
     ],
@@ -107322,7 +107322,7 @@
         "info": {
           "class": "NormalAttack"
         },
-        "name": "skill_rexer_h01_02",
+        "name": "skill_rexer_eh01_02",
         "triggerJson": []
       }
     ],
