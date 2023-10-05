@@ -17,7 +17,21 @@ sales_end_time: 2023-10-26T20:00:00+09
 
 ## Event Preview
 
-coming soon
+W,where...is this!?
+
+It's summer vacation, and you were using the discount ticket that Hisaki gave you.
+You came to Muirauka IV, the ocean star, with everyone from Laborer's Site.
+
+There, you meet with a serious soldier who doesn't know how to relax
+and a lazy, carefree cook,
+It was going to be a lively and fun trip….
+
+However, the cruiser ship Isaribi boarded, thinking that it was a tour ship,
+turns out belonging to a clumsy domineering villain, the ship departed out of control!
+It finally arrived at an uninhabited island where a perfectionist hacker villain is hiding!
+
+Broken Ship! Zero connection! Villain all over the place! Something unsettling coming from the sea!
+You have only one goal, to return from this island alive!!
 
 ## Event Banners
 
