@@ -1,6 +1,8 @@
 ---
 title: Sadayoshi
 characterId: 81
+h2:
+  title: '"Wild Freedom" Sadayoshi'
 heroes:
 - stockId: 10811
   BIO_H01: |-
@@ -29,6 +31,7 @@ heroes:
     he will become a stronger and more resilient hero than ever before.
   passiveSkillIds:
   - '8081101'
+- stockId: 10812
 sidekicks:
 - stockId: 10811
   BIO_S01: |-
@@ -79,6 +82,9 @@ RELATION = "I don't understand Monomasa-dono's feelings.<br>His path was laid ou
 TOUCH = "Hmm... Is this a physical examination, officer?<br>I didn't bring anything suspicious with me, but...<br>If you are concerned about it, please go ahead and check it out."
 TRAIN = "The situation has begun. I will not go easy on you."
 TRAINED = "I guess I didn't train hard enough..."
+%}
+
+{% include voice-table.html resourceName="sadayoshisurvival2309"
 %}
 
 ## Notes:
