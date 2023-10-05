@@ -63,6 +63,9 @@ module LahWiki
         when "EnemyTeamCountTrigger"
           count = c['value']
           f.push("Enemy count=#{count}")
+        when "OwnTeamCountTrigger"
+          count = c['value']
+          f.push("Ally count=#{count}")
         when "MinComboTrigger"
           h['Combo']['min'] = c['value']
         when "MaxComboTrigger"
