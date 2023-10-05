@@ -74,6 +74,8 @@ module LahWiki
           f.push("HP&gt;=50<!--#{c['value']}-->%")
         when "PinchExecTrigger"
           f.push("HP&lt;50<!--#{c['value']}-->%")
+        when "ExistPinchTeamCharacterTrigger"
+          f.push("One ally's HP&lt;50<!--#{c['value']}-->%")
         when "MinHPTrigger"
           h['HP']['min'] = c['value']
         when "MaxnHPTrigger"

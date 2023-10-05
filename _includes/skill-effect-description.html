@@ -14,7 +14,7 @@
 {% for effect in skillEffectJson.effects %}
 
 {% if skillEffectJson.effects.size > 1 %}
-  {% if effect.class == "NoneEffect" or effect.class == "NoneEffectElapseTurnDamage" %}
+  {% if effect.class == "NoneEffect" or effect.class == "NoneEffectElapseTurnDamage" or effect.class == "NoneEffectElapseAfterTurnEnd" %}
     {% continue %}
   {% endif %}
 {% endif %}
@@ -80,7 +80,11 @@ Heal {{ target }} for {{ effect.parameter.value }}% of own ATK value
 {% when "HealMultipleAttack" %}
 Increase recovery amount of {{ target }}'s healing skill by {{ effect.parameter.value }}%
 {% when "HealMultipleDefence" %}
+{% if effect.parameter.value < 100 %}
 Reduce recovery amount of {{ target }}'s healing skill by {{ 100 | minus: effect.parameter.value }}%
+{% else %}
+Increase recovery amount of {{ target }}'s healing skill by {{ effect.parameter.value | minus: 100 }}%
+{% endif %}
 {% when "NeedViewChange" %}
 {% assign turnDefinition = "turn" %}
 Skill View cost {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x for {{ target }}
@@ -216,6 +220,8 @@ Resurrect {{ target }} to {{ effect.parameter.value }}% HP
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the highest SPD {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
 {% when "AimBossCharacter" %}
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the boss {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
+{% when "TriggerDecideAutoSkill" %}
+Prioritize skill {{ effect.parameter.value | plus: 1 }}
 {% when "ChangeSkillProbElapseTurnEnd" %}
 Proc rate of skill {{ effect.parameter.skillId }} is multiplied by {{ effect.parameter.value }}{% if effect.parameter.isPercent %}%{% else %}x{% endif %}
 {% else %}
