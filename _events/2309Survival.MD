@@ -69,7 +69,7 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 | {% chara_link Toshu|h2 %} | 20 |
 | {% chara_link Shaft|h2 %}  | 20 |
 | {% chara_link Cerastium|h1 %} | 10 | 
-| {% chara_link Rexer|h1 %} | 10 | 
+| {% chara_link reXer|h1 %} | 10 | 
 | {% chara_link Sadayoshi|h1 %} | 20 | 
 
 | Sidekick | +Bonus (%) |
@@ -81,7 +81,7 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 | {% chara_link Toshu %}  | 10 | 
 | {% chara_link Shaft %}  | 10 | 
 | {% chara_link Cerastium %}  | 10 |
-| {% chara_link Rexer %}  | 10 | 
+| {% chara_link reXer %}  | 10 | 
 | {% chara_link Isaribi %}  | 10 | 
 | {% chara_link Marfik %}  | 10 | 
 | {% chara_link Polaris Mask %}  | 10 | 
