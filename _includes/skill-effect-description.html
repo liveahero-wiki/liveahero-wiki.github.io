@@ -13,13 +13,24 @@
 {% if skillEffectJson.trigger %}{{ skillEffectJson.trigger | skill_trigger_json: include.timing }}{% endif %}
 {% for effect in skillEffectJson.effects %}
 
-{% if effect.class == "NoneEffect" and skillEffectJson.effects.size > 1 %}{% continue %}{% endif %}
+{% if skillEffectJson.effects.size > 1 %}
+  {% if effect.class == "NoneEffect" or effect.class == "NoneEffectElapseTurnDamage" %}
+    {% continue %}
+  {% endif %}
+{% endif %}
+
+{% if effect.class == "NoneEffect" or skillEffectJson.statudId == 0 %}
+  {% continue %}
+{% endif %}
+
 {% if effect.class == "ParticleStatus" %}{% continue %}{% endif %}
 
 {% assign turnDefinition = "action" %}
 {% case effect.class %}
 {% when "Damage" %}
 Deal {{ effect.parameter.value }}% of damage to {{ target }}
+{% when "NowHPDependDamageLimit" %}
+This skill's damage is capped at {{ effect.parameter.mult }}% of {{ target }} HP
 {% when "ChangeHp" %}
 {% assign turnDefinition = "turn" %}
 {% if effect.parameter.value >= 0 %}Decrease{% else %}Increase{% endif %} HP by {{ 0 | minus: effect.parameter.value }}% to {{ target }}
@@ -89,6 +100,8 @@ Give {{ target }} {{ 15 | status_description }}
 Ignore enemy's {{ 15 | status_description }}
 {% when "HealthDamage" %}
 Deal {% if effect.parameter.evaluationIsMax == true %}{{ effect.parameter.value | times: 2 }}% -> {{ effect.parameter.value }}%{% else %}{{ effect.parameter.value }}% -> {{ effect.parameter.value | times: 2 }}%{% endif %} damage to {{ target }} as HP goes from Max to 0
+{% when "GetViewDamage" %}
+Deal {{ effect.parameter.value }}% of damage to {{ target }}. Gain <code>damage x{{ effect.parameter.viewMult }}</code> worth of View.
 {% when "DeleteTurn" %}
 Skip {{ effect.parameter.value }} enemy action(s)
 {% when "Silence" %}

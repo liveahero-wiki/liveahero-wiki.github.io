@@ -60,6 +60,9 @@ module LahWiki
         when "ViewDontExecTrigger"
           count = c['value']
           f.push("View&lt;=#{count}")
+        when "EnemyTeamCountTrigger"
+          count = c['value']
+          f.push("Enemy count=#{count}")
         when "MinComboTrigger"
           h['Combo']['min'] = c['value']
         when "MaxComboTrigger"
