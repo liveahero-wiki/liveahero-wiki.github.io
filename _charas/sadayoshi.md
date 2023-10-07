@@ -32,6 +32,26 @@ heroes:
   passiveSkillIds:
   - '8081101'
 - stockId: 10812
+  BIO_H01: |-
+    Surviving in an unhabited island, Sadayoshi has been able to break through his usual defenses and unleash his own emotions better than before.
+  
+    His new suit is similar to beach volleyball players.
+  
+    His sun visor-shaped parallel weapon can capture a target and determines the point of attack,
+    then the ball-shaped parallel weapon becomes a high-density energy projectile that   always lands at that point.
+  
+    Sadayoshi, now lighter after shedding his huge glove-shaped parallel weapon, leaps freely with his body as high as he can go.
+  BIO_H02: |-
+    Pushing aside his selfishness, Sadayoshi eat and sleep together with the villains who follows their own beliefs, and come into contact with the true meaning of freedom.
+  
+    Although his firm belief that wrongdoing will not be tolerated remains unchanged,
+    he begins to believe that learning about the other person is the first step toward changing his stiff self.
+  
+    And then, instead of walk a path other wants him to, he will choose his own path.
+  
+    With his own emotions overflowing from the depths of his heart, he jumps on the beach and stares at the ball, not caring about the sweat that pours out of him.
+  
+    That face showed his experience and confidence, decorated with a dazzling smile.
   extra_sprites: fg_sadayoshiSurvival2309_h01_skin2,fg_sadayoshiSurvival2309_h01_skin3
 sidekicks:
 - stockId: 10811
