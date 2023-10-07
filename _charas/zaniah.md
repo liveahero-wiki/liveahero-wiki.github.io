@@ -1,4 +1,3 @@
-![image](https://github.com/liveahero-wiki/liveahero-wiki.github.io/assets/72242784/e6b07bb6-1e70-4e71-ac09-e8476956f408)---
 title: Zaniah
 characterId: 182
 heroes:
