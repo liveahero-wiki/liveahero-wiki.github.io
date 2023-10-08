@@ -23,7 +23,7 @@ heroes:
 sidekicks:
 - stockId: 11831
   BIO_S01: |-
-    He is a whimsical chef at a fine dining restaurant in Taipei, and his full name is Yuhang Chai.
+    He is a whimsical chef at a fine dining restaurant in Taipei, and his full name is Chai Yuhang.
   
     Foolishly optimistic, with a penchant of suddenly wandering around, carefree in behaviour.
   
@@ -50,4 +50,4 @@ EVENTB = "This…bivalve…! No matter what I do…dammit!<br>I can't open it! I
 
 ## Notes
 
-- His full name is Yuhang Chai (ツァイ・ユーハン)
+- His full name is Chai Yuhang (ツァイ・ユーハン)
