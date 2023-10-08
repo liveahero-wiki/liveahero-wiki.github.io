@@ -32,4 +32,14 @@ sidekicks:
 ---
 
 {% include voice-table.html resourceName="zaniah"
+APPRECIATION = "What, already exhausted?...<br>It's not even one lah and you're already down.<br>Just rest already. I will somehow deal with the rest."
+DAILY = "The evil flower that soar across the universe…hmhm, not a bad opening.<br>Shocking everyone with beautiful performance, Phantom thief Zaniah is here!<br>…okay, eh since when are you there!?"
+HERO = "I hate people in the upper class.<br>But that soldier…I can't feel the air of superiority from him, <br>and he chase the ball with such high spirits…is he really a soldier?"
+PLAYER = "…You, they say you lost your memories, is that true?<br>…I see. But you too, now have a family.<br>You and me, we should treasure them."
+RELATION = "Yuhang is such a sloppy person, but his cooking skills is top grade..<br>Ahh, just thinking about it makes me hungry…<br>I wonder what will be tonight's dinner!"
+TOUCH = "Kyah, what's with that over-familiar touch..!<br>Y,yes! My coat is expensive you know!<br>Just with your wallet is impossible, impossible! Come back later!"
+TRAIN = "Groan under my whip!"
+TRAINED = "This idiot, don't be so hard!"
+EVENTA = "I will soon get an amazing treasure!<br>A single ship is but a small price!...ah!<br>There is 1 lah here, it's mine! Ohohoho!"
+EVENTB = "The supreme treasure sunk in Muirauka IV...oh my goodness, I can't resist..! <br>I can't wait to see how much it's worth.<br>Just thinking about it makes my heart flutter!"
 %}
