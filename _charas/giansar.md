@@ -32,4 +32,14 @@ sidekicks:
 ---
 
 {% include voice-table.html resourceName="giansar"
+APPRECIATION = "Operator is an existence that is important for both villains and heroes.<br>Health management needs to be done perfectly. Leave this to me.<br>This degree of data input, I can finish it in two minutes."
+DAILY = "A job needs to be done perfectly.<br>It has to be done exactly as planned, right?<br>Well then, the one who are one minute late, why don't you give me an acceptable reason?"
+HERO = "That hero, and this hero.<br>Why are they licensed? I don't understand…!<br>Those cowards…I will perfectly weed them out."
+PLAYER = "I don't know anything about an operator's job.<br>But, you should always be repsonsible for the work you do.<br>Always aim for perfection, right?"
+RELATION = "His beliefs are too backward. He doesn't have a future.<br>But…this world is the one that puts us on the edge.<br>Until we change this world…we won't stop."
+TOUCH = "Stop touching me. I have found an isolated place for my intelligence device.<br>Even if you search my body or anything…<br>Wh, what a strong body? Uh..I, I see…"
+TRAIN = "I hope you have a plan when you challenge me?"
+TRAINED = "I'm tricked…!?"
+EVENTA = "Hah. Heroes with gaps in their security are gathering here.<br>Don't you know that it makes thing easy to get your avatar hijacked..?"
+EVENTB = "There is no way I'm inferior to those lot…<br>Yes, I will remind them.<br>I'm going to show this world…my worth."
 %}
