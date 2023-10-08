@@ -106,6 +106,16 @@ TRAINED = "I guess I didn't train hard enough..."
 %}
 
 {% include voice-table.html resourceName="sadayoshisurvival2309"
+APPRECIATION = "You look tired, officer...understandably so.<br>Let's build a simple base first, so that you can rest.<br>Wait for a little bit, I will collect the necessary materials."
+DAILY = "…never thought I will be stranded in an uninhabited island.<br>I have a lot of survival knowledge though.<br>Be at ease, we will certainly live and return together."
+HERO = "Giansar…I haven't change my stance that his misdeeds are unacceptable.<br>Just…whether he's a villain or not, I think I want to know more about him."
+PLAYER = "I was given an order to fully enjoy my holiday, but..<br>I just ends up wondering what is it that I should do.<br>Officer, how do you usually spend your time?"
+RELATION = "Phantom thief Zaniah…can she just stop with that self-proclaimed title!<br>The only result that will come from a small time villain proclaiming themselves like that is just more chance of being caught..<br>I really don't understand her meaning…"
+TOUCH = "Oh, what's the matter?<br>…no, I was wondering if you're worried about surviving on this island…<br>I will be by your side, be at ease and leave your body to me."
+TRAIN = "Come..let's have fun!"
+TRAINED = "T,this much…is nothing…!"
+EVENTA = "Those who don't have shipwreck training, don't be afraid, you can rely on me.<br>First is to procure water, like this coconut…hmph!<br>…burst it open, see it's this kind of liquid that we should procure."
+EVENTB = "Beach volley…hmm, this exercise seems to foster a sense of solidarity among personnel by playing a ball game together.<br>Then, I will give it my all, prepare youself!"
 %}
 
 ## Notes:
