@@ -107459,7 +107459,8 @@
         "info": {
           "class": "NormalAttack"
         },
-        "name": "skill_villainGiansar_h01_01"
+        "name": "skill_giansar_eh01_01",
+        "triggerJson": []
       }
     ],
     "isEquip": false,
@@ -107513,7 +107514,8 @@
         "info": {
           "class": "NormalAttack"
         },
-        "name": "skill_villainGiansar_h01_02"
+        "name": "skill_giansar_eh01_02",
+        "triggerJson": []
       }
     ],
     "isEquip": false,
@@ -107595,7 +107597,8 @@
         "info": {
           "class": "NormalAttack"
         },
-        "name": "skill_villainGiansar_h01_03"
+        "name": "skill_giansar_eh01_03",
+        "triggerJson": []
       }
     ],
     "isEquip": false,
@@ -121451,6 +121454,46 @@
         "conditionDescription": "",
         "subIconAddress": "",
         "triggerJson": []
+      }
+    ]
+  },
+  "6004114": {
+    "skillId": 6004114,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 21,
+    "description": "",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 21,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 4094,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 263
+          }
+        ]
       }
     ]
   },
