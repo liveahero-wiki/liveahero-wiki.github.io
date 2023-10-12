@@ -37248,6 +37248,48 @@
         "conditionDescription": "",
         "subIconAddress": "",
         "triggerJson": []
+      },
+      {
+        "skillEffectId": 857,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 1123101
+          }
+        ]
+      },
+      {
+        "skillEffectId": 864,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 136
+          }
+        ]
       }
     ]
   },
@@ -107638,6 +107680,116 @@
       }
     ]
   },
+  "4124104": {
+    "skillId": 4124104,
+    "skillName": "トロジャン・コード",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に60%ダメージ。60%の確率で1回分のDEFダウンを付与。【常時発動】Viewが5000以上ある場合、自身に「隠蔽」と同様の効果を発動。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_giansar_eh01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 60,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
+  "4124105": {
+    "skillId": 4124105,
+    "skillName": "カーネル・スティール",
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に1ターンの間照準を付与。スキル１を追加発動。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_giansar_h01_02",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 832,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      },
+      {
+        "skillEffectId": 486,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
   "4125101": {
     "skillId": 4125101,
     "skillName": "マン・メキャニキ",
@@ -127698,6 +127850,112 @@
       }
     ]
   },
+  "6074601": {
+    "skillId": 6074601,
+    "skillName": "大暴れ",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "自身がピンチ状態の場合、行動終了後にもう１度行動する。（1ターンに1度まで）",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 3,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 166
+          }
+        ]
+      },
+      {
+        "skillEffectId": 985,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [
+          {
+            "class": "PinchExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          },
+          {
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 166
+          }
+        ]
+      }
+    ]
+  },
+  "6074602": {
+    "skillId": 6074602,
+    "skillName": "エーテルエンジン",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "status_awakening",
+    "subResourceName": "",
+    "timing": 6,
+    "description": "ピンチ状態になった時、View消費量-50%。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 6,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 4074,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": []
+      }
+    ]
+  },
   "6076101": {
     "skillId": 6076101,
     "skillName": "ノイズカモフラージュ",
@@ -132279,6 +132537,24 @@
         "triggerJson": []
       }
     ]
+  },
+  "6124102": {
+    "skillId": 6124102,
+    "skillName": "戦局分析",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方が自分１人の時、2ターンに1度スキル2を使用する。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": []
   },
   "6125101": {
     "skillId": 6125101,
@@ -144802,7 +145078,7 @@
             "class": "OwnSystemStatusNumberExecTrigger",
             "value": 0,
             "element": 0,
-            "statusId": 131
+            "statusId": 1123101
           }
         ]
       },
@@ -144823,7 +145099,7 @@
             "class": "OwnSystemStatusNumberExecTrigger",
             "value": 0,
             "element": 0,
-            "statusId": 131
+            "statusId": 1123101
           }
         ]
       },
@@ -144844,7 +145120,7 @@
             "class": "OwnSystemStatusNumberExecTrigger",
             "value": 0,
             "element": 0,
-            "statusId": 131
+            "statusId": 1123101
           }
         ]
       }
