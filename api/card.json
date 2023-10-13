@@ -5,7 +5,7 @@ layout: none
 {%- for pair in site.data.SidekickMaster %}
 {%- assign unit = pair[1] %}
 {%- if unit.levelZone > 1 %}{%- continue %}{%- endif %}
-{%- capture info %}{"cardName":"{{ unit.stockId | stockIdToCharaTitle: 1 }}","resourceName":"{{ unit.resourceName}}"}{% endcapture %}
+{%- capture info %}{"cardName":"{{ unit.stockId | stockIdToCharaTitle: 1 }}","resourceName":"{{ unit.resourceName}}","rarity":{{ unit.rarity }}}{% endcapture %}
 {%- assign array = array | push: info %}
 {%- endfor %}
 [{{ array | join: "," }}]
