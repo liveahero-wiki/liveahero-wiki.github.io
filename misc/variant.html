@@ -15,7 +15,7 @@ For hero that has multiple variants, the latest one will be displayed.
 
 <p>For simplicity's sake, sidekick-only characters are not included here.</p>
 
-{% assign cardInfos = site.data.CardMaster | where: "stockOrder", 1 | where_exp: "item", "item.stockId < 90000" %}
+{% assign cardInfos = site.data.CardMaster | where: "stockOrder", 1 | where_exp: "item", "item.stockId < 90000 and item.rarity >= 3" %}
 {% assign group = cardInfos | group_by: "characterId" %}
 
 <ul id="hero-list" class="card-list">
