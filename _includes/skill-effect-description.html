@@ -81,9 +81,9 @@ Heal {{ target }} for {{ effect.parameter.value }}% of own ATK value
 Increase recovery amount of {{ target }}'s healing skill by {{ effect.parameter.value }}%
 {% when "HealMultipleDefence" %}
 {% if effect.parameter.value < 100 %}
-Reduce recovery amount of {{ target }}'s healing skill by {{ 100 | minus: effect.parameter.value }}%
+Reduce recovery amount of {{ target }}'s received healing by {{ 100 | minus: effect.parameter.value }}%
 {% else %}
-Increase recovery amount of {{ target }}'s healing skill by {{ effect.parameter.value | minus: 100 }}%
+Increase recovery amount of {{ target }}'s received healing by {{ effect.parameter.value | minus: 100 }}%
 {% endif %}
 {% when "NeedViewChange" %}
 {% assign turnDefinition = "turn" %}
