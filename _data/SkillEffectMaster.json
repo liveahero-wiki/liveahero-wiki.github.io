@@ -3718,7 +3718,10 @@
       "description": "150%ダメージ+Viewに応じてダメージ量が上昇",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -4013,7 +4016,10 @@
       "description": "HPを基礎ATKの30%回復する",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -13363,7 +13369,10 @@
       "description": "HPを基礎ATKの150%回復する",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -18177,6 +18186,41 @@
       ],
       "parameter": false,
       "description": "デバフを3つ解除",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "595": {
+    "skillEffectId": 595,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SpdDeferenceDamage",
+          "parameter": {
+            "value": 60,
+            "spdMult": 10
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "60%ダメージ+対象と自分のSPDの差だけダメージ量が上昇",
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
@@ -23666,7 +23710,10 @@
       "description": "サンテツ用クリティカル SPDアップが付与されている時用",
       "isImmediate": false,
       "persistence": true,
+      "reaminDeath": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -23848,7 +23895,10 @@
       "description": "サンテツ用クリティカル SPDが付与されてない時用",
       "isImmediate": false,
       "persistence": true,
+      "reaminDeath": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -32816,6 +32866,7 @@
       "description": "弱体抵抗+50",
       "isImmediate": false,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": true,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
@@ -33235,6 +33286,7 @@
       "description": "80%ダメージ。対象にデバフが付与されている場合、120％ダメージ。",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
@@ -33275,6 +33327,40 @@
       "overrideStatusName": "View消費量+2000",
       "isOverrideStatusName": true,
       "overrideStatusDescription": "Viewを消費するスキルのView消費量が2000増加する。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "1095": {
+    "skillEffectId": 1095,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": 1000
+          }
+        }
+      ],
+      "filename": "status_useless",
+      "statusId": 58,
+      "canDispel": true,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View消費量+1000",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "View消費量+1000",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "Viewを消費するスキルのView消費量が1000増加する。",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
     }
@@ -42662,7 +42748,7 @@
         3
       ],
       "parameter": false,
-      "description": "80%ダメージ+Viewに応じてダメージ量が上昇（20000で最大値）",
+      "description": "80%ダメージ+スキル発動後のViewに応じてダメージ量が上昇。 （最大160%まで上昇。スキル発動後のViewが20000の時最大ダメージに到達。）",
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
