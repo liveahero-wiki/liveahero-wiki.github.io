@@ -47,7 +47,11 @@ Gain {{ effect.parameter.value }}% of self's base view
 {% when "NotDamageSkillNeedViewValueChange" %}
 View cost of self's non-damaging skill changed by {{ effect.parameter.value }}
 {% when "MultipleDefence" %}
+{% if skillEffectJson.turn == 1 %}
+{% assign turnDefinition = "turn" %}
+{% else %}
 {% assign turnDefinition = "next attack" %}
+{% endif %}
 {% if effect.parameter.value == 0 %}Nullify incoming damage to {{ target }}{% else %}Incoming damage to {{ target }} {% if effect.parameter.value >= 100 %}increased{% else %}reduced{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x{% endif %}
 {% when "SpdRateEmitDefence" %}
 {% assign turnDefinition = "next attack" %}
@@ -142,6 +146,7 @@ Incoming damage increases by {{ effect.parameter.value }}% to {{ target }}
 {% when "Penetration" %}
 Make {{ target }} ignore Taunt
 {% when "TargetMark" %}
+{% assign turnDefinition = "turn" %}
 {{ target }} will have higher chance of being targeted when opponent is in auto action mode
 {% when "NoneEffectElapseTurnDamageAndTurnEnd" %}
 (Remove this effect at the end of turn even if unused){% continue %}
