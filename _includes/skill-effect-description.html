@@ -47,8 +47,11 @@ Gain {{ effect.parameter.value }}% of self's base view
 {% when "NotDamageSkillNeedViewValueChange" %}
 View cost of self's non-damaging skill changed by {{ effect.parameter.value }}
 {% when "MultipleDefence" %}
+{% if skillEffectJson.filterIds contains 12 %}
+{% else %}
 {% assign turnDefinition = "next attack" %}
 {% if effect.parameter.value == 0 %}Nullify incoming damage to {{ target }}{% else %}Incoming damage to {{ target }} {% if effect.parameter.value >= 100 %}increased{% else %}reduced{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x{% endif %}
+{% endif %}
 {% when "SpdRateEmitDefence" %}
 {% assign turnDefinition = "next attack" %}
 With "absolute SPD difference" x{{ effect.parameter.rate }}% chance, {% if effect.parameter.mult == 0 %}ignore incoming damage{% else %}incoming damage {% if effect.parameter.mult >= 100 %}increased{% else %}reduced{% endif %} to {{ effect.parameter.mult | divided_by: 100.0 }}x{% endif %} to {{ target }}
@@ -143,7 +146,7 @@ Incoming damage increases by {{ effect.parameter.value }}% to {{ target }}
 Make {{ target }} ignore Taunt
 {% when "TargetMark" %}
 {% assign turnDefinition = "turn" %}
-{{ target }} will have higher chance of being targeted when opponent is in auto action mode
+Apply {{ 123 | status_description }} to {{ target }}
 {% when "NoneEffectElapseTurnDamageAndTurnEnd" %}
 (Remove this effect at the end of turn even if unused){% continue %}
 {% when "AllAttack" %}
