@@ -21,6 +21,11 @@
 {% break %}{% comment %}Only use the first stockId, since they are usually refer to the same chara anyway{% endcomment %}
 {% endfor %}
 </ul></td></tr>
+{% when "HavingHeroCard" %}
+<tr><th>Card</th>
+<td>{{ cond.heroCardId | divided_by: 10 | stockIdToLink: 1 }}</td></tr>
+{% when "IsLimitBreakCard" %}
+{% comment %}Skipped{% endcomment %}
 {% else %}
 <tr><td>Unknown condition ({{ cond.class }})</td></tr>
 {% endcase %}
