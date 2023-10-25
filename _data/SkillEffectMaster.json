@@ -45825,5 +45825,72 @@
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
     }
+  },
+  "4096": {
+    "skillEffectId": 4096,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 126,
+      "canDispel": true,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "エーテル",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "エーテル",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "バフでもデバフでもない状態。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4101": {
+    "skillEffectId": 4101,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewChange",
+          "parameter": {
+            "value": 0
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":127,\"class\":\"OwnSystemStatusNumberExecTrigger\"}]",
+      "filename": "",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View消費量0%（システム効果127が付与されている時）",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
   }
 }
