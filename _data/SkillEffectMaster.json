@@ -43182,6 +43182,75 @@
       "isOverrideStatusDescription": false
     }
   },
+  "3041": {
+    "skillEffectId": 3041,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":11,\"class\":\"OwnDeBuffNumberExecTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 1184101,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "ATK+50%。バフでもデバフでも無い状態。スキルによる解除不可。ATKダウンが1つ以上付与されている時のみ発動。",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATK+50%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATK+50%。バフでもデバフでも無い状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "3042": {
+    "skillEffectId": 3042,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 1184101,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果1184101番除去",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "4001": {
     "skillEffectId": 4001,
     "skillEffectJson": {
@@ -45202,6 +45271,40 @@
       "isOverrideStatusDescription": true
     }
   },
+  "4075": {
+    "skillEffectId": 4075,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 110
+          }
+        }
+      ],
+      "filename": "status_atkup",
+      "statusId": 232,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "ATK+10%",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATK+10%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATK+10%。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
   "4076": {
     "skillEffectId": 4076,
     "skillEffectJson": {
@@ -45858,6 +45961,114 @@
       "isOverrideStatusDescription": true
     }
   },
+  "4097": {
+    "skillEffectId": 4097,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 18
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":126,\"class\":\"OwnSystemStatusNumberExecTrigger\"}]",
+      "filename": "status_immunity",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "毒無効(システム効果126付与中のみ)",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "毒無効",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "毒が付与されない。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4098": {
+    "skillEffectId": 4098,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 19
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":126,\"class\":\"OwnSystemStatusNumberExecTrigger\"}]",
+      "filename": "status_immunity",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "火傷無効(システム効果126付与中のみ)",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "火傷無効",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "火傷が付与されない。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4099": {
+    "skillEffectId": 4099,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 22
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":126,\"class\":\"OwnSystemStatusNumberExecTrigger\"}]",
+      "filename": "status_immunity",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "沈黙無効(システム効果126付与中のみ)",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "沈黙無効",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "沈黙が付与されない。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "4101": {
     "skillEffectId": 4101,
     "skillEffectJson": {
@@ -45891,6 +46102,80 @@
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
+    }
+  },
+  "4103": {
+    "skillEffectId": 4103,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 200
+          }
+        }
+      ],
+      "trigger": "[]",
+      "filename": "status_defdown",
+      "statusId": 128,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "被ダメージ+100%（システム）",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "弱点露出",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメージ+100%。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4104": {
+    "skillEffectId": 4104,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffectElapseTurnBeforeSkill",
+          "parameter": {
+            "avoidExtensionTurn": false
+          }
+        },
+        {
+          "class": "ForceAuto",
+          "parameter": []
+        }
+      ],
+      "filename": "status_confusion",
+      "statusId": 265,
+      "canDispel": true,
+      "filterIds": [
+        4,
+        13
+      ],
+      "parameter": false,
+      "description": "混乱",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
     }
   }
 }
