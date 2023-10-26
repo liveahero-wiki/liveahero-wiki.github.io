@@ -52,7 +52,7 @@ heroes:
     With his own emotions overflowing from the depths of his heart, he jumps on the beach and stares at the ball, not caring about the sweat that pours out of him.
   
     That face showed his experience and confidence, decorated with a dazzling smile.
-  extra_sprites: fg_sadayoshiSurvival2309_h01_skin2,fg_sadayoshiSurvival2309_h01_skin3
+  extra_sprites: fg_sadayoshiSurvival2309_h01_skin2,fg_sadayoshiSurvival2309_h01_skin3,fg_sadayoshiSurvival2309_h02_skin2
 sidekicks:
 - stockId: 10811
   BIO_S01: |-
