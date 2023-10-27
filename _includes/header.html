@@ -21,7 +21,12 @@
   <meta property="og:title" content="{{ page_title }}"/>
   <meta property="og:site_name" content="Live A Hero Wiki"/>
   <meta property="og:description" content="{{ page_title }}"/>
+{% if page.characterId %}
+{% assign cardId = page.characterId | times: 100 | plus: 100011 | downcase %}
+  <meta property="og:image" content="{{ site.url }}/cdn/Sprite/icon_{{ site.data.SidekickMaster[cardId].resourceName }}_s01.png"/>
+{% else %}
   <meta property="og:image" content="{{ site.url }}/assets/img/logo512.png"/>
+{% endif %}
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
