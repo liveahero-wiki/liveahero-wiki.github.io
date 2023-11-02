@@ -37,6 +37,7 @@ sidekicks:
     
     He is soft-spoken and gentle, but has no mercy on those who steal away his peaceful moments,
     and is rumored to be unruly when angered….
+  extra_sprites: fg_esperdica_s01_skin1
 ---
 
 {% include voice-table.html resourceName="esperdica"

@@ -28,6 +28,7 @@ sidekicks:
     
     He is sometimes in a daze and is said to be looking at other parallel universes, 
     but he does not want to talk much about what he has observed, so the truth is not known for certain.
+  extra_sprites: fg_raizi_s01_skin1
 ---
 
 {% include voice-table.html resourceName="raizi"

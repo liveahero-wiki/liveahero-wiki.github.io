@@ -42,7 +42,7 @@ sidekicks:
 
     Although she is a master to Sui, the sense of distance from her best friend's
     daughter is a little delicate because of the circumstances.
-  extra_sprites: fg_maculata_s01_skin1
+  extra_sprites: fg_maculata_s01_skin1,fg_maculata_s01_skin2,fg_maculata_s01_skin3
 ---
 
 {% include voice-table.html resourceName="maculata"
