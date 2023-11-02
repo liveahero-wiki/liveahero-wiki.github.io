@@ -39981,7 +39981,28 @@
           "class": "CutIn"
         },
         "name": "skill_yohack_h01_03",
-        "triggerJson": []
+        "triggerJson": [
+          {
+            "class": "TargetNotOwnTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_yohack_h01_04",
+        "triggerJson": [
+          {
+            "class": "TargetIsOwnTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
       }
     ],
     "isEquip": false,
