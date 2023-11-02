@@ -2,7 +2,7 @@
 title: Moonlight Dance ～Masquerade of Conspiracy～
 jp_title: 月光群舞 ～陰謀のマスカレード～
 news_link: https://live-a-hero.jp/info/7049
-banner_image: Sprite/ui_banner_info_Masquerade2310.jpg
+banner_image: ui_banner_info_Masquerade2310.jpg
 gacha: true
 event_start_time: 2023-11-02T20:00:00+09
 event_end_time: 2023-11-30T14:00:00+09
