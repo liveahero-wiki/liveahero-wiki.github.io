@@ -1,6 +1,8 @@
 ---
 title: Nessen
 characterId: 51
+h2:
+  title: '"Moonlight Shadow" Nessen'
 heroes:
 - stockId: 10511
   BIO_H01: |-
@@ -19,6 +21,7 @@ heroes:
     gratitude to the city, and he became a hero in order to protect it from peace-
     threatening beings. As long as his beloved city continues to develop as a
     tourist destination, his dream will never stop.
+- stockId: 10512
 sidekicks:
 - stockId: 10511
   BIO_S01: |-
@@ -58,6 +61,9 @@ RELATION = "Nobeyama sensei is a frequent guest at our hotel.<br>He said that, s
 TOUCH = "Oops, What's the matter?<br>A, my hair is still rather wet? Pardon me,<br>I was taking a bath until a few minutes ago.."
 TRAIN = "When this is over, let's take a bath."
 TRAINED = "I can't stop sweating…!"
+%}
+
+{% include voice-table.html resourceName="nessenMasquerade2310"
 %}
 
 ## Notes
