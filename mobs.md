@@ -166,6 +166,12 @@ sprites="fg_villainTraineeNinjaEarth_s01,fg_villainTraineeNinjaFire_s01,fg_villa
 sprites="fg_villainTraineeNinjaEarth_h01,fg_villainTraineeNinjaFire_h01,fg_villainTraineeNinjaLight_h01,fg_villainTraineeNinjaShadow_h01,fg_villainTraineeNinjaWater_h01"
 %}
 
+### Octopus Kaibutsu
+
+{% include hero-infobox-unreleased.html name="Octopus Kaibutsu" mob=true
+sprites="fg_kaibutsuOctopusEarth_h01,fg_kaibutsuOctopusFire_h01,fg_kaibutsuOctopusLight_h01,fg_kaibutsuOctopusShadow_h01,fg_kaibutsuOctopusWater_h01"
+%}
+
 ### Palanquin Kaibutsu
 
 {% include hero-infobox-unreleased.html name="Palanquin Kaibutsu" mob=true
