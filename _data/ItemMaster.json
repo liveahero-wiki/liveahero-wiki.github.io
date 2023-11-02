@@ -2149,6 +2149,80 @@
     ],
     "limitValue": 0
   },
+  "190": {
+    "itemId": 190,
+    "itemName": "マスカレード・コサージュ",
+    "resourceName": "Masquerade2310_exchange01",
+    "rarity": 0,
+    "itemType": 512,
+    "description": "服飾職人が一つ一つ作り上げたコサージュ。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "191": {
+    "itemId": 191,
+    "itemName": "ハロウィンの街ホログラム",
+    "resourceName": "icon_bg_battle_halloweentown_night_decoration",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景にハロウィンの街を投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_halloweentown_night_decoration",
+        "bgTitleKey": "TITLE_BG_BATTLE_HALLOWEENTOWN_NIGHT_DECORATION_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
+  "192": {
+    "itemId": 192,
+    "itemName": "バルコニーホログラム",
+    "resourceName": "icon_bg_battle_castlebalcony_night",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景にバルコニーを投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_castlebalcony_night",
+        "bgTitleKey": "TITLE_BG_BATTLE_CASTLEBALCONY_NIGHT_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
+  "193": {
+    "itemId": 193,
+    "itemName": "月光群舞ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "月光群舞 ～陰謀のマスカレード～のBGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_masquerade_adv",
+        "bgmTitleKey": "TITLE_BGM_MASQUERADE_ADV_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "194": {
+    "itemId": 194,
+    "itemName": "月光群舞戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "月光群舞 ～陰謀のマスカレード～の戦闘BGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_masquerade_battle1",
+        "bgmTitleKey": "TITLE_BGM_MASQUERADE_BATTLE1_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -3405,6 +3479,27 @@
     ],
     "limitValue": 0
   },
+  "110512": {
+    "itemId": 110512,
+    "itemName": "月影のネッセンの記憶片",
+    "resourceName": "piece_nessenMasquerade2310",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "月影のネッセンのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10512
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
   "110531": {
     "itemId": 110531,
     "itemName": "ヒサキの記憶片",
@@ -4612,6 +4707,48 @@
         "addFan": 50,
         "rarity": 0,
         "stockId": 11831
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "111891": {
+    "itemId": 111891,
+    "itemName": "アストシスの記憶片",
+    "resourceName": "piece_astosis",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "アストシスのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 11891
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
+  "111901": {
+    "itemId": 111901,
+    "itemName": "ヨハックの記憶片",
+    "resourceName": "piece_yohack",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "ヨハックのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 11901
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
@@ -6512,6 +6649,46 @@
     ],
     "limitValue": 0
   },
+  "211891": {
+    "itemId": 211891,
+    "itemName": "アストシスの心",
+    "resourceName": "heart_astosis",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "アストシスのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 11891
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ],
+    "limitValue": 0
+  },
+  "211901": {
+    "itemId": 211901,
+    "itemName": "ヨハックの心",
+    "resourceName": "heart_yohack",
+    "rarity": 4,
+    "itemType": 2048,
+    "description": "ヨハックのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 11901
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
   "219991": {
     "itemId": 219991,
     "itemName": "@playerNameの心",
@@ -7382,6 +7559,16 @@
     "effect": [],
     "limitValue": 0
   },
+  "21051201": {
+    "itemId": 21051201,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
   "21053101": {
     "itemId": 21053101,
     "itemName": "開花の波動",
@@ -7964,6 +8151,26 @@
   },
   "21183101": {
     "itemId": 21183101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21189101": {
+    "itemId": 21189101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21190101": {
+    "itemId": 21190101,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,
