@@ -98,6 +98,8 @@ Apply {{ skillEffectJson.statusId | status_description }} to {{ target}}<br>&nbs
 Remove {{ effect.parameter.value }} debuff(s) from {{ target }}
 {% when "RegistDebuff" %}
 &quot;{{ effect.parameter.value }}% chance to resist {% if effect.parameter.statusId == 0 %}one debuff{% else %}{{ effect.parameter.statusId | status_description }}{% endif %}&quot; for {{ target }}
+{% when "RegistBuff" %}
+&quot;{{ effect.parameter.value }}% chance to resist {% if effect.parameter.statusId == 0 %}one buff{% else %}{{ effect.parameter.statusId | status_description }}{% endif %}&quot; for {{ target }}
 {% when "Provocation" %}
 {% assign turnDefinition = "turn" %}
 Give {{ target }} {{ 5 | status_description }}: opponents can target only {{ target }}
@@ -229,6 +231,13 @@ Resurrect {{ target }} to {{ effect.parameter.value }}% HP
 Prioritize skill {{ effect.parameter.value | plus: 1 }}
 {% when "ChangeSkillProbElapseTurnEnd" %}
 Proc rate of skill {{ effect.parameter.skillId }} is multiplied by {{ effect.parameter.value }}{% if effect.parameter.isPercent %}%{% else %}x{% endif %}
+{% when "PassiveBattleSkillEffect" %}
+Grant this skill to {{ target }}
+{% assign new_skill_id = effect.parameter.skillId | downcase %}
+{% assign new_skill = site.data.SkillMaster[new_skill_id] %}
+<fieldset>
+{% include skill-description.html skillId=new_skill_id skill=new_skill %}
+</fieldset>
 {% else %}
 Unknown effect class ({{ effect.class }})
 {% endcase %}
