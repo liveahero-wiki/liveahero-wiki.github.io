@@ -12,7 +12,7 @@
 {% for skillEffect in randomGroup.items %}
 {% comment %}Exclude skill tree effect for now{% endcomment %}
 {% if skillEffect.prob > 0 and skillEffect.conditionEntityId == 0 %}
-{% include skill-effect-description.html skillEffect=skillEffect timing=include.skill.timing %}
+  {% include skill-effect-description-v2.html skillEffect=skillEffect timing=include.skill.timing %}
 {% endif %}
 {% endfor %}
 
