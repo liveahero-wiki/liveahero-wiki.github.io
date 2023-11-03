@@ -45,6 +45,18 @@ sprites="fg_kaibutsuBirdSmallEarth_h01,fg_kaibutsuBirdSmallFire_h01,fg_kaibutsuB
 sprites="fg_cetus_s01,fg_cetus_s01_skin1,fg_cetus_h01"
 %}
 
+### Chasseur
+
+{% include hero-infobox-unreleased.html name="Chasseur" mob=true
+sprites="fg_villainChasseurEarth_s01,fg_villainChasseurFire_s01,fg_villainChasseurLight_s01,fg_villainChasseurShadow_s01,fg_villainChasseurWater_s01"
+%}
+
+### Chasseur (Transform)
+
+{% include hero-infobox-unreleased.html name="Chasseur (Transform)" mob=true
+sprites="fg_villainChasseurEarth_h01,fg_villainChasseurFire_h01,fg_villainChasseurLight_h01,fg_villainChasseurShadow_h01,fg_villainChasseurWater_h01"
+%}
+
 ### Ghost Kaibutsu (Adult)
 
 {% include hero-infobox-unreleased.html name="Adult Ghost Kaibutsu" mob=true
