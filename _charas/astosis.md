@@ -38,3 +38,10 @@ TRAINED = "That was intense....... I'll remember that...!"
 EVENTA = "The Poderna is historically and culturally significant garment.<br>It isn't common for the public to see it like this.<br>Working security on an artifact like this is a rare opportunity, so why not take a closer look?"
 EVENTB = "Your reputation precedes you.<br>I've heard you're a very good operator.<br>The police seem to trust in your abilities as well.<br>I have high expectations."
 %}
+
+## Notes
+
+- His Skill name is from Greek language:
+  - Gia ti Alítheia (για τη αλήθεια) : For The Truth
+  - Kríne ti Oikouméni (κρῖνε τη οἰκουμένη) : Judge The World
+  - Zygós Dikaiosýnis (ζυγός δικαιοσύνης) : Yoke of Justice
