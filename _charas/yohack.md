@@ -41,3 +41,10 @@ TRAINED = "A-aaiieee~! Please be gentleee! "
 EVENTA = "This is my first time meeting an operator in the field!<br>Let's work hard on security at the museum!<br>Oh, and we can go to the party together after! Yay!"
 EVENTB = "Masquerade? Like wearing masks and dancing?<br>Yes, I understand it! I've never done it before.<br>Leave it to me! I'm sure we'll figure it out!"
 %}
+
+## Notes
+
+- His Skill name is from Latin language:
+  - Reserans : Unlocking
+  - Semita Lucis : Path of Light
+  - Omnes Cravis : Master Key
