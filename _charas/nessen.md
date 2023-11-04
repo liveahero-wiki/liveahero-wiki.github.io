@@ -22,6 +22,18 @@ heroes:
     threatening beings. As long as his beloved city continues to develop as a
     tourist destination, his dream will never stop.
 - stockId: 10512
+  BIO_H01: |-
+    In order to get inspiration for a new event planned for the Inn, Nessen visited the traditional festival.
+    What I saw there was people doing their best to liven up the festival for their own enjoyment.
+    Nessen's new form to protect the people enjoying the party is wearing a hero suit reminiscent of the night sky.
+    His parallel weapon, the ornament sewn into the suit, generates light that changes shape at will.
+    The light becomes a dance partner that unites offense and defense, dancing on the battlefield with Nessen.
+  BIO_H02: |-
+    In the words of a clothing craftsman,
+    "I don't know if my feelings will reach the other person, but I just put everything I have into it and give it a shape,"
+    Nessen reexamines his own hospitality with that in mind. Even if you don't know for sure how your actions will be taken by others, you just continue to provide as best you can.
+    Beyond that, there was a spirit of hospitality that Nessen was aiming for.
+    Nessen's eyes shine like the night sky that gently welcomes the moon, as he looks ahead to the path he is aiming for with determination.
 sidekicks:
 - stockId: 10511
   BIO_S01: |-
@@ -64,6 +76,17 @@ TRAINED = "I can't stop sweating…!"
 %}
 
 {% include voice-table.html resourceName="nessenMasquerade2310"
+APPRECIATION = "You look tired, Commander.<br>If you would like, I would be happy to give you a massage.<br>...Relax your body and give yourself to me."
+DAILY = "Ah, this tea would go well with the inn's pastries.<br>Oh, and wouldn't those decorations look wonderful in with the lobby?<br>Oops, excuse me. It's a bad habit..."
+HERO = "Mr. Astosis said that he always gives hugs as a greeting.<br>I was a little surprised considering how distant he seems otherwise...<br>I suppose everyone has their own quirks."
+PLAYER = "Commander. Excuse me, my costume is a little disheveled...<br>...There we are. I want you to be proud to be seen with me, so a mussed outfit won't do."
+RELATION = "Yohack's beaming smile and that talent for making people feel at ease... <br>he would go far in the hospitality industry.<br> I wonder if he's looking to change careers...
+Oh, no, pay me no mind."
+TOUCH = "Oh, you are asking me to dance?<br>Well then, Commander, please take my hand.<br>...closer. Allow me to lead, okay?"
+TRAIN = "It's going to be a little intense, are you ready?"
+TRAINED = "How...hot!"
+EVENTA = "The beautiful decorations of the city, the costumes of the people.<br>I can feel the attention to detail in all of them.<br>It makes me want to look at them forever...."
+EVENTB = "...You want to attend the party as a guest?<br>I had planned to inspect the host's side...<br>Well, perhaps this would be a good opportunity to learn the guests' point of view."
 %}
 
 ## Notes
