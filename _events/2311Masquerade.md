@@ -17,7 +17,7 @@ sales_end_time: 2023-11-23T20:00:00+09
 
 ## Event Preview
 
-In that city, a festival is held in honor of a beautiful star that resembles the moon --
+In that city, a festival is held in honor of a beautiful star that resembles the moon
 
 At the masked ball, which is the main event of the festival,
 A dress called "Poderna", which is very precious culturally and historically, will be on display.
