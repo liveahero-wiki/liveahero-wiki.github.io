@@ -17,7 +17,21 @@ sales_end_time: 2023-11-23T20:00:00+09
 
 ## Event Preview
 
-Coming soon
+In that city, a festival is held in honor of a beautiful star that resembles the moon --
+
+At the masked ball, which is the main event of the festival,
+A dress called "Poderna", which is very precious culturally and historically, will be on display.
+
+The request for security support is accepted by the imposing lawyer,
+Maculata with her eyes shining, proposed to accompany him.
+Together with a naive locksmith you meets in town and a gentlemanly manager of a hot spring inn,
+You stroll through the bustling festival.
+
+The sun eventually sets, and you set out to guard the masquerade ball,
+You go to the old castle where the event is to be held.....
+What awaits you there is an upheaval that no one expected.
+
+Tonight, numerous intrigues and schemes are intertwined, and a masquerade of conspiracy is about to begin...
 
 ## Event Banners
 
