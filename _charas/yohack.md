@@ -47,4 +47,4 @@ EVENTB = "Masquerade? Like wearing masks and dancing?<br>Yes, I understand it! I
 - His Skill name is from Latin language:
   - Reserans : Unlocking
   - Semita Lucis : Path of Light
-  - Omnes Cravis : Master Key
+  - Omnes Clavis : Master Key
