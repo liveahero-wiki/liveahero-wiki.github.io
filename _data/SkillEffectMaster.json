@@ -43852,6 +43852,108 @@
       "isOverrideStatusDescription": false
     }
   },
+  "3056": {
+    "skillEffectId": 3056,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "trigger": "[{\"value\":1,\"element\":0,\"statusId\":18,\"class\":\"EnemyDeBuffNumberExecTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 133,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "毒が付与されている場合、ATK+50%",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "ATK+50%",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3057": {
+    "skillEffectId": 3057,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "trigger": "[{\"value\":1,\"element\":0,\"statusId\":19,\"class\":\"EnemyDeBuffNumberExecTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 134,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "火傷が付与されている場合、ATK+50%",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "ATK+50%",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3058": {
+    "skillEffectId": 3058,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NowViewDamage",
+          "parameter": {
+            "value": 130,
+            "viewMult": 40
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1,
+        3
+      ],
+      "parameter": false,
+      "description": "敵単体に130%ダメージ+Viewに応じてダメージ量が上昇（最大260%まで上昇。スキル発動後のViewが25000の時最大ダメージに到達）",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "4001": {
     "skillEffectId": 4001,
     "skillEffectJson": {
@@ -47269,6 +47371,40 @@
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4127": {
+    "skillEffectId": 4127,
+    "skillEffectJson": {
+      "turn": 5,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeAgi",
+          "parameter": {
+            "value": 30
+          }
+        }
+      ],
+      "filename": "status_superagiup",
+      "statusId": 20,
+      "canDispel": true,
+      "filterIds": [
+        6
+      ],
+      "parameter": false,
+      "description": "超SPDアップ",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",

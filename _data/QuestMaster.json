@@ -14035,7 +14035,8 @@
       {
         "class": "HavingStockCard",
         "stockIds": [
-          10321
+          10321,
+          10322
         ],
         "isBannerDisplay": true
       }
@@ -14159,7 +14160,8 @@
       {
         "class": "HavingStockCard",
         "stockIds": [
-          10181
+          10181,
+          10182
         ],
         "isBannerDisplay": true
       }
@@ -14346,7 +14348,8 @@
       {
         "class": "HavingStockCard",
         "stockIds": [
-          10511
+          10511,
+          10512
         ],
         "isBannerDisplay": true
       }
@@ -119717,6 +119720,89 @@
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
   },
+  "1073005": {
+    "questId": 1073005,
+    "questName": "騒乱、そして今",
+    "subName": "第５話",
+    "questKind": 5,
+    "chapterId": 1073,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2023-11-14 18:00:00",
+    "endAt": "2023-11-30 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 5,
+    "enemyLevel": 13,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1073004,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainChasseurWater_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 106
+      },
+      {
+        "battleInfoIcon": "icon_villainChasseurLight_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 105
+      },
+      {
+        "battleInfoIcon": "icon_villainChasseurEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 104
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
   "1074001": {
     "questId": 1074001,
     "questName": "月下の仮面舞踏会",
@@ -120548,6 +120634,156 @@
         "battleInfoIcon": "icon_villainShadow_h01",
         "battleInfoElement": 5,
         "battleInfoSpd": 111
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1076003": {
+    "questId": 1076003,
+    "questName": "無頼、招待状なきゲスト",
+    "subName": "第３話高難易度",
+    "questKind": 6,
+    "chapterId": 1076,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2023-11-14 18:00:00",
+    "endAt": "2023-11-30 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 3,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 25000,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 33,
+        "objectValue": 5,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 34,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1073003,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_gaisei_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 112
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1076004": {
+    "questId": 1076004,
+    "questName": "幕間、絢爛たるマスカレード",
+    "subName": "第４話高難易度",
+    "questKind": 6,
+    "chapterId": 1076,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2023-11-14 18:00:00",
+    "endAt": "2023-11-30 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 4,
+    "enemyLevel": 55,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 29,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1073004,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 95
+      },
+      {
+        "battleInfoIcon": "icon_gaisei_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 112
+      },
+      {
+        "battleInfoIcon": "icon_villainFire_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 100
       }
     ],
     "hasAdv": false,
