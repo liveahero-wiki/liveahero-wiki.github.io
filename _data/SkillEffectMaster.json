@@ -42613,6 +42613,39 @@
       "isOverrideStatusDescription": true
     }
   },
+  "2002": {
+    "skillEffectId": 2002,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Hide",
+          "parameter": []
+        }
+      ],
+      "trigger": "[{\"value\":10000,\"element\":0,\"statusId\":0,\"class\":\"ViewDontExecTrigger\"}]",
+      "filename": "status_hide",
+      "statusId": 199,
+      "canDispel": true,
+      "filterIds": [
+        12
+      ],
+      "parameter": false,
+      "description": "View10000以下の時隠蔽",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "緊急隠蔽",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ViewPowerが10000以下の時、相手から狙われなくなる。ターン経過で解除される。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
   "3001": {
     "skillEffectId": 3001,
     "skillEffectJson": {
@@ -47412,6 +47445,38 @@
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
+    }
+  },
+  "4128": {
+    "skillEffectId": 4128,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffectElapseTurnBeforeSkill",
+          "parameter": {
+            "avoidExtensionTurn": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果127番付与（発動準備）",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "発動準備",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "次の行動でスキル3を使用する。バフでもデバフでもない状態。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
     }
   }
 }
