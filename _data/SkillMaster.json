@@ -3615,6 +3615,171 @@
       }
     ]
   },
+  "100": {
+    "skillId": 100,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に最大HPの30%のダメージ",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 914,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": []
+      }
+    ]
+  },
+  "101": {
+    "skillId": 101,
+    "skillName": "",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "自身に最大HPの51%のダメージ。最大HPの10%のダメージ。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 914,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": [
+          {
+            "class": "TargetIsNotBossTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      },
+      {
+        "skillEffectId": 694,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": [
+          {
+            "class": "TargetIsBossTrigger",
+            "value": 0,
+            "element": 0,
+            "statusId": 0
+          }
+        ]
+      }
+    ]
+  },
+  "102": {
+    "skillId": 102,
+    "skillName": "視聴者の目線",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "視聴者の関心を付与。",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 3067,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": []
+      }
+    ]
+  },
+  "103": {
+    "skillId": 103,
+    "skillName": "復活",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "対象を復活",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 260,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": []
+      }
+    ]
+  },
   "1001101": {
     "skillId": 1001101,
     "skillName": "燃ゆる白球",
@@ -99800,6 +99965,63 @@
       }
     ]
   },
+  "4055106": {
+    "skillId": 4055106,
+    "skillName": "ディザーム・ショット",
+    "useView": 3000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に100%ダメージ+Viewに応じてダメージ量が上昇（最大200%まで上昇。スキル発動後のViewが30000の時最大ダメージに到達）。もう１度行動をする。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainChasseur_h01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 4129,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": []
+      },
+      {
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": []
+      }
+    ]
+  },
   "4055107": {
     "skillId": 4055107,
     "skillName": "強化弾装填",
@@ -99844,6 +100066,63 @@
         "skillEffectId": 46,
         "prob": 100,
         "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": []
+      }
+    ]
+  },
+  "4055108": {
+    "skillId": 4055108,
+    "skillName": "ロックソルト",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に80%ダメージ。1回分のDEFダウンを付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_villainChasseur_h01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 2,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "randomGroupId": 0,
@@ -129380,6 +129659,222 @@
       }
     ]
   },
+  "4189101": {
+    "skillId": 4189101,
+    "skillName": "ギア・ティ・アリーシア",
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_debuffTeam",
+    "timing": 0,
+    "description": "敵単体に70%ダメージ。40%の確率で2ターンの間火傷を付与。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_astosisBoss_eh01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 1,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": []
+      },
+      {
+        "skillEffectId": 2,
+        "prob": 40,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": []
+      }
+    ]
+  },
+  "4189102": {
+    "skillId": 4189102,
+    "skillName": "クリネ・ティ・オイクメネ",
+    "useView": 6000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に2回50%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_astosisBoss_eh01_02",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": []
+      },
+      {
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": []
+      }
+    ]
+  },
+  "4189103": {
+    "skillId": 4189103,
+    "skillName": "ジゴス・ディカオシーニス",
+    "useView": 10000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffAll",
+    "timing": 0,
+    "description": "敵全体に80%ダメージ。70%の確率で1回のランダムなデバフ効果を付与。断罪の天秤を全て復活。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_astosisBoss_eh01_03",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 5,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": []
+      },
+      {
+        "skillEffectId": 48,
+        "prob": 70,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 1,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": []
+      },
+      {
+        "skillEffectId": 42,
+        "prob": 70,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 1,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": []
+      },
+      {
+        "skillEffectId": 31,
+        "prob": 70,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 1,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": []
+      },
+      {
+        "skillEffectId": 260,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": []
+      }
+    ]
+  },
   "4190101": {
     "skillId": 4190101,
     "skillName": "骸装刃",
@@ -130012,6 +130507,48 @@
         "skillEffectId": 3058,
         "prob": 100,
         "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": []
+      }
+    ]
+  },
+  "4192101": {
+    "skillId": 4192101,
+    "skillName": "裁きの光",
+    "useView": 0,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体に60%ダメージ。（敵専用）",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_balance_h01_01",
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 4,
         "sequenceGroupId": 0,
         "probGroupId": 0,
         "randomGroupId": 0,
@@ -137932,6 +138469,70 @@
         "subIconAddress": "",
         "triggerJson": [],
         "receiverTriggerJson": null
+      }
+    ]
+  },
+  "6055101": {
+    "skillId": 6055101,
+    "skillName": "増援",
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_heal",
+    "subResourceName": "",
+    "timing": 14,
+    "description": "戦闘不能時、100%のHPで復活。復活時、付与されている状態変化を全て解除 & 2回の行動の間ATKダウンを付与。このスキルが発動したターン、行動が出来なくなる。",
+    "cutin": [],
+    "isEquip": true,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 14,
+      "trigger": null
+    },
+    "effects": [
+      {
+        "skillEffectId": 260,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": []
+      },
+      {
+        "skillEffectId": 16,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": []
+      },
+      {
+        "skillEffectId": 53,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "triggerJson": [],
+        "receiverTriggerJson": []
       }
     ]
   },

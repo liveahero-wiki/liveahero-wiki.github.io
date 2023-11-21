@@ -43987,6 +43987,46 @@
       "isOverrideStatusDescription": false
     }
   },
+  "3067": {
+    "skillEffectId": 3067,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleBaseView",
+          "parameter": {
+            "value": 500
+          }
+        },
+        {
+          "class": "ChangeViewCoefficient",
+          "parameter": {
+            "value": 500
+          }
+        }
+      ],
+      "filename": "status_attention",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "視聴者の関心",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "視聴者の関心",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "自身のViewが5倍。View獲得スキルで獲得するViewが5倍。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
   "4001": {
     "skillEffectId": 4001,
     "skillEffectJson": {
@@ -47477,6 +47517,42 @@
       "overrideStatusDescription": "次の行動でスキル3を使用する。バフでもデバフでもない状態。",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
+    }
+  },
+  "4129": {
+    "skillEffectId": 4129,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NowViewDamage",
+          "parameter": {
+            "value": 100,
+            "viewMult": 33.333
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1,
+        3
+      ],
+      "parameter": false,
+      "description": "100%ダメージ+Viewに応じてダメージ量が上昇（30000で最大値）",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
     }
   }
 }
