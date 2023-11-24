@@ -15,6 +15,7 @@ heroes:
     After extraordinary efforts, he completed his bar exam and studied under his father, whom he respected the most.
     However, his harsh but fulfilling days came to an abrupt end with his father's suicide.
     Left alone, Astosis still refuses to let go of his badge, the sign of a lawyer. With a firm conviction in his heart, he enters the courtroom.
+  extra_sprites: fg_astosisBoss_h02,fg_astosisBoss_h02_skin1
 sidekicks:
 - stockId: 11891
   BIO_S01: |-

@@ -34,6 +34,7 @@ heroes:
     Nessen reexamines his own hospitality with that in mind. Even if you don't know for sure how your actions will be taken by others, you just continue to provide as best you can.
     Beyond that, there was a spirit of hospitality that Nessen was aiming for.
     Nessen's eyes shine like the night sky that gently welcomes the moon, as he looks ahead to the path he is aiming for with determination.
+  extra_sprites: fg_nessenMasquerade2310_h01_skin2,fg_nessenMasquerade2310_h01_skin3,fg_nessenMasquerade2310_h02_skin2
 sidekicks:
 - stockId: 10511
   BIO_S01: |-
