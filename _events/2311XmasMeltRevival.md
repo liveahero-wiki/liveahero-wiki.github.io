@@ -1,6 +1,6 @@
 ---
 title: Christmas Melt Countdown (Reprint)
-jp_title:【復刻】クリスマスメルト・カウントダウン
+jp_title: 【復刻】クリスマスメルト・カウントダウン
 news_link: https://live-a-hero.jp/info/7320
 banner_image: banner_info_XmasMeltRevival2311.jpg
 gacha: true
