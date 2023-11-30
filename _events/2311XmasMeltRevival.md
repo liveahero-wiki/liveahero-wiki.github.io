@@ -68,6 +68,7 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 | {% chara_link Astosis|h1 %} | 20 |
 | {% chara_link Yohack|h1 %}  | 10 |
 | {% chara_link Marfik|h2 %} | 20 |
+| {% chara_link Marfik|h1 %} | 20 |
 | {% chara_link Huckle|h1 %}  | 10 |
 | {% chara_link Akashi|h1 %}  | 10 |
 
