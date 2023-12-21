@@ -135,21 +135,29 @@ Proc rate {% if effect.parameter.value >= 0 %}Up{% else %}Down{% endif %} by {{ 
 {% when "MoreTurn" %} 
 Perform {{ effect.parameter.value }} more action(s)
 {% when "SkillTurnExtension" %}
-  Extend
+  {% if effect.parameter.value > 0 %}
+    Extend
+  {% else %}
+    Reduce
+  {% endif %}
   {% if effect.parameter.statusId != 0 %}
     {{ effect.parameter.statusId | status_description }}
   {% else %}
     {% if effect.parameter.statusTypeValue == 1 %}buff{% else %}debuff{% endif %} status effect
   {% endif %}
-  by {{ effect.parameter.value }} turn(s){% if effect.parameter.extensionLimit > 0 %}(capped at {{ effect.parameter.extensionLimit }}){% endif %}
+  by {{ effect.parameter.value | abs }} turn(s){% if effect.parameter.extensionLimit > 0 %}(capped at {{ effect.parameter.extensionLimit }}){% endif %}
 {% when "InvokerSkillTurnExtension" %}
-  Extend
+  {% if effect.parameter.value > 0 %}
+    Extend
+  {% else %}
+    Reduce
+  {% endif %}
   {% if effect.parameter.statusId != 0 %}
     {{ effect.parameter.statusId | status_description }}
   {% else %}
     all allies' {% if effect.parameter.statusTypeValue == 1 %}buff{% else %}debuff{% endif %} status effect (bestowed by allies)
   {% endif %}
-  by {{ effect.parameter.value }} turn(s){% if effect.parameter.extensionLimit > 0 %}(capped at {{ effect.parameter.extensionLimit }}){% endif %}
+  by {{ effect.parameter.value | abs }} turn(s){% if effect.parameter.extensionLimit > 0 %}(capped at {{ effect.parameter.extensionLimit }}){% endif %}
 {% when "Heal" %}
 {% assign turnDefinition = "turn" %}
 Heal {{ target }} for {{ effect.parameter.value }}% of own ATK value

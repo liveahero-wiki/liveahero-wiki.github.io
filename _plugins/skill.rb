@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 require 'json'
+require_relative 'common'
 
 module LahWiki
   module JsonParseFilter
@@ -273,6 +274,7 @@ module LahWiki
 
       name = Skills::status_wiki(@context).dig(id_s, 'name') || status['statusName']
       description = Skills::status_wiki(@context).dig(id_s, 'description') || status['description']
+      description = xml_escape(description)
 
       status_type = status["statusType"]
       if status_type == 2 && name == ""
