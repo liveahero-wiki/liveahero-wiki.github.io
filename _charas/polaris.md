@@ -3,6 +3,8 @@ title: Polaris Mask
 characterId: 15
 occupation: Professional Wrestler (プロレスラー)
 permalink: /charas/polaris_mask/
+h2:
+  title: '"The Unleashed" Polaris Mask'
 heroes:
 - stockId: 10151
   BIO_H01: |-
@@ -19,6 +21,7 @@ heroes:
     to be crushed, he laughs invincibly while flexing his muscles, and shows off the
     best extreme battle that the audience wants to see. All to prepare for his dream
     of "confrontation with the strongest man in the universe".
+- stockId: 10152
 sidekicks:
 - stockId: 10151
   BIO_S01: |-
@@ -63,6 +66,9 @@ RELATION = "I oftentimes meet Rad while on the road.<br>That's because we're alw
 TOUCH = "Hmm, what? You're interested in my body?<br>Haha, my body's not so bad huh? <br>I've got really good technique!"
 TRAIN = "I'm not going to go easy on you just because you're new to this!"
 TRAINED = "Yeah, that's g-good! You're real hot!"
+%}
+
+{% include voice-table.html resourceName="polarisWorkout2312"
 %}
 
 ## Notes

@@ -1,6 +1,8 @@
 ---
 title: Monomasa
 characterId: 31
+h2:
+  title: '"Starry Night" Monomasa'
 heroes:
 - stockId: 10311
   BIO_H01: |-
@@ -27,6 +29,7 @@ heroes:
 
     Drovain's wish is for Monomasa to come out in the open again and be able to live
     by his own will.
+- stockId: 10312
 sidekicks:
 - stockId: 10311
   BIO_S01: |-
