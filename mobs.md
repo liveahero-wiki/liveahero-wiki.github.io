@@ -261,3 +261,15 @@ sprites="fg_villainEarth_h01,fg_villainFire_h01,fg_villainLight_h01,fg_villainSh
 {% include hero-infobox-unreleased.html name="Vine Kaibutsu" mob=true
 sprites="fg_kaibutsuTentacleTree_h01,fg_kaibutsuTentacle_h01"
 %}
+
+### Wrestler
+
+{% include hero-infobox-unreleased.html name="Wrestler" mob=true
+sprites="fg_villainWrestlerEarth_s01,fg_villainWrestlerFire_s01,fg_villainWrestlerLight_s01,fg_villainWrestlerShadow_s01,fg_villainWrestlerWater_s01"
+%}
+
+### Wrestler (Transform)
+
+{% include hero-infobox-unreleased.html name="Transformed Wrestler" mob=true
+sprites="fg_villainWrestlerEarth_h01,fg_villainWrestlerFire_h01,fg_villainWrestlerLight_h01,fg_villainWrestlerShadow_h01,fg_villainWrestlerWater_h01"
+%}
