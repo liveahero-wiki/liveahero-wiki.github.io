@@ -17,6 +17,17 @@ module LahWiki
       5 => "Shadow",
     }
 
+    @@role_map = {
+      1 => "Attack",
+      2 => "Defense",
+      3 => "Assistance",
+      4 => "Debuff",
+      5 => "Speed",
+      6 => "VP Gain",
+      7 => "Heal",
+      99 => "Special",
+    }
+
     INVALID = 999
 
     def self.status_wiki(context)
@@ -143,6 +154,10 @@ module LahWiki
           count = c['value']
           #f.push("target possessing &lt;=#{count}x #{status_icon}")
           h["statusEnemy_#{c['statusId']}_1"]['max'] = count
+        when "OverInvokerSpecialEffectTurnTrigger"
+          status_icon = self.status_description_unknown(c['statusId'], 1)
+          count = c['value']
+          f.push("self has at least #{count}x #{status_icon}")
         when "TargetElementExecTrigger"
           element = @@element_map[c['element']] || "Unknown"
           f.push("target is #{element}")
@@ -166,6 +181,9 @@ module LahWiki
           f.push("is not targeting self")
         when "NowAttackingTrigger"
           f.push("current action is not activated by another skill")
+        when "ReceiverSelectRoleTrigger"
+          role = @@role_map[c['role']]
+          f.push("target's role is #{role}")
         else
           f.push("unknown condition (#{c['class']}")
         end
