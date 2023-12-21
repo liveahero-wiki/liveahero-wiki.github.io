@@ -313,6 +313,8 @@ Prioritize skill {{ effect.parameter.value | plus: 1 }}
 Proc rate of skill {{ effect.parameter.skillId }} is multiplied by {{ effect.parameter.value }}{% if effect.parameter.isPercent %}%{% else %}x{% endif %}
 {% when "PassiveBattleSkillEffect" %}
 Grant this skill to {{ target }}
+{% when "TurnBaseMultipleAttack" %}
+Apply {{ skillEffectJson.statusId | status_description }} to {{ target }}
 {% assign new_skill_id = effect.parameter.skillId | downcase %}
 {% assign new_skill = site.data.SkillMaster[new_skill_id] %}
 <fieldset>
