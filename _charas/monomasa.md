@@ -78,6 +78,9 @@ TRAIN = "Monomasa wants to move too, so come with me."
 TRAINED = "Guh.. It's dripping out...!"
 %}
 
+{% include voice-table.html resourceName="monomasaWorkout2312"
+%}
+
 ## Notes
 
 - His full name is Monomasa Oosato (大里 モノマサ)
