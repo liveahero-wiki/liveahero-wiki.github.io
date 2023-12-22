@@ -4,6 +4,11 @@ require_relative 'common'
 
 module LahWiki
   module JsonParseFilter
+    def render_liquid(content)
+      partial = Liquid::Template.parse(content, :line_numbers => true)
+      partial.render!(@context)
+    end
+
     def json_parse(str)
       JSON.parse(str)
     end
