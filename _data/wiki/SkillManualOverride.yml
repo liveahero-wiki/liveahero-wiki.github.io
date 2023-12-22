@@ -96,13 +96,14 @@ of view after the skill is cast (maxed at 11000 view) /100%<br>\
 [base skill] Apply one of the following random debuff (
   {{ 11 | status_description }},
   {{ 12 | status_description }},
-  {{ 88 | status_description }},
   {{ 58 | status_description }},
   {{ 19 | status_description }}
 ) to target enemy<br>\
 If the skill can be activated, activate this skill again (up to 4 times). Additional activation will not gain view."
 
-# Kouki variant Passive 2
+# Kouki variant Passive
+8018201: "[when appearing] (triggered when invoker is alive and target enemy possessing x > 1 debuff(s)) 
+Apply {{ 205 | status_description }} all enemies /100%"
 8018202: ""
 
 # Monomasa Variant Passive
@@ -130,7 +131,7 @@ and possessing > 0 {{ 1031209 | status_description }} ) Reset {{ 1031201 | statu
 
 # Nessen Variant S3
 1051203: "[base skill] Heal all allies for 70% of own ATK value /100%<br>\
-[base skill] Incoming damage reduced by 50% to all allies for 1 next attack(s) /100%<br>\
+[base skill] Apply {{ 2 | status_description }} to all allies for 1 next attack(s) /100%<br>\
 [base skill] (extra_cond: View>10000) Act again (once per turn) /100%"
 
 # Nessen Variant Passive
@@ -200,7 +201,7 @@ doesn't take effect if the damage defeat the receiver) for 2 turns /100%"
 
 # Yohack S3
 1190103: "[base skill] Apply  Atkup+ (Multiply Atk by 1.8x, this status is treated as normal Atkup) to target ally for 1 next attack(s) /100%<br>\
-[base skill] Apply {{ 2641 | status_description }} to target ally for 1 action /100%<br>\
+[base skill] Apply {{ 264 | status_description }} to target ally for 1 action /100%<br>\
 [base skill] Apply {{ 8 | status_description }} to target ally for 1 action /100%<br>\
 [base skill] Apply {{ 1190101 | status_description }} to self for 3 turn /100%"
 
