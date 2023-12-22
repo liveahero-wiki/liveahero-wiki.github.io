@@ -93,23 +93,33 @@ of view after the skill is cast (maxed at 11000 view) /100%<br>\
 
 # Kouki variant S2
 1018202: "[base skill] Deal 70% of damage to enemy<br>\
-[base skill] Apply one of the random debuff (
-  Attack Down, Defense Down, View Cost +1000, Burn, Speed Down
-  <!--{{ 11 | status_description }},
+[base skill] Apply one of the following random debuff (
+  {{ 11 | status_description }},
   {{ 12 | status_description }},
   {{ 88 | status_description }},
   {{ 58 | status_description }},
-  {{ 19 | status_description }}-->
-) to enemy<br>\
+  {{ 19 | status_description }}
+) to target enemy<br>\
 If the skill can be activated, activate this skill again (up to 4 times). Additional activation will not gain view."
 
 # Kouki variant Passive 2
 8018202: ""
 
+# Monomasa Variant Passive
+8031201: "[when appearing] Apply {{ 1031201 | status_description }} to self /100%<br>\
+[when enemy take damage] Apply {{ 1031206 | status_description }} to target enemy /100%"
+
+8031205: ""
+
+8031206: "[Always active] (extra_cond: self has at least 2 stack of {{ 1031201 | status_description }} 
+and possessing > 0 {{ 1031209 | status_description }} ) Reset {{ 1031201 | status_description }} stack /100%"
+
+8031207: ""
+
 # Nessen Variant S1
 1051201: "[base skill] Remove 1 debuff(s) from target ally /100%<br>\
-[base skill] Remove all Waltz status from allies /100%<br>\
-[base skill] Apply Waltz (Atk +20%) to target allies for 2 turn /100%"
+[base skill] Remove all {{ 1051202 | status_description }} status from allies /100%<br>\
+[base skill] Apply {{ 1051202 | status_description }} to target allies for 2 turn /100%"
 
 # Nessen Variant S2
 1051202: "[base skill] Apply  Attack Up 1.5x to target ally for 1 next attack(s) /100%<br>\
@@ -124,7 +134,7 @@ If the skill can be activated, activate this skill again (up to 4 times). Additi
 [base skill] (extra_cond: View>10000) Act again (once per turn) /100%"
 
 # Nessen Variant Passive
-8051201: "[base skill] After using any skill (except sidekick skill), ally with Waltz will use skill 1 to random enemy /100%"
+8051201: "[base skill] After using any skill (except sidekick skill), ally with {{ 1051202 | status_description }} will use skill 1 to random enemy /100%"
 8051202: ""
 
 # Obsidius S1
@@ -152,10 +162,10 @@ If the skill can be activated, activate this skill again (up to 4 times). Additi
 8015102: "[When current VP >= 10000] Atk of all allies +10% at the start of the turn (neither buff nor debuff, cannot be dispelled) /100%"
 
 # Polaris Mask variant passive
-8015203: "[when posessing 0 unleash] Apply 1 Polaris Special2 to self and use skill 1 /100%"
+8015203: "[when posessing 0 {{ 1015203 | status_description }} ] Apply 1 Polaris Special2 to self and use skill 1 /100%"
 
 # Rakta S3 bloom active
-1020107: "[base skill] Skill View cost Down by 0.5x for target ally for 2 turn(s) /100% <br>\
+1020107: "[base skill] Apply {{ 8 | status_description }} target ally for 2 turn(s) /100% <br>\
 [base skill] Remove 2 debuff(s) from target ally /100%  <br>\
 [base skill] If target has debuff, heal target by 50% own atk /100%"
 
@@ -190,9 +200,9 @@ doesn't take effect if the damage defeat the receiver) for 2 turns /100%"
 
 # Yohack S3
 1190103: "[base skill] Apply  Atkup+ (Multiply Atk by 1.8x, this status is treated as normal Atkup) to target ally for 1 next attack(s) /100%<br>\
-[base skill] Apply Gospel (Recovery amount of skill used by self +50%) to target ally for 1 action /100%<br>\
-[base skill] Apply Awakening (Viewpoint required to use skill is halved) to target ally for 1 action /100%<br>\
-[base skill] Self cannot use skill 3 for 3 turn(s) /100%"
+[base skill] Apply {{ 2641 | status_description }} to target ally for 1 action /100%<br>\
+[base skill] Apply {{ 8 | status_description }} to target ally for 1 action /100%<br>\
+[base skill] Apply {{ 1190101 | status_description }} to self for 3 turn /100%"
 
 # Unexplored Skills
 9000001: "View Gain or Special role allies' skill View Gain +100%"
