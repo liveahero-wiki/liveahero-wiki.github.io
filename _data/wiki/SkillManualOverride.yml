@@ -140,17 +140,17 @@ and possessing > 0 {{ 1031209 | status_description }} ) Reset {{ 1031201 | statu
 
 # Obsidius S1
 1160101: "[base skill] Deal 50% of damage to target enemy /100%<br>\
-[base skill] Apply 2 stack of Stubborn to self /100% (Stubborn doesn't count as buff or debuff)"
+[base skill] Apply 2 stack of {{ 238 | status_description }} to self /100%"
 
 # Obsidius S2
 1160102: "[base skill] Deal 50% of damage 2 times to random enemy/100%<br>\
 [Each hit] Incoming damage to random enemy increased by 1.5x for 1 next attack(s) /50%<br>\
-[When has more than 3 Stubborn] Deal 1 additional hit and remove 3 stack of Stubborn /100%"
+[When has more than 3 {{ 238 | status_description }} ] Deal 1 additional hit and remove 3 stack of {{ 238 | status_description }} /100%"
 
 # Obsidius S3
 1160103: "[base skill] Remove 1 buff(s) from all enemies /100%<br>\
 [base skill] Deal 90% of damage to all enemies, the less enemies hit the more the damage increase up to 180% against one enemy /100%<br>\
-[When has more than 5 Stubborn] Performs one more action this turn and remove 5 stack of Stubborn /100%"
+[When has more than 5 {{ 238 | status_description }} ] Performs one more action this turn and remove 5 stack of {{ 238 | status_description }} /100%"
 
 1160104: "[base skill] Remove 1 buff(s) from all enemies /100%<br>\
 [base skill] Deal 90% of damage to all enemies, the less enemies hit the more the damage increase up to 180% against one enemy /100%<br>\
@@ -184,8 +184,7 @@ buffs up ATK Accumulation (up to 2x) /100% <br>\
 
 # Theoreol S3
 1161103: "[base skill] Incoming damage to all allies reduced by 0.5x for 1 next attack(s) /100%.<br>\
-[base skill] Grants all allies Conversion (Heal for 50% of the invoker's atk every time they receive damage, 
-doesn't take effect if the damage defeat the receiver) for 2 turns /100%"
+[base skill] Grants all allies Conversion {{ 239 | status_description }} for 2 turns /100%"
 
 # Theoreol Passive
 8161101: "[In auto action] Prioritize the third skill when there is an ally with less than 50% HP"
@@ -204,6 +203,11 @@ doesn't take effect if the damage defeat the receiver) for 2 turns /100%"
 [base skill] Apply {{ 264 | status_description }} to target ally for 1 action /100%<br>\
 [base skill] Apply {{ 8 | status_description }} to target ally for 1 action /100%<br>\
 [base skill] Apply {{ 1190101 | status_description }} to self for 3 turn /100%"
+
+# Zaniah S2
+1182102: "[base skill] Deal 60% of damage to target ally. Gain damage x400 worth of View. /100%<br>\
+[base skill] Apply  {{ 2 | status_description  to target ally for 1 next attack(s) /100%<br>\
+This skill cannot defeat an ally"
 
 # Unexplored Skills
 9000001: "View Gain or Special role allies' skill View Gain +100%"
