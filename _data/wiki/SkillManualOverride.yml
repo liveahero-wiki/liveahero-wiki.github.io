@@ -10,9 +10,9 @@
 8062202: ""
 
 # Andrew variant S3
-1025203: "[base skill] Deal 50% of damage to target enemy, and deal another 50% of damage to target enemy for every Defense Up status that Andrew posesses, up to 3 extra hits /100%<br>\
+1025203: "[base skill] Deal 50% of damage to target enemy, and deal another 50% of damage to target enemy for every {{ 2 | status_description }} status that Andrew posesses, up to 3 extra hits /100%<br>\
 [base skill] Deal 100% of damage to target enemy /100%<br>\
-[base skill] Remove 999 Defense Up status from self /100%"
+[base skill] Remove 999 {{ 2 | status_description }} status from self /100%"
 
 # Astosis Passive
 8189101: "[When not debuffed] Rate of inflicting debuff is multiplied by 1.5x for all allies /100%"
@@ -83,12 +83,12 @@ of view after the skill is cast (maxed at 11000 view) /100%<br>\
 
 # Grigory S2
 1170102: "[base skill] Remove 1 debuff(s) from all allies /100%<br>\
-[base skill] Increase HP by 10% to all allies for 1 turn(s) /100%<br>\
+[base skill] Apply {{ 10 | status_description }} to all allies for 1 turn(s) /100%<br>\
 [base skill] Perform 1 more action(s) (once per turn only) /100%"
 
 # Kouki S1 bloom active
 1018105: "[base skill] Deal 60% of damage to target enemy /100% <br>\
-[base skill] ATK Down by 0.5x to target enemy for 1 action(s) /40% <br>\
+[base skill] Apply {{ 11 | status_description }} to target enemy for 1 action(s) /40% <br>\
 [base skill] Add 1500 views /100%"
 
 # Kouki S1 bloom passive
@@ -209,7 +209,7 @@ buffs up ATK Accumulation (up to 2x) /100% <br>\
 
 # Zaniah S2
 1182102: "[base skill] Deal 60% of damage to target ally. Gain damage x400 worth of View. /100%<br>\
-[base skill] Apply  {{ 2 | status_description  to target ally for 1 next attack(s) /100%<br>\
+[base skill] Apply  {{ 2 | status_description }} to target ally for 1 next attack(s) /100%<br>\
 This skill cannot defeat an ally"
 
 # Unexplored Skills
