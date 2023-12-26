@@ -46,6 +46,9 @@ of view after the skill is cast (maxed at 11000 view) /100%<br>\
 [base skill] Decrease HP by -10% to all enemies for 1 turn(s) /50%<br>\
 [base skill] (extra_cond: Combo>=5) Activate this skill once again if Flamier is still alive, without gaining extra view /100%"
 
+# Furlong variant Passive
+8008201: "[when appearing] Apply {{ 87 | status_description }} to self /100%"
+
 # Gaius S1 bloom passive
 8115101: "[base skill] Atk+20% when not having debuff /100%"
 
@@ -154,10 +157,10 @@ and possessing > 0 {{ 1031209 | status_description }} ) Reset {{ 1031201 | statu
 
 1160104: "[base skill] Remove 1 buff(s) from all enemies /100%<br>\
 [base skill] Deal 90% of damage to all enemies, the less enemies hit the more the damage increase up to 180% against one enemy /100%<br>\
-[When has more than 5 Stubborn] Performs one more action this turn and remove 5 stack of Stubborn /100%"
+[When has more than 5 {{ 238 | status_description } ] Performs one more action this turn and remove 5 stack of {{ 238 | status_description } /100%"
 
 # Obsidius Passive
-8160101: "[When buffed] Add 1 stack of Stubborn to self /100%"
+8160101: "[When buffed] Add 1 stack of {{ 238 | status_description } to self /100%"
 
 # Polaris Mask S2 bloom passive
 8015102: "[When current VP >= 10000] Atk of all allies +10% at the start of the turn (neither buff nor debuff, cannot be dispelled) /100%"
