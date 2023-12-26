@@ -15,8 +15,8 @@
 [base skill] Remove 999 Defense Up status from self /100%"
 
 # Astosis Passive
-8189101: "[When enemy with debuff is damaged] Apply Pledge (Viewpoint consumption of skill 1,2,3 -5%, not buff or debuff) to self for 1 action /100%"
-8189103: "[When not debuffed] Rate of inflicting debuff is multiplied by 1.5x for all allies /100%"
+8189101: "[When not debuffed] Rate of inflicting debuff is multiplied by 1.5x for all allies /100%"
+8189103: "[When enemy with debuff is damaged] Apply {{ 1189102 | status_description }} to self for 1 action /100%"
 8189104: ""
 8189105: ""
 
@@ -25,25 +25,25 @@
 [base skill] Increase the damage of this skill by 20% permanently, up until 160% of damage /100%"
 
 # Exio S2, passive
-1035102: "[base skill] For each \"Multi Observation\" status held, change skill view cost by -1000 for all allies except self for 1 turn(s) /100%<br>\
-[base skill] Remove all \"Multi Observation\" statuses /100%"
-8035101: "[when invoker's attack causes damage to enemy] Apply \"Multi Observation\" to self /100%"
+1035102: "[base skill] For each {{ 1035101 | status_description }} status held, change skill view cost by -1000 for all allies except self for 1 turn(s) /100%<br>\
+[base skill] Remove all {{ 1035101 | status_description }} statuses /100%"
+8035101: "[when invoker's attack causes damage to enemy] Apply {{ 1035101 | status_description }} to self /100%"
 8035102: ""
 
 # Exio S3
-1035103: "[base skill] Deal 160% + 10% X \"Multi Observation\" of damage to target enemy, this damage is increased up to 100% depending on the amount 
+1035103: "[base skill] Deal 160% + 10% x {{ 1035101 | status_description }} of damage to target enemy, this damage is increased up to 100% depending on the amount 
 of view after the skill is cast (maxed at 13000 view) /100%<br>\
-[base skill] Remove all \"Multi Observation\" statuses /100%<br>\
-[base skill] Use up to 20000 View to apply \"Multi Observation\" to self (each \"Multi Observation\" use 5000 view) /100%"
+[base skill] Remove all {{ 1035101 | status_description }} statuses /100%<br>\
+[base skill] Use up to 20000 View to apply {{ 1035101 | status_description }} to self (each {{ 1035101 | status_description }} use 5000 view) /100%"
 
-1035104: "[base skill] Deal 160% + 10% X \"Multi Observation\" of damage to target enemy, this damage is increased up to 100% depending on the amount 
+1035104: "[base skill] Deal 160% + 10% x {{ 1035101 | status_description }} of damage to target enemy, this damage is increased up to 100% depending on the amount 
 of view after the skill is cast (maxed at 11000 view) /100%<br>\
-[base skill] Remove all \"Multi Observation\" statuses /100%<br>\
-[base skill] Use up to 20000 View to apply \"Multi Observation\" to self (each \"Multi Observation\" use 5000 view) /100%"
+[base skill] Remove all {{ 1035101 | status_description }} statuses /100%<br>\
+[base skill] Use up to 20000 View to apply {{ 1035101 | status_description }} to self (each {{ 1035101 | status_description }} use 5000 view) /100%"
 
 # Flamier variant S2
 1011202: "[base skill] Deal 50% of damage to all enemies /100%<br>\
-[base skill] Decrease HP by -10% to all enemies for 1 turn(s) /50%<br>\
+[base skill] Apply {{ 19 | status_description }} to all enemies for 1 turn(s) /50%<br>\
 [base skill] (extra_cond: Combo>=5) Activate this skill once again if Flamier is still alive, without gaining extra view /100%"
 
 # Furlong variant Passive
@@ -157,10 +157,10 @@ and possessing > 0 {{ 1031209 | status_description }} ) Reset {{ 1031201 | statu
 
 1160104: "[base skill] Remove 1 buff(s) from all enemies /100%<br>\
 [base skill] Deal 90% of damage to all enemies, the less enemies hit the more the damage increase up to 180% against one enemy /100%<br>\
-[When has more than 5 {{ 238 | status_description }} ] Performs one more action this turn and remove 5 stack of {{ 238 | status_description } /100%"
+[When has more than 5 {{ 238 | status_description }} ] Performs one more action this turn and remove 5 stack of {{ 238 | status_description }} /100%"
 
 # Obsidius Passive
-8160101: "[When buffed] Add 1 stack of {{ 238 | status_description } to self /100%"
+8160101: "[When buffed] Add 1 stack of {{ 238 | status_description }} to self /100%"
 
 # Polaris Mask S2 bloom passive
 8015102: "[When current VP >= 10000] Atk of all allies +10% at the start of the turn (neither buff nor debuff, cannot be dispelled) /100%"
