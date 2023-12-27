@@ -117,6 +117,7 @@ View cost of self's non-damaging skill changed by {{ effect.parameter.value }}
 {% assign turnDefinition = "next attack" %}
 With "absolute SPD difference" x{{ effect.parameter.rate }}% chance, {% if effect.parameter.mult == 0 %}ignore incoming damage{% else %}incoming damage {% if effect.parameter.mult >= 100 %}increased{% else %}reduced{% endif %} to {{ effect.parameter.mult | divided_by: 100.0 }}x{% endif %} to {{ target }}
 {% when "ChangeAgi" %}
+{% assign turnDefinition = "action" %}
 SPD {% if effect.parameter.value >= 0 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value }} to {{ target }}
 {% when "RemoveBuff" %}
 Remove {{ effect.parameter.value }} {% if effect.parameter.target %}{{ effect.parameter.target | status_description }} status{% else %}buff(s){% endif %} from {{ target }}
@@ -170,7 +171,7 @@ Reduce recovery amount of {{ target }}'s received healing by {{ 100 | minus: eff
 Increase recovery amount of {{ target }}'s received healing by {{ effect.parameter.value | minus: 100 }}%
 {% endif %}
 {% when "NeedViewChange" %}
-{% assign turnDefinition = "turn" %}
+{% assign turnDefinition = "action" %}
 Skill View cost {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x for {{ target }}
 {% when "RemoveGainViewStock" %}
 Apply {{ skillEffectJson.statusId | status_description }} to {{ target}}<br>&nbsp;&nbsp;&nbsp;&nbsp;Gain {{ effect.parameter.value }} View when {{ skillEffectJson.statusId | status_description }} is removed
