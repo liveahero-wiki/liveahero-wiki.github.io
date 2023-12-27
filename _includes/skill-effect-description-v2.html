@@ -140,7 +140,7 @@ Perform {{ effect.parameter.value }} more action(s)
   {% else %}
     Reduce
   {% endif %}
-  {% if effect.statusId != 0 %}
+  {% if skillEffectJson.statusId != 0 %}
     {{ effect.parameter.statusId | status_description }}
   {% else %}
     {% if effect.parameter.statusTypeValue == 1 %}buff{% else %}debuff{% endif %} status effect
