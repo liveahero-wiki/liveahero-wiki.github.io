@@ -264,7 +264,7 @@ module LahWiki
       return self.status_description(id)
     end
 
-    def status_description(id)
+    def status_description(id, skillEffectJson=nil)
       id_s = id.to_s
 
       status = Skills::status_master(@context)[id_s]
@@ -279,6 +279,20 @@ module LahWiki
 
       name = Skills::status_wiki(@context).dig(id_s, 'name') || status['statusName']
       description = Skills::status_wiki(@context).dig(id_s, 'description') || status['description']
+
+      if skillEffectJson != nil
+        effects = {}
+        skillEffectJson["effects"].each do |effect|
+          effects[effect["class"]] = effect
+        end
+        @context.stack do
+          @context["skillEffectJson"] = skillEffectJson
+          @context["effects"] = effects
+
+          partial = Liquid::Template.parse(description, :line_numbers => true)
+          description = partial.render!(@context)
+        end
+      end
       description = xml_escape(description)
 
       status_type = status["statusType"]

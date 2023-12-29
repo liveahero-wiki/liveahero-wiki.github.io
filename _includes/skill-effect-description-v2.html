@@ -63,7 +63,7 @@
       {{ skillEffectJson.overrideStatusName }}
     </span> to {{ target }}
   {% else %}
-    {% assign status = skillEffectJson.statusId | status_description %}
+    {% assign status = skillEffectJson.statusId | status_description: skillEffectJson %}
     Apply {{ status }} to {{ target }}
   {% endif %}
 
