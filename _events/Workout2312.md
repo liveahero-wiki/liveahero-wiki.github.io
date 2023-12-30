@@ -17,7 +17,24 @@ sales_end_time: 2024-01-11T20:00:00+09
 
 ## Event Preview
 
-coming soon
+Orient City is bustling with the approaching Christmas season.
+In the middle of the city, you encounter an outbreak of Kaibutsu.
+You are in a great crisis, with no familiar heroes within earshot.
+A person suddenly appears in front of you and offers a helping hand.
+He is ...... a "Santa" who looks like a red devil!
+
+"Observer is necessary" , saying so he escort you back to your office,
+suddenly a pro-wrestler who is active in the universe come with a request.
+He is planning a special christmas performance, 
+a former villain and your sister apprentice got rolled up in it, and all of you wear a special santa outfit,
+the moment he sees that appearance, santa's eyes changed….
+
+From now on, all of you are new santa!!
+
+I will teach you all what it means to be a santa!!
+
+An incident-filled journey around the globe, a pilgrimage of santa training.
+The journey to know what "Santa" means to each of them begins now!
 
 ## Event Banners
 
