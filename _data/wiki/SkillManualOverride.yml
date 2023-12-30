@@ -183,7 +183,8 @@ and possessing > 0 {{ 1031209 | status_description }} ) Reset {{ 1031201 | statu
 
 # Rakta variant S3
 1020203: "[base skill] Grants {{ 1020201 | status_description }} to a single ally for 3 turns/100% <br>\
-[base skill] Grants -1500 VP cost to all alies except self for one action /100%"
+{% assign se = site.data.SkillEffectMaster['684'] %}\
+[base skill] Grants {{ 74 | status_description: se.skillEffectJson }} to all alies except self for one action /100%"
 
 # Ryekie variant S2 bloom passive
 8004201: "[When invoker is alive] Allies with speed up buff gain +20% atk (doesn't stack) /100%"
