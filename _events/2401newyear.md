@@ -1,6 +1,6 @@
 ---
 title: New Year 2024
-news_link: https://live-a-hero.jp/info/5152
+news_link: https://live-a-hero.jp/info/7643
 banner_image: banner_info_NewYear2401.jpg
 event_start_time: 2024-01-01T00:00:00+09
 event_end_time: 2024-01-15T00:00:00+09
