@@ -165,7 +165,7 @@ and possessing > 0 {{ 1031209 | status_description }} ) Reset {{ 1031201 | statu
 [Each hit] Apply {{ 12 | status_description }} for 1 next attack(s) /50%<br>\
 [When has more than 3 {{ 238 | status_description }} ] Deal 1 additional hit and remove 3 stack of {{ 238 | status_description }} /100%"
 
-# Obsidius S3
+# Obsidius S3, passive
 1160103: "[base skill] Remove 1 buff(s) from all enemies /100%<br>\
 [base skill] Deal 90% of damage to all enemies, the less enemies hit the more the damage increase up to 180% against one enemy /100%<br>\
 [When has more than 5 {{ 238 | status_description }} ] Performs one more action this turn and remove 5 stack of {{ 238 | status_description }} /100%"
@@ -174,7 +174,6 @@ and possessing > 0 {{ 1031209 | status_description }} ) Reset {{ 1031201 | statu
 [base skill] Deal 90% of damage to all enemies, the less enemies hit the more the damage increase up to 180% against one enemy /100%<br>\
 [When has more than 5 {{ 238 | status_description }} ] Performs one more action this turn and remove 5 stack of {{ 238 | status_description }} /100%"
 
-# Obsidius Passive
 8160101: "[When buffed] Add 1 stack of {{ 238 | status_description }} to self /100%"
 
 # Polaris Mask S2 bloom passive
@@ -210,11 +209,19 @@ and possessing > 0 {{ 1031209 | status_description }} ) Reset {{ 1031201 | statu
 # Shaft variant passive
 8063201: ""
 
-# Theoreol S3
+# Tabit S3 , passive
+1151103: "[base skill] Deal 180% of damage to target enemy /100% <br>\
+[base skill] (extra_cond: target enemy is killed) Perform 1 more action (only once per turn)/100%"
+
+1151104: "[base skill] Deal 200% of damage to target enemy /100% <br>\
+[base skill] (extra_cond: target enemy is killed) Perform 1 more action (only once per turn)/100%"
+
+8151102: ""
+
+# Theoreol S3 , passive
 1161103: "[base skill] Grants all allies {{ 2 | status_description }} for 1 next attack(s) /100%.<br>\
 [base skill] Grants all allies {{ 239 | status_description }} for 2 turns /100%"
 
-# Theoreol Passive
 8161101: "[In auto action] Prioritize the third skill when there is an ally with less than 50% HP"
 
 # Viscunam S2
