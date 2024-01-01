@@ -13,7 +13,7 @@ sidekicks:
 
 ## Notes
 - Most of his skill names is in german language:
-  - Atˈvɛnt͜skrant͜s : The crown of waiting
+  - Adventskranz : Literal translation is "The crown of waiting"
     - The four candles that are displayed from the Sunday four weeks before Christmas to the Sunday just before Christmas, which is the period of Advent, are called "Atˈvɛnt͜skrant͜s," and it is customary to light them one by one on Sunday mornings.
   - Frohe Weihnachten : Merry Christmas
   - Stille Nacht : Silent Night
