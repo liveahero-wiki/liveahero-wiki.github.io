@@ -41,7 +41,7 @@ sidekicks:
 
     He is very susceptible to both flattery and provocation, so he can be easily
     manipulated at times.
-  extra_sprites: fg_hydoor_s01_skin1
+  extra_sprites: fg_hydoor_s01_skin1,fg_hydoor_s01_skin2,fg_hydoor_s01_skin3,fg_hydoor_s01_skin4
 ---
 
 {% include voice-table.html resourceName="hydoor"

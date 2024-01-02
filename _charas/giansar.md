@@ -28,7 +28,7 @@ sidekicks:
     He likes to use words such as perfect and exact to describe his plans, and he is very much against any element of uncertainty.
   
     He has strong opposition against heroes, and it seems to come from his past attempt to obtain a hero license.
-  extra_sprites: fg_giansar_s01_skin1,fg_giansar_s01_skin2,fg_giansar_s01_skin3,fg_giansar_s01_skin4
+  extra_sprites: fg_giansar_s01_skin1,fg_giansar_s01_skin2,fg_giansar_s01_skin3,fg_giansar_s01_skin4,fg_giansar_s01_skin5,fg_giansar_s01_skin6,fg_giansar_s01_skin7,fg_giansar_s01_skin8
 ---
 
 {% include voice-table.html resourceName="giansar"

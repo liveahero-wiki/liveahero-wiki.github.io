@@ -34,7 +34,7 @@ sidekicks:
     He has a deep knowledge of cultural forms, preserving "concepts that are disappearing" and expanding the common language of the universe.
   
     He places great emphasis on experiencing live culture, and seems to have a strong desire to actually experience what is popular.
-  extra_sprites: fg_garbo_s01_skin1
+  extra_sprites: fg_garbo_s01_skin1,fg_garbo_s01_skin2,fg_garbo_s01_skin3
 ---
 
 {% include voice-table.html resourceName="garbo"
