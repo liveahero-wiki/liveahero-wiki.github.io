@@ -42698,6 +42698,40 @@
       "isOverrideStatusDescription": true
     }
   },
+  "2003": {
+    "skillEffectId": 2003,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 130
+          }
+        }
+      ],
+      "filename": "status_system_atkup",
+      "statusId": 191,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATK+30%。バフでもデバフでも無い状態。スキルによる解除不可。",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATK+30%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATK+30%。バフでもデバフでも無い状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
   "3001": {
     "skillEffectId": 3001,
     "skillEffectJson": {
@@ -45404,6 +45438,40 @@
       "isOverrideStatusName": true,
       "overrideStatusDescription": "被ダメージ+10%。解除不可。",
       "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "3112": {
+    "skillEffectId": 3112,
+    "skillEffectJson": {
+      "turn": 5,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 105
+          }
+        }
+      ],
+      "filename": "status_atkup",
+      "statusId": 199,
+      "canDispel": true,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "行動激化",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": true,
+      "isCountDownEffect": false,
+      "overrideStatusName": "行動激化",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATK+5%。バフ重複無効のクエストでも重複する。",
+      "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
     }
   },

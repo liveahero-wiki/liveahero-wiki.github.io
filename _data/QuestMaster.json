@@ -125466,6 +125466,94 @@
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
   },
+  "1082005": {
+    "questId": 1082005,
+    "questName": "子供たちのお友達",
+    "subName": "第５話",
+    "questKind": 5,
+    "chapterId": 1082,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2024-01-04 18:00:00",
+    "endAt": "2024-01-18 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 5,
+    "enemyLevel": 13,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1082004,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFire_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 108
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultWater_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 104
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFire_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 102
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultWater_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 100
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
   "1083001": {
     "questId": 1083001,
     "questName": "クリスマス・スペシャルマッチ！",
@@ -126405,6 +126493,86 @@
         "battleInfoIcon": "icon_villainWrestlerShadow_h01",
         "battleInfoElement": 5,
         "battleInfoSpd": 97
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1085004": {
+    "questId": 1085004,
+    "questName": "クリスマス・キャロル",
+    "subName": "第４話チャレンジクエスト",
+    "questKind": 6,
+    "chapterId": 1085,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2024-01-04 18:00:00",
+    "endAt": "2024-01-18 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 2,
+    "enemyLevel": 55,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 29,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 34,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1082004,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_hydoor_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 109
+      },
+      {
+        "battleInfoIcon": "icon_yasuhiko_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 115
+      },
+      {
+        "battleInfoIcon": "icon_anna_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 110
       }
     ],
     "hasAdv": false,
