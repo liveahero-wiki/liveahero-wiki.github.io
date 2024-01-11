@@ -39,7 +39,7 @@ sidekicks:
 
     He has a tendency of being in the midst of big-sized tussles, so he is a man who
     is both a hero and a troublemaker.
-  extra_sprites: fg_polaris_s01_skin1,fg_polaris_s01_skin2
+  extra_sprites: fg_polaris_s01_skin1,fg_polaris_s01_skin2,fg_polaris_s01_skin3,fg_polaris_s01_skin4
 ---
 
 {% include voice-table.html resourceName="polaris"
