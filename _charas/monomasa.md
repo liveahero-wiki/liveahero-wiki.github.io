@@ -30,6 +30,7 @@ heroes:
     Drovain's wish is for Monomasa to come out in the open again and be able to live
     by his own will.
 - stockId: 10312
+  extra_sprites: fg_monomasaWorkout2312_h01_skin2,fg_monomasaWorkout2312_h02_skin2,fg_monomasaWorkout2312_boss_h01
 sidekicks:
 - stockId: 10311
   BIO_S01: |-

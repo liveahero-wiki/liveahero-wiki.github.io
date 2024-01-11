@@ -22,7 +22,7 @@ heroes:
     best extreme battle that the audience wants to see. All to prepare for his dream
     of "confrontation with the strongest man in the universe".
 - stockId: 10152
-  extra_sprites: fg_polarisWorkout2312_h01_skin2,fg_polarisWorkout2312_h01_skin3,fg_polarisWorkout2312_h02_skin2,fg_polarisWorkout2312_h02_skin3
+  extra_sprites: fg_polarisWorkout2312_h01_skin2,fg_polarisWorkout2312_h01_skin3,fg_polarisWorkout2312_h02_skin2,fg_polarisWorkout2312_h02_skin3,fg_polarisWorkout2312_h01_skin4,fg_polarisWorkout2312_h01_skin5,fg_polarisWorkout2312_h01_skin6,fg_polarisWorkout2312_h01_skin7,fg_polarisWorkout2312_h02_skin4,fg_polarisWorkout2312_h02_skin5,fg_polarisWorkout2312_h02_skin6,fg_polarisWorkout2312_h02_skin7,fg_polarisWorkout2312_h02_skin8,fg_polarisWorkout2312_h02_skin9
 sidekicks:
 - stockId: 10151
   BIO_S01: |-

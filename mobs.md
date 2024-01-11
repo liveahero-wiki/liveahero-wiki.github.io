@@ -105,6 +105,12 @@ sprites="fg_kaibutsuAdultEarth_h01,fg_kaibutsuAdultFire_h01,fg_kaibutsuAdultFire
 sprites="fg_kaibutsuLarvaEarth_h01,fg_kaibutsuLarvaFire_h01,fg_kaibutsuLarvaLight_h01,fg_kaibutsuLarvaShadow_h01,fg_kaibutsuLarvaWater_h01"
 %}
 
+### Kram
+
+{% include hero-infobox-unreleased.html name="Kram" mob=true
+sprites="fg_ADV_kram_s01"
+%}
+
 ### Mafia
 
 {% include hero-infobox-unreleased.html name="Mafia" mob=true
