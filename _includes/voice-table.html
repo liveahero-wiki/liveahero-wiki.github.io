@@ -5,7 +5,7 @@
 {% assign greeting = "h_gachaResult,s_gachaResult" | split: "," %}
 
 <h2>Voice Lines ({{ names | join: ", " }})</h2>
-<table class="voice-table" data-resourceName="{{ include.resourceName | downcase }}">
+<table class="voice-table" data-resourceName="{{ include.resourceName }}">
 {% for n in names %}
   {% assign name = n | upcase | prepend: "_" | append: "_" %}
 
