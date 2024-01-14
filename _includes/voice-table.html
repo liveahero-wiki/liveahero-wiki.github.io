@@ -14,7 +14,7 @@
     {% capture key %}voice_{{ n }}_{{ part }}{% endcapture %}
     {% assign jp_line = site.data.processed.jp_greeting[key] %}
 
-    {% if translated or jp_line %}<tr><th data-part="{{ part | downcase }}">{{ part | replace: "h_", "Hero " | replace: "s_", "Sidekick " }}</th>
+    {% if translated or jp_line %}<tr><th data-part="{{ part }}">{{ part | replace: "h_", "Hero " | replace: "s_", "Sidekick " }}</th>
 <td markdown="1" class="translate" data-translate="{% if translated %}{{ jp_line | escape }}{% endif %}">
 {{ translated | default: jp_line }}
 </td></tr>{% endif %}
