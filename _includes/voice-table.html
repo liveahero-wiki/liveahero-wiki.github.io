@@ -29,7 +29,7 @@
       {% assign p = key | replace: "SERIF_", "" %}
     {% endif %}
     {% assign translated = include[p] %}
-    {% if jp_line %}<tr><th>{{ p }}</th>
+    {% if jp_line %}<tr><th data-part="{{ p | downcase }}">{{ p }}</th>
 <td markdown="1" class="translate" data-translate="{% if translated %}{{ jp_line | escape }}{% endif %}">
 {{ translated | default: jp_line }}
 </td></tr>{% endif %}
