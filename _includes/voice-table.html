@@ -37,7 +37,7 @@
 
   {% for part in manual %}
   {% assign line = include[part] %}
-  {% if line %}<tr><th>{{ part }}</th>
+  {% if line %}<tr><th data-part="{{ part }}">{{ part }}</th>
 <td markdown="1">
 {{ line }}
 </td></tr>{% endif %}
