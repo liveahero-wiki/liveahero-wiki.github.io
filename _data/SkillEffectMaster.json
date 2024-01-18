@@ -42183,6 +42183,40 @@
       "isOverrideStatusDescription": true
     }
   },
+  "1452": {
+    "skillEffectId": 1452,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 134,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果134番全除去",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "1454": {
     "skillEffectId": 1454,
     "skillEffectJson": {
@@ -42762,6 +42796,38 @@
       "overrideStatusDescription": "ダメージを受けた時、カウントを-1。カウントが0になった時、自身に1回の行動の間過消費を付与。バフでもデバフでもない状態。",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
+    }
+  },
+  "2005": {
+    "skillEffectId": 2005,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 128,
+      "canDispel": false,
+      "filterIds": [
+        0
+      ],
+      "parameter": false,
+      "description": "システム効果128番付与",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
     }
   },
   "2006": {
@@ -51176,6 +51242,406 @@
       "overrideStatusDescription": "相手から狙われなくなる。バフでもデバフでもない状態。スキルによる解除不可。",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
+    }
+  },
+  "4218": {
+    "skillEffectId": 4218,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "OwnAttack",
+          "parameter": {
+            "index": 3,
+            "executeTiming": 5
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "スキル4を追加発動（状態変化版）",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4219": {
+    "skillEffectId": 4219,
+    "skillEffectJson": {
+      "turn": 10,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseMultipleAttack",
+          "parameter": {
+            "value": 100
+          }
+        },
+        {
+          "class": "ParticleStatus",
+          "parameter": {
+            "address": "yoshiori_taunt"
+          }
+        },
+        {
+          "class": "Provocation",
+          "parameter": []
+        },
+        {
+          "class": "Aggregation",
+          "parameter": []
+        }
+      ],
+      "filename": "status_system_provocation",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "挺身",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "挺身",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "相手から狙われやすくなる。全体攻撃のダメージを自分に集める。ダメージを受けた時カウントが1減少。カウントが0になった時解除される。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4220": {
+    "skillEffectId": 4220,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": -1,
+            "isRandom": false,
+            "statusId": 126,
+            "statusNum": 0,
+            "statusTypeValue": 2
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "挺身を１ターン減少",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4222": {
+    "skillEffectId": 4222,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseMultipleAttack",
+          "parameter": {
+            "value": 100
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 134,
+      "canDispel": true,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "SP",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "SP",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ダメージを受けた時チャージ数が1減少(最低で1まで)。バフでもデバフでもない状態。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4223": {
+    "skillEffectId": 4223,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": 1,
+            "isRandom": false,
+            "statusId": 134,
+            "statusNum": 0,
+            "extensionLimit": 99,
+            "statusTypeValue": 2
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "SPを1増加",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4224": {
+    "skillEffectId": 4224,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": -1,
+            "isRandom": false,
+            "statusId": 134,
+            "statusNum": 0,
+            "statusTypeValue": 2
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "SPを１減少",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4225": {
+    "skillEffectId": 4225,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 19
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 81,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "火傷無効（アイコン表示有り）",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "火傷無効",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "火傷が付与されない。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4226": {
+    "skillEffectId": 4226,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 22
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 59,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "沈黙無効（アイコン表示有り）",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "沈黙無効",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "沈黙が付与されない。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4227": {
+    "skillEffectId": 4227,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 18
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 81,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "毒無効（アイコン表示有り）",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "毒無効",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "毒が付与されない。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4228": {
+    "skillEffectId": 4228,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseMultipleAttack",
+          "parameter": {
+            "value": 110
+          }
+        }
+      ],
+      "filename": "status_system_firepower",
+      "statusId": 270,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "ATK増加（チャージ数1につき10%）",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATK増加",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "チャージ数1につきATKを10%上昇。バフでもデバフでもない状態。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4229": {
+    "skillEffectId": 4229,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": 1,
+            "isRandom": false,
+            "statusId": 270,
+            "statusNum": 0,
+            "extensionLimit": 99,
+            "statusTypeValue": 2
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果270を１ターン増加",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
     }
   }
 }
