@@ -26206,12 +26206,20 @@
   "864": {
     "skillEffectId": 864,
     "skillEffectJson": {
-      "turn": 1,
+      "turn": 2,
       "count": 0,
       "effects": [
         {
-          "class": "NoneEffect",
-          "parameter": []
+          "class": "TurnBaseMultipleAttack",
+          "parameter": {
+            "value": 100
+          }
+        },
+        {
+          "class": "PassiveBattleSkillEffect",
+          "parameter": {
+            "skillId": 8123101
+          }
         }
       ],
       "filename": "",
@@ -26219,11 +26227,11 @@
       "canDispel": false,
       "filterIds": [],
       "parameter": false,
-      "description": "セラスティウム反撃用システム効果2",
+      "description": "スキル1反撃（システム効果136）",
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
-      "canDuplicate": true,
+      "canDuplicate": false,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
@@ -26236,26 +26244,24 @@
   "865": {
     "skillEffectId": 865,
     "skillEffectJson": {
-      "turn": 1,
+      "turn": 0,
       "count": 0,
       "effects": [
         {
-          "class": "NoneEffectElapseTurnBeforeSkill",
-          "parameter": {
-            "avoidExtensionTurn": true
-          }
+          "class": "NoneEffect",
+          "parameter": []
         }
       ],
       "filename": "",
       "statusId": 137,
-      "canDispel": false,
+      "canDispel": true,
       "filterIds": [],
       "parameter": false,
-      "description": "セラスティウム反撃用システム効果3",
+      "description": "セラスティウム反撃用（システム効果137）",
       "isImmediate": false,
-      "persistence": false,
+      "persistence": true,
       "reaminDeath": false,
-      "canDuplicate": true,
+      "canDuplicate": false,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
@@ -31674,6 +31680,7 @@
       "description": "ダメージ集約",
       "isImmediate": false,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
@@ -51242,6 +51249,76 @@
       "overrideStatusDescription": "相手から狙われなくなる。バフでもデバフでもない状態。スキルによる解除不可。",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
+    }
+  },
+  "4216": {
+    "skillEffectId": 4216,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 1,
+            "target": 137,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果137番除去",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4217": {
+    "skillEffectId": 4217,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": -1,
+            "isRandom": false,
+            "statusId": 136,
+            "statusNum": 0,
+            "statusTypeValue": 2
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "スキル1反撃を１ターン減少",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
     }
   },
   "4218": {
