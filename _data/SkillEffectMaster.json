@@ -3765,7 +3765,10 @@
       "description": "90%ダメージ+対象と自分のSPDの差だけダメージ量が上昇",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -15842,7 +15845,10 @@
       "description": "50%のHPで復活",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -21827,7 +21833,10 @@
       "description": "クリティカル有バトル用クリティカル",
       "isImmediate": false,
       "persistence": true,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -21859,7 +21868,10 @@
       "description": "回避有バトル用回避",
       "isImmediate": false,
       "persistence": true,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -25288,7 +25300,7 @@
           }
         }
       ],
-      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"class\":\"EnemyBuffNumberExecTrigger\"}]",
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"role\":0,\"class\":\"EnemyBuffNumberExecTrigger\"}]",
       "filename": "",
       "statusId": 0,
       "canDispel": false,
@@ -25395,10 +25407,13 @@
       "description": "SPDダウン(永続)",
       "isImmediate": false,
       "persistence": true,
+      "reaminDeath": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "Spd-5",
       "isOverrideStatusName": true,
-      "overrideStatusDescription": "このバトル中、Spdが-5される。",
+      "overrideStatusDescription": "このバトル中、Spdが-5される。バフでもデバフでもない状態。",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
     }
@@ -26330,7 +26345,10 @@
       "description": "被ダメージ+25%（永続）",
       "isImmediate": false,
       "persistence": true,
+      "reaminDeath": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -26363,7 +26381,10 @@
       "description": "View消費量-2000(永続）",
       "isImmediate": false,
       "persistence": true,
+      "reaminDeath": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -26460,7 +26481,10 @@
       "description": "被ダメージ-75%（永続）",
       "isImmediate": false,
       "persistence": true,
+      "reaminDeath": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -26491,7 +26515,10 @@
       "description": "システム効果138番を３つ解除",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -26522,7 +26549,10 @@
       "description": "システム効果139番を３つ解除",
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -26737,7 +26767,10 @@
       "description": "システム効果142番付与",
       "isImmediate": false,
       "persistence": true,
+      "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
       "overrideStatusName": "",
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
@@ -51947,6 +51980,324 @@
       "persistence": true,
       "reaminDeath": true,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4251": {
+    "skillEffectId": 4251,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 130,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "軽減説明用",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "軽減",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメージ-30%",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4252": {
+    "skillEffectId": 4252,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 130,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "クリティカル説明用",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "クリティカル",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "与ダメージ+30%",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4253": {
+    "skillEffectId": 4253,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseMultipleAttack",
+          "parameter": {
+            "value": 100
+          }
+        },
+        {
+          "class": "PassiveBattleSkillEffect",
+          "parameter": {
+            "skillId": 6069105
+          }
+        }
+      ],
+      "filename": "b_skill_damage",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果126番付与（スキルカウンター1）",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "スキル1カウンター",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ダメージを受けた時、自身のスキル1を誘発する。バフでもデバフでもない状態。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4254": {
+    "skillEffectId": 4254,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseMultipleAttack",
+          "parameter": {
+            "value": 100
+          }
+        },
+        {
+          "class": "PassiveBattleSkillEffect",
+          "parameter": {
+            "skillId": 6069105
+          }
+        }
+      ],
+      "filename": "b_skill_damageAll",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果126番付与（スキルカウンター2）",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "スキル2カウンター",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ダメージを受けた時、自身のスキル2を誘発する。発動に必要なViewが足りない場合はスキル1を誘発する。バフでもデバフでもない状態。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4255": {
+    "skillEffectId": 4255,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": -1,
+            "isRandom": false,
+            "statusId": 126,
+            "statusNum": 0,
+            "statusTypeValue": 2
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果126のターン数を1ターン減少",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4256": {
+    "skillEffectId": 4256,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseMultipleAttack",
+          "parameter": {
+            "value": 100
+          }
+        },
+        {
+          "class": "PassiveBattleSkillEffect",
+          "parameter": {
+            "skillId": 6069105
+          }
+        }
+      ],
+      "filename": "b_skill_damage",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果126番付与（スキルカウンター1）",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "スキル1カウンター",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ダメージを受けた時、自身のスキル1を誘発する。バフでもデバフでもない状態。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4257": {
+    "skillEffectId": 4257,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseMultipleAttack",
+          "parameter": {
+            "value": 100
+          }
+        },
+        {
+          "class": "PassiveBattleSkillEffect",
+          "parameter": {
+            "skillId": 6069105
+          }
+        }
+      ],
+      "filename": "b_skill_damageAll",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果126番付与（スキルカウンター2）",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "スキル2カウンター",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ダメージを受けた時、自身のスキル2を誘発する。発動に必要なViewが足りない場合はスキル1を誘発する。バフでもデバフでもない状態。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4258": {
+    "skillEffectId": 4258,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewChange",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "filename": "status_useless",
+      "statusId": 175,
+      "canDispel": true,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View消費量1.5倍（システム）",
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "View消費量1.5倍",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "スキルに必要なViewPowerが1.5倍になる。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4259": {
+    "skillEffectId": 4259,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 175,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果175番除去",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
