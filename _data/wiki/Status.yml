@@ -234,10 +234,10 @@
   isGoodStatus: 1
   icon: ""
 "48":
-  name: "Void"
-  description: "Cannot be inflicted with certain debuff"
+  name: "Debuff Resistance"
+  description: "Reduce the chance of {{ effects.RegistDebuff.parameter.statusId | status_description }} being inflicted by {{ effects.RegistDebuff.parameter.value | abs }} %"
   isGoodStatus: 1
-  icon: ""
+  icon: "status_immunity"
 "49":
   name: "Clock Up"
   description: "Speed +5, decrease VP consumption by 2000, cannot be removed"
@@ -284,8 +284,8 @@
   isGoodStatus: 2
   icon: ""
 "58":
-  name: "View Cost +1000"
-  description: "Increase view cost by 1000"
+  name: "View Cost Increase"
+  description: "Increase view cost by {{ effects.NeedViewValueChange.parameter.value | abs }}"
   isGoodStatus: 0
   icon: "status_mosaic" 
 "59":
