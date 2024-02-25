@@ -267,6 +267,11 @@ module LahWiki
     def status_description(id, skillEffectJson=nil)
       id_s = id.to_s
 
+      # try getting from context
+      if skillEffectJson == nil
+        skillEffectJson = @context['skillEffectJson']
+      end
+
       status = Skills::status_master(@context)[id_s]
       if !status
         return "unknown status #{id}"
