@@ -203,4 +203,8 @@
 {% endfor %}
 {% endif %}
 
+{% if site.data.wiki.HeroSkillEvolution[stockId] != nil %}
+{% include hero-skill-evolution.html stockId=include.stockId %}
+{% endif %}
+
 </div>

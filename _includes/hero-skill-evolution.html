@@ -1,0 +1,50 @@
+{% assign stockId = include.stockId | downcase %}
+{% assign heroEvo = site.data.wiki.HeroSkillEvolution[stockId] %}
+
+<h2>Skill evolution</h2>
+
+<p>Note to wiki contributor: skill evolution data is saved in
+  <a href="https://github.com/liveahero-wiki/liveahero-wiki.github.io/blob/master/_includes/hero-skill-evolution.html">this file</a></p>
+
+{% for evo in heroEvo.evolutions %}
+<h3>Evolution {{ forloop.index }}</h3>
+<div class="blooming">
+  {% for skill in evo.skills %}
+  <div class="blooming_main" title="{{ skill.skillId }}">
+    {% assign nid = skill.skillId %}
+    {% assign sid = skill.skillId | downcase %}
+    {% assign realSkill = site.data.SkillMaster[sid] %}
+    {% assign skillName = site.data.wiki.SkillNameTranslation[nid] %}
+    <b>{{ skillName | default: realSkill.skillName }}</b>
+    <p>View: {{ realSkill.useView }}</p>
+    <p>{% include skill-description.html skillId=nid skill=realSkill %}</p>
+  </div>
+
+  {% assign COLNAME = "?ABC" | split: "" %}
+  {% assign max_col = 1 %}
+  {% for row in skill.tree %}
+    {% if row.size > max_col %}
+      {% assign max_col = row.size %}
+    {% endif %}
+  {% endfor %}
+  <div class="skill_tree">
+    <table data-col="{{ max_col }}">
+      {% for row in skill.tree %}
+      {% assign i = forloop.index %}
+      <tr data-size="{{ row.size }}">
+        {% for col in row %}
+        <th>{{ i }}{% if row.size > 1 %}{{ COLNAME[ forloop.index] }}{% endif %}</th>
+        <td
+          class="tippy" data-content="{{ col.tooltip | render_liquid | xml_escape }}"
+          {% if max_col == 2 and row.size == 1 %}colspan="3"{% endif %}
+        >
+          {{ col.text | render_liquid }}
+        </td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  {% endfor %}
+</div>
+{% endfor %}

@@ -3,10 +3,10 @@
 
 # Akashi Bloom S1, passive
 
-1001105: "[When self skill 2 not active] Deal 70% of damage to target enemy /100%<br> \
-[When self skill 2 is active] Deal 80%-110% of damage to target enemy (depending on skill tree)/100%<br> \
-[When self skill 2 is active] (extra cond: current action is not activated by another skill) Deal 150% of damage to target enemy /100%<br> \
-[base skill] Apply {{ 19 | status_description }} to target enemy for 2 turns /40%-60% (depending on skill tree)"
+1001105: "[base skill] Deal 70% of damage to target enemy /100%<br> \
+[base skill] Apply {{ 19 | status_description }} to target enemy for 2 turns /40%<br> \
+[battle start] Apply {{ 1001101 | status_description }} to self<br> \
+[when Akashi's attack damages an enemy] {{ 1001101 | status_description }} +1"
 
 8001106: ""
 8001107: "[when invoker's attack causes damage to enemy] Apply {{ 1001101 | status_description }} to self /100%"

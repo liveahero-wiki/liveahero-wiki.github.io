@@ -444,6 +444,31 @@ $elementColor: #f07d75, #88bcff, #5fcb58, #ffb251, #b88dff;
     border: 2px solid $colorGrey;
   }
 }
+.blooming {
+  display: grid;
+  grid-template-columns: fit-content(280px) 1fr;
+  grid-gap: 5px;
+  margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .blooming {
+    grid-template-columns: 1fr;
+  }
+}
+.blooming_main {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+}
+.skill_tree tr:nth-child(odd) td {
+  background: #f5f5f5;
+}
+.skill_tree tr:nth-child(even) td {
+  background: #fff;
+}
+.skill_tree table {
+  margin: 0;
+}
 // Chara list page
 .card-list {
   display: grid;
