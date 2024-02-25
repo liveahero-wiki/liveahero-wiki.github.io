@@ -1,11 +1,9 @@
 {% assign names = include.override | default: include.illustrator | processVoiceActor %}
 {% for name in names %}
 {% assign en = site.data.wiki.Illustrator[name].en %}
-<a href="/illustrators/#{{ en | default: name | slugify }}">
 {%- if en %}
-<abbr class="tippy" data-content="{{ name }}">{{ en }}</abbr>
+<a class="tippy" data-content="{{ name }}" href="/illustrators/#{{ en | slugify }}">{{ en }}</a>
 {%- else %}
-{{ name }}
+<a href="/illustrators/#{{ name | slugify }}">{{ name }}</a>
 {%- endif %}
-</a>
 {% endfor %}
