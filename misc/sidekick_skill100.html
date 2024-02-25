@@ -15,7 +15,7 @@ wide_content: true
 {% assign page = c.characterId | characterIdToPage %}
 {% assign g = c.growths[1] %}
 <tr>
-<td><a class="item" href="{{ page.url }}/#s{{ c.stockId }}-stats"><img src="/cdn/Sprite/icon_{{ c.resourceName }}_s01.png" loading="lazy"> {{ page.title }}</a></td>
+<td><a class="item" href="{{ page.url }}#s{{ c.stockId }}"><img src="/cdn/Sprite/icon_{{ c.resourceName }}_s01.png" loading="lazy"> {{ page.title }}</a></td>
 <td>{{ g.agility }}</td>
 {% assign active = c.skillIds[0] | downcase %}
 {% assign passive = c.equipmentSkills | last | downcase %}
