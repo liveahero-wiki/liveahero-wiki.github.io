@@ -136244,5 +136244,900 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
+  },
+  "1097001": {
+    "questId": 1097001,
+    "questName": "拝啓、お元気ですか？",
+    "subName": "第１話",
+    "questKind": 5,
+    "chapterId": 1097,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": "2024-03-26 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 1,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1097002": {
+    "questId": 1097002,
+    "questName": "いつも騒々しい日々です",
+    "subName": "第２話",
+    "questKind": 5,
+    "chapterId": 1097,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": "2024-03-26 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 2,
+    "enemyLevel": 10,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1097001,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 107
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1098001": {
+    "questId": 1098001,
+    "questName": "焦熱のカカオ採取！",
+    "subName": "D級",
+    "questKind": 6,
+    "chapterId": 1098,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Volcano2402_exchange01",
+    "startAt": null,
+    "endAt": "2024-03-19 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 1,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 8,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 4,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1097002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainStuntmanEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 100
+      },
+      {
+        "battleInfoIcon": "icon_villainStuntmanLight_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 107
+      },
+      {
+        "battleInfoIcon": "icon_villainStuntmanEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 100
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1098002": {
+    "questId": 1098002,
+    "questName": "焦熱のカカオ採取！",
+    "subName": "C級",
+    "questKind": 6,
+    "chapterId": 1098,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Volcano2402_exchange01",
+    "startAt": null,
+    "endAt": "2024-03-19 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 15,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 10,
+        "prob": 80
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 8,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1097002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainStuntmanEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 100
+      },
+      {
+        "battleInfoIcon": "icon_villainStuntmanLight_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 107
+      },
+      {
+        "battleInfoIcon": "icon_villainStuntmanEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 100
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1098003": {
+    "questId": 1098003,
+    "questName": "焦熱のカカオ採取！",
+    "subName": "B級",
+    "questKind": 6,
+    "chapterId": 1098,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Volcano2402_exchange01",
+    "startAt": null,
+    "endAt": "2024-03-19 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 30,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 20,
+        "prob": 50
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 12,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1097002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainStuntmanEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 100
+      },
+      {
+        "battleInfoIcon": "icon_villainStuntmanLight_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 107
+      },
+      {
+        "battleInfoIcon": "icon_villainStuntmanEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 100
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1098004": {
+    "questId": 1098004,
+    "questName": "焦熱のカカオ採取！",
+    "subName": "A級",
+    "questKind": 6,
+    "chapterId": 1098,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Volcano2402_exchange01",
+    "startAt": null,
+    "endAt": "2024-03-19 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 45,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 10,
+        "prob": 40
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 16,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1097002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainStuntmanEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 100
+      },
+      {
+        "battleInfoIcon": "icon_villainStuntmanLight_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 107
+      },
+      {
+        "battleInfoIcon": "icon_villainStuntmanEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 100
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1098005": {
+    "questId": 1098005,
+    "questName": "焦熱のカカオ採取！",
+    "subName": "S級",
+    "questKind": 6,
+    "chapterId": 1098,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Volcano2402_exchange01",
+    "startAt": null,
+    "endAt": "2024-03-19 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 60,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 40,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 40,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 20,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 20,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1097002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainStuntmanEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 100
+      },
+      {
+        "battleInfoIcon": "icon_villainStuntmanLight_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 107
+      },
+      {
+        "battleInfoIcon": "icon_villainStuntmanEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 100
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1098006": {
+    "questId": 1098006,
+    "questName": "焦熱のカカオ採取！",
+    "subName": "ビギナー級",
+    "questKind": 6,
+    "chapterId": 1098,
+    "bannerResourceName": "ui_window_quest_04",
+    "iconFilename": "item_Volcano2402_exchange01",
+    "startAt": null,
+    "endAt": "2024-03-19 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 25,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 70,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 60,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 50,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 50,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 10,
+        "prob": 25
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 15,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1097002,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "ItemConsume",
+        "value": 3,
+        "itemId": 38,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainStuntmanEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 100
+      },
+      {
+        "battleInfoIcon": "icon_villainStuntmanLight_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 107
+      },
+      {
+        "battleInfoIcon": "icon_villainStuntmanEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 100
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1098007": {
+    "questId": 1098007,
+    "questName": "焦熱のカカオ採取！",
+    "subName": "エキスパート級",
+    "questKind": 6,
+    "chapterId": 1098,
+    "bannerResourceName": "ui_window_quest_04",
+    "iconFilename": "item_Volcano2402_exchange01",
+    "startAt": null,
+    "endAt": "2024-03-19 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 100,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 100,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 80,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 60,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 201,
+        "objectValue": 60,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 20,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1097002,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "ItemConsume",
+        "value": 3,
+        "itemId": 38,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainStuntmanEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 100
+      },
+      {
+        "battleInfoIcon": "icon_villainStuntmanLight_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 107
+      },
+      {
+        "battleInfoIcon": "icon_villainStuntmanEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 100
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
   }
 }

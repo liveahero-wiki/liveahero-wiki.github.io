@@ -2307,6 +2307,64 @@
     "effect": [],
     "limitValue": 0
   },
+  "201": {
+    "itemId": 201,
+    "itemName": "岩石カカオ",
+    "resourceName": "Volcano2402_exchange01",
+    "rarity": 0,
+    "itemType": 512,
+    "description": "火山で採れる結晶化した希少な食用鉱石。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "202": {
+    "itemId": 202,
+    "itemName": "鉱山道ホログラム",
+    "resourceName": "icon_bg_battle_rockyplace_rockwall_day",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景に鉱山道を投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_rockyplace_rockwall_day",
+        "bgTitleKey": "TITLE_BG_BATTLE_ROCKYPLACE_ROCKWALL_DAY_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
+  "203": {
+    "itemId": 203,
+    "itemName": "ヴォルカーノディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "チョコ・ヴォルカーノより愛を込めてのBGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_volcano_adv",
+        "bgmTitleKey": "TITLE_BGM_VOLCANO_ADV_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "204": {
+    "itemId": 204,
+    "itemName": "ヴォルカーノ戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "チョコ・ヴォルカーノより愛を込めての戦闘BGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_volcano_battle",
+        "bgmTitleKey": "TITLE_BGM_VOLCANO_BATTLE_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -4400,6 +4458,27 @@
     ],
     "limitValue": 0
   },
+  "111222": {
+    "itemId": 111222,
+    "itemName": "炎誓のリグザの記憶片",
+    "resourceName": "piece_rexerVolcano2402",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "炎誓のリグザのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 11222
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
   "111231": {
     "itemId": 111231,
     "itemName": "セラスティウムの記憶片",
@@ -4896,6 +4975,48 @@
         "addFan": 50,
         "rarity": 0,
         "stockId": 11921
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "111981": {
+    "itemId": 111981,
+    "itemName": "リューセイの記憶片",
+    "resourceName": "piece_ryusei",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "リューセイのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 11981
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
+  "111991": {
+    "itemId": 111991,
+    "itemName": "ガンランの記憶片",
+    "resourceName": "piece_ganran",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "ガンランのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 11991
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
@@ -6856,6 +6977,46 @@
     ],
     "limitValue": 0
   },
+  "211981": {
+    "itemId": 211981,
+    "itemName": "リューセイの心",
+    "resourceName": "heart_ryusei",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "リューセイのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 11981
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ],
+    "limitValue": 0
+  },
+  "211991": {
+    "itemId": 211991,
+    "itemName": "ガンランの心",
+    "resourceName": "heart_ganran",
+    "rarity": 4,
+    "itemType": 2048,
+    "description": "ガンランのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 11991
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
   "219991": {
     "itemId": 219991,
     "itemName": "@playerNameの心",
@@ -8206,6 +8367,16 @@
     "effect": [],
     "limitValue": 0
   },
+  "21122201": {
+    "itemId": 21122201,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
   "21123101": {
     "itemId": 21123101,
     "itemName": "開花の波動",
@@ -8438,6 +8609,26 @@
   },
   "21192101": {
     "itemId": 21192101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21198101": {
+    "itemId": 21198101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21199101": {
+    "itemId": 21199101,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,
