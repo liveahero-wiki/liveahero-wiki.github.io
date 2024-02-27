@@ -36,7 +36,7 @@
     {% assign turnDefinition = "turn" %}
   {% when 9 %}
     {% comment %}View consumption{% endcomment %}
-    {% assign turnDefinition = "turn" %}
+    {% assign turnDefinition = "action" %}
   {% when 10 %}
     {% comment %}Combo{% endcomment %}
   {% when 11 %}
@@ -71,15 +71,18 @@
     {% if skillEffectJson.isDisplayPersistenceStatus == true -%}
       permanently
     {% endif -%}
-  {% elsif skillEffectJson.turn != 0 -%}
-    for {{ skillEffectJson.turn }} {{ turnDefinition }}(s)
   {%- endif -%}
-  {%- if skillEffectJson.effects[0].class == "NoneEffectElapseTurnDamage" -%}
+
+  {%- if skillEffectJson.effects[0].class == "NoneEffect" -%}
+
+  {%- elsif skillEffectJson.effects[0].class == "NoneEffectElapseTurnDamage" -%}
     , removed when damaged
   {%- elsif skillEffectJson.effects[0].class == "NoneEffectElapseAfterTurnEnd" -%}
     , removed when current turn ends
   {%- elsif skillEffectJson.effects[0].class == "NoneEffectElapseTurnDamageAndTurnEnd" -%}
     , removed when damaged or current turn ends
+  {%- elsif skillEffectJson.turn != 0 and skillEffectJson.persistence == false -%}
+    for {{ skillEffectJson.turn }} {{ turnDefinition }}(s)
   {%- endif -%}
 {% else %}
 
@@ -329,8 +332,8 @@ Unknown effect class ({{ effect.class }})
 {% if skillEffectJson.persistence == true and skillEffectJson.isOverrideStatusDescription == false %}
   {% if skillEffectJson.isDisplayPersistenceStatus == true %}
     permanently
-  {% else %}
-    (recalculated in every turn)
+  {% comment %}{% else %}
+    (recalculated in every turn){% endcomment %}
   {% endif %}
 {% else %}
   {% if skillEffectJson.turn != 0 %}
