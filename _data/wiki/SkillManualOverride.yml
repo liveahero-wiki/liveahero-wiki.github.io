@@ -213,6 +213,33 @@ and possessing > 0 {{ 1031209 | status_description }} ) Reset {{ 1031201 | statu
 {% assign se = site.data.SkillEffectMaster['684'] %}\
 [base skill] Grants {{ 74 | status_description: se.skillEffectJson }} to all alies except self for one action /100%"
 
+# reXer variant S1,S2,S3, Passive
+1122201: "[base skill] Deal 60% of damage to target enemy /100% <br>\
+Remove 1 buff(s) from target enemy /60%"
+
+1122202: "[base skill] Deal 90% of damage to target enemy /100% <br>\
+Apply {{ 13 | status_description }} to target enemy for 1 turn(s) /100%"
+
+1122203: "[base skill] Deal 130% of damage to target enemy /100% <br>\
+Also deal 50% of atk as damage to other enemies, when the other enemy has not acted yet this turn, this damage is increased by +50% of atk /100%"
+
+1122204: "[base skill] Deal 60% of damage to target enemy /100% <br>\
+Remove 1 buff(s) from target enemy /100%"
+
+1000: "[When self has > 110 Speed and has no debuff] Change {{ 24 | status_description }} into Reboot <br>\
+Using Reboot will:<br>\
+[base skill] Apply {{ 1122202 | status_description }} to self for 1 turn(s) /100% <br>\
+[base skill] Apply {{ 1122205 | status_description }} to self for 1 turn(s) /100% <br>\
+[base skill] Perform 1 more action(s) /100% <br>\
+Max 3 times in 1 turn"
+
+8122201: "[Action end] (When enemy(s) has {{ 13 | status_description }} or {{ 29 | status_description }}) Deal 50% of damage to enemy with the condition"
+
+8122203: ""
+
+8122205: "[turn end] Remove all {{ 1122202 | status_description }} from self /100% <br>\
+[turn end] Remove all {{ 1122205 | status_description }} from self /100%"
+
 # Ryekie variant S2 bloom passive
 8004201: "[When invoker is alive] Allies with speed up buff gain +20% atk (doesn't stack) /100%"
 
