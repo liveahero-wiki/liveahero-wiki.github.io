@@ -9,7 +9,7 @@
 {{ include.skillEffect.triggerJson | skill_trigger: include.timing }}
 {% if skillEffectJson.trigger %}{{ skillEffectJson.trigger | skill_trigger_json: include.timing }}{% endif %}
 
-{% assign turnDefinition = "turn" %}
+{% assign turnDefinition = "action" %}
 {% case skillEffectJson.filterIds[0] %}
   {% when 1 %}
     {% comment %}Damage{% endcomment %}
@@ -18,7 +18,7 @@
     {% assign turnDefinition = "turn" %}
   {% when 3 %}
     {% comment %}Gain view{% endcomment %}
-    {% assign turnDefinition = "turn" %}
+    {% assign turnDefinition = "action" %}
   {% when 4 %}
     {% comment %}ATK up/DEF up{% endcomment %}
     {% assign turnDefinition = "next attack" %}
@@ -259,7 +259,6 @@ HP Up by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "StatusNumberMultipleAttack" %}
 ATK Up by {{ effect.parameter.statusMult | default: effect.parameter.value }}% to {{ target }} for each {% if effect.parameter.isGoodStatus == true %}buff{% else %}debuff{% endif %}{% if effect.parameter.limitStatusNum %}, can stack up to {{ effect.parameter.limitStatusNum }} time(s){% endif %}
 {% when "NeedViewValueChange" %}
-{% assign turnDefinition = "turn" %}
 Change skill view cost by {{ effect.parameter.value }} for {{ target }}
 {% when "IgnoreElement" %}
 Make {{ target }} ignore element advantages
