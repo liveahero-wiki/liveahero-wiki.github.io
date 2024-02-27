@@ -29,6 +29,7 @@ heroes:
   passiveSkillIds:
   - '8122101'
   extra_sprites: fg_rexer_h01_skin2,fg_rexer_h01_skin3,fg_rexer_h02_skin2,fg_rexer_h02_skin3
+- stockId: 11222
 sidekicks:
 - stockId: 11221
   BIO_S01: |-
@@ -75,6 +76,9 @@ TRAIN = "Come, follow me."
 TRAINED = "N-no more leeway…!"
 EVENTA = "I don't know the word defeat in this game.<br>I'm going to win for myself. That's all there is to it.<br>…I absolutely won't lose."
 EVENTB = "Gentle and strong, very cool.<br>I have come this far by chasing that person's back.<br>I want to be a perfect hero, just like them."
+%}
+
+{% include voice-table.html resourceName="rexerVolcano2402"
 %}
 
 ## Notes
