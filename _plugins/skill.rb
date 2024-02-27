@@ -110,60 +110,90 @@ module LahWiki
         when "OwnStatusTrigger"
           status_icon = self.status_description(c['value'])
           f.push("possessing #{status_icon}")
+
         when "OwnBuffNumberExecTrigger"
           status_icon = self.status_description_unknown(c['statusId'], 1)
           count = c['value']
-          #f.push("possessing &gt;#{count}x #{status_icon}")
           h["status_#{c['statusId']}_1"]['min'] = count
         when "OwnBuffNumberDontExecTrigger"
           status_icon = self.status_description_unknown(c['statusId'], 1)
           count = c['value']
-          #f.push("possessing &lt;=#{count}x #{status_icon}")
           h["status_#{c['statusId']}_1"]['max'] = count
+
         when "OwnDeBuffNumberExecTrigger"
           status_icon = self.status_description_unknown(c['statusId'], 0)
           count = c['value']
-          #f.push("possessing &gt;#{count}x #{status_icon}")
           h["status_#{c['statusId']}_0"]['min'] = count
         when "OwnDeBuffNumberDontExecTrigger"
           status_icon = self.status_description_unknown(c['statusId'], 0)
           count = c['value']
-          #f.push("possessing &lt;=#{count}x #{status_icon}")
           h["status_#{c['statusId']}_0"]['max'] = count
+
         when "OwnSystemStatusNumberExecTrigger"
           status_icon = self.status_description_unknown(c['statusId'], 2)
           count = c['value']
-          #f.push("possessing &gt;#{count}x #{status_icon}")
           h["status_#{c['statusId']}_2"]['min'] = count
         when "OwnSystemStatusNumberDontExecTrigger"
           status_icon = self.status_description_unknown(c['statusId'], 2)
           count = c['value']
-          #f.push("possessing &lt;=#{count}x #{status_icon}")
           h["status_#{c['statusId']}_2"]['max'] = count
+
         when "EnemyDeBuffNumberExecTrigger"
           status_icon = self.status_description_unknown(c['statusId'], 0)
           count = c['value']
-          #f.push("target enemy possessing &gt;#{count}x #{status_icon}")
           h["statusEnemy_#{c['statusId']}_0"]['min'] = count
         when "EnemyDeBuffNumberDontExecTrigger"
           status_icon = self.status_description_unknown(c['statusId'], 0)
           count = c['value']
-          #f.push("target enemy possessing &lt;=#{count}x #{status_icon}")
           h["statusEnemy_#{c['statusId']}_0"]['max'] = count
+
+        when "EnemyAllDeBuffNumberExecTrigger"
+          status_icon = self.status_description_unknown(c['statusId'], 0)
+          count = c['value']
+          h["statusAllEnemy_#{c['statusId']}_0"]['min'] = count
+        when "EnemyAllDeBuffNumberDontExecTrigger"
+          status_icon = self.status_description_unknown(c['statusId'], 0)
+          count = c['value']
+          h["statusAllEnemy_#{c['statusId']}_0"]['max'] = count
+
+        when "EnemySystemStatusNumberExecTrigger"
+          status_icon = self.status_description_unknown(c['statusId'], 0)
+          count = c['value']
+          h["statusEnemy_#{c['statusId']}_0"]['min'] = count
+        when "EnemySystemStatusNumberDontExecTrigger"
+          status_icon = self.status_description_unknown(c['statusId'], 0)
+          count = c['value']
+          h["statusEnemy_#{c['statusId']}_0"]['max'] = count
+
         when "EnemyBuffNumberExecTrigger"
           status_icon = self.status_description_unknown(c['statusId'], 1)
           count = c['value']
-          #f.push("target possessing &gt;#{count}x #{status_icon}")
           h["statusEnemy_#{c['statusId']}_1"]['min'] = count
         when "EnemyBuffNumberDontExecTrigger"
           status_icon = self.status_description_unknown(c['statusId'], 1)
           count = c['value']
-          #f.push("target possessing &lt;=#{count}x #{status_icon}")
           h["statusEnemy_#{c['statusId']}_1"]['max'] = count
+
+
+        # Not sure if these 4 are correct
+        when "OverTargetSpecialEffectTurnTrigger"
+          status_icon = self.status_description_unknown(c['statusId'], 1)
+          count = c['value']
+          f.push("target has at least #{count}x #{status_icon}")
+        when "RemainTargetSpecialEffectTurnTrigger"
+          status_icon = self.status_description_unknown(c['statusId'], 1)
+          count = c['value']
+          f.push("target has at most #{count}x #{status_icon}")
+
         when "OverInvokerSpecialEffectTurnTrigger"
           status_icon = self.status_description_unknown(c['statusId'], 1)
           count = c['value']
           f.push("self has at least #{count}x #{status_icon}")
+        when "RemainInvokerSpecialEffectTurnTrigger"
+          status_icon = self.status_description_unknown(c['statusId'], 1)
+          count = c['value']
+          f.push("self has at most #{count}x #{status_icon}")
+
         when "TargetElementExecTrigger"
           element = @@element_map[c['element']] || "Unknown"
           f.push("target is #{element}")
@@ -224,6 +254,8 @@ module LahWiki
 
           if key.start_with?("statusEnemy")
             f.push("target enemy possessing #{range} #{status_icon}")
+          elsif key.start_with?("statusAllEnemy")
+            f.push("all target enemies possessing #{range} #{status_icon}")
           else
             f.push("possessing #{range} #{status_icon}")
           end
