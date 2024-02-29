@@ -53,7 +53,7 @@ sprites="fg_villainChasseurEarth_s01,fg_villainChasseurFire_s01,fg_villainChasse
 
 ### Chasseur (Transform)
 
-{% include hero-infobox-unreleased.html name="Chasseur (Transform)" mob=true
+{% include hero-infobox-unreleased.html name="Transformed Chasseur" mob=true
 sprites="fg_villainChasseurEarth_h01,fg_villainChasseurFire_h01,fg_villainChasseurLight_h01,fg_villainChasseurShadow_h01,fg_villainChasseurWater_h01"
 %}
 
@@ -224,6 +224,12 @@ sprites="fg_kaibutsuAdultEarthSpace_h01,fg_kaibutsuAdultFireSpace_h01,fg_kaibuts
 
 {% include hero-infobox-unreleased.html name="Juvenile Space Kaibutsu" mob=true
 sprites="fg_kaibutsuLarvaEarthSpace_h01,fg_kaibutsuLarvaFireSpace_h01,fg_kaibutsuLarvaLightSpace_h01,fg_kaibutsuLarvaShadowSpace_h01,fg_kaibutsuLarvaWaterSpace_h01"
+%}
+
+### Stuntman (Transform)
+
+{% include hero-infobox-unreleased.html name="Transformed Stuntman" mob=true
+sprites="fg_villainStuntmanEarth_h01,fg_villainStuntmanFire_h01,fg_villainStuntmanLight_h01,fg_villainStuntmanShadow_h01,fg_villainStuntmanWater_h01"
 %}
 
 ### Trainee
