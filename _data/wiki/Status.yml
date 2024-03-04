@@ -815,3 +815,13 @@
   description: "Reduce speed by 10 per stack, neither a buff nor debuff"
   isGoodStatus: 2
   icon: ""
+"3198101":
+  name: "Overall Atk+"
+  description: "After using S3, increase all allies Atk by {{ effects.HighestMultipleAttack.parameter.value | minus: 100 }} % for 2 turns, doesn't stack with same effect buff"
+  isGoodStatus: 2
+  icon: "status_atkup"
+"3198102":
+  name: "Overall Atk+"
+  description: "Increase Atk by a certain percentage, cannot be stacked, effect with the highest % takes precedent"
+  isGoodStatus: 2
+  icon: "status_system_atkup"
