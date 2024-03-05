@@ -825,3 +825,8 @@
   description: "Increase Atk by a certain percentage, cannot be stacked, effect with the highest % takes precedent"
   isGoodStatus: 2
   icon: "status_system_atkup"
+"3199101":
+  name: "Atk+"
+  description: "Increase Atk by {{ effects.MultipleAttack.parameter.value | minus: 100 }} ,removed after turn end, neither buff nor debuff%"
+  isGoodStatus: 2
+  icon: "status_system_atkup"
