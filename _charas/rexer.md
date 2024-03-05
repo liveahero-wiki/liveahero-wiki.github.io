@@ -1,6 +1,8 @@
 ---
 title: reXer
 characterId: 122
+h2:
+  title: '"Burning Oath" reXer'
 heroes:
 - stockId: 11221
   BIO_H01: |-
