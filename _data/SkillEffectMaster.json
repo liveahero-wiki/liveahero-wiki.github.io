@@ -43287,6 +43287,40 @@
       "isOverrideStatusDescription": false
     }
   },
+  "2019": {
+    "skillEffectId": 2019,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffectElapseTurnBeforeSkill",
+          "parameter": {
+            "avoidExtensionTurn": false
+          }
+        }
+      ],
+      "filename": "status_debuff_special",
+      "statusId": 200,
+      "canDispel": true,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "耐熱低下(状態変化200番)",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "耐熱低下",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "敵の一部のスキルによって受けるダメージが上昇するデバフ。行動終了時にカウントが減少する。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
   "3001": {
     "skillEffectId": 3001,
     "skillEffectJson": {
