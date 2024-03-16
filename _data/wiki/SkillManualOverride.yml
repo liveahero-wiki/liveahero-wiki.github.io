@@ -22,7 +22,7 @@
 1025203: "[base skill] Deal 50% of damage to target enemy, and deal another 50% of damage to target enemy for every {{ 2 | status_description }} status that Andrew posesses, up to 3 extra hits /100%<br>\
 [base skill] Deal 100% of damage to target enemy /100%<br>\
 [base skill] Remove 999 {{ 2 | status_description }} status from self /100%"
-8025201: "[when {{ 2 | status_description }}] (extra_cond: possessing x <= 2  {{ 221 | status_description }} ) Apply {{ 221 | status_description }} to self /100%"
+8025201: "[when {{ 2 | status_description }} is applied] (extra_cond: possessing x <= 2  {{ 221 | status_description }} ) Apply {{ 221 | status_description }} to self /100%"
 
 # Astosis Passive
 8189101: "[When not debuffed] Rate of inflicting debuff is multiplied by 1.5x for all allies /100%"
