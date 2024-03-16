@@ -341,6 +341,15 @@ module LahWiki
       "<span class=\"status tippy\" data-id=\"#{id_s}\" data-content=\"#{description}\"><img src=\"/cdn/Sprite/#{wiki_icon}.png\" loading=\"lazy\"> #{name}</span>"      
     end
 
+    def status_manual(wiki_icon, name, description=nil)
+      if description && description.length > 0
+        description = xml_escape(description)
+        "<span class=\"status tippy\" data-content=\"#{description}\"><img src=\"/cdn/Sprite/#{wiki_icon}.png\" loading=\"lazy\"> #{name}</span>"
+      else
+        "<span class=\"status\"><img src=\"/cdn/Sprite/#{wiki_icon}.png\" loading=\"lazy\"> #{name}</span>"
+      end
+    end
+
     def skill_target(target)
       case target
       when 0
