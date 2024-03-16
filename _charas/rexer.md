@@ -84,3 +84,4 @@ EVENTB = "Gentle and strong, very cool.<br>I have come this far by chasing that 
 %}
 
 ## Notes
+- His real name is Alex R. Wilson (アレックス・R・ウィルソン)
