@@ -111,6 +111,12 @@ sprites="fg_kaibutsuLarvaEarth_h01,fg_kaibutsuLarvaFire_h01,fg_kaibutsuLarvaLigh
 sprites="fg_ADV_kram_s01"
 %}
 
+### Lizard Kaibutsu
+
+{% include hero-infobox-unreleased.html name="Lizard Kaibutsu" mob=true
+sprites="fg_kaibutsuLizardEarth_h01,fg_kaibutsuLizardFire_h01,fg_kaibutsuLizardLight_h01,fg_kaibutsuLizardShadow_h01,fg_kaibutsuLizardWater_h01"
+%}
+
 ### Mafia
 
 {% include hero-infobox-unreleased.html name="Mafia" mob=true
