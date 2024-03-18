@@ -85,8 +85,14 @@ of view after the skill is cast (maxed at 11000 view) /100%<br>\
 # Ganran S1,S2,Passive
 1199101: "[base skill] Deal 60% of damage to target enemy /100% <br>\
 [base skill] Gain 2 stack of {{ 1199101 | status_description }} /100%"
-1199102: "[base skill] Apply  {{ 5 | status_description }} to self for 2 next attack /100% <br>\
+1199102: "[base skill] Apply  {{ 'status_provocation' | status_manual: 'Metered Provocation', 'Enemies will be more likely to target you. Count -1 when damage is taken, carries over turns.' }} to self for 2 next attack /100% <br>\
 [base skill] Apply {{ 2 | status_description }} to self for 2 next attack(s) /100%"
+1199103: "[base skill] Deal 150% of damage to target enemy /100% <br>\
+[base skill] Apply {{ 11 | status_description }} to target enemy for 1 next attack(s) /100% <br>\
+[When self has 8x {{ 1199101 | status_description }} ] Apply {{ 'status_defdownplus' | status_manual: 'Defense Down+', 'multiply damage received by 1.8' }} to target for 3 next attack, reset {{ 1199101 | status_description }} stack to 1 /100%"
+1199104: "[base skill] Deal 150% of damage to target enemy /100% <br>\
+[base skill] Apply {{ 11 | status_description }} to target enemy for 1 next attack(s) /100% <br>\
+[When self has 8x {{ 1199101 | status_description }} ] Apply {{ 'status_defdownplus' | status_manual: 'Defense Down+', 'multiply damage received by 1.8' }} to target for 3 next attack, reset {{ 1199101 | status_description }} stack to 1 /100%"
 8199101: "[When appearing] Gain 1 stack of {{ 1199101 | status_description }} /100%"
 8199103: "[When taking damage] Gain 1 stack of {{ 1199101 | status_description }} /100%"
 8199104: "[Action end] lose 1 stack of {{ 1199101 | status_description }} /100%"
