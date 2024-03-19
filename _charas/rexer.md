@@ -32,6 +32,7 @@ heroes:
   - '8122101'
   extra_sprites: fg_rexer_h01_skin2,fg_rexer_h01_skin3,fg_rexer_h02_skin2,fg_rexer_h02_skin3
 - stockId: 11222
+  extra_sprites: fg_rexerVolcano2402_h02_skin2
 sidekicks:
 - stockId: 11221
   BIO_S01: |-
