@@ -54828,6 +54828,366 @@
       "isOverrideStatusDescription": false
     }
   },
+  "4298": {
+    "skillEffectId": 4298,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "ChangeAgi",
+          "parameter": {
+            "value": -3
+          }
+        }
+      ],
+      "filename": "status_spddown",
+      "statusId": 128,
+      "canDispel": false,
+      "filterIds": [
+        6
+      ],
+      "parameter": true,
+      "description": "SPD-3（1ターンの間）",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "SPD-3",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "SPD-3。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4299": {
+    "skillEffectId": 4299,
+    "skillEffectJson": {
+      "turn": 15,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffectElapseTurnDamage",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 276,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果276番付与",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4300": {
+    "skillEffectId": 4300,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseChangeAgi",
+          "parameter": {
+            "value": 3
+          }
+        }
+      ],
+      "filename": "status_spdup",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "SPD増加（チャージ数1につき+3)",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "SPD増加",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "チャージ数1につきSPDを3上昇。条件によりチャージ数が増加していく。チャージ数は最大5まで。バフでもデバフでもない状態。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4301": {
+    "skillEffectId": 4301,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": 1,
+            "isRandom": false,
+            "statusId": 126,
+            "statusNum": 0,
+            "extensionLimit": 5,
+            "statusTypeValue": 2
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果126のターン数を1ターン増加（最大5まで）",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4302": {
+    "skillEffectId": 4302,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": 1,
+            "isRandom": false,
+            "statusId": 276,
+            "statusNum": 0,
+            "extensionLimit": 30,
+            "statusTypeValue": 2
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果276を１ターン増加（最大30まで）",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4303": {
+    "skillEffectId": 4303,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": -2,
+            "isRandom": false,
+            "statusId": 276,
+            "statusNum": 0,
+            "statusTypeValue": 2
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果276を2ターン減少",
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4306": {
+    "skillEffectId": 4306,
+    "skillEffectJson": {
+      "turn": 18,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffectElapseTurnDamage",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 276,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果276番付与",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4307": {
+    "skillEffectId": 4307,
+    "skillEffectJson": {
+      "turn": 21,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffectElapseTurnDamage",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 276,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果276番付与",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4308": {
+    "skillEffectId": 4308,
+    "skillEffectJson": {
+      "turn": 24,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffectElapseTurnDamage",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 276,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果276番付与",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4309": {
+    "skillEffectId": 4309,
+    "skillEffectJson": {
+      "turn": 27,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffectElapseTurnDamage",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 276,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果276番付与",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4310": {
+    "skillEffectId": 4310,
+    "skillEffectJson": {
+      "turn": 30,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffectElapseTurnDamage",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 276,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果276番付与",
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "4311": {
     "skillEffectId": 4311,
     "skillEffectJson": {
