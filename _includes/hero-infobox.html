@@ -158,49 +158,15 @@
 {% include skill-table-v2.html skillIds=skillIds %}
 
 {% assign passiveSkillIds = "" | split: "," %}
-{% assign bloomingPassiveSkillIds = "" | split: "," %}
 {% for skill in lastCardInfo.skillProvider.passiveSkills %}
 {% if skill.skillUpgrade == 0 %}
 {% assign passiveSkillIds = passiveSkillIds | push: skill.skillId %}
-{% else %}
-{% assign bloomingPassiveSkillIds = bloomingPassiveSkillIds | push: skill.skillId %}
 {% endif %}
 {% endfor %}
 
 {% if passiveSkillIds.size > 0 %}
 <h3>Passive skills</h3>
 {% include skill-table-v2.html skillIds=passiveSkillIds hide_banner=true %}
-{% endif %}
-
-{% if bloomingPassiveSkillIds.size > 0 %}
-<h3>Blooming passive skills</h3>
-{% include skill-table-v2.html skillIds=bloomingPassiveSkillIds hide_banner=true %}
-{% endif %}
-
-{% assign skillEvos = lastCardInfo.skillProvider.activeSkills | where: "skillUpgrade", 1 %}
-{% if skillEvos.size > 0 %}
-<h3>Skill evolutions</h3>
-
-{% if lastCardInfo.skillUpgradeQuestInfos.size > 0 %}
-<h4>Skill evolution quests</h4>
-{% for quest in lastCardInfo.skillUpgradeQuestInfos %}
-
-<h5>Evolution {{ forloop.index }}</h5>
-
-{% assign changeSkills = "" | split: "," %}
-{% for cs in quest.changeSkills %}
-{% assign changeSkills = changeSkills | push: cs.afterSkillId %}
-{% endfor %}
-{% include skill-table-v2.html skillIds=changeSkills hide_banner=true %}
-{% endfor %}
-{% endif %}
-
-<h4>Skill tree</h4>
-
-{% for skill in skillEvos %}
-{% assign si = skill.skillId | downcase %}
-{{ site.data.processed.SkillUpgradeMaster[si] }}
-{% endfor %}
 {% endif %}
 
 {% if site.data.wiki.HeroSkillEvolution[stockId] != nil %}
