@@ -66,7 +66,7 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 | {% chara_link Kouki & Sirius|h1 %} | 20 |
 | {% chara_link Gammei|h1 %}  | 10 |
 | {% chara_link reXer|h2 %} | 20 | 
-| {% chara_link Ryuusei|h1 %} | 20 | 
+| {% chara_link Ryusei|h1 %} | 20 | 
 | {% chara_link Ganran|h1 %} | 10 | 
 
 | Sidekick | +Bonus (%) |
@@ -75,7 +75,7 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 | {% chara_link Kouki & Sirius %}  | 10 | 
 | {% chara_link Gammei %}  | 10 | 
 | {% chara_link reXer %}  | 10 | 
-| {% chara_link Ryuusei %}  | 10 | 
+| {% chara_link Ryusei %}  | 10 | 
 | {% chara_link Ganran %}  | 10 | 
 | {% chara_link Player %} | 10 | 
 
