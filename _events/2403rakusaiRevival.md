@@ -98,19 +98,24 @@ Here is a list of this event's limited time Missions:
 
 | No  | Description      | Rewards      |
 |----|-----------------------------------------------------------|----------------|
-| 1  | Finish any rank event quest 10 times | 1 {% include item-icon.html id=34 %}    |
-| 2  | Finish any rank event quest 20 times | 1 {% include item-icon.html id=34 %}    |
-| 3  | Finish any rank event quest 30 times | 1 {% include item-icon.html id=34 %}    |
-| 4  | Finish any rank event quest 40 times | 1 {% include item-icon.html id=34 %}    |
-| 5  | Finish any rank event quest 50 times | 1 {% include item-icon.html id=34 %}    |
-| 6  | Finish event sales 10 times | 1 {% include item-icon.html id=34 %}    |
-| 7  | Clear event free quest rank D  | 400 {% include item-icon.html id=167 %}    |
-| 8  | Clear event free quest rank C  | 400 {% include item-icon.html id=167 %}    |
-| 9  | Clear event free quest rank B  | 600 {% include item-icon.html id=167 %}    |
-| 10 | Clear event free quest rank A  | 600 {% include item-icon.html id=167 %}    |
-| 11 | Clear event free quest rank S  | 800 {% include item-icon.html id=167 %}    |
-| 12 | Clear event free quest beginner  | 600 {% include item-icon.html id=167 %}    |
-| 13 | Clear event free quest expert  | 800 {% include item-icon.html id=167 %}    |
+| 1  | Finish any rank event quest 5 times | 500 {% include item-icon.html id=167 %}    |
+| 2  | Finish any rank event quest 10 times | 1 {% include item-icon.html id=34 %}    |
+| 3  | Finish any rank event quest 15 times | 500 {% include item-icon.html id=167 %} |
+| 4  | Finish any rank event quest 20 times | 1 {% include item-icon.html id=34 %}    |
+| 5  | Finish any rank event quest 30 times | 1 {% include item-icon.html id=34 %}    |
+| 6  | Finish any rank event quest 35 times | 750 {% include item-icon.html id=167 %}    |
+| 7  | Finish any rank event quest 40 times | 1 {% include item-icon.html id=34 %}    |
+| 8  | Finish any rank event quest 50 times | 1 {% include item-icon.html id=34 %}    |
+| 9  | Finish any rank event quest 70 times | 1000 {% include item-icon.html id=167 %}    |
+| 10  | Finish any rank event quest 90 times | 1500 {% include item-icon.html id=167 %}    |
+| 11  | Finish event sales 10 times | 1 {% include item-icon.html id=34 %}    |
+| 12 | Clear event free quest rank D  | 400 {% include item-icon.html id=167 %}    |
+| 13 | Clear event free quest rank C  | 400 {% include item-icon.html id=167 %}    |
+| 14 | Clear event free quest rank B  | 600 {% include item-icon.html id=167 %}    |
+| 15 | Clear event free quest rank A  | 600 {% include item-icon.html id=167 %}    |
+| 16 | Clear event free quest rank S  | 800 {% include item-icon.html id=167 %}    |
+| 17 | Clear event free quest beginner  | 600 {% include item-icon.html id=167 %}    |
+| 18 | Clear event free quest expert  | 800 {% include item-icon.html id=167 %}    |
 
 ## Event Shop
 
