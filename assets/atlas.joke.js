@@ -82,10 +82,15 @@ const aprilFoolSpriteMap = {
   "alchiba": "thunderbird01_skin1",
   "akashi": "gunzou01",
   "andrew": "jacob01",
+  "astar": "goblinfire01b_skin2",
+  "astosis": "pazuzu01",
   "barrel": "tindalos01",
+  "cerastium": "ziz01",
+  "danzo": "shiva01",
   "exio": "nekros01_skin1",
   "furlong": "xolotl01",
   "gammei": "https@//api.housamo.xyz/housamo/unity/atlas/?mode=png&asset=/housamo/adv/Android/texture/character/fg_kyouma01&name=fg_kyouma01&use_filename=asset.png",
+  "garbo": "qinglong01",
   "gomeisa": "wakantanka01",
   "goro": "kimunkamui01",
   "guardmanFire": "orgus01",
@@ -97,6 +102,7 @@ const aprilFoolSpriteMap = {
   "melide": "alice01",
   "lilac": "sandayu01",
   "loren": "ryouta01",
+  "obsidius": "shennong01",
   "polaris": "aegir01",
   "procy": "shino01_skin2",
   "pubraseer": "breke01",
@@ -105,6 +111,9 @@ const aprilFoolSpriteMap = {
   "suhail": "jormungandr01",
   "sui": "arc01",
   "victom": "algernon01",
+  "yohack": "moritaka01",
+  "yuhang": "boogeyman01h",
+  "zaniah": "hakumen01",
 }
 const APRIL_FOOL = "april_fool"
 
