@@ -1,7 +1,7 @@
 
 # Sort by character name > original/variant/sidekick > skill
 
-# Akashi Bloom S1, passive
+# Akashi Skevo S1
 
 1001105: "[base skill] Deal 70% of damage to target enemy /100%<br> \
 [base skill] Apply {{ 19 | status_description }} to target enemy for 2 turns /40%<br> \
@@ -18,11 +18,13 @@
 8062201: "[when combo is multiple of 5] Deal 50% of damage to all enemies /100%"
 8062202: ""
 
-# Andrew variant S3, bloom passive
+# Andrew variant S3, S1 Skevo
 1025203: "[base skill] Deal 50% of damage to target enemy, and deal another 50% of damage to target enemy for every {{ 2 | status_description }} status that Andrew posesses, up to 3 extra hits /100%<br>\
 [base skill] Deal 100% of damage to target enemy /100%<br>\
 [base skill] Remove 999 {{ 2 | status_description }} status from self /100%"
-8025201: "[when {{ 2 | status_description }} is applied] (extra_cond: possessing x <= 2  {{ 221 | status_description }} ) Apply {{ 221 | status_description }} to self /100%"
+1025205: "[base skill] Deal 70% of damage to target enemy /100%<br>\
+[base skill] Apply {{ 2 | status_description }} to self for 1 next attack(s) /40%<br>\
+<mark>[when {{ 2 | status_description }} is applied] (extra_cond: possessing x <= 2  {{ 221 | status_description }} ) Apply {{ 221 | status_description }} to self /100%</mark>"
 
 # Astosis Passive
 8189101: "[When not debuffed] Rate of inflicting debuff is multiplied by 1.5x for all allies /100%"
@@ -70,9 +72,9 @@ of view after the skill is cast (maxed at 11000 view) /100%<br>\
 # Furlong variant Passive
 8008201: "[when appearing] Apply {{ 87 | status_description }} to self /100%"
 
-# Gaius S1 bloom passive
+# Gaius S1 Skevo
 1115105: "[base skill] Deal 80% of damage to target enemy /100%<br>\
-[base skill] Atk+20% when not having debuff /100%"
+<mark>[When not debuffed] Atk+20% /100%</mark>"
 
 # Galvo S2, S3, S3+, passive
 1169102: "[base skill] Heal self for 80% of own ATK value /100%<br>\
@@ -82,11 +84,15 @@ of view after the skill is cast (maxed at 11000 view) /100%<br>\
 8169103: ""
 8169104: ""
 
+# Gammei S3 Skevo
+1006107: "<mark>[base skill] Deal 80% of damage to all enemies /100%</mark> <br>\
+[base skill] Apply {{ 13 | status_description }} to all enemies for 1 turn(s) /100%"
+
 # Ganran S1,S2,Passive, SK active
 1199101: "[base skill] Deal 60% of damage to target enemy /100% <br>\
 [base skill] Gain 2 stack of {{ 1199101 | status_description }} /100%"
-1199102: "[base skill] Apply  {{ 'status_provocation' | status_manual: 'Metered Provocation', 'Enemies will be more likely to target you. Count -1 when damage is taken, carries over turns.' }} to self for 2 next attack /100% <br>\
-[base skill] Apply {{ 2 | status_description }} to self for 2 next attack(s) /100%"
+1199102: "[base skill] Apply   to self for 2 next attack /100% <br>\
+[base skill] Apply {{ 2 | status_description }} to self for 2 next attack(s) /100%"{{ 'status_provocation' | status_manual: 'Metered Provocation', 'Enemies will be more likely to target you. Count -1 when damage is taken, carries over turns.' }}
 1199103: "[base skill] Deal 150% of damage to target enemy /100% <br>\
 [base skill] Apply {{ 11 | status_description }} to target enemy for 1 next attack(s) /100% <br>\
 [When self has 8x {{ 1199101 | status_description }} ] Apply {{ 'status_defdownplus' | status_manual: 'Defense Down+', 'multiply damage received by 1.8' }} to target for 3 next attack, reset {{ 1199101 | status_description }} stack to 1 /100%"
@@ -121,6 +127,10 @@ of view after the skill is cast (maxed at 11000 view) /100%<br>\
 [base skill] (extra_cond: Enemy count >= 2) Incoming damage to all enemies increased by 1.5x for 1 next attack(s) /100%"
 8124103: ""
 
+# Gomeisa S2 Skevo
+1033106: "<mark>[base skill] Apply {{ 1033101 | status_description }} to target ally for 1 action(s) /100%</mark><br>\
+[base skill] Add 7000 views /100%"
+
 # Goro variant passive
 8023201: "[When caster is alive] Apply {{ 96 | status_description }} to all allies /100%"
 
@@ -129,13 +139,16 @@ of view after the skill is cast (maxed at 11000 view) /100%<br>\
 [base skill] Apply {{ 10 | status_description }} to all allies for 1 turn(s) /100%<br>\
 [base skill] Perform 1 more action(s) (once per turn only) /100%"
 
-# Kouki S1 bloom active
+# Huckle S3 Skevo
+1034107: "[base skill] Deal 150% of damage to target enemy /100%<br>\
+[When SPD>129] Activate self's skill 1 if target enemy is still alive /100%<br>\
+<mark>[When SPD>129] Act again, cannot use sidekick skill for the extra act (only once per turn) /100%</mark>"
+
+# Kouki S1 Skevo
 1018105: "[base skill] Deal 60% of damage to target enemy /100% <br>\
 [base skill] Apply {{ 11 | status_description }} to target enemy for 1 action(s) /40% <br>\
-[base skill] Add 1500 views /100%"
-
-# Kouki S1 bloom passive
-8018101: "[When invoker is alive] Reduce damage received by allies based on current VP (0-20% damage reduce at 0-50000 VP) /100%"
+<mark>[base skill] Add 1500 views /100% <br>\
+[When invoker is alive] Reduce damage received by allies based on current VP (0-20% damage reduce at 0-50000 VP) /100%</mark>"
 
 # Kouki variant S2
 1018202: "[base skill] Deal 70% of damage to enemy<br>\
@@ -152,10 +165,11 @@ If the skill can be activated, activate this skill again (up to 4 times). Additi
 Apply {{ 205 | status_description }} to all enemies /100%"
 8018202: ""
 
-# Marfik Bloom Passive
-8014201: "[when appearing] Apply 5 stack of {{ 1014203 | status_description }} to all enemies /100%<br>\
-[Turn start] (extra condition : {{ 1014203 | status_description }} = 0) Apply 5 stack of {{ 1014203 | status_description }} to enemies that fulfill the condition /100%"
-8014207: ""
+# Marfik Skevo S1
+1014205: "[base skill] Deal 60% of damage to target enemy /100%<br>\
+[base skill] Add 3000 views /100%<br>\
+<mark>[when appearing] Apply 5 stack of {{ 1014203 | status_description }} to all enemies /100%<br>\
+[Turn start] (extra condition : {{ 1014203 | status_description }} = 0) Apply 5 stack of {{ 1014203 | status_description }} to enemies that fulfill the condition /100%</mark>"
 
 # Monomasa Variant Passive
 8031201: "[when appearing] Apply {{ 1031201 | status_description }} to self /100%<br>\
@@ -213,10 +227,15 @@ and possessing > 0 {{ 1031209 | status_description }} ) Reset {{ 1031201 | statu
 8075101: ""
 8075102: ""
 
-# Polaris Mask S2 bloom passive
-8015102: ""
+# Polaris Mask S1 Skevo
+1015105: "[base skill] Deal 60% of damage to target enemy /100% <br>\
+[base skill] Add 3000 views /100%<br>\
+<mark>[When an enemy is damaged by self attack] Gain 500 View /100%</mark>"
 
-# Polaris Mask variant S2, passive
+# Polaris Mask variant S1,S2, passive
+1015201: "[base skill] Deal 50% of damage to all enemies /100% <br>\
+[base skill] Heal self for 35% of own ATK value /100% <br>\
+[When {{ 1015203 | status_description }} turns 0] Deal 50% of damage to all enemies and apply {{ 'status_defdown' | status_manual: 'Vertigo', 'Incoming damage x1.2' }} for 2 turns /100%"
 1015202: "[base skill] Heal self for 75% of own ATK value /100%<br>\
 [base skill] Reduce {{ 1015203 | status_description }} by 1 turn(s) /100%<br>\
 [base skill] Perform 1 more action (once per turn) /100%<br>\
@@ -227,10 +246,10 @@ and possessing > 0 {{ 1031209 | status_description }} ) Reset {{ 1031201 | statu
 # Procy variant passive
 8032202: ""
 
-# Rakta S3 bloom active
+# Rakta S3 Skevo
 1020107: "[base skill] Apply {{ 8 | status_description }} target ally for 2 turn(s) /100% <br>\
 [base skill] Remove 2 debuff(s) from target ally /100%  <br>\
-[base skill] If target has debuff, heal target by 50% own atk /100%"
+<mark>[base skill] If target has debuff, heal target by 50% own atk /100%</mark>"
 
 # Rakta variant S3
 1020203: "[base skill] Grants {{ 1020201 | status_description }} to a single ally for 3 turns/100% <br>\
@@ -264,8 +283,10 @@ Max 3 times in 1 turn"
 8122205: "[turn end] Remove all {{ 1122202 | status_description }} from self /100% <br>\
 [turn end] Remove all {{ 1122205 | status_description }} from self /100%"
 
-# Ryekie variant S2 bloom passive
-8004201: "[When invoker is alive] Allies with speed up buff gain +20% atk (doesn't stack) /100%"
+# Ryekie variant S2 Skevo
+1004206: "[base skill] Apply {{ 1 | status_description }} to target ally for 1 next attack(s) /100% <br>\
+[base skill] Apply {{ 3 | status_description }} to target ally for 1 turn(s) /100% <br>\
+<mark>[When invoker is alive] Allies with speed up buff gain +20% atk (doesn't stack) /100%</mark>"
 
 # Ryusei S2 
 1198102: "[base skill] Apply {{ 1 | status_description }} to highest Atk ally for 2 next attack(s) /100% <br>\
@@ -317,7 +338,7 @@ Max 3 times in 1 turn"
 [base skill] Activate this skill once again if the enemy is still alive /100%"
 
 # Yohack S3
-1190103: "[base skill] Apply  Atkup+ (Multiply Atk by 1.8x, this status is treated as normal Atkup) to target ally for 1 next attack(s) /100%<br>\
+1190103: "[base skill] Apply {{ 'status_atkupplus' | status_manual: 'Attack Up+', 'Multiply Atk by 1.8x, this status is treated as normal Atkup' }} to target ally for 1 next attack(s) /100%<br>\
 [base skill] Apply {{ 264 | status_description }} to target ally for 1 action /100%<br>\
 [base skill] Apply {{ 8 | status_description }} to target ally for 1 action /100%<br>\
 [base skill] Apply {{ 1190101 | status_description }} to self for 3 turn /100%"
