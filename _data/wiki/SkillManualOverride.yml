@@ -91,8 +91,8 @@ of view after the skill is cast (maxed at 11000 view) /100%<br>\
 # Ganran S1,S2,Passive, SK active
 1199101: "[base skill] Deal 60% of damage to target enemy /100% <br>\
 [base skill] Gain 2 stack of {{ 1199101 | status_description }} /100%"
-1199102: "[base skill] Apply   to self for 2 next attack /100% <br>\
-[base skill] Apply {{ 2 | status_description }} to self for 2 next attack(s) /100%"{{ 'status_provocation' | status_manual: 'Metered Provocation', 'Enemies will be more likely to target you. Count -1 when damage is taken, carries over turns.' }}
+1199102: "[base skill] Apply {{ 'status_provocation' | status_manual: 'Metered Provocation', 'Enemies will be more likely to target you. Count -1 when damage is taken, carries over turns.' }} to self for 2 next attack /100% <br>\
+[base skill] Apply {{ 2 | status_description }} to self for 2 next attack(s) /100%"
 1199103: "[base skill] Deal 150% of damage to target enemy /100% <br>\
 [base skill] Apply {{ 11 | status_description }} to target enemy for 1 next attack(s) /100% <br>\
 [When self has 8x {{ 1199101 | status_description }} ] Apply {{ 'status_defdownplus' | status_manual: 'Defense Down+', 'multiply damage received by 1.8' }} to target for 3 next attack, reset {{ 1199101 | status_description }} stack to 1 /100%"
@@ -233,15 +233,15 @@ and possessing > 0 {{ 1031209 | status_description }} ) Reset {{ 1031201 | statu
 <mark>[When an enemy is damaged by self attack] Gain 500 View /100%</mark>"
 
 # Polaris Mask variant S1,S2, passive
-1015201: "[base skill] Deal 50% of damage to all enemies /100% <br>\
+1015201: "[base skill] Deal 50% of damage to target enemy /100% <br>\
 [base skill] Heal self for 35% of own ATK value /100% <br>\
-[When {{ 1015203 | status_description }} turns 0] Deal 50% of damage to all enemies and apply {{ 'status_defdown' | status_manual: 'Vertigo', 'Incoming damage x1.2' }} for 2 turns /100%"
+[When {{ 1015203 | status_description }} = 0] Deal 50% of damage to all enemies and apply {{ 'status_defdown' | status_manual: 'Vertigo', 'Incoming damage x1.2' }} for 2 turns /100%"
 1015202: "[base skill] Heal self for 75% of own ATK value /100%<br>\
 [base skill] Reduce {{ 1015203 | status_description }} by 1 turn(s) /100%<br>\
 [base skill] Perform 1 more action (once per turn) /100%<br>\
 [base skill] Apply {{ 5 | status_description }} to self for 2 turn(s) /100%"
 8015201: "[when taking damage] Reduce {{ 1015203 | status_description }} by 1 turn(s) /100%"
-8015203: "[when posessing 0 {{ 1015203 | status_description }} ] Apply 1 {{ 1015204 | status_description }} to self and use skill 1 /100%"
+8015203: ""
 
 # Procy variant passive
 8032202: ""
@@ -338,7 +338,7 @@ Max 3 times in 1 turn"
 [base skill] Activate this skill once again if the enemy is still alive /100%"
 
 # Yohack S3
-1190103: "[base skill] Apply {{ 'status_atkupplus' | status_manual: 'Attack Up+', 'Multiply Atk by 1.8x, this status is treated as normal Atkup' }} to target ally for 1 next attack(s) /100%<br>\
+1190103: "[base skill] Apply {{ 'status_atkupplus' | status_manual: 'Attack Up+', 'Multiply Atk by 1.8x, this status is treated as normal Atkup' }} to target ally for 1 action /100%<br>\
 [base skill] Apply {{ 264 | status_description }} to target ally for 1 action /100%<br>\
 [base skill] Apply {{ 8 | status_description }} to target ally for 1 action /100%<br>\
 [base skill] Apply {{ 1190101 | status_description }} to self for 3 turn /100%"
