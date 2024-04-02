@@ -237,10 +237,10 @@ and possessing > 0 {{ 1031209 | status_description }} ) Reset {{ 1031201 | statu
 [base skill] Heal self for 35% of own ATK value /100% <br>\
 [When {{ 1015203 | status_description }} = 0] Deal 50% of damage to all enemies and apply {{ 'status_defdown' | status_manual: 'Vertigo', 'Incoming damage x1.2' }} for 2 turns /100%"
 1015202: "[base skill] Heal self for 75% of own ATK value /100%<br>\
-[base skill] Reduce {{ 1015203 | status_description }} by 1 turn(s) /100%<br>\
+[base skill] Reduce {{ 1015203 | status_description }} by 1 stack /100%<br>\
 [base skill] Perform 1 more action (once per turn) /100%<br>\
 [base skill] Apply {{ 5 | status_description }} to self for 2 turn(s) /100%"
-8015201: "[when taking damage] Reduce {{ 1015203 | status_description }} by 1 turn(s) /100%"
+8015201: "[when taking damage] Reduce {{ 1015203 | status_description }} by 1 stack /100%"
 8015203: ""
 
 # Procy variant passive
