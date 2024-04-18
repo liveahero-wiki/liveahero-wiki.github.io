@@ -690,6 +690,11 @@
   description: "When taking damage, counter with S1"
   isGoodStatus: 1
   icon: "status_counter"
+"287":
+  name: "Nullify Silence"
+  description: "Cannot be silenced"
+  isGoodStatus: 2
+  icon: "status_immunity"
 "1001101":
   name: "Fighting Spirit"
   description: "Gain 1 stack when invoker cause damage to enemy, every stack increase atk by 2.5% (max 20 stack), neither buff nor debuff"
@@ -795,6 +800,16 @@
   description: "Less likely to be targeted by enemy"
   isGoodStatus: 1
   icon: "status_hide"
+"1160201":
+  name: "Bullet Mark"
+  description: "+1 stack for every damage or debuff done by character other than Bulldozing Obsidius, add another 1 stack if character has debuff role, each stack of this status count as a debuff(max 20 stack)"
+  isGoodStatus: 0
+  icon: "status_debuff_special"
+"1160204":
+  name: "Furious Attack"
+  description: "[When enemy(s) has Bullet Mark at the end of the turn] deals damage to enemy(s) with Bullet Mark equal to 30%+Bullet Mark*10% Atk, remove all Bullet Mark, doesn't gain view or combo from this action"
+  isGoodStatus: 0
+  icon: "b_skill_special"
 "1169101":
   name: "Scorching Fire"
   description: "[Turn end] reduce 20% of max HP. Can be stacked even in quests with debuff duplication disabled."
