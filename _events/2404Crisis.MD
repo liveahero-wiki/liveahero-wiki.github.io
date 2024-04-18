@@ -49,7 +49,7 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 | {% chara_link Okitaka|h2 %} | 40 |
 | {% chara_link Obsidius|h2 %}  | 40 |
 | {% chara_link Bygul|h1 %}  | 30 |
-| {% chara_link Shidemasu|h2 %}  | 20 |
+| {% chara_link Shidemasu|h1 %}  | 20 |
 | {% chara_link Okitaka|h1 %}  | 10 |
 | {% chara_link Obsidius|h1 %}  | 20 |
 | {% chara_link Kouki & Sirius|h2 %}  | 20 |
@@ -65,7 +65,7 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 | {% chara_link Okitaka %}  | 10 | 
 | {% chara_link Obsidius %}  | 10 | 
 | {% chara_link Tsuneaki %}  | 10 | 
-| {% chara_link Kouki %}  | 10 | 
+| {% chara_link Kouki & Sirius %}  | 10 | 
 | {% chara_link Gammei %}  | 10 | 
 | {% chara_link Barrel %}  | 10 | 
 | {% chara_link Shaft %}  | 10 | 
