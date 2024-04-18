@@ -27,7 +27,7 @@ sidekicks:
     Because his main area of research is on-site, he is very bad with machinery that require precision.
     Because he grew up in an orphanage and took care of younger children all the time, he now has a very caring attitude,
     similar to that of an older brother. 
-  extra_sprites: fg_obsidius_s01_skin1,fg_obsidius_s01_skin2,fg_obsidius_s01_skin3,fg_obsidius_s01_skin4,fg_obsidius_s01_skin5
+  extra_sprites: fg_obsidius_s01_skin1,fg_obsidius_s01_skin2,fg_obsidius_s01_skin3,fg_obsidius_s01_skin4,fg_obsidius_s01_skin5,fg_obsidius_s01_skin6,fg_obsidius_s01_skin7
 ---
 
 {% include voice-table.html resourceName="obsidius"

@@ -286,6 +286,12 @@ sprites="fg_kaibutsuTentacleTree_h01,fg_kaibutsuTentacle_h01"
 sprites="fg_villainWrestlerEarth_s01,fg_villainWrestlerFire_s01,fg_villainWrestlerLight_s01,fg_villainWrestlerShadow_s01,fg_villainWrestlerWater_s01"
 %}
 
+### Wrestler (Prison)
+
+{% include hero-infobox-unreleased.html name="Wrestler (prison)" mob=true
+sprites="fg_wrestlerEarth_s01_skin1,fg_wrestlerEarth_s01_skin2,fg_wrestlerFire_s01_skin1,fg_wrestlerFire_s01_skin2,fg_wrestlerLight_s01_skin1,fg_wrestlerLight_s01_skin2,fg_wrestlerShadow_s01_skin1,fg_wrestlerShadow_s01_skin2,fg_wrestlerWater_s01_skin1,fg_wrestlerWater_s01_skin2"
+%}
+
 ### Wrestler (Transform)
 
 {% include hero-infobox-unreleased.html name="Transformed Wrestler" mob=true

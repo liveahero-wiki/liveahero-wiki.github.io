@@ -65,7 +65,7 @@ sidekicks:
     With a gentle and honest disposition, he has low self-esteem due to his
     clumsiness, whenever he makes a blunder he always reflect that he needs "to pull
     himself together".
-  extra_sprites: fg_shaft_s01_skin1,fg_shaft_s01_skin2
+  extra_sprites: fg_shaft_s01_skin1,fg_shaft_s01_skin2,fg_shaft_s01_skin3,fg_shaft_s01_skin4
 ---
 
 {% include voice-table.html resourceName="shaft"

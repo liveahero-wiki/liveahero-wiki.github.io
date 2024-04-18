@@ -47,7 +47,7 @@ sidekicks:
     uses a tranquilizer gun, but have very poor shooting skills, no matter how many
     rounds are fired he can't hit his target, not even the surrounding onlookers
     have ever got hit.
-  extra_sprites: fg_barrel_s01_skin1
+  extra_sprites: fg_barrel_s01_skin1,fg_barrel_s01_skin2,fg_barrel_s01_skin3
 ---
 
 {% include voice-table.html resourceName="barrel"

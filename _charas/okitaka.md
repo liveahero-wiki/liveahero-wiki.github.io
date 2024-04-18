@@ -36,7 +36,7 @@ sidekicks:
     position, but his wisdom as a commander is outstanding. The tight-knit working
     relationship between UEHA and Parallel Flight is due to the fact that he, Ryekie
     and Huckle formed a deep bond after a joint battle.
-  extra_sprites: fg_okitaka_s01_skin1,fg_okitaka_s01_skin2
+  extra_sprites: fg_okitaka_s01_skin1,fg_okitaka_s01_skin2,fg_okitaka_s01_skin3,fg_okitaka_s01_skin4
 ---
 
 {% include voice-table.html resourceName="okitaka"
