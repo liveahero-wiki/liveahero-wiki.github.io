@@ -111,6 +111,15 @@ module LahWiki
           status_icon = self.status_description(c['value'])
           f.push("possessing #{status_icon}")
 
+        when "OwnBuffTurnExecTrigger"
+          status_icon = self.status_description_unknown(c['statusId'], 1)
+          count = c['value']
+          h["statusTurn_#{c['statusId']}_1"]['min'] = count
+        when "OwnBuffTurnDontExecTrigger"
+          status_icon = self.status_description_unknown(c['statusId'], 1)
+          count = c['value']
+          h["statusTurn_#{c['statusId']}_1"]['max'] = count
+
         when "OwnBuffNumberExecTrigger"
           status_icon = self.status_description_unknown(c['statusId'], 1)
           count = c['value']
@@ -256,6 +265,8 @@ module LahWiki
             f.push("target enemy possessing #{range} #{status_icon}")
           elsif key.start_with?("statusAllEnemy")
             f.push("all target enemies possessing #{range} #{status_icon}")
+          elsif key.start_with?("statusTurn")
+            f.push("total status turn #{range} #{status_icon}")
           else
             f.push("possessing #{range} #{status_icon}")
           end

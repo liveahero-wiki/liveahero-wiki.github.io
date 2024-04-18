@@ -1,6 +1,8 @@
 ---
 title: Obsidius
 characterId: 160
+h2:
+  title: '"Bulldozing Destroyer" Obsidius'
 heroes:
 - stockId: 11601
   BIO_H01: |-
@@ -13,6 +15,7 @@ heroes:
     Obsidius was living in an orphanage as far back as he can remember.
     The only clue to his origin was a bangle made of an unknown ore that he had worn since birth.
     What is the ore used in the bangles? Is there a planet that produces the same ore? Is it home? All kinds of unknowns trouble him.         With a dream of "breaking through all unknowns" in his heart, he travels around the galaxy.
+- stockId: 11602
 sidekicks:
 - stockId: 11601
   BIO_S01: |-
@@ -40,4 +43,7 @@ TRAIN = "Prepare yourself for a hard hit."
 TRAINED = "Damn, he's gonna hit me hard!"
 EVENTA = "A mineral spring water with medicinal properties... That's gotta be it.<br>There must be some rare ore at the source of the water!<br>Hey, let's go take a look while we're sightseeing!"
 EVENTB = "The king...no, that Alphecca guy,<br>He's really getting worked up, huh?<br>That's one stressful job, so he oughta make the most of his vacation!"
+%}
+
+{% include voice-table.html resourceName="obsidiuscrisis2404"
 %}

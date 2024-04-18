@@ -1,6 +1,8 @@
 ---
 title: Okitaka
 characterId: 75
+h2:
+  title: '"Mobile Soldier" Okitaka'
 heroes:
 - stockId: 10751
   BIO_H01: |-
@@ -22,6 +24,7 @@ heroes:
   passiveSkillIds:
   - '8075101'
   - '8075102'
+- stockId: 10752
 sidekicks:
 - stockId: 10751
   BIO_S01: |-
@@ -49,6 +52,9 @@ TRAIN = "Let's show off what a veteran can do."
 TRAINED = "It's so hard! It's so hard! I can't do it anymore!"
 EVENTA = "The sun is shining, it's a perfect day for a battle!<br>Now let's plan our next battle plan together.<br>We're going to get another win today!"
 EVENTB = "Oh, you're making takoyaki? Let me borrow some.<br>I can make takoyaki with my eyes closed! Now lessee... didn't it go.... hm...<br>No, don't tell me! I have things under control!"
+%}
+
+{% include voice-table.html resourceName="okitakacrisis2404"
 %}
 
 ## Notes
