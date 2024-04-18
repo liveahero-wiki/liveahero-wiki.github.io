@@ -269,7 +269,7 @@ Deal {{ effect.parameter.value }}% of damage to {{ target }} + extra {{ effect.p
 {% when "StatusNumDamage" %}
 Deal {{ effect.parameter.value }}% of damage to {{ target }} and {{ effect.parameter.statusMult }}% extra for each {{ target }}'s {% if effect.parameter.isGoodStatus == true %}buff{% else %}debuff{% endif %}
 {% when "HPDependentDamage" %}
-Deal {{ effect.parameter.value }}% of receiver's Max HP of damage to {{ target }} {% if effect.parameter.dontCallDefenced %}(ignore any defence buff){% endif %}
+Deal "Max HP {{ effect.parameter.value }}%" damage to {{ target }} {% if effect.parameter.dontCallDefenced %}(ignore any defence buff){% endif %}
 {% when "SalesBonusCheat" %}
 Ignore business bonus conditions (?)
 {% when "IncreaseLAH" %}
