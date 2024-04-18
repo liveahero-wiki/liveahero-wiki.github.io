@@ -229,7 +229,7 @@ and possessing > 0 {{ 1031209 | status_description }} ) Reset {{ 1031201 | statu
 
 # Obsidius Variant S1, S3, Passive
 1160201: "[base skill] Deal 20% of damage to target enemy 3 times /100% <br>\
-[base skill] Apply {{ 1160201 | status_description }} to target enemy for 1 action(s) /100%<br>"
+[base skill] Apply 1 {{ 1160201 | status_description }} to target enemy /100%<br>"
 1160203: "[base skill] Deal 40% of damage to target enemy 4 times /100% <br>\
 [base skill] Each hit removes 1 buff /100% <br>\
 [When target has 0 {{ 1160201 | status_description }}] Each hit increase {{ 1160201 | status_description }} stack by 1 /100%"
@@ -243,6 +243,14 @@ and possessing > 0 {{ 1031209 | status_description }} ) Reset {{ 1031201 | statu
 # Okitaka passive
 8075101: ""
 8075102: ""
+
+# Okitaka Variant S3, Passive
+1075203: "[base skill] Apply {{ 1075211 | status_description }} to self for 2 next attack /100% <br>\
+[base skill] Remove all buff from self /100% <br>\
+[base skill] Deal 100% of damage + ((total duration of removed buff) to the power of 2)*4% of damage to all enemies (max +400% damage at 10 buff duration) /100%"
+8075201: ""
+8075202: ""
+8075204: ""
 
 # Polaris Mask S1 Skevo
 1015105: "[base skill] Deal 60% of damage to target enemy /100% <br>\
