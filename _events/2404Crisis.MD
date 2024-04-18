@@ -1,6 +1,6 @@
 ---
-title: ~With Love, from~ Choco Volcano
-jp_title: チョコ・ヴォルカーノより愛を込めて
+title: Jailbreak! Health Check Crisis!
+jp_title: 脱獄！ヘルスチェック・クライシス
 news_link: https://live-a-hero.jp/info/8228
 banner_image: ui_banner_info_Crisis2404.jpg
 gacha: true
@@ -74,7 +74,7 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 ## Event Sales Bonus
 
 Event sales bonus added according to how much event hero you have in a single sales, Which is
-{% chara_link reXer|h2 %}, {% chara_link Ryusei|h1 %}, {% chara_link Bygul|h1 %}, and {% chara_link Shidemasu|h1 %}
+{% chara_link Okitaka|h2 %}, {% chara_link Obsidius|h2 %}, {% chara_link Bygul|h1 %}, and {% chara_link Shidemasu|h1 %}
 
 Here is the bonus:
 
