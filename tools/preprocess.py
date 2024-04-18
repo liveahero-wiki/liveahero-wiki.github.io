@@ -62,6 +62,7 @@ def processMasterDataCatalog():
 
 CARD_OVERRIDE_ITEM = {
     1: "affiliation",
+    2: "job",
     3: "illustrator",
     5: "detail_h01",
     6: "detail_h02",
