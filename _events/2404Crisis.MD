@@ -91,13 +91,13 @@ Here is a list of this event's Special Missions:
 
 | No  | Description      | Rewards      |
 |----|-----------------------------------------------------------|----------------|
-| 1  | Finish event quest 2 | {% chara_link Shidemasu|h1 %}   |
-| 2  | Finish event quest 3 | 10 {% include item-icon.html id=112061 %}    |
-| 3  | Finish event quest 4 | 10 {% include item-icon.html id=112061 %} |
-| 4  | Finish event quest 5 | 10 {% include item-icon.html id=112061 %}    |
-| 5  | Finish event quest 6 | 10 {% include item-icon.html id=112061 %}    |
-| 6  | Finish event quest 7 | 10 {% include item-icon.html id=112061 %}    |
-| 7  | Finish any rank event quest 10 times | 1 {% include item-icon.html id=212061 %}    |
+| 1  | Finish event quest chapter 2 | {% chara_link Shidemasu|h1 %}   |
+| 2  | Finish event quest chapter 3 | 10 {% include item-icon.html id=112061 %}    |
+| 3  | Finish event quest chapter 4 | 10 {% include item-icon.html id=112061 %} |
+| 4  | Finish event quest chapter 5 | 10 {% include item-icon.html id=112061 %}    |
+| 5  | Finish event quest chapter 6 | 10 {% include item-icon.html id=112061 %}    |
+| 6  | Finish event quest chapter 7 | 10 {% include item-icon.html id=112061 %}    |
+| 7  | Finish any rank free event quest 10 times | 1 {% include item-icon.html id=212061 %}    |
 | 8  | Finish any event sales 10 times | 1 {% include item-icon.html id=212061 %}    |
 
 ## Event Shop
