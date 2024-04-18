@@ -142662,5 +142662,900 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
+  },
+  "1106001": {
+    "questId": 1106001,
+    "questName": "あんじょうやりなはれ",
+    "subName": "第１話",
+    "questKind": 5,
+    "chapterId": 1106,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": "2024-05-16 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 1,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1106002": {
+    "questId": 1106002,
+    "questName": "１秒でも早く健康になるッス",
+    "subName": "第２話",
+    "questKind": 5,
+    "chapterId": 1106,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": "2024-05-16 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 2,
+    "enemyLevel": 10,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1106001,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 109
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1107001": {
+    "questId": 1107001,
+    "questName": "迫り来る健康指導",
+    "subName": "D級",
+    "questKind": 6,
+    "chapterId": 1107,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Crisis2404_exchange01",
+    "startAt": null,
+    "endAt": "2024-05-07 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 1,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 8,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 4,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1106002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainWrestlerWater_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 104
+      },
+      {
+        "battleInfoIcon": "icon_shaft_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 106
+      },
+      {
+        "battleInfoIcon": "icon_villainWrestlerShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 103
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1107002": {
+    "questId": 1107002,
+    "questName": "迫り来る健康指導",
+    "subName": "C級",
+    "questKind": 6,
+    "chapterId": 1107,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Crisis2404_exchange01",
+    "startAt": null,
+    "endAt": "2024-05-07 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 15,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 10,
+        "prob": 80
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 8,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1106002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainWrestlerWater_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 104
+      },
+      {
+        "battleInfoIcon": "icon_crowne_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 104
+      },
+      {
+        "battleInfoIcon": "icon_villainWrestlerShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 103
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1107003": {
+    "questId": 1107003,
+    "questName": "迫り来る健康指導",
+    "subName": "B級",
+    "questKind": 6,
+    "chapterId": 1107,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Crisis2404_exchange01",
+    "startAt": null,
+    "endAt": "2024-05-07 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 30,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 20,
+        "prob": 50
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 12,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1106002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainWrestlerWater_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 104
+      },
+      {
+        "battleInfoIcon": "icon_rutilix_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 106
+      },
+      {
+        "battleInfoIcon": "icon_villainWrestlerShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 103
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1107004": {
+    "questId": 1107004,
+    "questName": "迫り来る健康指導",
+    "subName": "A級",
+    "questKind": 6,
+    "chapterId": 1107,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Crisis2404_exchange01",
+    "startAt": null,
+    "endAt": "2024-05-07 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 45,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 10,
+        "prob": 40
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 16,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1106002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainWrestlerWater_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 104
+      },
+      {
+        "battleInfoIcon": "icon_furlong_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 106
+      },
+      {
+        "battleInfoIcon": "icon_villainWrestlerShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 103
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1107005": {
+    "questId": 1107005,
+    "questName": "迫り来る健康指導",
+    "subName": "S級",
+    "questKind": 6,
+    "chapterId": 1107,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_Crisis2404_exchange01",
+    "startAt": null,
+    "endAt": "2024-05-07 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 60,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 40,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 40,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 20,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 20,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1106002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainWrestlerWater_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 109
+      },
+      {
+        "battleInfoIcon": "icon_barrel_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 106
+      },
+      {
+        "battleInfoIcon": "icon_villainWrestlerShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 105
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1107006": {
+    "questId": 1107006,
+    "questName": "迫り来る健康指導",
+    "subName": "ビギナー級",
+    "questKind": 6,
+    "chapterId": 1107,
+    "bannerResourceName": "ui_window_quest_04",
+    "iconFilename": "item_Crisis2404_exchange01",
+    "startAt": null,
+    "endAt": "2024-05-07 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 25,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 70,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 60,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 50,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 50,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 10,
+        "prob": 25
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 15,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1106002,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "ItemConsume",
+        "value": 3,
+        "itemId": 38,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainWrestlerWater_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 104
+      },
+      {
+        "battleInfoIcon": "icon_sui_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 106
+      },
+      {
+        "battleInfoIcon": "icon_villainWrestlerShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 103
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1107007": {
+    "questId": 1107007,
+    "questName": "迫り来る健康指導",
+    "subName": "エキスパート級",
+    "questKind": 6,
+    "chapterId": 1107,
+    "bannerResourceName": "ui_window_quest_04",
+    "iconFilename": "item_Crisis2404_exchange01",
+    "startAt": null,
+    "endAt": "2024-05-07 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 100,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 100,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 80,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 60,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 205,
+        "objectValue": 60,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 20,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1106002,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "ItemConsume",
+        "value": 3,
+        "itemId": 38,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainWrestlerWater_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 104
+      },
+      {
+        "battleInfoIcon": "icon_yoshiori_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 105
+      },
+      {
+        "battleInfoIcon": "icon_villainWrestlerShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 103
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
   }
 }
