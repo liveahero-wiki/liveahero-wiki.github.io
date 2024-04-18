@@ -31,7 +31,7 @@
                 </tr>
                 <tr>
                     <th colspan="2">Occupation</th>
-                    <td colspan="2">{{ firstCardInfo.job }}</td>
+                    <td colspan="2">{% if include.masked %}???{% elsif a %}{{ firstCardInfo.job }}{% endif %}</td>
                 </tr>
                 <tr>
                     <th colspan="2">Affliation office</th>
