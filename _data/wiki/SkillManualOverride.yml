@@ -227,6 +227,19 @@ and possessing > 0 {{ 1031209 | status_description }} ) Reset {{ 1031201 | statu
 
 8160101: "[When buffed] Add 1 stack of {{ 238 | status_description }} to self /100%"
 
+# Obsidius Variant S1, S3, Passive
+1160201: "[base skill] Deal 20% of damage to target enemy 3 times /100% <br>\
+[base skill] Apply {{ 1160201 | status_description }} to target enemy for 1 action(s) /100%<br>"
+1160203: "[base skill] Deal 40% of damage to target enemy 4 times /100% <br>\
+[base skill] Each hit removes 1 buff /100% <br>\
+[When target has 0 {{ 1160201 | status_description }}] Each hit increase {{ 1160201 | status_description }} stack by 1 /100%"
+1160204: "[base skill] Deal 40% of damage to target enemy 4 times /100% <br>\
+[base skill] Each hit removes 1 buff /100% <br>\
+[When target has 0 {{ 1160201 | status_description }}] Each hit increase {{ 1160201 | status_description }} stack by 1 /100%"
+8160203: "[Always Active] {{ 1160201 | status_description }} /100%"
+8160204: "[Always Active] {{ 1160204 | status_description }} /100%"
+8160205: "[When alive] Apply {{ 117 | status_description }} to all allies /100%"
+
 # Okitaka passive
 8075101: ""
 8075102: ""
