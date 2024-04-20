@@ -45,6 +45,8 @@ when receiving damage
 Always active
 {% when 27 %}
 current action end
+{% when 33 %}
+when an ally is damaged
 {% else %}
 unknown timing ({{ include.timing }})
 {% endcase %}
