@@ -41,17 +41,17 @@
 [base skill] Apply {{ 12 | status_description }} to target enemy for 1 next attack(s) /100%<br>\
 [base skill] Apply {{ 275 | status_description }} to self for 3 next attack(s) /100%"
 3207101: "[when appearing] Apply {{ 156 | status_description }} to self /100%<br>\
-[when an ally is damaged] Apply {{ 1207104 | status_description }} to self, removed when current turn ends /100%"
+[when an ally is damaged] Apply {{ 'status_bless' | status_manual: 'Bygul Special2', 'Increase HP recovery of recovery skill used by invoker by 5%' }} to self, removed when current turn ends /100%"
 3207102: "[when appearing] Apply {{ 156 | status_description }} to self /100%<br>\
-[when an ally is damaged] Apply {{ 1207104 | status_description }} to self, removed when current turn ends /100%"
+[when an ally is damaged] Apply {{ 'status_bless' | status_manual: 'Bygul Special2', 'Increase HP recovery of recovery skill used by invoker by 6%' }} to self, removed when current turn ends /100%"
 3207103: "[when appearing] Apply {{ 156 | status_description }} to self /100%<br>\
-[when an ally is damaged] Apply {{ 1207104 | status_description }} to self, removed when current turn ends /100%"
+[when an ally is damaged] Apply {{ 'status_bless' | status_manual: 'Bygul Special2', 'Increase HP recovery of recovery skill used by invoker by 7%' }} to self, removed when current turn ends /100%"
 3207104: "[when appearing] Apply {{ 156 | status_description }} to self /100%<br>\
-[when an ally is damaged] Apply {{ 1207104 | status_description }} to self, removed when current turn ends /100%"
+[when an ally is damaged] Apply {{ 'status_bless' | status_manual: 'Bygul Special2', 'Increase HP recovery of recovery skill used by invoker by 8%' }} to self, removed when current turn ends /100%"
 3207105: "[when appearing] Apply {{ 156 | status_description }} to self /100%<br>\
-[when an ally is damaged] Apply {{ 1207104 | status_description }} to self, removed when current turn ends /100%"
+[when an ally is damaged] Apply {{ 'status_bless' | status_manual: 'Bygul Special2', 'Increase HP recovery of recovery skill used by invoker by 9%' }} to self, removed when current turn ends /100%"
 3207106: "[when appearing] Apply {{ 156 | status_description }} to self /100%<br>\
-[when an ally is damaged] Apply {{ 1207104 | status_description }} to self, removed when current turn ends /100%"
+[when an ally is damaged] Apply {{ 'status_bless' | status_manual: 'Bygul Special2', 'Increase HP recovery of recovery skill used by invoker by 10%' }} to self, removed when current turn ends /100%"
 8207104: "[in auto mode] when an ally has <50% hp, prioritize S2 /100%"
 
 # Cerastium S1
@@ -130,7 +130,7 @@ of view after the skill is cast (maxed at 11000 view) /100%<br>\
 [base skill] Apply  {{ 'status_provocation' | status_manual: 'Metered Provocation', 'Enemies will be more likely to target you. Count -1 when damage is taken, carries over turns.' }} to self for 1 next attack /100% <br>\
 [base skill] Apply {{ 2 | status_description }} to self for 1 next attack(s) /100%"
 
-# Giansar S3, S3+
+# Giansar S3, S3+, SK passive
 1124102: "[base skill] Apply {{ 123 | status_description }} to target enemy for 1 turn/100%<br>\
 [base skill] (extra_cond: current action is not activated by another skill) Highest ATK ally (excluding self) uses skill 1 on random enemy/100%"
 1124103: "[base skill] Gain 2 combo(s) /100%<br>\
@@ -143,6 +143,12 @@ of view after the skill is cast (maxed at 11000 view) /100%<br>\
 [base skill] (extra_cond: Enemy count = 1) Incoming damage to all enemies increased by 1.8x for 2 next attack(s) /100%<br><br>\
 [base skill] (extra_cond: Enemy count >= 2) SPD Down by -10 to all enemies for 1 action(s) /100%<br>\
 [base skill] (extra_cond: Enemy count >= 2) Incoming damage to all enemies increased by 1.5x for 1 next attack(s) /100%"
+3124101: "[when invoker's attack causes damage to enemy] Apply {{ 15 | status_description }} to self for 1 turn(s) (once per turn) /10%"
+3124102: "[when invoker's attack causes damage to enemy] Apply {{ 15 | status_description }} to self for 1 turn(s) (once per turn) /12%"
+3124103: "[when invoker's attack causes damage to enemy] Apply {{ 15 | status_description }} to self for 1 turn(s) (once per turn) /14%"
+3124104: "[when invoker's attack causes damage to enemy] Apply {{ 15 | status_description }} to self for 1 turn(s) (once per turn) /16%"
+3124105: "[when invoker's attack causes damage to enemy] Apply {{ 15 | status_description }} to self for 1 turn(s) (once per turn) /18%"
+3124106: "[when invoker's attack causes damage to enemy] Apply {{ 15 | status_description }} to self for 1 turn(s) (once per turn) /20%"
 8124103: ""
 
 # Gomeisa S2 Skevo
@@ -332,16 +338,19 @@ Max 3 times in 1 turn"
 [base skill] Apply {{ 3 | status_description }} to target ally for 1 turn(s) /100% <br>\
 <mark>[When invoker is alive] Allies with speed up buff gain +20% atk (doesn't stack) /100%</mark>"
 
-# Ryusei S2 
+# Ryusei S2,S3, SK passive
 1198102: "[base skill] Apply {{ 1 | status_description }} to highest Atk ally for 2 next attack(s) /100% <br>\
 [If enough VP] Apply {{ 1 | status_description }} to 2nd highest Atk ally for 2 next attack(s) /100% (doesn't gain VP for 2nd activation)"
-
-# Ryusei S3 
 1198103: "[base skill] Apply {{ 274 | status_description }} to all allies for 2 next attack(s) /100% <br>\
 [base skill] Apply {{ 275 | status_description }} to all allies for 3 next attack(s) /100%"
-
 1198104: "[base skill] Apply {{ 274 | status_description }} to all allies for 2 next attack(s) /100% <br>\
 [base skill] Apply {{ 275 | status_description }} to all allies for 3 next attack(s) /100%"
+3198101: "[after using S3] apply {{ 3198101 | status_description }} to all allies for 2 turn /100%" 
+3198102: "[after using S3] apply {{ 3198101 | status_description }} to all allies for 2 turn /100%" 
+3198103: "[after using S3] apply {{ 3198101 | status_description }} to all allies for 2 turn /100%" 
+3198104: "[after using S3] apply {{ 3198101 | status_description }} to all allies for 2 turn /100%" 
+3198105: "[after using S3] apply {{ 3198101 | status_description }} to all allies for 2 turn /100%" 
+3198106: "[after using S3] apply {{ 3198101 | status_description }} to all allies for 2 turn /100%" 
 
 # Sadayoshi variant passive
 8081201: ""
