@@ -309,18 +309,14 @@ extra damage has maximum of 10 tier as follows from 1-10 buffs duration (4% 16% 
 # reXer variant S1,S2,S3, Passive
 1122201: "[base skill] Deal 60% of damage to target enemy /100% <br>\
 Remove 1 buff(s) from target enemy /60%"
-
 1122202: "[base skill] Deal 90% of damage to target enemy /100% <br>\
 Apply {{ 13 | status_description }} to target enemy for 1 turn(s) /100%"
-
 1122203: "[base skill] Deal 130% of damage to target enemy /100% <br>\
 Also deal 50% of atk as damage to non target enemy, when the non target enemy has not acted yet this turn, this damage is increased further by +50% of atk /100%"
-
 1122204: "[base skill] Deal 60% of damage to target enemy /100% <br>\
 Remove 1 buff(s) from target enemy /100%"
-
-1000: "[When self has >= 110 Speed and has no debuff] Change {{ 24 | status_description }} into Reboot <br>\
-Using Reboot will:<br>\
+1000: "[When self has >= 110 Speed and has no debuff] Change {{ 24 | status_description }} into {{ 1122201 | status_description }} <br>\
+Using {{ 1122201 | status_description }} will:<br>\
 [base skill] Apply {{ 1122202 | status_description }} to self for 1 turn(s) /100% <br>\
 [base skill] Apply {{ 1122205 | status_description }} to self for 1 turn(s) /100% <br>\
 [base skill] Perform 1 more action(s) /100% <br>\
