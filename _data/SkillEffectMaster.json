@@ -44301,6 +44301,39 @@
       "isOverrideStatusDescription": false
     }
   },
+  "2051": {
+    "skillEffectId": 2051,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Provocation",
+          "parameter": []
+        }
+      ],
+      "filename": "status_provocation",
+      "statusId": 132,
+      "canDispel": false,
+      "filterIds": [
+        12
+      ],
+      "parameter": false,
+      "description": "挑発(洗脳状態時用)",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "挑発",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "相手から狙われやすくなる。バフでもデバフでも無い状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
   "3001": {
     "skillEffectId": 3001,
     "skillEffectJson": {
@@ -59593,6 +59626,37 @@
       "isOverrideStatusDescription": false
     }
   },
+  "4399": {
+    "skillEffectId": 4399,
+    "skillEffectJson": {
+      "turn": 4,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffectElapseTurnDamage",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 276,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果276番付与",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "4400": {
     "skillEffectId": 4400,
     "skillEffectJson": {
@@ -59782,6 +59846,107 @@
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4405": {
+    "skillEffectId": 4405,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 120
+          }
+        }
+      ],
+      "filename": "status_atkup",
+      "statusId": 298,
+      "canDispel": true,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATK増加",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": true,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4406": {
+    "skillEffectId": 4406,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Penetration",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_buff",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [
+        12
+      ],
+      "parameter": false,
+      "description": "敵の挑発を無視（システム効果127番）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4407": {
+    "skillEffectId": 4407,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HidePenetration",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_buff",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [
+        12
+      ],
+      "parameter": false,
+      "description": "敵の隠蔽を無視（システム効果127番）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",

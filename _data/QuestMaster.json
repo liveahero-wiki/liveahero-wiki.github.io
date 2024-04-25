@@ -142873,6 +142873,89 @@
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
   },
+  "1106004": {
+    "questId": 1106004,
+    "questName": "この解釈で合ってますでしょうか",
+    "subName": "第４話",
+    "questKind": 5,
+    "chapterId": 1106,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2024-04-25 18:00:00",
+    "endAt": "2024-05-16 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 4,
+    "enemyLevel": 12,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": false,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1106003,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainWrestlerWater_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 107
+      },
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 95
+      },
+      {
+        "battleInfoIcon": "icon_villainWrestlerShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 104
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
   "1107001": {
     "questId": 1107001,
     "questName": "迫り来る健康指導",
@@ -143628,6 +143711,179 @@
       {
         "battleInfoIcon": "icon_villainWrestlerShadow_h01",
         "battleInfoElement": 5,
+        "battleInfoSpd": 103
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1109002": {
+    "questId": 1109002,
+    "questName": "１秒でも早く健康になるッス",
+    "subName": "第２話チャレンジクエスト",
+    "questKind": 6,
+    "chapterId": 1109,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2024-04-25 18:00:00",
+    "endAt": "2024-05-16 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 2,
+    "enemyLevel": 45,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 25000,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 32,
+        "objectValue": 5,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 34,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1106002,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_barrel_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 110
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1109003": {
+    "questId": 1109003,
+    "questName": "恐れ知らずだね君は",
+    "subName": "第３話チャレンジクエスト",
+    "questKind": 6,
+    "chapterId": 1109,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2024-04-25 18:00:00",
+    "endAt": "2024-05-16 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 2,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 25000,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 32,
+        "objectValue": 5,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 34,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1106003,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_furlong_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 108
+      },
+      {
+        "battleInfoIcon": "icon_rutilix_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 110
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeFire_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 105
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeEarth_h01",
+        "battleInfoElement": 3,
         "battleInfoSpd": 103
       }
     ],
