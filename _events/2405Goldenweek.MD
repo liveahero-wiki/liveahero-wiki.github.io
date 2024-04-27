@@ -8,8 +8,10 @@ event_start_time: 2024-04-27T00:00:00+09
 event_end_time: 2024-05-06T00:00:00+09
 ---
 
+## Login bonus campaign
 Login bonus as follows: 
-| No  | Description      | Rewards      |
+
+| No | Description      | Rewards      |
 |----|-----------------------------------------------------------|----------------|
 | 1  | Login 1 day in the event duration | 5 {% include item-icon.html id=2 %}, 1 {% include item-icon.html id=34 %}    |
 | 2  | Login 2 day in the event duration | 2 {% include item-icon.html id=2 %}, 1 {% include item-icon.html id=34 %}, 50000 {% include item-icon.html id=35 %} |
