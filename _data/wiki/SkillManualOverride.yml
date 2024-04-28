@@ -40,17 +40,17 @@
 1207102: "[base skill] Deal 110% of damage to target enemy /100%<br>\
 [base skill] Apply {{ 12 | status_description }} to target enemy for 1 next attack(s) /100%<br>\
 [base skill] Apply {{ 275 | status_description }} to self for 3 next attack(s) /100%"
-3207101: "[when appearing] Apply {{ 156 | status_description }} to self /100%<br>\
+3207101: "[when appearing] Apply {{ 'status_attention' | status_manual: 'Recovery Skill', 'Increase HP recovery of recovery skill used by invoker by 2.5%' }} to self /100%<br>\
 [when an ally is damaged] Apply {{ 'status_bless' | status_manual: 'Bygul Special2', 'Increase HP recovery of recovery skill used by invoker by 5%' }} to self, removed when current turn ends /100%"
-3207102: "[when appearing] Apply {{ 156 | status_description }} to self /100%<br>\
+3207102: "[when appearing] Apply {{ 'status_attention' | status_manual: 'Recovery Skill', 'Increase HP recovery of recovery skill used by invoker by 3%' }} to self /100%<br>\
 [when an ally is damaged] Apply {{ 'status_bless' | status_manual: 'Bygul Special2', 'Increase HP recovery of recovery skill used by invoker by 6%' }} to self, removed when current turn ends /100%"
-3207103: "[when appearing] Apply {{ 156 | status_description }} to self /100%<br>\
+3207103: "[when appearing] Apply {{ 'status_attention' | status_manual: 'Recovery Skill', 'Increase HP recovery of recovery skill used by invoker by 3.5%' }} to self /100%<br>\
 [when an ally is damaged] Apply {{ 'status_bless' | status_manual: 'Bygul Special2', 'Increase HP recovery of recovery skill used by invoker by 7%' }} to self, removed when current turn ends /100%"
-3207104: "[when appearing] Apply {{ 156 | status_description }} to self /100%<br>\
+3207104: "[when appearing] Apply {{ 'status_attention' | status_manual: 'Recovery Skill', 'Increase HP recovery of recovery skill used by invoker by 4%' }} to self /100%<br>\
 [when an ally is damaged] Apply {{ 'status_bless' | status_manual: 'Bygul Special2', 'Increase HP recovery of recovery skill used by invoker by 8%' }} to self, removed when current turn ends /100%"
-3207105: "[when appearing] Apply {{ 156 | status_description }} to self /100%<br>\
+3207105: "[when appearing] Apply {{ 'status_attention' | status_manual: 'Recovery Skill', 'Increase HP recovery of recovery skill used by invoker by 4.5%' }} to self /100%<br>\
 [when an ally is damaged] Apply {{ 'status_bless' | status_manual: 'Bygul Special2', 'Increase HP recovery of recovery skill used by invoker by 9%' }} to self, removed when current turn ends /100%"
-3207106: "[when appearing] Apply {{ 156 | status_description }} to self /100%<br>\
+3207106: "[when appearing] Apply {{ 'status_attention' | status_manual: 'Recovery Skill', 'Increase HP recovery of recovery skill used by invoker by 5%' }} to self /100%<br>\
 [when an ally is damaged] Apply {{ 'status_bless' | status_manual: 'Bygul Special2', 'Increase HP recovery of recovery skill used by invoker by 10%' }} to self, removed when current turn ends /100%"
 8207104: "[in auto mode] when an ally has <50% hp, prioritize S2 /100%"
 
