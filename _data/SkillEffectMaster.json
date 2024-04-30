@@ -49180,6 +49180,167 @@
       "isOverrideStatusDescription": true
     }
   },
+  "3193": {
+    "skillEffectId": 3193,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffectElapseTurnBeforeSkill",
+          "parameter": {
+            "avoidExtensionTurn": false
+          }
+        },
+        {
+          "class": "Silence",
+          "parameter": {
+            "index": 1,
+            "isForce": true
+          }
+        },
+        {
+          "class": "Silence",
+          "parameter": {
+            "index": 2,
+            "isForce": true
+          }
+        },
+        {
+          "class": "Silence",
+          "parameter": {
+            "index": 3,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 299,
+      "canDispel": true,
+      "filterIds": [],
+      "parameter": false,
+      "description": "スキル1以外封印",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3195": {
+    "skillEffectId": 3195,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "PassiveBattleSkillEffect",
+          "parameter": {
+            "skillId": 6197107
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 130,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "装備スキルID=6197107を付与。（2回行動）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "2回行動",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "このキャラクターは毎ターン2回行動する。2回目の行動時はスキル1を発動する。洗脳解除での行動は1回目の行動とカウントされる。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "3197": {
+    "skillEffectId": 3197,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseMultipleAttack",
+          "parameter": {
+            "value": 110
+          }
+        }
+      ],
+      "filename": "status_system_atkup",
+      "statusId": 126,
+      "canDispel": true,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATKチャージ",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": true,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATKチャージ",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "チャージ数1につき、ATKを10%上昇。条件によりチャージ数が増加していく。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "3198": {
+    "skillEffectId": 3198,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": 1,
+            "isRandom": false,
+            "statusId": 126,
+            "statusNum": 0,
+            "statusTypeValue": 2
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "汎用システム効果126を1ターン延長",
+      "isCountTurn": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "4001": {
     "skillEffectId": 4001,
     "skillEffectJson": {
