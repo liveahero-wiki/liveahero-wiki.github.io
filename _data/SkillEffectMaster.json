@@ -60116,5 +60116,79 @@
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
     }
+  },
+  "4409": {
+    "skillEffectId": 4409,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NowViewDamage",
+          "parameter": {
+            "value": 70,
+            "viewMult": 100
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1,
+        3
+      ],
+      "parameter": false,
+      "description": "70%ダメージ+Viewに応じてダメージ量が上昇（10000で最大値）",
+      "isCountTurn": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4410": {
+    "skillEffectId": 4410,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -2000
+          }
+        }
+      ],
+      "filename": "status_system_awakening",
+      "statusId": 139,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "View消費量-2000(永続・アイコン有り）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "View消費量-2000",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "Viewの消費を-2000する。バフでもデバフでもない状態。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
   }
 }
