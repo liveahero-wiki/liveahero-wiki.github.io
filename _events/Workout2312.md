@@ -141,3 +141,17 @@ Here is a list of this event's limited time Missions:
 ### Free Quests
 
 {% include quest-group.html chapterId=1083 %}
+
+### Event Sales Report
+
+<details><summary>SALES_EVENT_WORKOUT_REPORT_1</summary>
+<p>クリスマスイベントの仕事からの帰り道、<br>ちらつき始めた雪の中、白い息を吐きながら<br>ひとり街を歩く<code>character0</code>。<br>普段訪れることのないその場所は、<br>巨大なツリーとイルミネーションに彩られた<br>クリスマスマーケットの会場になっていた。<br><br><code>character0</code>が会場の熱気と<br>イルミネーションにつられて散策していると、<br>寒空の下、屋台の前で俯く子供に出会う。<br>話を聞くと、親に贈るプレゼントを買うための<br>ラフが後少しだけ足りないらしい。<br><br><code>character0</code>は子供に微笑みかけ、<br>マーケットの案内をお願いする。<br>スパイスの効いたノンアルコールホットワイン、<br>そして身体を芯から暖める料理の数々。<br><br>ようやく笑顔を浮かべた子供の手に、<br><code>character0</code>はマーケットを<br>案内してくれた依頼料をそっと握らせた。<br>手を振り、雪とイルミネーションの中を歩く。<br>その足取りは、少しだけ軽くなっていた。
+</p></details>
+
+<details><summary>SALES_EVENT_WORKOUT_REPORT_2</summary>
+<p>クリスマスケーキの販促イベントに呼ばれた<br><code>character0</code>と<code>character1</code>。<br><br>内容は、２人で独自のデコレーションをした<br>クリスマスケーキをファンに振る舞うというもの。<br><br>登場した２人は特設キッチンスペースに<br>用意された数々の食材に目を輝かせて、<br>思い思いのデコレーションを施していく。<br><br>クリーム、フルーツ、焼き菓子、一つ一つを<br>丁寧にトッピングしていき、見た目も華やかな<br><code>character0</code>のクリスマスケーキ。<br>チーズ、ローストビーフ、マッシュポテトが<br>豪快に盛られ、ド派手なインパクトを放つ<br><code>character1</code>のクリスマスケーキ。<br><br>全く異なる２人のパフォーマンスに会場は<br>大いに盛り上がり、イベントは大盛況だった。<br><br>追記：完成したケーキは全て、<br>ヒーローとファンが美味しくいただきました。
+</p></details>
+
+<details><summary>SALES_EVENT_WORKOUT_REPORT_3</summary>
+<p>今回の依頼はとある動画への出演依頼。<br>そしてその内容はクリスマスと年末年始で<br>溜まりゆく脂肪を熱く、激しく燃焼させる<br>エクササイズ動画だった。<br>スタジオインストラクターの掛け声とともに、<br>一行は動画の撮影を開始する。<br><br>満面の笑顔で軽々とエクササイズをこなしていく<br><code>character0</code>と<code>character1</code>。<br>対して、エクササイズに夢中になり表情を消して<br>本気で動く<code>character2</code>と、<br>エクササイズに独自のアレンジを加え、<br>自由きままに動く<code>character3</code>。<br><br>なかなか動きが揃わず撮影は何度も撮り直しとなり、<br>悩むスタジオインストラクターに、ある提案をする<br><code>character0</code>と<code>character1</code>。<br><br>完成した動画は、音楽にあわせて４人が自由に<br>エクササイズを行うものだった。<br>動きは全く違うが、誰の動きを真似しても<br>効果的なエクササイズになると拡散され、<br>配信された動画は大好評となった。
+</p></details>
