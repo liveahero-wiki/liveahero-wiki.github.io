@@ -11,6 +11,7 @@ sidekicks:
 %}
 
 ## Notes
+- His full name is Shidemasu Hanemaru (羽丸 シデマス)
 
 - His Skill name is from Italian language:
   - Schiacciamento : To crush, to press down
