@@ -40978,7 +40978,9 @@
           "class": "TeamAttackRandomEnemy",
           "parameter": {
             "isAutoSkill": false,
-            "executeTiming": 5
+            "executeTiming": 5,
+            "isRecalculateTarget": true,
+            "notExecuteInTargetReversal": true
           }
         }
       ],
@@ -40988,6 +40990,7 @@
       "filterIds": [],
       "parameter": false,
       "description": "味方がランダムな敵にオート行動スキルを誘発(状態変化版)アルフェッカ専用",
+      "isCountTurn": false,
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
@@ -43408,6 +43411,13 @@
           "class": "TurnBaseMultipleAttack",
           "parameter": {
             "value": 100
+          }
+        },
+        {
+          "class": "PassiveBattleSkillEffect",
+          "parameter": {
+            "timing": 17,
+            "skillId": 8160207
           }
         }
       ],
@@ -47168,7 +47178,8 @@
           "parameter": {
             "isAutoSkill": false,
             "executeTiming": 5,
-            "isRecalculateTarget": true
+            "isRecalculateTarget": true,
+            "notExecuteInTargetReversal": true
           }
         }
       ],
@@ -47178,6 +47189,7 @@
       "filterIds": [],
       "parameter": false,
       "description": "味方がランダムな敵にオート行動スキルを誘発(状態変化版)限定ポラリス専用",
+      "isCountTurn": false,
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
@@ -48719,7 +48731,8 @@
         {
           "class": "RandomTeamAttack",
           "parameter": {
-            "includeOwn": true
+            "includeOwn": true,
+            "notExecuteInTargetReversal": true
           }
         }
       ],
@@ -48732,6 +48745,7 @@
       ],
       "parameter": false,
       "description": "スパイタグを付与したな味方が追撃",
+      "isCountTurn": false,
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
@@ -49573,6 +49587,110 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3200": {
+    "skillEffectId": 3200,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "OwnAttack",
+          "parameter": {
+            "index": 0,
+            "notExecuteInTargetReversal": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "スキル１を追加発動（洗脳時無効）",
+      "isCountTurn": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3201": {
+    "skillEffectId": 3201,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TeamAttackRandomEnemy",
+          "parameter": {
+            "executeTiming": 5,
+            "notExecuteInTargetReversal": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "味方がランダムな敵にスキル1を誘発(状態変化版)洗脳時無効",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3203": {
+    "skillEffectId": 3203,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "DamageMultipleAdjust",
+          "parameter": {
+            "mult": 120
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":0,\"role\":0,\"class\":\"EnemyDeBuffNumberExecTrigger\"}]",
+      "filename": "",
+      "statusId": 1010201,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": true,
+      "description": "攻撃対象にデバフが付与されている時、ダメージ+20%。",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
       "canDuplicate": false,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
