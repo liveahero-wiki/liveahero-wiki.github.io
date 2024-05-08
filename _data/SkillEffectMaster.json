@@ -43743,6 +43743,76 @@
       "isOverrideStatusDescription": false
     }
   },
+  "2034": {
+    "skillEffectId": 2034,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffectElapseTurnBeforeSkill",
+          "parameter": {
+            "avoidExtensionTurn": false
+          }
+        },
+        {
+          "class": "ForceAuto",
+          "parameter": []
+        },
+        {
+          "class": "ParticleStatus",
+          "parameter": {
+            "address": "Crisis2404_choker"
+          }
+        },
+        {
+          "class": "TargetReversal",
+          "parameter": []
+        },
+        {
+          "class": "Silence",
+          "parameter": {
+            "index": 1,
+            "isForce": true
+          }
+        },
+        {
+          "class": "Silence",
+          "parameter": {
+            "index": 2,
+            "isForce": true
+          }
+        },
+        {
+          "class": "Silence",
+          "parameter": {
+            "index": 3,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "status_brainwashing",
+      "statusId": 294,
+      "canDispel": true,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "1回の行動の間洗脳",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "洗脳",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "洗脳",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "2035": {
     "skillEffectId": 2035,
     "skillEffectJson": {
@@ -44332,6 +44402,178 @@
       "overrideStatusDescription": "相手から狙われやすくなる。バフでもデバフでも無い状態。スキルによる解除不可。",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
+    }
+  },
+  "2053": {
+    "skillEffectId": 2053,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 0
+          }
+        }
+      ],
+      "filename": "status_invincible",
+      "statusId": 132,
+      "canDispel": false,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "無敵",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "canDuplicateForce": true,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "2055": {
+    "skillEffectId": 2055,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Hide",
+          "parameter": []
+        }
+      ],
+      "filename": "status_hide",
+      "statusId": 132,
+      "canDispel": false,
+      "filterIds": [
+        12
+      ],
+      "parameter": false,
+      "description": "永続隠蔽",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "2058": {
+    "skillEffectId": 2058,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillSkip",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_debuff",
+      "statusId": 132,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "スタン",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "2060": {
+    "skillEffectId": 2060,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "ParticleStatus",
+          "parameter": {
+            "address": "Rasalhague_barrier"
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 295,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "ラサルハグェエフェクト用",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "洗脳",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "洗脳によって敵対している状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "2061": {
+    "skillEffectId": 2061,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 0
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 132,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "弱体無効化",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "canDuplicateForce": true,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
     }
   },
   "3001": {
@@ -60188,6 +60430,145 @@
       "isOverrideStatusName": true,
       "overrideStatusDescription": "Viewの消費を-2000する。バフでもデバフでもない状態。",
       "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4413": {
+    "skillEffectId": 4413,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "PassiveBattleSkillEffect",
+          "parameter": {
+            "timing": 0,
+            "skillId": 6072105
+          }
+        }
+      ],
+      "filename": "status_system_atkup",
+      "statusId": 128,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果128番付与（攻撃指令）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": true,
+      "isCountDownEffect": false,
+      "overrideStatusName": "攻撃指令",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ターン開始時、自身に2回の行動の間ATKアップを付与。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4414": {
+    "skillEffectId": 4414,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "PassiveBattleSkillEffect",
+          "parameter": {
+            "timing": 0,
+            "skillId": 6072106
+          }
+        }
+      ],
+      "filename": "status_system_awakening",
+      "statusId": 130,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果130番付与（攪乱指令）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": true,
+      "isCountDownEffect": false,
+      "overrideStatusName": "攪乱指令",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "敵にダメージを与えた時、1回の行動の間過消費を付与。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4415": {
+    "skillEffectId": 4415,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "PassiveBattleSkillEffect",
+          "parameter": {
+            "timing": 0,
+            "skillId": 6005105
+          }
+        }
+      ],
+      "filename": "status_system_counter",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果127番付与（反撃指令）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": true,
+      "isCountDownEffect": false,
+      "overrideStatusName": "反撃指令",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ダメージを受けた時、スキル1で反撃。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4416": {
+    "skillEffectId": 4416,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "filename": "status_costumedamage_debuff",
+      "statusId": 300,
+      "canDispel": true,
+      "filterIds": [],
+      "parameter": false,
+      "description": "指令断絶",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "指令断絶",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメージ+50%。「攻撃指令」、「攪乱指令」、「反撃指令」の効果が発動しなくなる。",
+      "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
     }
   }
