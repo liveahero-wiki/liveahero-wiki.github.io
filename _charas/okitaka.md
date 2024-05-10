@@ -25,6 +25,7 @@ heroes:
   - '8075101'
   - '8075102'
 - stockId: 10752
+  extra_sprites: fg_okitakaCrisis2404_h01_skin2
 sidekicks:
 - stockId: 10751
   BIO_S01: |-

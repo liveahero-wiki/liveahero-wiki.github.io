@@ -16,6 +16,7 @@ heroes:
     The only clue to his origin was a bangle made of an unknown ore that he had worn since birth.
     What is the ore used in the bangles? Is there a planet that produces the same ore? Is it home? All kinds of unknowns trouble him.         With a dream of "breaking through all unknowns" in his heart, he travels around the galaxy.
 - stockId: 11602
+  extra_sprites: fg_obsidiusCrisis2404_h01_skin2
 sidekicks:
 - stockId: 11601
   BIO_S01: |-
