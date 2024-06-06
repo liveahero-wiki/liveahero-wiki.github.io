@@ -47153,18 +47153,19 @@
         4
       ],
       "parameter": false,
-      "description": "眩暈",
+      "description": "逵ｩ證・",
+      "isCountTurn": false,
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
-      "overrideStatusName": "眩暈",
-      "isOverrideStatusName": true,
-      "overrideStatusDescription": "被ダメージ+20%",
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
-      "isOverrideStatusDescription": true
+      "isOverrideStatusDescription": false
     }
   },
   "3108": {
@@ -58406,18 +58407,19 @@
         4
       ],
       "parameter": false,
-      "description": "眩暈",
+      "description": "逵ｩ證・",
+      "isCountTurn": false,
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
-      "overrideStatusName": "眩暈",
-      "isOverrideStatusName": true,
-      "overrideStatusDescription": "被ダメージ+20%",
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
-      "isOverrideStatusDescription": true
+      "isOverrideStatusDescription": false
     }
   },
   "4315": {
@@ -61424,6 +61426,79 @@
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4436": {
+    "skillEffectId": 4436,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "OtherParamBarrier",
+          "parameter": {
+            "mult": 20,
+            "value": 0,
+            "maxValue": 3000,
+            "paramType": 2
+          }
+        }
+      ],
+      "filename": "status_barrier",
+      "statusId": 275,
+      "canDispel": true,
+      "filterIds": [
+        5
+      ],
+      "parameter": true,
+      "description": "View20%バリア最大3000",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "被ダメージ時、受けるダメージをバリア値だけ軽減する。バリア値が無くなった時、解除される。バリア値は付与キャラクターのViewの20%（最大3000まで）。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4437": {
+    "skillEffectId": 4437,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 105
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        0
+      ],
+      "parameter": false,
+      "description": "被ダメージ+5%",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
