@@ -151011,5 +151011,119 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
+  },
+  "1117004": {
+    "questId": 1117004,
+    "questName": "球技大会、参加者募集！",
+    "subName": "リンククエスト",
+    "questKind": 0,
+    "chapterId": 1117,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_sadayoshiSurvival2309_h01",
+    "startAt": "2024-06-13 18:00:00",
+    "endAt": "2024-06-27 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1118001": {
+    "questId": 1118001,
+    "questName": "スコアアタック・灯篭型カイブツ",
+    "subName": "キャンペーンスコアアタック",
+    "questKind": 8,
+    "chapterId": 1118,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "icon_kaibutsuLantern_h01",
+    "startAt": "2024-06-13 18:00:00",
+    "endAt": "2024-06-27 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 60,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLantern_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 106
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": true,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": [
+      {
+        "score": 0,
+        "iconAddress": "ui_symbol_estimation_C"
+      },
+      {
+        "score": 30000,
+        "iconAddress": "ui_symbol_estimation_B"
+      },
+      {
+        "score": 65000,
+        "iconAddress": "ui_symbol_estimation_A"
+      },
+      {
+        "score": 90000,
+        "iconAddress": "ui_symbol_estimation_S"
+      }
+    ],
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": [
+      {
+        "label": "UI_SCORE_ATTACK_CLEAR_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_CLEAR_BONUS_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_HP_SCORE_LABEL",
+        "description": "UI_SCORE_ATTACK_HP_SCORE_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_TURN_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_TURN_BONUS_DESCRIPTION"
+      }
+    ],
+    "scoreAttackHintTextKey": "HINT_SCORE_ATTACK_LANTERN",
+    "scoreAttackBattleCount": 1,
+    "rewardUpRate": null
   }
 }
