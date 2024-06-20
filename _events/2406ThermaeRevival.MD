@@ -15,10 +15,6 @@ sales_end_time: 2024-07-04T20:00:00+09
 * this will be unordered
 {:toc}
 
-## Event Preview
-
-coming soon
-
 ## Event Banners
 
 This Event's gacha summon includes two time-limited variant {% chara_link Alphecca|h2 %} (Hero), {% chara_link Rakta|h2 %} (Hero),
