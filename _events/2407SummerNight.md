@@ -31,7 +31,7 @@ And then in the middle of the glittering night scenery, followed by various emot
 
 ## Event Banners
 
-This Event's gacha summon includes one time-limited variant {% chara_link reXer|h2 %} (Hero), and two new characters, {% chara_link Ryusei %} and {% chara_link Ganran %} (Hero & Sidekick)
+This Event's gacha summon includes one time-limited variant {% chara_link Lilac|h2 %} (Hero), {% chara_link Kalaski|h2 %} (Hero) and one new character {% chara_link Roudin %} (Hero & Sidekick)
 
 Rates as follow:
 
