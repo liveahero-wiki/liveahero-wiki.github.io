@@ -23,7 +23,7 @@ sidekicks:
     He also has good communication skills, so he is good at quickly winning the trust of his clients and gaining the information necessary for his defense.
     On the other hand, Astosis is reluctant to talk much about himself.
     He's unexpectedly touchy-feely upon greeting new people despite his withdrawn nature, but there seems to be another reason for this act.
-  extra_sprites: fg_astosis_s01_skin1
+  extra_sprites: fg_astosis_s01_skin1,fg_astosis_s01_skin2
 ---
 
 {% include voice-table.html resourceName="astosis"

@@ -32,6 +32,7 @@ sidekicks:
     Hero dies without VIEW is his motto, and he is constantly trying to develop a drone camera that can follow the hero in any and all situation.
   
     Because of his design philosophy and the knowledge he possesses, Zero Trust had given him a request and he has been selected as a technical advisor.
+  extra_sprites: fg_grigory_s01_skin1
 ---
 
 {% include voice-table.html resourceName="grigory"

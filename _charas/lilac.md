@@ -32,6 +32,7 @@ heroes:
   - '8101101'
   - '8101102'
 - stockId: 11012
+  extra_sprites: fg_lilacSummerNight2407_h01_skin2,fg_lilacSummerNight2407_h01_skin3,fg_lilacSummerNight2407_h01_skin4,fg_lilacSummerNight2407_h01_skin5,fg_lilacSummerNight2407_h01_skin6,fg_lilacSummerNight2407_h01_skin7
 sidekicks:
 - stockId: 11011
   BIO_S01: |-
