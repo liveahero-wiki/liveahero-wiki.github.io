@@ -30,6 +30,26 @@ heroes:
     born and disappears like bubbles on the battlefield, and keep it as a semi-
     permanent record.
 - stockId: 10642
+  BIO_H01: |-
+    After enjoying his vacation, Kalaski accepts a request for a warm up.
+    The request is to create a record that leads to the final days of a hotel set to be closed.
+
+    For the sake of showing the scenery that will soon disappear to those customers who have ever stayed there, Kalaski continues      to press his shutter.
+    While doing the job, Kalaski somehow ended up appearing in the hotel's exciting show, using parallel cue to transform.
+    The resulting hero suit is a glittering form suited for a performer on stage.
+  
+    He fight while being illuminated by a spotlight parallel weapon in his hand.
+    That appearance catches the viewer's eye and inspires their hearts.
+  BIO_H02: |-
+    A photo that Kalaski once took.
+    While riding a spaceship together with survivors who have lost their home, within the gloomy and depressed people,
+    a person raised their head and began singing a song from a movie in their homeland with a smile.
+
+    “Our planet is gone, even if that fact is going to be just a sad piece of news one day, we will continue singing, and live”,
+    remembering the words spoken by the person back then, Kalaski stand on the stage.
+    Even though this is not a battlefield,
+    for the sake of conveying and connecting the scream of the disappearing way of life here…
+  
 sidekicks:
 - stockId: 10641
   BIO_S01: |-
@@ -80,6 +100,20 @@ EVENTB = "Spiritual support is very important for people in rough areas.<br>Peop
 %}
 
 {% include voice-table.html resourceName="kalaskiSummerNight2407"
+h_gachaResult = "Now, illuminate and connect the memories.<br> Let this Kalaski show you, the most memorable stage!"
+s_gachaResult = "Oi, I'm a war photographer, you know?<br> So what's with this photographing hotel sceneries, appearing in a show…<br>well it's work, so I will do it properly though."
+APPRECIATION = "Here, delivery.<br>Just eat it however you like.<br>…wearing that sad face, I don't even feel like taking a picture.<br>I won't say that you shouldn't push yourself but…it's fine to be treated sometimes."
+PLAYER = "After not seeing you for awhile, you now have a pretty good eyes there.<br>Tell me, what kind of experiences you had?"
+TOUCH = "Funyaah!?<br>W-why are you suddenly touching me!<br>I hardly ever wear swimsuit so I'm uncomfortable with people touching my fur there…N-nyaaa…"
+TRAINED = "This…doing whatever you want…!"
+TRAIN = "I cannot do it gently, okay?"
+DAILY = "Oi, look there, now smile, cheese!<br> You're also a staff now, so scenery include…what?<br> It was cute so one more!?<br>…S-shut up!"
+HERO =  "Roudin, he has the eyes of someone who has given up on everything.<br>I can't leave someone like that alone.<br>…I've seen a lot of people gave up and disappear after all."
+RELATION = "Lilac seems like someone who doesn't like to smile,<br>I was worried, but then he is very confident when on stage,<br>subject like these is fun to photograph."
+EVENTA = "The people here has a good look when they work.<br>Until the very end, to continue like usual…huh.<br>Hahah, they're not a bad subject."
+EVENTB = "It's just wearing a swimsuit, just wear it<br>I will just buy appropriate one here…w-what’s this…string…?<br>I take back what I said, just forget about the equipment."
+EVENTC = "You come to the right place, there's an additional request.<br>We're asked to use this to promote the show.<br>Let's get this done quickly and get our reward."
+EVENTD = "Nice! If we do this much then Roudin won't have any complaints.<br>We can even expect a bonus!"
 %}
 
 ## Notes
