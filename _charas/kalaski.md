@@ -1,6 +1,8 @@
 ---
 title: Kalaski
 characterId: 64
+h2:
+  title: '"The Limelight" Kalaski'
 heroes:
 - stockId: 10641
   BIO_H01: |-
@@ -27,6 +29,7 @@ heroes:
     He considers it his mission to capture every moment of life's life, which is
     born and disappears like bubbles on the battlefield, and keep it as a semi-
     permanent record.
+- stockId: 10642
 sidekicks:
 - stockId: 10641
   BIO_S01: |-
@@ -44,7 +47,7 @@ sidekicks:
     it's a bother but actually is not really annoyed by it.
 
     He tries to act cool, but actually easily offended.
-  extra_sprites: fg_kalaski_s01_skin1
+  extra_sprites: fg_kalaski_s01_skin1,fg_kalaski_s01_skin2
 ---
 
 {% include voice-table.html resourceName="kalaski"
@@ -74,6 +77,9 @@ HERO =  "That detective. I thought he was just some frivolous playboy at first, 
 RELATION = "That bastard keeps making me take all these gossip pictures for some trashy tabloid.<br>What the hell do they think they're doing?<br>Ugh...  they're calling again.<br>...I guess I don't have a choice."
 EVENTA = "This kind of thing is a bit out of my wheelhouse, but... okay.<br>I'll at least help you out.<br>Just... I'll just have to take some pictures."
 EVENTB = "Spiritual support is very important for people in rough areas.<br>People who think they can take that away... we can't let them get away with it."
+%}
+
+{% include voice-table.html resourceName="kalaskiSummerNight2407"
 %}
 
 ## Notes

@@ -1,6 +1,8 @@
 ---
 title: Lilac
 characterId: 101
+h2:
+  title: '"Blessed Rain" Lilac'
 heroes:
 - stockId: 11011
   BIO_H01: |-
@@ -29,6 +31,7 @@ heroes:
   passiveSkillIds:
   - '8101101'
   - '8101102'
+- stockId: 11012
 sidekicks:
 - stockId: 11011
   BIO_S01: |-
@@ -45,7 +48,7 @@ sidekicks:
 
     He believes that flowers, which are often used as gifts to convey feelings, have
     the power to convey some sentiments better than words.
-  extra_sprites: fg_lilac_s01_skin1
+  extra_sprites: fg_lilac_s01_skin1,fg_lilac_s01_skin2
 ---
 
 {% include voice-table.html resourceName="lilac"
@@ -61,6 +64,9 @@ TRAIN = "Sorry if I made it too strenuous."
 TRAINED = "Wait a minute...!"
 EVENTA = "Welcome to Wemalt, the city of flowers.<br>Please enjoy the blooming flowers and plants.<br>If you like, I can show you around the city."
 EVENTB = "There is a strange smell in the city...<br>What's going on? Is it really true that it is the work of ghosts?"
+%}
+
+{% include voice-table.html resourceName="lilacSummerNight2407"
 %}
 
 ## Notes
