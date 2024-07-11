@@ -177,9 +177,9 @@ of view after the skill is cast (maxed at 11000 view) /100%<br>\
 [base skill] Deal 200% of damage to target enemy /100% <br>\
 [base skill] Apply {{ 12 | status_description }} to target enemy for 1-4 next attack (Increased every 3000 available View after skill use, max 4 next attack at extra 12000 view) /100%"
 
-8064201: "[Constant Activation] Apply {{ 1064204 | status_description }} to self and ally with View role /100%"
+8064201: "[Always active] Apply {{ 1064204 | status_description }} to self and ally with View role /100%"
 8064202: ""
-8064204: "[Constant Activation] Every 3000 view consumed by an ally increase a poin of gauge(above the hp bar), when gauge is full (after 30000 view) apply {{ 1064202 | status_description }} to self changing S1 effect into: <br>\
+8064204: "[Always active] Every 3000 view consumed by an ally increase a point of gauge(above the hp bar), when gauge is full (after 30000 view) apply {{ 1064202 | status_description }} to self changing S1 effect into: <br>\
 [base skill] Deal 130% of damage to target enemy /100% <br>\
 [base skill] Deal 50% of damage to all enemies except target /100% <br>\
 [base skill] Apply {{ 268 | status_description }} for 1 turn to all enemies /100%"
@@ -209,6 +209,15 @@ Apply {{ 205 | status_description }} to all enemies /100%"
 # Kyoichi variant Skevo S1
 1010205: "[base skill] (extra_cond: possessing {{ 15 | status_description }} ) Deal 70% of damage and extra 30% of damage when condition in bracket is met /100%<br>\
 <mark>[Always active] Increase damage by 10% against debuffed target /100%</mark>"
+
+# Lilac variant S2,S3, passive
+1101202: "[base skill] Heal target ally for 80% of own ATK value /100% <br>\
+[base skill] Apply {{ 275 | status_description }} to target ally for 3 next attack(s) /100% <br>\
+[base skill] Extend Atk up status granted to self by 1 turn(s) /100% <br>\
+[base skill] Extend Atk up status granted to self by 1 turn(s) /100% <br>\
+[when view >2000] Use 2000 view and act once more /100%"
+
+8101201: "[When alive] Apply 1 stack of {{ 1101201 | status_description }} to ally with max health that is targeted by an active recovery skill /100%"
 
 # Marfik Skevo S1
 1014205: "[base skill] Deal 60% of damage to target enemy /100%<br>\
@@ -345,6 +354,12 @@ Max 3 times in 1 turn"
 
 8122205: "[turn end] Remove all {{ 1122202 | status_description }} from self /100% <br>\
 [turn end] Remove all {{ 1122205 | status_description }} from self /100%"
+
+# Roudin Passive
+8209101: "[Always active] Every 3000 view consumed by an ally increase a point of gauge(above the hp bar), when gauge is full (after 30000 view) +20% atk for all allies for 1 next action"
+8209102: ""
+8209110: ""
+
 
 # Ryekie variant S2 Skevo
 1004206: "[base skill] Apply {{ 1 | status_description }} to target ally for 1 next attack(s) /100% <br>\
