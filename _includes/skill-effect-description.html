@@ -14,7 +14,8 @@
 {% for effect in skillEffectJson.effects %}
 
 {% if skillEffectJson.effects.size > 1 %}
-  {% if effect.class == "NoneEffect" or effect.class == "NoneEffectElapseTurnDamage" or effect.class == "NoneEffectElapseAfterTurnEnd" %}
+  {% if effect.class == "NoneEffect" or effect.class == "NoneEffectElapseTurnDamage" or effect.class == "NoneEffectElapseAfterTurnEnd" 
+     or effect.class == "NoneEffectElapseTurnBeforeSkill" %}
     {% continue %}
   {% endif %}
 {% endif %}

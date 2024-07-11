@@ -105,6 +105,8 @@ module LahWiki
           f.push("skill receiver's HP&gt;50")
         when "InvokerAliveTrigger"
           f.push("when invoker is alive")
+        when "ReceiverTemporaryAliveTrigger"
+          f.push("skill receiver is still alive")
         when "AboveSpdValueTrigger"
           f.push("SPD&gt;#{c['value']}")
         when "OwnStatusTrigger"
@@ -389,6 +391,8 @@ module LahWiki
         return "ally with highest ATK"
       when 14
         return "all allies except self"
+      when 16
+        return "all enemies except target"
       end
       return "Unknown target #{target}"
     end
