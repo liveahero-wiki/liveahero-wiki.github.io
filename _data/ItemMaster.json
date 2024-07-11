@@ -2439,6 +2439,64 @@
     ],
     "limitValue": 0
   },
+  "210": {
+    "itemId": 210,
+    "itemName": "水上ステージのチラシ",
+    "resourceName": "SummerNight2407_exchange01",
+    "rarity": 0,
+    "itemType": 512,
+    "description": "今時珍しい、紙媒体の宣伝チラシ。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "211": {
+    "itemId": 211,
+    "itemName": "水上ステージホログラム",
+    "resourceName": "icon_bg_battle_rooftopwaterstage_night",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景に水上ステージを投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_rooftopwaterstage_night",
+        "bgTitleKey": "TITLE_BG_BATTLE_ROOFTOPWATERSTAGE_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
+  "212": {
+    "itemId": 212,
+    "itemName": "サマーナイツ戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "サマーナイツ・ラストイリュージョンの戦闘BGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_summernight_battle_intro",
+        "bgmTitleKey": "TITLE_BGM_SUMMERNIGHT_BATTLE_INTRO_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "213": {
+    "itemId": 213,
+    "itemName": "サマーナイツヒーローショーディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "サマーナイツ・ラストイリュージョンのヒーローショーBGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_summernight_battle2_intro",
+        "bgmTitleKey": "TITLE_BGM_SUMMERNIGHT_BATTLE2_INTRO_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -4048,6 +4106,27 @@
     ],
     "limitValue": 0
   },
+  "110642": {
+    "itemId": 110642,
+    "itemName": "脚光のカラスキの記憶片",
+    "resourceName": "piece_kalaskiSummerNight2407",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "脚光のカラスキのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10642
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
   "110651": {
     "itemId": 110651,
     "itemName": "ウルペクラの記憶片",
@@ -4461,6 +4540,27 @@
         "addFan": 200,
         "rarity": 0,
         "stockId": 11011
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
+  "111012": {
+    "itemId": 111012,
+    "itemName": "恵雨のライラックの記憶片",
+    "resourceName": "piece_lilacSummerNight2407",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "恵雨のライラックのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 11012
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
@@ -5276,6 +5376,27 @@
         "addFan": 50,
         "rarity": 0,
         "stockId": 12071
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "112091": {
+    "itemId": 112091,
+    "itemName": "ルーディンの記憶片",
+    "resourceName": "piece_roudin",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "ルーディンのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 12091
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
@@ -7412,6 +7533,26 @@
     ],
     "limitValue": 0
   },
+  "212091": {
+    "itemId": 212091,
+    "itemName": "ルーディンの心",
+    "resourceName": "heart_roudin",
+    "rarity": 4,
+    "itemType": 2048,
+    "description": "ルーディンのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 12091
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
   "219991": {
     "itemId": 219991,
     "itemName": "@playerNameの心",
@@ -8652,6 +8793,16 @@
     "effect": [],
     "limitValue": 0
   },
+  "21064201": {
+    "itemId": 21064201,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
   "21065101": {
     "itemId": 21065101,
     "itemName": "開花の波動",
@@ -8854,6 +9005,16 @@
   },
   "21101101": {
     "itemId": 21101101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21101201": {
+    "itemId": 21101201,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,
@@ -9244,6 +9405,16 @@
   },
   "21207101": {
     "itemId": 21207101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21209101": {
+    "itemId": 21209101,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,

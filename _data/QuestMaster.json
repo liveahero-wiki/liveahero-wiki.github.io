@@ -153382,5 +153382,870 @@
     "scoreAttackHintTextKey": "",
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
+  },
+  "1123001": {
+    "questId": 1123001,
+    "questName": "ウェルカム・トゥ・ザ・ウィルダネス",
+    "subName": "第１話",
+    "questKind": 5,
+    "chapterId": 1123,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": "2024-08-08 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 1,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1123002": {
+    "questId": 1123002,
+    "questName": "ユー・キャン・ダンス",
+    "subName": "第２話",
+    "questKind": 5,
+    "chapterId": 1123,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": null,
+    "endAt": "2024-08-08 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 2,
+    "enemyLevel": 10,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1123001,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_esperdica_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 116
+      },
+      {
+        "battleInfoIcon": "icon_anna_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 106
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1124001": {
+    "questId": 1124001,
+    "questName": "ヒーローズ・オンステージ！",
+    "subName": "D級",
+    "questKind": 6,
+    "chapterId": 1124,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_SummerNight2407_exchange01",
+    "startAt": null,
+    "endAt": "2024-08-01 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 1,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 8,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 4,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1123002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_grigory_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 105
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeFire_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 100
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1124002": {
+    "questId": 1124002,
+    "questName": "ヒーローズ・オンステージ！",
+    "subName": "C級",
+    "questKind": 6,
+    "chapterId": 1124,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_SummerNight2407_exchange01",
+    "startAt": null,
+    "endAt": "2024-08-01 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 15,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 10,
+        "prob": 80
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 8,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1123002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_anna_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 105
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeFire_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 100
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1124003": {
+    "questId": 1124003,
+    "questName": "ヒーローズ・オンステージ！",
+    "subName": "B級",
+    "questKind": 6,
+    "chapterId": 1124,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_SummerNight2407_exchange01",
+    "startAt": null,
+    "endAt": "2024-08-01 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 30,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 20,
+        "prob": 50
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 12,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1123002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_astosis_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 104
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeFire_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 100
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1124004": {
+    "questId": 1124004,
+    "questName": "ヒーローズ・オンステージ！",
+    "subName": "A級",
+    "questKind": 6,
+    "chapterId": 1124,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_SummerNight2407_exchange01",
+    "startAt": null,
+    "endAt": "2024-08-01 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 45,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 10,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 10,
+        "prob": 40
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 16,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1123002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_esperdica_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 107
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeFire_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 100
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1124005": {
+    "questId": 1124005,
+    "questName": "ヒーローズ・オンステージ！",
+    "subName": "S級",
+    "questKind": 6,
+    "chapterId": 1124,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "item_SummerNight2407_exchange01",
+    "startAt": null,
+    "endAt": "2024-08-01 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 60,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 40,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 40,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 20,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 20,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 20,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1123002,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_shidemasu_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 106
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeFire_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 100
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1124006": {
+    "questId": 1124006,
+    "questName": "ヒーローズ・オンステージ！",
+    "subName": "ビギナー級",
+    "questKind": 6,
+    "chapterId": 1124,
+    "bannerResourceName": "ui_window_quest_04",
+    "iconFilename": "item_SummerNight2407_exchange01",
+    "startAt": null,
+    "endAt": "2024-08-01 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 25,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 70,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 60,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 50,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 50,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 30,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 10,
+        "prob": 25
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 15,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1123002,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "ItemConsume",
+        "value": 3,
+        "itemId": 38,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_yasuhiko_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 105
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeFire_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 100
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1124007": {
+    "questId": 1124007,
+    "questName": "ヒーローズ・オンステージ！",
+    "subName": "エキスパート級",
+    "questKind": 6,
+    "chapterId": 1124,
+    "bannerResourceName": "ui_window_quest_04",
+    "iconFilename": "item_SummerNight2407_exchange01",
+    "startAt": null,
+    "endAt": "2024-08-01 20:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 100,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 100,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 80,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 60,
+        "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 210,
+        "objectValue": 60,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 20,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1123002,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "ItemConsume",
+        "value": 3,
+        "itemId": 38,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_nessen_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 105
+      },
+      {
+        "battleInfoIcon": "icon_villainTraineeFire_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 100
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
   }
 }
