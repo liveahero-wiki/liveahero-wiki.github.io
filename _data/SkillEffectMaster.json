@@ -50604,6 +50604,103 @@
       "isOverrideStatusDescription": true
     }
   },
+  "3241": {
+    "skillEffectId": 3241,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "PassiveBattleSkillEffect",
+          "parameter": {
+            "skillId": 122
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 134,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "装備スキルID=122を付与。（行動開始時にHPが最大の場合、自身にシステム効果133を付与。）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "canDuplicateForce": true,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3242": {
+    "skillEffectId": 3242,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "status_awakening",
+      "statusId": 133,
+      "canDispel": true,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果133番付与",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "フィーバー状態",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "相手のゲージを多く削る。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "3243": {
+    "skillEffectId": 3243,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "PassiveBattleSkillEffect",
+          "parameter": {
+            "skillId": 123
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 134,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "装備スキルID=123を付与。（行動終了時自身のシステム効果133を削除。）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "canDuplicateForce": true,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "3244": {
     "skillEffectId": 3244,
     "skillEffectJson": {
@@ -63603,6 +63700,37 @@
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4488": {
+    "skillEffectId": 4488,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 229,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果229番付与",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
