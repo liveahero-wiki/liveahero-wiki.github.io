@@ -49,7 +49,7 @@ sidekicks:
 
     He believes that flowers, which are often used as gifts to convey feelings, have
     the power to convey some sentiments better than words.
-  extra_sprites: fg_lilac_s01_skin1
+  extra_sprites: fg_lilac_s01_skin1,fg_lilac_s01_skin2,fg_lilac_s01_skin3
 ---
 
 {% include voice-table.html resourceName="lilac"

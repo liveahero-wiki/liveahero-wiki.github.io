@@ -67,7 +67,7 @@ sidekicks:
     it's a bother but actually is not really annoyed by it.
 
     He tries to act cool, but actually easily offended.
-  extra_sprites: fg_kalaski_s01_skin1
+  extra_sprites: fg_kalaski_s01_skin1,fg_kalaski_s01_skin2,fg_kalaski_s01_skin3
 ---
 
 {% include voice-table.html resourceName="kalaski"
