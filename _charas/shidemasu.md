@@ -5,6 +5,7 @@ heroes:
 - stockId: 12061
 sidekicks:
 - stockId: 12061
+  extra_sprites: fg_shidemasu_s01_skin1
 ---
 
 {% include voice-table.html resourceName="shidemasu"
