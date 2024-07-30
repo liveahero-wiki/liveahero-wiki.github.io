@@ -153852,6 +153852,142 @@
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
   },
+  "1123007": {
+    "questId": 1123007,
+    "questName": "サマーナイツ・ラストイリュージョン",
+    "subName": "第７話",
+    "questKind": 5,
+    "chapterId": 1123,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2024-07-30 18:00:00",
+    "endAt": "2024-08-08 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 7,
+    "enemyLevel": 15,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 213,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1123006,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 104
+      },
+      {
+        "battleInfoIcon": "icon_roudin_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 103
+      },
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 105
+      },
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 106
+      },
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 105
+      },
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 106
+      },
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 103
+      },
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 107
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": true,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": [
+      {
+        "score": 0,
+        "iconAddress": "ui_symbol_estimation_C"
+      },
+      {
+        "score": 30000,
+        "iconAddress": "ui_symbol_estimation_B"
+      },
+      {
+        "score": 65000,
+        "iconAddress": "ui_symbol_estimation_A"
+      },
+      {
+        "score": 90000,
+        "iconAddress": "ui_symbol_estimation_S"
+      }
+    ],
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": [
+      {
+        "label": "UI_SCORE_ATTACK_ELAPSE_TURN_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_ELAPSE_TURN_BONUS_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_SURVIVAL_COUNT_LABEL",
+        "description": "UI_SCORE_ATTACK_SURVIVAL_COUNT_DESCRIPTION"
+      }
+    ],
+    "scoreAttackHintTextKey": "HINT_SCORE_ATTACK_RUINS",
+    "scoreAttackBattleCount": 3,
+    "rewardUpRate": null
+  },
   "1124001": {
     "questId": 1124001,
     "questName": "ヒーローズ・オンステージ！",
@@ -154911,6 +155047,95 @@
         "battleInfoIcon": "icon_kaibutsuBirdSmallLight_h01",
         "battleInfoElement": 4,
         "battleInfoSpd": 101
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuBirdSmallLight_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 97
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1126006": {
+    "questId": 1126006,
+    "questName": "ニュー・デイ・ウィル・ビギン",
+    "subName": "第６話チャレンジクエスト",
+    "questKind": 6,
+    "chapterId": 1126,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2024-07-30 18:00:00",
+    "endAt": "2024-08-08 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 2,
+    "enemyLevel": 60,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 33,
+        "objectValue": 5,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 34,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 135,
+        "objectValue": 2,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1123006,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuBirdBigShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 111
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuBirdSmallShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 103
       },
       {
         "battleInfoIcon": "icon_kaibutsuBirdSmallLight_h01",

@@ -44692,6 +44692,40 @@
       "isOverrideStatusDescription": false
     }
   },
+  "2065": {
+    "skillEffectId": 2065,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveBuff",
+          "parameter": {
+            "value": 1,
+            "isExecChangeInternalTurn": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "バフを１つ解除(受信時に内部ターン数書き換え)",
+      "isCountTurn": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "2066": {
     "skillEffectId": 2066,
     "skillEffectJson": {
@@ -51042,6 +51076,41 @@
       "isOverrideStatusName": true,
       "overrideStatusDescription": "自身のViewが1.5倍になる。解除不可。",
       "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "3301": {
+    "skillEffectId": 3301,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseMultipleAttack",
+          "parameter": {
+            "value": 103
+          }
+        }
+      ],
+      "filename": "status_system_firepower",
+      "statusId": 270,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "ATKチャージ（チャージ数1につき3%）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATKチャージ",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "チャージ数1につきATKを3%上昇。バフでもデバフでもない状態。",
+      "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
     }
   },
@@ -64077,6 +64146,145 @@
       "persistence": true,
       "reaminDeath": false,
       "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4490": {
+    "skillEffectId": 4490,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 166,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果166番全除去",
+      "isCountTurn": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4491": {
+    "skillEffectId": 4491,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 303,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果303番付与（エネミー用マスクシステム効果）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4492": {
+    "skillEffectId": 4492,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 50
+          }
+        }
+      ],
+      "trigger": "[{\"value\":25000,\"element\":0,\"statusId\":0,\"role\":0,\"class\":\"ViewDontExecTrigger\"}]",
+      "filename": "",
+      "statusId": 142,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "被ダメージ-50%（Viewが25000以下の時）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4493": {
+    "skillEffectId": 4493,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "NowHPDependDamageLimit",
+          "parameter": {
+            "mult": 101,
+            "value": 0,
+            "isMult": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 304,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "現在のHPの101%までしかダメージを受けないダメージ上限",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
