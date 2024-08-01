@@ -49,7 +49,7 @@ heroes:
     remembering the words spoken by the person back then, Kalaski stand on the stage.
     Even though this is not a battlefield,
     for the sake of conveying and connecting the scream of the disappearing way of life here…
-  
+  extra_sprites: fg_kalaskiSummerNight2407_h02_skin2
 sidekicks:
 - stockId: 10641
   BIO_S01: |-
