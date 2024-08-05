@@ -1,6 +1,6 @@
 import re
 
-CHAR_SUB = re.compile("{(\d+)}", re.DOTALL)
+CHAR_SUB = re.compile("{(\\d+)}", re.DOTALL)
 
 def processOneReport(key, value):
   value = re.sub(CHAR_SUB, "<code>character\\1</code>", value)
