@@ -160,6 +160,16 @@ Here is a list of this event's limited time Missions:
 
 {% include quest-group.html chapterId=1124 %}
 
+### Guide to play episode 7 (with translation)
+
+<iframe type="text/html" width="640" height="360" loading="lazy"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+ src="https://www.youtube.com/embed/cS5GA36JHYA" frameborder="0" allowfullscreen></iframe>
+
+### Fan translations
+
+- [Lilac special quest](https://docs.google.com/document/d/1LdLD3QjBcATaD6F4_gpBz_KMhihRch_v/edit)
+
 ### Event Sales Report
 
 <details><summary>SALES_EVENT_SUMMERNIGHT_REPORT_1</summary>
