@@ -45241,6 +45241,43 @@
       "isOverrideStatusDescription": false
     }
   },
+  "3017": {
+    "skillEffectId": 3017,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeActiveSkill",
+          "parameter": {
+            "index": 0,
+            "timing": 8,
+            "skillId": 8064206
+          }
+        }
+      ],
+      "filename": "status_buff_special",
+      "statusId": 1064204,
+      "canDispel": true,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "システム効果1064204 脚光",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "3018": {
     "skillEffectId": 3018,
     "skillEffectJson": {
@@ -45719,6 +45756,37 @@
       "overrideStatusDescription": "スキルによるHP回復量+50%",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
+    }
+  },
+  "3039": {
+    "skillEffectId": 3039,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 1064206,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "カラスキ強化スキル説明用",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "敵単体に100%ダメージ+対象以外の敵に50%ダメージ。敵全体に1ターンの間眩暈を付与。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
     }
   },
   "3041": {
@@ -48527,7 +48595,8 @@
         4
       ],
       "parameter": false,
-      "description": "汎用バフ253を1ターン延長",
+      "description": "汎用バフ199を1ターン延長",
+      "isCountTurn": false,
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
@@ -48599,6 +48668,7 @@
       ],
       "parameter": true,
       "description": "View100%バリア",
+      "isCountTurn": false,
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
@@ -51137,6 +51207,210 @@
       "filterIds": [],
       "parameter": false,
       "description": "システム効果270を3ターン減少",
+      "isCountTurn": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3303": {
+    "skillEffectId": 3303,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseMultipleAttack",
+          "parameter": {
+            "value": 103
+          }
+        },
+        {
+          "class": "TurnBaseMultipleChangeView",
+          "parameter": {
+            "value": 105
+          }
+        },
+        {
+          "class": "ViewCount",
+          "parameter": {
+            "isUse": true,
+            "value": 5000,
+            "target": 2,
+            "addTurn": true,
+            "maxCount": 1000,
+            "minCount": 1
+          }
+        }
+      ],
+      "filename": "status_atkup",
+      "statusId": 199,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "チャージカウント",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": true,
+      "isCountDownEffect": false,
+      "overrideStatusName": "チャージカウント",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "チャージ数1につき、ATKを3%上昇。Viewを5%上昇。条件によりチャージ数が増加していく。解除不可。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "3305": {
+    "skillEffectId": 3305,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 17
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 289,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "過消費無効",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "過消費無効",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "過消費が付与されない。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "3306": {
+    "skillEffectId": 3306,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 22
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 287,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "沈黙無効",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "沈黙無効",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "沈黙が付与されない。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "3307": {
+    "skillEffectId": 3307,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "OtherParamAddAttack",
+          "parameter": {
+            "value": 50,
+            "maxValue": 100000000,
+            "minValue": 0,
+            "addBefore": true,
+            "paramType": 2,
+            "isModifiedValue": true
+          }
+        }
+      ],
+      "trigger": "[{\"value\":1,\"element\":0,\"statusId\":0,\"role\":0,\"class\":\"OwnTeamCountTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 274,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "自身のViewの50%のATKを獲得",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3309": {
+    "skillEffectId": 3309,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": 8,
+            "isRandom": false,
+            "statusId": 199,
+            "statusNum": 0,
+            "statusTypeValue": 1
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "汎用バフ199を8ターン延長",
       "isCountTurn": false,
       "isImmediate": true,
       "persistence": false,
