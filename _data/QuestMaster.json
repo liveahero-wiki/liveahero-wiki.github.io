@@ -16370,7 +16370,7 @@
   "302012": {
     "questId": 302012,
     "questName": "やべ、潜入先間違えた！？",
-    "subName": "潜行のキョウイチスキルツリー開放クエスト",
+    "subName": "潜行のキョウイチスキルツリー解放クエスト",
     "questKind": 4,
     "chapterId": 302,
     "bannerResourceName": "ui_window_quest_03",
@@ -16382,7 +16382,7 @@
     "enemyLevel": 50,
     "canNotRetire": false,
     "canNotContinue": false,
-    "canNotGetFriendPoint": false,
+    "canNotGetFriendPoint": true,
     "canNotAuto": false,
     "canRestart": false,
     "canSavePreviousTeam": false,
@@ -16446,7 +16446,7 @@
   "302013": {
     "questId": 302013,
     "questName": "某の墨跡を御覧じよ",
-    "subName": "ショウエンスキルツリー開放クエスト",
+    "subName": "ショウエンスキルツリー解放クエスト",
     "questKind": 4,
     "chapterId": 302,
     "bannerResourceName": "ui_window_quest_03",
@@ -16458,7 +16458,7 @@
     "enemyLevel": 50,
     "canNotRetire": false,
     "canNotContinue": false,
-    "canNotGetFriendPoint": false,
+    "canNotGetFriendPoint": true,
     "canNotAuto": false,
     "canRestart": false,
     "canSavePreviousTeam": false,
@@ -16497,6 +16497,234 @@
         "battleInfoIcon": "icon_subaru_h01",
         "battleInfoElement": 3,
         "battleInfoSpd": 109
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "302014": {
+    "questId": 302014,
+    "questName": "正義の研鑽と行こうじゃないか！！",
+    "subName": "ライキスキルツリー解放クエスト ",
+    "questKind": 4,
+    "chapterId": 302,
+    "bannerResourceName": "ui_window_quest_03",
+    "iconFilename": "icon_ryekie_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": false,
+    "rewards": [
+      {
+        "rewardType": 10,
+        "objectId": 10041,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "HavingHeroCard",
+        "heroCardId": 100413,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "IsLimitBreakCard",
+        "heroCardId": 100413,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_procy_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 110
+      },
+      {
+        "battleInfoIcon": "icon_huckle_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 111
+      },
+      {
+        "battleInfoIcon": "icon_monomasa_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 107
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "302015": {
+    "questId": 302015,
+    "questName": "いざ、火山地帯奥地の古代都市へ！",
+    "subName": "マルフィクスキルツリー解放クエスト",
+    "questKind": 4,
+    "chapterId": 302,
+    "bannerResourceName": "ui_window_quest_03",
+    "iconFilename": "icon_marfik_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": false,
+    "rewards": [
+      {
+        "rewardType": 10,
+        "objectId": 10141,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "HavingHeroCard",
+        "heroCardId": 101412,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "IsLimitBreakCard",
+        "heroCardId": 101412,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_ganran_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 107
+      },
+      {
+        "battleInfoIcon": "icon_obsidius_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 95
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "302016": {
+    "questId": 302016,
+    "questName": "ビーチトレーニングか、悪くない",
+    "subName": "豪爽のヴィクトムスキルツリー解放クエスト",
+    "questKind": 4,
+    "chapterId": 302,
+    "bannerResourceName": "ui_window_quest_03",
+    "iconFilename": "icon_victomHerofesta2109_h01",
+    "startAt": null,
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": false,
+    "rewards": [
+      {
+        "rewardType": 10,
+        "objectId": 10092,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "HavingHeroCard",
+        "heroCardId": 100922,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "IsLimitBreakCard",
+        "heroCardId": 100922,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_villainFireSummerdive02_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 104
+      },
+      {
+        "battleInfoIcon": "icon_akashiSummerdive2108_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 101
+      },
+      {
+        "battleInfoIcon": "icon_sadayoshiSurvival2309_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 106
+      },
+      {
+        "battleInfoIcon": "icon_villainWaterSummerdive02_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 103
       }
     ],
     "hasAdv": false,
@@ -157869,7 +158097,7 @@
     "conditions": [
       {
         "class": "QuestClear",
-        "questId": 1128008,
+        "questId": 1128007,
         "isBannerDisplay": true
       }
     ],

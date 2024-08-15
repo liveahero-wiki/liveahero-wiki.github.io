@@ -229,6 +229,236 @@
     ],
     "nextEntryIds": null
   },
+  "100410501": {
+    "skillEntryId": 100410501,
+    "skillId": 1004105,
+    "iconAddress": "skillTree_defDown",
+    "description": "【キロボルト・スラッグ】の発動時、対象が未行動の場合10%の確率で1ターンの間眩暈を付与",
+    "conditionIds": null,
+    "nextEntryIds": [
+      100410502
+    ]
+  },
+  "100410502": {
+    "skillEntryId": 100410502,
+    "skillId": 1004105,
+    "iconAddress": "skillTree_defDown",
+    "description": "【キロボルト・スラッグ】の眩暈発動率+15%",
+    "conditionIds": [
+      100410501
+    ],
+    "nextEntryIds": [
+      100410503
+    ]
+  },
+  "100410503": {
+    "skillEntryId": 100410503,
+    "skillId": 1004105,
+    "iconAddress": "skillTree_defDown",
+    "description": "【キロボルト・スラッグ】の眩暈発動率+20%",
+    "conditionIds": [
+      100410502
+    ],
+    "nextEntryIds": [
+      100410504
+    ]
+  },
+  "100410504": {
+    "skillEntryId": 100410504,
+    "skillId": 1004105,
+    "iconAddress": "skillTree_defDown",
+    "description": "【キロボルト・スラッグ】の眩暈発動率+25%",
+    "conditionIds": [
+      100410503
+    ],
+    "nextEntryIds": [
+      100410505
+    ]
+  },
+  "100410505": {
+    "skillEntryId": 100410505,
+    "skillId": 1004105,
+    "iconAddress": "skillTree_defDown",
+    "description": "【キロボルト・スラッグ】の眩暈発動率+30%",
+    "conditionIds": [
+      100410504
+    ],
+    "nextEntryIds": null
+  },
+  "100410601": {
+    "skillEntryId": 100410601,
+    "skillId": 1004106,
+    "iconAddress": "skillTree_special",
+    "description": "【メガボルト・クラッシュ】の発動後、10%の確率でもう1度行動する。（1ターンに1回まで） ",
+    "conditionIds": null,
+    "nextEntryIds": [
+      100410602,
+      100410603
+    ]
+  },
+  "100410602": {
+    "skillEntryId": 100410602,
+    "skillId": 1004106,
+    "iconAddress": "skillTree_special",
+    "description": "【メガボルト・クラッシュ】の再行動発動率+10%",
+    "conditionIds": [
+      100410601
+    ],
+    "nextEntryIds": [
+      100410604
+    ]
+  },
+  "100410603": {
+    "skillEntryId": 100410603,
+    "skillId": 1004106,
+    "iconAddress": "skillTree_useless",
+    "description": "【メガボルト・クラッシュ】のView消費量-300",
+    "conditionIds": [
+      100410601
+    ],
+    "nextEntryIds": [
+      100410605
+    ]
+  },
+  "100410604": {
+    "skillEntryId": 100410604,
+    "skillId": 1004106,
+    "iconAddress": "skillTree_special",
+    "description": "【メガボルト・クラッシュ】の再行動発動率+15%",
+    "conditionIds": [
+      100410602
+    ],
+    "nextEntryIds": [
+      100410606
+    ]
+  },
+  "100410605": {
+    "skillEntryId": 100410605,
+    "skillId": 1004106,
+    "iconAddress": "skillTree_useless",
+    "description": "【メガボルト・クラッシュ】のView消費量-400",
+    "conditionIds": [
+      100410603
+    ],
+    "nextEntryIds": [
+      100410607
+    ]
+  },
+  "100410606": {
+    "skillEntryId": 100410606,
+    "skillId": 1004106,
+    "iconAddress": "skillTree_special",
+    "description": "【メガボルト・クラッシュ】の再行動発動率+15%",
+    "conditionIds": [
+      100410604
+    ],
+    "nextEntryIds": [
+      100410608
+    ]
+  },
+  "100410607": {
+    "skillEntryId": 100410607,
+    "skillId": 1004106,
+    "iconAddress": "skillTree_useless",
+    "description": "【メガボルト・クラッシュ】のView消費量-600",
+    "conditionIds": [
+      100410605
+    ],
+    "nextEntryIds": [
+      100410609
+    ]
+  },
+  "100410608": {
+    "skillEntryId": 100410608,
+    "skillId": 1004106,
+    "iconAddress": "skillTree_special",
+    "description": "【メガボルト・クラッシュ】の再行動発動率+20%",
+    "conditionIds": [
+      100410606
+    ],
+    "nextEntryIds": [
+      100410610
+    ]
+  },
+  "100410609": {
+    "skillEntryId": 100410609,
+    "skillId": 1004106,
+    "iconAddress": "skillTree_useless",
+    "description": "【メガボルト・クラッシュ】のView消費量-700",
+    "conditionIds": [
+      100410607
+    ],
+    "nextEntryIds": [
+      100410610
+    ]
+  },
+  "100410610": {
+    "skillEntryId": 100410610,
+    "skillId": 1004106,
+    "iconAddress": "skillTree_special",
+    "description": "【メガボルト・クラッシュ】の再行動発動率+30%",
+    "conditionIds": [
+      100410608,
+      100410609
+    ],
+    "nextEntryIds": null
+  },
+  "100410701": {
+    "skillEntryId": 100410701,
+    "skillId": 1004107,
+    "iconAddress": "skillTree_damageAll",
+    "description": "【ギガボルト・ブレイカー++】のダメージ+2%",
+    "conditionIds": null,
+    "nextEntryIds": [
+      100410702
+    ]
+  },
+  "100410702": {
+    "skillEntryId": 100410702,
+    "skillId": 1004107,
+    "iconAddress": "skillTree_damageAll",
+    "description": "【ギガボルト・ブレイカー++】のダメージ+3%",
+    "conditionIds": [
+      100410701
+    ],
+    "nextEntryIds": [
+      100410703
+    ]
+  },
+  "100410703": {
+    "skillEntryId": 100410703,
+    "skillId": 1004107,
+    "iconAddress": "skillTree_damageAll",
+    "description": "【ギガボルト・ブレイカー++】のダメージ+4%",
+    "conditionIds": [
+      100410702
+    ],
+    "nextEntryIds": [
+      100410704
+    ]
+  },
+  "100410704": {
+    "skillEntryId": 100410704,
+    "skillId": 1004107,
+    "iconAddress": "skillTree_damageAll",
+    "description": "【ギガボルト・ブレイカー++】のダメージ+5%",
+    "conditionIds": [
+      100410703
+    ],
+    "nextEntryIds": [
+      100410705
+    ]
+  },
+  "100410705": {
+    "skillEntryId": 100410705,
+    "skillId": 1004107,
+    "iconAddress": "skillTree_damageAll",
+    "description": "【ギガボルト・ブレイカー++】のダメージ+6%",
+    "conditionIds": [
+      100410704
+    ],
+    "nextEntryIds": null
+  },
   "100420501": {
     "skillEntryId": 100420501,
     "skillId": 1004205,
@@ -689,6 +919,236 @@
     ],
     "nextEntryIds": null
   },
+  "100920501": {
+    "skillEntryId": 100920501,
+    "skillId": 1009205,
+    "iconAddress": "skillTree_special",
+    "description": "【エディ・ウォール+】を自身の行動時に発動し、発動後にViewが50000以上ある場合、もう一度行動をする(1ターンに1回まで)",
+    "conditionIds": null,
+    "nextEntryIds": [
+      100920502
+    ]
+  },
+  "100920502": {
+    "skillEntryId": 100920502,
+    "skillId": 1009205,
+    "iconAddress": "skillTree_special",
+    "description": "【エディ・ウォール+】の再行動に必要なViewが5000減少",
+    "conditionIds": [
+      100920501
+    ],
+    "nextEntryIds": [
+      100920503
+    ]
+  },
+  "100920503": {
+    "skillEntryId": 100920503,
+    "skillId": 1009205,
+    "iconAddress": "skillTree_special",
+    "description": "【エディ・ウォール+】の再行動に必要なViewが10000減少",
+    "conditionIds": [
+      100920502
+    ],
+    "nextEntryIds": [
+      100920504
+    ]
+  },
+  "100920504": {
+    "skillEntryId": 100920504,
+    "skillId": 1009205,
+    "iconAddress": "skillTree_special",
+    "description": "【エディ・ウォール+】の再行動に必要なViewが10000減少",
+    "conditionIds": [
+      100920503
+    ],
+    "nextEntryIds": [
+      100920505
+    ]
+  },
+  "100920505": {
+    "skillEntryId": 100920505,
+    "skillId": 1009205,
+    "iconAddress": "skillTree_special",
+    "description": "【エディ・ウォール+】の再行動に必要なViewが15000減少",
+    "conditionIds": [
+      100920504
+    ],
+    "nextEntryIds": null
+  },
+  "100920601": {
+    "skillEntryId": 100920601,
+    "skillId": 1009206,
+    "iconAddress": "skillTree_special",
+    "description": "【テクニカル・ライディング+】の常時発動効果のViewに応じたATK上昇効果が、味方のスキル発動前のViewを参照して行われるようになる",
+    "conditionIds": null,
+    "nextEntryIds": [
+      100920602
+    ]
+  },
+  "100920602": {
+    "skillEntryId": 100920602,
+    "skillId": 1009206,
+    "iconAddress": "skillTree_atkUp",
+    "description": "【テクニカル・ライディング+】の常時発動効果のATK上昇の最大値到達に必要なViewが10000減少",
+    "conditionIds": [
+      100920601
+    ],
+    "nextEntryIds": [
+      100920603
+    ]
+  },
+  "100920603": {
+    "skillEntryId": 100920603,
+    "skillId": 1009206,
+    "iconAddress": "skillTree_atkUp",
+    "description": "【テクニカル・ライディング+】の常時発動効果のATK上昇の最大値到達に必要なViewが15000減少",
+    "conditionIds": [
+      100920602
+    ],
+    "nextEntryIds": [
+      100920604
+    ]
+  },
+  "100920604": {
+    "skillEntryId": 100920604,
+    "skillId": 1009206,
+    "iconAddress": "skillTree_atkUp",
+    "description": "【テクニカル・ライディング+】の常時発動効果のATK上昇の最大値到達に必要なViewが15000減少",
+    "conditionIds": [
+      100920603
+    ],
+    "nextEntryIds": [
+      100920605
+    ]
+  },
+  "100920605": {
+    "skillEntryId": 100920605,
+    "skillId": 1009206,
+    "iconAddress": "skillTree_atkUp",
+    "description": "【テクニカル・ライディング+】の常時発動効果のATK上昇の最大値到達に必要なViewが25000減少",
+    "conditionIds": [
+      100920604
+    ],
+    "nextEntryIds": null
+  },
+  "100920701": {
+    "skillEntryId": 100920701,
+    "skillId": 1009207,
+    "iconAddress": "skillTree_defDown",
+    "description": "【ライトスピード・フェニックス】の発動時、敵単体に10%の確率で1回分のDEFダウンを付与",
+    "conditionIds": null,
+    "nextEntryIds": [
+      100920702,
+      100920703
+    ]
+  },
+  "100920702": {
+    "skillEntryId": 100920702,
+    "skillId": 1009207,
+    "iconAddress": "skillTree_defDown",
+    "description": "【ライトスピード・フェニックス】のDEFダウン発動率+15%",
+    "conditionIds": [
+      100920701
+    ],
+    "nextEntryIds": [
+      100920704
+    ]
+  },
+  "100920703": {
+    "skillEntryId": 100920703,
+    "skillId": 1009207,
+    "iconAddress": "skillTree_debuff",
+    "description": "【ライトスピード・フェニックス】の発動後、Viewが30000以上ある場合、付与する沈黙の持続が1増加する",
+    "conditionIds": [
+      100920701
+    ],
+    "nextEntryIds": [
+      100920705
+    ]
+  },
+  "100920704": {
+    "skillEntryId": 100920704,
+    "skillId": 1009207,
+    "iconAddress": "skillTree_defDown",
+    "description": "【ライトスピード・フェニックス】のDEFダウン発動率+20%",
+    "conditionIds": [
+      100920702
+    ],
+    "nextEntryIds": [
+      100920706
+    ]
+  },
+  "100920705": {
+    "skillEntryId": 100920705,
+    "skillId": 1009207,
+    "iconAddress": "skillTree_debuff",
+    "description": "【ライトスピード・フェニックス】の沈黙の持続増加に必要なViewが5000減少",
+    "conditionIds": [
+      100920703
+    ],
+    "nextEntryIds": [
+      100920707
+    ]
+  },
+  "100920706": {
+    "skillEntryId": 100920706,
+    "skillId": 1009207,
+    "iconAddress": "skillTree_defDown",
+    "description": "【ライトスピード・フェニックス】のDEFダウン発動率+25%",
+    "conditionIds": [
+      100920704
+    ],
+    "nextEntryIds": [
+      100920708
+    ]
+  },
+  "100920707": {
+    "skillEntryId": 100920707,
+    "skillId": 1009207,
+    "iconAddress": "skillTree_debuff",
+    "description": "【ライトスピード・フェニックス】の沈黙の持続増加に必要なViewが5000減少",
+    "conditionIds": [
+      100920705
+    ],
+    "nextEntryIds": [
+      100920709
+    ]
+  },
+  "100920708": {
+    "skillEntryId": 100920708,
+    "skillId": 1009207,
+    "iconAddress": "skillTree_defDown",
+    "description": "【ライトスピード・フェニックス】のDEFダウン発動率+30%",
+    "conditionIds": [
+      100920706
+    ],
+    "nextEntryIds": [
+      100920710
+    ]
+  },
+  "100920709": {
+    "skillEntryId": 100920709,
+    "skillId": 1009207,
+    "iconAddress": "skillTree_debuff",
+    "description": "【ライトスピード・フェニックス】の沈黙の持続増加に必要なViewが10000減少",
+    "conditionIds": [
+      100920707
+    ],
+    "nextEntryIds": [
+      100920710
+    ]
+  },
+  "100920710": {
+    "skillEntryId": 100920710,
+    "skillId": 1009207,
+    "iconAddress": "skillTree_defDown",
+    "description": "【ライトスピード・フェニックス】の発動後、Viewが10000以上ある場合、付与するDEFダウンの持続が1増加する",
+    "conditionIds": [
+      100920708,
+      100920709
+    ],
+    "nextEntryIds": null
+  },
   "101020501": {
     "skillEntryId": 101020501,
     "skillId": 1010205,
@@ -1146,6 +1606,238 @@
     "conditionIds": [
       101210708,
       101210709
+    ],
+    "nextEntryIds": null
+  },
+  "101410501": {
+    "skillEntryId": 101410501,
+    "skillId": 1014105,
+    "iconAddress": "skillTree_atkUp",
+    "description": "【ハンティング・スピリット】常時発動効果に「生存時、味方のヒーローはバリアが付与されている間ATKが2％上昇」を追加",
+    "conditionIds": null,
+    "nextEntryIds": [
+      101410502,
+      101410503
+    ]
+  },
+  "101410502": {
+    "skillEntryId": 101410502,
+    "skillId": 1014105,
+    "iconAddress": "skillTree_atkUp",
+    "description": "【ハンティング・スピリット】の常時発動効果のATK上昇効果+4%",
+    "conditionIds": [
+      101410501
+    ],
+    "nextEntryIds": [
+      101410504
+    ]
+  },
+  "101410503": {
+    "skillEntryId": 101410503,
+    "skillId": 1014105,
+    "iconAddress": "skillTree_defDown",
+    "description": "【ハンティング・スピリット】の発動時、10%の確率で敵に1回分のDEFダウンを付与 ",
+    "conditionIds": [
+      101410501
+    ],
+    "nextEntryIds": [
+      101410505
+    ]
+  },
+  "101410504": {
+    "skillEntryId": 101410504,
+    "skillId": 1014105,
+    "iconAddress": "skillTree_atkUp",
+    "description": "【ハンティング・スピリット】の常時発動効果のATK上昇効果+6%",
+    "conditionIds": [
+      101410502
+    ],
+    "nextEntryIds": [
+      101410506
+    ]
+  },
+  "101410505": {
+    "skillEntryId": 101410505,
+    "skillId": 1014105,
+    "iconAddress": "skillTree_defDown",
+    "description": "【ハンティング・スピリット】のDEFダウン発動率+20%",
+    "conditionIds": [
+      101410503
+    ],
+    "nextEntryIds": [
+      101410507
+    ]
+  },
+  "101410506": {
+    "skillEntryId": 101410506,
+    "skillId": 1014105,
+    "iconAddress": "skillTree_atkUp",
+    "description": "【ハンティング・スピリット】の常時発動効果のATK上昇効果+8%",
+    "conditionIds": [
+      101410504
+    ],
+    "nextEntryIds": [
+      101410508
+    ]
+  },
+  "101410507": {
+    "skillEntryId": 101410507,
+    "skillId": 1014105,
+    "iconAddress": "skillTree_defDown",
+    "description": "【ハンティング・スピリット】のDEFダウン発動率+30%",
+    "conditionIds": [
+      101410505
+    ],
+    "nextEntryIds": [
+      101410508
+    ]
+  },
+  "101410508": {
+    "skillEntryId": 101410508,
+    "skillId": 1014105,
+    "iconAddress": "skillTree_defDown",
+    "description": "【ハンティング・スピリット】のDEFダウン発動率+40%",
+    "conditionIds": [
+      101410506,
+      101410507
+    ],
+    "nextEntryIds": null
+  },
+  "101410601": {
+    "skillEntryId": 101410601,
+    "skillId": 1014106,
+    "iconAddress": "skillTree_defUp",
+    "description": "【サバイバー・ソウル++】の発動時、対象がピンチ状態の場合、付与するバリア値がViewの50%に増加",
+    "conditionIds": null,
+    "nextEntryIds": [
+      101410602
+    ]
+  },
+  "101410602": {
+    "skillEntryId": 101410602,
+    "skillId": 1014106,
+    "iconAddress": "skillTree_defUp",
+    "description": "【サバイバー・ソウル++】の対象がピンチ状態の場合に付与するバリア値がViewの60%に増加",
+    "conditionIds": [
+      101410601
+    ],
+    "nextEntryIds": [
+      101410603
+    ]
+  },
+  "101410603": {
+    "skillEntryId": 101410603,
+    "skillId": 1014106,
+    "iconAddress": "skillTree_defUp",
+    "description": "【サバイバー・ソウル++】の対象がピンチ状態の場合に付与するバリア値がViewの80%に増加",
+    "conditionIds": [
+      101410602
+    ],
+    "nextEntryIds": [
+      101410604
+    ]
+  },
+  "101410604": {
+    "skillEntryId": 101410604,
+    "skillId": 1014106,
+    "iconAddress": "skillTree_defUp",
+    "description": "【サバイバー・ソウル++】の対象がピンチ状態の場合に付与するバリア値がViewの100%に増加",
+    "conditionIds": [
+      101410603
+    ],
+    "nextEntryIds": null
+  },
+  "101410701": {
+    "skillEntryId": 101410701,
+    "skillId": 1014107,
+    "iconAddress": "skillTree_regenerate",
+    "description": "【ルインズ・サルベージ】の発動時、20%の確率で自身に1ターンの間リジェネを付与",
+    "conditionIds": null,
+    "nextEntryIds": [
+      101410702,
+      101410703
+    ]
+  },
+  "101410702": {
+    "skillEntryId": 101410702,
+    "skillId": 1014107,
+    "iconAddress": "skillTree_regenerate",
+    "description": "【ルインズ・サルベージ】のリジェネ発動率+30%",
+    "conditionIds": [
+      101410701
+    ],
+    "nextEntryIds": [
+      101410704
+    ]
+  },
+  "101410703": {
+    "skillEntryId": 101410703,
+    "skillId": 1014107,
+    "iconAddress": "skillTree_special",
+    "description": "【ルインズ・サルベージ】の発動時、ピンチ状態の味方がいてスキル2を発動できる時、10%の確率で最もHPが減っている味方にスキル2を追加発動",
+    "conditionIds": [
+      101410701
+    ],
+    "nextEntryIds": [
+      101410705
+    ]
+  },
+  "101410704": {
+    "skillEntryId": 101410704,
+    "skillId": 1014107,
+    "iconAddress": "skillTree_regenerate",
+    "description": "【ルインズ・サルベージ】のリジェネ発動率+50%",
+    "conditionIds": [
+      101410702
+    ],
+    "nextEntryIds": [
+      101410706
+    ]
+  },
+  "101410705": {
+    "skillEntryId": 101410705,
+    "skillId": 1014107,
+    "iconAddress": "skillTree_special",
+    "description": "【ルインズ・サルベージ】のスキル2追加発動率＋20%",
+    "conditionIds": [
+      101410703
+    ],
+    "nextEntryIds": [
+      101410707
+    ]
+  },
+  "101410706": {
+    "skillEntryId": 101410706,
+    "skillId": 1014107,
+    "iconAddress": "skillTree_regenerate",
+    "description": "【ルインズ・サルベージ】のリジェネの持続が1増加",
+    "conditionIds": [
+      101410704
+    ],
+    "nextEntryIds": [
+      101410708
+    ]
+  },
+  "101410707": {
+    "skillEntryId": 101410707,
+    "skillId": 1014107,
+    "iconAddress": "skillTree_special",
+    "description": "【ルインズ・サルベージ】のスキル2追加発動率＋30%",
+    "conditionIds": [
+      101410705
+    ],
+    "nextEntryIds": [
+      101410708
+    ]
+  },
+  "101410708": {
+    "skillEntryId": 101410708,
+    "skillId": 1014107,
+    "iconAddress": "skillTree_special",
+    "description": "【ルインズ・サルベージ】のスキル2追加発動率＋40%",
+    "conditionIds": [
+      101410706,
+      101410707
     ],
     "nextEntryIds": null
   },
