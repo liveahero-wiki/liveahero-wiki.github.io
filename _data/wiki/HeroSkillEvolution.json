@@ -411,6 +411,143 @@
       }
     ]
   },
+  "10092": {
+    "name": "Victom",
+    "evolutions": [
+      {
+        "skillUpgrade": 1,
+        "skills": [
+          {
+            "skillId": 1009204,
+            "tree": [
+              [
+                {
+                  "text": "[When VP > 50000 after S1] Act again (once per turn)",
+                  "tooltip": "Final VP Required to act again > 50000"
+                }
+              ],
+              [
+                {
+                  "text": "Reduce VP Requirement by 5000",
+                  "tooltip": "Final VP Required to act again > 45000"
+                }
+              ],
+              [
+                {
+                  "text": "Reduce VP Requirement by 10000",
+                  "tooltip": "Final VP Required to act again > 35000"
+                }
+              ],
+              [
+                {
+                  "text": "Reduce VP Requirement by 10000",
+                  "tooltip": "Final VP Required to act again > 25000"
+                }
+              ],
+              [
+                {
+                  "text": "Reduce VP Requirement by 15000",
+                  "tooltip": "Final VP Required to act again > 10000"
+                }
+              ]
+            ]
+          },
+          {
+            "skillId": 1009206,
+            "tree": [
+              [
+                {
+                  "text": "{{ 67 | status_description }} now increase Atk based on view before skill activation",
+                  "tooltip": "{{ 67 | status_description }} required vp for max effect = 100000"
+                }
+              ],
+              [
+                {
+                  "text": "Reduce required VP for {{ 67 | status_description }} max effect by 10000",
+                  "tooltip": "{{ 67 | status_description }} required vp for max effect = 90000"
+                }
+              ],
+              [
+                {
+                  "text": "Reduce required VP for {{ 67 | status_description }} max effect by 15000",
+                  "tooltip": "{{ 67 | status_description }} required vp for max effect = 75000"
+                }
+              ],
+              [
+                {
+                  "text": "Reduce required VP for {{ 67 | status_description }} max effect by 15000",
+                  "tooltip": "{{ 67 | status_description }} required vp for max effect = 60000"
+                }
+              ],
+              [
+                {
+                  "text": "Reduce required VP for {{ 67 | status_description }} max effect by 25000",
+                  "tooltip": "{{ 67 | status_description }} required vp for max effect = 35000"
+                }
+              ]
+            ]
+          },
+          {
+            "skillId": 1009203,
+            "tree": [
+              [
+                {
+                  "text": "S3 has 10% chance to inflict {{ 12 | status_description }} for 1 action",
+                  "tooltip": "Final {{ 12 | status_description }} chance = 10%"
+                }
+              ],
+              [
+                {
+                  "text": "+15% chance for {{ 12 | status_description }}",
+                  "tooltip": "Final {{ 12 | status_description }} chance = 25%"
+                },
+                {
+                  "text": "[When view > 30000 after S3] increase duration of {{ 22 | status_description }} S3 applies by 1 action",
+                  "tooltip": "Final view requirement = 30000"
+                }
+              ],
+              [
+                {
+                  "text": "+20% chance for {{ 12 | status_description }}",
+                  "tooltip": "Final {{ 12 | status_description }} chance = 45%"
+                },
+                {
+                  "text": "Reduce view required for {{ 22 | status_description }} duration increase by 5000",
+                  "tooltip": "Final view requirement = 25000"
+                }
+              ],
+              [
+                {
+                  "text": "+25% chance for {{ 12 | status_description }}",
+                  "tooltip": "Final {{ 12 | status_description }} chance = 70%"
+                },
+                {
+                  "text": "Reduce view required for {{ 22 | status_description }} duration increase by 5000",
+                  "tooltip": "Final view requirement = 20000"
+                }
+              ],
+              [
+                {
+                  "text": "+30% chance for {{ 12 | status_description }}",
+                  "tooltip": "Final {{ 12 | status_description }} chance = 100%"
+                },
+                {
+                  "text": "Reduce view required for {{ 22 | status_description }} duration increase by 10000",
+                  "tooltip": "Final view requirement = 10000"
+                }
+              ],
+              [
+                {
+                  "text": "[When view > 10000 after S3] increase duration of {{ 12 | status_description }} S3 applies by 1 action",
+                  "tooltip": "Final S3 = [When view > 10000 after S3] Apply 2 action {{ 12 | status_description }} and {{ 22 | status_description }}"
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "10102": {
     "name": "Kyoichi",
     "evolutions": [
