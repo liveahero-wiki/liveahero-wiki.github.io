@@ -416,14 +416,15 @@ Max 3 times in 1 turn"
 
 
 # Sterio
-1211101: "[base skill] Deal 50% of damage to target enemy /100%
+1211101: "[base skill] Deal 50% of damage to target enemy /100%<br>\
 [base skill] Apply {{ 1211101 | status_description }} to target enemy for 1 next attack(s) /100%"
-1211102: "[base skill] Remove any existing {{ 1211103 | status_description }} and Apply {{ 1211103 | status_description }} to target ally for 2 turns /100%"
+1211102: "[base skill] Remove {{ 1211103 | status_description }} from all allies/100%<br>\
+[base skill] Apply {{ 1211103 | status_description }} to target ally for 2 turns/100%"
 1211103: "[base skill] Apply {{ 1 | status_description }} to ally with {{ 1211103 | status_description }} for 2 next attack(s) /100% <br>\
 [base skill] Apply {{ 3 | status_description }} and {{ 7 | status_description }} to ally with {{ 1211103 | status_description }} for 3 next attack(s) /100% <br>\
 [base skill] Target ally use S1 to random enemy /100%<br>\
-When there are no ally with {{ 1211103 | status_description }}, target random ally instead"
-1211103: "[base skill] Apply {{ 1 | status_description }} to ally with {{ 1211103 | status_description }} for 2 next attack(s) /100% <br>\
+[When there are no ally with {{ 1211103 | status_description }} ] target random ally instead"
+1211104: "[base skill] Apply {{ 1 | status_description }} to ally with {{ 1211103 | status_description }} for 2 next attack(s) /100% <br>\
 [base skill] Apply {{ 3 | status_description }} and {{ 7 | status_description }} to ally with {{ 1211103 | status_description }} for 3 next attack(s) /100% <br>\
 [base skill] Target ally use S1 to random enemy /100%<br>\
 When there are no ally with {{ 1211103 | status_description }}, target random ally instead"
