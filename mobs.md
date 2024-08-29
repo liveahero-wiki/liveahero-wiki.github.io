@@ -9,6 +9,18 @@ additional_scripts: ["/assets/atlas.min.js"]
 
 <!-- Keep this sorted alphabatically -->
 
+### Apprentice
+
+{% include hero-infobox-unreleased.html name="Apprentice" mob=true
+sprites="fg_villainApprenticeEarth_s01,fg_villainApprenticeFire_s01,fg_villainApprenticeLight_s01,fg_villainApprenticeShadow_s01,fg_villainApprenticeWater_s01"
+%}
+
+### Apprentice (Transform)
+
+{% include hero-infobox-unreleased.html name="Transformed Apprentice" mob=true
+sprites="fg_villainApprenticeEarth_h01,fg_villainApprenticeFire_h01,fg_villainApprenticeLight_h01,fg_villainApprenticeShadow_h01,fg_villainApprenticeWater_h01"
+%}
+
 ### Android Soldier
 
 {% include hero-infobox-unreleased.html name="Android Soldier" mob=true

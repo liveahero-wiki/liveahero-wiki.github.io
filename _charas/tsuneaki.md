@@ -19,7 +19,9 @@ heroes:
     or sometimes appear to fight together with the heroes, only to leave right after.
     For some reason, there is no archived data of the hero live where he appeared , and no one has yet seen his personal life or pre-transformation appearance,
     making it difficult for even top journalists to uncover his true identity.
+  extra_sprites: fg_tsuneaki_h01_skin2,fg_tsuneaki_h01_skin3,fg_tsuneaki_h01_skin4
 - stockId: 11402
+  extra_sprites: fg_tsuneakiRookies2408_h01_skin2,fg_tsuneakiRookies2408_h01_skin3
 sidekicks:
 - stockId: 11401
   BIO_S01: |-

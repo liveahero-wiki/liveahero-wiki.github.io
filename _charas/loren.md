@@ -29,6 +29,7 @@ heroes:
 
     As long as the object to be saved continues to exist in this world, he will
     continue to flap his wings to save lives.
+  extra_sprites: fg_loren_h01_skin2,fg_loren_h01_skin3
 sidekicks:
 - stockId: 10211
   BIO_S01: |-
