@@ -417,18 +417,18 @@ Max 3 times in 1 turn"
 
 # Sterio
 1211101: "[base skill] Deal 50% of damage to target enemy /100%
-[base skill] Apply {{ 1121101 | status_description }} to target enemy for 1 next attack(s) /100%"
-1211102: "[base skill] Remove any existing {{ 1121104 | status_description }} and Apply {{ 1121104 | status_description }} to target ally for 2 turns /100%"
-1211103: "[base skill] Apply {{ 1 | status_description }} to ally with {{ 1121104 | status_description }} for 2 next attack(s) /100% <br>\
-[base skill] Apply {{ 3 | status_description }} and {{ 7 | status_description }} to ally with {{ 1121104 | status_description }} for 3 next attack(s) /100% <br>\
+[base skill] Apply {{ 1211101 | status_description }} to target enemy for 1 next attack(s) /100%"
+1211102: "[base skill] Remove any existing {{ 1211103 | status_description }} and Apply {{ 1211103 | status_description }} to target ally for 2 turns /100%"
+1211103: "[base skill] Apply {{ 1 | status_description }} to ally with {{ 1211103 | status_description }} for 2 next attack(s) /100% <br>\
+[base skill] Apply {{ 3 | status_description }} and {{ 7 | status_description }} to ally with {{ 1211103 | status_description }} for 3 next attack(s) /100% <br>\
 [base skill] Target ally use S1 to random enemy /100%<br>\
-When there are no ally with {{ 1121104 | status_description }}, target random ally instead"
-1211104: "[base skill] Apply {{ 1 | status_description }} to ally with {{ 1121104 | status_description }} for 2 next attack(s) /100% <br>\
-[base skill] Apply {{ 3 | status_description }} and {{ 7 | status_description }} to ally with {{ 1121104 | status_description }} for 3 next attack(s) /100% <br>\
+When there are no ally with {{ 1211103 | status_description }}, target random ally instead"
+1211103: "[base skill] Apply {{ 1 | status_description }} to ally with {{ 1211103 | status_description }} for 2 next attack(s) /100% <br>\
+[base skill] Apply {{ 3 | status_description }} and {{ 7 | status_description }} to ally with {{ 1211103 | status_description }} for 3 next attack(s) /100% <br>\
 [base skill] Target ally use S1 to random enemy /100%<br>\
-When there are no ally with {{ 1121104 | status_description }}, target random ally instead"
-8211101: "[when invoker's attack causes damage to enemy with {{ 1121101 | status_description }} ] +1 stack of {{ 1121101 | status_description }} "
-8211102: "[When ally with {{ 1121104 | status_description }} attack with active skill] Self attack all enemies (max 2 times per turn, no combo gain) and add a stack of {{ 1121101 | status_description }} /100% <br>\
+When there are no ally with {{ 1211103 | status_description }}, target random ally instead"
+8211101: "[when invoker's attack causes damage to enemy with {{ 1211101 | status_description }} ] +1 stack of {{ 1211101 | status_description }} "
+8211102: "[When ally with {{ 1211103 | status_description }} attack with active skill] Self attack all enemies (max 2 times per turn, no combo gain) and add a stack of {{ 1211101 | status_description }} /100% <br>\
 Damage is proportional to how many enemy(s) hit:<br>\
 1 enemy = 50% atk <br>\
 2 enemies = 30% atk <br>\
