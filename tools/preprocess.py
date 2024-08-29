@@ -66,6 +66,7 @@ CARD_OVERRIDE_ITEM = {
     3: "illustrator",
     5: "detail_h01",
     6: "detail_h02",
+    8: "name",
 }
 
 def processCardProfileOverride():
