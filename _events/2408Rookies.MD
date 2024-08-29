@@ -21,13 +21,13 @@ Coming soon tm
 
 ## Event Banners
 
-This Event's gacha summon includes one time-limited variant {% chara_link Rokusei|h2 %} (Hero) and two new characters {% chara_link Canes %} (Hero & Sidekick), {% chara_link Sterio %} (Hero & Sidekick)
+This Event's gacha summon includes one time-limited variant {% chara_link Tsuneaki|h2 %} (Hero) and two new characters {% chara_link Canes %} (Hero & Sidekick), {% chara_link Sterio %} (Hero & Sidekick)
 
 Rates as follow:
 
 | Character                                                | Rates (Single) | Rates (Multis) |
 |----------------------------------------------------------|----------------|----------------|
-| {% chara_link Rokusei|h2 %}                               | 0.8 %            | 1.6 %            |
+| {% chara_link Tsuneaki|h2 %}                               | 0.8 %            | 1.6 %            |
 | {% chara_link Canes|h1 %}                              | 0.8 %            | 1.6 %            |
 | {% chara_link Sterio|h1 %}                             | 2 %              | 32 %             |
 | {% chara_link Tsuneaki|h1 %}                                 | 1 %             | 16 %             |
@@ -50,7 +50,7 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 
 | Hero | +Bonus (%)|
 |------------|--------------|
-| {% chara_link Rokusei|h2 %} | 40 |
+| {% chara_link Tsuneaki|h2 %} | 40 |
 | {% chara_link Canes|h1 %}  | 40 |
 | {% chara_link Sterio|h1 %}  | 30 |
 | {% chara_link Tsuneaki|h1 %}  | 10 |
@@ -83,7 +83,7 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 ## Event Sales Bonus
 
 Event sales bonus added according to how much event hero you have in a single sales, Which is
-{% chara_link Rokusei|h2 %}, {% chara_link Canes|h1 %}, and {% chara_link Sterio|h1 %}
+{% chara_link Tsuneaki|h2 %}, {% chara_link Canes|h1 %}, and {% chara_link Sterio|h1 %}
 
 Here is the bonus:
 
