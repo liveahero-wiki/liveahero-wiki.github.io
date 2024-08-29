@@ -2497,6 +2497,64 @@
     ],
     "limitValue": 0
   },
+  "214": {
+    "itemId": 214,
+    "itemName": "ヒーローブロマイドカード",
+    "resourceName": "Rookies2408_exchange01",
+    "rarity": 3,
+    "itemType": 512,
+    "description": "様々なヒーローのサイン付きブロマイド。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "215": {
+    "itemId": 215,
+    "itemName": "ルーキーズディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "ルーキーズ・サマーフェスタのBGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_rookies_adv",
+        "bgmTitleKey": "TITLE_BGM_ROOKIES_ADV_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "216": {
+    "itemId": 216,
+    "itemName": "ルーキーズ戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "ルーキーズ・サマーフェスタの戦闘BGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_rookies_battle",
+        "bgmTitleKey": "TITLE_BGM_ROOKIES_BATTLE_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "217": {
+    "itemId": 217,
+    "itemName": "ビーチサイドホログラム",
+    "resourceName": "icon_bg_battle_orientcitybeachside_day",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景にオリエントシティ・ビーチサイドを投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_orientcitybeachside_day",
+        "bgTitleKey": "TITLE_BG_BATTLE_ORIENTCITYBEACHSIDE_DAY_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -4821,6 +4879,51 @@
     ],
     "limitValue": 0
   },
+  "111402": {
+    "itemId": 111402,
+    "itemName": "涼戯のツネアキの記憶片",
+    "resourceName": "piece_tsuneakiRookies2408",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "涼戯のツネアキのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 11402
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      },
+      {
+        "class": "ItemNameOverrideEffect",
+        "textKey": "ITEM_TSUNEAKIROOKIES2408_PIECE_NAME",
+        "conditions": [
+          {
+            "class": "QuestClear",
+            "questId": 1132003,
+            "missionIds": [],
+            "isCheckClear": false
+          }
+        ]
+      },
+      {
+        "class": "ItemDescriptionOverrideEffect",
+        "textKey": "ITEM_TSUNEAKIROOKIES2408_PIECE_DESCRIPTION",
+        "conditions": [
+          {
+            "class": "QuestClear",
+            "questId": 1132003,
+            "missionIds": [],
+            "isCheckClear": false
+          }
+        ]
+      }
+    ],
+    "limitValue": 0
+  },
   "111511": {
     "itemId": 111511,
     "itemName": "タビトの記憶片",
@@ -5397,6 +5500,48 @@
         "addFan": 50,
         "rarity": 0,
         "stockId": 12091
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "112101": {
+    "itemId": 112101,
+    "itemName": "カネスの記憶片",
+    "resourceName": "piece_canes",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "カネスのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 12101
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
+  "112111": {
+    "itemId": 112111,
+    "itemName": "ステリオの記憶片",
+    "resourceName": "piece_sterio",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "ステリオのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 12111
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
@@ -7553,6 +7698,46 @@
     ],
     "limitValue": 0
   },
+  "212101": {
+    "itemId": 212101,
+    "itemName": "カネスの心",
+    "resourceName": "heart_canes",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "カネスのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 12101
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ],
+    "limitValue": 0
+  },
+  "212111": {
+    "itemId": 212111,
+    "itemName": "ステリオの心",
+    "resourceName": "heart_sterio",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "ステリオのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 12111
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ],
+    "limitValue": 0
+  },
   "219991": {
     "itemId": 219991,
     "itemName": "@playerNameの心",
@@ -9183,6 +9368,16 @@
     "effect": [],
     "limitValue": 0
   },
+  "21140201": {
+    "itemId": 21140201,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
   "21151101": {
     "itemId": 21151101,
     "itemName": "開花の波動",
@@ -9455,6 +9650,26 @@
   },
   "21209101": {
     "itemId": 21209101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21210101": {
+    "itemId": 21210101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21211101": {
+    "itemId": 21211101,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,
