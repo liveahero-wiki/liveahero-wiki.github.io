@@ -268,6 +268,8 @@ Deal {{ effect.parameter.value }}% -> {{ effect.parameter.value | times:2 }}% of
 Deal {{ effect.parameter.value }}% of damage to {{ target }} + extra {{ effect.parameter.value | divided_by: 1000.0 | times:effect.parameter.spdMult | times:2 }}% damage for each point in speed difference with target
 {% when "StatusNumDamage" %}
 Deal {{ effect.parameter.value }}% of damage to {{ target }} and {{ effect.parameter.statusMult }}% extra for each {{ target }}'s {% if effect.parameter.isGoodStatus == true %}buff{% else %}debuff{% endif %}
+{% when "StatusTurnDamage" %}
+Deal {{ effect.parameter.value }}% of damage to {{ target }} and extra multiple of {{ effect.parameter.statusMult }}% according to {% if effect.parameter.isInvoker %}self's{% endif %} total {% if effect.parameter.isGoodStatus %}buff{% else %}debuff{% endif %} turn count
 {% when "HPDependentDamage" %}
 Deal "Max HP {{ effect.parameter.value }}%" damage to {{ target }} {% if effect.parameter.dontCallDefenced %}(ignore any defence buff){% endif %}
 {% when "SalesBonusCheat" %}
