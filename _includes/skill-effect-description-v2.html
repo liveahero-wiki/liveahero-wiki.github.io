@@ -329,6 +329,7 @@ Grant this skill to {{ target }}
 <fieldset>
 {% include skill-description.html skillId=new_skill_id skill=new_skill %}
 </fieldset>
+{% when "ParticleStatus" %}{% comment %}Just visual effect{% endcomment %}
 {% else %}
 Unknown effect class ({{ effect.class }})
 {% endcase %}

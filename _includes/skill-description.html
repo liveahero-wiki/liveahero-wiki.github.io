@@ -19,4 +19,16 @@
 {%- if randomGroup.name != "0" %}</fieldset>{% endif %}
 
 {% endfor %}
+
+{% if include.skill.appendPassiveSkillIds.size > 0 %}
+<fieldset class="s-rand-g">
+  <legend>Passive</legend>
+  {% for passiveSkillId in include.skill.appendPassiveSkillIds %}
+    {% assign passiveSkillIdS = passiveSkillId | downcase %}
+    {% assign passiveSkill = site.data.SkillMaster[passiveSkillIdS] %}
+    {% include skill-description.html skillId=passiveSkillIdS skill=passiveSkill %}
+  {% endfor %}
+</fieldset>
+{% endif %}
+
 {% endif %}{% comment %}skillOverride{% endcomment %}
