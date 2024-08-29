@@ -231,6 +231,8 @@ module LahWiki
         when "ReceiverSelectRoleTrigger"
           role = @@role_map[c['role']]
           f.push("target's role is #{role}")
+        when "NotNowAttackingTrigger"
+          f.push("self is not attacking now}")
         else
           f.push("unknown condition (#{c['class']}")
         end
