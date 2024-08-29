@@ -2,6 +2,8 @@
 title: Tsuneaki
 characterId: 140
 masked: true
+h2:
+  title: 'Rokusei'
 heroes:
 - stockId: 11401
   BIO_H01: |-
@@ -17,6 +19,7 @@ heroes:
     or sometimes appear to fight together with the heroes, only to leave right after.
     For some reason, there is no archived data of the hero live where he appeared , and no one has yet seen his personal life or pre-transformation appearance,
     making it difficult for even top journalists to uncover his true identity.
+- stockId: 11402
 sidekicks:
 - stockId: 11401
   BIO_S01: |-
@@ -42,6 +45,9 @@ TRAIN = "Can you endure my stroke?"
 TRAINED = "Hh…I-I'm close to my limit"
 EVENTA = "Welcome to Shinraku Festival!<br>I welcome you as the local here.<br>Then let's enjoy this to the fullest, make sure to watch your wallet~!"
 EVENTB = "Arara, Gammei-kun is wearing such an immodest outfit…well no matter.<br>In time of festival, even outdoor sex is fine, right?"
+%}
+
+{% include voice-table.html resourceName="tsuneakiRookies2408"
 %}
 
 ## Notes
