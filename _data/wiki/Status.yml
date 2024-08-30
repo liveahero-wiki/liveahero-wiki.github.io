@@ -900,6 +900,11 @@
   description: "Increases the activation rate of effects with a probability of activation by 10%"
   isGoodStatus: 2
   icon: "status_buff_special"
+"1211111":
+  name: "Atk Charge"
+  description: "Increase atk by {{ effects.TurnBaseMultipleAttack.parameter.value | minus: 100 }} % per stack, +1 stack every time an ally deals damage (max 7 stack), reset stack when activating a skill"
+  isGoodStatus: 2
+  icon: "status_system_firepower"
 "3198101":
   name: "Overall Atk+"
   description: "Increase all allies Atk by {{ effects.HighestMultipleAttack.parameter.value | minus: 100 }} %, doesn't stack with same effect buff"
