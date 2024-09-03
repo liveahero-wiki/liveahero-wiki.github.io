@@ -3,7 +3,6 @@ title: Pubraseer
 characterId: 73
 heroes:
 - stockId: 10731
-  extra_sprites: fg_ADV_pubraseer_h01
   BIO_H01: |-
     Pubraseer has regained his memory and awakened to his power as a hero.
 
@@ -27,6 +26,8 @@ heroes:
     was saved by his five friends, and realizing that this life is no longer his
     alone, he raises the flag symbolizing that vow in his hand and stares at the
     bright star of the future.
+  extra_sprites: fg_pubraseer_h01_skin2,fg_pubraseer_h01_skin3,fg_ADV_pubraseer_h01,fg_ADV_pubraseer_h01_skin3,fg_ADV_pubraseer_h01_skin4
+  # fg_ADV_pubraseer_h01_skin2 is just black shadow
 sidekicks:
 - stockId: 10731
   BIO_S01: |-

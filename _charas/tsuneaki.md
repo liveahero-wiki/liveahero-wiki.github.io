@@ -31,7 +31,7 @@ sidekicks:
     Since a certain incident, a way of speaking that avoid his true feelings has been deeply ingrained in him, 
     making it hard for him to actually convey himself to other people at crucial times.
     He loves the land and culture of Kyoto and therefore has mixed feelings about his origins.
-  extra_sprites: fg_tsuneaki_s01_skin1
+  extra_sprites: fg_tsuneaki_s01_skin1,fg_tsuneaki_s01_skin2,fg_tsuneaki_s01_skin3
 ---
 
 {% include voice-table.html resourceName="tsuneaki"

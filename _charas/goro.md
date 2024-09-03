@@ -20,6 +20,7 @@ heroes:
     building a house that could withstand even a giant monster attack.
     Consequently, when he sees two lovers or two family members get seperated, he
     loses his composure, even if they're strangers to him.
+  extra_sprites: fg_goro_h01_skin2,fg_goro_h01_skin3
 - stockId: 10232
   BIO_H01: |-
     Based on the design of the costume used at the Wemalt flower festival, Goro got
