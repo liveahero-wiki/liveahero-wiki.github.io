@@ -158421,6 +158421,61 @@
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
   },
+  "1132005": {
+    "questId": 1132005,
+    "questName": "無常の風は時を選ばず",
+    "subName": "第５話",
+    "questKind": 5,
+    "chapterId": 1132,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2024-09-10 18:00:00",
+    "endAt": "2024-09-26 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 5,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1132004,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
   "1133001": {
     "questId": 1133001,
     "questName": "サプライズ・ヒーローショー！",
@@ -159266,6 +159321,109 @@
         "battleInfoIcon": "icon_villainApprenticeEarth_h01",
         "battleInfoElement": 3,
         "battleInfoSpd": 106
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1135003": {
+    "questId": 1135003,
+    "questName": "撒かぬ種は生えぬ",
+    "subName": "第３話チャレンジクエスト",
+    "questKind": 6,
+    "chapterId": 1135,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2024-09-10 18:00:00",
+    "endAt": "2024-09-26 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 2,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 29,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 25000,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 32,
+        "objectValue": 5,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 34,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1132003,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFire_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 108
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaWater_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 105
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaFire_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 102
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaWater_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 100
       }
     ],
     "hasAdv": false,

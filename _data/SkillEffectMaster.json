@@ -54003,6 +54003,41 @@
       "isOverrideStatusDescription": true
     }
   },
+  "3379": {
+    "skillEffectId": 3379,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeAgi",
+          "parameter": {
+            "value": 3
+          }
+        }
+      ],
+      "filename": "status_spdup",
+      "statusId": 133,
+      "canDispel": false,
+      "filterIds": [
+        6
+      ],
+      "parameter": false,
+      "description": "SPDアップ(永続・戦闘不能時も継続)",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "SPD+3",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "SPD+3。バフでもデバフでもない状態。戦闘不能後も継続。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
   "4001": {
     "skillEffectId": 4001,
     "skillEffectJson": {
@@ -57748,6 +57783,42 @@
       "overrideStatusDescription": "スキル1で与えるダメージが増加する。バフでもデバフでもない状態。ターン経過で解除される。",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
+    }
+  },
+  "4136": {
+    "skillEffectId": 4136,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Damage",
+          "parameter": {
+            "value": 105
+          }
+        }
+      ],
+      "trigger": "[]",
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "105%ダメージ",
+      "isCountTurn": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
     }
   },
   "4137": {
