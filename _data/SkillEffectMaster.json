@@ -54038,6 +54038,44 @@
       "isOverrideStatusDescription": true
     }
   },
+  "3382": {
+    "skillEffectId": 3382,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "ChangeAgi",
+          "parameter": {
+            "value": 5
+          }
+        }
+      ],
+      "filename": "status_spdup",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "SPD+5（死んでも継続）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "elapseTurnTiming": 0,
+      "canDuplicateForce": true,
+      "isCountDownEffect": false,
+      "overrideStatusName": "SPD+5",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "SPDが+5される。バフでもデバフでも無い状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
   "4001": {
     "skillEffectId": 4001,
     "skillEffectJson": {
@@ -68844,6 +68882,43 @@
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
+    }
+  },
+  "4546": {
+    "skillEffectId": 4546,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 125
+          }
+        }
+      ],
+      "filename": "status_system_defup",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "被ダメージ+25%（永続・アイコン表示有り）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "被ダメージ+25%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "相手から受けるダメージ+25%。バフでもデバフでもない状態。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
     }
   }
 }
