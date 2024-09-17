@@ -68777,6 +68777,47 @@
       "isOverrideStatusDescription": false
     }
   },
+  "4542": {
+    "skillEffectId": 4542,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": {
+            "timing": 0
+          }
+        },
+        {
+          "class": "ForceAuto",
+          "parameter": []
+        }
+      ],
+      "filename": "status_brainwashing",
+      "statusId": 126,
+      "canDispel": true,
+      "filterIds": [
+        4,
+        13
+      ],
+      "parameter": false,
+      "description": "強制オート（システム効果126）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "elapseTurnTiming": 0,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "緊張",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "行動がオート行動になる。バフでもデバフでもない状態。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
   "4543": {
     "skillEffectId": 4543,
     "skillEffectJson": {
@@ -68919,6 +68960,371 @@
       "overrideStatusDescription": "相手から受けるダメージ+25%。バフでもデバフでもない状態。",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
+    }
+  },
+  "4547": {
+    "skillEffectId": 4547,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 75
+          }
+        }
+      ],
+      "filename": "status_system_defup",
+      "statusId": 142,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "被ダメージ-25%（システムアイコン）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "被ダメージ-25%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメージ-25%。バフでもデバフでもない状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4548": {
+    "skillEffectId": 4548,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "filename": "status_system_atkup",
+      "statusId": 186,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATK+50%（システムアイコン）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATK+50%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATK+50%。バフでもデバフでも無い状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4550": {
+    "skillEffectId": 4550,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TeamAttackRandomEnemy",
+          "parameter": {
+            "skillId": 6211101,
+            "isAutoSkill": false,
+            "executeTiming": 5,
+            "isInvokeAddDamage": true,
+            "isRecalculateTarget": false,
+            "notExecuteInTargetReversal": false
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "味方がランダムな敵にスキル6211101を誘発(状態変化版)",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4551": {
+    "skillEffectId": 4551,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "PassiveBattleSkillEffect",
+          "parameter": {
+            "timing": 1,
+            "skillId": 6211102
+          }
+        },
+        {
+          "class": "ChangeSkillProve",
+          "parameter": {
+            "value": 10,
+            "isPercent": false
+          }
+        }
+      ],
+      "filename": "status_buff_special",
+      "statusId": 1211103,
+      "canDispel": true,
+      "filterIds": [],
+      "parameter": false,
+      "description": "装備スキルID=6211102を付与",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "つのぶえ",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "確率で発動する効果の発動率が10%上がる。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4574": {
+    "skillEffectId": 4574,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "filename": "status_system_atkup",
+      "statusId": 186,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATK+50%（システム効果、死亡時も継続）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATK+50%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATK+50%。バフでもデバフでも無い状態。スキルによる解除不可。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4575": {
+    "skillEffectId": 4575,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseMultipleAttack",
+          "parameter": {
+            "value": 110
+          }
+        }
+      ],
+      "filename": "status_system_atkup",
+      "statusId": 133,
+      "canDispel": true,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATK増加（チャージ数1につき10%。システム効果133）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATK増加",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "チャージ数1につき、ATKを10%上昇。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4576": {
+    "skillEffectId": 4576,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果127番付与（再生待機）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "再生待機",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメージ+50%。ターン終了時にカウントが1減少。カウントが0になった時、自身以外の味方全体を100%のHPで復活。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4577": {
+    "skillEffectId": 4577,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "ParticleStatus",
+          "parameter": {
+            "address": "Rookies7th_ryekie_aura"
+          }
+        }
+      ],
+      "filename": "status_provocation",
+      "statusId": 130,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "ルーキーズ7話ライキ強化エフェクト",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4578": {
+    "skillEffectId": 4578,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "ParticleStatus",
+          "parameter": {
+            "address": "Rookies7th_huckle_aura"
+          }
+        }
+      ],
+      "filename": "status_provocation",
+      "statusId": 130,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "ルーキーズ7話ハックル強化エフェクト",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4586": {
+    "skillEffectId": 4586,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "DamageLimit",
+          "parameter": {
+            "value": 7500
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "ダメージ上限7500",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
     }
   }
 }
