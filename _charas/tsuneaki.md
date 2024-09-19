@@ -21,7 +21,7 @@ heroes:
     making it difficult for even top journalists to uncover his true identity.
   extra_sprites: fg_tsuneaki_h01_skin2,fg_tsuneaki_h01_skin3,fg_tsuneaki_h01_skin4
 - stockId: 11402
-  extra_sprites: fg_tsuneakiRookies2408_h01_skin2,fg_tsuneakiRookies2408_h01_skin3
+  extra_sprites: fg_tsuneakiRookies2408_h01_skin2,fg_tsuneakiRookies2408_h01_skin3,fg_tsuneakiRookies2408_h02_skin2
 sidekicks:
 - stockId: 11401
   BIO_S01: |-
