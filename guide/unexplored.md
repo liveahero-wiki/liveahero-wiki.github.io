@@ -42,7 +42,7 @@ banner: true
     <tr>
         <td title="{{ sid }}" class="translate" data-translate="{% if skillName %}{{ skill.skillName }}{% endif %}" data-effects="{{ skill.effects | map: 'skillEffectId' | join: ',' }}">{{ skillName | default: skill.skillName }}</td>
         <td>{{ s.rarity }}</td>
-        <td class="translate" data-translate="{{ autoSkillDesc | xml_escape }}">{{ skillOverride | default: skill.description }}</td>
+        <td class="translate" data-translate="{{ autoSkillDesc | xml_escape }}">{{ skillOverride | default: skill.description | sanitizeSkillDescription }}</td>
     </tr>
     {% endfor %}
 </table>
