@@ -42,9 +42,9 @@ Here is a list of available hero/sidekick for exchange:
 
 ### Character training campaign
 
-From October 01, 2023 till October 08, 2023
+From October 01, 2024 till October 08, 2024
 
-There will be daily missions and limited time missions for any Training Mission
+All training quests will yield double drop
 
 #### Daily Missions: 
 
@@ -56,8 +56,12 @@ There will be daily missions and limited time missions for any Training Mission
 
 #### Limited Time Missions: 
 
-TBD
+| No | Description | Rewards |
+|----|-----------------------------------------------------------|----------------|
+| 1  | Clear \[Training Mission\] 5 times in total | 1 {% include item.html id=34 %} |
+| 2  | Clear \[Training Mission\] 10 times in total | 1 {% include item.html id=34 %} |
+| 3  | Clear \[Training Mission\] 20 times in total | 1 {% include item.html id=34 %} |
+| 4  | Clear \[Training Mission\] 30 times in total | 1 {% include item.html id=34 %} |
+| 5  | Clear \[Training Mission\] 40 times in total | 1 {% include item.html id=34 %} |
+| 6  | Clear \[Training Mission\] 50 times in total | 1 {% include item.html id=34 %} |
 
-### Others
-
-### Plans for future improvements
