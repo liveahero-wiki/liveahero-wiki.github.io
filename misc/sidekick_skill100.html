@@ -21,9 +21,9 @@ wide_content: true
 {% assign passive = c.equipmentSkills | last | downcase %}
 {% assign active_skill = site.data.SkillMaster[active] %}
 {% assign passive_skill = site.data.SkillMaster[passive] %}
-<td title="{{ active_skill.description }}">{% include skill-description.html skill=active_skill %}</td>
+<td title="{{ active_skill.description | sanitizeSkillDescription }}">{% include skill-description.html skill=active_skill %}</td>
 <td>{{ active_skill.useView }}</td>
-<td title="{{ passive_skill.description }}">{% include skill-description.html skill=passive_skill %}</td>
+<td title="{{ passive_skill.description | sanitizeSkillDescription }}">{% include skill-description.html skill=passive_skill %}</td>
 </tr>
 {% endfor %}
 </table>
