@@ -398,6 +398,12 @@ module LahWiki
       end
       return "Unknown target #{target}"
     end
+
+    def sanitizeSkillDescription(s)
+      s = s.gsub(/<style="(.*?)">/, "")
+      s = s.gsub("</style>", "")
+      return s
+    end
   end
 end
 
