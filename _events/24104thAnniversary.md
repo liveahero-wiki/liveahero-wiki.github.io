@@ -51,7 +51,7 @@ All training quests will yield double drop, and there are additional daily missi
 | No | Description | Rewards |
 |----|-----------------------------------------------------------|----------------|
 | 1  | Clear \[Training Mission\] quest 3 times | 1 {% include item.html id=182 %} |
-| 2  | Do sales dispatch 3 times | 2 {% include item.html id=28 %} |
+| 2  | Do sales dispatch 3 times | 2 {% include item.html id=33 %} |
 | 3  | Clear \[Training Mission\] quest 5 times  | 1 {% include item.html id=34 %} |
 
 #### Limited Time Missions: 
