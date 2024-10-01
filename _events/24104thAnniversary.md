@@ -44,7 +44,7 @@ Here is a list of available hero/sidekick for exchange:
 
 From October 01, 2024 till October 08, 2024
 
-All training quests will yield double drop
+All training quests will yield double drop, and there are additional daily missions everyday:
 
 #### Daily Missions: 
 
