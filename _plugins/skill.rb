@@ -400,6 +400,10 @@ module LahWiki
     end
 
     def sanitizeSkillDescription(s)
+      if s.nil?
+        return s
+      end
+
       s = s.gsub(/<style="(.*?)">/, "")
       s = s.gsub("</style>", "")
       return s

@@ -17,13 +17,17 @@ wide_content: true
 <tr>
 <td><a class="item" href="{{ page.url }}#s{{ c.stockId }}"><img src="/cdn/Sprite/icon_{{ c.resourceName }}_s01.png" loading="lazy"> {{ page.title }}</a></td>
 <td>{{ g.agility }}</td>
-{% assign active = c.skillIds[0] | downcase %}
-{% assign passive = c.equipmentSkills[0] | downcase %}
+{% assign activeInt = c.skillIds[0] %}
+{% assign passiveInt = c.equipmentSkills[0] %}
+
+{% assign active = activeInt | downcase %}
+{% assign passive = passiveInt | downcase %}
+
 {% assign active_skill = site.data.SkillMaster[active] %}
 {% assign passive_skill = site.data.SkillMaster[passive] %}
-<td>{% include skill-description.html skill=active_skill %}</td>
+<td>{% include skill-description.html skill=active_skill skillId=activeInt %}</td>
 <td>{{ active_skill.useView }}</td>
-<td>{% include skill-description.html skill=passive_skill %}</td>
+<td>{% include skill-description.html skill=passive_skill skillId=passiveInt %}</td>
 </tr>
 {% endfor %}
 </table>
