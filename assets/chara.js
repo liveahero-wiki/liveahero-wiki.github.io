@@ -28,6 +28,45 @@ document.querySelectorAll(".chara-sort").forEach(ele => {
   });
 });
 
+function toggleCardList(list, btn, buttons) {
+  btn.classList.toggle("filter-on");
+
+  const activeMap = {}
+  for (const btn of buttons) {
+    const field = btn.dataset.field;
+    let s = activeMap[field];
+    if (s === undefined) {
+      s = new Set()
+    }
+    if (!btn.classList.contains("filter-on")) {
+      s.add(btn.dataset.value);
+    }
+    activeMap[field] = s;
+  }
+
+  for (const item of list.children) {
+    let active = true;
+    for (const [field, s] of Object.entries(activeMap)) {
+      if (!s.has(item.dataset[field])) {
+        active = false;
+        break;
+      }
+    }
+    if (active) {
+      item.classList.remove("filtered");
+    } else {
+      item.classList.add("filtered");
+    }
+  }
+}
+document.querySelectorAll(".chara-filter").forEach(ele => {
+  const list = document.querySelector(ele.dataset.list);
+  const buttons = ele.querySelectorAll("button");
+  for (const btn of buttons) {
+    btn.addEventListener("click", () => toggleCardList(list, btn, buttons));
+  }
+});
+
 // Format: #collection/h:<compressed_ids>/s:<compressed_ids>
 // compressed_ids is computed by taking difference of array[i]-array[i-1] for i>1
 // do one run-length encoding, converted to base32, then joined by ','

@@ -9,19 +9,52 @@ additional_scripts: ["/assets/chara.js"]
 
 <h2>Released units</h2>
 
-<div class="">
+<fieldset>
+<legend>Collection</legend>
+<p>Activate Collection Mode, then click the heroes and sidekicks you have to get a shareable URL for your collection.</p>
 <button id="collection-btn">Activate Collection Mode</button>
 <button id="toggle-hide-btn">Toggle Non-highlighted Cards</button>
-</div>
+</fieldset>
 
 <h3 id="heroes">Heroes</h3>
 
-<div class="chara-sort" data-list="#hero-list">
+<fieldset class="chara-sort" data-list="#hero-list">
+<legend>Sort</legend>
 <button data-sort="id">Card ID</button>
 <button data-sort="name">Name</button>
 <button data-sort="rarity">Rarity</button>
 <button data-sort="element">Element</button>
+</fieldset>
+
+<fieldset class="chara-filter" data-list="#hero-list">
+<legend>Filter</legend>
+<div>
+  Rarity |
+  <button data-field="rarity" data-value="1">1</button>
+  <button data-field="rarity" data-value="3">3</button>
+  <button data-field="rarity" data-value="4">4</button>
+  <button data-field="rarity" data-value="5">5</button>
 </div>
+<div>
+  Element |
+  <button data-field="element" data-value="1">Fire</button>
+  <button data-field="element" data-value="2">Water</button>
+  <button data-field="element" data-value="3">Wood</button>
+  <button data-field="element" data-value="4">Light</button>
+  <button data-field="element" data-value="5">Shadow</button>
+</div> 
+<div>
+  Role | 
+  <button data-field="role" data-value="1">Attack</button>
+  <button data-field="role" data-value="2">Defense</button>
+  <button data-field="role" data-value="3">Assistance</button>
+  <button data-field="role" data-value="4">Debuff</button>
+  <button data-field="role" data-value="5">Speed</button>
+  <button data-field="role" data-value="6">VP Gain</button>
+  <button data-field="role" data-value="7">Heal</button>
+  <button data-field="role" data-value="99">Special</button>
+</div>
+</fieldset>
 
 {% assign cardInfos = site.data.CardMaster | where: "stockOrder", 1 | where_exp: "item", "item.stockId < 90000" %}
 <ul id="hero-list" class="card-list">
@@ -32,11 +65,22 @@ additional_scripts: ["/assets/chara.js"]
 
 <h3 id="sidekicks">Sidekicks</h3>
 
-<div class="chara-sort" data-list="#sidekick-list">
+<fieldset class="chara-sort" data-list="#sidekick-list">
+<legend>Sort</legend>
 <button data-sort="id">Card ID</button>
 <button data-sort="name">Name</button>
 <button data-sort="rarity">Rarity</button>
-</div>
+</fieldset>
+
+<fieldset class="chara-filter" data-list="#sidekick-list">
+  <legend>Filter</legend>
+  <div>
+    Rarity |
+    <button data-field="rarity" data-value="1">1</button>
+    <button data-field="rarity" data-value="3">3</button>
+    <button data-field="rarity" data-value="4">4</button>
+  </div>
+</fieldset>
 
 {% assign cardInfos = site.data.SidekickMaster | where: "levelZone", 1 %}
 <ul id="sidekick-list" class="card-list">
