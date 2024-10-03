@@ -6,6 +6,10 @@ $colorPrimary: #ffa726;
 $colorDark: #c77800;
 $colorGrey: #ccc;
 
+$silver: #d0d0d0;
+$gold: linear-gradient(195deg, #f0b050, #ffe080, #f0b050);
+$rainbow: linear-gradient(195deg, #ff8080, #ffff80, #80ff80, #80ffff, #8080ff);
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -593,6 +597,15 @@ $elementName: fire, water, earth, light, shadow;
 }
 .indent {
   padding-left: 20px;
+}
+.skill-1 {
+  background: $silver;
+}
+.skill-2 {
+  background: $gold;
+}
+.skill-3 {
+  background: $rainbow;
 }
 // Event page
 .event-infobox {
