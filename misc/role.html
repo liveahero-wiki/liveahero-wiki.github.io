@@ -1,0 +1,27 @@
+---
+title: Role
+banner: true
+---
+
+{% assign heroes = site.data.CardMaster | where: "stockOrder", 1 | where_exp: "item", "item.stockId < 90000" %}
+
+{% assign groups = heroes | group_by: "role" %}
+
+<ul id="markdown-toc">
+{% for human in groups %}
+{% assign role = human.name | plus: 0 %}
+<li><a href="#{% include hero-role.html role=role %}">{% include hero-role.html role=role %}</a></li>
+{% endfor %}
+</ul>
+
+{% for human in groups %}
+
+{% assign role = human.name | plus: 0 %}
+<h3 id="{% include hero-role.html role=role %}">{% include hero-role.html role=role %}</h3>
+
+<ul class="card-list">
+{% for item in human.items %}
+{% include card-hero.html card=item %}
+{% endfor %}
+</ul>
+{% endfor %}
