@@ -63,7 +63,7 @@
 [base skill] (extra_cond: Combo >= 5) Apply 1 action {{ 1 | status_description }} to all allies without it/100%"
 1210104: "[base skill] Deal 25% of damage to target enemy 3 times/100%<br>\
 [base skill] Add 1 combo for each hit/40%"
-8210101: "[When self has {{ 1 | status_description }} ] Atk +20% for all allies except self"
+8210101: "[When self has {{ 1 | status_description }} ] ATK +20% for all allies except self"
 8210104: ""
 8210105: ""
 
@@ -102,7 +102,7 @@ of view after the skill is cast (maxed at 11000 view) /100%<br>\
 
 # Gaius S1 Skevo
 1115105: "[base skill] Deal 80% of damage to target enemy /100%<br>\
-<mark>[When not debuffed] Atk+20% /100%</mark>"
+<mark>[When not debuffed] ATK+20% /100%</mark>"
 
 # Galvo S2, S3, S3+, passive
 1169102: "[base skill] Heal self for 80% of own ATK value /100%<br>\
@@ -223,7 +223,7 @@ Apply {{ 205 | status_description }} to all enemies /100%"
 # Lilac variant S2,S3, passive
 1101202: "[base skill] Heal target ally for 80% of own ATK value /100% <br>\
 [base skill] Apply {{ 275 | status_description }} to target ally for 3 next attack(s) /100% <br>\
-[base skill] Extend Atk up status granted to self by 1 turn(s) /100% <br>\
+[base skill] Extend ATK up status granted to self by 1 turn(s) /100% <br>\
 [when view >2000] Use 2000 view and act once more /100%"
 
 8101201: "[When alive] Apply 1 stack of {{ 1101201 | status_description }} to ally with max health that is targeted by an active recovery skill /100%"
@@ -340,7 +340,7 @@ extra damage has maximum of 10 tier as follows from 1-10 buffs duration (4% 16% 
 # Rakta S3 Skevo
 1020107: "[base skill] Apply {{ 8 | status_description }} target ally for 2 turn(s) /100% <br>\
 [base skill] Remove 2 debuff(s) from target ally /100%  <br>\
-<mark>[base skill] If target has debuff, heal target by 50% own atk /100%</mark>"
+<mark>[base skill] If target has debuff, heal target by 50% own ATK /100%</mark>"
 
 # Rakta variant S3
 1020203: "[base skill] Grants {{ 1020201 | status_description }} to a single ally for 3 turns/100% <br>\
@@ -353,7 +353,7 @@ Remove 1 buff(s) from target enemy /60%"
 1122202: "[base skill] Deal 90% of damage to target enemy /100% <br>\
 Apply {{ 13 | status_description }} to target enemy for 1 turn(s) /100%"
 1122203: "[base skill] Deal 130% of damage to target enemy /100% <br>\
-Also deal 50% of atk as damage to non target enemy, when the non target enemy has not acted yet this turn, this damage is increased further by +50% of atk /100%"
+Also deal 50% of ATK as damage to non target enemy, when the non target enemy has not acted yet this turn, this damage is increased further by +50% of ATK /100%"
 1122204: "[base skill] Deal 60% of damage to target enemy /100% <br>\
 Remove 1 buff(s) from target enemy /100%"
 1000: "[When self has >= 110 Speed and has no debuff] Change {{ 24 | status_description }} into {{ 1122201 | status_description }} <br>\
@@ -371,13 +371,13 @@ Max 3 times in 1 turn"
 [turn end] Remove all {{ 1122205 | status_description }} from self /100%"
 
 # Roudin Passive
-3209101: "[when appearing] ATK Up by 2.5% to self, every 5000 view at the start of action also increase Atk by an extra 2.5% (max at 20000 view) /100%"
-3209102: "[when appearing] ATK Up by 3% to self, every 5000 view at the start of action also increase Atk by an extra 3% (max at 20000 view) /100%"
-3209103: "[when appearing] ATK Up by 3.5% to self, every 5000 view at the start of action also increase Atk by an extra 3.5% (max at 20000 view) /100%"
-3209104: "[when appearing] ATK Up by 4% to self, every 5000 view at the start of action also increase Atk by an extra 4% (max at 20000 view) /100%"
-3209105: "[when appearing] ATK Up by 4.5% to self, every 5000 view at the start of action also increase Atk by an extra 4.5% (max at 20000 view) /100%"
-3209106: "[when appearing] ATK Up by 5% to self, every 5000 view at the start of action also increase Atk by an extra 5% (max at 20000 view) /100%"
-8209101: "[Always active] Every 3000 view consumed by an ally increase a point of gauge(above the hp bar), when gauge is full (after 30000 view) +20% atk for all allies for 1 next action"
+3209101: "[when appearing] ATK Up by 2.5% to self, every 5000 view at the start of action also increase ATK by an extra 2.5% (max at 20000 view) /100%"
+3209102: "[when appearing] ATK Up by 3% to self, every 5000 view at the start of action also increase ATK by an extra 3% (max at 20000 view) /100%"
+3209103: "[when appearing] ATK Up by 3.5% to self, every 5000 view at the start of action also increase ATK by an extra 3.5% (max at 20000 view) /100%"
+3209104: "[when appearing] ATK Up by 4% to self, every 5000 view at the start of action also increase ATK by an extra 4% (max at 20000 view) /100%"
+3209105: "[when appearing] ATK Up by 4.5% to self, every 5000 view at the start of action also increase ATK by an extra 4.5% (max at 20000 view) /100%"
+3209106: "[when appearing] ATK Up by 5% to self, every 5000 view at the start of action also increase ATK by an extra 5% (max at 20000 view) /100%"
+8209101: "[Always active] Every 3000 view consumed by an ally increase a point of gauge(above the hp bar), when gauge is full (after 30000 view) +20% ATK for all allies for 1 next action"
 8209102: ""
 8209110: ""
 
@@ -388,25 +388,25 @@ Max 3 times in 1 turn"
 # Ryekie variant S2 Skevo
 1004206: "[base skill] Apply {{ 1 | status_description }} to target ally for 1 next attack(s) /100% <br>\
 [base skill] Apply {{ 3 | status_description }} to target ally for 1 turn(s) /100% <br>\
-<mark>[When invoker is alive] Allies with speed up buff gain +20% atk (doesn't stack) /100%</mark>"
+<mark>[When invoker is alive] Allies with speed up buff gain +20% ATK (doesn't stack) /100%</mark>"
 
 # Ryusei S2,S3, SK passive
-1198102: "[base skill] Apply {{ 1 | status_description }} to highest Atk ally for 2 next attack(s) /100% <br>\
-[If enough VP] Apply {{ 1 | status_description }} to 2nd highest Atk ally for 2 next attack(s) /100% (doesn't gain VP for 2nd activation)"
+1198102: "[base skill] Apply {{ 1 | status_description }} to highest ATK ally for 2 next attack(s) /100% <br>\
+[If enough VP] Apply {{ 1 | status_description }} to 2nd highest ATK ally for 2 next attack(s) /100% (doesn't gain VP for 2nd activation)"
 1198103: "[base skill] Apply {{ 274 | status_description }} to all allies for 2 next attack(s) /100% <br>\
 [base skill] Apply {{ 275 | status_description }} to all allies for 3 next attack(s) /100%"
 1198104: "[base skill] Apply {{ 274 | status_description }} to all allies for 2 next attack(s) /100% <br>\
 [base skill] Apply {{ 275 | status_description }} to all allies for 3 next attack(s) /100%"
-3198101: "[after using S3] apply {{ 'status_atkup' | status_manual: 'Overall Atk+', 'Increase all allies Atk by 5%, not stack with same effect buff' }} to all allies for 2 turn /100%" 
-3198102: "[after using S3] apply {{ 'status_atkup' | status_manual: 'Overall Atk+', 'Increase all allies Atk by 6%, not stack with same effect buff' }} to all allies for 2 turn /100%"
-3198103: "[after using S3] apply {{ 'status_atkup' | status_manual: 'Overall Atk+', 'Increase all allies Atk by 7%, not stack with same effect buff' }} to all allies for 2 turn /100%"
-3198104: "[after using S3] apply {{ 'status_atkup' | status_manual: 'Overall Atk+', 'Increase all allies Atk by 8%, not stack with same effect buff' }} to all allies for 2 turn /100%"
-3198105: "[after using S3] apply {{ 'status_atkup' | status_manual: 'Overall Atk+', 'Increase all allies Atk by 9%, not stack with same effect buff' }} to all allies for 2 turn /100%"
-3198106: "[after using S3] apply {{ 'status_atkup' | status_manual: 'Overall Atk+', 'Increase all allies Atk by 10%, not stack with same effect buff' }} to all allies for 2 turn /100%"
+3198101: "[after using S3] apply {{ 'status_atkup' | status_manual: 'Overall ATK+', 'Increase all allies ATK by 5%, not stack with same effect buff' }} to all allies for 2 turn /100%" 
+3198102: "[after using S3] apply {{ 'status_atkup' | status_manual: 'Overall ATK+', 'Increase all allies ATK by 6%, not stack with same effect buff' }} to all allies for 2 turn /100%"
+3198103: "[after using S3] apply {{ 'status_atkup' | status_manual: 'Overall ATK+', 'Increase all allies ATK by 7%, not stack with same effect buff' }} to all allies for 2 turn /100%"
+3198104: "[after using S3] apply {{ 'status_atkup' | status_manual: 'Overall ATK+', 'Increase all allies ATK by 8%, not stack with same effect buff' }} to all allies for 2 turn /100%"
+3198105: "[after using S3] apply {{ 'status_atkup' | status_manual: 'Overall ATK+', 'Increase all allies ATK by 9%, not stack with same effect buff' }} to all allies for 2 turn /100%"
+3198106: "[after using S3] apply {{ 'status_atkup' | status_manual: 'Overall ATK+', 'Increase all allies ATK by 10%, not stack with same effect buff' }} to all allies for 2 turn /100%"
 
 # Sadayoshi variant passive
 8081201: ""
-8081202: "[When buffed] Heal all allies except self by 5% of own atk /100%."
+8081202: "[When buffed] Heal all allies except self by 5% of own ATK /100%."
 
 # Santetsu S1
 1112101: "[base skill] {{ 13 | status_description }} to target enemy for 1 action(s) /100%.<br>\
@@ -451,10 +451,10 @@ Max 3 times in 1 turn"
 8211101: "[when invoker's attack causes damage to enemy with {{ 1211101 | status_description }} ] +1 stack of {{ 1211101 | status_description }} "
 8211102: "[When ally with {{ 1211103 | status_description }} attack with active skill] Self attack target enemy(s) (max 2 times per turn, no combo gain) and add a stack of {{ 1211101 | status_description }} /100% <br>\
 Damage is proportional to how many enemy(s) hit:<br>\
-1 enemy = 50% atk <br>\
-2 enemies = 30% atk <br>\
-3 enemies = 20% atk <br>\
->3 enemies = 15% atk "
+1 enemy = 50% ATK <br>\
+2 enemies = 30% ATK <br>\
+3 enemies = 20% ATK <br>\
+>3 enemies = 15% ATK "
 8211106: "[AI choose target] (extra_cond: no other ally has {{ 24 | status_description }} ) Self {{ 24 | status_description }} "
 
 # Tabit S3 , passive
@@ -507,7 +507,7 @@ Damage is proportional to how many enemy(s) hit:<br>\
 [base skill] Activate this skill once again if the enemy is still alive /100%"
 
 # Yohack S3
-1190103: "[base skill] Apply {{ 'status_atkupplus' | status_manual: 'Attack Up+', 'Multiply Atk by 1.8x, this status is treated as normal Atkup' }} to target ally for 1 action /100%<br>\
+1190103: "[base skill] Apply {{ 'status_atkupplus' | status_manual: 'Attack Up+', 'Multiply ATK by 1.8x, this status is treated as normal ATKup' }} to target ally for 1 action /100%<br>\
 [base skill] Apply {{ 264 | status_description }} to target ally for 1 action /100%<br>\
 [base skill] Apply {{ 8 | status_description }} to target ally for 1 action /100%<br>\
 [base skill] Apply {{ 1190101 | status_description }} to self for 3 turn /100%"
@@ -587,19 +587,19 @@ the damage is capped at 90% own MAX HP"
 9000065: "At start of turn, grant Invention that will activates after 3 actions, granting another action for self. <br>\
 If there's already Invention granted, this skill won't activated"
 9000066: "Increase damage dealt to enemies based on number of debuffs on them (1 debuff +25%, max +100%)"
-9000068: "Base HP +3000, base atk +1000, damage received -250"
-9000070: "When ally with speed or special role has acted this turn, all allies atk +10%"
-9000073: "All allies do auto action at all times, all allies atk+50%"
-9000074: "When in Wait grants atk+30% and damage received +10%"
-9000075: "When an ally is damaged by another ally, grants atk+25% for one action to damaged ally"
-9000076: "When an ally has <50% HP, grants a barrier for 3 action and atk+20%"
-9000078: "When skill2 damage an enemy, give def down for 1 action to target"
-9000082: "At the start of battle, atk+10% for each different attribute allies"
-9000085: "When ally with speed or special role grants speed up to ally, apply 1 Atk up to target ally, <br>\
-when they deal speed down to enemy, apply 1 def down to target enemy"
+9000068: "Base HP +3000, base ATK +1000, damage received -250"
+9000070: "When ally with speed or special role has acted this turn, all allies ATK +10%"
+9000073: "All allies do auto action at all times, all allies ATK+50%"
+9000074: "When in Wait grants ATK+30% and damage received +10%"
+9000075: "When an ally is damaged by another ally, grants ATK+25% for one action to damaged ally"
+9000076: "When an ally has <50% HP, grants a barrier for 3 action and ATK+20%"
+9000078: "When skill2 damage an enemy, give DEF down for 1 action to target"
+9000082: "At the start of battle, ATK+10% for every unique element in ally team"
+9000085: "When ally with speed or special role grants speed up to ally, apply 1 ATK up to target ally, <br>\
+when they deal speed down to enemy, apply 1 DEF down to target enemy"
 9000087: "Each time target takes damage apply +10% damage received debuff to target (max 100%), debuff removed when target takes action"
 9000089: "Increases damage taken by the opponent according to the total number of duration of debuffs on the enemy. <br>\
 (+10% per duration. Maximum 100%.)"
-9000090: "At the start of action, atk +10% times the number of buff duration target ally has (max 100%) for one action"
-9000091: "At the start of turn, atk +50% for all allies for one action"
+9000090: "At the start of action, ATK +10% times the number of buff duration target ally has (max 100%) for one action"
+9000091: "At the start of turn, ATK +50% for all allies for one action"
 
