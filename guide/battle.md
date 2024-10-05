@@ -61,7 +61,7 @@ During the battle, the character can be affected by several statuses. The number
 
 Statuses that grant positive effects on the hero are displayed as a yellow icon, also known as "Buffs". Conversely, statuses that afflict the hero with negative effects are displayed as a blue icon, also known as "Debuffs".
 
-The available status modifiers are listed as follows:
+Full list of statuses can be found [here](/statuses/).
 
 #### Buffs
 
@@ -87,10 +87,10 @@ The available status modifiers are listed as follows:
 | {{ 11 | status_description }} | ATK Down | Attack is decreased by 0.5x. Duration decreases after the Hero performs an action. |
 | {{ 12 | status_description }} | DEF Down | Damage received is increased by 1.5x once. Duration decreases after taking damage. |
 | {{ 13 | status_description }} | SPD down | Speed is decreased by -10. Duration decreases after the Hero performs an action. |
-| {{ 14 | status_description }} | Super SPD Down | Speed is decreased by 30. Duration decreases after the Hero performs an action. |
-| {{ 15 | status_description }} | Mosaic | View Power gained from actions is decreased by 0.5x. Duration decreases after the Hero performs an action. |
+| {{ 29 | status_description }} | Super SPD Down | Speed is decreased by 30. Duration decreases after the Hero performs an action. |
+| {{ 14 | status_description }} | Mosaic | View Power gained from actions is decreased by 0.5x. Duration decreases after the Hero performs an action. |
 | {{ 16 | status_description }} | Misfortune | Activation rate of skills decreased by 20%. Duration decreases after the Hero performs an action. |
-| {{ 17 | status_description }} | Silence | Skill cannot be used. Duration decreases when the turn ends. It does not repeat. |
+| {{ 22 | status_description }} | Silence | Skill cannot be used. Duration decreases when the turn ends. It does not repeat. |
 | {{ 18 | status_description }} | Poison | Takes 5% of HP as damage at end of turn. Duration decreases when the turn ends. |
 | {{ 19 | status_description }} | Burn | Takes 10% of HP as damage at end of turn. Duration decreases when the turn ends. |
 
