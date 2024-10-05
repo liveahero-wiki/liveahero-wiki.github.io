@@ -7,6 +7,16 @@ redirect_from: /heroes/
 additional_scripts: ["/assets/chara.js"]
 ---
 
+<style>
+.control-panel {
+  display: grid;
+  grid-template-columns: min-content auto;
+}
+.control-panel div {
+  padding: 0 3px;
+}
+</style>
+
 <h2>Released units</h2>
 
 <fieldset>
@@ -28,32 +38,36 @@ additional_scripts: ["/assets/chara.js"]
 
 <fieldset class="chara-filter" data-list="#hero-list">
 <legend>Filter</legend>
-<div>
-  Rarity |
-  <button data-field="rarity" data-value="1">1</button>
-  <button data-field="rarity" data-value="3">3</button>
-  <button data-field="rarity" data-value="4">4</button>
-  <button data-field="rarity" data-value="5">5</button>
-</div>
-<div>
-  Element |
-  <button data-field="element" data-value="1">Fire</button>
-  <button data-field="element" data-value="2">Water</button>
-  <button data-field="element" data-value="3">Wood</button>
-  <button data-field="element" data-value="4">Light</button>
-  <button data-field="element" data-value="5">Shadow</button>
-</div> 
-<div>
-  Role | 
-  <button data-field="role" data-value="1">Attack</button>
-  <button data-field="role" data-value="2">Defense</button>
-  <button data-field="role" data-value="3">Assistance</button>
-  <button data-field="role" data-value="4">Debuff</button>
-  <button data-field="role" data-value="5">Speed</button>
-  <button data-field="role" data-value="6">VP Gain</button>
-  <button data-field="role" data-value="7">Heal</button>
-  <button data-field="role" data-value="99">Special</button>
-</div>
+<div class="control-panel">
+  <div>Rarity</div>
+  <div> |
+    <button data-field="rarity" data-value="1">1</button>
+    <button data-field="rarity" data-value="3">3</button>
+    <button data-field="rarity" data-value="4">4</button>
+    <button data-field="rarity" data-value="5">5</button>
+  </div>
+
+  <div>Element</div>
+  <div> |
+    <button data-field="element" data-value="1">Fire</button>
+    <button data-field="element" data-value="2">Water</button>
+    <button data-field="element" data-value="3">Wood</button>
+    <button data-field="element" data-value="4">Light</button>
+    <button data-field="element" data-value="5">Shadow</button>
+  </div>
+
+  <div>Role</div>
+  <div> |
+    <button data-field="role" data-value="1">Attack</button>
+    <button data-field="role" data-value="2">Defense</button>
+    <button data-field="role" data-value="3">Assistance</button>
+    <button data-field="role" data-value="4">Debuff</button>
+    <button data-field="role" data-value="5">Speed</button>
+    <button data-field="role" data-value="6">VP Gain</button>
+    <button data-field="role" data-value="7">Heal</button>
+    <button data-field="role" data-value="99">Special</button>
+  </div>
+</table>
 </fieldset>
 
 {% assign cardInfos = site.data.CardMaster | where: "stockOrder", 1 | where_exp: "item", "item.stockId < 90000" %}
@@ -74,11 +88,13 @@ additional_scripts: ["/assets/chara.js"]
 
 <fieldset class="chara-filter" data-list="#sidekick-list">
   <legend>Filter</legend>
-  <div>
-    Rarity |
-    <button data-field="rarity" data-value="1">1</button>
-    <button data-field="rarity" data-value="3">3</button>
-    <button data-field="rarity" data-value="4">4</button>
+  <div class="control-panel">
+    <div>Rarity</div>
+    <div> |
+      <button data-field="rarity" data-value="1">1</button>
+      <button data-field="rarity" data-value="3">3</button>
+      <button data-field="rarity" data-value="4">4</button>
+    </div>
   </div>
 </fieldset>
 
