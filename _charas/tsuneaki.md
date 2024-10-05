@@ -1,7 +1,6 @@
 ---
 title: Tsuneaki
 characterId: 140
-masked: true
 h2:
   title: 'Rokusei'
 heroes:

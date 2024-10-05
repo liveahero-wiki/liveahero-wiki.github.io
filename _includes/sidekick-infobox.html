@@ -12,6 +12,11 @@
 {% assign sprites = sprites | append: "," | append: include.extra_sprites %}
 {% endif %}
 
+{% assign cardProfileOverride = site.data.processed.CardProfileOverride[stockId].sidekick %}
+{% assign overrideIllustrator = site.data.processed.jp_profile[cardProfileOverride.illustrator] %}
+{% assign overrideAffiliation = site.data.processed.jp_profile[cardProfileOverride.affiliation] %}
+{% assign overridejob = site.data.processed.jp_profile[cardProfileOverride.job] %}
+
 <div id="s{{ include.stockId }}" role="tabpanel" tabindex="0"  class="tabcontent contain elementNone">
     <div class="heroinfobox">
         <div class="header">
@@ -23,7 +28,7 @@
             <tbody>
                 <tr>
                     <th colspan="2">Illustration</th>
-                    <td colspan="2">{% include chara-illustrator.html illustrator=firstCardInfo.illustrator %}</td>
+                    <td colspan="2">{% include chara-illustrator.html illustrator=firstCardInfo.illustrator override=overrideIllustrator %}</td>
                 </tr>
                 <tr>
                     <th colspan="2">Voice</th>
@@ -31,11 +36,11 @@
                 </tr>
                 <tr>
                     <th colspan="2">Occupation</th>
-                    <td colspan="2">{% if include.masked %}???{% elsif a %}{{ firstCardInfo.job }}{% endif %}</td>
+                    <td colspan="2">{% if overridejob %}<span class="masked">{% endif %}{{ firstCardInfo.job }}{% if overridejob %}</span>{% endif %}</td>
                 </tr>
                 <tr>
                     <th colspan="2">Affliation office</th>
-                    <td colspan="2">{% include chara-affiliation.html masked=page.masked affiliation=firstCardInfo.affiliationOffice %}</td>
+                    <td colspan="2">{% include chara-affiliation.html affiliation=firstCardInfo.affiliationOffice override=overrideAffiliation %}</td>
                 </tr>
             </tbody>
         </table>

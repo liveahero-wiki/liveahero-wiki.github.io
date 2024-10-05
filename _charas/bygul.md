@@ -1,7 +1,6 @@
 ---
 title: Bygul
 characterId: 207
-masked: true
 heroes:
 - stockId: 12071
 sidekicks:

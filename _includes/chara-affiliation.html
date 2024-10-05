@@ -1,8 +1,7 @@
-{% assign a = site.data.wiki.Affiliation[include.affiliation] %}
-{% if include.masked %}
-???
-{% elsif a %}
-<abbr class="tippy" data-content="{{ include.affiliation }}">{{ a.en }}</abbr>
-{% else %}
-{{ include.affiliation }}
-{% endif %}
+{% assign name = include.affiliation %}
+{% assign en = site.data.wiki.Affiliation[include.affiliation].en %}
+<a
+  {% if name != "—" %}href="/affiliations/#{{ en | default: name | slugify }}"{% endif %}
+  class="{% if en %}tippy{% endif %} {% if include.override %}masked{% endif %}"
+  {% if en %}data-content="{{ name }}"{% endif %}
+>{{ en | default: name }}</a>
