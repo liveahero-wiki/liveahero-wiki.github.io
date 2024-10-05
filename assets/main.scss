@@ -74,11 +74,14 @@ a:hover {
 }
 .sidebar__logo {
   border-bottom: 1px solid $colorDark;
-  font-size: 36px;
   height: 130px;
+  /*font-size: 36px;
   line-height: 130px;
   margin-bottom: 0;
-  text-align: center;
+  text-align: center;*/
+}
+.sidebar__logo img {
+  filter: drop-shadow(0 0 0.25rem #fff);
 }
 .sidebar__nav {
   max-height: calc(100% - 130px);
