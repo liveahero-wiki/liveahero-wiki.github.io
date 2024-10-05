@@ -21,12 +21,12 @@ heroes:
 
     **Additional information: Released by clearing the final episode of the event quest "Rakusai Travelouge".**
 
-    <p class="masked">He is an Onmyoji Hero belonging to the Japan Self-Defense Authorities. He is in charge of handling cases that the bureau is not allowed to 
+    <p><span class="masked">He is an Onmyoji Hero belonging to the Japan Self-Defense Authorities. He is in charge of handling cases that the bureau is not allowed to 
     act on as a public institution, such as undercover investigations into certain organizations. Therefore, only a few bureaucrats in the 
     Defense Bureau know the details of his affiliation and duties. The general public does not know that he is a hero, unless they are a total fanatic.
     Tsuneaki has taken over from his former mentor on Earth, and has acquired the knowledge and skills of an Onmyoji, even 
     though he is an alien. He willingly becomes a pawn of the government and lives in the shadow, dreaming that one day a world that 
-    transcends the boundaries of race and position will be realized.</p>
+    transcends the boundaries of race and position will be realized.</span></p>
 
   extra_sprites: fg_tsuneaki_h01_skin2,fg_tsuneaki_h01_skin3,fg_tsuneaki_h01_skin4
 - stockId: 11402
