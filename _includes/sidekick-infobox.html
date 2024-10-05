@@ -12,6 +12,7 @@
 {% assign sprites = sprites | append: "," | append: include.extra_sprites %}
 {% endif %}
 
+{% assign stockId = include.stockId | downcase %}
 {% assign cardProfileOverride = site.data.processed.CardProfileOverride[stockId].sidekick %}
 {% assign overrideIllustrator = site.data.processed.jp_profile[cardProfileOverride.illustrator] %}
 {% assign overrideAffiliation = site.data.processed.jp_profile[cardProfileOverride.affiliation] %}
