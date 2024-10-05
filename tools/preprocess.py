@@ -1,6 +1,8 @@
 import os.path
 import json
 import sys
+import re
+
 from collections import defaultdict
 
 
@@ -11,6 +13,14 @@ def dumpJson(filename, obj, **kwargs):
         json.dump(obj, f, ensure_ascii=False, **kwargs)
 
 
+COLOR_PATTERN = re.compile(r"<color=(.*?)>(.*?)</color>", re.DOTALL)
+SIZE_PATTERN = re.compile(r"<size=(\d+)>(.*?)</size>", re.DOTALL)
+
+def sanitizeText(s):
+    s = COLOR_PATTERN.sub(r'\2', s[:-1])
+    s = SIZE_PATTERN.sub(r'<span style="font-size: calc(\1px * 0.75)">\2</span>', s)
+    return s
+
 def processPropertiesFile(raw_file, bio_file, serif_file, profile_file):
     with open(os.path.join("_data", "processed", raw_file), "r", encoding="utf-8") as f:
         lines = f.readlines()
@@ -20,16 +30,16 @@ def processPropertiesFile(raw_file, bio_file, serif_file, profile_file):
     profile = {}
 
     for line in lines:
-        s = line.split("=")
+        s = line.split("=", 1)
 
         if s[0].startswith("DETAIL"):
-            detail[s[0]] = s[1][:-1].replace("<br><b><colo", "")
+            detail[s[0]] = sanitizeText(s[1])
 
         if s[0].startswith("SERIF"):
-            serif[s[0]] = s[1][:-1]
+            serif[s[0]] = sanitizeText(s[1])
 
         if s[0].startswith("PROFILE_"):
-            profile[s[0]] = s[1][:-1]
+            profile[s[0]] = sanitizeText(s[1])
 
     dumpJson(os.path.join("_data", "processed", bio_file), detail)
     dumpJson(os.path.join("_data", "processed", serif_file), serif)
