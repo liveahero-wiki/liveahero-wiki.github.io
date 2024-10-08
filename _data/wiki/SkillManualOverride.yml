@@ -337,6 +337,23 @@ extra damage has maximum of 10 tier as follows from 1-10 buffs duration (4% 16% 
 # Procy variant passive
 8032202: ""
 
+# Pubraseer variant 
+1073201: "[base skill] Deal 50% of damage to target enemy /100% <br>\
+[base skill] Gain 1 combo(s) /100% <br>\
+[when {{ 1073208 | status_description }} > 2] This skill changes to Asteria Odigos"
+
+1073202: "[base skill] Deal (70% 85% 110% 140%) of damage to all enemies based on how many enemies hit (4 3 2 1) /100% <br>\
+[base skill] Grants {{ 1 | status_description }} to self for 1 action /100% <br>\
+[when {{ 1073208 | status_description }} = 6] Grants {{ 'status_atkupplus' | status_manual: 'ATK up+', 'multiply ATK power by 1.8' }} to self for 1 action instead"
+
+8073201: "[constant activation] Each time a skill that increases the combo count is activated, {{ 1073208 | status_description }} +1"
+8073202: "[when combo reach a multiple of 5] {{ 1073208 | status_description }} +2"
+8073203: "[base skill] Consume 2 {{ 1073208 | status_description }}, Deal 50% of damage to target enemy and Heal 50% of damage to ally with the lowest HP (repeated until {{ 1073208 | status_description }} is insufficient). <br>\ 
+This skill can only be activated once per turn"
+8073204: ""
+8073205: ""
+8073207: ""
+
 # Rakta S3 Skevo
 1020107: "[base skill] Apply {{ 8 | status_description }} target ally for 2 turn(s) /100% <br>\
 [base skill] Remove 2 debuff(s) from target ally /100%  <br>\
