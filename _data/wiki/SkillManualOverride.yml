@@ -100,6 +100,29 @@ of view after the skill is cast (maxed at 11000 view) /100%<br>\
 # Furlong variant Passive
 8008201: "[when appearing] Apply {{ 87 | status_description }} to self /100%"
 
+# Gaisei
+1191101: "[base skill] Deal 70% of damage to target enemy /100% <br>\
+[base skill] Apply {{ 1211101 | status_description }} to target enemy /100% <br>\
+[base skill] Apply {{ 1191101 | status_description }} to target enemy /100%"
+1191102: "[base skill] Deal 70% of damage to all enemies /100% <br>\
+[when target has debuff(s)] Deal 105% of damage to enemy(s) instead /100% <br>\
+[when target has {{ 1191101 | status_description }}] Also activate Reaper's Blade if self is still alive /100%"
+1191103: "[base skill] Apply {{ 3 | status_description } to target enemy for 1 turn(s) /100% <br>\
+[base skill] Apply {{ 1191102 | status_description } to self for 2 action /100% <br>\
+[base skill] Apply {{ 5 | status_description } to self for 1 turn /100%"
+1191104: "[base skill] Deal 70% of damage to all enemies /100% <br>\
+[when target has debuff(s)] Deal 105% of damage to enemy(s) instead /100% <br>\
+[when target has {{ 1191101 | status_description }}] Also activate Reaper's Blade if self is still alive /100%"
+8191101: "[base skill] (extra_cond: for target enemy(s) possessing x > 0  {{ 1191101 | status_description }}) Deal 60% of damage to target enemy(s) /100% <br>\
+[base skill] Remove all {{ 1191101 | status_description }} status from all enemies /100%"
+8191103: "[when self take damage from an enemy] counter with Skill 1 <br>\
+[when self take damage from an ally] activate Skill 1 against a random single enemy."
+8191104: "[constant activation] Increases the likelihood of being targeted by enemies."
+8191105: "[when self has {{ 1191102 | status_description }] skill 1 changes into: <br>\
+[base skill] Deal 140%-280% of damage to target enemy as HP go from 100% to 0% /100% <br>\
+[base skill] Apply {{ 1211101 | status_description }} to target enemy /100% <br>\
+[base skill] Apply {{ 1191101 | status_description }} to target enemy /100%"
+
 # Gaius S1 Skevo
 1115105: "[base skill] Deal 80% of damage to target enemy /100%<br>\
 <mark>[When not debuffed] ATK+20% /100%</mark>"
@@ -341,11 +364,9 @@ extra damage has maximum of 10 tier as follows from 1-10 buffs duration (4% 16% 
 1073201: "[base skill] Deal 50% of damage to target enemy /100% <br>\
 [base skill] Gain 1 combo(s) /100% <br>\
 [when {{ 1073208 | status_description }} > 2] This skill changes to Asteria Odigos"
-
 1073202: "[base skill] Deal (70% 85% 110% 140%) of damage to all enemies based on how many enemies hit (4 3 2 1) /100% <br>\
 [base skill] Grants {{ 1 | status_description }} to self for 1 action /100% <br>\
 [when {{ 1073208 | status_description }} = 6] Consume all {{ 1073208 | status_description }}, grants {{ 'status_atkupplus' | status_manual: 'ATK up+', 'multiply ATK power by 1.8' }} to self for 1 action instead"
-
 8073201: "[constant activation] Each time a skill that increases the combo count is activated, {{ 1073208 | status_description }} +1"
 8073202: "[when combo reach a multiple of 5] {{ 1073208 | status_description }} +2"
 8073203: "[base skill] (activated 1-3 times based on {{ 1073208 | status_description }}) Consume 2 {{ 1073208 | status_description }}, Deal 50% of damage to target enemy and Heal 50% of damage to ally with the lowest HP <br>\ 
