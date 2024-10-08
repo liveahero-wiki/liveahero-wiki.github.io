@@ -2,7 +2,7 @@
 title: The Glorious Rising Moon
 jp_title: 栄光のライジング・ムーン
 news_link: https://live-a-hero.jp/info/9602
-banner_image: ‎banner_info_RisingMoon2410.jpg
+banner_image: banner_info_RisingMoon2410.jpg
 gacha: true
 event_start_time: 2024-10-08T20:00:00+09
 event_end_time: 2024-11-05T14:00:00+09
