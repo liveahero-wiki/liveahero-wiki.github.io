@@ -120,7 +120,7 @@ of view after the skill is cast (maxed at 11000 view) /100%<br>\
 VP is not gained by this counter, max 4 times in a single turn"
 8191104: "[constant activation] Increases the likelihood of being targeted by enemies."
 8191105: "[when self has {{ 1191102 | status_description }} ] skill 1 changes into: <br>\
-[base skill] Deal 140%-280% of damage to target enemy as HP go from 100% to 0% /100% <br>\
+[base skill] Deal 140%-280% of damage to target enemy as HP go from MAX to 0 /100% <br>\
 [base skill] Apply {{ 1211101 | status_description }} to target enemy /100% <br>\
 [base skill] Apply {{ 1191101 | status_description }} to target enemy /100%"
 
@@ -341,6 +341,13 @@ extra damage has maximum of 10 tier as follows from 1-10 buffs duration (4% 16% 
 8075201: ""
 8075202: ""
 8075204: ""
+
+# Orbiter
+1217103: "[base skill] Remove all {{ 1217103 | status_description }} from all allies /100% <br>\
+[base skill] Grants {{ 1217103 | status_description }} to target ally for 4 turns /100%"
+8101102: "[when a skill that increases the combo count is activated] further increase the combo count by 1. This effect does not stack with similar effects"
+8217101: ""
+8217102: ""
 
 # Polaris Mask S1 Skevo
 1015105: "[base skill] Deal 60% of damage to target enemy /100% <br>\
