@@ -1,6 +1,11 @@
 ---
 title: Gaisei
-unreleased: true
-sprites: fg_gaisei_h01,fg_gaisei_h01_skin2,fg_gaisei_h02,fg_gaisei_h02_skin2
+characterId: 191
+heroes:
+- stockId: 11911
+sidekicks:
+- stockId: 11911
 ---
 
+{% include voice-table.html resourceName="gaisei"
+%}

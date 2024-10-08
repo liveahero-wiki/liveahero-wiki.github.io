@@ -1,6 +1,8 @@
 ---
 title: Pubraseer
 characterId: 73
+h2:
+  title: "\"Star Insignia\" Pubraseer"
 heroes:
 - stockId: 10731
   BIO_H01: |-
@@ -28,6 +30,7 @@ heroes:
     bright star of the future.
   extra_sprites: fg_pubraseer_h01_skin2,fg_pubraseer_h01_skin3,fg_ADV_pubraseer_h01,fg_ADV_pubraseer_h01_skin3,fg_ADV_pubraseer_h01_skin4
   # fg_ADV_pubraseer_h01_skin2 is just black shadow
+- stockId: 10732
 sidekicks:
 - stockId: 10731
   BIO_S01: |-
@@ -71,6 +74,9 @@ win = "Elipe, Damarki, Kahoni, Timbanos, Heiros ...<br>I believe this victory wi
 lose = "I can't hear my friend's voices...<br>I wanted to see them again..."
 rankMax = "I can say that I'm here right now because of you. Truly, thank you.<br>This gratitude filled my heart, the power of my friends, let me use it for your sake."
 loveIndexMax= "I don't want to lose someone precious again.<br>That’s why until this body turned into stardust…<br>I promise I will never leave your side, not even for a moment."
+%}
+
+{% include voice-table.html resourceName="pubraseerrisingmoon2410"
 %}
 
 ## Notes
