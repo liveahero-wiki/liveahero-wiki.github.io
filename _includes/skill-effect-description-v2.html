@@ -320,6 +320,13 @@ Resurrect {{ target }} to {{ effect.parameter.value }}% HP
 Prioritize skill {{ effect.parameter.value | plus: 1 }}
 {% when "ChangeSkillProbElapseTurnEnd" %}
 Proc rate of skill {{ effect.parameter.skillId }} is multiplied by {{ effect.parameter.value }}{% if effect.parameter.isPercent %}%{% else %}x{% endif %}
+{% when "ChangeActiveSkill" %}
+Change Skill {{ effect.parameter.index | plus: 1 }} to this skill:
+{% assign new_skill_id = effect.parameter.skillId | downcase %}
+{% assign new_skill = site.data.SkillMaster[new_skill_id] %}
+<fieldset>
+{% include skill-description.html skillId=new_skill_id skill=new_skill %}
+</fieldset>
 {% when "TurnBaseMultipleAttack" %}
 Apply {{ skillEffectJson.statusId | status_description }} to {{ target }}
 {% when "PassiveBattleSkillEffect" %}
