@@ -275,7 +275,7 @@ module LahWiki
 
           if min == INVALID
             if max == 0
-              range = "x = 0"
+              range = "no" # x = 0
             else
               range = "x &lt;= #{max}"
             end
