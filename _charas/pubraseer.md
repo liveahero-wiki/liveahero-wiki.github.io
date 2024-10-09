@@ -114,6 +114,13 @@ lose = "The hope entrusted to me is fading…<br>My friends, please… stay safe
 %}
 
 ## Notes
+- He has motifs that echo that of the Soviet space dog, Laika, who was one of the very first animals launched into space. She was never expected to survive returning as technology to de-orbit had not yet been developed. She tragically died to overheating hours into the flight.
+  - In his base version, his dream was to trailblaze to uncharted areas places in space, much like how Laika was the first dog to enter orbit, the wish was given form in the shape of a flag to be placed in new lands.
+  - The new version gives him a new wish of being able to lead his new crew to where they need to go and return safely to where they belong, a feat that Laika was never able to do. This wish is given form in the form of a saber that can recreate a ship.
+ 
+- Pubraseer's name is possibly an anagram of the star La Superba (Publasear > Pubraseer), a star in the constellation Canes Venatici, also known as the Hunting Dogs.
+  - Many have assumed that Pubraseer's breed is possibly a type of West Siberian Laika or East Siberian Laika due to his fur color and pattern, they are known as hunting dogs.
+
 - His skill names is in Greek language:
   - Metéoro Kidemónas (μετέωρο κηδεμόνας) : Meteor Guardian
   - évología Komíti (έβολογία κομήτη) : Comet Evology
