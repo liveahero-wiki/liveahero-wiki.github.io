@@ -31,6 +31,23 @@ heroes:
   extra_sprites: fg_pubraseer_h01_skin2,fg_pubraseer_h01_skin3,fg_ADV_pubraseer_h01,fg_ADV_pubraseer_h01_skin3,fg_ADV_pubraseer_h01_skin4
   # fg_ADV_pubraseer_h01_skin2 is just black shadow
 - stockId: 10732
+  BIO_H01: |-
+    In a ceremony celebrating the milestone of a hero's birth, Pubraseer reminisces about the day he became a leader.
+
+    The saber-shaped parallel weapon he holds can recreate and summon the energy form of the spaceship he once piloted.
+    Additionally, the navigation device-type parallel weapon for space travel emits a gentle light that heals and inspires his 
+    companions.
+  
+    This weapon embodies his wish for everyone to safely reach their destination and return to where they belong.
+  BIO_H02: |-
+    Upon being appointed as a leader, Pubraseer, once an optimist, developed a resolute will.
+    This was a hopeful determination shared with his companions, who, despite their differences, harbored the same dream: "We will 
+    embark on a fruitful adventure and return to this place."
+  
+    As those who shared his hardships were taken from him, Pubraseer began to search for ways to use his remaining life meaningfully.
+
+    With a saber imbued with the wish to carve out a new future, a space compass gifted by his friends, and a suit worn with 
+    determination, he was prepared to guide and support his new "friends" with all that has been entrusted to him.
 sidekicks:
 - stockId: 10731
   BIO_S01: |-
@@ -77,6 +94,25 @@ loveIndexMax= "I don't want to lose someone precious again.<br>That’s why unti
 %}
 
 {% include voice-table.html resourceName="pubraseerrisingmoon2410"
+APPRECIATION = "It seems you're feeling the fatigue from the ceremony, are you alright?<br>I am the leader, so it’s my duty to worry about your well-being too.<br>Come on, lean on me. It’s okay to relax and rest for a bit."
+DAILY = "This outfit certainly has a way of making me stand tall.<br>There were times in the past when it felt a bit too formal, but I wonder if I’ve gotten used to it a little now.<br>So, what do you think? Does it suit me? I’d really like your honest opinion."
+RELATION = "So he want to become an astronaut… Heh, it feels like I’m talking to my old friends.<br>So earnest, untouched by anyone.<br>…I hope his dream comes true."
+HERO = "I can't quite understand his constant yearning for conflict.<br>However, I do understand that feeling when important people with whom you once laughed with are no longer around."
+PLAYER = "Giving your all for those around you… it reminds me of who I used to be.<br>I worry for you, but it’s also incredibly reassuring.<br>Heh, I bet my friends felt the same way too."
+TOUCH = "What’s this? Prodding my belly? You want to play, huh?<br>…Just kidding, haha! Come on, get a little closer.<br>I want to touch and feel your warmth too."
+TRAIN = "Are you ready? I won’t hold back!"
+TRAINED = "For my friends, this much is nothing…!"
+EVENTA = "A ceremony to celebrate the birth of a hero… it brings back memories of the past.<br>…No, let’s save those stories for later.<br>It’s a celebration, so we should really enjoy ourselves first!"
+EVENTB = "I remember taking the hero license approval exam myself.<br>I never imagined I would end up on the examiner’s side, but it’s truly a joy to witness the moment a hero is born."
+EVENTC = "It seems the preparations for the ceremony souvenirs aren’t finished yet.<br>I heard that if we help out, we could earn a reward.<br>If you have the time, would you like to go and lend a hand together?"
+EVENTD = "Oh, impressive! You’re already done!<br>…Oops, I almost got too excited there!<br>Well then, let’s enjoy the ceremony together without any worries!"
+battleStart = "To celebrate this departure with my new companions!<br>Friends, follow me!!"
+skill = "Point to the star of hope!"
+special = "I will guide my friends who chase their dreams!<br>"Polaris"! Pénte Anamniseis!!"
+smallDamage = "Guuh!!"
+bigDamage = "Are my friends safe?!"
+win = "Alright! You all are the best!!<br>…Kuhum…Now, let’s bring this victory home!<br>To everyone waiting for our return."
+lose = "The hope entrusted to me is fading…<br>My friends, please… stay safe…"
 %}
 
 ## Notes
@@ -87,3 +123,9 @@ loveIndexMax= "I don't want to lose someone precious again.<br>That’s why unti
   - Fos Odigós (φως οδηγός) : Fos = light, Odigós = Leader/Guide
   - Astéria Odigós (αστέρια οδηγός) : Astéria = Star, Odigós = Leader/Guide
   - ánoix Méllon (άνοιξ μέλλον) : ánoix = Open, Méllon = Future
+ 
+- His quote in the game start screen (Glorious Rising Moon Event):
+  - "LIVE A HERO."
+  Four years… it’s quite a profound feeling.
+  Let’s reflect on our journey together while gazing at the stars! A celebration with everyone would be great too.
+  …An anniversary, huh? I’m feeling all excited about it!!!
