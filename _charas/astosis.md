@@ -45,4 +45,4 @@ EVENTB = "Your reputation precedes you.<br>I've heard you're a very good operato
 - His Skill name is from Greek language:
   - Gia ti Alítheia (για τη αλήθεια) : For The Truth
   - Kríne ti Oikouméni (κρῖνε τη οἰκουμένη) : Judge The World
-  - Zygós Dikaiosýnis (ζυγός δικαιοσύνης) : Yoke of Justice
+  - Zygós Dikaiosýnis (ζυγός δικαιοσύνης) : Scales of Justice
