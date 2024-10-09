@@ -108,9 +108,7 @@ EVENTC = "It seems the preparations for the ceremony souvenirs aren’t finished
 EVENTD = "Oh, impressive! You’re already done!<br>…Oops, I almost got too excited there!<br>Well then, let’s enjoy the ceremony together without any worries!"
 battleStart = "To celebrate this departure with my new companions!<br>Friends, follow me!!"
 skill = "Point to the star of hope!"
-special = "I will guide my friends who chase their dreams!<br>"Polaris"! Pénte Anamniseis!!"
-smallDamage = "Guuh!!"
-bigDamage = "Are my friends safe?!"
+special = "I will guide my friends who chase their dreams!<br>\"Polaris\"! Pénte Anamniseis!!"
 win = "Alright! You all are the best!!<br>…Kuhum…Now, let’s bring this victory home!<br>To everyone waiting for our return."
 lose = "The hope entrusted to me is fading…<br>My friends, please… stay safe…"
 %}
