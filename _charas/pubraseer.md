@@ -84,3 +84,6 @@ loveIndexMax= "I don't want to lose someone precious again.<br>That’s why unti
   - Metéoro Kidemónas (μετέωρο κηδεμόνας) : Meteor Guardian
   - évología Komíti (έβολογία κομήτη) : Comet Evology
   - Pénte Anamniseis (πέντε αναμνησεις) : Five Memories
+  - Fos Odigós (φως οδηγός) : Fos = light, Odigós = Leader/Guide
+  - Astéria Odigós (αστέρια οδηγός) : Astéria = Star, Odigós = Leader/Guide
+  - ánoix Méllon (άνοιξ μέλλον) : ánoix = Open, Méllon = Future
