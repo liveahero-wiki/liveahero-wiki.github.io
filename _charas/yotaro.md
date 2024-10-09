@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/42284538-0902-4b2f-850f-a6eb61f55061)---
+---
 title: Yotaro
 characterId: 218
 sidekicks:
