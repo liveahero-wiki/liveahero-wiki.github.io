@@ -20,6 +20,7 @@ jobs:
         cache: 'pip'
     - name: Generate data files
       run: |
+        python -m pip install -r requirements.txt
         python tools/skill_evo.py
     - name: Build the site in the jekyll/builder container
       run: |
