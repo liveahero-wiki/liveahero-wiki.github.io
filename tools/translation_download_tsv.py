@@ -16,7 +16,7 @@ def getTranslatedTsv(url, filename, use_local=True):
         if resp.status_code != 200:
             raise FileNotFoundError(url)
 
-        content = resp.text
+        content = resp.content.decode("utf-8")
         with open(filename, "w", encoding="utf-8") as f:
             f.write(content)
 
@@ -24,7 +24,7 @@ def getTranslatedTsv(url, filename, use_local=True):
         for row in reader:
             yield row
     else:
-        with open(filename, "rb") as f:
+        with open(filename, "r", encoding="utf-8") as f:
             reader = csv.DictReader(f, delimiter='\t')
             for row in reader:
                 yield row
