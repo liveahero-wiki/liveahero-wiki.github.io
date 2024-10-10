@@ -22,6 +22,7 @@ jobs:
           cache: 'pip'
       - name: Download master data
         run: |
+          python -m pip install -r requirements.txt
           python tools/masterdata.py
       - name: Diff with previous commit and commit files
         run: |
