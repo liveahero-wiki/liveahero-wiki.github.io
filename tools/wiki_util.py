@@ -1,7 +1,11 @@
 import re
 import json
 import yaml
+import os
+import os.path
 
+def ensureDirs(path):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
 
 def omitEmptyDict(**kwargs) -> dict:
     obj = {}
