@@ -5,21 +5,7 @@ import re
 
 from collections import defaultdict
 
-
-def dumpJson(filename, obj, **kwargs):
-    if "indent" not in kwargs:
-        kwargs["indent"] = ""
-    with open(filename, "w", encoding="utf-8", newline="\n") as f:
-        json.dump(obj, f, ensure_ascii=False, **kwargs)
-
-
-COLOR_PATTERN = re.compile(r"<color=(.*?)>(.*?)</color>", re.DOTALL)
-SIZE_PATTERN = re.compile(r"<size=(\d+)>(.*?)</size>", re.DOTALL)
-
-def sanitizeText(s):
-    s = COLOR_PATTERN.sub(r'\2', s[:-1])
-    s = SIZE_PATTERN.sub(r'<span style="font-size: calc(\1px * 0.75)">\2</span>', s)
-    return s
+from wiki_util import dumpJson, sanitizeText
 
 def processPropertiesFile(raw_file, bio_file, serif_file, profile_file):
     with open(os.path.join("_data", "processed", raw_file), "r", encoding="utf-8") as f:
