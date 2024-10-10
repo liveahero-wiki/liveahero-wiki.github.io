@@ -1,5 +1,24 @@
+{% assign skillS = include.skillId | downcase %}
+{% assign skillV2 = site.data.translation.Skill[skillS] %}
 {% assign skillOverride = site.data.wiki.SkillManualOverride[include.skillId] %}
-{% if skillOverride %}{{ skillOverride | render_liquid }}{% else %}
+
+{% if skillV2.description %}
+
+  {{ skillV2.description }}
+  <hr>
+  {% for effect in include.skill.effects %}
+    {% assign skillEffectId = effect.skillEffectId | downcase %}
+    {% assign skillEffect = site.data.SkillEffectMaster[skillEffectId] %}
+    {% assign skillEffectJson = skillEffect.skillEffectJson %}
+
+    {% if skillEffectJson.statusId == 0 %}
+      {% continue %}
+    {% endif %}
+
+    {{ skillEffectId | status_description_v2: skillEffectJson }}
+  {% endfor %}
+
+{% elsif skillOverride %}{{ skillOverride | render_liquid }}{% else %}
 
 {% assign randomGroups = include.skill.effects | group_by: "randomGroupId" %}
 

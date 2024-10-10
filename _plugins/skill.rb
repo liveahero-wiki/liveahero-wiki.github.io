@@ -36,6 +36,10 @@ module LahWiki
 
     INVALID = 999
 
+    def self.skill_effect_wiki(context)
+      @@status_wiki ||= context.registers[:site].data["wiki"]["translation"]["SkillEffect"]
+    end
+
     def self.status_wiki(context)
       @@status_wiki ||= context.registers[:site].data["wiki"]["Status"]
     end
@@ -379,6 +383,52 @@ module LahWiki
         name = "system status #{id}"
         wiki_icon = "ui_button_square_02"
       end
+
+      "<span class=\"status tippy\" data-id=\"#{id_s}\" data-content=\"#{description}\"><img src=\"/cdn/Sprite/#{wiki_icon}.png\" loading=\"lazy\"> #{name}</span>"      
+    end
+
+    def status_description_v2(skillEffectId, skillEffectJson)
+      id_s = skillEffectJson["statusId"].to_s
+
+      status = Skills::status_master(@context)[id_s]
+
+      if !status
+        return "unknown status #{id_s}"
+      end
+
+      wiki_icon = skillEffectJson["filename"]
+      turn = skillEffectJson["turn"]
+      if !wiki_icon || wiki_icon == ""
+        wiki_icon = "b_skill_special" # "ui_icon_stance_blank"
+      end
+
+      name = Skills::status_wiki(@context).dig(id_s, 'name') || status['statusName']
+      description = Skills::status_wiki(@context).dig(id_s, 'description') || status['description']
+
+      overrideStatusName = skillEffectJson["overrideStatusName"]
+      if overrideStatusName&.length > 0
+        name = Skills::skill_effect_wiki(@context).dig(skillEffectId, "overrideStatusName") || overrideStatusName
+      end
+
+      overrideStatusDescription = skillEffectJson["overrideStatusDescription"]
+      if overrideStatusDescription&.length > 0
+        description = Skills::skill_effect_wiki(@context).dig(skillEffectId, "overrideStatusDescription") || overrideStatusDescription
+      end
+
+      if skillEffectJson != nil
+        effects = {}
+        skillEffectJson["effects"].each do |effect|
+          effects[effect["class"]] = effect
+        end
+        @context.stack do
+          @context["skillEffectJson"] = skillEffectJson
+          @context["effects"] = effects
+
+          partial = Liquid::Template.parse(description, :line_numbers => true)
+          description = partial.render!(@context)
+        end
+      end
+      description = xml_escape(description)
 
       "<span class=\"status tippy\" data-id=\"#{id_s}\" data-content=\"#{description}\"><img src=\"/cdn/Sprite/#{wiki_icon}.png\" loading=\"lazy\"> #{name}</span>"      
     end
