@@ -102,14 +102,14 @@
     <h3>Active</h3>
     {% include skill-table-v2.html skillIds=skillIdsActive %}
  
-    {% if include.extraActiveSkillIds %}
+    {% if !site.data.translation.SkillV2Whitelist[stockId] && include.extraActiveSkillIds %}
     {% include skill-table-v2.html skillIds=include.extraActiveSkillIds hide_banner=true %}
     {% endif %}
 
     <h3>Passive</h3>
     {% include skill-table-v2.html skillIds=skillIdsPassive %}
 
-    {% if lastCardInfo.equipmentAppendSkills.size > 0 %}
+    {% if !site.data.translation.SkillV2Whitelist[stockId] && lastCardInfo.equipmentAppendSkills.size > 0 %}
     {% assign extraPassiveSkillIds = "" | split: "," | push: lastCardInfo.equipmentAppendSkills[0] %}
     {% include skill-table-v2.html skillIds=extraPassiveSkillIds hide_banner=true %}
     {% endif %}
