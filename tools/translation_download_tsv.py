@@ -1,6 +1,4 @@
 import csv
-import json
-import yaml
 import io
 import argparse
 
@@ -10,6 +8,7 @@ import wiki_util
 
 SKILL_TL_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGnHrxbjI27aRZLsu52ZiBlhZIqLEA4nsd0nICwGlzFPH_v2AQlvC5hf7mvvs8i7-XhfRkq0HcbhU1/pub?gid=1388379188&single=true&output=tsv"
 SKILL_EFFECT_TL_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGnHrxbjI27aRZLsu52ZiBlhZIqLEA4nsd0nICwGlzFPH_v2AQlvC5hf7mvvs8i7-XhfRkq0HcbhU1/pub?gid=1473812801&single=true&output=tsv"
+STATUS_TL_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGnHrxbjI27aRZLsu52ZiBlhZIqLEA4nsd0nICwGlzFPH_v2AQlvC5hf7mvvs8i7-XhfRkq0HcbhU1/pub?gid=1446280214&single=true&output=tsv"
 
 def getTranslatedTsv(url, filename, use_local=True):
     if not use_local:
@@ -50,15 +49,31 @@ def processSkillEffectTranslation(use_local: bool):
 
     obj = {}
     for row in rows:
-        skill = wiki_util.omitEmptyDict(
+        skillEffect = wiki_util.omitEmptyDict(
             skillName=row["overrideStatusNameTranslated"],
             description=row["overrideStatusDescriptionTranslated"],
         )
-        if skill:
-            obj[row["skillEffectId"]] = skill
+        if skillEffect:
+            obj[row["skillEffectId"]] = skillEffect
 
     wiki_util.ensureDirs("_data/translation/")
     wiki_util.dumpJson("_data/translation/SkillEffect.json", obj, indent=2)
+
+def processStatusTranslation(use_local: bool):
+    rows = getTranslatedTsv(STATUS_TL_URL, "status-tl.tsv", use_local)
+
+    obj = {}
+    for row in rows:
+        status = wiki_util.omitEmptyDict(
+            name=row["statusNameTranslated"],
+            description=row["descriptionTranslated"],
+            icon=row["icon"],
+        )
+        if status:
+            obj[row["statusId"]] = status
+
+    wiki_util.ensureDirs("_data/translation/")
+    wiki_util.dumpJson("_data/translation/Status.json", obj, indent=2)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -67,3 +82,4 @@ if __name__ == '__main__':
 
     processSkillTranslation(ARGS.use_local)
     processSkillEffectTranslation(ARGS.use_local)
+    processStatusTranslation(ARGS.use_local)
