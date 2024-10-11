@@ -34,6 +34,27 @@ module LahWiki
       99 => "Special",
     }
 
+    @@status_type_map = {
+      0 => "Debuff",
+      1 => "Buff",
+      2 => "Other",
+    }
+
+    @@stackable_map = {
+      false => "Unstackable",
+      true => "Stackable",
+    }
+
+    @@chargeable_map = {
+      false => "",
+      true => "/Charge",
+    }
+
+    @@elapse_turn_timing_map = {
+      0 => "Remove at the end of turn",
+      2 => "Reduce remaining turn at the end of action",
+    }
+
     INVALID = 999
 
     def self.skill_effect_wiki(context)
@@ -397,7 +418,6 @@ module LahWiki
       end
 
       wiki_icon = skillEffectJson["filename"]
-      turn = skillEffectJson["turn"]
       if !wiki_icon || wiki_icon == ""
         wiki_icon = "b_skill_special" # "ui_icon_stance_blank"
       end
@@ -428,9 +448,22 @@ module LahWiki
           description = partial.render!(@context)
         end
       end
-      description = xml_escape(description)
 
-      "<span class=\"status tippy\" data-id=\"#{id_s}\" data-content=\"#{description}\"><img src=\"/cdn/Sprite/#{wiki_icon}.png\" loading=\"lazy\"> #{name}</span>"      
+      label = "<b>#{name} [#{@@status_type_map[status['isGoodStatus']]}/#{@@stackable_map[skillEffectJson['canDuplicate']]}#{@@chargeable_map[skillEffectJson['isCharageEffect']]}]</b><br>"
+
+      turn = skillEffectJson["turn"]
+      turnS = ""
+      if turn > 0
+        turnS = "<span>#{turn}</span>"
+      end
+
+      elapseTurnTiming = skillEffectJson["elapseTurnTiming"]
+      if elapseTurnTiming&.length > 0
+      end
+
+      description = xml_escape(label + description)
+
+      "<span class=\"status tippy\" data-id=\"#{id_s}\" data-se-id=\"#{skillEffectId}\" data-content=\"#{description}\"><img src=\"/cdn/Sprite/#{wiki_icon}.png\" loading=\"lazy\">#{turnS} #{name}</span>"      
     end
 
     def status_manual(wiki_icon, name, description=nil)

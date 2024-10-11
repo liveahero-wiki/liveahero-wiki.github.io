@@ -616,6 +616,7 @@ $elementName: fire, water, earth, light, shadow;
   display: none;
 }
 .item, .status {
+  position: relative;
   text-decoration: underline dashed 1px;
   text-underline-offset: 2px;
   cursor: help;
@@ -623,6 +624,19 @@ $elementName: fire, water, earth, light, shadow;
     height: 2em;
     vertical-align: middle;
   }
+}
+.status span {
+  display: block;
+  position: absolute;
+  font-size: 10px;
+  text-align: center;
+  color: $bg;
+  background: $text;
+  border-radius: 6px;
+  height: 12px;
+  width: 12px;
+  top: 20px;
+  left: 24px;
 }
 // Skill
 .s-rand-g {

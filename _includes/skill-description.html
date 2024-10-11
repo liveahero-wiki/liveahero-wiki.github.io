@@ -5,7 +5,7 @@
 {% if skillV2.description %}
 
   {{ skillV2.description }}
-  <hr>
+  {% assign status_array = "" | split: "," %}
   {% for effect in include.skill.effects %}
     {% assign skillEffectId = effect.skillEffectId | downcase %}
     {% assign skillEffect = site.data.SkillEffectMaster[skillEffectId] %}
@@ -15,8 +15,12 @@
       {% continue %}
     {% endif %}
 
-    {{ skillEffectId | status_description_v2: skillEffectJson }}
+    {% assign status = skillEffectId | status_description_v2: skillEffectJson %}
+    {% assign status_array = status_array | push: status %}
   {% endfor %}
+  {% if status_array.size > 0 %}
+    <hr>{{ status_array | join: ", " }}
+  {% endif %}
 
 {% elsif skillOverride %}{{ skillOverride | render_liquid }}{% else %}
 
