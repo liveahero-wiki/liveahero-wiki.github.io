@@ -29,7 +29,7 @@ def writeEnglishSkill():
 
     with open("skill-en.tsv", "w", encoding="utf-8") as f:
         writer = csv.writer(f, delimiter='\t')
-        writer.writerow(["skillId", "charaName", "skillName", "description", "skillNameEng"])
+        writer.writerow(["skillId", "charaName", "skillName", "description", "skillNameTranslated"])
 
         for skill in SkillMaster.values():
             si = int(skill["skillId"])
@@ -116,5 +116,5 @@ def main():
 if __name__ == '__main__':
     main()
     #writeEnglishSkill()
-    writeEnglishStatus()
+    #writeEnglishStatus()
 
