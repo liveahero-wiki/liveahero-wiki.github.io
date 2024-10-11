@@ -9,7 +9,7 @@ wide_content: true
 {% assign cardInfos = site.data.SidekickMaster | where: "levelZone", 1 %}
 
 <div class="table-scroll">
-<table class="sort-table">
+<table class="sort-table bordered">
 <tr><th data-type="string">Sidekick</th><th>HP</th><th>ATK</th><th>View</th><th>Speed</th></tr>
 {% for c in cardInfos %}
 {% assign page = c.characterId | characterIdToPage %}
