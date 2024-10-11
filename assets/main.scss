@@ -281,6 +281,9 @@ th {
     border: 1px solid #000;
   }
 }
+.sortable td {
+  vertical-align: top;
+}
 details {
   contain: content;
   border: 1px solid #aaa;
@@ -401,9 +404,9 @@ figcaption {
   grid-auto-flow: dense;
   margin-bottom: 20px;
 }
-.re-table div {
+.re-A, .re-B, .re-C {
   padding: 10px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid $text;
 }
 .re-A {
   background: #d5d5d5;
@@ -472,7 +475,7 @@ wiki-passive, wiki-auto-action {
   position: relative;
   border-top: 1px solid $text;
   padding-top: 1.25rem;
-  margin-top: 1.75rem;
+  margin-top: 1.25rem;
 }
 wiki-passive::before, wiki-auto-action::before {
   display: block;
