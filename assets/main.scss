@@ -5,6 +5,8 @@ $colorLight: #ffd95b;
 $colorPrimary: #ffa726;
 $colorDark: #c77800;
 $colorGrey: #ccc;
+$text: #000;
+$bg: #fafafa;
 
 $silver: #d0d0d0;
 $gold: linear-gradient(195deg, #f0b050, #ffe080, #f0b050);
@@ -22,7 +24,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  background-color: #fafafa;
+  background-color: $bg;
 }
 header, .page-header, .pager, footer {
   flex: none;
@@ -400,7 +402,7 @@ figcaption {
   margin-bottom: 20px;
 }
 .re-table div {
-  padding: 5px 10px;
+  padding: 10px;
   border-bottom: 1px solid #e5e5e5;
 }
 .re-A {
@@ -464,6 +466,27 @@ $elementColor: #f07d75, #88bcff, #5fcb58, #ffb251, #b88dff;
   grid-template-columns: fit-content(280px) 1fr;
   grid-gap: 5px;
   margin-bottom: 30px;
+}
+wiki-passive, wiki-auto-action {
+  display: block;
+  position: relative;
+  border-top: 1px solid $text;
+  padding-top: 1.25rem;
+  margin-top: 1.75rem;
+}
+wiki-passive::before, wiki-auto-action::before {
+  display: block;
+  position: absolute;
+  top: -.75rem;
+  left: 20px;
+  background: $bg;
+  padding: 2px;
+}
+wiki-passive::before {
+  content: 'Passive';
+}
+wiki-auto-action::before {
+  content: 'Auto action';
 }
 @media (max-width: 768px) {
   .blooming {
