@@ -37,11 +37,11 @@ module LahWiki
     INVALID = 999
 
     def self.skill_effect_wiki(context)
-      @@status_wiki ||= context.registers[:site].data["wiki"]["translation"]["SkillEffect"]
+      @@status_wiki ||= context.registers[:site].data["translation"]["SkillEffect"]
     end
 
     def self.status_wiki(context)
-      @@status_wiki ||= context.registers[:site].data["wiki"]["Status"]
+      @@status_wiki ||= context.registers[:site].data["translation"]["Status"]
     end
 
     def self.status_master(context)
