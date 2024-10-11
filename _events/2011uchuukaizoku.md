@@ -11,8 +11,8 @@ event_end_time: 2020-12-11T18:00:00+09
 
 The limited time quests will feature special battle condition. Normally, you cannot win the battle without defeating all the enemies, but in this event, you can win the battle by defeating the BOSS characters that appear in each quest.
 
-In "Clash! Space Pirate", the enemy uses a skill with the new effect {% include status-icon.html id=9 %} Resurrection.
-The {% include status-icon.html id=9 %} Resurrection effect can let the defeated allies to re-enter battles with their HP restored.
+In "Clash! Space Pirate", the enemy uses a skill with the new effect {{ 9 | status_description }} Resurrection.
+The {{ 9 | status_description }} Resurrection effect can let the defeated allies to re-enter battles with their HP restored.
 
 In order to defeat enemies that are resurrected many times, heroes with powerful general attacks and those that can defeat enemies with a single blow, will be effective. 
 
