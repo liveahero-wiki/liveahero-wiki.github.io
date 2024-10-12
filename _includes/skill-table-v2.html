@@ -1,9 +1,8 @@
-{% unless include.hide_banner == true %}
-<p>Hover over the effect description to see original japanese description. Please help report any bug related to skill effect or suggestion on rewording skill description <a href="https://docs.google.com/spreadsheets/d/1gnic8BbN0-cPrj9XGjxVjjU50L8fiD4hRQDMUR2P37s/edit#gid=0">here</a>.</p>
-{% endunless %}
-
+{% if include.split != true or include.first == true %}
 <div class="re-table">
-    <div class="re-A re-head">Skill Name</div><div class="re-C re-head">View cost</div><div class="re-B re-head">Effect/Proc rate</div>
+    <div class="re-A re-head">Skill Name</div><div class="re-C re-head">View cost</div><div class="re-B re-head">Skill Description</div>
+{% endif %}
+
 {% for id in include.skillIds %}
 {% assign nid = id | plus: 0 %}
 {% assign sid = id | downcase %}
@@ -13,4 +12,7 @@
     <div class="re-C">{{ skill.useView}}</div>
     <div class="re-B" title="{{ skill.description | sanitizeSkillDescription }}">{% include skill-description.html skillId=nid skill=skill %}</div>
 {% endfor %}
+
+{% if include.split != true or include.last == true %}
 </div>
+{% endif %}

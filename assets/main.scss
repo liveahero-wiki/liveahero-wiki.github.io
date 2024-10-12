@@ -404,7 +404,7 @@ figcaption {
   grid-auto-flow: dense;
   margin-bottom: 20px;
 }
-.re-A, .re-B, .re-C {
+.re-A, .re-B, .re-C, .re-split {
   padding: 10px;
   border-bottom: 1px solid $text;
 }
@@ -414,12 +414,18 @@ figcaption {
 .re-head {
   background: $colorPrimary;
 }
+.re-split {
+  grid-column: span 3;
+}
 @media (max-width: 550px) {
   .re-table {
       grid-template-columns: auto 55px;
   }
-  .re-B {
+  .re-B, .re-split {
       grid-column: span 2;
+  }
+  .re-B.re-head {
+    display: none;
   }
 }
 .heroinfobox {
