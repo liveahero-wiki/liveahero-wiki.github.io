@@ -83,8 +83,8 @@ def processSkillEffectTranslation(use_local: bool):
     obj = {}
     for row in rows:
         skillEffect = wiki_util.omitEmptyDict(
-            skillName=row["overrideStatusNameTranslated"],
-            description=row["overrideStatusDescriptionTranslated"],
+            overrideStatusName=row["overrideStatusNameTranslated"],
+            overrideStatusDescription=row["overrideStatusDescriptionTranslated"],
         )
         if skillEffect:
             obj[row["skillEffectId"]] = skillEffect
