@@ -23,30 +23,31 @@ def skillIdToCharaResourceNameMap() -> dict:
 
 def writeEnglishSkill():
     SkillMaster = loadJson("_data/SkillMaster.json")
-    SkillName = loadYaml("_data/wiki/SkillNameTranslation.yml")
+    Skill = loadJson("_data/translation/Skill.json")
 
     charaMap = skillIdToCharaResourceNameMap()
 
     with open("skill-en.tsv", "w", encoding="utf-8") as f:
         writer = csv.writer(f, delimiter='\t')
-        writer.writerow(["skillId", "charaName", "skillName", "description", "skillNameTranslated"])
+        writer.writerow(["skillId", "charaName", "skillName", "description", "skillNameTranslated", "descriptionTranslated"])
 
         for skill in SkillMaster.values():
             si = int(skill["skillId"])
             charaName = charaMap.get(si, "")
-            eng = SkillName.get(si, "")
+            ss = Skill.get(si, "")
 
             writer.writerow([
                 skill["skillId"],
                 charaName,
                 skill["skillName"],
                 sanitizeSkillDescription(skill["description"]),
-                eng,
+                ss["skillName"] if ss else "",
+                ss["description"] if ss else "",
             ])
 
 def writeEnglishStatus():
     StatusMaster = loadJson("_data/StatusMaster.json")
-    StatusWiki = loadYaml("_data/wiki/Status.yml")
+    StatusWiki = loadJson("_data/translation/Status.json")
 
     with open("status-en.tsv", "w", encoding="utf-8") as f:
         writer = csv.writer(f, delimiter='\t')
@@ -91,8 +92,8 @@ def main():
         for value in SkillEffectMaster.values():
             skillEffect = value["skillEffectJson"]
             if skillEffect["statusId"] == 0 or \
-                not skillEffect.get("isOverrideStatusName", False) or \
-                not skillEffect.get("isOverrideStatusDescription", False):
+                not (skillEffect.get("isOverrideStatusName", False) or \
+                skillEffect.get("isOverrideStatusDescription", False)):
                 continue
 
             writer.writerow([
