@@ -435,19 +435,19 @@ module LahWiki
         description = Skills::skill_effect_wiki(@context).dig(skillEffectId, "overrideStatusDescription") || overrideStatusDescription
       end
 
-      # if skillEffectJson != nil
-      #   effects = {}
-      #   skillEffectJson["effects"].each do |effect|
-      #     effects[effect["class"]] = effect
-      #   end
-      #   @context.stack do
-      #     @context["skillEffectJson"] = skillEffectJson
-      #     @context["effects"] = effects
-      # 
-      #     partial = Liquid::Template.parse(description, :line_numbers => true)
-      #     description = partial.render!(@context)
-      #   end
-      # end
+      if description.include? "{{"
+        effects = {}
+        skillEffectJson["effects"].each do |effect|
+          effects[effect["class"]] = effect
+        end
+        @context.stack do
+          @context["skillEffectJson"] = skillEffectJson
+          @context["effects"] = effects
+      
+          partial = Liquid::Template.parse(description, :line_numbers => true)
+          description = partial.render!(@context)
+        end
+      end
 
       label = "<b>#{name} [#{@@status_type_map[status['isGoodStatus']]}/#{@@stackable_map[skillEffectJson['canDuplicate']]}#{@@chargeable_map[skillEffectJson['isCharageEffect']]}]</b><br>"
 

@@ -199,7 +199,7 @@
 {% endif %}
 {% endfor %}
 
-{% if !site.data.translation.SkillV2Whitelist[stockId] && passiveSkillIds.size > 0 %}
+{% if site.data.translation.SkillV2Whitelist.heroes[stockId] != true and passiveSkillIds.size > 0 %}
 <h3>Passive skills</h3>
 {% include skill-table-v2.html skillIds=passiveSkillIds hide_banner=true %}
 {% endif %}

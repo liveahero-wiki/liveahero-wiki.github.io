@@ -49,7 +49,7 @@ def processSkillTranslation(use_local: bool):
 
     heroes={}
     sidekicks={}
-    for stockId, chara in CardMaster.items():
+    for chara in CardMaster.values():
         all_present = True
         for skillId in chara["skillIds"]:
             skill = obj.get(str(skillId))
@@ -57,7 +57,7 @@ def processSkillTranslation(use_local: bool):
                 all_present = False
                 break
         if all_present:
-            heroes[stockId] = True
+            heroes[chara["stockId"]] = True
 
     for chara in SidekickMaster.values():
         all_present = True
@@ -73,7 +73,7 @@ def processSkillTranslation(use_local: bool):
                 break
 
         if all_present:
-            sidekicks[stockId] = True
+            sidekicks[chara["stockId"]] = True
 
     wiki_util.dumpJson("_data/translation/SkillV2Whitelist.json", dict(heroes=heroes, sidekicks=sidekicks))
 
