@@ -191,7 +191,7 @@ collectionBtn.addEventListener("click", function (e) {
   enableCollectionMode()
 }, false);
 
-for (const radio of document.querySelectorAll(".filter-radio-group input[type=radio]")) {
+for (const radio of document.querySelectorAll("#collection-radio-group input[type=radio]")) {
   radio.addEventListener("change", () => {
     document.querySelector("#hero-list").dataset.radioFilter = radio.value;
     document.querySelector("#sidekick-list").dataset.radioFilter = radio.value;
