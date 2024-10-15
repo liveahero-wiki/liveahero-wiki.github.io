@@ -73,7 +73,6 @@ document.querySelectorAll(".chara-filter").forEach(ele => {
 
 let collectionMode = false;
 const collectionBtn = document.querySelector("#collection-btn");
-const toggleHideBtn = document.querySelector("#toggle-hide-btn");
 const hasUnit = "has-unit";
 const heroList = Array.from(document.querySelector("#hero-list").children);
 const sidekickList = Array.from(document.querySelector("#sidekick-list").children);
@@ -191,9 +190,13 @@ collectionBtn.addEventListener("click", function (e) {
   }
   enableCollectionMode()
 }, false);
-toggleHideBtn.addEventListener("click", function() {
-  document.querySelectorAll(".card-list").forEach(e => e.classList.toggle("hide-unmarked"));
-});
+
+for (const radio of document.querySelectorAll(".filter-radio-group input[type=radio]")) {
+  radio.addEventListener("change", () => {
+    document.querySelector("#hero-list").dataset.radioFilter = radio.value;
+    document.querySelector("#sidekick-list").dataset.radioFilter = radio.value;
+  });
+}
 
 function enableCollectionMode() {
   collectionMode = true;

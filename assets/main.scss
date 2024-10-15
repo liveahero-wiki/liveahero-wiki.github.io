@@ -624,8 +624,11 @@ $elementName: fire, water, earth, light, shadow;
 .filtered {
   display: none !important;
 }
-.hide-unmarked li:not(.has-unit) {
-  display: none;
+[data-radio-filter="1"] li:not(.has-unit) {
+  display: none !important;
+}
+[data-radio-filter="2"] li.has-unit {
+  display: none !important;
 }
 .item, .status {
   position: relative;

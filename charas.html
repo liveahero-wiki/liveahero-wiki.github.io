@@ -21,9 +21,17 @@ additional_scripts: ["/assets/chara.js"]
 
 <fieldset>
 <legend>Collection</legend>
-<p>Activate Collection Mode, then click the heroes and sidekicks you have to get a shareable URL for your collection.</p>
-<button id="collection-btn">Activate Collection Mode</button>
-<button id="toggle-hide-btn">Toggle Non-highlighted Cards</button>
+<p>Activate Collection Mode, then click on the hero/sidekicks' icons to mark them and get a shareable URL for your collection.</p>
+<p><button id="collection-btn">Activate Collection Mode</button>
+</p>
+
+<fieldset class="filter-radio-group" name="collection-filter">
+<legend>Display</legend>
+<label><input type="radio" name="collection-filter" value="0" checked>All</label>
+<label><input type="radio" name="collection-filter" value="1">Selected only</label>
+<label><input type="radio" name="collection-filter" value="2">Unselected only</label>
+</fieldset>
+
 </fieldset>
 
 <h3 id="heroes">Heroes</h3>
