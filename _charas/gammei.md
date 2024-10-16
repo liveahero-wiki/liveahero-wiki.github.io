@@ -47,7 +47,7 @@ sidekicks:
     thrown several burdens from both above and below his position, So troubles never
     seem to end for him. His old looking face and meagre salary are the roots of his
     anguish.
-  extra_sprites: fg_gammei_s01_skin1
+  extra_sprites: fg_gammei_s01_skin1,fg_gammei_s01_skin2
 ---
 
 {% include voice-table.html resourceName="gammei"
