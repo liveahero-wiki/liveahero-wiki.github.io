@@ -4,19 +4,32 @@ banner: true
 wide_content: true
 ---
 
+<style>
+[data-radio-filter="1"] tr.no-auto-passive {
+    display: none;
+}
+#collection-radio-group {
+    margin-bottom: 20px;
+}
+</style>
+
+<fieldset id="collection-radio-group" name="auto-passive-filter">
+    <legend>Display</legend>
+    <label><input type="radio" name="auto-passive-filter" value="0" checked>All</label>
+    <label><input type="radio" name="auto-passive-filter" value="1">Has auto passive only</label>
+</fieldset>
+
 <p>For simplicity sake, only active and passive skills at level 100 are listed.</p>
 
 {% assign cardInfos = site.data.SidekickMaster | where: "levelZone", 6 %}
 
 <div class="table-scroll">
-<table class="sort-table bordered">
+<table id="main-table" class="sort-table bordered">
 <tr><th data-type="string">Hero</th><th>SPD</th><th data-type="string">Active</th><th>Active VP</th><th data-type="string">Passive</th></tr>
 {% for c in cardInfos %}
 {% assign page = c.characterId | characterIdToPage %}
 {% assign g = c.growths[1] %}
-<tr>
-<td><a class="item" href="{{ page.url }}#s{{ c.stockId }}"><img src="/cdn/Sprite/icon_{{ c.resourceName }}_s01.png" loading="lazy"> {{ page.title }}</a></td>
-<td>{{ g.agility }}</td>
+
 {% assign activeInt = c.skillIds[0] %}
 {% assign passiveInt = c.equipmentSkills | last %}
 
@@ -25,6 +38,11 @@ wide_content: true
 
 {% assign active_skill = site.data.SkillMaster[active] %}
 {% assign passive_skill = site.data.SkillMaster[passive] %}
+{% assign hasAutoPassive = passive_skill.description | hasAutoActionMarker %}
+<tr {% if hasAutoPassive != true %}class="no-auto-passive"{% endif %}>
+<td><a class="item" href="{{ page.url }}#s{{ c.stockId }}"><img src="/cdn/Sprite/icon_{{ c.resourceName }}_s01.png" loading="lazy"> {{ page.title }}</a></td>
+<td>{{ g.agility }}</td>
+
 <td title="{{ active_skill.description | sanitizeSkillDescription }}">{% include skill-description.html skill=active_skill skillId=activeInt %}</td>
 <td>{{ active_skill.useView }}</td>
 <td title="{{ passive_skill.description | sanitizeSkillDescription }}">{% include skill-description.html skill=passive_skill skillId=passiveInt %}</td>
@@ -32,3 +50,11 @@ wide_content: true
 {% endfor %}
 </table>
 </div>
+
+<script>
+for (const radio of document.querySelectorAll("#collection-radio-group input[type=radio]")) {
+  radio.addEventListener("change", () => {
+    document.querySelector("#main-table").dataset.radioFilter = radio.value;
+  });
+}
+</script>

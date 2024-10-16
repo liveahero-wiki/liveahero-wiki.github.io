@@ -518,6 +518,10 @@ module LahWiki
       s = s.gsub("</style>", "")
       return s
     end
+
+    def hasAutoActionMarker(s)
+      return s.include?('<style="オート行動"></style>')
+    end
   end
 end
 
