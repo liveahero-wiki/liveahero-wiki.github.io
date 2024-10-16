@@ -69,6 +69,12 @@ sprites="fg_villainChasseurEarth_s01,fg_villainChasseurFire_s01,fg_villainChasse
 sprites="fg_villainChasseurEarth_h01,fg_villainChasseurFire_h01,fg_villainChasseurLight_h01,fg_villainChasseurShadow_h01,fg_villainChasseurWater_h01"
 %}
 
+### Engine Kaibutsu (Juvenile)
+
+{% include hero-infobox-unreleased.html name="Adult Ghost Kaibutsu" mob=true
+sprites="fg_kaibutsuEngineLarvaEarth_h01,fg_kaibutsuEngineLarvaFire_h01,fg_kaibutsuEngineLarvaLight_h01,fg_kaibutsuEngineLarvaShadow_h01,fg_kaibutsuEngineLarvaWater_h01"
+%}
+
 ### Ghost Kaibutsu (Adult)
 
 {% include hero-infobox-unreleased.html name="Adult Ghost Kaibutsu" mob=true
