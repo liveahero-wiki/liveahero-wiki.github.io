@@ -5,6 +5,8 @@ $colorLight: #ffd95b;
 $colorPrimary: #ffa726;
 $colorDark: #c77800;
 $colorGrey: #ccc;
+$text: #000;
+$bg: #fafafa;
 
 $silver: #d0d0d0;
 $gold: linear-gradient(195deg, #f0b050, #ffe080, #f0b050);
@@ -22,7 +24,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  background-color: #fafafa;
+  background-color: $bg;
 }
 header, .page-header, .pager, footer {
   flex: none;
@@ -279,6 +281,9 @@ th {
     border: 1px solid #000;
   }
 }
+.sort-table td {
+  vertical-align: top;
+}
 details {
   contain: content;
   border: 1px solid #aaa;
@@ -399,9 +404,12 @@ figcaption {
   grid-auto-flow: dense;
   margin-bottom: 20px;
 }
-.re-table div {
-  padding: 5px 10px;
-  border-bottom: 1px solid #e5e5e5;
+.re-table wiki-enhance {
+  background: $colorLight;
+}
+.re-A, .re-B, .re-C, .re-split {
+  padding: 10px;
+  border-bottom: 1px solid $text;
 }
 .re-A {
   background: #d5d5d5;
@@ -409,12 +417,18 @@ figcaption {
 .re-head {
   background: $colorPrimary;
 }
+.re-split {
+  grid-column: span 3;
+}
 @media (max-width: 550px) {
   .re-table {
       grid-template-columns: auto 55px;
   }
-  .re-B {
+  .re-B, .re-split {
       grid-column: span 2;
+  }
+  .re-B.re-head {
+    display: none;
   }
 }
 .heroinfobox {
@@ -464,6 +478,27 @@ $elementColor: #f07d75, #88bcff, #5fcb58, #ffb251, #b88dff;
   grid-template-columns: fit-content(280px) 1fr;
   grid-gap: 5px;
   margin-bottom: 30px;
+}
+wiki-passive, wiki-auto-action {
+  display: block;
+  position: relative;
+  border-top: 1px solid $text;
+  padding-top: 1.25rem;
+  margin-top: 1.25rem;
+}
+wiki-passive::before, wiki-auto-action::before {
+  display: block;
+  position: absolute;
+  top: -.75rem;
+  left: 20px;
+  background: $bg;
+  padding: 2px;
+}
+wiki-passive::before {
+  content: 'Passive';
+}
+wiki-auto-action::before {
+  content: 'Auto action';
 }
 @media (max-width: 768px) {
   .blooming {
@@ -589,10 +624,14 @@ $elementName: fire, water, earth, light, shadow;
 .filtered {
   display: none !important;
 }
-.hide-unmarked li:not(.has-unit) {
-  display: none;
+[data-radio-filter="1"] li:not(.has-unit) {
+  display: none !important;
+}
+[data-radio-filter="2"] li.has-unit {
+  display: none !important;
 }
 .item, .status {
+  position: relative;
   text-decoration: underline dashed 1px;
   text-underline-offset: 2px;
   cursor: help;
@@ -600,6 +639,19 @@ $elementName: fire, water, earth, light, shadow;
     height: 2em;
     vertical-align: middle;
   }
+}
+.status span {
+  display: block;
+  position: absolute;
+  font-size: 10px;
+  text-align: center;
+  color: $bg;
+  background: $text;
+  border-radius: 6px;
+  height: 12px;
+  width: 12px;
+  top: 20px;
+  left: 24px;
 }
 // Skill
 .s-rand-g {

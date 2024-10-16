@@ -9,7 +9,7 @@ wide_content: true
 {% assign cardInfos = site.data.CardMaster | where: "rarity", 5 | where_exp: "item", "item.stockId < 90000" %}
 
 <div class="table-scroll">
-<table class="sort-table">
+<table class="sort-table bordered">
 <tr><th data-type="string">Hero</th><th data-type="string">Role</th><th>HP</th><th>ATK</th><th>View</th><th>Speed</th></tr>
 {% for c in cardInfos %}
 {% assign page = c.characterId | characterIdToPage %}

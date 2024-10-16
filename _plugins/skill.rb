@@ -34,10 +34,35 @@ module LahWiki
       99 => "Special",
     }
 
+    @@status_type_map = {
+      0 => "Debuff",
+      1 => "Buff",
+      2 => "Other",
+    }
+
+    @@stackable_map = {
+      false => "Unstackable",
+      true => "Stackable",
+    }
+
+    @@chargeable_map = {
+      false => "",
+      true => "/Charge",
+    }
+
+    @@elapse_turn_timing_map = {
+      0 => "Remove at the end of turn",
+      2 => "Reduce remaining turn at the end of action",
+    }
+
     INVALID = 999
 
+    def self.skill_effect_wiki(context)
+      @@skill_effect_wiki ||= context.registers[:site].data["translation"]["SkillEffect"]
+    end
+
     def self.status_wiki(context)
-      @@status_wiki ||= context.registers[:site].data["wiki"]["Status"]
+      @@status_wiki ||= context.registers[:site].data["translation"]["Status"]
     end
 
     def self.status_master(context)
@@ -383,6 +408,64 @@ module LahWiki
       "<span class=\"status tippy\" data-id=\"#{id_s}\" data-content=\"#{description}\"><img src=\"/cdn/Sprite/#{wiki_icon}.png\" loading=\"lazy\"> #{name}</span>"      
     end
 
+    def status_description_v2(skillEffectId, skillEffectJson)
+      id_s = skillEffectJson["statusId"].to_s
+
+      status = Skills::status_master(@context)[id_s]
+
+      if !status
+        return "unknown status #{id_s}"
+      end
+
+      wiki_icon = skillEffectJson["filename"]
+      if !wiki_icon || wiki_icon == ""
+        wiki_icon = "b_skill_special" # "ui_icon_stance_blank"
+      end
+
+      name = Skills::status_wiki(@context).dig(id_s, 'name') || status['statusName']
+      description = Skills::status_wiki(@context).dig(id_s, 'description') || status['description']
+
+      overrideStatusName = skillEffectJson["overrideStatusName"]
+      if overrideStatusName&.length > 0
+        name = Skills::skill_effect_wiki(@context).dig(skillEffectId, "overrideStatusName") || overrideStatusName
+      end
+
+      overrideStatusDescription = skillEffectJson["overrideStatusDescription"]
+      if overrideStatusDescription&.length > 0
+        description = Skills::skill_effect_wiki(@context).dig(skillEffectId, "overrideStatusDescription") || overrideStatusDescription
+      end
+
+      if description.include? "{{"
+        effects = {}
+        skillEffectJson["effects"].each do |effect|
+          effects[effect["class"]] = effect
+        end
+        @context.stack do
+          @context["skillEffectJson"] = skillEffectJson
+          @context["effects"] = effects
+      
+          partial = Liquid::Template.parse(description, :line_numbers => true)
+          description = partial.render!(@context)
+        end
+      end
+
+      label = "<b>#{name} [#{@@status_type_map[status['isGoodStatus']]}/#{@@stackable_map[skillEffectJson['canDuplicate']]}#{@@chargeable_map[skillEffectJson['isCharageEffect']]}]</b><br>"
+
+      turn = skillEffectJson["turn"]
+      turnS = ""
+      if turn > 0
+        turnS = "<span>#{turn}</span>"
+      end
+
+      elapseTurnTiming = skillEffectJson["elapseTurnTiming"]
+      if elapseTurnTiming&.length > 0
+      end
+
+      description = xml_escape(label + description)
+
+      "<span class=\"status tippy\" data-id=\"#{id_s}\" data-se-id=\"#{skillEffectId}\" data-content=\"#{description}\"><img src=\"/cdn/Sprite/#{wiki_icon}.png\" loading=\"lazy\">#{turnS} #{name}</span>"      
+    end
+
     def status_manual(wiki_icon, name, description=nil)
       if description && description.length > 0
         description = xml_escape(description)
@@ -434,6 +517,10 @@ module LahWiki
       s = s.gsub(/<style="(.*?)">/, "")
       s = s.gsub("</style>", "")
       return s
+    end
+
+    def hasAutoActionMarker(s)
+      return s.include?('<style="オート行動"></style>')
     end
   end
 end

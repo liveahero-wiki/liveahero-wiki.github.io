@@ -4,6 +4,8 @@ on:
   workflow_dispatch: ~
   push:
     branches: [ master ]
+  schedule:
+    - cron: '0 */6 * * *'
 
 jobs:
   build:
@@ -21,6 +23,7 @@ jobs:
     - name: Generate data files
       run: |
         python -m pip install -r requirements.txt
+        python tools/translation_download_tsv.py
         python tools/skill_evo.py
     - name: Build the site in the jekyll/builder container
       run: |

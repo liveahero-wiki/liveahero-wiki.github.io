@@ -14,7 +14,7 @@
     {% assign nid = skill.skillId %}
     {% assign sid = skill.skillId | downcase %}
     {% assign realSkill = site.data.SkillMaster[sid] %}
-    {% assign skillName = site.data.wiki.SkillNameTranslation[nid] %}
+    {% assign skillName = site.data.translation.Skill[sid].skillName %}
     <b>{{ skillName | default: realSkill.skillName }}</b>
     <p>View: {{ realSkill.useView }}</p>
     <p>{% include skill-description.html skillId=nid skill=realSkill %}</p>

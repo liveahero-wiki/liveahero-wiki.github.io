@@ -31,8 +31,6 @@ sidekicks:
     The bizarre rebellious spirit is also directed at the intervenors, and he
     continues to work in his underground organization to achieve revenge against
     them.
-  extraPassiveSkillIds:
-  - '8114101'
   extra_sprites: fg_seiichiro_s01_skin1,fg_seiichiro_s01_skin2,fg_seiichiro_s01_skin3,fg_seiichiro_s01_skin4
 ---
 

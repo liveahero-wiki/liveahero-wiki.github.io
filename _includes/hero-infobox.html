@@ -106,15 +106,6 @@
 </details>
 {% endif %}
 
-
-{% assign skillIds = firstCardInfo.skillIds %}
-{% for cardInfo in cardInfos %}
-{% unless forloop.first %}
-{% for id in cardInfo.skillIds %}
-{% unless skillIds contains id %}{% assign skillIds = skillIds | push: id %}{% endunless %}
-{% endfor %}
-{% endunless %}
-{% endfor %}
 <h2 id="h{{ include.stockId }}-stats">Stats</h2>
     
 <div class="table-scroll">
@@ -137,27 +128,69 @@
         {% endfor %}
     </table>
 </div>
-{% comment %}{% for cardInfo in cardInfos %}
-<div class="hero{{ cardInfo.rarity }}">
-    <h3>{{ cardInfo.rarity }} ☆</h3>
-    <table>
-        <tr>
-            <th>Level</th><th>HP</th><th>ATK</th><th>SPD</th><th>View</th>
-        </tr>
-        {% for growth in cardInfo.growths %}
-        <tr>
-            <td>{{ growth.level }}</td><td>{{ growth.hp }}</td><td>{{ growth.attack }}</td><td>{{ growth.agility }}</td><td>{{ growth.addView }}</td>
-        </tr>
-        {% assign maxLevel = cardInfo.rarity | times: 10 %}
-        {% if growth.level == maxLevel %}{% break %}{% endif %}
-        {% endfor %}
-    </table>
-</div>
-{% endfor %}{% endcomment %}
 
 <h2>Skills</h2>
 
+{% assign skillIds = firstCardInfo.skillIds %}
+{% include skill-table-v2.html skillIds=skillIds split=true first=true %}
+
+{% if firstCardInfo.rarity == 1 %}
+    {% assign threeStar = cardInfos[2] %}
+    {% assign threeStarSkillIds = "" | split: "," | push: threeStar.skillIds[2] %}
+    <div class="re-split"><b>Skill 3 obtained at rarity 3 ☆</b></div>
+    {% include skill-table-v2.html skillIds=threeStarSkillIds split=true %}
+{% else %}
+    {% assign threeStar = firstCardInfo %}
+{% endif %}
+
+{% assign lastSkillIds = "" | split: "," %}
+{% assign skillUpgradedIndex = 1 %}
+{% for id in lastCardInfo.skillIds %}
+    {% unless threeStar.skillIds contains id %}
+        {% assign lastSkillIds = lastSkillIds | push: id %}
+        {% break %}
+    {% endunless %}
+    {% assign skillUpgradedIndex = skillUpgradedIndex | plus: 1 %}
+{% endfor %}
+{% if firstCardInfo.rarity == 5 %}
+    <div class="re-split"><b>Skill {{ skillUpgradedIndex }} upgraded at rarity 6 ☆</b></div>
+{% else %}
+    <div class="re-split"><b>Skill {{ skillUpgradedIndex }} upgraded at rarity 5 ☆</b></div>
+{% endif %}
+{% include skill-table-v2.html skillIds=lastSkillIds split=true last=true %}
+
+{% comment %}
+{% assign skillIds = firstCardInfo.skillIds %}
+{% for cardInfo in cardInfos %}
+{% unless forloop.first %}
+{% for id in cardInfo.skillIds %}
+{% unless skillIds contains id %}{% assign skillIds = skillIds | push: id %}{% endunless %}
+{% endfor %}
+{% endunless %}
+{% endfor %}
 {% include skill-table-v2.html skillIds=skillIds %}
+
+{% if firstCardInfo.rarity == 1 %}
+    {% assign threeStar = cardInfos[2] %}
+    {% assign threeStarSkillId = threeStar.skillIds[2] | downcase %}
+    <p>Skill 3 ({{ site.data.translation.Skill[threeStarSkillId].skillName | default: site.data.SkillMaster[threeStarSkillId].skillName }})
+    is obtained at rarity 3 ☆.</p>
+{% else %}
+    {% assign threeStar = firstCardInfo %}
+{% endif %}
+
+{% assign skillUpgradedIndex = 1 %}
+{% for id in lastCardInfo.skillIds %}
+    {% unless threeStar.skillIds contains id %}
+        {% assign lastSkillId = id | downcase %}
+        {% break %}
+    {% endunless %}
+    {% assign skillUpgradedIndex = skillUpgradedIndex | plus: 1 %}
+{% endfor %}
+<p>Skill {{ skillUpgradedIndex }}
+    ({{ site.data.translation.Skill[lastSkillId].skillName | default: site.data.SkillMaster[lastSkillId].skillName }})
+    is upgraded at rarity {% if firstCardInfo.rarity == 5 %}6{% else %}5{% endif %} ☆.</p>
+{% endcomment %}
 
 {% assign passiveSkillIds = "" | split: "," %}
 {% for skill in lastCardInfo.skillProvider.passiveSkills %}
@@ -166,7 +199,7 @@
 {% endif %}
 {% endfor %}
 
-{% if passiveSkillIds.size > 0 %}
+{% if site.data.translation.SkillV2Whitelist.heroes[stockId] != true and passiveSkillIds.size > 0 %}
 <h3>Passive skills</h3>
 {% include skill-table-v2.html skillIds=passiveSkillIds hide_banner=true %}
 {% endif %}
