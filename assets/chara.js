@@ -28,20 +28,18 @@ document.querySelectorAll(".chara-sort").forEach(ele => {
   });
 });
 
-function toggleCardList(list, btn, buttons) {
-  btn.classList.toggle("filter-on");
+const filterOn = "filter-on";
 
+function toggleCardList(list, btnMap) {
   const activeMap = {}
-  for (const btn of buttons) {
-    const field = btn.dataset.field;
-    let s = activeMap[field];
-    if (s === undefined) {
-      s = new Set()
-    }
-    if (!btn.classList.contains("filter-on")) {
-      s.add(btn.dataset.value);
-    }
+  for (const [field, buttons] of Object.entries(btnMap)) {
+    let s =  new Set();
     activeMap[field] = s;
+    for (const btn of buttons) {
+      if (!btn.classList.contains(filterOn)) {
+        s.add(btn.dataset.value);
+      }
+    }
   }
 
   for (const item of list.children) {
@@ -61,9 +59,45 @@ function toggleCardList(list, btn, buttons) {
 }
 document.querySelectorAll(".chara-filter").forEach(ele => {
   const list = document.querySelector(ele.dataset.list);
-  const buttons = ele.querySelectorAll("button");
+  const buttons = ele.querySelectorAll("button[data-field]");
+
+  const btnMap = {}; // field -> btns
   for (const btn of buttons) {
-    btn.addEventListener("click", () => toggleCardList(list, btn, buttons));
+    const field = btn.dataset.field;
+    let s = btnMap[field];
+    if (s === undefined) {
+      s = []
+      btnMap[field] = s;
+    }
+    s.push(btn);
+  }
+
+  for (const btn of buttons) {
+    btn.addEventListener("click", () => {
+      const foundIndex = btnMap[btn.dataset.field].findIndex(b => b.classList.contains(filterOn));
+      if (foundIndex == -1) {
+        for (const b of btnMap[btn.dataset.field]) {
+          if (b.dataset.value !== btn.dataset.value) {
+            b.classList.add(filterOn);
+          }
+        }
+      } else {
+        btn.classList.toggle(filterOn);
+      }
+
+      toggleCardList(list, btnMap);
+    });
+  }
+
+  const resetButtons = ele.querySelectorAll("button[data-reset]");
+  for (const btn of resetButtons) {
+    btn.addEventListener("click", () => {
+      for (const b of btnMap[btn.dataset.reset]) {
+        b.classList.remove(filterOn);
+      }
+
+      toggleCardList(list, btnMap);
+    });
   }
 });
 

@@ -11,6 +11,7 @@ additional_scripts: ["/assets/chara.js"]
 .control-panel {
   display: grid;
   grid-template-columns: min-content auto;
+  row-gap: 5px;
 }
 .control-panel div {
   padding: 0 3px;
@@ -53,6 +54,7 @@ additional_scripts: ["/assets/chara.js"]
     <button data-field="rarity" data-value="3">3</button>
     <button data-field="rarity" data-value="4">4</button>
     <button data-field="rarity" data-value="5">5</button>
+    | <button data-reset="rarity">All</button>
   </div>
 
   <div>Element</div>
@@ -62,6 +64,7 @@ additional_scripts: ["/assets/chara.js"]
     <button data-field="element" data-value="3">Wood</button>
     <button data-field="element" data-value="4">Light</button>
     <button data-field="element" data-value="5">Shadow</button>
+    | <button data-reset="element">All</button>
   </div>
 
   <div>Role</div>
@@ -74,6 +77,7 @@ additional_scripts: ["/assets/chara.js"]
     <button data-field="role" data-value="6">VP Gain</button>
     <button data-field="role" data-value="7">Heal</button>
     <button data-field="role" data-value="99">Special</button>
+    | <button data-reset="role">All</button>
   </div>
 </table>
 </fieldset>
@@ -102,6 +106,7 @@ additional_scripts: ["/assets/chara.js"]
       <button data-field="rarity" data-value="1">1</button>
       <button data-field="rarity" data-value="3">3</button>
       <button data-field="rarity" data-value="4">4</button>
+      | <button data-reset="rarity">All</button>
     </div>
   </div>
 </fieldset>
