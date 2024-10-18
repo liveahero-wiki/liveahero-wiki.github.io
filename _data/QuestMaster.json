@@ -161005,6 +161005,94 @@
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
   },
+  "1137005": {
+    "questId": 1137005,
+    "questName": "流星に託したもの",
+    "subName": "第５話",
+    "questKind": 5,
+    "chapterId": 1137,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2024-10-18 18:00:00",
+    "endAt": "2024-11-05 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 5,
+    "enemyLevel": 13,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1137004,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuEngineLarvaFire_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 106
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuEngineLarvaLight_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 105
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuEngineLarvaEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 104
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuEngineLarvaShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 103
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
   "1138001": {
     "questId": 1138001,
     "questName": "式典の乱入者",
@@ -161934,6 +162022,91 @@
         "battleInfoIcon": "icon_kaibutsuLarvaEarth_h01",
         "battleInfoElement": 3,
         "battleInfoSpd": 109
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1140004": {
+    "questId": 1140004,
+    "questName": "導きの先で会えたなら",
+    "subName": "第４話チャレンジクエスト",
+    "questKind": 6,
+    "chapterId": 1140,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2024-10-18 18:00:00",
+    "endAt": "2024-11-05 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 4,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 29,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 34,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1137004,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 104
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaLight_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 100
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 96
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuEngineLarvaShadowRisingMoon4_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 115
       }
     ],
     "hasAdv": false,
