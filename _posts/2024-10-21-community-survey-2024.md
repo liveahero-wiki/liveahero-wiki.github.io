@@ -679,7 +679,7 @@ Lift:
 
 For the next two questions, the volume of the feedback is simply too big for me to go through one by one, so I used ChatGPT to summarize them (and even then I had to do it in a few batches because the total text length exceeds ChatGPT’s limit...)
 
-The “number of mentions” should be treated more as an estimation rather than absolute value. Words coloured in blue are my own. 
+The “number of mentions” should be treated more as an estimation rather than absolute value. <span class="comment">Words coloured in blue are my own</span>.
 
 ## What People Like
 
@@ -735,25 +735,14 @@ The “number of mentions” should be treated more as an estimation rather than
     * There are also calls for improving character synergies and combat formulas.
     * **Improved Combat Mechanics**: Players want more depth in gameplay and better explanations of in-game mechanics to enhance understanding. Some ask for improvements in auto-battle and skill animations, as well as more intricate battle strategies.
     * **Character Progression**: Players find it challenging to upgrade characters or progress without spending a lot of time or money. Easier access to promotion materials and quicker progression through content is a popular request.
-      *  I think this might apply more to new players, because old players tend to hoard a lot of resources over time and be selective in which units to upgrade. Crave Saga provides a lot more beginner missions <span class="masked">and paid packs</span> to help new players to catch up, so I think LAH can learn from that too.
-            
+      *  <span class="comment">I think this might apply more to new players, because old players tend to hoard a lot of resources over time and be selective in which units to upgrade. Crave Saga provides a lot more beginner missions <span class="masked">and paid packs</span> to help new players to catch up, so I think LAH can learn from that too.</span>
+
 5. **Stamina System Improvements** (9 mentions)
   * The stamina system is seen as restrictive, with slow recovery times and high stamina costs for grinding stages.
   * Players suggest more ways to obtain stamina or reduce the stamina cost for certain content.
 
 6. **More Frequent Events and Content Updates** (8 mentions)
-  * Players feel that events and main story updates are too infrequent, leading to periods of inactivity.        
-    1. We officially have “more than a year gap” between two main quest chapters 😭
-  * Some want more daily and weekly missions with meaningful rewards to keep players engaged.
-  * They request more frequent updates and event variety, with less downtime between content.
-
-7. **Hero/Sidekick System & Dupe Shop Improvements** (8 mentions)  
-  * There are calls to improve the system for hero/sidekick duplicates, with better shop rewards and more useful items from dupes.
-
-8. **Event Frequency and Content (11 mentions):** 
-  * Players suggest more frequent events to keep the game engaging and reduce downtime.
-  * Requests for additional content such as hard mode for story stages and boss fights.
-
+  * Players feel that events and main story updates are too infrequent, leading to periods of inactivity.
 9. **Old Character Updates** (14 mentions) 
   * Older characters feel more static compared to newer ones.
   * Requests to update older characters with new animations, skills, or cosmetic options to match newer units.
@@ -780,7 +769,18 @@ The “number of mentions” should be treated more as an estimation rather than
 
 ## Game Merchandise
 
-Other comments in no particular order:
+Other comments in no particular 
+    * <span class="comment">We officially have “more than a year gap” between two main quest chapters 😭</span>
+  * Some want more daily and weekly missions with meaningful rewards to keep players engaged.
+  * They request more frequent updates and event variety, with less downtime between content.
+
+7. **Hero/Sidekick System & Dupe Shop Improvements** (8 mentions)  
+  * There are calls to improve the system for hero/sidekick duplicates, with better shop rewards and more useful items from dupes.
+
+8. **Event Frequency and Content (11 mentions):** 
+  * Players suggest more frequent events to keep the game engaging and reduce downtime.
+  * Requests for additional content such as hard mode for story stages and boss fights.
+order:
 
 * Food, snack and drink (collaboration with existing brands)
 * Food recipe book of my favorite characters
@@ -828,7 +828,7 @@ Other comments in no particular order:
 * Videos need english subtitle
   * <span class="comment">Cannot agree more on this</span>
 * Official livestream with game producers
-  * <span class="comment">Among games of similar genre, so far only Crave Saga has official livestream where game producer showed his face
+  * <span class="comment">Among games of similar genre, so far only Crave Saga has official livestream where the game producer showed his face (<span class="masked">along with some Gogo boys</span>).
   * <span class="comment">I think LifeWonders can consider inviting a few official artists to join the livestream. Maybe everyone would just use Vtuber model instead of showing their real face ([Kinoshita Jiroh does that a lot](https://www.youtube.com/@kinoshita_jiroh/about))</span>
 * Gameplay livestream
 * More voice actor’s performance like podcast
@@ -840,3 +840,90 @@ Other comments in no particular order:
 ## Feedback for the Survey and Wiki
 
 Thank you for all the kind words about the wiki and the survey. There was also one person from Japan who apparently also contributed to the LAH JP Wiki, yeah sometimes wikis just copy stuff from each other don’t we.
+
+And on to the other feedbacks and suggestions
+
+### Character profile, voice line not translated
+
+We used to have a few more contributors to work on translation, but now we are just down to one. We just need more contributors...
+
+### Voice/BGM audio files, Spine animation on Wiki
+
+Firstly, this Wiki is hosted on Github Pages with only 1GB free storage, so I don’t have a lot of leeway to work with. Secondly, LifeWonders don’t really like people sharing audio files widely (this is in the Terms of Service).
+
+If you know where to look, you can already find voice/BGMs in certain websites, but I cannot tell you where they are as the owner of this wiki.
+
+### Skill description are hard to read
+
+Many people complain that the skill descriptions in Wiki are more wordy than the original Japanese game text, like “[base skill] Deal 60% of damage to target enemy/100%” instead of just “Deal 60% damage to target enemy”.
+
+To explain that, here is a bit of history:
+
+1. The early contributors of this Wiki (myself included) were the same people that contributed to [Housamo wiki](https://housamo.wiki) (and later the [Housamo Skill DB](https://housamo-skill.netlify.app/)). We had the tradition of generating skill description by parsing game data and output description in a certain format to expose the most intricate details of the game mechanism
+1. That method worked well with Housamo even till today, the Wiki can auto generate most of the skill descriptions with minimal human intervention when game maintenance hasn't even ended.
+1. However, LAH’s game mechanism evolved more wildly than Housamo. There were almost always new mechanisms added to LAH after every game maintenance.
+1. We began to see more and more crazy “system status counters”, “various types of skill triggers”, “one skill adding a new skill to another target”, “weird skill timing” and so on. Trying to maintain the algorithm to parse this kind of game data to generate human-readable descriptions becomes more and more infeasible.
+1. We obviously received a lot of complaints about the readability of the skill descriptions, and no good solution to fix, to the point where one day I just decided that some complicated skills will just be manually written by human contributors instead. However, we still wanted to keep most of the old machine-generated descriptions there, because at that time, we didn't have that kind of manpower to rewrite those too manually (remember that all these works are unpaid).
+
+Around October this year, I made a bold decision to abandon the old system to generate skill descriptions automatically, and instead develop a new system to translate skill descriptions in a way that is more aligned with actual game UI. Fortunately, a few volunteers joined the effort, so now newer characters’ skills should have more readable descriptions, and the new system will be more prepared to welcome official translations when it happens.
+
+### List of XXX
+
+I think many people didn’t know these pages exist:
+
+- [Misc lists](/misc/)
+- [List of statuses that ever exist in game](/statuses/)
+  - We might prepare something better for list of common buff/debuff in the future
+- [List of game items](/items/)
+
+### There should be a way to jump for game app to Wiki
+
+... Do some people actually think that this Wiki is operating in an official way, and I am a LifeWonders’ employee?!
+
+### Discord role where we get notified that stocks get refilled
+
+I think you should just follow the official X (Twitter) account
+
+### Gameplay tier list, recommendation and strategy guide like JP Wiki
+
+Among the two contributors in this wiki, we don’t have that kind of expertise or manpower.
+
+### Filter characters by buff / debuff
+
+Way too difficult to implement, you will know why when you read the game data yourself...
+
+### Survey question suggestions
+
+- Top 1 favourite question
+- Favourite human / furry / female / costume / variant / event / artist / voice actors
+  - New question for human / furry / female will require repeating that long list of characters in the survey. I am afraid that will increase the respondents’ fatigue. There are already people complaining that the list is too long to navigate in Google Form
+  - People may have very different standard when judging best costume / variant, most will ended up just choosing their favourite characters, so the questions become quite pointless
+  - Proof: {% chara_link  Sadayoshi %} is somehow top 5 fashionable characters in a separate poll (conducted by LAH discord admin), despite the fact that “not knowing much about being fashionable) is kind of coded into his personality.
+- Characters pairing
+  - Right now I can’t think of how to set up this kind of question on Google Form since this is “one question that has two inputs”. I also cannot trust that everyone can spell names correctly. If I were to make it as one text input, enforcing text format and fixing typos would be a nightmare.
+
+### More organized list of fan translations
+
+We collect what we can on the wiki, but to be honest there really aren’t that many English fan translations for this game to begin with.
+
+For event/main quest translation, see [https://housamosummaries.blogspot.com/](https://housamosummaries.blogspot.com/).
+For event special quest fan translations, they are usually listed in the event info page.
+For character quest fan translations, see [Character Quests](https://liveahero-wiki.github.io/chara_quests/)
+
+### Survey needs Traditional Chinese/Spanish translation
+
+Unfortunately that is just not practical. With just three languages (English, Simplified Chinese and Japanese), the survey already looks very cluttered, adding one more language will further impact the readability of the survey.
+
+### Story lore section
+
+Contribution welcomed. We also need the origin of character names.
+
+### Comment section for gameplay
+
+I would suggest you to just ask help in LAH Discord (unofficial), there are many good players that give you better advice more quickly.
+
+# Afterword
+
+I hope you enjoy reading this report, because the whole process took me months to prepare. Many times the thought of “I should be paid for this work” flashed in my mind. It really is not easy to conduct a survey of this size.
+
+For a lGbt game that we all know caters more towards gay players, I think LifeWonders’ success in attracting more players from other demographics is pretty commendable. If they can grow the group of paying players to keep the business running [while still staying true to their original mission](https://www.lifewonders.co.jp/?lang=en), I think that is good for everyone.
