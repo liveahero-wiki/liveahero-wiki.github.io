@@ -174,7 +174,7 @@ It is clear that East Asia is the most important market for the game (being cult
     <td>0.17%</td>
   </tr>
   <tr>
-    <td rowspan="20">Europe<<br>61 (10.07%)</td>
+    <td rowspan="20">Europe<br>61 (10.07%)</td>
     <td>France</td>
     <td>13</td>
     <td>2.15%</td>
@@ -384,7 +384,9 @@ It is clear that East Asia is the most important market for the game (being cult
 </div>
 
 I think the most surprising fact to me is how many more Taiwan respondents I have gotten after translating the survey to Chinese.
+
 Despite the largest expected player base of this game being Japan, this survey still was not able to capture the same proportion of Japanese players (only 22). I just don’t know where these Japanese people are lurking.
+
 China should also be a pretty big player base of this game, but because the survey was conducted via Google Forms, people living in China cannot access Google websites unless they use VPN. It does not mean that there are very few China LAH players.
 
 ## Japanese proficiency
@@ -616,7 +618,7 @@ Muscular male furry characters once again dominated the popularity ranking, with
 
 
 
-As we move to “top 10 favourites” popularity ranking, we can see that it often favours the older characters more. {% chara_link Tsuneaki %} and {% chara_link Sterio %}’s ranking somewhat dropped, while {% chara_link Gauis %} experienced the largest ranking boost this way.
+As we move on to “top 10 favourites” popularity ranking, we can see that it often favours the older characters more. {% chara_link Tsuneaki %} and {% chara_link Sterio %}’s ranking somewhat dropped, while {% chara_link Gauis %} experienced the largest ranking boost this way.
 
 ## 2023 vs 2024
 
@@ -668,3 +670,235 @@ Lift:
 - {% chara_link Victom %} and {% chara_link Danzo %} (mecha hunks)
 - {% chara_link Yuhang %}, {% chara_link Santetsu %} and {% chara_link Grigory %} (plus size men)
 - {% chara_link Gaius %} and {% chara_link Canes %} (cute shy boys?)
+
+# Free form questions
+
+For the next two questions, the volume of the feedback is simply too big for me to go through one by one, so I used ChatGPT to summarize them (and even then I had to do it in a few batches because the total text length exceeds ChatGPT’s limit...)
+
+The “number of mentions” should be treated more as an estimation rather than absolute value. Words coloured in blue are my own. 
+
+## What People Like
+
+1. **Character Design & Appearance** (170 mentions)
+
+  * **Key Point:** The standout praise goes to the **character designs**, with players admiring their **originality**, **diverse appearances**, and **non-stereotypical portrayals**, especially compared to other gacha games.
+
+  * **Furry/Bara Fans:** Many appreciate the **furry/bara representation** and highlight the presence of **hot male characters**. Tight suits are also a frequently mentioned characteristic that the players are attracted to.
+    
+  * **Inclusivity:** Positive mentions about the **non-hypersexualized** female characters and the inclusion of **female MC** and **diverse body types**.
+
+  * **Voice Acting & 2D Sprites:** Several players also love the **voice acting** and the **animated 2D sprites**. Many noted that the **bulge physics, suit ripping to represent damage** are visually satisfying.  
+
+2. **Art, Animation, & Visuals** (25 mentions):
+
+  * Players like the dynamic animations, character sprites, and visual effects, noting the quality is higher than in other gacha games.
+ 
+  * The inclusion of animations, battle effects, and how damage is represented on characters’ clothes (e.g., clothes ripping) were highlighted as visually satisfying.
+    
+
+3. **Story and Lore** (80 mentions)
+
+  * **Key Point:** The **storyline** is highly praised, with players noting its **depth**, **unique lore**, and how it makes events more engaging. Some find it even more compelling than LifeWonders' previous game "Tokyo Afterschool Summoners."
+    
+  * **World-Building:** Players enjoy the **heroic setting** and the inclusion of **superhero live-streaming mechanics**.
+    
+  * **Character Development:** The progression of relationships between characters, and how they evolve in the story, is a popular theme. There is also excitement for **well-written event stories**.
+
+  * **Story Depth & Serious Themes**: Several appreciated how it addresses serious topics like racism and death, and others praised the story events and main quest. The game's willingness to explore heavy topics, paired with strong character development, resonates deeply with its audience, making it feel more mature compared to competitors like _Housamo_.
+    
+
+4. Gameplay & Mechanics** (84 mentions)
+
+  * **Key Point:** Players are drawn to the **turn-based gameplay** with **simple controls**, which is engaging without being overly complex.
+    
+  * **Sparking (Pity) System:** The **pity system** gets a positive reception, allowing players to have a guaranteed chance for rare characters after a set number of pulls.
+    
+  * **Special Features:** Some appreciate the **unique combat mechanics** like **armor/stun meters**, **scenario requirements**, and **temporary level boosts** during events.
+    
+  * “Unique gameplay & base mechanics where view can be a blessing & curse at the same time, encouraging players to make it count or else the enemy will take advantage."
+    
+
+5. Music & Soundtrack** (10 mentions)
+
+  * **Key Point:** The **soundtrack** is well-received, with appreciation for **event-specific songs**, making the experience more immersive.
+    
+
+6. Accessibility & QoL Features** (15 mentions)
+
+  * **Key Point:** Players value the game’s **low time investment** and **easy-to-earn resources**, appreciating that it doesn’t require excessive grinding to enjoy the experience.
+  
+  * The turn-based combat system is appreciated for its ease of understanding while offering depth in team-building and strategy for harder quests. Some enjoy that the game isn't too grindy, making it easy to play casually.
+
+  * A number of players liked the balance between auto-battling and manual input during fights.
+    
+
+## Improvement People Want to See
+
+1.  **Official Translation** (187 mentions)
+    
+    * **Most frequent request**: Players overwhelmingly want an official English translation for the game.
+        
+    * Requests for additional languages such as Chinese and Thai。
+        
+2.  **Improvement to Pity System** (67 mentions)
+    
+    * Players want the pity system (guaranteed high-rarity character after many pulls) improved, with lower thresholds or more accessible systems.
+        
+    * Suggestions include accumulating pity across banners and lowering the pull threshold.
+        
+3.  **Better Gacha Rates/Currency Acquisition** (54 mentions)
+    
+    * Players want more opportunities for free pulls such as through daily missions or events, and many suggest that _Live A Hero_ is more expensive compared to other gacha games.
+        
+    * Some want cheaper currency packs and higher chances to get featured units.
+        
+    * Players feel it’s difficult to earn enough resources for a **spark (pity) system** without spending real money.
+        
+    * Suggestions to make **stones more accessible** during downtime between events.
+        
+    * **Battle pass** or reward systems to provide more consistent resources.
+        
+4.  **Gameplay Mechanics** (13 mentions)
+    
+    * Players want more diverse gameplay mechanics, less grindy content, and new permanent game modes (e.g., tower, survival, or co-op modes).
+        
+    * There are also calls for improving character synergies and combat formulas.
+        
+    * **Improved Combat Mechanics**: Players want more depth in gameplay and better explanations of in-game mechanics to enhance understanding. Some ask for improvements in auto-battle and skill animations, as well as more intricate battle strategies.
+        
+    * **Character Progression**: Players find it challenging to upgrade characters or progress without spending a lot of time or money. Easier access to promotion materials and quicker progression through content is a popular request.
+        
+        1.  I think this might apply more to new players, because old players tend to hoard a lot of resources over time and be selective in which units to upgrade. Crave Saga provides a lot more beginner missions ~~and paid packs~~ to help new players to catch up, so I think LAH can learn from that too.
+            
+5.  **Stamina System Improvements** (9 mentions)
+    
+    * The stamina system is seen as restrictive, with slow recovery times and high stamina costs for grinding stages.
+        
+    * Players suggest more ways to obtain stamina or reduce the stamina cost for certain content.
+        
+6.  **More Frequent Events and Content Updates** (8 mentions)
+    
+    * Players feel that events and main story updates are too infrequent, leading to periods of inactivity.
+        
+        1.  We officially have “more than a year gap” between two main quest chapters 😭
+            
+    * Some want more daily and weekly missions with meaningful rewards to keep players engaged.
+        
+    * They request more frequent updates and event variety, with less downtime between content.
+        
+7.  **Hero/Sidekick System & Dupe Shop Improvements** (8 mentions)
+    
+    * There are calls to improve the system for hero/sidekick duplicates, with better shop rewards and more useful items from dupes.
+        
+8.  **Event Frequency and Content (11 mentions):**
+    
+    * Players suggest more frequent events to keep the game engaging and reduce downtime.
+        
+    * Requests for additional content such as hard mode for story stages and boss fights.
+        
+9.  **Old Character Updates** (14 mentions)
+    
+    * Older characters feel more static compared to newer ones.
+        
+    * Requests to update older characters with new animations, skills, or cosmetic options to match newer units.
+        
+10.  **Quality of Life (QoL) Enhancements** (6 mentions)
+  * Many suggestions revolve around UI improvements, faster loading times, and more streamlinedsystems for managing inventory and items.
+  * Other suggestions include auto-battle systems and customizable main menus.
+  * Some players also ask for customizable options to enhance gameplay, such as freezing backgroundanimations or character motions to reduce lag.
+        
+11.  **More Diverse Characters and Content** (5 mentions)
+  * Players want more diverse characters (more women, trans characters, and more varied body typeslike chubby or muscular).
+  * Some request for specific character alts and more character interactions.
+        
+12.  **Character Interaction and Story** (12 mentions):  
+  * Some players want more **interaction with favorite characters**, including features like a **relationship system** (similar to "Housamo").
+        
+  * Interest in a **protagonist with a more active role** in the story.
+        
+  * Suggestions for UI improvements such as **character animations during dialogues** and **moving sprites**.
+        
+
+### Notable Points:
+
+* There is also frustration about the game's slow progression and limited free-to-play (F2P) opportunities, with calls for it to be more F2P-friendly.
+* A few comments suggest adding romance and marriage mechanics with gacha characters.
+* Visual improvements, like new CG or splash art for characters, are desired by some.
+
+
+## Game Merchandise
+
+Other comments in no particular order:
+
+* Food, snack and drink (collaboration with existing brands)
+* Food recipe book of my favorite characters
+  * LifeWonders kind of did make a Christmas dessert recipe during Housamo 2022 Christmas event. Making enough recipes to make a book probably is too difficult
+* Character scent (e.g. story-accurate perfume that the character uses)  
+* Bad dragon toys
+  * <span class="redact">I think the person meant dildo</span>
+* Enamel pin
+* Official books/comics but with translation
+* Bedsheet
+* Animated computer/phone wallpaper
+* Will consider buying if LW come to Taiwan event to sell
+* Some brain rot comments about Hydoor, Sadayoshi, Gaius
+
+Other comments in no particular order:
+
+* Merchandise update is too slow, favourite character does not yet has merchandise
+* Character badges are always out of stock
+* Come to Taiwan event to sell
+  * Probably more likely than any other overseas countries, Taiwanese are so lucky.      
+* Shipping to US, Europe and other countries 
+  * If you want less hassle and don’t mind the shipping cost, then I believe you can just buy on Alicebook. However, the pricing model that is based on volumetric weight often will make the shipping cost more expensive than the item itself...
+    * [https://alice-books.com/m\_feature/lifewonders](https://alice-books.com/m_feature/lifewonders) 
+    * [https://alice-books.com/help/user/oversea\_shippable](https://alice-books.com/help/user/oversea_shippable)          
+  * The other way is finding a proxy service with better pricing model, but more hassle 
+* I hate taxes and especially import duties
+    * My dear, this issue is impossible to solve
+* National law and sanctions
+    * Some countries have tighter border control and/or ongoing war, also impossible to solve
+* Too shy to enter a group buying programme
+    * Group buy certainly can help reduce the shipping cost that each participants have to bear individually, but it is hard to find such group
+* Lack of budget
+
+> God, I feel I am becoming LifeWonders’ customer support.
+>
+> One thing is that, with supply chain disruption and global conflict, international shopping will only be increasingly more expensive. And for some countries, it is completely impossible to ship physical items to them.
+>
+> This is why I always advocate that we need digital format! You can focus on paying for the item itself instead of shipping cost, and no worry about national law and sanctions.
+
+## Extra Content
+
+Other comments in no particular order:
+
+* Tons of comments about wanting anime/animation
+    
+    * People are high on [copium](https://www.urbandictionary.com/define.php?term=Copium) again
+        
+* Videos need english subtitle
+    
+    * Cannot agree more on this
+        
+* Official livestream with game producers
+    
+    * Among games of similar genre, so far only Crave Saga has official livestream where game producer showed his face
+        
+    * I think LifeWonders can consider inviting a few official artists to join the livestream. Maybe everyone would just use Vtuber model instead of showing their real face (Kinoshita Jiroh does that a lot)
+        
+* Gameplay livestream
+    
+* More voice actor’s performance like podcast
+    
+* R18 content
+    
+* Idol pop/ rock song with Hitomi and Sensettia
+    
+* Make april fools content into reality
+    
+* Some brain rot comments about Hydoor, Sadayoshi, Loren..
+    
+
+## Feedback for the Survey and Wiki
+
+Thank you for all the kind words about the wiki and the survey. There was also one person from Japan who apparently also contributed to the LAH JP Wiki, yeah sometimes wikis just copy stuff from each other don’t we.
