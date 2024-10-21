@@ -502,7 +502,9 @@ From the feedback I have received after publishing the survey, I should have add
 
 ## What-if
 
-The next two questions really stemmed from my frustration that despite having a few more new games entering the space of gay gacha games over the last 2 years, none seem to really threaten LifeWonders’ market share in a meaningful way, so LW seems very comfortable about not improving their monetization strategy.
+The next two questions really stemmed from my frustration that despite having a few more new games entering the space of gay gacha games over the last 2 years, none seem to really threaten LifeWonders’ market share in a meaningful way, so LifeWonders seems very comfortable about not improving their monetization strategy.
+
+Therefore, I want to use these two questions to see if the market are willing to explore other kind of game format and monetization.
 
 ### Buy-out games
 
@@ -626,7 +628,7 @@ As we move on to “top 10 favourites” popularity ranking, we can see that it 
 
 ## 2023 vs 2024
 
-It seems that characters that gotten their variant between the time when 2023 and 2023 surveys was carried out (such as {% chara_link Polaris Mask %}, {% chara_link Lilac %}, {% chara_link Kalaski %}). {% chara_link Tsuneaki %} have their ranking boosted quite significantly, further proving that the amount of character appearance in story and recency biases do play a role in their ranking.
+It seems that characters that gotten their variant between the time when 2023 and 2024 surveys was carried out (such as {% chara_link Polaris Mask %}, {% chara_link Lilac %}, {% chara_link Kalaski %}). {% chara_link Tsuneaki %} have their ranking boosted quite significantly, further proving that the amount of character appearance in story and recency biases do play a role in their ranking.
 
 ## Japan
 
@@ -648,27 +650,15 @@ For female respondents, {% chara_link Sensettia %} is number 1 in “All favouri
 
 ## 
 
-
-
-
-
 Using association rules with min confidence > 60%
-
-Top 10 popularity ranking can tell us which characters are the absolute favourites for the majority of the player base, but but what about the , do they have 
-
-“All favourites” popularity ranking tells us which characters are generally likable, while “Top 10” popularity ranking tells us which characters have the most diehard fans when people are forced to make a choice.
-
-It is clear that muscular furries dominated both rankings, but what about the characters that get slightly less votes? What other character themes also have their own group of diehard fans?
-
-Lift: measures 
-Confidence: 
 
 There are clearly some sort of clusters formed by “Muscular male humans”, “Muscular male furries” and “Chubby male furries”.
 People who put Melide in their top 10 tend to also have Monomasa in the list
 Obviously all male furries point to Pubraseer
 
+The popularity poll clearly shows that the game has successfully captured the market that likes muscular male and furries, but has the game captured market that like other kind of characters? We are going to find out with other metrics.
 
-Lift: 
+Interesting observations:
 
 - {% chara_link Esperdica %} and {% chara_link Vulpecula %} (sophisticated foxy vibes)
 - {% chara_link Victom %} and {% chara_link Danzo %} (mecha hunks)
