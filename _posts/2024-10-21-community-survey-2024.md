@@ -841,7 +841,7 @@ Other comments in no particular order:
 
 ## Feedback for the Survey and Wiki
 
-Thank you for all the kind words about the wiki and the survey. There was also one person from Japan who apparently also contributed to the LAH JP Wiki, yeah sometimes wikis just copy stuff from each other don’t we.
+Thank you for all the kind words about the wiki and the survey. There was also one person from Japan who apparently is a contributor to the LAH JP Wiki. <span class="masked">Yeah, sometimes wikis just copy stuff from each other don’t we.</span>
 
 And on to the other feedbacks and suggestions
 
@@ -851,13 +851,13 @@ We used to have a few more contributors to work on translation, but now we are j
 
 ### Voice/BGM audio files, Spine animation on Wiki
 
-Firstly, this Wiki is hosted on Github Pages with only 1GB free storage, so I don’t have a lot of leeway to work with. Secondly, LifeWonders don’t really like people sharing audio files widely (this is in the Terms of Service).
+Firstly, this Wiki is hosted on Github Pages with only 1GB free storage, so I don’t have a lot of leeway to work with. Secondly, LifeWonders don’t really like people sharing audio files widely (this is in their Terms of Service).
 
 If you know where to look, you can already find voice/BGMs in certain websites, but I cannot tell you where they are as the owner of this wiki.
 
 ### Skill description are hard to read
 
-Many people complain that the skill descriptions in Wiki are more wordy than the original Japanese game text, like “[base skill] Deal 60% of damage to target enemy/100%” instead of just “Deal 60% damage to target enemy”.
+Many people complain that the skill descriptions in Wiki are more wordy than the original Japanese game text, like `[base skill] Deal 60% of damage to target enemy/100%` instead of just `Deal 60% damage to target enemy`.
 
 To explain that, here is a bit of history:
 
