@@ -29,12 +29,17 @@ This report was incredibly hard to write due to the complexity to test the legit
 
 <figure>
 <img src="/assets/img/survey-2024/source.svg" width="600" height="371" loading="lazy" alt="Source of respondents">
-<figcaption>Source of respondents</figcaption>
+<figcaption>Source of Respondents</figcaption>
 </figure>
 
 Majority of the respondents found the survey via Discord, 巴哈姆特 (a Taiwan game forum) and X (Twitter).
 
 ## Age
+
+<figure>
+<img src="/assets/img/survey-2024/age.jpg" width="600" height="371" loading="lazy" alt="Age">
+<figcaption>Age of Respondents</figcaption>
+</figure>
 
 > At this point, the oldest respondent (54 year old) can be the youngest respondent’s grandfather... (13 years old)
 
@@ -53,6 +58,11 @@ Majority of the respondents found the survey via Discord, 巴哈姆特 (a Taiwan
 7.5% of the respondents are non-male and 5.9% are transgender.
 
 Female/Non-Binary/Other Respondents and Where to Find them
+
+<figure>
+<img src="/assets/img/survey-2024/other-gender-country.jpg" width="600" height="371" loading="lazy" alt="Countries of Female/Non-Binary/Other Respondents">
+<figcaption>Countries of Female/Non-Binary/Other Respondents</figcaption>
+</figure>
 
 ## Country
 
@@ -389,7 +399,7 @@ China should also be a pretty big player base of this game, but because the surv
 
 <figure>
 <img src="/assets/img/survey-2024/jp.svg" width="600" height="371" loading="lazy" alt="Japanese language proficiency">
-<figcaption>Japanese language proficiency</figcaption>
+<figcaption>Japanese Language Proficiency</figcaption>
 </figure>
 
 After using the same question setup for the fourth time, this was the first time that I realised that it was not well designed. Many people who self-taught the Japanese language but did not sit for standardised Japanese language exams like JLPT report “Zero knowledge” instead of estimating the JLPT level that is close to their current ability.
@@ -412,6 +422,11 @@ Despite having more than double the amount of respondents for this year’s surv
 We can see that Gyee has the highest number of “abandoned” counts, followed by Crave Saga.
 
 ## Playing Time
+
+<figure>
+<img src="/assets/img/survey-2024/play-lah-time.jpg" width="600" height="371" loading="lazy" alt="Playing time of LAH players">
+<figcaption>How Long Have Live A Hero Players Been Playing the Game?</figcaption>
+</figure>
 
 X-axis is the number of days played (end date is set to 30 Sep 2024). Slightly less than half of the respondents started playing Live A Hero immediately after the game’s launch. Since then, the player base seems to be growing at a linear scale.
 
@@ -439,51 +454,14 @@ There are cis-male respondents who choose female body types (straight players?!)
 
 Hiroki (first male voice) took nearly 50% of the male voice’s market, the other two are about 25% each, I think this might be due to the power of default choice.
 
-For female voice, is slightly more popular than
-
-## Other games
-
-268 LAH players have played Gyee before but most of them have abandoned it. 242 LAH players have heard of the game, but probably got scared by the testimonial of past Gyee players that they never bother to try it.
-
-Fantastic Boyfriends (F彼) being a buy-out game, you can treat “abandoned” the same as “still playing”. It is not surprising that plenty of respondents said “they heard of it but never played it”, since the majority of the respondents do not understand Japanese and the game has no hope of ever getting translated.
-
-66.8% of LAH players are still playing Tokyo Afterschool Summoners, which is another older game developed by LifeWonders, while 23.9% have abandoned it.
-
-Tamacolle has the highest number of respondents who have “never heard of” the game and also the lowest abandoned / still playing count.
-
-Sizable number of respondents have at least tried playing Another Eidos and Crave Saga (372 and 303 respectively), but the former seem more able to retain players. They are gay gacha games that have R18 content. and provide some form of translation, but from what I have seen, Another Eidos’ translation quality is much higher than Crave Saga.
-
-Maybe next year I should add questions to rate the story, characters and general satisfaction of these games too.
-
-## Free Gacha Pull Currency
-
-<figure>
-<img src="/assets/img/survey-2024/gacha_stone.svg" width="745" height="371" loading="lazy" alt="Free Gacha Pull Currency">
-<figcaption>Free Gacha Pull Currency</figcaption>
-</figure>
-
-55.2% of the LAH players think the game gives less free gacha pulls than other gacha games, while only 9.8% of them think LAH is more generous than other gacha games.
-
-
-Let’s hear players that have tried gacha games have to say:
-
-it seems that only LAH players that have tried Another Eidos have some different patterns between the “less” and “more” group: in the “more generous” group, higher percentage of those from “more generous” group have abandoned Another Eidos than that of the “less generous” group (but we do not know if they are indeed using Another Eidos as the comparison).
-
-(Tamacolle also shows a different pattern between the “less” and “more” group, but since the game does not require spending money to pull characters, I don’t think it really matters).
-
-
-
-It is clear that even among players that have spent money in this game, we still have more of them feeling the game is less generous with free gacha pulls than other gacha games, this not limited to those free-to-play players.
-
-## Translation
-
-Once again, we celebrate another game anniversary without official translation, which means 27.2% of the respondents made the correct prediction.
-
-LifeWonders said that they are still working on it and implore us to wait a little longer, but what “a little longer” really means may be up for debate.
-
-Half of the people (median value) believe that LifeWonders would translate at most all the Main Quest stories till 1st anniversary.
+For female voice, Yui Toita is slightly more popular than Orie Kimoto.
 
 ## Money spending
+
+<figure>
+<img src="/assets/img/survey-2024/in-app-purchase.jpg" width="745" height="371" loading="lazy" alt="How Many Live A Hero Player Spend Money In-game?">
+<figcaption>How Many Live A Hero Player Spend Money In-game?</figcaption>
+</figure>
 
 To help make other visualizations easier to understand, we will introduce the concept of “spending level” here.
 
@@ -497,18 +475,126 @@ Definition of Spending level:
 
 The criteria for each spending level may be a little arbitrary, but it is enough to get a sense of the general trend.
 
+<figure>
+<img src="/assets/img/survey-2024/spending-overall.jpg" width="745" height="371" loading="lazy" alt="How Many Live A Hero Player Spend Money In-game?">
+<figcaption>How Many Live A Hero Player Spend Money In-game?</figcaption>
+</figure>
+
+More than 50% of the players actually spend at least some amount of money in Live A Hero.
+
+<figure>
+<img src="/assets/img/survey-2024/spending-region.jpg" width="745" height="371" loading="lazy" alt="How Many Live A Hero Player Spend Money In-game? (by Region)">
+<figcaption>How Many Live A Hero Player Spend Money In-game? (by Region)</figcaption>
+</figure>
+
+<figure>
+<img src="/assets/img/survey-2024/spending-east-asia.jpg" width="745" height="371" loading="lazy" alt="How Many Live A Hero Player Spend Money In-game? (East Asia)">
+<figcaption>How Many Live A Hero Player Spend Money In-game? (East Asia)</figcaption>
+</figure>
+
+East Asia has the highest percentage of Live A Hero players that spend money in-game. Given that, you can see why LifeWonders advertise a lot to East Asia countries like Taiwan.
 
 ## Gameplay Style
 
+<figure>
+<img src="/assets/img/survey-2024/login-overall.jpg" width="745" height="371" loading="lazy" alt="How Many Live A Hero Player Spend Money In-game?">
+<figcaption>How Live A Hero Players Play the Game?</figcaption>
+</figure>
+
+<figure>
+<img src="/assets/img/survey-2024/login-spending-percentage.jpg" width="745" height="371" loading="lazy" alt="How Live A Hero Players Play the Game against Spending Level">
+<figcaption>"How Live A Hero Players Play the Game" against "Spending Level"</figcaption>
+</figure>
+
 Those who play the game in the most earnest way (last tier) are more likely to be paying customer too
 
+<figure>
+<img src="/assets/img/survey-2024/login-other-gender.jpg" width="745" height="371" loading="lazy" alt="How Live A Hero Players Play the Game (Female / Non-binary / Other)">
+<figcaption>How Live A Hero Players Play the Game (Female / Non-binary / Other)</figcaption>
+</figure>
+
+- Among non-male players, slightly more only play the game occasionally compared to the male counterpart
+- Female players are less likely to optimize their game play to the maximum compared to other groups.
+
 ## Game Elements’ Ranking
+
+<figure>
+<img src="/assets/img/survey-2024/game-score.jpg" width="745" height="371" loading="lazy" alt="Live A Hero Game Element's Score">
+<figcaption>Live A Hero Game Element's Score</figcaption>
+</figure>
+
+Unsurprisingly, character is the most important aspect of the game according to the players.
 
 > Once again, my original word choice of “rank” in the question had confused some people. I actually just want people to give a score to each game element (which mean two game elements can both be scored “3”) instead of really ranking each game element by different rank
 
 > This means that some people might have answered the question in a way that did not align with my original intention.
 
+## Other games
+
+<figure>
+<img src="/assets/img/survey-2024/play-other-game.jpg" width="600" height="371" loading="lazy" alt="What Other lGbt Games Played by Live A Hero Players">
+<figcaption>What Other lGbt Games Played by Live A Hero Players</figcaption>
+</figure>
+
+268 LAH players have played Gyee before but most of them have abandoned it. 242 LAH players have heard of the game, but probably got scared by the testimonial of past Gyee players that they never bother to try it.
+
+Fantastic Boyfriends (F彼) being a buy-out game developed by LifeWonders, you can treat “abandoned” the same as “still playing”. It is not surprising that plenty of respondents said “they heard of it but never played it”, since the majority of the respondents do not understand Japanese and the game has no hope of ever getting official translation.
+
+66.8% of LAH players are still playing Tokyo Afterschool Summoners, which is also another older game developed by LifeWonders, while 23.9% have abandoned it.
+
+Tamacolle has the highest number of respondents who have “never heard of” the game and also the lowest abandoned / still playing count.
+
+Sizable number of respondents have at least tried playing Another Eidos and Crave Saga (372 and 303 respectively), but the former seem more able to retain players. They are gay gacha games that have R18 content. and provide some form of translation, but from what I have seen, Another Eidos’ translation quality is much higher than Crave Saga.
+
+Maybe next year I should add questions to rate the story, characters and general satisfaction of these games too.
+
+## Free Gacha Pull Currency
+
+<figure>
+<img src="/assets/img/survey-2024/gacha_stone.svg" width="745" height="371" loading="lazy" alt="Free Gacha Pull Currency">
+<figcaption>Free Gacha Pull Currency Opinion</figcaption>
+</figure>
+
+55.2% of the LAH players think the game gives less free gacha pulls than other gacha games, while only 9.8% of them think LAH is more generous than other gacha games.
+
+
+Let’s hear players that have tried other gacha games have to say:
+
+<figure>
+<img src="/assets/img/survey-2024/gacha-stone-other-game2.jpg" width="745" height="371" loading="lazy" alt="Free Gacha Pull Currency Opinion against Other Games">
+<figcaption>Free Gacha Pull Currency Opinion against Other Games</figcaption>
+</figure>
+
+it seems that only LAH players that have tried Another Eidos have some different patterns between the “less” and “more” group: in the “more generous” group, higher percentage of those from “more generous” group have abandoned Another Eidos than that of the “less generous” group (but we do not know if they are indeed using Another Eidos as the comparison).
+
+(Tamacolle also shows a different pattern between the “less” and “more” group, but since the game does not require spending money to pull characters, I don’t think it really matters).
+
+<figure>
+<img src="/assets/img/survey-2024/gacha-stone-spending.jpg" width="745" height="371" loading="lazy" alt="Free Gacha Pull Currency Opinion against Spending Level">
+<figcaption>Free Gacha Pull Currency Opinion against Spending Level</figcaption>
+</figure>
+
+It is clear that even among players that have spent money in this game, we still have more of them feeling the game is less generous with free gacha pulls than other gacha games, this opinion is not just limited to those free-to-play players.
+
+## Translation
+
+<figure>
+<img src="/assets/img/survey-2024/translation.jpg" width="745" height="371" loading="lazy" alt="Translation Prediction">
+<figcaption>Translation Prediction</figcaption>
+</figure>
+
+Once again, we celebrate another game anniversary without official translation, which means 27.2% of the respondents made the correct prediction.
+
+LifeWonders said that they are still working on it and implore us to wait a little longer, but what “a little longer” really means may be up for debate.
+
+Half of the people (median value) believe that LifeWonders would translate at most all the Main Quest stories till 1st anniversary.
+
 ## Read story
+
+<figure>
+<img src="/assets/img/survey-2024/read-story.svg" width="745" height="371" loading="lazy" alt="Does Live A Hero Player Read Story In-game?">
+<figcaption>Does Live A Hero Player Read Story In-game?</figcaption>
+</figure>
 
 From the feedback I have received after publishing the survey, I should have added one more option for “Yes, I read the story in-game with the help of machine translation and some guesswork”.
 
@@ -519,6 +605,11 @@ The next two questions really stemmed from my frustration that despite having a 
 Therefore, I want to use these two questions to see if the market are willing to explore other kind of game format and monetization.
 
 ### Buy-out games
+
+<figure>
+<img src="/assets/img/survey-2024/buy-out.jpg" width="745" height="371" loading="lazy" alt="Does Live A Hero Player Read Story In-game?">
+<figcaption>Do Live A Hero Players Support Buy-out Game?</figcaption>
+</figure>
 
 - Need translation
 - Must have hote men/furries
@@ -533,8 +624,19 @@ Therefore, I want to use these two questions to see if the market are willing to
 - Less/no female
 - Playable on iPhone X
 
+In case LifeWonders is not convinced that this statistics is not representing those who actually spend money in game, let me create another chart with only Live A Hero Players that spent money in-game
+
+<figure>
+<img src="/assets/img/survey-2024/buy-out-spending.jpg" width="745" height="371" loading="lazy" alt="Does Live A Hero Player Read Story In-game?">
+<figcaption>Do Live A Hero Players Support Buy-out Game? (those who spent money in Live A Hero)</figcaption>
+</figure>
 
 ### R-18 games
+
+<figure>
+<img src="/assets/img/survey-2024/r18.jpg" width="745" height="371" loading="lazy" alt="Does Live A Hero Player Read Story In-game?">
+<figcaption>Do Live A Hero Players Support R18 Game?</figcaption>
+</figure>
 
 Other comments in no particular order:
 
@@ -566,7 +668,18 @@ Other comments in no particular order:
 
 # Character popularity
 
-## Global
+<details open markdown="1">
+<summary>Global</summary>
+
+<figure>
+<img src="/assets/img/survey-2024/all-fav-bar.jpg" width="745" height="371" loading="lazy" alt="All Favourites Popularity Ranking (Global)">
+<figcaption>All Favourites Popularity Ranking (Global)</figcaption>
+</figure>
+
+<figure>
+<img src="/assets/img/survey-2024/top10-bar.jpg" width="745" height="371" loading="lazy" alt="Top 10 Favourites Popularity Ranking (Global)">
+<figcaption>Top 10 Favourites Popularity Ranking (Global)</figcaption>
+</figure>
 
 > Before we start, I realized that once again some people misunderstood my intention for setting the “top 10 favourites” question. Many people who have less than 10 “all favourites” thought they still need to choose exactly 10 characters for “top 10” question, but actually I wanted people to choose “at most 10 characters among their all favourites”: if you have chose less than 10 characters in first question, you should just same set of characters for the second question.
 >
@@ -629,26 +742,49 @@ Top spots for “All favourites” popularity ranking for each category
 
 > {% chara_link  Player %} is not included in this table because they fit in all categories
 
-Muscular male furry characters once again dominated the popularity ranking, with {% chara_link Pubraseer %} being the top, while {% chara_link Barrel %} and {% chara_link Monomasa %} taking the second and third place with just one vote in difference. The gap between first place and second place is much more significant.
+Comments:
 
-{% chara_link Tsuneaki %} and {% chara_link Sterio %} are pretty high on the ranking too, perhaps due to recency biases as they are featured in the event when the survey was running.
+- Muscular male furry characters once again dominated the popularity ranking, with {% chara_link Pubraseer %} being the top, while {% chara_link Barrel %} and {% chara_link Monomasa %} taking the second and third place with just one vote in difference.
+- The gap between first place and second place is much more significant.
+- {% chara_link Tsuneaki %} and {% chara_link Sterio %} are pretty high on the ranking too, perhaps due to recency biases as they are featured in the event when the survey was running.
 
+<figure>
+<img src="/assets/img/survey-2024/all-fav-top-10-2024.jpg" width="745" height="371" loading="lazy" alt="All Favourites vs Top 10 (2024)">
+<figcaption>All Favourites vs Top 10 (2024)</figcaption>
+</figure>
 
+As we move on to “top 10 favourites” popularity ranking, we can see that it often favours the older characters more. {% chara_link Tsuneaki %} and {% chara_link Sterio %}’s ranking somewhat dropped, while {% chara_link Gaius %} experienced the largest ranking boost this way.
 
+</details>
 
-As we move on to “top 10 favourites” popularity ranking, we can see that it often favours the older characters more. {% chara_link Tsuneaki %} and {% chara_link Sterio %}’s ranking somewhat dropped, while {% chara_link Gauis %} experienced the largest ranking boost this way.
+<details markdown="1">
+<summary>2023 vs 2024</summary>
 
-## 2023 vs 2024
+<figure>
+<img src="/assets/img/survey-2024/all-fav-2023-2024.jpg" width="745" height="371" loading="lazy" alt="All Favourites (2023 vs 2024)">
+<figcaption>All Favourites (2023 vs 2024)</figcaption>
+</figure>
 
-It seems that characters that gotten their variant between the time when 2023 and 2024 surveys was carried out (such as {% chara_link Polaris Mask %}, {% chara_link Lilac %}, {% chara_link Kalaski %}). {% chara_link Tsuneaki %} have their ranking boosted quite significantly, further proving that the amount of character appearance in story and recency biases do play a role in their ranking.
+Comments
 
-## Japan
+- It seems that characters that gotten their variant between the time when 2023 and 2024 surveys was carried out (such as {% chara_link Polaris Mask %}, {% chara_link Lilac %}, {% chara_link Kalaski %})
+- {% chara_link Tsuneaki %} have their ranking boosted quite significantly, further proving that the amount of character appearance in story and recency biases do play a role in their ranking.
+</details>
 
-The sample size is not large, but I think it is not wrong to speculate that Japan players are also mostly furry-lovers.
+<details markdown="1">
+<summary>Japan</summary>
 
-{% chara_link Alchiba %} gets the biggest boost, jumping from 37th place to 12th place in "top 10" favourites ranking.
+<figure>
+<img src="/assets/img/survey-2024/fav-japan.jpg" width="745" height="371" loading="lazy" alt="All Favourites vs Top 10 (Japan only)">
+<figcaption>All Favourites vs Top 10 (Japan only)</figcaption>
+</figure>
 
-## Female / Non-binary / Other respondents
+- The sample size is not large, but I think it is not wrong to speculate that Japan players are also mostly furry-lovers.
+- {% chara_link Alchiba %} gets the biggest boost, jumping from 37th place to 12th place in "top 10" favourites ranking.
+</details>
+
+<details markdown="1">
+<summary>Female / Non-binary / Other respondents</summary>
 
 The number of non-male respondents is small to begin with, so there are a lot of ties in votes.
 
@@ -659,8 +795,20 @@ For female respondents, {% chara_link Sensettia %} is number 1 in “All favouri
 {% chara_link Barrel %} is only at 17th place in “All favourites” ranking, but shot up to TODO. This is quite aligned with what I observed in social media, where most Barrel fan arts are paired with the main character in the female human form.
 
 {% chara_link reXer %}, {% chara_link Grigory %} also saw significant ranking boost in “Top 10” ranking.
+</details>
 
-## 
+<details markdown="1">
+<summary>People with less than 10 favourites</summary>
+
+<figure>
+<img src="/assets/img/survey-2024/top10-less-than-10-vs-exactly-10.jpg" width="745" height="371" loading="lazy" alt="All Favourites vs Top 10 (Japan only)">
+<figcaption>All Favourites vs Top 10 (Japan only)</figcaption>
+</figure>
+
+</details>
+
+<details markdown="1">
+<summary>???</summary>
 
 Using association rules with min confidence > 60%
 
@@ -668,7 +816,18 @@ There are clearly some sort of clusters formed by “Muscular male humans”, �
 People who put Melide in their top 10 tend to also have Monomasa in the list
 Obviously all male furries point to Pubraseer
 
+
+</details>
+
+<details markdown="1">
+<summary>Top 10 Heat map</summary>
+
 The popularity poll clearly shows that the game has successfully captured the market that likes muscular male and furries, but has the game captured market that like other kind of characters? We are going to find out with other metrics.
+
+<figure>
+<img src="/assets/img/survey-2024/top10-heat-map.jpg" width="745" height="371" loading="lazy" alt="All Favourites vs Top 10 (Japan only)">
+<figcaption>All Favourites vs Top 10 (Japan only)</figcaption>
+</figure>
 
 Interesting observations:
 
@@ -676,6 +835,7 @@ Interesting observations:
 - {% chara_link Victom %} and {% chara_link Danzo %} (mecha hunks)
 - {% chara_link Yuhang %}, {% chara_link Santetsu %} and {% chara_link Grigory %} (plus size men)
 - {% chara_link Gaius %} and {% chara_link Canes %} (cute shy boys?)
+</details>
 
 # Free form questions
 
@@ -745,7 +905,7 @@ The “number of mentions” should be treated more as an estimation rather than
 
 6. **More Frequent Events and Content Updates** (8 mentions)
   * Players feel that events and main story updates are too infrequent, leading to periods of inactivity.
-    * <span class="comment">We officially have “more than a year gap” between two main quest chapters :sob:</span>
+    * <span class="comment" markdown="0">We officially have “more than a year gap” between two main quest chapters :sob:</span>
   * Some want more daily and weekly missions with meaningful rewards to keep players engaged.
   * They request more frequent updates and event variety, with less downtime between content.
 
@@ -782,6 +942,11 @@ The “number of mentions” should be treated more as an estimation rather than
 
 ## Game Merchandise
 
+<figure>
+<img src="/assets/img/survey-2024/merchandise.jpg" width="745" height="371" loading="lazy" alt="Live A Hero Game Element's Score">
+<figcaption>Live A Hero Game Element's Score</figcaption>
+</figure>
+
 Other comments in no particular order:
 
 * Food, snack and drink (collaboration with existing brands)
@@ -796,6 +961,23 @@ Other comments in no particular order:
 * Animated computer/phone wallpaper
 * Will consider buying if LW come to Taiwan event to sell
 * Some brain rot comments about Hydoor, Sadayoshi, Gaius
+
+<figure>
+<img src="/assets/img/survey-2024/merchandise-bucket-analysis.jpg" width="745" height="371" loading="lazy" alt="Bucket Analysis for Game Merchandise">
+<figcaption>Bucket Analysis for Game Merchandise</figcaption>
+</figure>
+
+## Difficulty to Buy Game Merchandise
+
+<figure>
+<img src="/assets/img/survey-2024/merchandise-difficulty.jpg" width="745" height="371" loading="lazy" alt="Live A Hero Game Element's Score">
+<figcaption>Live A Hero Game Element's Score</figcaption>
+</figure>
+
+<figure>
+<img src="/assets/img/survey-2024/merchandise-difficulty-spending.jpg" width="745" height="371" loading="lazy" alt="Live A Hero Game Element's Score">
+<figcaption>Live A Hero Game Element's Score</figcaption>
+</figure>
 
 Other comments in no particular order:
 
@@ -821,7 +1003,17 @@ Other comments in no particular order:
 >
 > This is why I always advocate that **we need digital format!** You can focus on paying for the item itself instead of shipping cost, and no worry about national law and sanctions.
 
+<figure>
+<img src="/assets/img/survey-2024/merchandise-difficulty-spending.jpg" width="745" height="371" loading="lazy" alt="Live A Hero Game Element's Score">
+<figcaption>Live A Hero Game Element's Score</figcaption>
+</figure>
+
 ## Extra Content
+
+<figure>
+<img src="/assets/img/survey-2024/extra-content.jpg" width="745" height="371" loading="lazy" alt="Live A Hero Game Element's Score">
+<figcaption>Live A Hero Game Element's Score</figcaption>
+</figure>
 
 Other comments in no particular order:
 
@@ -888,11 +1080,11 @@ I think you should just follow the official X (Twitter) account
 
 ### Gameplay tier list, recommendation and strategy guide like JP Wiki
 
-Among the two contributors in this wiki, we don’t have that kind of expertise or manpower.
+Since LAH JP Wiki kind of has it (like clarifying mechanism of certain unit, what hero/sidekick is good for this unit and why), I am not totally against having gameplay guide in this wiki. It is just that there are no volunteer who would write it.
 
 ### Filter characters by buff / debuff
 
-Way too difficult to implement, you will know why when you read the game data yourself...
+We might implement such thing in the future for a few common buff/debuff statuses.
 
 ### Survey question suggestions
 
@@ -900,7 +1092,8 @@ Way too difficult to implement, you will know why when you read the game data yo
 - Favourite human / furry / female / costume / variant / event / artist / voice actors
   - New question for human / furry / female will require repeating that long list of characters in the survey. I am afraid that will increase the respondents’ fatigue. There are already people complaining that the list is too long to navigate in Google Form
   - People may have very different standard when judging best costume / variant, most will ended up just choosing their favourite characters, so the questions become quite pointless
-  - Proof: {% chara_link  Sadayoshi %} is somehow top 5 fashionable characters in a separate poll (conducted by LAH discord admin), despite the fact that “not knowing much about being fashionable) is kind of coded into his personality.
+  - Proof: [X/Twitter Fashion Poll](https://x.com/BarrelCrankrack/status/1842968014620434859)
+    - {% chara_link  Sadayoshi %} is somehow top 5 fashionable characters, despite the fact that “not knowing much about being fashionable" is kind of coded into his personality (excluding his variant costume which was partly thanks to {% chara_link Maculata %}'s design).
 - Characters pairing
   - Right now I can’t think of how to set up this kind of question on Google Form since this is “one question that has two inputs”. I also cannot trust that everyone can spell names correctly. If I were to make it as one text input, enforcing text format and fixing typos would be a nightmare.
 
@@ -926,15 +1119,15 @@ I would suggest you to just ask help in LAH Discord (unofficial), there are many
 
 # Afterword
 
-I hope you enjoy reading this report, because the whole process took me months to prepare. Many times the thought of “I should be paid for this work” flashed in my mind. It really is not easy to conduct a survey of this size.
+I hope you enjoy reading this report, because the whole process took me months to prepare. Many times the thought of “I should be paid for this work” flashed in my mind. It really is not easy to conduct a survey of this size, and then write a report about it!
 
 For a lGbt game that we all know caters more towards gay players, I think LifeWonders’ success in attracting more players from other demographics is pretty commendable. If they can grow the group of paying players to keep the business running [while still staying true to their original mission](https://www.lifewonders.co.jp/?lang=en), I think that is good for everyone.
 
 ## Data sanitization
 
-### Suspicious responses
+Given the sample size, it is not surprising that we might have responses that look suspicious. I will talk about some of the measures I took to sieve the responses.
 
-Given the sample size, it is not surprising that we might have some response that looks a bit trolling.
+### Suspicious responses
 
 - A transgender girl from Antarctica, has JLPT N1 level but does not play the game, and requested an English translation for the game.
   - What is the probability that this combination actually exists in the world?? How many people were born in Antarctica, some more being a transgender? If you have achieved JLPT N1 level, you probably can play the game and read its story without English translation. This response was submitted after I had already added clarification on JLPT levels and other standardized Japanese language tests, the person clearly did not read the questions properly.
