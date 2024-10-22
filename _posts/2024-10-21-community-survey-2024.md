@@ -9,6 +9,8 @@ date: 2024-10-21 09:00:00 +08
 }
 </style>
 
+> This article is quite long and contain a few visualizations. For better reading experience, please read this article in wider screen.
+
 * unordered
 {:toc}
 
@@ -21,34 +23,14 @@ Thank you to those who have helped me spread the word on various social media pl
 
 This report was incredibly hard to write due to the complexity to test the legitimacy of some responses and sheer volume of data. I also spent a lot of time trying to find data relationships that are worth telling, and coding up the visualizations for them.
 
-## Data sanitization
-
-### Suspicious responses
-
-Given the sample size, it is not surprising that we might have some response that looks a bit trolling.
-
-A transgender girl from Antarctica, has JLPT N1 level but does not play the game, and requested an English translation for the game.
-What is the probability that this combination actually exists in the world?? How many people were born in Antarctica, some more being a transgender? If you have achieved JLPT N1 level, you probably can play the game and read its story without English translation. This response was submitted after I had already added clarification on JLPT levels and other standardized Japanese language tests, the person clearly did not read the questions properly.
-Someone who found the survey via “Atlantis”, born in the Philippines but claiming to be a Japanese native speaker, and the person’s “Top 10” and “All favourites” have no intersection
-This response was also removed
-
-### Removing duplicate responses
-
-Majority of the responses I had to remove fall under this category. Usually they are detected when I see the same set of comments/favourite selections appear in multiple responses.
-
-There might be even more duplicate responses, but eliminating them all is beyond my capability. I believe there are not that many duplicates to affect the overall result significantly.
-
-### People just don’t read instructions!
-
-For optional questions, please leave them blank if you have no comment, and I specifically said “don’t write N/A”, yet I still get some “N/A”, “No”, “None” and their equivalent in other languages for those questions.
-
-For the “when did you start playing Live A Hero” question, despite already stating that the game launched on 30 September 2020, there are still people who claim to have played the game before this date, some even as far back as the year 1998.
-
-And then we also have someone who claims to be 500 years old (maybe he was trying to type “50” instead).
-
 # Respondent Profile
 
 ## Source of respondents
+
+<figure>
+<img src="/assets/img/survey-2024/source.svg" width="600" height="371" loading="lazy" alt="Source of respondents">
+<figcaption>Source of respondents</figcaption>
+</figure>
 
 Majority of the respondents found the survey via Discord, 巴哈姆特 (a Taiwan game forum) and X (Twitter).
 
@@ -57,6 +39,16 @@ Majority of the respondents found the survey via Discord, 巴哈姆特 (a Taiwan
 > At this point, the oldest respondent (54 year old) can be the youngest respondent’s grandfather... (13 years old)
 
 ## Gender
+
+<figure>
+<img src="/assets/img/survey-2024/sex.svg" width="600" height="371" loading="lazy" alt="Gender">
+<figcaption>Gender</figcaption>
+</figure>
+
+<figure>
+<img src="/assets/img/survey-2024/gender.svg" width="600" height="371" loading="lazy" alt="Cisgender vs Transgender">
+<figcaption>Cisgender vs Transgender</figcaption>
+</figure>
 
 7.5% of the respondents are non-male and 5.9% are transgender.
 
@@ -395,6 +387,11 @@ China should also be a pretty big player base of this game, but because the surv
 
 ## Japanese proficiency
 
+<figure>
+<img src="/assets/img/survey-2024/jp.svg" width="600" height="371" loading="lazy" alt="Japanese language proficiency">
+<figcaption>Japanese language proficiency</figcaption>
+</figure>
+
 After using the same question setup for the fourth time, this was the first time that I realised that it was not well designed. Many people who self-taught the Japanese language but did not sit for standardised Japanese language exams like JLPT report “Zero knowledge” instead of estimating the JLPT level that is close to their current ability.
 
 The original purpose of this question was merely to estimate the overall Japanese reading ability of the player base (to highlight how much market share LifeWonders is missing for not translating the game), rather than really wanting to know the formal qualification of the respondents.
@@ -404,6 +401,11 @@ Therefore, this question will be revamped next year, which mean I also have to r
 # The Game
 
 ## Actual Player
+
+<figure>
+<img src="/assets/img/survey-2024/play_lah.svg" width="600" height="371" loading="lazy" alt="Do you play Live A Hero?">
+<figcaption>Do you play Live A Hero?</figcaption>
+</figure>
 
 Despite having more than double the amount of respondents for this year’s survey, the percentage of actual players remains pretty high.
 
@@ -421,7 +423,15 @@ This linear scale is likely more for oversea players, whose growth is limited du
 
 ## Main Character Configuration
 
+<figure>
+<img src="/assets/img/survey-2024/body.svg" width="600" height="371" loading="lazy" alt="Main character body type">
+<figcaption>Main character body type</figcaption>
+</figure>
 
+<figure>
+<img src="/assets/img/survey-2024/voice_actor.svg" width="745" height="371" loading="lazy" alt="Main character voice">
+<figcaption>Main character voice</figcaption>
+</figure>
 
 Interesting points:
 Female respondents (cis and trans) mostly only choose human body types.
@@ -446,6 +456,11 @@ Sizable number of respondents have at least tried playing Another Eidos and Crav
 Maybe next year I should add questions to rate the story, characters and general satisfaction of these games too.
 
 ## Free Gacha Pull Currency
+
+<figure>
+<img src="/assets/img/survey-2024/gacha_stone.svg" width="745" height="371" loading="lazy" alt="Free Gacha Pull Currency">
+<figcaption>Free Gacha Pull Currency</figcaption>
+</figure>
 
 55.2% of the LAH players think the game gives less free gacha pulls than other gacha games, while only 9.8% of them think LAH is more generous than other gacha games.
 
@@ -481,9 +496,6 @@ Definition of Spending level:
 - No: never spent a single cent in this game
 
 The criteria for each spending level may be a little arbitrary, but it is enough to get a sense of the general trend.
-
-https://www.reddit.com/r/gachagaming/comments/1f6vprn/august_2024_revenue_husbando_femaleoriented/
-
 
 
 ## Gameplay Style
@@ -536,7 +548,7 @@ Other comments in no particular order:
 - No underage characters
 - Auto play/skip stages
 - Settings to disable certain kink content
-  - I think this is totally reasonable if we want diverse sex kink (even hardcore ones) but still accommodate to different kind of players
+  - <span class="comment">I think this is totally reasonable if we want diverse sex kink (even hardcore ones) but still accommodate to different kind of players</span>
 - If main character is meant to be self-insert, need settings to specify player’s sexuality
 - Furries should not be minority in the selection
 - Must no catharsis ending and No tragic, grotesque, cruel ending with no reason
@@ -545,9 +557,9 @@ Other comments in no particular order:
 - Old men
 - Playable on iPhone X
 - No female characters at all, cannot choose female main character, cannot have sex with female characters
-  - I am totally not surprised to see this comment
+  - <span class="comment">I am totally not surprised to see this comment</span>
 - Don’t end up in a situation where certain characters have way less arts than other, don’t hire artists that has known bad history
-  - We all know which artists they are referring to... 
+  - <span class="comment">We all know which artists they are referring to...</span>
 - BomBom main character
 - Main character customization
 - More brain rot comment about Sadayoshi
@@ -733,6 +745,17 @@ The “number of mentions” should be treated more as an estimation rather than
 
 6. **More Frequent Events and Content Updates** (8 mentions)
   * Players feel that events and main story updates are too infrequent, leading to periods of inactivity.
+    * <span class="comment">We officially have “more than a year gap” between two main quest chapters :sob:</span>
+  * Some want more daily and weekly missions with meaningful rewards to keep players engaged.
+  * They request more frequent updates and event variety, with less downtime between content.
+
+7. **Hero/Sidekick System & Dupe Shop Improvements** (8 mentions)  
+  * There are calls to improve the system for hero/sidekick duplicates, with better shop rewards and more useful items from dupes.
+
+8. **Event Frequency and Content (11 mentions):** 
+  * Players suggest more frequent events to keep the game engaging and reduce downtime.
+  * Requests for additional content such as hard mode for story stages and boss fights.
+
 9. **Old Character Updates** (14 mentions) 
   * Older characters feel more static compared to newer ones.
   * Requests to update older characters with new animations, skills, or cosmetic options to match newer units.
@@ -759,18 +782,7 @@ The “number of mentions” should be treated more as an estimation rather than
 
 ## Game Merchandise
 
-Other comments in no particular 
-    * <span class="comment">We officially have “more than a year gap” between two main quest chapters 😭</span>
-  * Some want more daily and weekly missions with meaningful rewards to keep players engaged.
-  * They request more frequent updates and event variety, with less downtime between content.
-
-7. **Hero/Sidekick System & Dupe Shop Improvements** (8 mentions)  
-  * There are calls to improve the system for hero/sidekick duplicates, with better shop rewards and more useful items from dupes.
-
-8. **Event Frequency and Content (11 mentions):** 
-  * Players suggest more frequent events to keep the game engaging and reduce downtime.
-  * Requests for additional content such as hard mode for story stages and boss fights.
-order:
+Other comments in no particular order:
 
 * Food, snack and drink (collaboration with existing brands)
 * Food recipe book of my favorite characters
@@ -807,7 +819,7 @@ Other comments in no particular order:
 >
 > One thing is that, with supply chain disruption and global conflict, international shopping will only be increasingly more expensive. And for some countries, it is completely impossible to ship physical items to them.
 >
-> This is why I always advocate that we need digital format! You can focus on paying for the item itself instead of shipping cost, and no worry about national law and sanctions.
+> This is why I always advocate that **we need digital format!** You can focus on paying for the item itself instead of shipping cost, and no worry about national law and sanctions.
 
 ## Extra Content
 
@@ -819,7 +831,7 @@ Other comments in no particular order:
   * <span class="comment">Cannot agree more on this</span>
 * Official livestream with game producers
   * <span class="comment">Among games of similar genre, so far only Crave Saga has official livestream where the game producer showed his face (<span class="masked">along with some Gogo boys</span>).
-  * <span class="comment">I think LifeWonders can consider inviting a few official artists to join the livestream. Maybe everyone would just use Vtuber model instead of showing their real face ([Kinoshita Jiroh does that a lot](https://www.youtube.com/@kinoshita_jiroh/about))</span>
+  * <span class="comment">I think LifeWonders can consider inviting a few official artists to join the livestream. Maybe everyone would just use Vtuber model instead of showing their real face ([Kinoshita Jiroh sensei does that a lot](https://www.youtube.com/@kinoshita_jiroh/about))</span>
 * Gameplay livestream
 * More voice actor’s performance like podcast
 * R18 content
@@ -896,9 +908,9 @@ Way too difficult to implement, you will know why when you read the game data yo
 
 We collect what we can on the wiki, but to be honest there really aren’t that many English fan translations for this game to begin with.
 
-For event/main quest translation, see [https://housamosummaries.blogspot.com/](https://housamosummaries.blogspot.com/).
-For event special quest fan translations, they are usually listed in the event info page.
-For character quest fan translations, see [Character Quests](https://liveahero-wiki.github.io/chara_quests/)
+- For event/main quest translation, see [https://housamosummaries.blogspot.com/](https://housamosummaries.blogspot.com/).
+- For event special quest fan translations, they are usually listed in the event info page.
+- For character quest fan translations, see [Character Quests](https://liveahero-wiki.github.io/chara_quests/)
 
 ### Survey needs Traditional Chinese/Spanish translation
 
@@ -917,3 +929,28 @@ I would suggest you to just ask help in LAH Discord (unofficial), there are many
 I hope you enjoy reading this report, because the whole process took me months to prepare. Many times the thought of “I should be paid for this work” flashed in my mind. It really is not easy to conduct a survey of this size.
 
 For a lGbt game that we all know caters more towards gay players, I think LifeWonders’ success in attracting more players from other demographics is pretty commendable. If they can grow the group of paying players to keep the business running [while still staying true to their original mission](https://www.lifewonders.co.jp/?lang=en), I think that is good for everyone.
+
+## Data sanitization
+
+### Suspicious responses
+
+Given the sample size, it is not surprising that we might have some response that looks a bit trolling.
+
+- A transgender girl from Antarctica, has JLPT N1 level but does not play the game, and requested an English translation for the game.
+  - What is the probability that this combination actually exists in the world?? How many people were born in Antarctica, some more being a transgender? If you have achieved JLPT N1 level, you probably can play the game and read its story without English translation. This response was submitted after I had already added clarification on JLPT levels and other standardized Japanese language tests, the person clearly did not read the questions properly.
+- Someone who found the survey via “Atlantis”, born in the Philippines but claiming to be a Japanese native speaker, and the person’s “Top 10” and “All favourites” have no intersection
+  - This response was also removed
+
+### Removing duplicate responses
+
+Majority of the responses I had to remove fall under this category. Usually they are detected when I see the same set of comments/favourite selections appear in multiple responses.
+
+There might be even more duplicate responses, but eliminating them all is beyond my capability. I believe there are not that many duplicates to affect the overall result significantly.
+
+### People just don’t read instructions!
+
+For optional questions, please leave them blank if you have no comment, and I specifically said “don’t write N/A”, yet I still get some “N/A”, “No”, “None” and their equivalent in other languages for those questions.
+
+For the “when did you start playing Live A Hero” question, despite already stating that the game launched on 30 September 2020, there are still people who claim to have played the game before this date, some even as far back as the year 1998.
+
+And then we also have someone who claims to be 500 years old (maybe he was trying to type “50” instead).
