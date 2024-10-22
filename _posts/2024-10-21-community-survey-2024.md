@@ -940,6 +940,10 @@ The “number of mentions” should be treated more as an estimation rather than
 * A few comments suggest adding romance and marriage mechanics with gacha characters.
 * Visual improvements, like new CG or splash art for characters, are desired by some.
 
+## Occupation
+
+TODO
+
 ## Game Merchandise
 
 <figure>
