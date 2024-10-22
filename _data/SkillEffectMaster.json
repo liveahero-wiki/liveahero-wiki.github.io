@@ -81816,6 +81816,46 @@
       "isOverrideStatusDescription": false
     }
   },
+  "4489": {
+    "skillEffectId": 4489,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 1,
+            "target": 133,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果133番1つ除去",
+      "isCountTurn": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "4490": {
     "skillEffectId": 4490,
     "skillEffectJson": {
@@ -87914,6 +87954,234 @@
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
+    }
+  },
+  "4689": {
+    "skillEffectId": 4689,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Silence",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 303,
+      "canDispel": false,
+      "filterIds": [
+        9
+      ],
+      "parameter": false,
+      "description": "システム沈黙",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4690": {
+    "skillEffectId": 4690,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 90
+          }
+        }
+      ],
+      "filename": "status_fire",
+      "statusId": 126,
+      "canDispel": true,
+      "filterIds": [],
+      "parameter": false,
+      "description": "火の加護",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "火の加護",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメージ-10%。<br><color=#505050>火属性の敵からダメージを受けた時、解除される。</color>",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4691": {
+    "skillEffectId": 4691,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 90
+          }
+        }
+      ],
+      "filename": "status_water",
+      "statusId": 128,
+      "canDispel": true,
+      "filterIds": [],
+      "parameter": false,
+      "description": "水の加護",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "水の加護",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメージ-10%。<br><color=#505050>水属性の敵からダメージを受けた時、解除される。</color>",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4692": {
+    "skillEffectId": 4692,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 90
+          }
+        }
+      ],
+      "filename": "status_earth",
+      "statusId": 129,
+      "canDispel": true,
+      "filterIds": [],
+      "parameter": false,
+      "description": "木の加護",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "木の加護",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメージ-10%。<br><color=#505050>木属性の敵からダメージを受けた時、解除される。</color>",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4693": {
+    "skillEffectId": 4693,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 90
+          }
+        }
+      ],
+      "filename": "status_light",
+      "statusId": 130,
+      "canDispel": true,
+      "filterIds": [],
+      "parameter": false,
+      "description": "光の加護",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "光の加護",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメージ-10%。<br><color=#505050>光属性の敵からダメージを受けた時、解除される。</color>",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4694": {
+    "skillEffectId": 4694,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 90
+          }
+        }
+      ],
+      "filename": "status_shadow",
+      "statusId": 133,
+      "canDispel": true,
+      "filterIds": [],
+      "parameter": false,
+      "description": "影の加護",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "影の加護",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメージ-10%。<br><color=#505050>影属性の敵からダメージを受けた時、解除される。</color>",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
     }
   }
 }
