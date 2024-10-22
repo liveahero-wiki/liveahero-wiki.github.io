@@ -905,7 +905,7 @@ The “number of mentions” should be treated more as an estimation rather than
 
 6. **More Frequent Events and Content Updates** (8 mentions)
   * Players feel that events and main story updates are too infrequent, leading to periods of inactivity.
-    * <span class="comment" markdown="0">We officially have “more than a year gap” between two main quest chapters :sob:</span>
+    * <span class="comment">We officially have “more than a year gap” between two main quest chapters :sob:</span>.
   * Some want more daily and weekly missions with meaningful rewards to keep players engaged.
   * They request more frequent updates and event variety, with less downtime between content.
 
@@ -1022,12 +1022,12 @@ Other comments in no particular order:
 Other comments in no particular order:
 
 * Tons of comments about wanting anime/animation
-  * <span class="comment">People are high on [copium](https://www.urbandictionary.com/define.php?term=Copium) again</span>
+  * <span class="comment">Anime is very expensive...</span>
 * Videos need english subtitle
   * <span class="comment">Cannot agree more on this</span>
 * Official livestream with game producers
   * <span class="comment">Among games of similar genre, so far only Crave Saga has official livestream where the game producer showed his face (<span class="masked">along with some Gogo boys</span>).
-  * <span class="comment">I think LifeWonders can consider inviting a few official artists to join the livestream. Maybe everyone would just use Vtuber model instead of showing their real face ([Kinoshita Jiroh sensei does that a lot](https://www.youtube.com/@kinoshita_jiroh/about))</span>
+  * <span class="comment">I think LifeWonders can consider inviting a few official illustrators to join the livestream. Maybe everyone would just use Vtuber model instead of showing their real face ([Kinoshita Jiroh sensei does that a lot](https://www.youtube.com/@kinoshita_jiroh/about))</span>
 * Gameplay livestream
 * More voice actor’s performance like podcast
 * R18 content
