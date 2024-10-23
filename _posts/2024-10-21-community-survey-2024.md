@@ -27,42 +27,32 @@ This report was incredibly hard to write due to the complexity to test the legit
 
 ## Source of respondents
 
-<figure>
-<img src="/assets/img/survey-2024/source.svg" width="600" height="371" loading="lazy" alt="Source of respondents">
-<figcaption>Source of Respondents</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/source.svg"
+  title="Source of Respondents" %}
 
 Majority of the respondents found the survey via Discord, 巴哈姆特 (a Taiwan game forum) and X (Twitter).
 
 ## Age
 
-<figure>
-<img src="/assets/img/survey-2024/age.jpg" width="847" height="777" loading="lazy" alt="Age">
-<figcaption>Age of Respondents</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/age.jpg"
+  title="Age of Respondents" %}
 
 > At this point, the oldest respondent (54 year old) can be the youngest respondent’s grandfather... (13 years old)
 
 ## Gender
 
-<figure>
-<img src="/assets/img/survey-2024/sex.svg" width="600" height="371" loading="lazy" alt="Gender">
-<figcaption>Gender</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/sex.svg"
+  title="Gender" %}
 
-<figure>
-<img src="/assets/img/survey-2024/gender.svg" width="600" height="371" loading="lazy" alt="Cisgender vs Transgender">
-<figcaption>Cisgender vs Transgender</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/gender.svg"
+  title="Cisgender vs Transgender" %}
 
 7.5% of the respondents are non-male and 5.9% are transgender.
 
 Female/Non-Binary/Other Respondents and Where to Find them
 
-<figure>
-<img src="/assets/img/survey-2024/other-gender-country.jpg" width="553" height="490" loading="lazy" alt="Countries of Female/Non-Binary/Other Respondents">
-<figcaption>Countries of Female/Non-Binary/Other Respondents</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/other-gender-country.jpg"
+  title="Countries of Female/Non-Binary/Other Respondents" %}
 
 ## Country
 
@@ -397,10 +387,8 @@ China should also be a pretty big player base of this game, but because the surv
 
 ## Japanese proficiency
 
-<figure>
-<img src="/assets/img/survey-2024/jp.svg" width="600" height="371" loading="lazy" alt="Japanese language proficiency">
-<figcaption>Japanese Language Proficiency</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/jp.svg"
+  title="Japanese Language Proficiency" %}
 
 After using the same question setup for the fourth time, this was the first time that I realised that it was not well designed. Many people who self-taught the Japanese language but did not sit for standardised Japanese language exams like JLPT report “Zero knowledge” instead of estimating the JLPT level that is close to their current ability.
 
@@ -412,10 +400,8 @@ Therefore, this question will be revamped next year, which mean I also have to r
 
 ## Actual Player
 
-<figure>
-<img src="/assets/img/survey-2024/play_lah.svg" width="600" height="371" loading="lazy" alt="Do you play Live A Hero?">
-<figcaption>Do you play Live A Hero?</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/play_lah.svg"
+  title="Do you play Live A Hero?" %}
 
 Despite having more than double the amount of respondents for this year’s survey, the percentage of actual players remains pretty high.
 
@@ -423,10 +409,8 @@ We can see that Gyee has the highest number of “abandoned” counts, followed 
 
 ## Playing Time
 
-<figure>
-<img src="/assets/img/survey-2024/play-lah-time.jpg" width="568" height="433" loading="lazy" alt="Playing time of LAH players">
-<figcaption>How Long Have Live A Hero Players Been Playing the Game?</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/play-lah-time.jpg"
+  title="How Long Have Live A Hero Players Been Playing the Game?" %}
 
 X-axis is the number of days played (end date is set to 30 Sep 2024). Slightly less than half of the respondents started playing Live A Hero immediately after the game’s launch. Since then, the player base seems to be growing at a linear scale.
 
@@ -438,15 +422,11 @@ This linear scale is likely more for oversea players, whose growth is limited du
 
 ## Main Character Configuration
 
-<figure>
-<img src="/assets/img/survey-2024/body.svg" width="600" height="371" loading="lazy" alt="Main character body type">
-<figcaption>Main character body type</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/body.svg"
+  title="Main character body type" %}
 
-<figure>
-<img src="/assets/img/survey-2024/voice_actor.svg" width="745" height="371" loading="lazy" alt="Main character voice">
-<figcaption>Main character voice</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/voice_actor.svg"
+  title="Main character voice" %}
 
 Interesting points:
 Female respondents (cis and trans) mostly only choose human body types.
@@ -458,10 +438,8 @@ For female voice, Yui Toita is slightly more popular than Orie Kimoto.
 
 ## Money spending
 
-<figure>
-<img src="/assets/img/survey-2024/in-app-purchase.jpg" width="1204" height="546" loading="lazy" alt="How Many Live A Hero Player Spend Money In-game?">
-<figcaption>How Many Live A Hero Player Spend Money In-game?</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/in-app-purchase.jpg"
+  title="How Many Live A Hero Player Spend Money In-game?" %}
 
 - It seems that those who do spend money in this game pretty much will buy all of the in-app purchase (but we don't know how frequent they do it via this question).
 - We also don't know how many players bought both the small and large event limited stone packs.
@@ -478,53 +456,39 @@ To help make other visualizations easier to understand, we will introduce the co
 
 The criteria for each spending level may be a little arbitrary, but it is enough to get a sense of the general trend.
 
-<figure>
-<img src="/assets/img/survey-2024/spending-overall.jpg" width="467" height="410" loading="lazy" alt="How Many Live A Hero Player Spend Money In-game?">
-<figcaption>How Many Live A Hero Player Spend Money In-game?</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/spending-overall.jpg"
+  title="How Many Live A Hero Player Spend Money In-game?" %}
 
 More than 50% of the players actually spend at least some amount of money in Live A Hero.
 
-<figure>
-<img src="/assets/img/survey-2024/spending-region.jpg" width="795" height="602" loading="lazy" alt="How Many Live A Hero Player Spend Money In-game? (by Region)">
-<figcaption>How Many Live A Hero Player Spend Money In-game? (by Region)</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/spending-region.jpg"
+  title="How Many Live A Hero Player Spend Money In-game? (by Region)" %}
 
-<figure>
-<img src="/assets/img/survey-2024/spending-east-asia.jpg" width="720" height="502" loading="lazy" alt="How Many Live A Hero Player Spend Money In-game? (East Asia)">
-<figcaption>How Many Live A Hero Player Spend Money In-game? (East Asia)</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/spending-east-asia.jpg"
+  title="How Many Live A Hero Player Spend Money In-game? (East Asia)" %}
 
 East Asia has the highest percentage of Live A Hero players that spend money in-game. Given that, you can see why LifeWonders advertise a lot to East Asia countries like Taiwan.
 
 ## Gameplay Style
 
-<figure>
-<img src="/assets/img/survey-2024/login-overall.jpg" width="745" height="371" loading="lazy" alt="How Many Live A Hero Player Spend Money In-game?">
-<figcaption>How Live A Hero Players Play the Game?</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/login-overall.jpg"
+  title="How Live A Hero Players Play the Game?" %}
 
-<figure>
-<img src="/assets/img/survey-2024/login-spending-percentage.jpg" width="745" height="371" loading="lazy" alt="How Live A Hero Players Play the Game against Spending Level">
-<figcaption>"How Live A Hero Players Play the Game" against "Spending Level"</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/login-spending-percentage.jpg"
+  title="\"How Live A Hero Players Play the Game\" against \"Spending Level\"" %}
 
 Those who play the game in the most earnest way (last tier) are more likely to be paying customer too
 
-<figure>
-<img src="/assets/img/survey-2024/login-other-gender.jpg" width="745" height="371" loading="lazy" alt="How Live A Hero Players Play the Game (Female / Non-binary / Other)">
-<figcaption>How Live A Hero Players Play the Game (Female / Non-binary / Other)</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/login-other-gender.jpg"
+  title="How Live A Hero Players Play the Game (Female / Non-binary / Other)" %}
 
 - Among non-male players, slightly more only play the game occasionally compared to the male counterpart
 - Female players are less likely to optimize their game play to the maximum compared to other groups.
 
 ## Game Elements’ Ranking
 
-<figure>
-<img src="/assets/img/survey-2024/game-score.jpg" width="745" height="371" loading="lazy" alt="Live A Hero Game Element's Score">
-<figcaption>Live A Hero Game Element's Score</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/game-score.jpg"
+  title="Live A Hero Game Element's Score" %}
 
 Unsurprisingly, character is the most important aspect of the game according to the players.
 
@@ -534,10 +498,8 @@ Unsurprisingly, character is the most important aspect of the game according to 
 
 ## Other games
 
-<figure>
-<img src="/assets/img/survey-2024/play-other-game.jpg" width="600" height="371" loading="lazy" alt="What Other lGbt Games Played by Live A Hero Players">
-<figcaption>What Other lGbt Games Played by Live A Hero Players</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/play-other-game.jpg"
+  title="What Other lGbt Games Played by Live A Hero Players" %}
 
 268 LAH players have played Gyee before but most of them have abandoned it. 242 LAH players have heard of the game, but probably got scared by the testimonial of past Gyee players that they never bother to try it.
 
@@ -553,38 +515,30 @@ Maybe next year I should add questions to rate the story, characters and general
 
 ## Free Gacha Pull Currency
 
-<figure>
-<img src="/assets/img/survey-2024/gacha_stone.svg" width="745" height="371" loading="lazy" alt="Free Gacha Pull Currency">
-<figcaption>Free Gacha Pull Currency Opinion</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/gacha_stone.svg"
+  title="Free Gacha Pull Currency Opinion" %}
 
 55.2% of the LAH players think the game gives less free gacha pulls than other gacha games, while only 9.8% of them think LAH is more generous than other gacha games.
 
 
 Let’s hear players that have tried other gacha games have to say:
 
-<figure>
-<img src="/assets/img/survey-2024/gacha-stone-other-game2.jpg" width="745" height="371" loading="lazy" alt="Free Gacha Pull Currency Opinion against Other Games">
-<figcaption>Free Gacha Pull Currency Opinion against Other Games</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/gacha-stone-other-game2.jpg"
+  title="Free Gacha Pull Currency Opinion against Other Games" %}
 
 it seems that only LAH players that have tried Another Eidos have some different patterns between the “less” and “more” group: in the “more generous” group, higher percentage of those from “more generous” group have abandoned Another Eidos than that of the “less generous” group (but we do not know if they are indeed using Another Eidos as the comparison).
 
 (Tamacolle also shows a different pattern between the “less” and “more” group, but since the game does not require spending money to pull characters, I don’t think it really matters).
 
-<figure>
-<img src="/assets/img/survey-2024/gacha-stone-spending.jpg" width="745" height="371" loading="lazy" alt="Free Gacha Pull Currency Opinion against Spending Level">
-<figcaption>Free Gacha Pull Currency Opinion against Spending Level</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/gacha-stone-spending.jpg"
+  title="Free Gacha Pull Currency Opinion against Spending Level" %}
 
 It is clear that even among players that have spent money in this game, we still have more of them feeling the game is less generous with free gacha pulls than other gacha games, this opinion is not just limited to those free-to-play players.
 
 ## Translation
 
-<figure>
-<img src="/assets/img/survey-2024/translation.jpg" width="745" height="371" loading="lazy" alt="Translation Prediction">
-<figcaption>Translation Prediction</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/translation.jpg"
+  title="Translation Prediction" %}
 
 Once again, we celebrate another game anniversary without official translation, which means 27.2% of the respondents made the correct prediction.
 
@@ -594,10 +548,8 @@ Half of the people (median value) believe that LifeWonders would translate at mo
 
 ## Read story
 
-<figure>
-<img src="/assets/img/survey-2024/read-story.svg" width="745" height="371" loading="lazy" alt="Does Live A Hero Player Read Story In-game?">
-<figcaption>Does Live A Hero Player Read Story In-game?</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/read-story.svg"
+  title="Does Live A Hero Player Read Story In-game?" %}
 
 From the feedback I have received after publishing the survey, I should have added one more option for “Yes, I read the story in-game with the help of machine translation and some guesswork”.
 
@@ -609,10 +561,8 @@ Therefore, I want to use these two questions to see if the market are willing to
 
 ### Buy-out games
 
-<figure>
-<img src="/assets/img/survey-2024/buy-out.jpg" width="745" height="371" loading="lazy" alt="Does Live A Hero Player Read Story In-game?">
-<figcaption>Do Live A Hero Players Support Buy-out Game?</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/buy-out.jpg"
+  title="Do Live A Hero Players Support Buy-out Game?" %}
 
 - Need translation
 - Must have hote men/furries
@@ -629,19 +579,13 @@ Therefore, I want to use these two questions to see if the market are willing to
 
 In case LifeWonders is not convinced that this statistics is not representing those who actually spend money in game, let me create another chart with only Live A Hero Players that spent money in-game
 
-<figure>
-<img src="/assets/img/survey-2024/buy-out-spending.jpg" width="745" height="371" loading="lazy" alt="Does Live A Hero Player Read Story In-game?">
-<figcaption>Do Live A Hero Players Support Buy-out Game? (those who spent money in Live A Hero)</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/buy-out-spending.jpg"
+  title="Do Live A Hero Players Support Buy-out Game? (those who spent money in Live A Hero)" %}
 
 ### R-18 games
 
-<figure>
-<img src="/assets/img/survey-2024/r18.jpg" width="745" height="371" loading="lazy" alt="Does Live A Hero Player Read Story In-game?">
-<figcaption>Do Live A Hero Players Support R18 Game?</figcaption>
-</figure>
-
-{% include figure-image.html path="/assets/img/survey-2024/r18.jpg" title="Do Live A Hero Players Support R18 Game?" %}
+{% include figure-image.html path="/assets/img/survey-2024/r18.jpg"
+  title="Do Live A Hero Players Support R18 Game?" %}
 
 Other comments in no particular order:
 
@@ -676,15 +620,11 @@ Other comments in no particular order:
 <details open markdown="1">
 <summary>Global</summary>
 
-<figure>
-<img src="/assets/img/survey-2024/all-fav-bar.jpg" width="745" height="371" loading="lazy" alt="All Favourites Popularity Ranking (Global)">
-<figcaption>All Favourites Popularity Ranking (Global)</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/all-fav-bar.jpg"
+  title="All Favourites Popularity Ranking (Global)" %}
 
-<figure>
-<img src="/assets/img/survey-2024/top10-bar.jpg" width="745" height="371" loading="lazy" alt="Top 10 Favourites Popularity Ranking (Global)">
-<figcaption>Top 10 Favourites Popularity Ranking (Global)</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/top10-bar.jpg"
+  title="Top 10 Favourites Popularity Ranking (Global)" %}
 
 > Before we start, I realized that once again some people misunderstood my intention for setting the “top 10 favourites” question. Many people who have less than 10 “all favourites” thought they still need to choose exactly 10 characters for “top 10” question, but actually I wanted people to choose “at most 10 characters among their all favourites”: if you have chose less than 10 characters in first question, you should just same set of characters for the second question.
 >
@@ -753,10 +693,8 @@ Comments:
 - The gap between first place and second place is much more significant.
 - {% chara_link Tsuneaki %} and {% chara_link Sterio %} are pretty high on the ranking too, perhaps due to recency biases as they are featured in the event when the survey was running.
 
-<figure>
-<img src="/assets/img/survey-2024/all-fav-top-10-2024.jpg" width="745" height="371" loading="lazy" alt="All Favourites vs Top 10 (2024)">
-<figcaption>All Favourites vs Top 10 (2024)</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/all-fav-top-10-2024.jpg"
+  title="All Favourites vs Top 10 (2024)" %}
 
 As we move on to “top 10 favourites” popularity ranking, we can see that it often favours the older characters more. {% chara_link Tsuneaki %} and {% chara_link Sterio %}’s ranking somewhat dropped, while {% chara_link Gaius %} experienced the largest ranking boost this way.
 
@@ -765,10 +703,8 @@ As we move on to “top 10 favourites” popularity ranking, we can see that it 
 <details markdown="1">
 <summary>2023 vs 2024</summary>
 
-<figure>
-<img src="/assets/img/survey-2024/all-fav-2023-2024.jpg" width="745" height="371" loading="lazy" alt="All Favourites (2023 vs 2024)">
-<figcaption>All Favourites (2023 vs 2024)</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/all-fav-2023-2024.jpg"
+  title="All Favourites (2023 vs 2024)" %}
 
 Comments
 
@@ -779,10 +715,8 @@ Comments
 <details markdown="1">
 <summary>Japan</summary>
 
-<figure>
-<img src="/assets/img/survey-2024/fav-japan.jpg" width="745" height="371" loading="lazy" alt="All Favourites vs Top 10 (Japan only)">
-<figcaption>All Favourites vs Top 10 (Japan only)</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/fav-japan.jpg"
+  title="All Favourites vs Top 10 (Japan only)" %}
 
 - The sample size is not large, but I think it is not wrong to speculate that Japan players are also mostly furry-lovers.
 - {% chara_link Alchiba %} gets the biggest boost, jumping from 37th place to 12th place in "top 10" favourites ranking.
@@ -805,10 +739,8 @@ For female respondents, {% chara_link Sensettia %} is number 1 in “All favouri
 <details markdown="1">
 <summary>People with less than 10 favourites</summary>
 
-<figure>
-<img src="/assets/img/survey-2024/top10-less-than-10-vs-exactly-10.jpg" width="745" height="371" loading="lazy" alt="All Favourites vs Top 10 (Japan only)">
-<figcaption>All Favourites vs Top 10 (Japan only)</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/top10-less-than-10-vs-exactly-10.jpg"
+  title="All Favourites vs Top 10 (Japan only)" %}
 
 </details>
 
@@ -829,10 +761,8 @@ Obviously all male furries point to Pubraseer
 
 The popularity poll clearly shows that the game has successfully captured the market that likes muscular male and furries, but has the game captured market that like other kind of characters? We are going to find out with other metrics.
 
-<figure>
-<img src="/assets/img/survey-2024/top10-heat-map.jpg" width="745" height="371" loading="lazy" alt="All Favourites vs Top 10 (Japan only)">
-<figcaption>All Favourites vs Top 10 (Japan only)</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/top10-heat-map.jpg"
+  title="All Favourites vs Top 10 (Japan only)" %}
 
 Interesting observations:
 
@@ -951,10 +881,8 @@ TODO
 
 ## Game Merchandise
 
-<figure>
-<img src="/assets/img/survey-2024/merchandise.jpg" width="745" height="371" loading="lazy" alt="Live A Hero Game Element's Score">
-<figcaption>Live A Hero Game Element's Score</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/merchandise.jpg"
+  title="Live A Hero Game Element's Score" %}
 
 Other comments in no particular order:
 
@@ -971,22 +899,16 @@ Other comments in no particular order:
 * Will consider buying if LW come to Taiwan event to sell
 * Some brain rot comments about Hydoor, Sadayoshi, Gaius
 
-<figure>
-<img src="/assets/img/survey-2024/merchandise-bucket-analysis.jpg" width="745" height="371" loading="lazy" alt="Bucket Analysis for Game Merchandise">
-<figcaption>Bucket Analysis for Game Merchandise</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/merchandise-bucket-analysis.jpg"
+  title="Bucket Analysis for Game Merchandise" %}
 
 ## Difficulty to Buy Game Merchandise
 
-<figure>
-<img src="/assets/img/survey-2024/merchandise-difficulty.jpg" width="745" height="371" loading="lazy" alt="Live A Hero Game Element's Score">
-<figcaption>Live A Hero Game Element's Score</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/merchandise-difficulty.jpg"
+  title="Live A Hero Game Element's Score" %}
 
-<figure>
-<img src="/assets/img/survey-2024/merchandise-difficulty-spending.jpg" width="745" height="371" loading="lazy" alt="Live A Hero Game Element's Score">
-<figcaption>Live A Hero Game Element's Score</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/merchandise-difficulty-spending.jpg"
+  title="Live A Hero Game Element's Score" %}
 
 Other comments in no particular order:
 
@@ -1012,17 +934,13 @@ Other comments in no particular order:
 >
 > This is why I always advocate that **we need digital format!** You can focus on paying for the item itself instead of shipping cost, and no worry about national law and sanctions.
 
-<figure>
-<img src="/assets/img/survey-2024/merchandise-difficulty-spending.jpg" width="745" height="371" loading="lazy" alt="Live A Hero Game Element's Score">
-<figcaption>Live A Hero Game Element's Score</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/merchandise-difficulty-spending.jpg"
+  title="Live A Hero Game Element's Score" %}
 
 ## Extra Content
 
-<figure>
-<img src="/assets/img/survey-2024/extra-content.jpg" width="745" height="371" loading="lazy" alt="Live A Hero Game Element's Score">
-<figcaption>Live A Hero Game Element's Score</figcaption>
-</figure>
+{% include figure-image.html path="/assets/img/survey-2024/extra-content.jpg"
+  title="Live A Hero Game Element's Score" %}
 
 Other comments in no particular order:
 
