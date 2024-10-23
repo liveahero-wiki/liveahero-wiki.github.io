@@ -25,11 +25,20 @@ jobs:
         python -m pip install -r requirements.txt
         python tools/translation_download_tsv.py
         python tools/skill_evo.py
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "jekyll --version && chmod 777 /srv/jekyll && JEKYLL_ENV=production jekyll build --future"
+    #- name: Build the site in the jekyll/builder container
+    #  run: |
+    #    docker run \
+    #    -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+    #    jekyll/builder:latest /bin/bash -c "jekyll --version && chmod 777 /srv/jekyll && JEKYLL_ENV=production jekyll build --future"
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.3'
+        bundler-cache: true
+    - name: Install dependencies
+      run: bundle install jekyll jemoji jekyll-redirect-from fastimage
+    - name: Build site
+      run: JEKYLL_ENV=production bundle exec jekyll build --future
+
     - name: Publish to Github Pages
       run: |
         sudo chmod 777 _site
