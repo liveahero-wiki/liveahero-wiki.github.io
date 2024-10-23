@@ -37,7 +37,7 @@ Majority of the respondents found the survey via Discord, 巴哈姆特 (a Taiwan
 ## Age
 
 <figure>
-<img src="/assets/img/survey-2024/age.jpg" width="600" height="371" loading="lazy" alt="Age">
+<img src="/assets/img/survey-2024/age.jpg" width="847" height="777" loading="lazy" alt="Age">
 <figcaption>Age of Respondents</figcaption>
 </figure>
 
@@ -60,7 +60,7 @@ Majority of the respondents found the survey via Discord, 巴哈姆特 (a Taiwan
 Female/Non-Binary/Other Respondents and Where to Find them
 
 <figure>
-<img src="/assets/img/survey-2024/other-gender-country.jpg" width="600" height="371" loading="lazy" alt="Countries of Female/Non-Binary/Other Respondents">
+<img src="/assets/img/survey-2024/other-gender-country.jpg" width="553" height="490" loading="lazy" alt="Countries of Female/Non-Binary/Other Respondents">
 <figcaption>Countries of Female/Non-Binary/Other Respondents</figcaption>
 </figure>
 
@@ -424,7 +424,7 @@ We can see that Gyee has the highest number of “abandoned” counts, followed 
 ## Playing Time
 
 <figure>
-<img src="/assets/img/survey-2024/play-lah-time.jpg" width="600" height="371" loading="lazy" alt="Playing time of LAH players">
+<img src="/assets/img/survey-2024/play-lah-time.jpg" width="568" height="433" loading="lazy" alt="Playing time of LAH players">
 <figcaption>How Long Have Live A Hero Players Been Playing the Game?</figcaption>
 </figure>
 
@@ -459,13 +459,16 @@ For female voice, Yui Toita is slightly more popular than Orie Kimoto.
 ## Money spending
 
 <figure>
-<img src="/assets/img/survey-2024/in-app-purchase.jpg" width="745" height="371" loading="lazy" alt="How Many Live A Hero Player Spend Money In-game?">
+<img src="/assets/img/survey-2024/in-app-purchase.jpg" width="1204" height="546" loading="lazy" alt="How Many Live A Hero Player Spend Money In-game?">
 <figcaption>How Many Live A Hero Player Spend Money In-game?</figcaption>
 </figure>
 
+- It seems that those who do spend money in this game pretty much will buy all of the in-app purchase (but we don't know how frequent they do it via this question).
+- We also don't know how many players bought both the small and large event limited stone packs.
+
 To help make other visualizations easier to understand, we will introduce the concept of “spending level” here.
 
-Definition of Spending level:
+### Definition of Spending level
 
 - Medium-Heavy: those who had bought the event-limited stone pack and/or regular-priced stones
   - Because the question did not ask how often people bought stone packs, it is hard to further differentiate “those that buy stone pack(s) in every event” vs “those that only spend once or twice in their entire experience”.
@@ -476,19 +479,19 @@ Definition of Spending level:
 The criteria for each spending level may be a little arbitrary, but it is enough to get a sense of the general trend.
 
 <figure>
-<img src="/assets/img/survey-2024/spending-overall.jpg" width="745" height="371" loading="lazy" alt="How Many Live A Hero Player Spend Money In-game?">
+<img src="/assets/img/survey-2024/spending-overall.jpg" width="467" height="410" loading="lazy" alt="How Many Live A Hero Player Spend Money In-game?">
 <figcaption>How Many Live A Hero Player Spend Money In-game?</figcaption>
 </figure>
 
 More than 50% of the players actually spend at least some amount of money in Live A Hero.
 
 <figure>
-<img src="/assets/img/survey-2024/spending-region.jpg" width="745" height="371" loading="lazy" alt="How Many Live A Hero Player Spend Money In-game? (by Region)">
+<img src="/assets/img/survey-2024/spending-region.jpg" width="795" height="602" loading="lazy" alt="How Many Live A Hero Player Spend Money In-game? (by Region)">
 <figcaption>How Many Live A Hero Player Spend Money In-game? (by Region)</figcaption>
 </figure>
 
 <figure>
-<img src="/assets/img/survey-2024/spending-east-asia.jpg" width="745" height="371" loading="lazy" alt="How Many Live A Hero Player Spend Money In-game? (East Asia)">
+<img src="/assets/img/survey-2024/spending-east-asia.jpg" width="720" height="502" loading="lazy" alt="How Many Live A Hero Player Spend Money In-game? (East Asia)">
 <figcaption>How Many Live A Hero Player Spend Money In-game? (East Asia)</figcaption>
 </figure>
 
@@ -637,6 +640,8 @@ In case LifeWonders is not convinced that this statistics is not representing th
 <img src="/assets/img/survey-2024/r18.jpg" width="745" height="371" loading="lazy" alt="Does Live A Hero Player Read Story In-game?">
 <figcaption>Do Live A Hero Players Support R18 Game?</figcaption>
 </figure>
+
+{% include figure-image.html path="/assets/img/survey-2024/r18.jpg" title="Do Live A Hero Players Support R18 Game?" %}
 
 Other comments in no particular order:
 
