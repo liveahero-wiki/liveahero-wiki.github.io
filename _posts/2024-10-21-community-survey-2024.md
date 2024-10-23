@@ -9,7 +9,7 @@ date: 2024-10-21 09:00:00 +08
 }
 </style>
 
-> This article is quite long and contain a few visualizations. For better reading experience, please read this article in wider screen.
+> This article is very long and contain a few visualizations. For better reading experience, please read this article in wider screen.
 
 * unordered
 {:toc}
@@ -37,6 +37,8 @@ Majority of the respondents found the survey via Discord, 巴哈姆特 (a Taiwan
 {% include figure-image.html path="/assets/img/survey-2024/age.jpg"
   title="Age of Respondents" %}
 
+Since this is a mobile gacha game, it is no surprise that the age distribution is skewed towards the younger side.
+
 > At this point, the oldest respondent (54 year old) can be the youngest respondent’s grandfather... (13 years old)
 
 ## Gender
@@ -47,9 +49,9 @@ Majority of the respondents found the survey via Discord, 巴哈姆特 (a Taiwan
 {% include figure-image.html path="/assets/img/survey-2024/gender.svg"
   title="Cisgender vs Transgender" %}
 
-7.5% of the respondents are non-male and 5.9% are transgender.
+7.5% of the respondents are non-male and 5.9% are transgender. Both are higher than the previous year.
 
-Female/Non-Binary/Other Respondents and Where to Find them
+### Female/Non-Binary/Other Respondents and Where to Find them
 
 {% include figure-image.html path="/assets/img/survey-2024/other-gender-country.jpg"
   title="Countries of Female/Non-Binary/Other Respondents" %}
@@ -390,9 +392,13 @@ China should also be a pretty big player base of this game, but because the surv
 {% include figure-image.html path="/assets/img/survey-2024/jp.svg"
   title="Japanese Language Proficiency" %}
 
-After using the same question setup for the fourth time, this was the first time that I realised that it was not well designed. Many people who self-taught the Japanese language but did not sit for standardised Japanese language exams like JLPT report “Zero knowledge” instead of estimating the JLPT level that is close to their current ability.
+31.4% of the respondents cannot read Japanese at all, while slightly more than half of the respondents can read some basic Japanese words.
 
-The original purpose of this question was merely to estimate the overall Japanese reading ability of the player base (to highlight how much market share LifeWonders is missing for not translating the game), rather than really wanting to know the formal qualification of the respondents.
+All in all, those who has the ability to read the in-game Japanese story is still less than a quarter.
+
+> After using the same question setup for the fourth time, this was the first time that I realised that it was not well designed. Many people who self-taught the Japanese language but did not sit for standardised Japanese language exams like JLPT report “Zero knowledge” instead of estimating the JLPT level that is close to their current ability.
+>
+> The original purpose of this question was merely to estimate the overall Japanese reading ability of the player base (to highlight how much market share LifeWonders is missing for not translating the game), rather than really wanting to know the formal qualification of the respondents.
 
 Therefore, this question will be revamped next year, which mean I also have to remove the “fundoshi” option (*sob*).
 
@@ -428,13 +434,109 @@ This linear scale is likely more for oversea players, whose growth is limited du
 {% include figure-image.html path="/assets/img/survey-2024/voice_actor.svg"
   title="Main character voice" %}
 
-Interesting points:
-Female respondents (cis and trans) mostly only choose human body types.
-There are cis-male respondents who choose female body types (straight players?!)
-
 Hiroki (first male voice) took nearly 50% of the male voice’s market, the other two are about 25% each, I think this might be due to the power of default choice.
 
 For female voice, Yui Toita is slightly more popular than Orie Kimoto.
+
+<div class="table-scroll">
+<table class="bordered">
+  <tr>
+    <th colspan="2"></th>
+    <th colspan="5">Which MC body type did you choose?<br>您选择的主角体型？<br>あなたが選んだ主人公の体型は？</th>
+  </tr>
+  <tr>
+    <th>What gender do you identify as?<br>您的性别？<br>あなたの性別は？</th>
+    <th>Are you Cisgender or Transgender?<br>您是順性別还是跨性別？<br>あなたはシスジェンダーですか、それともトランスジェンダーですか？</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>Grand Total</th>
+  </tr>
+  <tr>
+    <td rowspan="2">Male / 男性</td>
+    <td>Cisgender / 順性別 / シスジェンダー</td>
+    <td>233</td>
+    <td>19</td>
+    <td>255</td>
+    <td>4</td>
+    <td>511</td>
+  </tr>
+  <tr>
+    <td>Transgender / 跨性別 / トランスジェンダー</td>
+    <td>2</td>
+    <td>2</td>
+    <td>12</td>
+    <td></td>
+    <td>16</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Female / 女性</td>
+    <td>Cisgender / 順性別 / シスジェンダー</td>
+    <td></td>
+    <td>10</td>
+    <td></td>
+    <td>2</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td>Transgender / 跨性別 / トランスジェンダー</td>
+    <td></td>
+    <td>3</td>
+    <td>1</td>
+    <td></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Non-binary / 非二元性別 / ノンバイナリー</td>
+    <td>Cisgender / 順性別 / シスジェンダー</td>
+    <td>2</td>
+    <td>1</td>
+    <td>2</td>
+    <td></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Transgender / 跨性別 / トランスジェンダー</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>2</td>
+    <td>11</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Other / 其他 / その他</td>
+    <td>Cisgender / 順性別 / シスジェンダー</td>
+    <td>3</td>
+    <td>1</td>
+    <td>1</td>
+    <td></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Transgender / 跨性別 / トランスジェンダー</td>
+    <td>1</td>
+    <td>1</td>
+    <td>3</td>
+    <td></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td>Grand Total</td>
+    <td></td>
+    <td>243</td>
+    <td>40</td>
+    <td>278</td>
+    <td>8</td>
+    <td>569</td>
+  </tr>
+</table>
+</div>
+
+Interesting points:
+
+- Female respondents (cis and trans) mostly only choose human body types.
+- There are cis-male respondents who choose female body types (straight players?!)
 
 ## Money spending
 
@@ -444,15 +546,15 @@ For female voice, Yui Toita is slightly more popular than Orie Kimoto.
 - It seems that those who do spend money in this game pretty much will buy all of the in-app purchase (but we don't know how frequent they do it via this question).
 - We also don't know how many players bought both the small and large event limited stone packs.
 
-To help make other visualizations easier to understand, we will introduce the concept of “spending level” here.
+To help make other visualizations easier to understand, we will introduce the concept of **spending level** here.
 
 ### Definition of Spending level
 
-- Medium-Heavy: those who had bought the event-limited stone pack and/or regular-priced stones
+- **Medium-Heavy**: those who had bought the event-limited stone pack and/or regular-priced stones
   - Because the question did not ask how often people bought stone packs, it is hard to further differentiate “those that buy stone pack(s) in every event” vs “those that only spend once or twice in their entire experience”.
-- Light: those who only bought the anniversary pack and/or new year grab bag (i.e. spent only once or twice a year)
-- Minimal: only bought the ten paid stones for fourth Sales slot
-- No: never spent a single cent in this game
+- **Light**: those who only bought the anniversary pack and/or new year grab bag (i.e. spent only once or twice a year)
+- **Minimal**: only bought the ten paid stones for fourth Sales slot
+- **No**: never spent a single cent in this game
 
 The criteria for each spending level may be a little arbitrary, but it is enough to get a sense of the general trend.
 
@@ -526,7 +628,7 @@ Let’s hear players that have tried other gacha games have to say:
 {% include figure-image.html path="/assets/img/survey-2024/gacha-stone-other-game2.jpg"
   title="Free Gacha Pull Currency Opinion against Other Games" %}
 
-it seems that only LAH players that have tried Another Eidos have some different patterns between the “less” and “more” group: in the “more generous” group, higher percentage of those from “more generous” group have abandoned Another Eidos than that of the “less generous” group (but we do not know if they are indeed using Another Eidos as the comparison).
+It seems that only LAH players that have tried Another Eidos have some different patterns between the “less” and “more” group: in the “more generous” group, higher percentage of those from “more generous” group have abandoned Another Eidos than that of the “less generous” group (but we do not know if they are indeed using Another Eidos as the comparison).
 
 (Tamacolle also shows a different pattern between the “less” and “more” group, but since the game does not require spending money to pull characters, I don’t think it really matters).
 
@@ -549,9 +651,11 @@ Half of the people (median value) believe that LifeWonders would translate at mo
 ## Read story
 
 {% include figure-image.html path="/assets/img/survey-2024/read-story.svg"
-  title="Does Live A Hero Player Read Story In-game?" %}
+  title="Do Live A Hero Player Read Story In-game?" %}
 
-From the feedback I have received after publishing the survey, I should have added one more option for “Yes, I read the story in-game with the help of machine translation and some guesswork”.
+More than half of the respondents need to rely on fan translation (which are only available for some quests).
+
+> From the feedback I have received after publishing the survey, I should have added one more option for “Yes, I read the story in-game with the help of machine translation and some guesswork”.
 
 ## What-if
 
@@ -577,10 +681,12 @@ Therefore, I want to use these two questions to see if the market are willing to
 - Less/no female
 - Playable on iPhone X
 
-In case LifeWonders is not convinced that this statistics is not representing those who actually spend money in game, let me create another chart with only Live A Hero Players that spent money in-game
+In case LifeWonders is not convinced that this statistics is not representing those who actually spend money in game, let me create another chart with **only Live A Hero Players that spent money in-game**.
 
 {% include figure-image.html path="/assets/img/survey-2024/buy-out-spending.jpg"
   title="Do Live A Hero Players Support Buy-out Game? (those who spent money in Live A Hero)" %}
+
+It is clear that LifeWonders will still get real money if they release buy-out games. Very few of these customers won't try buy-out games.
 
 ### R-18 games
 
@@ -706,10 +812,11 @@ As we move on to “top 10 favourites” popularity ranking, we can see that it 
 {% include figure-image.html path="/assets/img/survey-2024/all-fav-2023-2024.jpg"
   title="All Favourites (2023 vs 2024)" %}
 
-Comments
-
 - It seems that characters that gotten their variant between the time when 2023 and 2024 surveys was carried out (such as {% chara_link Polaris Mask %}, {% chara_link Lilac %}, {% chara_link Kalaski %})
-- {% chara_link Tsuneaki %} have their ranking boosted quite significantly, further proving that the amount of character appearance in story and recency biases do play a role in their ranking.
+- {% chara_link Tsuneaki %} have their ranking boosted quite significantly, further suggesting that the amount of character appearance in story and recency biases do play a role in their ranking.
+
+{% include figure-image.html path="/assets/img/survey-2024/top10-2023-2024.jpg"
+  title="Top 10 Favourites (2023 vs 2024)" %}
 </details>
 
 <details markdown="1">
@@ -725,56 +832,78 @@ Comments
 <details markdown="1">
 <summary>Female / Non-binary / Other respondents</summary>
 
+{% include figure-image.html path="/assets/img/survey-2024/fav-female.jpg"
+  title="All Favourites vs Top 10 (Female respondents)" %}
+
+{% include figure-image.html path="/assets/img/survey-2024/fav-other.jpg"
+  title="All Favourites vs Top 10 (Non-binary/Other respondents)" %}
+
 The number of non-male respondents is small to begin with, so there are a lot of ties in votes.
 
-{% chara_link Pubraseer %} are not the number 1 among these respondents, but still in the top 3. This character is just really well loved in all segment of the player base.
+{% chara_link Pubraseer %} is not the number 1 among these respondents, but still in the top 3. This character is just really well loved in all segment of the player base.
 
-For female respondents, {% chara_link Sensettia %} is number 1 in “All favourites” ranking when they can choose as many characters as want, but {% chara_link Flamier %} overtake her by one vote in “top 10” ranking.
+For female respondents, {% chara_link Sensettia %} is number 1 in “All favourites” ranking when they can choose as many characters as want, but {% chara_link Flamier %} overtake her by one vote in “top 10” ranking. {% chara_link Tsuneaki %} is number in "Top 10" ranking.
 
-{% chara_link Barrel %} is only at 17th place in “All favourites” ranking, but shot up to TODO. This is quite aligned with what I observed in social media, where most Barrel fan arts are paired with the main character in the female human form.
+{% chara_link Barrel %} is only at 17th place in “All favourites” ranking, but shot up to 3rd place in "Top 10" among female respondents. This is quite aligned with what I observed in social media, where most Barrel fan arts are paired with the main character in the female human form.
 
 {% chara_link reXer %}, {% chara_link Grigory %} also saw significant ranking boost in “Top 10” ranking.
+
 </details>
 
 <details markdown="1">
 <summary>People with less than 10 favourites</summary>
 
+{% include figure-image.html path="/assets/img/survey-2024/fav-less-than-10.jpg"
+  title="Respondents who chose < 10 favourites" %}
+
 {% include figure-image.html path="/assets/img/survey-2024/top10-less-than-10-vs-exactly-10.jpg"
-  title="All Favourites vs Top 10 (Japan only)" %}
+  title="Top 10 (those who chose < 10 vs those who chose exactly 10)" %}
+
+{% chara_link Gaius %}, {% chara_link Canes %} and {% chara_link Player %} are ranked much higher by those who chose less than 10 favourites.
 
 </details>
 
 <details markdown="1">
-<summary>???</summary>
-
-Using association rules with min confidence > 60%
-
-There are clearly some sort of clusters formed by “Muscular male humans”, “Muscular male furries” and “Chubby male furries”.
-People who put Melide in their top 10 tend to also have Monomasa in the list
-Obviously all male furries point to Pubraseer
-
-
-</details>
-
-<details markdown="1">
-<summary>Top 10 Heat map</summary>
+<summary>Advanced Analysis</summary>
 
 The popularity poll clearly shows that the game has successfully captured the market that likes muscular male and furries, but has the game captured market that like other kind of characters? We are going to find out with other metrics.
 
-{% include figure-image.html path="/assets/img/survey-2024/top10-heat-map.jpg"
-  title="All Favourites vs Top 10 (Japan only)" %}
+### Analysis 1: Lift value in *Top 10 popularity poll*
 
-Interesting observations:
+- Wikipedia definition: [https://en.wikipedia.org/wiki/Lift_(data_mining)](https://en.wikipedia.org/wiki/Lift_(data_mining))
+- In the context of our analysis, the higher the **lift** value for two characters, it means that **the number of times they are chosen together is higher than what can be explained by their individual popularity**
+  - Due to this property, characters that are already very popular individually won't show up in this heatmap
+
+{% include figure-image.html path="/assets/img/survey-2024/top10-heat-map.jpg"
+  title="Lift Heatmap between Any Two Characters" %}
+
+> Pairings whose **lift** values are less than 2.5 are filtered out to keep the heatmap small.
+
+Groups that have exceptionally high **Lift** values
 
 - {% chara_link Esperdica %} and {% chara_link Vulpecula %} (sophisticated foxy vibes)
 - {% chara_link Victom %} and {% chara_link Danzo %} (mecha hunks)
 - {% chara_link Yuhang %}, {% chara_link Santetsu %} and {% chara_link Grigory %} (plus size men)
 - {% chara_link Gaius %} and {% chara_link Canes %} (cute shy boys?)
+
+### Metric 2: association rule
+
+{% include figure-image.html path="/assets/img/survey-2024/top10-bucket-analysis.jpg"
+  title="Lift Heatmap between Any Two Characters" %}
+
+- How to interpret this chart
+  - A line from {% chara_link Kyoichi %} on the left to {% chara_link Lilac %} on the right means that **compared to those who do not like Kyoichi, those who do like Kyoichi are more likely to also like Lilac**
+
+> To keep this chart small, pairings that are not included in at least 60% of the respondents' "top 10 favourites" are not included here.
+
+- There are clearly some sort of clusters formed by “Muscular male humans”, “Muscular male furries” and “Chubby male furries”.
+- Obviously all male furries point to {% chara_link Pubraseer %} on the right
+
 </details>
 
 # Free form questions
 
-For the next two questions, the volume of the feedback is simply too big for me to go through one by one, so I used ChatGPT to summarize them (and even then I had to do it in a few batches because the total text length exceeds ChatGPT’s limit...)
+For the **next three questions**, the volume of the feedback is simply too big for me to go through one by one, so I used ChatGPT to summarize them (and even then I had to do it in a few batches because the total text length exceeds ChatGPT’s limit...)
 
 The “number of mentions” should be treated more as an estimation rather than absolute value. <span class="comment">Words coloured in blue are my own</span>.
 
@@ -877,12 +1006,49 @@ The “number of mentions” should be treated more as an estimation rather than
 
 ## Occupation
 
-TODO
+### Popular Suggestions (Multiple Mentions):
+
+1. **Artists/Animators/Graphic Designers** (8 mentions)
+  * Occupations like animators, cartoonists, and other creative roles were frequently mentioned.
+
+2. **Healthcare/Medical Roles** (6 mentions) 
+  * Players expressed interest in seeing roles like **psychologists, doctors, and therapists**. There were also mentions of specific roles like a **vet** or **mental health professionals**.
+
+3. **Police/Detective/Enforcement Roles** (6 mentions) 
+  * There is a strong interest in **police officers, detectives, SWAT, and anti-bomb squad** members, with some wanting more heroic law enforcement representation.
+
+4. **Farming and Agricultural Roles** (5 mentions) 
+  * Roles like **farmers, ranchers, gardeners, and eco-organic farmers** were a popular suggestion.
+
+5. **Villains/Criminal Roles** (5 mentions)
+  * Players suggested roles such as **bounty hunters, villains, assassins, mercenaries, and mafia members** for more antagonistic characters.
+
+6. **Magicians/Wizards/Occult Roles** (5 mentions) 
+  * Several players suggested roles related to magic, such as **wizards, summoners, or occultists**.
+
+7. **Construction and Engineering Jobs** (5 mentions) 
+  * Suggestions included **engineers, electricians, plumbers, janitors, and carpenters**.
+
+8. **Chefs/Culinary Experts** (4 mentions)
+  * Multiple players requested professions like **chefs, bakers, sushi chefs**, or other food-related occupations.
+
+9. **Pilots and Aerospace Roles** (4 mentions)
+  * Occupations such as **pilots, astronauts**, and other space-related roles were requested.
+
+10. **Combat Sports/Athletes** (4 mentions)
+  * Players wanted to see more roles like **MMA fighters, sumo wrestlers, boxers**, and other athletes.
+
+### Notable One-Time Suggestions:
+
+* **Linguist/Translator**: A few mentioned a focus on linguistics or translators.
+* **Programmer/Tech**: Some players suggested **programmers or tech-related jobs** in tribute to game developers.
+* **Time Travelers/Explorers**: Unique suggestions like **time travelers, cartographers, or interplanetary explorers** were mentioned.    
+* **Undead/Overworked Corporate Workers**: Some humorous and unusual suggestions, like an **overworked corporate zombie** or **undead/mortician**, stood out for creativity.
 
 ## Game Merchandise
 
 {% include figure-image.html path="/assets/img/survey-2024/merchandise.jpg"
-  title="Live A Hero Game Element's Score" %}
+  title="Game Merchandise Wishlist" %}
 
 Other comments in no particular order:
 
@@ -899,16 +1065,22 @@ Other comments in no particular order:
 * Will consider buying if LW come to Taiwan event to sell
 * Some brain rot comments about Hydoor, Sadayoshi, Gaius
 
+### Market-Basket Analysis
+
+Since we are literally asking our respondents to add merchandises into their imaginative wishlist, let's see what merchandises are often wanted together. This will be important to plan potential bundle sales opportunity.
+
 {% include figure-image.html path="/assets/img/survey-2024/merchandise-bucket-analysis.jpg"
-  title="Bucket Analysis for Game Merchandise" %}
+  title="Market-Basket Analysis for Game Merchandise" %}
+
+- How to interpret this chart:
+  - If there is a line going from item A on the left to item B on the right, then it means people who want item A are more likely to also want item B, compared to those who don't want item A.
 
 ## Difficulty to Buy Game Merchandise
 
 {% include figure-image.html path="/assets/img/survey-2024/merchandise-difficulty.jpg"
-  title="Live A Hero Game Element's Score" %}
+  title="Difficulty in Buying Game Merchandise" %}
 
-{% include figure-image.html path="/assets/img/survey-2024/merchandise-difficulty-spending.jpg"
-  title="Live A Hero Game Element's Score" %}
+It is clear that shipping fee, both international and domestic, is the main factor that deter potential buyers.
 
 Other comments in no particular order:
 
@@ -934,13 +1106,15 @@ Other comments in no particular order:
 >
 > This is why I always advocate that **we need digital format!** You can focus on paying for the item itself instead of shipping cost, and no worry about national law and sanctions.
 
+Once again, in case LifeWonders think it is just F2P respondents spamming the question, here is another chart that only have **Live A Hero players that spent in-game**.
+
 {% include figure-image.html path="/assets/img/survey-2024/merchandise-difficulty-spending.jpg"
-  title="Live A Hero Game Element's Score" %}
+  title="Difficulty in Buying Game Merchandise (players who spent in-game)" %}
 
 ## Extra Content
 
 {% include figure-image.html path="/assets/img/survey-2024/extra-content.jpg"
-  title="Live A Hero Game Element's Score" %}
+  title="Live A Hero Extra Content Wishlist" %}
 
 Other comments in no particular order:
 
@@ -949,7 +1123,7 @@ Other comments in no particular order:
 * Videos need english subtitle
   * <span class="comment">Cannot agree more on this</span>
 * Official livestream with game producers
-  * <span class="comment">Among games of similar genre, so far only Crave Saga has official livestream where the game producer showed his face (<span class="masked">along with some Gogo boys</span>).
+  * <span class="comment">Among games of similar genre, so far only Crave Saga has official livestream where the game producer showed his face <span class="masked">along with some Gogo boys</span>.
   * <span class="comment">I think LifeWonders can consider inviting a few official illustrators to join the livestream. Maybe everyone would just use Vtuber model instead of showing their real face ([Kinoshita Jiroh sensei does that a lot](https://www.youtube.com/@kinoshita_jiroh/about))</span>
 * Gameplay livestream
 * More voice actor’s performance like podcast
@@ -1048,11 +1222,15 @@ I would suggest you to just ask help in LAH Discord (unofficial), there are many
 
 I hope you enjoy reading this report, because the whole process took me months to prepare. Many times the thought of “I should be paid for this work” flashed in my mind. It really is not easy to conduct a survey of this size, and then write a report about it!
 
-For a lGbt game that we all know caters more towards gay players, I think LifeWonders’ success in attracting more players from other demographics is pretty commendable. If they can grow the group of paying players to keep the business running [while still staying true to their original mission](https://www.lifewonders.co.jp/?lang=en), I think that is good for everyone.
+For a lGbt game that we all know caters more towards gay players, I think LifeWonders’ success in attracting more players from other demographics is pretty commendable. If they can grow the group of paying players to keep the business running [while still staying true to their original mission](https://www.lifewonders.co.jp/?lang=en), I think that is good for everyone. (Ironically, "serving global market is also in their missions).
+
+While waiting for the ever elusive release of official translation, this wiki will still be here supporting oversea players.
+
+See you in next year survey!
 
 ## Data sanitization
 
-Given the sample size, it is not surprising that we might have responses that look suspicious. I will talk about some of the measures I took to sieve the responses.
+I put this at the end because I know most people will find this boring, but given the sample size, it is not surprising that we might have responses that look suspicious. I will talk about some of the measures I took to sieve the responses.
 
 ### Suspicious responses
 
