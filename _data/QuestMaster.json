@@ -161181,6 +161181,94 @@
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
   },
+  "1137007": {
+    "questId": 1137007,
+    "questName": "重なり合う絆・前編",
+    "subName": "第７話",
+    "questKind": 5,
+    "chapterId": 1137,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2024-10-24 18:00:00",
+    "endAt": "2024-11-05 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 7,
+    "enemyLevel": 15,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1137006,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuEngineLarvaEarthSmall_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 104
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuEngineLarvaShadowSmall_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 101
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuEngineLarvaEarthSmall_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 98
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuEngineLarvaShadowSmall_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 95
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
   "1138001": {
     "questId": 1138001,
     "questName": "式典の乱入者",
@@ -161969,7 +162057,7 @@
     "enemyLevel": 40,
     "canNotRetire": false,
     "canNotContinue": true,
-    "canNotGetFriendPoint": false,
+    "canNotGetFriendPoint": true,
     "canNotAuto": false,
     "canRestart": false,
     "canSavePreviousTeam": true,
@@ -162053,7 +162141,7 @@
     "enemyLevel": 45,
     "canNotRetire": false,
     "canNotContinue": true,
-    "canNotGetFriendPoint": false,
+    "canNotGetFriendPoint": true,
     "canNotAuto": false,
     "canRestart": false,
     "canSavePreviousTeam": true,
@@ -162142,7 +162230,7 @@
     "enemyLevel": 50,
     "canNotRetire": false,
     "canNotContinue": true,
-    "canNotGetFriendPoint": false,
+    "canNotGetFriendPoint": true,
     "canNotAuto": false,
     "canRestart": false,
     "canSavePreviousTeam": true,
@@ -162227,7 +162315,7 @@
     "enemyLevel": 55,
     "canNotRetire": false,
     "canNotContinue": true,
-    "canNotGetFriendPoint": false,
+    "canNotGetFriendPoint": true,
     "canNotAuto": false,
     "canRestart": false,
     "canSavePreviousTeam": true,
@@ -162265,6 +162353,100 @@
         "battleInfoIcon": "icon_pubraseerRisingMoon2410_h01",
         "battleInfoElement": 4,
         "battleInfoSpd": 109
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1140006": {
+    "questId": 1140006,
+    "questName": "交差する宇宙の澪",
+    "subName": "第６話チャレンジクエスト",
+    "questKind": 6,
+    "chapterId": 1140,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2024-10-24 18:00:00",
+    "endAt": "2024-11-05 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 100,
+    "enemyLevel": 55,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 33,
+        "objectValue": 5,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 34,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 135,
+        "objectValue": 2,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1137006,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuEngineLarvaFire_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 112
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuEngineLarvaLight_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 110
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuEngineLarvaEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 108
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuEngineLarvaShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 107
       }
     ],
     "hasAdv": false,
