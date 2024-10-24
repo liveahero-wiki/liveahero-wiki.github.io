@@ -399,8 +399,8 @@ All in all, those who has the ability to read the in-game Japanese story is stil
 > After using the same question setup for the fourth time, this was the first time that I realised that it was not well designed. Many people who self-taught the Japanese language but did not sit for standardised Japanese language exams like JLPT report “Zero knowledge” instead of estimating the JLPT level that is close to their current ability.
 >
 > The original purpose of this question was merely to estimate the overall Japanese reading ability of the player base (to highlight how much market share LifeWonders is missing for not translating the game), rather than really wanting to know the formal qualification of the respondents.
-
-Therefore, this question will be revamped next year, which mean I also have to remove the “fundoshi” option (*sob*).
+>
+> Therefore, this question will be revamped next year, which mean I also have to remove the “fundoshi” option (*sob*).
 
 # The Game
 
@@ -411,8 +411,6 @@ Therefore, this question will be revamped next year, which mean I also have to r
 
 Despite having more than double the amount of respondents for this year’s survey, the percentage of actual players remains pretty high.
 
-We can see that Gyee has the highest number of “abandoned” counts, followed by Crave Saga.
-
 ## Playing Time
 
 {% include figure-image.html path="/assets/img/survey-2024/play-lah-time.jpg"
@@ -422,9 +420,9 @@ X-axis is the number of days played (end date is set to 30 Sep 2024). Slightly l
 
 There are small bumps near every 360 days, likely due to the anniversary bringing more players than other times of the year.
 
-I want to emphasize that this probably is not the actual overall market growth rate of the game, since by right the actual player base should be predominantly Japanese, and the sample group of this survey has very few Japanese.
-
-This linear scale is likely more for oversea players, whose growth is limited due to language barrier. We shall see again if the trend changes next year when official translation is finally implemented.
+> This probably is not the actual overall market growth rate of the game, since by right the actual player base should be predominantly Japanese, and the sample group of this survey has very few Japanese.
+>
+> This linear scale is likely more for oversea players, whose growth is limited due to language barrier. We shall see again if the trend changes next year when official translation is finally implemented.
 
 ## Main Character Configuration
 
@@ -434,9 +432,9 @@ This linear scale is likely more for oversea players, whose growth is limited du
 {% include figure-image.html path="/assets/img/survey-2024/voice_actor.svg"
   title="Main character voice" %}
 
-Hiroki (first male voice) took nearly 50% of the male voice’s market, the other two are about 25% each, I think this might be due to the power of default choice.
+Hiroki Goto (first male voice) took nearly 50% of the male voice’s market, the other two are about 25% each. For female voice, Yui Toita is slightly more popular than Orie Kimoto.
 
-For female voice, Yui Toita is slightly more popular than Orie Kimoto.
+Since Hiroki Goto and Yui Toita are the first male/female voice **in the order listed by the game**, I think many users choose them partly due to the [default effect](https://en.wikipedia.org/wiki/Default_effect).
 
 <div class="table-scroll">
 <table class="bordered">
@@ -543,7 +541,7 @@ Interesting points:
 {% include figure-image.html path="/assets/img/survey-2024/in-app-purchase.jpg"
   title="How Many Live A Hero Player Spend Money In-game?" %}
 
-- It seems that those who do spend money in this game pretty much will buy all of the in-app purchase (but we don't know how frequent they do it via this question).
+- It seems that those who do spend money in this game pretty much will buy all other types of in-app purchase (but we can't know how frequent they do so via this question).
 - We also don't know how many players bought both the small and large event limited stone packs.
 
 To help make other visualizations easier to understand, we will introduce the concept of **spending level** here.
@@ -561,7 +559,7 @@ The criteria for each spending level may be a little arbitrary, but it is enough
 {% include figure-image.html path="/assets/img/survey-2024/spending-overall.jpg"
   title="How Many Live A Hero Player Spend Money In-game?" %}
 
-More than 50% of the players actually spend at least some amount of money in Live A Hero.
+More than 50% of the players actually spend at least some amount of money in Live A Hero. Completely free-to-play players are less than what I originally thought.
 
 {% include figure-image.html path="/assets/img/survey-2024/spending-region.jpg"
   title="How Many Live A Hero Player Spend Money In-game? (by Region)" %}
@@ -579,7 +577,7 @@ East Asia has the highest percentage of Live A Hero players that spend money in-
 {% include figure-image.html path="/assets/img/survey-2024/login-spending-percentage.jpg"
   title="\"How Live A Hero Players Play the Game\" against \"Spending Level\"" %}
 
-Those who play the game in the most earnest way (last tier) are more likely to be paying customer too
+Those who play the game in the most earnest way (last tier) are more likely to be paying customer too.
 
 {% include figure-image.html path="/assets/img/survey-2024/login-other-gender.jpg"
   title="How Live A Hero Players Play the Game (Female / Non-binary / Other)" %}
@@ -668,8 +666,10 @@ Therefore, I want to use these two questions to see if the market are willing to
 {% include figure-image.html path="/assets/img/survey-2024/buy-out.jpg"
   title="Do Live A Hero Players Support Buy-out Game?" %}
 
+Other comments in no particular order:
+
 - Need translation
-- Must have hote men/furries
+- Must have hot men/furries
 - I thought that is literally what LifeWonders main brand about
 - R18 content
 - Must have good gameplay
@@ -686,7 +686,7 @@ In case LifeWonders is not convinced that this statistics is not representing th
 {% include figure-image.html path="/assets/img/survey-2024/buy-out-spending.jpg"
   title="Do Live A Hero Players Support Buy-out Game? (those who spent money in Live A Hero)" %}
 
-It is clear that LifeWonders will still get real money if they release buy-out games. Very few of these customers won't try buy-out games.
+It is clear that LifeWonders will still get real money if they release buy-out games. Most paying players are willing to give buy-out game from LifeWonders a try.
 
 ### R-18 games
 
@@ -732,7 +732,7 @@ Other comments in no particular order:
 {% include figure-image.html path="/assets/img/survey-2024/top10-bar.jpg"
   title="Top 10 Favourites Popularity Ranking (Global)" %}
 
-> Before we start, I realized that once again some people misunderstood my intention for setting the “top 10 favourites” question. Many people who have less than 10 “all favourites” thought they still need to choose exactly 10 characters for “top 10” question, but actually I wanted people to choose “at most 10 characters among their all favourites”: if you have chose less than 10 characters in first question, you should just same set of characters for the second question.
+> Before we start, I realized that once again some people misunderstood my intention for setting the “top 10 favourites” question. Many people who have less than 10 “all favourites” thought they still need to choose exactly 10 characters for “top 10” question, but actually I wanted people to choose “at most 10 characters among their all favourites”: if you have chosen less than 10 characters in first question, you should just choose the same set of characters for the second question.
 >
 > Therefore, I fixed those cases by filtering out “top 10” characters that are not present in their “all favourites” response.
 
@@ -812,7 +812,7 @@ As we move on to “top 10 favourites” popularity ranking, we can see that it 
 {% include figure-image.html path="/assets/img/survey-2024/all-fav-2023-2024.jpg"
   title="All Favourites (2023 vs 2024)" %}
 
-- It seems that characters that gotten their variant between the time when 2023 and 2024 surveys was carried out (such as {% chara_link Polaris Mask %}, {% chara_link Lilac %}, {% chara_link Kalaski %})
+- It seems that characters that gotten their variant forms between the time when 2023 and 2024 surveys were carried out (such as {% chara_link Polaris Mask %}, {% chara_link Lilac %}, {% chara_link Kalaski %})
 - {% chara_link Tsuneaki %} have their ranking boosted quite significantly, further suggesting that the amount of character appearance in story and recency biases do play a role in their ranking.
 
 {% include figure-image.html path="/assets/img/survey-2024/top10-2023-2024.jpg"
@@ -856,6 +856,8 @@ For female respondents, {% chara_link Sensettia %} is number 1 in “All favouri
 {% include figure-image.html path="/assets/img/survey-2024/fav-less-than-10.jpg"
   title="Respondents who chose < 10 favourites" %}
 
+In this gacha game that is full of baits for thirsty players, let us applaud these people who can limit the amount of characters they devote their hearts for.
+
 {% include figure-image.html path="/assets/img/survey-2024/top10-less-than-10-vs-exactly-10.jpg"
   title="Top 10 (those who chose < 10 vs those who chose exactly 10)" %}
 
@@ -868,36 +870,41 @@ For female respondents, {% chara_link Sensettia %} is number 1 in “All favouri
 
 The popularity poll clearly shows that the game has successfully captured the market that likes muscular male and furries, but has the game captured market that like other kind of characters? We are going to find out with other metrics.
 
-### Analysis 1: Lift value in *Top 10 popularity poll*
+**Analysis 1: `Lift` value in *Top 10 popularity poll***
 
-- Wikipedia definition: [https://en.wikipedia.org/wiki/Lift_(data_mining)](https://en.wikipedia.org/wiki/Lift_(data_mining))
-- In the context of our analysis, the higher the **lift** value for two characters, it means that **the number of times they are chosen together is higher than what can be explained by their individual popularity**
+- Wikipedia definition of `Lift`: [https://en.wikipedia.org/wiki/Lift_(data_mining)](https://en.wikipedia.org/wiki/Lift_(data_mining))
+- How to we use this metric in our analysis:
+  - If `Lift(Canes, Gaius) > 1`, then it means that the number of times that {% chara_link Canes %} and {% chara_link Gaius %} are chosen together in *Top 10 popularity poll* is higher than **what can be expected from their individual popularity**.
   - Due to this property, characters that are already very popular individually won't show up in this heatmap
+
+<!--- In the context of our analysis, the higher the **lift** value for two characters, it means that **the number of times they are chosen together is higher than what can be explained by their individual popularity**-->
 
 {% include figure-image.html path="/assets/img/survey-2024/top10-heat-map.jpg"
   title="Lift Heatmap between Any Two Characters" %}
 
-> Pairings whose **lift** values are less than 2.5 are filtered out to keep the heatmap small.
+> Pairings whose `Lift` values less than 2.5 are filtered out to keep the heatmap small.
 
-Groups that have exceptionally high **Lift** values
+Groups that have exceptionally high `Lift` values
 
 - {% chara_link Esperdica %} and {% chara_link Vulpecula %} (sophisticated foxy vibes)
 - {% chara_link Victom %} and {% chara_link Danzo %} (mecha hunks)
 - {% chara_link Yuhang %}, {% chara_link Santetsu %} and {% chara_link Grigory %} (plus size men)
 - {% chara_link Gaius %} and {% chara_link Canes %} (cute shy boys?)
 
-### Metric 2: association rule
+**Metric 2: Association Rule by `Confidence`**
+
+- ScienceDirect definition of `Confidence`: [https://www.sciencedirect.com/topics/computer-science/confidence-measure](https://www.sciencedirect.com/topics/computer-science/confidence-measure)
+- How to we use this metric in our analysis:
+  - `Confidence(Kyoichi, Lilac)` tells us the probability of how many people like {% chara_link Kyoichi %} **and** {% chara_link Lilac %} among those who like Lilac (which may include those who do not like Kyoichi) in *Top 10 popularity ranking*
 
 {% include figure-image.html path="/assets/img/survey-2024/top10-bucket-analysis.jpg"
   title="Lift Heatmap between Any Two Characters" %}
 
-- How to interpret this chart
-  - A line from {% chara_link Kyoichi %} on the left to {% chara_link Lilac %} on the right means that **compared to those who do not like Kyoichi, those who do like Kyoichi are more likely to also like Lilac**
-
-> To keep this chart small, pairings that are not included in at least 60% of the respondents' "top 10 favourites" are not included here.
+> To keep this chart small, pairings whose `Confidence` value is less than 0.6 are not included here.
 
 - There are clearly some sort of clusters formed by “Muscular male humans”, “Muscular male furries” and “Chubby male furries”.
-- Obviously all male furries point to {% chara_link Pubraseer %} on the right
+- Characters on the right are more popular than those on the left
+- Obviously all male furries point to {% chara_link Pubraseer %} on the right: anyone who likes some male furries almost always like Pubraseer too
 
 </details>
 
@@ -969,15 +976,14 @@ The “number of mentions” should be treated more as an estimation rather than
 
 6. **More Frequent Events and Content Updates** (8 mentions)
   * Players feel that events and main story updates are too infrequent, leading to periods of inactivity.
-    * <span class="comment">We officially have “more than a year gap” between two main quest chapters :sob:</span>.
   * Some want more daily and weekly missions with meaningful rewards to keep players engaged.
   * They request more frequent updates and event variety, with less downtime between content.
+    * <span class="comment" markdown="span">We officially have “more than a year gap” between two main quest chapters 😭</span>.
 
 7. **Hero/Sidekick System & Dupe Shop Improvements** (8 mentions)  
   * There are calls to improve the system for hero/sidekick duplicates, with better shop rewards and more useful items from dupes.
 
-8. **Event Frequency and Content (11 mentions):** 
-  * Players suggest more frequent events to keep the game engaging and reduce downtime.
+8. **Additional Content (11 mentions):** 
   * Requests for additional content such as hard mode for story stages and boss fights.
 
 9. **Old Character Updates** (14 mentions) 
@@ -991,7 +997,6 @@ The “number of mentions” should be treated more as an estimation rather than
 
 11. **More Diverse Characters and Content** (5 mentions)
   * Players want more diverse characters (more women, trans characters, and more varied body typeslike chubby or muscular).
-  * Some request for specific character alts and more character interactions.
 
 12. **Character Interaction and Story** (12 mentions):  
   * Some players want more **interaction with favorite characters**, including features like a **relationship system** (similar to "Housamo").
@@ -1102,9 +1107,9 @@ Other comments in no particular order:
 
 > God, I feel I am becoming LifeWonders’ customer support.
 >
-> One thing is that, with supply chain disruption and global conflict, international shopping will only be increasingly more expensive. And for some countries, it is completely impossible to ship physical items to them.
+> One thing is that, with supply chain disruption and global conflict, international shopping will only be increasingly more expensive. For for some countries, it is completely impossible to ship physical items to them currently. And then there are some countries who ban materials related to gay culture, so custom check is a problem.
 >
-> This is why I always advocate that **we need digital format!** You can focus on paying for the item itself instead of shipping cost, and no worry about national law and sanctions.
+> This is why I always advocate that **we need digital format!** You can focus on paying for the item itself instead of shipping cost, and don't have to worry about national law and sanctions.
 
 Once again, in case LifeWonders think it is just F2P respondents spamming the question, here is another chart that only have **Live A Hero players that spent in-game**.
 
@@ -1171,7 +1176,7 @@ I think many people didn’t know these pages exist:
   - We might prepare something better for list of common buff/debuff in the future
 - [List of game items](/items/)
 
-### There should be a way to jump for game app to Wiki
+### There should be a way to jump from the game app to Wiki website
 
 ... Do some people actually think that this Wiki is operating in an official way, and I am a LifeWonders’ employee?!
 
