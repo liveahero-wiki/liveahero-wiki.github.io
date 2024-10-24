@@ -866,14 +866,14 @@ In this gacha game that is full of baits for thirsty players, let us applaud the
 </details>
 
 <details markdown="1">
-<summary>Advanced Analysis</summary>
+<summary>Association Rules Analysis</summary>
 
 The popularity poll clearly shows that the game has successfully captured the market that likes muscular male and furries, but has the game captured market that like other kind of characters? We are going to find out with other metrics.
 
 **Analysis 1: `Lift` value in *Top 10 popularity poll***
 
 - Wikipedia definition of `Lift`: [https://en.wikipedia.org/wiki/Lift_(data_mining)](https://en.wikipedia.org/wiki/Lift_(data_mining))
-- How to we use this metric in our analysis:
+- How do we use this metric in our analysis:
   - If `Lift(Canes, Gaius) > 1`, then it means that the number of times that {% chara_link Canes %} and {% chara_link Gaius %} are chosen together in *Top 10 popularity poll* is higher than **what can be expected from their individual popularity**.
   - Due to this property, characters that are already very popular individually won't show up in this heatmap
 
@@ -894,8 +894,9 @@ Groups that have exceptionally high `Lift` values
 **Metric 2: Association Rule by `Confidence`**
 
 - ScienceDirect definition of `Confidence`: [https://www.sciencedirect.com/topics/computer-science/confidence-measure](https://www.sciencedirect.com/topics/computer-science/confidence-measure)
-- How to we use this metric in our analysis:
-  - `Confidence(Kyoichi, Lilac)` tells us the probability of how many people like {% chara_link Kyoichi %} **and** {% chara_link Lilac %} among those who like Lilac (which may include those who do not like Kyoichi) in *Top 10 popularity ranking*
+- How do we use this metric in our analysis:
+  - `Confidence(Kyoichi, Lilac)` tells us the probability of people liking {% chara_link Kyoichi %} *also* like {% chara_link Lilac %} in *Top 10 popularity ranking*
+  - There is a line going from Kyoichi to Lilac in the chart below if `Confidence(Kyoichi, Lilac) > 0.6`
 
 {% include figure-image.html path="/assets/img/survey-2024/top10-bucket-analysis.jpg"
   title="Lift Heatmap between Any Two Characters" %}
@@ -904,7 +905,7 @@ Groups that have exceptionally high `Lift` values
 
 - There are clearly some sort of clusters formed by “Muscular male humans”, “Muscular male furries” and “Chubby male furries”.
 - Characters on the right are more popular than those on the left
-- Obviously all male furries point to {% chara_link Pubraseer %} on the right: anyone who likes some male furries almost always like Pubraseer too
+- Obviously most male furries point to {% chara_link Pubraseer %} on the right: anyone who likes some male furries almost always like Pubraseer too
 
 </details>
 
@@ -1070,22 +1071,25 @@ Other comments in no particular order:
 * Will consider buying if LW come to Taiwan event to sell
 * Some brain rot comments about Hydoor, Sadayoshi, Gaius
 
-### Market-Basket Analysis
+### Association rule by `Confidence` (Market-Basket Analysis)
 
 Since we are literally asking our respondents to add merchandises into their imaginative wishlist, let's see what merchandises are often wanted together. This will be important to plan potential bundle sales opportunity.
+
+We will reusing the `Confidence` metric introduce in Advanced Analaysis section before.
 
 {% include figure-image.html path="/assets/img/survey-2024/merchandise-bucket-analysis.jpg"
   title="Market-Basket Analysis for Game Merchandise" %}
 
 - How to interpret this chart:
-  - If there is a line going from item A on the left to item B on the right, then it means people who want item A are more likely to also want item B, compared to those who don't want item A.
+  - `Confidence(item A, item B)` = how likely someone who want item A also want item B
+  - If there is a line from item A to item B in the chart, then `Confidence(item A, item B) > 0.6`
 
 ## Difficulty to Buy Game Merchandise
 
 {% include figure-image.html path="/assets/img/survey-2024/merchandise-difficulty.jpg"
   title="Difficulty in Buying Game Merchandise" %}
 
-It is clear that shipping fee, both international and domestic, is the main factor that deter potential buyers.
+It is clear that various shipping issues are the biggest factor that deters potential buyers.
 
 Other comments in no particular order:
 
