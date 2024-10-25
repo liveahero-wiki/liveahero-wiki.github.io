@@ -1,6 +1,6 @@
 ---
 title: Community Survey Result 2024
-date: 2024-10-21 09:00:00 +08
+date: 2024-10-25 12:00:00 +08
 ---
 
 <style>
