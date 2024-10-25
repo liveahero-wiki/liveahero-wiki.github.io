@@ -288,8 +288,11 @@ details {
   contain: content;
   border: 1px solid #aaa;
 
-  p, ul, ol, table {
+  p, ul, ol, table, blockquote {
     margin: 15px;
+  }
+  blockquote {
+    padding: 1px;
   }
 
   table {
@@ -343,6 +346,10 @@ footer a {
 figure {
   margin: 0;
   margin-bottom: 30px;
+}
+figure img {
+  display: block;
+  margin: auto;
 }
 figcaption {
   font-size: 13px;
