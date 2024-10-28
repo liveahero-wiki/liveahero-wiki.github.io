@@ -1406,7 +1406,7 @@
       "canDispel": false,
       "filterIds": [],
       "parameter": false,
-      "description": "バフを１つ解除",
+      "description": "バフを1つ解除",
       "isCountTurn": false,
       "isImmediate": true,
       "persistence": false,
@@ -66638,6 +66638,166 @@
       "isOverrideStatusDescription": false
     }
   },
+  "3417": {
+    "skillEffectId": 3417,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeActiveSkill",
+          "parameter": {
+            "index": 2,
+            "timing": 8,
+            "skillId": 4224104
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 134,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "スキル3を強化スキル3に置き換え（エンジン型成体）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3419": {
+    "skillEffectId": 3419,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 0
+          }
+        }
+      ],
+      "filename": "status_invincible",
+      "statusId": 6,
+      "canDispel": false,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "遮断（永続無敵　ライジングムーン用）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "遮断",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3420": {
+    "skillEffectId": 3420,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Cure",
+          "parameter": {
+            "value": 999,
+            "target": 6,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "無敵を強制的に全て解除",
+      "isCountTurn": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3421": {
+    "skillEffectId": 3421,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeActiveSkill",
+          "parameter": {
+            "index": 2,
+            "timing": 8,
+            "skillId": 4224105
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 134,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "スキル3を強化スキル3に置き換え（エンジン型成体）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "4001": {
     "skillEffectId": 4001,
     "skillEffectJson": {
@@ -88223,6 +88383,86 @@
       "isOverrideStatusName": true,
       "overrideStatusDescription": "被ダメージ-10%。<br><color=#505050>影属性の敵からダメージを受けた時、解除される。</color>",
       "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4702": {
+    "skillEffectId": 4702,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseMultipleDefence",
+          "parameter": {
+            "value": 90
+          }
+        }
+      ],
+      "filename": "status_system_defup",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "被ダメージ-10%（チャージ・死亡時も継続・システムアイコン）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isCharageEffect": true,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "被ダメージ減少",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "チャージ数1につき、被ダメージ-10%。<br><color=#505050>特定のスキルによりチャージ数が増加する。戦闘不能後も継続する。</color>",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4703": {
+    "skillEffectId": 4703,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseChangeAgi",
+          "parameter": {
+            "value": 5
+          }
+        }
+      ],
+      "filename": "status_spdup",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [
+        6
+      ],
+      "parameter": false,
+      "description": "SPDアップ(チャージ・永続・戦闘不能時も継続)",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isCharageEffect": true,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "SPD増加",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "チャージ数1につき、SPDが+5される。<br><color=#505050>特定のスキルによりチャージ数が増加する。戦闘不能後も継続する。</color>",
+      "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
     }
   }
