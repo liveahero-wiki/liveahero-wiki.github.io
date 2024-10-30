@@ -48,7 +48,7 @@ heroes:
 
     With a saber imbued with the wish to carve out a new future, a space compass gifted by his friends, and a suit worn with 
     determination, he was prepared to guide and support his new "friends" with all that has been entrusted to him.
-  extra_sprites: fg_ADV_pubraseerRisingMoon2410_h01,fg_ADV_pubraseerRisingMoon2410_h01_skin1
+  extra_sprites: fg_pubraseerRisingMoon2410_h02_skin2,fg_ADV_pubraseerRisingMoon2410_h01,fg_ADV_pubraseerRisingMoon2410_h01_skin1,fg_ADV_pubraseerRisingMoon2410_h02_skin2
 sidekicks:
 - stockId: 10731
   BIO_S01: |-
