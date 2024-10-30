@@ -161315,6 +161315,12 @@
         "objectId": 11,
         "objectValue": 160,
         "prob": 100
+      },
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
       }
     ],
     "conditions": [
@@ -161338,6 +161344,61 @@
     ],
     "hasAdv": true,
     "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1137009": {
+    "questId": 1137009,
+    "questName": "蒼き暁",
+    "subName": "最終話",
+    "questKind": 5,
+    "chapterId": 1137,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2024-10-30 18:00:00",
+    "endAt": "2024-11-05 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 9,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1137008,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
     "hasStockBattle": false,
     "hasScoreAttack": false,
     "boostItems": [],
@@ -162124,6 +162185,215 @@
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
   },
+  "1139073": {
+    "questId": 1139073,
+    "questName": "パブラシアと地球を見下ろして",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 1139,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_pubraseerRisingMoon2410_h01",
+    "startAt": "2024-10-30 18:00:00",
+    "endAt": "2024-11-05 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 927,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1137009,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10731,
+          10732
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1139191": {
+    "questId": 1139191,
+    "questName": "ガイセイと地球を見下ろして",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 1139,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_gaisei_h01",
+    "startAt": "2024-10-30 18:00:00",
+    "endAt": "2024-11-05 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 809,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1137009,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          11911
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1139217": {
+    "questId": 1139217,
+    "questName": "オービターと地球を見下ろして",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 1139,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_orbiter_h01",
+    "startAt": "2024-10-30 18:00:00",
+    "endAt": "2024-11-05 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 783,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1137009,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          12171
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1139218": {
+    "questId": 1139218,
+    "questName": "ヨウタロウと地球を見下ろして",
+    "subName": "エピローグクエスト",
+    "questKind": 7,
+    "chapterId": 1139,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "icon_yotaro_s01",
+    "startAt": "2024-10-30 18:00:00",
+    "endAt": "2024-11-05 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 782,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1137009,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          12181
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
   "1140002": {
     "questId": 1140002,
     "questName": "めくるめくワープの荒瀬",
@@ -162623,6 +162893,67 @@
         "battleInfoIcon": "icon_kaibutsuEngineLarvaShadow_h01",
         "battleInfoElement": 5,
         "battleInfoSpd": 100
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1140008": {
+    "questId": 1140008,
+    "questName": "重なり合う絆・後編",
+    "subName": "第８話チャレンジクエスト",
+    "questKind": 6,
+    "chapterId": 1140,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2024-10-30 18:00:00",
+    "endAt": "2024-11-05 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 8,
+    "enemyLevel": 60,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 59,
+        "objectValue": 30,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1137008,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuEngineAdultEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 115
       }
     ],
     "hasAdv": false,
