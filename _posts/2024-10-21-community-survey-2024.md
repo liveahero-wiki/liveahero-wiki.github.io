@@ -577,7 +577,9 @@ East Asia has the highest percentage of Live A Hero players that spend money in-
 {% include figure-image.html path="/assets/img/survey-2024/login-spending-percentage.jpg"
   title="\"How Live A Hero Players Play the Game\" against \"Spending Level\"" %}
 
-Those who play the game in the most earnest way (last tier) are more likely to be paying customer too.
+- About 75% of the players login at least once a day.
+- About 55% of the players will make sure all AP are used.
+- Those who play the game in the most earnest way (last tier) are more likely to be paying customer too.
 
 {% include figure-image.html path="/assets/img/survey-2024/login-other-gender.jpg"
   title="How Live A Hero Players Play the Game (Female / Non-binary / Other)" %}
@@ -812,8 +814,8 @@ As we move on to “top 10 favourites” popularity ranking, we can see that it 
 {% include figure-image.html path="/assets/img/survey-2024/all-fav-2023-2024.jpg"
   title="All Favourites (2023 vs 2024)" %}
 
-- It seems that characters that gotten their variant forms between the time when 2023 and 2024 surveys were carried out (such as {% chara_link Polaris Mask %}, {% chara_link Lilac %}, {% chara_link Kalaski %})
-- {% chara_link Tsuneaki %} have their ranking boosted quite significantly, further suggesting that the amount of character appearance in story and recency biases do play a role in their ranking.
+- It seems that characters that gotten their variant forms between the time when 2023 and 2024 surveys were carried out (such as {% chara_link Polaris Mask %}, {% chara_link Lilac %}, {% chara_link Kalaski %} and {% chara_link Tsuneaki %}) have their ranking boosted quite significantly
+  - This further suggests that the amount of character appearance in story and recency biases do play a role in their ranking.
 
 {% include figure-image.html path="/assets/img/survey-2024/top10-2023-2024.jpg"
   title="Top 10 Favourites (2023 vs 2024)" %}
