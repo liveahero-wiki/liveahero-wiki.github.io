@@ -88509,6 +88509,241 @@
       "isOverrideStatusDescription": true
     }
   },
+  "4695": {
+    "skillEffectId": 4695,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": {
+            "timing": 0
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 305,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "限定パブラシア強化スキル説明エネミー用",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "アステリア・オディゴス",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "敵単体に1～3回、40%ダメージ。Viewを3000獲得。<br>もう一度行動をする。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4696": {
+    "skillEffectId": 4696,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeActiveSkill",
+          "parameter": {
+            "index": 0,
+            "timing": 6,
+            "skillId": 4073207
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 1073209,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "スキル1を強化スキル1に置き換え（限定パブラシアエネミー用）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4697": {
+    "skillEffectId": 4697,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HealthMultipleAttack",
+          "parameter": {
+            "evaluationIsMax": false
+          }
+        }
+      ],
+      "trigger": "[]",
+      "filename": "status_firepower",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "戦闘狂（エネミーガイセイ用）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "戦闘狂",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "HPが減少するほどATKが上昇する。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4698": {
+    "skillEffectId": 4698,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeAgi",
+          "parameter": {
+            "value": 3
+          }
+        }
+      ],
+      "filename": "status_spdup",
+      "statusId": 129,
+      "canDispel": false,
+      "filterIds": [
+        6
+      ],
+      "parameter": true,
+      "description": "SPD+3(システム効果129番)",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "SPD+3",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "SPDが+3される。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4699": {
+    "skillEffectId": 4699,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 125
+          }
+        }
+      ],
+      "filename": "status_system_atkup",
+      "statusId": 57,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "ATK+25%（システムアイコン）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATK+25%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATK+25%。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4700": {
+    "skillEffectId": 4700,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": {
+            "timing": 15
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 133,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果133番1ターン付与（消費タイミング15番）",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        1
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "4702": {
     "skillEffectId": 4702,
     "skillEffectJson": {
@@ -88587,6 +88822,50 @@
       "overrideStatusDescription": "チャージ数1につき、SPDが+5される。<br><color=#505050>特定のスキルによりチャージ数が増加する。戦闘不能後も継続する。</color>",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
+    }
+  },
+  "4704": {
+    "skillEffectId": 4704,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "NeedViewChange",
+          "parameter": {
+            "value": 90
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 1217101,
+      "canDispel": true,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "引力",
+      "isCountTurn": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        1
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
     }
   }
 }
