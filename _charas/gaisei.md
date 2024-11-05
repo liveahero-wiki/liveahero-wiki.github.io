@@ -15,7 +15,7 @@ heroes:
     Even the head of the orphanage, who taught him martial arts and protected the children, was trampled by a more powerful force.
 
     With this reality ingrained in him, Gaisei later left the sheltered planet and now roams the galaxy in search of battlefields where       he can confront the strong. He seeks to experience firsthand the belief that strength determines everything.
-  extra_sprites: fg_gaisei_h02_skin3
+  extra_sprites: fg_gaisei_h02_skin2,fg_gaisei_h02_skin3
 sidekicks:
 - stockId: 11911
   BIO_S01: |-
