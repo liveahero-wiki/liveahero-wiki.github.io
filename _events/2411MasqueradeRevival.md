@@ -132,7 +132,7 @@ Here is a list of this event's limited time Missions:
 
 ## Event Shop
 
-{% include shop-table.html id=53 %}
+{% include shop-table.html id=72 %}
 
 ## Quest Details
 
