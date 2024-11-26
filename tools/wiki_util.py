@@ -22,7 +22,7 @@ COLOR_PATTERN = re.compile(r"<color=(.*?)>(.*?)</color>", re.DOTALL)
 SIZE_PATTERN = re.compile(r"<size=(\d+)>(.*?)</size>", re.DOTALL)
 
 def sanitizeText(s):
-    s = COLOR_PATTERN.sub(r'\2', s[:-1])
+    s = COLOR_PATTERN.sub(r'\2', s)
     s = SIZE_PATTERN.sub(r'<span style="font-size: calc(\1px * 0.75)">\2</span>', s)
     return s
 
@@ -31,6 +31,7 @@ PASSIVE_SKILL_FRONT_MARKER = '<style="パッシブ領域">'
 PASSIVE_SKILL_PATTERN = re.compile(PASSIVE_SKILL_FRONT_MARKER + r'(.*?)</style>', re.DOTALL)
 ENHANCEMENT_PATTERN = re.compile(r'<style="スキル強化">(.*?)</style>', re.DOTALL)
 AUTO_ACTION_MARKER = '<style="オート行動"></style>'
+AUTO_ACTION_PATTERN = re.compile(r'<style="オート行動">(.*?)</style>', re.DOTALL)
 
 def sanitizeSkillDescription(s: str) -> str:
     s = sanitizeText(s)
@@ -40,6 +41,7 @@ def sanitizeSkillDescription(s: str) -> str:
     s = ENHANCEMENT_PATTERN.sub(r'<wiki-enhance>\1</wiki-enhance>', s)
     if AUTO_ACTION_MARKER in s:
         s = s.replace(AUTO_ACTION_MARKER, '<wiki-auto-action>') + '</wiki-auto-action>'
+    s = AUTO_ACTION_PATTERN.sub(r'<wiki-auto-action>\1</wiki-auto-action>', s)
 
     # LW cannot be trusted to close their tag
     if PASSIVE_SKILL_FRONT_MARKER in s:
