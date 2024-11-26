@@ -2649,6 +2649,64 @@
     ],
     "limitValue": 0
   },
+  "225": {
+    "itemId": 225,
+    "itemName": "海洋惑星の魚",
+    "resourceName": "BattleShip2411_exchange01",
+    "rarity": 3,
+    "itemType": 512,
+    "description": "荒廃の海域で釣れた色とりどりの魚たち。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "226": {
+    "itemId": 226,
+    "itemName": "バトルシップ戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "超大漁！バトルシップ・フィッシャーズの戦闘BGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_battleship_battle1",
+        "bgmTitleKey": "TITLE_BGM_BATTLESHIP_BATTLE1_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "227": {
+    "itemId": 227,
+    "itemName": "バトルシップボス戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "超大漁！バトルシップ・フィッシャーズのボス戦闘BGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_battleship_battle2",
+        "bgmTitleKey": "TITLE_BGM_BATTLESHIP_BATTLE2_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "228": {
+    "itemId": 228,
+    "itemName": "軍艦甲板ホログラム",
+    "resourceName": "icon_bg_battle_battleship",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景に式典会場を投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_battleship",
+        "bgTitleKey": "TITLE_BG_BATTLE_BATTLESHIP_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -3443,6 +3501,27 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 1
+      }
+    ],
+    "limitValue": 0
+  },
+  "110222": {
+    "itemId": 110222,
+    "itemName": "灯標のイサリビの記憶片",
+    "resourceName": "piece_isaribiBattleShip2411",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "灯標のイサリビのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10222
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
       }
     ],
     "limitValue": 0
@@ -5707,6 +5786,48 @@
     ],
     "limitValue": 0
   },
+  "112291": {
+    "itemId": 112291,
+    "itemName": "キロクの記憶片",
+    "resourceName": "piece_kiloc",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "キロクのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 12291
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
+  "112301": {
+    "itemId": 112301,
+    "itemName": "ジョウゼンの記憶片",
+    "resourceName": "piece_joezen",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "ジョウゼンのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 12301
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
   "210011": {
     "itemId": 210011,
     "itemName": "アカシの心",
@@ -7955,6 +8076,46 @@
     ],
     "limitValue": 0
   },
+  "212291": {
+    "itemId": 212291,
+    "itemName": "キロクの心",
+    "resourceName": "heart_kiloc",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "キロクのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 12291
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ],
+    "limitValue": 0
+  },
+  "212301": {
+    "itemId": 212301,
+    "itemName": "ジョウゼンの心",
+    "resourceName": "heart_joezen",
+    "rarity": 4,
+    "itemType": 2048,
+    "description": "ジョウゼンのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 12301
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
   "219991": {
     "itemId": 219991,
     "itemName": "@playerNameの心",
@@ -8867,6 +9028,16 @@
   },
   "21022101": {
     "itemId": 21022101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21022201": {
+    "itemId": 21022201,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,
@@ -9947,6 +10118,26 @@
   },
   "21217101": {
     "itemId": 21217101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21229101": {
+    "itemId": 21229101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21230101": {
+    "itemId": 21230101,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,
