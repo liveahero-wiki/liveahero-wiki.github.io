@@ -1,6 +1,8 @@
 ---
 title: Isaribi
 characterId: 22
+h2:
+  title: '"Blazing Beacon" Isaribi'
 occupation: Fisherman
 heroes:
 - stockId: 10221
@@ -18,6 +20,7 @@ heroes:
     but ended up disappearing into the jet black bottom of the ocean. Since that
     day, he's wanted a rematch with the person who saved him and until that dream of
     his becomes true, he wants to continue to be a hero fisherman.
+- stockId: 10222
 sidekicks:
 - stockId: 10221
   BIO_S01: |-
@@ -58,6 +61,9 @@ HERO = "That fellow has stopped being a pirate eh.<br>I guess we're in the same 
 TOUCH = "Oh!  Boss, you have good eyes!<br>I see you  appreciate this well honed body trained in the fishing grounds.<br>I got rough skin, but touch as much as you like!  Gahaha!"
 TRAIN = "I'll fully teach ya how fishermen fights."
 TRAINED = "Nuga…!? Ya idiot, do ya want to kill me!"
+%}
+
+{% include voice-table.html resourceName="isaribiBattleShip2411"
 %}
 
 ## Notes:
