@@ -6,12 +6,15 @@ heroes:
   BIO_H01: |-
     In the battlefield Kiloc transform into a military-style hero suit resembling that of a captain.
 
-    The anchor-shaped parallel weapon slung over his shoulder can also be used as a throwing weapon, but that is not its primary purpose.
+    The anchor-shaped parallel weapon slung over his shoulder can also be used as a throwing weapon,
+    but that is not its primary purpose.
   
-    The anchor, when fired towards the destination the ship should reach, paradoxically serves the purpose of keeping the ship nearby.
+    The anchor, when fired towards the destination the ship should reach,
+    paradoxically serves the purpose of keeping the ship nearby.
     This means that when the anchor reaches its target, a barrier is deployed around the ship to safely guide the crew.
     
-    However, the anchor’s true effectiveness cannot be realized if it is shot down, and this flaw is intertwined with its nature.
+    However, the anchor’s true effectiveness cannot be realized if it is shot down,
+    and this flaw is intertwined with its nature.
     Therefore, proper situational judgment is essential for its use
   BIO_H02: |-
     Kiloc, the son of the former supreme fleet commander of Estevolta, was subjected to an elite education from a young age
