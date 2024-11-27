@@ -17,7 +17,7 @@ sales_end_time: 2024-12-17T20:00:00+09
 
 ## Event Preview
 
-The Estebolta Urban Fleet is about to enter war!
+The Estevolta Urban Fleet is about to enter war!
 
 On the oceanic planet Muirauqa IV, a proxy war over trade routes, known as the Fishing War, is about to begin.
 
@@ -26,11 +26,11 @@ And the battleground for this proxy war is—a sea filled with Kaibutsu in a des
 
 Having received a request from a familiar fisherman hero, you depart from Orient City as a field operator.
 
-Upon your return to Estebolta, you meet the carefree captain, famous for his love of fun, and the hardworking young navigator who assists him.
+Upon your return to Estevolta, you meet the carefree captain, famous for his love of fun, and the hardworking young navigator who assists him.
 
 However, despite being members of the same crew, these two are a mismatched pair constantly bickering like a father and son—!?
 
-Joining forces with the heroes of Estebolta, you aim to win the Fishing War. But soon, you will face the greatest crisis in Muirauqa IV's history—!
+Joining forces with the heroes of Estevolta, you aim to win the Fishing War. But soon, you will face the greatest crisis in Muirauqa IV's history—!
 
 ## Event Banners
 
