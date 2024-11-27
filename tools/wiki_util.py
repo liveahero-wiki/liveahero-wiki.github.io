@@ -21,8 +21,8 @@ def omitEmptyDict(**kwargs) -> dict:
 COLOR_PATTERN = re.compile(r"<color=(.*?)>(.*?)</color>", re.DOTALL)
 SIZE_PATTERN = re.compile(r"<size=(\d+)>(.*?)</size>", re.DOTALL)
 
-def sanitizeText(s):
-    s = COLOR_PATTERN.sub(r'\2', s)
+def sanitizeText(s: str):
+    s = COLOR_PATTERN.sub(r'\2', s.strip())
     s = SIZE_PATTERN.sub(r'<span style="font-size: calc(\1px * 0.75)">\2</span>', s)
     return s
 
