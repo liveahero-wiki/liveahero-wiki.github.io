@@ -165957,6 +165957,94 @@
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
   },
+  "1146003": {
+    "questId": 1146003,
+    "questName": "繋がらない親子",
+    "subName": "第３話",
+    "questKind": 5,
+    "chapterId": 1146,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2024-11-28 18:00:00",
+    "endAt": "2024-12-24 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 3,
+    "enemyLevel": 11,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1146002,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_phein_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 109
+      },
+      {
+        "battleInfoIcon": "icon_tabit_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 109
+      },
+      {
+        "battleInfoIcon": "icon_hydoor_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 103
+      },
+      {
+        "battleInfoIcon": "icon_hisaki_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 104
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
   "1147001": {
     "questId": 1147001,
     "questName": "海を荒らすカイブツ達",

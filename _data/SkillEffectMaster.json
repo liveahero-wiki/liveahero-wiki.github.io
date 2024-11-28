@@ -65762,6 +65762,48 @@
       "isOverrideStatusDescription": true
     }
   },
+  "3377": {
+    "skillEffectId": 3377,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "AbsorbDamage",
+          "parameter": {
+            "value": 70,
+            "target": 0,
+            "healMult": 50
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "70%ダメージ+ダメージの50%自身を回復",
+      "isCountTurn": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "3379": {
     "skillEffectId": 3379,
     "skillEffectJson": {
@@ -81133,7 +81175,7 @@
       "filterIds": [
         3
       ],
-      "parameter": true,
+      "parameter": false,
       "description": "発破",
       "isCountTurn": false,
       "isImmediate": false,
@@ -81141,9 +81183,11 @@
       "reaminDeath": false,
       "canDuplicate": false,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
-        0
+        2
       ],
       "canDuplicateForce": false,
       "isCountDownEffect": false,
@@ -91844,7 +91888,7 @@
       "filterIds": [
         3
       ],
-      "parameter": true,
+      "parameter": false,
       "description": "発破+",
       "isCountTurn": false,
       "isImmediate": false,
