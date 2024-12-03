@@ -166045,6 +166045,89 @@
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
   },
+  "1146004": {
+    "questId": 1146004,
+    "questName": "外すことのできない仮面",
+    "subName": "第４話",
+    "questKind": 5,
+    "chapterId": 1146,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2024-12-03 18:00:00",
+    "endAt": "2024-12-24 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 4,
+    "enemyLevel": 12,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1146003,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuSharkWater_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 104
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuSharkShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 105
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuSharkWater_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 106
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
   "1147001": {
     "questId": 1147001,
     "questName": "海を荒らすカイブツ達",
@@ -166592,7 +166675,7 @@
     "subName": "ビギナー級",
     "questKind": 5,
     "chapterId": 1147,
-    "bannerResourceName": "ui_window_quest_01",
+    "bannerResourceName": "ui_window_quest_04",
     "iconFilename": "item_BattleShip2411_exchange01",
     "startAt": null,
     "endAt": "2024-12-17 20:00:00",
@@ -166711,7 +166794,7 @@
     "subName": "エキスパート級",
     "questKind": 5,
     "chapterId": 1147,
-    "bannerResourceName": "ui_window_quest_01",
+    "bannerResourceName": "ui_window_quest_04",
     "iconFilename": "item_BattleShip2411_exchange01",
     "startAt": null,
     "endAt": "2024-12-17 20:00:00",
@@ -166801,6 +166884,193 @@
         "battleInfoIcon": "icon_kaibutsuBirdSmallWater_h01",
         "battleInfoElement": 2,
         "battleInfoSpd": 111
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1149002": {
+    "questId": 1149002,
+    "questName": "代理戦争の狼煙",
+    "subName": "第２話チャレンジクエスト",
+    "questKind": 5,
+    "chapterId": 1149,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2024-12-03 18:00:00",
+    "endAt": "2024-12-24 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 2,
+    "enemyLevel": 45,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 11,
+        "objectValue": 25000,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 32,
+        "objectValue": 5,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 34,
+        "objectValue": 2,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1146002,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaWater_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 95
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaLight_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 90
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1149003": {
+    "questId": 1149003,
+    "questName": "繋がらない親子",
+    "subName": "第３話チャレンジクエスト",
+    "questKind": 5,
+    "chapterId": 1149,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2024-12-03 18:00:00",
+    "endAt": "2024-12-24 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 3,
+    "enemyLevel": 50,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 29,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 25000,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 32,
+        "objectValue": 5,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 34,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1146003,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_phein_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 109
+      },
+      {
+        "battleInfoIcon": "icon_tabit_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 109
+      },
+      {
+        "battleInfoIcon": "icon_hydoor_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 103
+      },
+      {
+        "battleInfoIcon": "icon_hisaki_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 104
       }
     ],
     "hasAdv": false,
