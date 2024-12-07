@@ -50,6 +50,11 @@ module LahWiki
       true => "/Charge",
     }
 
+    @@field_map = {
+      false => "",
+      true => "/Field",
+    }
+
     @@elapse_turn_timing_map = {
       0 => "Remove at the end of turn",
       2 => "Reduce remaining turn at the end of action",
@@ -449,7 +454,15 @@ module LahWiki
         end
       end
 
-      label = "<b>#{name} [#{@@status_type_map[status['isGoodStatus']]}/#{@@stackable_map[skillEffectJson['canDuplicate']]}#{@@chargeable_map[skillEffectJson['isCharageEffect']]}]</b><br>"
+      label = "<b>#{name} [#{
+        @@status_type_map[status['isGoodStatus']]
+      }/#{
+        @@stackable_map[skillEffectJson['canDuplicate']]
+      }#{
+        @@chargeable_map[skillEffectJson['isCharageEffect']]
+      }#{
+        @@field_map[skillEffectJson['isFieldEffect']]
+      }]</b><br>"
 
       turn = skillEffectJson["turn"]
       turnS = ""
