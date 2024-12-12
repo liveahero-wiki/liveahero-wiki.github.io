@@ -166262,6 +166262,98 @@
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
   },
+  "1146007": {
+    "questId": 1146007,
+    "questName": "バトルシップ・フィッシャーズ",
+    "subName": "第７話",
+    "questKind": 5,
+    "chapterId": 1146,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2024-12-12 18:00:00",
+    "endAt": "2024-12-24 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 7,
+    "enemyLevel": 15,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 227,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1146006,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuSharkWater_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 114
+      },
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 111
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuSharkWater_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 113
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
   "1147001": {
     "questId": 1147001,
     "questName": "海を荒らすカイブツ達",
