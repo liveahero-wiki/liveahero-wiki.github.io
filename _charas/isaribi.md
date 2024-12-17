@@ -21,6 +21,7 @@ heroes:
     day, he's wanted a rematch with the person who saved him and until that dream of
     his becomes true, he wants to continue to be a hero fisherman.
 - stockId: 10222
+  extra_sprites: fg_isaribiBattleShip2411_h02_skin2
 sidekicks:
 - stockId: 10221
   BIO_S01: |-
