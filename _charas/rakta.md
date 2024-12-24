@@ -51,7 +51,7 @@ sidekicks:
     strength", he has undergone various health methods and attend the gym 5 times a
     week, which is an aspect of a health nut who spares no effort even when
     misguided.
-  extra_sprites: fg_rakta_s01_skin1,fg_rakta_s01_skin2
+  extra_sprites: fg_rakta_s01_skin1,fg_rakta_s01_skin2,fg_rakta_s01_skin3
 ---
 
 {% include voice-table.html resourceName="rakta"

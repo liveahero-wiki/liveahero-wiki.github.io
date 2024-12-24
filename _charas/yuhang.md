@@ -32,7 +32,7 @@ sidekicks:
   
     He is very inquisitive about food and will eat anything to try it out,
     which has sent him to the hospital many times under the care of M.A.H.A. doctors.
-  extra_sprites: fg_yuhang_s01_skin1
+  extra_sprites: fg_yuhang_s01_skin1,fg_yuhang_s01_skin2
 ---
 
 {% include voice-table.html resourceName="yuhang"

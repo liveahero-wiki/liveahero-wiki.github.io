@@ -141,6 +141,18 @@ sprites="fg_ADV_kram_s01"
 sprites="fg_kaibutsuLizardEarth_h01,fg_kaibutsuLizardFire_h01,fg_kaibutsuLizardLight_h01,fg_kaibutsuLizardShadow_h01,fg_kaibutsuLizardWater_h01"
 %}
 
+### Local Idol
+
+{% include hero-infobox-unreleased.html name="Lizard Kaibutsu" mob=true
+sprites="fg_villainLocalIdolEarth_s01,fg_villainLocalIdolFire_s01,fg_villainLocalIdolLight_s01,fg_villainLocalIdolShadow_s01,fg_villainLocalIdolWater_s01"
+%}
+
+### Local Idol (Transform)
+
+{% include hero-infobox-unreleased.html name="Lizard Kaibutsu" mob=true
+sprites="fg_villainLocalIdolEarth_h01,fg_villainLocalIdolFire_h01,fg_villainLocalIdolLight_h01,fg_villainLocalIdolShadow_h01,fg_villainLocalIdolWater_h01"
+%}
+
 ### Mafia
 
 {% include hero-infobox-unreleased.html name="Mafia" mob=true
