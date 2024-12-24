@@ -2707,6 +2707,64 @@
     ],
     "limitValue": 0
   },
+  "229": {
+    "itemId": 229,
+    "itemName": "ホログラムデコレーション",
+    "resourceName": "LightYears2412_exchange01",
+    "rarity": 3,
+    "itemType": 512,
+    "description": "センサクお手製のクリスマスデコレーション。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "230": {
+    "itemId": 230,
+    "itemName": "ライトイヤーズディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "ライトイヤーズ・イルミネーションのBGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_lightyears_adv",
+        "bgmTitleKey": "TITLE_BGM_LIGHTYEARS_ADV_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "231": {
+    "itemId": 231,
+    "itemName": "ライトイヤーズ戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "ライトイヤーズ・イルミネーションの戦闘BGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_lightyears_battle",
+        "bgmTitleKey": "TITLE_BGM_LIGHTYEARS_BATTLE_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "232": {
+    "itemId": 232,
+    "itemName": "仮設都市ホログラム",
+    "resourceName": "icon_bg_battle_immigranturbanarea_night",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景に仮設都市を投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_immigranturbanarea_night",
+        "bgTitleKey": "TITLE_BG_BATTLE_IMMIGRANTURBANAREA_NIGHT_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -4968,6 +5026,27 @@
     ],
     "limitValue": 0
   },
+  "111242": {
+    "itemId": 111242,
+    "itemName": "驚天のギアンサルの記憶片",
+    "resourceName": "piece_giansarLightYears2412",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "驚天のギアンサルのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 11242
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
   "111251": {
     "itemId": 111251,
     "itemName": "ヴィスカナムの記憶片",
@@ -5820,6 +5899,48 @@
         "addFan": 50,
         "rarity": 0,
         "stockId": 12301
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "112361": {
+    "itemId": 112361,
+    "itemName": "アレンドの記憶片",
+    "resourceName": "piece_alend",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "アレンドのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 12361
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
+  "112371": {
+    "itemId": 112371,
+    "itemName": "センサクの記憶片",
+    "resourceName": "piece_senthak",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "センサクのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 12371
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
@@ -8116,6 +8237,46 @@
     ],
     "limitValue": 0
   },
+  "212361": {
+    "itemId": 212361,
+    "itemName": "アレンドの心",
+    "resourceName": "heart_alend",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "アレンドのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 12361
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ],
+    "limitValue": 0
+  },
+  "212371": {
+    "itemId": 212371,
+    "itemName": "センサクの心",
+    "resourceName": "heart_senthak",
+    "rarity": 4,
+    "itemType": 2048,
+    "description": "センサクのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 12371
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
   "219991": {
     "itemId": 219991,
     "itemName": "@playerNameの心",
@@ -9746,6 +9907,16 @@
     "effect": [],
     "limitValue": 0
   },
+  "21124201": {
+    "itemId": 21124201,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
   "21125101": {
     "itemId": 21125101,
     "itemName": "開花の波動",
@@ -10138,6 +10309,26 @@
   },
   "21230101": {
     "itemId": 21230101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21236101": {
+    "itemId": 21236101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21237101": {
+    "itemId": 21237101,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,
