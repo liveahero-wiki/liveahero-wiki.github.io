@@ -1,6 +1,8 @@
 ---
 title: Giansar
 characterId: 124
+h2:
+  title: "\"Shattering Horizons\" Giansar"
 heroes:
 - stockId: 11241
   BIO_H01: |-
@@ -20,6 +22,7 @@ heroes:
     In the midst of the disappointment and pain of not being a hero and being put on probation as a dangerous person, he makes a vow.
   
     He will become the strongest hero, with information over all heroes, a real hero that he always admire and long to be.
+- stockId: 11242
 sidekicks:
 - stockId: 11241
   BIO_S01: |-
@@ -42,4 +45,7 @@ TRAIN = "I hope you have a plan when you challenge me?"
 TRAINED = "I'm tricked…!?"
 EVENTA = "Hah. Heroes with gaps in their security are gathering here.<br>Don't you know that it makes thing easy to get your avatar hijacked..?"
 EVENTB = "There is no way I'm inferior to those lot…<br>Yes, I will remind them.<br>I'm going to show this world…my worth."
+%}
+
+{% include voice-table.html resourceName="giansarLightYears2412"
 %}
