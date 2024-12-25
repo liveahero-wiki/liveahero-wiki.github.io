@@ -1,0 +1,149 @@
+---
+title: Light Years Illumination
+jp_title: ライトイヤーズ・イルミネーション
+news_link: https://live-a-hero.jp/info/10298
+banner_image: banner_info_LightYears2412.jpg
+gacha: true
+event_start_time: 2024-12-24T20:00:00+09
+event_end_time: 2025-01-23T14:00:00+09
+farm_start_time: 2024-12-24T20:00:00+09
+farm_end_time: 2025-01-16T20:00:00+09
+sales_start_time: 2024-12-24T20:00:00+09
+sales_end_time: 2025-01-16T20:00:00+09
+---
+
+* this will be unordered
+{:toc}
+
+## Event Preview
+
+An immigrant ship that departed Earth long ago,
+after a long journey of 150 years, finally arrived at its intended planet.
+
+Upon hearing this news, you receive a request from a rising young city designer.
+The request is... to support a Christmas event.
+
+Accepting the request, you head with Mokdai to
+a temporary city built for immigrants, where sterile buildings stand in rows.
+There, you unexpectedly meet a perfectionist hacker villain,
+and a cheerful hologram creator. Together, you begin preparations for the Christmas event.
+
+As you solve various troubles with the city's residents,
+the preparations for the event steadily move forward.
+But then, a shadow of unease begins to approach—
+
+In a city where the past and present intersect, will the heroes be able to light up the Holy Night!?
+
+## Event Banners
+
+This Event's gacha summon includes one time-limited variant {% chara_link Giansar|h2 %} (Hero) and two new characters {% chara_link Alend %} (Hero & Sidekick), {% chara_link Senthak %} (Hero & Sidekick).
+
+Rates as follow:
+
+| Character                                                | Rates (Single) | Rates (Multis) |
+|----------------------------------------------------------|----------------|----------------|
+| {% chara_link Giansar|h2 %}                               | 0.8 %            | 1.6 %            |
+| {% chara_link Alend|h1 %}                              | 0.8 %            | 1.6 %            |
+| {% chara_link Senthak|h1 %}                             | 2 %              | 32 %             |
+| {% chara_link Senthak %}                                 | 5 %              | 0 %             |
+| {% chara_link Yuhang %}                                 | 3 %              | 0 %             |
+| {% chara_link Alend %}                                   | 12 %             | 0 %             |
+| {% chara_link Rakta %}                                   | 4 %             | 0 %             |
+| {% chara_link Shaft %}                                   | 4 %             | 0 %             |
+| {% chara_link Giansar %}                                   | 4 %             | 0 %             |
+| Offbanner 5 star hero                                    | 0.4 %            | 0.8 %            |
+| Offbanner 4 star hero                                    | 6 %              | 64 %             |
+| Offbanner 3 star hero                                    | 35 %             | 0 %              |
+| Offbanner 4 star sidekick                                | 2 %              | 0 %              |
+| Offbanner 3 star sidekick                                | 21 %             | 0 %              |
+
+>Rates (Multis) is the rate of the tenth pull in a multi pull, pull number 1-9 still use the Rates (Single)
+
+## Free Quest Bonus
+
+Here is a list of heroes and sidekicks which grants bonus in this event:
+
+| Hero | +Bonus (%)|
+|------------|--------------|
+| {% chara_link Giansar|h2 %} | 40 |
+| {% chara_link Alend|h1 %}  | 40 |
+| {% chara_link Senthak|h1 %}  | 30 |
+| {% chara_link Giansar|h1 %}  | 20 |
+| {% chara_link Isaribi|h2 %} | 20 |
+| {% chara_link Kiloc|h1 %}  | 20 |
+| {% chara_link Joezen|h1 %} | 10 | 
+| {% chara_link Shaft|h1 %} | 20 |
+| {% chara_link Yuhang|h1 %} | 10 | 
+| {% chara_link Rakta|h1 %} | 10 | 
+| {% chara_link Mokdai|h2 %} | 20 | 
+| {% chara_link Narihito|h2 %} | 20 | 
+| {% chara_link Borealis|h1 %} | 10 | 
+
+| Sidekick | +Bonus (%) |
+|-------------|---------------|
+| {% chara_link Senthak %} | 30 | 
+| {% chara_link Alend %}  | 20 | 
+| {% chara_link Giansar %}  | 10 | 
+| {% chara_link Joezen %}  | 10 | 
+| {% chara_link Kiloc %}  | 10 |
+| {% chara_link Isaribi %}  | 10 | 
+| {% chara_link Yuhang %}  | 10 | 
+| {% chara_link Rakta %}  | 10 | 
+| {% chara_link Shaft %}  | 10 | 
+| {% chara_link Mokdai %}  | 10 | 
+| {% chara_link Narihito %}  | 10 | 
+| {% chara_link Borealis %}  | 10 | 
+| {% chara_link Player %} | 10 | 
+
+## Event Sales Bonus
+
+Event sales bonus added according to how much event hero you have in a single sales, Which is
+{% chara_link Giansar|h2 %}, {% chara_link Alend|h1 %}, and {% chara_link Senthak|h1 %}
+
+Here is the bonus:
+
+| Hero   | +Bonus(%) |
+|--------|-----------|
+| 1 Event Hero   |     10    |
+| 2 Event Heroes |     30    |
+| 3 Event Heroes |     50    |
+
+## Limited Time Mission
+
+Here is a list of this event's limited time Missions:
+
+| No  | Description      | Rewards      |
+|----|-----------------------------------------------------------|----------------|
+| 1  | Finish any rank event quest 5 times | 500 {% include item-icon.html id=229 %}    |
+| 2  | Finish any rank event quest 10 times | 1 {% include item-icon.html id=34 %}    |
+| 4  | Finish any rank event quest 20 times | 1 {% include item-icon.html id=34 %}    |
+| 5  | Finish any rank event quest 30 times | 1 {% include item-icon.html id=34 %}    |
+| 6  | Finish any rank event quest 35 times | 750 {% include item-icon.html id=229 %}    |
+| 7  | Finish any rank event quest 40 times | 1 {% include item-icon.html id=34 %}    |
+| 8  | Finish any rank event quest 50 times | 1 {% include item-icon.html id=34 %}    |
+| 9  | Finish any rank event quest 70 times | 1000 {% include item-icon.html id=229 %}    |
+| 10  | Finish any rank event quest 90 times | 1500 {% include item-icon.html id=229 %}    |
+| 11  | Finish event sales 10 times | 1 {% include item-icon.html id=34 %}    |
+| 12 | Clear event free quest rank D  | 400 {% include item-icon.html id=229 %}    |
+| 13 | Clear event free quest rank C  | 400 {% include item-icon.html id=229 %}    |
+| 14 | Clear event free quest rank B  | 600 {% include item-icon.html id=229 %}    |
+| 15 | Clear event free quest rank A  | 600 {% include item-icon.html id=229 %}    |
+| 16 | Clear event free quest rank S  | 800 {% include item-icon.html id=229 %}    |
+| 17 | Clear event free quest beginner  | 600 {% include item-icon.html id=229 %}    |
+| 18 | Clear event free quest expert  | 800 {% include item-icon.html id=229 %}    |
+
+## Event Shop
+
+{% include shop-table.html id=74 %}
+
+## Quest Details
+
+### Main Quests
+
+{% include quest-group.html chapterId=1150 %}
+
+### Free Quests
+
+{% include quest-group.html chapterId=1151 %}
+
+### Event Sales Report
