@@ -45,6 +45,11 @@ module LahWiki
       true => "Stackable",
     }
 
+    @@dot_damage_map = {
+      false => "",
+      true => "/Damage over time"
+    }
+
     @@chargeable_map = {
       false => "",
       true => "/Charge",
@@ -460,6 +465,8 @@ module LahWiki
         @@stackable_map[skillEffectJson['canDuplicate']]
       }#{
         @@chargeable_map[skillEffectJson['isCharageEffect']]
+      }#{
+        @@dot_damage_map[skillEffectJson['isDotDamage']]
       }#{
         @@field_map[skillEffectJson['isFieldEffect']]
       }]</b><br>"
