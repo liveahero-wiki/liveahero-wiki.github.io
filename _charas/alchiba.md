@@ -60,7 +60,7 @@ sidekicks:
     recieved even if he dies in the process". This is because of his established
     reputation for laboral perfection, which has the detective industry thriving
     beyond expectation.
-  extra_sprites: fg_alchiba_s01_skin1
+  extra_sprites: fg_alchiba_s01_skin1,fg_alchiba_s01_skin2
 ---
 
 {% include voice-table.html resourceName="alchiba"

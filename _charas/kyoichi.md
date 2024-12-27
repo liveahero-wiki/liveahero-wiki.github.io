@@ -62,7 +62,7 @@ sidekicks:
 
     By the way, it seems like "Elementary students are the base he's supposed to
     defend".
-  extra_sprites: fg_kyoichi_s01_skin1
+  extra_sprites: fg_kyoichi_s01_skin1,fg_kyoichi_s01_skin2
 ---
 
 {% include voice-table.html resourceName="kyoichi"
