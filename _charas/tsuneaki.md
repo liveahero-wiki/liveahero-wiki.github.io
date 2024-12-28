@@ -44,14 +44,14 @@ sidekicks:
 ---
 
 {% include voice-table.html resourceName="tsuneaki"
-h_gachaResult = "Yo, good day.<br>My name is Tsuneaki Toshuku.<br>An exorcist hero is rare, right?<br>….eh?<br>No no, it's not a shady thing, truly!"
+h_gachaResult = "Yo, good day.<br>My name is Tsuneaki Toshuku.<br>An exorcist hero is rare, right?<br>….eh?<br>No no, I am not a suspicious person, really!"
 s_gachaResult = "Hm, don't tell me you're…my fan?<br>Heheh, I'm just joking!<br>Uncle's called Tsuneaki.<br>Let's have a long and fun association shall we, Operator-kun?"
-APPRECIATION = "Are you not tired? You don't know when you're tired?<br>Don't slack off with today's work.<br>Afterwards let's go for a date with uncle!...eh, no?"
+APPRECIATION = "Are you tired? You don't know when you're tired?<br>How about skipping work just for today?<br>And then... let's go on a date with me! …Huh? No?"
 DAILY = "Eeh? Do you have some interest with uncle's private life!?<br>Well…if you're fine with not going back, should we spend some time together?"
-EVENTA = "Welcome to Shinraku Festival!<br>I welcome you as the local here.<br>Then let's enjoy this to the fullest, make sure to watch your wallet~!"
-EVENTB = "Arara, Gammei-kun is wearing such an immodest outfit…well no matter.<br>In time of festivals, even outdoor sex is fine, right?"
-EVENTC = "You're so diligent, even taking company paperwork with you on your business trips<br>I'm cheering for you behind the scenes.<br>...eh, uncle has to do it too!?
-EVENTD = "Iya~ It's over, It's over, Thanks for your hard work!<br>As a reward for your hard work, shall uncle take you to a very special restaurant~?
+EVENTA = "Welcome to Shinraku Festival!<br>I welcome you as the local here.<br>Come on, have fun to your heart's content, and spend lots of money while you're at it~!"
+EVENTB = "Oh dear, Gammei-kun has ended up in quite the compromising state...<br>Well, I suppose it’s fine. It's okay to cut loose a little during the festival, right?"
+EVENTC = "You're so diligent, even taking company paperwork with you on your business trips<br>I'm cheering for you behind the scenes.<br>...eh, uncle has to do it too!?"
+EVENTD = "Iya~ It's over, It's over, Thanks for your hard work!<br>As a reward for your hard work, shall uncle take you to a very special restaurant~?"
 HERO = "I'm a private practice hero, but my face is known by a lot of people, you know?<br>There is that famous joint effort with that person…<br>That person's name..who is it again?"
 PLAYER = "I see, you are much more than rumored...<br>I can see why there are people who want to do something about you…<br>From who did I hear that? Secret!"
 RELATION = "Very good, Kouki-kun.<br>Whether acting or talent show he's brimming with energy, uncle is overwhelmed.<br>Though, I think it will be fine to be a little bit more carefree."
