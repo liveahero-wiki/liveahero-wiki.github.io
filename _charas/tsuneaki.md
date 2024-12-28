@@ -48,14 +48,31 @@ h_gachaResult = "Yo, good day.<br>My name is Tsuneaki Toshuku.<br>An exorcist he
 s_gachaResult = "Hm, don't tell me you're…my fan?<br>Heheh, I'm just joking!<br>Uncle's called Tsuneaki.<br>Let's have a long and fun association shall we, Operator-kun?"
 APPRECIATION = "Are you not tired? You don't know when you're tired?<br>Don't slack off with today's work.<br>Afterwards let's go for a date with uncle!...eh, no?"
 DAILY = "Eeh? Do you have some interest with uncle's private life!?<br>Well…if you're fine with not going back, should we spend some time together?"
+EVENTA = "Welcome to Shinraku Festival!<br>I welcome you as the local here.<br>Then let's enjoy this to the fullest, make sure to watch your wallet~!"
+EVENTB = "Arara, Gammei-kun is wearing such an immodest outfit…well no matter.<br>In time of festivals, even outdoor sex is fine, right?"
+EVENTC = "You're so diligent, even taking company paperwork with you on your business trips<br>I'm cheering for you behind the scenes.<br>...eh, uncle has to do it too!?
+EVENTD = "Iya~ It's over, It's over, Thanks for your hard work!<br>As a reward for your hard work, shall uncle take you to a very special restaurant~?
 HERO = "I'm a private practice hero, but my face is known by a lot of people, you know?<br>There is that famous joint effort with that person…<br>That person's name..who is it again?"
-PLAYER = "I see, you are much more than rumored..<br>I can see why there are people who want to do something about you…<br>From who did I hear that? Secret!"
+PLAYER = "I see, you are much more than rumored...<br>I can see why there are people who want to do something about you…<br>From who did I hear that? Secret!"
 RELATION = "Very good, Kouki-kun.<br>Whether acting or talent show he's brimming with energy, uncle is overwhelmed.<br>Though, I think it will be fine to be a little bit more carefree."
 TOUCH = "Hmm! Sorry, sorry, I avoid you without thinking,<br>but what do you mean by wanting to touch uncle?….nah i'm joking.<br>Alright, come here."
 TRAIN = "Can you endure my stroke?"
 TRAINED = "Hh…I-I'm close to my limit"
-EVENTA = "Welcome to Shinraku Festival!<br>I welcome you as the local here.<br>Then let's enjoy this to the fullest, make sure to watch your wallet~!"
-EVENTB = "Arara, Gammei-kun is wearing such an immodest outfit…well no matter.<br>In time of festival, even outdoor sex is fine, right?"
+battleStart = "Divination, star reading, geological features and curses...<br>Well, which one do you want?"
+action = "Oh, my turn?"
+attack = "There you go!"
+skill = "How about this?"
+special = "It took a while for my technique.<br>Well then, end of the game!<br>Exorcism!<br>Platycodon Formation!!"
+smallDamage = "That hurt..."
+bigDamage = "Nyaa!!"
+win = "Look at that. It was just as I predicted.<br>I'll wait for your job requests anytime."
+lose = "I guess I read it wrong...<br>I didn't think I could imitate that person easily...<br>I feel so pathetic..."
+assist = "It's a very effective amulet~"
+assisted = "Eh...<br>Are you leaving already...?"
+loveIndexMax = "I couldn't predict how much I love you...<br>Please, just please...<br>Don't disappear in front of me."
+rankMax = "Oh no, you already like me.<br>I'm sorry you got involved with uncle.<br>I don't know if you'll regret it.<br>I... am prepared to respond to your feelings."
+salesStart = "Play, Oh uh...<br>I'm off to business!"
+salesEnd = "I'm back<br>huh...?<br>Where did I go?"
 %}
 
 {% include voice-table.html resourceName="tsuneakiRookies2408"
@@ -64,4 +81,5 @@ EVENTB = "Arara, Gammei-kun is wearing such an immodest outfit…well no matter.
 ## Notes
 
 - His full name is Tsuneaki Toshuku (斗宿 ツネアキ)
-
+- Platycodon grandiflorus (aka balloon flowers) are flowers associated with Abe no Seimi (an onmyōji)
+- The design symbol of the Platycodon is called Semei Kiyko, and is known as a five-pointed star.
