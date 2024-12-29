@@ -16,7 +16,7 @@ For all potential wiki contributors, you need to [sign up for a free Github acco
 
 ### Edit a page
 
-Every page should have a "Edit this page" link on top. It will lead you to the edit page in Github. If you don't have a Github account, you will be prompted to make one.
+Every page should have a "View source" link on top. It will lead you to the edit page in Github. If you don't have a Github account, you will be prompted to make one.
 
 After that, if you are a new contributor, you may be asked to "fork" the repository, just agree with it. What this means is you will be editing a copied version of the Wiki before it goes through our review process.
 
@@ -54,7 +54,18 @@ RELATION = "hello world"
 {% endraw %}
 ```
 
-### Translate skill name
+#### Check syntax error for voice-table.html
+
+1. Go to [regex101 website](https://regex101.com/)
+1. Paste the following code to the "Regular Expression" field
+1. Paste your voice-table.html inner syntax into "Test string" field
+1. Check that every line in "Test string" should be fully highlighted, otherwise there is syntax error to be fixed
+
+{% raw %}
+([\w-]+)\s*=\s*(?:"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)'|([\w.-]+))
+{% endraw %}
+
+<!--### Translate skill name
 
 Take {% chara_link Exio|h1 %} hero S1 skill for example:
 
@@ -79,6 +90,7 @@ Take {% chara_link Exio|h1 %} hero S1 skill for example:
 1. Add a new hand-written skill description like `1035101: "<new skill description>"`
   - New line should be written as `<br>`
   - Double quote needs to be written as `\"`
+-->
 <!--
 
 ### Create page for new Hero `/charas/:name/`
