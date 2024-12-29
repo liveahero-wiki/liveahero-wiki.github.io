@@ -45,14 +45,18 @@ Take {% chara_link Ryekie %} for example [source code](https://github.com/liveah
   - New line should be written as `<br>`
 
 ```
-{% raw %}
-{% include voice-table.html resourceName="exio"
+{% raw %}{% include voice-table.html resourceName="exio"
 ...
 RELATION = "hello world"
 ...
-%}
-{% endraw %}
+%}{% endraw %}
 ```
+
+| Field names | Notes |
+|-|-|
+| h_gachaResult, s_gachaResult | Gacha summon lines |
+| APPRECIATION, DAILY, EVENTA, EVENTB, EVENTC, EVENTD, HERO, HERO2, PLAYER, PLAYER2, RELATION, TOUCH, TOUCH2, TRAIN, TRAINED | Only some characters may have EVENTC, EVENTD, HERO2 and PLAYER2 |
+| battleStart, action, attack, skill, skillA, skillB, special, smallDamage, bigDamage, win, lose, assist, assisted, loveIndexMax, rankMax, salesStart, salesEnd | If a hero character has more than one voice line for their own skill, use skillA and skillB |
 
 #### Check syntax error for voice-table.html
 
@@ -62,9 +66,7 @@ RELATION = "hello world"
 1. Check that every line in "Test string" should be fully highlighted, otherwise there is syntax error to be fixed
 
 ```
-{% raw %}
-([\w-]+)\s*=\s*(?:"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)'|([\w.-]+))
-{% endraw %}
+{% raw %}([\w-]+)\s*=\s*(?:"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)'|([\w.-]+)){% endraw %}
 ```
 
 <!--### Translate skill name
