@@ -54,7 +54,7 @@ jobs:
 
     - name: Publish (preview)
       if: ${{ github.event_name == 'pull_request' }}
-      run: netlify deploy --dir=_site --alias ${{ github.ref_name }}
+      run: npm run netlify deploy --dir=_site --alias ${{ github.ref_name }}
       env:
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         NETLIFY_AUTH_TOKEN:  ${{ secrets.NETLIFY_AUTH_TOKEN }}
