@@ -36,7 +36,7 @@ sidekicks:
 
 {% include voice-table.html resourceName="giansar"
 h_gachaResult = "Are you my next client?<br>I am Giansar. I'm what you call a hacker.<br>You have a job for an outlaw like me? Who do you want to take over?"
-s_gachaResult "I am Giansar. A so-called hacker.<br>It doesn't suit my nature to be a sidekick, but this is also my job...<br>I'm going to completely and perfectly take over and do everything I can."
+s_gachaResult = "I am Giansar. A so-called hacker.<br>It doesn't suit my nature to be a sidekick, but this is also my job...<br>I'm going to completely and perfectly take over and do everything I can."
 salesStart = "I'll finish it within the specified time."
 salesEnd = "Exactly on time, that felt good"
 battleStart = "These guys are far from perfect. I'll keep them all under my control."
