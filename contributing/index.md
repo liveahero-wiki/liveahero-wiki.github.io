@@ -61,9 +61,11 @@ RELATION = "hello world"
 1. Paste your voice-table.html inner syntax into "Test string" field
 1. Check that every line in "Test string" should be fully highlighted, otherwise there is syntax error to be fixed
 
+```
 {% raw %}
 ([\w-]+)\s*=\s*(?:"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)'|([\w.-]+))
 {% endraw %}
+```
 
 <!--### Translate skill name
 
