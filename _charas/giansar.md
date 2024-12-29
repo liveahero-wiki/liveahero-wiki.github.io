@@ -42,8 +42,7 @@ salesEnd = "Exactly on time, that felt good"
 battleStart = "These guys are far from perfect. I'll keep them all under my control."
 action = "Who's next?"
 attack = "Hmph!"
-skill1 = "It's full of gaps."
-skill2 = "I'll rewrite it"
+skill = "It's full of gaps." 
 special = "I'll rewrite it, take over it, and destroy it.<br>Invasion!<br>Malicious Exploit!"
 smallDamage = "Argh!"
 bigDamage = "This...!"
@@ -72,5 +71,5 @@ EVENTD = "Good grief. An aditional task to this emergency situation.<br>I'd like
 
 ## Notes
 
-- He has two skill voicelines; however, the second skill voiceline is only used for his boss fight in the Virtual Festa Royale event
+- He has two skill voicelines; however, the second skill voiceline is only used for his boss fight in the Virtual Festa Royale event. He says "I'll rewrite it" when using his skill in the boss fight
 - [Lambda Draconis](https://en.wikipedia.org/wiki/Lambda_Draconis), also known as Giausar, is a solitary, orange-red star in the northern circumpolar constellation of [Draco](https://en.wikipedia.org/wiki/Draco_(constellation)).
