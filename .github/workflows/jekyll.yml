@@ -6,6 +6,7 @@ on:
     branches: [ master ]
   schedule:
     - cron: '0 */6 * * *'
+  pull_request:
 
 jobs:
   build:
@@ -20,6 +21,18 @@ jobs:
       with:
         python-version: 3.12
         cache: 'pip'
+
+    - uses: actions/setup-node@v4
+      if: ${{ github.event_name == 'pull_request' }}
+      with:
+        node-version: '22'
+        cache: 'npm'
+
+    - name: Install Dependencies
+      if: ${{ github.event_name == 'pull_request' }}
+      run: |
+        npm ci
+
     - name: Generate data files
       run: |
         python -m pip install -r requirements.txt
@@ -39,7 +52,15 @@ jobs:
     - name: Build site
       run: JEKYLL_ENV=production bundle exec jekyll build --future
 
+    - name: Publish (preview)
+      if: ${{ github.event_name == 'pull_request' }}
+      run: npm run netlify -- deploy --dir=_site --alias ${{ github.ref_name }}
+      env:
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        NETLIFY_AUTH_TOKEN:  ${{ secrets.NETLIFY_AUTH_TOKEN }}
+
     - name: Publish to Github Pages
+      if: ${{ github.ref == 'refs/heads/master' }}
       run: |
         sudo chmod 777 _site
         cd _site
