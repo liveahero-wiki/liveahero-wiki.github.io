@@ -21,9 +21,9 @@ There will be extra login bonus for 10 days as follow
 | 3  | 1 {% include item.html id=34 %} ; 10000 {% include item.html id=35 %} ; 5000 {% include item.html id=30 %} |
 | 4  | 1 {% include item.html id=2 %} ; 1 {% include item.html id=34 %} ; 25000 {% include item.html id=35 %} |
 | 5  | 10 {% include item.html id=135 %} ; 10 {% include item.html id=59 %} ; 1 {% include item.html id=29 %} ; 1 {% include item.html id=28 %} ; 1 {% include item.html id=27 %} |
-| 6  | 1 {% include item.html id=2 %} ; 15000 {% include item.html id=11 %} ; 20000 {% include item.html id=35 %} |
-| 7  | 1 {% include item.html id=34 %} ; 5000 {% include item.html id=35 %} ; 10000 {% include item.html id=30 %} |
-| 8  | 1 {% include item.html id=2 %} ; 10000 {% include item.html id=30 %} ; 1 {% include item.html id=29 %} ; 1 {% include item.html id=28 %} ; 1 {% include item.html id=27 %} |
+| 6  | 1 {% include item.html id=2 %} ; 15000 {% include item.html id=11 %} ; 10000 {% include item.html id=35 %} |
+| 7  | 1 {% include item.html id=34 %} ; 5000 {% include item.html id=30 %} ; 10000 {% include item.html id=35 %} |
+| 8  | 1 {% include item.html id=2 %} ; 10000 {% include item.html id=35 %} ; 1 {% include item.html id=29 %} ; 1 {% include item.html id=28 %} ; 1 {% include item.html id=27 %} |
 | 9  | 10 {% include item.html id=59 %} ; 1 {% include item.html id=34 %} ; 15000 {% include item.html id=11 %} |
 | 10 |  5 {% include item.html id=2 %} ; 15 {% include item.html id=135 %} ; 30 {% include item.html id=59 %} ; 25000 {% include item.html id=35 %} |
 
@@ -46,49 +46,58 @@ There will be 3 special Ether Search abnners, pulling in this Ether Search will 
 
 You can only pull in each Ether Search once and with 50 {% include item.html id=1 %}
 
-### Banner 1
+<table>
+  <tr><th>Banner 1</th><th>Banner 2</th><th>Banner 3</th></tr>
+  <tr>
+    <td markdown="1">
 
-- {% chara_link Akashi|h2 %}
-- {% chara_link Mokdai|h2 %}
-- {% chara_link Ryekie|h2 %}
-- {% chara_link Giansar|h1 %}
-- {% chara_link Vulpecula|h1 %}
-- {% chara_link Exio|h1 %}
-- {% chara_link Suhail|h2 %}
-- {% chara_link Yoshiori|h2 %}
-- {% chara_link Monomasa|h2 %}
-- {% chara_link Gaisei|h1 %}
-- {% chara_link Kouki & Sirius|h2 %}
-- {% chara_link reXer|h2 %}
+1. {% chara_link Akashi|h2 %}
+1. {% chara_link Mokdai|h2 %}
+1. {% chara_link Ryekie|h2 %}
+1. {% chara_link Giansar|h1 %}
+1. {% chara_link Vulpecula|h1 %}
+1. {% chara_link Exio|h1 %}
+1. {% chara_link Suhail|h2 %}
+1. {% chara_link Yoshiori|h2 %}
+1. {% chara_link Monomasa|h2 %}
+1. {% chara_link Gaisei|h1 %}
+1. {% chara_link Kouki & Sirius|h2 %}
+1. {% chara_link reXer|h2 %}
 
-### Banner 2
+    </td>
+    <td markdown="1">
 
-- {% chara_link Furlong|h2 %}
-- {% chara_link Victom|h2 %}
-- {% chara_link Gammei|h2 %}
-- {% chara_link Barrel|h2 %}
-- {% chara_link Okitaka|h2 %}
-- {% chara_link Sadayoshi|h2 %}
-- {% chara_link Tsuneaki|h2 %}
-- {% chara_link Narihito|h2 %}
-- {% chara_link Kalaski|h2 %}
-- {% chara_link Polaris Mask|h2 %}
-- {% chara_link Alphecca|h2 %}
-- {% chara_link Nessen|h1 %}
-- {% chara_link Nessen|h2 %}
+1. {% chara_link Furlong|h2 %}
+1. {% chara_link Victom|h2 %}
+1. {% chara_link Gammei|h2 %}
+1. {% chara_link Barrel|h2 %}
+1. {% chara_link Okitaka|h2 %}
+1. {% chara_link Sadayoshi|h2 %}
+1. {% chara_link Tsuneaki|h2 %}
+1. {% chara_link Narihito|h2 %}
+1. {% chara_link Kalaski|h2 %}
+1. {% chara_link Polaris Mask|h2 %}
+1. {% chara_link Alphecca|h2 %}
+1. {% chara_link Nessen|h1 %}
+1. {% chara_link Nessen|h2 %}
 
-### Banner 3
+    </td>
+    <td markdown="1">
 
-- {% chara_link Kyoichi|h2 %}
-- {% chara_link Malfik|h2 %}
-- {% chara_link Toshu|h2 %}
-- {% chara_link Obsidius|h2 %}
-- {% chara_link Goro|h2 %}
-- {% chara_link Hisaki|h2 %}
-- {% chara_link Isaribi|h2 %}
-- {% chara_link Pubraseer|h2 %}
-- {% chara_link Lilac|h2 %}
-- {% chara_link Alchiba|h2 %}
-- {% chara_link Gomeisa|h2 %}
-- {% chara_link Procy|h2 %}
-- {% chara_link Shaft|h2 %}
+1. {% chara_link Kyoichi|h2 %}
+1. {% chara_link Marfik|h2 %}
+1. {% chara_link Toshu|h2 %}
+1. {% chara_link Obsidius|h2 %}
+1. {% chara_link Goro|h2 %}
+1. {% chara_link Hisaki|h2 %}
+1. {% chara_link Isaribi|h2 %}
+1. {% chara_link Pubraseer|h2 %}
+1. {% chara_link Lilac|h2 %}
+1. {% chara_link Alchiba|h2 %}
+1. {% chara_link Gomeisa|h2 %}
+1. {% chara_link Procy|h2 %}
+1. {% chara_link Shaft|h2 %}
+
+    </td>
+  </tr>
+</table>
