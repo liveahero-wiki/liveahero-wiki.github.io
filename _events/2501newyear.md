@@ -48,8 +48,9 @@ You can only pull in each Ether Search once and with 50 {% include item.html id=
 
 <table>
   <tr><th>Banner 1</th><th>Banner 2</th><th>Banner 3</th></tr>
-  <tr>
-    <td markdown="1">
+
+<tr>
+<td markdown="1">
 
 1. {% chara_link Akashi|h2 %}
 1. {% chara_link Mokdai|h2 %}
@@ -64,8 +65,8 @@ You can only pull in each Ether Search once and with 50 {% include item.html id=
 1. {% chara_link Kouki & Sirius|h2 %}
 1. {% chara_link reXer|h2 %}
 
-    </td>
-    <td markdown="1">
+</td>
+<td markdown="1">
 
 1. {% chara_link Furlong|h2 %}
 1. {% chara_link Victom|h2 %}
@@ -81,8 +82,8 @@ You can only pull in each Ether Search once and with 50 {% include item.html id=
 1. {% chara_link Nessen|h1 %}
 1. {% chara_link Nessen|h2 %}
 
-    </td>
-    <td markdown="1">
+</td>
+<td markdown="1">
 
 1. {% chara_link Kyoichi|h2 %}
 1. {% chara_link Marfik|h2 %}
@@ -98,6 +99,6 @@ You can only pull in each Ether Search once and with 50 {% include item.html id=
 1. {% chara_link Procy|h2 %}
 1. {% chara_link Shaft|h2 %}
 
-    </td>
-  </tr>
+</td>
+</tr>
 </table>
