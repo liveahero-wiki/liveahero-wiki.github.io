@@ -179,9 +179,9 @@ At the start of every turn, Ghost Kaibutsu (Adult) revives Ghost Kaibutsu (Juven
 
 Ghost Kaibutsu (Adult)'s attack power increases as its HP decreases, and some of its skills are further enhanced when in a critical state.
 
-Ghost Kaibutsu (Juvenile) has a skill that inflicts the "Resentment" status effect on itself.
+Ghost Kaibutsu (Juvenile) has a skill that inflicts the "Grudge" status effect on itself.
 
-When Ghost Kaibutsu (Juvenile) with "Resentment" is defeated, it deals damage to all Heroes.
+When Ghost Kaibutsu (Juvenile) with "Grudge" is defeated, it deals damage to all Heroes.
 
 #### Ghost Kaibutsu (Adult)'s skills
 
