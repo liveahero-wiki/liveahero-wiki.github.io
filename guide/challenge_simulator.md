@@ -163,9 +163,13 @@ This Simulator has different Score condition which is:
 
 #### Simulator Info
 
-Simulation Target: Ghost Kaibutsu (Adult), 2 Ghost Kaibutsu (Juvenile)
+Simulation Target: 
 
-Target Attributes: Wood, Light, Shadow
+| Target  | Element                                     | Speed     |
+|---------|---------------------------------------------|----------------|
+|Ghost Kaibutsu (Adult)|Wood|110|
+|Ghost Kaibutsu (Juvenile)|Light|115|
+|Ghost Kaibutsu (Juvenile)|Shadow|115|
 
 Details:
 
@@ -181,35 +185,8 @@ When Ghost Kaibutsu (Juvenile) with "Resentment" is defeated, it deals damage to
 
 #### Ghost Kaibutsu (Adult)'s skills
 
-Main Skills:
-
-| Skill Name  | Skill Description                                         | View Cost      |
-|-------------|-----------------------------------------------------------|----------------|
-|デスサイズ|Deal 60% damage to a single enemy. The base damage increases by 20% for each Wandering Soul debuff on self (up to a maximum of 120%). When HP <50%, grant 2 turns of Taunt to self.|0|
-|魂集め|Grant up to 4 Wandering Soul debuffs to self. If 3 or more Wandering Soul debuffs are already on self when this skill is activated, grant all allies 2 instances of ATK Up.|0|
-|ソウルクラッシュ|Deal 120% damage to all enemies. If there are >= 2 Wandering Soul debuffs on self, additionally trigger Skill 1.|6000|
-
-Passive Skills:
-
-| Skill Name  | Skill Description                                         |
-|-------------|-----------------------------------------------------------|
-|魂の衆合|For each Wandering Soul debuff on self, reduce the damage you receive from enemies by 20%. When HP <50%, grant self 2 Wandering Soul debuffs (up to a maximum of 4).|
-|魂の分割|At the start of each turn, revive all allies with 50% HP. When HP <50%, the revived allies' HP will be 100%. For each ally revived, remove the same number of Wandering Soul debuffs from self.|
-|狂暴化|Increase ATK in proportion to lost HP.|
-|高度耐性|Immune to Poison, Burn, and Silence. Cap the maximum damage you can receive from enemies to 60,000.|
+{% include skill-table-manual.html skillIds="4109101,4109102,4109103" equipmentSkills="6109101,6109102,6121109,6109103" %}
 
 #### Ghost Kaibutsu (Juvenile)'s skills
 
-Main Skills:
-
-| Skill Name  | Skill Description                                         | View Cost      |
-|-------------|-----------------------------------------------------------|----------------|
-|体当たり|Deal 70% damage to a single enemy.|0|
-|道連れ|Grant Resentment to self for 1 turn.|3000|
-|鬼火|Deal 60% damage to all enemies. 40% chance to Apply Burn for 1 turn.|6000|
-
-Passive Skills:
-
-| Skill Name  | Skill Description                                         |
-|-------------|-----------------------------------------------------------|
-|霧中の攻撃|At the start of the turn, if HP = 100%, grant SPD Up to self for 1 action.|
+{% include skill-table-manual.html skillIds="4104101,4104102,4104103" equipmentSkills="6105101" %}
