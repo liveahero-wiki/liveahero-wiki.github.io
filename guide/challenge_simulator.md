@@ -185,7 +185,7 @@ When Ghost Kaibutsu (Juvenile) with "Resentment" is defeated, it deals damage to
 
 #### Ghost Kaibutsu (Adult)'s skills
 
-{% include skill-table-manual.html skillIds="4109101,4109102,4109103" equipmentSkills="6109101,6109102,6121109,6109103" %}
+{% include skill-table-manual.html skillIds="4109101,4109102,4109103" equipmentSkills="6109101,6109102,6121109,6121114" %}
 
 #### Ghost Kaibutsu (Juvenile)'s skills
 
