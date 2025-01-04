@@ -182,6 +182,7 @@ When Ghost Kaibutsu (Juvenile) with "Resentment" is defeated, it deals damage to
 #### Ghost Kaibutsu (Adult)'s skills
 
 Main Skills:
+
 | Skill Name  | Skill Description                                         | View Cost      |
 |-------------|-----------------------------------------------------------|----------------|
 |デスサイズ|Deal 60% damage to a single enemy. The base damage increases by 20% for each Wandering Soul debuff on self (up to a maximum of 120%). When HP <50%, grant 2 turns of Taunt to self.|0|
@@ -189,6 +190,7 @@ Main Skills:
 |ソウルクラッシュ|Deal 120% damage to all enemies. If there are >= 2 Wandering Soul debuffs on self, additionally trigger Skill 1.|6000|
 
 Passive Skills:
+
 | Skill Name  | Skill Description                                         |
 |-------------|-----------------------------------------------------------|
 |魂の衆合|For each Wandering Soul debuff on self, reduce the damage you receive from enemies by 20%. When HP <50%, grant self 2 Wandering Soul debuffs (up to a maximum of 4).|
@@ -199,6 +201,7 @@ Passive Skills:
 #### Ghost Kaibutsu (Juvenile)'s skills
 
 Main Skills:
+
 | Skill Name  | Skill Description                                         | View Cost      |
 |-------------|-----------------------------------------------------------|----------------|
 |体当たり|Deal 70% damage to a single enemy.|0|
@@ -206,6 +209,7 @@ Main Skills:
 |鬼火|Deal 60% damage to all enemies. 40% chance to Apply Burn for 1 turn.|6000|
 
 Passive Skills:
+
 | Skill Name  | Skill Description                                         |
 |-------------|-----------------------------------------------------------|
 |霧中の攻撃|At the start of the turn, if HP = 100%, grant SPD Up to self for 1 action.|
