@@ -68,6 +68,33 @@ EVENTD = "Good grief. An aditional task to this emergency situation.<br>I'd like
 %}
 
 {% include voice-table.html resourceName="giansarLightYears2412"
+h_gachaResult = "I can't believe I'm Santa...<br>Interesting.<br>I Giansar will deliver it<br>The perfect surprise for the goody-two-shoes!"
+s_gachaResult = "Is it a request for a sidekick?<br>That's fine.<br>On this joyous holy night, I'll do my best to stir things up." 
+salesStart = "Hmph, I'll do the job for the compensation."
+salesEnd = "I finished it on time without any problems"
+battleStart = "Now, the surprise party begins.<br>Are you ready to be turned upside down?"
+action = "It's present time."
+attack = "There you go!"
+skill = "That's a fake, right?"
+special = "Now, turn the world upside down...!<br>Invasion!<br>Schrödinger's Surprise Box!!!"
+smallDamage = "Ugh!"
+bigDamage = "You can still do it...!"
+win = "How do you feel? Have you woken up?<br>A nice pick-me-up for a night of just waiting for presents, right?"
+lose = "I haven't lost yet...<br>Until I turn the world upside down...<br>I...!"
+assisted = "I ain't thanking you."
+rankMax = "Hmm... You're a curious one.<br>Come with me, and I'll fill this holy night with surprises.<br>If I'm teaming up with you, a night like that wouldn't be so bad."
+APPRECIATION = "It's an energy bar, eat it.<br>...What, you getting carried away with all this kindness?<br>If you can't move, it'll affect me too, that's all."
+DAILY = "A night filled with good will and happiness...<br>Everyone is so excited.<br>Even though those good intentions can easily destroy people..."
+RELATION = "Even if the residents deny it, we want to achieve maximum efficiency in livability.<br>Alend's attitude isn't bad.<br>...I just hope the residents don't give up on their beliefs."
+HERO = "Senthak found his place by his own will. It sounds good when you say it like that, but I just ran away...<br>And happened to find my place at the end of it."
+PLAYER = "I never expected that I would be the one giving it to them...<br>What, do you want a present too?<br>...Kukuku, okay? I'm looking forward to seeing what comes out."
+TOUCH = "Hey, don't cling on to me.<br>Sneaking your hands into a villain's pocket without warning.<br>I think you need to know your place."
+TRAIN = "I guess I'll do it, just enough to warm up alright?"
+TRAINED = "Damn, It's getting hot...!"
+EVENTA = "Damn, the data on the immigrant ship was a waste of time, and now you're having a Christmas event with these carefree people...?<br>It wouldn't be a good idea with you around!"
+EVENTB = "Look, here's the historical data for Christmas events.<br>...What's with that face?<br>I just want to see these guys struggle with all their might... that's all."
+EVENTC = "Helping set up? Why would I take on such a job...<br>Take it on yourself!<br> Listen, I'll never help you!"
+EVENTD = "Hey, take it. This is your reward.<br>Damn, that's a dangerous move.<br>You couldn't help but put your hand out...!"
 %}
 
 ## Notes
