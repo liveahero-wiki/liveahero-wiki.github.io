@@ -71,6 +71,8 @@ sidekicks:
 {% include voice-table.html resourceName="pubraseer"
 h_gachaResult = "My name's Pubraseer.<br>Captain of the spaceship.<br>Somehow…I remember it now.<br>..n? the way I talk is different?<br>Don't worry, both are the real me."
 s_gachaResult = "I am Pubraseer.<br>Janitor of the resort!<br>I seem to have forgotten a lot of things.<br>Let me know if I'm saying something weird, okay?"
+salesStart = "It's okay, I'll go."
+salesEnd = "I've returned safely."
 APPRECIATION = "Oh, operator, are you tired?<br>I'm almost done with the cleaning,<br>Why don't you come and sit in the sun with me when you're done?"
 DAILY = "It's a beautiful day, let's go fishing!<br>...hmm, work?...Oh, yeah, yeah.<br>I haven't cleaned the restroom!"
 RELATION = "Hydoor lad has kind eyes.<br>His words is the opposite though, is this what's called \"tsundere\"?<br>I learned it from you!"
@@ -95,6 +97,9 @@ loveIndexMax= "I don't want to lose someone precious again.<br>That’s why unti
 %}
 
 {% include voice-table.html resourceName="pubraseerrisingmoon2410"
+h_gachaResult = "I am truly happy to be with you on this joyous occasion.<br>Now, let's go my friend. I am...<br>No, I will fulfill the hope entrusted to me this time."
+salesStart = "Now, let's go out with pride."
+salesEnd = "I'm back. Phew...<br>Let's take a little break."
 APPRECIATION = "It seems you're feeling the fatigue from the ceremony, are you alright?<br>I am the leader, so it’s my duty to worry about your well-being too.<br>Come on, lean on me. It’s okay to relax and rest for a bit."
 DAILY = "This outfit certainly has a way of making me stand tall.<br>There were times in the past when it felt a bit too formal, but I wonder if I’ve gotten used to it a little now.<br>So, what do you think? Does it suit me? I’d really like your honest opinion."
 RELATION = "So he want to become an astronaut… Heh, it feels like I’m talking to my old friends.<br>So earnest, untouched by anyone.<br>…I hope his dream comes true."
@@ -108,10 +113,16 @@ EVENTB = "I remember taking the hero license approval exam myself.<br>I never im
 EVENTC = "It seems the preparations for the ceremony souvenirs aren’t finished yet.<br>I heard that if we help out, we could earn a reward.<br>If you have the time, would you like to go and lend a hand together?"
 EVENTD = "Oh, impressive! You’re already done!<br>…Oops, I almost got too excited there!<br>Well then, let’s enjoy the ceremony together without any worries!"
 battleStart = "To celebrate this departure with my new companions!<br>Friends, follow me!!"
+action = "It's time to go!"
+attack = "Let's go!"
 skill = "Point to the star of hope!"
 special = "I will guide my friends who chase their dreams!<br>\"Polaris\"! Pénte Anamniseis!!"
+smallDamage = "Damn..."
+bigDamage = "Who cares...!!!"
 win = "Alright! You all are the best!!<br>…Kuhum…Now, let’s bring this victory home!<br>To everyone waiting for our return."
 lose = "The hope entrusted to me is fading…<br>My friends, please… stay safe…"
+assisted = "Thanks for the response!"
+rankMax = "I can tell how much you care about me.<br>Thank you.<br>With this power, I want to find a way to use this life that everyone has entrusted to me.<br>...Together with you."
 %}
 
 ## Notes
