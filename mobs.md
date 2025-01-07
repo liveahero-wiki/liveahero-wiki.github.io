@@ -250,6 +250,12 @@ sprites="fg_villainSalvagerEarth_h01,fg_villainSalvagerFire_h01,fg_villainSalvag
 sprites="fg_kaibutsuSharkEarth_h01,fg_kaibutsuSharkFire_h01,fg_kaibutsuSharkLight_h01,fg_kaibutsuSharkShadow_h01,fg_kaibutsuSharkWater_h01"
 %}
 
+### Snake Kaibutsu
+
+{% include hero-infobox-unreleased.html name="Snake Kaibutsu" mob=true
+sprites="fg_kaibutsuSnakeEarth_h01,fg_kaibutsuSnakeFire_h01,fg_kaibutsuSnakeLight_h01,fg_kaibutsuSnakeShadow_h01,fg_kaibutsuSnakeWater_h01"
+%}
+
 ### Slime Kaibutsu (Juvenile)
 
 {% include hero-infobox-unreleased.html name="Juvenile Slime Kaibutsu" mob=true
