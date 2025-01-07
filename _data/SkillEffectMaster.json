@@ -56273,6 +56273,52 @@
       "isOverrideStatusDescription": true
     }
   },
+  "2108": {
+    "skillEffectId": 2108,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": 1,
+            "isRandom": false,
+            "statusId": 126,
+            "statusNum": 0,
+            "extensionLimit": 0,
+            "statusTypeValue": 2
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果126番を1ターン延長(死亡時貫通)",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": true,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "3001": {
     "skillEffectId": 3001,
     "skillEffectJson": {
@@ -96557,6 +96603,88 @@
       "overrideStatusName": "SPD+3",
       "isOverrideStatusName": true,
       "overrideStatusDescription": "SPDが+3される。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4804": {
+    "skillEffectId": 4804,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "スキル1強化（エネミー用）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "スキル1強化",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "スキル1が強化される。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4810": {
+    "skillEffectId": 4810,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseChangeAgi",
+          "parameter": {
+            "value": 5
+          }
+        }
+      ],
+      "filename": "status_spdup",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [
+        6
+      ],
+      "parameter": false,
+      "description": "SPDアップ(チャージ・永続・死亡貫通・戦闘不能時も継続)",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": true,
+      "isCharageEffect": true,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "SPD増加",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "チャージ数1につき、SPDが+5される。<br><color=#505050>特定のスキルによりチャージ数が増加する。戦闘不能後も継続する。</color>",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
     }

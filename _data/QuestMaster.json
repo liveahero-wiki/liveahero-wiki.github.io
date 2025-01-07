@@ -168663,6 +168663,89 @@
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
   },
+  "1150005": {
+    "questId": 1150005,
+    "questName": "イルミネーション飾ろう",
+    "subName": "第５話",
+    "questKind": 5,
+    "chapterId": 1150,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2025-01-07 18:00:00",
+    "endAt": "2025-01-23 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 5,
+    "enemyLevel": 13,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "rewardType": 3,
+        "objectId": 30,
+        "objectValue": 160,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1150004,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 111
+      },
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 112
+      },
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 108
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
   "1151001": {
     "questId": 1151001,
     "questName": "ジングルビート・ライブステージ！",
@@ -169582,6 +169665,86 @@
         "battleInfoIcon": "icon_villainLocalIdolWater_h01",
         "battleInfoElement": 2,
         "battleInfoSpd": 96
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1153004": {
+    "questId": 1153004,
+    "questName": "悪い子のサンタクロース",
+    "subName": "第４話チャレンジクエスト",
+    "questKind": 5,
+    "chapterId": 1153,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2025-01-07 18:00:00",
+    "endAt": "2025-01-23 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 3,
+    "enemyLevel": 55,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 29,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 34,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1150004,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 103
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaWater_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 101
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuLarvaLight_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 99
       }
     ],
     "hasAdv": false,
