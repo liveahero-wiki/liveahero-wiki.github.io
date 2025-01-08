@@ -190,3 +190,35 @@ When Ghost Kaibutsu (Juvenile) with "Grudge" is defeated, it deals damage to all
 #### Ghost Kaibutsu (Juvenile)'s skills
 
 {% include skill-table-manual.html skillIds="4104101,4104102,4104103" equipmentSkills="6105101" %}
+
+### Simulated Meteorite Kaibutsu (Difficulty: SS)
+
+#### Simulator Info
+
+Simulation Target: 
+
+| Target  | Element                                     | Speed     |
+|---------|---------------------------------------------|----------------|
+|Meteorite Kaibutsu (Large)|Fire|108|
+|Meteorite Kaibutsu (Small)|Fire|109|
+|Meteorite Kaibutsu (Small)|Fire|110|
+
+Details:
+
+This quest is completed by surviving for 8 turns.
+
+Meteorite Kaibutsu (Large) randomly applies either a "single-target" or "all-target" status to itself every turn, and attacks accordingly based on that status. When Meteorite Kaibutsu (Large) takes damage, it switches between the "single-target" and "all-target" states.
+
+Meteorite Kaibutsu (Large) grants itself "Meteor Fragments" every turn. Once every 4 turns, it unleashes a powerful all-target attack based on the number of Meteor Fragments it has accumulated.
+
+"Meteor Fragments" can be removed by attacking Meteorite Kaibutsu (Large).
+
+Meteorite Kaibutsu (Small) performs single-target and area attacks that apply buffs and debuffs, and if it is knocked out by the fifth turn, it will revive.
+
+#### Meteorite Kaibutsu (Large)'s skills
+
+{% include skill-table-manual.html skillIds="4095103,4095104,4095105" equipmentSkills="6095101,6095111,6095110,6095108" %}
+
+#### Meteorite Kaibutsu (Small)'s skills
+
+{% include skill-table-manual.html skillIds="4089103,4089101,4089102" equipmentSkills="" %}
