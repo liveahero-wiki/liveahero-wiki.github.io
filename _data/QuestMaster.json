@@ -168819,6 +168819,103 @@
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
   },
+  "1150007": {
+    "questId": 1150007,
+    "questName": "反撃のメリークリスマス",
+    "subName": "第７話",
+    "questKind": 5,
+    "chapterId": 1150,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2025-01-15 18:00:00",
+    "endAt": "2025-01-23 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 7,
+    "enemyLevel": 15,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1150006,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 105
+      },
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 103
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": true,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": [
+      {
+        "score": 0,
+        "iconAddress": "ui_symbol_estimation_C"
+      },
+      {
+        "score": 30000,
+        "iconAddress": "ui_symbol_estimation_B"
+      },
+      {
+        "score": 65000,
+        "iconAddress": "ui_symbol_estimation_A"
+      },
+      {
+        "score": 90000,
+        "iconAddress": "ui_symbol_estimation_S"
+      }
+    ],
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": [
+      {
+        "label": "UI_SCORE_ATTACK_CLEAR_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_CLEAR_BONUS_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_TURN_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_TURN_BONUS_DESCRIPTION"
+      }
+    ],
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 2,
+    "rewardUpRate": null
+  },
   "1151001": {
     "questId": 1151001,
     "questName": "ジングルビート・ライブステージ！",
@@ -169898,6 +169995,85 @@
         "battleInfoIcon": "icon_raktaThermae2307_h01",
         "battleInfoElement": 3,
         "battleInfoSpd": 113
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1153006": {
+    "questId": 1153006,
+    "questName": "戦場のクリスマスイブ",
+    "subName": "第６話チャレンジクエスト",
+    "questKind": 5,
+    "chapterId": 1153,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2025-01-15 18:00:00",
+    "endAt": "2025-01-23 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 5,
+    "enemyLevel": 60,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 33,
+        "objectValue": 5,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 34,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 135,
+        "objectValue": 2,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1150006,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuSnakeEX_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 105
       }
     ],
     "hasAdv": false,
