@@ -23,6 +23,7 @@ heroes:
   
     He will become the strongest hero, with information over all heroes, a real hero that he always admire and long to be.
 - stockId: 11242
+  extra_sprites: fg_giansarLightYears2412_h02_skin2
 sidekicks:
 - stockId: 11241
   BIO_S01: |-
