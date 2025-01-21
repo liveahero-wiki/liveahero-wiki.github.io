@@ -96814,6 +96814,54 @@
       "isOverrideStatusDescription": true
     }
   },
+  "4803": {
+    "skillEffectId": 4803,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SpreadStatus",
+          "parameter": {
+            "num": 999,
+            "target": 21,
+            "isForce": true,
+            "statusId": 0,
+            "statusType": 0,
+            "isActiveSkill": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        12
+      ],
+      "parameter": false,
+      "description": "デバフを全て隣接に拡散",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": true,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": true,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "4804": {
     "skillEffectId": 4804,
     "skillEffectJson": {
@@ -97061,6 +97109,183 @@
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
+    }
+  },
+  "4815": {
+    "skillEffectId": 4815,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "OtherParamBarrier",
+          "parameter": {
+            "mult": 1000,
+            "value": 0,
+            "maxValue": 100000,
+            "paramType": 2
+          }
+        }
+      ],
+      "filename": "status_barrier",
+      "statusId": 275,
+      "canDispel": true,
+      "filterIds": [
+        5
+      ],
+      "parameter": true,
+      "description": "View1000%バリア",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "被ダメージ時、受けるダメージをバリア値だけ軽減する。バリア値は付与キャラクターのViewの1000%。<br><color=#505050>バリア値が無くなった時、解除される。</color>",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4816": {
+    "skillEffectId": 4816,
+    "skillEffectJson": {
+      "turn": 5,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Burst",
+          "parameter": {
+            "limit": 0,
+            "value": 40,
+            "timing": 6,
+            "element": 5,
+            "isFixDamage": false,
+            "popupAddress": "BurstShadowDamagePopup",
+            "isModifiedAtk": true
+          }
+        }
+      ],
+      "filename": "status_bomb",
+      "statusId": 34,
+      "canDispel": true,
+      "filterIds": [
+        11
+      ],
+      "parameter": false,
+      "description": "炸裂",
+      "isCountTurn": false,
+      "isDotDamage": true,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        2
+      ],
+      "canDuplicateForce": true,
+      "isCountDownEffect": false,
+      "overrideStatusName": "炸裂",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "行動終了時、付与したキャラクターのATKの40%の属性ダメージを受ける。（影属性）<br>状態変化の重複無効を無視し、5個まで重複する。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4818": {
+    "skillEffectId": 4818,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewChange",
+          "parameter": {
+            "value": 200
+          }
+        }
+      ],
+      "filename": "status_system_awakening",
+      "statusId": 170,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "View消費量+100%（システム）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "View消費量+100%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ViewPowerを消費するスキルのView消費量が2倍になる。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4819": {
+    "skillEffectId": 4819,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "status_debuff_special",
+      "statusId": 1237101,
+      "canDispel": true,
+      "filterIds": [],
+      "parameter": false,
+      "description": "虚像（エネミー用）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        1
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "虚像",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "特定のスキルに関連する効果。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
     }
   }
 }
