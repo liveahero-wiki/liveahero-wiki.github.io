@@ -17,9 +17,9 @@ Following it's predecessors this game is a LGBT-positive game that features LGBT
 
 ### How Do I Download This Game?
 
-If you're an iPhone user, simply download the game from [here](https://apps.apple.com/jp/app/id1474209512)
+- [Apple App Store page](https://apps.apple.com/us/app/live-a-hero/id1474209512)
+- [Google Play Store page](https://play.google.com/store/apps/details?id=jp.co.lifewonders.liveahero).
 
-If you are an Android user, you can download the app from the Google Play Store [here](https://play.google.com/store/apps/details?id=jp.co.lifewonders.liveahero). 
 If this is not possible for some reason, you must install QooApp onto your phone from [here](https://apps.qoo-app.com/en/app/880). Then, open QooApp and do a search for Lifewonders. 
 Select Live A Hero and install.
 
@@ -133,13 +133,15 @@ You can set your own support unit from the support setting button in team menu, 
 
 It is recommended to follow these steps to make it easier to recover your account in case you lose access to it.
 
-### Backing up your user key
+### Backing up your user key (Android user only)
 
-userKey is the file that keeps your account data. If you lose access to the device where you play the game you can simply install the game on another device and copy the userKey to the game folder. 
+`userKey` is the file that keeps your account data. If you lose access to the device where you play the game you can simply install the game on another device and copy the userKey to the game folder. 
 
 This means that making a copy of your userKey and keeping it somewhere safe is highly recommended. 
 
-you can find userKey on Android devices under `/SD/Android/data/jp.co.lifewonders.liveahero/files/Data/`.
+You can find userKey on Android devices under `/SD/Android/data/jp.co.lifewonders.liveahero/files/Data/`.
+
+For Android 11+, you may need to **connect your phone to a computer** and access app data folder from your computer.
 
 ### Player ID
 
@@ -148,7 +150,7 @@ From the main menu, select "Friends" and then "Search for Friends".
 On the lower part of the screen you will find your Player ID. Noting this number down is recommended, as it is something Lifewonders will ask you if you have to contact their support to recover your account.
 
 {:refdef: style="text-align: center;"}
-<img src="/assets/img/Playerid.png" alt="Pid" height=500px loading="lazy">
+<img src="/assets/img/Playerid.png" alt="How to find Live A Hero Player ID" height=500px loading="lazy">
 {: refdef}
 
 ## How to Back-up Your Data
@@ -164,7 +166,7 @@ When you're ready or need to use it, start up the game. At the Title Screen, hit
 
 Enter the Code in the top box, and your custom password you made in the bottom box. Then hit the blue button.
 
->NOTE: When you transfer your account to another device using this code, a new userKey will be created in this device and your account will be bound to this new userKey, while the previous userKey will be bound to a new account. So remember to backup this new userKey after transferring your data, as the previous userKey will be rendered useless.
+>NOTE: When you transfer your account to another device using this code, a new `userKey` file will be created in this device and your account will be bound to this new `userKey`, while the previous `userKey` will be become invalid. So remember to backup this new `userKey` after transferring your data, as **the previous `userKey` will be rendered useless**.
 
 ## Tips
 
