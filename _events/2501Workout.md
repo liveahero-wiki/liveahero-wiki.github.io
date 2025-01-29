@@ -104,7 +104,7 @@ Here is a list of this event's limited time Missions:
 
 ### Main Quests
 
-{% include quest-group.html chapterId=537 %}
+{% include quest-group.html chapterId=528 %}
 
 ### Free Quests
 
