@@ -15599,6 +15599,69 @@
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
   },
+  "301020": {
+    "questId": 301020,
+    "questName": "根を下ろした場所は",
+    "subName": "ゴメイサキャラクエスト",
+    "questKind": 4,
+    "chapterId": 301,
+    "bannerResourceName": "ui_window_quest_03",
+    "iconFilename": "icon_gomeisa_h01",
+    "startAt": "2025-02-04 18:00:00",
+    "endAt": null,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 101014,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "HavingStockCard",
+        "stockIds": [
+          10331,
+          10332
+        ],
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
   "302001": {
     "questId": 302001,
     "questName": "オレのアクション見ときなよ！",
@@ -172967,6 +173030,171 @@
         "battleInfoIcon": "icon_villainWrestlerShadow_h01",
         "battleInfoElement": 5,
         "battleInfoSpd": 97
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1158004": {
+    "questId": 1158004,
+    "questName": "クリスマス・キャロル",
+    "subName": "第４話チャレンジクエスト",
+    "questKind": 6,
+    "chapterId": 1158,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2025-02-04 18:00:00",
+    "endAt": "2025-02-13 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 2,
+    "enemyLevel": 55,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 29,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1155004,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_hydoor_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 109
+      },
+      {
+        "battleInfoIcon": "icon_yasuhiko_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 115
+      },
+      {
+        "battleInfoIcon": "icon_anna_h01",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 110
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1158005": {
+    "questId": 1158005,
+    "questName": "子供たちのお友達",
+    "subName": "第５話チャレンジクエスト",
+    "questKind": 6,
+    "chapterId": 1158,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "ui_icon_eventicon",
+    "startAt": "2025-02-04 18:00:00",
+    "endAt": "2025-02-13 14:00:00",
+    "dayOfWeek": 0,
+    "sortWeight": 2,
+    "enemyLevel": 55,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 135,
+        "objectValue": 2,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1155005,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFire_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 112
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultLight_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 108
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultFire_h01",
+        "battleInfoElement": 1,
+        "battleInfoSpd": 106
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuAdultLight_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 104
       }
     ],
     "hasAdv": false,
