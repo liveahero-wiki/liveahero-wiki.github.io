@@ -2765,6 +2765,84 @@
     ],
     "limitValue": 0
   },
+  "233": {
+    "itemId": 233,
+    "itemName": "メモリー・アーカイブ",
+    "resourceName": "memory_archive",
+    "rarity": 3,
+    "itemType": 4,
+    "description": "特別な思い出を記録した保存端末。過去イベントのプレイ可能なエピローグクエストを解放することができる。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "234": {
+    "itemId": 234,
+    "itemName": "スターシャード",
+    "resourceName": "star_shard",
+    "rarity": 3,
+    "itemType": 4,
+    "description": "不思議な力を秘めた星の破片。交換所でアイテムと交換できる。4000個まで所持できる。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "235": {
+    "itemId": 235,
+    "itemName": "チョコドリンクレシピ",
+    "resourceName": "Seekers2502_exchange01",
+    "rarity": 3,
+    "itemType": 512,
+    "description": "幻の霊薬と謳われる秘薬を模したチョコドリンクのレシピ。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "236": {
+    "itemId": 236,
+    "itemName": "砂漠の都ホログラム",
+    "resourceName": "icon_bg_battle_desertoasis_decoration_day",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景に砂漠の都を投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_desertoasis_decoration_day",
+        "bgTitleKey": "TITLE_BG_BATTLE_DESERTOASIS_DECORATION_DAY_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
+  "237": {
+    "itemId": 237,
+    "itemName": "シーカーズディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "チョコレート・シーカーズのBGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_seekers_adv",
+        "bgmTitleKey": "TITLE_BGM_SEEKERS_ADV_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "238": {
+    "itemId": 238,
+    "itemName": "シーカーズ戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "チョコレート・シーカーズの戦闘BGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_seekers_battle",
+        "bgmTitleKey": "TITLE_BGM_SEEKERS_BATTLE_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -4942,6 +5020,27 @@
     ],
     "limitValue": 0
   },
+  "111152": {
+    "itemId": 111152,
+    "itemName": "威風のガイウスの記憶片",
+    "resourceName": "piece_gaiusSeekers2502",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "威風のガイウスのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 11152
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
   "111221": {
     "itemId": 111221,
     "itemName": "リグザの記憶片",
@@ -5941,6 +6040,48 @@
         "addFan": 50,
         "rarity": 0,
         "stockId": 12371
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "112481": {
+    "itemId": 112481,
+    "itemName": "ヴラハムの記憶片",
+    "resourceName": "piece_vlaham",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "ヴラハムのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 12481
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
+  "112491": {
+    "itemId": 112491,
+    "itemName": "バロレイの記憶片",
+    "resourceName": "piece_valoray",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "バロレイのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 12491
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
@@ -8277,6 +8418,46 @@
     ],
     "limitValue": 0
   },
+  "212481": {
+    "itemId": 212481,
+    "itemName": "ヴラハムの心",
+    "resourceName": "heart_vlaham",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "ヴラハムのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 12481
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ],
+    "limitValue": 0
+  },
+  "212491": {
+    "itemId": 212491,
+    "itemName": "バロレイの心",
+    "resourceName": "heart_valoray",
+    "rarity": 4,
+    "itemType": 2048,
+    "description": "バロレイのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 12491
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
   "219991": {
     "itemId": 219991,
     "itemName": "@playerNameの心",
@@ -9897,6 +10078,16 @@
     "effect": [],
     "limitValue": 0
   },
+  "21115201": {
+    "itemId": 21115201,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
   "21122101": {
     "itemId": 21122101,
     "itemName": "開花の波動",
@@ -10359,6 +10550,26 @@
   },
   "21237101": {
     "itemId": 21237101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21248101": {
+    "itemId": 21248101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21249101": {
+    "itemId": 21249101,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,
