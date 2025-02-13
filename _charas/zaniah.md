@@ -28,7 +28,7 @@ sidekicks:
   
     In reality, however, Zania is the type of person who won't stop once she decides to do something, 
     so her families in the slum are very worried when she rushed out of town, they follow her behind buildings, behind trees, and are always cheering her on in the shadows.
-  extra_sprites: fg_zaniah_s01_skin1
+  extra_sprites: fg_zaniah_s01_skin1,fg_zaniah_s01_skin2,fg_zaniah_s01_skin3
 ---
 
 {% include voice-table.html resourceName="zaniah"
