@@ -18,23 +18,17 @@ sales_end_time: 2025-03-13T20:00:00+09
 ## Event Preview
 
 In this vast universe, there exists a legendary dessert so delicious it seems otherworldly, with tales as enchanting as a fairy tale—
-
 A chocolate, known as the ‘Phantom Elixir,’ said to heal all wounds and grant eternal life.
 
 Having been asked to join an investigation by an anxious food hunter, 
-
 you, along with a gravekeeper with a fragile aura and a diver who loves lakes, 
-
 descend to a desert planet where scorching sands swirl, hoping to uncover the truth behind the rumor.
 
 While enjoying the splendid festival that celebrates the Desert King, 
-
 who is said to have once brought the Phantom Elixir to the people, 
-
 your group gathers information and heads to the ancient ruins where the recipe is said to be hidden.
 
 Heroes, seeking romance and adventure, venture deeper into the ancient ruins, 
-
 where they will discover whether the legendary dessert is real, or something else entirely—
 
 ## Event Banners
