@@ -1,6 +1,8 @@
 ---
 title: Gaius
 characterId: 115
+h2:
+  title: "\"Majestic Gale\" Gaius"
 heroes:
 - stockId: 11151
   BIO_H01: |-
@@ -22,6 +24,7 @@ heroes:
     Gaius gazed at the still surface of the water and asked himself, "Who am I?
     Believing that the answer is somewhere in the lake, he dives back into the
     water.
+- stockId: 11152
 sidekicks:
 - stockId: 11151
   BIO_S01: |-
@@ -53,6 +56,9 @@ TRAIN = "I won't adjust, good luck."
 TRAINED = "I can't do this kind of intensity!"
 EVENTA = "Hello, I will be your guide, my name's Gaius.<br>Let me know if anyone throws trash into the lake.<br>I will throw them out."
 EVENTB = "This lake has a guardian deity.<br>Sometimes they appear on the water and watch over the lake.<br>If you're lucky then maybe it will also swim alongside you."
+%}
+
+{% include voice-table.html resourceName="gaiusseekers2502"
 %}
 
 ## Notes
