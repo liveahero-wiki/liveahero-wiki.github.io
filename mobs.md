@@ -247,7 +247,7 @@ sprites="fg_villainSalvagerEarth_h01,fg_villainSalvagerFire_h01,fg_villainSalvag
 ### Scavenger Easter Kaibutsu
 
 {% include hero-infobox-unreleased.html name="Scavenger Easter Kaibutsu" mob=true
-sprites="fg_kaibutsuScavengerEaterEarth_h01,fg_kaibutsuScavengerEaterFire_h01,fg_kaibutsuScavengerEaterLight_h01,fg_kaibutsuScavengerEaterShadow_h01,fg_kaibutsuScavengerEaterWater_h01
+sprites="fg_kaibutsuScavengerEaterEarth_h01,fg_kaibutsuScavengerEaterFire_h01,fg_kaibutsuScavengerEaterLight_h01,fg_kaibutsuScavengerEaterShadow_h01,fg_kaibutsuScavengerEaterWater_h01"
 %}
 
 ### Shark Kaibutsu
