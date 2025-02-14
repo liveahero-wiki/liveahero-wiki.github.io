@@ -427,6 +427,10 @@ module LahWiki
         return "unknown status #{id_s}"
       end
 
+      if status["statusType"] == 2 && !skillEffectJson["isOverrideStatusName"] && !skillEffectJson["isOverrideStatusDescription"]
+        return nil
+      end
+
       wiki_icon = skillEffectJson["filename"]
       if !wiki_icon || wiki_icon == ""
         wiki_icon = "b_skill_special" # "ui_icon_stance_blank"

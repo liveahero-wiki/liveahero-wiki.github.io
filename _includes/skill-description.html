@@ -16,7 +16,9 @@
     {% endif %}
 
     {% assign status = skillEffectId | status_description_v2: skillEffectJson %}
-    {% assign status_array = status_array | push: status %}
+    {% if status %}
+      {% assign status_array = status_array | push: status %}
+    {% endif %}
   {% endfor %}
   {% if status_array.size > 0 %}
     <hr>{{ status_array | join: ", " }}
