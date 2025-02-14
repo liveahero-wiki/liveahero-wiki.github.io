@@ -148,3 +148,17 @@ Here is a list of this event's limited time Missions:
 ### Free Quests
 
 {% include quest-group.html chapterId=1161 %}
+
+## Sales Report
+
+<details><summary>SALES_EVENT_SEEKERS_REPORT_1</summary>
+<p>チョコレートの甘い香りが漂うスイーツ店。<br>イベントの出演依頼を請けた<code>character0</code>は、<br>真剣な表情で特設キッチンに立っていた。<br>そのイベントは、用意されたチョコスイーツに<br>デコレーションを施して来場者に振舞うというもの。<br><br>緊張からか、最初は思うようにいかなかった作業も、<br>回を重ねるごとに洗練されていき、<br>敢えてシンプルな見た目で作られたスイーツが<br><code>character0</code>の手で生まれ変わっていく。<br><br>チョコレートの甘い香りに、トッピングの鮮やかな色が<br>加わり、華やかさの増したスイーツ店で、<br><code>character0</code>は完成したスイーツを<br>来場者ひとりひとりに、笑顔と共に手渡していった。<br><br>大盛況でイベントは幕を閉じ、スイーツ店を<br>後にする<code>character0</code>。<br>その手にはひとつだけ、プライベート用にと<br>特別に用意したスイーツが収まっている。<br>これを受け取った瞬間の相手の顔を思い浮かべ、<br><code>character0</code>には自然と笑みが浮かんだ。
+</p></details>
+
+<details><summary>SALES_EVENT_SEEKERS_REPORT_2</summary>
+<p>砂漠の惑星デュナストで、祭りの警備依頼を終えた<br><code>character0</code>と<code>character1</code>は、<br>帰還までの空き時間で、祭りの散策を楽しんでいた。<br><br>２人はひとしきり非日常の空気を楽しんだ後、<br>祭りのドリンクスタンドへと向かう。<br>そして店主の勧めるまま購入したのは、<br>シェアをするチョコレートドリンクだった。<br><br>喉を通る甘さを堪能する２人だったが、<br><code>character0</code>の口数が少なくなっていく。<br>心配する<code>character1</code>の目に映ったのは、<br>頬を紅く染め、潤んだ目で自分をみつめる<br><code>character0</code>の姿だった。<br><br>慌ててスタンドへと戻った２人に、店主が<br>ドリンクに入った体を温めるスパイスが、<br>良く効くヒトが偶にいるんだよと笑って説明する。<br><br>その声を聞き流しながら、<code>character0</code>の<br>普段とは違う姿に、なぜか頬が染まっていくのを感じ、<br>自分にもスパイスが良く効いたのかと、<br><code>character1</code>はごまかすように笑った。
+</p></details>
+
+<details><summary>SALES_EVENT_SEEKERS_REPORT_3</summary>
+<p>とある旅行会社からの依頼を請けた<br><code>character0</code>と<code>character1</code>、そして<br><code>character2</code>と<code>character3</code>。<br>熱風が砂塵を巻き上げる砂漠で、４人は<br>真剣な表情を浮かべ、１列に並ぶ。<br><br>見守る観客の歓声の中、派手な合図が響く。<br>そして始まったのは、ヒーロー達による<br>砂漠のホバークラフトレースだった。<br><br><code>character0</code>の操る大型車型が<br>砂塵を巻き上げながら先陣を切り、<br>それを追う<code>character1</code>の<br>バイク型が、華麗なターンを決める。<br><br>その横では、<code>character2</code>の操る<br>空飛ぶ絨毯型が決める宙返りと、<br><code>character3</code>のボード型が決める<br>豪快なトリックの数々が観客を大いに沸かせる。<br><br>ただ競うだけでない、魅せるヒーローたちのレースに<br>イベントは大いに盛り上がった。<br>そして、砂漠アクティビティを楽しむ<br>ツアー客の獲得に、大いに貢献したという。
+</p></details>
