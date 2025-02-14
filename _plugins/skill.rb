@@ -427,7 +427,7 @@ module LahWiki
         return "unknown status #{id_s}"
       end
 
-      if status["statusType"] == 2 && !skillEffectJson["isOverrideStatusName"] && !skillEffectJson["isOverrideStatusDescription"]
+      if status["statusType"] == 2 && status["isGoodStatus"] != 2 && !skillEffectJson["isOverrideStatusName"] && !skillEffectJson["isOverrideStatusDescription"]
         return nil
       end
 
