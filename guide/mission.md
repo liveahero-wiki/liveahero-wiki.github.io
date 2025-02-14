@@ -29,7 +29,7 @@ Daily missions will only reset after the daily rotation, which is scheduled to h
 
 Since 13 Feb 2025 (v4.2.0), weekly missions were introduced which allow players to obtain {% include item.html id=234 %} and trade it for other items in [Weekly Mission exchange](/guide/shop/#weekly-mission-exchange).
 
-Weekly missions will rest on Monday at 0000 hours (GMT+9) weekly. You can only obtain maximum of 1000 {% include item.html id=234 %} per week, and accumulate maximum of 4000 {% include item.html id=234 %} at any point of time.
+Weekly missions will reset on Monday at 0000 hours (GMT+9) weekly. You can only obtain maximum of 1000 {% include item.html id=234 %} per week, and accumulate maximum of 4000 {% include item.html id=234 %} at any point of time.
 
 |Task Details|Reward|
 |-|-|
