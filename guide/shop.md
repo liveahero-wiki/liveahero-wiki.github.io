@@ -35,3 +35,9 @@ Items can be exchanged using {% include item.html id=35 %} or {% include item.ht
 Items can be exchanged using {% include item.html id=75 %}, items are restocked monthly.
 
 {% include shop-table.html id=20 %}
+
+### Weekly Mission Exchange
+
+Items can be exchanged using {% include item.html id=234 %}, which can be obtained from [Weekly Mission](/guide/mission/#weekly-mission).
+
+{% include shop-table.html id=77 %}

@@ -25,6 +25,22 @@ Daily missions will only reset after the daily rotation, which is scheduled to h
 * Clearing an Upgrade/ Event quest will also contributes towards the quest mission completion.
 * Aborting a sale will also contributes towards the sales mission completion.
 
+### Weekly Mission
+
+Since 13 Feb 2025 (v4.2.0), weekly missions were introduced which allow players to obtain {% include item.html id=234 %} and trade it for other items in [Weekly Mission exchange](/guide/shop/#weekly-mission-exchange).
+
+Weekly missions will rest on Monday at 0000 hours (GMT+9) weekly. You can only obtain maximum of 1000 {% include item.html id=234 %} per week, and accumulate maximum of 4000 {% include item.html id=234 %} at any point of time.
+
+|Task Details|Reward|
+|-|-|
+| Consume stamina | {% include item-icon.html id=234 %} x50 for each 50 stamina, up to 650 |
+| Get 150 score in [Unexplored](/guide/unexplored/) | {% include item-icon.html id=234 %} x200 |
+| Get 50000 score in [Challenge Simulator](/guide/challenge_simulator/) | {% include item-icon.html id=234 %} x200 |
+| Do [Sales](/guide/sale/) 3 times | {% include item-icon.html id=234 %} x100 for each 3 sales, up to 18 times |
+| Buy something at the [store](/guide/shop/#store) | {% include item-icon.html id=234 %} x150 |
+
+You do not need to do all missions to hit the weekly 1000 limit.
+
 ### Limited-time Mission
 
 Limited-time missions are special missions that is only avaiable during a specific period of time. They are usually tied behind an ongoing event, in which the mission will no longer be available to clear after the time duration has ended.
