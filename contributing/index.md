@@ -39,7 +39,7 @@ When editing articles, please try to write objectively and formally about the to
 
 ### Translate voice line
 
-Take {% chara_link Ryekie %} for example [source code](https://github.com/liveahero-wiki/liveahero-wiki.github.io/blob/master/_charas/ryekie.md)
+Take {% chara_link Ryekie %} for example [source code](https://github.com/liveahero-wiki/liveahero-wiki.github.io/blob/master/_charas/ryekie.md?plain=1)
 
 1. To translate the "relation" line, add `RELATION = "<translation>"`
   - New line should be written as `<br>`
@@ -68,6 +68,22 @@ RELATION = "hello world"
 ```
 {% raw %}([\w-]+)\s*=\s*(?:"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)'|([\w.-]+)){% endraw %}
 ```
+
+### Update illustrator/voice actor/affiliation/item info
+
+- Illustrator info: [_data/wiki/Illustrator.yml](https://github.com/liveahero-wiki/liveahero-wiki.github.io/blob/master/_data/wiki/Illustrator.yml)
+- Voice actor info: [_data/wiki/VoiceActor.yml](https://github.com/liveahero-wiki/liveahero-wiki.github.io/blob/master/_data/wiki/VoiceActor.yml)
+- Affiliation: [_data/wiki/Affiliation.yml](https://github.com/liveahero-wiki/liveahero-wiki.github.io/blob/master/_data/wiki/Affiliation.yml)
+  - Follow official translation of Agency in [LifeWonders Shop](https://lifewonders-shop.jp/en/collections/live-a-hero)
+- Item: [_data/wiki/Item.yml](https://github.com/liveahero-wiki/liveahero-wiki.github.io/blob/master/_data/wiki/Item.yml)
+  - Item id can be found in [Item list](/items/) page.
+ 
+### Skill, Skill Effect, Status Translation
+
+- Currently translation work are done on Google Sheet: [LAH Translation sheet](https://docs.google.com/spreadsheets/d/1PVTqJxN2-VF1TwSdlisrrLgW1vWlRKJSmv1cpCBaY-I/edit). Google Account is required.
+- Please contact @rongjie in `#lah-wiki` to get access permission and coordinate works.
+- You are welcomed to report bug related to skill info in `#lah-wiki`:
+  - Please post the skill menu screenshot with expanded status details.
 
 <!--### Translate skill name
 
