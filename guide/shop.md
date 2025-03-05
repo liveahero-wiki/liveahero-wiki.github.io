@@ -40,4 +40,6 @@ Items can be exchanged using {% include item.html id=75 %}, items are restocked 
 
 Items can be exchanged using {% include item.html id=234 %}, which can be obtained from [Weekly Mission](/guide/mission/#weekly-mission).
 
+{% include item.html id=3 %}'s stock is refreshed every week.
+
 {% include shop-table.html id=77 %}
