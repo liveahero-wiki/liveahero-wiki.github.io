@@ -74804,6 +74804,51 @@
       "isOverrideStatusDescription": false
     }
   },
+  "4089": {
+    "skillEffectId": 4089,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "ParticleStatus",
+          "parameter": {
+            "address": "eff_giansar_h01_01"
+          }
+        }
+      ],
+      "filename": "status_hide",
+      "statusId": 1124103,
+      "canDispel": true,
+      "filterIds": [],
+      "parameter": false,
+      "description": "隠蔽のアイコン表示（ギアンサル）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "隠蔽",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "相手から狙われなくなる。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
   "4091": {
     "skillEffectId": 4091,
     "skillEffectJson": {
@@ -101029,6 +101074,221 @@
       "isCountEffect": false,
       "isFieldEffect": false,
       "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "スキル1強化",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "スキル1が強化される。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4907": {
+    "skillEffectId": 4907,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseMultipleAttack",
+          "parameter": {
+            "value": 120
+          }
+        }
+      ],
+      "filename": "status_system_atkup",
+      "statusId": 128,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "ATKチャージ",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": true,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATKチャージ",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "チャージ数1につき、ATK+20%。<br><color=#505050>特定のスキルによりチャージ数が増加する。</color>",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4908": {
+    "skillEffectId": 4908,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseMultipleAttack",
+          "parameter": {
+            "value": 120
+          }
+        }
+      ],
+      "filename": "status_system_atkup",
+      "statusId": 128,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "ATKチャージ",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": true,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATKチャージ",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "チャージ数1につき、ATK+20%。<br><color=#505050>特定のスキルによりチャージ数が増加する。</color>",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4909": {
+    "skillEffectId": 4909,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": 1,
+            "isRandom": false,
+            "statusId": 128,
+            "statusNum": 0,
+            "statusTypeValue": 2
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果128を1ターン増加",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4910": {
+    "skillEffectId": 4910,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": 2,
+            "isRandom": false,
+            "statusId": 128,
+            "statusNum": 0,
+            "statusTypeValue": 2
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果128を2ターン増加",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "4914": {
+    "skillEffectId": 4914,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 166,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "スキル1強化（エネミー用・死亡貫通）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": true,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
