@@ -57390,6 +57390,91 @@
       "isOverrideStatusDescription": false
     }
   },
+  "2134": {
+    "skillEffectId": 2134,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NeedViewValueChange",
+          "parameter": {
+            "value": -2000
+          }
+        }
+      ],
+      "filename": "status_system_awakening",
+      "statusId": 130,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "View消費量-2000(システムアイコン、死亡貫通・継続）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": true,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "View消費量-2000",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ViewPowerを消費するスキルのView消費量が2000減少する。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "2135": {
+    "skillEffectId": 2135,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 130
+          }
+        }
+      ],
+      "filename": "status_defdown",
+      "statusId": 131,
+      "canDispel": false,
+      "filterIds": [
+        12,
+        4
+      ],
+      "parameter": false,
+      "description": "陣形の乱れ(被ダメージ+30%)",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "陣形の乱れ",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメージ+30%。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
   "3001": {
     "skillEffectId": 3001,
     "skillEffectJson": {
