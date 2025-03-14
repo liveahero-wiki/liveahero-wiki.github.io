@@ -12,3 +12,8 @@ sidekicks:
 %}
 
 ## Notes
+- Valoray's name may have come from the word "valor", meaning brave or courageous.
+- His Skill names are written in Latin:
+  - Securitas ad Prae - Safety Above All
+  - Sperando Periculum - Watching For Danger
+  - Funis ad Ultima - Rope To The End
