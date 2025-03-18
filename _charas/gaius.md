@@ -25,7 +25,7 @@ heroes:
     Believing that the answer is somewhere in the lake, he dives back into the
     water.
 - stockId: 11152
-  extra_sprites: fg_gaiusSeekers2502_h01_skin2
+  extra_sprites: fg_gaiusSeekers2502_h01_skin2,fg_gaiusSeekers2502_h02_skin3,fg_gaiusSeekers2502_h02_skin4
 sidekicks:
 - stockId: 11151
   BIO_S01: |-
