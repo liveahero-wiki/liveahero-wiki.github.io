@@ -72273,6 +72273,47 @@
       "isOverrideStatusDescription": true
     }
   },
+  "3524": {
+    "skillEffectId": 3524,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Induction",
+          "parameter": []
+        }
+      ],
+      "filename": "status_induction",
+      "statusId": 310,
+      "canDispel": true,
+      "filterIds": [
+        12
+      ],
+      "parameter": false,
+      "description": "誘導",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        1
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "3525": {
     "skillEffectId": 3525,
     "skillEffectJson": {
@@ -72313,6 +72354,212 @@
       "isOverrideStatusName": true,
       "overrideStatusDescription": "SPDが+3される。戦闘不能時も解除されない。",
       "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "3528": {
+    "skillEffectId": 3528,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeActiveSkill",
+          "parameter": {
+            "index": 1,
+            "timing": 6,
+            "skillId": 4115207
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 1073209,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "スキル2を強化スキル2に置き換え（限定ガイウスエネミー用）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3529": {
+    "skillEffectId": 3529,
+    "skillEffectJson": {
+      "turn": 5,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeHp",
+          "parameter": {
+            "value": 15
+          }
+        }
+      ],
+      "filename": "status_flame",
+      "statusId": 200,
+      "canDispel": true,
+      "filterIds": [
+        11
+      ],
+      "parameter": false,
+      "description": "ターン終了時にHP最大値の15%のダメージを受ける。",
+      "isCountTurn": false,
+      "isDotDamage": true,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        1
+      ],
+      "canDuplicateForce": true,
+      "isCountDownEffect": false,
+      "overrideStatusName": "血呪",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ターン終了時にHP最大値の15%のダメージを受ける。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "3532": {
+    "skillEffectId": 3532,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 305,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "限定ガイウススキル2説明用（敵専用）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "リトゥス・グラティアエ+",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "敵全体からランダムに3回70%ダメージ",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "3533": {
+    "skillEffectId": 3533,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 130
+          }
+        }
+      ],
+      "trigger": "[{\"value\":1,\"value2\":0,\"includeTemporary\":false,\"element\":0,\"statusId\":0,\"role\":0,\"class\":\"OwnTeamCountTrigger\"}]",
+      "filename": "status_atkup",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "味方が自身のみの時、自身のATK+30%。",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3534": {
+    "skillEffectId": 3534,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 305,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "ヴラハム役割別の付与弾丸説明用",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "対象の役割ごとの付与される弾丸",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "役割:攻撃 【強襲弾】<br>役割:View獲得 【彩光弾】<br>役割:補助・弱体化 【裂傷弾】<br>役割:SPD操作 【連双弾】<br>役割:防御・回復・特殊 【治癒弾】",
+      "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
     }
   },
@@ -101811,6 +102058,45 @@
       "isOverrideStatusName": true,
       "overrideStatusDescription": "スキル1が強化される。",
       "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "4924": {
+    "skillEffectId": 4924,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 305,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "エネミーヴラハム弾丸説明用",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "弾丸ごとの追加効果",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "【強襲弾】敵に与えるダメージ1.5倍。<br>【彩光弾】Viewを5000獲得。<br>【裂傷弾】チャージ数3の傷跡を付与。<br>【連双弾】30%ダメージの追加攻撃。<br>【治癒弾】自身のHPを基礎ATKの200%回復。",
+      "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
     }
   },
