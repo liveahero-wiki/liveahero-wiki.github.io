@@ -47,21 +47,19 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 | {% chara_link Ganran|h1 %}  | 30 |
 | {% chara_link reXer|h1 %}  | 10 |
 | {% chara_link Hitomi|h1 %}  | 10 |
+| {% chara_link Gaius|h2 %}  | 20 |
+| {% chara_link Vlaham|h1 %}  | 20 |
+| {% chara_link Valoray|h1 %} | 10 | 
 | {% chara_link Obsidius|h1 %}  | 20 |
-| {% chara_link Procy|h2 %}  | 20 |
-| {% chara_link Suhail|h2 %} | 20 | 
-| {% chara_link Phein|h1 %} | 10 | 
-| {% chara_link Anna|h1 %} | 10 | 
 
 | Sidekick | +Bonus (%) |
 |-------------|---------------|
 | {% chara_link Ganran %} | 30 | 
 | {% chara_link Ryusei %}  | 20 | 
 | {% chara_link reXer %}  | 10 | 
-| {% chara_link Procy %}  | 10 | 
-| {% chara_link Suhail %}  | 10 | 
-| {% chara_link Phein %}  | 10 | 
-| {% chara_link Anna %}  | 10 | 
+| {% chara_link Valoray %}  | 10 | 
+| {% chara_link Vlaham %}  | 10 | 
+| {% chara_link Gaius %}  | 10 | 
 | {% chara_link Hitomi %}  | 10 | 
 | {% chara_link Obsidius %}  | 10 | 
 | {% chara_link Player %} | 10 | 
@@ -81,17 +79,17 @@ Here is the bonus:
 
 ## Event Shop
 
-{% include shop-table.html id=60 %}
+{% include shop-table.html id=78 %}
 
 ## Quest Details
 
 ### Main Quests
 
-{% include quest-group.html chapterId=1097 %}
+{% include quest-group.html chapterId=1168 %}
 
 ### Free Quests
 
-{% include quest-group.html chapterId=1098 %}
+{% include quest-group.html chapterId=1169 %}
 
 ### Event Sales Report
 
