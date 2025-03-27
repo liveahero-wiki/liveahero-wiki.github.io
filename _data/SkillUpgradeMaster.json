@@ -2993,6 +2993,238 @@
     ],
     "nextEntryIds": null
   },
+  "103010501": {
+    "skillEntryId": 103010501,
+    "skillId": 1030105,
+    "iconAddress": "skillTree_special",
+    "description": "【マーチソン・メテオ+】の発動時、敵全体に付与されているデバフの合計数が6個以上の場合、スキル1をもう一度発動する",
+    "conditionIds": null,
+    "nextEntryIds": [
+      103010502,
+      103010503
+    ]
+  },
+  "103010502": {
+    "skillEntryId": 103010502,
+    "skillId": 1030105,
+    "iconAddress": "skillTree_special",
+    "description": "【マーチソン・メテオ+】のスキル1追加発動に必要なデバフの合計数-1",
+    "conditionIds": [
+      103010501
+    ],
+    "nextEntryIds": [
+      103010504
+    ]
+  },
+  "103010503": {
+    "skillEntryId": 103010503,
+    "skillId": 1030105,
+    "iconAddress": "skillTree_damageAll",
+    "description": "【マーチソン・メテオ+】のダメージ+2%",
+    "conditionIds": [
+      103010501
+    ],
+    "nextEntryIds": [
+      103010505
+    ]
+  },
+  "103010504": {
+    "skillEntryId": 103010504,
+    "skillId": 1030105,
+    "iconAddress": "skillTree_special",
+    "description": "【マーチソン・メテオ+】のスキル1追加発動に必要なデバフの合計数-1",
+    "conditionIds": [
+      103010502
+    ],
+    "nextEntryIds": [
+      103010506
+    ]
+  },
+  "103010505": {
+    "skillEntryId": 103010505,
+    "skillId": 1030105,
+    "iconAddress": "skillTree_damageAll",
+    "description": "【マーチソン・メテオ+】のダメージ+2%",
+    "conditionIds": [
+      103010503
+    ],
+    "nextEntryIds": [
+      103010507
+    ]
+  },
+  "103010506": {
+    "skillEntryId": 103010506,
+    "skillId": 1030105,
+    "iconAddress": "skillTree_special",
+    "description": "【マーチソン・メテオ+】のスキル1追加発動に必要なデバフの合計数-1",
+    "conditionIds": [
+      103010504
+    ],
+    "nextEntryIds": [
+      103010508
+    ]
+  },
+  "103010507": {
+    "skillEntryId": 103010507,
+    "skillId": 1030105,
+    "iconAddress": "skillTree_damageAll",
+    "description": "【マーチソン・メテオ+】のダメージ+3%",
+    "conditionIds": [
+      103010505
+    ],
+    "nextEntryIds": [
+      103010508
+    ]
+  },
+  "103010508": {
+    "skillEntryId": 103010508,
+    "skillId": 1030105,
+    "iconAddress": "skillTree_damageAll",
+    "description": "【マーチソン・メテオ+】のダメージ+3%",
+    "conditionIds": [
+      103010506,
+      103010507
+    ],
+    "nextEntryIds": null
+  },
+  "103010601": {
+    "skillEntryId": 103010601,
+    "skillId": 1030106,
+    "iconAddress": "skillTree_poison",
+    "description": "【ジャイアント・インパクト+】の毒発動率+5%",
+    "conditionIds": null,
+    "nextEntryIds": [
+      103010602
+    ]
+  },
+  "103010602": {
+    "skillEntryId": 103010602,
+    "skillId": 1030106,
+    "iconAddress": "skillTree_poison",
+    "description": "【ジャイアント・インパクト+】の毒発動率+5%",
+    "conditionIds": [
+      103010601
+    ],
+    "nextEntryIds": [
+      103010603
+    ]
+  },
+  "103010603": {
+    "skillEntryId": 103010603,
+    "skillId": 1030106,
+    "iconAddress": "skillTree_poison",
+    "description": "【ジャイアント・インパクト+】の毒発動率+5%",
+    "conditionIds": [
+      103010602
+    ],
+    "nextEntryIds": [
+      103010604
+    ]
+  },
+  "103010604": {
+    "skillEntryId": 103010604,
+    "skillId": 1030106,
+    "iconAddress": "skillTree_poison",
+    "description": "【ジャイアント・インパクト+】の毒発動率+10%",
+    "conditionIds": [
+      103010603
+    ],
+    "nextEntryIds": null
+  },
+  "103010701": {
+    "skillEntryId": 103010701,
+    "skillId": 1030107,
+    "iconAddress": "skillTree_useless",
+    "description": "【ブラキウム・エクス・マキナ】のView消費量-500",
+    "conditionIds": null,
+    "nextEntryIds": [
+      103010702,
+      103010703
+    ]
+  },
+  "103010702": {
+    "skillEntryId": 103010702,
+    "skillId": 1030107,
+    "iconAddress": "skillTree_useless",
+    "description": "【ブラキウム・エクス・マキナ】のView消費量-1000",
+    "conditionIds": [
+      103010701
+    ],
+    "nextEntryIds": [
+      103010704
+    ]
+  },
+  "103010703": {
+    "skillEntryId": 103010703,
+    "skillId": 1030107,
+    "iconAddress": "skillTree_cure",
+    "description": "【ブラキウム・エクス・マキナ】の発動時、敵全体にダメージを与える前に20%の確率で自身のデバフを1つ解除",
+    "conditionIds": [
+      103010701
+    ],
+    "nextEntryIds": [
+      103010705
+    ]
+  },
+  "103010704": {
+    "skillEntryId": 103010704,
+    "skillId": 1030107,
+    "iconAddress": "skillTree_useless",
+    "description": "【ブラキウム・エクス・マキナ】のView消費量-1500",
+    "conditionIds": [
+      103010702
+    ],
+    "nextEntryIds": [
+      103010706
+    ]
+  },
+  "103010705": {
+    "skillEntryId": 103010705,
+    "skillId": 1030107,
+    "iconAddress": "skillTree_cure",
+    "description": "【ブラキウム・エクス・マキナ】のデバフ解除率+30%",
+    "conditionIds": [
+      103010703
+    ],
+    "nextEntryIds": [
+      103010707
+    ]
+  },
+  "103010706": {
+    "skillEntryId": 103010706,
+    "skillId": 1030107,
+    "iconAddress": "skillTree_useless",
+    "description": "【ブラキウム・エクス・マキナ】のView消費量-2000",
+    "conditionIds": [
+      103010704
+    ],
+    "nextEntryIds": [
+      103010708
+    ]
+  },
+  "103010707": {
+    "skillEntryId": 103010707,
+    "skillId": 1030107,
+    "iconAddress": "skillTree_cure",
+    "description": "【ブラキウム・エクス・マキナ】のデバフ解除率+50%",
+    "conditionIds": [
+      103010705
+    ],
+    "nextEntryIds": [
+      103010708
+    ]
+  },
+  "103010708": {
+    "skillEntryId": 103010708,
+    "skillId": 1030107,
+    "iconAddress": "skillTree_cure",
+    "description": "【ブラキウム・エクス・マキナ】のデバフ解除数が1増加",
+    "conditionIds": [
+      103010706,
+      103010707
+    ],
+    "nextEntryIds": null
+  },
   "103310501": {
     "skillEntryId": 103310501,
     "skillId": 1033105,
@@ -3450,6 +3682,236 @@
     "description": "【ソニックブーム・ペネトレイション+】のダメージ+4%",
     "conditionIds": [
       103410704
+    ],
+    "nextEntryIds": null
+  },
+  "108210501": {
+    "skillEntryId": 108210501,
+    "skillId": 1082105,
+    "iconAddress": "skillTree_special",
+    "description": "【シークト・カントゥス++】のパッシブ効果に「バトル開始時、自身の交響ゲージ+1」を追加",
+    "conditionIds": null,
+    "nextEntryIds": [
+      108210502
+    ]
+  },
+  "108210502": {
+    "skillEntryId": 108210502,
+    "skillId": 1082105,
+    "iconAddress": "skillTree_special",
+    "description": "【シークト・カントゥス++】のバトル開始時に発動する自身の交響ゲージ増加数+1",
+    "conditionIds": [
+      108210501
+    ],
+    "nextEntryIds": [
+      108210503
+    ]
+  },
+  "108210503": {
+    "skillEntryId": 108210503,
+    "skillId": 1082105,
+    "iconAddress": "skillTree_special",
+    "description": "【シークト・カントゥス++】のバトル開始時に発動する自身の交響ゲージ増加数+1",
+    "conditionIds": [
+      108210502
+    ],
+    "nextEntryIds": [
+      108210504
+    ]
+  },
+  "108210504": {
+    "skillEntryId": 108210504,
+    "skillId": 1082105,
+    "iconAddress": "skillTree_special",
+    "description": "【シークト・カントゥス++】のバトル開始時に発動する自身の交響ゲージ増加数+1",
+    "conditionIds": [
+      108210503
+    ],
+    "nextEntryIds": [
+      108210505
+    ]
+  },
+  "108210505": {
+    "skillEntryId": 108210505,
+    "skillId": 1082105,
+    "iconAddress": "skillTree_special",
+    "description": "【シークト・カントゥス++】のバトル開始時に発動する自身の交響ゲージ増加数+1",
+    "conditionIds": [
+      108210504
+    ],
+    "nextEntryIds": null
+  },
+  "108210601": {
+    "skillEntryId": 108210601,
+    "skillId": 1082106,
+    "iconAddress": "skillTree_cure",
+    "description": "【ステラリス・エレジア】の発動時、10%の確率でランダムな味方のデバフを1つ解除",
+    "conditionIds": null,
+    "nextEntryIds": [
+      108210602
+    ]
+  },
+  "108210602": {
+    "skillEntryId": 108210602,
+    "skillId": 1082106,
+    "iconAddress": "skillTree_cure",
+    "description": "【ステラリス・エレジア】のデバフ解除率+20%",
+    "conditionIds": [
+      108210601
+    ],
+    "nextEntryIds": [
+      108210603
+    ]
+  },
+  "108210603": {
+    "skillEntryId": 108210603,
+    "skillId": 1082106,
+    "iconAddress": "skillTree_cure",
+    "description": "【ステラリス・エレジア】のデバフ解除率+30%",
+    "conditionIds": [
+      108210602
+    ],
+    "nextEntryIds": [
+      108210604
+    ]
+  },
+  "108210604": {
+    "skillEntryId": 108210604,
+    "skillId": 1082106,
+    "iconAddress": "skillTree_cure",
+    "description": "【ステラリス・エレジア】のデバフ解除率+40%",
+    "conditionIds": [
+      108210603
+    ],
+    "nextEntryIds": [
+      108210605
+    ]
+  },
+  "108210605": {
+    "skillEntryId": 108210605,
+    "skillId": 1082106,
+    "iconAddress": "skillTree_cureAll",
+    "description": "【ステラリス・エレジア】の発動時に協奏が付与されている場合、デバフ解除の対象が味方全体に変化する",
+    "conditionIds": [
+      108210604
+    ],
+    "nextEntryIds": null
+  },
+  "108210701": {
+    "skillEntryId": 108210701,
+    "skillId": 1082107,
+    "iconAddress": "skillTree_atkUp",
+    "description": "【グランディオロクア】のパッシブ効果に「自身が生存している間、自身以外の協奏が付与されている味方のATK+3%」を追加",
+    "conditionIds": null,
+    "nextEntryIds": [
+      108210702,
+      108210703
+    ]
+  },
+  "108210702": {
+    "skillEntryId": 108210702,
+    "skillId": 1082107,
+    "iconAddress": "skillTree_atkUp",
+    "description": "【グランディオロクア】のパッシブ効果のATK上昇効果+4%",
+    "conditionIds": [
+      108210701
+    ],
+    "nextEntryIds": [
+      108210704
+    ]
+  },
+  "108210703": {
+    "skillEntryId": 108210703,
+    "skillId": 1082107,
+    "iconAddress": "skillTree_buffAll",
+    "description": "【グランディオロクア】の発動後にViewPowerが10000以上ある場合、ViewPowerを追加で3000消費して付与する協奏の持続が1増加する",
+    "conditionIds": [
+      108210701
+    ],
+    "nextEntryIds": [
+      108210705
+    ]
+  },
+  "108210704": {
+    "skillEntryId": 108210704,
+    "skillId": 1082107,
+    "iconAddress": "skillTree_atkUp",
+    "description": "【グランディオロクア】のパッシブ効果のATK上昇効果+5%",
+    "conditionIds": [
+      108210702
+    ],
+    "nextEntryIds": [
+      108210706
+    ]
+  },
+  "108210705": {
+    "skillEntryId": 108210705,
+    "skillId": 1082107,
+    "iconAddress": "skillTree_buffAll",
+    "description": "【グランディオロクア】の協奏の持続増加に必要なViewPowerが10000から8000に減少",
+    "conditionIds": [
+      108210703
+    ],
+    "nextEntryIds": [
+      108210707
+    ]
+  },
+  "108210706": {
+    "skillEntryId": 108210706,
+    "skillId": 1082107,
+    "iconAddress": "skillTree_atkUp",
+    "description": "【グランディオロクア】のパッシブ効果のATK上昇効果+6%",
+    "conditionIds": [
+      108210704
+    ],
+    "nextEntryIds": [
+      108210708
+    ]
+  },
+  "108210707": {
+    "skillEntryId": 108210707,
+    "skillId": 1082107,
+    "iconAddress": "skillTree_buffAll",
+    "description": "【グランディオロクア】の協奏の持続増加に必要なViewPowerが8000から6000に減少",
+    "conditionIds": [
+      108210705
+    ],
+    "nextEntryIds": [
+      108210709
+    ]
+  },
+  "108210708": {
+    "skillEntryId": 108210708,
+    "skillId": 1082107,
+    "iconAddress": "skillTree_atkUp",
+    "description": "【グランディオロクア】のパッシブ効果のATK上昇効果+7%",
+    "conditionIds": [
+      108210706
+    ],
+    "nextEntryIds": [
+      108210710
+    ]
+  },
+  "108210709": {
+    "skillEntryId": 108210709,
+    "skillId": 1082107,
+    "iconAddress": "skillTree_buffAll",
+    "description": "【グランディオロクア】の協奏の持続増加に必要なViewPowerが6000から3000に減少",
+    "conditionIds": [
+      108210707
+    ],
+    "nextEntryIds": [
+      108210710
+    ]
+  },
+  "108210710": {
+    "skillEntryId": 108210710,
+    "skillId": 1082107,
+    "iconAddress": "skillTree_spdUp",
+    "description": "【グランディオロクア】のパッシブ効果に「自身に協奏が付与されている時、自身のSPD+10」を追加",
+    "conditionIds": [
+      108210708,
+      108210709
     ],
     "nextEntryIds": null
   },
