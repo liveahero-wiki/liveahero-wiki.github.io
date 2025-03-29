@@ -149,6 +149,16 @@ Here is a list of this event's limited time Missions:
 
 {% include quest-group.html chapterId=1161 %}
 
+### Special Quests
+
+Here is a list of fan translated special quests:
+
+| Character  | Translation      | 
+|------------|------------------|
+| {% chara_link Vlaham %}  | [Docs](https://docs.google.com/spreadsheets/d/1Jrg646xJqA8klObNzhZy_oaGw_5HP0tT2SpUjiiwEYw/edit?usp=sharing) |
+
+{% include quest-group.html chapterId=1162 %}
+
 ## Sales Report
 
 <details><summary>SALES_EVENT_SEEKERS_REPORT_1</summary>
