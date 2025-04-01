@@ -98,7 +98,7 @@ const aprilFoolSpriteMap = {
   "huckle": "leib01",
   "isaribi": "typhon01",
   "joezen": "tanetomo01",
-  "kiloc": "kumanogongen01",
+  "kiloc": "kumanogongen01_skin1",
   "kouki": "michael01",
   "kyoichi": "taurus01_skin1",
   "marfik": "amatsumara01",
