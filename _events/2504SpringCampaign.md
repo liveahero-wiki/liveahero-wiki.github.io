@@ -50,11 +50,11 @@ Here is a list of this campaign's limited time Missions:
 
 {% include quest-group.html chapterId=1173 %}
 
-### Campaign Score Attack: Slime Kaibutsu
+## Campaign Score Attack: Slime Kaibutsu
 
-## Simulator Info
+### Score Attack Info
 
-Simulation Target: 
+Score Attack Target: 
 
 | Target  | Element                                     | Speed     |
 |---------|---------------------------------------------|----------------|
