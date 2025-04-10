@@ -45,3 +45,7 @@ Here is a list of this campaign's limited time Missions:
 ### Free Quests
 
 {% include quest-group.html chapterId=1174 %}
+
+### Link Quests
+
+{% include quest-group.html chapterId=1173 %}
