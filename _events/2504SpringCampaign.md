@@ -49,3 +49,44 @@ Here is a list of this campaign's limited time Missions:
 ### Link Quests
 
 {% include quest-group.html chapterId=1173 %}
+
+### Campaign Score Attack: Slime Kaibutsu
+
+## Simulator Info
+
+Simulation Target: 
+
+| Target  | Element                                     | Speed     |
+|---------|---------------------------------------------|----------------|
+|Giant Slime Kaibutsu|Water|104|
+|Slime Kaibutsu(Red)|Water|110|
+|Slime Kaibutsu(Yellow)|Water|108|
+|Slime Kaibutsu(Purple)|Water|106|
+
+Details:
+
+This quest is completed by filling the damage gauge (at the top of the screen).
+
+Damage gauge increase based on damage dealt to enemy, if damage dealt is more than the enemy HP, gauge doesn't increase beyond current HP.
+
+When Giant Slime Kaibutsu gets killed it will revive itself and one slime immediately, if it has already acted that turn it will act again.
+
+Giant Slime Kaibutsu's ATK gradually increase each turn.
+
+Slime Kaibutsu's damage limit increase the more ally you have.
+
+#### Giant Slime Kaibutsu's skills
+
+{% include skill-table-manual.html skillIds="4167101,4167111,4167112" equipmentSkills="6167123,6167124,6167125,6167126" %}
+
+#### Slime Kaibutsu(Red)'s skills
+
+{% include skill-table-manual.html skillIds="4162110,4162111,4162109" equipmentSkills="6163102,6162106" %}
+
+#### Slime Kaibutsu(Yellow)'s skills
+
+{% include skill-table-manual.html skillIds="4162110,4162112,4162109" equipmentSkills="6163102,6162106" %}
+
+#### Slime Kaibutsu(Purple)'s skills
+
+{% include skill-table-manual.html skillIds="4162110,4162113,4162109" equipmentSkills="6163102,6162106" %}
