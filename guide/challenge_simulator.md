@@ -222,3 +222,27 @@ Meteorite Kaibutsu (Small) performs single-target and area attacks that apply bu
 #### Meteorite Kaibutsu (Small)'s skills
 
 {% include skill-table-manual.html skillIds="4089103,4089101,4089102" equipmentSkills="" %}
+
+### Simulated Plesiosaur Kaibutsu (Difficulty: SS)
+
+#### Simulator Info
+
+Simulation Target: 
+
+| Target  | Element                                     | Speed     |
+|---------|---------------------------------------------|----------------|
+|Plesiosaur Kaibutsu(?)|Water|106|
+
+Details:
+
+The Plesiosaur Kaibutsu(?) is a boss that performs multi-hit attacks on random targets and AoE (area-of-effect) attacks.
+Its ATK increases as its HP decreases.
+
+Once every 4 turns, the Plesiosaur Kaibutsu(?) unleashes a powerful charge attack. On the turn it prepares this charge attack, at the start of the turn, it grants itself a 3-hit shield and enters a charging state. After the charge, if the shield is still active when it executes the attack, the attack power increases.
+If the Plesiosaur Kaibutsu(?) has fewer than 3 debuffs at the time of the attack, the attack will also inflict Silence as an additional effect.
+
+When under 50% HP, the Plesiosaur Kaibutsu(?) will activate several additional effects upon taking damage, such as removing its own debuffs.
+
+#### Plesiosaur Kaibutsu(?)'s skills
+
+{% include skill-table-manual.html skillIds="4121111,4121108,4121109" equipmentSkills="6121102,6121115,6121111,6121114" %}
