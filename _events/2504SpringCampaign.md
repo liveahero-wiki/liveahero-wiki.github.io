@@ -50,6 +50,13 @@ Here is a list of this campaign's limited time Missions:
 
 {% include quest-group.html chapterId=1173 %}
 
+Here is Fan translation of the link quest:
+
+| Quest  | Link                                     |
+|---------|---------------------------------------------|
+|Prologue|[Link](https://docs.google.com/spreadsheets/d/e/2PACX-1vTHY3BWSh2ak0ScUZMa9XHAFaY4rVMJKcQ0XSLGUvX9LD9PYYITlltl9l3Ws4lm9jgnAmBHJ57jebQV/pubhtml)|
+|{% chara_link Cerastium %} Fan the Justice |[Link](https://docs.google.com/spreadsheets/d/e/2PACX-1vTHY3BWSh2ak0ScUZMa9XHAFaY4rVMJKcQ0XSLGUvX9LD9PYYITlltl9l3Ws4lm9jgnAmBHJ57jebQV/pubhtml)|
+
 ## Campaign Score Attack: Slime Kaibutsu
 
 ### Score Attack Info
