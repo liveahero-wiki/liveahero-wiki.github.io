@@ -69,7 +69,7 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 | {% chara_link Hydoor|h1 %} | 10 | 
 | {% chara_link Danzo|h1 %} | 20 |
 | {% chara_link reXer|h2 %}  | 20 |
-| {% chara_link Ryuusei|h1 %} | 20 | 
+| {% chara_link Ryusei|h1 %} | 20 | 
 | {% chara_link Ganran|h1 %} | 10 | 
 
 | Sidekick | +Bonus (%) |
