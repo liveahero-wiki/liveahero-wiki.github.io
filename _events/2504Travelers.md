@@ -19,7 +19,7 @@ sales_end_time: 2025-05-21T20:00:00+09
 
 "O hero who has crossed the rainbow, please... save this world—"
 
-In the Kingdom of Aladisia, ruled by King Alphecca, a martial arts tournament is being held.
+In the Kingdom of Aradissia, ruled by King Alphecca, a martial arts tournament is being held.
 You, working as an operator at this tournament where heroes compete,
 are suddenly sucked into an unstable path!
 
