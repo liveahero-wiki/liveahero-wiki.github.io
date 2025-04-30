@@ -1,6 +1,8 @@
 ---
 title: Hydoor
 characterId: 17
+h2:
+  title: '"Roaring Storm" Hydoor'
 heroes:
 - stockId: 10171
   BIO_H01: |-
@@ -26,6 +28,7 @@ heroes:
 
     That's why, he will never forgive anyone who pollute the ocean, the source of
     life, even if that ocean is in another planet.
+- stockId: 10172
 sidekicks:
 - stockId: 10171
   BIO_S01: |-
@@ -69,6 +72,9 @@ PLAYER = "I didn't like indecisive people.<br>A man who lives in the sea must ha
 TOUCH = "Na!? What the hell are you doing!<br>Suddenly touching other's scales, don't think you can get away with it…<br>Wahyaa!? S-stop it…!"
 TRAIN = "You will get hurt if you're careless!?"
 TRAINED = "This bastard…I will kill you!"
+%}
+
+{% include voice-table.html resourceName="hydoortravelers2504"
 %}
 
 ## Notes

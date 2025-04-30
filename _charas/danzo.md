@@ -1,6 +1,8 @@
 ---
 title: Danzo
 characterId: 168
+h2:
+  title: '"Bardic Wanderlust" Danzo'
 heroes:
 - stockId: 11681
   BIO_H01: |-
@@ -22,6 +24,7 @@ heroes:
   
     The abilities and taste for music that he had when he's still normal, now he use all of that as a hero
     until he is satisfied from the bottom of his heart and says, "Ah, I am living a very pleasant life now".
+- stockId: 11682
 sidekicks:
 - stockId: 11681
   BIO_S01: |-
@@ -39,4 +42,7 @@ sidekicks:
 ---
 
 {% include voice-table.html resourceName="danzo"
+%}
+
+{% include voice-table.html resourceName="danzotravelers2504"
 %}
