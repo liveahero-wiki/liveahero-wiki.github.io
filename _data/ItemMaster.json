@@ -2843,6 +2843,80 @@
     ],
     "limitValue": 0
   },
+  "239": {
+    "itemId": 239,
+    "itemName": "未来世界の魔導書",
+    "resourceName": "Travelers2504_exchange01",
+    "rarity": 3,
+    "itemType": 512,
+    "description": "実は魔導書型の外部メモリー兼ドングルキー。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "240": {
+    "itemId": 240,
+    "itemName": "トラベラーズディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "ワールドエンド・トラベラーズのBGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_travelers_adv",
+        "bgmTitleKey": "TITLE_BGM_TRAVELERS_ADV_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "241": {
+    "itemId": 241,
+    "itemName": "トラベラーズ戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "ワールドエンド・トラベラーズの戦闘BGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_travelers_battle1",
+        "bgmTitleKey": "TITLE_BGM_TRAVELERS_BATTLE1_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "242": {
+    "itemId": 242,
+    "itemName": "トラベラーズボス戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "ワールドエンド・トラベラーズのボス戦闘BGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_travelers_battle2",
+        "bgmTitleKey": "TITLE_BGM_TRAVELERS_BATTLE2_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "243": {
+    "itemId": 243,
+    "itemName": "消滅危惧世界の平原ホログラム",
+    "resourceName": "icon_bg_battle_endangeredworld",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景に消滅危惧世界の平原を投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_endangeredworld",
+        "bgTitleKey": "TITLE_BG_BATTLE_ENDANGEREDWORLD_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -3469,6 +3543,27 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "110172": {
+    "itemId": 110172,
+    "itemName": "突貫のハイドールの記憶片",
+    "resourceName": "piece_hydoorTravelers2504",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "突貫のハイドールのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10172
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
       }
     ],
     "limitValue": 0
@@ -5632,6 +5727,27 @@
     ],
     "limitValue": 0
   },
+  "111682": {
+    "itemId": 111682,
+    "itemName": "吟遊のダンゾーの記憶片",
+    "resourceName": "piece_danzoTravelers2504",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "吟遊のダンゾーのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 11682
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
   "111691": {
     "itemId": 111691,
     "itemName": "ガルボの記憶片",
@@ -5947,6 +6063,27 @@
     ],
     "limitValue": 0
   },
+  "112001": {
+    "itemId": 112001,
+    "itemName": "バルテの記憶片",
+    "resourceName": "piece_barte",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "バルテのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 12001
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
   "112061": {
     "itemId": 112061,
     "itemName": "シデマスの記憶片",
@@ -6191,6 +6328,27 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "112551": {
+    "itemId": 112551,
+    "itemName": "ノーモンの記憶片",
+    "resourceName": "piece_gnomon",
+    "rarity": 3,
+    "itemType": 1024,
+    "description": "ノーモンのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 10,
+        "rarity": 0,
+        "stockId": 12551
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
       }
     ],
     "limitValue": 0
@@ -8407,6 +8565,26 @@
     ],
     "limitValue": 0
   },
+  "212001": {
+    "itemId": 212001,
+    "itemName": "バルテの心",
+    "resourceName": "heart_barte",
+    "rarity": 4,
+    "itemType": 2048,
+    "description": "バルテのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 12001
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
   "212061": {
     "itemId": 212061,
     "itemName": "シデマスの心",
@@ -8659,6 +8837,26 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
+  "212551": {
+    "itemId": 212551,
+    "itemName": "ノーモンの心",
+    "resourceName": "heart_gnomon",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "ノーモンのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 12551
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
       }
     ],
     "limitValue": 0
@@ -9555,6 +9753,16 @@
   },
   "21017101": {
     "itemId": 21017101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21017201": {
+    "itemId": 21017201,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,
@@ -10593,6 +10801,16 @@
     "effect": [],
     "limitValue": 0
   },
+  "21168201": {
+    "itemId": 21168201,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
   "21169101": {
     "itemId": 21169101,
     "itemName": "開花の波動",
@@ -10743,6 +10961,16 @@
     "effect": [],
     "limitValue": 0
   },
+  "21200101": {
+    "itemId": 21200101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
   "21206101": {
     "itemId": 21206101,
     "itemName": "開花の波動",
@@ -10855,6 +11083,16 @@
   },
   "21249101": {
     "itemId": 21249101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21255101": {
+    "itemId": 21255101,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,
