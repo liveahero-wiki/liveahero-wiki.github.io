@@ -29,6 +29,7 @@ heroes:
     That's why, he will never forgive anyone who pollute the ocean, the source of
     life, even if that ocean is in another planet.
 - stockId: 10172
+  extra_sprites: fg_hydoorTravelers2504_h02_skin2
 sidekicks:
 - stockId: 10171
   BIO_S01: |-

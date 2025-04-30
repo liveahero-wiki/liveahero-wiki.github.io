@@ -25,6 +25,7 @@ heroes:
     The abilities and taste for music that he had when he's still normal, now he use all of that as a hero
     until he is satisfied from the bottom of his heart and says, "Ah, I am living a very pleasant life now".
 - stockId: 11682
+  extra_sprites: fg_danzoTravelers2504_h02_skin2
 sidekicks:
 - stockId: 11681
   BIO_S01: |-
