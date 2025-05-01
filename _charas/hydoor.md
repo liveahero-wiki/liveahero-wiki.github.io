@@ -39,7 +39,7 @@ heroes:
     he charges into the enemy lines, weaving through the battlefield and dodging
     attacks with such strength and finesse, that you would see his figure as if he
     was swimming gracefully in the ocean depths.
-   BIO_H02: |-
+  BIO_H02: |-
     Born as a descendant of a dying race, Hydoor despised the defeatist atmosphere of
     his homeland and threw himself into the ocean. He could no longer bear the attitude
     of his people; they no longer considered a better tomorrow and instead spent the
