@@ -1,6 +1,9 @@
 import csv
 import io
 import argparse
+import xml.etree.ElementTree as ET
+import sys
+import re
 
 import requests
 
@@ -9,6 +12,26 @@ import wiki_util
 SKILL_TL_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGnHrxbjI27aRZLsu52ZiBlhZIqLEA4nsd0nICwGlzFPH_v2AQlvC5hf7mvvs8i7-XhfRkq0HcbhU1/pub?gid=1388379188&single=true&output=tsv"
 SKILL_EFFECT_TL_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGnHrxbjI27aRZLsu52ZiBlhZIqLEA4nsd0nICwGlzFPH_v2AQlvC5hf7mvvs8i7-XhfRkq0HcbhU1/pub?gid=1473812801&single=true&output=tsv"
 STATUS_TL_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGnHrxbjI27aRZLsu52ZiBlhZIqLEA4nsd0nICwGlzFPH_v2AQlvC5hf7mvvs8i7-XhfRkq0HcbhU1/pub?gid=1446280214&single=true&output=tsv"
+
+has_invalid_html = False
+
+LESSER_PATTERN = re.compile(r"\s<(\s|=|\d)")
+GREATER_PATTERN = re.compile(r"\s<(\s|=|\d)")
+
+def validateHtml(s: str):
+    try:
+        # a bunch of hack because html is more leniant than actual xml
+        # we only want to detect if html tags are closed correctly
+        s = LESSER_PATTERN.sub(" ", s)
+        s = GREATER_PATTERN.sub(" ", s)
+        s = s.replace("<br>", " ").replace(" & ", " ").replace("&nbsp;", "")
+
+        ET.fromstring("<xml>" + s + "</xml>")
+        return None
+    except ET.ParseError as e:
+        global has_invalid_html
+        has_invalid_html = True
+        return e
 
 def getTranslatedTsv(url, filename, use_local=True):
     if not use_local:
@@ -39,6 +62,8 @@ def processSkillTranslation(use_local: bool):
             description=row["descriptionTranslated"],
         )
         if skill:
+            if (e := validateHtml(row["descriptionTranslated"])) is not None:
+                print(f"Invalid skill html({row["skillId"]}):", row["descriptionTranslated"], e)
             obj[row["skillId"]] = skill
 
     wiki_util.ensureDirs("_data/translation/")
@@ -87,6 +112,8 @@ def processSkillEffectTranslation(use_local: bool):
             overrideStatusDescription=row["overrideStatusDescriptionTranslated"],
         )
         if skillEffect:
+            if (e := validateHtml(row["overrideStatusDescriptionTranslated"])) is not None:
+                print(f"Invalid skillEffect html({row["skillEffectId"]}):", row["overrideStatusDescriptionTranslated"], e)
             obj[row["skillEffectId"]] = skillEffect
 
     wiki_util.ensureDirs("_data/translation/")
@@ -103,6 +130,8 @@ def processStatusTranslation(use_local: bool):
             icon=row["icon"],
         )
         if status:
+            if (e := validateHtml(row["descriptionTranslated"])) is not None:
+                print(f"Invalid status html({row["statusId"]}):", row["descriptionTranslated"], e)
             obj[row["statusId"]] = status
 
     wiki_util.ensureDirs("_data/translation/")
@@ -116,3 +145,6 @@ if __name__ == '__main__':
     processSkillTranslation(ARGS.use_local)
     processSkillEffectTranslation(ARGS.use_local)
     processStatusTranslation(ARGS.use_local)
+
+    if has_invalid_html:
+        sys.exit(1)
