@@ -60,9 +60,17 @@ module LahWiki
       true => "/Field",
     }
 
+    @@count_map = {
+      false => "",
+      true => "/Count",
+    }
+
     @@elapse_turn_timing_map = {
-      0 => "Remove at the end of turn",
+      0 => "",
+      1 => "Remove at the end of turn",
       2 => "Reduce remaining turn at the end of action",
+      3 => "", # use for nullify buff
+      4 => "Reducing remaining turn per damage",
     }
 
     INVALID = 999
@@ -427,7 +435,11 @@ module LahWiki
         return "unknown status #{id_s}"
       end
 
-      if status["statusType"] == 2 && status["isGoodStatus"] != 2 && !skillEffectJson["isOverrideStatusName"] && !skillEffectJson["isOverrideStatusDescription"]
+      if status["statusType"] == 2 &&
+        status["isGoodStatus"] != 2 &&
+        status['description']&.length == 0 &&
+        !skillEffectJson["isOverrideStatusName"] &&
+        !skillEffectJson["isOverrideStatusDescription"]
         return nil
       end
 
@@ -473,6 +485,8 @@ module LahWiki
         @@dot_damage_map[skillEffectJson['isDotDamage']]
       }#{
         @@field_map[skillEffectJson['isFieldEffect']]
+      }#{
+        @@count_map[skillEffectJson['isCountEffect']]
       }]</b><br>"
 
       turn = skillEffectJson["turn"]
