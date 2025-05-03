@@ -444,8 +444,9 @@ module LahWiki
       end
 
       wiki_icon = skillEffectJson["filename"]
-      if !wiki_icon || wiki_icon == ""
-        wiki_icon = "b_skill_special" # "ui_icon_stance_blank"
+      iconS = ""
+      if wiki_icon && !wiki_icon.empty?
+        iconS = "<img class=\"status-s\" src=\"/cdn/Sprite/#{wiki_icon}.png\" loading=\"lazy\"> "
       end
 
       name = Skills::status_wiki(@context).dig(id_s, 'name') || status['statusName']
@@ -489,11 +490,11 @@ module LahWiki
         @@count_map[skillEffectJson['isCountEffect']]
       }]</b><br>"
 
-      turn = skillEffectJson["turn"]
-      turnS = ""
-      if turn > 0
-        turnS = "<span>#{turn}</span>"
-      end
+      #turn = skillEffectJson["turn"]
+      #turnS = ""
+      #if turn > 0
+      #  turnS = "<span>#{turn}</span>"
+      #end
 
       elapseTurnTiming = skillEffectJson["elapseTurnTiming"]
       if elapseTurnTiming&.length > 0
@@ -501,7 +502,37 @@ module LahWiki
 
       description = xml_escape(label + description)
 
-      "<span class=\"status tippy\" data-id=\"#{id_s}\" data-se-id=\"#{skillEffectId}\" data-content=\"#{description}\"><img src=\"/cdn/Sprite/#{wiki_icon}.png\" loading=\"lazy\">#{turnS} #{name}</span>"      
+      return name, status['isGoodStatus'], "<span class=\"status tippy\" data-id=\"#{id_s}\" data-se-id=\"#{skillEffectId}\" data-content=\"#{description}\">#{iconS}#{name}</span>"      
+    end
+
+    @@wiki_status_pattern = /<wiki-status>(.*?)<\/wiki-status>/
+
+    def render_skill_description(skill_description, status_array)
+      if status_array.empty?
+        return skill_description
+      end
+
+      status_map = {}
+      status_array.each do |status_name, status_type, status_html|
+        status_map[status_name] = [status_type, status_html]
+      end
+
+      output = skill_description.gsub(@@wiki_status_pattern) do
+        match = $~
+        status_name = match[1]
+        value = status_map.fetch(status_name, nil)
+        if !value
+          return match[0]
+        end
+        status_type, status_html = value
+
+        status_html
+      end
+
+      output << "<hr>"
+      output << status_map.map {|key, value| value[1] }.join(", ")
+
+      return output
     end
 
     def status_manual(wiki_icon, name, description=nil)
