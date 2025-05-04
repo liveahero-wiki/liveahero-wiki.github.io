@@ -522,7 +522,7 @@ module LahWiki
         status_name = match[1]
         value = status_map.fetch(status_name, nil)
         if !value
-          return match[0]
+          match[0]
         end
         status_type, status_html = value
 
