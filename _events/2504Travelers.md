@@ -155,6 +155,7 @@ Here is a list of this event's limited time Missions:
 
 {% include quest-group.html chapterId=1175 %}
 
+
 Here is a list of fan translated event quests:
 
 | Episode  | Translation      | 
