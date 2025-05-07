@@ -61513,11 +61513,14 @@
       "parameter": false,
       "description": "システム効果276番付与",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         4
@@ -61840,11 +61843,14 @@
       "parameter": false,
       "description": "SPD+5（死んでも継続）",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": false,
       "persistence": true,
       "reaminDeath": true,
       "canDuplicate": true,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -72965,7 +72971,7 @@
             "skillId": 8168207,
             "isAutoSkill": false,
             "executeTiming": 5,
-            "isInvokeAddDamage": true,
+            "isInvokeAddDamage": false,
             "isRecalculateTarget": false,
             "notExecuteInTargetReversal": false
           }
@@ -73455,7 +73461,7 @@
             "skillId": 8168208,
             "isAutoSkill": false,
             "executeTiming": 5,
-            "isInvokeAddDamage": true,
+            "isInvokeAddDamage": false,
             "isRecalculateTarget": false,
             "notExecuteInTargetReversal": false
           }
@@ -96340,11 +96346,14 @@
       "parameter": true,
       "description": "ATK+25%（システムアイコン）",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": false,
       "persistence": true,
       "reaminDeath": false,
       "canDuplicate": true,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -111790,6 +111799,104 @@
       "overrideStatusName": "",
       "isOverrideStatusName": true,
       "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "6053": {
+    "skillEffectId": 6053,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Burst",
+          "parameter": {
+            "limit": 0,
+            "value": 40,
+            "timing": 6,
+            "element": 1,
+            "isFixDamage": false,
+            "popupAddress": "BurstFireDamagePopup",
+            "isModifiedAtk": true
+          }
+        }
+      ],
+      "filename": "status_bomb",
+      "statusId": 34,
+      "canDispel": true,
+      "filterIds": [
+        11
+      ],
+      "parameter": false,
+      "description": "炸裂（火）",
+      "isCountTurn": false,
+      "isDotDamage": true,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        2
+      ],
+      "canDuplicateForce": true,
+      "isCountDownEffect": false,
+      "overrideStatusName": "炸裂",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "行動終了時、付与したキャラクターのATKの40%の属性ダメージを受ける。（火属性）<br>状態変化の重複無効を無視し、5個まで重複する。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "6054": {
+    "skillEffectId": 6054,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Burst",
+          "parameter": {
+            "limit": 0,
+            "value": 40,
+            "timing": 6,
+            "element": 4,
+            "isFixDamage": false,
+            "popupAddress": "BurstLightDamagePopup",
+            "isModifiedAtk": true
+          }
+        }
+      ],
+      "filename": "status_bomb",
+      "statusId": 34,
+      "canDispel": true,
+      "filterIds": [
+        11
+      ],
+      "parameter": false,
+      "description": "炸裂（光）",
+      "isCountTurn": false,
+      "isDotDamage": true,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        2
+      ],
+      "canDuplicateForce": true,
+      "isCountDownEffect": false,
+      "overrideStatusName": "炸裂",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "行動終了時、付与したキャラクターのATKの40%の属性ダメージを受ける。（光属性）<br>状態変化の重複無効を無視し、5個まで重複する。",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
     }
