@@ -57663,6 +57663,176 @@
       "isOverrideStatusDescription": true
     }
   },
+  "2136": {
+    "skillEffectId": 2136,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Provocation",
+          "parameter": []
+        }
+      ],
+      "filename": "status_provocation",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [
+        12
+      ],
+      "parameter": false,
+      "description": "生存戦略",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "生存戦略",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "耐久ゲージが0でない間、「挑発」と同じ効果を発動。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "2137": {
+    "skillEffectId": 2137,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffectElapseTurnDamage",
+          "parameter": []
+        }
+      ],
+      "filename": "status_system_counter",
+      "statusId": 127,
+      "canDispel": true,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "耐久ゲージがある時に反撃",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "反撃",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "耐久ゲージが0でない時、ダメージを受けた後、自身のスキル1で反撃する。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "2138": {
+    "skillEffectId": 2138,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "filename": "status_atkup",
+      "statusId": 131,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATK+50%（システム）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATK+50%",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATK+50%。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "2139": {
+    "skillEffectId": 2139,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "ChangeAgi",
+          "parameter": {
+            "value": 3
+          }
+        }
+      ],
+      "filename": "status_spdup",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "SPD+3（増援後も継続する。）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": true,
+      "isCountDownEffect": false,
+      "overrideStatusName": "SPD+3",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "SPDが+3される。増援後も継続する。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
   "3001": {
     "skillEffectId": 3001,
     "skillEffectJson": {
@@ -74263,6 +74433,140 @@
       "filterIds": [],
       "parameter": false,
       "description": "もう１度行動をする",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3574": {
+    "skillEffectId": 3574,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": 1,
+            "isRandom": false,
+            "statusId": 1211111,
+            "statusNum": 0,
+            "extensionLimit": 100,
+            "statusTypeValue": 2
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果1211111を1ターン延長",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3575": {
+    "skillEffectId": 3575,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseMultipleAttack",
+          "parameter": {
+            "value": 102.5
+          }
+        }
+      ],
+      "filename": "status_system_firepower",
+      "statusId": 1211111,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "ATKチャージ（チャージ数1につき2.5%）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": true,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATKチャージ",
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "チャージ数1につき、ATK+2.5%。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "3579": {
+    "skillEffectId": 3579,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": 6,
+            "isRandom": false,
+            "statusId": 1017201,
+            "extensionLimit": 7,
+            "statusTypeValue": 2
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "勇往ゲージ（システム効果1017201）のチャージ数を+6",
       "isCountTurn": false,
       "isDotDamage": false,
       "isImmediate": true,
