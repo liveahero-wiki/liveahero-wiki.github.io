@@ -4,11 +4,11 @@ jp_title: 【復刻】脱獄！ヘルスチェック・クライシス
 news_link: https://live-a-hero.jp/info/11278
 banner_image: banner_info_CrisisRevival2505.jpg
 gacha: true
-event_start_time: 2025-27-18T20:00:00+09
+event_start_time: 2025-05-27T20:00:00+09
 event_end_time: 2025-06-24T14:00:00+09
-farm_start_time: 2025-27-18T20:00:00+09
+farm_start_time: 2025-05-27T20:00:00+09
 farm_end_time: 2025-06-17T14:00:00+09
-sales_start_time: 2025-27-18T20:00:00+09
+sales_start_time: 2025-05-27T20:00:00+09
 sales_end_time: 2025-06-17T14:00:00+09
 ---
 
