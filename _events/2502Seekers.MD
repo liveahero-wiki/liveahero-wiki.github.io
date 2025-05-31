@@ -156,6 +156,7 @@ Here is a list of fan translated special quests:
 | Character  | Translation      | 
 |------------|------------------|
 | {% chara_link Vlaham %}  | [Docs](https://docs.google.com/spreadsheets/d/1Jrg646xJqA8klObNzhZy_oaGw_5HP0tT2SpUjiiwEYw/edit?usp=sharing) |
+| {% chara_link Valoray %}  | [Docs](https://docs.google.com/spreadsheets/d/1g8EHFy7uZ7DeyGu8COtjXeJfJ2zSP1TF8-P-vbtQYAc/) |
 
 {% include quest-group.html chapterId=1162 %}
 
