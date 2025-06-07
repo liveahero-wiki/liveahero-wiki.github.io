@@ -137,6 +137,12 @@ Here is a list of this event's Special Missions:
 
 {% include quest-group.html chapterId=1181 %}
 
+Here is a list of fan translated event quests:
+
+| Episode  | Translation      | 
+|------------|------------------|
+| 1  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0XsEWt2ffS306CI41rlv79F14MADohmhBtpoNpH5LOlDi28tln1FCJ1Z9k6cLOqgoJPlXNKqQXnkS/pubhtml?gid=0&single=true) |
+
 ### Free Quests
 
 {% include quest-group.html chapterId=1182 %}
