@@ -81,6 +81,12 @@ sprites="fg_kaibutsuEngineAdultEarth_h01,fg_kaibutsuEngineAdultFire_h01,fg_kaibu
 sprites="fg_kaibutsuEngineLarvaEarth_h01,fg_kaibutsuEngineLarvaFire_h01,fg_kaibutsuEngineLarvaLight_h01,fg_kaibutsuEngineLarvaShadow_h01,fg_kaibutsuEngineLarvaWater_h01"
 %}
 
+### Eno Seaman
+
+{% include hero-infobox-unreleased.html name="Eno Seaman" mob=true
+sprites="fg_enoseaman_h01,fg_enoseaman_s01"
+%}
+
 ### Ghost Kaibutsu (Adult)
 
 {% include hero-infobox-unreleased.html name="Adult Ghost Kaibutsu" mob=true
