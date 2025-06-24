@@ -29,7 +29,7 @@ sidekicks:
     He is also good at cooking and DIY due to his natural dexterity.
     He has a strong desire to help people, and he will jump at the chance to accept any request asked of him, so he is appreciated by the neighbors.
     Sometimes, his yes-man personality can be troublesome, and he takes on so many requests that he gets overwhelmed.
-  extra_sprites: fg_yohack_s01_skin1
+  extra_sprites: fg_yohack_s01_skin1,fg_yohack_s01_skin2,fg_yohack_s01_skin3
 ---
 
 {% include voice-table.html resourceName="yohack"

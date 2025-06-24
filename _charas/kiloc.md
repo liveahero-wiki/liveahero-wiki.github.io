@@ -47,6 +47,7 @@ sidekicks:
     The background behind this man’s appointment as the commander of Estevolta is rumored to involve the
     covert actions of the governing organization of Muirauqa IV, the Council of Commanders,
     though this remains nothing more than speculation.
+  extra_sprites: fg_kiloc_s01_skin1,fg_kiloc_s01_skin2
 ---
 
 {% include voice-table.html resourceName="kiloc"

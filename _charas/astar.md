@@ -9,7 +9,7 @@ heroes:
 - stockId: 11922
 sidekicks:
 - stockId: 11921
-  extra_sprites: fg_ADV_astarboy_s01,fg_ADV_astarboy_s01_skin2,fg_ADV_astaryoung_s01
+  extra_sprites: fg_astar_s01_skin1,fg_astar_s01_skin2,fg_ADV_astarboy_s01,fg_ADV_astarboy_s01_skin2,fg_ADV_astaryoung_s01
 ---
 
 {% include voice-table.html resourceName="astar"
