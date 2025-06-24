@@ -46,18 +46,21 @@ Rates as follow:
 
 | Character                                                | Rates (Single) | Rates (Multis) |
 |----------------------------------------------------------|----------------|----------------|
-| {% chara_link Gaius|h2 %}                               | 0.8 %            | 1.6 %            |
-| {% chara_link Vlaham|h1 %}                              | 0.8 %            | 1.6 %            |
-| {% chara_link Valoray|h1 %}                             | 2 %              | 32 %             |
-| {% chara_link Valoray %}                                 | 5 %              | 0 %             |
-| {% chara_link Zaniah %}                                 | 3 %              | 0 %             |
-| {% chara_link Vlaham %}                                   | 12 %             | 0 %             |
-| {% chara_link Gaius %}                                   | 6 %             | 0 %             |
+| {% chara_link Yohack|h2 %}                               | 0.8 %            | 1.6 %            |
+| {% chara_link Astar|h2 %}                              | 0.8 %            | 1.6 %            |
+| {% chara_link Saotome|h1 %}                             | 2 %              | 32 %             |
+| {% chara_link Saotome %}                                 | 5 %              | 0 %             |
+| {% chara_link Alend %}                                   | 6 %             | 0 %             |
+| {% chara_link Kiloc %}                                   | 6 %             | 0 %             |
+| {% chara_link Joezen %}                                   | 0.75 %             | 0 %             |
+| {% chara_link Astar %}                                   | 0.75 %             | 0 %             |
+| {% chara_link Yohack %}                                   | 0.75 %             | 0 %             |
+| {% chara_link Senthak %}                                   | 0.75 %             | 0 %            |
 | Offbanner 5 star hero                                    | 0.4 %            | 0.8 %            |
 | Offbanner 4 star hero                                    | 6 %              | 64 %             |
 | Offbanner 3 star hero                                    | 35 %             | 0 %              |
 | Offbanner 4 star sidekick                                | 2 %              | 0 %              |
-| Offbanner 3 star sidekick                                | 27 %             | 0 %              |
+| Offbanner 3 star sidekick                                | 33 %             | 0 %              |
 
 >Rates (Multis) is the rate of the tenth pull in a multi pull, pull number 1-9 still use the Rates (Single)
 
