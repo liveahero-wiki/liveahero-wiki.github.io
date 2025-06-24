@@ -1,6 +1,8 @@
 ---
 title: Yohack
 characterId: 190
+h2:
+  title: '"Radiant Rider" Yohack'
 heroes:
 - stockId: 11901
   BIO_H01: |-
@@ -17,6 +19,7 @@ heroes:
     Encouraging Yohack as he worked, the man successfully unlocked the door to freedom.
     Stricken with admiration, Yohack moved alone to Muirauka IV when he came of age, where the man had a shop, and studied as a locksmith under him.
     To show those in need that there is a way out, and to rescue them. 
+- stockId: 11902
 sidekicks:
 - stockId: 11901
   BIO_S01: |-
@@ -40,6 +43,9 @@ TRAIN = "I'm not gonna go easy on ya!"
 TRAINED = "A-aaiieee~! Please be gentleee! "
 EVENTA = "This is my first time meeting an operator in the field!<br>Let's work hard on security at the museum!<br>Oh, and we can go to the party together after! Yay!"
 EVENTB = "Masquerade? Like wearing masks and dancing?<br>Yes, I understand it! I've never done it before.<br>Leave it to me! I'm sure we'll figure it out!"
+%}
+
+{% include voice-table.html resourceName="yohackLastResort2506"
 %}
 
 ## Notes
