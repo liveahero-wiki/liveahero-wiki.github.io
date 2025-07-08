@@ -13132,11 +13132,14 @@
       "parameter": false,
       "description": "自身はオート行動時、味方を対象にするスキルはボスキャラクターを対象にする。（敵専用）",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -13144,6 +13147,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -25065,11 +25069,14 @@
       "parameter": false,
       "description": "最大HPの100%のダメージ",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -25077,6 +25084,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -42698,6 +42706,7 @@
       "canDuplicateForce": true,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -47974,6 +47983,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -48160,11 +48170,14 @@
       "parameter": false,
       "description": "システム効果229番除去",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -48172,6 +48185,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -61799,6 +61813,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -76647,11 +76662,14 @@
       "parameter": false,
       "description": "View消費量-5000",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": true,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         2
@@ -76659,6 +76677,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "View消費量-5000",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": true,
       "overrideStatusDescription": "ViewPowerを消費するスキルのView消費量が5000減少する。",
       "isDisplayPersistenceStatus": false,
@@ -88262,6 +88281,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "View消費量-2000",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": true,
       "overrideStatusDescription": "ViewPowerを消費するスキルのView消費量が2000減少する。",
       "isDisplayPersistenceStatus": true,
@@ -101030,6 +101050,7 @@
       "parameter": false,
       "description": "システム効果129番付与（死亡貫通）",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": false,
       "persistence": true,
       "reaminDeath": true,
@@ -101042,6 +101063,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -117249,6 +117271,137 @@
       "overrideStatusDescription": "1回のスキル発動、もしくは継続ダメージから受けるダメージを合計3000に制限。",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
+    }
+  },
+  "6120": {
+    "skillEffectId": 6120,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 10
+          }
+        }
+      ],
+      "trigger": "[]",
+      "filename": "status_system_defup",
+      "statusId": 130,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "被ダメージ-90%",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "被ダメージ-90%",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメージ-90%。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "6121": {
+    "skillEffectId": 6121,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 130
+          }
+        }
+      ],
+      "filename": "status_system_atkup",
+      "statusId": 186,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATK+30%（システム効果、死亡時も貫通・継続）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": true,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATK+30%",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATK+30%。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "6122": {
+    "skillEffectId": 6122,
+    "skillEffectJson": {
+      "turn": 4,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffectElapseTurnDamage",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 276,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果276番付与（死亡時も継続・死亡貫通）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": true,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": true,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        4
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
     }
   }
 }
