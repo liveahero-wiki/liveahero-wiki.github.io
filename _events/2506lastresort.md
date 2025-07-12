@@ -145,6 +145,13 @@ Here is a list of this event's limited time Missions:
 
 {% include quest-group.html chapterId=1185 %}
 
+Here is a list of fan translated event quests:
+
+| Episode  | Translation      | 
+|------------|------------------|
+| 1  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRbO4SSgEOGnxkGm8QVfxHI92jlnsAAm6549PycoHtIvHQwEoE_hulo1x6WQg0TBUN7OjCTTZNvdy9U/pubhtml?gid=0&single=true) |
+| 2  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRbO4SSgEOGnxkGm8QVfxHI92jlnsAAm6549PycoHtIvHQwEoE_hulo1x6WQg0TBUN7OjCTTZNvdy9U/pubhtml?gid=1561428475&single=true) |
+
 ### Free Quests
 
 {% include quest-group.html chapterId=1186 %}
