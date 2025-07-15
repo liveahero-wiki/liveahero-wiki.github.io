@@ -20,6 +20,7 @@ heroes:
     Stricken with admiration, Yohack moved alone to Muirauka IV when he came of age, where the man had a shop, and studied as a locksmith under him.
     To show those in need that there is a way out, and to rescue them. 
 - stockId: 11902
+  extra_sprites: fg_yohackLastResort2506_h02_skin2
 sidekicks:
 - stockId: 11901
   BIO_S01: |-

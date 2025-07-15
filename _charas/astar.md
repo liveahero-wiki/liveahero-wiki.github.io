@@ -7,6 +7,7 @@ heroes:
 - stockId: 11921
   extra_sprites: fg_astar_h01_skin2,fg_astar_h01_skin3,fg_astar_h01_skin4,fg_ADV_astar_h01,fg_ADV_astar_h01_skin1,fg_ADV_astaryoung_h01
 - stockId: 11922
+  extra_sprites: fg_astarLastResort2506_h02_skin2
 sidekicks:
 - stockId: 11921
   extra_sprites: fg_astar_s01_skin1,fg_astar_s01_skin2,fg_ADV_astarboy_s01,fg_ADV_astarboy_s01_skin2,fg_ADV_astaryoung_s01
