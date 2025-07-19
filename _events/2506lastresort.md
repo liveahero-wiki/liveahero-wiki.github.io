@@ -152,6 +152,8 @@ Here is a list of fan translated event quests:
 | 1  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRbO4SSgEOGnxkGm8QVfxHI92jlnsAAm6549PycoHtIvHQwEoE_hulo1x6WQg0TBUN7OjCTTZNvdy9U/pubhtml?gid=0&single=true) |
 | 2  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRbO4SSgEOGnxkGm8QVfxHI92jlnsAAm6549PycoHtIvHQwEoE_hulo1x6WQg0TBUN7OjCTTZNvdy9U/pubhtml?gid=1561428475&single=true) |
 | 3  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRbO4SSgEOGnxkGm8QVfxHI92jlnsAAm6549PycoHtIvHQwEoE_hulo1x6WQg0TBUN7OjCTTZNvdy9U/pubhtml?gid=1174886637&single=true) |
+| 4  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRbO4SSgEOGnxkGm8QVfxHI92jlnsAAm6549PycoHtIvHQwEoE_hulo1x6WQg0TBUN7OjCTTZNvdy9U/pubhtml?gid=2009740489&single=true) |
+| 5  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRbO4SSgEOGnxkGm8QVfxHI92jlnsAAm6549PycoHtIvHQwEoE_hulo1x6WQg0TBUN7OjCTTZNvdy9U/pubhtml?gid=594418777&single=true) |
 
 ### Free Quests
 
