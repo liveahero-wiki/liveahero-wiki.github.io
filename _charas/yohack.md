@@ -50,7 +50,7 @@ EVENTB = "Masquerade? Like wearing masks and dancing?<br>Yes, I understand it! I
 %}
 
 ## Notes
-
+- His full name is Yohack Ranilanza (ヨハック・ラニランザ)
 - His Skill name is from Latin language:
   - Reserans : Unlocking
   - Semita Lucis : Path of Light
