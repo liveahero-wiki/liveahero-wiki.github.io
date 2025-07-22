@@ -105,20 +105,6 @@ Here is the bonus:
 | 2 Event Heroes |     30    |
 | 3 Event Heroes |     50    |
 
-## Limited Time Login Bonus
-
-An additional login bonus is available for the duration of this event:
-
-| Day  | Rewards      |
-|----||----------------|
-| 1  |  2 {% include item-icon.html id=2 %} , 1 {% include item-icon.html id=34 %} , 50000 {% include item-icon.html id=35 %}    |
-| 2  |  2 {% include item-icon.html id=2 %} , 25000 {% include item-icon.html id=11 %}    |
-| 3  |  5 {% include item-icon.html id=2 %} , 1 {% include item-icon.html id=34 %} , 20 {% include item-icon.html id=59 %}    |
-| 4  |  2 {% include item-icon.html id=2 %} , 50000 {% include item-icon.html id=35 %}    |
-| 5  |  2 {% include item-icon.html id=2 %} , 25000 {% include item-icon.html id=11 %}    |
-| 6  |  2 {% include item-icon.html id=2 %} , 10000 {% include item-icon.html id=30 %}    |
-| 7  |  5 {% include item-icon.html id=2 %} , 1 {% include item-icon.html id=34 %} , 30 {% include item-icon.html id=59 %}    |
-
 ## Limited Time Mission
 
 Here is a list of this event's limited time Missions:
