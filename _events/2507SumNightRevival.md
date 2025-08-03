@@ -140,6 +140,10 @@ Here is a list of this event's limited time Missions:
 
 {% include quest-group.html chapterId=1192 %}
 
+| Episode  | Translation      | 
+|------------|------------------|
+| 1  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRUzUVKV3Oq9na78J5g4-UVMkn-_NscoRRgO6U22ayhmWXYApqKRnyR5zUJoRmMlQR8i2VoKlMynGrg/pubhtml?gid=0&single=true) |
+
 ### Free Quests
 
 {% include quest-group.html chapterId=1193 %}
