@@ -143,6 +143,7 @@ Here is a list of this event's limited time Missions:
 | Episode  | Translation      | 
 |------------|------------------|
 | 1  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRUzUVKV3Oq9na78J5g4-UVMkn-_NscoRRgO6U22ayhmWXYApqKRnyR5zUJoRmMlQR8i2VoKlMynGrg/pubhtml?gid=0&single=true) |
+| 2  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRUzUVKV3Oq9na78J5g4-UVMkn-_NscoRRgO6U22ayhmWXYApqKRnyR5zUJoRmMlQR8i2VoKlMynGrg/pubhtml?gid=75458051&single=true) |
 
 ### Free Quests
 
