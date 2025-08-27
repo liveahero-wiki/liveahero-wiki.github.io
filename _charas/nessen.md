@@ -88,6 +88,8 @@ TRAIN = "It's going to be a little intense, are you ready?"
 TRAINED = "How...hot!"
 EVENTA = "The beautiful decorations of the city, the costumes of the people.<br>I can feel the attention to detail in all of them.<br>It makes me want to look at them forever...."
 EVENTB = "...You want to attend the party as a guest?<br>I had planned to inspect the host's side...<br>Well, perhaps this would be a good opportunity to learn the guests' point of view."
+EVENTC = "Giving a corsage is a wonderful gesture of hospitality.<br>Would you like to come and help us Commander?<br>Fufu, here, take my hand. Now we can walk through town together."
+EVENTD = "That completes my assistance, Commander.<br>You must be tired from all that walking.<br>If you'd like, shall we go and wash away your fatigue in the bath?"
 %}
 
 ## Notes
