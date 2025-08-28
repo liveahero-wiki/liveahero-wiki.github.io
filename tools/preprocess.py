@@ -2,6 +2,7 @@ import os.path
 import json
 import sys
 import re
+import collections
 
 from collections import defaultdict
 
@@ -26,6 +27,10 @@ def processPropertiesFile(raw_file, bio_file, serif_file, profile_file):
 
         if s[0].startswith("PROFILE_"):
             profile[s[0]] = sanitizeText(s[1])
+
+    detail = collections.OrderedDict(sorted(detail.items()))
+    serif = collections.OrderedDict(sorted(serif.items()))
+    profile = collections.OrderedDict(sorted(profile.items()))
 
     dumpJson(os.path.join("_data", "processed", bio_file), detail)
     dumpJson(os.path.join("_data", "processed", serif_file), serif)
