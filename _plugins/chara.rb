@@ -61,7 +61,13 @@ module Jekyll
       end
 
       if page.data["unreleased"]
-        return "<a href=\"#{page.url}\"><span class=\"item\"><img src=\"/cdn/Sprite/icon_unknown_card.png\" loading=\"lazy\"></span> #{title}</a>"
+        img = page.data["icon"]
+        if img
+          img = "/assets/img/unreleased/#{img}.png"
+        else
+          img = "/cdn/Sprite/icon_unknown_card.png"
+        end
+        return "<a href=\"#{page.url}\"><span class=\"item\"><img src=\"#{img}\" loading=\"lazy\"></span> #{title}</a>"
       end
 
       if tokens.length == 2
