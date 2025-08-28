@@ -10,17 +10,18 @@ These are notes written by <span class="masked" markdown="0">{% chara_link Exio 
 * this will be unordered
 {:toc}
 
+## Story
+
+{% include library-info.html key="SUMMARY_1" %}
+{% include library-info.html key="SUMMARY_2" %}
+
 ## Person
 
 {% include library-info.html key="PROTAGONIST" %}
 {% include library-info.html key="BROKER" %}
-{% include library-info.html key="GATEKEEPER" %}
-
-{% comment %}
 {% include library-info.html key="ANTARES" %}
 {% include library-info.html key="TAIKA" %}
 {% include library-info.html key="HURAY" %}
-{% endcomment %}
 
 ## Organization
 
@@ -30,14 +31,13 @@ These are notes written by <span class="masked" markdown="0">{% chara_link Exio 
 {% include library-info.html key="ALLIANCE" %}
 {% include library-info.html key="SHINASHIWARASHA" %}
 {% include library-info.html key="ZEROTRUST" %}
-{% comment %}
+{% include library-info.html key="FORESIGHT" %}
 {% include library-info.html key="HERO_LICENSE_ASSOCIATION" %}
-{% include library-info.html key="BIOTOPE" %}
-{% endcomment %}
 
 ## Area
 
 {% include library-info.html key="MT_FUJI" %}
+{% include library-info.html key="BIOTOPE" %}
 
 ## Phenomenon / Event
 
@@ -45,8 +45,4 @@ These are notes written by <span class="masked" markdown="0">{% chara_link Exio 
 {% include library-info.html key="HERO_LICENSE" %}
 {% include library-info.html key="UNIQUE" %}
 {% include library-info.html key="PARALELL_WORLD" %}
-
-## Story
-
-{% include library-info.html key="SUMMARY_1" %}
-{% include library-info.html key="SUMMARY_2" %}
+{% include library-info.html key="GATEKEEPER" %}
