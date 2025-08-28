@@ -39,7 +39,7 @@ These are notes written by <span class="masked" markdown="0">{% chara_link Exio 
 
 {% include library-info.html key="MT_FUJI" %}
 
-## Phenomeon / Event
+## Phenomenon / Event
 
 {% include library-info.html key="HERO_AND_VILLAIN" %}
 {% include library-info.html key="HERO_LICENSE" %}
