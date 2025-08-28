@@ -2985,6 +2985,64 @@
     ],
     "limitValue": 0
   },
+  "249": {
+    "itemId": 249,
+    "itemName": "認証ホログラム",
+    "resourceName": "Main23_exchange01",
+    "rarity": 3,
+    "itemType": 512,
+    "description": "ヒーローライセンス協会発行の特殊な電子認証ホログラム。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "250": {
+    "itemId": 250,
+    "itemName": "ビオトープホログラム",
+    "resourceName": "icon_bg_battle_biotope_day",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景にビオトープを投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_biotope_day",
+        "bgTitleKey": "TITLE_BG_BATTLE_BIOTOPE_DAY_WALLPAPER"
+      }
+    ],
+    "limitValue": 0
+  },
+  "251": {
+    "itemId": 251,
+    "itemName": "背理者の目覚めディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "第２部３章のBGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_main2-3_adv",
+        "bgmTitleKey": "TITLE_BGM_MAIN2-3_ADV_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
+  "252": {
+    "itemId": 252,
+    "itemName": "背理者の目覚め戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "第２部３章の戦闘BGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_main2-3_battle1",
+        "bgmTitleKey": "TITLE_BGM_MAIN2-3_BATTLE_RECORD"
+      }
+    ],
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -6589,6 +6647,69 @@
     ],
     "limitValue": 0
   },
+  "112641": {
+    "itemId": 112641,
+    "itemName": "アンタレスの記憶片",
+    "resourceName": "piece_antares",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "アンタレスのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 12641
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
+  "112651": {
+    "itemId": 112651,
+    "itemName": "タイカの記憶片",
+    "resourceName": "piece_taika",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "タイカのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 12651
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "limitValue": 0
+  },
+  "112661": {
+    "itemId": 112661,
+    "itemName": "フーレイの記憶片",
+    "resourceName": "piece_houley",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "フーレイのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 12661
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
   "210011": {
     "itemId": 210011,
     "itemName": "アカシの心",
@@ -9217,6 +9338,66 @@
     ],
     "limitValue": 0
   },
+  "212641": {
+    "itemId": 212641,
+    "itemName": "アンタレスの心",
+    "resourceName": "heart_antares",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "アンタレスのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 12641
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ],
+    "limitValue": 0
+  },
+  "212651": {
+    "itemId": 212651,
+    "itemName": "タイカの心",
+    "resourceName": "heart_taika",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "タイカのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 12651
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ],
+    "limitValue": 0
+  },
+  "212661": {
+    "itemId": 212661,
+    "itemName": "フーレイの心",
+    "resourceName": "heart_houley",
+    "rarity": 4,
+    "itemType": 2048,
+    "description": "フーレイのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 12661
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "limitValue": 0
+  },
   "219991": {
     "itemId": 219991,
     "itemName": "@playerNameの心",
@@ -9704,6 +9885,16 @@
     "rarity": 3,
     "itemType": 262144,
     "description": "とあるヒトに託された最後の贈り物。ツネアキのバトルモデルをカスタムできる。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "11140102": {
+    "itemId": 11140102,
+    "itemName": "フード",
+    "resourceName": "custom_tsuneaki_book",
+    "rarity": 3,
+    "itemType": 262144,
+    "description": "隠密行動用のフード。ツネアキのバトルモデルをカスタムできる。",
     "effect": [],
     "limitValue": 0
   },
@@ -11589,6 +11780,36 @@
   },
   "21261101": {
     "itemId": 21261101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21264101": {
+    "itemId": 21264101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21265101": {
+    "itemId": 21265101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "limitValue": 0
+  },
+  "21266101": {
+    "itemId": 21266101,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,
