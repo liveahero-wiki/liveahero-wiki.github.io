@@ -9,6 +9,18 @@ additional_scripts: ["/assets/atlas.min.js"]
 
 <!-- Keep this sorted alphabatically -->
 
+### Acolyte
+
+{% include hero-infobox-unreleased.html name="Apprentice" mob=true
+sprites="fg_villainAcolyteEarth_s01,fg_villainAcolyteFire_s01,fg_villainAcolyteLight_s01,fg_villainAcolyteShadow_s01,fg_villainAcolyteWater_s01"
+%}
+
+### Acolyte (Transform)
+
+{% include hero-infobox-unreleased.html name="Apprentice" mob=true
+sprites="fg_villainAcolyteEarth_h01,fg_villainAcolyteFire_h01,fg_villainAcolyteLight_h01,fg_villainAcolyteShadow_h01,fg_villainAcolyteWater_h01"
+%}
+
 ### Apprentice
 
 {% include hero-infobox-unreleased.html name="Apprentice" mob=true
