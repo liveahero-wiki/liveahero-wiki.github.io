@@ -8,13 +8,14 @@ from collections import defaultdict
 
 from wiki_util import dumpJson, sanitizeText
 
-def processPropertiesFile(raw_file, bio_file, serif_file, profile_file):
+def processPropertiesFile(raw_file, bio_file, serif_file, profile_file, library_file):
     with open(os.path.join("_data", "processed", raw_file), "r", encoding="utf-8") as f:
         lines = f.readlines()
 
     detail = {}
     serif = {}
     profile = {}
+    library = {}
 
     for line in lines:
         s = line.split("=", 1)
@@ -28,13 +29,18 @@ def processPropertiesFile(raw_file, bio_file, serif_file, profile_file):
         if s[0].startswith("PROFILE_"):
             profile[s[0]] = sanitizeText(s[1])
 
+        if s[0].startswith("LIBRARY_"):
+            library[s[0]] = sanitizeText(s[1])
+
     detail = collections.OrderedDict(sorted(detail.items()))
     serif = collections.OrderedDict(sorted(serif.items()))
     profile = collections.OrderedDict(sorted(profile.items()))
+    library = collections.OrderedDict(sorted(library.items()))
 
     dumpJson(os.path.join("_data", "processed", bio_file), detail)
     dumpJson(os.path.join("_data", "processed", serif_file), serif)
     dumpJson(os.path.join("_data", "processed", profile_file), profile)
+    dumpJson(os.path.join("_data", "processed", library_file), library)
 
 
 def processShopFile():
@@ -89,4 +95,4 @@ def processCardProfileOverride():
 
 if __name__ == "__main__":
     processCardProfileOverride()
-    processPropertiesFile("Japanese.properties", "jp_bio.json", "jp_serif.json", "jp_profile.json")
+    processPropertiesFile("Japanese.properties", "jp_bio.json", "jp_serif.json", "jp_profile.json", "jp_library.json")
