@@ -5,6 +5,8 @@ banner: true
 
 > Warning: This page contain heavy spoiler to game's story, especially [Main Quest](/main_quests/)
 
+These are notes written by <span class="masked" markdown="0">{% chara_link Exio %}</span>
+
 * this will be unordered
 {:toc}
 
@@ -18,7 +20,7 @@ banner: true
 {% include library-info.html key="ANTARES" %}
 {% include library-info.html key="TAIKA" %}
 {% include library-info.html key="HURAY" %}
-{% endcommment %}
+{% endcomment %}
 
 ## Organization
 
@@ -31,7 +33,7 @@ banner: true
 {% comment %}
 {% include library-info.html key="HERO_LICENSE_ASSOCIATION" %}
 {% include library-info.html key="BIOTOPE" %}
-{% endcommment %}
+{% endcomment %}
 
 ## Area
 
