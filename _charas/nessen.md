@@ -78,6 +78,7 @@ TRAINED = "I can't stop sweating…!"
 
 {% include voice-table.html resourceName="nessenMasquerade2310"
 h_gachaResult = "Commander, please take my hand.<br>I Nessen will escort you to the ball where we shall be the main stars."
+s_gachaResult = "You've requested a sidekick, please leave it to us.<br>Unfortunately, we don't have a hot spring here, but we'll provide you with the best hospitality, I'll support you to the fullest."
 salesStart = "Let us show you the finest hospitality!"
 salesEnd = "I'm back. I must welcome the next customer."
 battleStart = "It's showtime!<br>Let's enjoy ourselves to the fullest and put on a great show for all!"
