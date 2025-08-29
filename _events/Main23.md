@@ -83,3 +83,7 @@ Detailed lists of main quest can be found in [chapter 3](/main_quests/chapter08/
 ### Free Quests
 
 {% include quest-group.html chapterId=1200 %}
+
+### Implementation of "XXX's Notes"
+
+"[XXX's Notes](/guide/library/)" feature has been implemented in this release to help players catch up with important terms and events from [Main Quests](/main_quests/).
