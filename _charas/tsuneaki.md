@@ -76,10 +76,39 @@ salesEnd = "I'm back<br>huh...?<br>Where did I go?"
 %}
 
 {% include voice-table.html resourceName="tsuneakiRookies2408"
+h_gachaResult = "Rokusei here! I've started as a new hero! Nice to meet you.<br>Um, my hobbies are... Huh? Who exactly is Tsuneaki?"
+s_gachaResult = "Hey, it's been a while... this is our first meeting? Oh, come on, jokes like that aren't cool, you know.<br>...Hey, you're joking, right? Say something! Don't bully an old man like that~!"
+salesStart = "Sales, yes? ...Where should I stop by on my way home?"
+salesEnd = "Man, that was fun! The sales stuff? Of course I was talking about that."
+battleStart = "What shall we play? Swimming? Watermelon smashing?<br>...Battle first? I know~..."
+action = "Well... What should I do?"
+attack = "Let's go!"
+skillA = "Let me show you some water tricks!"
+skillB = "This is getting fun!"
+special = "Alright! Uncle's all fired up, maybe I'll try that fan service thing?<br>Secret technique!<br>Threefold moisture!"
+smallDamage = "Oops! That was dangerous"
+bigDamage = "Ngh... That was close!"
+win = "Wow, thanks to all of you, I actually won!<br>...Huh? You're saying I'm not really a rookie? No way!"
+lose = "Even if I find new possibilities... Is that person's dream still out of reach...?"
+assisted = "Senpai, you're so cool!"
+rankMax = "With you by my side... I can become anything. I can face any challenge.<br>The possibilities you observed for me, I'll never, ever forget them."
+APPRECIATION = "Hey operator, here's a gift from the newbie!<br>...I won't ask what happened. But at least let me stay by your side until you feel better."
+DAILY = "Orient City sure has all kinds of people, huh? By the way, the place you live...<br>No, no, it's fine, I won't barge in or anything. Really, really!"
+RELATION = "That arrogant bureaucrat really likes you, but he's really cold to me!<br>Next time, let's talk to him at the same time and see what happens?"
+HERO = "Siblings of different races... I envy them.<br>Watching Canes-kun and Sterio-kun, it gives me hope that my dream might just come true more easily than I thought."
+PLAYER = "When you're in trouble, you can rely on the people at the office.<br>But when you've got a problem you can't even tell them about, that's when I come in.<br>Don't hesitate to talk to me."
+TOUCH = "You really have zero sense of caution, don't you? If you keep messing with uncle like this... Gotcha!<br>Ah... Did you actually plan for this to happen?"
+TRAIN = "Want a taste of what Uncle's got up his sleeve?"
+TRAINED = "Wait... Let's take a break... Are we still going!?"
+EVENTA = "A city-wide event sounds exciting!<br>Actually, I only started getting interested in local events once I became an adult.<br>Back in the day, I had my hands full with other things."
+EVENTB = "Who's gonna be thrilled to be greeted by an unknown hero like me... Huh, there's people here?<br>Really~? You're just trying to flatter uncle to get him to work for you, aren't you?"
+EVENTC = "Wow, a stamp rally. If you accomplish what's written here, you get a stamp and a prize...<br>There's no way uncle is falling for this! This is work, right!?"
+EVENTD = "Guess what this is? A reward! For you and me, since we both worked so hard.<br>It's a Hero Festa, so we deserve to have some fun too, don't you think?"
 %}
 
 ## Notes
 
 - His full name is Tsuneaki Toshuku (斗宿 ツネアキ)
 - Platycodon grandiflorus (aka balloon flowers) are flowers associated with Abe no Seimi (an onmyōji)
-- The design symbol of the Platycodon is called Semei Kiyko, and is known as a five-pointed star.
+- The design symbol of the Platycodon is called Semei Kiyko, and is known as a five-pointed star. (as seen in his special animation).
+- Rokusei refers to {% chara_link Seiichiro %} in his relation line
