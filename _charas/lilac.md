@@ -53,7 +53,7 @@ sidekicks:
 ---
 
 {% include voice-table.html resourceName="lilac"
-h_gachaResult = "My name is Lilac.<br>I work in a florist shop.<br>This smell......<br>You're in the business of exterminating kaibutsu.<br>Leave it to me, I'll cut 'em down with these shears."
+h_gachaResult = "My name is Lilac.<br>I work in a flower shop.<br>This smell......<br>You're in the business of exterminating kaibutsu.<br>Leave it to me, I'll cut 'em down with these shears."
 s_gachaResult = "My name is Lilac. A florist.<br>I'm in charge of sidekicking this time, right?<br>Of course I can do it. I just finished a bouquet.<br>What do you think, beautiful, right?"
 salesStart = "I understand, I'll go."
 salesEnd = "I'm glad I could help."
@@ -83,7 +83,7 @@ EVENTB = "There is a strange smell in the city...<br>What's going on? Is it real
 %}
 
 {% include voice-table.html resourceName="lilacSummerNight2407"
-h_gachaResult = "Performing on a water stage... huh? It's a job I'm not used to, but I'll do my best.<br>Please watch my performance on stage!"
+h_gachaResult = "Performing on a water stage... huh?<br>It's a job I'm not used to, but I'll do my best.<br>Please watch my performance on stage!"
 s_gachaResult = "A sidekick's job, I see. It's a little different from back home,<br>but with the power of wilderness plants, I'll be there to support you to the best of my ability."
 salesStart = "I'll make it a great stage."
 salesEnd = "I'm back. Was I of any help?"
@@ -97,18 +97,18 @@ bigDamage = "I can still... stand!"
 win = "Thank you for your hard work, you're a little wet. Sorry,<br>I'll use my towel to dry you off right away. Don't move, leave it to me."
 lose = "I can't afford to fall...! The seeds of my resolve will wither away...!"
 assisted = "Thanks for the assist!"
-rankMax = "The bond we've built together... Those memories have made me so much stronger.<br>I'd be happy if you continue to stay with me."
+rankMax = "The bond we've built together...<br>Those memories have made me so much stronger.<br>I'd be happy if you continue to stay with me."
 APPRECIATION = "The sun is a bit strong today... Oh, right.<br>If you don't mind, this is flower oil sunscreen.<br>I'll apply it now, so could you please make yourself comfortable?"
-DAILY = "Even in a town in the wilderness, plants take root properly and grow strong and resilient.<br>I love these moments when I feel that vitality."
+DAILY = "Even in a town in the wilderness, plants take root properly<br>and grow strong and resilient.<br>I love these moments when I feel that vitality."
 RELATION = "Every time I see Mr. Rudin, he smells different,<br>so when I asked why, he dodged the question.<br>He said it's a no-no to probe a magician's secrets..."
 HERO = "I really love Kalaski's photos. They're gentle and warm, and I feel like they exactly capture Kalaski's essence."
-PLAYER = "…Would it be okay if I held your hand? I'm nervous about this unfamiliar job, but...<br>If you're watching over me, I feel like I can do it."
-TOUCH = "Your hands feel cool and so nice. I was practicing for the show just now, so my body is hot...<br>Um, can we stay like this a little longer?"
+PLAYER = "…Would it be okay if I held your hand?<br>I'm nervous about this unfamiliar job, but...<br>If you're watching over me, I feel like I can do it."
+TOUCH = "Your hands feel cool and so nice. I was practicing for the show<br>just now, so my body is hot...<br>Um, can we stay like this a little longer?"
 TRAIN = "I'm going to give it my all. Take this!"
 TRAINED = "It's... more intense than I thought...!"
-EVENTA = "This town is really lively, isn't it? It reminds me a little of the flower festivals back home.<br>...Huh, do I look like I'm having fun?"
-EVENTB = "Since I became a hero, I've hardly had any chances to appear on shows like this...<br>Um... would you mind helping me practice my smile?"
-EVENTC = "Would you like to help promote the show with me?<br>Mr. Rudin asked me to, but I also want to help the hotel staff in any way I can."
+EVENTA = "This town is really lively, isn't it?<br>It reminds me a little of the flower festivals back home.<br>...Huh, do I look like I'm having fun?"
+EVENTB = "Since I became a hero, I've hardly had any chances<br>to appear on shows like this...<br>Um... would you mind helping me practice my smile?"
+EVENTC = "Would you like to help promote the show with me?<br>Mr. Rudin asked me to, but I also want to help the hotel staff<br>in any way I can."
 EVENTD = "Thanks for your hard work. This is a thank you gift.<br>...But for me, the best reward is the memory of working alongside you."
 %}
 
