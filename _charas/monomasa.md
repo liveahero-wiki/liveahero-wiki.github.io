@@ -87,10 +87,11 @@ s_gachaResult = "...I can't help but feel a little amazed<br>...It's already the
 salesStart = "Off we go... Ho, ho-ho..."
 salesEnd = "Phew, I'm back. Kids can be terrifying..."
 battleStart = "Come, let us celebrate this holy night.<br>It is a time that should be bestowed upon everyone and their families.<br>I won't let anyone get in the way."
+boss_battleStart = "Ah... I'm sorry, but I just can't forgive this.<br>Even though it's none of my business.<br>I'm filled with disgust."
 action = "Shall we go, Monomasa?"
 attack = "Hmph, a present."
 skillA = "Come, take this!"
-SkillB = "Eliminate the obstacles...!"
+skillB = "Eliminate the obstacles...!"
 special = "We will be renewed. We can change.<br>Omen<br>Téras Symvaínoun"
 smallDamage = "Ngh..."
 bigDamage = "I won't give in...!"
@@ -102,7 +103,7 @@ APPRECIATION = "...I'm impressed you can manage so well with all those limitatio
 DAILY = "Nice to see you again, Operator. Are you pleased to see me?<br>...You really are a kind person. It stirs my emotions a bit.<br>It's hard to say whether it's good or bad, though."
 RELATION = "I can somewhat sympathize with Exio's feelings.<br>On the other hand, I wonder why others, including Drovain, can't understand.<br>But still, it's good to have hope."
 HERO = "Santa... He treats it like something borrowed,<br>yet somehow shapes it into his own dream...<br>What does “Santa” even mean to him...?"
-PLAYER = "You're...our benefactor...and an important person to us.<br>You protected my...um, “family”. Now, I want you to ask something from me.<br>What gift do you want?"
+PLAYER = "You're...our benefactor...and an important person to us.<br>You protected my...um, \"family.\"<br>Now, I want you to ask something from me.<br>What gift do you want?"
 TOUCH = "Wait a minute, don't touch me now.<br>...This body belongs to Monomasa, but...<br>“I” still desire it. Please wait until I calm down."
 TRAIN = "So, what is your wish? Tell us."
 TRAINED = "After moving my body for the first time in a while...<br>It brought back a lot of memories."
@@ -117,6 +118,7 @@ EVENTC = "This catalog... a mission? I see.<br>Hmm, it looks like it's an effici
 - Refers to {% chara_link Astar %} in his variant form Hero and Event C lines
 - In shinto funeral, Monomasa (尸者) is someone who participate in festival and receive condolences on behalf of the dead person.
 - His 2nd battle start, skill and special voicelines are used in the Monomasa boss fight in the Santa Claus Workout event
+- His boss form special voiceline: "Drovain... I... we...! “Betrayal” Téras Symvaínoun!"
 - His skill names is in greek language:
 - Base form:  
     - Kynigó Sylléktis (κυνηγώ συλλέκτης) : Kynigó = Hunt/Chase, Sylléktis= Collector
