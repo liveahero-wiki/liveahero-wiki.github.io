@@ -91,7 +91,7 @@ boss_battleStart = "Ah... I'm sorry, but I just can't forgive this.<br>Even thou
 action = "Shall we go, Monomasa?"
 attack = "Hmph, a present."
 skillA = "Come, take this!"
-skillB = "Eliminate the obstacles...!
+skillB = "Eliminate the obstacles...!"
 special = "We will be renewed. We can change.<br>Omen<br>Téras Symvaínoun"
 smallDamage = "Ngh..."
 bigDamage = "I won't give in...!"
@@ -118,6 +118,7 @@ EVENTC = "This catalog... a mission? I see.<br>Hmm, it looks like it's an effici
 - Refers to {% chara_link Astar %} in his variant form Hero and Event C lines
 - In shinto funeral, Monomasa (尸者) is someone who participate in festival and receive condolences on behalf of the dead person.
 - His 2nd battle start, skill and special voicelines are used in the Monomasa boss fight in the Santa Claus Workout event
+- His boss form special voiceline: "Drovain... I... we...! “Betrayal” Téras Symvaínoun!"
 - His skill names is in greek language:
 - Base form:  
     - Kynigó Sylléktis (κυνηγώ συλλέκτης) : Kynigó = Hunt/Chase, Sylléktis= Collector
