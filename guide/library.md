@@ -20,6 +20,7 @@ These are notes written by <span class="masked" markdown="0">{% chara_link Exio 
 {% include library-info.html key="PROTAGONIST" %}
 {% include library-info.html key="BROKER" %}
 {% include library-info.html key="ANTARES" %}
+{% include library-info.html key="ANTARES_2" %}
 {% include library-info.html key="TAIKA" %}
 {% include library-info.html key="HURAY" %}
 
@@ -30,6 +31,7 @@ These are notes written by <span class="masked" markdown="0">{% chara_link Exio 
 {% include library-info.html key="EXIO_FAMILY" %}
 {% include library-info.html key="ALLIANCE" %}
 {% include library-info.html key="SHINASHIWARASHA" %}
+{% include library-info.html key="SHINASHIWARASHA_2" %}
 {% include library-info.html key="ZEROTRUST" %}
 {% include library-info.html key="FORESIGHT" %}
 {% include library-info.html key="HERO_LICENSE_ASSOCIATION" %}
