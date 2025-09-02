@@ -58413,6 +58413,50 @@
       "isOverrideStatusDescription": true
     }
   },
+  "2146": {
+    "skillEffectId": 2146,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "DamageLimit",
+          "parameter": {
+            "value": 5000,
+            "affectDotDamage": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 178,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "ダメージ上限5000（死亡後も継続、ドットダメージにも適用）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": true,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ダメージ上限5000",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "受けるダメージの上限が5000になる。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "3001": {
     "skillEffectId": 3001,
     "skillEffectJson": {
@@ -115160,6 +115204,96 @@
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
+    }
+  },
+  "5141": {
+    "skillEffectId": 5141,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 50
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [
+        5
+      ],
+      "parameter": false,
+      "description": "ATKダウン（システム効果）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        2
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATKダウン",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATKが0.5倍になる。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "5142": {
+    "skillEffectId": 5142,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Silence",
+          "parameter": {
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "status_silence",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [
+        9
+      ],
+      "parameter": false,
+      "description": "沈黙（全スキル封印）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        1
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
     }
   },
   "6001": {
