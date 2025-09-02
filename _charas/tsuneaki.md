@@ -28,7 +28,7 @@ heroes:
     though he is an alien. He willingly becomes a pawn of the government and lives in the shadow, dreaming that one day a world that 
     transcends the boundaries of race and position will be realized.</span></p>
 
-  extra_sprites: fg_tsuneaki_h01_skin2,fg_tsuneaki_h01_skin3,fg_tsuneaki_h01_skin4
+  extra_sprites: fg_tsuneaki_h01_skin2,fg_tsuneaki_h01_skin3,fg_tsuneaki_h01_skin4,fg_tsuneaki_h01_skin5,fg_tsuneaki_h01_skin6
 - stockId: 11402
   extra_sprites: fg_tsuneakiRookies2408_h01_skin2,fg_tsuneakiRookies2408_h01_skin3,fg_tsuneakiRookies2408_h02_skin2
 sidekicks:
