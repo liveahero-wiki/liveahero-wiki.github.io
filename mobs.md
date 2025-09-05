@@ -63,6 +63,12 @@ sprites="fg_kaibutsuBirdBigEarth_h01,fg_kaibutsuBirdBigFire_h01,fg_kaibutsuBirdB
 sprites="fg_kaibutsuBirdSmallEarth_h01,fg_kaibutsuBirdSmallFire_h01,fg_kaibutsuBirdSmallLight_h01,fg_kaibutsuBirdSmallShadow_h01,fg_kaibutsuBirdSmallWater_h01"
 %}
 
+## Bird Kaibutsu (Small Gen)
+
+{% include hero-infobox-unreleased.html name="Small Gen Bird Kaibutsu" mob=true
+sprites="fg_kaibutsuBirdGenSmallEarth_h01,fg_kaibutsuBirdGenSmallFire_h01,fg_kaibutsuBirdGenSmallLight_h01,fg_kaibutsuBirdGenSmallShadow_h01,fg_kaibutsuBirdGenSmallWater_h01"
+%}
+
 ### Cetus/Plesiosaur Kaibutsu
 
 {% include hero-infobox-unreleased.html name="Plesiosaur Kaibutsu" mob=true
