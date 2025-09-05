@@ -53,7 +53,7 @@ jobs:
       run: JEKYLL_ENV=production bundle exec jekyll build --future
 
     - name: Publish (preview)
-      if: ${{ github.event_name == 'pull_request' and github.event.pull_request.user.login == github.event.pull_request.head.repo.owner.login }}
+      if: ${{ github.event_name == 'pull_request' && github.event.pull_request.user.login == github.event.pull_request.head.repo.owner.login }}
       run: npm run netlify -- deploy --dir=_site --alias ${{ github.ref_name }}
       env:
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
