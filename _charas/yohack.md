@@ -61,8 +61,7 @@ TRAIN = "I'm not gonna go easy on ya!"
 TRAINED = "A-aaiieee~! Please be gentleee! "
 EVENTA = "This is my first time meeting an operator in the field!<br>Let's work hard on security at the museum!<br>Oh, and we can go to the party together after! Yay!"
 EVENTB = "Masquerade? Like wearing masks and dancing?<br>Yes, I understand it! I've never done it before.<br>Leave it to me! I'm sure we'll figure it out!"
-EVENTC = "Your job is to go around the workshops and collect corsages, right?<br>
-I see, I totally understand! We can be useful in other ways besides security!"
+EVENTC = "Your job is to go around the workshops and collect corsages, right?<br>I see, I totally understand! We can be useful in other ways besides security!"
 EVENTD = "Yay, we did a great job! The folks at Cloge were happy too,<br>and I'm so glad I got to work with the operator!"
 %}
 
