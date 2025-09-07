@@ -9,8 +9,12 @@ additional_scripts:
   - https://captcha.gurl.eu.org/cap.min.js
 ---
 {% include header.html %}
-<main>
+<main class="content__area">
 <style>
+#surveyContainer {
+  max-width: 900px;
+  position: relative;
+}
 #languageSelect {
   position: absolute;
   top: 10px;
@@ -19,7 +23,6 @@ additional_scripts:
   padding: 5px;
 }
 </style>
-<div id="surveyContainer">
     <aside class="toolbar clearfix">
     <button class="menu-button" title="Open Menu" aria-label="Open Menu">
         <span aria-hidden="true"><svg height="16" viewBox="0 0 12 16" width="12" xmlns="http://www.w3.org/2000/svg"><path d="m11.41 9h-10.82c-.59 0-.59-.41-.59-1s0-1 .59-1h10.81c.59 0 .59.41.59 1s0 1-.59 1zm0-4h-10.82c-.59 0-.59-.41-.59-1s0-1 .59-1h10.81c.59 0 .59.41.59 1s0 1-.59 1zm-10.82 6h10.81c.59 0 .59.41.59 1s0 1-.59 1h-10.81c-.59 0-.59-.41-.59-1s0-1 .59-1z"/></svg></span>
@@ -27,7 +30,7 @@ additional_scripts:
     </button>
     <a class="github-button" href="{{ site.github_repo }}/blob/master/{{ page.path }}?plain=1">View source</a>
     </aside>
-</div>
+    <div id="surveyContainer"></div>
 </main>
 <script defer src="https://rongjie-survey-platform.netlify.app/lah-2025.js"></script>
 {% include footer.html %}
