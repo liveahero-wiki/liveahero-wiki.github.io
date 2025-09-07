@@ -55,8 +55,31 @@ jobs:
     - name: check name
       run: echo "1st=${{ github.event.pull_request.user.login }}, 2nd=${{ github.event.pull_request.head.repo.owner.login }}"
 
+    - name: Check if PR author is a member of the 'committers' team
+      id: team_check
+      run: |
+        user_is_committer=false
+        org_name="your-organization"
+        team_slug="committers"
+        pr_author="${{ github.event.pull_request.user.login }}"
+
+        # Use the GitHub CLI to check team membership
+        gh_response=$(gh api \
+          --method GET \
+          /orgs/$org_name/teams/$team_slug/members/$pr_author \
+          --header 'Accept: application/vnd.github.v3+json' \
+          --silent || echo "not_found")
+
+        if [ "$gh_response" != "not_found" ]; then
+          user_is_committer=true
+        fi
+
+        echo "user_is_committer=$user_is_committer" >> $GITHUB_OUTPUT
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Publish (preview)
-      if: github.event_name == 'pull_request' && github.event.pull_request.user.login == github.event.pull_request.head.repo.owner.login
+      if: github.event_name == 'pull_request' && steps.team_check.outputs.user_is_committer == 'true'
       run: npm run netlify -- deploy --dir=_site --alias ${{ github.ref_name }}
       env:
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
