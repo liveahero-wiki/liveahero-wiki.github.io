@@ -12,7 +12,6 @@ additional_scripts:
 <main class="content__area">
 <style>
 #surveyContainer {
-  max-width: 900px;
   position: relative;
 }
 #languageSelect {
@@ -31,7 +30,9 @@ additional_scripts:
     </button>
     <a class="github-button" href="{{ site.github_repo }}/blob/master/{{ page.path }}?plain=1">View source</a>
     </aside>
-    <div id="surveyContainer"></div>
+    <div id="surveyContainer">
+      <h1>Loading...</h1>
+    </div>
 </div>
 </main>
 <script defer src="https://rongjie-survey-platform.netlify.app/lah-2025.js"></script>
