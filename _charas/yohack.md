@@ -65,7 +65,7 @@ EVENTC = "Your job is to go around the workshops and collect corsages, right?<br
 EVENTD = "Yay, we did a great job! The folks at Cloge were happy too,<br>and I'm so glad I got to work with the operator!"
 %}
 
-{% include voice-table.html resourceName="yohackLastResort2506"
+{% include voice-table.html resourceName="yohackLastResort25067th"
 h_gachaResult = "Come on, take my hand!<br>We'll ride out any storm,<br>and I'll take you to a place where you can smile again!"
 s_gachaResult = "Trouble at the beach, huh? I completely understand!<br>I'll take care of everything, so just relax and trust me Operator!"
 salesStart = "Anyone out there in trouble?"
@@ -75,6 +75,7 @@ action = "It's my turn!"
 attack = "Yah!"
 skill = "	I'll overcome it!"
 special = "I won't leave you alone!<br>Unlock<br>Omnes Exitus!"
+special2 = "I'll give it my all!"
 smallDamage = "Uwah!"
 bigDamage = "It's going to capsize!!"
 win = "I drove perfectly! Hehehe!<br>How about we just drive to the venue together like this!"
