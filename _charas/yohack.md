@@ -65,7 +65,7 @@ EVENTC = "Your job is to go around the workshops and collect corsages, right?<br
 EVENTD = "Yay, we did a great job! The folks at Cloge were happy too,<br>and I'm so glad I got to work with the operator!"
 %}
 
-{% include voice-table.html resourceName="yohackLastResort25067th"
+{% include voice-table.html resourceName="yohackLastResort25067"
 h_gachaResult = "Come on, take my hand!<br>We'll ride out any storm,<br>and I'll take you to a place where you can smile again!"
 s_gachaResult = "Trouble at the beach, huh? I completely understand!<br>I'll take care of everything, so just relax and trust me Operator!"
 salesStart = "Anyone out there in trouble?"
