@@ -10,7 +10,7 @@ sidekicks:
 
 {% include voice-table.html resourceName="sterio"
 h_gachaResult = "I'm Sterio, a hunter hero. It's my job to protect you.<br>I'll be counting on you! Opereta... Opere... It's hard to say! Is Ope okay?"
-s_gachaResult = "Nice to meet you. I'm Stelio the hound. I'm not a dog, I'm a space hunter.<br>Never heard of us? Well then, let me get my brother to tell you all about it!"
+s_gachaResult = "Nice to meet you. I'm Sterio the hound. I'm not a dog, I'm a space hunter.<br>Never heard of us? Well then, let me get my brother to tell you all about it!"
 salesStart = "Business! Business! Business! Does business mean walking around?"
 salesEnd = "I'm back, I'm back-! Time for a nap!"
 battleStart = "It's my job to chase down prey! I'll show you the power of a hunting dog!"
