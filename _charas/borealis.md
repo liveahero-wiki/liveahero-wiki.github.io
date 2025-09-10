@@ -53,7 +53,7 @@ sidekicks:
 h_gachaResult = "I am Borealis, the one who take command.<br>Your sound…<br>It's very nostalgic.<br>It would be an honor to be on stage with you."
 s_gachaResult = "Do you wish for my performance, operator?<br>Now, let's tune up for the next concert......<br>Sidekick duty?<br>Yeah, I will do that later."
 salesStart = "I have the setlist memorized."
-salesEnd = "The performance ended with a thunderous applause."
+salesEnd = "The performance ended with thunderous applause."
 battleStart = "The curtain rises. Now, let me show you the ultimate sound."
 action = "Let's go!"
 attack = "That's ear grating!"
