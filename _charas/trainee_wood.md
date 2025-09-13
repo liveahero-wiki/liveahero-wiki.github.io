@@ -1,6 +1,8 @@
 ---
 title: Wood Trainee
 characterId: 78
+type: humanoid
+gender: male
 heroes:
 - stockId: 10781
   BIO_H01: |-

@@ -1,6 +1,8 @@
 ---
 title: Shadow Wrestler
 characterId: 197
+type: humanoid
+gender: male
 heroes:
 - stockId: 11971
 sidekicks:

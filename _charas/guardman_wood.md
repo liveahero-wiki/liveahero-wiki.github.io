@@ -1,6 +1,8 @@
 ---
 title: Wood Guardman
 characterId: 56
+type: humanoid
+gender: male
 heroes:
 - stockId: 10561
   BIO_H01: |-

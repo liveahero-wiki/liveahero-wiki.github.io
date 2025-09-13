@@ -1,6 +1,8 @@
 ---
 title: Toshu
 characterId: 13
+type: anthro
+gender: male
 occupation: Kendo Artist (剣道家)
 h2:
   title: '"Swordman Spirit" Toshu'

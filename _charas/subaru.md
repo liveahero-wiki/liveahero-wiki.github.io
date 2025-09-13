@@ -1,6 +1,8 @@
 ---
 title: Subaru
 characterId: 27
+type: humanoid
+gender: male
 heroes:
 - stockId: 10271
   BIO_H01: |-

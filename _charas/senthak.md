@@ -1,6 +1,8 @@
 ---
 title: Senthak
 characterId: 237
+type: humanoid
+gender: male
 heroes:
 - stockId: 12371
 sidekicks:

@@ -1,6 +1,8 @@
 ---
 title: Yuhang
 characterId: 183
+type: humanoid
+gender: male
 heroes:
 - stockId: 11831
   BIO_H01: |-

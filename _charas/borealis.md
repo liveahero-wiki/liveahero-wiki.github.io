@@ -1,6 +1,8 @@
 ---
 title: Borealis
 characterId: 82
+type: anthro
+gender: male
 heroes:
 - stockId: 10821
   BIO_H01: |-

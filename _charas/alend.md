@@ -1,6 +1,8 @@
 ---
 title: Alend
 characterId: 236
+type: humanoid
+gender: male
 heroes:
 - stockId: 12361
 sidekicks:

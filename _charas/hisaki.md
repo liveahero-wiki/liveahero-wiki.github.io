@@ -1,6 +1,8 @@
 ---
 title: Hisaki
 characterId: 53
+type: anthro
+gender: male
 h2:
   title: '"Joyful Diver" Hisaki'
 heroes:

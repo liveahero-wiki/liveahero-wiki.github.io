@@ -1,6 +1,8 @@
 ---
 title: Shaft
 characterId: 63
+type: humanoid
+gender: male
 h2:
   title: '"The Runner" Shaft'
 heroes:

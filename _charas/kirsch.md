@@ -1,6 +1,8 @@
 ---
 title: Kirsch
 characterId: 28
+type: anthro
+gender: female
 occupation: 'Pâtissier '
 heroes:
 - stockId: 10281

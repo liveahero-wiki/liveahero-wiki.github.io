@@ -1,6 +1,8 @@
 ---
 title: Santetsu
 characterId: 112
+type: humanoid
+gender: male
 heroes:
 - stockId: 11121
   BIO_H01: |-

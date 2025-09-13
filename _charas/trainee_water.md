@@ -1,6 +1,8 @@
 ---
 title: Water Trainee
 characterId: 77
+type: humanoid
+gender: male
 heroes:
 - stockId: 10771
   BIO_H01: |-

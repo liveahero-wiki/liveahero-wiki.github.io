@@ -1,6 +1,8 @@
 ---
 title: Fire Apprentice
 characterId: 212
+type: humanoid
+gender: male
 heroes:
 - stockId: 12121
 sidekicks:

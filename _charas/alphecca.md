@@ -1,6 +1,8 @@
 ---
 title: Alphecca
 characterId: 62
+type: humanoid
+gender: male
 h2:
   title: '"Tidal Surge" Alphecca'
 heroes:

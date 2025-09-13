@@ -1,6 +1,8 @@
 ---
 title: Joezen
 characterId: 230
+type: anthro
+gender: male
 heroes:
 - stockId: 12301
 sidekicks:

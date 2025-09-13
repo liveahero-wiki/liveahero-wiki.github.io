@@ -1,6 +1,8 @@
 ---
 title: Esperdica
 characterId: 152
+type: anthro
+gender: male
 heroes:
 - stockId: 11521
   BIO_H01: |-

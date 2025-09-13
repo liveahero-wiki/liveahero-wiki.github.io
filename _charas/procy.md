@@ -1,6 +1,8 @@
 ---
 title: Procy
 characterId: 32
+type: anthro
+gender: male
 occupation: Bartender (バーテンダー)
 h2:
   title: '"Swift Knuckle" Procy'

@@ -1,6 +1,8 @@
 ---
 title: Hitomi
 characterId: 19
+type: humanoid
+gender: female
 occupation: Idol Singer
 h2:
   title: '"Ripple Sound" Hitomi'

@@ -1,6 +1,8 @@
 ---
 title: Yohack
 characterId: 190
+type: anthro
+gender: male
 h2:
   title: '"Radiant Rider" Yohack'
 heroes:

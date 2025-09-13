@@ -1,6 +1,8 @@
 ---
 title: Light Android Soldier
 characterId: 157
+type: humanoid
+gender: male
 heroes:
 - stockId: 11571
 sidekicks:

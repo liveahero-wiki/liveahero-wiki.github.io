@@ -1,6 +1,8 @@
 ---
 title: Tsuneaki
 characterId: 140
+type: anthro
+gender: male
 h2:
   title: 'Rokusei'
 heroes:

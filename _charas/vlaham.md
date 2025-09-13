@@ -1,6 +1,8 @@
 ---
 title: Vlaham
 characterId: 248
+type: anthro
+gender: male
 heroes:
 - stockId: 12481
 sidekicks:

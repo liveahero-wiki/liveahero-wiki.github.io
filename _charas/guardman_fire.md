@@ -1,6 +1,8 @@
 ---
 title: Fire Guardman
 characterId: 54
+type: humanoid
+gender: male
 heroes:
 - stockId: 10541
   BIO_H01: |-

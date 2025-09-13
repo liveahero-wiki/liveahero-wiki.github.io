@@ -1,6 +1,8 @@
 ---
 title: Anna
 characterId: 129
+type: humanoid
+gender: female
 heroes:
 - stockId: 11291
   BIO_H01: |-

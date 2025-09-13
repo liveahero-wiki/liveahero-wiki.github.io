@@ -1,6 +1,8 @@
 ---
 title: Wood Android Soldier
 characterId: 156
+type: humanoid
+gender: male
 heroes:
 - stockId: 11561
 sidekicks:

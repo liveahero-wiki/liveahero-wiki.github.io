@@ -1,6 +1,8 @@
 ---
 title: Cerastium
 characterId: 123
+type: humanoid
+gender: female
 heroes:
 - stockId: 11231
   BIO_H01: |-

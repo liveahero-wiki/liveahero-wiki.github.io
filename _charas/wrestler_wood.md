@@ -1,6 +1,8 @@
 ---
 title: Wood Wrestler
 characterId: 195
+type: humanoid
+gender: male
 heroes:
 - stockId: 11951
 sidekicks:

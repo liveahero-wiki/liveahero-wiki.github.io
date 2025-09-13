@@ -1,6 +1,8 @@
 ---
 title: Ryekie
 characterId: 4
+type: anthro
+gender: male
 occupation: Hero Office Employee (Salesperson)
 h2:
   title: '"Drunken Tiger" Ryekie'

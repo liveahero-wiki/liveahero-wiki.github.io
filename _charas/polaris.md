@@ -1,6 +1,8 @@
 ---
 title: Polaris Mask
 characterId: 15
+type: humanoid
+gender: male
 occupation: Professional Wrestler (プロレスラー)
 permalink: /charas/polaris_mask/
 h2:

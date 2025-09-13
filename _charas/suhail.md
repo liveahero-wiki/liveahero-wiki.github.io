@@ -1,6 +1,8 @@
 ---
 title: Suhail
 characterId: 30
+type: humanoid
+gender: male
 h2:
   title: '"Arousal Voice" Suhail'
 heroes:

@@ -1,6 +1,8 @@
 ---
 title: Bygul
 characterId: 207
+type: anthro
+gender: male
 heroes:
 - stockId: 12071
 sidekicks:

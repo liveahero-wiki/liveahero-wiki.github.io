@@ -1,6 +1,8 @@
 ---
 title: Phein
 characterId: 128
+type: anthro
+gender: male
 heroes:
 - stockId: 11281
   BIO_H01: |-

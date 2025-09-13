@@ -1,6 +1,8 @@
 ---
 title: Pubraseer
 characterId: 73
+type: anthro
+gender: male
 h2:
   title: "\"Star Insignia\" Pubraseer"
 heroes:

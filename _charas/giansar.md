@@ -1,6 +1,8 @@
 ---
 title: Giansar
 characterId: 124
+type: anthro
+gender: male
 h2:
   title: "\"Shattering Horizons\" Giansar"
 heroes:

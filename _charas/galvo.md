@@ -1,6 +1,8 @@
 ---
 title: Galvo
 characterId: 169
+type: anthro
+gender: male
 heroes:
 - stockId: 11691
   BIO_H01: |-

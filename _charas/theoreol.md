@@ -1,6 +1,8 @@
 ---
 title: Theoreol
 characterId: 161
+type: other
+gender: male
 heroes:
 - stockId: 11611
   BIO_H01: |-
