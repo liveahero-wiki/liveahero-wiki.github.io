@@ -1,6 +1,8 @@
 ---
 title: Ryusei
 characterId: 198
+type: humanoid
+gender: male
 heroes:
 - stockId: 11981
 sidekicks:

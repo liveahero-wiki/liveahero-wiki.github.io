@@ -1,6 +1,8 @@
 ---
 title: Kyoichi
 characterId: 10
+type: humanoid
+gender: male
 occupation: Elementary School Teacher (小学校教諭)
 h2:
   title: '"Active Agent" Kyoichi'

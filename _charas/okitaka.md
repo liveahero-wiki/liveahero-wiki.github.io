@@ -1,6 +1,8 @@
 ---
 title: Okitaka
 characterId: 75
+type: humanoid
+gender: male
 h2:
   title: '"Mobile Soldier" Okitaka'
 heroes:

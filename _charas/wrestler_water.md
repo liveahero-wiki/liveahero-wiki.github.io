@@ -1,6 +1,8 @@
 ---
 title: Water Wrestler
 characterId: 194
+type: humanoid
+gender: male
 heroes:
 - stockId: 11941
 sidekicks:

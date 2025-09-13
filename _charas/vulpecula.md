@@ -1,6 +1,8 @@
 ---
 title: Vulpecula
 characterId: 65
+type: anthro
+gender: male
 heroes:
 - stockId: 10651
   BIO_H01: |-

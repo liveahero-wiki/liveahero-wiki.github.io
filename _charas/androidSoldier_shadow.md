@@ -1,6 +1,8 @@
 ---
 title: Shadow Android Soldier
 characterId: 158
+type: humanoid
+gender: male
 heroes:
 - stockId: 11581
 sidekicks:

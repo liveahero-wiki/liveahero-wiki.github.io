@@ -1,6 +1,8 @@
 ---
 title: Sterio
 characterId: 211
+type: anthro
+gender: male
 heroes:
 - stockId: 12111
 sidekicks:

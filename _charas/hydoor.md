@@ -1,6 +1,8 @@
 ---
 title: Hydoor
 characterId: 17
+type: anthro
+gender: male
 h2:
   title: '"Roaring Storm" Hydoor'
 heroes:

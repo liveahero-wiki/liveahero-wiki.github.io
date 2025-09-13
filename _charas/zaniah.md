@@ -1,6 +1,8 @@
 ---
 title: Zaniah
 characterId: 182
+type: anthro
+gender: female
 heroes:
 - stockId: 11821
   BIO_H01: |-

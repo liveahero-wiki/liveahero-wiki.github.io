@@ -1,6 +1,8 @@
 ---
 title: Canes
 characterId: 210
+type: humanoid
+gender: male
 heroes:
 - stockId: 12101
   extra_sprites: fg_canes_h01_skin2,fg_canes_h01_skin3

@@ -1,6 +1,8 @@
 ---
 title: Kiloc
 characterId: 229
+type: humanoid
+gender: male
 heroes:
 - stockId: 12291
   BIO_H01: |-

@@ -1,6 +1,8 @@
 ---
 title: Gomeisa
 characterId: 33
+type: humanoid
+gender: male
 h2:
   title: '"Holy Frost" Gomeisa'
 heroes:

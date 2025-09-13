@@ -1,6 +1,8 @@
 ---
 title: Light Diver
 characterId: 119
+type: humanoid
+gender: male
 heroes:
 - stockId: 11191
 sidekicks:

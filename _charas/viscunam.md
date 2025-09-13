@@ -1,6 +1,8 @@
 ---
 title: Viscunam
 characterId: 125
+type: anthro
+gender: male
 heroes:
 - stockId: 11251
   BIO_H01: |-

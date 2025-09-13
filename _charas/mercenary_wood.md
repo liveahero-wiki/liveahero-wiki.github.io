@@ -1,6 +1,8 @@
 ---
 title: Wood Mercenary
 characterId: 68
+type: anthro
+gender: male
 heroes:
 - stockId: 10681
   BIO_H01: |-

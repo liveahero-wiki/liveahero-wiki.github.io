@@ -1,6 +1,8 @@
 ---
 title: Valoray
 characterId: 249
+type: anthro
+gender: male
 heroes:
 - stockId: 12491
 sidekicks:

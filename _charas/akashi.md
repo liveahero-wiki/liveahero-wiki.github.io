@@ -1,6 +1,8 @@
 ---
 title: Akashi
 characterId: 1
+type: humanoid
+gender: male
 occupation: University Student (Part-timer)
 Affiliation Office: Parallel Flight
 h2:

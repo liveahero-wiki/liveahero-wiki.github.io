@@ -1,6 +1,8 @@
 ---
 title: Narihito
 characterId: 29
+type: humanoid
+gender: male
 occupation: Reporter (取材記者)
 h2:
   title: '"The Comet" Narihito'

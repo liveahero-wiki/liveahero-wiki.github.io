@@ -1,6 +1,8 @@
 ---
 title: Exio
 characterId: 35
+type: humanoid
+gender: male
 heroes:
 - stockId: 10351
   extra_sprites: fg_ADV_exio_h01,fg_ADV_exio_h01_skin1,fg_ADV_exio_h01_skin2

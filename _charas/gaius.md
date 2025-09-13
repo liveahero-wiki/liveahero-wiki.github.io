@@ -1,6 +1,8 @@
 ---
 title: Gaius
 characterId: 115
+type: humanoid
+gender: male
 h2:
   title: "\"Majestic Gale\" Gaius"
 heroes:

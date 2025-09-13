@@ -1,6 +1,8 @@
 ---
 title: Shoen
 characterId: 12
+type: anthro
+gender: male
 occupation: Calligrapher (書道家)
 h2:
   title: '"Secret Agent" Shoen'

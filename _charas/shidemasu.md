@@ -1,6 +1,8 @@
 ---
 title: Shidemasu
 characterId: 206
+type: humanoid
+gender: male
 heroes:
 - stockId: 12061
 sidekicks:

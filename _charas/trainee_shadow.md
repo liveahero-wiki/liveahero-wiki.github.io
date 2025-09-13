@@ -1,6 +1,8 @@
 ---
 title: Shadow Trainee
 characterId: 80
+type: humanoid
+gender: male
 heroes:
 - stockId: 10801
   BIO_H01: |-

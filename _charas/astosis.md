@@ -1,6 +1,8 @@
 ---
 title: Astosis
 characterId: 189
+type: anthro
+gender: male
 heroes:
 - stockId: 11891
   BIO_H01: |-

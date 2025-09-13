@@ -1,6 +1,8 @@
 ---
 title: Maculata
 characterId: 59
+type: anthro
+gender: female
 heroes:
 - stockId: 10591
   BIO_H01: |-

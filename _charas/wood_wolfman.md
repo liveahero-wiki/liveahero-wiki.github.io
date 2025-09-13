@@ -1,6 +1,8 @@
 ---
 title: Wood Wolfman
 characterId: 43
+type: anthro
+gender: male
 heroes:
 - stockId: 10431
   BIO_H01: |-

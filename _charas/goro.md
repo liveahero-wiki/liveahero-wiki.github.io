@@ -1,6 +1,8 @@
 ---
 title: Goro
 characterId: 23
+type: anthro
+gender: male
 occupation: Carpenter
 h2:
   title: '"Delightful Performer" Goro'

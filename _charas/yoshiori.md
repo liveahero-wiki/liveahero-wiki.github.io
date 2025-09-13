@@ -1,6 +1,8 @@
 ---
 title: Yoshiori
 characterId: 72
+type: humanoid
+gender: male
 h2:
   title: '"The Brave Guard" Yoshiori'
 heroes:

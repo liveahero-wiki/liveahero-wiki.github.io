@@ -1,6 +1,8 @@
 ---
 title: Saotome
 characterId: 261
+type: humanoid
+gender: male
 heroes:
 - stockId: 12611
 sidekicks:

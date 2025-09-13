@@ -1,6 +1,8 @@
 ---
 title: Shadow Diver
 characterId: 120
+type: humanoid
+gender: male
 heroes:
 - stockId: 11201
 sidekicks:

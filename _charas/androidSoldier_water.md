@@ -1,6 +1,8 @@
 ---
 title: Water Android Soldier
 characterId: 155
+type: humanoid
+gender: male
 heroes:
 - stockId: 11551
 sidekicks:

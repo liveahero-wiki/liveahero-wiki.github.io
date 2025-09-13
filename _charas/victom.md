@@ -1,6 +1,8 @@
 ---
 title: Victom
 characterId: 9
+type: humanoid
+gender: male
 occupation: Rescue squad captain
 h2:
   title: '"Dynamic Rescue" Victom'

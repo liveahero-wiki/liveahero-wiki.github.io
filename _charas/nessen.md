@@ -1,6 +1,8 @@
 ---
 title: Nessen
 characterId: 51
+type: humanoid
+gender: male
 h2:
   title: '"Moonlight Shadow" Nessen'
 heroes:

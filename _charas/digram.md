@@ -1,6 +1,8 @@
 ---
 title: Digram
 characterId: 24
+type: humanoid
+gender: male
 occupation: Railroad Staff
 heroes:
 - stockId: 10241

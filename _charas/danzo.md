@@ -1,6 +1,8 @@
 ---
 title: Danzo
 characterId: 168
+type: humanoid
+gender: male
 h2:
   title: '"Bardic Wanderlust" Danzo'
 heroes:

@@ -1,6 +1,8 @@
 ---
 title: Seiichiro
 characterId: 114
+type: humanoid
+gender: male
 sidekicks:
 - stockId: 11141
   BIO_S01: |-

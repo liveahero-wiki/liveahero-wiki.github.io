@@ -1,6 +1,8 @@
 ---
 title: Fire Wrestler
 characterId: 193
+type: humanoid
+gender: male
 heroes:
 - stockId: 11931
 sidekicks:

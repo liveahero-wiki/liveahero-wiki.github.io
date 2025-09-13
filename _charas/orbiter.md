@@ -1,6 +1,8 @@
 ---
 title: Orbiter
 characterId: 217
+type: humanoid
+gender: male
 heroes:
 - stockId: 12171
   BIO_H01: |-

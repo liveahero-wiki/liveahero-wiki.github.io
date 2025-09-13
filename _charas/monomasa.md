@@ -1,6 +1,8 @@
 ---
 title: Monomasa
 characterId: 31
+type: anthro
+gender: male
 h2:
   title: '"Starry Night" Monomasa'
 heroes:

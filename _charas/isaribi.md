@@ -1,6 +1,8 @@
 ---
 title: Isaribi
 characterId: 22
+type: anthro
+gender: male
 h2:
   title: '"Blazing Beacon" Isaribi'
 occupation: Fisherman

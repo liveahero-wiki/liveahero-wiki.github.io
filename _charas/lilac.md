@@ -1,6 +1,8 @@
 ---
 title: Lilac
 characterId: 101
+type: humanoid
+gender: male
 h2:
   title: '"Blessed Rain" Lilac'
 heroes:

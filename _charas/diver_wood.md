@@ -1,6 +1,8 @@
 ---
 title: Wood Diver
 characterId: 118
+type: humanoid
+gender: male
 heroes:
 - stockId: 11181
 sidekicks:

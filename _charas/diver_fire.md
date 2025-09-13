@@ -1,6 +1,8 @@
 ---
 title: Fire Diver
 characterId: 116
+type: humanoid
+gender: male
 heroes:
 - stockId: 11161
 sidekicks:

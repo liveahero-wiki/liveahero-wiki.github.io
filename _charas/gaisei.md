@@ -1,6 +1,8 @@
 ---
 title: Gaisei
 characterId: 191
+type: humanoid
+gender: male
 heroes:
 - stockId: 11911
   BIO_H01: |-
