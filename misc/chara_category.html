@@ -1,0 +1,80 @@
+---
+title: Character category
+banner: true
+---
+
+<table>
+<tr><th>Gender \ Type</th><th>Humanoid</th><th>Anthro</th><th>Other</th></tr>
+<tr>
+    <td>Male</td>
+    <td>
+    {% assign temp = site.charas | where: "type", "humanoid" | where: "gender", "male" %}
+    <p>Total: {{ temp.size | default: 0 }}</p>
+    {% for chara in temp %}
+        <a href="{{ chara.url }}">{{ chara.title }}</a>
+    {% endfor %}
+    </td>
+    <td>
+    {% assign temp = site.charas | where: "type", "anthro" | where: "gender", "male" %}
+    <p>Total: {{ temp.size | default: 0 }}</p>
+    {% for chara in temp %}
+        <a href="{{ chara.url }}">{{ chara.title }}</a>
+    {% endfor %}
+    </td>
+    <td>
+    {% assign temp = site.charas | where: "type", "other" | where: "gender", "male" %}
+    <p>Total: {{ temp.size | default: 0 }}</p>
+    {% for chara in temp %}
+        <a href="{{ chara.url }}">{{ chara.title }}</a>
+    {% endfor %}
+    </td>
+</tr>
+<tr>
+    <td>Female</td>
+    <td>
+    {% assign temp = site.charas | where: "type", "humanoid" | where: "gender", "female" %}
+    <p>Total: {{ temp.size | default: 0 }}</p>
+    {% for chara in temp %}
+        <a href="{{ chara.url }}">{{ chara.title }}</a>
+    {% endfor %}
+    </td>
+    <td>
+    {% assign temp = site.charas | where: "type", "anthro" | where: "gender", "female" %}
+    <p>Total: {{ temp.size | default: 0 }}</p>
+    {% for chara in temp %}
+        <a href="{{ chara.url }}">{{ chara.title }}</a>
+    {% endfor %}
+    </td>
+    <td>
+    {% assign temp = site.charas | where: "type", "other" | where: "gender", "female" %}
+    <p>Total: {{ temp.size | default: 0 }}</p>
+    {% for chara in temp %}
+        <a href="{{ chara.url }}">{{ chara.title }}</a>
+    {% endfor %}
+    </td>
+</tr>
+<tr>
+    <td>Other</td>
+    <td>
+    {% assign temp = site.charas | where: "type", "humanoid" | where: "gender", "other" %}
+    <p>Total: {{ temp.size | default: 0 }}</p>
+    {% for chara in temp %}
+        <a href="{{ chara.url }}">{{ chara.title }}</a>
+    {% endfor %}
+    </td>
+    <td>
+    {% assign temp = site.charas | where: "type", "anthro" | where: "gender", "other" %}
+    <p>Total: {{ temp.size | default: 0 }}</p>
+    {% for chara in temp %}
+        <a href="{{ chara.url }}">{{ chara.title }}</a>
+    {% endfor %}
+    </td>
+    <td>
+    {% assign temp = site.charas | where: "type", "other" | where: "gender", "other" %}
+    <p>Total: {{ temp.size | default: 0 }}</p>
+    {% for chara in temp %}
+        <a href="{{ chara.url }}">{{ chara.title }}</a>
+    {% endfor %}
+    </td>
+</tr>
+</table>
