@@ -93,6 +93,27 @@ module Jekyll
 
   module CharaFilter
 
+    def charaPageToIcon(page)
+      if page.data["unreleased"]
+        img = page.data["icon"]
+        if img
+          img = "/assets/img/unreleased/#{img}.png" # unreleased chara
+        else
+          img = "/cdn/Sprite/icon_unknown_card.png"
+        end
+        return img
+      end
+      characterId = page.data["characterId"]
+      cardId = (100 * characterId) + 100011
+      resourceName = CharaLinkTag.sidekick_master(@context).dig(cardId.to_s, "resourceName")
+      if resourceName
+        img = "/cdn/Sprite/icon_#{resourceName}_s01.png"
+      else
+        img = "/cdn/Sprite/icon_unknown_card.png"
+      end
+      return img
+    end
+
     def characterIdToPage(id)
       CharaMap.characterId_to_pages[id]
     end
