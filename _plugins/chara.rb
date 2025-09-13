@@ -94,8 +94,8 @@ module Jekyll
   module CharaFilter
 
     def charaPageToIcon(page)
-      if page.data["unreleased"]
-        img = page.data["icon"]
+      if page["unreleased"]
+        img = page["icon"]
         if img
           img = "/assets/img/unreleased/#{img}.png" # unreleased chara
         else
@@ -103,7 +103,7 @@ module Jekyll
         end
         return img
       end
-      characterId = page.data["characterId"]
+      characterId = page["characterId"]
       cardId = (100 * characterId) + 100011
       resourceName = CharaLinkTag.sidekick_master(@context).dig(cardId.to_s, "resourceName")
       if resourceName
