@@ -22,7 +22,12 @@ additional_scripts:
   z-index: 1000;
   padding: 5px;
 }
+.loading-area {
+  padding: 40px;
+  text-align: center;
+}
 .load-spinner {
+  margin: auto;
   width: 100px;
   height: 100px;
   border: 8px solid #FFF;
@@ -49,8 +54,10 @@ additional_scripts:
     <a class="github-button" href="{{ site.github_repo }}/blob/master/{{ page.path }}?plain=1">View source</a>
     </aside>
     <div id="surveyContainer">
+      <div class="loading-area">
       <h1>Loading...</h1>
       <div class="load-spinner"></div>
+      </div>>
     </div>
 </div>
 </main>
