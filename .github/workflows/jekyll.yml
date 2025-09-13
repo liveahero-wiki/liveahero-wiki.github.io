@@ -7,6 +7,8 @@ on:
   schedule:
     - cron: '0 */6 * * *'
   pull_request:
+  pull_request_target:
+    types: [labeled]
 
 jobs:
   build:
@@ -52,12 +54,12 @@ jobs:
     - name: Build site
       run: JEKYLL_ENV=production bundle exec jekyll build --future
 
-    #- name: Publish (preview)
-    #  if: ${{ github.event_name == 'pull_request' }}
-    #  run: npm run netlify -- deploy --dir=_site --alias ${{ github.ref_name }}
-    #  env:
-    #    NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-    #    NETLIFY_AUTH_TOKEN:  ${{ secrets.NETLIFY_AUTH_TOKEN }}
+    - name: Publish (preview)
+      if: github.event_name == 'pull_request' && contains(join(github.event.pull_request.labels.*.name, ','), 'committer-approved')
+      run: npm run netlify -- deploy --dir=_site --alias ${{ github.ref_name }}
+      env:
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        NETLIFY_AUTH_TOKEN:  ${{ secrets.NETLIFY_AUTH_TOKEN }}
 
     - name: Publish to Github Pages
       if: ${{ github.ref == 'refs/heads/master' }}

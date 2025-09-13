@@ -34,6 +34,7 @@
   <link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
   <style>{% include style/tabs.min.css %}</style>
   <style>{% include style/tippy.min.css %}</style>
+  {% for s in page.additional_styles %}<link rel="stylesheet" href="{{ s }}">{% endfor %}
 </head>
 
 <body>
