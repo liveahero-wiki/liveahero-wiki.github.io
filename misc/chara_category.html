@@ -12,26 +12,39 @@ wide_content: true
 }
 </style>
 
-<table class="chara-category">
+{% assign all_chara = "" | split: "," %}
+{% for chara in site.charas %}
+    {% if chara.unreleased %}
+        {% assign all_chara = all_chara | push: chara %}
+        {% continue %}
+    {% endif %}
+    {% assign cardId = chara.characterId | times: 100 | plus: 100011 | downcase %}
+    {% assign sidekick = site.data.SidekickMaster[cardId] %}
+    {% if sidekick.rarity >= 3 %}
+        {% assign all_chara = all_chara | push: chara %}
+    {% endif %}
+{% endfor %}
+
+<table class="chara-category bordered">
 <tr><th>Gender \ Type</th><th>Humanoid</th><th>Anthro</th><th>Other</th></tr>
 <tr>
     <td>Male</td>
     <td>
-    {% assign temp = site.charas | where: "type", "humanoid" | where: "gender", "male" %}
+    {% assign temp = all_chara | where: "type", "humanoid" | where: "gender", "male" %}
     <p>Total: {{ temp.size | default: 0 }}</p>
     {% for chara in temp %}
         <a class="item" href="{{ chara.url }}"><img src="{{ chara | charaPageToIcon }}" loading="lazy" widt="32" height="32"> {{ chara.title }}</a>
     {% endfor %}
     </td>
     <td>
-    {% assign temp = site.charas | where: "type", "anthro" | where: "gender", "male" %}
+    {% assign temp = all_chara | where: "type", "anthro" | where: "gender", "male" %}
     <p>Total: {{ temp.size | default: 0 }}</p>
     {% for chara in temp %}
         <a class="item" href="{{ chara.url }}"><img src="{{ chara | charaPageToIcon }}" loading="lazy" widt="32" height="32"> {{ chara.title }}</a>
     {% endfor %}
     </td>
     <td>
-    {% assign temp = site.charas | where: "type", "other" | where: "gender", "male" %}
+    {% assign temp = all_chara | where: "type", "other" | where: "gender", "male" %}
     <p>Total: {{ temp.size | default: 0 }}</p>
     {% for chara in temp %}
         <a class="item" href="{{ chara.url }}"><img src="{{ chara | charaPageToIcon }}" loading="lazy" widt="32" height="32"> {{ chara.title }}</a>
@@ -41,21 +54,21 @@ wide_content: true
 <tr>
     <td>Female</td>
     <td>
-    {% assign temp = site.charas | where: "type", "humanoid" | where: "gender", "female" %}
+    {% assign temp = all_chara | where: "type", "humanoid" | where: "gender", "female" %}
     <p>Total: {{ temp.size | default: 0 }}</p>
     {% for chara in temp %}
         <a class="item" href="{{ chara.url }}"><img src="{{ chara | charaPageToIcon }}" loading="lazy" widt="32" height="32"> {{ chara.title }}</a>
     {% endfor %}
     </td>
     <td>
-    {% assign temp = site.charas | where: "type", "anthro" | where: "gender", "female" %}
+    {% assign temp = all_chara | where: "type", "anthro" | where: "gender", "female" %}
     <p>Total: {{ temp.size | default: 0 }}</p>
     {% for chara in temp %}
         <a class="item" href="{{ chara.url }}"><img src="{{ chara | charaPageToIcon }}" loading="lazy" widt="32" height="32"> {{ chara.title }}</a>
     {% endfor %}
     </td>
     <td>
-    {% assign temp = site.charas | where: "type", "other" | where: "gender", "female" %}
+    {% assign temp = all_chara | where: "type", "other" | where: "gender", "female" %}
     <p>Total: {{ temp.size | default: 0 }}</p>
     {% for chara in temp %}
         <a class="item" href="{{ chara.url }}"><img src="{{ chara | charaPageToIcon }}" loading="lazy" widt="32" height="32"> {{ chara.title }}</a>
@@ -65,21 +78,21 @@ wide_content: true
 <tr>
     <td>Other</td>
     <td>
-    {% assign temp = site.charas | where: "type", "humanoid" | where: "gender", "other" %}
+    {% assign temp = all_chara | where: "type", "humanoid" | where: "gender", "other" %}
     <p>Total: {{ temp.size | default: 0 }}</p>
     {% for chara in temp %}
         <a class="item" href="{{ chara.url }}"><img src="{{ chara | charaPageToIcon }}" loading="lazy" widt="32" height="32"> {{ chara.title }}</a>
     {% endfor %}
     </td>
     <td>
-    {% assign temp = site.charas | where: "type", "anthro" | where: "gender", "other" %}
+    {% assign temp = all_chara | where: "type", "anthro" | where: "gender", "other" %}
     <p>Total: {{ temp.size | default: 0 }}</p>
     {% for chara in temp %}
         <a class="item" href="{{ chara.url }}"><img src="{{ chara | charaPageToIcon }}" loading="lazy" widt="32" height="32"> {{ chara.title }}</a>
     {% endfor %}
     </td>
     <td>
-    {% assign temp = site.charas | where: "type", "other" | where: "gender", "other" %}
+    {% assign temp = all_chara | where: "type", "other" | where: "gender", "other" %}
     <p>Total: {{ temp.size | default: 0 }}</p>
     {% for chara in temp %}
         <a class="item" href="{{ chara.url }}"><img src="{{ chara | charaPageToIcon }}" loading="lazy" widt="32" height="32"> {{ chara.title }}</a>
