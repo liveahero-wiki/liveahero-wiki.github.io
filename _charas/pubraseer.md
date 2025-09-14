@@ -58,12 +58,11 @@ sidekicks:
 
     He is a beastman alien with a cheerful and carefree personality.
 
-    During the spaceship resort's construction, he protected the nearby sea area.
+    During the spaceship resort's construction, he was found adrift and rescued from the nearby sea area.
 
-    He lost his memories pertaining to his time protecting it, and even
-    conversations about it are difficult for him,  but because he has a lot more
-    curiosity than others, he has managed to absorb how to speak, as well as
-    knowledge.
+    He lost his memories from before being rescued, and even
+    conversations are difficult for him, but because he has a lot more
+    curiosity than others, he has managed to absorb many words and knowledge.
 
     Sometimes, he hears impossible to understand words from the pendant he was found
     with, which always give him a headache.
