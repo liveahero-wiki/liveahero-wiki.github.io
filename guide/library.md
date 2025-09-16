@@ -14,6 +14,7 @@ These are notes written by <span class="masked" markdown="0">{% chara_link Exio 
 
 {% include library-info.html key="SUMMARY_1" %}
 {% include library-info.html key="SUMMARY_2" %}
+{% include library-info.html key="SUMMARY_3" %}
 
 ## Person
 
