@@ -1,7 +1,9 @@
 {% assign dim = include.path | image_dimension %}
 <figure>
+    {% if include.clip %}<div class="clip-img">{% endif %}
     <img src="{{ include.path }}" width="{{ dim[0] }}" height="{{ dim[1] }}" loading="lazy"
         {% if include.title %}alt="{{ include.title | xml_escape }}"{% endif %}
     >
+    {% if include.clip %}</div>{% endif %}
     {% if include.title %}<figcaption>{{ include.title }}</figcaption>{% endif %}
 </figure>

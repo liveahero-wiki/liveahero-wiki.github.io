@@ -729,9 +729,11 @@ Other comments in no particular order:
 <summary>Global</summary>
 
 {% include figure-image.html path="/assets/img/survey-2024/all-fav-bar.jpg"
+  clip=true
   title="All Favourites Popularity Ranking (Global)" %}
 
 {% include figure-image.html path="/assets/img/survey-2024/top10-bar.jpg"
+  clip=true
   title="Top 10 Favourites Popularity Ranking (Global)" %}
 
 > Before we start, I realized that once again some people misunderstood my intention for setting the “top 10 favourites” question. Many people who have less than 10 “all favourites” thought they still need to choose exactly 10 characters for “top 10” question, but actually I wanted people to choose “at most 10 characters among their all favourites”: if you have chosen less than 10 characters in first question, you should just choose the same set of characters for the second question.
@@ -802,6 +804,7 @@ Comments:
 - {% chara_link Tsuneaki %} and {% chara_link Sterio %} are pretty high on the ranking too, perhaps due to recency biases as they are featured in the event when the survey was running.
 
 {% include figure-image.html path="/assets/img/survey-2024/all-fav-top-10-2024.jpg"
+  clip=true
   title="All Favourites vs Top 10 (2024)" %}
 
 As we move on to “top 10 favourites” popularity ranking, we can see that it often favours the older characters more. {% chara_link Tsuneaki %} and {% chara_link Sterio %}’s ranking somewhat dropped, while {% chara_link Gaius %} experienced the largest ranking boost this way.
@@ -812,12 +815,14 @@ As we move on to “top 10 favourites” popularity ranking, we can see that it 
 <summary>2023 vs 2024</summary>
 
 {% include figure-image.html path="/assets/img/survey-2024/all-fav-2023-2024.jpg"
+  clip=true
   title="All Favourites (2023 vs 2024)" %}
 
 - It seems that characters that gotten their variant forms between the time when 2023 and 2024 surveys were carried out (such as {% chara_link Polaris Mask %}, {% chara_link Lilac %}, {% chara_link Kalaski %} and {% chara_link Tsuneaki %}) have their ranking boosted quite significantly
   - This further suggests that the amount of character appearance in story and recency biases do play a role in their ranking.
 
 {% include figure-image.html path="/assets/img/survey-2024/top10-2023-2024.jpg"
+  clip=true
   title="Top 10 Favourites (2023 vs 2024)" %}
 </details>
 
@@ -825,6 +830,7 @@ As we move on to “top 10 favourites” popularity ranking, we can see that it 
 <summary>Japan</summary>
 
 {% include figure-image.html path="/assets/img/survey-2024/fav-japan.jpg"
+  clip=true
   title="All Favourites vs Top 10 (Japan only)" %}
 
 - The sample size is not large, but I think it is not wrong to speculate that Japan players are also mostly furry-lovers.
@@ -835,9 +841,11 @@ As we move on to “top 10 favourites” popularity ranking, we can see that it 
 <summary>Female / Non-binary / Other respondents</summary>
 
 {% include figure-image.html path="/assets/img/survey-2024/fav-female.jpg"
+  clip=true
   title="All Favourites vs Top 10 (Female respondents)" %}
 
 {% include figure-image.html path="/assets/img/survey-2024/fav-other.jpg"
+  clip=true
   title="All Favourites vs Top 10 (Non-binary/Other respondents)" %}
 
 The number of non-male respondents is small to begin with, so there are a lot of ties in votes.
@@ -856,11 +864,13 @@ For female respondents, {% chara_link Sensettia %} is number 1 in “All favouri
 <summary>People with less than 10 favourites</summary>
 
 {% include figure-image.html path="/assets/img/survey-2024/fav-less-than-10.jpg"
+  clip=true
   title="Respondents who chose < 10 favourites" %}
 
 In this gacha game that is full of baits for thirsty players, let us applaud these people who can limit the amount of characters they devote their hearts for.
 
 {% include figure-image.html path="/assets/img/survey-2024/top10-less-than-10-vs-exactly-10.jpg"
+  clip=true
   title="Top 10 (those who chose < 10 vs those who chose exactly 10)" %}
 
 {% chara_link Gaius %}, {% chara_link Canes %} and {% chara_link Player %} are ranked much higher by those who chose less than 10 favourites.
@@ -882,6 +892,7 @@ The popularity poll clearly shows that the game has successfully captured the ma
 <!--- In the context of our analysis, the higher the **lift** value for two characters, it means that **the number of times they are chosen together is higher than what can be explained by their individual popularity**-->
 
 {% include figure-image.html path="/assets/img/survey-2024/top10-heat-map.jpg"
+  clip=true
   title="Lift Heatmap between Any Two Characters" %}
 
 > Pairings whose `Lift` values less than 2.5 are filtered out to keep the heatmap small.
@@ -901,6 +912,7 @@ Groups that have exceptionally high `Lift` values
   - There is a line going from Kyoichi to Lilac in the chart below if `Confidence(Kyoichi, Lilac) > 0.6`
 
 {% include figure-image.html path="/assets/img/survey-2024/top10-bucket-analysis.jpg"
+  clip=true
   title="Lift Heatmap between Any Two Characters" %}
 
 > To keep this chart small, pairings whose `Confidence` value is less than 0.6 are not included here.
