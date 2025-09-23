@@ -1,6 +1,8 @@
 ---
 title: Fire Mercenary
 characterId: 66
+type: anthro
+gender: male
 heroes:
 - stockId: 10661
   BIO_H01: |-

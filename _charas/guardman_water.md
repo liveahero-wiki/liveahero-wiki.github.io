@@ -1,6 +1,8 @@
 ---
 title: Water Guardman
 characterId: 55
+type: humanoid
+gender: male
 heroes:
 - stockId: 10551
   BIO_H01: |-

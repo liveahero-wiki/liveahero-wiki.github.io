@@ -1,6 +1,8 @@
 ---
 title: Barrel
 characterId: 7
+type: anthro
+gender: male
 h2:
   title: '"Cool Gunfighter" Barrel'
 heroes:

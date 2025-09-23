@@ -1,6 +1,8 @@
 ---
 title: Roiker
 characterId: 113
+type: anthro
+gender: male
 heroes:
 - stockId: 11131
   BIO_H01: |-

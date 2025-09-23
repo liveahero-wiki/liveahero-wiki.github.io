@@ -1,6 +1,8 @@
 ---
 title: Light Mercenary
 characterId: 69
+type: anthro
+gender: male
 heroes:
 - stockId: 10691
   BIO_H01: |-

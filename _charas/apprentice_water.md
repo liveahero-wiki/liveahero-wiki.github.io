@@ -1,6 +1,8 @@
 ---
 title: Water Apprentice
 characterId: 213
+type: humanoid
+gender: male
 heroes:
 - stockId: 12131
 sidekicks:

@@ -1,6 +1,8 @@
 ---
 title: Mokdai
 characterId: 2
+type: anthro
+gender: male
 occupation: Video Production Staff
 Affiliation Office: Parallel Flight
 h2:

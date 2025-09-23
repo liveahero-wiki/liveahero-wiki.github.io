@@ -1,6 +1,8 @@
 ---
 title: Houley
 characterId: 266
+type: humanoid
+gender: male
 heroes:
 - stockId: 12661
 sidekicks:

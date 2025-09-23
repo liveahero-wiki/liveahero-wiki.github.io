@@ -1,6 +1,8 @@
 ---
 title: Crowne
 characterId: 5
+type: humanoid
+gender: female
 occupation: Mechanic
 heroes:
 - stockId: 10051

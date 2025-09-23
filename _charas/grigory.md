@@ -1,6 +1,8 @@
 ---
 title: Grigory
 characterId: 170
+type: humanoid
+gender: male
 heroes:
 - stockId: 11701
   BIO_H01: |-

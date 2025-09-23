@@ -1,6 +1,8 @@
 ---
 title: Flamier
 characterId: 11
+type: humanoid
+gender: female
 h2:
   title: '"Flower Dancer" Flamier'
 heroes:

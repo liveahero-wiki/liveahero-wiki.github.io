@@ -1,6 +1,8 @@
 ---
 title: Raizi
 characterId: 153
+type: anthro
+gender: male
 sidekicks:
 - stockId: 11531
   BIO_S01: |-

@@ -1,6 +1,8 @@
 ---
 title: Kouki & Sirius
 characterId: 18
+type: humanoid
+gender: male
 h2:
   title: '"Lightning Blade" Kouki & Sirius'
 occupation: Child actor - Entertainer & Dog entertainer

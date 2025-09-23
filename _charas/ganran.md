@@ -1,6 +1,8 @@
 ---
 title: Ganran
 characterId: 199
+type: humanoid
+gender: male
 heroes:
 - stockId: 11991
 sidekicks:

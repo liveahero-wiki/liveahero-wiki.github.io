@@ -1,6 +1,8 @@
 ---
 title: Kalaski
 characterId: 64
+type: anthro
+gender: male
 h2:
   title: '"The Limelight" Kalaski'
 heroes:

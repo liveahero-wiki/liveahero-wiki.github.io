@@ -1,6 +1,8 @@
 ---
 title: Sadayoshi
 characterId: 81
+type: anthro
+gender: male
 h2:
   title: '"Wild Freedom" Sadayoshi'
 heroes:

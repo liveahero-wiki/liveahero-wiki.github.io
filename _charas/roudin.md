@@ -1,6 +1,8 @@
 ---
 title: Roudin
 characterId: 209
+type: humanoid
+gender: male
 heroes:
 - stockId: 12091
 sidekicks:

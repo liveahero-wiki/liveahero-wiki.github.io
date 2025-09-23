@@ -1,6 +1,8 @@
 ---
 title: Rakta
 characterId: 20
+type: humanoid
+gender: male
 occupation: Surgeon (外科医師)
 h2:
   title: '"Compassion Flow" Rakta'

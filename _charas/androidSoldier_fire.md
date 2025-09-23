@@ -1,6 +1,8 @@
 ---
 title: Fire Android Soldier
 characterId: 154
+type: humanoid
+gender: male
 heroes:
 - stockId: 11541
 sidekicks:

@@ -1,6 +1,8 @@
 ---
 title: Obsidius
 characterId: 160
+type: anthro
+gender: male
 h2:
   title: '"Bulldozing Destroyer" Obsidius'
 heroes:

@@ -1,6 +1,8 @@
 ---
 title: Huckle
 characterId: 34
+type: anthro
+gender: male
 occupation: Hero Office Manager
 heroes:
 - stockId: 10341

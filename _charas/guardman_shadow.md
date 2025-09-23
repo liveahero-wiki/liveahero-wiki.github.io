@@ -1,6 +1,8 @@
 ---
 title: Shadow Guardman
 characterId: 58
+type: humanoid
+gender: male
 heroes:
 - stockId: 10581
   BIO_H01: |-

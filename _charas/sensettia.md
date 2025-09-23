@@ -1,6 +1,8 @@
 ---
 title: Sensettia
 characterId: 126
+type: humanoid
+gender: female
 heroes:
 - stockId: 11261
   BIO_H01: |-

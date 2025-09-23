@@ -1,6 +1,8 @@
 ---
 title: Gammei
 characterId: 6
+type: humanoid
+gender: male
 h2:
   title: '"Intoxicating Festival" Gammei'
 heroes:

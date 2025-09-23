@@ -1,6 +1,8 @@
 ---
 title: Melide
 characterId: 71
+type: humanoid
+gender: female
 sidekicks:
 - stockId: 10711
   BIO_S01: |-

@@ -1,6 +1,8 @@
 ---
 title: Tabit
 characterId: 151
+type: humanoid
+gender: male
 heroes:
 - stockId: 11511
   BIO_H01: |-

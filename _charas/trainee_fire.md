@@ -1,6 +1,8 @@
 ---
 title: Fire Trainee
 characterId: 76
+type: humanoid
+gender: male
 heroes:
 - stockId: 10761
   BIO_H01: |-

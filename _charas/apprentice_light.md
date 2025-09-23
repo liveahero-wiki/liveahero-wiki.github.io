@@ -1,6 +1,8 @@
 ---
 title: Light Apprentice
 characterId: 215
+type: humanoid
+gender: male
 heroes:
 - stockId: 12151
 sidekicks:

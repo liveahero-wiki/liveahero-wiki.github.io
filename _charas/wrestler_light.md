@@ -1,6 +1,8 @@
 ---
 title: Light Wrestler
 characterId: 196
+type: humanoid
+gender: male
 heroes:
 - stockId: 11961
 sidekicks:

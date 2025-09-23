@@ -1,6 +1,8 @@
 ---
 title: Alchiba
 characterId: 26
+type: anthro
+gender: male
 h2:
   title: '"The Chaser" Alchiba'
 occupation: Private Investigator

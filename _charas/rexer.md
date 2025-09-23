@@ -1,6 +1,8 @@
 ---
 title: reXer
 characterId: 122
+type: anthro
+gender: male
 h2:
   title: '"Burning Oath" reXer'
 heroes:

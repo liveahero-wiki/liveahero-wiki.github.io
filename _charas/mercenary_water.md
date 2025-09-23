@@ -1,6 +1,8 @@
 ---
 title: Water Mercenary
 characterId: 67
+type: anthro
+gender: male
 heroes:
 - stockId: 10671
   BIO_H01: |-

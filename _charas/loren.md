@@ -1,6 +1,8 @@
 ---
 title: Loren
 characterId: 21
+type: humanoid
+gender: male
 occupation: Nurse (看護師)
 heroes:
 - stockId: 10211

@@ -1,6 +1,8 @@
 ---
 title: Marfik
 characterId: 14
+type: humanoid
+gender: male
 occupation: University Professor (Archeology)
 h2:
   title: '"The Adventurer" Marfik'

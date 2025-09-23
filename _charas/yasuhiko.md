@@ -1,6 +1,8 @@
 ---
 title: Yasuhiko
 characterId: 100
+type: humanoid
+gender: male
 heroes:
 - stockId: 11001
   BIO_H01: |-
