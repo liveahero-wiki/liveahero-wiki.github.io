@@ -868,7 +868,9 @@ The “number of mentions” should be treated more as an estimation rather than
     - https://x.com/Gryffindor131
 1. Abashiri
     -  https://x.com/abasirisippo?
-1. Espter
+1. Estper
+    - https://x.com/tiger_est
+    - Most people wrote this as "Espter" which caused me a long time to find...
 1. Istani
     - https://x.com/kemoistani?
 1. Monogg
@@ -949,9 +951,10 @@ The “number of mentions” should be treated more as an estimation rather than
     - https://x.com/dangpaart
 1. Ghostfood
     - https://bsky.app/profile/ghostfood.bsky.social
-1. cheshirebacon
+1. ChesschireBacon
     - https://bsky.app/profile/chesschirebacon.bsky.social
-1. seamonsterping
+1. seamonsterping (海怪平)
+    - https://x.com/seamonsterping?lang=en
 1. yuuuki_dogs
     - https://x.com/yuuuki_dogs
 1. Robokeh
