@@ -898,7 +898,7 @@ The “number of mentions” should be treated more as an estimation rather than
 1. Jiraiya
     - https://x.com/jiraiyajpn
 1. Kuromine Hiraya
-1. 紅紫藍黑白
+1. RPBBW (紅紫藍黑白)
     - https://x.com/noku13456
 1. Null Ghost
     - https://x.com/nullghost_art
@@ -1025,6 +1025,7 @@ The “number of mentions” should be treated more as an estimation rather than
 1. Stranj
     - https://x.com/CivetStranj
 1. Chunie
+    - https://x.com/chunieart
 1. Nesskain
     - https://x.com/nesskain
 1. Nikiciy
@@ -1083,7 +1084,9 @@ The “number of mentions” should be treated more as an estimation rather than
     - Naruto's artist
 1. Haiki
     - https://x.com/haiki396g
-1. Beltsalt
+1. Bellsalt
+    - https://x.com/bellsaltr
+    - The respondent wrote "Beltsalt", that took me days to find the correct name
 1. Kaeru
     - https://bsky.app/profile/frog1432.bsky.social
 1. cfsy10
