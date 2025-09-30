@@ -3,7 +3,7 @@ title: 5th Anniversary
 eventId: 103
 jp_title: 5周年記念キャンペーン
 news_link: https://live-a-hero.jp/info/12066
-banner_image: ui_banner_info_5thAnniversary.jpg
+banner_image: ui_banner_event_questbanner_5thAnniversary2510.jpg
 event_start_time: 2025-09-30T20:00:00+09
 event_end_time: 2025-11-04T14:00:00+09
 ---
