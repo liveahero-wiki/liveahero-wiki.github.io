@@ -27,7 +27,7 @@ date: 2025-09-30 20:00:00 +08
 
 Live A Hero Wiki チーム
 
-<details>
+<details open markdown="1">
 <summary>English version</summary>
 
 Dear LifeWonders team,
