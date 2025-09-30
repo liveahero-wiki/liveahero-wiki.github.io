@@ -1,5 +1,6 @@
 ---
 title: Cruise Train of Star Ocean
+eventId: 57
 jp_title: 海往くクルーズトレイン
 news_link: https://live-a-hero.jp/info/5983
 banner_image: ui_banner_info_Train2305.jpg

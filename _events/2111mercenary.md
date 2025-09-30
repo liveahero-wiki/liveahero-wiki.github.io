@@ -1,5 +1,6 @@
 ---
 title: Character Contract Campaign - Mercenary
+eventId: 23
 jp_title: キャラクター契約締結キャンペーン -マーセナリー-
 news_link: https://live-a-hero.jp/campaign/3053
 banner_image: banner_campaign_ContractMercenary2111.jpg

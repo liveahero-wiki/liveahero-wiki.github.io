@@ -1,5 +1,6 @@
 ---
 title: Summer Survival Island Muirauka SOS!(Reprint)
+eventId: 99
 jp_title: 【復刻】常夏のサバイバル・アイランド ～ムイラウカSOS！
 news_link: https://live-a-hero.jp/info/9122
 banner_image: banner_info_SurvivalRevival2408.jpg

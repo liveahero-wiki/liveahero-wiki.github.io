@@ -1,5 +1,6 @@
 ---
 title: Aqua Vacation Thermae Panic! (Reprint)
+eventId: 94
 jp_title: アクアバケーション・テルマエパニック！ (復刻)
 news_link: https://live-a-hero.jp/info/8831
 banner_image: banner_info_ThermaeRevival2406.jpg

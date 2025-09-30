@@ -1,5 +1,6 @@
 ---
 title: Main Quest Chapter 4
+eventId: 17
 gacha: true
 no_limited_quest: true
 news_link: https://live-a-hero.jp/info/2411

@@ -1,5 +1,6 @@
 ---
 title: Clash! Space Pirate
+eventId: 4
 jp_title: 激突！宇宙海賊
 news_link: https://live-a-hero.jp/campaign/927
 banner_image: banner_campaign_03_2011uchuukaizoku.jpg 

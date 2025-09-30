@@ -1,5 +1,6 @@
 ---
 title: Paradise! Hot Water Battlefield on Holy Night (Reprint)
+eventId: 22
 jp_title: \[復刻\]夜の熱湯戦線
 news_link: https://live-a-hero.jp/info/2994
 banner_image: banner_info_Xmas2012Revival.jpg

@@ -1,5 +1,6 @@
 ---
 title: Space Taxi Chasers！(Reprint)
+eventId: 38
 jp_title: スペース・タクシー・チェイサーズ！開催！
 news_link: https://live-a-hero.jp/info/4183
 banner_image: banner_info_2208ChasersRevival.jpg

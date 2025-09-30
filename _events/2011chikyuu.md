@@ -1,5 +1,6 @@
 ---
 title: Global Union Special Exercise!
+eventId: 3
 jp_title: 地球圏連合特別演習！
 news_link: https://live-a-hero.jp/campaign/822
 banner_image: banner_campaign_03_chikyuu.jpg

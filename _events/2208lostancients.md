@@ -1,5 +1,6 @@
 ---
 title: Lost Ancients of Blue
+eventId: 39
 jp_title: 蒼碧のロスト・エンシェンツ
 news_link: https://live-a-hero.jp/info/4352
 banner_image: banner_info_LostAncients2208.jpg

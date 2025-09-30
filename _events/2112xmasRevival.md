@@ -1,5 +1,6 @@
 ---
 title: Melody Meteorite Christmas (Reprint)
+eventId: 43
 jp_title: 【復刻】 旋律のメテオライト･クリスマス
 news_link: https://live-a-hero.jp/info/4930
 banner_image: banner_info_MeteoriteRevival2211.jpg 

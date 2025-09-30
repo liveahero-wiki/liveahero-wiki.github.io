@@ -1,5 +1,6 @@
 ---
 title: Rakusai Travelouge ～When stars connect～ (Reprint)
+eventId: 83
 jp_title: 洛祭紀行～星つなぐとき～ 開催
 news_link: https://live-a-hero.jp/info/8132
 banner_image: banner_info_RakusaiRevival2403.jpg

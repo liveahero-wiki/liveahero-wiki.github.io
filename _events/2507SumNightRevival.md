@@ -1,5 +1,6 @@
 ---
 title: Summer Night Last Illusion (Reprint)
+eventId: 134
 jp_title: サマーナイツ・ラストイリュージョン開催！
 news_link: https://live-a-hero.jp/info/11531
 banner_image: ui_banner_info_SummerNightRevival2507.jpg

@@ -1,5 +1,6 @@
 ---
 title: ~With Love, from~ Choco Volcano (Reprint)
+eventId: 120
 jp_title: \[復刻\]チョコ・ヴォルカーノより愛を込めて
 news_link: https://live-a-hero.jp/info/10567
 banner_image: banner_info_VolcanoRevival2503.jpg

@@ -1,5 +1,6 @@
 ---
 title: Santa Claus Workout
+eventId: 71
 jp_title: サンタクロース・ワークアウト
 news_link: https://live-a-hero.jp/info/7444
 banner_image: ui_banner_info_Workout2312.jpg

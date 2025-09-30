@@ -1,5 +1,6 @@
 ---
 title: Cruise Train of Star Ocean (Reprint)
+eventId: 89
 jp_title: 【復刻】星海往くクルーズトレイン
 news_link: https://live-a-hero.jp/info/8704
 banner_image: banner_info_TrainRevival2405.jpg

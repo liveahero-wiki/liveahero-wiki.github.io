@@ -1,5 +1,6 @@
 ---
 title: Summer Dive Amusement!
+eventId: 18
 jp_title: サマーダイブ・アミューズメント！
 news_link: https://live-a-hero.jp/info/2593
 banner_image: banner_notice_Summerdive2108.jpg 

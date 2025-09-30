@@ -1,5 +1,6 @@
 ---
 title: Reminiscence of Ghostwoods (Reprint)
+eventId: 51
 jp_title: 【復刻】追憶のゴーストウッズ
 news_link: https://live-a-hero.jp/info/5265
 banner_image: banner_info_GhostWoodsRevival2301.jpg

@@ -1,5 +1,6 @@
 ---
 title: Summer Dive Amusement! (Reprint)
+eventId: 33
 jp_title: サマーダイブ・アミューズメント！(復刻)
 news_link: https://live-a-hero.jp/info/3861
 banner_image: banner_info_2205SummerdiveRevival.jpg

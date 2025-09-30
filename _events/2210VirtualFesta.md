@@ -1,5 +1,6 @@
 ---
 title: Virtual Festa Royale
+eventId: 42
 jp_title: バーチャルフェスタ・ロワイアル
 news_link: https://live-a-hero.jp/info/4691
 banner_image: banner_info_VirtualFesta2210.jpg 

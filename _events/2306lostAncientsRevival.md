@@ -1,5 +1,6 @@
 ---
 title: Lost Ancients of Blue (Reprint)
+eventId: 58
 jp_title: 蒼碧のロスト・エンシェンツ開催
 news_link: https://live-a-hero.jp/info/6146
 banner_image: banner_info_LostAncientsRevival2306.jpg

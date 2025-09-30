@@ -1,5 +1,6 @@
 ---
 title: Moonlight Dance ～Masquerade of Conspiracy～(Reprint)
+eventId: 106
 jp_title: 月光群舞 ～陰謀のマスカレード～(復刻)
 news_link: https://live-a-hero.jp/info/10026
 banner_image: banner_info_MasqueradeRevival2411.jpg

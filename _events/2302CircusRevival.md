@@ -1,5 +1,6 @@
 ---
 title: Chocolate Circus (Reprint)
+eventId: 52
 jp_title: 【復刻】チョコレイト・サーカス！
 news_link: https://live-a-hero.jp/info/5322
 banner_image: banner_info_CircusRevival2302.jpg

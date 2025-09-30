@@ -1,5 +1,6 @@
 ---
 title: Super Catch! Battleship Fishers
+eventId: 109
 jp_title: 超大漁！バトルシップ・フィッシャーズ
 news_link: https://live-a-hero.jp/info/10130
 banner_image: banner_info_BattleShip2411.jpg

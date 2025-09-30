@@ -1,5 +1,6 @@
 ---
 title: Jailbreak! Health Check Crisis! (Reprint)
+eventId: 130
 jp_title: 【復刻】脱獄！ヘルスチェック・クライシス 
 news_link: https://live-a-hero.jp/info/11278
 banner_image: banner_info_CrisisRevival2505.jpg

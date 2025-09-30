@@ -1,5 +1,6 @@
 ---
 title: Hero Festa in Midsummer! (Reprint)
+eventId: 40
 jp_title: 【復刻】闘え！真夏のヒーローフェスタ開催
 news_link: https://live-a-hero.jp/info/4494
 banner_image: banner_info_HerofestaRevival2209.jpg 

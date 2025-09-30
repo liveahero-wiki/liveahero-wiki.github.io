@@ -1,5 +1,6 @@
 ---
 title: Moonlight Dance ～Masquerade of Conspiracy～
+eventId: 68
 jp_title: 月光群舞 ～陰謀のマスカレード～
 news_link: https://live-a-hero.jp/info/7049
 banner_image: ui_banner_info_Masquerade2310.jpg

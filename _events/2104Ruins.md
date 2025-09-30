@@ -1,5 +1,6 @@
 ---
 title: Investigation! The Knight and Ruins Adventure!
+eventId: 13
 jp_title: 探索! 騎士と遺跡アドベンチャー
 news_link: https://live-a-hero.jp/info/1933
 banner_image: banner_info_2104Ruins.jpg

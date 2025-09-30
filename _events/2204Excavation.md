@@ -1,5 +1,6 @@
 ---
 title: Rush! Ruins Excavation Team!
+eventId: 30
 jp_title: 猛進！遺跡発掘隊！
 news_link: https://live-a-hero.jp/info/3706
 banner_image: banner_campaign_2204Excavation.jpg 

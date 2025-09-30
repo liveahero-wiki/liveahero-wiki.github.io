@@ -1,5 +1,6 @@
 ---
 title: Chocolate Circus
+eventId: 28
 jp_title: チョコレイト・サーカス！
 news_link: https://live-a-hero.jp/info/3444
 banner_image: banner_info_2202circus.jpg

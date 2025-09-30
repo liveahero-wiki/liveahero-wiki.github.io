@@ -1,5 +1,6 @@
 ---
 title: Rookies Summer Festa (Reprint)
+eventId: 141
 jp_title: 【復刻】ルーキーズ・サマーフェスタ
 news_link: https://live-a-hero.jp/info/11977
 banner_image: ui_banner_info_RookiesRevival2509.jpg

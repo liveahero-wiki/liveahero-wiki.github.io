@@ -1,5 +1,6 @@
 ---
 title: Chapter 4 pre-campaign
+eventId: 16
 jp_title: 第4章公開前キャンペーン開催
 news_link: https://live-a-hero.jp/campaign/2341
 banner_image: banner_campaign_2106Shinrin.jpg

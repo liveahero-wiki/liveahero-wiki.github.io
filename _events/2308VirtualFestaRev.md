@@ -1,5 +1,6 @@
 ---
 title: Virtual Festa Royale (Reprint)
+eventId: 42
 jp_title: 【復刻】バーチャルフェスタ・ロワイアル開催
 news_link: https://live-a-hero.jp/info/6508
 banner_image: banner_info_VirtualFesta2210.jpg 

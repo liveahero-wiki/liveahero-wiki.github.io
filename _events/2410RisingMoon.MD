@@ -1,5 +1,6 @@
 ---
 title: The Glorious Rising Moon
+eventId: 104
 jp_title: 栄光のライジング・ムーン
 news_link: https://live-a-hero.jp/info/9602
 banner_image: banner_info_RisingMoon2410.jpg
