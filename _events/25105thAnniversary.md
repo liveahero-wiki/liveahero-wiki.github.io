@@ -17,7 +17,15 @@ event_end_time: 2025-11-04T14:00:00+09
 
 There will be extra login bonus for 7 days as follow
 
-TODO
+| Day| Rewards |
+|----|-----------------------------------------------------------|
+| 1  | 100 {% include item.html id=2 %} ; 1 {% include item.html id=253 %} ; 10 {% include item.html id=135 %} ; 6 {% include item.html id=34 %} ; 3 {% include item.html id=255 %} |
+| 2  | 10 {% include item.html id=2 %} ; 5 {% include item.html id=29 %}; 5 {% include item.html id=28 %}; 5 {% include item.html id=27 %} ;  200,000 {% include item.html id=11 %} |
+| 3  | 10 {% include item.html id=2 %} ; 2 {% include item.html id=166 %} ; 30,000 {% include item.html id=30 %} ; 200,000 {% include item.html id=35 %} |
+| 4  | 10 {% include item.html id=2 %} ; 1 {% include item.html id=254 %} ; 50 {% include item.html id=59 %} ; 40,000 {% include item.html id=30 %} |
+| 5  | 10 {% include item.html id=2 %} ; 15 {% include item.html id=135 %} ; 240,000 {% include item.html id=11 %} ; 200,000 {% include item.html id=35 %} |
+| 6  | 10 {% include item.html id=2 %} ; 3 {% include item.html id=166 %} ; 50 {% include item.html id=59 %} ; 40,000 {% include item.html id=30 %} ; 200,000 {% include item.html id=35 %} |
+| 7  | 50 {% include item.html id=2 %} ; 100 {% include item.html id=59 %} ; 5 {% include item.html id=29 %}; 5 {% include item.html id=28 %}; 5 {% include item.html id=27 %} |
 
 ### 5th Anniversary Ticket Exchange
 
