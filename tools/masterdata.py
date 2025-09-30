@@ -84,7 +84,7 @@ if __name__ == '__main__':
     'ItemMaster',
     'StatusMaster',
     'CardMaster',
-    #'EventMaster',
+    'EventMaster',
     'ShopMaster',
     'QuestMaster',
     'HeroCardExpMaster',
@@ -94,6 +94,7 @@ if __name__ == '__main__':
     "ParallelWeaponFormMaster",
     'AffiliationOfficeMaster',
     'UnexploredSkillMaster',
+    'CharacterStoryMaster',
     #'SerifMaster',
     'SerifOverwriteMaster',
   ]
