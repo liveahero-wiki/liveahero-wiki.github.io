@@ -888,7 +888,7 @@ The “number of mentions” should be treated more as an estimation rather than
 1. Mato
     - https://x.com/matomonstera
 1. Gammachaos
-    - Funny comment: every game needs a Horkeu Kamui clone
+    - Funny comment from a respondent: "every game needs a Horkeu Kamui clone"
 1. TakaTaka
     - https://x.com/TakaTakaPig
 1. Juggermelon
@@ -918,12 +918,15 @@ The “number of mentions” should be treated more as an estimation rather than
 1. DaemonTor
     - https://x.com/perverteddaemon
 1. KNN
+    - https://x.com/Kunn00_
 1. 種
     - https://x.com/Energy_camdy
 1. Mixter
     - https://x.com/mixterArt
 1. Racoon21
-1. Kurotero
+    - https://x.com/raccoon_21c
+1. Kurotero (クロテロ)
+    - https://x.com/kurotero/
 1. DUNE
     - https://x.com/GT_DunE
 1. ルイズ
@@ -935,7 +938,6 @@ The “number of mentions” should be treated more as an estimation rather than
     - https://x.com/mazjojomania
 1. Tepen
     - https://x.com/tptptpn
-1. Gai Mizuki
 1. こるく
     - https://x.com/kemo_0519
 1. わお
@@ -963,12 +965,14 @@ The “number of mentions” should be treated more as an estimation rather than
 1. Kaitodraws
     - https://x.com/kaitodraws1
 1. Wolf Con F
+    - https://x.com/f_con
 1. Uleez
     - https://x.com/Uleezoo
 1. 土狼弐
     - https://x.com/d_raw_two/
 1. Nama Kobura
-1. にゅうも
+1. Neumo (にゅうも)
+    - https://twitter.com/neumokun
 1. foooooxes
     - https://x.com/foooooxes
 1. risuou
@@ -994,6 +998,7 @@ The “number of mentions” should be treated more as an estimation rather than
 1. Nekogaki
     - https://x.com/nekogaki0324
 1. UZA
+    - https://x.com/art_uza
 1. zifu
     - https://x.com/zifuuuun
 1. 吉川達哉
@@ -1161,7 +1166,8 @@ The “number of mentions” should be treated more as an estimation rather than
 1. Tevit
     - https://x.com/Tevit15
 1. Osuman
-1. Magmataishi
+1. Magmataishi (まぐまたいし)
+    - https://x.com/magma00
 1. Ammamiya (あまみや)
     - https://x.com/ammami8
 1. Doosoo
@@ -1210,7 +1216,8 @@ The “number of mentions” should be treated more as an estimation rather than
     - https://x.com/Tamura_Kazumasa
 1. Tos Tos F Ski (とすとすFスキー)
     - https://x.com/Tos_Tos_F_ski/
-1. Niku 18
+1. Niku 18 (肉良獣八)
+    - https://x.com/niku_18
 1. Chirenbo
     - https://vxtwitter.com/Chirenbo
 1. Fruitzyjam
