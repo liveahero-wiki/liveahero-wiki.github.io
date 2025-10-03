@@ -7,8 +7,8 @@ occupation: Video Production Staff
 Affiliation Office: Parallel Flight
 profile:
   age: 23
-  height: 164 cm
-  weight: 122 kg
+  height: 164
+  weight: 122
   birthday: 10/02
   birthplace: Earth, Japan, Fukuoka
   5th_anniversary_intro: |-
