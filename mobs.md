@@ -11,13 +11,13 @@ additional_scripts: ["/assets/atlas.min.js"]
 
 ### Acolyte
 
-{% include hero-infobox-unreleased.html name="Apprentice" mob=true
+{% include hero-infobox-unreleased.html name="Acolyte" mob=true
 sprites="fg_villainAcolyteEarth_s01,fg_villainAcolyteFire_s01,fg_villainAcolyteLight_s01,fg_villainAcolyteShadow_s01,fg_villainAcolyteWater_s01"
 %}
 
 ### Acolyte (Transform)
 
-{% include hero-infobox-unreleased.html name="Apprentice" mob=true
+{% include hero-infobox-unreleased.html name="Transformed Acolyte" mob=true
 sprites="fg_villainAcolyteEarth_h01,fg_villainAcolyteFire_h01,fg_villainAcolyteLight_h01,fg_villainAcolyteShadow_h01,fg_villainAcolyteWater_h01"
 %}
 
@@ -167,13 +167,13 @@ sprites="fg_kaibutsuLizardEarth_h01,fg_kaibutsuLizardFire_h01,fg_kaibutsuLizardL
 
 ### Local Idol
 
-{% include hero-infobox-unreleased.html name="Lizard Kaibutsu" mob=true
+{% include hero-infobox-unreleased.html name="Local Idol" mob=true
 sprites="fg_villainLocalIdolEarth_s01,fg_villainLocalIdolFire_s01,fg_villainLocalIdolLight_s01,fg_villainLocalIdolShadow_s01,fg_villainLocalIdolWater_s01"
 %}
 
 ### Local Idol (Transform)
 
-{% include hero-infobox-unreleased.html name="Lizard Kaibutsu" mob=true
+{% include hero-infobox-unreleased.html name="Transformed Local Idol" mob=true
 sprites="fg_villainLocalIdolEarth_h01,fg_villainLocalIdolFire_h01,fg_villainLocalIdolLight_h01,fg_villainLocalIdolShadow_h01,fg_villainLocalIdolWater_h01"
 %}
 
