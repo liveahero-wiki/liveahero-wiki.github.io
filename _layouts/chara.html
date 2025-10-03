@@ -104,3 +104,25 @@ layout: markdownify
 </table>
 
 {% endif %}
+
+{% assign intro = page.profile["5th_anniversary_intro"] %}
+{% assign trueSelf = page.profile["5th_anniversary_true_self"] %}
+{% if intro or trueSelf %}<h2>5th Anniversary Hero-encyclopedias</h2>{% endif %}
+
+{% if intro %}
+<details open markdown="1">
+<summary>Introduction</summary>
+
+{{ intro }}
+
+</details>
+{% endif %}
+
+{% if trueSelf %}
+<details open markdown="1">
+<summary>True Story</summary>
+
+{{ trueSelf }}
+
+</details>
+{% endif %}
