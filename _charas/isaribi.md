@@ -16,11 +16,11 @@ profile:
     
     Due to his base of operations and his profession, there aren't many chances to see him in the Earth Sphere, but his name and visual design may suggest that he is a hero with surprisingly deep ties to Earth (Japan in particular). He is definitely one to keep an eye out for. 
   5th_anniversary_true_self: |-
-    Holding the title "Federally Registered Fisherman of the Novohook Bay Fishing Plant", a designation unfamiliar in the Earth Sphere, he is a fisherman living in the City Fleet Estevolta, diligently piling up his trades every day. 
+    Holding the title "Federally Registered Fisherman of the Novohook Bay Fishing Plant", a designation unfamiliar in the Earth Sphere, he is a fisherman living in the City Fleet Estebolta, diligently piling up his trades every day. 
     
     His work routine is not so different from that of a fisherman from the Earth Sphere. He prepares his boat and sets out before sunrise, heading for the fishing grounds known as the Fishing Plant (designated points where marine life can be caught). 
     
-    There, he sets out his gear according to his quarry; sometimes pulling in nets, reeling in longlines, or simply dropping a fishing line. Afterwards, he brings his catch back to Estevolta to sell at the market. 
+    There, he sets out his gear according to his quarry; sometimes pulling in nets, reeling in longlines, or simply dropping a fishing line. Afterwards, he brings his catch back to Estebolta to sell at the market. 
     
     Due to the unique nature of the ship-based city, which must rely on imports for agricultural products and cannot actively practice animal husbandry, the seafood brought to shore by fishermen like him is an essential lifeline. 
     
