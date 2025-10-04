@@ -3,6 +3,7 @@ title: Santetsu
 characterId: 112
 type: humanoid
 gender: male
+occupation: Librarian
 profile:
   age: 28
   height: 188
