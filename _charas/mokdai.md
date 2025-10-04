@@ -14,21 +14,21 @@ profile:
   5th_anniversary_intro: |-
     Literally like his name "Mighty Knuckle", he crushes his enemies with his fist!
 
-    A hero with incredible physical strength, "Mighty Knuckle"'s parallel weapon is a      powered suit that amplifies his natural superhuman power.
+    A hero with incredible physical strength, "Mighty Knuckle"'s parallel weapon is a powered suit that amplifies his natural superhuman power.
 
-    This suit, packed with technology from another universe, also enhance hearing and      vision, at the cost of being extremely heavy.
+    This suit, packed with technology from another universe, also enhance hearing and vision, at the cost of being extremely heavy.
 
-    Using this suit to its full potential depends on his racial trait, but it seems he     himself aren't very aware of his superhuman strength.
+    Using this suit to its full potential depends on his racial trait, but it seems he himself aren't very aware of his superhuman strength.
 
-    Though he call himself "Mighty Knuckle" , his comrade in the office tend to call       him by his name which makes him a little dissatisfied.
+    Though he call himself "Mighty Knuckle" , his comrade in the office tend to call him by his name which makes him a little dissatisfied.
   5th_anniversary_true_self: |-
     As parallel Flight's cameraman and director, he also has a hero otaku side.
     
-    Because he's always thinking of how to make the heroes shine brighter on camera,       his directing play a role on the acquisition of ViewPower and has become the           signature feature of Parallel Flight's Live.
+    Because he's always thinking of how to make the heroes shine brighter on camera, his directing play a role on the acquisition of ViewPower and has become the signature feature of Parallel Flight's Live.
     
-    However, he seems to struggle when he's the hero on live, showing embarassed,          depressed, sometimes a little proud, his emotion keeps changing.
+    However, he seems to struggle when he's the hero on live, showing embarassed, depressed, sometimes a little proud, his emotion keeps changing.
     
-    Born in Kyushu . Fukuoka, perhaps because of that he has a weakness for Fukuoka's      specialties, whenever Orient City held a regional product exhibitions he always        visit without hesitation.
+    Born in Kyushu . Fukuoka, perhaps because of that he has a weakness for Fukuoka's specialties, whenever Orient City held a regional product exhibitions he always visit without hesitation.
 h2:
   title: '"Holy Night" Mokdai'
 heroes:
