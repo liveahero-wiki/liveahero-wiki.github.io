@@ -13,7 +13,7 @@ profile:
   5th_anniversary_intro: |-
     With a helmet and work clothes, Obsidius transforms into a hero in a suit resembling a miner. 
     
-    It's said that those who see his hero form for the first time often mistake him for a member of Labor Site. However, that misconception is shattered the moment they see his rock drill-shaped Parallel Weapon in action. The hardness of his Parallel Weapon changes according to the amount of knowledge he possesses about the target. 
+    It's said that those who see his hero form for the first time often mistake him for a member of Laborer's Site. However, that misconception is shattered the moment they see his rock drill-shaped Parallel Weapon in action. The hardness of his Parallel Weapon changes according to the amount of knowledge he possesses about the target. 
     
     Even if he can't destroy an object in one hit, breaking off even a single fragment allows him to acquire structural data from it, thereby increasing the weapon's hardness. 
     
