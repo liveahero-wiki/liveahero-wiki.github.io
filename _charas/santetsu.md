@@ -75,10 +75,10 @@ heroes:
     eventually become a person with a knowledge base that no one else in the world
     can match.
   passiveSkillIds:
-'8112101'
-'8112102'
-'8112103'
-'8112104'
+  - '8112101'
+  - '8112102'
+  - '8112103'
+  - '8112104'
   extra_sprites: fg_santetsu_h01_skin2,fg_santetsu_h01_skin3
 sidekicks:
 - stockId: 11121
