@@ -9,7 +9,7 @@ profile:
   height: 173
   weight: 57
   birthday: 05/09
-  birthplace: Earth, United States, Washington state, Seattle
+  birthplace: Earth, USA, Washington state, Seattle
   5th_anniversary_intro: |-
     Crowne fights using her full knowledge as a mechanic, she believes there's no machine she can't dissasemble!
     
