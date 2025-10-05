@@ -4,7 +4,7 @@ banner: true
 wide_content: true
 ---
 
-<p>This is a list of character with official profile info fromm Hero-encyclopedia</p>
+<p>This is a list of characters with official profile info from Hero-encyclopedia</p>
 
 {% assign charas = site.charas | where_exp: "item", "item.profile != null" %}
 
