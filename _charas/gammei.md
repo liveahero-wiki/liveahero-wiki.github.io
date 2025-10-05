@@ -3,6 +3,7 @@ title: Gammei
 characterId: 6
 type: humanoid
 gender: male
+occupation: Police Officer (City Police Detective Division, Sergeant)
 profile:
   age: 30
   height: 174
