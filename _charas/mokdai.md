@@ -12,23 +12,23 @@ profile:
   birthday: 10/02
   birthplace: Earth, Japan, Fukuoka
   5th_anniversary_intro: |-
-    Literally like his name "Mighty Knuckle", he crushes his enemies with his fist!
-
-    A hero with incredible physical strength, "Mighty Knuckle"'s parallel weapon is a powered suit that amplifies his natural superhuman power.
-
-    This suit, packed with technology from another universe, also enhance hearing and vision, at the cost of being extremely heavy.
-
-    Using this suit to its full potential depends on his racial trait, but it seems he himself aren't very aware of his superhuman strength.
-
-    Though he call himself "Mighty Knuckle" , his comrade in the office tend to call him by his name which makes him a little dissatisfied.
+    Living up to his name of "Mighty Knuckle", he literally smashes his foes with his fists! 
+    
+    The Parallel Weapon of "Mighty Knuckle", a hero who boasts astounding physical power, is a powered suit that amplifies his innate superhuman strength. 
+    
+    Packed with technology from a parallel universe, this suit can enhance his vision and hearing, but in exchange, it is incredibly heavy.
+    
+    His ability to draw out the suit's performance to its absolute limit is thanks to his racial traits, yet he himself seems to have little awareness of his own incredible strength. 
+    
+    Although he uses the hero name "Mighty Knuckle", he is apparently a little dissatisfied that the other heroes in his agency tend to call him by his real name instead. 
   5th_anniversary_true_self: |-
-    As parallel Flight's cameraman and director, he also has a hero otaku side.
+    Working as both the cameraman and director for Parallel Flight Inc., he also has a side to him that is a "hero otaku". 
     
-    Because he's always thinking of how to make the heroes shine brighter on camera, his directing play a role on the acquisition of ViewPower and has become the signature feature of Parallel Flight's Live.
+    His directorial style, born from a constant pursuit of how to best frame shots to make heroes shine, has played a key role in gaining ViewPower and has become a signature feature of Parallel Flight Inc.'s livestreams. 
     
-    However, he seems to struggle when he's the hero on live, showing embarassed, depressed, sometimes a little proud, his emotion keeps changing.
+    However, he seems to have a hard time directing the livestreams in which he himself participates as a hero. His emotions are in constant flux, as he gets embarrassed, then dejected, then sometimes a little proud. 
     
-    Born in Kyushu . Fukuoka, perhaps because of that he has a weakness for Fukuoka's specialties, whenever Orient City held a regional product exhibitions he always visit without hesitation.
+    Mokdai himself is from Fukuoka, Kyushu. Perhaps for that reason, he appears to have a weakness for Fukuoka's specialty products, and it's said that whenever a regional product fair is held in Orient City, he would always head there without hesitation. 
 h2:
   title: '"Holy Night" Mokdai'
 heroes:
