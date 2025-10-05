@@ -1305,16 +1305,18 @@ The “number of mentions” should be treated more as an estimation rather than
 - Hikaru Midorikawa (緑川光) 3 times
 - Yūki Ono (小野友樹) 3 times
 - Genda Tesshō (玄田哲章) 3 times
-- Yū Kobayashi (小林优) 2
-- Kazuhiko Inoue (井上和彦) 2
-- Takuya Eguchi (江口拓也) 2
-- Shunsuke Takeuchi (武内駿輔) 2
-- Takahiro Sakurai (櫻井孝宏) 2
-- Hiroki Tōchi (東地宏樹) 2
-- Kenji Hamada (浜田賢二) 2
-- Kosuke Toriumi (鳥海浩輔) 2
-- Masahiro Ogata (尾形真宏) 2
-- George Nakata (中田譲治) 2
+- Yū Kobayashi (小林优) 2 times
+- Kazuhiko Inoue (井上和彦) 2 times
+- Takuya Eguchi (江口拓也) 2 times
+- Shunsuke Takeuchi (武内駿輔) 2 times
+- Takahiro Sakurai (櫻井孝宏) 2 times
+- Hiroki Tōchi (東地宏樹) 2 times
+- Kenji Hamada (浜田賢二) 2 times
+- Kosuke Toriumi (鳥海浩輔) 2 times
+- Masahiro Ogata (尾形真宏) 2 times
+- George Nakata (中田譲治) 2 times
+
+- Shizuka Ishigami (石上静香) 2 times
 
 - Yūsuke Kobayashi (小林裕介) 1
 - Jun'ichi Kanemaru (金丸淳一) 1
@@ -1331,14 +1333,94 @@ The “number of mentions” should be treated more as an estimation rather than
 - Hikaru Hanada (花田光) 1
 - Kazuya Nakai (中井和哉) 1
 - Takahiro Mizushima (水岛大宙) 1
+- Rica Matsumoto (松本梨香)
+- Fairouz Ai (ファイルーズあい)
+- Romi Park (朴璐美)
+- Aoi Yūki (悠木碧)
+- Ikue Ōtani (大谷育江)
+- Yurina Amami (雨宮結梨菜)
+- Ikezawa Haruna (池澤 春菜)
+- Aoki Sayaka (あおき さやか)
+- Amamiya Sora (雨宮 天)
+- Asanuma Shintarou (浅沼 晋太郎)
+- Azakami Youhei (阿座上 陽平)
+- Ban Taito (坂 泰斗)
+- Canna Nobutoshi (神奈 延年)
+- Cho Kasumi (長 克巳)
+- Eguchi Takuya (江口 拓也)
+- Furukawa Makoto (古川 慎)
+- Ginga Banjō (銀河 万丈)
+- Hanawa Eiji (花輪 英司)
+- Hayami Saori (早見 沙織)
+- Hirohashi Ryo (広橋 涼)
+- Hirose Daisuke (廣瀬 大介)
+- Horiuchi Kenyuu (堀内 賢雄)
+- Hoshino Takanori (星野 貴紀)
+- Hosoya Yoshimasa (細谷 佳正)
+- Junya Inaba (稲葉純弥)
+- Ishikawa Yui (石川 由依)
+- Kakihara Tetsuya (柿原 徹也)
+- Kamiya Hiroshi (神谷 浩史)
+- Kawata Taeko (川田 妙子)
+- Kawasumi Ayako (川澄 綾子)
+- Kawashima Tokuyoshi (川島 得愛)
+- Kikuchi Kokoro (菊池 こころ)
+- Kimura Ryohei (木村 良平)
+- Konishi Katsuyuki (小西 克幸)
+- Kumamoto Kenta (隈本 健太)
+- Kusunoki Taiten (楠 大典)
+- Maeno Tomoaki (前野 智昭)
+- Masuda Yuki (増田 ゆうき)
+- Masuyama Takeaki (益山 武明)
+- Midorikawa Hikaru (緑川 光)
+- Miki Shin-ichiro (三木 眞一郎)
+- Miyano Mamoru (宮野 真守)
+- Mizunaka Masaaki (水中 雅章)
+- Mizuki Nana (水樹 奈々)
+- Morikawa Toshiyuki (森川 智之)
+- Murase Ayumu (村瀬 歩)
+- Nagasako Takashi (長嶝 高士)
+- Nakahara Anko (長原 杏子)
+- Nakamura Kotaro (中村 浩太郎)
+- Nakao Ryūsei (中尾 隆聖)
+- Nazuka Kaori (名塚 佳織)
+- Nishikawa Takanori (西川 貴教)
+- Noto Mamiko (能登 麻美子)
+- Ochiai Rumi (落合 るみ)
+- Okitsu Kazuyuki (興津 和幸)
+- Ōmoto Makiko (大本 眞基子)
+- Ono Daisuke (小野 大輔)
+- Ōtsuka Hōchū (大塚 芳忠)
+- Ōtsuka Takeo (大塚 剛央)
+- Otoshiro Kiyori (音代 継)
+- Saitō Ayaka (齋藤 彩夏)
+- Satō Takuya (佐藤 拓也)
+- Sawashiro Miyuki (沢城 みゆき)
+- Seki Tomokazu (関 智一)
+- Shingaki Tarusuke (新垣 樽助)
+- Shiraishi Ryoko (白石 涼子)
+- Shimono Hiro (下野 紘)
+- Shimura Tomoyuki (志村 知幸)
+- Sugiyama Noriaki (杉山 紀彰)
+- Sugō Takayuki (菅生 隆之)
+- Takeuchi Shunsuke (武内 駿輔)
+- Tanezaki Atsumi (種﨑 敦美)
+- Teppōzuka Yōko (鉄砲塚 葉子)
+- Toriumi Kosuke (鳥海 浩輔)
+- Uchida Yuma (内田 雄馬)
+- Uchiyama Kouki (内山 昂輝)
+- Ueda Reina (上田 麗奈)
+- Umehara Yuichiro (梅原 裕一郎)
+- Wakamoto Norio (若本 規夫)
+- Yamada Kōichi (山寺 宏一)
+- Yamashita Daiki (山下 大輝)
+- Yasui Kunihiko (安井 邦彦)
+- Yusa Kōji (遊佐 浩二)
 
-- Shizuka Ishigami (石上静香) 2
-- Rica Matsumoto (松本梨香) 1
-- Fairouz Ai (ファイルーズあい) 1
-- Romi Park (朴璐美) 1
-- Aoi Yūki (悠木碧) 1
-- Ikue Ōtani (大谷育江) 1
-- Yurina Amami (雨宮結梨菜) 1
+Special Mentions
+Nakai, Kazuya (中井 和哉) - The Japanese voice actor for Roronao Zoro.
+
+Volcano Ota (ボルケーノ太田)
 
 - I would like to see voice actors from MILGRAM since Kazui is here as Obsidius and it would be really funny if we could get the full lineup lol.
 - actually any UMAMUSUME voice actor
