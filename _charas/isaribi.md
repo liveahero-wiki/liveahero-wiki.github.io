@@ -7,7 +7,7 @@ profile:
   age: 35
   height: 180
   weight: 105
-  birthday: 04/07 (+- 7 days, converted to earth calendar)
+  birthday: 04/07 (± 7 days)
   birthplace: Muirauka Star System, Muirauka IV, City Fleet Estebolta
   5th_anniversary_intro: |-
     Isaribi is a fisherman hero whose name is renowned across the great oceans of Muirauka IV. The items produced by his glove-type Parallel Weapon, such as casting nets, spears, and baskets, truly resemble the distinct look and feel of a fisherman's gear. 

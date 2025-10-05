@@ -8,8 +8,8 @@ profile:
   age: 21
   height: 177
   weight: 85
-  birthday: 06/12 (converted to earth calendar)
-  birthplace: Earth, Japan, Fukuoka
+  birthday: 06/12
+  birthplace: Planet on Sunflower Galaxy, Wehmalt
   5th_anniversary_intro: |-
     Lilac is a florist hero active in the Sunflower Galaxy, a place far removed from the Earth Sphere. 
     
