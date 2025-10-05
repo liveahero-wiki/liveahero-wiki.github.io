@@ -3,6 +3,7 @@ title: reXer
 characterId: 122
 type: anthro
 gender: male
+occupation: Pro Gamer
 profile:
   age: Undisclosed
   height: 176
