@@ -8,7 +8,7 @@ profile:
   height: 178
   weight: 98
   birthday: 12/01
-  birthplace: Earth, USA, Exas, Houston
+  birthplace: Earth, USA, Texas, Houston
   5th_anniversary_intro: |-
     Western is a film genre popular in the first half of the 20th century.
     Symphonic Trigger, is a hero whose appearance emulates the genre's
