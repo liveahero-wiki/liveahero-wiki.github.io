@@ -115,9 +115,9 @@ module Jekyll
     end
 
     def charaPageToLink(page)
-      title = page.data["title"]
+      title = page["title"]
       url = page.url
-      img = charaPageToIcon(page.data)
+      img = charaPageToIcon(page)
       return "<a class=\"item\" href=\"#{url}\"><img src=\"#{img}\" loading=\"lazy\"> #{title}</a>"
     end
 
