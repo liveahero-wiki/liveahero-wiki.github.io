@@ -21,14 +21,14 @@ profile:
     According to the man himself:
     “The specifications of this weapon make it unable to cause lethal harm or destruction. Please rest assured, it’s completely safe.”
   5th_anniversary_true_self: |-
-    An employee of Jupiter Insurance, a major company that also handles hero insurance,
-he usually works as a corporate insurance sales representative. Based mainly in Orient City, he visits various businesses to support contracts and provide after-sales service.
+    An employee of Jupiter Insurance, a major company that also handles hero insurance, he usually works as a corporate insurance sales representative. Based mainly in Orient City, he visits various businesses to support contracts and provide after-sales service.
 
     However, with his rugged appearance—covered in scars and missing one eye—he certainly stands out. According to him, this has affected his work, and he jokes that “my sales performance for new client sign-ups is below average.”
 
     That said, when we spoke with the Sales Director of Jupiter Insurance, we learned that his performance has been improving recently. More importantly, his reliability as an after-sales service agent is unmatched. In fact, there’s a steady number of clients who specifically request him for follow-up support.
-
+    
     As for his days off, he follows a set routine: staff training, roadwork , and lunch at a café in between.
+    
 heroes:
 - stockId: 12061
 sidekicks:
