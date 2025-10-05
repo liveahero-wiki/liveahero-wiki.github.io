@@ -3,6 +3,7 @@ title: Pubraseer
 characterId: 73
 type: anthro
 gender: male
+occupation: Resort Ship Janitor
 profile:
   age: 44
   height: 176
