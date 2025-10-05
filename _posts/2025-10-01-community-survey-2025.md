@@ -1290,6 +1290,60 @@ The “number of mentions” should be treated more as an estimation rather than
 
 ## New Voice Actor Wishlist
 
+- Akio Otsuka (大塚明夫) 11 times
+- Kenjiro Tsuda (津田健次郎) 11 times
+- Junichi Suwabe (諏訪部順一) 9 times
+- Satoshi Hino (日野聰) 6 times
+- Kazuya Nakai (中井和哉) 6 times
+- Akira Ishida (石田彰) 5 times
+- Natsuki Hanae (花江夏樹) 4 times
+- Takaya Kuroda (黑田崇矢) 4 times
+- Yuichi Nakamura (中村悠一) 3 times
+- Subaru Kimura (木村昴) 3 times
+- Tomokazu Sugita (杉田智和) 3 times
+- Fumihiko Tachiki (立木文彦) 3 times
+- Hikaru Midorikawa (緑川光) 3 times
+- Yūki Ono (小野友樹) 3 times
+- Genda Tesshō (玄田哲章) 3 times
+- Yū Kobayashi (小林优) 2
+- Kazuhiko Inoue (井上和彦) 2
+- Takuya Eguchi (江口拓也) 2
+- Shunsuke Takeuchi (武内駿輔) 2
+- Takahiro Sakurai (櫻井孝宏) 2
+- Hiroki Tōchi (東地宏樹) 2
+- Kenji Hamada (浜田賢二) 2
+- Kosuke Toriumi (鳥海浩輔) 2
+- Masahiro Ogata (尾形真宏) 2
+- George Nakata (中田譲治) 2
+
+- Yūsuke Kobayashi (小林裕介) 1
+- Jun'ichi Kanemaru (金丸淳一) 1
+- Matsuda Kenichiro (松田健一郎) 1
+- Masakazu Morita (森田成一) 1
+- Kazuhiro Yamaji (山路和弘) 1
+- Daisuke Sakaguchi (阪口大助) 1
+- Shuhei Sakaguchi (阪口周平) 1
+- Yūsuke Kobayashi (小林裕介) 1
+- Jun'ichi Kanemaru (金丸淳一) 1
+- Matsuda Kenichiro (松田健一郎) 1
+- Tsuguo Mogami (最上嗣生) 1
+- Yuma Uchida (内田雄馬) 1
+- Hikaru Hanada (花田光) 1
+- Kazuya Nakai (中井和哉) 1
+
+
+- Shizuka Ishigami (石上静香) 2
+- Rica Matsumoto (松本梨香) 1
+- Fairouz Ai (ファイルーズあい) 1
+- Romi Park (朴璐美) 1
+- Aoi Yūki (悠木碧) 1
+- Ikue Ōtani (大谷育江) 1
+- Yurina Amami (雨宮結梨菜) 1
+
+- I would like to see voice actors from MILGRAM since Kazui is here as Obsidius and it would be really funny if we could get the full lineup lol.
+- actually any UMAMUSUME voice actor
+- Josuke Shinomiya (篠宮穰祐, old Barguest VA in housamo)
+
 # Afterword
 
 I hope you enjoy reading this report, because the whole process took me months to prepare. Many times the thought of “I should be paid for this work” flashed in my mind. It really is not easy to conduct a survey of this size, and then write a report about it!
