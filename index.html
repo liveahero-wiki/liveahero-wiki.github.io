@@ -98,16 +98,17 @@ section h2 {
 <h2><a href="/misc/profile/">Birthday</a></h2>
 
 {% assign current_date_day = site.time | date: "%m/%d" %}
-{% assign one_month_date_day = site.time | plus: 2419200 | date: "%m/%d" %}
+{% assign one_month_date_day = site.time | date: "%s" | plus: 2419200 | date: "%m/%d" %}
 <!-- {{ one_month_date_day }} -->
+{% assign sorted_bdays = site.charas | sort: "profile.birthday" %}
 {% if current_date_day < one_month_date_day %}
     {% capture upcoming_bday_query %}item.profile.birthday > "{{ current_date_day }}" and item.profile.birthday <= "{{ one_month_date_day }}"{% endcapture %}
-    {% assign upcoming_bdays = site.charas | where_exp: "item", upcoming_bday_query %}
+    {% assign upcoming_bdays = sorted_bdays | where_exp: "item", upcoming_bday_query %}
 {% else %}
     {% capture upcoming_bday_query %}item.profile.birthday <= "{{ one_month_date_day }}"{% endcapture %}
-    {% assign year_start_bdays = site.charas | where_exp: "item", upcoming_bday_query %}
+    {% assign year_start_bdays = sorted_bdays | where_exp: "item", upcoming_bday_query %}
     {% capture upcoming_bday_query %}item.profile.birthday > "{{ current_date_day }}"{% endcapture %}
-    {% assign upcoming_bdays = site.charas | where_exp: "item", upcoming_bday_query | concat: year_start_bdays %}
+    {% assign upcoming_bdays = sorted_bdays | where_exp: "item", upcoming_bday_query | concat: year_start_bdays %}
 {% endif %}
 {% assign today_bdays = site.charas | where: "profile.birthday", current_date_day %}
 
@@ -121,12 +122,14 @@ section h2 {
 {% endif %}
 
 {% if upcoming_bdays.size > 0 %}
+<p>Upcoming birthdays in the next 28 days:</p>
 <ul>
 {% for c in upcoming_bdays %}
 <li>{{ c | charaPageToLink }} - {{ c.profile.birthday }}</li>
 {% endfor %}
 </ul>
-
+{% else %}
+<p>No birthdays in the next 28 days.</p>
 {% endif %}
 
 </section>
