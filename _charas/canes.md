@@ -3,6 +3,7 @@ title: Canes
 characterId: 210
 type: humanoid
 gender: male
+occupation: Space Hunter
 profile:
   age: 15
   height: 169
