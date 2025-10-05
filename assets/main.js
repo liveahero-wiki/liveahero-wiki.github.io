@@ -69,6 +69,7 @@ function setupSortTable() {
       });
       h.addEventListener("click", () => sortTable(T, k, h));
     })
+    heads[0].dataset.order = "1";
   });
 }
 

@@ -281,6 +281,20 @@ th {
     border: 1px solid #000;
   }
 }
+.sort-table {
+  th {
+    cursor: pointer;
+  }
+  th::after {
+    content: ' \25BD';
+  }
+  th[data-order="1"]::after {
+    content: ' \25BC';
+  }
+  th[data-order="-1"]::after {
+    content: ' \25B2';
+  }
+}
 .sort-table td {
   vertical-align: top;
 }
