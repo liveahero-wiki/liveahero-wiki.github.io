@@ -3,6 +3,7 @@ title: Barrel
 characterId: 7
 type: anthro
 gender: male
+occupation: Police Officer (City police community division, Policeman)
 profile:
   age: 22
   height: 178
