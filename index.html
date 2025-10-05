@@ -95,6 +95,45 @@ section h2 {
 </section>
 
 <section>
+<h2><a href="/misc/profile/">Birthday</a></h2>
+
+{% assign current_date_day = site.time | date: "%m/%d" %}
+{% assign one_month_date_day = site.time | plus: 2419200 | date: "%m/%d" %}
+<!-- {{ one_month_date_day }} -->
+{% if current_date_day < one_month_date_day %}
+    {% capture upcoming_bday_query %}item.profile.birthday > "{{ current_date_day }}" and item.profile.birthday <= "{{ one_month_date_day }}"{% endcapture %}
+    {% assign upcoming_bdays = site.charas | where_exp": "item", upcoming_bday_query %}
+{% else %}
+    {% capture upcoming_bday_query %}item.profile.birthday <= "{{ one_month_date_day }}"{% endcapture %}
+    {% assign year_start_bdays = site.charas | where_exp": "item", upcoming_bday_query %}
+    {% capture upcoming_bday_query %}item.profile.birthday > "{{ current_date_day }}"{% endcapture %}
+    {% assign upcoming_bdays = site.charas | where_exp": "item", upcoming_bday_query | concat: year_start_bdays %}
+{% endif %}
+{% assign today_bdays = site.charas | where: "profile.birthday", current_date_day %}
+
+{% if today_bdays.size > 0 %}
+{% assign today_bday_links = "" | split: "," %}
+{% for c in today_bdays %}
+{% assign link = c | charaPageToLink %}
+{% assign today_bday_links = today_bday_links | push: link %}
+{% endfor %}
+<p>Today is {{ today_bday_links | array_to_sentence_string }}'s birthday!</p>
+{% endif %}
+
+{% if upcoming_bdays.size > 0 %}
+<ul>
+{% for c in upcoming_bdays %}
+<li>{{ c | charaPageToLink }} - {{ c.profile.birthday }}</li>
+{% endfor %}
+</ul>
+
+{% endif %}
+
+</section>
+
+</div>
+
+<section>
 <h2>Community Links</h2>
 
 <ul>
@@ -106,8 +145,6 @@ section h2 {
 <li><a href="https://housamosummaries.blogspot.com/">Fan Translation Summaries</a></li>
 </ul>
 </section>
-
-</div>
 
 <section>
 <h2>Story</h2>
