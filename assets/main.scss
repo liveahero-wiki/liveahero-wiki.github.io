@@ -669,11 +669,13 @@ $elementName: fire, water, earth, light, shadow;
 [data-radio-filter="2"] li.has-unit {
   display: none !important;
 }
-.item, .status {
+.item, .status, abbr {
   position: relative;
   text-decoration: underline dashed 1px;
   text-underline-offset: 2px;
   cursor: help;
+}
+.item, .status {
   img {
     width: 2em;
     height: 2em;
