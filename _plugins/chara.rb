@@ -118,7 +118,7 @@ module Jekyll
       title = page.data["title"]
       url = page.url
       img = charaPageToIcon(page.data)
-      return "<a href=\"#{url}\"><span class=\"item\"><img src=\"#{img}\" loading=\"lazy\"></span> #{title}</a>"
+      return "<a class=\"item\" href=\"#{url}\"><img src=\"#{img}\" loading=\"lazy\"> #{title}</a>"
     end
 
     def characterIdToPage(id)

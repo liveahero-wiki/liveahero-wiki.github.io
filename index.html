@@ -102,12 +102,12 @@ section h2 {
 <!-- {{ one_month_date_day }} -->
 {% if current_date_day < one_month_date_day %}
     {% capture upcoming_bday_query %}item.profile.birthday > "{{ current_date_day }}" and item.profile.birthday <= "{{ one_month_date_day }}"{% endcapture %}
-    {% assign upcoming_bdays = site.charas | where_exp": "item", upcoming_bday_query %}
+    {% assign upcoming_bdays = site.charas | where_exp: "item", upcoming_bday_query %}
 {% else %}
     {% capture upcoming_bday_query %}item.profile.birthday <= "{{ one_month_date_day }}"{% endcapture %}
-    {% assign year_start_bdays = site.charas | where_exp": "item", upcoming_bday_query %}
+    {% assign year_start_bdays = site.charas | where_exp: "item", upcoming_bday_query %}
     {% capture upcoming_bday_query %}item.profile.birthday > "{{ current_date_day }}"{% endcapture %}
-    {% assign upcoming_bdays = site.charas | where_exp": "item", upcoming_bday_query | concat: year_start_bdays %}
+    {% assign upcoming_bdays = site.charas | where_exp: "item", upcoming_bday_query | concat: year_start_bdays %}
 {% endif %}
 {% assign today_bdays = site.charas | where: "profile.birthday", current_date_day %}
 
