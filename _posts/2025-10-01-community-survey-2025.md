@@ -1330,7 +1330,7 @@ The “number of mentions” should be treated more as an estimation rather than
 - Yuma Uchida (内田雄馬) 1
 - Hikaru Hanada (花田光) 1
 - Kazuya Nakai (中井和哉) 1
-
+- Takahiro Mizushima (水岛大宙) 1
 
 - Shizuka Ishigami (石上静香) 2
 - Rica Matsumoto (松本梨香) 1
