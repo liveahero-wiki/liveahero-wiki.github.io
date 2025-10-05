@@ -114,5 +114,5 @@ function setupWikiTabs() {
 
 const tasks = [setupWikiTabs, setupMenu, setupTranslate, setupExpiry, setupSortTable];
 for (const t of tasks) {
-  setTimeout(t, 100)
+  setTimeout(t, 0)
 }
