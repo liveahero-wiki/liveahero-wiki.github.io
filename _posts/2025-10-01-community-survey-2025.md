@@ -1316,14 +1316,11 @@ The “number of mentions” should be treated more as an estimation rather than
 - Masahiro Ogata (尾形真宏) 2 times
 - George Nakata (中田譲治) 2 times
 
-- Shizuka Ishigami (石上静香) 2 times
-
 - Yūsuke Kobayashi (小林裕介) 1
 - Jun'ichi Kanemaru (金丸淳一) 1
 - Matsuda Kenichiro (松田健一郎) 1
 - Masakazu Morita (森田成一) 1
 - Kazuhiro Yamaji (山路和弘) 1
-- Daisuke Sakaguchi (阪口大助) 1
 - Shuhei Sakaguchi (阪口周平) 1
 - Yūsuke Kobayashi (小林裕介) 1
 - Jun'ichi Kanemaru (金丸淳一) 1
@@ -1354,7 +1351,6 @@ The “number of mentions” should be treated more as an estimation rather than
 - Hayami Saori (早見 沙織)
 - Hirohashi Ryo (広橋 涼)
 - Hirose Daisuke (廣瀬 大介)
-- Horiuchi Kenyuu (堀内 賢雄)
 - Hoshino Takanori (星野 貴紀)
 - Hosoya Yoshimasa (細谷 佳正)
 - Junya Inaba (稲葉純弥)
@@ -1366,7 +1362,6 @@ The “number of mentions” should be treated more as an estimation rather than
 - Kawashima Tokuyoshi (川島 得愛)
 - Kikuchi Kokoro (菊池 こころ)
 - Kimura Ryohei (木村 良平)
-- Konishi Katsuyuki (小西 克幸)
 - Kumamoto Kenta (隈本 健太)
 - Kusunoki Taiten (楠 大典)
 - Maeno Tomoaki (前野 智昭)
@@ -1400,7 +1395,6 @@ The “number of mentions” should be treated more as an estimation rather than
 - Shingaki Tarusuke (新垣 樽助)
 - Shiraishi Ryoko (白石 涼子)
 - Shimono Hiro (下野 紘)
-- Shimura Tomoyuki (志村 知幸)
 - Sugiyama Noriaki (杉山 紀彰)
 - Sugō Takayuki (菅生 隆之)
 - Takeuchi Shunsuke (武内 駿輔)
