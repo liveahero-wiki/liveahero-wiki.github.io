@@ -7,7 +7,7 @@ profile:
   age: 44
   height: 176
   weight: 102
-  birthday: 9/12
+  birthday: 09/12
   birthplace: Unknown
   5th_anniversary_intro: |-
     Pubraseer is a cheerful sailor hero, who has newly begun his activities at

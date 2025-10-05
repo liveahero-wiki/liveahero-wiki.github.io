@@ -7,7 +7,7 @@ profile:
   age: 15
   height: 169
   weight: 75
-  birthday: 6/2
+  birthday: 06/02
   birthplace: No fixed residence
   5th_anniversary_intro: |-
     Do not underestimate the rookie hero "Canes" as just some newcomer. He is a

@@ -8,7 +8,7 @@ profile:
   age: 28
   height: 188
   weight: 129
-  birthday: 4/30
+  birthday: 04/30
   birthplace: Earth, Japan, Okayama
   5th_anniversary_intro: |-
     Santetsu, a hero who holds the alias "Guardian of the Library", fights by

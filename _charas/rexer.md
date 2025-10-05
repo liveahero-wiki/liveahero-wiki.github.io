@@ -7,7 +7,7 @@ profile:
   age: Undisclosed
   height: 176
   weight: 80
-  birthday: 5/5
+  birthday: 05/05
   birthplace: Earth, USA, California, Los Angeles
   5th_anniversary_intro: |-
     Though he was once active as a hero in the real world, rieker is now a "Cyber
