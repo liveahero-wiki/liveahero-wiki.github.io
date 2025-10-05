@@ -3,6 +3,7 @@ title: Astosis
 characterId: 189
 type: anthro
 gender: male
+occupation: Lawyer
 profile:
   age: 36
   height: 190
