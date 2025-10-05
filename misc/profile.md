@@ -6,7 +6,7 @@ wide_content: true
 
 <p>This is a list of characters with official profile info from Hero-encyclopedia</p>
 
-{% assign charas = site.charas | where_exp: "item", "item.profile != null" %}
+{% assign charas = site.charas | where_exp: "item", "item.profile != null" | sort: "title" %}
 
 <div class="table-scroll">
 <table class="sort-table bordered">
