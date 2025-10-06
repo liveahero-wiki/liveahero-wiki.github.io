@@ -847,8 +847,6 @@ In this gacha game that is full of baits for thirsty players, let us applaud the
 
 # Free form questions
 
-For the **next three questions**, the volume of the feedback is simply too big for me to go through one by one, so I used ChatGPT to summarize them (and even then I had to do it in a few batches because the total text length exceeds ChatGPT’s limit...)
-
 The “number of mentions” should be treated more as an estimation rather than absolute value. <span class="comment">Words coloured in blue are my own</span>.
 
 ## What People Like
@@ -856,6 +854,17 @@ The “number of mentions” should be treated more as an estimation rather than
 ## Improvement People Want to See
 
 ## New Illustrator Wishlist
+
+People sure was not holding back when it comes to illustrator wishlist, we received tons of names for this question.
+
+I did my absolute best to try finding the illustrator, but I wasn't able to fix all the typos, so I could only list the names I couldn't find verbatim.
+
+Some of the suggestions are literally moonshot, so please do take a look at the list. To quote a joke from a friend: "some people dream so big, you can open a (Hero) Path".
+
+> Warning: most of the social links are NSFW
+
+<details open markdown="1">
+<summary></summary>
 
 1. Zoyu (卓羽)
     - https://x.com/ZoYu26152516
@@ -867,12 +876,12 @@ The “number of mentions” should be treated more as an estimation rather than
 1. Gryffindor (Rainer)
     - https://x.com/Gryffindor131
 1. Abashiri
-    -  https://x.com/abasirisippo?
+    -  https://x.com/abasirisippo
 1. Estper
     - https://x.com/tiger_est
-    - Most people wrote this as "Espter" which caused me a long time to find...
+    - <span class="comment">Most people wrote this as "Espter" which caused me a long time to find...</span>
 1. Istani
-    - https://x.com/kemoistani?
+    - https://x.com/kemoistani
 1. Monogg
     - https://x.com/MonogG
 1. Jacketbear (山藥人)
@@ -888,7 +897,8 @@ The “number of mentions” should be treated more as an estimation rather than
 1. Mato
     - https://x.com/matomonstera
 1. Gammachaos
-    - Funny comment from a respondent: "every game needs a Horkeu Kamui clone"
+    - https://x.com/gammachaos
+    - <span class="comment">Funny comment from a respondent:</span> "every gay gacha game needs a Horkeu Kamui clone"
 1. TakaTaka
     - https://x.com/TakaTakaPig
 1. Juggermelon
@@ -897,7 +907,8 @@ The “number of mentions” should be treated more as an estimation rather than
     - https://x.com/kokukokuboo
 1. Jiraiya
     - https://x.com/jiraiyajpn
-1. Kuromine Hiraya
+1. Kuromine Hiraya (湯あたり)
+    - https://x.com/kuromine_hiraya
 1. RPBBW (紅紫藍黑白)
     - https://x.com/noku13456
 1. Null Ghost
@@ -905,6 +916,7 @@ The “number of mentions” should be treated more as an estimation rather than
 1. GlenSaru
     - https://x.com/glensaru
 1. 一夫多獸
+    - https://www.pixiv.net/en/users/7576657
 1. 文碧
     - https://x.com/Fumimimimidory
 1. ZOROJ
@@ -1091,7 +1103,7 @@ The “number of mentions” should be treated more as an estimation rather than
     - https://x.com/haiki396g
 1. Bellsalt
     - https://x.com/bellsaltr
-    - The respondent wrote "Beltsalt", that took me days to find the correct name
+    - <span class="comment">The respondent wrote "Beltsalt", that took me days to find the correct name<s/span>
 1. Kaeru
     - https://bsky.app/profile/frog1432.bsky.social
 1. cfsy10
@@ -1130,7 +1142,7 @@ The “number of mentions” should be treated more as an estimation rather than
 1. KAJIKA
 1. Manabiko (まなびこ)
     - https://x.com/manabiko_
-    - (Technically they already did [Cetus](/mobs/#cetusplesiosaur-kaibutsu) in this game)
+    - <span class="comment">(Technically they already did [Cetus](/mobs/#cetusplesiosaur-kaibutsu) in this game)</span>
 1. Ninahachi (ニナハチ)
     - https://x.com/nijuunanayo
 1. 閃耀菌
@@ -1220,7 +1232,9 @@ The “number of mentions” should be treated more as an estimation rather than
     - https://x.com/niku_18
 1. Chirenbo
     - https://vxtwitter.com/Chirenbo
-1. Fruitzyjam
+1. FruitzJam
+    - https://x.com/FruitzJam/
+    - <span class="comment">Respondent wrote this as "Fruitzyjam", costing me some time to find the right name</span>
 1. Ponzu
     - https://x.com/ponzu_tas/
 1. Retsito/Morskart
@@ -1238,9 +1252,9 @@ The “number of mentions” should be treated more as an estimation rather than
 1. Fearfac666
     - https://x.com/fearfac666
 1. Rikiya Koyama
-    - I am not sure, is this the voice actor 小山力也?
+    - <span class="comment">I am not sure, is this the voice actor 小山力也?</span>
 1. 赤田
-    - Respondent did not provide any social network user name, maybe it is https://x.com/akatadobuchiki
+    - <span class="comment">Respondent did not provide any social network user name, maybe it is https://x.com/akatadobuchiki</span>
 1. 遊茶
     - https://x.com/usa_kotobuki
 1. YaoYaoReer (述麓)
@@ -1262,7 +1276,7 @@ The “number of mentions” should be treated more as an estimation rather than
     - https://x.com/edamamego_02ma3
 1. Gamma-G
     - https://x.com/gamma_DH
-    - God bless the brave soul that ask for this...
+    - <span class="comment">God bless the brave soul that ask for this, they do not know...</span>
 1. Tokuni
     - https://x.com/toktoktokuni
 1. 阿莫AMO
@@ -1274,6 +1288,10 @@ The “number of mentions” should be treated more as an estimation rather than
 1. Ryota-H
     - https://x.com/Ryota_H
 
+</details>
+
+<details open markdown="1">
+<summary>List of illustrators that were in the wishlist but already has work in this game</summary>
 
 - 朱交赤成
 - BomBom
@@ -1288,7 +1306,16 @@ The “number of mentions” should be treated more as an estimation rather than
 - wasp
 - カヂロ
 
+</details>
+
 ## New Voice Actor Wishlist
+
+Less respondents actually provide a wishlist for voice actors than for illustrators. Most admit that they do not know much about voice actor industry and just trust LifeWonders to make the call.
+
+Despite that, we still receive a lot of names. Processing this question turned out to be quite challenging, because some people wrote voice actors' names as English (Hiragana), sometime even with accent symbols. Other people wrote in Kanji names. Furthermore, there were also several typos or alternative names. This made deduplication difficult.
+
+<details open markdown="1">
+<summary>List of voice actor that got mentioned by multiple respondents</summary>
 
 - Akio Otsuka (大塚明夫) 11 times
 - Kenjiro Tsuda (津田健次郎) 11 times
@@ -1316,20 +1343,25 @@ The “number of mentions” should be treated more as an estimation rather than
 - Masahiro Ogata (尾形真宏) 2 times
 - George Nakata (中田譲治) 2 times
 
-- Yūsuke Kobayashi (小林裕介) 1
-- Jun'ichi Kanemaru (金丸淳一) 1
-- Matsuda Kenichiro (松田健一郎) 1
-- Masakazu Morita (森田成一) 1
-- Kazuhiro Yamaji (山路和弘) 1
-- Shuhei Sakaguchi (阪口周平) 1
-- Yūsuke Kobayashi (小林裕介) 1
-- Jun'ichi Kanemaru (金丸淳一) 1
-- Matsuda Kenichiro (松田健一郎) 1
-- Tsuguo Mogami (最上嗣生) 1
-- Yuma Uchida (内田雄馬) 1
-- Hikaru Hanada (花田光) 1
-- Kazuya Nakai (中井和哉) 1
-- Takahiro Mizushima (水岛大宙) 1
+</details>
+
+<details markdown="1">
+<summary>Other voice actor with less mentions</summary>
+
+- Yūsuke Kobayashi (小林裕介)
+- Jun'ichi Kanemaru (金丸淳一)
+- Matsuda Kenichiro (松田健一郎)
+- Masakazu Morita (森田成一)
+- Kazuhiro Yamaji (山路和弘)
+- Shuhei Sakaguchi (阪口周平)
+- Yūsuke Kobayashi (小林裕介)
+- Jun'ichi Kanemaru (金丸淳一)
+- Matsuda Kenichiro (松田健一郎)
+- Tsuguo Mogami (最上嗣生)
+- Yuma Uchida (内田雄馬)
+- Hikaru Hanada (花田光)
+- Kazuya Nakai (中井和哉)
+- Takahiro Mizushima (水岛大宙)
 - Rica Matsumoto (松本梨香)
 - Fairouz Ai (ファイルーズあい)
 - Romi Park (朴璐美)
@@ -1410,15 +1442,13 @@ The “number of mentions” should be treated more as an estimation rather than
 - Yamashita Daiki (山下 大輝)
 - Yasui Kunihiko (安井 邦彦)
 - Yusa Kōji (遊佐 浩二)
-
-Special Mentions
-Nakai, Kazuya (中井 和哉) - The Japanese voice actor for Roronao Zoro.
-
-Volcano Ota (ボルケーノ太田)
-
-- I would like to see voice actors from MILGRAM since Kazui is here as Obsidius and it would be really funny if we could get the full lineup lol.
-- actually any UMAMUSUME voice actor
+- Nakai Kazuya (中井 和哉) - The Japanese voice actor for Roronao Zoro.
+- Volcano Ota (ボルケーノ太田)
 - Josuke Shinomiya (篠宮穰祐, old Barguest VA in housamo)
+
+</details>
+
+Due to time constraint, I did not make a list of voice actors that respondents wished for but are actually already performed for this game.
 
 # Afterword
 
