@@ -388,8 +388,7 @@ China should also be a pretty big player base of this game, but because the surv
 {% include figure-image.html path="/assets/img/survey-2024/play_lah.svg"
   title="Do you play Live A Hero?" %}
 
-Note:
-
+- 86.58% of the respondents are still playing the game
 - Usually people who do not play the game or has abandoned the game are naturally less likely to spend time filling up this survey, so the pie chart just tell you how much votes you might want to exclude when reading other data of this survey if you only care about the voices of those who currently still play the game
 
 ## Stop Reason
@@ -542,8 +541,7 @@ Interesting points:
 {% include figure-image.html path="/assets/img/survey-2024/in-app-purchase.jpg"
   title="How Many Live A Hero Player Spend Money In-game?" %}
 
-- It seems that those who do spend money in this game pretty much will buy all other types of in-app purchase (but we can't know how frequent they do so via this question).
-- We also don't know how many players bought both the small and large event limited stone packs.
+- It seems that more respondents bought "New Year Grab Bag" than "Anniversary Hero Selection Pack". One possible explanation is the respondents value the chance of getting random limited 5 star to be higher than the chance of getting a specific permanent 5 star.
 
 To help make other visualizations easier to understand, we will introduce the concept of **spending level** here.
 
