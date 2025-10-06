@@ -1018,7 +1018,7 @@ Some of the suggestions are literally moonshot, so please do take a look at the 
     - https://x.com/haiki396g
 1. Bellsalt
     - https://x.com/bellsaltr
-    - <span class="comment">The respondent wrote "Beltsalt", that took me days to find the correct name<s/span>
+    - <span class="comment">The respondent wrote "Beltsalt", that took me days to find the correct name</span>
 1. Kaeru
     - https://bsky.app/profile/frog1432.bsky.social
 1. cfsy10
