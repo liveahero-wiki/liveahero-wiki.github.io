@@ -443,13 +443,13 @@ Since Hiroki Goto and Yui Toita are the first male/female voice **in the order l
     <th colspan="5">Which MC body type did you choose?<br>您选择的主角体型？<br>あなたが選んだ主人公の体型は？</th>
   </tr>
   <tr>
-    <td>What gender do you identify as?<br>您的性别？<br>あなたの性別は？</td>
-    <td>Are you Cisgender or Transgender?<br>您是順性別还是跨性別？<br>あなたはシスジェンダーですか、それともトランスジェンダーですか？</td>
-    <td>1</td>
-    <td>2</td>
-    <td>3</td>
-    <td>4</td>
-    <td>Grand Total</td>
+    <th>What gender do you identify as?<br>您的性别？<br>あなたの性別は？</th>
+    <th>Are you Cisgender or Transgender?<br>您是順性別还是跨性別？<br>あなたはシスジェンダーですか、それともトランスジェンダーですか？</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>Grand Total</th>
   </tr>
   <tr>
     <td rowspan="2">Male / 男性</td>
