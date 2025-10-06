@@ -17,7 +17,7 @@ date: 2025-10-01 12:00:00 +08
 
 # Foreword
 
-We have achieved 606 responses in this year’s survey, more than twice the amount from last year’s iteration!
+We have achieved 596 responses in this year’s survey, slightly less than last year's survey.
 
 Thank you to those who have helped me spread the word on various social media platforms!
 
@@ -31,17 +31,21 @@ Special thanks to 無理 for helping to check Japanese translation in the survey
 
 ## Disclaimer on Limitation of the Survey
 
-The demographics percentage of this year's respondents is very different from past few years, in that the percentage of East Asians became more than half of the total respondents, and the number of English-speaking respondents also have decreased.
-This means that many "2024 vs 2025" comparsion does not really tell, because the underlying group of respondents are quite different.
+The demographics percentage of this year's respondents is very different from past few years, in that the percentage of East Asians became more than half of the total respondents, and the absolute number of non East-Asian respondents also have decreased.
+This means that many "2024 vs 2025" comparsions do not really tell if there is a sentiment change for the same group of people, because the underlying group of respondents are quite different. Take the comparison with a pinch of salt.
 
-Despite . In fact Japanese is the only group that has ever shown a very hostile reaction towards this survey.
+Despite trying my best to make the survey more user-friendly to Japanese and some Japanese Twitter/BlueSky users helping to repost the survey, we still failed to attract enough Japanese respondents.
+This is also the first time I tried to publish the survey in Wikiwiki/Zawazawa. Although that did attract a few more Japanese respondents, I also received a lot of negative comments and downvotes from those anonymous users (ironically, I was the only forum user that uses an actual user name instead of just posting anonymously).
+I have ran this survey for 5 years, and this is the first time I received such hostility.
 
-I understand that some people do not want to see the popularity poll result as there might be jerks
+I do not know if "Japanese people who were willing to participate in this survey" and "Japanese people who were very against to this survey" do not also have very different opinions about the questions of this survey, so all the Japan results below cannot meaningfully represent the overall Japan playerbase.
+
+I understand that some people do not want to see the popularity poll result as there might be jerks who would cherry pick any data and twist it to fit their narrative.
 So let me get this straight:
 
-1. "Some characters being more popular than others" is a fact that everyone can observe through many other ways, such as "engagement count on ", the number of fan arts and so on. Even without this popularity poll, . The result should not increase the number of such group.
-1. I have ran this survey for many years. While I can't say there weren't people , I have not witnessed such discourse escalated too much, because most groups and servers already have rules to control insults and hate speech.
-1. For those people who twist the result of popularity poll for their narrative, I am sure these people do other Karen stuffs in other time too. So the general online advise applies: if the person is being too annoying, just block them and move on with your life.
+1. "Some characters being more popular than others" is a fact that everyone can observe through many other ways, such as "engagement count on LifeWonders' official posts/videos", "the number of fan arts" and so on. Even without this popularity poll, people who would cherry pick any data and twist it to fit their narrative always exist. The survey result should not increase the number of such people.
+1. I have ran this survey for many years. While I can't say that everyone acted civil after the result publication, but I have not witnessed such discourse escalated too much, because most groups and servers already have rules to control insults and hate speech.
+1. For those people who twist the result of popularity poll for their nown arrative, I am sure these people do other Karen stuffs in other time too. So the general online advise applies: if the person is being too annoying, just block them and move on with your life.
 
 
 # Respondent Profile
@@ -60,7 +64,7 @@ Majority of the respondents found the survey via
 
 Since this is a mobile gacha game, it is no surprise that the age distribution is skewed towards the younger side.
 
-> At this point, the oldest respondent (54 year old) can be the youngest respondent’s grandfather... (13 years old)
+At this point, the oldest respondent (54 year old) can be the youngest respondent’s grandfather... (13 years old)
 
 ## Gender
 
@@ -88,6 +92,8 @@ Transparency report:
 - Many people from "China" use ip address from various other countries, but that is kind of expected since China has the Great Firewall, or they have migrated permanently
 
 It is clear that East Asia is the most important market for the game (being culturally close to Japan), followed by Southeast Asia and North America.
+
+<table>
   <tr>
     <th>Region</th>
     <th>Country of birth / 出身国</th>
@@ -1448,7 +1454,7 @@ Despite that, we still receive a lot of names. Processing this question turned o
 
 </details>
 
-Due to time constraint, I did not make a list of voice actors that respondents wished for but are actually already performed for this game.
+Due to time constraint, I did not make a list of voice actors that respondents wished for but are actually already performed for this game. But I have to say, quite a few people ask for the voice actor for {% chara_link Theoreol %} (子安武人).
 
 # Afterword
 
