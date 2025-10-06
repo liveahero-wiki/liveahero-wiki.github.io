@@ -55,7 +55,7 @@ So let me get this straight:
 {% include figure-image.html path="/assets/img/survey-2024/source.svg"
   title="Source of Respondents" %}
 
-Majority of the respondents found the survey via 
+Majority of the respondents found the survey via Discord (23.49%). Taiwan Bahamut Forum, Twitter/X and English Wiki each take approximately 15%.
 
 ## Age
 
@@ -64,7 +64,7 @@ Majority of the respondents found the survey via
 
 Since this is a mobile gacha game, it is no surprise that the age distribution is skewed towards the younger side.
 
-At this point, the oldest respondent (54 year old) can be the youngest respondent’s grandfather... (13 years old)
+At this point, the oldest respondent (55 year old) can be the youngest respondent’s grandfather... (13 years old)
 
 ## Gender
 
@@ -74,7 +74,7 @@ At this point, the oldest respondent (54 year old) can be the youngest responden
 {% include figure-image.html path="/assets/img/survey-2024/gender.svg"
   title="Cisgender vs Transgender" %}
 
-7.5% of the respondents are non-male and 5.9% are transgender. Both are higher than the previous year.
+11.24% of the respondents are non-male (up from 7.5% last year) and 3.52% are transgender (lower than last year)
 
 ### Female/Non-Binary/Other Respondents and Where to Find them
 
@@ -93,7 +93,7 @@ Transparency report:
 
 It is clear that East Asia is the most important market for the game (being culturally close to Japan), followed by Southeast Asia and North America.
 
-<table>
+<table class="bordered">
   <tr>
     <th>Region</th>
     <th>Country of birth / 出身国</th>
@@ -101,102 +101,97 @@ It is clear that East Asia is the most important market for the game (being cult
     <th>Percentage</th>
   </tr>
   <tr>
-    <td rowspan="6">East Asia<br>226 (37.29%)</td>
+    <td rowspan="6">East Asia<br>314 (52.68%)</td>
     <td>Taiwan</td>
-    <td>153</td>
-    <td>25.25%</td>
-  </tr>
-  <tr>
-    <td>Japan</td>
-    <td>22</td>
-    <td>3.63%</td>
-  </tr>
-  <tr>
-    <td>Hong Kong</td>
-    <td>19</td>
-    <td>3.14%</td>
+    <td>118</td>
+    <td>19.80%</td>
   </tr>
   <tr>
     <td>China</td>
-    <td>19</td>
-    <td>3.14%</td>
+    <td>90</td>
+    <td>15.10%</td>
+  </tr>
+  <tr>
+    <td>Japan</td>
+    <td>85</td>
+    <td>14.26%</td>
+  </tr>
+  <tr>
+    <td>Hong Kong</td>
+    <td>16</td>
+    <td>2.68%</td>
   </tr>
   <tr>
     <td>Korea, South</td>
-    <td>11</td>
-    <td>1.82%</td>
+    <td>3</td>
+    <td>0.50%</td>
   </tr>
   <tr>
     <td>Macau</td>
     <td>2</td>
-    <td>0.33%</td>
+    <td>0.34%</td>
   </tr>
   <tr>
-    <td rowspan="7">Southeastern Asia<br>145 (23.93)</td>
-    <td>Philippines</td>
-    <td>38</td>
-    <td>6.27%</td>
+    <td rowspan="7">Southeastern Asia<br>110 (18.46%)</td>
+    <td>Indonesia</td>
+    <td>28</td>
+    <td>4.70%</td>
   </tr>
   <tr>
     <td>Vietnam</td>
-    <td>30</td>
-    <td>4.95%</td>
-  </tr>
-  <tr>
-    <td>Indonesia</td>
-    <td>30</td>
-    <td>4.95%</td>
+    <td>26</td>
+    <td>4.36%</td>
   </tr>
   <tr>
     <td>Thailand</td>
-    <td>25</td>
-    <td>4.13%</td>
+    <td>20</td>
+    <td>3.36%</td>
   </tr>
   <tr>
     <td>Malaysia</td>
-    <td>16</td>
-    <td>2.64%</td>
+    <td>18</td>
+    <td>3.02%</td>
+  </tr>
+  <tr>
+    <td>Philippines</td>
+    <td>13</td>
+    <td>2.18%</td>
   </tr>
   <tr>
     <td>Singapore</td>
-    <td>5</td>
-    <td>0.83%</td>
+    <td>4</td>
+    <td>0.67%</td>
   </tr>
   <tr>
-    <td>Laos</td>
+    <td>Brunei</td>
     <td>1</td>
     <td>0.17%</td>
   </tr>
   <tr>
-    <td rowspan="7">North America<br>115 (18.98%)</td>
+    <td rowspan="6">North America<br>88 (14.77%)</td>
     <td>United States</td>
-    <td>91</td>
-    <td>15.02%</td>
+    <td>71</td>
+    <td>11.91%</td>
   </tr>
   <tr>
     <td>Mexico</td>
-    <td>13</td>
-    <td>2.15%</td>
+    <td>8</td>
+    <td>1.34%</td>
   </tr>
   <tr>
     <td>Canada</td>
-    <td>6</td>
-    <td>0.99%</td>
+    <td>4</td>
+    <td>0.67%</td>
   </tr>
   <tr>
     <td>Puerto Rico</td>
     <td>2</td>
-    <td>0.33%</td>
+    <td>0.34%</td>
   </tr>
   <tr>
-    <td>Guatemala</td>
-    <td>1</td>
-    <td>0.17%</td>
-  </tr>
-  <tr>
-    <td>Dominican Republic</td>
-    <td>1</td>
-    <td>0.17%</td>
+    <td>El Salvador</td>
+    <td>2</td>
+    <td>0.34%</td>
   </tr>
   <tr>
     <td>Costa Rica</td>
@@ -204,35 +199,30 @@ It is clear that East Asia is the most important market for the game (being cult
     <td>0.17%</td>
   </tr>
   <tr>
-    <td rowspan="20">Europe<br>61 (10.07%)</td>
-    <td>France</td>
-    <td>13</td>
-    <td>2.15%</td>
-  </tr>
-  <tr>
-    <td>Spain</td>
-    <td>7</td>
-    <td>1.16%</td>
-  </tr>
-  <tr>
+    <td rowspan="18">Europe<br>44 (7.38%)</td>
     <td>Russia</td>
     <td>6</td>
-    <td>0.99%</td>
+    <td>1.01%</td>
   </tr>
   <tr>
-    <td>Poland</td>
-    <td>4</td>
-    <td>0.66%</td>
+    <td>Italy</td>
+    <td>5</td>
+    <td>0.84%</td>
   </tr>
   <tr>
     <td>Germany</td>
-    <td>4</td>
-    <td>0.66%</td>
+    <td>5</td>
+    <td>0.84%</td>
   </tr>
   <tr>
-    <td>Finland</td>
+    <td>Spain</td>
     <td>4</td>
-    <td>0.66%</td>
+    <td>0.67%</td>
+  </tr>
+  <tr>
+    <td>France</td>
+    <td>4</td>
+    <td>0.67%</td>
   </tr>
   <tr>
     <td>United Kingdom</td>
@@ -240,42 +230,32 @@ It is clear that East Asia is the most important market for the game (being cult
     <td>0.50%</td>
   </tr>
   <tr>
-    <td>Sweden</td>
-    <td>3</td>
-    <td>0.50%</td>
-  </tr>
-  <tr>
-    <td>Italy</td>
+    <td>Finland</td>
     <td>3</td>
     <td>0.50%</td>
   </tr>
   <tr>
     <td>Romania</td>
     <td>2</td>
-    <td>0.33%</td>
+    <td>0.34%</td>
+  </tr>
+  <tr>
+    <td>Czech Republic</td>
+    <td>2</td>
+    <td>0.34%</td>
+  </tr>
+  <tr>
+    <td>Belgium</td>
+    <td>2</td>
+    <td>0.34%</td>
   </tr>
   <tr>
     <td>Portugal</td>
-    <td>2</td>
-    <td>0.33%</td>
-  </tr>
-  <tr>
-    <td>Netherlands</td>
-    <td>2</td>
-    <td>0.33%</td>
-  </tr>
-  <tr>
-    <td>Ukraine</td>
     <td>1</td>
     <td>0.17%</td>
   </tr>
   <tr>
-    <td>Switzerland</td>
-    <td>1</td>
-    <td>0.17%</td>
-  </tr>
-  <tr>
-    <td>Serbia and Montenegro</td>
+    <td>Poland</td>
     <td>1</td>
     <td>0.17%</td>
   </tr>
@@ -285,12 +265,7 @@ It is clear that East Asia is the most important market for the game (being cult
     <td>0.17%</td>
   </tr>
   <tr>
-    <td>Monaco</td>
-    <td>1</td>
-    <td>0.17%</td>
-  </tr>
-  <tr>
-    <td>Lithuania</td>
+    <td>Netherlands</td>
     <td>1</td>
     <td>0.17%</td>
   </tr>
@@ -300,61 +275,61 @@ It is clear that East Asia is the most important market for the game (being cult
     <td>0.17%</td>
   </tr>
   <tr>
-    <td>Belgium</td>
+    <td>Cyprus</td>
     <td>1</td>
     <td>0.17%</td>
   </tr>
   <tr>
-    <td rowspan="9">South America<br>40 (6.60%)</td>
-    <td>Brazil</td>
-    <td>15</td>
-    <td>2.48%</td>
+    <td>Belarus</td>
+    <td>1</td>
+    <td>0.17%</td>
   </tr>
   <tr>
-    <td>Venezuela</td>
-    <td>7</td>
-    <td>1.16%</td>
+    <td>Andorra</td>
+    <td>1</td>
+    <td>0.17%</td>
+  </tr>
+  <tr>
+    <td rowspan="7">South America<br>29 (4.87%)</td>
+    <td>Brazil</td>
+    <td>13</td>
+    <td>2.18%</td>
   </tr>
   <tr>
     <td>Chile</td>
+    <td>6</td>
+    <td>1.01%</td>
+  </tr>
+  <tr>
+    <td>Venezuela</td>
     <td>5</td>
-    <td>0.83%</td>
-  </tr>
-  <tr>
-    <td>Peru</td>
-    <td>4</td>
-    <td>0.66%</td>
-  </tr>
-  <tr>
-    <td>Argentina</td>
-    <td>3</td>
-    <td>0.50%</td>
-  </tr>
-  <tr>
-    <td>Uruguay</td>
-    <td>2</td>
-    <td>0.33%</td>
+    <td>0.84%</td>
   </tr>
   <tr>
     <td>Ecuador</td>
     <td>2</td>
-    <td>0.33%</td>
+    <td>0.34%</td>
   </tr>
   <tr>
-    <td>Colombia</td>
+    <td>Uruguay</td>
     <td>1</td>
     <td>0.17%</td>
   </tr>
   <tr>
-    <td>Bolivia</td>
+    <td>Paraguay</td>
     <td>1</td>
     <td>0.17%</td>
   </tr>
   <tr>
-    <td rowspan="2">Oceania<br>9 (1.49%)</td>
+    <td>Argentina</td>
+    <td>1</td>
+    <td>0.17%</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Oceania<br>7 (1.17%)</td>
     <td>Australia</td>
-    <td>8</td>
-    <td>1.32%</td>
+    <td>5</td>
+    <td>0.84%</td>
   </tr>
   <tr>
     <td>French Polynesia</td>
@@ -362,51 +337,29 @@ It is clear that East Asia is the most important market for the game (being cult
     <td>0.17%</td>
   </tr>
   <tr>
-    <td rowspan="5">Africa<br>6 (0.99%)</td>
-    <td>South Africa</td>
-    <td>2</td>
-    <td>0.33%</td>
-  </tr>
-  <tr>
-    <td>Nigeria</td>
+    <td>Christmas Island</td>
     <td>1</td>
     <td>0.17%</td>
   </tr>
   <tr>
-    <td>Morocco</td>
-    <td>1</td>
-    <td>0.17%</td>
-  </tr>
-  <tr>
-    <td>Angola</td>
-    <td>1</td>
-    <td>0.17%</td>
-  </tr>
-  <tr>
-    <td>Algeria</td>
-    <td>1</td>
-    <td>0.17%</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Western Asia<br>2 (0.33%)</td>
+    <td rowspan="2">Western Asia<br>2 (0.34%)</td>
     <td>Turkey</td>
     <td>1</td>
     <td>0.17%</td>
   </tr>
   <tr>
-    <td>Israel</td>
+    <td>Iran</td>
     <td>1</td>
     <td>0.17%</td>
   </tr>
   <tr>
-    <td>South Asia<br>1 (0.17%)</td>
-    <td>India</td>
+    <td rowspan="2">Africa<br>2 (0.34%)</td>
+    <td>Sierra Leone</td>
     <td>1</td>
     <td>0.17%</td>
   </tr>
   <tr>
-    <td>Central Asia<br>1 (0.17%)</td>
-    <td>Kazakhstan</td>
+    <td>Morocco</td>
     <td>1</td>
     <td>0.17%</td>
   </tr>
@@ -421,11 +374,12 @@ China should also be a pretty big player base of this game, but because the surv
 ## Japanese proficiency
 
 {% include figure-image.html path="/assets/img/survey-2024/jp.svg"
-  title="Japanese Language Proficiency" %}
+  title="Japanese Language Reading Proficiency" %}
 
-31.4% of the respondents cannot read Japanese at all, while slightly more than half of the respondents can read some basic Japanese words.
-
-All in all, those who has the ability to read the in-game Japanese story is still less than a quarter.
+- 56.04% of the respondents cannot read Japanese at all.
+- 106 respondents has N1-level reading ability (17.79%). If excluding Japanese people, only 21 respondents have N1-level reading ability (3.52%)
+- I estimate that you need at least N3 to be able to rea the in-game Japanese story comfortably, only
+  22.52% of the respondents fit in this category.
 
 # The Game
 
@@ -434,7 +388,31 @@ All in all, those who has the ability to read the in-game Japanese story is stil
 {% include figure-image.html path="/assets/img/survey-2024/play_lah.svg"
   title="Do you play Live A Hero?" %}
 
-Despite having more than double the amount of respondents for this year’s survey, the percentage of actual players remains pretty high.
+Note:
+
+- Usually people who do not play the game or has abandoned the game are naturally less likely to spend time filling up this survey, so the pie chart just tell you how much votes you might want to exclude when reading other data of this survey if you only care about the voices of those who currently still play the game
+
+## Stop Reason
+
+Among the respondents who has played the game but now has stopped playing, these are the reasons:
+
+- No translation
+- Lost interest/motivation
+- Battle system is too complicated / unfamiliar with game mechanics
+- Quit becasue respondent cannot pull the character they want
+- Too little (free) pull currency
+- Boring/monotonous grinding, no skip ticket, not enough reward
+- Nothing to do after upgrading favourite character(s)
+- Phone storage shortage
+- Respondent also play other gacha games, no time to keep Live A Hero
+- No NSFW element
+
+## Platform
+
+{% include figure-image.html path="/assets/img/survey-2025/lah_survey_venn_chart.svg"
+  title="Which platform(s) Players Use to Play Live A Hero" %}
+
+Majority of the respondents use Android to play the game. Quite a few people use multiple platforms to play the game.
 
 ## Playing Time
 
@@ -447,11 +425,6 @@ There are small bumps near every 360 days, likely due to the anniversary bringin
 
 The bump at "last 720 days" is quite steep, which is roughly when 3rd anniversary happened. I suspect that there might be a lot of oversea players trying out the game when LifeWonders announced that they were working on official translation.
 
-
-> This probably is not the actual overall market growth rate of the game, since by right the actual player base should be predominantly Japanese, and the sample group of this survey has very few Japanese.
->
-> This linear scale is likely more for oversea players, whose growth is limited due to language barrier. We shall see again if the trend changes next year when official translation is finally implemented.
-
 ## Main Character Configuration
 
 {% include figure-image.html path="/assets/img/survey-2024/body.svg"
@@ -463,96 +436,98 @@ The bump at "last 720 days" is quite steep, which is roughly when 3rd anniversar
 Hiroki Goto (first male voice) took nearly 50% of the male voice’s market, the other two are about 25% each. For female voice, Yui Toita is slightly more popular than Orie Kimoto.
 
 Since Hiroki Goto and Yui Toita are the first male/female voice **in the order listed by the game**, I think many users choose them partly due to the [default effect](https://en.wikipedia.org/wiki/Default_effect).
+
+<div class="table-scroll">
 <table class="bordered">
   <tr>
     <th colspan="2"></th>
     <th colspan="5">Which MC body type did you choose?<br>您选择的主角体型？<br>あなたが選んだ主人公の体型は？</th>
   </tr>
   <tr>
-    <th>What gender do you identify as?<br>您的性别？<br>あなたの性別は？</th>
-    <th>Are you Cisgender or Transgender?<br>您是順性別还是跨性別？<br>あなたはシスジェンダーですか、それともトランスジェンダーですか？</th>
-    <th>1</th>
-    <th>2</th>
-    <th>3</th>
-    <th>4</th>
-    <th>Grand Total</th>
+    <td>What gender do you identify as?<br>您的性别？<br>あなたの性別は？</td>
+    <td>Are you Cisgender or Transgender?<br>您是順性別还是跨性別？<br>あなたはシスジェンダーですか、それともトランスジェンダーですか？</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>Grand Total</td>
   </tr>
   <tr>
     <td rowspan="2">Male / 男性</td>
     <td>Cisgender / 順性別 / シスジェンダー</td>
-    <td>233</td>
-    <td>19</td>
-    <td>255</td>
-    <td>4</td>
-    <td>511</td>
+    <td>205</td>
+    <td>20</td>
+    <td>211</td>
+    <td>12</td>
+    <td>448</td>
   </tr>
   <tr>
     <td>Transgender / 跨性別 / トランスジェンダー</td>
+    <td>1</td>
     <td>2</td>
-    <td>2</td>
-    <td>12</td>
+    <td>4</td>
     <td></td>
-    <td>16</td>
+    <td>7</td>
   </tr>
   <tr>
     <td rowspan="2">Female / 女性</td>
     <td>Cisgender / 順性別 / シスジェンダー</td>
-    <td></td>
-    <td>10</td>
-    <td></td>
     <td>2</td>
-    <td>12</td>
+    <td>18</td>
+    <td>1</td>
+    <td>5</td>
+    <td>26</td>
   </tr>
   <tr>
     <td>Transgender / 跨性別 / トランスジェンダー</td>
     <td></td>
-    <td>3</td>
+    <td></td>
     <td>1</td>
     <td></td>
-    <td>4</td>
+    <td>1</td>
   </tr>
   <tr>
     <td rowspan="2">Non-binary / 非二元性別 / ノンバイナリー</td>
     <td>Cisgender / 順性別 / シスジェンダー</td>
-    <td>2</td>
     <td>1</td>
-    <td>2</td>
-    <td></td>
+    <td>1</td>
     <td>5</td>
+    <td></td>
+    <td>7</td>
   </tr>
   <tr>
     <td>Transgender / 跨性別 / トランスジェンダー</td>
     <td>2</td>
-    <td>3</td>
-    <td>4</td>
+    <td></td>
     <td>2</td>
-    <td>11</td>
+    <td>2</td>
+    <td>6</td>
   </tr>
   <tr>
     <td rowspan="2">Other / 其他 / その他</td>
     <td>Cisgender / 順性別 / シスジェンダー</td>
-    <td>3</td>
+    <td>2</td>
+    <td>6</td>
+    <td>8</td>
     <td>1</td>
-    <td>1</td>
-    <td></td>
-    <td>5</td>
+    <td>17</td>
   </tr>
   <tr>
     <td>Transgender / 跨性別 / トランスジェンダー</td>
-    <td>1</td>
-    <td>1</td>
-    <td>3</td>
     <td></td>
-    <td>5</td>
+    <td>2</td>
+    <td>2</td>
+    <td></td>
+    <td>4</td>
   </tr>
   <tr>
     <td>Grand Total</td>
     <td></td>
-    <td>243</td>
-    <td>40</td>
-    <td>278</td>
-    <td>8</td>
-    <td>569</td>
+    <td>213</td>
+    <td>49</td>
+    <td>234</td>
+    <td>20</td>
+    <td>516</td>
   </tr>
 </table>
 </div>
@@ -618,6 +593,8 @@ East Asia has the highest percentage of Live A Hero players that spend money in-
 
 ## High Difficulty Quest
 
+
+
 ## Game Elements’ Rating
 
 {% include figure-image.html path="/assets/img/survey-2024/game-score.jpg"
@@ -669,11 +646,9 @@ It is clear that even among players that have spent money in this game, we still
 {% include figure-image.html path="/assets/img/survey-2024/translation.jpg"
   title="Translation Prediction" %}
 
-Once again, we celebrate another game anniversary without official translation, which means 27.2% of the respondents made the correct prediction.
+Once again, we celebrate another game anniversary without official translation, which means 35.7% of the respondents made the correct prediction.
 
 This number is much higher than last anniversary (27.2%), you can see that oversea players had lost faith in LifeWonders when they failed to fulfill their promise in last anniversary.
-
-Half of the people (median value) believe that LifeWonders would translate at most all the Main Quest stories till 1st anniversary.
 
 ## Read story
 
@@ -682,71 +657,7 @@ Half of the people (median value) believe that LifeWonders would translate at mo
 
 More than half of the respondents need to rely on fan translation (which are only available for some quests).
 
-> From the feedback I have received after publishing the survey, I should have added one more option for “Yes, I read the story in-game with the help of machine translation and some guesswork”.
-
-The next two questions really stemmed from my frustration that despite having a few more new games entering the space of gay gacha games over the last 2 years, none seem to really threaten LifeWonders’ market share in a meaningful way, so LifeWonders seems very comfortable about not improving their monetization strategy.
-
-Therefore, I want to use these two questions to see if the market are willing to explore other kind of game format and monetization.
-
-### Buy-out games
-
-{% include figure-image.html path="/assets/img/survey-2024/buy-out.jpg"
-  title="Do Live A Hero Players Support Buy-out Game?" %}
-
-Other comments in no particular order:
-
-- Need translation
-- Must have hot men/furries
-- I thought that is literally what LifeWonders main brand about
-- R18 content
-- Must have good gameplay
-- Diverse range of game illustrators
-- I don't play the game if it has the no catharsis ending
-- A more in-depth character customization that cannot be done (can only be simplified) in a non-gacha game
-- If LifeWonders makes it, I will buy it
-- See, LifeWonders brand does invoke some confidence now
-- Less/no female
-- Playable on iPhone X
-
-In case LifeWonders is not convinced that this statistics is not representing those who actually spend money in game, let me create another chart with **only Live A Hero Players that spent money in-game**.
-
-{% include figure-image.html path="/assets/img/survey-2024/buy-out-spending.jpg"
-  title="Do Live A Hero Players Support Buy-out Game? (those who spent money in Live A Hero)" %}
-
-It is clear that LifeWonders will still get real money if they release buy-out games. Most paying players are willing to give buy-out game from LifeWonders a try.
-
-### R-18 games
-
-{% include figure-image.html path="/assets/img/survey-2024/r18.jpg"
-  title="Do Live A Hero Players Support R18 Game?" %}
-
-Other comments in no particular order:
-
-- Hot and sexy men
-- Need translation
-- Less or even completely without censorship
-- Need good writing to develop relationship with characters before going R18
-- R18 is only a good to have, other part of the game needs to be good too
-- Characters need to be have personality that are more than just their dicks and asses
-- Plot needs to follow common logic
-- No underage characters
-- Auto play/skip stages
-- Settings to disable certain kink content
-  - <span class="comment">I think this is totally reasonable if we want diverse sex kink (even hardcore ones) but still accommodate to different kind of players</span>
-- If main character is meant to be self-insert, need settings to specify player’s sexuality
-- Furries should not be minority in the selection
-- Must no catharsis ending and No tragic, grotesque, cruel ending with no reason
-- Also have CGs that are not R18
-- Can only choose furries
-- Old men
-- Playable on iPhone X
-- No female characters at all, cannot choose female main character, cannot have sex with female characters
-  - <span class="comment">I am totally not surprised to see this comment</span>
-- Don’t end up in a situation where certain characters have way less arts than other, don’t hire artists that has known bad history
-  - <span class="comment">We all know which artists they are referring to...</span>
-- BomBom main character
-- Main character customization
-- More brain rot comment about Sadayoshi
+> I said from last year that I need to add the option of "Yes, I read the story in-game with the help of machine translation and some guesswork", but I forgot...
 
 # Character popularity
 
@@ -870,7 +781,7 @@ Some of the suggestions are literally moonshot, so please do take a look at the 
 > Warning: most of the social links are NSFW
 
 <details open markdown="1">
-<summary></summary>
+<summary>Illustrator wishlist (in no particular order)</summary>
 
 1. Zoyu (卓羽)
     - https://x.com/ZoYu26152516
@@ -1297,20 +1208,20 @@ Some of the suggestions are literally moonshot, so please do take a look at the 
 </details>
 
 <details open markdown="1">
-<summary>List of illustrators that were in the wishlist but already has work in this game</summary>
+<summary>List of illustrators that were in the wishlist but already has work in this game  (in no particular order)</summary>
 
-- 朱交赤成
-- BomBom
-- Sawch_cls
-- BKMITA
-- Yow
-- YED
-- Naop
-- Vorusu
-- gozu_farm
-- Nullq
-- wasp
-- カヂロ
+1. 朱交赤成
+1. BomBom
+1. Sawch_cls
+1. BKMITA
+1. Yow
+1. YED
+1. Naop
+1. Vorusu
+1. gozu_farm
+1. Nullq
+1. wasp
+1. カヂロ
 
 </details>
 
@@ -1323,134 +1234,134 @@ Despite that, we still receive a lot of names. Processing this question turned o
 <details open markdown="1">
 <summary>List of voice actor that got mentioned by multiple respondents</summary>
 
-- Akio Otsuka (大塚明夫) 11 times
-- Kenjiro Tsuda (津田健次郎) 11 times
-- Junichi Suwabe (諏訪部順一) 9 times
-- Satoshi Hino (日野聰) 6 times
-- Kazuya Nakai (中井和哉) 6 times
-- Akira Ishida (石田彰) 5 times
-- Natsuki Hanae (花江夏樹) 4 times
-- Takaya Kuroda (黑田崇矢) 4 times
-- Yuichi Nakamura (中村悠一) 3 times
-- Subaru Kimura (木村昴) 3 times
-- Tomokazu Sugita (杉田智和) 3 times
-- Fumihiko Tachiki (立木文彦) 3 times
-- Hikaru Midorikawa (緑川光) 3 times
-- Yūki Ono (小野友樹) 3 times
-- Genda Tesshō (玄田哲章) 3 times
-- Yū Kobayashi (小林优) 2 times
-- Kazuhiko Inoue (井上和彦) 2 times
-- Takuya Eguchi (江口拓也) 2 times
-- Shunsuke Takeuchi (武内駿輔) 2 times
-- Takahiro Sakurai (櫻井孝宏) 2 times
-- Hiroki Tōchi (東地宏樹) 2 times
-- Kenji Hamada (浜田賢二) 2 times
-- Kosuke Toriumi (鳥海浩輔) 2 times
-- Masahiro Ogata (尾形真宏) 2 times
-- George Nakata (中田譲治) 2 times
+1. Akio Otsuka (大塚明夫) 11 times
+1. Kenjiro Tsuda (津田健次郎) 11 times
+1. Junichi Suwabe (諏訪部順一) 9 times
+1. Satoshi Hino (日野聰) 6 times
+1. Kazuya Nakai (中井和哉) 6 times
+1. Akira Ishida (石田彰) 5 times
+1. Natsuki Hanae (花江夏樹) 4 times
+1. Takaya Kuroda (黑田崇矢) 4 times
+1. Yuichi Nakamura (中村悠一) 3 times
+1. Subaru Kimura (木村昴) 3 times
+1. Tomokazu Sugita (杉田智和) 3 times
+1. Fumihiko Tachiki (立木文彦) 3 times
+1. Hikaru Midorikawa (緑川光) 3 times
+1. Yūki Ono (小野友樹) 3 times
+1. Genda Tesshō (玄田哲章) 3 times
+1. Yū Kobayashi (小林优) 2 times
+1. Kazuhiko Inoue (井上和彦) 2 times
+1. Takuya Eguchi (江口拓也) 2 times
+1. Shunsuke Takeuchi (武内駿輔) 2 times
+1. Takahiro Sakurai (櫻井孝宏) 2 times
+1. Hiroki Tōchi (東地宏樹) 2 times
+1. Kenji Hamada (浜田賢二) 2 times
+1. Kosuke Toriumi (鳥海浩輔) 2 times
+1. Masahiro Ogata (尾形真宏) 2 times
+1. George Nakata (中田譲治) 2 times
 
 </details>
 
 <details markdown="1">
-<summary>Other voice actor with less mentions</summary>
+<summary>Other voice actor with less mentions (in no particular order)</summary>
 
-- Yūsuke Kobayashi (小林裕介)
-- Jun'ichi Kanemaru (金丸淳一)
-- Matsuda Kenichiro (松田健一郎)
-- Masakazu Morita (森田成一)
-- Kazuhiro Yamaji (山路和弘)
-- Shuhei Sakaguchi (阪口周平)
-- Yūsuke Kobayashi (小林裕介)
-- Jun'ichi Kanemaru (金丸淳一)
-- Matsuda Kenichiro (松田健一郎)
-- Tsuguo Mogami (最上嗣生)
-- Yuma Uchida (内田雄馬)
-- Hikaru Hanada (花田光)
-- Kazuya Nakai (中井和哉)
-- Takahiro Mizushima (水岛大宙)
-- Rica Matsumoto (松本梨香)
-- Fairouz Ai (ファイルーズあい)
-- Romi Park (朴璐美)
-- Aoi Yūki (悠木碧)
-- Ikue Ōtani (大谷育江)
-- Yurina Amami (雨宮結梨菜)
-- Ikezawa Haruna (池澤 春菜)
-- Aoki Sayaka (あおき さやか)
-- Amamiya Sora (雨宮 天)
-- Asanuma Shintarou (浅沼 晋太郎)
-- Azakami Youhei (阿座上 陽平)
-- Ban Taito (坂 泰斗)
-- Canna Nobutoshi (神奈 延年)
-- Cho Kasumi (長 克巳)
-- Eguchi Takuya (江口 拓也)
-- Furukawa Makoto (古川 慎)
-- Ginga Banjō (銀河 万丈)
-- Hanawa Eiji (花輪 英司)
-- Hayami Saori (早見 沙織)
-- Hirohashi Ryo (広橋 涼)
-- Hirose Daisuke (廣瀬 大介)
-- Hoshino Takanori (星野 貴紀)
-- Hosoya Yoshimasa (細谷 佳正)
-- Junya Inaba (稲葉純弥)
-- Ishikawa Yui (石川 由依)
-- Kakihara Tetsuya (柿原 徹也)
-- Kamiya Hiroshi (神谷 浩史)
-- Kawata Taeko (川田 妙子)
-- Kawasumi Ayako (川澄 綾子)
-- Kawashima Tokuyoshi (川島 得愛)
-- Kikuchi Kokoro (菊池 こころ)
-- Kimura Ryohei (木村 良平)
-- Kumamoto Kenta (隈本 健太)
-- Kusunoki Taiten (楠 大典)
-- Maeno Tomoaki (前野 智昭)
-- Masuda Yuki (増田 ゆうき)
-- Masuyama Takeaki (益山 武明)
-- Midorikawa Hikaru (緑川 光)
-- Miki Shin-ichiro (三木 眞一郎)
-- Miyano Mamoru (宮野 真守)
-- Mizunaka Masaaki (水中 雅章)
-- Mizuki Nana (水樹 奈々)
-- Morikawa Toshiyuki (森川 智之)
-- Murase Ayumu (村瀬 歩)
-- Nagasako Takashi (長嶝 高士)
-- Nakahara Anko (長原 杏子)
-- Nakamura Kotaro (中村 浩太郎)
-- Nakao Ryūsei (中尾 隆聖)
-- Nazuka Kaori (名塚 佳織)
-- Nishikawa Takanori (西川 貴教)
-- Noto Mamiko (能登 麻美子)
-- Ochiai Rumi (落合 るみ)
-- Okitsu Kazuyuki (興津 和幸)
-- Ōmoto Makiko (大本 眞基子)
-- Ono Daisuke (小野 大輔)
-- Ōtsuka Hōchū (大塚 芳忠)
-- Ōtsuka Takeo (大塚 剛央)
-- Otoshiro Kiyori (音代 継)
-- Saitō Ayaka (齋藤 彩夏)
-- Satō Takuya (佐藤 拓也)
-- Sawashiro Miyuki (沢城 みゆき)
-- Seki Tomokazu (関 智一)
-- Shingaki Tarusuke (新垣 樽助)
-- Shiraishi Ryoko (白石 涼子)
-- Shimono Hiro (下野 紘)
-- Sugiyama Noriaki (杉山 紀彰)
-- Sugō Takayuki (菅生 隆之)
-- Takeuchi Shunsuke (武内 駿輔)
-- Tanezaki Atsumi (種﨑 敦美)
-- Teppōzuka Yōko (鉄砲塚 葉子)
-- Toriumi Kosuke (鳥海 浩輔)
-- Uchida Yuma (内田 雄馬)
-- Uchiyama Kouki (内山 昂輝)
-- Ueda Reina (上田 麗奈)
-- Umehara Yuichiro (梅原 裕一郎)
-- Wakamoto Norio (若本 規夫)
-- Yamada Kōichi (山寺 宏一)
-- Yamashita Daiki (山下 大輝)
-- Yasui Kunihiko (安井 邦彦)
-- Yusa Kōji (遊佐 浩二)
-- Nakai Kazuya (中井 和哉) - The Japanese voice actor for Roronao Zoro.
-- Volcano Ota (ボルケーノ太田)
-- Josuke Shinomiya (篠宮穰祐, old Barguest VA in housamo)
+1. Yūsuke Kobayashi (小林裕介)
+1. Jun'ichi Kanemaru (金丸淳一)
+1. Matsuda Kenichiro (松田健一郎)
+1. Masakazu Morita (森田成一)
+1. Kazuhiro Yamaji (山路和弘)
+1. Shuhei Sakaguchi (阪口周平)
+1. Yūsuke Kobayashi (小林裕介)
+1. Jun'ichi Kanemaru (金丸淳一)
+1. Matsuda Kenichiro (松田健一郎)
+1. Tsuguo Mogami (最上嗣生)
+1. Yuma Uchida (内田雄馬)
+1. Hikaru Hanada (花田光)
+1. Kazuya Nakai (中井和哉)
+1. Takahiro Mizushima (水岛大宙)
+1. Rica Matsumoto (松本梨香)
+1. Fairouz Ai (ファイルーズあい)
+1. Romi Park (朴璐美)
+1. Aoi Yūki (悠木碧)
+1. Ikue Ōtani (大谷育江)
+1. Yurina Amami (雨宮結梨菜)
+1. Ikezawa Haruna (池澤 春菜)
+1. Aoki Sayaka (あおき さやか)
+1. Amamiya Sora (雨宮 天)
+1. Asanuma Shintarou (浅沼 晋太郎)
+1. Azakami Youhei (阿座上 陽平)
+1. Ban Taito (坂 泰斗)
+1. Canna Nobutoshi (神奈 延年)
+1. Cho Kasumi (長 克巳)
+1. Eguchi Takuya (江口 拓也)
+1. Furukawa Makoto (古川 慎)
+1. Ginga Banjō (銀河 万丈)
+1. Hanawa Eiji (花輪 英司)
+1. Hayami Saori (早見 沙織)
+1. Hirohashi Ryo (広橋 涼)
+1. Hirose Daisuke (廣瀬 大介)
+1. Hoshino Takanori (星野 貴紀)
+1. Hosoya Yoshimasa (細谷 佳正)
+1. Junya Inaba (稲葉純弥)
+1. Ishikawa Yui (石川 由依)
+1. Kakihara Tetsuya (柿原 徹也)
+1. Kamiya Hiroshi (神谷 浩史)
+1. Kawata Taeko (川田 妙子)
+1. Kawasumi Ayako (川澄 綾子)
+1. Kawashima Tokuyoshi (川島 得愛)
+1. Kikuchi Kokoro (菊池 こころ)
+1. Kimura Ryohei (木村 良平)
+1. Kumamoto Kenta (隈本 健太)
+1. Kusunoki Taiten (楠 大典)
+1. Maeno Tomoaki (前野 智昭)
+1. Masuda Yuki (増田 ゆうき)
+1. Masuyama Takeaki (益山 武明)
+1. Midorikawa Hikaru (緑川 光)
+1. Miki Shin-ichiro (三木 眞一郎)
+1. Miyano Mamoru (宮野 真守)
+1. Mizunaka Masaaki (水中 雅章)
+1. Mizuki Nana (水樹 奈々)
+1. Morikawa Toshiyuki (森川 智之)
+1. Murase Ayumu (村瀬 歩)
+1. Nagasako Takashi (長嶝 高士)
+1. Nakahara Anko (長原 杏子)
+1. Nakamura Kotaro (中村 浩太郎)
+1. Nakao Ryūsei (中尾 隆聖)
+1. Nazuka Kaori (名塚 佳織)
+1. Nishikawa Takanori (西川 貴教)
+1. Noto Mamiko (能登 麻美子)
+1. Ochiai Rumi (落合 るみ)
+1. Okitsu Kazuyuki (興津 和幸)
+1. Ōmoto Makiko (大本 眞基子)
+1. Ono Daisuke (小野 大輔)
+1. Ōtsuka Hōchū (大塚 芳忠)
+1. Ōtsuka Takeo (大塚 剛央)
+1. Otoshiro Kiyori (音代 継)
+1. Saitō Ayaka (齋藤 彩夏)
+1. Satō Takuya (佐藤 拓也)
+1. Sawashiro Miyuki (沢城 みゆき)
+1. Seki Tomokazu (関 智一)
+1. Shingaki Tarusuke (新垣 樽助)
+1. Shiraishi Ryoko (白石 涼子)
+1. Shimono Hiro (下野 紘)
+1. Sugiyama Noriaki (杉山 紀彰)
+1. Sugō Takayuki (菅生 隆之)
+1. Takeuchi Shunsuke (武内 駿輔)
+1. Tanezaki Atsumi (種﨑 敦美)
+1. Teppōzuka Yōko (鉄砲塚 葉子)
+1. Toriumi Kosuke (鳥海 浩輔)
+1. Uchida Yuma (内田 雄馬)
+1. Uchiyama Kouki (内山 昂輝)
+1. Ueda Reina (上田 麗奈)
+1. Umehara Yuichiro (梅原 裕一郎)
+1. Wakamoto Norio (若本 規夫)
+1. Yamada Kōichi (山寺 宏一)
+1. Yamashita Daiki (山下 大輝)
+1. Yasui Kunihiko (安井 邦彦)
+1. Yusa Kōji (遊佐 浩二)
+1. Nakai Kazuya (中井 和哉) - The Japanese voice actor for Roronao Zoro.
+1. Volcano Ota (ボルケーノ太田)
+1. Josuke Shinomiya (篠宮穰祐, old Barguest VA in housamo)
 
 </details>
 
