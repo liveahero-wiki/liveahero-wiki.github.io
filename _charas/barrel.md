@@ -50,6 +50,8 @@ profile:
     never once held a real firearm.
 h2:
   title: '"Cool Gunfighter" Barrel'
+h3:
+  title: '"Unfaltering Devotion" Barrel'
 heroes:
 - stockId: 10071
   BIO_H01: |-
@@ -84,6 +86,7 @@ heroes:
     friend, the fireman hero, at a water pistol target shooting stall. As a lover of
     summer and the water, it was inevitable that he would want to be a hero who
     deals with water and is appropriate for summer.
+- stockId: 10073
 sidekicks:
 - stockId: 10071
   BIO_S01: |-
