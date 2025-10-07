@@ -26,7 +26,33 @@ TODO
 
 ## Free Quest Bonus
 
-TODO
+Here is a list of heroes and sidekicks which grants bonus in this event:
+
+| Hero | +Bonus (%) |
+|---|---|
+| {% chara_link Barrel|h3 %} | 40 |
+| {% chara_link Roudin|h2 %} | 40 |
+| {% chara_link Turbak|h1 %} | 30 |
+| {% chara_link Barrel|h1 %} | 10 |
+| {% chara_link Roudin|h1 %} | 10 |
+| {% chara_link Tsuneaki|h2 %} | 20 |
+| {% chara_link Canes|h1 %} | 20 |
+| {% chara_link Sterio|h1 %} | 10 |
+| {% chara_link Viscunam|h1 %} | 20 |
+| {% chara_link Sensettia|h1 %} | 10 |
+
+| Sidekick | +Bonus (%) |
+|---|---|
+| {% chara_link Turbak %} | 30 |
+| {% chara_link Barrel %} | 10 |
+| {% chara_link Roudin %} | 10 |
+| {% chara_link Tsuneaki %} | 10 |
+| {% chara_link Sterio %} | 10 |
+| {% chara_link Canes %} | 10 |
+| {% chara_link Theoreol %} | 10 |
+| {% chara_link Sensettia %} | 10 |
+| {% chara_link Viscunam %} | 10 |
+| {% chara_link Player %} | 10 |
 
 ## Event Sales Bonus
 
