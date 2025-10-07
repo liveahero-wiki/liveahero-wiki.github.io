@@ -42,3 +42,6 @@ sidekicks:
 
 {% include voice-table.html resourceName="roudin"
 %}
+
+{% include voice-table.html resourceName="roudinStella2510"
+%}

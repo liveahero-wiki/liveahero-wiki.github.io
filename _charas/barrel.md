@@ -156,6 +156,9 @@ EVENTA = "Heh heh! What do you think? Does it look good on me?<br>With this new 
 EVENTB = "It's nice to have a lively festival, it makes me feel excited!<br>Hey, partner, let's go visit the food stalls after the battle!<br>My stomach's growling!"
 %}
 
+{% include voice-table.html resourceName="barrelStella2510"
+%}
+
 ## Notes
 
 - His relation lines refers to {% chara_link Gammei %}
