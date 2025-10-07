@@ -44,9 +44,7 @@ is about to begin.
 
 ## Event Banners
 
-This Event's gacha summon includes time-limited variant {% chara_link Barrel|h3 %} (Hero), {% chara_link Roudin|h2 %} (Hero & Sidekick), and one new character {% chara_link Turbak %} (Hero & Sidekick).
-
-Rates as follow:
+This Event's gacha summon includes time-limited variant {% chara_link Barrel|h3 %} (Hero), {% chara_link Roudin|h2 %} (Hero), and one new character {% chara_link Turbak %} (Hero & Sidekick).
 
 Rates as follow:
 
