@@ -43,8 +43,8 @@ def generate_event(eventId: str):
     with open(f"_events/{pageName}.md", "w", encoding="utf-8") as f:
         f.write(f"---\n")
         f.write(f"title: \n")
-        f.write(f"jp_title: {E.get('title')}\n")
         f.write(f"eventId: {eventId}\n")
+        f.write(f"jp_title: \n")
         f.write(f"banner_image: \n")
         f.write(f"gacha: true\n")
 

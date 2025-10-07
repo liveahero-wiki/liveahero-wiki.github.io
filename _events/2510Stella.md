@@ -1,7 +1,7 @@
 ---
 title: Stella Link Carnival
-jp_title: None
 eventId: 143
+jp_title: ステラリンク・カーニバル 
 banner_image: 
 gacha: true
 event_start_time: 2025-10-07T20:00:00+09
