@@ -97,6 +97,19 @@ def generate_event(eventId: str):
         f.write(f"## Special Mission\n\nTODO\n\n")
         f.write(f"## Limited Time Mission\n\nTODO\n\n")
 
+        if shopId:
+            f.write(f"## Event Shop\n\n{{% include shop-table.html id={shopId} %}}\n\n")
+
+        if questInfos:
+            f.write(f"## Quest Details\n\n")
+
+            for questInfo in questInfos:
+                questType = questInfo.get('type', 0)
+                if questType == 5:
+                    f.write(f"### Main Quests\n\n{{% include quest-group.html chapterId={questInfo.get('chapterId')} %}}\n\n")
+                elif questType == 6:
+                    f.write(f"### Free Quests\n\n{{% include quest-group.html chapterId={questInfo.get('chapterId')} %}}\n\n")
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("eventId", type=str, help="Event ID")
