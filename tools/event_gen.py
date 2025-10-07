@@ -33,15 +33,16 @@ def generate_event(eventId: str):
 
         for term in terms:
             keys = term.get('keys', [])
+            endAt = term.get('endAt').replace(" ", "T") + "+09"
             if "UI_MISSION" in keys:
                 f.write(f"event_start_time: \n")
-                f.write(f"event_end_time: {term.get('endAt')}+09\n")
+                f.write(f"event_end_time: {endAt}\n")
             if "UI_FREE_QUEST" in keys:
                 f.write(f"farm_start_time: \n")
-                f.write(f"farm_end_time: {term.get('endAt')}+09\n")
+                f.write(f"farm_end_time: {endAt}\n")
             if "UI_SALES" in keys:
                 f.write(f"sales_start_time: \n")
-                f.write(f"sales_end_time: {term.get('endAt')}+09\n")
+                f.write(f"sales_end_time: {endAt}\n")
 
         f.write(f"news_link: \n")
         f.write(f"---\n\n")
