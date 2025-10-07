@@ -7,6 +7,7 @@ heroes:
 - stockId: 12871
 sidekicks:
 - stockId: 12871
+  extra_sprites: fg_turbak_s01_skin1
 ---
 
 {% include voice-table.html resourceName="turbak"
