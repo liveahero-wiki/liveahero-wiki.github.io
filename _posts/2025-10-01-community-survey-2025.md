@@ -69,10 +69,12 @@ At this point, the oldest respondent (55 year old) can be the youngest responden
 
 ## Gender
 
-{% include figure-image.html path="/assets/img/survey-2024/sex.svg"
+{% include apache-chart.html
+  options='{"dataset": {"source": [["Male / 男性", 529], ["Female / 女性", 31], ["Other / 其他 / その他", 22], ["Non-binary / 非二元性別 / ノンバイナリー", 14]]}, "legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "value": 1}]}'
   title="Gender" %}
 
-{% include figure-image.html path="/assets/img/survey-2024/gender.svg"
+{% include apache-chart.html
+  options='{"dataset": {"source": [["Cisgender / 順性別 / シスジェンダー", 575], ["Transgender / 跨性別 / トランスジェンダー", 21]]}, "legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "value": 1}]}'
   title="Cisgender vs Transgender" %}
 
 11.24% of the respondents are non-male (up from 7.5% last year) and 3.52% are transgender (lower than last year)
@@ -374,7 +376,8 @@ China should also be a pretty big player base of this game, but because the surv
 
 ## Japanese proficiency
 
-{% include figure-image.html path="/assets/img/survey-2024/jp.svg"
+{% include apache-chart.html
+  options='{"dataset": {"source": [["Zero knowledge / 完全不会 / 知識ゼロ", 334], ["N1", 106], ["N5", 93], ["N4", 35], ["N3", 15], ["N2", 13]]}, "legend": {"data": ["N1", "N2", "N3", "N4", "N5", "Zero knowledge / 完全不会 / 知識ゼロ"]}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "value": 1}]}'
   title="Japanese Language Reading Proficiency" %}
 
 - 56.04% of the respondents cannot read Japanese at all.
@@ -386,7 +389,8 @@ China should also be a pretty big player base of this game, but because the surv
 
 ## Actual Player
 
-{% include figure-image.html path="/assets/img/survey-2024/play_lah.svg"
+{% include apache-chart.html
+  options='{"dataset": {"source": [["Still playing / 还在玩 / 今もやってる", 516], ["Has stopped playing / 已弃坑 / 辞めた", 49], ["Heard of but never play / 听过但没玩过 / やったことない", 31]]}, "legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "value": 1}]}'
   title="Do you play Live A Hero?" %}
 
 - 86.58% of the respondents are still playing the game
@@ -559,7 +563,8 @@ To help make other visualizations easier to understand, we will introduce the co
 
 The criteria for each spending level isn't completely accurate as we don't count how often people buy each product, but it is enough to get a sense of the general trend.
 
-{% include figure-image.html path="/assets/img/survey-2024/spending-overall.jpg"
+{% include apache-chart.html
+  options='{"dataset": {"source": [["Zero", 212], ["L", 106], ["XS", 93], ["S", 75], ["XL", 57], ["M", 53]]}, "legend": {"data": ["XL", "L", "M", "S", "XS", "Zero"]}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "value": 1}]}'
   title="How Many Live A Hero Player Spend Money In-game?" %}
 
 More than 50% of the players actually spend at least some amount of money in Live A Hero. Completely free-to-play players are less than what I originally thought.
@@ -651,7 +656,8 @@ This number is much higher than last anniversary (27.2%), you can see that overs
 
 ## Read story
 
-{% include figure-image.html path="/assets/img/survey-2024/read-story.svg"
+{% include apache-chart.html
+  options='{"dataset": {"source": [["Yes, I read fan translation when available / 会，如果有粉丝翻译 / はい （ファンの翻訳があれば読みます）", 255], ["Yes, I read the story in-game (Japanese) / 会，我直接看日文原文 / はい（日本語）", 165], ["No / 不会 / いいえ", 96], ["", 49]]}, "legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "value": 1}]}'
   title="Do Live A Hero Player Read Story In-game?" %}
 
 More than half of the respondents need to rely on fan translation (which are only available for some quests).
