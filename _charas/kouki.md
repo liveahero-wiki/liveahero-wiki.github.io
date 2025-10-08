@@ -29,21 +29,21 @@ profile:
      You won’t want to take your eyes off them.
   5th_anniversary_true_self: |-
      Active across a wide range of visual media throughout Earth’s sphere, the duo Inukura Kouki and Sirius continue to captivate audiences.
-    
      Despite being only 10 years old, Kouki demonstrates a level of professionalism that seems far beyond his years—so much so that almost no one has ever managed to capture his private moments on camera.
+     
+     However, there was one occasion when I, the author, witnessed a side of him completely unimaginable from his usual composed demeanor during a program recording.
+    
+     Noticing my surprise, he gave a mischievous smile and said,
+     “Surprised?”
+     —before calmly returning to his usual, quiet self.
 
-    However, there was one occasion when I, the author, witnessed a side of him completely unimaginable from his usual composed demeanor during a program recording.
-    Noticing my surprise, he gave a mischievous smile and said,
-    “Surprised?”
-    —before calmly returning to his usual, quiet self.
+     Which side of him is the real one?
+     Was that unexpected behavior simply practice for a new role?
+     Even when asked directly, he would only reply:
+     “I’ll leave that to your imagination.”
 
-    Which side of him is the real one?
-    Was that unexpected behavior simply practice for a new role?
-    Even when asked directly, he would only reply:
-    “I’ll leave that to your imagination.”
-
-    As I continued to search for the truth, I realized something—
-    This is how we all fall under his spell, drawn in by his charm, until we’re utterly captivated.
+     As I continued to search for the truth, I realized something—
+     This is how we all fall under his spell, drawn in by his charm, until we’re utterly captivated.
 h2:
   title: '"Lightning Blade" Kouki & Sirius'
 occupation: Child actor - Entertainer & Dog entertainer
