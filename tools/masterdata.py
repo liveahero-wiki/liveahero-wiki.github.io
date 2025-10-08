@@ -97,6 +97,7 @@ if __name__ == '__main__':
     'CharacterStoryMaster',
     #'SerifMaster',
     'SerifOverwriteMaster',
+    'SalesMaster',
   ]
   for m in masterDataList:
     downloadMasterdata(mV, m)
@@ -104,6 +105,7 @@ if __name__ == '__main__':
   processMasterDataCatalog()
   processShopFile()
   processCardProfileOverride()
+  processSalesFile()
 
   prop_files = [
     "Japanese.properties",
@@ -114,4 +116,4 @@ if __name__ == '__main__':
 
   for p in prop_files:
     downloadProperties(mV, p)
-  processPropertiesFile("Japanese.properties", "jp_bio.json", "jp_serif.json", "jp_profile.json", "jp_library.json")
+  processPropertiesFile("Japanese.properties", "jp_bio.json", "jp_serif.json", "jp_profile.json", "jp_library.json", "jp_sales_report.json")
