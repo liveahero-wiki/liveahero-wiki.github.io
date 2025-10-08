@@ -52,7 +52,8 @@ So let me get this straight:
 
 ## Source of respondents
 
-{% include figure-image.html path="/assets/img/survey-2024/source.svg"
+{% include apache-chart.html
+  options='{"dataset": {"source": [["Discord", 140], ["X (Twitter)", 91], ["English wiki / 英語版wiki", 90], ["巴哈姆特 (Taiwan)", 88], ["Weibo 微博", 41], ["Reddit", 38], ["Tencent QQ", 26], ["Youtube", 26], ["BlueSky", 24], ["other", 11], ["Facebook", 10], ["Zawazawa", 8], ["Bilibili", 3]]}, "legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "value": 1}]}'
   title="Source of Respondents" %}
 
 Majority of the respondents found the survey via Discord (23.49%). Taiwan Bahamut Forum, Twitter/X and English Wiki each take approximately 15%.
@@ -1375,4 +1376,5 @@ While waiting for the ever elusive release of official translation, this wiki wi
 
 See you in next year survey!
 
-## Data sanitization
+<script defer src="https://echarts.apache.org/en/js/vendors/echarts/dist/echarts.min.js"></script>
+<script defer src="/assets/chart.js"></script>
