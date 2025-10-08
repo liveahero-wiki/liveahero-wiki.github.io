@@ -131,17 +131,3 @@ Here is a list of fan translated special quests:
 | {% chara_link Obsidius %}  | [yes](https://docs.google.com/spreadsheets/d/1td0UxSJUDnp5YHsdCrCUg-PPzzcxqLGBQTTc0iKIEFY/edit?usp=sharing) |
 
 {% include quest-group.html chapterId=1121 %}
-
-### Event Sales Report
-
-<details><summary>SALES_EVENT_THERMAE2307_REPORT_1</summary>
-<p>水の都「アクウェス」の名物である淡く輝く樹。<br>その花を使ったハーバリウム教室に<br><code>character0</code>は特別ゲストとして呼ばれた。<br><br>講師のサポートを受けながらリハーサルを行うも、<br>花びらの輝きを保つ保存液の扱いが難しく<br>思わぬ苦戦を強いられる<code>character0</code>。<br><br>しかし、責務を果たすため<br><code>character0</code>は根気強く作業に取り組み、<br>本番では見事なハーバリウムを作り上げた。<br><br><code>character0</code>の新たな一面に、<br>参加したファンたちも感動の拍手を送る。<br><br>ファンの１人がそのハーバリウムを撮影し、<br>ブログに投稿したところ<br>マニアの間でかなりの反響を呼んだ。<br><br>それ以来、<code>character0</code>のヒーローイベントでは<br>お手製のハーバリウムが少数販売されることになり<br>伝説のレアグッズとして語り継がれているらしい。
-</p></details>
-
-<details><summary>SALES_EVENT_THERMAE2307_REPORT_2</summary>
-<p>旅番組の撮影で、ロケ地である<br>水の都「アクウェス」を訪れた<br><code>character0</code>と<code>character1</code>。<br><br>街中の水路を流れる清らかな水と<br>淡く輝く草花が織りなす景観は美しく<br>撮影だということを忘れて楽しむ２人。<br>穏やかな雰囲気のまま、撮影は順調に進み<br>番組は終盤に差し掛かる。<br>旅の最後のスポットは、噴水のある屋外浴場だった。<br><br>スタッフからの情報によると<br>知る人ぞ知る、縁結びの名所でもあるらしい。<br>並んで浴場の縁に腰掛けた<br><code>character0</code>と<code>character1</code>は<br>必要以上に相手を意識してしまい<br>どちらからともなく頬を染めるのだった。<br><br>２人の初々しい様子が配信されると<br>視聴者からの好評なコメントが相次いだ。<br><br>それからほどなくして、水の都は<br><code>character0</code>と<code>character1</code>の<br>ファンから聖地と呼ばれ<br>観光地として更に人気を高めた。
-</p></details>
-
-<details><summary>SALES_EVENT_THERMAE2307_REPORT_3</summary>
-<p>水着のプロモーション撮影のため、<br>４人のヒーローが水の都に招集された。<br><br>普段から観測されることに慣れているヒーローたちだが<br>手渡された水着の開放的なデザインに唖然とする。<br><br>水の都ではこれくらいが一般的だと笑って<br>スタッフは控室を出て行ってしまった。<br>撮影は目前に迫っている……。<br><br>仕事のためと、覚悟を決めた<code>character0</code>は<br>ヤケクソ気味に水着を着用する。<br><code>character0</code>を独りにするわけにはいかないと<br><code>character1</code>も水着に足を通したが<br>鏡に映る自分の姿に顔を赤くしている。<br><code>character2</code>は固まったまま動けずにいた……。<br>３人の姿に、<code>character3</code>は何かを閃いた――<br><br>ヒーローたちは、水着の上にカーディガンを羽織って<br>撮影に臨んだ。<br>水の都では珍しいスタイルだったらしく<br>スタッフからの評判も上々。<br><br>カーディガンを持ち歩いていた<br><code>character3</code>の機転に皆が感謝したという。
-</p></details>

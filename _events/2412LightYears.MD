@@ -146,17 +146,3 @@ Here is a list of this event's limited time Missions:
 ### Free Quests
 
 {% include quest-group.html chapterId=1151 %}
-
-### Event Sales Report
-
-<details><summary>SALES_EVENT_LIGHTYEARS_REPORT_1</summary>
-<p>とある冬の日。資材護送の仕事を受け、<br>レプカーⅢを訪れた<code>character0</code>。<br><br>大きな荷物を運び終え、一息ついていた所に<br>「プレゼント泥棒だ！」と叫ぶ悲鳴と、<br>こちらへ走って向かってくる人影を目にする。<br><br><code>character0</code>は、ひったくり犯の<br>前に飛び出して、その人物を取り押さえる。<br>誤解だと慌てる犯人の元に、<br>１人の人物が駆け寄ってくる。<br><br>そのヒトはドラマの監督らしく、<br>犯人は、撮影中のスタッフだと知り、<br><code>character0</code>は、急いで拘束を解く。<br><br>謝る<code>character0</code>を見て、<br>監督は感嘆の唸り声を上げる。<br>キレのある動き、素早い身のこなし…<br>頼めるのはキミしかいない！と<br>監督は<code>character0</code>の手を握る。<br><br>そして、クリスマスの日。<br>護送してきたクリスマスツリーの上を、<br>大きな白い袋を担いで駆け抜けていく<br><code>character0</code>サンタが登場するドラマが<br>一斉放送されたという。
-</p></details>
-
-<details><summary>SALES_EVENT_LIGHTYEARS_REPORT_2</summary>
-<p>クリスマストークショーへの出演が決まった<br><code>character0</code>と<code>character1</code>。<br><br>２人は集まってくれるファンの皆に<br>サプライズをプレゼントしようと、<br>クリスマスソングをこっそりと練習する。<br><br>ショーは順調に進行し、いよいよ最後に<br>練習した成果を披露しようと<br><code>character0</code>が合図を出した時、<br>突然、会場の照明が全て落ち、<br>トークショーの会場は真っ暗に。<br><br>焦る<code>character0</code>と<code>character1</code>。<br>その時突然、ペンライトで描かれたファンからの<br>応援のメッセージが客席に浮かび上がる。<br><br>逆サプライズが用意されていたことに<br>驚きながらも、２人は笑って立ち上がり、<br>用意していたクリスマスソングを歌い始める。<br><br><code>character0</code>は心を込めてしっとりと、<br>一方、<code>character1</code>は優しくも楽し気に<br>２人のハーモニーが会場内に響いていく。<br><br>会場全体が温かな気持ちと拍手の音に包まれ、<br>客席からは驚きと喜びの声が上がる。<br>歌が終わると、２人は手を繋ぎ、ファンへと一礼して、<br>聖夜のショーを終えたのであった。
-</p></details>
-
-<details><summary>SALES_EVENT_LIGHTYEARS_REPORT_3</summary>
-<p>クリスマスイベントの依頼を受けたヒーローたち。<br><code>character0</code>はアイドルブームに乗っかり、<br>クリスマスライブの開催を提案する。<br><br>しかし、ライブ当日の朝。演出の軸にしていた<br>クリスマスツリーがトラブルで届かないと<br><code>character1</code>の元に連絡が……<br><br><code>character0</code>と<code>character1</code>は、<br>慌てて、別のツリーを貸し出せる施設を探す。<br><code>character2</code>と<code>character3</code>は、<br>オーナメントを探して、何件もの店をはしごする……<br><br>そして、日が暮れ始めた頃。<br><code>character2</code>たちは、大きなツリーと<br>大量のオーナメントを次々に会場へと搬入していた。<br><br>アイドルらしくもなく、フラフラになりながら、<br>ツリーの飾り付けを始める４人。<br>その時、来場者の１人が<br><code>character3</code>に手伝いを申し出る。<br>その姿を見て、また別のヒトも……と、<br>来場者たちは次々に飾り付けに参加していく。<br><br>……心温かな応援を受け、<br>ツリーを囲みながら始まる１夜限りのライブ。<br>準備で汚れたアイドルたちの嬉し気な横顔を、<br>イルミネーションの光が優しく照らしていた。
-</p></details>

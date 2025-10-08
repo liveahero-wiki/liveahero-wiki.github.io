@@ -132,5 +132,3 @@ Here is a list of this event's limited time Missions:
 ### Free Quests
 
 {% include quest-group.html chapterId=1133 %}
-
-### Event Sales Report

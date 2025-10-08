@@ -144,17 +144,3 @@ Here is a list of this event's limited time Missions:
 ### Free Quests
 
 {% include quest-group.html chapterId=1074 %}
-
-### Event Sales Report
-
-<details><summary>SALES_EVENT_MASQUERADE_REPORT_1</summary>
-<p>クロージュで行われるお祭りに、<br>臨時の警備員として雇われた<code>character0</code>。<br><br>会場をパトロールする<code>character0</code>の目には、<br>異星情緒のある伝統衣装を身に纏った<br>参加者たちが、とても輝いて見えた。<br><br>警備の仕事を無事に完了した<code>character0</code>は、<br>居ても立ってもいられず、街を歩き回った。<br><br>そして、年季の入った洋服店を見つけると、<br>値札も見ずに伝統衣装を購入するのだった。<br><br>後日、<code>character0</code>の元に届いた明細書には<br>警備の仕事で得た収入以上の値段が記されていた。<br><br>思わぬ金額に、少々焦りはしたものの<br>お気に入りの衣装を着ることの喜びを思えば、<br>今日の仕事も頑張ろうと思えるのだった。
-</p></details>
-
-<details><summary>SALES_EVENT_MASQUERADE_REPORT_2</summary>
-<p>仮面舞踏会を隠れ蓑に<br>ヴィランが闇取引を行っているらしい。<br><br>その情報を入手した<code>character0</code>は、<br>参加者の１人として潜入捜査を開始した。<br><br><code>character0</code>が周囲を観察していると、<br>突然ダンスに誘われてしまった。<br>場に溶け込むため、仕方なく応じるも、<br>相手の軽やかなステップに翻弄されてしまう。<br><br>一曲踊った直後、<br>相手が仮面の裏側をちらりと覗かせた。<br>それはなんと、変装した<code>character1</code>だった。<br>どうやら、事務所から応援を依頼されたらしい。<br><br>その後、闇取引の現場を発見した２人は<br>息を合わせてヴィランを取り押さえた。<br>仕事を終えた<code>character1</code>は、<br>颯爽と現場を去っていく。<br><br>その後ろ姿を見つめながら、<br><code>character1</code>の鮮やかなステップと<br>不敵な表情を思い出し、<br><code>character0</code>の胸はざわつくのだった。
-</p></details>
-
-<details><summary>SALES_EVENT_MASQUERADE_REPORT_3</summary>
-<p>月を愛でる祭の盛り上げ役として<br>抜擢された４人のヒーローたち。<br><br>事務所が彼らに用意した衣装は、<br>「地球圏のハロウィン文化を紹介する」<br>というコンセプトだった。<br><br><code>character0</code>は全身を包帯で巻き、<br>ミイラ姿で会場を練り歩いて、会場を悲鳴で満たす。<br><code>character1</code>は白いレースを身に纏い、<br>ゆらゆらとした奇妙な動きが不気味だと好評だった。<br><br>そして、<code>character2</code>は<br>三角帽と黒色のローブを、<br><code>character3</code>は黒猫のきぐるみを着て、<br>魔法使いと、その使い魔として参加した。<br><br>祭りの参加者を驚かせようと意気込む２人だったが、<br>迎えられたのは意図せぬ黄色い歓声。<br><br>「あの衣装、斬新でオシャレ～！」<br>「猫ちゃん、モフモフでかわいい～！」<br><br>２人は、複雑な内心を笑顔で隠して<br>参加者との写真撮影に応じるのだった。
-</p></details>
