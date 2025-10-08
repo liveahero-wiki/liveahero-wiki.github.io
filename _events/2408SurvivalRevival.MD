@@ -167,17 +167,3 @@ Here is a list of this event's limited time Missions:
 ### Special Quests
 
 {% include quest-group.html chapterId=1130 %}
-
-### Event Sales Report
-
-<details><summary>SALES_EVENT_SURVIVAL2309_REPORT_1</summary>
-<p><code>character0</code>は休暇中に<br>人気のないビーチを訪れていた。<br><br>水着姿になった<code>character0</code>は<br>シュノーケルを装着して海に入る。<br><br>しばらく泳いでいると、水面に<br>サメを思わせる三角のヒレが……。<br><br>緊張に身を固くする<code>character0</code>だったが<br>寄って来たのは小さなイルカだった。<br><br>自分の周りをくるくると泳いで<br>じゃれついてくるイルカに<br>思わず笑顔になる<code>character0</code>。<br>しばらく一緒に遊んでから<br>足取りも軽く帰路につくのだった。<br><br>後日、<code>character0</code>は例のビーチについて<br>とある噂を耳にする。<br>人懐っこいイルカがSNSで話題になり、<br>今ではすっかり人気スポットになっているのだとか。
-</p></details>
-
-<details><summary>SALES_EVENT_SURVIVAL2309_REPORT_2</summary>
-<p>無人島でのサバイバル番組に呼ばれた<br><code>character0</code>と<code>character1</code>。<br><br>手渡されたナイフや銛、ライターなどの物資を頼りに、<br>２人だけで１週間を生き延びなければならない。<br><br><code>character0</code>は銛を片手に海へ向かう。<br><code>character1</code>は島を散策して食料を探す。<br><br>そして、日が暮れる頃に合流した２人は、<br>それぞれの収穫を見せ合った。<br><br>焚き火で魚を焼き、ヤシの実の硬い殻を割り<br>ようやく食料を口にした瞬間、<br>「少し焦げてる」「甘さが足りない」と、<br>不満を零した２人は<br>互いのしかめっ面を見て笑い合うのだった。<br><br>番組の収録からしばらく経ったある日、<br>とあるリゾートビーチにて<br>仲睦まじく語り合う２人の姿があったという。
-</p></details>
-
-<details><summary>SALES_EVENT_SURVIVAL2309_REPORT_3</summary>
-<p>ヒーローが砂浜で行うこと――<br>それはもちろんビーチトレーニングだ！<br><br><code>character0</code>は走り込みで、<br>バランス感覚と足腰を鍛える。<br><code>character1</code>は日差しを浴びながら<br>ヨガを行い、体の柔軟性を高めている。<br><br><code>character2</code>と<code>character3</code>は、<br>ペアになって筋トレに励み、<br>汗まみれになりながら全身を追い込んだ。<br><br>一通りのトレーニングが終わったヒーローたちは<br>横一列に並び、カメラ目線でサムズアップ！<br>「「ビーチ最高！　今年の夏は浜トレで決まり！」」<br><br><br>ビーチトレーニングで、あなたも<br>ワンランク上のカラダを目指してしてみませんか？<br>～浜トレの予約は↓のリンクにアクセス！～<br><br><br>「――はい、カット！　お疲れ様でしたー！」<br>スタッフの言葉と共に、汗だくの４人は<br>ヘロヘロとその場に崩れ落ちた。
-</p></details>

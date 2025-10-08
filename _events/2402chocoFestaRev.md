@@ -1,5 +1,6 @@
 ---
 title: Chocolate Festa (Reprint)
+eventId: 76
 jp_title: 押忍！チョコ学園祭メモリーズ！開催
 news_link: https://live-a-hero.jp/info/7824
 banner_image: banner_campaign_chocoFesta.jpg
@@ -233,35 +234,3 @@ Here is a list of this event's limited time Missions:
 Fan translations for special quests can be found [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vQRqvH0eDWo7qehduF2d8XIP4XCvN5vjbpo2rLreJhuALbqf2a2UBfkvZlvtXgcJ0X9x-kCYn-K_NzA/pubhtml)
 
 {% include quest-group.html chapterId=1094 %}
-
-## Event Sales Report
-
-<details><summary>Sales Report 1</summary>
-<p>とある学校に仕事で訪れた <code>character0</code> 。<br>仕事も終わり、折角ならばと放課後の校舎を<br>見て回っていた時だった。<br><br>ある教室の前で、<br>中から2人の生徒の声が聞こえてくる。<br>どうやら1人の生徒が、もう1人へと<br>チョコを手 渡しているようだ。<br><br>その様子を見守る <code>character0</code> 。<br>しばらくして、その生徒はチョコを受け取り、<br> 告白は成功したようだった。<br><br>教室の前を通り過ぎ、学校を後にしながら<br> <code>character0</code> は今の出来事を思い 返す。<br><br>チョコに想いを込めて、相手に手渡す。<br>自分なら誰に渡すのだろうか、<br>喜んで受け取ってもらえるだろうか――<br><br>考えている内に、 <code>character0</code> は<br>チョコレート専門店の前で足を止めていた。<br>少しだけ悩んだ後、照 れ臭そうに笑うと、<br> <code>character0</code> はそのまま店へと入っていった。<br><br><br>
-</p>
-</details>
-
-<details><summary>Sales Report 1 (Translated)</summary>
-<p> <code>character0</code> visited a certain school for a job.<br>After the job, they took the opportunity to look around the building after school.<br><br>In front of a classroom, they heard voices of two students.<br>Seems like one of them gave a chocolate to the other.<br><br> <code>character0</code> watch over the situation.<br>After a while, the student receive the chocolate,<br>the confession seemed to have succeeded.<br><br>Passing by the classroom, and after leaving the school what happened was still in <code>character0</code> 's mind.<br><br>Giving a chocolate filled with feelings.<br>If it was me, then to whom will I give it, and whether it will be received…<br><br>While in thought, <code>character0</code> stopped in front of a chocolate store.<br>After a few moment of contemplation, with a shy smile, they entered the store.
-</p>
-</details>
-
-<details><summary>Sales Report 2</summary>
-<p>ある学園祭のお手伝いに訪れた、<br> <code>character0</code> と <code>character1</code> 。<br><br>果物をチョコでコーテ ィングして手渡しをする屋台を<br>任せられ、2人は意気揚々と準備を行う。<br><br>しかし、その最中。 <code>character1</code> は<br>コーティング用のホワイトチョコを倒してしまい、<br> <code>character1</code> はチョコでべとべとに……<br><br>開始まで 時間も無く、迷惑を掛けてしまったと<br>謝る <code>character1</code> に、 <code>character0</code> は<br>切り替えて頑張ろうと自分の上着を羽織らせる。<br><br> <code>character0</code> に励まされ、<br> <code>character1</code> は失敗を取り戻そうと、<br>気合いを入れる。<br><br>そして、張り切ってお客さんに商品を渡していく<br> <code>character1</code> の姿が話題となり 、<br>2人の屋台は大好評で学園祭は幕を下ろした。<br><br>追記：<br>後日、フォローしてもらったお礼の品を持って<br> <code>character0</code> の元へ向かう<br> <code>character1</code> の姿があったとか。
-</p>
-</details>
-
-<details><summary>Sales Report 2 (Translated)</summary>
-<p> <code>character0</code> and <code>character1</code> are requested to help a certain school festival.<br><br>They are entrusted with a stall where they hand over fruits with chocolate coating,<br>with high spirits the both of them begin the preparation.<br><br>However, in the middle of that.<br> <code>character1</code> accidentally knocked over the white chocolate for coating,<br> <code>character1</code> ends up being sticky with chocolate…<br><br>With not much time before the start of festival, <code>character1</code> apologize for their mistake, <br> <code>character0</code> encourages them to do their best together, they drape their jacket over.<br><br>With <code>character0</code> 's encouragement, <code>character1</code> tried their best to recover the mistake.<br><br> And then, handing the chocolate with enthusiasm, <code>character1</code> became the talk of the festival,<br>their stall was a great success, and the school festival came to an end.<br><br>PS:<br>On a later day, <code>character0</code> received a thank you gift for the follow up from <code>character1</code> .
-</p>
-</details>
-
-<details><summary>Sales Report 3</summary>
-<p>とある学校での学園祭。<br>トークショーの仕事を請け負ったヒーローたちは、<br>「赤裸々エピソード」をテーマに、<br>現場 での裏話で盛り上がっていく。<br><br>そして、最後のトークの時間。<br>「チョコを貰う事は多い皆さんですが、<br>どなたかに本命を贈る相手はいますか？」という質問が。<br><br>それに <code>character0</code> は、<br>顔を赤くして言葉を濁す。<br><br> しかし、突然 <code>character2</code> が<br>去年は <code>character0</code> からチョコをもらった！と<br>嬉しそうに司会に告げた。すると、負けじと<br>自分もだと <code>character3</code> が叫ぶ。<br>ざわつく会場、黄色い声が沸き上がる。<br><br> <code>character1</code> も笑って、 <code>character0</code> は<br>料理の腕を上げようと挑戦していたことを暴露する。<br><br> <code>character2</code> と <code>character3</code> は、<br>とても美味しかったから自分たちは幸せ者だと締め括り、<br>会場 からは笑顔と拍手が送られる。<br><br>話が逸れたことに、 <code>character0</code> は<br>一人静かに胸を撫で下ろしていた。
-</p>
-</details>
-
-<details><summary>Sales Report 3 (Translated)</summary>
-<p> On a certain school festival.<br>The heroes took on a job in a talk show,<br>the theme of the talk show was about frank episode.<br><br>And so, at the final segment.<br>We know that you got a lot of chocolates,<br>but do you have someone you want to give real chocolate to? Came that question.<br><br> <code>character0</code> with blushing face, spoke evasively.<br><br>Then suddenly, <code>character2</code> remembered that they received chocolate from <code>character0</code> last year!<br>They told the audience with joy.<br>Then <code>character3</code> exclaimed that they also got one.<br>The noisy venue was filled with shrill voice.<br><br> <code>character1</code> laughs, they disclose that <code>character0</code> was trying to improve their cooking skills.<br><br> <code>character2</code> and <code>character3</code> said that it's very delicious, they felt lucky to have received it,<br>the venue was filled with laughter and applause.<br><br>When the talk has passed,<br> <code>character0</code> secretly heaved a sigh of relief.
-</p>
-</details>

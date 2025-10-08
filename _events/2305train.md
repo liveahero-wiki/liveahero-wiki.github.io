@@ -142,17 +142,3 @@ Here is a list of this event's limited time Missions:
 ### Free Quests
 
 {% include quest-group.html chapterId=1049 %}
-
-### Event Sales Report
-
-<details><summary>SALES_EVENT_TRAIN_REPORT_1</summary>
-<p>警備依頼の合間、ひと時の休暇を過ごすべく<br>クルーズトレインを散策する<code>character0</code>。<br><br>ショッピングエリアに差し掛かった時、<br><code>character0</code>はベンチで独り泣く子供と出会う。<br>泣きじゃくる子供からなんとか事情を聞くと、<br>どうやら親とはぐれ、お腹を空かせていたらしい。<br><br>近くのスタッフに事情を説明し、任せようとするも<br>子供は<code>character0</code>に懐き、<br>全く離れようとしない。<br><br>こうして親が見つかるまでのひととき、<br><code>character0</code>と二人、散策することとなった。<br>フードコートでスイーツを堪能したり、<br>夢中になってゲームコーナーで遊んだり。<br><br>いつしか泣いていたことさえ忘れ、<br>笑いあう子供と<code>character0</code>。<br><br>やがて迎えに来た両親に感謝されながら、<br>こんな休暇も悪くはない、と<br><code>character0</code>はひとり微笑んだ。<br>
-</p></details>
-
-<details><summary>SALES_EVENT_TRAIN_REPORT_2</summary>
-<p>クルーズトレインで撮影の仕事をこなす<br><code>character0</code>と<code>character1</code>。<br><br>今回はグルメ番組のレポーター出演というもの。<br>トークで場を盛り上げる二人の前に、<br>豪華クルーズの名に恥じない料理が運ばれてくる。<br><br>料理の美しさに目を輝かせる<code>character0</code>、<br>仕事で食べ放題と目を輝かせる<code>character1</code>。<br>二人は同時に料理を口に運んだ。<br><br>口に運んだ料理を一口一口じっくりと味わい、<br>事細かにレポートする<code>character0</code>。<br>運ばれた料理を一瞬で完食、<br>予定にない全料理制覇を達成し<br>美味しいを連呼する<code>character1</code>。<br><br>対照的な二人のレポートは大いに盛り上がり、<br>番組は開始以来最高の視聴数となった。<br><br>それからしばらく、二人の事務所には<br>多くのグルメレポート依頼が舞い込んだという。
-</p></details>
-
-<details><summary>SALES_EVENT_TRAIN_REPORT_3</summary>
-<p>ディナーショーのステージ警護を依頼された<br><code>character0</code>、<code>character1</code>、<br><code>character2</code>、そして<code>character3</code>。<br><br>バンドの演奏で盛り上がるステージ。<br>そこに突如として酔ったヴィランが乱入してきた。<br><br>すぐステージに上がり、バンドの曲に合わせながら<br>踊るように闘う<code>character0</code>と<br><code>character1</code>。<br>フロアを回り、驚く客にサービスドリンクをサーブし、<br>場を落ち着かせる<code>character2</code>と<br><code>character3</code>。<br><br>４人の連携ですぐに騒動は収まり、<br>ショーは大成功だったと、大いに感謝された。<br><br>後日、騒動をショーの一環と勘違いした客により<br>撮影された動画がアップされる。<br><br>踊るヒーローバトルは大いに話題となり、<br>次は警備ではなく出演を、と依頼されるのだった。<br>
-</p></details>
