@@ -1,0 +1,7 @@
+{% assign aspectRatio = include.aspectRatio | default: "3 / 2" %}
+<figure>
+<div class="apache-chart" style="aspect-ratio: {{ aspectRatio }}" data-options="{{ include.options | escape }}"></div>
+{% if include.title %}
+<figcaption>{{ include.title }}</figcaption>
+{% endif %}
+</figure>
