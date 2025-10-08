@@ -69,6 +69,12 @@ RELATION = "hello world"
 {% raw %}([\w-]+)\s*=\s*(?:"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)'|([\w.-]+)){% endraw %}
 ```
 
+### Translate sales report
+
+1. Copy original text from [`_data/processed/jp_sales_report.json`](https://github.com/liveahero-wiki/liveahero-wiki.github.io/blob/master/_data/processed/jp_sales_report.json)
+   to [`_data/wiki/SalesReport.json`](https://github.com/liveahero-wiki/liveahero-wiki.github.io/blob/master/_data/wiki/SalesReport.json)
+1. Change all `{Number}` to `<code>characterNumber</code>` (e.g. `{0}` to `<code>character0</code>`). For english text, there should be whitespace before and after the `<code>` syntax.
+
 ### Update illustrator/voice actor/affiliation/item info
 
 - Illustrator info: [_data/wiki/Illustrator.yml](https://github.com/liveahero-wiki/liveahero-wiki.github.io/blob/master/_data/wiki/Illustrator.yml)
