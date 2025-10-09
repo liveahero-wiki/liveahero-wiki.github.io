@@ -4,10 +4,10 @@ characterId: 18
 type: humanoid
 gender: male
 profile:
-  age: Kouki 10 , Sirius 5
-  height: Kouki 152 , Sirius 67
-  weight: Kouki 40 , Sirius 50
-  birthday: Kouki 02/26 , Sirius 08/06
+  age: 10 (Kouki), 5 (Sirius)
+  height: 152 (Kouki), 67 (Sirius)
+  weight: 40 (Kouki), 50 (Sirius)
+  birthday: 02/26 (Kouki), 08/06 (Sirius)
   birthplace: Earth, Japan, Nagoya
   5th_anniversary_intro: |-
      When the duo of heroes dressed in dazzling, tailcoat-style suits appears, all eyes are instantly drawn to them.
