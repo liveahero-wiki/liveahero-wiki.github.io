@@ -9,9 +9,9 @@ import requests
 
 import wiki_util
 
-SKILL_TL_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGnHrxbjI27aRZLsu52ZiBlhZIqLEA4nsd0nICwGlzFPH_v2AQlvC5hf7mvvs8i7-XhfRkq0HcbhU1/pub?gid=1388379188&single=true&output=tsv"
-SKILL_EFFECT_TL_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGnHrxbjI27aRZLsu52ZiBlhZIqLEA4nsd0nICwGlzFPH_v2AQlvC5hf7mvvs8i7-XhfRkq0HcbhU1/pub?gid=1473812801&single=true&output=tsv"
-STATUS_TL_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGnHrxbjI27aRZLsu52ZiBlhZIqLEA4nsd0nICwGlzFPH_v2AQlvC5hf7mvvs8i7-XhfRkq0HcbhU1/pub?gid=1446280214&single=true&output=tsv"
+SKILL_TL_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGnHrxbjI27aRZLsu52ZiBlhZIqLEA4nsd0nICwGlzFPH_v2AQlvC5hf7mvvs8i7-XhfRkq0HcbhU1/pub?gid=1388379188&single=true&output=csv"
+SKILL_EFFECT_TL_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGnHrxbjI27aRZLsu52ZiBlhZIqLEA4nsd0nICwGlzFPH_v2AQlvC5hf7mvvs8i7-XhfRkq0HcbhU1/pub?gid=1473812801&single=true&output=csv"
+STATUS_TL_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGnHrxbjI27aRZLsu52ZiBlhZIqLEA4nsd0nICwGlzFPH_v2AQlvC5hf7mvvs8i7-XhfRkq0HcbhU1/pub?gid=1446280214&single=true&output=csv"
 
 has_invalid_html = False
 
@@ -43,12 +43,12 @@ def getTranslatedTsv(url, filename, use_local=True):
         with open(filename, "w", encoding="utf-8") as f:
             f.write(content)
 
-        reader = csv.DictReader(io.StringIO(content), delimiter='\t')
+        reader = csv.DictReader(io.StringIO(content))
         for row in reader:
             yield row
     else:
         with open(filename, "r", encoding="utf-8") as f:
-            reader = csv.DictReader(f, delimiter='\t')
+            reader = csv.DictReader(f)
             for row in reader:
                 yield row
 
