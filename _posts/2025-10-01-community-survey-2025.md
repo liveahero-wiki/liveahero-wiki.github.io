@@ -19,7 +19,7 @@ date: 2025-10-01 12:00:00 +08
 
 # Foreword
 
-We have achieved 596 responses in this year’s survey, slightly less than last year's survey.
+We have achieved **596** responses in this year’s survey, slightly less than last year's survey.
 
 Thank you to those who have helped me spread the word on various social media platforms!
 
@@ -75,7 +75,7 @@ At this point, the oldest respondent (55 year old) can be the youngest responden
 ## Gender
 
 {% include apache-chart.html
-  options='{"legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "Male / 男性", "value": 66}, {"name": "Female / 女性", "value": 12}, {"name": "Other / 其他 / その他", "value": 4}, {"name": "Non-binary / 非二元性別 / ノンバイナリー", "value": 3}]}]}'
+  options='{"legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "Male / 男性", "value": 529}, {"name": "Female / 女性", "value": 31}, {"name": "Other / 其他 / その他", "value": 22}, {"name": "Non-binary / 非二元性別 / ノンバイナリー", "value": 14}]}]}'
   title="Gender" %}
 
 {% include apache-chart.html
@@ -99,7 +99,7 @@ Transparency report:
 
 - One person from "Christmas Island" uses USA ip address
 - One person from "Sierra Leone" uses Malaysia ip address
-- Many people from "China" use ip address from various other countries, but that is kind of expected since China has the Great Firewall, or they have migrated permanently
+- Many people from "China" use ip address from various other countries, but that is kind of expected since China has the Great Firewall so many China people use VPN. Some might have already migrated to other countries permanently
 
 It is clear that East Asia is the most important market for the game (being culturally close to Japan), followed by Southeast Asia and North America.
 
@@ -390,7 +390,7 @@ China should also be a pretty big player base of this game, but because the surv
 - 56.04% of the respondents cannot read Japanese at all.
 - 106 respondents has N1-level reading ability (17.79%). If excluding Japanese people, only 21 respondents have N1-level reading ability (3.52%)
 - I estimate that you need at least N3 to be able to rea the in-game Japanese story comfortably, only
-  22.52% of the respondents fit in this category.
+  22.48% of the respondents fit in this category.
 
 # The Game
 
