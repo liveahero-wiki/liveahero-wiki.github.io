@@ -669,7 +669,9 @@ This number is much higher than last anniversary (27.2%), you can see that overs
   options='{"legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "Yes, I read fan translation when available / 会，如果有粉丝翻译 / はい （ファンの翻訳があれば読みます）", "value": 255}, {"name": "Yes, I read the story in-game (Japanese) / 会，我直接看日文原文 / はい（日本語）", "value": 165}, {"name": "No / 不会 / いいえ", "value": 96}]}]}'
   title="Do Live A Hero Player Read Story In-game?" %}
 
-More than half of the respondents need to rely on fan translation (which are only available for some quests).
+Close to half of the respondents need to rely on fan translation.
+
+> Note: Chinese community are more lucky than English community due to having more fan translators helping to translate different parts of the game.
 
 > I said from last year that I need to add the option of "Yes, I read the story in-game with the help of machine translation and some guesswork", but I forgot...
 
@@ -756,15 +758,14 @@ Top spots for “All favourites” popularity ranking for each category
 
 Comments:
 
-- Muscular male furry characters once again dominated the popularity ranking, with {% chara_link Pubraseer %} being the top, while {% chara_link Barrel %} and {% chara_link Monomasa %} taking the second and third place with just one vote in difference.
+- Muscular male furry characters once again dominated the popularity ranking, with {% chara_link Pubraseer %} being the top.
+- Only {% chara_link Pubraseer %} and {% chara_link Monomasa %} are liked by more than half of the respondents (approval rating > 50%)
 - The gap between first place and second place is quite significant.
 - Top 1 for "Male furry', "Male human" and "Female/Other" are exactly the same as 2024.
 
 {% include figure-image.html path="/assets/img/survey-2025/all-fav-top-10.jpg"
   clip=true
   title="All Favourites vs Top 10 (2025)" %}
-
-As we move on to “top 10 favourites” popularity ranking, we can see that it often favours the older characters more. {% chara_link Tsuneaki %} and {% chara_link Sterio %}’s ranking somewhat dropped, while {% chara_link Gaius %} experienced the largest ranking boost this way.
 
 </details>
 
@@ -779,15 +780,10 @@ As we move on to “top 10 favourites” popularity ranking, we can see that it 
   clip=true
   title="Approval Rating Change (2024 vs 2025)" %}
 
-- It seems that characters that gotten their variant forms between the time when 2023 and 2024 surveys were carried out (such as {% chara_link Polaris Mask %}, {% chara_link Lilac %}, {% chara_link Kalaski %} and {% chara_link Tsuneaki %}) have their ranking boosted quite significantly
-  - This further suggests that the amount of character appearance in story and recency biases do play a role in their ranking.
+- It seems that characters that gotten their variant forms or base form released between the time when 2024 and 2025 surveys were carried out (such as {% chara_link Astar %}, {% chara_link Barte %}, {% chara_link Yohack %}) and {% chara_link Gaisei %} have their ranking boosted quite significantly
+- {% chara_link Obsidius %}, {% chara_link Sterio %} and {% chara_link Barrel %} lost the most approval rating between 2024 and 2025 survey
+  - Reminder: this year's survey was ended before {% chara_link Barrel|h3 %} was announced
 
-{% chara_link Astar %}, {% chara_link Giansar %}, {% chara_link Yohack %}
-
-
-{% include figure-image.html path="/assets/img/survey-2025/top10-2024-2025.jpg"
-  clip=true
-  title="Top 10 Favourites (2024 vs 2025)" %}
 </details>
 
 <details markdown="1">
@@ -818,17 +814,9 @@ As we move on to “top 10 favourites” popularity ranking, we can see that it 
   clip=true
   title="All Favourites vs Top 10 (Non-binary/Other respondents)" %}
 
-The number of non-male respondents is small to begin with, so there are a lot of ties in votes.
-
-{% chara_link Pubraseer %} is not the number 1 among these respondents, but still in the top 3. This character is just really well loved in all segment of the player base.
-
-TODO
-
-For female respondents, {% chara_link Sensettia %} is number 1 in “All favourites” ranking when they can choose as many characters as want, but {% chara_link Flamier %} overtake her by one vote in “top 10” ranking. {% chara_link Tsuneaki %} is number in "Top 10" ranking.
-
-{% chara_link Barrel %} is only at 17th place in “All favourites” ranking, but shot up to 3rd place in "Top 10" among female respondents. This is quite aligned with what I observed in social media, where most Barrel fan arts are paired with the main character in the female human form.
-
-{% chara_link reXer %}, {% chara_link Grigory %} also saw significant ranking boost in “Top 10” ranking.
+- The number of non-male respondents is small to begin with, so there are a lot of ties in votes.
+- Among non-male respondents, {% chara_link Tsuneaki %} replaced {% chara_link Pubraseer %}'s to take the top spot, but {% chara_link Pubraseer %} is still ranked fairly high in the "Top 10" ranking.
+- LifeWonders promoted {% chara_link Gaisei %} and {% chara_link Vlaham %} in past AGF events to attract more female players, and indeed the female respondents give these characters higher approval rating (35.5% and 32.3% respectively) than the overall respondents (only 7.7% and 18.0% respectively)
 
 </details>
 
@@ -851,7 +839,7 @@ TODO are ranked much higher by those who chose less than 10 favourites.
 
 ## Humanoid vs Anthro Bias
 
-I have been running this survey for 5 years, and anthro characters are always on top in the popularity ranking. This has led many people to think that . So let's try to answer this question: is the survey overwhelmingly dominated by respondents that only like anthro characters?
+I have been running this survey for 5 years, and anthro characters almost always came on top in every year's popularity ranking. This has led many people to think that "furry lovers have conquered the survey". So let's try to answer this question: is the survey overwhelmingly dominated by respondents that only like anthro characters?
 
 First of all, I tried to categorize Live A Hero characters by "Gender" (Male, Female and Other) and "Type" (Humanoid, Anthro and Other). The table can be found [here](/misc/chara_category/).
 
@@ -862,20 +850,26 @@ So if the respondent population does not have bias towards anthro character or h
 {% include figure-image.html path="/assets/img/survey-2025/anthro-loving.jpg"
   title="Anthro-loving Ratio Distribution" %}
 
-> Higher percentage (right hand side of the chart) means the respondent prefers more anthro character than humanoid characters.
-> 100% means the respondent only like anthro characters
+Formula:
 
-So globally, 50% of the respondents have an anthro-loving ratio of at least 62.5% when countring all their favourite characters. The ratio is even higher when respondents can only choose top 10 favourite characters.
+- Anthro-loving ratio of a respondent = "total number of anthro characters they like" / "total number of characters they like" (converted to percentage)
+- Higher percentage means the responden prefers more anthro character than humanoid characters.
+- 100% means the respondent only like anthro characters
+
+- So globally, 50% of the respondents have an anthro-loving ratio of at least 62.5% when countring all their favourite characters.
+- The ratio is even higher when respondents can only choose top 10 favourite characters.
 
 {% include figure-image.html path="/assets/img/survey-2025/anthro-loving-japan.jpg"
   title="Anthro-loving Ratio Distribution (Japan only)" %}
 
-Japan respondents' anthro-loving ratio is slightly lower than global respondents, but it follows the global trend that the anthro-loving ratio increases when we only count top 10 favourite characters.
+- Japan respondents' anthro-loving ratio is slightly lower than global respondents, but it follows the global trend that the anthro-loving ratio increases when we only count top 10 favourite characters.
+- There are two peaks at the 0%~5% and 95%~100% range (i.e. people who almost only like humanoid characters vs people who almost only like anthro characters). Some of the Japan respondents can be quite extreme.
 
 {% include figure-image.html path="/assets/img/survey-2025/anthro-loving-female.jpg"
   title="Anthro-loving Ratio Distribution (Female respondents)" %}
 
-It is very interesting that female respondents' anthro-loving ratio distribution resembles a binomial distribution for the "all favourites". However, when the female respondents are forced to pick the top 10, then the distribution shifts towards antho characters like other gender group.
+- It is very interesting that female respondents' anthro-loving ratio distribution resembles a binomial distribution for the "all favourites".
+- However, when the female respondents are forced to pick the top 10, then the distribution shifts towards antho characters like other gender group.
 
 # Free form questions
 
@@ -1127,10 +1121,10 @@ Some of the suggestions are literally moonshot, so please do take a look at the 
     - https://x.com/korindo
 1. Hirohiko Araki (荒木飛呂彦)
     - https://x.com/araki_jojo
-    - "JoJo's Bizarre Adventure"'s artist
+    - <span class="comment">"JoJo's Bizarre Adventure"'s artist</span>
 1. Masashi Kishimoto (岸本斉史)
     - https://x.com/kishimotomasshi
-    - Naruto's artist
+    - <span class="comment">Naruto's artist</span>
 1. Haiki
     - https://x.com/haiki396g
 1. Bellsalt
@@ -1476,7 +1470,10 @@ Despite that, we still receive a lot of names. Processing this question turned o
 1. Yusa Kōji (遊佐 浩二)
 1. Nakai Kazuya (中井 和哉) - The Japanese voice actor for Roronao Zoro.
 1. Volcano Ota (ボルケーノ太田)
-1. Josuke Shinomiya (篠宮穰祐, old Barguest VA in housamo)
+1. Josuke Shinomiya (篠宮穰祐)
+  - <span class="comment">Old Barguest VA in Housamo</span>
+1. Hatsune Miku (初音ミク)
+  - <span class="comment">Yep, the infamous vocaloid</span>
 
 </details>
 
