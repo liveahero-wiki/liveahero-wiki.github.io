@@ -559,18 +559,18 @@ Interesting points:
 - It seems that more respondents bought "New Year Grab Bag" than "Anniversary Hero Selection Pack". One possible explanation is the respondents value the chance of getting random limited 5 star to be higher than the chance of getting a specific permanent 5 star.
 - Anniversary stone pack has the biggest decrease in popularity
 
-To help make other visualizations easier to understand, we will introduce the concept of **spending level** here.
+To help make other visualizations easier to understand, we will introduce the concept of **Spending Level** here.
 
 ### Definition of Spending level
 
 |Grade|Description|
 |-|-|
-|XL| those who had bought regular paid stones (more expensive) |
-|L| those who had bought the event-limited gem pack (large) |
-|M| those who had bought the event-limited gem pack (small) |
-|S| only bought the anniversary pack and/or new year grab bag (i.e. spent only once or twice a year) |
-|XS| only bought the ten paid stones for fourth Sales slot |
-|Zero| never spent money in this game |
+|XL| Those who had bought regular paid Ether gem (more expensive) |
+|L| Those who had bought the event-limited Ether Gem pack (large) |
+|M| Those who had bought the event-limited Ether Gem pack (small) |
+|S| Only bought the Anniversary pack and/or New Year Grab Bag (i.e. spent only once or twice a year) |
+|XS| Only bought the ten paid stones for fourth Sales slot |
+|Zero| Never spent money in this game |
 
 The criteria for each spending level isn't completely accurate as we don't count how often people buy each product, but it is enough to get a sense of the general trend.
 
@@ -630,7 +630,7 @@ Although the percentage of female respondents is much lower than male respondent
 {% include figure-image.html path="/assets/img/survey-2025/game-score.jpg"
   title="Live A Hero Game Element's Score" %}
 
-- Unsurprisingly, character is the most important aspect of the game according to the players.
+- Unsurprisingly, most respondents give the highest rating for character design
 - Difficulty rating has the lowest average score of 3.55 (median=4）).
 
 ## Other games
