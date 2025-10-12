@@ -3,7 +3,7 @@ const EE = [];
 for (const chartElement of chartElements) {
   try {
     const E = echarts.init(chartElement);
-    const options = JSON.parse(chartElement.dataset.options);
+    const options = JSON.parse(chartElement.querySelector("script").innerText);
     E.setOption(options);
     EE.push(E);
   } catch (e) {
