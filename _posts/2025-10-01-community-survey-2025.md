@@ -442,6 +442,12 @@ The bump at "last 720 days" is quite steep, which is roughly when 3rd anniversar
   options='{"legend": {"data": ["1", "2", "3", "4"]}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "1", "value": 213}, {"name": "2", "value": 49}, {"name": "3", "value": 234}, {"name": "4", "value": 20}]}]}'
   title="Main character body type" %}
 
+- Refresher:
+  - Type 1: <img width="64" height="64" src="/cdn/Sprite/icon_player1_s01.png" loading="lazy">
+  - Type 2: <img width="64" height="64" src="/cdn/Sprite/icon_player2_s01.png" loading="lazy">
+  - Type 3: <img width="64" height="64" src="/cdn/Sprite/icon_player3_s01.png" loading="lazy">
+  - Type 4: <img width="64" height="64" src="/cdn/Sprite/icon_player4_s01.png" loading="lazy">
+
 {% include apache-chart.html
   options='{"legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "1 (Hiroki Goto 後藤ヒロキ)", "value": 229}, {"name": "2 (Iwanaga Yuhei 岩永悠平)", "value": 127}, {"name": "3 (Yu Amano 天野ユウ)", "value": 87}, {"name": "4 (Yui Toita 戸板優衣)", "value": 49}, {"name": "5 (Orie Kimoto 樹元オリエ)", "value": 24}]}]}'
   title="Main character voice" %}
@@ -660,10 +666,10 @@ Although the percentage of female respondents is much lower than male respondent
   - This game has the second lowest current Japanese players (just above Tamacolle) among all the Japanese gacha games that target gay players. Its abandonment rate is also fairly high.
   - The game's per
 - **XXL Woofia**
-  - The latest gacha game that tries to take a pie in the gay player market. It first debutted with English, Chinese and Korean language 
-  - Outside of Japan, this game has the highest number of respondents still playing the game, just second to Tokyo Afterschool Summoners
-  - In Japan, the number of respondents that have tried the game is very low, as the game has only released japanese language in early September 2025.
-    - <span class="comment">For a short few months before Japanese language was released, gay players in Japan that craved for the uncensored R18 game faced the problem that non-Japanese people have been facing for years: language hurdle</span>
+  - The latest gacha game that tries to take a pie in the gay player market. It first debutted with English, Chinese and Korean languages
+  - Outside of Japan, this game has a very high number of respondents still playing the game, only second to Tokyo Afterschool Summoners
+  - In Japan, however, the number of respondents that have tried the game is very low, as the game had only released japanese language in early September 2025.
+    - <span class="comment">For a short few months before Japanese language was released, gay players in Japan that craved for this uncensored R18 game faced the problem that non-Japanese people have been facing for years: language hurdle</span>
   - The game is still very young, we will check again next year to see how well it can retain these players
 
 Sizable number of respondents have at least tried playing Another Eidos and Crave Saga (372 and 303 respectively), but the former seem more able to retain players. They are gay gacha games that have R18 content. and provide some form of translation, but from what I have seen, Another Eidos’ translation quality is much higher than Crave Saga.
@@ -862,8 +868,6 @@ In this gacha game that is full of baits for thirsty players, let us applaud the
   clip=true
   title="Top 10 (those who chose < 10 vs those who chose exactly 10)" %}
 
-TODO are ranked much higher by those who chose less than 10 favourites.
-
 </details>
 
 ## Humanoid vs Anthro Bias
@@ -902,11 +906,189 @@ Formula:
 
 # Free form questions
 
-The “number of mentions” should be treated more as an estimation rather than absolute value. <span class="comment">Words coloured in blue are my own</span>.
+For this year's survey, I ended up manually going through all the comments instead of using AI summarization, as I find the latter hallucinated too much for some reason. The formatting may be a bit messy, and I can't guarantee I did not miss any comment.
+
+<span class="comment">Words coloured in blue are my own</span>.
 
 ## What People Like
 
+- Most comments are all about good character designs. 
+    - Has hot men characters, furry characters, chubby characters, robotic/non-human characters
+    - Good voice acting
+        - Fan service voice lines when touching characters and max leveling units
+    - Cool character models and animations in game battle that are high in quality
+    - Hero theme
+    - Torn suit system
+    - Design that does not sacrifice good visual language for pure eroticism
+- Gameplay
+    - Easy / casual game play that is not time consuming
+    - Vertical game display
+    - Has some form of auto play mechanism
+    - Despite running for 5 years, game unit’s skill inflation isn’t super high
+- Story
+    - Interesting story writing with good world building. It is easy to see how much care LifeWonders take in ensuring the quality of story
+    - Many praised how the story enhanced the appeal of the characters through back story and interaction with other characters
+        - Different characters may have different personality, but at the end of the day, most are kind to the main character
+        - Compared to R18 games where eroticism is always allowed, one respondent like that you can see the characters' modesty and the conflict of whether it's okay to expose themselves in such a shameless state in front of the person they trust (the main character) who has observed them
+        - A respondent mentioned “there is no NTR in this game”. <span class="comment">I have a feeling the respondent is angry with AnotherEidos</span>
+    - Story that is centered more around working adults (compared to Housamo which are mostly “high schoolers”)
+    - Story that actually has high stake, like “you will disappear after being eaten by Kaibutsu”
+    - Main character isn’t useless in the story
+    - Player having some form of “choices” to get some variations in the story, even though the overall story ending is already decided
+    - Interaction between characters
+    - One respondent prefers Live A Hero that has story less suggestive than Housamo
+        - <span class="comment">In next section, you will see other people complained that the story is not suggestive enough</span>
+    - Good BGM
+- Has mechanism to guarantee getting a rate-up character
+- Game franchise that has lots of fan arts
+
+### Some comments more specific to content for past 12 months
+
+- The quality of visual performance within battle, voiced dialogues, cutscenes and BGMs have significantly improved, beyond other games of similar genre. This increases the story immersion.
+- It is now easier to get to secret boss of Unexplored Quest
+  - <span class="comment">Really? I still can’t reach there yet...</span>
+- Glossary (Exio’s notes) to review past concepts/events
+- One requests for implementing trial quest to try out older characters
+- Name card is a good addition
+    - <span class="comment">Unsurprisingly, a lot of people employ a great amount of creativity and ingenuity to make their name card looks erotic</span>
+- Weekly mission, though some still feel it is very stingy
+
 ## Improvement People Want to See
+
+### Translation
+
+Since most survey respondents are not from Japan, the lack of translation is obviously one of the most mentioned feedback:
+
+- One respondent literally said: Japan views punctuality very seriously, but “please wait a while” literally is more than one year? Almost like lying to the players
+- A Japanese respondent also feels concerned that there is no official translation for foreign players to this day
+- Some players have difficulty in clearing game content because not being able to understand skill description and in-game battle guide
+- Some oversea players can get by with the game wiki, but the back and forth checking is very tiring
+- Some does not even know when a new feature is implemented due to not understanding game announcement
+- People can feel that the story and performance quality has improved, but lack of translation means they cannot understand any of it
+- The fact that all other gacha games competing in the same space already have official translations but this game still doesn’t, make players feel very betrayed.
+- One respondent dares LifeWonders to remove the game for non-Japan region and witness how much that tanks the game’s revenue
+
+### Story
+
+- Some people prefer to able to skip the voice acting, and complains that the voiced dialogue prevents them from reading at their own pace
+- There are also players who project themselves as the main character, and saying that the voiced dialogue for main character breaks that immersion for them
+    - An option to turn off main character voice might be a good solution
+- Waited too long to get new Main Quest
+    - One respondent thinks that the frequency of Main Quest and Event Quest should be more balanced
+- Longer Event Quest story to flesh out a character’s charm. Event Special Quest is too short
+- Some respondents complained that Live A Hero’s story is a lot less suggestive as compared to Tokyo Afterschool Summoner
+- Implementation of Date Quest
+- “To top it off, the script and direction for the main story—which hadn't been updated for nearly two years—received quite negative reviews, sparking mixed reactions. Honestly, I'm worried about the future of the game's operation.”
+    - <span class="comment">This comment was written by a Japanese respondent. I was quite surprised by it, as I thought Japanese players on Twitter/X are mostly positive with the latest Main Quest (but then again, I can’t understand Japanese)</span>
+
+### Event
+
+- Too many filler campaigns (like farming campaigns) where players have nothing much to do. For oversea players, “Link Quest campaigns” also counts as filler, because they cannot understand the only content of the campaign, which is just story in Japanese.
+- Every event has a very predictable formula: farm event currency, then trade items in the event shop. Some feel this is too repetitive
+    - People want more ways to play the game during an event other than repetitive farming
+- Request for implementation of story CG
+- Increase the content production frequency
+- Some people request that the event farming quest should last till the final day of the event.
+- Some respondents request LifeWonders to make guide on how to actually beat hard-difficulty quest, beyond the basic in-game battle mechanics description
+- Some players complained the game is too hard, while other players wish to have more challenging quests to play (end-game content)
+- One player complained that many statuses have similar effect, just with different multiplier and/or turn count, and wants LW to standardize them
+    - <span class="comment">I don’t think LW will change this, this is the method most gacha games employ to “adjust game difficulty” and “add variety”</span>
+- Farming efficiency
+    - Reduce time needed to farm event
+    - Farming quest that uses more stamina and gives more reward
+    - Skip ticket and double stamina usage
+    - Skip skill 3’s animation, increase animation speed
+    - Better auto battle system
+    - Auto continue for infinite farming
+    - Able to consume stamina drink till you reach 999
+
+### Game Feature
+
+- Very difficult to figure out what heroes / sidekicks work well together
+- Name card
+    - Want more customization to the name card
+    - Name card title feels useless
+- More mini game to interact with character
+- More features in Office
+    - Accessories for Office
+    - More rewards from Office
+    - “My Alice” from “Crash Fever”
+- More customization for home screen
+- The latest hard-difficulty quest of Main Quest 2-3 introduced the “two-teams” mechanic, but player is only allowed to borrow a friend support for one of the team, which hurts players who don’t have a lot of strong units yet
+    - Forming one strong team is hard enough, now I need to have two teams at the same time??
+- Want to be able to directly buy the required amount of multiple items for one upgrade in one go, rather than having to go back and forth multiple times to check how much they need to buy
+- Sort/filter function for sidekick skills and passives
+- One click to exchange all duplicates to record cubes
+- App notification when stamina is full
+- 100-pulls friend point gacha with a single click
+- Make “reuse previous team combination” a default-ON option in settings instead of asking about it every login. If the player does not want it (which should be a minority), they can turn it off in settings.
+- Make “use stamina to play this quest again” a default-ON option in settings instead of asking about it every login. If the player does not want it (which should be a minority), they can turn it off in settings.
+    - <span class="comment">Crave Saga and XXL Woofia already implement the last two features as default-ON option</span>
+- Scenario replays will display the same scenario and battles as when first viewed.
+- Sandbox quest to test characters
+- Add favourite tags for most used friend supports
+- NSFW mode
+
+### Gacha & Monetization
+
+- Some respondents request for the implementation of monthly pass instead of limited event gem pack
+- Many people want to be able to support the game at lower price point monthly
+- Monthly pass is a very common feature in other gacha games, LifeWonders really need to consider this
+- Paid skins are also mentioned a few times
+- New players complain that it is very slow and boring at the early stage of playing, since accumulating gacha currency and upgrading resources are very challenging.
+    - One player said it takes months to upgrade one character
+    - One respondent observed that their friends often quit the game before that, leading to poor retention rate
+    - <span class="comment">I am guessing that most of the complaints might be referring more to the end-game upgrades like Parallel Quartz, Blooming and Skill Tree, which indeed would take a freaking long time to accumulate enough materials to upgrade.</span>
+- It takes a lot of units to make certain gameplay streak possible, but the game provides very little gacha currency to get units, so it is difficult to achieve that gameplay streak unless you spend money
+- People requests that rerun banners should have higher guaranteed rates for limited units
+- People welcomed the improved mechanics to new characters, but lament that most are for 5 star characters only
+- There are a few complaints about old characters’ skills being useless in the current environment. People want more frequent release of skill tree
+    - Some people complained that old characters are still useless after skill tree enhancement
+- One respondent said “Anniversary got worse” (no specific details), another respondent is displeased the anniversary ticket has been stuck to 3 tickets for years.
+
+### Characters
+
+- One respondent complained that 5 star characters for the last 12 months were almost all just male hunk bodytype, only one (furry) is chubby. No chubby human limited variant in the last 12 months.
+- Limited variants for female character
+- Equal chance of getting limited variant for all characters
+- Some players are not satisfied about the company’s decision to increase the proportion of characters that are not popular to gay men for the sake of diversity
+- Female players on the hand think we need more female characters
+- Some respondents are against the implementation of shota characters
+    - <span class="comment">I can’t comment much, we all know how east asian vs other countries have very different views on fictional shota characters...</span>
+- More furries characters
+    - More female furries characters
+- More grandpa characters
+- More slim-body characters
+    - More slim-body non-human characters
+
+<span class="comment">So you see, when your playerbase becomes diverse enough, you will have opposing needs from the playerbase. Given how slow it is for Live A Hero to release a new unit (variant or new character), there is no way for LifeWonders to satisfy everyone.</span>
+
+<span class="comment">Fortunately, the percentage of respondents that actually complain about the proportion of character type remains pretty low. The community in general is more tolerant than you might think.</span>
+
+<span class="masked">I will drop the truth bomb here: most people that complain about diversity are asian males. Japanese female respondents and quite a few male respondents outside east asia are supportive of more female characters.</span>
+
+- Implementation of event-themed main character skins
+- Increase the suggestive-level for damaged clothes skin
+    - <span class="comment">Some characters’ damaged skin might be more conservative, but I think {% chara_link Antares %} is almost completely naked now</span>
+- One person complains that they cannot get their character naked
+    - <span class="comment">Please, this is a SFW game</span>
+- Some players wish to have same characters getting more chance to appear (even if it means more limited variants) instead of blindlessly increase the number of new characters
+- New art when upgrading 5 star characters
+    - <span class="comment">I supposed the person wants 5 star characters to have at least 3 unique arts?</span>
+- Improve spine models for older characters
+- The quality of spine models for some new characters are worse than others.
+- Some people complain that the recent accessory for some characters’ spine models are getting too simple and boring
+- There are people request for changing skin on spine models
+- Bigger bulge on spine model
+    - <span class="comment">If XXL Woofia can get away with having gigantic bulge in the “SFW” Google Play/Apple Store version, I think LifeWonders can be a bit more bold too...</span>
+- HD character arts
+- Characters’ legs are too short
+
+# Bugs & Performance
+
+- Loading time being too slow is the most common complaint in this category, especially at the login screen.
+- Some people also experienced random game crashes at login screen
+- Friend list management page is very slow
 
 ## New Illustrator Wishlist
 
@@ -1342,6 +1524,19 @@ Some of the suggestions are literally moonshot, so please do take a look at the 
     - https://x.com/479992103
 1. Ryota-H
     - https://x.com/Ryota_H
+1. WINEMVEE
+    - https://x.com/winemvee
+1. piikeisandaa
+    - https://bsky.app/profile/piikeisandaa.bsky.social
+1. 村上タロス
+    - https://x.com/murakami_ta
+    - https://www.pixiv.net/en/users/66210
+1. dokeshin
+    - https://x.com/dokeshin
+1. Tsuroe
+    - https://x.com/chuurow/
+1. jrjresq
+    - https://bsky.app/profile/jrjr.esq
 
 </details>
 
