@@ -808,6 +808,52 @@ Comments:
 
 </details>
 
+<details open markdown="1">
+<summary>Pairwise Ranking</summary>
+
+Apart from asking survey respondents to choose all their favourite characters and top 10 favourite characters, I also asked them to rank the top 10 into a linear order.
+
+With this data, we can try to do pairwise ranking, which basically put all characters into head-to-head comparisons with each other, and rank them by how many times they win in these head-to-head comparisons.
+
+How it works:
+
+- Assume a respondent's top 10 ranking is A > B > C > D > E > F > G > H > I > J
+- +1 for each of "A > B", "A > C", "A > D", ... "B > C", "B > D", ..., "I > J"
+- +1 for every characters in the top 10 ranking vs not in the ranking. For example, if X is not in the ranking, then +1 for "A > X", "B > X", ... "J > X"
+  - This is necessary because I only ask respondents to rank the top 10 characters instead of **all the characters**. Asking respondents to rank all characters would be too exhausting and boring for most people.
+  - Because of this imperfect data, the pairwise ranking computed **is not perfect**
+
+Below is a small snapshot of the computed pairwise ranking:
+
+<div class="table-scroll" markdown="1">
+
+|           | RANK | TOTAL | {% chara_link Pubraseer %} | {% chara_link Monomasa %} | {% chara_link Giansar %} | {% chara_link Barrel %} | {% chara_link Ryekie %} | {% chara_link Sadayoshi %} | {% chara_link Akashi %} | {% chara_link Obsidius %} | {% chara_link reXer %} | {% chara_link Tsuneaki %} | {% chara_link Toshu %} |
+|-----------|:----:|:-----:|:---------:|:--------:|:-------:|:------:|:------:|:---------:|:------:|:--------:|:-----:|:--------:|:-----:|
+| {% chara_link Pubraseer %} |    1 | 28853 |         0 |      235 |     237 |    248 |    261 |       264 |    258 |      257 |   263 |      268 |   280 |
+| {% chara_link  Monomasa %} |    2 | 22110 |       125 |        0 |     164 |    173 |    202 |       194 |    198 |      202 |   195 |      204 |   209 |
+| {% chara_link  Giansar  %} |    3 | 18815 |       125 |      129 |       0 |    149 |    164 |       158 |    177 |      180 |   166 |      175 |   177 |
+| {% chara_link   Barrel  %} |    4 | 16611 |        81 |      107 |     130 |      0 |    143 |       141 |    156 |      153 |   146 |      158 |   156 |
+| {% chara_link   Ryekie  %} |    5 | 14972 |        65 |       89 |     117 |     96 |      0 |       132 |    135 |      127 |   121 |      137 |   138 |
+| {% chara_link Sadayoshi %} |    6 | 14038 |        79 |       76 |      90 |     95 |    117 |         0 |    130 |      128 |   104 |      127 |   131 |
+| {% chara_link   Akashi  %} |    7 | 14013 |       113 |      122 |     131 |    124 |    124 |       135 |      0 |      135 |   129 |      122 |   139 |
+| {% chara_link  Obsidius %} |    8 | 13996 |        82 |       94 |      98 |    106 |    125 |       128 |    124 |        0 |   131 |      131 |   126 |
+| {% chara_link   reXer   %} |    9 | 13536 |        70 |       77 |      80 |     99 |    112 |       118 |    114 |      129 |     0 |      118 |   124 |
+| {% chara_link  Tsuneaki %} |   10 | 13141 |        77 |       95 |      97 |    101 |    106 |       111 |    117 |      117 |   110 |        0 |   126 |
+| {% chara_link   Toshu   %} |   11 | 11059 |        54 |       66 |      78 |     86 |     86 |        91 |    107 |       83 |    97 |      100 |     0 |
+
+</div>
+
+Here are the links for the full table, feel free to import them to a spreadsheet to explore the data:
+
+- [Global Pairwise Ranking](/misc/survey-2025/global_pairwise_ranking.html)
+
+Some observations:
+
+- After taking into account of the ranking data, the positions of {% chara_link Obsidius %} (6th -> 8th) and {% chara_link Akashi %} (8th -> 7th) are swapped.
+- Most characters' position in the top 10 ranking remain unchanged. Only those characters who were tie with other characters in the original top 10 ranking no longer share the same rank in the new pairwise ranking
+
+</details>
+
 <details markdown="1">
 <summary>2024 vs 2025</summary>
 
