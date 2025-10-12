@@ -644,7 +644,7 @@ Maybe next year I should add questions to rate the story, characters and general
 ## Free Gacha Pull Currency
 
 {% include apache-chart.html
-  option='{"legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "Less than other gacha games / 比别的游戏少 / 他のガチャゲームより少ない", "value": 319}, {"name": "About the same / 和别的游戏差不多 / ほぼ同じ", "value": 154}, {"name": "More generous than other gacha games / 比别的游戏大方 / 他のガチャゲームより気前がいい", "value": 38}, {"name": "Don't play other gacha games / 没玩别的扭蛋游戏 / 他のガチャゲームはやらない", "value": 5}]}]}'
+  option='{"legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "Less than other gacha games / 比别的游戏少 / 他のガチャゲームより少ない", "value": 319}, {"name": "About the same / 和别的游戏差不多 / ほぼ同じ", "value": 154}, {"name": "More generous than other gacha games / 比别的游戏大方 / 他のガチャゲームより気前がいい", "value": 38}, {"name": "Don\'t play other gacha games / 没玩别的扭蛋游戏 / 他のガチャゲームはやらない", "value": 5}]}]}'
   title="Free Gacha Pull Currency Opinion" %}
 
 TODO of the LAH players think the game gives less free gacha pulls than other gacha games (A), while only TODO of them think LAH is more generous than other gacha games (B).
