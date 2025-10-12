@@ -779,7 +779,7 @@ Top spots for “All favourites” popularity ranking for each category
     <td>48.5%</td>
     <td>{% chara_link Gammei %}</td>
     <td>31.4%</td>
-    <td>{% chara_link Flamier %}, {% chara_link Zahniah %}</td>
+    <td>{% chara_link Flamier %}, {% chara_link Zaniah %}</td>
     <td>10.6%</td>
   </tr>
   <tr>
@@ -799,8 +799,10 @@ Comments:
 
 - Muscular male furry characters once again dominated the popularity ranking, with {% chara_link Pubraseer %} being the top.
 - Only {% chara_link Pubraseer %} and {% chara_link Monomasa %} are liked by more than half of the respondents (approval rating > 50%)
+  - **Approval rating**: the percentage of respondents that include the character in their "All favourites"
 - The gap between first place and second place is quite significant.
 - Top 1 for "Male furry', "Male human" and "Female/Other" are exactly the same as 2024.
+- {% chara_link Denebora %} is the most anticipated unreleased character so far (31.7% approval rating)
 
 {% include figure-image.html path="/assets/img/survey-2025/all-fav-top-10.jpg"
   clip=true
@@ -820,8 +822,9 @@ How it works:
 - Assume a respondent's top 10 ranking is A > B > C > D > E > F > G > H > I > J
 - +1 for each of "A > B", "A > C", "A > D", ... "B > C", "B > D", ..., "I > J"
 - +1 for every characters in the top 10 ranking vs not in the ranking. For example, if X is not in the ranking, then +1 for "A > X", "B > X", ... "J > X"
-  - This is necessary because I only ask respondents to rank the top 10 characters instead of **all the characters**. Asking respondents to rank all characters would be too exhausting and boring for most people.
+  - This is necessary because I only asked respondents to rank the top 10 characters instead of **all the characters**. Asking respondents to rank all characters into a linear order would be too exhausting and boring for most people.
   - Because of this imperfect data, the pairwise ranking computed **is not perfect**
+- Repeat the same process for all respondents
 
 Below is a small snapshot of the computed pairwise ranking:
 
@@ -865,7 +868,7 @@ Some observations:
   clip=true
   title="Approval Rating Change (2024 vs 2025)" %}
 
-- It seems that characters that gotten their variant forms or base form released between the time when 2024 and 2025 surveys were carried out (such as {% chara_link Astar %}, {% chara_link Barte %}, {% chara_link Yohack %}) and {% chara_link Gaisei %} have their ranking boosted quite significantly
+- It seems that characters that gotten their variant forms or base form released between the time when 2024 and 2025 surveys were carried out have their ranking boosted quite significantly (such as {% chara_link Astar %}, {% chara_link Barte %}, {% chara_link Yohack %}) and {% chara_link Gaisei %}
 - {% chara_link Obsidius %}, {% chara_link Sterio %} and {% chara_link Barrel %} lost the most approval rating between 2024 and 2025 survey
   - Reminder: this year's survey was ended before {% chara_link Barrel|h3 %} was announced
 
