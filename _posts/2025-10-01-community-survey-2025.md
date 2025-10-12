@@ -45,9 +45,9 @@ I do not know if "Japanese people who were willing to participate in this survey
 I understand that some people do not want to see the popularity poll result as there might be jerks who would cherry pick any data and twist it to fit their narrative.
 So let me get this straight:
 
-1. "Some characters being more popular than others" is a fact that everyone can observe through many other ways, such as "engagement count on LifeWonders' official posts/videos", "the number of fan arts" and so on. Even without this popularity poll, people who would cherry pick any data and twist it to fit their narrative always exist. The survey result should not increase the number of such people.
-1. I have ran this survey for many years. While I can't say that everyone acted civil after the result publication, but I have not witnessed such discourse escalated too much, because most groups and servers already have rules to control insults and hate speech.
-1. For those people who twist the result of popularity poll for their nown arrative, I am sure these people do other Karen stuffs in other time too. So the general online advise applies: if the person is being too annoying, just block them and move on with your life.
+1. "Some characters being more popular than others" is a fact that everyone can observe through many other ways, such as "engagement count on LifeWonders' official posts/videos", "the number of fan arts" and so on. Even without this popularity poll, people who would cherry pick any data and twist it to fit their narrative always exist, and there are plenty data for them to do that. The survey result should not increase the number of such people.
+1. I have ran this survey for many years. While I can't say that everyone acted civilly after publication of the survey result, but I have not witnessed such discourse escalated too much, because most groups and servers already have rules to control insults and hate speech.
+1. For those people who try to use the survey result o bully others, I am sure these people do other Karen stuffs in other time too. So the general online advise applies: if the person is being too annoying, just block them and move on with your life.
 
 
 # Respondent Profile
@@ -70,7 +70,7 @@ Since this is a mobile gacha game, it is no surprise that the age distribution i
 At this point, the oldest respondent (55 year old) can be the youngest respondent’s grandfather... (15 years old)
 
 {% include figure-image.html path="/assets/img/survey-2025/age-other.jpg"
-  title="Age of Respondents" %}
+  title="Age of Respondents (First chart is female respondents only, second chart is Japan only)" %}
 
 ## Gender
 
@@ -651,7 +651,7 @@ Although the percentage of female respondents is much lower than male respondent
   - The only buy-out game developed by LifeWonders, you can treat “abandoned” the same as “still playing”
   - It is not surprising that plenty of non-Japan respondents said “they heard of it but never played it”, since the majority of the respondents do not understand Japanese and the game has no hope of ever getting official translation.
   - Even among Japan respondents, there are more than a third of them that has "heard of the game but never play"
-  - <span class="comment">In all honesty, the game has a very solid story writing, and it benefited from having limited number of characters, so each characters has more exposure to shine. If you can understand Japanese, definitely give it a try.</span>
+  - <span class="comment">In all honesty, the game has a very solid story writing, and it benefited from having limited number of characters, so each characters has more time to shine. If you can understand Japanese, definitely give it a try.</span>
 - **Tokyo Afterschool Summoners**
   - Close to 70% LAH players are still playing Tokyo Afterschool Summoners, which is also another older game developed by LifeWonders, while 23.9% have abandoned it.
 - **Tamacolle**
@@ -666,15 +666,11 @@ Although the percentage of female respondents is much lower than male respondent
   - This game has the second lowest current Japanese players (just above Tamacolle) among all the Japanese gacha games that target gay players. Its abandonment rate is also fairly high.
   - The game's per
 - **XXL Woofia**
-  - The latest gacha game that tries to take a pie in the gay player market. It first debutted with English, Chinese and Korean languages
+  - The latest gacha game that wants a piece of the pie in the gay player market. It first debuted with English, Chinese and Korean languages in June 2025.
   - Outside of Japan, this game has a very high number of respondents still playing the game, only second to Tokyo Afterschool Summoners
-  - In Japan, however, the number of respondents that have tried the game is very low, as the game had only released japanese language in early September 2025.
+  - In Japan, however, the number of respondents that have tried the game is very low, as the game had only released Japanese language in early September 2025.
     - <span class="comment">For a short few months before Japanese language was released, gay players in Japan that craved for this uncensored R18 game faced the problem that non-Japanese people have been facing for years: language hurdle</span>
   - The game is still very young, we will check again next year to see how well it can retain these players
-
-Sizable number of respondents have at least tried playing Another Eidos and Crave Saga (372 and 303 respectively), but the former seem more able to retain players. They are gay gacha games that have R18 content. and provide some form of translation, but from what I have seen, Another Eidos’ translation quality is much higher than Crave Saga.
-
-Maybe next year I should add questions to rate the story, characters and general satisfaction of these games too.
 
 ## Free Gacha Pull Currency
 
@@ -688,6 +684,14 @@ Maybe next year I should add questions to rate the story, characters and general
   title="Free Gacha Pull Currency Opinion against Spending Level" %}
 
 When we examine the spending level of the group A and group B, we see no colleration between the spending level of the respondents and their opinion on the sufficiency of free gacha pull currency.
+
+> "Whether Live A Hero is gives more or less free pull currency than other gacha game" alone might not be best question to ask.
+>
+> Sometime other gacha games may give out more free pull currency, but at the same time there are 4 gacha banners per month <span class="masked">Crave Saga</span>. If you want every characters, you are still screwed.
+>
+> There is also a case where the gacha game is super genorous with free pull currency, but at the same time you need get many duplicates to make the character's skills useful <span class="masked">XXL Woofia</span>.
+>
+> So, we need to consider the entire gacha mechanism as a whole to assess whether it is healthy for the playerbase...
 
 ## Translation
 
@@ -937,7 +941,7 @@ For this year's survey, I ended up manually going through all the comments inste
     - Player having some form of “choices” to get some variations in the story, even though the overall story ending is already decided
     - Interaction between characters
     - One respondent prefers Live A Hero that has story less suggestive than Housamo
-        - <span class="comment">In next section, you will see other people complained that the story is not suggestive enough</span>
+        - <span class="comment">In the "Improvement" section, you will see other people complained that the story is not suggestive enough</span>
     - Good BGM
 - Has mechanism to guarantee getting a rate-up character
 - Game franchise that has lots of fan arts
@@ -945,13 +949,14 @@ For this year's survey, I ended up manually going through all the comments inste
 ### Some comments more specific to content for past 12 months
 
 - The quality of visual performance within battle, voiced dialogues, cutscenes and BGMs have significantly improved, beyond other games of similar genre. This increases the story immersion.
-- It is now easier to get to secret boss of Unexplored Quest
+- It is now easier to get to secret boss of [Unexplored Quest](/guide/unexplored/)
   - <span class="comment">Really? I still can’t reach there yet...</span>
-- Glossary (Exio’s notes) to review past concepts/events
-- One requests for implementing trial quest to try out older characters
-- Name card is a good addition
+- New features that receive praises from the respondents
+  - Glossary (Exio’s notes) to review past concepts/events
+  - Trial quest to try out new characters' game skills
+  - Name card is a good addition
     - <span class="comment">Unsurprisingly, a lot of people employ a great amount of creativity and ingenuity to make their name card looks erotic</span>
-- Weekly mission, though some still feel it is very stingy
+  - Weekly mission, though some still feel it is very stingy
 
 ## Improvement People Want to See
 
@@ -1012,13 +1017,13 @@ Since most survey respondents are not from Japan, the lack of translation is obv
 - More features in Office
     - Accessories for Office
     - More rewards from Office
-    - “My Alice” from “Crash Fever”
+    - One respondent mentioned LW can copy “My Alice” from “Crash Fever”
 - More customization for home screen
 - The latest hard-difficulty quest of Main Quest 2-3 introduced the “two-teams” mechanic, but player is only allowed to borrow a friend support for one of the team, which hurts players who don’t have a lot of strong units yet
     - Forming one strong team is hard enough, now I need to have two teams at the same time??
 - Want to be able to directly buy the required amount of multiple items for one upgrade in one go, rather than having to go back and forth multiple times to check how much they need to buy
 - Sort/filter function for sidekick skills and passives
-- One click to exchange all duplicates to record cubes
+- One click to exchange all duplicates to {% include item.html id=40 %}
 - App notification when stamina is full
 - 100-pulls friend point gacha with a single click
 - Make “reuse previous team combination” a default-ON option in settings instead of asking about it every login. If the player does not want it (which should be a minority), they can turn it off in settings.
@@ -1026,6 +1031,8 @@ Since most survey respondents are not from Japan, the lack of translation is obv
     - <span class="comment">Crave Saga and XXL Woofia already implement the last two features as default-ON option</span>
 - Scenario replays will display the same scenario and battles as when first viewed.
 - Sandbox quest to test characters
+    - <span class="comment">I think we already have [Challenge Simulator](/guide/challenge_simulator/) every fortnight for that?</span>
+- Implement trial quest to try out older characters
 - Add favourite tags for most used friend supports
 - NSFW mode
 
@@ -1038,8 +1045,8 @@ Since most survey respondents are not from Japan, the lack of translation is obv
 - New players complain that it is very slow and boring at the early stage of playing, since accumulating gacha currency and upgrading resources are very challenging.
     - One player said it takes months to upgrade one character
     - One respondent observed that their friends often quit the game before that, leading to poor retention rate
-    - <span class="comment">I am guessing that most of the complaints might be referring more to the end-game upgrades like Parallel Quartz, Blooming and Skill Tree, which indeed would take a freaking long time to accumulate enough materials to upgrade.</span>
-- It takes a lot of units to make certain gameplay streak possible, but the game provides very little gacha currency to get units, so it is difficult to achieve that gameplay streak unless you spend money
+    - <span class="comment">I am guessing that most of the complaints might be referring more to the end-game upgrades like {% include item-icon.html id=59 %} Parallel Quartz, Blooming and Skill Tree, which indeed would take a freaking long time to accumulate enough materials to upgrade.</span>
+- It takes a lot of units to make certain gameplay combination possible, but the game provides very little gacha currency to get units, so it is difficult to achieve that gameplay combination unless you spend money
 - People requests that rerun banners should have higher guaranteed rates for limited units
 - People welcomed the improved mechanics to new characters, but lament that most are for 5 star characters only
 - There are a few complaints about old characters’ skills being useless in the current environment. People want more frequent release of skill tree
@@ -1069,7 +1076,7 @@ Since most survey respondents are not from Japan, the lack of translation is obv
 
 - Implementation of event-themed main character skins
 - Increase the suggestive-level for damaged clothes skin
-    - <span class="comment">Some characters’ damaged skin might be more conservative, but I think {% chara_link Antares %} is almost completely naked now</span>
+    - <span class="comment">Some characters’ damaged skin might be more conservative, but I think {% chara_link Antares|h1 %} is almost completely naked now</span>
 - One person complains that they cannot get their character naked
     - <span class="comment">Please, this is a SFW game</span>
 - Some players wish to have same characters getting more chance to appear (even if it means more limited variants) instead of blindlessly increase the number of new characters
@@ -1705,13 +1712,11 @@ Due to time constraint, I did not make a list of voice actors that respondents w
 
 # Afterword
 
-I hope you enjoy reading this report, because the whole process took me months to prepare. Many times the thought of “I should be paid for this work” flashed in my mind. It really is not easy to conduct a survey of this size, and then write a report about it!
-
-For a lGbt game that we all know caters more towards gay players, I think LifeWonders’ success in attracting more players from other demographics is pretty commendable. If they can grow the group of paying players to keep the business running [while still staying true to their original mission](https://www.lifewonders.co.jp/?lang=en), I think that is good for everyone. (Ironically, "serving global market is also in their missions).
+I hope you enjoy reading this report, because the whole process took me months to prepare. I added too many open-ended questions, which only cost me even more time to analyze. There were also some technical upgrade for the survey and the report itself. This felt like a full time work.
 
 While waiting for the ever elusive release of official translation, this wiki will still be here supporting oversea players.
 
-See you in next year survey!
+See you in next year survey! (Or see me again in this year's unofficial Tokyo Afterschool Summoners survey that should happen around two weeks before its anniversary.)
 
 <script defer src="https://echarts.apache.org/en/js/vendors/echarts/dist/echarts.min.js"></script>
 <script defer src="/assets/chart.js"></script>
