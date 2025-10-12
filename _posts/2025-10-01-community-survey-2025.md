@@ -9,7 +9,9 @@ date: 2025-10-01 12:00:00 +08
 }
 </style>
 
-> This article is very long and contain a few visualizations. For better reading experience, please read this article in wider screen.
+> This article is very long and contain a few visualizations. Some interactive charts do not work well in small screen size.
+>
+> For better reading experience, please read this article in wider screen.
 
 * unordered
 {:toc}
@@ -53,40 +55,45 @@ So let me get this straight:
 ## Source of respondents
 
 {% include apache-chart.html
-  options='{"dataset": {"source": [["Discord", 140], ["X (Twitter)", 91], ["English wiki / 英語版wiki", 90], ["巴哈姆特 (Taiwan)", 88], ["Weibo 微博", 41], ["Reddit", 38], ["Tencent QQ", 26], ["Youtube", 26], ["BlueSky", 24], ["other", 11], ["Facebook", 10], ["Zawazawa", 8], ["Bilibili", 3]]}, "legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "value": 1}]}'
+  options='{"legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "Discord", "value": 140}, {"name": "X (Twitter)", "value": 91}, {"name": "English wiki / 英語版wiki", "value": 90}, {"name": "巴哈姆特 (Taiwan)", "value": 88}, {"name": "Weibo 微博", "value": 41}, {"name": "Reddit", "value": 38}, {"name": "Tencent QQ", "value": 26}, {"name": "Youtube", "value": 26}, {"name": "BlueSky", "value": 24}, {"name": "other", "value": 11}, {"name": "Facebook", "value": 10}, {"name": "Zawazawa", "value": 8}, {"name": "Bilibili", "value": 3}]}]}'
   title="Source of Respondents" %}
 
 Majority of the respondents found the survey via Discord (23.49%). Taiwan Bahamut Forum, Twitter/X and English Wiki each take approximately 15%.
 
 ## Age
 
-{% include figure-image.html path="/assets/img/survey-2024/age.jpg"
+{% include figure-image.html path="/assets/img/survey-2025/age.jpg"
   title="Age of Respondents" %}
 
 Since this is a mobile gacha game, it is no surprise that the age distribution is skewed towards the younger side.
 
-At this point, the oldest respondent (55 year old) can be the youngest respondent’s grandfather... (13 years old)
+At this point, the oldest respondent (55 year old) can be the youngest respondent’s grandfather... (15 years old)
+
+{% include figure-image.html path="/assets/img/survey-2025/age-other.jpg"
+  title="Age of Respondents" %}
 
 ## Gender
 
 {% include apache-chart.html
-  options='{"dataset": {"source": [["Male / 男性", 529], ["Female / 女性", 31], ["Other / 其他 / その他", 22], ["Non-binary / 非二元性別 / ノンバイナリー", 14]]}, "legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "value": 1}]}'
+  options='{"legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "Male / 男性", "value": 66}, {"name": "Female / 女性", "value": 12}, {"name": "Other / 其他 / その他", "value": 4}, {"name": "Non-binary / 非二元性別 / ノンバイナリー", "value": 3}]}]}'
   title="Gender" %}
 
 {% include apache-chart.html
-  options='{"dataset": {"source": [["Cisgender / 順性別 / シスジェンダー", 575], ["Transgender / 跨性別 / トランスジェンダー", 21]]}, "legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "value": 1}]}'
+  options='{"legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "Cisgender / 順性別 / シスジェンダー", "value": 575}, {"name": "Transgender / 跨性別 / トランスジェンダー", "value": 21}]}]}'
   title="Cisgender vs Transgender" %}
 
 11.24% of the respondents are non-male (up from 7.5% last year) and 3.52% are transgender (lower than last year)
 
 ### Female/Non-Binary/Other Respondents and Where to Find them
 
-{% include figure-image.html path="/assets/img/survey-2024/other-gender-country.jpg"
+{% include figure-image.html path="/assets/img/survey-2025/other-gender-country.jpg"
   title="Countries of Female/Non-Binary/Other Respondents" %}
+
+- A lot of the female respondents for this survey come from Japan.
 
 ## Country
 
-Top 3 countries are Taiwan (153), China and Japan
+Top 3 countries are Taiwan, China and Japan
 
 Transparency report:
 
@@ -377,7 +384,7 @@ China should also be a pretty big player base of this game, but because the surv
 ## Japanese proficiency
 
 {% include apache-chart.html
-  options='{"dataset": {"source": [["Zero knowledge / 完全不会 / 知識ゼロ", 334], ["N1", 106], ["N5", 93], ["N4", 35], ["N3", 15], ["N2", 13]]}, "legend": {"data": ["N1", "N2", "N3", "N4", "N5", "Zero knowledge / 完全不会 / 知識ゼロ"]}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "value": 1}]}'
+  options='{"legend": {"data": ["N1", "N2", "N3", "N4", "N5", "Zero knowledge / 完全不会 / 知識ゼロ"]}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "N1", "value": 106}, {"name": "N2", "value": 13}, {"name": "N3", "value": 15}, {"name": "N4", "value": 35}, {"name": "N5", "value": 93}, {"name": "Zero knowledge / 完全不会 / 知識ゼロ", "value": 334}]}]}'
   title="Japanese Language Reading Proficiency" %}
 
 - 56.04% of the respondents cannot read Japanese at all.
@@ -390,7 +397,7 @@ China should also be a pretty big player base of this game, but because the surv
 ## Actual Player
 
 {% include apache-chart.html
-  options='{"dataset": {"source": [["Still playing / 还在玩 / 今もやってる", 516], ["Has stopped playing / 已弃坑 / 辞めた", 49], ["Heard of but never play / 听过但没玩过 / やったことない", 31]]}, "legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "value": 1}]}'
+  options='{"legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "Still playing / 还在玩 / 今もやってる", "value": 516}, {"name": "Has stopped playing / 已弃坑 / 辞めた", "value": 49}, {"name": "Heard of but never play / 听过但没玩过 / やったことない", "value": 31}]}]}'
   title="Do you play Live A Hero?" %}
 
 - 86.58% of the respondents are still playing the game
@@ -420,7 +427,7 @@ Majority of the respondents use Android to play the game. Quite a few people use
 
 ## Playing Time
 
-{% include figure-image.html path="/assets/img/survey-2024/play-lah-time.jpg"
+{% include figure-image.html path="/assets/img/survey-2025/play-lah-time.jpg"
   title="How Long Have Live A Hero Players Been Playing the Game?" %}
 
 X-axis is the number of days played (end date is set to 30 Sep 2024). Slightly less than half of the respondents started playing Live A Hero immediately after the game’s launch. Since then, the player base seems to be growing at a linear scale.
@@ -431,10 +438,12 @@ The bump at "last 720 days" is quite steep, which is roughly when 3rd anniversar
 
 ## Main Character Configuration
 
-{% include figure-image.html path="/assets/img/survey-2024/body.svg"
+{% include apache-chart.html
+  option='{"legend": {"data": ["1", "2", "3", "4"]}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "1", "value": 213}, {"name": "2", "value": 49}, {"name": "3", "value": 234}, {"name": "4", "value": 20}]}]}'
   title="Main character body type" %}
 
-{% include figure-image.html path="/assets/img/survey-2024/voice_actor.svg"
+{% include apache-chart.html
+  option='{"legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "1 (Hiroki Goto 後藤ヒロキ)", "value": 229}, {"name": "2 (Iwanaga Yuhei 岩永悠平)", "value": 127}, {"name": "3 (Yu Amano 天野ユウ)", "value": 87}, {"name": "4 (Yui Toita 戸板優衣)", "value": 49}, {"name": "5 (Orie Kimoto 樹元オリエ)", "value": 24}]}]}'
   title="Main character voice" %}
 
 Hiroki Goto (first male voice) took nearly 50% of the male voice’s market, the other two are about 25% each. For female voice, Yui Toita is slightly more popular than Orie Kimoto.
@@ -543,10 +552,12 @@ Interesting points:
 
 ## Money spending
 
-{% include figure-image.html path="/assets/img/survey-2024/in-app-purchase.jpg"
-  title="How Many Live A Hero Player Spend Money In-game?" %}
+{% include apache-chart.html
+  option='{"dataset": [{"source": [["In App Purchase Item", "All time", "Last 12 months only"], ["Regular paid stones\n非特价石头\n通常の有償石", 57, 44], ["Anniversary stone pack\n周年礼包\n周年記念パック", 148, 97], ["Event limited stone pack (large)\n活動限定礼包 （大）/ イベント限定エーテル晶石パック（大）", 153, 128], ["Anniversary Hero selection pack\n周年英雄选定礼包\n周年ヒーロー指名パック", 163, 137], ["10 stones for the 4th sales slot\n第4個营業所需的十石\n4番目の营業枠に有償エーテル晶石10個", 174, 138], ["New year grab bag\n新年福袋", 186, 168], ["Event limited stone pack (small)\n活動限定礼包（小）\nイベント限定エーテル晶石パック（小）", 193, 183], ["Not at all\n无课金\n無課金", 212, 212]]}], "toolbox": {"show": true, "feature": {"magicType": {"show": true, "type": ["stack"]}}}, "legend": {}, "label": {}, "tooltip": {}, "series": [{"type": "bar"}, {"type": "bar"}], "yAxis": {"type": "category"}, "xAxis": {}}'
+  title="In-App Purchase (All time vs Last 12 months only)" %}
 
 - It seems that more respondents bought "New Year Grab Bag" than "Anniversary Hero Selection Pack". One possible explanation is the respondents value the chance of getting random limited 5 star to be higher than the chance of getting a specific permanent 5 star.
+- Anniversary stone pack has the biggest decrease in popularity
 
 To help make other visualizations easier to understand, we will introduce the concept of **spending level** here.
 
@@ -564,51 +575,58 @@ To help make other visualizations easier to understand, we will introduce the co
 The criteria for each spending level isn't completely accurate as we don't count how often people buy each product, but it is enough to get a sense of the general trend.
 
 {% include apache-chart.html
-  options='{"dataset": {"source": [["Zero", 212], ["L", 106], ["XS", 93], ["S", 75], ["XL", 57], ["M", 53]]}, "legend": {"data": ["XL", "L", "M", "S", "XS", "Zero"]}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "value": 1}]}'
+  options='{"legend": {"data": ["XL", "L", "M", "S", "XS", "Zero"]}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "XL", "value": 57}, {"name": "L", "value": 106}, {"name": "M", "value": 53}, {"name": "S", "value": 75}, {"name": "XS", "value": 93}, {"name": "Zero", "value": 212}], "color": ["#6c2b6d", "#8f3371", "#b13c6c", "#d14a61", "#e3685c", "#e98d6b"]}]}'
   title="How Many Live A Hero Player Spend Money In-game?" %}
 
 More than 50% of the players actually spend at least some amount of money in Live A Hero. Completely free-to-play players are less than what I originally thought.
 
-{% include figure-image.html path="/assets/img/survey-2024/spending-region.jpg"
+{% include figure-image.html path="/assets/img/survey-2025/spending-region.jpg"
   title="How Many Live A Hero Player Spend Money In-game? (by Region)" %}
 
-{% include figure-image.html path="/assets/img/survey-2024/spending-east-asia.jpg"
+{% include figure-image.html path="/assets/img/survey-2025/spending-east-asia.jpg"
   title="How Many Live A Hero Player Spend Money In-game? (East Asia)" %}
 
 East Asia has the highest percentage of Live A Hero players that spend money in-game. Other developed economies like United States and Europe also have high percentage of paying players.
 
 ## Gameplay Style
 
-{% include figure-image.html path="/assets/img/survey-2024/login-overall.jpg"
-  title="How Live A Hero Players Play the Game?" %}
+{% include apache-chart.html
+  option='{"dataset": [{"source": [["gender", "login", "value"], ["Other\n其他\nその他", "Login almost everyday, clear all game content in\nthe most optimised method\n几乎每天登录，会试图以最优化方式通过所有游戏内容\nほぼ毎日ログインし、最も最適化された方法ですべてのゲームコン\nテンツをクリアする", 2], ["Other\n其他\nその他", "Login almost everyday, clear almost all stamina,\nbut does not always able to clear hard game\ncontent\n几乎每天登录，消耗所有AP，但并非能通过所有高难内容\nほぼ毎日ログインし、スタミナはほぼクリアしているが、難しいク\nエストは大体クリアできない", 10], ["Other\n其他\nその他", "Only login once a day, to clear current stamina\nand sales only\n每天登录一次，只消耗AP和营业\nログインは1日1回のみで、現在のスタミナと营業をクリアするの\nみ", 3], ["Other\n其他\nその他", "Only login once a week, try to clear as much\nmissions as possible during that\n每周登录一次，在当天尽可能完成任务\nログインは週に1回だけ、やる時はできるだけ多くのミッションや\nクエストをクリアするようにする。", 1], ["Other\n其他\nその他", "Only login once a day, not using stamina\n每天登录一次，不消耗AP\nログインは1日1回のみ、スタミナは使わない", 0], ["Other\n其他\nその他", "Only login once a week, not using stamina\n每周登录一次，不消耗AP\n週に1度しかログインせず、スタミナを使わない", 1], ["Other\n其他\nその他", "Only login once in a while\n偶尔登录\nたまにしかログインしない", 4], ["Non-binary\n非二元性別\nノンバイナリー", "Login almost everyday, clear all game content in\nthe most optimised method\n几乎每天登录，会试图以最优化方式通过所有游戏内容\nほぼ毎日ログインし、最も最適化された方法ですべてのゲームコン\nテンツをクリアする", 1], ["Non-binary\n非二元性別\nノンバイナリー", "Login almost everyday, clear almost all stamina,\nbut does not always able to clear hard game\ncontent\n几乎每天登录，消耗所有AP，但并非能通过所有高难内容\nほぼ毎日ログインし、スタミナはほぼクリアしているが、難しいク\nエストは大体クリアできない", 4], ["Non-binary\n非二元性別\nノンバイナリー", "Only login once a day, to clear current stamina\nand sales only\n每天登录一次，只消耗AP和营业\nログインは1日1回のみで、現在のスタミナと营業をクリアするの\nみ", 6], ["Non-binary\n非二元性別\nノンバイナリー", "Only login once a week, try to clear as much\nmissions as possible during that\n每周登录一次，在当天尽可能完成任务\nログインは週に1回だけ、やる時はできるだけ多くのミッションや\nクエストをクリアするようにする。", 0], ["Non-binary\n非二元性別\nノンバイナリー", "Only login once a day, not using stamina\n每天登录一次，不消耗AP\nログインは1日1回のみ、スタミナは使わない", 0], ["Non-binary\n非二元性別\nノンバイナリー", "Only login once a week, not using stamina\n每周登录一次，不消耗AP\n週に1度しかログインせず、スタミナを使わない", 1], ["Non-binary\n非二元性別\nノンバイナリー", "Only login once in a while\n偶尔登录\nたまにしかログインしない", 1], ["Male\n男性", "Login almost everyday, clear all game content in\nthe most optimised method\n几乎每天登录，会试图以最优化方式通过所有游戏内容\nほぼ毎日ログインし、最も最適化された方法ですべてのゲームコン\nテンツをクリアする", 113], ["Male\n男性", "Login almost everyday, clear almost all stamina,\nbut does not always able to clear hard game\ncontent\n几乎每天登录，消耗所有AP，但并非能通过所有高难内容\nほぼ毎日ログインし、スタミナはほぼクリアしているが、難しいク\nエストは大体クリアできない", 143], ["Male\n男性", "Only login once a day, to clear current stamina\nand sales only\n每天登录一次，只消耗AP和营业\nログインは1日1回のみで、現在のスタミナと营業をクリアするの\nみ", 117], ["Male\n男性", "Only login once a week, try to clear as much\nmissions as possible during that\n每周登录一次，在当天尽可能完成任务\nログインは週に1回だけ、やる時はできるだけ多くのミッションや\nクエストをクリアするようにする。", 29], ["Male\n男性", "Only login once a day, not using stamina\n每天登录一次，不消耗AP\nログインは1日1回のみ、スタミナは使わない", 21], ["Male\n男性", "Only login once a week, not using stamina\n每周登录一次，不消耗AP\n週に1度しかログインせず、スタミナを使わない", 6], ["Male\n男性", "Only login once in a while\n偶尔登录\nたまにしかログインしない", 26], ["Female\n女性", "Login almost everyday, clear all game content in\nthe most optimised method\n几乎每天登录，会试图以最优化方式通过所有游戏内容\nほぼ毎日ログインし、最も最適化された方法ですべてのゲームコン\nテンツをクリアする", 5], ["Female\n女性", "Login almost everyday, clear almost all stamina,\nbut does not always able to clear hard game\ncontent\n几乎每天登录，消耗所有AP，但并非能通过所有高难内容\nほぼ毎日ログインし、スタミナはほぼクリアしているが、難しいク\nエストは大体クリアできない", 11], ["Female\n女性", "Only login once a day, to clear current stamina\nand sales only\n每天登录一次，只消耗AP和营业\nログインは1日1回のみで、現在のスタミナと营業をクリアするの\nみ", 5], ["Female\n女性", "Only login once a week, try to clear as much\nmissions as possible during that\n每周登录一次，在当天尽可能完成任务\nログインは週に1回だけ、やる時はできるだけ多くのミッションや\nクエストをクリアするようにする。", 2], ["Female\n女性", "Only login once a day, not using stamina\n每天登录一次，不消耗AP\nログインは1日1回のみ、スタミナは使わない", 1], ["Female\n女性", "Only login once a week, not using stamina\n每周登录一次，不消耗AP\n週に1度しかログインせず、スタミナを使わない", 1], ["Female\n女性", "Only login once in a while\n偶尔登录\nたまにしかログインしない", 2]]}, {"transform": {"type": "filter", "config": {"dimension": "gender", "value": "Male\n男性"}}}, {"transform": {"type": "filter", "config": {"dimension": "gender", "value": "Female\n女性"}}}, {"transform": {"type": "filter", "config": {"dimension": "gender", "value": "Non-binary\n非二元性別\nノンバイナリー"}}}, {"transform": {"type": "filter", "config": {"dimension": "gender", "value": "Other\n其他\nその他"}}}], "toolbox": {"show": true, "feature": {"magicType": {"show": true, "type": ["stack"]}}}, "legend": {"data": ["Male\n男性", "Female\n女性", "Non-binary\n非二元性別\nノンバイナリー", "Other\n其他\nその他"]}, "label": {}, "tooltip": {}, "series": [{"name": "Male\n男性", "type": "bar", "datasetIndex": 1, "encode": {"x": "value", "y": "login"}, "label": {"show": true}, "emphasis": {"focus": "series"}, "stack": "x"}, {"name": "Female\n女性", "type": "bar", "datasetIndex": 2, "encode": {"x": "value", "y": "login"}, "label": {"show": true}, "emphasis": {"focus": "series"}, "stack": "x"}, {"name": "Non-binary\n非二元性別\nノンバイナリー", "type": "bar", "datasetIndex": 3, "encode": {"x": "value", "y": "login"}, "label": {"show": true}, "emphasis": {"focus": "series"}, "stack": "x"}, {"name": "Other\n其他\nその他", "type": "bar", "datasetIndex": 4, "encode": {"x": "value", "y": "login"}, "label": {"show": true}, "emphasis": {"focus": "series"}, "stack": "x"}], "yAxis": {"type": "category"}, "xAxis": {}}'
+  title="\"How Live A Hero Players Play the Game\" against \"Gender\"" %}
 
-{% include figure-image.html path="/assets/img/survey-2024/login-spending-percentage.jpg"
+{% include apache-chart.html
+  option='{"dataset": [{"source": [["paying", "login", "value"], ["Zero", "Login almost everyday, clear all game content in\nthe most optimised method\n几乎每天登录，会试图以最优化方式通过所有游戏内容\nほぼ毎日ログインし、最も最適化された方法ですべてのゲームコン\nテンツをクリアする", 36], ["Zero", "Login almost everyday, clear almost all stamina,\nbut does not always able to clear hard game\ncontent\n几乎每天登录，消耗所有AP，但并非能通过所有高难内容\nほぼ毎日ログインし、スタミナはほぼクリアしているが、難しいク\nエストは大体クリアできない", 66], ["Zero", "Only login once a day, to clear current stamina\nand sales only\n每天登录一次，只消耗AP和营业\nログインは1日1回のみで、現在のスタミナと营業をクリアするの\nみ", 60], ["Zero", "Only login once a week, try to clear as much\nmissions as possible during that\n每周登录一次，在当天尽可能完成任务\nログインは週に1回だけ、やる時はできるだけ多くのミッションや\nクエストをクリアするようにする。", 18], ["Zero", "Only login once a day, not using stamina\n每天登录一次，不消耗AP\nログインは1日1回のみ、スタミナは使わない", 7], ["Zero", "Only login once a week, not using stamina\n每周登录一次，不消耗AP\n週に1度しかログインせず、スタミナを使わない", 4], ["Zero", "Only login once in a while\n偶尔登录\nたまにしかログインしない", 21], ["XS", "Login almost everyday, clear all game content in\nthe most optimised method\n几乎每天登录，会试图以最优化方式通过所有游戏内容\nほぼ毎日ログインし、最も最適化された方法ですべてのゲームコン\nテンツをクリアする", 3], ["XS", "Login almost everyday, clear almost all stamina,\nbut does not always able to clear hard game\ncontent\n几乎每天登录，消耗所有AP，但并非能通过所有高难内容\nほぼ毎日ログインし、スタミナはほぼクリアしているが、難しいク\nエストは大体クリアできない", 3], ["XS", "Only login once a day, to clear current stamina\nand sales only\n每天登录一次，只消耗AP和营业\nログインは1日1回のみで、現在のスタミナと营業をクリアするの\nみ", 6], ["XS", "Only login once a week, try to clear as much\nmissions as possible during that\n每周登录一次，在当天尽可能完成任务\nログインは週に1回だけ、やる時はできるだけ多くのミッションや\nクエストをクリアするようにする。", 0], ["XS", "Only login once a day, not using stamina\n每天登录一次，不消耗AP\nログインは1日1回のみ、スタミナは使わない", 0], ["XS", "Only login once a week, not using stamina\n每周登录一次，不消耗AP\n週に1度しかログインせず、スタミナを使わない", 0], ["XS", "Only login once in a while\n偶尔登录\nたまにしかログインしない", 1], ["XL", "Login almost everyday, clear all game content in\nthe most optimised method\n几乎每天登录，会试图以最优化方式通过所有游戏内容\nほぼ毎日ログインし、最も最適化された方法ですべてのゲームコン\nテンツをクリアする", 25], ["XL", "Login almost everyday, clear almost all stamina,\nbut does not always able to clear hard game\ncontent\n几乎每天登录，消耗所有AP，但并非能通过所有高难内容\nほぼ毎日ログインし、スタミナはほぼクリアしているが、難しいク\nエストは大体クリアできない", 22], ["XL", "Only login once a day, to clear current stamina\nand sales only\n每天登录一次，只消耗AP和营业\nログインは1日1回のみで、現在のスタミナと营業をクリアするの\nみ", 4], ["XL", "Only login once a week, try to clear as much\nmissions as possible during that\n每周登录一次，在当天尽可能完成任务\nログインは週に1回だけ、やる時はできるだけ多くのミッションや\nクエストをクリアするようにする。", 2], ["XL", "Only login once a day, not using stamina\n每天登录一次，不消耗AP\nログインは1日1回のみ、スタミナは使わない", 1], ["XL", "Only login once a week, not using stamina\n每周登录一次，不消耗AP\n週に1度しかログインせず、スタミナを使わない", 1], ["XL", "Only login once in a while\n偶尔登录\nたまにしかログインしない", 2], ["S", "Login almost everyday, clear all game content in\nthe most optimised method\n几乎每天登录，会试图以最优化方式通过所有游戏内容\nほぼ毎日ログインし、最も最適化された方法ですべてのゲームコン\nテンツをクリアする", 14], ["S", "Login almost everyday, clear almost all stamina,\nbut does not always able to clear hard game\ncontent\n几乎每天登录，消耗所有AP，但并非能通过所有高难内容\nほぼ毎日ログインし、スタミナはほぼクリアしているが、難しいク\nエストは大体クリアできない", 28], ["S", "Only login once a day, to clear current stamina\nand sales only\n每天登录一次，只消耗AP和营业\nログインは1日1回のみで、現在のスタミナと营業をクリアするの\nみ", 19], ["S", "Only login once a week, try to clear as much\nmissions as possible during that\n每周登录一次，在当天尽可能完成任务\nログインは週に1回だけ、やる時はできるだけ多くのミッションや\nクエストをクリアするようにする。", 3], ["S", "Only login once a day, not using stamina\n每天登录一次，不消耗AP\nログインは1日1回のみ、スタミナは使わない", 4], ["S", "Only login once a week, not using stamina\n每周登录一次，不消耗AP\n週に1度しかログインせず、スタミナを使わない", 3], ["S", "Only login once in a while\n偶尔登录\nたまにしかログインしない", 4], ["M", "Login almost everyday, clear all game content in\nthe most optimised method\n几乎每天登录，会试图以最优化方式通过所有游戏内容\nほぼ毎日ログインし、最も最適化された方法ですべてのゲームコン\nテンツをクリアする", 15], ["M", "Login almost everyday, clear almost all stamina,\nbut does not always able to clear hard game\ncontent\n几乎每天登录，消耗所有AP，但并非能通过所有高难内容\nほぼ毎日ログインし、スタミナはほぼクリアしているが、難しいク\nエストは大体クリアできない", 17], ["M", "Only login once a day, to clear current stamina\nand sales only\n每天登录一次，只消耗AP和营业\nログインは1日1回のみで、現在のスタミナと营業をクリアするの\nみ", 13], ["M", "Only login once a week, try to clear as much\nmissions as possible during that\n每周登录一次，在当天尽可能完成任务\nログインは週に1回だけ、やる時はできるだけ多くのミッションや\nクエストをクリアするようにする。", 3], ["M", "Only login once a day, not using stamina\n每天登录一次，不消耗AP\nログインは1日1回のみ、スタミナは使わない", 1], ["M", "Only login once a week, not using stamina\n每周登录一次，不消耗AP\n週に1度しかログインせず、スタミナを使わない", 1], ["M", "Only login once in a while\n偶尔登录\nたまにしかログインしない", 3], ["L", "Login almost everyday, clear all game content in\nthe most optimised method\n几乎每天登录，会试图以最优化方式通过所有游戏内容\nほぼ毎日ログインし、最も最適化された方法ですべてのゲームコン\nテンツをクリアする", 28], ["L", "Login almost everyday, clear almost all stamina,\nbut does not always able to clear hard game\ncontent\n几乎每天登录，消耗所有AP，但并非能通过所有高难内容\nほぼ毎日ログインし、スタミナはほぼクリアしているが、難しいク\nエストは大体クリアできない", 32], ["L", "Only login once a day, to clear current stamina\nand sales only\n每天登录一次，只消耗AP和营业\nログインは1日1回のみで、現在のスタミナと营業をクリアするの\nみ", 29], ["L", "Only login once a week, try to clear as much\nmissions as possible during that\n每周登录一次，在当天尽可能完成任务\nログインは週に1回だけ、やる時はできるだけ多くのミッションや\nクエストをクリアするようにする。", 6], ["L", "Only login once a day, not using stamina\n每天登录一次，不消耗AP\nログインは1日1回のみ、スタミナは使わない", 9], ["L", "Only login once a week, not using stamina\n每周登录一次，不消耗AP\n週に1度しかログインせず、スタミナを使わない", 0], ["L", "Only login once in a while\n偶尔登录\nたまにしかログインしない", 2]]}, {"transform": {"type": "filter", "config": {"dimension": "paying", "value": "Zero"}}}, {"transform": {"type": "filter", "config": {"dimension": "paying", "value": "XS"}}}, {"transform": {"type": "filter", "config": {"dimension": "paying", "value": "S"}}}, {"transform": {"type": "filter", "config": {"dimension": "paying", "value": "M"}}}, {"transform": {"type": "filter", "config": {"dimension": "paying", "value": "L"}}}, {"transform": {"type": "filter", "config": {"dimension": "paying", "value": "XL"}}}], "toolbox": {"show": true, "feature": {"magicType": {"show": true, "type": ["stack"]}}}, "legend": {"data": ["Zero", "XS", "S", "M", "L", "XL"]}, "label": {}, "tooltip": {}, "series": [{"name": "Zero", "type": "bar", "datasetIndex": 1, "encode": {"x": "value", "y": "login"}, "label": {"show": true}, "emphasis": {"focus": "series"}, "stack": "x", "color": "#e98d6b"}, {"name": "XS", "type": "bar", "datasetIndex": 2, "encode": {"x": "value", "y": "login"}, "label": {"show": true}, "emphasis": {"focus": "series"}, "stack": "x", "color": "#e3685c"}, {"name": "S", "type": "bar", "datasetIndex": 3, "encode": {"x": "value", "y": "login"}, "label": {"show": true}, "emphasis": {"focus": "series"}, "stack": "x", "color": "#d14a61"}, {"name": "M", "type": "bar", "datasetIndex": 4, "encode": {"x": "value", "y": "login"}, "label": {"show": true}, "emphasis": {"focus": "series"}, "stack": "x", "color": "#b13c6c"}, {"name": "L", "type": "bar", "datasetIndex": 5, "encode": {"x": "value", "y": "login"}, "label": {"show": true}, "emphasis": {"focus": "series"}, "stack": "x", "color": "#8f3371"}, {"name": "XL", "type": "bar", "datasetIndex": 6, "encode": {"x": "value", "y": "login"}, "label": {"show": true}, "emphasis": {"focus": "series"}, "stack": "x", "color": "#6c2b6d"}], "yAxis": {"type": "category"}, "xAxis": {}}'
   title="\"How Live A Hero Players Play the Game\" against \"Spending Level\"" %}
 
 - About 75% of the players login at least once a day.
 - About 55% of the players will make sure all AP are used.
 - Those who play the game in the most earnest way (last tier) are more likely to be paying customer too.
 
-{% include figure-image.html path="/assets/img/survey-2024/login-other-gender.jpg"
-  title="How Live A Hero Players Play the Game (Female / Non-binary / Other)" %}
-
 - Among non-male players, slightly more only play the game occasionally compared to the male counterpart
 - Female players are less likely to optimize their game play to the maximum compared to other groups.
 
 ## High Difficulty Quest
 
+{% include figure-image.html path="/assets/img/survey-2025/hdq.jpg"
+  title="High Difficulty Quest Completion Percentage" %}
 
+{% include figure-image.html path="/assets/img/survey-2025/hdq-gender.jpg"
+  title="High Difficulty Quest Completion Percentage by Gender" %}
+
+- Globally, half of the respondents report that they can complete >= 80% of the Hard Difficulty Content (median)
+- When we examine the data by gender, we find that male respondents' peak is around 90%~100% range, all other respondents peak at 70%~80% range.
 
 ## Game Elements’ Rating
 
-{% include figure-image.html path="/assets/img/survey-2024/game-score.jpg"
+{% include figure-image.html path="/assets/img/survey-2025/game-score.jpg"
   title="Live A Hero Game Element's Score" %}
 
-Unsurprisingly, character is the most important aspect of the game according to the players.
+- Unsurprisingly, character is the most important aspect of the game according to the players.
+- Difficulty rating has the lowest average scoreo of 3.55 (median=4）).
 
 ## Other games
 
-{% include figure-image.html path="/assets/img/survey-2024/play-other-game.jpg"
+{% include figure-image.html path="/assets/img/survey-2025/play-other-game.jpg"
   title="What Other lGbt Games Played by Live A Hero Players" %}
 
 268 LAH players have played Gyee before but most of them have abandoned it. 242 LAH players have heard of the game, but probably got scared by the testimonial of past Gyee players that they never bother to try it.
@@ -625,74 +643,128 @@ Maybe next year I should add questions to rate the story, characters and general
 
 ## Free Gacha Pull Currency
 
-{% include figure-image.html path="/assets/img/survey-2024/gacha_stone.svg"
+{% include apache-chart.html
+  option='{"legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "Less than other gacha games / 比别的游戏少 / 他のガチャゲームより少ない", "value": 319}, {"name": "About the same / 和别的游戏差不多 / ほぼ同じ", "value": 154}, {"name": "More generous than other gacha games / 比别的游戏大方 / 他のガチャゲームより気前がいい", "value": 38}, {"name": "Don't play other gacha games / 没玩别的扭蛋游戏 / 他のガチャゲームはやらない", "value": 5}]}]}'
   title="Free Gacha Pull Currency Opinion" %}
 
-55.2% of the LAH players think the game gives less free gacha pulls than other gacha games, while only 9.8% of them think LAH is more generous than other gacha games.
+TODO of the LAH players think the game gives less free gacha pulls than other gacha games (A), while only TODO of them think LAH is more generous than other gacha games (B).
 
-
-Let’s hear players that have tried other gacha games have to say:
-
-{% include figure-image.html path="/assets/img/survey-2024/gacha-stone-other-game2.jpg"
-  title="Free Gacha Pull Currency Opinion against Other Games" %}
-
-It seems that only LAH players that have tried Another Eidos have some different patterns between the “less” and “more” group: in the “more generous” group, higher percentage of those from “more generous” group have abandoned Another Eidos than that of the “less generous” group (but we do not know if they are indeed using Another Eidos as the comparison).
-
-(Tamacolle also shows a different pattern between the “less” and “more” group, but since the game does not require spending money to pull characters, I don’t think it really matters).
-
-{% include figure-image.html path="/assets/img/survey-2024/gacha-stone-spending.jpg"
+{% include figure-image.html path="/assets/img/survey-2025/gacha-stone-spending.jpg"
   title="Free Gacha Pull Currency Opinion against Spending Level" %}
 
-It is clear that even among players that have spent money in this game, we still have more of them feeling the game is less generous with free gacha pulls than other gacha games, this opinion is not just limited to those free-to-play players.
+When we examine the spending level of the group A and group B, we see no colleration between the spending level of the respondents and their opinion on the sufficiency of free gacha pull currency.
 
 ## Translation
 
-{% include figure-image.html path="/assets/img/survey-2024/translation.jpg"
+{% include figure-image.html path="/assets/img/survey-2025/translation.jpg"
   title="Translation Prediction" %}
 
 Once again, we celebrate another game anniversary without official translation, which means 35.7% of the respondents made the correct prediction.
 
 This number is much higher than last anniversary (27.2%), you can see that oversea players had lost faith in LifeWonders when they failed to fulfill their promise in last anniversary.
 
-## Read story
+## Read Story
 
 {% include apache-chart.html
-  options='{"dataset": {"source": [["Yes, I read fan translation when available / 会，如果有粉丝翻译 / はい （ファンの翻訳があれば読みます）", 255], ["Yes, I read the story in-game (Japanese) / 会，我直接看日文原文 / はい（日本語）", 165], ["No / 不会 / いいえ", 96], ["", 49]]}, "legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "value": 1}]}'
+  options='{"legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "Yes, I read fan translation when available / 会，如果有粉丝翻译 / はい （ファンの翻訳があれば読みます）", "value": 255}, {"name": "Yes, I read the story in-game (Japanese) / 会，我直接看日文原文 / はい（日本語）", "value": 165}, {"name": "No / 不会 / いいえ", "value": 96}]}]}'
   title="Do Live A Hero Player Read Story In-game?" %}
 
 More than half of the respondents need to rely on fan translation (which are only available for some quests).
 
 > I said from last year that I need to add the option of "Yes, I read the story in-game with the help of machine translation and some guesswork", but I forgot...
 
+## Event Rating
+
+{% include figure-image.html path="/assets/img/survey-2025/event.jpg"
+  clip=true
+  title="Event Rating" %}
+
+{% include figure-image.html path="/assets/img/survey-2025/event-reading.jpg"
+  clip=true
+  title="Event Rating (by different Japanese Reading Language Proficiency)" %}
+
+- It seems that respondents that have Japanese reading skill higher or equivalent to N3 are more likely to rate events higher than those with lower Japanese reading skill
+- The only outlier to this pattern is [The Glorious Rising Moon](/events/2410RisingMoon/). I suspect it is because global players are just happy to see {% chara_link Pubraseer|h2 %} finally getting his limited variant.
+
 # Character popularity
 
 <details open markdown="1">
 <summary>Global</summary>
 
-{% include figure-image.html path="/assets/img/survey-2024/all-fav-bar.jpg"
+{% include figure-image.html path="/assets/img/survey-2025/all-fav-bar.jpg"
   clip=true
   title="All Favourites Popularity Ranking (Global)" %}
 
-{% include figure-image.html path="/assets/img/survey-2024/top10-bar.jpg"
+{% include figure-image.html path="/assets/img/survey-2025/top10-bar.jpg"
   clip=true
   title="Top 10 Favourites Popularity Ranking (Global)" %}
 
 Top spots for “All favourites” popularity ranking for each category
 
 <div class="table-scroll">
+<table>
+  <tr>
+    <th>Male furry</th>
+    <th>Approval Rating</th>
+    <th>Male Human</th>
+    <th>Approval Rating</th>
+    <th>Female/Other</th>
+    <th>Approval Rating</th>
+  </tr>
+  <tr>
+    <td>{% chara_link Pubraseer %}</td>
+    <td>65.4%</td>
+    <td>{% chara_link Akashi %}</td>
+    <td>41.4%</td>
+    <td>{% chara_link Sensettia %}</td>
+    <td>13.3%</td>
+  </tr>
+  <tr>
+    <td>{% chara_link Monomasa %}</td>
+    <td>53.5%</td>
+    <td>{% chara_link Astar %}</td>
+    <td>37.8%</td>
+    <td>{% chara_link Sui %}</td>
+    <td>11.6%</td>
+  </tr>
+  <tr>
+    <td>{% chara_link Giansar %}</td>
+    <td>49.5%</td>
+    <td>{% chara_link Roudin %}</td>
+    <td>31.5%</td>
+    <td>{% chara_link Hitomi %}</td>
+    <td>10.7%</td>
+  </tr>
+  <tr>
+    <td>{% chara_link Ryekie %}</td>
+    <td>48.5%</td>
+    <td>{% chara_link Gammei %}</td>
+    <td>31.4%</td>
+    <td>{% chara_link Flamier %}, {% chara_link Zahniah %}</td>
+    <td>10.6%</td>
+  </tr>
+  <tr>
+    <td>{% chara_link Barrel %}</td>
+    <td>47.5%</td>
+    <td>{% chara_link Lilac %}</td>
+    <td>29.9%</td>
+    <td>{% chara_link Cerastium %}</td>
+    <td>9.1%</td>
+  </tr>
+</table>
 </div>
 
-> {% chara_link  Player %} is not included in this table because they fit in all categories
+> {% chara_link Player %} is not included in this table because they fit in all categories
 
 Comments:
 
 - Muscular male furry characters once again dominated the popularity ranking, with {% chara_link Pubraseer %} being the top, while {% chara_link Barrel %} and {% chara_link Monomasa %} taking the second and third place with just one vote in difference.
-- The gap between first place and second place is much more significant.
-- {% chara_link Tsuneaki %} and {% chara_link Sterio %} are pretty high on the ranking too, perhaps due to recency biases as they are featured in the event when the survey was running.
+- The gap between first place and second place is quite significant.
+- Top 1 for "Male furry', "Male human" and "Female/Other" are exactly the same as 2024.
 
-{% include figure-image.html path="/assets/img/survey-2024/all-fav-top-10-2024.jpg"
+{% include figure-image.html path="/assets/img/survey-2025/all-fav-top-10.jpg"
   clip=true
-  title="All Favourites vs Top 10 (2024)" %}
+  title="All Favourites vs Top 10 (2025)" %}
 
 As we move on to “top 10 favourites” popularity ranking, we can see that it often favours the older characters more. {% chara_link Tsuneaki %} and {% chara_link Sterio %}’s ranking somewhat dropped, while {% chara_link Gaius %} experienced the largest ranking boost this way.
 
@@ -701,9 +773,13 @@ As we move on to “top 10 favourites” popularity ranking, we can see that it 
 <details markdown="1">
 <summary>2024 vs 2025</summary>
 
-{% include figure-image.html path="/assets/img/survey-2024/all-fav-2023-2024.jpg"
+{% include figure-image.html path="/assets/img/survey-2025/all-fav-2024-2025.jpg"
   clip=true
   title="All Favourites (2024 vs 2025)" %}
+
+{% include figure-image.html path="/assets/img/survey-2025/approval-rating-change.jpg"
+  clip=true
+  title="Approval Rating Change (2024 vs 2025)" %}
 
 - It seems that characters that gotten their variant forms between the time when 2023 and 2024 surveys were carried out (such as {% chara_link Polaris Mask %}, {% chara_link Lilac %}, {% chara_link Kalaski %} and {% chara_link Tsuneaki %}) have their ranking boosted quite significantly
   - This further suggests that the amount of character appearance in story and recency biases do play a role in their ranking.
@@ -711,36 +787,44 @@ As we move on to “top 10 favourites” popularity ranking, we can see that it 
 {% chara_link Astar %}, {% chara_link Giansar %}, {% chara_link Yohack %}
 
 
-{% include figure-image.html path="/assets/img/survey-2024/top10-2023-2024.jpg"
+{% include figure-image.html path="/assets/img/survey-2025/top10-2024-2025.jpg"
   clip=true
   title="Top 10 Favourites (2024 vs 2025)" %}
 </details>
 
 <details markdown="1">
-<summary>Japan</summary>
+<summary>Japan / Taiwan / China</summary>
 
-{% include figure-image.html path="/assets/img/survey-2024/fav-japan.jpg"
+{% include figure-image.html path="/assets/img/survey-2025/fav-japan.jpg"
   clip=true
   title="All Favourites vs Top 10 (Japan only)" %}
 
-- The sample size is not large, but I think it is not wrong to speculate that Japan players are also mostly furry-lovers.
-- {% chara_link Alchiba %} gets the biggest boost, jumping from 37th place to 12th place in "top 10" favourites ranking.
+{% include figure-image.html path="/assets/img/survey-2025/fav-taiwan.jpg"
+  clip=true
+  title="All Favourites vs Top 10 (Taiwan only)" %}
+
+{% include figure-image.html path="/assets/img/survey-2025/fav-china.jpg"
+  clip=true
+  title="All Favourites vs Top 10 (China only)" %}
+
 </details>
 
 <details markdown="1">
 <summary>Female / Non-binary / Other respondents</summary>
 
-{% include figure-image.html path="/assets/img/survey-2024/fav-female.jpg"
+{% include figure-image.html path="/assets/img/survey-2025/fav-female.jpg"
   clip=true
   title="All Favourites vs Top 10 (Female respondents)" %}
 
-{% include figure-image.html path="/assets/img/survey-2024/fav-other.jpg"
+{% include figure-image.html path="/assets/img/survey-2025/fav-other.jpg"
   clip=true
   title="All Favourites vs Top 10 (Non-binary/Other respondents)" %}
 
 The number of non-male respondents is small to begin with, so there are a lot of ties in votes.
 
 {% chara_link Pubraseer %} is not the number 1 among these respondents, but still in the top 3. This character is just really well loved in all segment of the player base.
+
+TODO
 
 For female respondents, {% chara_link Sensettia %} is number 1 in “All favourites” ranking when they can choose as many characters as want, but {% chara_link Flamier %} overtake her by one vote in “top 10” ranking. {% chara_link Tsuneaki %} is number in "Top 10" ranking.
 
@@ -753,19 +837,47 @@ For female respondents, {% chara_link Sensettia %} is number 1 in “All favouri
 <details markdown="1">
 <summary>People with less than 10 favourites</summary>
 
-{% include figure-image.html path="/assets/img/survey-2024/fav-less-than-10.jpg"
+{% include figure-image.html path="/assets/img/survey-2025/fav-less-than-10.jpg"
   clip=true
   title="Respondents who chose < 10 favourites" %}
 
 In this gacha game that is full of baits for thirsty players, let us applaud these people who can limit the amount of characters they devote their hearts for.
 
-{% include figure-image.html path="/assets/img/survey-2024/top10-less-than-10-vs-exactly-10.jpg"
+{% include figure-image.html path="/assets/img/survey-2025/top10-less-than-10-vs-exactly-10.jpg"
   clip=true
   title="Top 10 (those who chose < 10 vs those who chose exactly 10)" %}
 
-{% chara_link Gaius %}, {% chara_link Canes %} and {% chara_link Player %} are ranked much higher by those who chose less than 10 favourites.
+TODO are ranked much higher by those who chose less than 10 favourites.
 
 </details>
+
+## Humanoid vs Anthro Bias
+
+I have been running this survey for 5 years, and anthro characters are always on top in the popularity ranking. This has led many people to think that . So let's try to answer this question: is the survey overwhelmingly dominated by respondents that only like anthro characters?
+
+First of all, I tried to categorize Live A Hero characters by "Gender" (Male, Female and Other) and "Type" (Humanoid, Anthro and Other). The table can be found [here](/misc/chara_category/).
+
+We can see that among the male characters in this game, the ratio of "humanoid" vs "anthro" is almost 50/50.
+So if the respondent population does not have bias towards anthro character or humanoid character, then we should see the distribution to be binomial centered around 50%.
+
+
+{% include figure-image.html path="/assets/img/survey-2025/anthro-loving.jpg"
+  title="Anthro-loving Ratio Distribution" %}
+
+> Higher percentage (right hand side of the chart) means the respondent prefers more anthro character than humanoid characters.
+> 100% means the respondent only like anthro characters
+
+So globally, 50% of the respondents have an anthro-loving ratio of at least 62.5% when countring all their favourite characters. The ratio is even higher when respondents can only choose top 10 favourite characters.
+
+{% include figure-image.html path="/assets/img/survey-2025/anthro-loving-japan.jpg"
+  title="Anthro-loving Ratio Distribution (Japan only)" %}
+
+Japan respondents' anthro-loving ratio is slightly lower than global respondents, but it follows the global trend that the anthro-loving ratio increases when we only count top 10 favourite characters.
+
+{% include figure-image.html path="/assets/img/survey-2025/anthro-loving-female.jpg"
+  title="Anthro-loving Ratio Distribution (Female respondents)" %}
+
+It is very interesting that female respondents' anthro-loving ratio distribution resembles a binomial distribution for the "all favourites". However, when the female respondents are forced to pick the top 10, then the distribution shifts towards antho characters like other gender group.
 
 # Free form questions
 
