@@ -819,14 +819,21 @@ With this data, we can try to do pairwise ranking, which basically put all chara
 
 How it works:
 
-- Assume a respondent's top 10 ranking is A > B > C > D > E > F > G > H > I > J
-- +1 for each of "A > B", "A > C", "A > D", ... "B > C", "B > D", ..., "I > J"
-- +1 for every characters in the top 10 ranking vs not in the ranking. For example, if X is not in the ranking, then +1 for "A > X", "B > X", ... "J > X"
-  - This is necessary because I only asked respondents to rank the top 10 characters instead of **all the characters**. Asking respondents to rank all characters into a linear order would be too exhausting and boring for most people.
-  - Because of this imperfect data, the pairwise ranking computed **is not perfect**
-- Repeat the same process for all respondents
+1. Create Rank Matrix
+  - Assume a respondent's top 10 ranking is A > B > C > D > E > F > G > H > I > J
+  - +1 for each of "A > B", "A > C", "A > D", ... "B > C", "B > D", ..., "I > J"
+  - +1 for every characters in the top 10 ranking vs not in the ranking. For example, if X is not in the ranking, then +1 for "A > X", "B > X", ... "J > X"
+    - This is necessary because I only asked respondents to rank the top 10 characters instead of **all the characters**. Asking respondents to rank all characters into a linear order would be too exhausting and boring for most people.
+    - Because of this imperfect data, the pairwise ranking computed **is not perfect**
+  - Repeat the same process for all respondents
+1. For each pair of characters A and B:
+  - If `Rank[A][B] > Rank[B][A]`, then we +1 for A
+  - If `Rank[A][B] < Rank[B][A]`, then we +1 for B
+  - If there is a tie, we skip this pair
+1. Count how many times each character has won head-to-head comparison, then sort by descending order
+  - If the first character in the order won more than 50% of the time, then this is the [Cordocet Winner](https://en.wikipedia.org/wiki/Condorcet_winner_criterion)
 
-Below is a small snapshot of the computed pairwise ranking:
+Below is a small snapshot of the computed pairwise Rank Matrix:
 
 <div class="table-scroll" markdown="1">
 
@@ -849,11 +856,16 @@ Below is a small snapshot of the computed pairwise ranking:
 Here are the links for the full table, feel free to import them to a spreadsheet to explore the data:
 
 - [Global Pairwise Ranking](/misc/survey-2025/global_pairwise_ranking.html)
+- [Japan Pairwise Ranking](/misc/survey-2025/japan_pairwise_ranking.html)
+- [Taiwan Pairwise Ranking](/misc/survey-2025/taiwan_pairwise_ranking.html)
+- [China Pairwise Ranking](/misc/survey-2025/china_pairwise_ranking.html)
 
-Some observations:
+Some observations for the global pairwise ranking:
 
-- After taking into account of the ranking data, the positions of {% chara_link Obsidius %} (6th -> 8th) and {% chara_link Akashi %} (8th -> 7th) are swapped.
+- After taking into account of the ranking data, the positions of {% chara_link Obsidius %} (6th -> 8th) and {% chara_link Akashi %} (8th -> 7th) are swapped, but the total vote difference is quite small
 - Most characters' position in the top 10 ranking remain unchanged. Only those characters who were tie with other characters in the original top 10 ranking no longer share the same rank in the new pairwise ranking
+
+Cordocet Winners
 
 </details>
 
