@@ -83,6 +83,14 @@ module LahWiki
       @@status_wiki ||= context.registers[:site].data["translation"]["Status"]
     end
 
+    def self.skill_master(context)
+      @@skill_master ||= context.registers[:site].data["SkillMaster"]
+    end
+
+    def self.skill_effect_master(context)
+      @@skill_effect_master ||= context.registers[:site].data["SkillEffectMaster"]
+    end
+
     def self.status_master(context)
       @@status_master ||= context.registers[:site].data["StatusMaster"]
     end
@@ -533,6 +541,53 @@ module LahWiki
       output << status_map.map {|key, value| value[1] }.join(", ")
 
       return output
+    end
+
+    def collect_change_skills(skillsFromSkillProvider)
+      skillIds = skillsFromSkillProvider.select {|skill| skill["skillUpgrade"] == 0}.map {|skill| skill["skillId"]}
+
+      changeSkillIds = Hash.new {|hsh, key| hsh[key] = [] }
+
+      skillIds.each do |skillId|
+        skill = Skills::skill_master(@context)[skillId.to_s]
+        if !skill
+          next
+        end
+        skill["effects"].each do |effect|
+          skillEffectId = effect["skillEffectId"].to_s
+          skillEffect = Skills::skill_effect_master(@context)[skillEffectId]
+          skillEffectJson = skillEffect["skillEffectJson"]
+          skillEffectJson["effects"].each do |effect|
+            if effect["class"] == "ChangeActiveSkill"
+              #puts "effect: #{effect.inspect}"
+              changeSkillIds[effect["parameter"]["index"] + 1] << effect["parameter"]["skillId"]
+            end
+          end
+        end
+      end
+
+      return changeSkillIds
+    end
+
+    def collect_status(skillId)
+      statues = []
+      skill = Skills::skill_master(@context)[skillId.to_s]
+      if skill
+        return statues
+      end
+      skill.effects.each do |effect|
+        skillEffectId = effect["skillEffectId"].to_s
+        skillEffect = Skills::skill_effect_master(@context)[skillEffectId]
+        skillEffectJson = skillEffect["skillEffectJson"]
+        if skillEffectJson["statusId"] == 0
+          next
+        end
+        status = Skills::status_description_v2(skillEffectId, skillEffectJson)
+        if status
+          statues << status
+        end
+      end
+      return statues
     end
 
     def status_manual(wiki_icon, name, description=nil)
