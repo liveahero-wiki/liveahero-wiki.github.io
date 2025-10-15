@@ -465,6 +465,10 @@ module LahWiki
         name = Skills::skill_effect_wiki(@context).dig(skillEffectId, "overrideStatusName") || overrideStatusName
       end
 
+      if !name || name.length == 0
+        return nil
+      end
+
       overrideStatusDescription = skillEffectJson["overrideStatusDescription"]
       if overrideStatusDescription&.length > 0
         description = Skills::skill_effect_wiki(@context).dig(skillEffectId, "overrideStatusDescription") || overrideStatusDescription
@@ -653,4 +657,5 @@ end
 
 Liquid::Template.register_filter(LahWiki::JsonParseFilter)
 Liquid::Template.register_filter(LahWiki::Skills)
+
 
