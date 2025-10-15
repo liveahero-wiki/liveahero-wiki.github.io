@@ -537,8 +537,10 @@ module LahWiki
         status_html
       end
 
-      output << "<hr>"
-      output << status_map.map {|key, value| value[1] }.join(", ")
+      if status_map.size > 0
+        output << "<hr>"
+        output << status_map.map {|key, value| value[1] }.join(", ")
+      end
 
       return output
     end
@@ -651,3 +653,4 @@ end
 
 Liquid::Template.register_filter(LahWiki::JsonParseFilter)
 Liquid::Template.register_filter(LahWiki::Skills)
+
