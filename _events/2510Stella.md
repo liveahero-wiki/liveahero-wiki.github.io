@@ -158,6 +158,8 @@ Here is a list of this event's limited time Missions:
 
 {% include quest-group.html chapterId=1208 %}
 
+### Challenge Quests
+
 {% include quest-group.html chapterId=1210 %}
 
 {% include quest-group.html chapterId=1209 %}
