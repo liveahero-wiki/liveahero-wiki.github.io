@@ -1,11 +1,12 @@
 {% assign skillS = include.skillId | downcase %}
+{% assign skill = site.data.SkillMaster[skillS] %}
 {% assign skillV2 = site.data.translation.Skill[skillS] %}
 {% assign skillOverride = site.data.wiki.SkillManualOverride[include.skillId] %}
 
 {% if skillV2.description %}
 
   {% assign status_array = "" | split: "," %}
-  {% for effect in include.skill.effects %}
+  {% for effect in skill.effects %}
     {% assign skillEffectId = effect.skillEffectId | downcase %}
     {% assign skillEffect = site.data.SkillEffectMaster[skillEffectId] %}
     {% assign skillEffectJson = skillEffect.skillEffectJson %}
@@ -21,9 +22,21 @@
   {% endfor %}
   {{ skillV2.description | render_skill_description: status_array }}
 
+  {% for changeSkillId in include.changeSkillIds[include.index] %}
+    {% if changeSkillId != include.skillId %}
+      {% assign sid = changeSkillId | downcase %}
+      {% assign skill = site.data.SkillMaster[sid] %}
+      {% assign skillName = site.data.translation.Skill[sid].skillName | default: skill.skillName %}
+      <fieldset class="s-rand-g">
+        <legend>{{ skillName }}</legend>
+        {% include skill-description.html skillId=changeSkillId %}
+      </fieldset>
+    {% endif %}
+  {% endfor %}
+
 {% elsif skillOverride %}{{ skillOverride | render_liquid }}{% else %}
 
-{% assign randomGroups = include.skill.effects | group_by: "randomGroupId" %}
+{% assign randomGroups = skill.effects | group_by: "randomGroupId" %}
 
 {% for randomGroup in randomGroups %}
 {%- if randomGroup.name != "0" %}
@@ -34,7 +47,7 @@
 {% for skillEffect in randomGroup.items %}
 {% comment %}Exclude skill tree effect for now{% endcomment %}
 {% if skillEffect.prob > 0 and skillEffect.conditionEntityId == 0 and skillEffect.skillEffectId != 3024 %}
-  {% include skill-effect-description-v2.html skillEffect=skillEffect timing=include.skill.timing %}
+  {% include skill-effect-description-v2.html skillEffect=skillEffect timing=skill.timing %}
 {% endif %}
 {% endfor %}
 
@@ -42,10 +55,10 @@
 
 {% endfor %}
 
-{% if include.skill.appendPassiveSkillIds.size > 0 %}
+{% if skill.appendPassiveSkillIds.size > 0 %}
 <fieldset class="s-rand-g">
   <legend>Passive</legend>
-  {% for passiveSkillId in include.skill.appendPassiveSkillIds %}
+  {% for passiveSkillId in skill.appendPassiveSkillIds %}
     {% assign passiveSkillIdS = passiveSkillId | downcase %}
     {% assign passiveSkill = site.data.SkillMaster[passiveSkillIdS] %}
     {% include skill-description.html skillId=passiveSkillIdS skill=passiveSkill %}
