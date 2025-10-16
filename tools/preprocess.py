@@ -8,7 +8,9 @@ from collections import defaultdict
 
 from wiki_util import dumpJson, sanitizeText
 
-def processPropertiesFile(raw_file, bio_file, serif_file, profile_file, library_file, sales_report_file):
+def processPropertiesFile(raw_file, bio_file, serif_file, profile_file, library_file, sales_report_file,
+    score_attack_file,
+):
     with open(os.path.join("_data", "processed", raw_file), "r", encoding="utf-8") as f:
         lines = f.readlines()
 
@@ -17,6 +19,7 @@ def processPropertiesFile(raw_file, bio_file, serif_file, profile_file, library_
     profile = {}
     library = {}
     sales_report = {}
+    score_attack = {}
 
     for line in lines:
         s = line.split("=", 1)
@@ -35,18 +38,23 @@ def processPropertiesFile(raw_file, bio_file, serif_file, profile_file, library_
 
         if s[0].startswith("SALES_REPORT_") or s[0].startswith("SALES_EVENT_"):
             sales_report[s[0]] = sanitizeText(s[1])
+        
+        if s[0].startswith("HINT_SCORE_ATTACK_"):
+            score_attack[s[0]] = sanitizeText(s[1])
 
     detail = collections.OrderedDict(sorted(detail.items()))
     serif = collections.OrderedDict(sorted(serif.items()))
     profile = collections.OrderedDict(sorted(profile.items()))
     library = collections.OrderedDict(sorted(library.items()))
     sales_report = collections.OrderedDict(sorted(sales_report.items()))
+    score_attack = collections.OrderedDict(sorted(score_attack.items()))
 
     dumpJson(os.path.join("_data", "processed", bio_file), detail)
     dumpJson(os.path.join("_data", "processed", serif_file), serif)
     dumpJson(os.path.join("_data", "processed", profile_file), profile)
     dumpJson(os.path.join("_data", "processed", library_file), library)
     dumpJson(os.path.join("_data", "processed", sales_report_file), sales_report)
+    dumpJson(os.path.join("_data", "processed", score_attack_file), score_attack)
 
 
 def processShopFile():
@@ -120,4 +128,4 @@ def processCardProfileOverride():
 
 if __name__ == "__main__":
     processCardProfileOverride()
-    processPropertiesFile("Japanese.properties", "jp_bio.json", "jp_serif.json", "jp_profile.json", "jp_library.json")
+    processPropertiesFile("Japanese.properties", "jp_bio.json", "jp_serif.json", "jp_profile.json", "jp_library.json", "jp_sales_report.json", "jp_score_attack.json")
