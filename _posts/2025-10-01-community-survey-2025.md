@@ -36,11 +36,7 @@ Special thanks to 無理 for helping to check Japanese translation in the survey
 The demographics percentage of this year's respondents is very different from past few years, in that the percentage of East Asians became more than half of the total respondents, and the absolute number of non East-Asian respondents also have decreased.
 This means that many "2024 vs 2025" comparsions do not really tell if there is a sentiment change for the same group of people, because the underlying group of respondents are quite different. Take the comparison with a pinch of salt.
 
-Despite trying my best to make the survey more user-friendly to Japanese and some Japanese Twitter/BlueSky users helping to repost the survey, we still failed to attract enough Japanese respondents.
-This is also the first time I tried to publish the survey in Wikiwiki/Zawazawa. Although that did attract a few more Japanese respondents, I also received a lot of negative comments and downvotes from those anonymous users (ironically, I was the only forum user that uses an actual user name instead of just posting anonymously).
-I have ran this survey for 5 years, and this is the first time I received such hostility.
-
-I do not know if "Japanese people who were willing to participate in this survey" and "Japanese people who were very against to this survey" do not also have very different opinions about the questions of this survey, so all the Japan results below cannot meaningfully represent the overall Japan playerbase.
+This is the first time I tried to publish the survey in Wikiwiki/Zawazawa (Japan anonymous forum). Although that did attract a few more Japanese respondents, I also received a lot of negative comments and downvotes. I have ran this survey for 5 years, and this is the first time I received such hostility. It is hard to tell if Japanese people has higher perecentage of people disliking popularity poll than other groups, or it is just people acting nastily when they can hide behind the mask of anonymity without fear of consequences.
 
 I understand that some people do not want to see the popularity poll result as there might be jerks who would cherry pick any data and twist it to fit their narrative.
 So let me get this straight:
@@ -755,40 +751,40 @@ Top spots for “All favourites” popularity ranking for each category
     <td>65.4%</td>
     <td>{% chara_link Akashi %}</td>
     <td>41.4%</td>
-    <td>{% chara_link Sensettia %}</td>
-    <td>13.3%</td>
+    <td>{% chara_link Melide %}</td>
+    <td>19.5%</td>
   </tr>
   <tr>
     <td>{% chara_link Monomasa %}</td>
     <td>53.5%</td>
     <td>{% chara_link Astar %}</td>
     <td>37.8%</td>
-    <td>{% chara_link Sui %}</td>
-    <td>11.6%</td>
+    <td>{% chara_link Sensettia %}</td>
+    <td>13.3%</td>
   </tr>
   <tr>
     <td>{% chara_link Giansar %}</td>
     <td>49.5%</td>
     <td>{% chara_link Roudin %}</td>
     <td>31.5%</td>
-    <td>{% chara_link Hitomi %}</td>
-    <td>10.7%</td>
+    <td>{% chara_link Sui %}</td>
+    <td>11.6%</td>
   </tr>
   <tr>
     <td>{% chara_link Ryekie %}</td>
     <td>48.5%</td>
     <td>{% chara_link Gammei %}</td>
     <td>31.4%</td>
-    <td>{% chara_link Flamier %}, {% chara_link Zaniah %}</td>
-    <td>10.6%</td>
+    <td>{% chara_link Hitomi %}</td>
+    <td>10.7%</td>
   </tr>
   <tr>
     <td>{% chara_link Barrel %}</td>
     <td>47.5%</td>
     <td>{% chara_link Lilac %}</td>
     <td>29.9%</td>
-    <td>{% chara_link Cerastium %}</td>
-    <td>9.1%</td>
+    <td>{% chara_link Flamier %}, {% chara_link Zaniah %}</td>
+    <td>10.6%</td>
   </tr>
 </table>
 </div>
@@ -801,7 +797,8 @@ Comments:
 - Only {% chara_link Pubraseer %} and {% chara_link Monomasa %} are liked by more than half of the respondents (approval rating > 50%)
   - **Approval rating**: the percentage of respondents that include the character in their "All favourites"
 - The gap between first place and second place is quite significant.
-- Top 1 for "Male furry', "Male human" and "Female/Other" are exactly the same as 2024.
+- Top 1 for "Male furry' and "Male human" are exactly the same as 2024. {% chara_link Sensettia %} lost her top 1 spot this year to {% chara_link Melide %}.
+  - This likely has a lot to do with the amount of time {% chara_link Melide %} gets to appear in recent story.
 - {% chara_link Denebora %} is the most anticipated unreleased character so far (31.7% approval rating)
 
 {% include figure-image.html path="/assets/img/survey-2025/all-fav-top-10.jpg"
@@ -811,7 +808,7 @@ Comments:
 </details>
 
 <details open markdown="1">
-<summary>Pairwise Ranking</summary>
+<summary>Ranked Pairs (Tideman Method)</summary>
 
 Apart from asking survey respondents to choose all their favourite characters and top 10 favourite characters, I also asked them to rank the top 10 into a linear order.
 
@@ -835,37 +832,12 @@ How it works:
 
 Below is a small snapshot of the computed pairwise Rank Matrix:
 
-<div class="table-scroll" markdown="1">
-
-|           | RANK | TOTAL | {% chara_link Pubraseer %} | {% chara_link Monomasa %} | {% chara_link Giansar %} | {% chara_link Barrel %} | {% chara_link Ryekie %} | {% chara_link Sadayoshi %} | {% chara_link Akashi %} | {% chara_link Obsidius %} | {% chara_link reXer %} | {% chara_link Tsuneaki %} | {% chara_link Toshu %} |
-|-----------|:----:|:-----:|:---------:|:--------:|:-------:|:------:|:------:|:---------:|:------:|:--------:|:-----:|:--------:|:-----:|
-| {% chara_link Pubraseer %} |    1 | 28853 |         0 |      235 |     237 |    248 |    261 |       264 |    258 |      257 |   263 |      268 |   280 |
-| {% chara_link  Monomasa %} |    2 | 22110 |       125 |        0 |     164 |    173 |    202 |       194 |    198 |      202 |   195 |      204 |   209 |
-| {% chara_link  Giansar  %} |    3 | 18815 |       125 |      129 |       0 |    149 |    164 |       158 |    177 |      180 |   166 |      175 |   177 |
-| {% chara_link   Barrel  %} |    4 | 16611 |        81 |      107 |     130 |      0 |    143 |       141 |    156 |      153 |   146 |      158 |   156 |
-| {% chara_link   Ryekie  %} |    5 | 14972 |        65 |       89 |     117 |     96 |      0 |       132 |    135 |      127 |   121 |      137 |   138 |
-| {% chara_link Sadayoshi %} |    6 | 14038 |        79 |       76 |      90 |     95 |    117 |         0 |    130 |      128 |   104 |      127 |   131 |
-| {% chara_link   Akashi  %} |    7 | 14013 |       113 |      122 |     131 |    124 |    124 |       135 |      0 |      135 |   129 |      122 |   139 |
-| {% chara_link  Obsidius %} |    8 | 13996 |        82 |       94 |      98 |    106 |    125 |       128 |    124 |        0 |   131 |      131 |   126 |
-| {% chara_link   reXer   %} |    9 | 13536 |        70 |       77 |      80 |     99 |    112 |       118 |    114 |      129 |     0 |      118 |   124 |
-| {% chara_link  Tsuneaki %} |   10 | 13141 |        77 |       95 |      97 |    101 |    106 |       111 |    117 |      117 |   110 |        0 |   126 |
-| {% chara_link   Toshu   %} |   11 | 11059 |        54 |       66 |      78 |     86 |     86 |        91 |    107 |       83 |    97 |      100 |     0 |
-
-</div>
-
 Here are the links for the full table, feel free to import them to a spreadsheet to explore the data:
 
 - [Global Pairwise Ranking](/misc/survey-2025/global_pairwise_ranking.html)
 - [Japan Pairwise Ranking](/misc/survey-2025/japan_pairwise_ranking.html)
 - [Taiwan Pairwise Ranking](/misc/survey-2025/taiwan_pairwise_ranking.html)
 - [China Pairwise Ranking](/misc/survey-2025/china_pairwise_ranking.html)
-
-Some observations for the global pairwise ranking:
-
-- After taking into account of the ranking data, the positions of {% chara_link Obsidius %} (6th -> 8th) and {% chara_link Akashi %} (8th -> 7th) are swapped, but the total vote difference is quite small
-- Most characters' position in the top 10 ranking remain unchanged. Only those characters who were tie with other characters in the original top 10 ranking no longer share the same rank in the new pairwise ranking
-
-Cordocet Winners
 
 </details>
 
@@ -1095,6 +1067,9 @@ Since most survey respondents are not from Japan, the lack of translation is obv
     - <span class="comment">I think we already have [Challenge Simulator](/guide/challenge_simulator/) every fortnight for that?</span>
 - Implement trial quest to try out older characters
 - Add favourite tags for most used friend supports
+- More team slots to organize teams for different gameplay purposes
+    - As this game has added more and more bosses that require different setups, 10 team slots is seem too inadequate
+    - Crave Saga literally has 7 x 10 = 70 team slots, Live A Hero needs to keep up
 - NSFW mode
 
 ### Gacha & Monetization
@@ -1129,11 +1104,9 @@ Since most survey respondents are not from Japan, the lack of translation is obv
 - More slim-body characters
     - More slim-body non-human characters
 
-<span class="comment">So you see, when your playerbase becomes diverse enough, you will have opposing needs from the playerbase. Given how slow it is for Live A Hero to release a new unit (variant or new character), there is no way for LifeWonders to satisfy everyone.</span>
+<span class="comment">So you see, when your playerbase becomes diverse enough, you will have contracdicting opinions from the playerbase. Given how slow it is for Live A Hero to release a new unit (variant or new character), there is no way for LifeWonders to satisfy everyone.</span>
 
 <span class="comment">Fortunately, the percentage of respondents that actually complain about the proportion of character type remains pretty low. The community in general is more tolerant than you might think.</span>
-
-<span class="masked">I will drop the truth bomb here: most people that complain about diversity are asian males. Japanese female respondents and quite a few male respondents outside east asia are supportive of more female characters.</span>
 
 - Implementation of event-themed main character skins
 - Increase the suggestive-level for damaged clothes skin
