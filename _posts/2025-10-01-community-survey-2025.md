@@ -907,6 +907,63 @@ In this gacha game that is full of baits for thirsty players, let us applaud the
 
 </details>
 
+## Ranked Voting System
+
+Apart from asking survey respondents to choose all their favourite characters and top 10 favourite characters, I also asked them to rank the top 10 into a linear order.
+
+With this data, we can try to do a ranked voting using Tideman Method.
+
+<details open markdown="1">
+<summary>Tideman Method (Wikipedia definition)</summary>
+
+**Ranked Pairs (RP)**, also known as the **Tideman method**, is a tournament-style system of ranked voting first proposed by Nicolaus Tideman in 1987.
+
+If there is a candidate who is preferred over the other candidates, when compared in turn with each of the others, the ranked-pairs procedure guarantees that candidate will win. Therefore, the ranked-pairs procedure complies with the Condorcet winner criterion—that is, it is a [Condorcet method](https://en.wikipedia.org/wiki/Condorcet_method).
+
+Ranked pairs begins with a round-robin tournament, where the one-on-one margins of victory for each possible pair of candidates are compared to find a majority-preferred candidate; if such a candidate exists, they are immediately elected. Otherwise, if there is a
+[Condorcet cycle](https://en.wikipedia.org/wiki/Condorcet_paradox) (a rock-paper-scissors-like sequence A > B > C > A) of three or more candidates then the cycle is broken by dropping the "weakest" election in the cycle, i.e. the one that is closest to being tied.
+
+Source: [Ranked Pairs (Wikipedia)](https://en.wikipedia.org/wiki/Ranked_pairs)
+
+</details>
+
+### Key adaptation to Tideman Method made for this survey
+
+1. Let `Set X` (`X_1`, `X_2`, `X_3`, ...) be the set of characters that are in a respondent's top 10 ranking, and another `Set Y` (`Y_1`, `Y_2`, ...) that contains characters not in the respondent's top 10 ranking
+1. For each pair of `(X_i, Y_j)`, we assume the respondent would rank `X_i > Y_j` 
+  - This is necessary because I only asked respondents to rank the top 10 characters instead of **all the characters**. Asking respondents to rank all characters into a linear order would be too exhausting and boring for most people.
+
+Here are the links for the full table, feel free to import them to a spreadsheet to explore the data:
+
+- [Global Pairwise Ranking](/misc/survey-2025/global_pairwise_ranking.html)
+- [Japan Pairwise Ranking](/misc/survey-2025/japan_pairwise_ranking.html)
+- [Taiwan Pairwise Ranking](/misc/survey-2025/taiwan_pairwise_ranking.html)
+- [China Pairwise Ranking](/misc/survey-2025/china_pairwise_ranking.html)
+
+{% include figure-image.html path="/assets/img/survey-2025/ranked_voting_global.svg"
+  title="Ranked Voting" %}
+
+> Reminder:
+>
+> We only show the top 10 characters with the most links, otherwise the graph would be too massive to visualize
+>
+> Tideman Method explicitly remove links with weaker margin of victory, so although the raw data do have **Cordocet cycle**, we don't draw those links in the network graphs above.
+
+Depending on your definition of fairness, Tideman Method may not completely fair to you. In fact, no voting system with more than two candidates can satisfy all the voting criteria, so please take the result with a grain of salt. However, Tideman Method *is* considered one of the voting systems that satisfy more voting criterias that most people would desire, and is much harder to be manipulated by tactical voting strategy.
+
+You may use the raw data above to implement other types of [voting systems](https://en.wikipedia.org/wiki/Comparison_of_electoral_systems) and see how some systems may be fairer while others lead to undesirable outcome for most people.
+
+### Ranking for Specific Demographics
+
+{% include figure-image.html path="/assets/img/survey-2025/ranked_voting_japan.svg"
+  title="Ranked Voting (Japan Only)" %}
+
+{% include figure-image.html path="/assets/img/survey-2025/ranked_voting_taiwan.svg"
+  title="Ranked Voting (Taiwan only)" %}
+
+{% include figure-image.html path="/assets/img/survey-2025/ranked_voting_china.svg"
+  title="Ranked Voting (China only)" %}
+
 ## Humanoid vs Anthro Bias
 
 I have been running this survey for 5 years, and anthro characters almost always came on top in every year's popularity ranking. This has led many people to think that "furry lovers have conquered the survey". So let's try to answer this question: is the survey overwhelmingly dominated by respondents that only like anthro characters?
