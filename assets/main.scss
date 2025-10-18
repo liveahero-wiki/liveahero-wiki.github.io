@@ -303,7 +303,7 @@ details {
   contain: content;
   border: 1px solid #aaa;
 
-  p, ul, ol, table, blockquote {
+  >p, >ul, >ol, >table, >blockquote {
     margin: 15px;
   }
   blockquote {
@@ -369,6 +369,9 @@ figure {
 figure img {
   display: block;
   margin: auto;
+}
+.apache-chart {
+  width: 100%;
 }
 figcaption {
   font-size: 13px;
