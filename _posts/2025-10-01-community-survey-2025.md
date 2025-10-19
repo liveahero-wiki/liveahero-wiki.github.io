@@ -959,11 +959,11 @@ You may use the raw data above to implement other types of [voting systems](http
 - There is no single Condorcet Winner for female respondents' ballots
   - i.e. Different **Condorcet methods** may elect different winner within the cycle
   - If we use Tideman Method, then {% chara_link Sadayoshi %} will be elected (as shown in the network graph)
-    - Please take this result with a bigger grain of salt.
+  - We only have 31 female respondents, please take this result with a bigger grain of salt.
 
 ## Humanoid vs Anthro Bias
 
-I have been running this survey for 5 years, and anthro characters almost always came on top in every year's popularity ranking. This has led many people to think that "furry lovers have conquered the survey". So let's try to answer this question: is the survey overwhelmingly dominated by respondents that only like anthro characters?
+I have been running this survey for 5 years, and anthropomorphic characters (anthro characters) almost always came on top in every year's popularity ranking. This has led many people to think that "furry lovers have conquered the survey". So let's try to answer this question: is the survey overwhelmingly dominated by respondents that only like anthro characters?
 
 First of all, I tried to categorize Live A Hero characters by "Gender" (Male, Female and Other) and "Type" (Humanoid, Anthro and Other). The table can be found [here](/misc/chara_category/).
 
@@ -984,7 +984,7 @@ Formula:
 
 > Reminder:
 >
-> This does not 100% prove that the respondents is biased towards anthro characters in all context. Another possible explanation is, LifeWonders is slightly better at creating attractive anthro characters than attractive humanoid characters.
+> This does not 100% prove that the respondents are biased towards anthro characters in all context. Another possible explanation is, LifeWonders is slightly better at creating attractive anthro characters than attractive humanoid characters.
 
 {% include figure-image.html path="/assets/img/survey-2025/anthro-loving-japan.jpg"
   title="Anthro-loving Ratio Distribution (Japan only)" %}
