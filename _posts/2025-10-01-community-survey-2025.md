@@ -926,20 +926,20 @@ Here are the links for the full table, feel free to import them to a spreadsheet
 - There is no Condorcet cycle among the top 10 characters for global data
   - Condorcet cycle usually becomes rarer as the sample size increases
 
-Depending on your definition of fairness, Tideman Method may not be completely fair. In fact, no voting system with more than two candidates can satisfy all the voting criteria that humans want, as some of voting criteria actually contradict each other, so please take the result with a grain of salt. However, Tideman Method *is* considered one of the voting systems that satisfy more voting criterias that most people would want, and is much harder to be manipulated by tactical voting strategy.
+Depending on your definition of fairness, Tideman Method may not be completely fair. In fact, no voting system with more than two candidates can satisfy all the voting criteria that humans want, as some of the voting criteria actually contradict each other, so please take the result with a grain of salt. However, Tideman Method *is* considered one of the better ranked voting systems, and is much harder to be manipulated by tactical voting strategy.
 
 You may use the raw data above to implement other types of [voting systems](https://en.wikipedia.org/wiki/Comparison_of_electoral_systems) and see how some systems may be fairer while others lead to undesirable outcome for most people.
 
 ### Ranking for Specific Demographics
 
 {% include figure-image.html path="/assets/img/survey-2025/ranked_voting_japan.svg"
-  title="Ranked Voting (Japan Only)" %}
+  title="Ranked Voting (Japan Respondents Only)" %}
 
 {% include figure-image.html path="/assets/img/survey-2025/ranked_voting_taiwan.svg"
-  title="Ranked Voting (Taiwan only)" %}
+  title="Ranked Voting (Taiwan Respondents only)" %}
 
 {% include figure-image.html path="/assets/img/survey-2025/ranked_voting_china.svg"
-  title="Ranked Voting (China only)" %}
+  title="Ranked Voting (China Respondents only)" %}
 
 - In Japan, {% chara_link Akashi %} wins over all other characters more than 50% of the time, making him the only **Condorcet Winner** for the Japanese respondents
   - i.e. {% chara_link Akashi %} will always be elected as winner regardless of what **Condorcet method** you use
@@ -954,7 +954,7 @@ You may use the raw data above to implement other types of [voting systems](http
 
 
 {% include figure-image.html path="/assets/img/survey-2025/ranked_voting_female.svg"
-  title="Ranked Voting (Female respondents only)" %}
+  title="Ranked Voting (Female Respondents only)" %}
 
 - There is no single Condorcet Winner for female respondents' ballots
   - i.e. Different **Condorcet methods** may elect different winner within the cycle
