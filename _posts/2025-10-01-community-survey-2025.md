@@ -807,40 +807,6 @@ Comments:
 
 </details>
 
-<details open markdown="1">
-<summary>Ranked Pairs (Tideman Method)</summary>
-
-Apart from asking survey respondents to choose all their favourite characters and top 10 favourite characters, I also asked them to rank the top 10 into a linear order.
-
-With this data, we can try to do pairwise ranking, which basically put all characters into head-to-head comparisons with each other, and rank them by how many times they win in these head-to-head comparisons.
-
-How it works:
-
-1. Create Rank Matrix
-  - Assume a respondent's top 10 ranking is A > B > C > D > E > F > G > H > I > J
-  - +1 for each of "A > B", "A > C", "A > D", ... "B > C", "B > D", ..., "I > J"
-  - +1 for every characters in the top 10 ranking vs not in the ranking. For example, if X is not in the ranking, then +1 for "A > X", "B > X", ... "J > X"
-    - This is necessary because I only asked respondents to rank the top 10 characters instead of **all the characters**. Asking respondents to rank all characters into a linear order would be too exhausting and boring for most people.
-    - Because of this imperfect data, the pairwise ranking computed **is not perfect**
-  - Repeat the same process for all respondents
-1. For each pair of characters A and B:
-  - If `Rank[A][B] > Rank[B][A]`, then we +1 for A
-  - If `Rank[A][B] < Rank[B][A]`, then we +1 for B
-  - If there is a tie, we skip this pair
-1. Count how many times each character has won head-to-head comparison, then sort by descending order
-  - If the first character in the order won more than 50% of the time, then this is the [Cordocet Winner](https://en.wikipedia.org/wiki/Condorcet_winner_criterion)
-
-Below is a small snapshot of the computed pairwise Rank Matrix:
-
-Here are the links for the full table, feel free to import them to a spreadsheet to explore the data:
-
-- [Global Pairwise Ranking](/misc/survey-2025/global_pairwise_ranking.html)
-- [Japan Pairwise Ranking](/misc/survey-2025/japan_pairwise_ranking.html)
-- [Taiwan Pairwise Ranking](/misc/survey-2025/taiwan_pairwise_ranking.html)
-- [China Pairwise Ranking](/misc/survey-2025/china_pairwise_ranking.html)
-
-</details>
-
 <details markdown="1">
 <summary>2024 vs 2025</summary>
 
@@ -929,27 +895,34 @@ Source: [Ranked Pairs (Wikipedia)](https://en.wikipedia.org/wiki/Ranked_pairs)
 
 ### Key adaptation to Tideman Method made for this survey
 
-1. Let `Set X` (`X_1`, `X_2`, `X_3`, ...) be the set of characters that are in a respondent's top 10 ranking, and another `Set Y` (`Y_1`, `Y_2`, ...) that contains characters not in the respondent's top 10 ranking
-1. For each pair of `(X_i, Y_j)`, we assume the respondent would rank `X_i > Y_j` 
-  - This is necessary because I only asked respondents to rank the top 10 characters instead of **all the characters**. Asking respondents to rank all characters into a linear order would be too exhausting and boring for most people.
+1. Let *Set X* (*X<sub>1</sub>, X<sub>2</sub>, X<sub>3</sub>, ...*) be the set of characters that are in a respondent's top 10 ranking, and another *Set Y* (*Y<sub>1</sub>, Y<sub>2</sub>, ...*) that contains characters not in the respondent's top 10 ranking
+1. For each pair of (*X<sub>i</sub>, Y<sub>j</sub>*), we assume the respondent would rank *X<sub>i</sub>* > *Y<sub>j</sub>* 
+    - This is necessary because I only asked the respondents to rank the top 10 characters instead of **all the characters**. Asking respondents to rank all characters into a linear order would be too exhausting and boring for most people.
 
 Here are the links for the full table, feel free to import them to a spreadsheet to explore the data:
 
-- [Global Pairwise Ranking](/misc/survey-2025/global_pairwise_ranking.html)
-- [Japan Pairwise Ranking](/misc/survey-2025/japan_pairwise_ranking.html)
-- [Taiwan Pairwise Ranking](/misc/survey-2025/taiwan_pairwise_ranking.html)
-- [China Pairwise Ranking](/misc/survey-2025/china_pairwise_ranking.html)
+- [Global Pairwise Rank Matrix](/misc/survey-2025/global_pairwise_ranking.html)
+- [Japan Pairwise Rank Matrix](/misc/survey-2025/japan_pairwise_ranking.html)
+- [Taiwan Pairwise Rank Matrix](/misc/survey-2025/taiwan_pairwise_ranking.html)
+- [China Pairwise Rank Matrix](/misc/survey-2025/china_pairwise_ranking.html)
 
 {% include figure-image.html path="/assets/img/survey-2025/ranked_voting_global.svg"
-  title="Ranked Voting" %}
+  title="Ranked Voting (global)" %}
 
 > Reminder:
 >
 > We only show the top 10 characters with the most links, otherwise the graph would be too massive to visualize
 >
-> Tideman Method explicitly remove links with weaker margin of victory, so although the raw data do have **Cordocet cycle**, we don't draw those links in the network graphs above.
+> Tideman Method explicitly remove links with weaker margin of victory, so although the raw data may have **Cordocet cycles**, we don't draw those links in the network graphs above.
 
-Depending on your definition of fairness, Tideman Method may not completely fair to you. In fact, no voting system with more than two candidates can satisfy all the voting criteria, so please take the result with a grain of salt. However, Tideman Method *is* considered one of the voting systems that satisfy more voting criterias that most people would desire, and is much harder to be manipulated by tactical voting strategy.
+- {% chara_link Pubraseer %} wins over all other characters more than 50% of the time, making him the only **Cordocet Winner** in global ranking
+- {% chara_link Obsidius %} ranks higher than {% chara_link Akashi %} in the Top 10 favourites (without using ranking data), but their positions are swapped when accounting for respondents' preferential ranking
+- We can find the widest path of the graph to form the ranking:
+  - {% chara_link Pubraseer %} > {% chara_link Monomasa %} > {% chara_link Giansar %} > {% chara_link Barrel %} > {% chara_link Ryekie %} > {% chara_link Akashi %} > {% chara_link Obsidius %} > {% chara_link reXer %} > {% chara_link Sadayoshi %} > {% chara_link Tsuneaki %}
+- {% chara_link Obsidius %} vs {% chara_link Sadayoshi %} is a tie: they both win each other 50% of the time
+- There is no Cordocet cycle among the top 10 characters for global data
+
+Depending on your definition of fairness, Tideman Method may not be completely fair. In fact, no voting system with more than two candidates can satisfy all the voting criteria that humans want as some of them actually contradict each other, so please take the result with a grain of salt. However, Tideman Method *is* considered one of the voting systems that satisfy more voting criterias that most people would want, and is much harder to be manipulated by tactical voting strategy.
 
 You may use the raw data above to implement other types of [voting systems](https://en.wikipedia.org/wiki/Comparison_of_electoral_systems) and see how some systems may be fairer while others lead to undesirable outcome for most people.
 
@@ -964,6 +937,16 @@ You may use the raw data above to implement other types of [voting systems](http
 {% include figure-image.html path="/assets/img/survey-2025/ranked_voting_china.svg"
   title="Ranked Voting (China only)" %}
 
+- In Japan, {% chara_link Akashi %} wins over all other characters more than 50% of the time, making him the only **Cordocet Winner** for the Japanese respondents
+- Ranked voting results by country have a lot of Cordocet cycles.
+  - For example, in Japan, {% chara_link Ryekie %}, {% chara_link Pubraseer %} and {% chara_link Lilac %} form a Cordocet cycle.
+    - | Pairs | Margin of Victory |
+      |-|-|
+      | {% chara_link Ryekie %} > {% chara_link Pubraseer %} | 55.17% |
+      | {% chara_link Pubraseer %} > {% chara_link Lilac %} | 55.26% |
+      | {% chara_link Lilac %} > {% chara_link Ryekie %} | 52.94% |
+  - Tideman Method requires breaking Cordocet cycle by removing the pair with the weakest margin of victory, which in this case is the last pair, so the final ranking is {% chara_link Ryekie %} > {% chara_link Pubraseer %} > {% chara_link Lilac %}
+
 ## Humanoid vs Anthro Bias
 
 I have been running this survey for 5 years, and anthro characters almost always came on top in every year's popularity ranking. This has led many people to think that "furry lovers have conquered the survey". So let's try to answer this question: is the survey overwhelmingly dominated by respondents that only like anthro characters?
@@ -971,20 +954,23 @@ I have been running this survey for 5 years, and anthro characters almost always
 First of all, I tried to categorize Live A Hero characters by "Gender" (Male, Female and Other) and "Type" (Humanoid, Anthro and Other). The table can be found [here](/misc/chara_category/).
 
 We can see that among the male characters in this game, the ratio of "humanoid" vs "anthro" is almost 50/50.
-So if the respondent population does not have bias towards anthro character or humanoid character, then we should see the distribution to be binomial centered around 50%.
-
+So if the character popularity from Live A Hero is not biased towards anthro character or humanoid character, then we should see the distribution to look like a [Normal Distribution](https://en.wikipedia.org/wiki/Normal_Distribution) centered around 50%.
 
 {% include figure-image.html path="/assets/img/survey-2025/anthro-loving.jpg"
   title="Anthro-loving Ratio Distribution" %}
 
 Formula:
 
-- Anthro-loving ratio of a respondent = "total number of anthro characters they like" / "total number of characters they like" (converted to percentage)
-- Higher percentage means the responden prefers more anthro character than humanoid characters.
+- **Anthro-loving ratio** of a respondent = "total number of anthro characters they like" / "total number of characters they like" (converted to percentage)
+- Higher percentage means the respondent prefers more anthro character than humanoid characters.
 - 100% means the respondent only like anthro characters
 
 - So globally, 50% of the respondents have an anthro-loving ratio of at least 62.5% when countring all their favourite characters.
 - The ratio is even higher when respondents can only choose top 10 favourite characters.
+
+> Reminder:
+>
+> This does not 100% prove that the respondents is biased towards anthro characters in all context. Another possible explanation is, LifeWonders is slightly better at creating attractive anthro characters than attractive humanoid characters.
 
 {% include figure-image.html path="/assets/img/survey-2025/anthro-loving-japan.jpg"
   title="Anthro-loving Ratio Distribution (Japan only)" %}
@@ -995,8 +981,8 @@ Formula:
 {% include figure-image.html path="/assets/img/survey-2025/anthro-loving-female.jpg"
   title="Anthro-loving Ratio Distribution (Female respondents)" %}
 
-- It is very interesting that female respondents' anthro-loving ratio distribution resembles a binomial distribution for the "all favourites".
-- However, when the female respondents are forced to pick the top 10, then the distribution shifts towards antho characters like other gender group.
+- It is very interesting that female respondents' anthro-loving ratio distribution resembles a Normal Distribution for the "all favourites" statistics.
+- However, when the female respondents are forced to pick only their top 10 favourities, then the distribution shifts towards anthro characters like other gender groups.
 
 # Free form questions
 
@@ -1178,7 +1164,7 @@ Since most survey respondents are not from Japan, the lack of translation is obv
 - Some people complain that the recent accessory for some characters’ spine models are getting too simple and boring
 - There are people request for changing skin on spine models
 - Bigger bulge on spine model
-    - <span class="comment">If XXL Woofia can get away with having gigantic bulge in the “SFW” Google Play/Apple Store version, I think LifeWonders can be a bit more bold too...</span>
+    - <span class="comment" markdown="1">If XXL Woofia can get away with having [gigantic bulge](https://x.com/ReclamonRex/status/1965350665083039765/) in the “SFW” Google Play/Apple Store version, I think LifeWonders can be a bit more bold too...</span>
 - HD character arts
 - Characters’ legs are too short
 
