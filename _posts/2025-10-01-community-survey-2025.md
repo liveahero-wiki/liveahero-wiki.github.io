@@ -428,7 +428,7 @@ X-axis is the number of days played (end date is set to 30 Sep 2024). Slightly l
 
 There are small bumps near every 360 days, likely due to the anniversary bringing more players than other times of the year.
 
-The bump at "last 720 days" is quite steep, which is roughly when 3rd anniversary happened. I suspect that there might be a lot of oversea players trying out the game when LifeWonders announced that they were working on official translation.
+The bump at "last 720 days" is quite steep, which is roughly when 3rd anniversary happened. I suspect that there might be a lot of overseas players trying out the game when LifeWonders announced that they were working on official translation.
 
 ## Main Character Configuration
 
@@ -695,7 +695,7 @@ When we examine the spending level of the group A and group B, we see no collera
 
 Once again, we celebrate another game anniversary without official translation, which means 35.7% of the respondents made the correct prediction.
 
-This number is much higher than last anniversary (27.2%), you can see that oversea players had lost faith in LifeWonders when they failed to fulfill their promise in last anniversary.
+This number is much higher than last anniversary (27.2%), you can see that overseas players had lost faith in LifeWonders when they failed to fulfill their promise in last anniversary.
 
 ## Read Story
 
@@ -1057,7 +1057,7 @@ Since most survey respondents are not from Japan, the lack of translation is obv
 - One respondent literally said: Japan views punctuality very seriously, but “please wait a while” literally is more than one year? Almost like lying to the players
 - A Japanese respondent also feels concerned that there is no official translation for foreign players to this day
 - Some players have difficulty in clearing game content because not being able to understand skill description and in-game battle guide
-- Some oversea players can get by with the game wiki, but the back and forth checking is very tiring
+- Some overseas players can get by with the game wiki, but the back and forth checking is very tiring
 - Some does not even know when a new feature is implemented due to not understanding game announcement
 - People can feel that the story and performance quality has improved, but lack of translation means they cannot understand any of it
 - The fact that all other gacha games competing in the same space already have official translations but this game still doesn’t, make players feel very betrayed.
@@ -1065,9 +1065,9 @@ Since most survey respondents are not from Japan, the lack of translation is obv
 
 ### Story
 
-- Some people prefer to able to skip the voice acting, and complains that the voiced dialogue prevents them from reading at their own pace
+- Some people prefer to able to skip the voice acting in story mode, and complained that the voiced dialogue prevents them from reading story at their own pace
 - There are also players who project themselves as the main character, and saying that the voiced dialogue for main character breaks that immersion for them
-    - An option to turn off main character voice might be a good solution
+    - A game setting to turn on/off main character voice might be a good solution
 - Waited too long to get new Main Quest
     - One respondent thinks that the frequency of Main Quest and Event Quest should be more balanced
 - Longer Event Quest story to flesh out a character’s charm. Event Special Quest is too short
@@ -1078,7 +1078,7 @@ Since most survey respondents are not from Japan, the lack of translation is obv
 
 ### Event
 
-- Too many filler campaigns (like farming campaigns) where players have nothing much to do. For oversea players, “Link Quest campaigns” also counts as filler, because they cannot understand the only content of the campaign, which is just story in Japanese.
+- Too many filler campaigns (like farming campaigns) where players have nothing much to do. For overseas players, “Link Quest campaigns” also counts as filler, because they cannot understand the only content of the campaign, which is just story in Japanese.
 - Every event has a very predictable formula: farm event currency, then trade items in the event shop. Some feel this is too repetitive
     - People want more ways to play the game during an event other than repetitive farming
 - Request for implementation of story CG
@@ -1099,7 +1099,7 @@ Since most survey respondents are not from Japan, the lack of translation is obv
 
 ### Game Feature
 
-- Very difficult to figure out what heroes / sidekicks work well together
+- Very difficult to figure out which heroes / sidekicks work well together
 - Name card
     - Want more customization to the name card
     - Name card title feels useless
@@ -1110,7 +1110,7 @@ Since most survey respondents are not from Japan, the lack of translation is obv
     - One respondent mentioned LW can copy “My Alice” from “Crash Fever”
 - More customization for home screen
 - The latest hard-difficulty quest of Main Quest 2-3 introduced the “two-teams” mechanic, but player is only allowed to borrow a friend support for one of the team, which hurts players who don’t have a lot of strong units yet
-    - Forming one strong team is hard enough, now I need to have two teams at the same time??
+    - <span class="comment">Forming one strong team is hard enough, now I need to have two teams at the same time??</span>
 - Want to be able to directly buy the required amount of multiple items for one upgrade in one go, rather than having to go back and forth multiple times to check how much they need to buy
 - Sort/filter function for sidekick skills and passives
 - One click to exchange all duplicates to {% include item.html id=40 %}
@@ -1125,17 +1125,18 @@ Since most survey respondents are not from Japan, the lack of translation is obv
 - Implement trial quest to try out older characters
 - Add favourite tags for most used friend supports
 - More team slots to organize teams for different gameplay purposes
-    - As this game has added more and more bosses that require different setups, 10 team slots is seem too inadequate
-    - Crave Saga literally has 7 x 10 = 70 team slots, Live A Hero needs to keep up
+    - As this game has added more and more bosses that require different setups, 10 team slots is no longer enough
+    - Crave Saga literally has 7 x 10 = 70 team slots for players to store different team setups, Live A Hero needs to keep up
 - NSFW mode
 
 ### Gacha & Monetization
 
 - Some respondents request for the implementation of monthly pass instead of limited event gem pack
-- Many people want to be able to support the game at lower price point monthly
-- Monthly pass is a very common feature in other gacha games, LifeWonders really need to consider this
+    - Many people want to be able to support the game at lower price point monthly
+    - <span class="comment">This is especially true for some developing countries as their average salary is much lower than Japan</span>
+    - <span class="comment">Monthly pass is a very common feature in other gacha games, LifeWonders really need to consider this</span>
 - Paid skins are also mentioned a few times
-- New players complain that it is very slow and boring at the early stage of playing, since accumulating gacha currency and upgrading resources are very challenging.
+- New players complained that it is very slow and boring at the early stage of playing, since accumulating gacha currency and upgrading resources are very challenging.
     - One player said it takes months to upgrade one character
     - One respondent observed that their friends often quit the game before that, leading to poor retention rate
     - <span class="comment">I am guessing that most of the complaints might be referring more to the end-game upgrades like {% include item-icon.html id=59 %} Parallel Quartz, Blooming and Skill Tree, which indeed would take a freaking long time to accumulate enough materials to upgrade.</span>
@@ -1144,7 +1145,7 @@ Since most survey respondents are not from Japan, the lack of translation is obv
 - People welcomed the improved mechanics to new characters, but lament that most are for 5 star characters only
 - There are a few complaints about old characters’ skills being useless in the current environment. People want more frequent release of skill tree
     - Some people complained that old characters are still useless after skill tree enhancement
-- One respondent said “Anniversary got worse” (no specific details), another respondent is displeased the anniversary ticket has been stuck to 3 tickets for years.
+- One respondent said “Anniversary got worse” (no specific details given), another respondent is displeased that the anniversary ticket has been stuck at 3 tickets for years.
 
 ### Characters
 
@@ -1803,9 +1804,9 @@ Due to time constraint, I did not make a list of voice actors that respondents w
 
 # Afterword
 
-I hope you enjoy reading this report. For the reader, reading this report might only take 20 minutes (or less if you only look at the images), but the whole process of preparing the survey, compiling data, debugging visualization codes and writing the report is almost a full time work for two months. I also added too many open-ended questions, which only cost me even more time to analyze.
+I hope you enjoy reading this report. For the reader, reading this report might only take 20 minutes (or less if you only look at the images), but the whole process of preparing the survey, compiling data, debugging my visualization scripts and writing the report is almost a full time work for two months. I also added too many open-ended questions, which only cost me even more time to analyze.
 
-While waiting for the ever elusive release of official translation, this wiki will still be here supporting oversea players.
+While waiting for the ever elusive release of official translation, this wiki will still be here to support overseas players.
 
 See you in next year survey! (Or see you again in this year's unofficial Tokyo Afterschool Summoners survey that should happen around two weeks before its anniversary.)
 
