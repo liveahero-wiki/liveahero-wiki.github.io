@@ -42,8 +42,8 @@ I understand that some people do not want to see the popularity poll result as t
 So let me get this straight:
 
 1. "Some characters being more popular than others" is a fact that everyone can observe through many other ways, such as "engagement count on LifeWonders' official posts/videos", "the number of fan arts" and so on. Even without this popularity poll, people who would cherry pick any data and twist it to fit their narrative always exist, and there are plenty data for them to do that. The survey result should not increase the number of such people.
-1. I have ran this survey for many years. While I can't say that everyone acted civilly after publication of the survey result, but I have not witnessed such discourse escalated too much, because most groups and servers already have rules to control insults and hate speech.
-1. For those people who try to use the survey result o bully others, I am sure these people do other Karen stuffs in other time too. So the general online advise applies: if the person is being too annoying, just block them and move on with your life.
+1. I have ran this survey for many years. While I can't say that everyone acted civilly after the publication of the survey result, but I have not witnessed such discourse escalated too much, because most groups and servers already have rules to control insults and hate speech.
+1. For those people who try to use the survey result to bully others, I am sure these people do other Karen stuffs in other time too. So the general online advise applies: if the person is being too annoying, just block them and move on with your life.
 
 
 # Respondent Profile
@@ -54,7 +54,7 @@ So let me get this straight:
   options='{"legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "Discord", "value": 140}, {"name": "X (Twitter)", "value": 91}, {"name": "English wiki / 英語版wiki", "value": 90}, {"name": "巴哈姆特 (Taiwan)", "value": 88}, {"name": "Weibo 微博", "value": 41}, {"name": "Reddit", "value": 38}, {"name": "Tencent QQ", "value": 26}, {"name": "Youtube", "value": 26}, {"name": "BlueSky", "value": 24}, {"name": "other", "value": 11}, {"name": "Facebook", "value": 10}, {"name": "Zawazawa", "value": 8}, {"name": "Bilibili", "value": 3}]}]}'
   title="Source of Respondents" %}
 
-Majority of the respondents found the survey via Discord (23.49%). Taiwan Bahamut Forum, Twitter/X and English Wiki each take approximately 15%.
+Majority of the respondents found the survey via Discord (23.49%). 巴哈姆特 (Taiwan gamer forum), Twitter/X and English Wiki each take approximately 15%.
 
 ## Age
 
@@ -371,11 +371,7 @@ It is clear that East Asia is the most important market for the game (being cult
   </tr>
 </table>
 
-I think the most surprising fact to me is how many more Taiwan respondents I have gotten after translating the survey to Chinese.
-
-Despite the largest expected player base of this game being Japan, this survey still was not able to capture the same proportion of Japanese players (only 22). I just don’t know where these Japanese people are lurking.
-
-China should also be a pretty big player base of this game, but because the survey was conducted via Google Forms, people living in China cannot access Google websites unless they use VPN. It does not mean that there are very few China LAH players.
+Despite the largest expected player base of this game being Japan, this survey still was not able to capture the same proportion of Japanese players.
 
 ## Japanese proficiency
 
@@ -385,7 +381,7 @@ China should also be a pretty big player base of this game, but because the surv
 
 - 56.04% of the respondents cannot read Japanese at all.
 - 106 respondents has N1-level reading ability (17.79%). If excluding Japanese people, only 21 respondents have N1-level reading ability (3.52%)
-- I estimate that you need at least N3 to be able to rea the in-game Japanese story comfortably, only
+- I estimate that you need at least N3 to be able to read the in-game Japanese story comfortably, which only
   22.48% of the respondents fit in this category.
 
 # The Game
@@ -410,7 +406,7 @@ Among the respondents who has played the game but now has stopped playing, these
 - Too little (free) pull currency
 - Boring/monotonous grinding, no skip ticket, not enough reward
 - Nothing to do after upgrading favourite character(s)
-- Phone storage shortage
+- Running out of phone storage
 - Respondent also play other gacha games, no time to keep Live A Hero
 - No NSFW element
 
@@ -420,6 +416,8 @@ Among the respondents who has played the game but now has stopped playing, these
   title="Which platform(s) Players Use to Play Live A Hero" %}
 
 Majority of the respondents use Android to play the game. Quite a few people use multiple platforms to play the game.
+
+<span class="comment">I know ther are some players that use mobile phones for day-to-day playing, then ocassionally switch to iPad to view their husbands in bigger screen.</span>
 
 ## Playing Time
 
@@ -551,6 +549,7 @@ Interesting points:
 
 - Female respondents (cis and trans) mostly only choose human body types.
 - There are cis-male respondents who choose female body types (straight players?!).
+  - If LifeWonders is estimating the number of female players purely by how many players chose female body types in-game, they will overestimate since the number includes these straight male players
 
 ## Money spending
 
@@ -642,10 +641,10 @@ Although the percentage of female respondents is much lower than male respondent
 
 - **Gyee**
   - Among all the games, it has the highest combined count of "heard of but never play" and "has abandoned the game"
-  - More than a third of Japan respondents have never hard of this game
+  - More than a third of Japan respondents have never heard of this game
 - **Fantastic Boyfriends (F彼)**
-  - The only buy-out game developed by LifeWonders, you can treat “abandoned” the same as “still playing”
-  - It is not surprising that plenty of non-Japan respondents said “they heard of it but never played it”, since the majority of the respondents do not understand Japanese and the game has no hope of ever getting official translation.
+  - The only buy-out game developed by LifeWonders, you can treat “abandoned” as the same as “still playing”
+  - It is not surprising that many overseas respondents said “they heard of it but never played it”, since the majority of the respondents do not understand Japanese and the game has no hope of ever getting official translation.
   - Even among Japan respondents, there are more than a third of them that has "heard of the game but never play"
   - <span class="comment">In all honesty, the game has a very solid story writing, and it benefited from having limited number of characters, so each characters has more time to shine. If you can understand Japanese, definitely give it a try.</span>
 - **Tokyo Afterschool Summoners**
@@ -683,9 +682,9 @@ When we examine the spending level of the group A and group B, we see no collera
 
 > "Whether Live A Hero is gives more or less free pull currency than other gacha game" alone might not be best question to ask.
 >
-> Sometime other gacha games may give out more free pull currency, but at the same time there are 4 gacha banners per month <span class="masked">Crave Saga</span>. If you want every characters, you are still screwed.
+> Sometime other gacha games <span class="masked">like Crave Saga</span> may give out more free pull currency, but at the same time there are 4 gacha banners per month. If you want every characters, you are still screwed.
 >
-> There is also a case where the gacha game is super genorous with free pull currency, but at the same time you need get many duplicates to make the character's skills useful <span class="masked">XXL Woofia</span>.
+> There is also a case where the gacha game <span class="masked">(XXL Woofia)</span> is super genorous with free pull currency, but at the same time you need to get many duplicates to make the character's skills useful.
 >
 > So, we need to consider the entire gacha mechanism as a whole to assess whether it is healthy for the playerbase...
 
@@ -706,7 +705,7 @@ This number is much higher than last anniversary (27.2%), you can see that overs
 
 Close to half of the respondents need to rely on fan translation.
 
-> Note: Chinese community are more lucky than English community due to having more fan translators helping to translate different parts of the game.
+> Note: Chinese community are luckier than English community due to having more fan translators helping to translate different parts of the game.
 
 > I said from last year that I need to add the option of "Yes, I read the story in-game with the help of machine translation and some guesswork", but I forgot...
 
@@ -818,7 +817,7 @@ Comments:
   clip=true
   title="Approval Rating Change (2024 vs 2025)" %}
 
-- It seems that characters that gotten their variant forms or base form released between the time when 2024 and 2025 surveys were carried out have their ranking boosted quite significantly (such as {% chara_link Astar %}, {% chara_link Barte %}, {% chara_link Yohack %}) and {% chara_link Gaisei %}
+- It seems that for characters that have gotten their variant forms or base form released between the time when 2024 and 2025 surveys were carried out, their ranking are boosted quite significantly (such as {% chara_link Astar %}, {% chara_link Barte %}, {% chara_link Yohack %}) and {% chara_link Gaisei %}
 - {% chara_link Obsidius %}, {% chara_link Sterio %} and {% chara_link Barrel %} lost the most approval rating between 2024 and 2025 survey
   - Reminder: this year's survey was ended before {% chara_link Barrel|h3 %} was announced
 
@@ -901,28 +900,33 @@ Source: [Ranked Pairs (Wikipedia)](https://en.wikipedia.org/wiki/Ranked_pairs)
 
 Here are the links for the full table, feel free to import them to a spreadsheet to explore the data:
 
-- [Global Pairwise Rank Matrix](/misc/survey-2025/global_pairwise_ranking.html)
-- [Japan Pairwise Rank Matrix](/misc/survey-2025/japan_pairwise_ranking.html)
-- [Taiwan Pairwise Rank Matrix](/misc/survey-2025/taiwan_pairwise_ranking.html)
-- [China Pairwise Rank Matrix](/misc/survey-2025/china_pairwise_ranking.html)
+- [Global Respondents' Pairwise Rank Matrix](/misc/survey-2025/global_pairwise_ranking.html)
+- [Japan Respondents' Pairwise Rank Matrix](/misc/survey-2025/japan_pairwise_ranking.html)
+- [Taiwan Respondents' Pairwise Rank Matrix](/misc/survey-2025/taiwan_pairwise_ranking.html)
+- [China Respondents' Pairwise Rank Matrix](/misc/survey-2025/china_pairwise_ranking.html)
+- [Female Respondents' Pairwise Rank Matrix](/misc/survey-2025/china_pairwise_ranking.html)
 
 {% include figure-image.html path="/assets/img/survey-2025/ranked_voting_global.svg"
   title="Ranked Voting (global)" %}
 
 > Reminder:
 >
-> We only show the top 10 characters with the most links, otherwise the graph would be too massive to visualize
+> An edge from {% chara_link Pubraseer %} to {% chara_link Giansar %} means {% chara_link Pubraseer %} > {% chara_link Giansar %} for 65.47% of the time, and {% chara_link Giansar %} > {% chara_link Pubraseer %} for 34.53% of the time.
 >
-> Tideman Method explicitly remove links with weaker margin of victory, so although the raw data may have **Cordocet cycles**, we don't draw those links in the network graphs above.
+> We only show the top 10 characters with the most links in the network graph, otherwise the graph would be too massive to visualize.
+>
+> Tideman Method explicitly removes links with weaker margin of victory, so although the raw data may have **Condorcet cycles**, we don't draw those links in the network graphs above.
 
-- {% chara_link Pubraseer %} wins over all other characters more than 50% of the time, making him the only **Cordocet Winner** in global ranking
+- {% chara_link Pubraseer %} wins over all other characters more than 50% of the time, making him the only **Condorcet Winner** in global ranking
+  - i.e. {% chara_link Pubraseer %} will always be elected as winner regardless of what **Condorcet method** you use
 - {% chara_link Obsidius %} ranks higher than {% chara_link Akashi %} in the Top 10 favourites (without using ranking data), but their positions are swapped when accounting for respondents' preferential ranking
 - We can find the widest path of the graph to form the ranking:
   - {% chara_link Pubraseer %} > {% chara_link Monomasa %} > {% chara_link Giansar %} > {% chara_link Barrel %} > {% chara_link Ryekie %} > {% chara_link Akashi %} > {% chara_link Obsidius %} > {% chara_link reXer %} > {% chara_link Sadayoshi %} > {% chara_link Tsuneaki %}
-- {% chara_link Obsidius %} vs {% chara_link Sadayoshi %} is a tie: they both win each other 50% of the time
-- There is no Cordocet cycle among the top 10 characters for global data
+- {% chara_link Obsidius %} vs {% chara_link Sadayoshi %} is a tie: they both win over each other 50% of the time
+- There is no Condorcet cycle among the top 10 characters for global data
+  - Condorcet cycle usually becomes rarer as the sample size increases
 
-Depending on your definition of fairness, Tideman Method may not be completely fair. In fact, no voting system with more than two candidates can satisfy all the voting criteria that humans want as some of them actually contradict each other, so please take the result with a grain of salt. However, Tideman Method *is* considered one of the voting systems that satisfy more voting criterias that most people would want, and is much harder to be manipulated by tactical voting strategy.
+Depending on your definition of fairness, Tideman Method may not be completely fair. In fact, no voting system with more than two candidates can satisfy all the voting criteria that humans want, as some of voting criteria actually contradict each other, so please take the result with a grain of salt. However, Tideman Method *is* considered one of the voting systems that satisfy more voting criterias that most people would want, and is much harder to be manipulated by tactical voting strategy.
 
 You may use the raw data above to implement other types of [voting systems](https://en.wikipedia.org/wiki/Comparison_of_electoral_systems) and see how some systems may be fairer while others lead to undesirable outcome for most people.
 
@@ -937,15 +941,25 @@ You may use the raw data above to implement other types of [voting systems](http
 {% include figure-image.html path="/assets/img/survey-2025/ranked_voting_china.svg"
   title="Ranked Voting (China only)" %}
 
-- In Japan, {% chara_link Akashi %} wins over all other characters more than 50% of the time, making him the only **Cordocet Winner** for the Japanese respondents
-- Ranked voting results by country have a lot of Cordocet cycles.
-  - For example, in Japan, {% chara_link Ryekie %}, {% chara_link Pubraseer %} and {% chara_link Lilac %} form a Cordocet cycle.
+- In Japan, {% chara_link Akashi %} wins over all other characters more than 50% of the time, making him the only **Condorcet Winner** for the Japanese respondents
+  - i.e. {% chara_link Akashi %} will always be elected as winner regardless of what **Condorcet method** you use
+- Ranked voting results by country have a lot of Condorcet cycles due to lower number of ballots
+  - For example, in Japan, {% chara_link Ryekie %}, {% chara_link Pubraseer %} and {% chara_link Lilac %} form a Condorcet cycle.
     - | Pairs | Margin of Victory |
       |-|-|
       | {% chara_link Ryekie %} > {% chara_link Pubraseer %} | 55.17% |
       | {% chara_link Pubraseer %} > {% chara_link Lilac %} | 55.26% |
       | {% chara_link Lilac %} > {% chara_link Ryekie %} | 52.94% |
-  - Tideman Method requires breaking Cordocet cycle by removing the pair with the weakest margin of victory, which in this case is the last pair, so the final ranking is {% chara_link Ryekie %} > {% chara_link Pubraseer %} > {% chara_link Lilac %}
+  - Tideman Method requires breaking Condorcet cycle by removing the pair with the weakest margin of victory, which in this case is the last pair (52.94%), so the final ranking is {% chara_link Ryekie %} > {% chara_link Pubraseer %} > {% chara_link Lilac %}
+
+
+{% include figure-image.html path="/assets/img/survey-2025/ranked_voting_female.svg"
+  title="Ranked Voting (Female respondents only)" %}
+
+- There is no single Condorcet Winner for female respondents' ballots
+  - i.e. Different **Condorcet methods** may elect different winner within the cycle
+  - If we use Tideman Method, then {% chara_link Sadayoshi %} will be elected (as shown in the network graph)
+    - Please take this result with a bigger grain of salt.
 
 ## Humanoid vs Anthro Bias
 
@@ -1010,7 +1024,7 @@ For this year's survey, I ended up manually going through all the comments inste
     - Many praised how the story enhanced the appeal of the characters through back story and interaction with other characters
         - Different characters may have different personality, but at the end of the day, most are kind to the main character
         - Compared to R18 games where eroticism is always allowed, one respondent like that you can see the characters' modesty and the conflict of whether it's okay to expose themselves in such a shameless state in front of the person they trust (the main character) who has observed them
-        - A respondent mentioned “there is no NTR in this game”. <span class="comment">I have a feeling the respondent is angry with AnotherEidos</span>
+        - A respondent mentioned “there is no NTR in this game”. <span class="comment">I have a feeling that the respondent is angry with AnotherEidos</span>
     - Story that is centered more around working adults (compared to Housamo which are mostly “high schoolers”)
     - Story that actually has high stake, like “you will disappear after being eaten by Kaibutsu”
     - Main character isn’t useless in the story
@@ -1789,11 +1803,11 @@ Due to time constraint, I did not make a list of voice actors that respondents w
 
 # Afterword
 
-I hope you enjoy reading this report, because the whole process took me months to prepare. I added too many open-ended questions, which only cost me even more time to analyze. There were also some technical upgrade for the survey and the report itself. This felt like a full time work.
+I hope you enjoy reading this report. For the reader, reading this report might only take 20 minutes (or less if you only look at the images), but the whole process of preparing the survey, compiling data, debugging visualization codes and writing the report is almost a full time work for two months. I also added too many open-ended questions, which only cost me even more time to analyze.
 
 While waiting for the ever elusive release of official translation, this wiki will still be here supporting oversea players.
 
-See you in next year survey! (Or see me again in this year's unofficial Tokyo Afterschool Summoners survey that should happen around two weeks before its anniversary.)
+See you in next year survey! (Or see you again in this year's unofficial Tokyo Afterschool Summoners survey that should happen around two weeks before its anniversary.)
 
 <script defer src="https://echarts.apache.org/en/js/vendors/echarts/dist/echarts.min.js"></script>
 <script defer src="/assets/chart.js"></script>
