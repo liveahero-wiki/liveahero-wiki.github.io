@@ -659,7 +659,7 @@ Although the percentage of female respondents is much lower than male respondent
   - Out of east asia, the number of respondents that still play this game seems to have dropped from 2024 slightly
 - **Crave Saga**
   - This game has the second lowest current Japanese players (just above Tamacolle) among all the Japanese gacha games that target gay players. Its abandonment rate is also fairly high.
-  - The game's per
+  - Despite the game having English and Chinese translation via global server (which has a one year content lag), the number of non-Japan players is not very high.
 - **XXL Woofia**
   - The latest gacha game that wants a piece of the pie in the gay player market. It first debuted with English, Chinese and Korean languages in June 2025.
   - Outside of Japan, this game has a very high number of respondents still playing the game, only second to Tokyo Afterschool Summoners
