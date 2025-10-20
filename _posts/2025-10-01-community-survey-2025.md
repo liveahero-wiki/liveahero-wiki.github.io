@@ -1110,7 +1110,7 @@ Since most survey respondents are not from Japan, the lack of translation is obv
     - One respondent mentioned LW can copy “My Alice” from “Crash Fever”
 - More customization for home screen
 - The latest hard-difficulty quest of Main Quest 2-3 introduced the “two-teams” mechanic, but player is only allowed to borrow a friend support for one of the team, which hurts players who don’t have a lot of strong units yet
-    - <span class="comment">Forming one strong team is hard enough, now I need to have two teams at the same time??</span>
+    - <span class="comment">Forming one strong team is hard enough, now I need to have two strong teams at the same time??</span>
 - Want to be able to directly buy the required amount of multiple items for one upgrade in one go, rather than having to go back and forth multiple times to check how much they need to buy
 - Sort/filter function for sidekick skills and passives
 - One click to exchange all duplicates to {% include item.html id=40 %}
@@ -1153,7 +1153,7 @@ Since most survey respondents are not from Japan, the lack of translation is obv
 - Limited variants for female character
 - Equal chance of getting limited variant for all characters
 - Some players are not satisfied about the company’s decision to increase the proportion of characters that are not popular to gay men for the sake of diversity
-- Female players on the hand think we need more female characters
+- Female players think we need more female characters
 - Some respondents are against the implementation of shota characters
     - <span class="comment">I can’t comment much, we all know how east asian vs other countries have very different views on fictional shota characters...</span>
 - More furries characters
@@ -1193,7 +1193,9 @@ Since most survey respondents are not from Japan, the lack of translation is obv
 
 People sure was not holding back when it comes to illustrator wishlist, we received tons of names for this question.
 
-I did my absolute best to try finding the illustrator, but I wasn't able to fix all the typos, so I could only list the names I couldn't find verbatim.
+I did my absolute best to try finding the illustrators, but some names are just impossible to search, while some contain typos.
+
+<span class="comment">For those of you who entered your favourite illustrators' names incorrectly, I am revoking your supporter memebership with immediate effect. You need to handwrite their name correctly 1000 times to gain back your membership.<span>
 
 Some of the suggestions are literally moonshot, so please do take a look at the list. To quote a joke from a friend: "some people dream so big, you can open a (Hero) Path".
 
@@ -1273,8 +1275,6 @@ Some of the suggestions are literally moonshot, so please do take a look at the 
     - https://x.com/mixterArt
 1. Racoon21
     - https://x.com/raccoon_21c
-1. Kurotero (クロテロ)
-    - https://x.com/kurotero/
 1. DUNE
     - https://x.com/GT_DunE
 1. ルイズ
@@ -1471,11 +1471,15 @@ Some of the suggestions are literally moonshot, so please do take a look at the 
 1. Sky
     - https://x.com/sky_gomi
 1. 黑轩
+    - <span class="comment">I am guessing maybe it is Kurotero (クロテロ)</span>
+    - https://x.com/kurotero
+    - https://space.bilibili.com/567272/dynamic
 1. 行丸
     - https://saru59.sakura.ne.jp/
 1. Itohiro (いとひろ)
     - https://x.com/itohiro0305
-1. KAJIKA
+1. KAJIKA (鮖)
+    - https://x.com/_ka_ji_ka
 1. Manabiko (まなびこ)
     - https://x.com/manabiko_
     - <span class="comment">(Technically they already did [Cetus](/mobs/#cetusplesiosaur-kaibutsu) in this game)</span>
@@ -1514,6 +1518,7 @@ Some of the suggestions are literally moonshot, so please do take a look at the 
 1. Tevit
     - https://x.com/Tevit15
 1. Osuman
+    - https://x.com/osumankokuou
 1. Magmataishi (まぐまたいし)
     - https://x.com/magma00
 1. Ammamiya (あまみや)
@@ -1576,6 +1581,7 @@ Some of the suggestions are literally moonshot, so please do take a look at the 
 1. Retsito/Morskart
     - https://x.com/morskart
 1. Bakedanuki
+    - https://bskyx.app/profile/bakedanuki.bsky.social
 1. bozi
     - https://x.com/bozi_exe
 1. Joseph A.J
@@ -1640,9 +1646,9 @@ Some of the suggestions are literally moonshot, so please do take a look at the 
 </details>
 
 <details open markdown="1">
-<summary>List of illustrators that were in the wishlist but already has work in this game  (in no particular order)</summary>
+<summary>List of illustrators that were in the wishlist but already has work in this game (in no particular order)</summary>
 
-1. 朱交赤成
+1. Syukou Akanaru
 1. BomBom
 1. Sawch_cls
 1. BKMITA
@@ -1794,9 +1800,10 @@ Despite that, we still receive a lot of names. Processing this question turned o
 1. Nakai Kazuya (中井 和哉) - The Japanese voice actor for Roronao Zoro.
 1. Volcano Ota (ボルケーノ太田)
 1. Josuke Shinomiya (篠宮穰祐)
-  - <span class="comment">Old Barguest VA in Housamo</span>
+  - <span class="comment">The previous Barguest's voice actor in Housamo <img width="32" height="32" src="https://cdn.housamo.xyz/housamo/unity/Android/icon/icon_barguest01.png" loading="lazy"></span>
 1. Hatsune Miku (初音ミク)
   - <span class="comment">Yep, the infamous vocaloid</span>
+  - {% include figure-image.html path="/assets/img/survey-2025/lw-hatsune-miku.jpg" title="Hatsune Miku mascot appearing on the same stage as LifeWonders' mascots" %}
 
 </details>
 
