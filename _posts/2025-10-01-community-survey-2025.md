@@ -1029,8 +1029,8 @@ For this year's survey, I ended up manually going through all the comments inste
     - Main character isn’t useless in the story
     - Player having some form of “choices” to get some variations in the story, even though the overall story ending is already decided
     - Interaction between characters
-    - One respondent prefers Live A Hero that has story less suggestive than Housamo
-        - <span class="comment">In the "Improvement" section, you will see other people complained that the story is not suggestive enough</span>
+    - One respondent prefers Live A Hero that has story less sexually suggestive than Housamo
+        - <span class="comment">In the "Improvement" section, you will see other people complained that the story is not sexually suggestive enough</span>
     - Good BGM
 - Has mechanism to guarantee getting a rate-up character
 - Game franchise that has lots of fan arts
@@ -1070,7 +1070,7 @@ Since most survey respondents are not from Japan, the lack of translation is obv
 - Waited too long to get new Main Quest
     - One respondent thinks that the frequency of Main Quest and Event Quest should be more balanced
 - Longer Event Quest story to flesh out a character’s charm. Event Special Quest is too short
-- Some respondents complained that Live A Hero’s story is a lot less suggestive as compared to Tokyo Afterschool Summoner
+- Some respondents complained that Live A Hero’s story is a lot less sexually suggestive as compared to Tokyo Afterschool Summoner
 - Implementation of Date Quest
 - “To top it off, the script and direction for the main story—which hadn't been updated for nearly two years—received quite negative reviews, sparking mixed reactions. Honestly, I'm worried about the future of the game's operation.”
     - <span class="comment">This comment was written by a Japanese respondent. I was quite surprised by it, as I thought Japanese players on Twitter/X are mostly positive with the latest Main Quest (but then again, I can’t understand Japanese)</span>
