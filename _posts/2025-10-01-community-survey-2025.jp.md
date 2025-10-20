@@ -1117,7 +1117,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
   - よく使うフレンドサポートにお気に入りタグを追加する機能
   - 様々なゲームプレイ目的に合わせてチームを編成するためのチームスロットを増やしてほしい
       - このゲームには様々な編成を必要とするボスがどんどん追加されており、10個のチームスロットではもはや不十分
-      - Crave Sagaには文字通り7×10=70個のチームスロットがあり、プレイヤーは様々なチーム編成を保存できる。ライブ・ア・ヒーローも追随する必要がある
+      - <span class="comment">Crave Sagaには文字通り7×10=70個のチームスロットがあり、プレイヤーは様々なチーム編成を保存できる。ライブ・ア・ヒーローも追随する必要がある</span>
   - NSFWモード
 
 ### ガチャと収益化
@@ -1131,7 +1131,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
       - あるプレイヤーは、1人のキャラクターを育成するのに数ヶ月かかると述べた
       - ある回答者は、友人がその前にゲームをやめてしまうことが多く、定着率が低いと指摘した
       - <span class="comment">不満のほとんどは、{% include item-icon.html id=59 %}パラレルクオーツや開花、スキルツリーのようなエンドゲームの強化要素を指しているのではないかと推測します。これらは確かに、強化に必要な素材を十分に集めるのに途方もない時間がかかりますから。</span>
-  - 特定のゲームプレイの組み合わせを可能にするには多くのユニットが必要だが、ゲーム内で提供されるガチャ通貨が非常に少ないため、課金しないとその組み合わせを実現するのは難しい
+  - このゲームには「カウンター攻撃チーム」「持続ダメージチーム」「Viewpower中心チーム」「SPD操作チーム」など、数多くのプレイスタイルの組み合わせが存在します。各組み合わせには異なるタイプのキャラクターが必要です。異なるタイプのボスによって特定の戦術チームが機能しなくなる可能性があるため、少なくとも2～3チームは必要です。しかしゲーム内で入手できるガチャ通貨は極めて少ないため、課金しない限り理想の戦術構成を実現するのは困難です。
   - 復刻バナーでは、限定ユニットの確定排出率を高くしてほしいという要望がある
   - 新キャラクターのメカニクス改善は歓迎されているが、そのほとんどが星5キャラクターのみであることに嘆きの声が上がっている
   - 古いキャラクターのスキルが現在の環境では役に立たないという不満がいくつかある。スキルツリーのより頻繁なリリースが望まれている
@@ -1161,7 +1161,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
   - 被弾衣装スキンの際どさを増してほしい
       - <span class="comment">一部のキャラクターの被弾スキンは控えめかもしれませんが、{% chara_link Antares|h1 %}は今やほとんど全裸だと思います</span>
   - キャラクターを裸にできないと不満を言う人が一人いた
-      - <span class="comment">お願いします、これはSFW（全年齢対象）ゲームです</span>
+      - <span class="comment">まったく、これはSFW（全年齢対象）ゲームです</span>
   - 一部のプレイヤーは、やみくもに新しいキャラクターの数を増やすのではなく、同じキャラクターが（限定バージョンが増えることになっても）もっと登場する機会を望んでいる
   - 星5キャラクターを強化した際の新しいアート
       - <span class="comment">その人は、星5キャラクターに少なくとも3つのユニークなアートを持たせてほしいということだと思いますか？</span>
@@ -1193,7 +1193,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 > 警告：ソーシャルリンクのほとんどはNSFWです
 
 <details open markdown="1">
-<summary>Illustrator wishlist (in no particular order)</summary>
+<summary>イラストレーター ウィッシュリスト（順不同）</summary>
 
 1. Zoyu (卓羽)
     - https://x.com/ZoYu26152516
@@ -1208,7 +1208,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
     -  https://x.com/abasirisippo
 1. Estper
     - https://x.com/tiger_est
-    - <span class="comment">Most people wrote this as "Espter" which caused me a long time to find...</span>
+    - <span class="comment">ほとんどの人はこれを「Espter」と書いていたので、見つけるのに長い時間がかかってしまった…</span>
 1. Istani
     - https://x.com/kemoistani
 1. Monogg
@@ -1227,7 +1227,8 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
     - https://x.com/matomonstera
 1. Gammachaos
     - https://x.com/gammachaos
-    - <span class="comment">Funny comment from a respondent:</span> "every gay gacha game needs a Horkeu Kamui clone"
+    - <span class="comment">回答者からの面白いコメント：</span> 「ゲイガチャゲームには必ずホルケウ・カムイのクローンが必要だ
+      <img width="32" height="32" loading="lazy" src="https://cdn.housamo.xyz/housamo/unity/Android/icon/icon_horkeukamui01.png">」
 1. TakaTaka
     - https://x.com/TakaTakaPig
 1. Juggermelon
@@ -1422,15 +1423,15 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
     - https://x.com/korindo
 1. Hirohiko Araki (荒木飛呂彦)
     - https://x.com/araki_jojo
-    - <span class="comment">"JoJo's Bizarre Adventure"'s artist</span>
+    - <span class="comment">『ジョジョの奇妙な冒険』の作画担当</span>
 1. Masashi Kishimoto (岸本斉史)
     - https://x.com/kishimotomasshi
-    - <span class="comment">Naruto's artist</span>
+    - <span class="comment">ナルトのアーティスト</span>
 1. Haiki
     - https://x.com/haiki396g
 1. Bellsalt
     - https://x.com/bellsaltr
-    - <span class="comment">The respondent wrote "Beltsalt", that took me days to find the correct name</span>
+    - <span class="comment">回答者は「Beltsalt」と書いていた。その正しい名前を見つけるのに何日もかかった。</span>
 1. Kaeru
     - https://bsky.app/profile/frog1432.bsky.social
 1. cfsy10
@@ -1462,7 +1463,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 1. Sky
     - https://x.com/sky_gomi
 1. 黑轩
-    - <span class="comment">I am guessing maybe it is Kurotero (クロテロ)</span>
+    - <span class="comment">たぶんKurotero(クロテロ)なんじゃないかな </span>
     - https://x.com/kurotero
     - https://space.bilibili.com/567272/dynamic
 1. 行丸
@@ -1473,7 +1474,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
     - https://x.com/_ka_ji_ka
 1. Manabiko (まなびこ)
     - https://x.com/manabiko_
-    - <span class="comment">(Technically they already did [Cetus](/mobs/#cetusplesiosaur-kaibutsu) in this game)</span>
+    - <span class="comment">（厳密に言えば、このゲームでは既に[ケトゥス](/mobs/#cetusplesiosaur-kaibutsu)を実装済みです）</span>
 1. Ninahachi (ニナハチ)
     - https://x.com/nijuunanayo
 1. 閃耀菌
@@ -1566,7 +1567,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
     - https://vxtwitter.com/Chirenbo
 1. FruitzJam
     - https://x.com/FruitzJam/
-    - <span class="comment">Respondent wrote this as "Fruitzyjam", costing me some time to find the right name</span>
+    - <span class="comment">回答者はこれを「Fruitzyjam」と書いており、正しい名前を見つけるのに少し時間がかかった</span>
 1. Ponzu
     - https://x.com/ponzu_tas/
 1. Retsito/Morskart
@@ -1585,9 +1586,9 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 1. Fearfac666
     - https://x.com/fearfac666
 1. Rikiya Koyama
-    - <span class="comment">I am not sure, is this the voice actor 小山力也?</span>
+    - <span class="comment">これは声優の小山力也さんでしょうか？</span>
 1. 赤田
-    - <span class="comment">Respondent did not provide any social network user name, maybe it is https://x.com/akatadobuchiki</span>
+    - <span class="comment">回答者はソーシャルネットワークのユーザー名を一切提供していません。おそらく https://x.com/akatadobuchiki でしょう。</span>
 1. 遊茶
     - https://x.com/usa_kotobuki
 1. YaoYaoReer (述麓)
@@ -1609,7 +1610,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
     - https://x.com/edamamego_02ma3
 1. Gamma-G
     - https://x.com/gamma_DH
-    - <span class="comment">God bless the brave soul that ask for this, they do not know...</span>
+    - <span class="comment">この願いを叶えてくれる勇敢な魂に神の祝福あれ、彼は知らない…</span>
 1. Tokuni
     - https://x.com/toktoktokuni
 1. 阿莫AMO
@@ -1637,7 +1638,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 </details>
 
 <details open markdown="1">
-<summary>List of illustrators that were in the wishlist but already has work in this game (in no particular order)</summary>
+<summary>ウィッシュリストに掲載されていたが、既に本作に作品を提供しているイラストレーター一覧（順不同）</summary>
 
 1. Syukou Akanaru
 1. BomBom
@@ -1788,14 +1789,14 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 1. Yamashita Daiki (山下 大輝)
 1. Yasui Kunihiko (安井 邦彦)
 1. Yusa Kōji (遊佐 浩二)
-1. Nakai Kazuya (中井 和哉) - The Japanese voice actor for Roronao Zoro.
+1. Nakai Kazuya (中井 和哉)
 1. Volcano Ota (ボルケーノ太田)
 1. Josuke Shinomiya (篠宮穰祐)
-  - <span class="comment">The previous Barguest's voice actor in Housamo <img width="32" height="32" src="https://cdn.housamo.xyz/housamo/unity/Android/icon/icon_barguest01.png" loading="lazy"></span>
+  - <span class="comment">『東京放課後サモナーズ』における前任のバーゲストの声優 <img width="32" height="32" src="https://cdn.housamo.xyz/housamo/unity/Android/icon/icon_barguest01.png" loading="lazy"></span>
 1. Hatsune Miku (初音ミク)
-  - <span class="comment">Yep, the infamous vocaloid</span>
+  - <span class="comment">そう、あの有名なボーカロイド</span>
 
-{% include figure-image.html path="/assets/img/survey-2025/lw-hatsune-miku.jpg" title="Hatsune Miku mascot appearing on the same stage as LifeWonders' mascots" %}
+{% include figure-image.html path="/assets/img/survey-2025/lw-hatsune-miku.jpg" title="初音ミクのマスコットキャラクターが、LifeWondersのマスコットキャラクターたちと同じステージに登場" %}
 
 </details>
 

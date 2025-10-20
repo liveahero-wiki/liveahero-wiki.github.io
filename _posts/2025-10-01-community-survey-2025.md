@@ -1124,7 +1124,7 @@ Since most survey respondents are not from Japan, the lack of translation is obv
 - Add favourite tags for most used friend supports
 - More team slots to organize teams for different gameplay purposes
     - As this game has added more and more bosses that require different setups, 10 team slots is no longer enough
-    - Crave Saga literally has 7 x 10 = 70 team slots for players to store different team setups, Live A Hero needs to keep up
+    - <span class="comment">Crave Saga literally has 7 x 10 = 70 team slots for players to store different team setups, Live A Hero needs to keep up</span>
 - NSFW mode
 
 ### Gacha & Monetization
@@ -1138,7 +1138,7 @@ Since most survey respondents are not from Japan, the lack of translation is obv
     - One player said it takes months to upgrade one character
     - One respondent observed that their friends often quit the game before that, leading to poor retention rate
     - <span class="comment">I am guessing that most of the complaints might be referring more to the end-game upgrades like {% include item-icon.html id=59 %} Parallel Quartz, Blooming and Skill Tree, which indeed would take a freaking long time to accumulate enough materials to upgrade.</span>
-- It takes a lot of units to make certain gameplay combination possible, but the game provides very little gacha currency to get units, so it is difficult to achieve that gameplay combination unless you spend money
+- The game has a lot of possible gameplay combinations such as "counter attack team", "DoT team", "Viewpower-centric team", "SPD manipulation team" etc. Each combination require different types of characters. Different types of bosses might make certain gameplay team unusable, so you will need at least 2~3 teams, but the game provides very little gacha currency to get characters, so it is difficult to achieve that gameplay combination unless you spend money
 - People requests that rerun banners should have higher guaranteed rates for limited units
 - People welcomed the improved mechanics to new characters, but lament that most are for 5 star characters only
 - There are a few complaints about old characters’ skills being useless in the current environment. People want more frequent release of skill tree
@@ -1235,6 +1235,7 @@ Some of the suggestions are literally moonshot, so please do take a look at the 
 1. Gammachaos
     - https://x.com/gammachaos
     - <span class="comment">Funny comment from a respondent:</span> "every gay gacha game needs a Horkeu Kamui clone"
+      <img width="32" height="32" loading="lazy" src="https://cdn.housamo.xyz/housamo/unity/Android/icon/icon_horkeukamui01.png">
 1. TakaTaka
     - https://x.com/TakaTakaPig
 1. Juggermelon
@@ -1800,7 +1801,7 @@ Despite that, we still receive a lot of names. Processing this question turned o
 1. Josuke Shinomiya (篠宮穰祐)
   - <span class="comment">The previous Barguest's voice actor in Housamo <img width="32" height="32" src="https://cdn.housamo.xyz/housamo/unity/Android/icon/icon_barguest01.png" loading="lazy"></span>
 1. Hatsune Miku (初音ミク)
-  - <span class="comment">Yep, the infamous vocaloid</span>
+  - <span class="comment">Yep, the famous vocaloid</span>
 
 {% include figure-image.html path="/assets/img/survey-2025/lw-hatsune-miku.jpg" title="Hatsune Miku mascot appearing on the same stage as LifeWonders' mascots" %}
 
