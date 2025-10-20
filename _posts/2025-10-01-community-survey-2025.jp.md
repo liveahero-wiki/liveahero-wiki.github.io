@@ -798,8 +798,8 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 - {% chara_link Denebora %}はこれまでのところ最も期待されている未実装キャラクターです（支持率31.7%）。
 
 {% include figure-image.html path="/assets/img/survey-2025/all-fav-top-10.jpg"
-  clip=true
-  title="全お気に入り vs トップ10 (2025年)" %}
+  clip=true
+  title="全お気に入り vs トップ10 (2025年)" %}
 
 </details>
 
