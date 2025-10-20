@@ -1597,8 +1597,6 @@ Some of the suggestions are literally moonshot, so please do take a look at the 
     - <span class="comment">I am not sure, is this the voice actor 小山力也?</span>
 1. 赤田
     - <span class="comment">Respondent did not provide any social network user name, maybe it is https://x.com/akatadobuchiki</span>
-1. 遊茶
-    - https://x.com/usa_kotobuki
 1. YaoYaoReer (述麓)
     - https://weibo.com/u/2128358004
     - https://x.com/YaoYaoRe

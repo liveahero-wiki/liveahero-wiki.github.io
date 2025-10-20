@@ -1592,8 +1592,6 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
     - <span class="comment">これは声優の小山力也さんでしょうか？</span>
 1. 赤田
     - <span class="comment">回答者はソーシャルネットワークのユーザー名を一切提供していません。おそらく https://x.com/akatadobuchiki でしょう。</span>
-1. 遊茶
-    - https://x.com/usa_kotobuki
 1. YaoYaoReer (述麓)
     - https://weibo.com/u/2128358004
     - https://x.com/YaoYaoRe
