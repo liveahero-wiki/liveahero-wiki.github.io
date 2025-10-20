@@ -697,7 +697,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 ## ストーリーを読むか
 
 {% include apache-chart.html
-  options='{"legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "Yes, I read fan translation when available / 会，如果有粉丝翻译 / はい （ファンの翻訳があれば読みます）", "value": 255}, {"name": "Yes, I read the story in-game (Japanese) / 会，我直接看日文原文 / はい（日本語）", "value": 165}, {"name": "No / 不会 / いいえ", "value": 96}]}]}'
+  options='{"legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "Yes, I read fan translation when available / 会，如果有粉丝翻译 / はい （ファンの翻訳があれば読みます）", "value": 255}, {"name": "Yes, I read the story in-game (Japanese) / 会，我直接看日文原文 / はい（日本語）", "value": 165}, {"name": "No / 不会 / いいえ", "value": 96}]}]}'
   title="『ライブ・ア・ヒーロー！』のプレイヤーはゲーム内でストーリーを読みますか？" %}
 
 回答者の半数近くがファン翻訳に頼る必要があります。
