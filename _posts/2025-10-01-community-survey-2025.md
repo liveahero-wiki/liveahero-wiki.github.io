@@ -448,8 +448,6 @@ The bump at "last 720 days" is quite steep, which is roughly the time when 3rd a
 
 Hiroki Goto (first male voice) took nearly 50% of the male voice’s market, the other two are about 25% each. For female voice, Yui Toita is slightly more popular than Orie Kimoto.
 
-Since Hiroki Goto and Yui Toita are the first male/female voice **in the order listed by the game**, I think many users choose them partly due to the [default effect](https://en.wikipedia.org/wiki/Default_effect).
-
 <div class="table-scroll">
 <table class="bordered">
   <tr>
@@ -1000,7 +998,7 @@ Formula:
 
 # Free form questions
 
-For this year's survey, I ended up manually going through all the comments instead of using AI summarization, as I find the latter hallucinated too much for some reason. The formatting may be a bit messy, and I can't guarantee I did not miss any comment.
+For this year's survey, I ended up manually going through all the comments instead of using AI summarization, as I find the latter hallucinated too much for some reason. The formatting may be a bit messy, and I can't guarantee that I did not miss any comment.
 
 <span class="comment">Words coloured in blue are my own</span>.
 
