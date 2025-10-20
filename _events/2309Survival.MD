@@ -1,5 +1,6 @@
 ---
 title: Summer Survival Island Muirauka SOS!
+eventId: 67
 jp_title: 常夏のサバイバル・アイランド ～ムイラウカSOS！
 news_link: https://live-a-hero.jp/info/6769
 banner_image: ui_banner_info_Survival2309.jpg

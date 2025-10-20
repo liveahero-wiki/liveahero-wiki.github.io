@@ -136,7 +136,7 @@ a:hover {
   padding-bottom: 40px;
 }
 .content {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -275,10 +275,25 @@ th {
 .sticky-header th {
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 .bordered {
   th, td {
     border: 1px solid #000;
+  }
+}
+.sort-table {
+  th {
+    cursor: pointer;
+  }
+  th::after {
+    content: ' \25BD';
+  }
+  th[data-order="1"]::after {
+    content: ' \25BC';
+  }
+  th[data-order="-1"]::after {
+    content: ' \25B2';
   }
 }
 .sort-table td {
@@ -399,6 +414,7 @@ figcaption {
 .atlas-gallery {
   img {
     display: block;
+    margin: auto;
   }
   select {
     width: 100%;
@@ -407,7 +423,7 @@ figcaption {
 @media (min-width: 1064px) {
   .atlas-gallery {
     img {
-      padding: 0 159px;
+      max-width: 320px;
     }
   }
 }
@@ -450,9 +466,20 @@ figcaption {
 .heroinfobox {
   padding: 2px;
   margin-bottom: 10px;
+  display: grid;
+}
+@media (min-width: 1064px) {
+  .heroinfobox {
+    grid-template-columns: 320px auto;
+    gap: 5px;
+  }
 }
 .heroinfobox .header {
-  padding: 5px;
+  padding: 10px;
+}
+.heroinfobox .name {
+  font-size: 40px;
+  font-weight: 700;
 }
 .heroinfobox table {
   margin: 0;
@@ -465,7 +492,7 @@ $elementColor: #f07d75, #88bcff, #5fcb58, #ffb251, #b88dff;
       background: $color;
     }
     .heroinfobox {
-      border: 1px solid $color;
+      border: 2px solid $color;
     }
     summary {
       background-color: $color;
@@ -646,11 +673,13 @@ $elementName: fire, water, earth, light, shadow;
 [data-radio-filter="2"] li.has-unit {
   display: none !important;
 }
-.item, .status {
+.item, .status, abbr {
   position: relative;
   text-decoration: underline dashed 1px;
   text-underline-offset: 2px;
   cursor: help;
+}
+.item, .status {
   img {
     width: 2em;
     height: 2em;
@@ -716,5 +745,11 @@ $elementName: fire, water, earth, light, shadow;
     float: left;
     width: 64px;
     height: 64px;
+  }
+  .enemy-info-row {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
   }
 }

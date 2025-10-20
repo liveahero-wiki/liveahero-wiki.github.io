@@ -69,6 +69,7 @@ function setupSortTable() {
       });
       h.addEventListener("click", () => sortTable(T, k, h));
     })
+    heads[0].dataset.order = "1";
   });
 }
 
@@ -114,5 +115,5 @@ function setupWikiTabs() {
 
 const tasks = [setupWikiTabs, setupMenu, setupTranslate, setupExpiry, setupSortTable];
 for (const t of tasks) {
-  setTimeout(t, 100)
+  setTimeout(t, 0)
 }

@@ -1,5 +1,6 @@
 ---
 title: Jailbreak! Health Check Crisis!
+eventId: 87
 jp_title: 脱獄！ヘルスチェック・クライシス
 news_link: https://live-a-hero.jp/info/8228
 banner_image: ui_banner_info_Crisis2404.jpg
@@ -138,17 +139,3 @@ Here is a list of this event's Special Missions:
 ### Free Quests
 
 {% include quest-group.html chapterId=1107 %}
-
-### Event Sales Report
-
-<details><summary>SALES_EVENT_CRISIS_REPORT_1</summary>
-<p>ヒーローエキスポの会場にて、<br>「憧れのヒーローと腕相撲対決！」<br>と書かれた看板を目印に、<br>多くの一般参加者が集っていた。<br><br>会場を任された<code>character0</code>は、<br>時には順当に勝利を収め、<br>時には子供との接戦を演じて<br>参加者との楽しい時間を過ごす。<br><br>だが、腕相撲を始めてしばらくすると<br>参加者の雰囲気が様変わりしてきた。<br><br>目が血走った筋骨隆々の参加者が、<br>「最強はこのオレだ…」と呟きながら<br>大行列を作っていた。<br><br><code>character0</code>は覚悟を決めて腕をまくると、<br>過酷な戦場に身を投じる。<br><br>全ての対決を終えて<br>真っ白に燃え尽きた<code>character0</code>は、<br>もう二度と腕相撲を取るまいと心に決めるのだった。
-</p></details>
-
-<details><summary>SALES_EVENT_CRISIS_REPORT_2</summary>
-<p>イベント会場の一角では、<br>２人のヒーローによる記念撮影が行われていた。<br><br>穏やかな笑顔を浮かべる<code>character0</code>と、<br>元気いっぱいな<code>character1</code>のファンサに、<br>撮影コーナーは大盛り上がりを見せる。<br><br>だが、順調に続いていた記念撮影に現れた<br>とあるファンの一言によって、<br>撮影のコンセプトは塗り替えられることになった。<br><br>「自分は良いので、２人で肩を組んでほしいです…」<br><br>少し戸惑いながらも、希望通り肩を組んだ<br><code>character0</code>と<code>character1</code>に向けて<br>興奮した数多のファンがカメラを構える。<br><br>それからはファンの要望に応える形で、<br>手を繋ぎ、肩を組み、ポーズを変えるたびに<br>会場のボルテージは上がっていった。<br><br>そして<code>character0</code>が<code>character1</code>を<br>抱き上げた瞬間、絶叫のような歓声が上がった。<br><br>この時の写真がSNSで話題を呼び、<br>２人にはペアでの依頼が舞い込むようになったという。
-</p></details>
-
-<details><summary>SALES_EVENT_CRISIS_REPORT_3</summary>
-<p>ヒーローエキスポのとあるブースで、<br>クイズヒーローショーが開催されていた。<br><br>集められた４人のヒーローは、<br>ポイントを競って次々にクイズに答えていく。<br><br><code>character0</code>と<code>character1</code>は、<br>堅実に真面目な回答をして<br>コツコツとポイントを稼ぐ。<br><br>一方、<code>character2</code>と<code>character3</code>は<br>笑いを取りにいくような回答を繰り返して、<br>大いに会場を沸かせていた。<br><br><code>character0</code>と<code>character1</code>は<br>自分たちの勝利を確信していたが、集計の最中に<br>視聴者投票によるシークレットポイントが加算された。<br><br>奇跡の大逆転を起こして勝利した<br><code>character2</code>と<code>character3</code>は<br>諸手を挙げて喜びながらインタビューに応じる。<br><br>一方、クイズの正答率では圧勝していた<br><code>character0</code>と<code>character1</code>は、<br>まさかの敗北に目を丸くしながらも、<br>会場を盛り上げてくれた２人に惜しみない拍手を送った。
-</p></details>

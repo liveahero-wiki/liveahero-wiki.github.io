@@ -1,5 +1,6 @@
 ---
 title: Summer Night Last Illusion
+eventId: 97
 jp_title: サマーナイツ・ラストイリュージョン
 news_link: https://live-a-hero.jp/info/9090
 banner_image: ui_banner_info_SummerNight2407.jpg
@@ -174,17 +175,3 @@ Here is a list of this event's limited time Missions:
 
 - [Lilac special quest](https://docs.google.com/document/d/1LdLD3QjBcATaD6F4_gpBz_KMhihRch_v/edit)
 - [Kalaski special quest](https://docs.google.com/spreadsheets/d/1DIi2G9IyVxg9KclOvS66ZndrBQTajs6lx-z8lufZIag/edit?usp=sharing)
-
-### Event Sales Report
-
-<details><summary>SALES_EVENT_SUMMERNIGHT_REPORT_1</summary>
-<p>有名なエンタメ都市で行われる<br>大規模なファッションショーのモデルとして<br><code>character0</code>にオファーが届いた。<br><br>そしてファッションショー当日。<br><code>character0</code>のために用意された衣装は、<br>前衛的かつ大胆な衣装だった。<br><br>その奇抜さに度肝を抜かれた<br><code>character0</code>だったが、<br>引き受けた仕事はこなさなくてはならない。<br><br>覚悟を決めた<code>character0</code>は、<br>背筋を伸ばして堂々とランウェイを歩き、<br>その佇まいと衣装の親和性が大きな話題を呼んだ。<br><br>そして後日、<code>character0</code>の元に<br>ショーで着用した衣装がお礼として送られてきた。<br><br><code>character0</code>はランウェイでの歓声を思い出し<br>改めて衣装を身に纏ってみたものの、<br>なんとなく気恥ずかしくなり、顔を赤らめるのだった。
-</p></details>
-
-<details><summary>SALES_EVENT_SUMMERNIGHT_REPORT_2</summary>
-<p>とある高級ショッピングモールのテナントに、<br>ヴィランが紛れ込んでいるとのタレコミが入った。<br><br>調査を依頼された２人のヒーローは、<br>正体を隠すため、一般人に扮しての潜入捜査を行う。<br><br><code>character0</code>は顔をスカーフで隠し、<br><code>character1</code>はサングラスと帽子を身に着け、<br>共にショッピングモールに向かった。<br><br>そして、２人がテナントを観察していると、<br>指名手配中のヴィランが経営していることが判明した。<br><code>character0</code>と<code>character1</code>は<br>瞬く間にヴィランを確保し、事件は無事に解決したのだった。<br><br>それから数日後、<br><code>character0</code>と<code>character1</code>が<br>お忍びでショッピングデートをしていたという噂が<br>SNSで大きな話題を呼んでいた。<br><br>その噂については肯定も否定もしない２人だったが、<br>事件解決以降、仲睦まじく並んで歩く姿が<br>時おり目撃されるようになったという。
-</p></details>
-
-<details><summary>SALES_EVENT_SUMMERNIGHT_REPORT_3</summary>
-<p>近頃流行りの大型ナイトプールで、<br>４人のヒーローたちが束の間の休暇を満喫していた。<br><br><code>character0</code>はイルカフロートに、<br><code>character1</code>は天使の翼を象った浮き輪に<br>それぞれ乗り、ライトアップされたプールを漂う。<br><br><code>character2</code>と<code>character3</code>は<br>水着姿のままクラブエリアに移動し、<br>DJが流す音楽に合わせて体を動かしていた。<br><br>しばらくして４人が合流した時のこと。<br><code>character2</code>が大きな声で<br><code>character0</code>の名前を呼んでしまい、<br>周囲の注目が一斉に集まった。<br><br>４人のヒーローが一堂に会する光景に<br>盛り上がったファンが次々と押し寄せ、<br>きらびやかなナイトプールの一角は<br>グリーティング会場の様相を呈するに至った。<br><br>気付けば、ナイトプールは閉園の時間を迎えていた。<br>４人は「仕事よりも大変だった」と零しながらも、<br>自分たちを応援してくれるファンの熱意を肌で感じ、<br>満足そうな笑顔を浮かべるのだった。
-</p></details>

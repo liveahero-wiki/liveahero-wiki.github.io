@@ -114,6 +114,13 @@ module Jekyll
       return img
     end
 
+    def charaPageToLink(page)
+      title = page["title"]
+      url = page.url
+      img = charaPageToIcon(page)
+      return "<a class=\"item\" href=\"#{url}\"><img src=\"#{img}\" loading=\"lazy\"> #{title}</a>"
+    end
+
     def characterIdToPage(id)
       CharaMap.characterId_to_pages[id]
     end

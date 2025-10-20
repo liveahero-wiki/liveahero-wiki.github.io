@@ -31,7 +31,7 @@ Sale can be conducted in set amounts of time: two hours, four hours, eight hours
 |  8:00h | 1600 {% include item-icon.html id=11 %} | 3840 {% include item-icon.html id=35 %} |      2560 {% include item-icon.html id=30 %}     |
 |  12:00h | 2400 {% include item-icon.html id=11 %} | 5760 {% include item-icon.html id=35 %} |      3840 {% include item-icon.html id=30 %}     |
 | 16:00h | 3200 {% include item-icon.html id=11 %} | 7680 {% include item-icon.html id=35 %} |      5120 {% include item-icon.html id=30 %}     |
-|  12:00h | 4800 {% include item-icon.html id=11 %} | 11520 {% include item-icon.html id=35 %} |      7680 {% include item-icon.html id=30 %}     |
+|  24:00h | 4800 {% include item-icon.html id=11 %} | 11520 {% include item-icon.html id=35 %} |      7680 {% include item-icon.html id=30 %}     |
 
 ## Sale Obtainable Experience
 
@@ -233,3 +233,4 @@ For special sales report released in events, please see event info pages listed 
 <p>After work, the team decided to eat dinner and go home.<br><br>However, maybe because the store they happened to enter was a luxury store.<br>The amount charged after the meal was unexpectedly ridiculous.<br><br> <code>character0</code> ,who had intended to treat everyone, is clearly confused.<br> <code>character1</code> checks the contents of his wallet and sighs.<br> <code>character2</code> resigned to a night of washing the dishes.<br><br>Suddenly,  <code>character3</code> saves the day, flashing a dashing golden card and declaring a "Dinner's on me."<br><br>Everyone thanked <code>character3</code> ,<br> <code>character3</code> laughed and told them to think nothing of it.<br>Everyone left satisfied with full bellies...<br><br>Additional Notes:<br>For the forseeable future,  <code>character3</code> requests the provision of cup noodles at meal time.<br>
 </p>
 </details>
+

@@ -1,5 +1,6 @@
 ---
 title: New Year 2023
+eventId: 50
 news_link: https://live-a-hero.jp/info/5152
 banner_image: banner_info_NewYear2301.jpg
 event_start_time: 2023-01-01T00:00:00+09

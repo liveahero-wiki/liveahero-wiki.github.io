@@ -19,39 +19,7 @@
 {% assign overridejob = site.data.processed.jp_profile[cardProfileOverride.job] %}
 
 <div id="h{{ include.stockId }}" role="tabpanel" tabindex="0"  class="tabcontent contain element{{ firstCardInfo.element }}">
-    <div class="heroinfobox">
-        <div class="header">
-            <div class="name">{{ firstCardInfo.stockId | stockIdToCharaTitle: 1 }}</div>
-            <div class="sub">{{ firstCardInfo.cardName }}</div>
-        </div>
-        {% include atlas-gallery.html sprites=sprites %}
-        <table>
-            <tbody>
-                <tr>
-                    <th>Attribute</th>
-                    <td>{% include hero-element.html element=firstCardInfo.element %}</td>
-                    <th>Role</th>
-                    <td>{% include hero-role.html role=firstCardInfo.role %}</td>
-                </tr>
-                <tr>
-                    <th colspan="2">Illustration</th>
-                    <td colspan="2">{% include chara-illustrator.html illustrator=firstCardInfo.illustrator override=overrideIllustrator %}</td>
-                </tr>
-                <tr>
-                    <th colspan="2">Voice</th>
-                    <td colspan="2">{% include chara-voice-actor.html cv=firstCardInfo.characterVoice %}</td>
-                </tr>
-                <tr>
-                    <th colspan="2">Occupation</th>
-                    <td colspan="2">{% if overridejob %}<span class="masked">{% endif %}{{ firstCardInfo.job }}{% if overridejob %}</span>{% endif %}</td>
-                </tr>
-                <tr>
-                    <th colspan="2">Affliation office</th>
-                    <td colspan="2">{% include chara-affiliation.html affiliation=firstCardInfo.affiliationOffice override=overrideAffiliation %}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+{% include hero-infobox-profile.html stockId=include.stockId firstCardInfo=firstCardInfo sprites=sprites isHero=true %}
 
 {% assign detail_prefix = firstCardInfo.resourceName | upcase | prepend: "DETAIL_" %}
 {% assign bio_h01 = detail_prefix | append: "_H01" %}
@@ -132,7 +100,11 @@
 <h2>Skills</h2>
 
 {% assign skillIds = firstCardInfo.skillIds %}
-{% include skill-table-v2.html skillIds=skillIds split=true first=true %}
+{% assign changeSkillIds = firstCardInfo.skillProvider.activeSkills | concat: firstCardInfo.skillProvider.passiveSkills | collect_change_skills %}
+<!-- {{ changeSkillIds | jsonify }} -->
+
+{% include skill-table-v2.html skillIds=skillIds split=true first=true
+    changeSkillIds=changeSkillIds %}
 
 {% if firstCardInfo.rarity == 1 %}
     {% assign threeStar = cardInfos[2] %}
@@ -144,6 +116,8 @@
 {% endif %}
 
 {% assign lastSkillIds = "" | split: "," %}
+{% assign changeSkillIds = lastCardInfo.skillProvider.activeSkills | concat: lastCardInfo.skillProvider.passiveSkills | collect_change_skills %}
+<!-- {{ changeSkillIds | jsonify }} -->
 {% assign skillUpgradedIndex = 1 %}
 {% for id in lastCardInfo.skillIds %}
     {% unless threeStar.skillIds contains id %}
@@ -157,52 +131,8 @@
 {% else %}
     <div class="re-split"><b>Skill {{ skillUpgradedIndex }} upgraded at rarity 5 ☆</b></div>
 {% endif %}
-{% include skill-table-v2.html skillIds=lastSkillIds split=true last=true %}
-
-{% comment %}
-{% assign skillIds = firstCardInfo.skillIds %}
-{% for cardInfo in cardInfos %}
-{% unless forloop.first %}
-{% for id in cardInfo.skillIds %}
-{% unless skillIds contains id %}{% assign skillIds = skillIds | push: id %}{% endunless %}
-{% endfor %}
-{% endunless %}
-{% endfor %}
-{% include skill-table-v2.html skillIds=skillIds %}
-
-{% if firstCardInfo.rarity == 1 %}
-    {% assign threeStar = cardInfos[2] %}
-    {% assign threeStarSkillId = threeStar.skillIds[2] | downcase %}
-    <p>Skill 3 ({{ site.data.translation.Skill[threeStarSkillId].skillName | default: site.data.SkillMaster[threeStarSkillId].skillName }})
-    is obtained at rarity 3 ☆.</p>
-{% else %}
-    {% assign threeStar = firstCardInfo %}
-{% endif %}
-
-{% assign skillUpgradedIndex = 1 %}
-{% for id in lastCardInfo.skillIds %}
-    {% unless threeStar.skillIds contains id %}
-        {% assign lastSkillId = id | downcase %}
-        {% break %}
-    {% endunless %}
-    {% assign skillUpgradedIndex = skillUpgradedIndex | plus: 1 %}
-{% endfor %}
-<p>Skill {{ skillUpgradedIndex }}
-    ({{ site.data.translation.Skill[lastSkillId].skillName | default: site.data.SkillMaster[lastSkillId].skillName }})
-    is upgraded at rarity {% if firstCardInfo.rarity == 5 %}6{% else %}5{% endif %} ☆.</p>
-{% endcomment %}
-
-{% assign passiveSkillIds = "" | split: "," %}
-{% for skill in lastCardInfo.skillProvider.passiveSkills %}
-{% if skill.skillUpgrade == 0 %}
-{% assign passiveSkillIds = passiveSkillIds | push: skill.skillId %}
-{% endif %}
-{% endfor %}
-
-{% if site.data.translation.SkillV2Whitelist.heroes[stockId] != true and passiveSkillIds.size > 0 %}
-<h3>Passive skills</h3>
-{% include skill-table-v2.html skillIds=passiveSkillIds hide_banner=true %}
-{% endif %}
+{% include skill-table-v2.html skillIds=lastSkillIds split=true last=true index=skillUpgradedIndex
+    changeSkillIds=changeSkillIds %}
 
 {% if site.data.wiki.HeroSkillEvolution[stockId] != nil %}
 {% include hero-skill-evolution.html stockId=include.stockId %}

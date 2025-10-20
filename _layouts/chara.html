@@ -39,3 +39,90 @@ layout: markdownify
 </wiki-tabs>
 {% endif %}
 {{content}}
+
+{% assign characterId = page.characterId | downcase %}
+{% assign characterStory = site.data.CharacterStoryMaster[characterId] %}
+{% if characterStory %}
+<h2>Character Story Appearances</h2>
+
+<p>We only list the appearances if the character played a significant role in the story.</p>
+
+<table>
+{% if characterStory.mainChapterIds.size > 0 %}
+<tr>
+    <th>Main Chapters</th>
+    <td>
+        <ul>
+        {% for chapterId in characterStory.mainChapterIds %}
+        {% assign chapter = site.main_quests | where: "chapterId", chapterId | first %}
+        <li><a href="{{ chapter.url }}">Chapter {{ chapter.book }}-{{ chapter.chapter }}: {{ chapter.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </td>
+</tr>
+{% endif %}
+{% if characterStory.eventIds.size > 0 %}
+<tr>
+    <th>Events</th>
+    <td>
+        <ul>
+        {% for eventId in characterStory.eventIds %}
+        {% assign event = site.events | where: "eventId", eventId | first %}
+        <li><a href="{{ event.url }}">{{ event.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </td>
+</tr>
+{% endif %}
+{% if characterStory.linkQuestIds.size > 0 %}
+<tr>
+    <th>Link Quests</th>
+    <td>
+        <ul>
+        {% for questId in characterStory.linkQuestIds %}
+        {% assign qid = questId | downcase %}
+        {% assign quest = site.data.QuestMaster[qid] %}
+        <li>{{ quest.questName }}</li>
+        {% endfor %}
+        </ul>
+    </td>
+</tr>
+{% endif %}
+{% comment %}{% if characterStory.characterQuestChapterIds.size > 0 %}
+<tr>
+    <th>Character Quest Chapters</th>
+    <td>
+        <ul>
+        {% for chapterId in characterStory.characterQuestChapterIds %}
+        {% assign chapter = site.data.ChapterMaster[chapterId] %}
+        <li>{{ chapter.questName }}</li>
+        {% endfor %}
+        </ul>
+    </td>
+</tr>
+{% endif %}{% endcomment %}
+</table>
+
+{% endif %}
+
+{% assign intro = page.profile["5th_anniversary_intro"] %}
+{% assign trueSelf = page.profile["5th_anniversary_true_self"] %}
+{% if intro or trueSelf %}<h2>5th Anniversary Hero-encyclopedias</h2>{% endif %}
+
+{% if intro %}
+<details open markdown="1">
+<summary>Introduction</summary>
+
+{{ intro }}
+
+</details>
+{% endif %}
+
+{% if trueSelf %}
+<details open markdown="1">
+<summary>True Self</summary>
+
+{{ trueSelf }}
+
+</details>
+{% endif %}

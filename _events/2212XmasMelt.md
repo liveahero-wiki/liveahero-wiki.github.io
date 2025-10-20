@@ -1,5 +1,6 @@
 ---
 title: Christmas Melt Countdown
+eventId: 49
 jp_title: クリスマスメルト・カウントダウン
 news_link: https://live-a-hero.jp/info/5067
 banner_image: banner_info_XmasMelt2212.jpg 
@@ -182,48 +183,3 @@ Listed below are the enemies skills in S difficulty:
 Fan translations for special quests can be found [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vSELESywdJubquJxmr4HAbEB5b2pKG_mYErA0cjEwzItoSkF0MFYC6Yq0GddH9XH4P9C6m4Ev_UkNjW/pubhtml)
 
 {% include quest-group.html chapterId=1025 %}
-
-## Sales Report
-
-<details><summary>Sales Report 1</summary>
-<p>クリスマス音楽フェスの会場で<br>警備を担当することになった <code>character0</code> 。<br><br>無事に見回りの仕事を終え戻ってくると、<br>ライトアップされたステージでは<br>聞き馴染みのあるクリスマスソングが流れている。<br><br>周囲を見渡しても辺りにはヒトの姿は無い。<br>心地よいクリスマスソングに任せて、ステージで<br> <code>character0</code> は一人、歌を口ずさむ。<br><br>曲が終わると、突如として拍手が<br> <code>character0</code> へと送られた。<br>驚いて振り返ると、その歌声を聞いていたのは、<br>イベントの主催を務めるディレクターだった。
-<br><br>音楽フェスへ、ぜひ参加してほしいと<br>ディレクターは目を輝かせて頼み込む。<br>困惑する <code>character0</code> だったが――<br><br>イベント当日、ステージの上には<br>緊張しながらもマイクを握る<br> <code>character0</code> の姿があったという。
-</p>
-</details>
-
-<details><summary>Sales Report 1 (Translated)</summary>
-<p> At the venue of a Christmas music festival <code>character0</code> was put in charge of security at a Christmas music festival.<br><br>After coming back from patrolling,<br> from the illuminated stage <br>a familiar christmas song can be heard.<br><br>Seeing no one around.<br> <code>character0</code> entrust themselves to the pleasant christmas song,<br>and begun singing on the stage.<br><br> When the song ended, suddenly there was an applause for <code>character0</code> .<br>Surprised, they turn around and found out <br>that the one who heard the singing was the event director.<br><br>With eyes that said they really wanted them to participate the director earnestly plead.<br> <code>character0</code> was bewildered, but…<br><br>On the day of the event, up on the stage,<br> <code>character0</code> can be seen, holding a microphone nervously.
-</p>
-</details>
-
-<details><summary>Sales Report 2</summary>
-<p>とある惑星の地域活性化イベントの仕事に呼ばれた<br> <code>character0</code> と <code>character1</code> 。<br><br>仕事の内容は、その地
-域の特産品である<br>クリスタルを使ったアクセサリーを<br>手作り体験してレポートするというもの。<br><br>しかし、慣れない作業に<br>悪戦苦 
-闘する <code>character0</code> 。<br>コツを掴んだ <code>character1</code> は、<br>自然に <code>character0</code> をアシストし、<br>２人
-は無事にアクセサリーを完成させる。<br><br>折角だから、互いに作ったものを交換しましょうと<br>イベントの担当者が提案するが、完成品に<br> 
-納得ができない様子の <code>character0</code> 。<br><br>しかし、 <code>character1</code> は <code>character0</code> が<br>作ったことが大
-事だと嬉しそうにそれを受け取った。<br><br>そのクリスタルは、想いを込めて誰かに贈ることで<br>御守りとしての意味を持つのだそう。<br><br> 
-それを知った <code>character0</code> が、<br>今度こそ上手く作ろうと<br>再びその星を訪れるのは、また別のお話。
-</p>
-</details>
-
-<details><summary>Sales Report 2 (Translated)</summary>
-<p> <code>character0</code> and <code>character1</code> were called for a revitalization event for a certain planet.<br><br>Their job, was to do a report on the planet's handmade accesory,<br>which is made using the planet's special crystal.<br><br>But, <code>character0</code> struggle to handle the manufacturing process.<br> <code>character1</code> who already got the hang of it, naturally assist <code>character0</code> ,<br>The both of them sucessfully completed the accessories.<br><br>The event organized suggested them to exchange each other's accessories since it has been made,<br>though <code>character0</code> was not satisfied with theirs.<br><br>But, <code>character1</code> gladly accepted <code>character0</code> 's handmade accessories and treat it importantly.<br><br>That crystal was a sort of charm and can be given to someone with some thought.<br><br>Learning about this, <code>character0</code> decided to make it better next time,<br>Visiting that planet once more, that will be for another story.
-</p>
-</details>
-
-<details><summary>Sales Report 3</summary>
-<p> <code>character0</code> と <code>character1</code> は、<br>クリスマス音楽フェスにゲストとして招かれ、<br>ステージでのパフォーマンス
-を楽しんでいた。<br><br>しかし、次の演目が始まらず、会場がざわつき始める。<br>何かあったのだろうかと２人は会場裏へと向かった。<br><br> 
-そこには、突風で潰れてしまったテントと<br>このままでは機材が雪に埋もれてしまうと<br>右往左往するスタッフたちが。<br><br>それを見た <code>character0</code> は、<br>フェスを続けてほしい、<br>良いアイデアがあるから任せてと胸を叩く。<br>話を聞き、 <code>character1</code> は
-意気込んで頷くと、<br>すぐさま <code>character2</code> と<br> <code>character3</code> へ連絡を入れた。<br><br>しばらくして、 <code>character2</code> が大きなシャベルを、<br> <code>character3</code> は沢山のバケツを持って現れた。<br><br>協力して、急いで大きなかまくらを作
-るヒーローたち。<br>機材をそこに退避させ終えると、<br>これでもう大丈夫だろうと４人は笑う。<br>温かな雪の家の中に、優しい聖歌が聴こえて 
-来た。
-</p>
-</details>
-
-
-<details><summary>Sales Report 3 (Translated)</summary>
-<p> <code>character0</code> and <code>character1</code> were invited as guests to a Christmas music festival and enjoyed performing on stage.<br><br>But,the next program didn't start, and the venue was filled with noise,<br>curiously the both of them headed towards the venue.<br><br>There, they found the tent has been smashed by the wind,<br>and the machineries are in danger of being buried in the snow,<br>the staffs busily moving about left and right.<br><br>Seeing that <code>character0</code> who wanted the festival to continue,<br>said that they have a good idea while beating their chest.<br><br>Hearing the idea, <code>character1</code> nodded In agreement and proceed to contact <code>character2</code> and <code>character3</code> .<br><br>Soon, <code>character2</code> appeared with a large shovel, while <code>character3</code> came with a lot of buckets.<br><br>Working together, the heroes hurriedly built a large snow dome.<br>And they move the machineries inside,<br>With this things will be all right, the four of them laugh together.<br>From inside the warm snow house, a gentle hymn can be heard.
-</p>
-</details>

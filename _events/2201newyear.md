@@ -1,5 +1,6 @@
 ---
 title: New Year 2022
+eventId: 26
 news_link: https://live-a-hero.jp/info/3229
 banner_image: banner_info2_newyear2101i.jpg
 event_start_time: 2022-01-01T00:00:00+09

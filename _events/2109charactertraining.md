@@ -1,5 +1,6 @@
 ---
 title: Character Training Campaign
+eventId: 19
 jp_title: キャラクター育成キャンペーン
 news_link: https://live-a-hero.jp/campaign/2789
 banner_image: banner_campaign_Breed.jpg 

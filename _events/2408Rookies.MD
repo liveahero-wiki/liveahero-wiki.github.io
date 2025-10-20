@@ -1,5 +1,6 @@
 ---
 title: Rookies Summer Festa
+eventId: 101
 jp_title: ルーキーズ・サマーフェスタ
 news_link: https://live-a-hero.jp/info/9398
 banner_image: ui_banner_info_Rookies2408.jpg
@@ -131,5 +132,3 @@ Here is a list of this event's limited time Missions:
 ### Free Quests
 
 {% include quest-group.html chapterId=1133 %}
-
-### Event Sales Report
