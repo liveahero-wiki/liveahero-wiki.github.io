@@ -1194,3 +1194,622 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 
 > 警告：ソーシャルリンクのほとんどはNSFWです
 
+<details open markdown="1">
+<summary>Illustrator wishlist (in no particular order)</summary>
+
+1. Zoyu (卓羽)
+    - https://x.com/ZoYu26152516
+    - https://x.com/wuedti
+1. Terujirou
+    - https://x.com/terujirou1014
+1. Sollyz
+    - https://x.com/sollyzsundyz
+1. Gryffindor (Rainer)
+    - https://x.com/Gryffindor131
+1. Abashiri
+    -  https://x.com/abasirisippo
+1. Estper
+    - https://x.com/tiger_est
+    - <span class="comment">Most people wrote this as "Espter" which caused me a long time to find...</span>
+1. Istani
+    - https://x.com/kemoistani
+1. Monogg
+    - https://x.com/MonogG
+1. Jacketbear (山藥人)
+    - https://x.com/jacketbear
+1. Gamubear
+    - https://x.com/BearWivMe
+1. Bonti\*age
+    -  https://x.com/bont1age
+1. Takikaze
+    - https://x.com/takikaze217
+1. Nviek
+    - https://x.com/nviek5
+1. Mato
+    - https://x.com/matomonstera
+1. Gammachaos
+    - https://x.com/gammachaos
+    - <span class="comment">Funny comment from a respondent:</span> "every gay gacha game needs a Horkeu Kamui clone"
+1. TakaTaka
+    - https://x.com/TakaTakaPig
+1. Juggermelon
+    - https://x.com/Juggermelon
+1. KokuKokuBoo
+    - https://x.com/kokukokuboo
+1. Jiraiya
+    - https://x.com/jiraiyajpn
+1. Kuromine Hiraya (湯あたり)
+    - https://x.com/kuromine_hiraya
+1. RPBBW (紅紫藍黑白)
+    - https://x.com/noku13456
+1. Null Ghost
+    - https://x.com/nullghost_art
+1. GlenSaru
+    - https://x.com/glensaru
+1. 一夫多獸
+    - https://www.pixiv.net/en/users/7576657
+1. 文碧
+    - https://x.com/Fumimimimidory
+1. ZOROJ
+    - https://bsky.app/profile/zoroj.bsky.social/
+1. DOPQ
+    - https://x.com/yy62401
+1. Posporo
+    - https://x.com/P0SPORO
+1. 18plusplus
+    - https://x.com/18plus_plus
+1. DaemonTor
+    - https://x.com/perverteddaemon
+1. KNN
+    - https://x.com/Kunn00_
+1. 種
+    - https://x.com/Energy_camdy
+1. Mixter
+    - https://x.com/mixterArt
+1. Racoon21
+    - https://x.com/raccoon_21c
+1. DUNE
+    - https://x.com/GT_DunE
+1. ルイズ
+    - https://x.com/Takaxvfruizu1
+1. 爱画画的Breeze
+    - https://x.com/BreezeM18
+1. Asutaro
+1. Mazjojo
+    - https://x.com/mazjojomania
+1. Tepen
+    - https://x.com/tptptpn
+1. こるく
+    - https://x.com/kemo_0519
+1. わお
+    - https://x.com/wao_kinoto
+1. ヒャク
+    - https://x.com/hyaku1063
+1. Futei (ふてー)
+    - https://x.com/MTI777
+1. Kijimaru
+    - https://x.com/kijimarie
+1. Natsume Yakumushi
+1. Dangpa
+    - https://x.com/dangpaart
+1. Ghostfood
+    - https://bsky.app/profile/ghostfood.bsky.social
+1. ChesschireBacon
+    - https://bsky.app/profile/chesschirebacon.bsky.social
+1. seamonsterping (海怪平)
+    - https://x.com/seamonsterping?lang=en
+1. yuuuki_dogs
+    - https://x.com/yuuuki_dogs
+1. Robokeh
+    - https://x.com/Robodraws
+1. Buranko
+1. Kaitodraws
+    - https://x.com/kaitodraws1
+1. Wolf Con F
+    - https://x.com/f_con
+1. Uleez
+    - https://x.com/Uleezoo
+1. 土狼弐
+    - https://x.com/d_raw_two/
+1. Nama Kobura
+1. Neumo (にゅうも)
+    - https://twitter.com/neumokun
+1. foooooxes
+    - https://x.com/foooooxes
+1. risuou
+    - https://x.com/risuou
+1. 狗芒五
+    - https://x.com/ekqopi7bfldyyqa
+1. Magangz
+    - https://x.com/makidogang
+1. 木狼
+    - https://x.com/mokurou8810
+1. 大地巧太
+    - https://x.com/nikubo
+1. Ross
+    - https://x.com/ross_ciaco
+1. 肉鍋
+    - https://x.com/nikunabe1989
+1. ぬぬたろう
+    - https://x.com/nunutaro3
+1. Riotaro
+    - https://x.com/Riotaro15
+1. ねこ丼
+    - https://x.com/nekodon_san
+1. Nekogaki
+    - https://x.com/nekogaki0324
+1. UZA
+    - https://x.com/art_uza
+1. zifu
+    - https://x.com/zifuuuun
+1. 吉川達哉
+    - https://x.com/0t0_yoshikawa
+1. 村山竜大
+    - https://x.com/ovopack
+1. 狼小魂
+    - https://x.com/Yama_wolfsoul
+    - https://www.plurk.com/Yamacat
+1. 昆布茶
+    - https://x.com/kbc_omaso
+1. 吃肉的草狼
+    - https://x.com/weedwolfeatmeat
+1. SUV
+    - https://x.com/suv032
+1. 狐塚遁
+    - https://x.com/cotton_nottoc
+1. maio
+1. 梅拉德Mallards
+    - https://x.com/Mallards1305
+1. ヒャク
+    - https://x.com/hyaku1063
+1. GabyT
+    - https://www.youtube.com/channel/UCJr7ptN1tz60UMhzElyfaQg
+1. Taran Fildder
+    - https://x.com/tfiddlerart
+1. ANhes
+    - https://x.com/anhesart
+1. Stranj
+    - https://x.com/CivetStranj
+1. Chunie
+    - https://x.com/chunieart
+1. Nesskain
+    - https://x.com/nesskain
+1. Nikiciy
+    - https://x.com/konnikichan
+1. 月潟ロッシ
+    - https://x.com/RossiThukigata
+1. rou
+   - https://x.com/radcanine
+1. TulRang_C
+   - https://x.com/tulrang
+1. Underwater Sponge
+   - https://x.com/UWSponge
+1. 熊谷しん
+   - https://x.com/kumagayasin
+1. O-RO
+   - https://x.com/DogoroNumber3
+1. Zololee (黄金の大猫)
+   - https://x.com/goldenbigcat/
+   - https://www.pixiv.net/users/196845
+1. Dsharp
+    - https://x.com/Dsharp_K
+1. 欺久
+1. Luode jun (大罗德)
+    - https://x.com/luodejun
+1. bnav5
+    - https://bsky.app/profile/bnav5.bsky.social
+1. Chinatsu Kurahana
+1. ニジタロウ/星端 朗
+    - https://x.com/nizitaro1
+1. neumokun
+    - https://x.com/Neumokun
+1. kouta_nagamori (永守浩太)
+    - https://x.com/kouta_nagamori/
+1. Adios
+    - https://x.com/Adiosarts
+1. kamado023 (かまど)
+    - https://x.com/kamado023
+1. HOWDY
+    - https://x.com/HOWDY_FUR
+1. Yūji Iwasaki (岩崎優次)
+    - Cipher Academy, JJK:Modulo
+1. kimidori (きみどり)
+    - https://twitter.com/dera_kimidori
+1. にゃんこね(ro)
+    - https://x.com/nyankone2
+1. kame3
+1. もふあき
+    - https://x.com/mofuaki_
+1. ZUN (博麗神主)
+    - https://x.com/korindo
+1. Hirohiko Araki (荒木飛呂彦)
+    - https://x.com/araki_jojo
+    - <span class="comment">"JoJo's Bizarre Adventure"'s artist</span>
+1. Masashi Kishimoto (岸本斉史)
+    - https://x.com/kishimotomasshi
+    - <span class="comment">Naruto's artist</span>
+1. Haiki
+    - https://x.com/haiki396g
+1. Bellsalt
+    - https://x.com/bellsaltr
+    - <span class="comment">The respondent wrote "Beltsalt", that took me days to find the correct name</span>
+1. Kaeru
+    - https://bsky.app/profile/frog1432.bsky.social
+1. cfsy10
+    - https://x.com/cfsy10
+1. Jocob Mott
+    - https://www.instagram.com/jacob_mott_bwb/
+1. Caro
+    - https://x.com/Caro_zalt
+1. Luwei
+    - https://x.com/chang52084
+1. izm
+    - https://x.com/izm_rm7
+1. 鱼
+    - https://x.com/fishingmanMAX
+1. Kul
+    - https://x.com/KulPlant
+1. FSL6
+    - https://x.com/FanSL_Art
+1. KD钙
+    - https://x.com/kd_gai
+1. LukeOx
+    - https://x.com/luke_c419
+1. 舵丸
+    - https://x.com/kajimaru_0507
+1. 泥水
+    - https://x.com/doromiez
+1. 怒涛
+    - https://x.com/sousuke000
+1. Sky
+    - https://x.com/sky_gomi
+1. 黑轩
+    - <span class="comment">I am guessing maybe it is Kurotero (クロテロ)</span>
+    - https://x.com/kurotero
+    - https://space.bilibili.com/567272/dynamic
+1. 行丸
+    - https://saru59.sakura.ne.jp/
+1. Itohiro (いとひろ)
+    - https://x.com/itohiro0305
+1. KAJIKA (鮖)
+    - https://x.com/_ka_ji_ka
+1. Manabiko (まなびこ)
+    - https://x.com/manabiko_
+    - <span class="comment">(Technically they already did [Cetus](/mobs/#cetusplesiosaur-kaibutsu) in this game)</span>
+1. Ninahachi (ニナハチ)
+    - https://x.com/nijuunanayo
+1. 閃耀菌
+    - https://x.com/shan_yao_jun
+1. Yudai
+    - https://x.com/Grandeur023
+1. Go Fujimoto (藤本郷)
+    - https://x.com/go_fujimoto
+1. Gai Mizuki (水樹凱)
+    - https://x.com/mizukigai
+1. Sakuramaru
+    - https://x.com/sakuramaru123
+1. Hiko
+    - https://x.com/hicochi788
+1. Jin
+    - https://x.com/jin_jinx
+1. Kumao
+    - https://x.com/kumao_cafe_
+1. Kuromine Hiraya
+    - https://x.com/kuromine_hiraya
+1. Yunosuke
+    - https://x.com/UN0SK
+1. Edamame
+    - https://x.com/edamamego_02ma3
+1. DoPq
+    - https://x.com/yy62401
+1. Topi
+    - https://x.com/topi5356
+1. Daisukebear
+    - https://bsky.app/profile/daisukebear.bsky.social
+1. Hisbam
+    - https://x.com/hisbam_hisbam
+1. Tevit
+    - https://x.com/Tevit15
+1. Osuman
+    - https://x.com/osumankokuou
+1. Magmataishi (まぐまたいし)
+    - https://x.com/magma00
+1. Ammamiya (あまみや)
+    - https://x.com/ammami8
+1. Doosoo
+    - https://x.com/rntentn
+1. Konohanaya
+    - https://x.com/Konohanaya/
+1. adj (阿形)
+    - https://x.com/0110ADJ
+1. みきてゃ
+    - https://x.com/mine_miki0840
+1. Shikaku Yamamoto
+    - https://x.com/s_k_k
+1. Me~
+    - https://x.com/mee04__
+1. Suzuka Morino
+    - https://x.com/karana_cat
+1. Emboss
+    - https://x.com/Emboss0320
+1. Tomotiso
+    - https://x.com/Tomotiso2k
+1. Nekotiger
+    - https://x.com/mosaKemono
+1. Iyoko
+    - https://x.com/iyoko_145
+1. LLJH
+    - https://x.com/LLJHLISHIFU
+1. LAGOON
+    - https://x.com/LAGOON_XVI
+1. ThemeFinland
+    - https://x.com/ThemeFinland
+1. Mandaro
+    - https://x.com/augoose_cong
+1. Posuka Demizu
+    - https://x.com/DemizuPosuka
+1. Paru Itagaki
+    - https://x.com/itaparu99
+1. Yifeng
+    - https://x.com/Yifeng_LZ
+1. KOBITOWANI
+    - https://x.com/K0BIT0WANI
+1. Kunoma
+1. Kawara Gawara
+1. Shamoji (杓文字)
+    - https://x.com/samoji
+1. Tamura_Kazumasa
+    - https://x.com/Tamura_Kazumasa
+1. Tos Tos F Ski (とすとすFスキー)
+    - https://x.com/Tos_Tos_F_ski/
+1. Niku 18 (肉良獣八)
+    - https://x.com/niku_18
+1. Chirenbo
+    - https://vxtwitter.com/Chirenbo
+1. FruitzJam
+    - https://x.com/FruitzJam/
+    - <span class="comment">Respondent wrote this as "Fruitzyjam", costing me some time to find the right name</span>
+1. Ponzu
+    - https://x.com/ponzu_tas/
+1. Retsito/Morskart
+    - https://x.com/morskart
+1. Bakedanuki
+    - https://bskyx.app/profile/bakedanuki.bsky.social
+1. bozi
+    - https://x.com/bozi_exe
+1. Joseph A.J
+1. Miazuma Shouki
+    - https://x.com/miazuma_shouki
+1. Numaro
+1. Tigerlion Moikana
+    - https://x.com/tigerlion_art
+    - Mexican bara artist
+1. Fearfac666
+    - https://x.com/fearfac666
+1. Rikiya Koyama
+    - <span class="comment">I am not sure, is this the voice actor 小山力也?</span>
+1. 赤田
+    - <span class="comment">Respondent did not provide any social network user name, maybe it is https://x.com/akatadobuchiki</span>
+1. 遊茶
+    - https://x.com/usa_kotobuki
+1. YaoYaoReer (述麓)
+    - https://weibo.com/u/2128358004
+    - https://x.com/YaoYaoRe
+1. jung_ryeong
+    - https://x.com/jung__ryeong
+1. HIFUMI_2nd
+    - https://x.com/HIFUMI_2nd
+1. waaaaaa_i
+    - https://x.com/waaaaaa_i
+1. Pulin Nabe/kakenari_
+    - https://x.com/kakenari_
+1. Arima_bn_Skeb
+    - https://x.com/Arima_bn_Skeb
+1. 綠草茶GREENTEA
+    - https://x.com/GREENTEA781016
+1. えだまめ號
+    - https://x.com/edamamego_02ma3
+1. Gamma-G
+    - https://x.com/gamma_DH
+    - <span class="comment">God bless the brave soul that ask for this, they do not know...</span>
+1. Tokuni
+    - https://x.com/toktoktokuni
+1. 阿莫AMO
+    - https://x.com/AMO9612
+1. YAN
+    - https://x.com/bltyann
+1. 00047
+    - https://x.com/479992103
+1. Ryota-H
+    - https://x.com/Ryota_H
+1. WINEMVEE
+    - https://x.com/winemvee
+1. piikeisandaa
+    - https://bsky.app/profile/piikeisandaa.bsky.social
+1. 村上タロス
+    - https://x.com/murakami_ta
+    - https://www.pixiv.net/en/users/66210
+1. dokeshin
+    - https://x.com/dokeshin
+1. Tsuroe
+    - https://x.com/chuurow/
+1. jrjresq
+    - https://bsky.app/profile/jrjr.esq
+
+</details>
+
+<details open markdown="1">
+<summary>List of illustrators that were in the wishlist but already has work in this game (in no particular order)</summary>
+
+1. Syukou Akanaru
+1. BomBom
+1. Sawch_cls
+1. BKMITA
+1. Yow
+1. YED
+1. Naop
+1. Vorusu
+1. gozu_farm
+1. Nullq
+1. wasp
+1. カヂロ
+
+</details>
+
+## 新しい声優希望リスト
+
+実際に声優の希望リストを提供した回答者は、イラストレーターに比べて少ない。大半は声優業界について詳しくないことを認め、LifeWondersの判断を信頼していると述べている。
+
+それでもなお、多くの名前が寄せられている。この質問の処理は予想以上に困難でした。回答者によっては声優名を英語表記（ひらがな）で記入し、アクセント記号付きの場合さえありました。また漢字表記のケースも存在し、さらに複数の誤字や別表記も確認されたため、重複排除が非常に困難でした。
+
+<details open markdown="1">
+<summary>複数回答者から言及された声優リスト</summary>
+
+1. Akio Otsuka (大塚明夫) 11 times
+1. Kenjiro Tsuda (津田健次郎) 11 times
+1. Junichi Suwabe (諏訪部順一) 9 times
+1. Satoshi Hino (日野聰) 6 times
+1. Kazuya Nakai (中井和哉) 6 times
+1. Akira Ishida (石田彰) 5 times
+1. Natsuki Hanae (花江夏樹) 4 times
+1. Takaya Kuroda (黑田崇矢) 4 times
+1. Yuichi Nakamura (中村悠一) 3 times
+1. Subaru Kimura (木村昴) 3 times
+1. Tomokazu Sugita (杉田智和) 3 times
+1. Fumihiko Tachiki (立木文彦) 3 times
+1. Hikaru Midorikawa (緑川光) 3 times
+1. Yūki Ono (小野友樹) 3 times
+1. Genda Tesshō (玄田哲章) 3 times
+1. Yū Kobayashi (小林优) 2 times
+1. Kazuhiko Inoue (井上和彦) 2 times
+1. Takuya Eguchi (江口拓也) 2 times
+1. Shunsuke Takeuchi (武内駿輔) 2 times
+1. Takahiro Sakurai (櫻井孝宏) 2 times
+1. Hiroki Tōchi (東地宏樹) 2 times
+1. Kenji Hamada (浜田賢二) 2 times
+1. Kosuke Toriumi (鳥海浩輔) 2 times
+1. Masahiro Ogata (尾形真宏) 2 times
+1. George Nakata (中田譲治) 2 times
+
+</details>
+
+<details markdown="1">
+<summary>言及回数が少ないその他の声優（順不同）</summary>
+
+1. Yūsuke Kobayashi (小林裕介)
+1. Jun'ichi Kanemaru (金丸淳一)
+1. Matsuda Kenichiro (松田健一郎)
+1. Masakazu Morita (森田成一)
+1. Kazuhiro Yamaji (山路和弘)
+1. Shuhei Sakaguchi (阪口周平)
+1. Yūsuke Kobayashi (小林裕介)
+1. Jun'ichi Kanemaru (金丸淳一)
+1. Matsuda Kenichiro (松田健一郎)
+1. Tsuguo Mogami (最上嗣生)
+1. Yuma Uchida (内田雄馬)
+1. Hikaru Hanada (花田光)
+1. Kazuya Nakai (中井和哉)
+1. Takahiro Mizushima (水岛大宙)
+1. Rica Matsumoto (松本梨香)
+1. Fairouz Ai (ファイルーズあい)
+1. Romi Park (朴璐美)
+1. Aoi Yūki (悠木碧)
+1. Ikue Ōtani (大谷育江)
+1. Yurina Amami (雨宮結梨菜)
+1. Ikezawa Haruna (池澤 春菜)
+1. Aoki Sayaka (あおき さやか)
+1. Amamiya Sora (雨宮 天)
+1. Asanuma Shintarou (浅沼 晋太郎)
+1. Azakami Youhei (阿座上 陽平)
+1. Ban Taito (坂 泰斗)
+1. Canna Nobutoshi (神奈 延年)
+1. Cho Kasumi (長 克巳)
+1. Eguchi Takuya (江口 拓也)
+1. Furukawa Makoto (古川 慎)
+1. Ginga Banjō (銀河 万丈)
+1. Hanawa Eiji (花輪 英司)
+1. Hayami Saori (早見 沙織)
+1. Hirohashi Ryo (広橋 涼)
+1. Hirose Daisuke (廣瀬 大介)
+1. Hoshino Takanori (星野 貴紀)
+1. Hosoya Yoshimasa (細谷 佳正)
+1. Junya Inaba (稲葉純弥)
+1. Ishikawa Yui (石川 由依)
+1. Kakihara Tetsuya (柿原 徹也)
+1. Kamiya Hiroshi (神谷 浩史)
+1. Kawata Taeko (川田 妙子)
+1. Kawasumi Ayako (川澄 綾子)
+1. Kawashima Tokuyoshi (川島 得愛)
+1. Kikuchi Kokoro (菊池 こころ)
+1. Kimura Ryohei (木村 良平)
+1. Kumamoto Kenta (隈本 健太)
+1. Kusunoki Taiten (楠 大典)
+1. Maeno Tomoaki (前野 智昭)
+1. Masuda Yuki (増田 ゆうき)
+1. Masuyama Takeaki (益山 武明)
+1. Midorikawa Hikaru (緑川 光)
+1. Miki Shin-ichiro (三木 眞一郎)
+1. Miyano Mamoru (宮野 真守)
+1. Mizunaka Masaaki (水中 雅章)
+1. Mizuki Nana (水樹 奈々)
+1. Morikawa Toshiyuki (森川 智之)
+1. Murase Ayumu (村瀬 歩)
+1. Nagasako Takashi (長嶝 高士)
+1. Nakahara Anko (長原 杏子)
+1. Nakamura Kotaro (中村 浩太郎)
+1. Nakao Ryūsei (中尾 隆聖)
+1. Nazuka Kaori (名塚 佳織)
+1. Nishikawa Takanori (西川 貴教)
+1. Noto Mamiko (能登 麻美子)
+1. Ochiai Rumi (落合 るみ)
+1. Okitsu Kazuyuki (興津 和幸)
+1. Ōmoto Makiko (大本 眞基子)
+1. Ono Daisuke (小野 大輔)
+1. Ōtsuka Hōchū (大塚 芳忠)
+1. Ōtsuka Takeo (大塚 剛央)
+1. Otoshiro Kiyori (音代 継)
+1. Saitō Ayaka (齋藤 彩夏)
+1. Satō Takuya (佐藤 拓也)
+1. Sawashiro Miyuki (沢城 みゆき)
+1. Seki Tomokazu (関 智一)
+1. Shingaki Tarusuke (新垣 樽助)
+1. Shiraishi Ryoko (白石 涼子)
+1. Shimono Hiro (下野 紘)
+1. Sugiyama Noriaki (杉山 紀彰)
+1. Sugō Takayuki (菅生 隆之)
+1. Takeuchi Shunsuke (武内 駿輔)
+1. Tanezaki Atsumi (種﨑 敦美)
+1. Teppōzuka Yōko (鉄砲塚 葉子)
+1. Toriumi Kosuke (鳥海 浩輔)
+1. Uchida Yuma (内田 雄馬)
+1. Uchiyama Kouki (内山 昂輝)
+1. Ueda Reina (上田 麗奈)
+1. Umehara Yuichiro (梅原 裕一郎)
+1. Wakamoto Norio (若本 規夫)
+1. Yamada Kōichi (山寺 宏一)
+1. Yamashita Daiki (山下 大輝)
+1. Yasui Kunihiko (安井 邦彦)
+1. Yusa Kōji (遊佐 浩二)
+1. Nakai Kazuya (中井 和哉) - The Japanese voice actor for Roronao Zoro.
+1. Volcano Ota (ボルケーノ太田)
+1. Josuke Shinomiya (篠宮穰祐)
+  - <span class="comment">The previous Barguest's voice actor in Housamo <img width="32" height="32" src="https://cdn.housamo.xyz/housamo/unity/Android/icon/icon_barguest01.png" loading="lazy"></span>
+1. Hatsune Miku (初音ミク)
+  - <span class="comment">Yep, the infamous vocaloid</span>
+
+{% include figure-image.html path="/assets/img/survey-2025/lw-hatsune-miku.jpg" title="Hatsune Miku mascot appearing on the same stage as LifeWonders' mascots" %}
+
+</details>
+
+時間の制約により、回答者が希望したものの実際にこのゲームで既に起用されている声優のリストは作成しませんでした。ただし、{% chara_link Theoreol %}（子安武人）の声優を希望する声がかなり多かったことは特筆すべきでしょう。
+
+# あとがき
+
+本レポートをお楽しみいただければ幸いです。読者の皆様にとって、このレポートを読むのにかかる時間は20分程度（画像だけ見るならさらに短く）かもしれませんが、調査の準備、データの集計、可視化スクリプトのデバッグ、レポート作成の全プロセスは、ほぼ2ヶ月間のフルタイム作業に相当します。また自由回答形式の質問を多用したため、分析にさらに多くの時間を要しました。
+
+公式翻訳の発表がいつになるか分からない間も、このWikiは海外プレイヤーをサポートし続けます。
+
+来年の調査でお会いしましょう！（あるいは、記念日の約2週間前に実施予定の今年の非公式「東京放課後サマナーズ」調査でお会いしましょう。）
+
+<script defer src="https://echarts.apache.org/en/js/vendors/echarts/dist/echarts.min.js"></script>
+<script defer src="/assets/chart.js"></script>
