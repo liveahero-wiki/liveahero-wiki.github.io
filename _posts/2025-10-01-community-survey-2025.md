@@ -428,7 +428,7 @@ X-axis is the number of days played (end date is set to 30 Sep 2024). Slightly l
 
 There are small bumps near every 360 days, likely due to the anniversary bringing more players than other times of the year.
 
-The bump at "last 720 days" is quite steep, which is roughly when 3rd anniversary happened. I suspect that there might be a lot of overseas players trying out the game when LifeWonders announced that they were working on official translation.
+The bump at "last 720 days" is quite steep, which is roughly the time when 3rd anniversary happened. I suspect that there might be a lot of overseas players trying out the game when LifeWonders announced that they were working on official translation.
 
 ## Main Character Configuration
 
@@ -904,7 +904,7 @@ Here are the links for the full table, feel free to import them to a spreadsheet
 - [Japan Respondents' Pairwise Rank Matrix](/misc/survey-2025/japan_pairwise_ranking.html)
 - [Taiwan Respondents' Pairwise Rank Matrix](/misc/survey-2025/taiwan_pairwise_ranking.html)
 - [China Respondents' Pairwise Rank Matrix](/misc/survey-2025/china_pairwise_ranking.html)
-- [Female Respondents' Pairwise Rank Matrix](/misc/survey-2025/china_pairwise_ranking.html)
+- [Female Respondents' Pairwise Rank Matrix](/misc/survey-2025/female_pairwise_ranking.html)
 
 {% include figure-image.html path="/assets/img/survey-2025/ranked_voting_global.svg"
   title="Ranked Voting (global)" %}
@@ -1803,7 +1803,8 @@ Despite that, we still receive a lot of names. Processing this question turned o
   - <span class="comment">The previous Barguest's voice actor in Housamo <img width="32" height="32" src="https://cdn.housamo.xyz/housamo/unity/Android/icon/icon_barguest01.png" loading="lazy"></span>
 1. Hatsune Miku (初音ミク)
   - <span class="comment">Yep, the infamous vocaloid</span>
-  - {% include figure-image.html path="/assets/img/survey-2025/lw-hatsune-miku.jpg" title="Hatsune Miku mascot appearing on the same stage as LifeWonders' mascots" %}
+
+{% include figure-image.html path="/assets/img/survey-2025/lw-hatsune-miku.jpg" title="Hatsune Miku mascot appearing on the same stage as LifeWonders' mascots" %}
 
 </details>
 
