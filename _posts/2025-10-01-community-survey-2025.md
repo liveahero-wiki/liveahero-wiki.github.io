@@ -9,6 +9,8 @@ date: 2025-10-01 12:00:00 +08
 }
 </style>
 
+> この記事には日本語版があります。詳しくは[こちら](/blog/2025/community-survey-2025.jp/)をご覧ください。
+
 > This article is very long and contain a few visualizations. Some interactive charts do not work well in small screen size.
 >
 > For better reading experience, please read this article in wider screen.
