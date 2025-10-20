@@ -903,7 +903,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
   - [女性回答者のペアワイズ順位マトリックス](/misc/survey-2025/female_pairwise_ranking.html)
 
 {% include figure-image.html path="/assets/img/survey-2025/ranked_voting_global.svg"
-  title="順位付け投票 (グローバル)" %}
+  title="順位付け投票 (グローバル)" %}
 
 > 注意：
 >
@@ -986,7 +986,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
   - 0%～5%と95%～100%の範囲に2つのピークがあります（つまり、ほとんど人間型キャラクターしか好きでない人々と、ほとんど獣人キャラクターしか好きでない人々）。一部の日本の回答者はかなり極端な場合があります。
 
 {% include figure-image.html path="/assets/img/survey-2025/anthro-loving-female.jpg"
-  title="獣人好き度の分布 (Female respondents)" %}
+  title="獣人好き度の分布 (Female respondents)" %}
 
   - 女性回答者の獣人好き度分布が、「全員がお気に入り」の統計では正規分布に似ていることは非常に興味深いです。
   - しかし、女性回答者がトップ10のお気に入りのみを選ぶことを強制されると、分布は他の性別グループと同様に獣人キャラクターの方にシフトします。
