@@ -615,7 +615,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 ## 高難易度クエスト
 
 {% include figure-image.html path="/assets/img/survey-2025/hdq.jpg"
-  title="高難易度クエストのクリア率" %}
+  title="高難易度クエストのクリア率" %}
 
 {% include figure-image.html path="/assets/img/survey-2025/hdq-gender.jpg"
   title="性別別の高難易度クエストクリア率" %}
@@ -667,7 +667,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 ## 無料ガチャ通貨
 
 {% include apache-chart.html
-  options='{"legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "Less than other gacha games / 比别的游戏少 / 他のガチャゲームより少ない", "value": 319}, {"name": "About the same / 和别的游戏差不多 / ほぼ同じ", "value": 154}, {"name": "More generous than other gacha games / 比别的游戏大方 / 他のガチャゲームより気前がいい", "value": 38}, {"name": "Don't play other gacha games / 没玩别的扭蛋游戏 / 他のガチャゲームはやらない", "value": 5}]}]}'
+  options='{"legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "Less than other gacha games / 比别的游戏少 / 他のガチャゲームより少ない", "value": 319}, {"name": "About the same / 和别的游戏差不多 / ほぼ同じ", "value": 154}, {"name": "More generous than other gacha games / 比别的游戏大方 / 他のガチャゲームより気前がいい", "value": 38}, {"name": "Don\'t play other gacha games / 没玩别的扭蛋游戏 / 他のガチャゲームはやらない", "value": 5}]}]}'
   title="無料ガチャ通貨に関する意見" %}
 
 『ライブ・ア・ヒーロー！』プレイヤーの61.82%が、他のガチャゲームよりも無料ガチャの配布が少ない（A）と考えているのに対し、他のガチャゲームよりも気前が良い（B）と考えているのはわずか7.36%でした。
@@ -728,7 +728,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 
 {% include figure-image.html path="/assets/img/survey-2025/top10-bar.jpg"
   clip=true
-  title="人気ランキングトップ10（全世界） %}
+  title="人気ランキングトップ10（全世界）" %}
 
 各カテゴリの「全員がお気に入り」人気ランキングのトップ
 
