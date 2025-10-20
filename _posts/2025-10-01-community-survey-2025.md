@@ -1,6 +1,6 @@
 ---
 title: Community Survey Result 2025
-date: 2025-10-01 12:00:00 +08
+date: 2025-10-20 15:00:00 +08
 ---
 
 <style>
