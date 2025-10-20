@@ -860,7 +860,6 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 <summary>お気に入りが10キャラ未満の人</summary>
 
 {% include figure-image.html path="/assets/img/survey-2025/fav-less-than-10.jpg"
-  clip=true
   title="お気に入り10個未満を選択した回答者" %}
 
 欲情したプレイヤー向けの餌でいっぱいのこのガチャゲームで、心を捧げるキャラクターの数を制限できるこれらの人々に拍手を送りましょう。

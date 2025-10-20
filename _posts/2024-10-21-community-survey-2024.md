@@ -864,7 +864,6 @@ For female respondents, {% chara_link Sensettia %} is number 1 in “All favouri
 <summary>People with less than 10 favourites</summary>
 
 {% include figure-image.html path="/assets/img/survey-2024/fav-less-than-10.jpg"
-  clip=true
   title="Respondents who chose < 10 favourites" %}
 
 In this gacha game that is full of baits for thirsty players, let us applaud these people who can limit the amount of characters they devote their hearts for.
