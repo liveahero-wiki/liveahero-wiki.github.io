@@ -626,7 +626,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 ## ゲーム要素の評価
 
 {% include figure-image.html path="/assets/img/survey-2025/game-score.jpg"
-  title="「ライブ・ア・ヒーロー」ゲーム要素のスコア" %}
+  title="「ライブ・ア・ヒーロー」ゲーム要素のスコア" %}
 
 - 当然のことながら、ほとんどの回答者がキャラクターデザインに最高の評価を与えています。
 - 難易度評価は平均スコアが3.55（中央値=4）と最も低かったです。
@@ -634,7 +634,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 ## 他のゲーム
 
 {% include figure-image.html path="/assets/img/survey-2025/play-other-game.jpg"
-  title="ライブ・ア・ヒーロー」プレイヤーがプレイした他のLGBTゲーム" %}
+  title="ライブ・ア・ヒーロー」プレイヤーがプレイした他のLGBTゲーム" %}
 
 - **Gyee**
     - 全てのゲームの中で、「聞いたことはあるがプレイしたことはない」と「すでにやめた」を合わせた数が最も多いです。
@@ -668,12 +668,12 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 
 {% include apache-chart.html
   options='{"legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "Less than other gacha games / 比别的游戏少 / 他のガチャゲームより少ない", "value": 319}, {"name": "About the same / 和别的游戏差不多 / ほぼ同じ", "value": 154}, {"name": "More generous than other gacha games / 比别的游戏大方 / 他のガチャゲームより気前がいい", "value": 38}, {"name": "Don\'t play other gacha games / 没玩别的扭蛋游戏 / 他のガチャゲームはやらない", "value": 5}]}]}'
-  title="無料ガチャ通貨に関する意見" %}
+  title="無料ガチャ通貨に関する意見" %}
 
 『ライブ・ア・ヒーロー！』プレイヤーの61.82%が、他のガチャゲームよりも無料ガチャの配布が少ない（A）と考えているのに対し、他のガチャゲームよりも気前が良い（B）と考えているのはわずか7.36%でした。
 
 {% include figure-image.html path="/assets/img/survey-2025/gacha-stone-spending.jpg"
-  title="「無料ガチャ通貨に関する意見」対「課金レベル」" %}
+  title="「無料ガチャ通貨に関する意見」対「課金レベル」" %}
 
 グループAとグループBの課金額を調べたところ、回答者の課金額と無料ガチャ通貨の十分性に関する意見との間に相関は見られませんでした。
 
@@ -688,7 +688,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 ## 翻訳
 
 {% include figure-image.html path="/assets/img/survey-2025/translation.jpg"
-  title="翻訳予測" %}
+  title="翻訳予測" %}
 
 再び、公式翻訳なしでゲームの周年を祝い、回答者の35.7%が正しい予測をしたことになります。
 
@@ -698,7 +698,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 
 {% include apache-chart.html
   options='{"legend": {}, "label": {"formatter": "{b}: {d}%"}, "tooltip": {"formatter": "{b}<br>{c} ({d}%)"}, "series": [{"type": "pie", "data": [{"name": "Yes, I read fan translation when available / 会，如果有粉丝翻译 / はい （ファンの翻訳があれば読みます）", "value": 255}, {"name": "Yes, I read the story in-game (Japanese) / 会，我直接看日文原文 / はい（日本語）", "value": 165}, {"name": "No / 不会 / いいえ", "value": 96}]}]}'
-  title="『ライブ・ア・ヒーロー！』のプレイヤーはゲーム内でストーリーを読みますか？" %}
+  title="『ライブ・ア・ヒーロー！』のプレイヤーはゲーム内でストーリーを読みますか？" %}
 
 回答者の半数近くがファン翻訳に頼る必要があります。
 
@@ -709,10 +709,10 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 ## イベント評価
 
 {% include figure-image.html path="/assets/img/survey-2025/event.jpg"
-  title="イベント評価" %}
+  title="イベント評価" %}
 
 {% include figure-image.html path="/assets/img/survey-2025/event-reading.jpg"
-  title="イベント評価（日本語読解力別）" %}
+  title="イベント評価（日本語読解力別）" %}
 
 - 日本語読解能力がN3以上または同等の回答者は、それ以下の回答者よりもイベントを高く評価する傾向があるようです。
 - このパターンの唯一の例外は[「栄光のライジング・ムーン」](/events/2410RisingMoon/)です。これは、海外プレイヤーが{% chara_link Pubraseer|h2 %}の限定バージョンがついに登場したことを喜んでいるためだと推測します。
@@ -723,12 +723,12 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 <summary>全体</summary>
 
 {% include figure-image.html path="/assets/img/survey-2025/all-fav-bar.jpg"
-  clip=true
-  title="すべてのお気に入り 人気ランキング（全世界）" %}
+  clip=true
+  title="すべてのお気に入り 人気ランキング（全世界）" %}
 
 {% include figure-image.html path="/assets/img/survey-2025/top10-bar.jpg"
-  clip=true
-  title="人気ランキングトップ10（全世界）" %}
+  clip=true
+  title="人気ランキングトップ10（全世界）" %}
 
 各カテゴリの「全員がお気に入り」人気ランキングのトップ
 
@@ -807,12 +807,12 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 <summary>2024 vs 2025</summary>
 
 {% include figure-image.html path="/assets/img/survey-2025/all-fav-2024-2025.jpg"
-  clip=true
-  title="全お気に入り (2024年 vs 2025年)" %}
+  clip=true
+  title="全お気に入り (2024年 vs 2025年)" %}
 
 {% include figure-image.html path="/assets/img/survey-2025/approval-rating-change.jpg"
-  clip=true
-  title="支持率の変化 (2024年 vs 2025年)" %}
+  clip=true
+  title="支持率の変化 (2024年 vs 2025年)" %}
 
 - 2024年と2025年の調査の間に、バリアントやベースフォームがリリースされたキャラクター（{% chara_link Astar %}、{% chara_link Barte %}、{% chara_link Yohack %}、{% chara_link Gaisei %}など）は、ランキングがかなり上昇したようです。
 - {% chara_link Obsidius %}、{% chara_link Sterio %}、{% chara_link Barrel %}は2024年と2025年の調査の間で最も支持率を失いました。
@@ -824,16 +824,16 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 <summary>日本 / 台湾 / 中国</summary>
 
 {% include figure-image.html path="/assets/img/survey-2025/fav-japan.jpg"
-  clip=true
-  title="全お気に入り vs トップ10（日本のみ）" %}
+  clip=true
+  title="全お気に入り vs トップ10（日本のみ）" %}
 
 {% include figure-image.html path="/assets/img/survey-2025/fav-taiwan.jpg"
-  clip=true
-  title="全お気に入り vs トップ10（台湾のみ）" %}
+  clip=true
+  title="全お気に入り vs トップ10（台湾のみ）" %}
 
 {% include figure-image.html path="/assets/img/survey-2025/fav-china.jpg"
-  clip=true
-  title="全お気に入り vs トップ10（中国のみ）" %}
+  clip=true
+  title="全お気に入り vs トップ10（中国のみ）" %}
 
 </details>
 
@@ -841,12 +841,12 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 <summary>女性 / ノンバイナリー / その他</summary>
 
 {% include figure-image.html path="/assets/img/survey-2025/fav-female.jpg"
-  clip=true
-  title="全お気に入り vs トップ10 （女性の回答者のみ）" %}
+  clip=true
+  title="全お気に入り vs トップ10 （女性の回答者のみ）" %}
 
 {% include figure-image.html path="/assets/img/survey-2025/fav-other.jpg"
-  clip=true
-  title="全お気に入り vs トップ10 （ノンバイナリー / その他の回答者のみ）" %}
+  clip=true
+  title="全お気に入り vs トップ10 （ノンバイナリー / その他の回答者のみ）" %}
 
 - そもそも男性以外の回答者数が少ないため、票が同数になることが多いです。
 - 男性以外の回答者の中では、{% chara_link Tsuneaki %}が{% chara_link Pubraseer %}に代わってトップになりましたが、{% chara_link Pubraseer %}も「トップ10」ランキングではかなり上位にランクインしています。
@@ -858,14 +858,14 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 <summary>お気に入りが10キャラ未満の人</summary>
 
 {% include figure-image.html path="/assets/img/survey-2025/fav-less-than-10.jpg"
-  clip=true
-  title="お気に入り10個未満を選択した回答者" %}
+  clip=true
+  title="お気に入り10個未満を選択した回答者" %}
 
 欲情したプレイヤー向けの餌でいっぱいのこのガチャゲームで、心を捧げるキャラクターの数を制限できるこれらの人々に拍手を送りましょう。
 
 {% include figure-image.html path="/assets/img/survey-2025/top10-less-than-10-vs-exactly-10.jpg"
-  clip=true
-  title="トップ10（10未満を選択した人 vs ちょうど10を選択した人）" %}
+  clip=true
+  title="トップ10（10未満を選択した人 vs ちょうど10を選択した人）" %}
 
 </details>
 
@@ -929,27 +929,27 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 ### 特定の人口統計におけるランキング
 
 {% include figure-image.html path="/assets/img/survey-2025/ranked_voting_japan.svg"
-  title="順位付け投票 (日本)" %}
+  title="順位付け投票 (日本)" %}
 
 {% include figure-image.html path="/assets/img/survey-2025/ranked_voting_taiwan.svg"
-  title="順位付け投票 (台湾)" %}
+  title="順位付け投票 (台湾)" %}
 
 {% include figure-image.html path="/assets/img/survey-2025/ranked_voting_china.svg"
-  title="順位付け投票 (中国)" %}
+  title="順位付け投票 (中国)" %}
 
 - 日本では、{% chara_link Akashi %}が他のすべてのキャラクターに対して50%以上の確率で勝利しており、日本人回答者にとって唯一の**コンドルセ勝者**となっています。
   - つまり、どの**コンドルセ方式**を使用しても、{% chara_link Akashi %}は常に勝者として選出されます。
 - 国別の順位付け投票結果は、投票数が少ないため、多くのコンドルセサイクルがあります。
   - 例えば、日本では、{% chara_link Ryekie %}、{% chara_link Pubraseer %}、{% chara_link Lilac %}がコンドルセサイクルを形成しています。
     - | ペア | 勝利差 |
-      |-|-|
-      | {% chara_link Ryekie %} > {% chara_link Pubraseer %} | 55.17% |
-      | {% chara_link Pubraseer %} > {% chara_link Lilac %} | 55.26% |
-      | {% chara_link Lilac %} > {% chara_link Ryekie %} | 52.94% |
+      |-|-|
+      | {% chara_link Ryekie %} > {% chara_link Pubraseer %} | 55.17% |
+      | {% chara_link Pubraseer %} > {% chara_link Lilac %} | 55.26% |
+      | {% chara_link Lilac %} > {% chara_link Ryekie %} | 52.94% |
   - タイドマン方式では、最も勝利差が弱いペア、この場合は最後のペア（52.94%）を削除することでコンドルセサイクルを破る必要があります。したがって、最終的なランキングは {% chara_link Ryekie %} > {% chara_link Pubraseer %} > {% chara_link Lilac %} となります。
 
 {% include figure-image.html path="/assets/img/survey-2025/ranked_voting_female.svg"
-  title="順位付け投票 (女性回答者)" %}
+  title="順位付け投票 (女性回答者)" %}
 
   - 女性回答者の投票には、単一のコンドルセ勝者はいません。
     - つまり、異なる**コンドルセ方式**では、サイクル内で異なる勝者が選出される可能性があります。
@@ -965,7 +965,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 このゲームの男性キャラクターの中で、「人間型」と「獣人型」の比率はほぼ50/50であることがわかります。したがって、『ライブ・ア・ヒーロー！』のキャラクター人気が獣人キャラクターや人間型キャラクターに偏っていない場合、分布は50%を中心とした[正規分布](https://ja.wikipedia.org/wiki/%E6%AD%A3%E8%A6%8F%E5%88%86%E5%B8%83)のようになるはずです。
 
 {% include figure-image.html path="/assets/img/survey-2025/anthro-loving.jpg"
-  title="獣人好き度の分布" %}
+  title="獣人好き度の分布" %}
 
 計算式：
 
@@ -980,7 +980,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 > これは、回答者がすべての文脈で獣人キャラクターに偏っていることを100%証明するものではありません。もう一つの可能性として、LifeWondersが魅力的な人間型キャラクターよりも魅力的な獣人キャラクターを作成するのがわずかに得意であるということが考えられます。
 
 {% include figure-image.html path="/assets/img/survey-2025/anthro-loving-japan.jpg"
-  title="獣人好き度の分布 (Japan only)" %}
+  title="獣人好き度の分布 (Japan only)" %}
 
   - 日本の回答者の獣人好き度は全体の回答者よりもわずかに低いですが、トップ10のお気に入りキャラクターのみを数えると獣人好き度が増加するという全体的な傾向に従っています。
   - 0%～5%と95%～100%の範囲に2つのピークがあります（つまり、ほとんど人間型キャラクターしか好きでない人々と、ほとんど獣人キャラクターしか好きでない人々）。一部の日本の回答者はかなり極端な場合があります。
