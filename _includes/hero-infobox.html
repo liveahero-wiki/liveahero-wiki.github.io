@@ -28,11 +28,12 @@
 <p>{{ site.data.processed.jp_bio[bio_h01] }}</p>
 </details>
 {% if include.BIO_H01 != "" %}
-<details open>
+<details open markdown="1">
 <summary>Personal Data 1 (Translated)</summary>
-<div markdown="1">
+
 {{ include.BIO_H01 }}
-</div></details>
+
+</details>
 {% endif %}
 
 {% if firstCardInfo.rarity >= 3 %}
@@ -42,11 +43,11 @@
 <p>{{ site.data.processed.jp_bio[bio_h02] }}</p>
 </details>
 {% if include.BIO_H02 != "" %}
-<details open>
+<details open markdown="1">
 <summary>Personal Data 2 (Translated)</summary>
-<div markdown="1">
+
 {{ include.BIO_H02 }}
-</div>
+
 </details>
 {% endif %}
 {% endif %}
