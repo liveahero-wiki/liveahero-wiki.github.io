@@ -618,7 +618,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
   title="高難易度クエストのクリア率" %}
 
 {% include figure-image.html path="/assets/img/survey-2025/hdq-gender.jpg"
-  title="性別別の高難易度クエストクリア率" %}
+  title="性別別の高難易度クエストクリア率" %}
 
 - 全体では、回答者の半数が高難易度コンテンツの80%以上をクリアできると報告しています（中央値）。
 - データを性別で見てみると、男性回答者のピークが90%～100%の範囲であるのに対し、その他の回答者のピークは70%～80%の範囲にあります。
@@ -896,14 +896,14 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 
 完全な表へのリンクはこちらです。自由にスプレッドシートにインポートしてデータを探索してください：
 
-  - [Global Respondents' Pairwise Rank Matrix](/misc/survey-2025/global_pairwise_ranking.html)
-  - [Japan Respondents' Pairwise Rank Matrix](/misc/survey-2025/japan_pairwise_ranking.html)
-  - [Taiwan Respondents' Pairwise Rank Matrix](/misc/survey-2025/taiwan_pairwise_ranking.html)
-  - [China Respondents' Pairwise Rank Matrix](/misc/survey-2025/china_pairwise_ranking.html)
-  - [Female Respondents' Pairwise Rank Matrix](/misc/survey-2025/female_pairwise_ranking.html)
+  - [グローバル回答者のペアワイズ順位マトリックス](/misc/survey-2025/global_pairwise_ranking.html)
+  - [日本回答者のペアワイズ順位マトリックス](/misc/survey-2025/japan_pairwise_ranking.html)
+  - [台湾回答者のペアワイズ順位マトリックス](/misc/survey-2025/taiwan_pairwise_ranking.html)
+  - [中国回答者のペアワイズ順位マトリックス](/misc/survey-2025/china_pairwise_ranking.html)
+  - [女性回答者のペアワイズ順位マトリックス](/misc/survey-2025/female_pairwise_ranking.html)
 
 {% include figure-image.html path="/assets/img/survey-2025/ranked_voting_global.svg"
-  title="Ranked Voting (global)" %}
+  title="順位付け投票 (グローバル)" %}
 
 > 注意：
 >
@@ -929,13 +929,13 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
 ### 特定の人口統計におけるランキング
 
 {% include figure-image.html path="/assets/img/survey-2025/ranked_voting_japan.svg"
-  title="Ranked Voting (Japan Respondents Only)" %}
+  title="順位付け投票 (日本)" %}
 
 {% include figure-image.html path="/assets/img/survey-2025/ranked_voting_taiwan.svg"
-  title="Ranked Voting (Taiwan Respondents only)" %}
+  title="順位付け投票 (台湾)" %}
 
 {% include figure-image.html path="/assets/img/survey-2025/ranked_voting_china.svg"
-  title="Ranked Voting (China Respondents only)" %}
+  title="順位付け投票 (中国)" %}
 
 - 日本では、{% chara_link Akashi %}が他のすべてのキャラクターに対して50%以上の確率で勝利しており、日本人回答者にとって唯一の**コンドルセ勝者**となっています。
   - つまり、どの**コンドルセ方式**を使用しても、{% chara_link Akashi %}は常に勝者として選出されます。
@@ -949,7 +949,7 @@ X軸はプレイ日数です（終了日は2024年9月30日に設定）。回答
   - タイドマン方式では、最も勝利差が弱いペア、この場合は最後のペア（52.94%）を削除することでコンドルセサイクルを破る必要があります。したがって、最終的なランキングは {% chara_link Ryekie %} > {% chara_link Pubraseer %} > {% chara_link Lilac %} となります。
 
 {% include figure-image.html path="/assets/img/survey-2025/ranked_voting_female.svg"
-  title="Ranked Voting (Female Respondents only)" %}
+  title="順位付け投票 (女性回答者)" %}
 
   - 女性回答者の投票には、単一のコンドルセ勝者はいません。
     - つまり、異なる**コンドルセ方式**では、サイクル内で異なる勝者が選出される可能性があります。
