@@ -1395,7 +1395,7 @@ Some of the suggestions are literally moonshot, so please do take a look at the 
    - https://x.com/kumagayasin
 1. O-RO
    - https://x.com/DogoroNumber3
-1. Zololee (黄金の大猫)
+1. Zelolee (黄金の大猫)
    - https://x.com/goldenbigcat/
    - https://www.pixiv.net/users/196845
 1. Dsharp
