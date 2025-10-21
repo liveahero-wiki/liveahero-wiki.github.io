@@ -42,10 +42,133 @@ If all of this is fulfilled you will be then redirected to the Home UI where you
 
 Here is the translated home menu screen:
 
-{:refdef: style="text-align: center;"}
-<img src="/assets/img/TLed_Main_menu.png" alt="mainMenu" height=500px loading="lazy">
-{: refdef}
+<style>
+.screenshot {
+  height: 700px;
+}
+.screenshot text {
+  font: bold 30px sans-serif;
+  fill: white;
+}
+.image-mapper-shape {
+  fill: rgba(0, 0, 0, 0.5);
+  stroke: white;
+  stroke-width: 5px;
+}
+g:hover .image-mapper-shape {
+  opacity: 20%;
+}
+</style>
 
+<svg class="screenshot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1926">
+
+<defs>
+  <filter x="0" y="0" width="1" height="1" id="solid">
+    <feFlood flood-color="#000" result="bg" />
+    <feMerge>
+      <feMergeNode in="bg"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+</defs>
+
+<image xlink:href="/assets/img/screenshot/home.jpg" style="width: 1080px;"></image>
+<a xlink:href="#" xlink:title="Name card">
+<g>
+<circle cx="70.76923076923076" cy="75.8974358974359" r="63.763204276387945" class="image-mapper-shape" data-index="1"></circle>
+<text filter="url(#solid)" x="10" y="150">Name card</text>
+</g>
+</a>
+<a xlink:href="#" xlink:title="Quests">
+<g>
+<rect x="87.17948717948718" y="1223.5897435897436" width="250.25641025641028" height="253.33333333333326" class="image-mapper-shape" data-index="2"></rect>
+<text filter="url(#solid)" x="170" y="1455">Quest</text>
+</g>
+</a>
+<a xlink:href="#" xlink:title="Event">
+<g>
+<rect x="355.8974358974359" y="1226.6666666666667" width="367.1794871794872" height="251.28205128205127" class="image-mapper-shape" data-index="3"></rect>
+<text filter="url(#solid)" x="500" y="1455">Event</text>
+</g>
+</a>
+<a xlink:href="#" xlink:title="Sales">
+<g>
+<rect x="745.6410256410256" y="1226.6666666666667" width="249.23076923076917" height="117.94871794871779" class="image-mapper-shape" data-index="4"></rect>
+<text filter="url(#solid)" x="820" y="1335">Sales</text>
+</g>
+</a>
+<a xlink:href="#" xlink:title="Office">
+<g>
+<rect x="743.5897435897435" y="1362.051282051282" width="248.2051282051283" height="111.79487179487182" class="image-mapper-shape" data-index="5"></rect>
+<text filter="url(#solid)" x="820" y="1455">Ofiice</text>
+</g>
+</a>
+<a xlink:href="#" xlink:title="Present">
+<g>
+<circle cx="142.5641025641026" cy="1600.0000000000002" r="50.28779762925641" class="image-mapper-shape" data-index="6"></circle>
+<text filter="url(#solid)" x="80" y="1660">Presents</text>
+</g>
+</a>
+<a xlink:href="#" xlink:title="News">
+<g>
+<circle cx="277.94871794871796" cy="1601.025641025641" r="52.31774664556657" class="image-mapper-shape" data-index="7"></circle>
+<text filter="url(#solid)" x="240" y="1660">News</text>
+</g>
+</a>
+<a xlink:href="#" xlink:title="Missions">
+<g>
+<circle cx="408.20512820512823" cy="1602.0512820512822" r="56.735658198725396" class="image-mapper-shape" data-index="8"></circle>
+<text filter="url(#solid)" x="350" y="1660">Missions</text>
+</g>
+</a>
+<a xlink:href="#" xlink:title="Options">
+<g>
+<circle cx="541.5384615384615" cy="1602.051282051282" r="55.28956706438385" class="image-mapper-shape" data-index="9"></circle>
+<text filter="url(#solid)" x="490" y="1660">Options</text>
+</g>
+</a>
+<a xlink:href="#" xlink:title="Friends">
+<g>
+<circle cx="670.7692307692307" cy="1601.025641025641" r="52.34789807251212" class="image-mapper-shape" data-index="10"></circle>
+<text filter="url(#solid)" x="615" y="1660">Friends</text>
+</g>
+</a>
+<a xlink:href="#" xlink:title="Reception setting">
+<g>
+<circle cx="976.4102564102565" cy="260.51282051282044" r="60.451946782733835" class="image-mapper-shape" data-index="11"></circle>
+</g>
+</a>
+<a xlink:href="#" xlink:title="Home">
+<g>
+<rect x="36.92307692307692" y="1720" width="173.33333333333331" height="178.46153846153857" class="image-mapper-shape" data-index="12"></rect>
+<text filter="url(#solid)" x="85" y="1890">Home</text>
+</g>
+</a>
+<a xlink:href="#" xlink:title="Training">
+<g>
+<rect x="243.07692307692307" y="1724.1025641025642" width="176.41025641025644" height="174.35897435897436" class="image-mapper-shape" data-index="13"></rect>
+<text filter="url(#solid)" x="275" y="1890">Training</text>
+</g>
+</a>
+<a xlink:href="#" xlink:title="Teams">
+<g>
+<rect x="450.2564102564103" y="1722.051282051282" width="174.35897435897436" height="174.35897435897436" class="image-mapper-shape" data-index="14"></rect>
+<text filter="url(#solid)" x="485" y="1890">Teams</text>
+</g>
+</a>
+<a xlink:href="#" xlink:title="Gacha">
+<g>
+<rect x="654.3589743589744" y="1722.051282051282" width="178.46153846153845" height="177.43589743589746" class="image-mapper-shape" data-index="15"></rect>
+<text filter="url(#solid)" x="690" y="1890">Gacha</text>
+</g>
+</a>
+<a xlink:href="#" xlink:title="Shop">
+<g>
+<rect x="863.5897435897435" y="1720" width="177.43589743589757" height="178.46153846153857" class="image-mapper-shape" data-index="16"></rect>
+<text filter="url(#solid)" x="915" y="1890">Shop</text>
+</g>
+</a>
+</svg>
 
 ## Summon Currency
 
