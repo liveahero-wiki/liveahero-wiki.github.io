@@ -1,0 +1,6 @@
+{% assign dim = include.path | image_dimension %}
+<img src="{{ include.path }}" width="{{ dim[0] }}" height="{{ dim[1] }}" loading="lazy"
+    {% if include.title %}alt="{{ include.title | xml_escape }}"{% endif %}
+    {% if include.style %}style="{{ include.style }}"{% endif %}
+    {% if include.class %}class="{{ include.class }}"{% endif %}
+>
