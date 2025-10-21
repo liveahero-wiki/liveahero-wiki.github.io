@@ -1182,7 +1182,7 @@ Since most survey respondents are not from Japan, the lack of translation is obv
 - HD character arts
 - Characters’ legs are too short
 
-# Bugs & Performance
+### Bugs & Performance
 
 - Loading time being too slow is the most common complaint in this category, especially at the login screen.
 - Some people also experienced random game crashes at login screen
