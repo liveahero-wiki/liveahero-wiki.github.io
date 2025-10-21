@@ -30,16 +30,17 @@ Items can be exchanged using {% include item.html id=35 %} or {% include item.ht
 
 {% include shop-table.html id=1 %}
 
-## Search Structure Exchange
-
-Items can be exchanged using {% include item.html id=75 %}, items are restocked monthly.
-
-{% include shop-table.html id=20 %}
-
-### Weekly Mission Exchange
+## Weekly Mission Exchange
 
 Items can be exchanged using {% include item.html id=234 %}, which can be obtained from [Weekly Mission](/guide/mission/#weekly-mission).
 
 {% include item.html id=3 %}'s stock is refreshed every week.
 
 {% include shop-table.html id=77 %}
+
+## Search Structure Exchange
+
+Items can be exchanged using {% include item.html id=75 %}, which are converted from unused Search Points when you pull from gacha banner(s).
+Shop items are restocked monthly.
+
+{% include shop-table.html id=20 %}

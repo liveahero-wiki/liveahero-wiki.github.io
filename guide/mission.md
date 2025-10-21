@@ -177,7 +177,7 @@ Get {% include item.html id=34 %} x2 for every 10 player rank.
 | {% include item-icon.html id=11 %} x60,000 | Clear 2 {% include item.html id=11 %} quests (A-Rank) |
 | {% include item-icon.html id=35 %} x100,000| Clear 2 {% include item.html id=28 %} quests (A-Rank) |
 | {% include item-icon.html id=11 %} x60,000 | Raise two Heroes' level to 50 or higher |
-|| Clear [Challenge Simulator](/guide/challenge_simulator/) A-Rank a rating of A or higher |
+| {% include item-icon.html id=59 %} x25     | Clear [Challenge Simulator](/guide/challenge_simulator/) A-Rank a rating of A or higher |
 | {% include item-icon.html id=35 %} x100,000| Exhange {% include item.html id=68 %} (gained in [Challenge Simulator](/guide/challenge_simulator/)) in the Challenge Simulator Shop for any reward |
 | {% include item-icon.html id=30 %} x15,000 | Start 2 {% include item.html id=30 %} sales (any length) |
 | {% include item-icon.html id=66 %} x2      | Exchange any medal at the Medal Shop |
