@@ -57,6 +57,7 @@ See a breakdown for each item every 1,000 multis (10,000 slots per row) [^bigtab
 #### Rates with Parallel Quartz (after Sept 30th 2021)
 
 sample size: 150,000 multis / 150,000,000 {% include item.html id=42 %}
+
 | Items | Drop rates |
 |-------|------------|
 | {% include item-icon.html id=219991 %} | 0.01013% |
