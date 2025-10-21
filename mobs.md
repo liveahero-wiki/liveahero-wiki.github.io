@@ -135,6 +135,12 @@ sprites="fg_kaibutsuIdLarvaEarth_h01,fg_kaibutsuIdLarvaFire_h01,fg_kaibutsuIdLar
 sprites="fg_idReplica_h01"
 %}
 
+### Imposter
+
+{% include hero-infobox-unreleased.html name="Imposter" mob=true
+sprites="fg_imposterVillainEarth_h01,fg_imposterVillainFire_h01,fg_imposterVillainLight_h01,fg_imposterVillainShadow_h01,fg_imposterVillainWater_h01"
+%}
+
 ### Jellyfish Kaibutsu
 
 {% include hero-infobox-unreleased.html name="Jellyfish Kaibutsu" mob=true
