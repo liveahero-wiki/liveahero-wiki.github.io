@@ -44,11 +44,12 @@ Here is the translated home menu screen:
 
 <style>
 .screenshot {
-  height: min(700px, 100vh);
+  max-height: min(700px, 100vh);
   max-width: 100%;
+  --font-size: 30px;
 }
 .screenshot text {
-  font: bold 30px sans-serif;
+  font: bold var(--font-size) sans-serif;
   fill: white;
 }
 .image-mapper-shape {
@@ -330,9 +331,11 @@ From the main menu, select "Friends" and then "Search for Friends".
 
 On the lower part of the screen you will find your Player ID. Noting this number down is recommended, as it is something Lifewonders will ask you if you have to contact their support to recover your account.
 
-{:refdef: style="text-align: center;"}
-<img src="/assets/img/Playerid.png" alt="How to find Live A Hero Player ID" height=500px loading="lazy">
-{: refdef}
+<div markdown="0">
+{% include image.html path="/assets/img/Playerid.png"
+  class="screenshot"
+  title="How to find Live A Hero Player ID" %}
+</div>
 
 ## How to Back-up Your Data
 
