@@ -8,15 +8,15 @@ banner: true
 
 ### Parallel Weapon Remodelling
 
-After clearing Main quest chapter 3 episode 13, A new feature Parallel Weapon Remodelling will be available and can be accessed from the training menu.
+After clearing Main Quest 1-3, episode 13, a new feature Parallel Weapon Remodelling will be available and can be accessed from the training menu.
 
-Parallel weapon has level, and to increase this level {% include item-icon.html id=59 %} Parallel Quartz is needed.
+Parallel weapon has level, and to increase this level {% include item.html id=59 %} is needed.
 
 The maximum level is 100, and increasing parallel weapon's level will enhance your hero's parameter.
 
 Parameter enhancement grows linearly with Parallel weapon's level.
 
-{% include item-icon.html id=59 %} Parallel Quartz can only be obtained from events as of now.
+{% include item.html id=59 %} can only be obtained from events as of now.
 
 ### Parallel Weapon Form
 
@@ -27,11 +27,8 @@ This form can be changed using design item from events.
 A few points in regards to change form:
 
 - Changing form is only possible after a minimum of level 1 parallel weapon.
-
 - Changing form require one design item and override the previous form.
-
 - In the parallel weapon interface, you can change the weapon form by clicking the blue "変更" (change) button.
-
 - The level of parallel weapon will stay the same even after changing forms.
 
 Each form will give different status enhancement according to parallel weapon's level, such as more ATK or HP:

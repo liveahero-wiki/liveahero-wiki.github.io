@@ -35,8 +35,8 @@ When you officially start, you are greeted by a black screen followed by some di
 Follow the instructions given by the Game and you will see yourself winning the fight. To learn more about how Fighting, it's suggested to look and read the [Battle System](/guide/battle/). 
 
 
-After winning the game will continue the story until you're prompted to call a hero, simply follow the instruction and call your hero,
-The game will then proceed to instruct you to add your newly called hero as a member of your team it will also instruct you to level it up similar to how you will be doing the same for your future units.
+After winning the game will continue the story until you're prompted to summon a hero, simply follow the instruction and summon your hero,
+The game will then proceed to instruct you to add your newly summoned hero as a member of your team it will also instruct you to level it up similar to how you will be doing the same for your future units.
 
 If all of this is fulfilled you will be then redirected to the Home UI where you can choose [Quest](/guide/quest/), event, [sales](/guide/sale/) and a plethora of other menus.
 
@@ -45,6 +45,7 @@ Here is the translated home menu screen:
 <style>
 .screenshot {
   max-height: min(700px, 100vh);
+  width: auto;
   max-width: 100%;
   --font-size: 30px;
 }
@@ -233,19 +234,17 @@ See [Shop](/guide/shop/)
 
 How do I obtain more characters?
 
-Apart from characters you'll receive after completing certain chapters in the story, you will want to spend 50 Ether stones on multi-pulls for Premium Gachas. 
+Apart from characters you'll receive after completing certain chapters in the story, you will want to spend 50 {% include item.html id=2 %} on multi-pulls for Limited-time Gacha and Permanent Gacha. 
 
-Characters in Live A Hero are divided into two categories, namely Heroes and Sidekick, Heroes are the character you use in battle while sidekicks are their partner that act like an equipment i.e.: providing stats boost and skills to the hero.
+Characters in Live A Hero are divided into two categories, namely Heroes and Sidekick. Heroes are the character you use in battle while sidekicks are their partner that act like an equipment i.e.: providing stats boost and skills to the hero.
 
-You can get both heroes and sidekicks from the Premium Gacha
+You can get both heroes and sidekicks from the Limited-time Gacha and Permanent Gacha
 
-Premium Gachas are mainly based on the current event.
-
-### Ether Stones (Premium Event Gacha/Premium Standard Gacha)
+### Ether Stones (Limited-time Gacha and Permanent Gacha)
 
 5 {% include item.html id=2 %} for Single Pull, 50 {% include item.html id=2 %} for Multi-Pull
 
-Bare to mind to do multi-pulls if you want to obtain a guaranteed ☆4 or ☆5 on the 10th pull. 
+Multi-pulls has a guaranteed ☆4 or ☆5 on the 10th pull, so it is often recommended to save enough {% include item.html id=2 %} until you can do a multi-pull.
 
 It's also recommended to pull mainly from the Event Gachas since they usually include drops from the Premium Standard Gacha anyway.
 
@@ -259,19 +258,6 @@ Here are some ways to earn more free stones:
 - Purchase stones with real-life money. (Be responsible!)
 - Gain stones from LifeWonders after server maintenance, issues, or login campaigns.
 
-### Friend Points (Friend Points Gacha)
-
-1000 points for 10-Pull only
-
-Give a variety of items such as: {% include item.html id=11 %}, {% include item.html id=35 %}, {% include item.html id=31 %}
-
-The grand prize in Friend Gacha is a player sidekick dupe {% include item.html id=219991 %}.
-
-- Gain +50 {% include item.html id=42 %} every time you use other player's support
-- Gain +50 {% include item.html id=42 %} every time other player use your support
-- Gain +100 {% include item.html id=42 %} every time you use your friend's support
-- Gain +100 {% include item.html id=42 %} every time your friend use your support
-
 ### Ether Tickets
 
 {% include item.html id=10 %} are rare tickets that allow for a single pull (can't do multi-pulls sadly with these tickets) on any Premium Gacha.
@@ -282,26 +268,38 @@ The grand prize in Friend Gacha is a player sidekick dupe {% include item.html i
 
 ## Friend Code/Friend
 
-Despite the game being relatively new there are a lot of players who has max leveled unit (level 60) and if you're lucky enough to be accepted as friend by them, 
-you will now have a Support that can carry your party all on their own for most of the quests, and the best part of this is that friend supports characters cost nothing to borrow in fact it gives friend point to you and your friend.
+Many existing players have a suite of max leveled units and sidekicks to be borrowed by other players. Having strong friend support can carry your party all on their own for most of the quests, and the best part of this is that friend supports characters cost nothing to borrow. In fact, it gives {% include item.html id=42 %} to you and your friend.
+
+- Each time when you use another player's support that is not your friend yet, both you and the other player gain +50 {% include item.html id=42 %}
+- Each time when you use your friend's support, both you and your friend gain +100 {% include item.html id=42 %}
 
 To gain friends quickly, you will want to share your friend code, which is a 9-digit code (found in the Friends section of the game), in various places. A good place for now is LAH community discord.
 
-
 ## About Characters Rarity
 
-The game contains up to 4 ratings for each hero, from a 3 star rating to 6 star rating, any hero can be upgraded to 6 star rating eventually and as of now no hero starts at 6 star rating.
+There are two types of hero:
 
-Each hero has two different portrait, with the first unlocked from the beginning and the second unlocked at 5 star rarity (for natural 5 star heroes the two portraits are unlocked from the beginning)
+- **Regular Heroes** have initial star rating from 3 star to 5 star
+  - They can be obtained from Permanent Gacha banner, Limited-time Gacha banner, and certain Missions or Shops
+  - Each regular hero has two different portraits. Hero with initial rating of 5 star will have 2 portraits unlocked immediately. Other hero need to be first upgraded to 5 star to unlocked the second portrait
+- **Mob Heroes** have initial star rating at 1 star
+  - They usually can only be obtained by exchanging in Event limited shop
+  - Each mob hero only has one portrait, and has no voice actings
+
+Any heroes can be upgraded to 6 star.
 
 Sidekicks has different system than heroes, with a 3 star rating to 4 star rating, and no possible way to upgrade rarity.
 
 
 ## About Team
 
-A team is made of up of 4 of your own heroes ,4 of your sidekicks and, when you enter battle, 1 Support (a hero and sidekick from another player), for a total of 5 Heroes and 5 sidekicks. 
+A team is made of up of 5 Heroes and 5 sidekicks.
 
-4 heroes can fight at one time, with one of your heroes being sub-heroes. When one of your hero is defeated, it will be swapped out for a sub-hero in its place at the next turn.
+In most battles, you only need to have 4 pairs of your own heroes and sidekicks, then just borrow a friend support for one extra pair of hero and sidekick.
+
+Each hero can also equip some sidekick passives. Hero with <= 5 star rank can equip up to 2 sidekick passives. Hero with 6 star rank can equip up to 3 sidekick passives.
+
+4 heroes can fight at one time, with one of your heroes being sub-heroes. When one of the hero in your team is defeated, it will be swapped out for a sub-hero in its place at the next turn.
 
 ### Support Unit
 
