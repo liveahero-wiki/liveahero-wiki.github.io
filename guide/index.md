@@ -42,27 +42,6 @@ If all of this is fulfilled you will be then redirected to the Home UI where you
 
 Here is the translated home menu screen:
 
-<style>
-.screenshot {
-  max-height: min(700px, 100vh);
-  width: auto;
-  max-width: 100%;
-  --font-size: 30px;
-}
-.screenshot text {
-  font: bold var(--font-size) sans-serif;
-  fill: white;
-}
-.image-mapper-shape {
-  fill: rgba(0, 0, 0, 0.5);
-  stroke: white;
-  stroke-width: 5px;
-}
-g:hover .image-mapper-shape {
-  opacity: 20%;
-}
-</style>
-
 <svg class="screenshot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1926">
 
 <defs>
