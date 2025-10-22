@@ -10,6 +10,64 @@ banner: true
 
 You can read scenarios, and battle to obtain items.
 
+<svg class="screenshot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1926">
+
+<defs>
+  <filter x="0" y="0" width="1" height="1" id="solid">
+    <feFlood flood-color="#000" result="bg" />
+    <feMerge>
+      <feMergeNode in="bg"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+</defs>
+
+<image xlink:href="/assets/img/quest-type.jpg" style="width: 1080px;"></image>
+<g>
+<rect x="121.02564102564102" y="342.56410256410254" width="838.974358974359" height="262.56410256410254" class="image-mapper-shape" data-index="1"></rect>
+<text filter="url(#solid)" x="200" y="320">Event Quest </text>
+</g>
+<g class="tippy-tp" data-template="main-quest-tip">
+<rect x="128.2051282051282" y="712.8205128205127" width="823.5897435897436" height="260.51282051282067" class="image-mapper-shape" data-index="2"></rect>
+<text filter="url(#solid)" x="200" y="690"> Main Quest</text>
+</g>
+<g>
+<rect x="118.97435897435898" y="1012.3076923076923" width="841.025641025641" height="128.2051282051283" class="image-mapper-shape" data-index="3"></rect>
+<text filter="url(#solid)" x="180" y="1090"> Past Event</text>
+</g>
+<g>
+<rect x="121.02564102564102" y="1182.5641025641025" width="393.8461538461539" height="212.30769230769238" class="image-mapper-shape" data-index="4"></rect>
+<text filter="url(#solid)" x="200" y="1225">Training Quest</text>
+</g>
+<g class="tippy-tp" data-template="character-quest-tip">
+<rect x="557.9487179487179" y="1180.5128205128206" width="398.974358974359" height="220.51282051282055" class="image-mapper-shape" data-index="5"></rect>
+<text filter="url(#solid)" x="610" y="1225">Character Quest</text>
+</g>
+<g class="tippy-tp" data-template="challenge-simulator-tip">
+<rect x="114.87179487179488" y="1436.923076923077" width="403.07692307692304" height="225.64102564102564" class="image-mapper-shape" data-index="6"></rect>
+<text filter="url(#solid)" x="180" y="1490">Challenge Simulator </text>
+</g>
+<g class="tippy-tp" data-template="unexplored-tip">
+<rect x="558.974358974359" y="1437.948717948718" width="402.051282051282" height="222.56410256410254" class="image-mapper-shape" data-index="7"></rect>
+<text filter="url(#solid)" x="610" y="1490">Unexplored</text>
+</g>
+</svg>
+
+<div style="display: none">
+<div id="main-quest-tip" markdown="1">
+See [Main Quests](/main_quests/)
+</div>
+<div id="character-quest-tip" markdown="1">
+See [Character Quests](/chara_quests/)
+</div>
+<div id="challenge-simulator-tip" markdown="1">
+See [Challenge Simulator](/guide/challenge_simulator/)
+</div>
+<div id="unexplored-tip" markdown="1">
+See [Unexplored](/guide/unexplored/)
+</div>
+</div>
+
 ## Quest Selection
 
 On the quest selection menu, by either hold tapping on the quest banner, or by tapping on the magnifying glass icon, will display the information of enemies encountered, along with the items that can possibly be obtained.
