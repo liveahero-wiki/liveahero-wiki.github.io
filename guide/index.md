@@ -44,7 +44,8 @@ Here is the translated home menu screen:
 
 <style>
 .screenshot {
-  height: 700px;
+  height: min(700px, 100vh);
+  max-width: 100%;
 }
 .screenshot text {
   font: bold 30px sans-serif;
@@ -73,102 +74,159 @@ g:hover .image-mapper-shape {
 </defs>
 
 <image xlink:href="/assets/img/screenshot/home.jpg" style="width: 1080px;"></image>
-<a xlink:href="#" xlink:title="Name card">
-<g>
+<g class="tippy-tp" data-template="name-card-tip">
 <circle cx="70.76923076923076" cy="75.8974358974359" r="63.763204276387945" class="image-mapper-shape" data-index="1"></circle>
 <text filter="url(#solid)" x="10" y="150">Name card</text>
 </g>
-</a>
-<a xlink:href="#" xlink:title="Quests">
-<g>
+<g class="tippy-tp" data-template="quest-tip">
 <rect x="87.17948717948718" y="1223.5897435897436" width="250.25641025641028" height="253.33333333333326" class="image-mapper-shape" data-index="2"></rect>
 <text filter="url(#solid)" x="170" y="1455">Quest</text>
 </g>
-</a>
-<a xlink:href="#" xlink:title="Event">
-<g>
+<g class="tippy-tp" data-template="event-tip">
 <rect x="355.8974358974359" y="1226.6666666666667" width="367.1794871794872" height="251.28205128205127" class="image-mapper-shape" data-index="3"></rect>
 <text filter="url(#solid)" x="500" y="1455">Event</text>
 </g>
-</a>
-<a xlink:href="#" xlink:title="Sales">
-<g>
+<g class="tippy-tp" data-template="sales-tip">
 <rect x="745.6410256410256" y="1226.6666666666667" width="249.23076923076917" height="117.94871794871779" class="image-mapper-shape" data-index="4"></rect>
 <text filter="url(#solid)" x="820" y="1335">Sales</text>
 </g>
-</a>
-<a xlink:href="#" xlink:title="Office">
-<g>
+<g class="tippy-tp" data-template="office-tip">
 <rect x="743.5897435897435" y="1362.051282051282" width="248.2051282051283" height="111.79487179487182" class="image-mapper-shape" data-index="5"></rect>
 <text filter="url(#solid)" x="820" y="1455">Ofiice</text>
 </g>
-</a>
-<a xlink:href="#" xlink:title="Present">
-<g>
+<g class="tippy-tp" data-template="present-tip">
 <circle cx="142.5641025641026" cy="1600.0000000000002" r="50.28779762925641" class="image-mapper-shape" data-index="6"></circle>
 <text filter="url(#solid)" x="80" y="1660">Presents</text>
 </g>
-</a>
-<a xlink:href="#" xlink:title="News">
-<g>
+<g class="tippy-tp" data-template="news-tip">
 <circle cx="277.94871794871796" cy="1601.025641025641" r="52.31774664556657" class="image-mapper-shape" data-index="7"></circle>
 <text filter="url(#solid)" x="240" y="1660">News</text>
 </g>
-</a>
-<a xlink:href="#" xlink:title="Missions">
-<g>
+<g class="tippy-tp" data-template="mission-tip">
 <circle cx="408.20512820512823" cy="1602.0512820512822" r="56.735658198725396" class="image-mapper-shape" data-index="8"></circle>
 <text filter="url(#solid)" x="350" y="1660">Missions</text>
 </g>
-</a>
-<a xlink:href="#" xlink:title="Options">
-<g>
+<g class="tippy-tp" data-template="options-tip">
 <circle cx="541.5384615384615" cy="1602.051282051282" r="55.28956706438385" class="image-mapper-shape" data-index="9"></circle>
 <text filter="url(#solid)" x="490" y="1660">Options</text>
 </g>
-</a>
-<a xlink:href="#" xlink:title="Friends">
-<g>
+<g class="tippy-tp" data-template="friends-tip">
 <circle cx="670.7692307692307" cy="1601.025641025641" r="52.34789807251212" class="image-mapper-shape" data-index="10"></circle>
 <text filter="url(#solid)" x="615" y="1660">Friends</text>
 </g>
-</a>
-<a xlink:href="#" xlink:title="Reception setting">
-<g>
+<g class="tippy-tp" data-template="reception-setting-tip">
 <circle cx="976.4102564102565" cy="260.51282051282044" r="60.451946782733835" class="image-mapper-shape" data-index="11"></circle>
 </g>
-</a>
-<a xlink:href="#" xlink:title="Home">
-<g>
+<g class="tippy-tp" data-template="home-tip">
 <rect x="36.92307692307692" y="1720" width="173.33333333333331" height="178.46153846153857" class="image-mapper-shape" data-index="12"></rect>
 <text filter="url(#solid)" x="85" y="1890">Home</text>
 </g>
-</a>
-<a xlink:href="#" xlink:title="Training">
-<g>
+<g class="tippy-tp" data-template="training-tip">
 <rect x="243.07692307692307" y="1724.1025641025642" width="176.41025641025644" height="174.35897435897436" class="image-mapper-shape" data-index="13"></rect>
 <text filter="url(#solid)" x="275" y="1890">Training</text>
 </g>
-</a>
-<a xlink:href="#" xlink:title="Teams">
-<g>
+<g class="tippy-tp" data-template="team-tip">
 <rect x="450.2564102564103" y="1722.051282051282" width="174.35897435897436" height="174.35897435897436" class="image-mapper-shape" data-index="14"></rect>
 <text filter="url(#solid)" x="485" y="1890">Teams</text>
 </g>
-</a>
-<a xlink:href="#" xlink:title="Gacha">
-<g>
+<g class="tippy-tp" data-template="gacha-tip">
 <rect x="654.3589743589744" y="1722.051282051282" width="178.46153846153845" height="177.43589743589746" class="image-mapper-shape" data-index="15"></rect>
 <text filter="url(#solid)" x="690" y="1890">Gacha</text>
 </g>
-</a>
-<a xlink:href="#" xlink:title="Shop">
-<g>
+<g class="tippy-tp" data-template="shop-tip">
 <rect x="863.5897435897435" y="1720" width="177.43589743589757" height="178.46153846153857" class="image-mapper-shape" data-index="16"></rect>
 <text filter="url(#solid)" x="915" y="1890">Shop</text>
 </g>
-</a>
 </svg>
+
+<div style="display: none">
+<div id="name-card-tip" markdown="1">
+**Name Card**
+
+Customize your name card to show off to other players.
+</div>
+<div id="quest-tip" markdown="1">
+**Quests**
+
+You can read scenarios, and battle to obtain items.
+
+See [Quests](/guide/quest/)
+</div>
+<div id="event-tip" markdown="1">
+**Event**
+
+Current active events
+
+See [Events](/events/)
+</div>
+<div id="sales-tip" markdown="1">
+**Sales**
+
+Dispatch your heroes and sidekicks to Sales to obtain items
+
+See [Sales](/guide/sale/)
+</div>
+<div id="office-tip" markdown="1">
+**Office**
+
+Upgrade Office level to claim reward every 24 hours.
+</div>
+<div id="present-tip" markdown="1">
+Claim presents from LifeWonders
+</div>
+<div id="news-tip" markdown="1">
+Game news
+</div>
+<div id="mission-tip" markdown="1">
+**Mission**
+
+Complete missions to obtain items
+
+See [Mission](/guide/mission/)
+</div>
+<div id="options-tip" markdown="1">
+Game settings
+</div>
+<div id="friends-tip" markdown="1">
+Find and manage your in-game friend list. You can check your Player-ID here.
+</div>
+<div id="reception-setting-tip" markdown="1">
+Customize your home screen
+</div>
+<div id="home-tip" markdown="1">
+It is this page
+</div>
+<div id="training-tip" markdown="1">
+**Training**
+
+Upgrade your heroes and sidekicks
+
+See [Training](/guide/training/)
+</div>
+<div id="team-tip" markdown="1">
+**Teams**
+
+Form teams with heroes and sidekicks to battle.
+
+See [Battle](/guide/battle/)
+</div>
+<div id="gacha-tip" markdown="1">
+**Gacha**
+
+Pull new heroes and sidekicks from gacha banners with {% include item-icon.html id=2 %},
+{% include item-icon.html id=3 %} and {% include item-icon.html id=10 %}.
+There is also {% include item.html id=42 %} gacha to pull other items.
+
+See [Gacha](/guide/gacha/)
+</div>
+<div id="shop-tip" markdown="1">
+**Shop**
+
+Exchange items and buy in-app purchase items.
+
+See [Shop](/guide/shop/)
+</div>
+</div>
 
 ## Summon Currency
 
