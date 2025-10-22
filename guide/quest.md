@@ -116,3 +116,7 @@ There are different Rank Up Items available each day. The attributes available d
 ### Parallel Quartz Quests
 
 {% include quest-group.html chapterId=206 %}
+
+### Stamp of Approval Quests
+
+{% include quest-group.html chapterId=207 %}
