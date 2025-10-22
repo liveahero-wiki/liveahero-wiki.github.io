@@ -21,6 +21,16 @@ banner: true
 </defs>
 
 <image xlink:href="/assets/img/screenshot/training.jpg" style="width: 1080px;"></image>
+
+<g class="tippy-tp" data-template="hero-view-tip" style="--font-size: 30px">
+<circle cx="820.5128205128206" cy="233.84615384615384" r="59.80463481892612" class="image-mapper-shape" data-index="9"></circle>
+<text filter="url(#solid)" x="700" y="273">Hero List</text>
+</g>
+<g class="tippy-tp" data-template="sidekick-view-tip" style="--font-size: 30px">
+<circle cx="972.3076923076923" cy="233.84615384615384" r="58.92751762963376" class="image-mapper-shape" data-index="10"></circle>
+<text filter="url(#solid)" x="850" y="273">Sidekick List</text>
+</g>
+
 <g>
 <rect x="55.38461538461539" y="334.35897435897436" width="965.1282051282052" height="146.66666666666669" class="image-mapper-shape" data-index="1"></rect>
 <text filter="url(#solid)" x="435" y="420">Level Up</text>
@@ -56,6 +66,12 @@ banner: true
 </svg>
 
 <div style="display: none">
+<div id="hero-view-tip" markdown="1">
+View your Heroes
+</div>
+<div id="sidekick-view-tip" markdown="1">
+View your Sidekicks
+</div>
 <div id="parallel-weapon-tip" markdown="1">
 **Parallel Weapon Remodelling**
 
