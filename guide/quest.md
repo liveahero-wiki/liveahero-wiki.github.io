@@ -22,7 +22,7 @@ You can read scenarios, and battle to obtain items.
   </filter>
 </defs>
 
-<image xlink:href="/assets/img/quest-type.jpg" style="width: 1080px;"></image>
+<image xlink:href="/assets/img/screenshot/quest-type.jpg" style="width: 1080px;"></image>
 <g>
 <rect x="121.02564102564102" y="342.56410256410254" width="838.974358974359" height="262.56410256410254" class="image-mapper-shape" data-index="1"></rect>
 <text filter="url(#solid)" x="200" y="320">Event Quest </text>
