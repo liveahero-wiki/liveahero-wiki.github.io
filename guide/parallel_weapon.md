@@ -16,7 +16,7 @@ Parallel Weapon Level (P.Lv) can be increased by consuming {% include item.html 
 
 Increasing P.Lv will enhance your hero's parameter linearly.
 
-{% include item.html id=59 %} can be obtained from Event Shop and [Challenge Simulator](/guide/challenge_simulator/) Shop.
+{% include item.html id=59 %} can be obtained from [daily {% include item.html id=59 %} Quest](/guide/quest/#parallel-quartz-quests), Event Shop and [Challenge Simulator](/guide/challenge_simulator/) Shop.
 
 ## Parallel Weapon Form
 
@@ -26,10 +26,11 @@ Parallel Weapon Form can be changed using Design Item.
 
 A few points in regards to change form:
 
-- Changing form is only possible after a minimum of level 1 parallel weapon.
-- Changing form require one design item and override the previous form.
+- Changing form is only possible when P.Lv >= 1
+- Changing form will consume one Design Item and override the previous form.
+  - Design Item **will not be refunded** when overriden by another Design Item
 - In the parallel weapon interface, you can change the weapon form by clicking the blue "変更" (change) button.
-- The level of parallel weapon will stay the same even after changing forms.
+- Parallel Weapon Level will stay the same even after changing forms.
 
 Each form will give different status enhancement according to parallel weapon's level, such as more ATK or HP:
 
