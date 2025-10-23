@@ -209,22 +209,19 @@ See [Shop](/guide/shop/)
 </div>
 </div>
 
-## Friend Code/Friend
+At this point, you can start exploring other important concepts of this game:
 
-Many existing players have a suite of max leveled units and sidekicks to be borrowed by other players. Having strong friend support can carry your party all on their own for most of the quests, and the best part of this is that friend supports characters cost nothing to borrow. In fact, it gives {% include item.html id=42 %} to you and your friend.
-
-- Each time when you use another player's support that is not your friend yet, both you and the other player gain +50 {% include item.html id=42 %}
-- Each time when you use your friend's support, both you and your friend gain +100 {% include item.html id=42 %}
-
-To gain friends quickly, you will want to share your friend code, which is a 9-digit code (found in the Friends section of the game), in various places. A good place for now is LAH community discord.
-
-### Support Unit
-
-{:refdef: style="text-align: center;"}
-<img src="/assets/img/Support.png" alt="Team" height=500px loading="lazy">
-{: refdef}
-
-You can set your own support unit from the support setting button in team menu, select the hero and the corresponding sidekick to set as your support so that your friends can use your unit in battle (thus netting you friend points)
+- [Gacha](/guide/gacha/)
+  - The main source of new heroes and sidekicks
+- [Battle](/guide/battle/)
+- [Friend Support](/guide/friend_support/)
+  - Borrow strong support units from other players to help you clear quests
+- [Training](/guide/training)
+  - How to make your heroes and sidekicks stronger in battle
+  - In the early stage, beginners can mostly ignore Parallel Weapon, Blooming and Skill Tree Enhancement
+- [Quests](/guide/quest/)
+  - Read scenarios and battle to earn rewards
+- [Mission](/guide/mission/), [Login Bonus](/guide/login_bonus/)
 
 ## Keeping Your Account Safe
 
@@ -239,18 +236,6 @@ This means that making a copy of your userKey and keeping it somewhere safe is h
 You can find userKey on Android devices under `/SD/Android/data/jp.co.lifewonders.liveahero/files/Data/`.
 
 For Android 11+, you may need to **connect your phone to a computer** and access app data folder from your computer.
-
-### Player ID
-
-From the main menu, select "Friends" and then "Search for Friends".
-
-On the lower part of the screen you will find your Player ID. Noting this number down is recommended, as it is something Lifewonders will ask you if you have to contact their support to recover your account.
-
-<div markdown="0">
-{% include image.html path="/assets/img/Playerid.png"
-  class="screenshot"
-  title="How to find Live A Hero Player ID" %}
-</div>
 
 ## How to Back-up Your Data
 
