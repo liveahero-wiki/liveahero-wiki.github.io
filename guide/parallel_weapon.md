@@ -6,7 +6,7 @@ banner: true
 * this will be unordered
 {:toc}
 
-### Parallel Weapon Remodelling
+## Parallel Weapon Remodelling
 
 After clearing Main Quest 1-3, episode 13, a new feature **Parallel Weapon Remodelling** will be available and can be accessed from the [Training](/guide/training/) menu.
 
@@ -18,7 +18,7 @@ Increasing P.Lv will enhance your hero's parameter linearly.
 
 {% include item.html id=59 %} can be obtained from Event Shop and [Challenge Simulator](/guide/challenge_simulator/) Shop.
 
-### Parallel Weapon Form
+## Parallel Weapon Form
 
 Aside from level, each parallel weapon has 4 different forms.
 
@@ -33,7 +33,7 @@ A few points in regards to change form:
 
 Each form will give different status enhancement according to parallel weapon's level, such as more ATK or HP:
 
-- {% include item-icon.html id=60 %} Base Design
+### {% include item-icon.html id=60 %} Base Design
 
 | Status           | Max Enhancement at P.Lv 100 |
 |------------------|----------------------------|
@@ -41,8 +41,7 @@ Each form will give different status enhancement according to parallel weapon's 
 | ATK              | 500                        |
 | Damage Reduction | 250                        |
 
-
-- {% include item-icon.html id=61 %} Attack Design
+### {% include item-icon.html id=61 %} Attack Design
 
 | Status           | Max Enhancement at P.Lv 100 |
 |------------------|----------------------------|
@@ -50,8 +49,7 @@ Each form will give different status enhancement according to parallel weapon's 
 | ATK              | 750                        |
 | Damage Reduction | 187                        |
 
-
-- {% include item-icon.html id=62 %} Physical Design
+### {% include item-icon.html id=62 %} Physical Design
 
 | Status           | Max Enhancement at P.Lv 100 |
 |------------------|----------------------------|
@@ -60,7 +58,7 @@ Each form will give different status enhancement according to parallel weapon's 
 | Damage Reduction | 187                        |
 
 
-- {% include item-icon.html id=63 %} Guard Design
+### {% include item-icon.html id=63 %} Guard Design
 
 | Status           | Max Enhancement at P.Lv 100 |
 |------------------|----------------------------|
