@@ -24,11 +24,14 @@ banner: true
 
 <g class="tippy-tp" data-template="hero-view-tip" style="--font-size: 30px">
 <circle cx="820.5128205128206" cy="233.84615384615384" r="59.80463481892612" class="image-mapper-shape" data-index="9"></circle>
-<text filter="url(#solid)" x="700" y="273">Hero List</text>
+<text filter="url(#solid)" x="750" y="290">Hero List</text>
 </g>
 <g class="tippy-tp" data-template="sidekick-view-tip" style="--font-size: 30px">
 <circle cx="972.3076923076923" cy="233.84615384615384" r="58.92751762963376" class="image-mapper-shape" data-index="10"></circle>
-<text filter="url(#solid)" x="850" y="273">Sidekick List</text>
+<text filter="url(#solid)" x="900" y="273">
+<tspan x="900" dy="1.3rem">Sidekick</tspan>
+<tspan x="920" dy="1.3rem">List</tspan>
+</text>
 </g>
 
 <g>
