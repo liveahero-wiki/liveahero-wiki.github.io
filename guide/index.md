@@ -209,42 +209,6 @@ See [Shop](/guide/shop/)
 </div>
 </div>
 
-## Summon Currency
-
-How do I obtain more characters?
-
-Apart from characters you'll receive after completing certain chapters in the story, you will want to spend 50 {% include item.html id=2 %} on multi-pulls for Limited-time Gacha and Permanent Gacha. 
-
-Characters in Live A Hero are divided into two categories, namely Heroes and Sidekick. Heroes are the character you use in battle while sidekicks are their partner that act like an equipment i.e.: providing stats boost and skills to the hero.
-
-You can get both heroes and sidekicks from the Limited-time Gacha and Permanent Gacha
-
-### Ether Stones (Limited-time Gacha and Permanent Gacha)
-
-5 {% include item.html id=2 %} for Single Pull, 50 {% include item.html id=2 %} for Multi-Pull
-
-Multi-pulls has a guaranteed ☆4 or ☆5 on the 10th pull, so it is often recommended to save enough {% include item.html id=2 %} until you can do a multi-pull.
-
-It's also recommended to pull mainly from the Event Gachas since they usually include drops from the Premium Standard Gacha anyway.
-
-Here are some ways to earn more free stones:
-
-- Earn 1 {% include item.html id=2 %} for every quest you complete for the first time. Look for new events for fresh quests to complete. 
-- Earn 50 {% include item.html id=2 %} for first day of play 
-- Earn 6 {% include item.html id=2 %} for daily logins on a weekly cycle (2 on Day 4, 4 on Day 8)
-- Earn 1 {% include item.html id=2 %} daily for completing the daily missions
-- Earn extra stones for cumulative logins , Main quest missions and standard missions, check [missions](/guide/mission/) for detail
-- Purchase stones with real-life money. (Be responsible!)
-- Gain stones from LifeWonders after server maintenance, issues, or login campaigns.
-
-### Ether Tickets
-
-{% include item.html id=10 %} are rare tickets that allow for a single pull (can't do multi-pulls sadly with these tickets) on any Premium Gacha.
-
-- Gain 1 {% include item.html id=10 %} from event shops (usually 10 from a new event).
-- Gain 1 {% include item.html id=10 %} as a possible reward by completing a high difficulty mission.
-
-
 ## Friend Code/Friend
 
 Many existing players have a suite of max leveled units and sidekicks to be borrowed by other players. Having strong friend support can carry your party all on their own for most of the quests, and the best part of this is that friend supports characters cost nothing to borrow. In fact, it gives {% include item.html id=42 %} to you and your friend.
@@ -253,32 +217,6 @@ Many existing players have a suite of max leveled units and sidekicks to be borr
 - Each time when you use your friend's support, both you and your friend gain +100 {% include item.html id=42 %}
 
 To gain friends quickly, you will want to share your friend code, which is a 9-digit code (found in the Friends section of the game), in various places. A good place for now is LAH community discord.
-
-## About Characters Rarity
-
-There are two types of hero:
-
-- **Regular Heroes** have initial star rating from 3 star to 5 star
-  - They can be obtained from Permanent Gacha banner, Limited-time Gacha banner, and certain Missions or Shops
-  - Each regular hero has two different portraits. Hero with initial rating of 5 star will have 2 portraits unlocked immediately. Other hero need to be first upgraded to 5 star to unlocked the second portrait
-- **Mob Heroes** have initial star rating at 1 star
-  - They usually can only be obtained by exchanging in Event limited shop
-  - Each mob hero only has one portrait, and has no voice actings
-
-Any heroes can be upgraded to 6 star.
-
-Sidekicks has different system than heroes, with a 3 star rating to 4 star rating, and no possible way to upgrade rarity.
-
-
-## About Team
-
-A team is made of up of 5 Heroes and 5 sidekicks.
-
-In most battles, you only need to have 4 pairs of your own heroes and sidekicks, then just borrow a friend support for one extra pair of hero and sidekick.
-
-Each hero can also equip some sidekick passives. Hero with <= 5 star rank can equip up to 2 sidekick passives. Hero with 6 star rank can equip up to 3 sidekick passives.
-
-4 heroes can fight at one time, with one of your heroes being sub-heroes. When one of the hero in your team is defeated, it will be swapped out for a sub-hero in its place at the next turn.
 
 ### Support Unit
 

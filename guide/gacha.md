@@ -8,6 +8,8 @@ banner: true
 
 ## About Gacha
 
+**Gacha** is the main source of getting new [heroes](/guide/hero/) and [sidekicks](/guide/sidekick) in this game.
+
 There are two types of Gacha:
 
 - **Permanent/Limited-time Gacha** to obtain heroes and sidekicks:
@@ -29,6 +31,24 @@ How to pull:
 You can check for the details on the obtainable units for the gacha by tapping on the "Offer Ratio" button.
 
 It is highly recommended that you save your {% include item.html id=2 %} only for Limited-time Gacha, as you can get permanent heroes/sidekicks from these gacha banners anyway.
+
+### Source of Summon Currency
+
+You can get currency to pull from Gacha in the following ways (non-exhaustive):
+
+- {% include item.html id=2 %}
+  - Earn 1 {% include item.html id=2 %} for every quest you complete for the first time. Look for   new events for fresh quests to complete. 
+  - Earn 50 {% include item.html id=2 %} for first day of play 
+  - Earn 6 {% include item.html id=2 %} for daily logins on a weekly cycle (2 on Day 4, 4 on Day 8)
+  - Earn 1 {% include item.html id=2 %} daily for completing the daily missions
+  - Earn extra stones for cumulative logins , Main quest missions and standard missions, check [missions](/guide/mission/) for detail
+  - Purchase stones with real-life money. (Spend money responsibly!)
+  - Gain stones from LifeWonders after server maintenance, issues, or login campaigns.
+- {% include item.html id=10 %}
+  - New Event Shop usually have 10 {% include item.html id=10 %}
+  - Some High Difficulty Quest Mission gives 1 {% include item.html id=10 %}
+- {% include item.html id=3 %}
+  - Weekly Mission
 
 ### Search Point
 
