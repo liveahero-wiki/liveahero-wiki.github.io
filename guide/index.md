@@ -170,6 +170,8 @@ Game settings
 </div>
 <div id="friends-tip" markdown="1">
 Find and manage your in-game friend list. You can check your Player-ID here.
+
+See [Friend Support](/guide/friend_support/)
 </div>
 <div id="reception-setting-tip" markdown="1">
 Customize your home screen

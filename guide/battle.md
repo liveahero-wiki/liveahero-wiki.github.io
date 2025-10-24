@@ -39,7 +39,7 @@ Each hero can also equip some sidekick passives. Hero with <= 5 star rank can eq
 <rect x="353.84615384615387" y="171.28205128205127" width="259.4871794871795" height="76.92307692307693" class="image-mapper-shape" data-index="1"></rect>
 <text filter="url(#solid)" x="430" y="190">
 <tspan x="430" dy="1.5rem">Support</tspan>
-<tspan x="430" dy="1.5rem">Management</tspan>
+<tspan x="430" dy="1.5rem">Settings</tspan>
 </text>
 </g>
 <g class="tippy-tp" data-template="enhancement-mode-tip">
@@ -70,6 +70,8 @@ Each hero can also equip some sidekick passives. Hero with <= 5 star rank can eq
 <div style="display: none">
 <div id="support-list-tip" markdown="1">
 Setup your support list for other players to borrow
+
+See [Friend Support](/guide/friend_support/)
 </div>
 <div id="enhancement-mode-tip" markdown="1">
 Toggle on to enable directly upgrading current heroes / sidekicks and adjust fan count / engravement level in this UI
