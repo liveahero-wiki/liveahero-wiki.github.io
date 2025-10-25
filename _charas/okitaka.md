@@ -31,6 +31,7 @@ profile:
     When asked about his hobbies, he mentioned bar hopping, reading, and gaming.
     
     As for games, his interests range widely—from classics like shogi and chess to trading card games and full-scale strategy simulations. Unsurprisingly, he gravitates toward games that require deep strategic thinking.
+h2:
   title: '"Mobile Soldier" Okitaka'
 heroes:
 - stockId: 10751
