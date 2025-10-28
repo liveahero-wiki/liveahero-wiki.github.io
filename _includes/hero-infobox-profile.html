@@ -13,8 +13,14 @@
         <div class="name">{{ firstCardInfo.stockId | stockIdToCharaTitle: 1 }}</div>
         <div class="sub">{{ firstCardInfo.cardName }}</div>
     </div>
-    <div>
-        <img width="64" height="64" src="/cdn/Sprite/icon_star_{{ firstCardInfo.rarity }}.png" loading="lazy">
+    <div style="display: flex; justify-content: center; gap: 10px; margin: 10px;">
+        {% if include.isHero %}
+        <img style="height: 32px;" src="/assets/img/icons/ui_symbol_chara_hero.webp" loading="lazy">
+        <img width="32" height="32" src="/assets/img/icons/icon_element_{{ firstCardInfo.element | element_enum | lowercase}}.webp" loading="lazy">
+        {% else %}
+        <img style="height: 32px;" src="/assets/img/icons/ui_symbol_chara_sidekick.webp" loading="lazy">
+        {% endif %}
+        <img width="32" height="32" src="/assets/img/icons/icon_star_{{ firstCardInfo.rarity }}.webp" loading="lazy">
     </div>
     <table>
         <tbody>

@@ -18,7 +18,7 @@ module LahWiki
     @@element_map = {
       1 => "Fire",
       2 => "Water",
-      3 => "Wood",
+      3 => "Earth",
       4 => "Light",
       5 => "Shadow",
     }
@@ -93,6 +93,10 @@ module LahWiki
 
     def self.status_master(context)
       @@status_master ||= context.registers[:site].data["StatusMaster"]
+    end
+
+    def element_enum(enum)
+      return @@element_map[enum] || "Unknown"
     end
 
     def skill_trigger_json(trigger_s, timing)
