@@ -23321,6 +23321,62 @@
       "isOverrideStatusDescription": true
     }
   },
+  "591": {
+    "skillEffectId": 591,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeHp",
+          "parameter": {
+            "value": 15
+          }
+        },
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 200
+          }
+        },
+        {
+          "class": "ForceAuto",
+          "parameter": []
+        }
+      ],
+      "filename": "status_berserk",
+      "statusId": 78,
+      "canDispel": true,
+      "filterIds": [
+        4,
+        13
+      ],
+      "parameter": false,
+      "description": "狂乱",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        1
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "592": {
     "skillEffectId": 592,
     "skillEffectJson": {
@@ -130644,6 +130700,49 @@
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
+    }
+  },
+  "6378": {
+    "skillEffectId": 6378,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 90
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": true,
+      "description": "システム効果127番付与（誰かの夢）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "effect_PowerUp",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "誰かの夢",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "行動回数+1。ATK-10%。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
     }
   },
   "6379": {
