@@ -35,6 +35,7 @@ h2:
 heroes:
 - stockId: 12091
 - stockId: 12092
+  extra_sprites: fg_roudinStella2510_h02_skin2
 sidekicks:
 - stockId: 12091
   extra_sprites: fg_roudin_s01_skin1,fg_roudin_s01_skin2,fg_roudin_s01_skin3,fg_roudin_s01_skin4

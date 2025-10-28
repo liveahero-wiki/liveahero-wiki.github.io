@@ -87,6 +87,7 @@ heroes:
     summer and the water, it was inevitable that he would want to be a hero who
     deals with water and is appropriate for summer.
 - stockId: 10073
+  extra_sprites: fg_barrelStella2510_h02_skin2
 sidekicks:
 - stockId: 10071
   BIO_S01: |-
