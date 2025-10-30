@@ -481,6 +481,37 @@ figcaption {
 .heroinfobox table {
   margin: 0;
 }
+.chara-badge {
+  border: 1.5px solid #000;
+  border-radius: 4px;
+  padding: 10px;
+}
+.chara-type {
+  display: block;
+  margin: auto;
+  margin-bottom: 2px;
+}
+.chara-stars {
+  display: flex;
+  gap: 1px;
+  justify-content: center;
+}
+.h-star, .s-star, .g-star {
+  width: 12px;
+  height: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.h-star {
+  background-image: url(/assets/img/icons/ui_symbol_star_01.webp);
+}
+.s-star {
+  background-image: url(/assets/img/icons/ui_symbol_star_02.webp);
+}
+.g-star {
+  background-image: url(/assets/img/icons/ui_symbol_star_03.webp);
+}
 $elementColor: #f07d75, #88bcff, #5fcb58, #ffb251, #b88dff;
 @for $i from 1 to 6 {
   .element#{$i} {
