@@ -20,7 +20,7 @@
         {% assign starClass = "h-star" %}
         <img class="chara-type" width="64" height="17" src="/assets/img/icons/ui_symbol_chara_hero.webp" loading="lazy" title="Hero">
         {% else %}
-        {% assign maxStars = 3 %}
+        {% assign maxStars = firstCardInfo.rarity %}
         {% assign starClass = "s-star" %}
         <img class="chara-type" width="88" height="14" src="/assets/img/icons/ui_symbol_chara_sidekick.webp" loading="lazy" title="Sidekick">
         {% endif %}
