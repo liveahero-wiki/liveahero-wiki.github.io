@@ -13,56 +13,78 @@
         <div class="name">{{ firstCardInfo.stockId | stockIdToCharaTitle: 1 }}</div>
         <div class="sub">{{ firstCardInfo.cardName }}</div>
     </div>
-    <div>
-        <img width="64" height="64" src="/cdn/Sprite/icon_star_{{ firstCardInfo.rarity }}.png" loading="lazy">
+    <div style="display: flex; gap: 10px; padding: 10px;">
+        <div class="chara-badge">
+        {% if include.isHero %}
+        {% assign maxStars = 5 %}
+        {% assign starClass = "h-star" %}
+        <img class="chara-type" width="64" height="17" src="/assets/img/icons/ui_symbol_chara_hero.webp" loading="lazy" title="Hero">
+        {% else %}
+        {% assign maxStars = 3 %}
+        {% assign starClass = "s-star" %}
+        <img class="chara-type" width="88" height="14" src="/assets/img/icons/ui_symbol_chara_sidekick.webp" loading="lazy" title="Sidekick">
+        {% endif %}
+
+        <div class="chara-stars" title="{{ firstCardInfo.rarity }} Stars">
+        {% for i in (1..firstCardInfo.rarity) %}
+        <span class="{{ starClass }}"></span>
+        {% endfor %}
+        {% for i in (firstCardInfo.rarity..maxStars) %}
+        <span class="g-star"></span>
+        {% endfor %}
+        </div>
+        </div>
+
+        {% if include.isHero %}
+        {% assign elementName = firstCardInfo.element | element_enum | lowercase %}
+        <img width="56" height="56" src="/assets/img/icons/icon_element_{{ elementName | lowercase}}.webp" loading="lazy" title="{{ elementName }}">
+        {% endif %}
     </div>
     <table>
         <tbody>
             {% if include.isHero %}
             <tr>
-                <th>Attribute</th>
-                <td>{% include hero-element.html element=firstCardInfo.element %}</td>
                 <th>Role</th>
                 <td>{% include hero-role.html role=firstCardInfo.role %}</td>
             </tr>
             {% endif %}
             <tr>
-                <th colspan="2">Illustration</th>
-                <td colspan="2">{% include chara-illustrator.html illustrator=firstCardInfo.illustrator override=overrideIllustrator %}</td>
+                <th>Illustration</th>
+                <td>{% include chara-illustrator.html illustrator=firstCardInfo.illustrator override=overrideIllustrator %}</td>
             </tr>
             <tr>
-                <th colspan="2">Voice</th>
-                <td colspan="2">{% include chara-voice-actor.html cv=firstCardInfo.characterVoice %}</td>
+                <th>Voice</th>
+                <td>{% include chara-voice-actor.html cv=firstCardInfo.characterVoice %}</td>
             </tr>
             <tr>
-                <th colspan="2">Affliation office</th>
-                <td colspan="2">{% include chara-affiliation.html affiliation=firstCardInfo.affiliationOffice override=overrideAffiliation %}</td>
+                <th>Affliation office</th>
+                <td>{% include chara-affiliation.html affiliation=firstCardInfo.affiliationOffice override=overrideAffiliation %}</td>
             </tr>
             <tr>
-                <th colspan="2">Occupation</th>
-                <td colspan="2">{% if overridejob %}<span class="masked">{% endif %}{{ page.occupation | default: firstCardInfo.job }}{% if overridejob %}</span>{% endif %}</td>
+                <th>Occupation</th>
+                <td>{% if overridejob %}<span class="masked">{% endif %}{{ page.occupation | default: firstCardInfo.job }}{% if overridejob %}</span>{% endif %}</td>
             </tr>
 
 {% if page.profile %}
             <tr>
-                <th colspan="2">Birthplace</th>
-                <td colspan="2">{{ page.profile.birthplace }}</td>
+                <th>Birthplace</th>
+                <td>{{ page.profile.birthplace }}</td>
             </tr>
             <tr>
-                <th colspan="2"><abbr class="tippy" data-content="Converted to Earth Calendar">Age</abbr></th>
-                <td colspan="2">{{ page.profile.age }}</td>
+                <th><abbr class="tippy" data-content="Converted to Earth Calendar">Age</abbr></th>
+                <td>{{ page.profile.age }}</td>
             </tr>
             <tr>
-                <th colspan="2"><abbr class="tippy" data-content="Converted to Earth Calendar">Birthday</abbr></th>
-                <td colspan="2">{{ page.profile.birthday }}</td>
+                <th><abbr class="tippy" data-content="Converted to Earth Calendar">Birthday</abbr></th>
+                <td>{{ page.profile.birthday }}</td>
             </tr>
             <tr>
-                <th colspan="2">Height (cm)</th>
-                <td colspan="2">{{ page.profile.height }}</td>
+                <th>Height (cm)</th>
+                <td>{{ page.profile.height }}</td>
             </tr>
             <tr>
-                <th colspan="2">Weight (kg)</th>
-                <td colspan="2">{{ page.profile.weight }}</td>
+                <th>Weight (kg)</th>
+                <td>{{ page.profile.weight }}</td>
             </tr>
 {% endif %}
         </tbody>
