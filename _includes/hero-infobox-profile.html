@@ -36,8 +36,8 @@
         </div>
 
         {% if include.isHero %}
-        {% assign elementName = firstCardInfo.element | element_enum | lowercase %}
-        <img width="56" height="56" src="/assets/img/icons/icon_element_{{ elementName | lowercase}}.webp" loading="lazy" title="{{ elementName }}">
+        {% assign elementName = firstCardInfo.element | element_enum %}
+        <img width="56" height="56" src="/assets/img/icons/icon_element_{{ elementName | downcase }}.webp" loading="lazy" title="{{ elementName }}">
         {% endif %}
     </div>
     <table>
