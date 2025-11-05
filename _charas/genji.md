@@ -1,9 +1,13 @@
 ---
 title: Genji
-unreleased: true
+characterId: 288
 type: humanoid
 gender: male
-sprites: fg_genji_h01,fg_genji_h01_skin1,fg_genji_s01
-icon: icon_genji_s01
+heroes:
+- stockId: 12881
+sidekicks:
+- stockId: 12881
 ---
 
+{% include voice-table.html resourceName="genji"
+%}
