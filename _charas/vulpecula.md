@@ -3,6 +3,8 @@ title: Vulpecula
 characterId: 65
 type: anthro
 gender: male
+h2:
+  title: '"Daybreak Harbinger" Vulpecula'
 heroes:
 - stockId: 10651
   BIO_H01: |-
