@@ -1,5 +1,5 @@
 ---
-title: The City That Carves Goodbyes ～Smoke and Mirrors～
+title: City of Engraved Partings ～Smoke and Mirrors～
 eventId: 147
 jp_title: さよならを刻む街 ～Smoke and Mirrors～
 banner_image: 
