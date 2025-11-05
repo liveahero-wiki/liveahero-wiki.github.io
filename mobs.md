@@ -87,6 +87,12 @@ sprites="fg_villainChasseurEarth_s01,fg_villainChasseurFire_s01,fg_villainChasse
 sprites="fg_villainChasseurEarth_h01,fg_villainChasseurFire_h01,fg_villainChasseurLight_h01,fg_villainChasseurShadow_h01,fg_villainChasseurWater_h01"
 %}
 
+### Coal Tar Kaibutsu
+
+{% include hero-infobox-unreleased.html name="Coal Tar Kaibutsu" mob=true
+sprites="fg_kaibutsuCoalTarEarth_h01,fg_kaibutsuCoalTarFire_h01,fg_kaibutsuCoalTarLight_h01,fg_kaibutsuCoalTarShadow_h01,fg_kaibutsuCoalTarWater_h01"
+%}
+
 ### Engine Kaibutsu (Adult)
 
 {% include hero-infobox-unreleased.html name="Engine Kaibutsu (Adult)" mob=true
