@@ -1,4 +1,6 @@
+{% if include.path != "/cdn/Sprite/" %}
 {% assign dim = include.path | image_dimension %}
+{% endif %}
 <img src="{{ include.path }}" width="{{ dim[0] }}" height="{{ dim[1] }}" loading="lazy"
     {% if include.title %}alt="{{ include.title | xml_escape }}"{% endif %}
     {% if include.style %}style="{{ include.style }}"{% endif %}
