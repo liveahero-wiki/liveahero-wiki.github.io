@@ -23,11 +23,11 @@
   {{ skillV2.description | render_skill_description: status_array }}
 
   {% for changeSkillId in include.changeSkillIds[include.index] %}
-    {% if changeSkillId != include.skillId %}
-      {% assign sid = changeSkillId | downcase %}
-      {% assign skill = site.data.SkillMaster[sid] %}
-      {% assign skillName = site.data.translation.Skill[sid].skillName | default: skill.skillName %}
-      <fieldset class="s-rand-g">
+    {% assign sid = changeSkillId | downcase %}
+    {% assign changeSkill = site.data.SkillMaster[sid] %}
+    {% if changeSkillId != include.skillId and changeSkill.skillName != skill.skillName %}
+      {% assign skillName = site.data.translation.Skill[sid].skillName | default: changeSkill.skillName %}
+      <fieldset class="s-rand-g" data-id="{{ changeSkillId }}">
         <legend>{{ skillName }}</legend>
         {% include skill-description.html skillId=changeSkillId %}
       </fieldset>
