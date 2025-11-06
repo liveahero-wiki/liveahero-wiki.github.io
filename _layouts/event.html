@@ -11,7 +11,7 @@ layout: default
 <table id="event-{{ page.eventId }}" class="event-infobox">
 <tr><th colspan="2">{{ page.title | default: page.jp_title }}</th></tr>
 {% assign banner_image = "/cdn/Sprite/" | append: page.banner_image %}
-<tr><td colspan="2">{% include image.html path=banner_image style="width: 100%" %}</td></tr>
+<tr><td colspan="2">{% include image-event.html path=banner_image style="width: 100%" %}</td></tr>
 <tr><th colspan="2">Duration</th></tr>
 {% if page.gacha %}
 <tr><th>Gacha</th><td data-expiry="{{ page.event_end_time }}">{{ page.event_start_time | date: site.date_format }} to {{ page.event_end_time | date: site.date_format }}</td></tr>

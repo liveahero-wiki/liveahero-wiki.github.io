@@ -48,7 +48,7 @@ section h2 {
 {% if event.timed_bomb == true and event_start_date > current_date %}{% continue %}{% endif %}
 {% if event_date >= current_date %}
 {% assign banner_image = "/cdn/Sprite/" | append: event.banner_image %}
-<tr><td>{% include image.html path=banner_image style="width: 100%" %}</td></tr>
+<tr><td>{% include image-event.html path=banner_image style="width: 100%" %}</td></tr>
 <tr><td data-expiry="{{ event.event_end_time }}"><a href="{{ event.url }}">{{ event.title }}</a> ({{ event.event_start_time | date: "%-d %b %Y" }} ~ {{ event.event_end_time | date: "%-d %b %Y" }})</td></tr>
 {% endif %}
 {% endfor %}
