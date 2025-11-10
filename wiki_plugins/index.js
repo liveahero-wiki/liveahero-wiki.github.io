@@ -17,10 +17,6 @@ module.exports = function(eleventyConfig) {
     };
   });
 
-  eleventyConfig.addFilter("date_to_xmlschema", s => {
-    return new Date(s).toISOString();
-  });
-
   eleventyConfig.collections
 
   eleventyConfig.addFilter("stockIdToLink", s => {
@@ -33,10 +29,6 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter("status_description", s => {
     return `<a>Status: ${s}</a>`
-  });
-
-  eleventyConfig.addFilter("where_exp", a => {
-    return a;
   });
 
   eleventyConfig.addFilter("markdownify", a => {
@@ -59,46 +51,7 @@ module.exports = function(eleventyConfig) {
     return false;
   });
 
-  eleventyConfig.addFilter("push", (array, element) => {
-    const nArray = Array.from(array);
-    nArray.push(element);
-    return nArray;
-  });
-
   eleventyConfig.addFilter("characterIdToPage", a => {
-    return a;
-  });
-
-  eleventyConfig.addFilter("jsonify", s => {
-    return JSON.parse(s)
-  });
-
-  function groupBy(list, keyGetter) {
-    const map = new Map();
-    list.forEach((item) => {
-      const key = keyGetter(item);
-      const collection = map.get(key);
-      if (!collection) {
-          map.set(key, [item]);
-      } else {
-          collection.push(item);
-      }
-    });
-    return map;
-  }
-
-  eleventyConfig.addFilter("group_by", (array, tag) => {
-    if (!(array instanceof Array)) return array;
-
-    const gp = groupBy(array, e => e["tag"]);
-    const result = [];
-    for (const [name, items] of gp.entries()) {
-      result.push({name, items});
-    }
-    return result;
-  });
-
-  eleventyConfig.addFilter("group_by_exp", a => {
     return a;
   });
 
