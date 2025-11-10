@@ -1,5 +1,5 @@
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-module.exports = function(eleventyConfig) {
+export default function(eleventyConfig, markdownIt) {
   // Usage: {% uppercase myVar %} where myVar has a value of "alice"
   // Usage: {% uppercase "alice" %}
   eleventyConfig.addLiquidTag("chara_link", function(liquidEngine) {
@@ -32,7 +32,7 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addFilter("markdownify", a => {
-    return a;
+    return markdownIt.render(a);
   });
 
   eleventyConfig.addFilter("skill_target", a => {

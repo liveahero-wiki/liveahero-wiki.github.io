@@ -1,18 +1,21 @@
-const path = require("path");
-const { DateTime } = require("luxon");
-const yaml = require("js-yaml");
+import { DateTime } from "luxon";
+import yaml from "js-yaml";
 // const markdownItAnchor = require("markdown-it-anchor");
 
 // const pluginRss = require("@11ty/eleventy-plugin-rss");
 // const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 // const pluginNavigation = require("@11ty/eleventy-navigation");
 // const eleventyImage = require("@11ty/eleventy-img");
-const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
-const wiki_plugins = require("./wiki_plugins/index.js");
+import fs from 'fs';
+import path from 'path';
+import markdownIt from "markdown-it";
+
+import wiki_plugins from "./wiki_plugins/index.js";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy({
         "./assets/": "/assets/",
@@ -91,8 +94,13 @@ module.exports = function (eleventyConfig) {
         return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
     });
 
+    //eleventyConfig.setLibrary("md", markdownIt({
+    //    html: true,
+    //    breaks: true,
+    //    linkify: true,
+    //}));
 
-    wiki_plugins(eleventyConfig)
+    wiki_plugins(eleventyConfig, markdownIt)
 
     // Customize Markdown library settings:
     //eleventyConfig.amendLibrary("md", mdLib => {
@@ -134,6 +142,15 @@ module.exports = function (eleventyConfig) {
     };
     const collections = ["posts", "events", "charas", "main_quests"];
 
+    function traverseDataDir(currentDir) {
+        const files = fs.readdirSync(currentDir);
+        const obj = {};
+    
+        files.forEach((file) => {
+            
+        });
+    }
+
     for (const collection of collections) {
         let pages = null;
 
@@ -152,6 +169,11 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addGlobalData("site", function () {
         return site
+    })
+    eleventyConfig.addGlobalData("site.data", function () {
+        console.log("accessing site.data", this);
+        console.log("accessing site.data", eleventyConfig);
+        return null;
     })
 
     eleventyConfig.setLiquidOptions({
