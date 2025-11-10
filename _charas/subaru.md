@@ -1,6 +1,8 @@
 ---
 title: Subaru
 characterId: 27
+type: humanoid
+gender: male
 heroes:
 - stockId: 10271
   BIO_H01: |-
@@ -30,7 +32,7 @@ sidekicks:
     is an unfriendly, jerky and sarcastic cynic.  He tends to dislike unnecessary
     outings and situations where he is disturbed by others, because it throws his
     life into disorder, which is why he also tends to withdraw from things.
-  extra_sprites: fg_subaru_s01_skin1
+  extra_sprites: fg_subaru_s01_skin1,fg_subaru_s01_skin2
 ---
 
 {% include voice-table.html resourceName="subaru"

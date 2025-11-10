@@ -1,6 +1,7 @@
 ---
 title: Sidekick Skill List
 banner: true
+wide_content: true
 ---
 
 <p>For simplicity sake, only active and passive skills at level 50 are listed.</p>
@@ -8,21 +9,25 @@ banner: true
 {% assign cardInfos = SidekickMaster | where: "levelZone", 1 %}
 
 <div class="table-scroll">
-<table class="sort-table">
+<table class="sort-table bordered">
 <tr><th data-type="string">Hero</th><th>SPD</th><th data-type="string">Active</th><th>Active VP</th><th data-type="string">Passive</th></tr>
 {% for c in cardInfos %}
 {% assign page = c.characterId | characterIdToPage %}
 {% assign g = c.growths[0] %}
 <tr>
-<td><a class="item" href="{{ page.url }}/#s{{ c.stockId }}-stats"><img src="/cdn/Sprite/icon_{{ c.resourceName }}_s01.png" loading="lazy"> {{ page.title }}</a></td>
+<td><a class="item" href="{{ page.url }}#s{{ c.stockId }}"><img src="/cdn/Sprite/icon_{{ c.resourceName }}_s01.png" loading="lazy"> {{ page.title }}</a></td>
 <td>{{ g.agility }}</td>
-{% assign active = c.skillIds[0] | downcase %}
-{% assign passive = c.equipmentSkills[0] | downcase %}
-{% assign active_skill = SkillMaster[active] %}
-{% assign passive_skill = SkillMaster[passive] %}
-<td>{% include skill-description.html skill=active_skill %}</td>
+{% assign activeInt = c.skillIds[0] %}
+{% assign passiveInt = c.equipmentSkills[0] %}
+
+{% assign active = activeInt | downcase %}
+{% assign passive = passiveInt | downcase %}
+
+{% assign active_skill = site.data.SkillMaster[active] %}
+{% assign passive_skill = site.data.SkillMaster[passive] %}
+<td>{% include skill-description.html skill=active_skill skillId=activeInt %}</td>
 <td>{{ active_skill.useView }}</td>
-<td>{% include skill-description.html skill=passive_skill %}</td>
+<td>{% include skill-description.html skill=passive_skill skillId=passiveInt %}</td>
 </tr>
 {% endfor %}
 </table>

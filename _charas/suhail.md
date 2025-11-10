@@ -1,6 +1,10 @@
 ---
 title: Suhail
 characterId: 30
+type: humanoid
+gender: male
+h2:
+  title: '"Arousal Voice" Suhail'
 heroes:
 - stockId: 10301
   BIO_H01: |-
@@ -18,6 +22,21 @@ heroes:
     and laugh boldly at the scene, but behind his unconventional way of life, He
     keeps striving to fulfill the promise he once made to his "friend", he is very
     sincere when it comes to friendships.
+- stockId: 10302
+  BIO_H01: |-
+    The day Suhail landed on Tronesion, determined to become the best pirate in the universe, he encountered an inorganic life form, 
+    and that was the day he met his one and only friend.<br>
+    Memories of the past were awakened, and in response, 
+    the parts of his left arm entrusted to him by his friend transformed into the form of a loudspeaker.<br>
+    The suit, reminiscent of a cheering squad, interacted with the parallel weapon and became a voice that echoed far and wide.<br>
+    The overlapping voices of the friends and Suhail shake the stars and sweep all the attention of the listeners.
+  BIO_H02: |-
+    Suhail, who lost part of his memory after being attacked by a Kaibutsu, goes back to his memory to try to remember what he lost.<br>
+    He exchanged a promise with his friend, to become the best pirate in the universe, to steal all the attention, love and wealth.<br>
+    He didn't forget...the day he met his friend, the day he made the pirate gang, the day he lost his left arm<br>
+    It's because of this promise that Suhail can laugh heartily.<br>
+    If you encourage the universe with all your might, then the universe will resonate and also encourage you back, this is what he learned from his friend.
+  extra_sprites: fg_suhailChocolatefes2303_h01_skin2,fg_suhailChocolatefes2303_h02_skin2,fg_suhailChocolatefes2303_h02_skin3
 sidekicks:
 - stockId: 10301
   BIO_S01: |-
@@ -46,6 +65,21 @@ RELATION = "I will absolutely make that dragon fellow my henchman someday!<br>So
 TOUCH = "Whoa, want a skinship with me?<br>Even my henchmen don't have this kind of courage,<br>Ye've piqued my interest…well then, come here!"
 TRAIN = "How about opening yer treasures, too?"
 TRAINED = "Yer waving me around, yer good...!"
+%}
+
+{% include voice-table.html resourceName="suhailChocolatefes2303"
+h_gachaResult = "I heard it, your call for my name, comrade!<br>Hee, aren't you interesting!<br>No matter where you are in the universe, I can always give you an answer!"
+s_gachaResult = "Sidekick?<br>Supporting the heroes?<br>…Gahaha! Your eyes are serious!<br>Of course, I will agree,ooks like you have an interesting plan?"
+APPRECIATION = "What's with that gloomy look, comrade.<br>…good grief, oi henchman, it's a party, do the preparation!<br>Of course you will join! Bring something interesting!"
+DAILY = "There is only one person that I call my friend.<br>The one who steal a left arm from this pirate!<br>And now he live on as my arm, most interesting, right?"
+HERO = "That procy, looks like he has resolved himself to be the bancho.<br>Standing with his body, for the sake of his companion, not bad.<br>It's the same for pirates!"
+PLAYER = "It's fine to let it off your heart, you're very interesting!<br>You're going to win the voice in my heart!<br>…but, are you ready for it?"
+RELATION = "Anna…someone who can comment on me without being timid, it's been a long time!<br>What an open-minded fellow!<br>Let's advise her to be a pirate after high school, gahaha!"
+TOUCH = "Oh? Laying your hands on me, you got guts as always.<br>But…that's not enough.<br>Let me teach you the basics, don't be scared now, okay?"
+TRAIN = "Show me your guts!"
+TRAINED = "Guh…it's hitting me in the gut…!"
+EVENTA = "This school is shrouded with a sweet smell..<br>I didn’t like sweet…what! This chocos are very good with alcohol!<br>Henchmans, try it!"
+EVENTB = "Gahaha, I caught you, comrade!<br>With this you're also a member of my pirates!<br>Well then, let's get back and party!...hm? what? that bird…?"
 %}
 
 ## Notes

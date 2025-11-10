@@ -1,6 +1,8 @@
 ---
 title: Player
 characterId: 999
+type: other
+gender: other
 occupation: Hero operator
 sidekicks:
 - stockId: 19991

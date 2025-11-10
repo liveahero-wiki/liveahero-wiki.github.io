@@ -1,6 +1,51 @@
 ---
 title: Kouki & Sirius
 characterId: 18
+type: humanoid
+gender: male
+profile:
+  age: 10 (Kouki), 5 (Sirius)
+  height: 152 (Kouki), 67 (Sirius)
+  weight: 40 (Kouki), 50 (Sirius)
+  birthday: 02/26 (Kouki), 08/06 (Sirius)
+  birthplace: Earth, Japan, Nagoya
+  5th_anniversary_intro: |-
+     When the duo of heroes dressed in dazzling, tailcoat-style suits appears, all eyes are instantly drawn to them.
+     
+     Their names are Kouki & Sirius.
+
+     With a vibrant array of performances and meticulously coordinated teamwork, they can transform even a blood-soaked battlefield into a glamorous stage of entertainment in an instant.
+
+     Their brilliance, designed to captivate the audience and steal the spotlight, rapidly gathers ViewPower—the source of every hero’s strength.
+     Their capabilities are said to be among the best within Neo Talents Production, an agency known for specializing in support-type heroes.
+
+     While they were once thought to be unsuited for direct combat, one particular incident proved otherwise:
+     Wearing festival-inspired hero suits, Kouki & Sirius cut down waves of Kaibutsu with overwhelming skill, displaying incredible versatility on the battlefield.
+    
+     Their poised performances belied their unexpected role in the fight—
+     And the genius child actor and his partner showed sides of themselves that no one had seen before.
+
+     There’s no doubt they’ll continue to surprise and entertain us.
+     You won’t want to take your eyes off them.
+  5th_anniversary_true_self: |-
+     Active across a wide range of visual media throughout Earth’s sphere, the duo Inukura Kouki and Sirius continue to captivate audiences.
+     Despite being only 10 years old, Kouki demonstrates a level of professionalism that seems far beyond his years—so much so that almost no one has ever managed to capture his private moments on camera.
+     
+     However, there was one occasion when I, the author, witnessed a side of him completely unimaginable from his usual composed demeanor during a program recording.
+    
+     Noticing my surprise, he gave a mischievous smile and said,
+     “Surprised?”
+     —before calmly returning to his usual, quiet self.
+
+     Which side of him is the real one?
+     Was that unexpected behavior simply practice for a new role?
+     Even when asked directly, he would only reply:
+     “I’ll leave that to your imagination.”
+
+     As I continued to search for the truth, I realized something—
+     This is how we all fall under his spell, drawn in by his charm, until we’re utterly captivated.
+h2:
+  title: '"Lightning Blade" Kouki & Sirius'
 occupation: Child actor - Entertainer & Dog entertainer
 permalink: /charas/kouki_and_sirius/
 heroes:
@@ -19,6 +64,21 @@ heroes:
     partner Sirius who became a hero with the desire to "always stay with Kouki",
     always snuggling up to Kouki when he becomes anxious.
   extra_sprites: fg_ADV_kouki_h01
+- stockId: 10182
+  BIO_H01: |-
+    Citizens look forward to the festival. 
+    The hero suit called by him through parallel queue is for the sake of opposing the existence that threaten them.
+    Based on traditional costumes, it was created with both functionality and design, satisfying Kouki's high level of professionalism.
+    Even though it's the first time for him, he is a professional who says it is his job to charm people under any conditions,
+    so, together with Sirius he set off with their clapper shaped blade parallel weapon.
+  BIO_H02: |-
+    Kouki himself is actually troubled by his future prospect.
+    When growing up should he continue his good boy persona, will the audience accepts his real personality…
+    watching him searching for answer is his family Sirius who always snuggling up to him, never changing.
+    If Kouki, dressed in a glamorous tailcoat-like clothing, is the protecting figure, he is the offensive figure standing on the battlefield in festive attire.
+    Believing that one day the wish he held in his heart will come true, he paves the way to the future.
+  extra_sprites: fg_koukiRakusai2304_h02_skin2,fg_ADV_koukionlyRakusai2304_h01,fg_ADV_koukionlyRakusai2304_h01_skin1,fg_ADV_siriusRakusai2304_h01,fg_ADV_siriusRakusai2304_h01_skin1
+
 sidekicks:
 - stockId: 10181
   BIO_S01: |-
@@ -34,8 +94,10 @@ sidekicks:
     camera. When a camera is recording he acts as a meek good kid. The second the
     cameras are off however he lays bare his haugthy and arrogant demeanour. The
     driving force behind his doings seems to be the existence of a long-lost mother.
-  extra_sprites: fg_ADV_kouki_s01,fg_ADV_koukionly_s01,fg_kouki_s01_skin1,fg_ADV_kouki_s01_skin1,fg_ADV_koukionly_s01_skin1,fg_ADV_sirius_s01
+  extra_sprites: fg_ADV_kouki_s01,fg_ADV_koukionly_s01,fg_kouki_s01_skin1,fg_ADV_kouki_s01_skin1,fg_ADV_koukionly_s01_skin1,fg_ADV_kouki_s01_skin2,fg_ADV_kouki_s01_skin3,fg_ADV_koukionly_s01_skin2,fg_ADV_koukionly_s01_skin3,fg_ADV_koukionly_s01_skin4,fg_ADV_koukionly_s01_skin5,fg_ADV_sirius_s01,fg_ADV_sirius_s01_skin2,fg_ADV_sirius_s01_skin3
+
 ---
+
 
 {% include voice-table.html resourceName="kouki"
 h_gachaResult = "Heyy, I'm Inukura kouki!<br>This here is Sirius!<br>...Eh, the camera is not rolling?<br>Hmmm...well,<br>Don't drag me down, okay?"
@@ -63,6 +125,19 @@ RELATION = "That elementary school teacher is so annoying. What does he care if 
 TOUCH = "U-ughya Hey!  No petting, we're celebrities!  Sirius, quit wagging your stupid tail already!"
 TRAIN = "Even if it was only a rehearsal I'll give it my all."
 TRAINED = "Stop, you're acting childish against a kid!?"
+%}
+
+{% include voice-table.html resourceName="koukirakusai2304"
+APPRECIATION = "Here, Yakisoba, Okonomiyaki, and Apple candy.<br>…I brought it for you, you're tired aren't you?<br>When you feel better, let's go see the festival."
+DAILY = "He got me, that paparazzi!<br>Even though I'm confident that I won't get my pictures taken in private…<br>Dammit, just you wait this kind of scandal I will just blow it away!"
+HERO = "From my point of view, detective Gammei is already an old man<br>…but, for most of the world he should be still young.<br>Yet somehow he looks very tired, is he alright? How about I treat him to dinner?"
+PLAYER = "Operator-san, do you have something you wish to see in Kyoto?<br>…why did I want to know about it?<br>Well, when you're free I was thinking of inviting you to sightsee!<br>Be thankful for it."
+RELATION = "Shinraku's local actor…<br>well, he's familiar with photoshoot, and his acting is also not bad, but something is suspicious don't you think?<br>Even in his everyday attitude, it feels like he's still acting. Is it just me?"
+TOUCH = "Don't be touchy-feely with me….is what I want to say.<br>But, normally I am always in your care one way or another, <br>so I will overlook it this time.<br>Hey, Sirius too, come here!"
+TRAIN = "Okay, let's keep going till we hit the limit!"
+TRAINED = "No, impossible, give me a break already!"
+EVENTA = "Going to the local tourist attraction was fun,<br>but it looks like Sirius is very tired now…<br>He gets petted by everyone after all."
+EVENTB = "Ghost palanquin? Spirited away?<br>…well, I guess there are people who like that kind of things even as an adult.<br>Eh…it really happened? No way!"
 %}
 
 ## Notes

@@ -1,6 +1,8 @@
 ---
 title: Andrew
 characterId: 25
+type: humanoid
+gender: male
 h2:
   title: '"The Riptide" Andrew'
 heroes:

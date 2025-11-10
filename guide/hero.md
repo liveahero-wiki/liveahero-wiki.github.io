@@ -9,13 +9,24 @@ banner: true
 ## About Hero
 Hero is a general term for characters that appears in battle.
 
-They can be obtained by "Ether searching", or by mission rewards.
+They can be obtained by "Ether searching" ([Gacha banner](/guide/gacha/)), or by mission rewards.
+
+There are two types of hero:
+
+- **Regular Heroes** have initial star rating from 3 star to 5 star
+  - They can be obtained from Permanent Gacha banner, Limited-time Gacha banner, and certain Missions or Shops
+  - Each regular hero has two different portraits. Hero with initial rating of 5 star will have 2 portraits unlocked immediately. Other hero need to be first upgraded to 5 star to unlocked the second portrait
+- **Mob Heroes** have initial star rating at 1 star
+  - They usually can only be obtained by exchanging in Event limited shop
+  - Each mob hero only has one portrait, and has no voice actings
+
+Any heroes can be upgraded to 6 star.
 
 ## Hero Attribute
 
 Hero has their own attributes.
 
-There are currently 5 types of attribute: Fire, Water, Wood, Aether, and Nether.
+There are currently 5 types of attribute: Fire, Water, Wood, Light, and Shadow.
 
 Each attribute has their own affinity, advantageous attribute will have decreased incoming damage, along with an increased outgoing damage.
 
@@ -24,8 +35,8 @@ Disadvantageous attribute will have increased incoming damage, along with a decr
 - Fire is advantageous against Wood, and disadvantageous against Water.
 - Water is advantageous against Fire, and disadvantageous against Wood.
 - Wood is advantageous against water, and disadvantageous against Fire.
-- Aether is advantageous against Nether, thus dealing more damage.
-- Nether is advantageous against Aether, thus dealing more damage.
+- Light is advantageous against Shadow, thus dealing more damage.
+- Shadow is advantageous against Light, thus dealing more damage.
 
 Advantageous attribute will deal 50% more damage, while disadvantageous attribute will deal 25% less damage.
 

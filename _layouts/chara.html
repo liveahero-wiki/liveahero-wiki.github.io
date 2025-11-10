@@ -2,83 +2,8 @@
 layout: markdownify
 ---
 
-<style>
-wiki-tabs {
-  --hue: 328deg;
-  --accent: var(--hue) 100% 54%;
-  --indicator-size: 2px;
-  --space-1: .5rem;
-  --space-2: 1rem;
-  --space-3: 1.5rem;
-
-  display: flex;
-  flex-direction: column;
-
-  /* establish primary containing box */
-  overflow: hidden;
-  position: relative;
-}
-
-.tabcontent {
-  /* be pushy about consuming all space */
-  block-size: 100%;
-  scroll-snap-align: start;
-}
-
-wiki-header {
-  display: flex;
-  flex-direction: column;
-  /* defend against <section> needing 100% */
-  flex-shrink: 0;
-  /* fixes cross browser quarks */
-  min-block-size: fit-content;
-}
-.scroll-snap-x {
-  /* browser decide if x is ok to scroll and show bars on, y hidden */
-  overflow: auto hidden;
-  /* prevent scroll chaining on x scroll */
-  overscroll-behavior-x: contain;
-  /* scrolling should snap children on x */
-  scroll-snap-type: x mandatory;
-}
-wiki-header nav {
-  display: flex;
-}
-wiki-header a {
-  padding: 1rem 1.5rem;
-  scroll-snap-align: start;
-
-  font-weight: 700;
-  color: hsl(var(--hue) 5% 40%);
-  text-decoration: none;
-
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
-
-  border-block-end: var(--indicator-size) solid hsl(var(--accent) / 0%);
-  transition: color .7s ease, border-color .5s ease;
-}
-wiki-header a:hover {
-  text-decoration: none;
-  background: hsl(var(--accent)/5%);
-  transition: background-color .7s ease;
-}
-wiki-header a:is(:target,:active,[aria-selected]) {
-  color: #000;
-  border-block-end-color: hsl(var(--accent));
-}
-wiki-tabcontent {
-  block-size: 100%;
-
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 100%;
-}
-</style>
-
-{% if unreleased %}
-{% include hero-infobox-unreleased.html sprites=sprites %}
+{% if page.unreleased %}
+{% include hero-infobox-unreleased.html sprites=page.sprites %}
 {% else %}
 <wiki-tabs>
 
@@ -100,7 +25,6 @@ wiki-tabcontent {
     BIO_H01=hero.BIO_H01
     BIO_H02=hero.BIO_H02
     extra_sprites=hero.extra_sprites
-    passiveSkillIds=hero.passiveSkillIds
 %}
 {% endfor %}
 {% for sk in sidekicks %}
@@ -108,8 +32,6 @@ wiki-tabcontent {
     stockId=sk.stockId
     BIO_S01=sk.BIO_S01
     extra_sprites=sk.extra_sprites
-    extraActiveSkillIds=sk.extraActiveSkillIds
-    extraPassiveSkillIds=sk.extraPassiveSkillIds
 %}
 {% endfor %}
 </wiki-tabcontent>
@@ -117,3 +39,90 @@ wiki-tabcontent {
 </wiki-tabs>
 {% endif %}
 {{content}}
+
+{% assign characterId = page.characterId | downcase %}
+{% assign characterStory = site.data.CharacterStoryMaster[characterId] %}
+{% if characterStory %}
+<h2>Character Story Appearances</h2>
+
+<p>We only list the appearances if the character played a significant role in the story.</p>
+
+<table>
+{% if characterStory.mainChapterIds.size > 0 %}
+<tr>
+    <th>Main Chapters</th>
+    <td>
+        <ul>
+        {% for chapterId in characterStory.mainChapterIds %}
+        {% assign chapter = site.main_quests | where: "chapterId", chapterId | first %}
+        <li><a href="{{ chapter.url }}">Chapter {{ chapter.book }}-{{ chapter.chapter }}: {{ chapter.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </td>
+</tr>
+{% endif %}
+{% if characterStory.eventIds.size > 0 %}
+<tr>
+    <th>Events</th>
+    <td>
+        <ul>
+        {% for eventId in characterStory.eventIds %}
+        {% assign event = site.events | where: "eventId", eventId | first %}
+        <li><a href="{{ event.url }}">{{ event.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </td>
+</tr>
+{% endif %}
+{% if characterStory.linkQuestIds.size > 0 %}
+<tr>
+    <th>Link Quests</th>
+    <td>
+        <ul>
+        {% for questId in characterStory.linkQuestIds %}
+        {% assign qid = questId | downcase %}
+        {% assign quest = site.data.QuestMaster[qid] %}
+        <li>{{ quest.questName }}</li>
+        {% endfor %}
+        </ul>
+    </td>
+</tr>
+{% endif %}
+{% comment %}{% if characterStory.characterQuestChapterIds.size > 0 %}
+<tr>
+    <th>Character Quest Chapters</th>
+    <td>
+        <ul>
+        {% for chapterId in characterStory.characterQuestChapterIds %}
+        {% assign chapter = site.data.ChapterMaster[chapterId] %}
+        <li>{{ chapter.questName }}</li>
+        {% endfor %}
+        </ul>
+    </td>
+</tr>
+{% endif %}{% endcomment %}
+</table>
+
+{% endif %}
+
+{% assign intro = page.profile["5th_anniversary_intro"] %}
+{% assign trueSelf = page.profile["5th_anniversary_true_self"] %}
+{% if intro or trueSelf %}<h2>5th Anniversary Hero-encyclopedias</h2>{% endif %}
+
+{% if intro %}
+<details open markdown="1">
+<summary>Introduction</summary>
+
+{{ intro }}
+
+</details>
+{% endif %}
+
+{% if trueSelf %}
+<details open markdown="1">
+<summary>True Self</summary>
+
+{{ trueSelf }}
+
+</details>
+{% endif %}

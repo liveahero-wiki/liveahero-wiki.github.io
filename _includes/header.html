@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html>
 
+{% assign page_title = page.title %}
+{% if page.url != "/" %}
+{% assign page_title = page_title | append: " - Live A Hero Wiki" %}
+{% endif %}
+
 <head>
-  <title>{{ page.title }}{% if page.url != "/" %} - Live A Hero Wiki{% endif %}</title>
+  <title>{{ page_title }}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,minimum-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   {% if page.hidden %}<meta name="robots" content="noindex">{% endif %}
   <meta name="theme-color" content="#ffa726">
+
+  <link rel="apple-touch-icon" href="{{ site.url }}/assets/img/logo192.png"/>
+  <!--<link rel="manifest" href="{{ site.url }}/assets/img/manifest.json"/>-->
+  <meta name="description" content="Live A Hero Wiki"/>
+  <meta property="og:title" content="{{ page_title }}"/>
+  <meta property="og:site_name" content="Live A Hero Wiki"/>
+  <meta property="og:description" content="{{ page_title }}"/>
+{% if page.characterId %}
+{% assign cardId = page.characterId | times: 100 | plus: 100011 | downcase %}
+  <meta property="og:image" content="{{ site.url }}/cdn/Sprite/icon_{{ site.data.SidekickMaster[cardId].resourceName }}_s01.png"/>
+{% else %}
+  <meta property="og:image" content="{{ site.url }}/assets/img/logo512.png"/>
+{% endif %}
+
   <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
   <link rel="stylesheet" type="text/css" href="/assets/main.css">
   <link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
+  <style>{% include style/tabs.min.css %}</style>
+  <style>{% include style/tippy.min.css %}</style>
+  {% for s in page.additional_styles %}<link rel="stylesheet" href="{{ s }}">{% endfor %}
 </head>
 
 <body>
   <div class="sidebar">
     <header class="sidebar__logo" role="banner">
-      <img src="/assets/img/logo.png" width="300" height="117">
+      <img src="/assets/img/logo.png" width="250" height="98" loading="lazy">
     </header>
     <nav class="sidebar__nav">
       <div class="sidebar__nav-interior">
@@ -101,6 +123,9 @@
             <a href="/guide/battle/">Battle</a>
           </li>
           <li>
+            <a href="/guide/friend_support/">Friend Support</a>
+          </li>
+          <li>
             <a href="/guide/quest/">Quest</a>
           </li>
           <li>
@@ -135,6 +160,15 @@
           </li>
           <li>
             <a href="/guide/office/">Office</a>
+          </li>
+          <li>
+            <a href="/guide/blooming/">Bloom & Skill Tree</a>
+          </li>
+          <li>
+            <a href="/guide/unexplored/">Unexplored</a>
+          </li>
+          <li>
+            <a href="/guide/library/">???'s Notes</a>
           </li>
         </ul>
         <h3 class="section__header">Tools</h3>

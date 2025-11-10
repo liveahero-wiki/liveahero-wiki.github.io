@@ -4,20 +4,23 @@
     "statusName": "ATKアップ",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "攻撃力が1.5倍になる。"
+    "limitCount": -1,
+    "description": "ATKが1.5倍になる。"
   },
   "2": {
     "statusId": 2,
     "statusName": "DEFアップ",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "一度だけ相手からのダメージが半分になる。"
+    "limitCount": -1,
+    "description": "相手からのダメージが半分になる。"
   },
   "3": {
     "statusId": 3,
     "statusName": "SPDアップ",
     "isGoodStatus": 1,
     "statusType": 1,
+    "limitCount": -1,
     "description": "SPDが+10される。"
   },
   "4": {
@@ -25,6 +28,7 @@
     "statusName": "注目",
     "isGoodStatus": 1,
     "statusType": 1,
+    "limitCount": -1,
     "description": "自身のViewが1.5倍になる。"
   },
   "5": {
@@ -32,34 +36,39 @@
     "statusName": "挑発",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "ターン終了時まで相手から狙われやすくなる。"
+    "limitCount": -1,
+    "description": "相手から狙われやすくなる。"
   },
   "6": {
     "statusId": 6,
     "statusName": "無敵",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "一度だけ相手からのダメージを無効化する。"
+    "limitCount": -1,
+    "description": "相手からのダメージを無効化する。"
   },
   "7": {
     "statusId": 7,
     "statusName": "幸運",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "確率で発動する効果の発動率が20%上がる。"
+    "limitCount": -1,
+    "description": "スキルの効果発動率+20%"
   },
   "8": {
     "statusId": 8,
     "statusName": "覚醒",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "スキルに必要なViewPowerが半分になる。"
+    "limitCount": -1,
+    "description": "ViewPowerを消費するスキルのView消費量が半分になる。"
   },
   "9": {
     "statusId": 9,
     "statusName": "復活",
     "isGoodStatus": 1,
     "statusType": 1,
+    "limitCount": -1,
     "description": "死亡時に復活する。"
   },
   "10": {
@@ -67,27 +76,31 @@
     "statusName": "リジェネ",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "ターン終了時にHP最大値の10%の回復する。"
+    "limitCount": -1,
+    "description": "ターン終了時にHP最大値の10%回復する。"
   },
   "11": {
     "statusId": 11,
     "statusName": "ATKダウン",
     "isGoodStatus": 0,
     "statusType": 0,
-    "description": "攻撃力が0.5倍になる。"
+    "limitCount": -1,
+    "description": "ATKが0.5倍になる。"
   },
   "12": {
     "statusId": 12,
     "statusName": "DEFダウン",
     "isGoodStatus": 0,
     "statusType": 0,
-    "description": "一度だけ相手からのダメージが1.5倍になる。"
+    "limitCount": -1,
+    "description": "相手からのダメージが1.5倍になる。"
   },
   "13": {
     "statusId": 13,
     "statusName": "SPDダウン",
     "isGoodStatus": 0,
     "statusType": 0,
+    "limitCount": -1,
     "description": "SPDが-10される。"
   },
   "14": {
@@ -95,6 +108,7 @@
     "statusName": "モザイク",
     "isGoodStatus": 0,
     "statusType": 0,
+    "limitCount": -1,
     "description": "自身のViewが0になる。"
   },
   "15": {
@@ -102,13 +116,15 @@
     "statusName": "隠蔽",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "ターン終了時まで相手から狙われなくなる。"
+    "limitCount": -1,
+    "description": "相手から狙われなくなる。"
   },
   "16": {
     "statusId": 16,
     "statusName": "不幸",
     "isGoodStatus": 0,
     "statusType": 0,
+    "limitCount": -1,
     "description": "確率で発動する効果の発動率が20%下がる。"
   },
   "17": {
@@ -116,13 +132,15 @@
     "statusName": "過消費",
     "isGoodStatus": 0,
     "statusType": 0,
-    "description": "スキルに必要なViewPowerが2倍になる。"
+    "limitCount": -1,
+    "description": "ViewPowerを消費するスキルのView消費量が2倍になる。"
   },
   "18": {
     "statusId": 18,
     "statusName": "毒",
     "isGoodStatus": 0,
     "statusType": 0,
+    "limitCount": -1,
     "description": "ターン終了時にHP最大値の5%のダメージを受ける。"
   },
   "19": {
@@ -130,6 +148,7 @@
     "statusName": "火傷",
     "isGoodStatus": 0,
     "statusType": 0,
+    "limitCount": -1,
     "description": "ターン終了時にHP最大値の10%のダメージを受ける。"
   },
   "20": {
@@ -137,6 +156,7 @@
     "statusName": "超SPDアップ",
     "isGoodStatus": 1,
     "statusType": 1,
+    "limitCount": -1,
     "description": "SPDが+30される。"
   },
   "21": {
@@ -144,13 +164,15 @@
     "statusName": "弱体抵抗",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "被デバフ付与率が20%減少する。"
+    "limitCount": -1,
+    "description": "デバフが付与される確率が20%減少する。"
   },
   "22": {
     "statusId": 22,
     "statusName": "沈黙",
     "isGoodStatus": 0,
     "statusType": 0,
+    "limitCount": -1,
     "description": "Viewを使用するスキルが使えなくなる。"
   },
   "23": {
@@ -158,6 +180,7 @@
     "statusName": "火事場力",
     "isGoodStatus": 1,
     "statusType": 1,
+    "limitCount": -1,
     "description": "HPが減れば減るほど攻撃力が上昇する。"
   },
   "24": {
@@ -165,6 +188,7 @@
     "statusName": "ウェイト",
     "isGoodStatus": 1,
     "statusType": 2,
+    "limitCount": -1,
     "description": "自身の行動順を現時点での最後にする。"
   },
   "25": {
@@ -172,6 +196,7 @@
     "statusName": "俊敏",
     "isGoodStatus": 1,
     "statusType": 1,
+    "limitCount": -1,
     "description": "相手とSPDが離れてる程攻撃力が増加。"
   },
   "26": {
@@ -179,13 +204,15 @@
     "statusName": "ダメージ集約",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "ターン終了時まで全体攻撃のダメージを自分に集める。"
+    "limitCount": -1,
+    "description": "全体攻撃のダメージを自分に集める。"
   },
   "27": {
     "statusId": 27,
     "statusName": "永続効果",
     "isGoodStatus": 1,
     "statusType": 2,
+    "limitCount": -1,
     "description": "バトル中に永続的に発動する効果。"
   },
   "28": {
@@ -193,6 +220,7 @@
     "statusName": "イベントボーナス",
     "isGoodStatus": 1,
     "statusType": 2,
+    "limitCount": -1,
     "description": "イベントにより発動する効果。"
   },
   "29": {
@@ -200,6 +228,7 @@
     "statusName": "超SPDダウン",
     "isGoodStatus": 0,
     "statusType": 0,
+    "limitCount": -1,
     "description": "SPDが-30される。"
   },
   "30": {
@@ -207,6 +236,7 @@
     "statusName": "アイテム効果",
     "isGoodStatus": 1,
     "statusType": 2,
+    "limitCount": -1,
     "description": "アイテムによって発動する効果。"
   },
   "31": {
@@ -214,6 +244,7 @@
     "statusName": "アイテム効果：HPアップ",
     "isGoodStatus": 1,
     "statusType": 2,
+    "limitCount": -1,
     "description": "アイテムによってHPが上昇する。"
   },
   "32": {
@@ -221,6 +252,7 @@
     "statusName": "アイテム効果：ATKアップ",
     "isGoodStatus": 1,
     "statusType": 2,
+    "limitCount": -1,
     "description": "アイテムによってATKが上昇する。"
   },
   "33": {
@@ -228,6 +260,7 @@
     "statusName": "アイテム効果：被ダメージ減少",
     "isGoodStatus": 1,
     "statusType": 2,
+    "limitCount": -1,
     "description": "アイテムによって被ダメージが減少する。"
   },
   "34": {
@@ -235,6 +268,7 @@
     "statusName": "炸裂",
     "isGoodStatus": 0,
     "statusType": 0,
+    "limitCount": 5,
     "description": "ダメージを受けたときに炸裂の作成者のATK基礎値の40%のダメージを受ける。"
   },
   "35": {
@@ -242,20 +276,23 @@
     "statusName": "触手",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "カイブツの触手。"
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。"
   },
   "36": {
     "statusId": 36,
     "statusName": "View消費-3000",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "Viewの消費を-3000する。"
+    "limitCount": -1,
+    "description": "ViewPowerを消費するスキルのView消費量が3000減少する。"
   },
   "37": {
     "statusId": 37,
     "statusName": "ボーナス：ATKアップ",
     "isGoodStatus": 1,
     "statusType": 2,
+    "limitCount": -1,
     "description": "クエストボーナスによってATKが上昇する。"
   },
   "38": {
@@ -263,34 +300,39 @@
     "statusName": "View消費-2000",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "Viewの消費を-2000する。"
+    "limitCount": -1,
+    "description": "ViewPowerを消費するスキルのView消費量が2000減少する。"
   },
   "39": {
     "statusId": 39,
     "statusName": "View消費+4000",
     "isGoodStatus": 0,
     "statusType": 0,
-    "description": "Viewの消費を+4000する。"
+    "limitCount": -1,
+    "description": "ViewPowerを消費するスキルのView消費量が4000増加する。"
   },
   "40": {
     "statusId": 40,
     "statusName": "行動停止",
     "isGoodStatus": 0,
     "statusType": 0,
-    "description": "そのターン、行動が出来なくなる。"
+    "limitCount": -1,
+    "description": "行動が出来なくなる。"
   },
   "41": {
     "statusId": 41,
     "statusName": "ATKアップ(微小)",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "攻撃力が1.1倍になる。"
+    "limitCount": -1,
+    "description": "ATKが1.1倍になる。"
   },
   "42": {
     "statusId": 42,
     "statusName": "",
     "isGoodStatus": 0,
     "statusType": 0,
+    "limitCount": -1,
     "description": ""
   },
   "43": {
@@ -298,6 +340,7 @@
     "statusName": "",
     "isGoodStatus": 1,
     "statusType": 1,
+    "limitCount": -1,
     "description": ""
   },
   "44": {
@@ -305,13 +348,15 @@
     "statusName": "弱体抵抗100",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "被デバフ付与率が100%減少する。"
+    "limitCount": -1,
+    "description": "デバフが付与される確率が100%減少する"
   },
   "45": {
     "statusId": 45,
     "statusName": "",
     "isGoodStatus": 1,
     "statusType": 1,
+    "limitCount": -1,
     "description": ""
   },
   "46": {
@@ -319,13 +364,15 @@
     "statusName": "弱体抵抗100",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "被デバフ付与率が100%減少する。"
+    "limitCount": -1,
+    "description": "デバフが付与される確率が100%減少する"
   },
   "47": {
     "statusId": 47,
     "statusName": "",
     "isGoodStatus": 1,
     "statusType": 1,
+    "limitCount": -1,
     "description": ""
   },
   "48": {
@@ -333,6 +380,7 @@
     "statusName": "無効",
     "isGoodStatus": 1,
     "statusType": 1,
+    "limitCount": -1,
     "description": "特定のデバフにかからない。"
   },
   "49": {
@@ -340,41 +388,47 @@
     "statusName": "クロックアップ",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "SPD+5 & Viewの消費を-2000。スキルによる解除不可。"
+    "limitCount": -1,
+    "description": "SPDが+5される。 ViewPowerを消費するスキルのView消費量が2000減少する。スキルによる解除不可。"
   },
   "50": {
     "statusId": 50,
     "statusName": "標的",
     "isGoodStatus": 0,
     "statusType": 0,
-    "description": "ターン終了時まで相手から狙われやすくなる。"
+    "limitCount": -1,
+    "description": "相手から狙われやすくなる。"
   },
   "51": {
     "statusId": 51,
     "statusName": "View消費-18000",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "Viewの消費を-18000する。"
+    "limitCount": -1,
+    "description": "ViewPowerを消費するスキルのView消費量が18000減少する。"
   },
   "52": {
     "statusId": 52,
     "statusName": "弱体抵抗10",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "被デバフ付与率が10%減少する。"
+    "limitCount": -1,
+    "description": "デバフが付与される確率が10%減少する"
   },
   "53": {
     "statusId": 53,
     "statusName": "熱狂",
     "isGoodStatus": 1,
     "statusType": 2,
-    "description": "特殊なスキルで発動。バフでもデバフでも無い状態。"
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。"
   },
   "54": {
     "statusId": 54,
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "55": {
@@ -382,20 +436,23 @@
     "statusName": "View減少",
     "isGoodStatus": 0,
     "statusType": 0,
-    "description": "View基礎値が半分になる。"
+    "limitCount": -1,
+    "description": "Viewが半分になる。"
   },
   "56": {
     "statusId": 56,
     "statusName": "酸素ボンベ",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "海中での酸素補給を行うアイテム。ダメージを受けると破損する。"
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。"
   },
   "57": {
     "statusId": 57,
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "58": {
@@ -403,20 +460,23 @@
     "statusName": "View消費+1000",
     "isGoodStatus": 0,
     "statusType": 0,
-    "description": "Viewの消費を+1000する。"
+    "limitCount": -1,
+    "description": "ViewPowerを消費するスキルのView消費量が1000増加する。"
   },
   "59": {
     "statusId": 59,
     "statusName": "弱体抵抗",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "被デバフ付与率が数値だけ減少する。"
+    "limitCount": -1,
+    "description": "デバフが付与される確率が数値%減少する"
   },
   "60": {
     "statusId": 60,
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "61": {
@@ -424,27 +484,31 @@
     "statusName": "View消費量減少",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "Viewの消費量が減少する。スキルによる解除不可。"
+    "limitCount": -1,
+    "description": "ViewPowerを消費するスキルのView消費量が減少する。スキルによる解除不可。"
   },
   "62": {
     "statusId": 62,
     "statusName": "View消費量増加",
     "isGoodStatus": 0,
     "statusType": 0,
-    "description": "Viewの消費量が増加する。スキルによる解除不可。"
+    "limitCount": -1,
+    "description": "ViewPowerを消費するスキルのView消費量が増加する。スキルによる解除不可。"
   },
   "63": {
     "statusId": 63,
     "statusName": "View消費量減少",
     "isGoodStatus": 0,
     "statusType": 0,
-    "description": "Viewの消費量が減少する。スキルによる解除不可。"
+    "limitCount": -1,
+    "description": "ViewPowerを消費するスキルのView消費量が減少する。スキルによる解除不可。"
   },
   "64": {
     "statusId": 64,
     "statusName": "",
     "isGoodStatus": 0,
     "statusType": 0,
+    "limitCount": -1,
     "description": ""
   },
   "65": {
@@ -452,6 +516,7 @@
     "statusName": "",
     "isGoodStatus": 0,
     "statusType": 0,
+    "limitCount": -1,
     "description": ""
   },
   "66": {
@@ -459,6 +524,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "67": {
@@ -466,6 +532,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "68": {
@@ -473,6 +540,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "69": {
@@ -480,6 +548,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "70": {
@@ -487,6 +556,7 @@
     "statusName": "ダメージ上限3000",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": "受けるダメージの上限が3000になる。"
   },
   "71": {
@@ -494,6 +564,7 @@
     "statusName": "ダメージ上限5000",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": "受けるダメージの上限が5000になる。"
   },
   "72": {
@@ -501,6 +572,7 @@
     "statusName": "ダメージ上限10000",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": "受けるダメージの上限が10000になる。"
   },
   "73": {
@@ -508,6 +580,7 @@
     "statusName": "ダメージ上限20000",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": "受けるダメージの上限が20000になる。"
   },
   "74": {
@@ -515,27 +588,31 @@
     "statusName": "View消費量減少",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "Viewの消費量が減少する。"
+    "limitCount": -1,
+    "description": "ViewPowerを消費するスキルのView消費量が減少する。"
   },
   "75": {
     "statusId": 75,
     "statusName": "ATKアップ(小)",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "攻撃力が1.3倍になる。"
+    "limitCount": -1,
+    "description": "ATKが1.3倍になる。"
   },
   "76": {
     "statusId": 76,
     "statusName": "コアを守るもの",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "一度だけ相手からのダメージが0.7倍になる。"
+    "limitCount": -1,
+    "description": "相手からのダメージが0.7倍になる。"
   },
   "77": {
     "statusId": 77,
     "statusName": "暴走",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": "1ターンに2回行動を行う。スキルによる解除不可。"
   },
   "78": {
@@ -543,13 +620,15 @@
     "statusName": "狂乱",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "攻撃力が2倍になる。ターン終了時にHP最大値の15%のダメージを受ける。行動がオート行動になる。"
+    "limitCount": -1,
+    "description": "ATKが2倍になる。ターン終了時にHP最大値の15%のダメージを受ける。行動がオート行動になる。"
   },
   "79": {
     "statusId": 79,
     "statusName": "ATKアップ(重複不可)",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": "ATKが数値だけ上昇する。この効果が重複した場合、効果量が多い方を優先する。"
   },
   "80": {
@@ -557,6 +636,7 @@
     "statusName": "強化コア",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": "カイブツのコアを包む膜"
   },
   "81": {
@@ -564,6 +644,7 @@
     "statusName": "無効",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": "特定のデバフにかからない。"
   },
   "82": {
@@ -571,13 +652,15 @@
     "statusName": "協奏",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "View獲得スキルで獲得するViewが1.5倍。"
+    "limitCount": -1,
+    "description": "View獲得スキルで獲得するViewPowerが1.5倍。"
   },
   "83": {
     "statusId": 83,
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "84": {
@@ -585,6 +668,7 @@
     "statusName": "クリティカル",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": "クリティカル効果"
   },
   "85": {
@@ -592,6 +676,7 @@
     "statusName": "軽減",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": "軽減効果"
   },
   "86": {
@@ -599,6 +684,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "87": {
@@ -606,6 +692,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "88": {
@@ -613,6 +700,7 @@
     "statusName": "重複不可効果",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": "バフ・デバフの重複不可効果"
   },
   "92": {
@@ -620,20 +708,23 @@
     "statusName": "鉄壁",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "相手からのダメージが1/10になる。ターン経過で解除される。スキルによる解除不可。"
+    "limitCount": -1,
+    "description": "相手からのダメージが0.1倍になる。スキルによる解除不可。"
   },
   "93": {
     "statusId": 93,
     "statusName": "View消費-8000",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "Viewの消費を-8000する。ターン経過で解除される。スキルによる解除不可。"
+    "limitCount": -1,
+    "description": "ViewPowerを消費するスキルのView消費量が8000減少する。スキルによる解除不可。"
   },
   "94": {
     "statusId": 94,
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "95": {
@@ -641,6 +732,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "96": {
@@ -648,6 +740,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "97": {
@@ -655,6 +748,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "98": {
@@ -662,6 +756,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "99": {
@@ -669,6 +764,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "100": {
@@ -676,6 +772,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "101": {
@@ -683,6 +780,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "104": {
@@ -690,62 +788,71 @@
     "statusName": "昂揚状態",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "攻撃力が1.5倍になる。(この状態変化はバフにカウントされない)"
+    "limitCount": -1,
+    "description": "ATKが1.5倍になる。"
   },
   "105": {
     "statusId": 105,
     "statusName": "興奮状態",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "一度だけ相手からのダメージが半分になる。(この状態変化はバフにカウントされない)"
+    "limitCount": -1,
+    "description": "相手からのダメージが半分になる。"
   },
   "106": {
     "statusId": 106,
     "statusName": "興奮疲れ",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "一度だけ相手からのダメージが1.5倍になる。(この状態変化はデバフにカウントされない)"
+    "limitCount": -1,
+    "description": "相手からのダメージが1.5倍になる。"
   },
   "107": {
     "statusId": 107,
     "statusName": "ヒーロースーツ損傷",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "相手からのダメージ1.2倍。攻撃力0.9倍。ターン経過で解除される。"
+    "limitCount": -1,
+    "description": "相手からのダメージが1.2倍になる。ATKが0.9倍になる。"
   },
   "108": {
     "statusId": 108,
     "statusName": "攻めの極意",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "攻撃力3倍。スキルによる解除不可。"
+    "limitCount": -1,
+    "description": "ATKが3倍になる。"
   },
   "109": {
     "statusId": 109,
     "statusName": "映えの極意",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "Viewの消費を-6000する。スキルによる解除不可。"
+    "limitCount": -1,
+    "description": "ViewPowerを消費するスキルのView消費量が6000減少する。"
   },
   "110": {
     "statusId": 110,
     "statusName": "速さの極意",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "SPDが+20される。スキルによる解除不可。"
+    "limitCount": -1,
+    "description": "SPDが+20される。"
   },
   "111": {
     "statusId": 111,
     "statusName": "護りの極意",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "相手からのダメージが半分になる。スキルによる解除不可。"
+    "limitCount": -1,
+    "description": "相手からのダメージが半分になる。"
   },
   "112": {
     "statusId": 112,
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "113": {
@@ -753,6 +860,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "114": {
@@ -760,6 +868,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "115": {
@@ -767,13 +876,15 @@
     "statusName": "索引",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "この状態変化をスキルによって解除した時、行動によるViewPowerを獲得できない。バフでもデバフでも無い状態。"
+    "limitCount": -1,
+    "description": "この状態変化をスキルによって解除した時、行動によるViewPowerを獲得できない。"
   },
   "116": {
     "statusId": 116,
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "117": {
@@ -781,6 +892,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": "相手よりSpdが高い場合に、Spd差に応じて攻撃時にクリティカルが発動。発動時、ダメージが1.3倍になる。"
   },
   "118": {
@@ -788,27 +900,31 @@
     "statusName": "クリティカル",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "相手よりSpdが高い場合に、Spd差に応じて攻撃時にクリティカルが発動。発動時、ダメージが1.3倍になる。"
+    "limitCount": -1,
+    "description": "Spd差に応じた確率で、攻撃時にクリティカルが発動。発動時、ダメージが1.3倍になる。"
   },
   "119": {
     "statusId": 119,
     "statusName": "粘質武装",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "相手から受けるダメージの上限を3000にする。スキルによる解除不可。(この状態変化はバフにカウントされない)"
+    "limitCount": -1,
+    "description": "受けるダメージの上限が3000になる。"
   },
   "120": {
     "statusId": 120,
     "statusName": "武装解除状態",
     "isGoodStatus": 0,
     "statusType": 0,
-    "description": "相手からのダメージが1.5倍になる。ターン経過で解除される。"
+    "limitCount": -1,
+    "description": "相手からのダメージが1.5倍になる。"
   },
   "121": {
     "statusId": 121,
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": "相手からのダメージを無効化する。"
   },
   "122": {
@@ -816,27 +932,31 @@
     "statusName": "強制干渉",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "スキル「干渉防御」によるダメージ制限を緩和する。ダメージで消費される。この状態変化は重複しない。"
+    "limitCount": -1,
+    "description": "スキル「干渉防御」によるダメージ制限を緩和する。"
   },
   "123": {
     "statusId": 123,
     "statusName": "照準",
     "isGoodStatus": 0,
     "statusType": 0,
-    "description": "相手からのダメージが1.3倍になる。ターン経過で解除される。オート行動時、相手から狙われやすくなる。"
+    "limitCount": -1,
+    "description": "相手からのダメージが1.3倍になる。オート行動時、相手から狙われやすくなる。"
   },
   "124": {
     "statusId": 124,
     "statusName": "シールド",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "一度だけ相手からのダメージを無効化する。ターン終了時に解除される。"
+    "limitCount": -1,
+    "description": "相手からのダメージを無効化する。"
   },
   "125": {
     "statusId": 125,
     "statusName": "汎用エネミー用デバフ",
     "isGoodStatus": 0,
     "statusType": 0,
+    "limitCount": -1,
     "description": "汎用エネミー用デバフ"
   },
   "126": {
@@ -844,6 +964,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "127": {
@@ -851,6 +972,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "128": {
@@ -858,6 +980,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "129": {
@@ -865,6 +988,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "130": {
@@ -872,6 +996,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "131": {
@@ -879,6 +1004,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "132": {
@@ -886,6 +1012,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "133": {
@@ -893,6 +1020,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "134": {
@@ -900,6 +1028,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "135": {
@@ -907,6 +1036,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "136": {
@@ -914,6 +1044,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "137": {
@@ -921,6 +1052,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "138": {
@@ -928,6 +1060,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "139": {
@@ -935,6 +1068,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "140": {
@@ -942,13 +1076,15 @@
     "statusName": "二撃必殺",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "この状態変化を付与したキャラクターが、再び同じ相手を攻撃した時、与えるダメージが3倍になる。スキルによる解除不可。"
+    "limitCount": -1,
+    "description": "この状態変化を付与したキャラクターが、再び同じ相手を攻撃した時、与えるダメージが3倍になる。"
   },
   "141": {
     "statusId": 141,
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "142": {
@@ -956,6 +1092,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "143": {
@@ -963,6 +1100,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "144": {
@@ -970,13 +1108,15 @@
     "statusName": "鼓舞",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "特殊なスキルで発動。バフでもデバフでも無い状態。"
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。"
   },
   "145": {
     "statusId": 145,
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "146": {
@@ -984,27 +1124,31 @@
     "statusName": "回復無効",
     "isGoodStatus": 0,
     "statusType": 0,
-    "description": "HPが回復できない。"
+    "limitCount": -1,
+    "description": "HPが回復できなくなる。"
   },
   "147": {
     "statusId": 147,
     "statusName": "彷徨う魂",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "特殊なスキルで発動。バフでもデバフでも無い状態。スキルによる解除不可。"
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。"
   },
   "148": {
     "statusId": 148,
     "statusName": "怨念",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "死亡時に敵全体に、それぞれの最大HPの30%のダメージを与える。バフでもデバフでも無い状態。スキルによる解除不可。"
+    "limitCount": -1,
+    "description": "死亡時に敵全体に、それぞれのHP最大値の30%のダメージを与える。"
   },
   "149": {
     "statusId": 149,
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "150": {
@@ -1012,6 +1156,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "151": {
@@ -1019,6 +1164,7 @@
     "statusName": "観測集中",
     "isGoodStatus": 1,
     "statusType": 1,
+    "limitCount": -1,
     "description": "スキルを発動するViewが不足している場合、数値だけViewを獲得できる"
   },
   "152": {
@@ -1026,62 +1172,71 @@
     "statusName": "発明品:ATKアップ",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "0ターン目になる瞬間、永続的に発動するATKが10%増加する効果を付与する。ターン数延長の効果を受けない。"
+    "limitCount": -1,
+    "description": "カウントが0になった時、永続するATK+10%を付与。<br><color=#505050>行動終了時にカウント減少。<br>ターン数延長の効果を受けない。</color>"
   },
   "153": {
     "statusId": 153,
     "statusName": "発明品:DEFアップ",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "0ターン目になる瞬間、永続的に発動する被ダメージが10%減少する効果を付与する。ターン数延長の効果を受けない。"
+    "limitCount": -1,
+    "description": "カウントが0になった時、永続する被ダメージ-10%を付与。<br><color=#505050>行動終了時にカウント減少。<br>ターン数延長の効果を受けない。</color>"
   },
   "154": {
     "statusId": 154,
     "statusName": "発明品:回復",
     "isGoodStatus": 1,
     "statusType": 1,
-    "description": "0ターン目になる瞬間、HP最大値の20％を回復する。ターン数延長の効果を受けない。"
+    "limitCount": -1,
+    "description": "カウントが0になった時、HPを最大値の20%回復する。<br><color=#505050>行動終了時にカウント減少。<br>ターン数延長の効果を受けない。</color>"
   },
   "155": {
     "statusId": 155,
     "statusName": "追撃",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "<size=17>自身以外のランダムな味方が、同じ攻撃対象にスキル1を使用する。そのスキルが味方を対象とする場合は、ランダムな味方を対象とする。追撃の対象が戦闘不能の場合は発動しない。</size>"
+    "limitCount": -1,
+    "description": "<size=17>自身以外のランダムな味方が、同じ攻撃対象にスキル1を使用する。そのスキルが味方を対象とする場合は、ランダムな味方を対象とする。追撃の対象が戦闘不能の場合は発動しない。同タイミングでの同一キャラクターの追撃は複数回発動しない。</size>"
   },
   "156": {
     "statusId": 156,
     "statusName": "回復スキル",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "自身の基礎Atkに応じて回復量が変化する、味方のHPを回復するスキル"
+    "limitCount": -1,
+    "description": "自身の基礎ATKに応じて回復量が変化する、味方のHPを回復するスキル"
   },
   "157": {
     "statusId": 157,
     "statusName": "氷壁",
     "isGoodStatus": 1,
     "statusType": 2,
-    "description": "相手からのダメージを無効化する。ダメージ時に消費され、ターン終了時に解除される。スキルによる解除不可。"
+    "limitCount": -1,
+    "description": "相手からのダメージを無効化する。"
   },
   "158": {
     "statusId": 158,
     "statusName": "誘発",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "指定した味方が、ランダムな敵にスキル1を使用する。スキル1が味方を対象とする場合は、ランダムな味方にスキル1を使用する。"
+    "limitCount": -1,
+    "description": "指定した味方が、ランダムな敵にスキルで指定された行動を行う。行動が味方を対象とする場合、ランダムな味方に対して行動する。同タイミングでの同一キャラクターの追撃は複数回発動しない。"
   },
   "159": {
     "statusId": 159,
     "statusName": "特別ガジェット",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "攻撃力が1.5倍になり、相手から狙われやすくなる。スキルによる解除不可。"
+    "limitCount": -1,
+    "description": "ATKが1.5倍になる。相手から狙われやすくなる。"
   },
   "160": {
     "statusId": 160,
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "161": {
@@ -1089,6 +1244,7 @@
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": ""
   },
   "162": {
@@ -1096,13 +1252,15 @@
     "statusName": "ダメージ無効",
     "isGoodStatus": 2,
     "statusType": 2,
-    "description": "相手からのダメージを無効化する。強制出撃のセンセチアのスキル3使用時に解除される。"
+    "limitCount": -1,
+    "description": "相手からのダメージを無効化する。<br><color=#505050>強制出撃のセンセチアのスキル3使用時に解除される。</color>"
   },
   "163": {
     "statusId": 163,
     "statusName": "ビッグライブ",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
     "description": "ターン開始時にViewを10000獲得。"
   },
   "164": {
@@ -1110,20 +1268,4935 @@
     "statusName": "回復量低下10%",
     "isGoodStatus": 0,
     "statusType": 2,
-    "description": "HP回復の効果が10%減少する。スキルによる解除不可。"
+    "limitCount": -1,
+    "description": "HP回復の効果が10%減少する。"
   },
   "165": {
     "statusId": 165,
     "statusName": "超再生",
     "isGoodStatus": 1,
     "statusType": 2,
-    "description": "ターン終了時にHPを最大値の30%回復する。スキルによる解除不可。"
+    "limitCount": -1,
+    "description": "ターン終了時にHPを最大値の30%回復する。"
   },
   "166": {
     "statusId": 166,
     "statusName": "",
     "isGoodStatus": 2,
     "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "167": {
+    "statusId": 167,
+    "statusName": "View消費-50%",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "168": {
+    "statusId": 168,
+    "statusName": "ATK-50%",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "169": {
+    "statusId": 169,
+    "statusName": "デバフ時弱体",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "170": {
+    "statusId": 170,
+    "statusName": "View消費+50%",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "171": {
+    "statusId": 171,
+    "statusName": "HP回復量50%減少",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "172": {
+    "statusId": 172,
+    "statusName": "バフ時強化",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "173": {
+    "statusId": 173,
+    "statusName": "毎ターンHP減少",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "174": {
+    "statusId": 174,
+    "statusName": "コンボ3以下の時ATK-50%",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "175": {
+    "statusId": 175,
+    "statusName": "View消費2倍",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "176": {
+    "statusId": 176,
+    "statusName": "未行動時弱体",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "177": {
+    "statusId": 177,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "178": {
+    "statusId": 178,
+    "statusName": "ダメージ上限10000",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "179": {
+    "statusId": 179,
+    "statusName": "ATK+30%",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "180": {
+    "statusId": 180,
+    "statusName": "毎ターンHP回復",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "181": {
+    "statusId": 181,
+    "statusName": "View消費量-3000",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "182": {
+    "statusId": 182,
+    "statusName": "火事場力",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "183": {
+    "statusId": 183,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "184": {
+    "statusId": 184,
+    "statusName": "View消費量-10000",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "185": {
+    "statusId": 185,
+    "statusName": "覇気",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "解除された次のターンの間、解除された覇気の数×10%ATKを上昇(最大100%)。"
+  },
+  "186": {
+    "statusId": 186,
+    "statusName": "ATK上昇",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "187": {
+    "statusId": 187,
+    "statusName": "View消費量+5000",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "188": {
+    "statusId": 188,
+    "statusName": "ダメージ上限",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": "1回に受けるダメージを指定HP%までにする。"
+  },
+  "189": {
+    "statusId": 189,
+    "statusName": "オート行動",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "オートバトル時と同様の行動を行う。この行動時の発動スキルや発動対象の選択は装備スキルの影響を受ける。"
+  },
+  "190": {
+    "statusId": 190,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "191": {
+    "statusId": 191,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "192": {
+    "statusId": 192,
+    "statusName": "ATK+50%",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "ATK+50%。(クエストボーナス)"
+  },
+  "193": {
+    "statusId": 193,
+    "statusName": "バフターン延長",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "自身のスキルによって付与するバフの持続または回数が1増加。(クエストボーナス)"
+  },
+  "194": {
+    "statusId": 194,
+    "statusName": "デバフターン延長",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "自身のスキルによって付与するデバフの持続または回数が1増加。(クエストボーナス)"
+  },
+  "195": {
+    "statusId": 195,
+    "statusName": "被ダメージ-30%",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "被ダメージ-30%。(クエストボーナス)"
+  },
+  "196": {
+    "statusId": 196,
+    "statusName": "HP回復量+50%",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "自身のスキルによるHP回復量+50%。(クエストボーナス)"
+  },
+  "197": {
+    "statusId": 197,
+    "statusName": "サイドキックボーナス",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "サイドキックの基礎HP+1000&基礎ATK+500。被ダメージ-250。(クエストボーナス)"
+  },
+  "198": {
+    "statusId": 198,
+    "statusName": "ブレイク状態",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": "相手からのダメージが2倍になる。ターン経過で解除される。"
+  },
+  "199": {
+    "statusId": 199,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "200": {
+    "statusId": 200,
+    "statusName": "",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": ""
+  },
+  "201": {
+    "statusId": 201,
+    "statusName": "SPD差ダメージ増加",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "攻撃対象と自身のSPDの差1につき、与えるダメージが2%上昇する。(クエストボーナス)"
+  },
+  "202": {
+    "statusId": 202,
+    "statusName": "強化無効",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": "付与されたバフが無効化される。"
+  },
+  "203": {
+    "statusId": 203,
+    "statusName": "View獲得量上昇",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "自身のスキルによるView獲得量+100%。(クエストボーナス)"
+  },
+  "204": {
+    "statusId": 204,
+    "statusName": "View消費量減少",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "ViewPowerを消費するスキルのView消費量が半分になる。（クエストボーナス）"
+  },
+  "205": {
+    "statusId": 205,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "206": {
+    "statusId": 206,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "207": {
+    "statusId": 207,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "208": {
+    "statusId": 208,
+    "statusName": "酩酊",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "解除された次のターン開始時、解除された酩酊の数×1000の値のView消費量減少を付与。(最大5000)。バフでもデバフでも無い状態。"
+  },
+  "209": {
+    "statusId": 209,
+    "statusName": "View消費量減少",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "210": {
+    "statusId": 210,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "211": {
+    "statusId": 211,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "212": {
+    "statusId": 212,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "213": {
+    "statusId": 213,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "214": {
+    "statusId": 214,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "215": {
+    "statusId": 215,
+    "statusName": "奮起",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "スキル3のView消費量が1000減少する。"
+  },
+  "216": {
+    "statusId": 216,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "217": {
+    "statusId": 217,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "218": {
+    "statusId": 218,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "219": {
+    "statusId": 219,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "220": {
+    "statusId": 220,
+    "statusName": "弱体抵抗",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "221": {
+    "statusId": 221,
+    "statusName": "鋼拳",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。"
+  },
+  "222": {
+    "statusId": 222,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "223": {
+    "statusId": 223,
+    "statusName": "弱体抵抗",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "デバフが付与される確率が数値%減少する。"
+  },
+  "224": {
+    "statusId": 224,
+    "statusName": "歓声",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "複数付与された場合一番高い効果のみ適用される。"
+  },
+  "225": {
+    "statusId": 225,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "226": {
+    "statusId": 226,
+    "statusName": "スタン",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": "そのターン、スキルを発動できない。"
+  },
+  "227": {
+    "statusId": 227,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "228": {
+    "statusId": 228,
+    "statusName": "",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": ""
+  },
+  "229": {
+    "statusId": 229,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "230": {
+    "statusId": 230,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "231": {
+    "statusId": 231,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "232": {
+    "statusId": 232,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "233": {
+    "statusId": 233,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "234": {
+    "statusId": 234,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "235": {
+    "statusId": 235,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "236": {
+    "statusId": 236,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "237": {
+    "statusId": 237,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "238": {
+    "statusId": 238,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "239": {
+    "statusId": 239,
+    "statusName": "転化",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": "被ダメージ後に自身のHPを付与キャラクターの基礎ATKの50%だけ回復する。戦闘不能になるダメージを受けた時は発動しない。"
+  },
+  "240": {
+    "statusId": 240,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "241": {
+    "statusId": 241,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "242": {
+    "statusId": 242,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "243": {
+    "statusId": 243,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "244": {
+    "statusId": 244,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "245": {
+    "statusId": 245,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "246": {
+    "statusId": 246,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "247": {
+    "statusId": 247,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "248": {
+    "statusId": 248,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "249": {
+    "statusId": 249,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "250": {
+    "statusId": 250,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "251": {
+    "statusId": 251,
+    "statusName": "バフ増強",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "<size=18>同種のバフを重ね掛けした際、重複せずに既に付与されているバフの効果量が上昇する。バフのターン数は付与されたターン数でリセットされる。</size>"
+  },
+  "252": {
+    "statusId": 252,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "253": {
+    "statusId": 253,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "254": {
+    "statusId": 254,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "255": {
+    "statusId": 255,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "256": {
+    "statusId": 256,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "257": {
+    "statusId": 257,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "258": {
+    "statusId": 258,
+    "statusName": "",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": ""
+  },
+  "259": {
+    "statusId": 259,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "260": {
+    "statusId": 260,
+    "statusName": "View凍結4000",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": "場のキャラクターの行動終了時にViewを4000に変更する。"
+  },
+  "261": {
+    "statusId": 261,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "262": {
+    "statusId": 262,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "263": {
+    "statusId": 263,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "264": {
+    "statusId": 264,
+    "statusName": "福音",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": "自身が使用するスキルのHP回復量が1.5倍になる。"
+  },
+  "265": {
+    "statusId": 265,
+    "statusName": "混乱",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": "行動がオート行動になる。"
+  },
+  "266": {
+    "statusId": 266,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "267": {
+    "statusId": 267,
+    "statusName": "プロテクト",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": "相手からのダメージが0.8倍になる。"
+  },
+  "268": {
+    "statusId": 268,
+    "statusName": "眩暈",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": "相手からのダメージが1.2倍になる。"
+  },
+  "269": {
+    "statusId": 269,
+    "statusName": "",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": ""
+  },
+  "270": {
+    "statusId": 270,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "271": {
+    "statusId": 271,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "272": {
+    "statusId": 272,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "273": {
+    "statusId": 273,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "274": {
+    "statusId": 274,
+    "statusName": "健美",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": "自身のViewの30%分、Atkが上昇。最小で+500、最大で+1500まで上昇する。"
+  },
+  "275": {
+    "statusId": 275,
+    "statusName": "バリア",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": "被ダメージ時、受けるダメージをバリア値だけ軽減する。<br><color=#505050>バリア値が無くなった時、解除される。</color>"
+  },
+  "276": {
+    "statusId": 276,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "277": {
+    "statusId": 277,
+    "statusName": "",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": ""
+  },
+  "278": {
+    "statusId": 278,
+    "statusName": "",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": ""
+  },
+  "279": {
+    "statusId": 279,
+    "statusName": "",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": ""
+  },
+  "280": {
+    "statusId": 280,
+    "statusName": "反撃",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": "ダメージを受けた後、自身のスキル1で反撃する。"
+  },
+  "281": {
+    "statusId": 281,
+    "statusName": "弱体抵抗",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "282": {
+    "statusId": 282,
+    "statusName": "毒抵抗",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "283": {
+    "statusId": 283,
+    "statusName": "毒無効",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "284": {
+    "statusId": 284,
+    "statusName": "火傷抵抗",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "285": {
+    "statusId": 285,
+    "statusName": "火傷無効",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "286": {
+    "statusId": 286,
+    "statusName": "沈黙抵抗",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "287": {
+    "statusId": 287,
+    "statusName": "沈黙無効",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "288": {
+    "statusId": 288,
+    "statusName": "過消費抵抗",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "289": {
+    "statusId": 289,
+    "statusName": "過消費無効",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "290": {
+    "statusId": 290,
+    "statusName": "リジェネ抵抗",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "291": {
+    "statusId": 291,
+    "statusName": "リジェネ無効",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "292": {
+    "statusId": 292,
+    "statusName": "ATKダウン抵抗",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "293": {
+    "statusId": 293,
+    "statusName": "ATKダウン無効",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "294": {
+    "statusId": 294,
+    "statusName": "洗脳",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": "スキルの対象が反転する。行動がオート行動になる。"
+  },
+  "295": {
+    "statusId": 295,
+    "statusName": "",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": ""
+  },
+  "296": {
+    "statusId": 296,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "297": {
+    "statusId": 297,
+    "statusName": "発破",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": "View基礎値+500。"
+  },
+  "298": {
+    "statusId": 298,
+    "statusName": "ATK増加",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": "ATKが1.2倍になる。バフ重複無効のクエストでも重複する。"
+  },
+  "299": {
+    "statusId": 299,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "300": {
+    "statusId": 300,
+    "statusName": "指令断絶",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": ""
+  },
+  "301": {
+    "statusId": 301,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "302": {
+    "statusId": 302,
+    "statusName": "",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": ""
+  },
+  "303": {
+    "statusId": 303,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "304": {
+    "statusId": 304,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "305": {
+    "statusId": 305,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "306": {
+    "statusId": 306,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "307": {
+    "statusId": 307,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 3,
+    "limitCount": -1,
+    "description": ""
+  },
+  "308": {
+    "statusId": 308,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 3,
+    "limitCount": -1,
+    "description": ""
+  },
+  "309": {
+    "statusId": 309,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "310": {
+    "statusId": 310,
+    "statusName": "誘導",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": "HPが多い相手を狙いやすくなる。"
+  },
+  "311": {
+    "statusId": 311,
+    "statusName": "剣舞",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": "チャージ数1につき、ATK1.1倍。(最大1.8倍まで。チャージ数8で最大値に到達)<br><color=#505050>剣舞が付与されている味方が敵にアクティブスキルで攻撃する度に、味方全体の剣舞のチャージ数+1。<br>行動終了時に味方全体の剣舞のチャージ数-1。<br>ターン終了時に解除される。</color>"
+  },
+  "312": {
+    "statusId": 312,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "313": {
+    "statusId": 313,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "314": {
+    "statusId": 314,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "315": {
+    "statusId": 315,
+    "statusName": "追撃（対象指定）",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "<size=17>対象が、発動者と同じ攻撃対象にスキル1を使用する。そのスキルが味方を対象とする場合は、ランダムな味方を対象とする。追撃の対象が戦闘不能の場合は発動しない。同タイミングでの同一キャラクターの追撃は複数回発動しない。</size>"
+  },
+  "317": {
+    "statusId": 317,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "318": {
+    "statusId": 318,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "320": {
+    "statusId": 320,
+    "statusName": "回数弱体無効",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": "相手からデバフが付与される確率が100%減少する。"
+  },
+  "324": {
+    "statusId": 324,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": 3,
+    "description": ""
+  },
+  "325": {
+    "statusId": 325,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "326": {
+    "statusId": 326,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 3,
+    "limitCount": -1,
+    "description": ""
+  },
+  "327": {
+    "statusId": 327,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 3,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1001101": {
+    "statusId": 1001101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1001102": {
+    "statusId": 1001102,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1001103": {
+    "statusId": 1001103,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1001104": {
+    "statusId": 1001104,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1001105": {
+    "statusId": 1001105,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1001106": {
+    "statusId": 1001106,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1001107": {
+    "statusId": 1001107,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1004101": {
+    "statusId": 1004101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1007301": {
+    "statusId": 1007301,
+    "statusName": "捕物",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "オート行動時、相手から狙われやすくなる。"
+  },
+  "1007302": {
+    "statusId": 1007302,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1007303": {
+    "statusId": 1007303,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1007306": {
+    "statusId": 1007306,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1007307": {
+    "statusId": 1007307,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1007308": {
+    "statusId": 1007308,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1007309": {
+    "statusId": 1007309,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1007310": {
+    "statusId": 1007310,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1007313": {
+    "statusId": 1007313,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1007314": {
+    "statusId": 1007314,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1007315": {
+    "statusId": 1007315,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1009201": {
+    "statusId": 1009201,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1009202": {
+    "statusId": 1009202,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1009203": {
+    "statusId": 1009203,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1010201": {
+    "statusId": 1010201,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1010202": {
+    "statusId": 1010202,
+    "statusName": "スパイタグ",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "付与したキャラクター以外からダメージを受けた時、付与したキャラクターがスキル1で追撃をする。"
+  },
+  "1010203": {
+    "statusId": 1010203,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1010204": {
+    "statusId": 1010204,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1010205": {
+    "statusId": 1010205,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1012101": {
+    "statusId": 1012101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1012102": {
+    "statusId": 1012102,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1014101": {
+    "statusId": 1014101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1014102": {
+    "statusId": 1014102,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1014201": {
+    "statusId": 1014201,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1014202": {
+    "statusId": 1014202,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1014203": {
+    "statusId": 1014203,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1014204": {
+    "statusId": 1014204,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1014205": {
+    "statusId": 1014205,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1015201": {
+    "statusId": 1015201,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1015202": {
+    "statusId": 1015202,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1015203": {
+    "statusId": 1015203,
+    "statusName": "解放",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。カウントが0になった時、解除される。<br><color=#505050>ダメージを受けた時にカウント減少。</color>"
+  },
+  "1015204": {
+    "statusId": 1015204,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1017201": {
+    "statusId": 1017201,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1017202": {
+    "statusId": 1017202,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1017203": {
+    "statusId": 1017203,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1017204": {
+    "statusId": 1017204,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1017205": {
+    "statusId": 1017205,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1017206": {
+    "statusId": 1017206,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1017207": {
+    "statusId": 1017207,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1017208": {
+    "statusId": 1017208,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1017210": {
+    "statusId": 1017210,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1017211": {
+    "statusId": 1017211,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1017212": {
+    "statusId": 1017212,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1017213": {
+    "statusId": 1017213,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1020201": {
+    "statusId": 1020201,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1020202": {
+    "statusId": 1020202,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1020203": {
+    "statusId": 1020203,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1020204": {
+    "statusId": 1020204,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1020205": {
+    "statusId": 1020205,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1020206": {
+    "statusId": 1020206,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1020207": {
+    "statusId": 1020207,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1020208": {
+    "statusId": 1020208,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1020209": {
+    "statusId": 1020209,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1020210": {
+    "statusId": 1020210,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1022201": {
+    "statusId": 1022201,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1022202": {
+    "statusId": 1022202,
+    "statusName": "糸鳴",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": "行動を行う前に、付与したヒーローから誘い打ちを受ける。最大チャージ数5まで。この状態変化のチャージ数はデバフ個数として扱われる。<br><color=#505050>行動開始時に解除。</color>"
+  },
+  "1022203": {
+    "statusId": 1022203,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1022204": {
+    "statusId": 1022204,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1022205": {
+    "statusId": 1022205,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1022206": {
+    "statusId": 1022206,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1022207": {
+    "statusId": 1022207,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1022208": {
+    "statusId": 1022208,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1022209": {
+    "statusId": 1022209,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1022210": {
+    "statusId": 1022210,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1022211": {
+    "statusId": 1022211,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1030101": {
+    "statusId": 1030101,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1030104": {
+    "statusId": 1030104,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1030105": {
+    "statusId": 1030105,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1031201": {
+    "statusId": 1031201,
+    "statusName": "星光",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。<br><color=#505050>星影のモノマサ以外の味方がダメージを与える度にチャージ数が増加する。<br>スキル3使用後にチャージ数が1になる。</color>"
+  },
+  "1031202": {
+    "statusId": 1031202,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1031203": {
+    "statusId": 1031203,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1031204": {
+    "statusId": 1031204,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1031205": {
+    "statusId": 1031205,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1031206": {
+    "statusId": 1031206,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1031207": {
+    "statusId": 1031207,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1031208": {
+    "statusId": 1031208,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1031209": {
+    "statusId": 1031209,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1033101": {
+    "statusId": 1033101,
+    "statusName": "陽光",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1033102": {
+    "statusId": 1033102,
+    "statusName": "新緑",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1034101": {
+    "statusId": 1034101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1034102": {
+    "statusId": 1034102,
+    "statusName": "連続跳躍",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "チャージ数1につき、SPDが+1される。（最大チャージ数50まで）<br><color=#505050>SPDアップが付与された時にチャージ数が増加する。</color>"
+  },
+  "1035101": {
+    "statusId": 1035101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1035102": {
+    "statusId": 1035102,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1035103": {
+    "statusId": 1035103,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1051201": {
+    "statusId": 1051201,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1051202": {
+    "statusId": 1051202,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1051203": {
+    "statusId": 1051203,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1051204": {
+    "statusId": 1051204,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1051205": {
+    "statusId": 1051205,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1062201": {
+    "statusId": 1062201,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1062202": {
+    "statusId": 1062202,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1062203": {
+    "statusId": 1062203,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1064201": {
+    "statusId": 1064201,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1064202": {
+    "statusId": 1064202,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1064203": {
+    "statusId": 1064203,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1064204": {
+    "statusId": 1064204,
+    "statusName": "脚光",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "自身と、役割が「View獲得」の味方はそれぞれのViewの40%分、ATKが上昇。最小で+500、最大で+3000まで上昇する。この効果は重複しない。"
+  },
+  "1064205": {
+    "statusId": 1064205,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1064206": {
+    "statusId": 1064206,
+    "statusName": "ステージ・イズ・マイン！",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "敵単体に130%ダメージ+対象以外の敵に50%ダメージ。敵全体に1ターンの間眩暈を付与。"
+  },
+  "1065202": {
+    "statusId": 1065202,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1065203": {
+    "statusId": 1065203,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1065204": {
+    "statusId": 1065204,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1065205": {
+    "statusId": 1065205,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1065207": {
+    "statusId": 1065207,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1065208": {
+    "statusId": 1065208,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1065209": {
+    "statusId": 1065209,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1065211": {
+    "statusId": 1065211,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1065212": {
+    "statusId": 1065212,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1065213": {
+    "statusId": 1065213,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1065214": {
+    "statusId": 1065214,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1065215": {
+    "statusId": 1065215,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": 3,
+    "description": "ATK+20%"
+  },
+  "1065216": {
+    "statusId": 1065216,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1065217": {
+    "statusId": 1065217,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1073201": {
+    "statusId": 1073201,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1073202": {
+    "statusId": 1073202,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1073203": {
+    "statusId": 1073203,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1073204": {
+    "statusId": 1073204,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1073205": {
+    "statusId": 1073205,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1073206": {
+    "statusId": 1073206,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1073207": {
+    "statusId": 1073207,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1073208": {
+    "statusId": 1073208,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1073209": {
+    "statusId": 1073209,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1073210": {
+    "statusId": 1073210,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1073211": {
+    "statusId": 1073211,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1075201": {
+    "statusId": 1075201,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1075202": {
+    "statusId": 1075202,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1075203": {
+    "statusId": 1075203,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1075204": {
+    "statusId": 1075204,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1075205": {
+    "statusId": 1075205,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1075206": {
+    "statusId": 1075206,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1075207": {
+    "statusId": 1075207,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1075208": {
+    "statusId": 1075208,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1075209": {
+    "statusId": 1075209,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1075210": {
+    "statusId": 1075210,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1075211": {
+    "statusId": 1075211,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1075212": {
+    "statusId": 1075212,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1075213": {
+    "statusId": 1075213,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1081201": {
+    "statusId": 1081201,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1082103": {
+    "statusId": 1082103,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1082104": {
+    "statusId": 1082104,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1082105": {
+    "statusId": 1082105,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1082106": {
+    "statusId": 1082106,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1101201": {
+    "statusId": 1101201,
+    "statusName": "恵雨",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "チャージ数1につき、ATK+5%。(最大チャージ数5まで)<br><color=#505050>特定のスキルによりチャージ数が増加する。ターン終了時にチャージ数が減少する。</color>"
+  },
+  "1101202": {
+    "statusId": 1101202,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1101203": {
+    "statusId": 1101203,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1101204": {
+    "statusId": 1101204,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1115201": {
+    "statusId": 1115201,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1115202": {
+    "statusId": 1115202,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1115203": {
+    "statusId": 1115203,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1115204": {
+    "statusId": 1115204,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1115205": {
+    "statusId": 1115205,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1115206": {
+    "statusId": 1115206,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1115207": {
+    "statusId": 1115207,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1115208": {
+    "statusId": 1115208,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1115210": {
+    "statusId": 1115210,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1116101": {
+    "statusId": 1116101,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1116102": {
+    "statusId": 1116102,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1116103": {
+    "statusId": 1116103,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1116104": {
+    "statusId": 1116104,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1116105": {
+    "statusId": 1116105,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1116106": {
+    "statusId": 1116106,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1122101": {
+    "statusId": 1122101,
+    "statusName": "オーバーシンクロ",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": "ViewPowerを消費するスキルのView消費量が半分になる。バフ重複無効のクエストでも重複する。<br><color=#505050>行動終了時に1つ解除</color>"
+  },
+  "1122201": {
+    "statusId": 1122201,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1122202": {
+    "statusId": 1122202,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1122203": {
+    "statusId": 1122203,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1122204": {
+    "statusId": 1122204,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1122205": {
+    "statusId": 1122205,
+    "statusName": "減速",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1123101": {
+    "statusId": 1123101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1124101": {
+    "statusId": 1124101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1124102": {
+    "statusId": 1124102,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1124103": {
+    "statusId": 1124103,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1124104": {
+    "statusId": 1124104,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1124105": {
+    "statusId": 1124105,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1124201": {
+    "statusId": 1124201,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1124202": {
+    "statusId": 1124202,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1124203": {
+    "statusId": 1124203,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1124204": {
+    "statusId": 1124204,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1124205": {
+    "statusId": 1124205,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1124206": {
+    "statusId": 1124206,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1124207": {
+    "statusId": 1124207,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1136101": {
+    "statusId": 1136101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1140201": {
+    "statusId": 1140201,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1140202": {
+    "statusId": 1140202,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1140203": {
+    "statusId": 1140203,
+    "statusName": "水塊圧縮",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1140204": {
+    "statusId": 1140204,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1140205": {
+    "statusId": 1140205,
+    "statusName": "バフカウント",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "自身にバフが付与される度+1される。最大値は5。"
+  },
+  "1140206": {
+    "statusId": 1140206,
+    "statusName": "水塊圧縮",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "自身のバフカウントを0にする。1回の行動の間消費したバフカウント×15%ATKが上昇。もう1度行動する。"
+  },
+  "1160101": {
+    "statusId": 1160101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1160201": {
+    "statusId": 1160201,
+    "statusName": "弾痕",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": "猛撃のオブシディウス以外のキャラクターからダメージを受けた時＆デバフが付与された時にチャージ数+1。役割が「弱体化」のキャラクターの行動でチャージ数が増える場合は、チャージ数+2に増加。最大チャージ数20まで。この状態変化のチャージ数はデバフ個数として扱われる。"
+  },
+  "1160202": {
+    "statusId": 1160202,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1160203": {
+    "statusId": 1160203,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1160204": {
+    "statusId": 1160204,
+    "statusName": "猛撃",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "ターン終了時、弾痕が付与されている敵に40～230%のダメージを与え、弾痕を全て解除(弾痕のチャージ数に応じて威力上昇)。この行動でView、コンボ数は増加しない。"
+  },
+  "1160205": {
+    "statusId": 1160205,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1160206": {
+    "statusId": 1160206,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1160207": {
+    "statusId": 1160207,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1160208": {
+    "statusId": 1160208,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1167111": {
+    "statusId": 1167111,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1168201": {
+    "statusId": 1168201,
+    "statusName": "ボルテージ",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1168202": {
+    "statusId": 1168202,
+    "statusName": "ハーモニクス",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。最大カウント数は6。"
+  },
+  "1168203": {
+    "statusId": 1168203,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1168204": {
+    "statusId": 1168204,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1168206": {
+    "statusId": 1168206,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1168207": {
+    "statusId": 1168207,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1168208": {
+    "statusId": 1168208,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1168209": {
+    "statusId": 1168209,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1168210": {
+    "statusId": 1168210,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1169101": {
+    "statusId": 1169101,
+    "statusName": "灼炎",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": "ターン終了時にHP最大値の20%のダメージを受ける。デバフ重複無効のクエストでも重複する。"
+  },
+  "1169102": {
+    "statusId": 1169102,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1169103": {
+    "statusId": 1169103,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1169104": {
+    "statusId": 1169104,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1169105": {
+    "statusId": 1169105,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1169106": {
+    "statusId": 1169106,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1170101": {
+    "statusId": 1170101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1171101": {
+    "statusId": 1171101,
+    "statusName": "稚拙な模造",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": "被ダメージ+25%"
+  },
+  "1184101": {
+    "statusId": 1184101,
+    "statusName": "ATK+50%",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1189101": {
+    "statusId": 1189101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1189102": {
+    "statusId": 1189102,
+    "statusName": "誓約",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "サイドキックスキルを除いた自身のスキルのView消費量が5%減少。"
+  },
+  "1189103": {
+    "statusId": 1189103,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1189104": {
+    "statusId": 1189104,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1190101": {
+    "statusId": 1190101,
+    "statusName": "施錠",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": "スキル3が使えなくなる。"
+  },
+  "1190201": {
+    "statusId": 1190201,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1190202": {
+    "statusId": 1190202,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1190203": {
+    "statusId": 1190203,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1190204": {
+    "statusId": 1190204,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1190205": {
+    "statusId": 1190205,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1190206": {
+    "statusId": 1190206,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1190208": {
+    "statusId": 1190208,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1190210": {
+    "statusId": 1190210,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1191101": {
+    "statusId": 1191101,
+    "statusName": "執着",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1191102": {
+    "statusId": 1191102,
+    "statusName": "戦闘狂",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "スキル1が崩骸に強化される。"
+  },
+  "1191103": {
+    "statusId": 1191103,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1191104": {
+    "statusId": 1191104,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1191105": {
+    "statusId": 1191105,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1192101": {
+    "statusId": 1192101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1192201": {
+    "statusId": 1192201,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1192202": {
+    "statusId": 1192202,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1192203": {
+    "statusId": 1192203,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1192204": {
+    "statusId": 1192204,
+    "statusName": "ATK+50%",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "ATK+50%。"
+  },
+  "1192206": {
+    "statusId": 1192206,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1192207": {
+    "statusId": 1192207,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1198101": {
+    "statusId": 1198101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1199101": {
+    "statusId": 1199101,
+    "statusName": "鍛錬",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "チャージ数2につき、味方全体のATK+5%。（最大チャージ数8まで）<br><color=#505050>ダメージを受けた時にチャージ数が増加する。行動終了時にチャージ数が減少する。</color>"
+  },
+  "1199102": {
+    "statusId": 1199102,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1200101": {
+    "statusId": 1200101,
+    "statusName": "魔眼",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1200102": {
+    "statusId": 1200102,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1200103": {
+    "statusId": 1200103,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1200104": {
+    "statusId": 1200104,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1200106": {
+    "statusId": 1200106,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1206101": {
+    "statusId": 1206101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1206102": {
+    "statusId": 1206102,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1207101": {
+    "statusId": 1207101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1207102": {
+    "statusId": 1207102,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1207103": {
+    "statusId": 1207103,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1207104": {
+    "statusId": 1207104,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "自身が使用するスキルのHP回復量増加。"
+  },
+  "1207105": {
+    "statusId": 1207105,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1209101": {
+    "statusId": 1209101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1209102": {
+    "statusId": 1209102,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1209201": {
+    "statusId": 1209201,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1209202": {
+    "statusId": 1209202,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1209203": {
+    "statusId": 1209203,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1209204": {
+    "statusId": 1209204,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1209205": {
+    "statusId": 1209205,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1209207": {
+    "statusId": 1209207,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1209208": {
+    "statusId": 1209208,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1209209": {
+    "statusId": 1209209,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1209210": {
+    "statusId": 1209210,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1209211": {
+    "statusId": 1209211,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1209212": {
+    "statusId": 1209212,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1210101": {
+    "statusId": 1210101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1210102": {
+    "statusId": 1210102,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1210103": {
+    "statusId": 1210103,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1210104": {
+    "statusId": 1210104,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1211101": {
+    "statusId": 1211101,
+    "statusName": "",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1211102": {
+    "statusId": 1211102,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1211103": {
+    "statusId": 1211103,
+    "statusName": "つのぶえ",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": "スキルの効果発動率+10%"
+  },
+  "1211104": {
+    "statusId": 1211104,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1211105": {
+    "statusId": 1211105,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1211106": {
+    "statusId": 1211106,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1211107": {
+    "statusId": 1211107,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1211108": {
+    "statusId": 1211108,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1211109": {
+    "statusId": 1211109,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1211110": {
+    "statusId": 1211110,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1211111": {
+    "statusId": 1211111,
+    "statusName": "ATKチャージ",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "チャージ数1につきATKを2.5%上昇。条件によりチャージ数が増加していく(最大で6まで)。"
+  },
+  "1211112": {
+    "statusId": 1211112,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1211113": {
+    "statusId": 1211113,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1211114": {
+    "statusId": 1211114,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1212101": {
+    "statusId": 1212101,
+    "statusName": "",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1212102": {
+    "statusId": 1212102,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1212103": {
+    "statusId": 1212103,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1212104": {
+    "statusId": 1212104,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1212105": {
+    "statusId": 1212105,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1212106": {
+    "statusId": 1212106,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1213105": {
+    "statusId": 1213105,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1214105": {
+    "statusId": 1214105,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1215105": {
+    "statusId": 1215105,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1216105": {
+    "statusId": 1216105,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1217101": {
+    "statusId": 1217101,
+    "statusName": "引力",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "ViewPowerを消費するスキルのView消費量が10%減少する。この効果を付与したキャラクターの行動終了時に、付与されたキャラクターが未行動だった場合、1回の行動の間SPDアップを付与。<br><color=#505050>付与したキャラクターが戦闘不能になった時に解除される。</color>"
+  },
+  "1217102": {
+    "statusId": 1217102,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1218101": {
+    "statusId": 1218101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1218102": {
+    "statusId": 1218102,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1224111": {
+    "statusId": 1224111,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1229101": {
+    "statusId": 1229101,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 3,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1229102": {
+    "statusId": 1229102,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1229103": {
+    "statusId": 1229103,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1229104": {
+    "statusId": 1229104,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1230101": {
+    "statusId": 1230101,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1230102": {
+    "statusId": 1230102,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1230103": {
+    "statusId": 1230103,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1230104": {
+    "statusId": 1230104,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1236101": {
+    "statusId": 1236101,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1236102": {
+    "statusId": 1236102,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1236103": {
+    "statusId": 1236103,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1236104": {
+    "statusId": 1236104,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1236105": {
+    "statusId": 1236105,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1236106": {
+    "statusId": 1236106,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1236107": {
+    "statusId": 1236107,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1237101": {
+    "statusId": 1237101,
+    "statusName": "虚像",
+    "isGoodStatus": 0,
+    "statusType": 0,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1237102": {
+    "statusId": 1237102,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1237103": {
+    "statusId": 1237103,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1248101": {
+    "statusId": 1248101,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1248103": {
+    "statusId": 1248103,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1248104": {
+    "statusId": 1248104,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1248106": {
+    "statusId": 1248106,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1248110": {
+    "statusId": 1248110,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1249101": {
+    "statusId": 1249101,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1249102": {
+    "statusId": 1249102,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1249103": {
+    "statusId": 1249103,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1249104": {
+    "statusId": 1249104,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1250101": {
+    "statusId": 1250101,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1255101": {
+    "statusId": 1255101,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1255102": {
+    "statusId": 1255102,
+    "statusName": "詠唱",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1255103": {
+    "statusId": 1255103,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1261101": {
+    "statusId": 1261101,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1261102": {
+    "statusId": 1261102,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1261103": {
+    "statusId": 1261103,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1261104": {
+    "statusId": 1261104,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1261105": {
+    "statusId": 1261105,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1261106": {
+    "statusId": 1261106,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1261107": {
+    "statusId": 1261107,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1261108": {
+    "statusId": 1261108,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1264101": {
+    "statusId": 1264101,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1264102": {
+    "statusId": 1264102,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1264103": {
+    "statusId": 1264103,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1264104": {
+    "statusId": 1264104,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1264105": {
+    "statusId": 1264105,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1264106": {
+    "statusId": 1264106,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1264107": {
+    "statusId": 1264107,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1264108": {
+    "statusId": 1264108,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1264109": {
+    "statusId": 1264109,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1264110": {
+    "statusId": 1264110,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1264111": {
+    "statusId": 1264111,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1264112": {
+    "statusId": 1264112,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1264113": {
+    "statusId": 1264113,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1264114": {
+    "statusId": 1264114,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": 3,
+    "description": ""
+  },
+  "1265101": {
+    "statusId": 1265101,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1265102": {
+    "statusId": 1265102,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1265103": {
+    "statusId": 1265103,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1265104": {
+    "statusId": 1265104,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1265105": {
+    "statusId": 1265105,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1265106": {
+    "statusId": 1265106,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1265107": {
+    "statusId": 1265107,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1266101": {
+    "statusId": 1266101,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1266102": {
+    "statusId": 1266102,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1266103": {
+    "statusId": 1266103,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1266104": {
+    "statusId": 1266104,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1266105": {
+    "statusId": 1266105,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1266106": {
+    "statusId": 1266106,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1267101": {
+    "statusId": 1267101,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1287101": {
+    "statusId": 1287101,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1287103": {
+    "statusId": 1287103,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1287104": {
+    "statusId": 1287104,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1287106": {
+    "statusId": 1287106,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1287107": {
+    "statusId": 1287107,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1287108": {
+    "statusId": 1287108,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1288101": {
+    "statusId": 1288101,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": 5,
+    "description": "ATK+10%（5個まで重複可能）"
+  },
+  "1288102": {
+    "statusId": 1288102,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1288103": {
+    "statusId": 1288103,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1288105": {
+    "statusId": 1288105,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 1,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1288106": {
+    "statusId": 1288106,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1289101": {
+    "statusId": 1289101,
+    "statusName": "絵本の住人【妖精】",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "行動開始時、デバフが付与されている場合、デバフを1つ解除。"
+  },
+  "1289102": {
+    "statusId": 1289102,
+    "statusName": "絵本の住人【鳥】",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "行動開始時、ATKアップが付与されていない場合、1回の行動の間ATKアップを付与。"
+  },
+  "1289103": {
+    "statusId": 1289103,
+    "statusName": "絵本の住人【蝶】",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "行動開始時、Viewを5000獲得。"
+  },
+  "1289104": {
+    "statusId": 1289104,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1289105": {
+    "statusId": 1289105,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 3,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1289106": {
+    "statusId": 1289106,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 3,
+    "limitCount": -1,
+    "description": ""
+  },
+  "1289107": {
+    "statusId": 1289107,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "3198101": {
+    "statusId": 3198101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "3198102": {
+    "statusId": 3198102,
+    "statusName": "ATK+%",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "味方全体のATKが数値だけ上昇する。この効果が重複した場合、効果量が多い方を優先する。"
+  },
+  "3199101": {
+    "statusId": 3199101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "3209101": {
+    "statusId": 3209101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "3217101": {
+    "statusId": 3217101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "3217102": {
+    "statusId": 3217102,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "3249101": {
+    "statusId": 3249101,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "3266101": {
+    "statusId": 3266101,
+    "statusName": "",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "4122201": {
+    "statusId": 4122201,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "4189101": {
+    "statusId": 4189101,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "4189102": {
+    "statusId": 4189102,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "4189103": {
+    "statusId": 4189103,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "4189104": {
+    "statusId": 4189104,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "4189105": {
+    "statusId": 4189105,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "4189106": {
+    "statusId": 4189106,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "9000068": {
+    "statusId": 9000068,
+    "statusName": "マルフィクのツルハシ",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "基礎HP+3000&基礎ATK+1000。被ダメージ-250。"
+  },
+  "10331021": {
+    "statusId": 10331021,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "10331022": {
+    "statusId": 10331022,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "10331023": {
+    "statusId": 10331023,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "10331024": {
+    "statusId": 10331024,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "10331031": {
+    "statusId": 10331031,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "10331032": {
+    "statusId": 10331032,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "10331033": {
+    "statusId": 10331033,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "10331034": {
+    "statusId": 10331034,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "10331041": {
+    "statusId": 10331041,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "10331042": {
+    "statusId": 10331042,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "10331043": {
+    "statusId": 10331043,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "10331044": {
+    "statusId": 10331044,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "12481071": {
+    "statusId": 12481071,
+    "statusName": "拡散弾",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。<br><color=#505050>スキル3使用後に解除される。</color>"
+  },
+  "12481072": {
+    "statusId": 12481072,
+    "statusName": "強襲弾",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。<br><color=#505050>スキル3使用後に解除される。</color>"
+  },
+  "12481073": {
+    "statusId": 12481073,
+    "statusName": "治癒弾",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。<br><color=#505050>スキル3使用後に解除される。</color>"
+  },
+  "12481074": {
+    "statusId": 12481074,
+    "statusName": "彩光弾",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。<br><color=#505050>スキル3使用後に解除される。</color>"
+  },
+  "12481075": {
+    "statusId": 12481075,
+    "statusName": "連双弾",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。<br><color=#505050>スキル3使用後に解除される。</color>"
+  },
+  "12481076": {
+    "statusId": 12481076,
+    "statusName": "裂傷弾",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。<br><color=#505050>スキル3使用後に解除される。</color>"
+  },
+  "12481081": {
+    "statusId": 12481081,
+    "statusName": "拡散弾",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。<br><color=#505050>スキル3使用後に解除される。</color>"
+  },
+  "12481082": {
+    "statusId": 12481082,
+    "statusName": "強襲弾",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。<br><color=#505050>スキル3使用後に解除される。</color>"
+  },
+  "12481083": {
+    "statusId": 12481083,
+    "statusName": "治癒弾",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。<br><color=#505050>スキル3使用後に解除される。</color>"
+  },
+  "12481084": {
+    "statusId": 12481084,
+    "statusName": "彩光弾",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。<br><color=#505050>スキル3使用後に解除される。</color>"
+  },
+  "12481085": {
+    "statusId": 12481085,
+    "statusName": "連双弾",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。<br><color=#505050>スキル3使用後に解除される。</color>"
+  },
+  "12481086": {
+    "statusId": 12481086,
+    "statusName": "裂傷弾",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。<br><color=#505050>スキル3使用後に解除される。</color>"
+  },
+  "12481091": {
+    "statusId": 12481091,
+    "statusName": "拡散弾",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。<br><color=#505050>スキル3使用後に解除される。</color>"
+  },
+  "12481092": {
+    "statusId": 12481092,
+    "statusName": "強襲弾",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。<br><color=#505050>スキル3使用後に解除される。</color>"
+  },
+  "12481093": {
+    "statusId": 12481093,
+    "statusName": "治癒弾",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。<br><color=#505050>スキル3使用後に解除される。</color>"
+  },
+  "12481094": {
+    "statusId": 12481094,
+    "statusName": "彩光弾",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。<br><color=#505050>スキル3使用後に解除される。</color>"
+  },
+  "12481095": {
+    "statusId": 12481095,
+    "statusName": "連双弾",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。<br><color=#505050>スキル3使用後に解除される。</color>"
+  },
+  "12481096": {
+    "statusId": 12481096,
+    "statusName": "裂傷弾",
+    "isGoodStatus": 1,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": "特定のスキルに関連する効果。<br><color=#505050>スキル3使用後に解除される。</color>"
+  },
+  "90000701": {
+    "statusId": 90000701,
+    "statusName": "先陣を切る",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "90000702": {
+    "statusId": 90000702,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "90000731": {
+    "statusId": 90000731,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "90000741": {
+    "statusId": 90000741,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "90000751": {
+    "statusId": 90000751,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "90000761": {
+    "statusId": 90000761,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "90000781": {
+    "statusId": 90000781,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "90000782": {
+    "statusId": 90000782,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "90000821": {
+    "statusId": 90000821,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "90000822": {
+    "statusId": 90000822,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "90000823": {
+    "statusId": 90000823,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "90000824": {
+    "statusId": 90000824,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "90000825": {
+    "statusId": 90000825,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "90000826": {
+    "statusId": 90000826,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "90000827": {
+    "statusId": 90000827,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "90000871": {
+    "statusId": 90000871,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "90000891": {
+    "statusId": 90000891,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "90000901": {
+    "statusId": 90000901,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
+    "description": ""
+  },
+  "90000911": {
+    "statusId": 90000911,
+    "statusName": "",
+    "isGoodStatus": 2,
+    "statusType": 2,
+    "limitCount": -1,
     "description": ""
   }
 }

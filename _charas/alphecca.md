@@ -1,6 +1,10 @@
 ---
 title: Alphecca
 characterId: 62
+type: humanoid
+gender: male
+h2:
+  title: '"Tidal Surge" Alphecca'
 heroes:
 - stockId: 10621
   BIO_H01: |-
@@ -29,6 +33,31 @@ heroes:
 
     He summoned a confidant of his, an "observer" and proposed a concept....
   extra_sprites: fg_ADV_alphecca_h01,fg_ADV_alphecca_h01_skin1,fg_ADV_alphecca_h02,fg_ADV_alphecca_h02_skin1
+- stockId: 10622
+  BIO_H01: |-
+    While travelling incognito to the beautiful capital of water,
+    Alphecca heard the adventure story about the great king who cut open the path to the capital,
+    that frontier spirit and how he's remembered by his people, excite him.
+    
+    The new form he got, very closely resembled that king.
+    
+    The trident shaped parallel weapon in his hand move freely with his intention,
+    and is capable of making a path with the water it produced.
+    
+    The image of this Alphecca, is of a king who lead his army in the front, clearing the way for them.
+  BIO_H02: |-
+    Alphecca recalls the time he ascended the throne.
+  
+    After losing his father and brother in quick succession, he found himself leading a nation very suddenly.
+  
+    As a king and a knight, he has done his best to protect the country of Ardisia and the people who live there.
+  
+    But Alphecca had a hidden feeling in his heart.
+  
+    I want to not only protect what is here and now, but also make the country of Ardisia better and carve out a brighter future             together with my beloved people.
+  
+    With this wish in mind, the gentle king raises the "Spear of Reclamation" high.
+  extra_sprites: fg_alpheccaThermae2307_h02_skin2
 sidekicks:
 - stockId: 10621
   BIO_S01: |-
@@ -49,7 +78,7 @@ sidekicks:
 
     He invites the Rutilix, who has trouble achieving anything, to an exploration
     into a labyrinth which has quickly caused some turmoil.
-  extra_sprites: fg_alphecca_s01_skin1
+  extra_sprites: fg_alphecca_s01_skin1,fg_alphecca_s01_skin2
 ---
 
 {% include voice-table.html resourceName="alphecca"
@@ -81,13 +110,33 @@ EVENTA = "Hmm..mysterious, what an interesting labyrinth.<br>I'm usually bound t
 EVENTB = "Hmm, the enigmatic white knight huh…I wonder what kind of person he is.<br>Mm? when he appears I am always nowhere to be seen you say?<br>Now…isn't it just a coincidence?"
 %}
 
+{% include voice-table.html resourceName="alpheccaThermae2307"
+h_gachaResult = "I am, Ardisia kingdom's…<br>No, I'm just a passing traveler,<br>My name's Alphecca!<br>Let's fully enjoy ourselves in this journey!"
+s_gachaResult = "Leave the rest to me!<br>Heheh, if it's a foreign country then no matter how noisy I am…<br>Ah, nothing, nothing at all!?"
+APPRECIATION = "Hey, isn't this a vacation journey?<br>Stretching yourself too much like this, it's a waste of this occasion.<br>How about I teach you my relaxation secrets!"
+DAILY = "Flowing clear water, beautiful trees and flowers abound…<br>It's very different from Ardisia.<br>This is great! It's exactly because this difference that they call it a journey!"
+HERO = "Such an earnest person when facing the afflicted, I like it!<br>I want to invite him to my country, and teach our…<br>Oops, I forgot I'm on vacation."
+PLAYER = "I want to know you, not as a magician but as a fellow traveler on the road…hm.<br>Nice timing, let's talk while we take a bath together!"
+RELATION = "Alchemy, I believe, is the study of the search for perfection....<br>I heard that there was once a researcher of it in our country.<br>I'm interested in knowing what kind of path this is."
+TOUCH = "Hahah, what's holding you back?<br>Right now, you and I are just tourists.<br>You can freely touch me however much you want, let's enjoy this travels!"
+TRAIN = "I won't hold back, have you prepared!?"
+TRAINED = "Kuh! You're playing me…!"
+EVENTA = "That legendary king who open the path to the capital alone…<br>How…full of adventurous spirit he is!<br>Haha! I can't control my excitement just thinking about it!"
+EVENTB = "Mm, what's that stall with such a savory smell!?<br>This glittering wooden sword souvenir is great!<br>…I'm too conspicuous?...uh.."
+%}
+
 ## Notes
 
 - His full name is Alphecca Gemma The 21st (アルフェッカ・ゲンマ21世）
 - He is 30 something years old
 - [Alphecca](https://en.wikipedia.org/wiki/Alpha_Coronae_Borealis) is the official name of the brightest star in the constellation of Corona Borealis (Alpha Corona Borealis), Alphecca is Arabic, short for نير الفكّة nayyir al-fakka "the bright (star) of the broken (ring of stars)"
 - Gemma ,another name for Alpha Corona Borealis, is latin for jewel
-- His Skill name is from Danish language:
+- His Skill name is from Swedish language:
+- Base form
   - Skråstreg : literally Slash
   - Kungens Ansvar : Kungens (The king's) Ansvar (Responsibility)
   - Helig Flammerei : Helig (Holy) Flammerei (presumably flames which is flammer)
+- Variant form
+  - Här av Vann : Army of Water, Här is "army", av is "of", Vann is "water".
+  - Kungens Aldern : Age of Kings, Kungens (The king's) Aldern (Age)
+  - Helig Vann Spyd : Helig (Holy) Vann (Water) Spyd (Spear)

@@ -1,5 +1,6 @@
 ---
 title: 2nd Anniversary
+eventId: 41
 jp_title: 2周年記念キャンペーン
 news_link: https://live-a-hero.jp/campaign/4553
 banner_image: banner_notice_2ndAnniversary.jpg 

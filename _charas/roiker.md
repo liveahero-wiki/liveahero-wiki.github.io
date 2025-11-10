@@ -1,6 +1,8 @@
 ---
 title: Roiker
 characterId: 113
+type: anthro
+gender: male
 heroes:
 - stockId: 11131
   BIO_H01: |-
@@ -45,6 +47,7 @@ sidekicks:
     delicious.
 
     Circumstances have restrained his hero activities, so he has few of it.
+  extra_sprites: fg_roiker_s01_skin1,fg_roiker_s01_skin2,fg_roiker_s01_skin3
 ---
 
 {% include voice-table.html resourceName="roiker"

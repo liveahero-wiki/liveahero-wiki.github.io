@@ -1,6 +1,38 @@
 ---
 title: Okitaka
 characterId: 75
+type: humanoid
+gender: male
+occupation: Orient City Hall Staff
+profile:
+  age: 43
+  height: 172
+  weight: 87
+  birthday: 08/23
+  birthplace: Earth, Japan, Osaka
+  5th_anniversary_intro: |-
+    The phrase "The name reflects the person" is most appropriate for "The Commander".
+    
+    He’s a rather unconventional hero, specializing in strategic leadership from the rear lines. While working closely with the team’s operator, he adapts to shifting situations and guides his team to victory through carefully crafted tactics.
+
+    And yet, this role is one that only he could truly fulfill.
+
+    Backed by a long career as a hero, his keen insight and extraordinary intellect give rise to logical, efficient strategies that leave everyone in awe.
+    
+    His calm and charismatic personality doesn’t just win over fans—it also earns the trust and admiration of his fellow heroes and operators, making him the irreplaceable brain of any mission.
+  5th_anniversary_true_self: |-
+    While he holds the position of Supreme Commander of the UEHA Japan Branch, he also works in a civilian capacity as a managerial staff member in the General Affairs Division of Orient City Hall—though his exact title remains undisclosed.
+    
+    On a daily basis, he reviews various development proposals and handles administrative coordination tasks to ensure the smooth operation of city governance. It's a "Plain" role (as remarked by himself), yet is undeniably crucial to the city’s functioning.
+
+    At the same time, he maintains close communication with UEHA branches across Japan, managing personnel assignments and supporting mission planning—a lifestyle that goes far beyond what most people could handle.
+
+    Despite his overwhelming workload, his calm and cheerful demeanor doesn't show how busy he is, which is also one of his charms.
+    When asked about his hobbies, he mentioned bar hopping, reading, and gaming.
+    
+    As for games, his interests range widely—from classics like shogi and chess to trading card games and full-scale strategy simulations. Unsurprisingly, he gravitates toward games that require deep strategic thinking.
+h2:
+  title: '"Mobile Soldier" Okitaka'
 heroes:
 - stockId: 10751
   BIO_H01: |-
@@ -22,6 +54,8 @@ heroes:
   passiveSkillIds:
   - '8075101'
   - '8075102'
+- stockId: 10752
+  extra_sprites: fg_okitakaCrisis2404_h01_skin2
 sidekicks:
 - stockId: 10751
   BIO_S01: |-
@@ -33,7 +67,7 @@ sidekicks:
     position, but his wisdom as a commander is outstanding. The tight-knit working
     relationship between UEHA and Parallel Flight is due to the fact that he, Ryekie
     and Huckle formed a deep bond after a joint battle.
-  extra_sprites: fg_okitaka_s01_skin1
+  extra_sprites: fg_okitaka_s01_skin1,fg_okitaka_s01_skin2,fg_okitaka_s01_skin3,fg_okitaka_s01_skin4
 ---
 
 {% include voice-table.html resourceName="okitaka"
@@ -49,6 +83,9 @@ TRAIN = "Let's show off what a veteran can do."
 TRAINED = "It's so hard! It's so hard! I can't do it anymore!"
 EVENTA = "The sun is shining, it's a perfect day for a battle!<br>Now let's plan our next battle plan together.<br>We're going to get another win today!"
 EVENTB = "Oh, you're making takoyaki? Let me borrow some.<br>I can make takoyaki with my eyes closed! Now lessee... didn't it go.... hm...<br>No, don't tell me! I have things under control!"
+%}
+
+{% include voice-table.html resourceName="okitakacrisis2404"
 %}
 
 ## Notes

@@ -1,4 +1,0 @@
-{%- assign id = include.id | downcase -%}
-{%- assign status = StatusMaster[id] -%}
-{%- assign icon = wiki.StatusIcons[id] -%}
-<span class="status" title="{{ status.description }}"><img src="/cdn/Sprite/{{ icon }}.png" loading="lazy"> {{ status.statusName }}</span>

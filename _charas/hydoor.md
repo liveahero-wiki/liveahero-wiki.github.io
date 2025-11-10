@@ -1,6 +1,10 @@
 ---
 title: Hydoor
 characterId: 17
+type: anthro
+gender: male
+h2:
+  title: '"Roaring Storm" Hydoor'
 heroes:
 - stockId: 10171
   BIO_H01: |-
@@ -26,6 +30,28 @@ heroes:
 
     That's why, he will never forgive anyone who pollute the ocean, the source of
     life, even if that ocean is in another planet.
+- stockId: 10172
+  extra_sprites: fg_hydoorTravelers2504_h02_skin2
+  BIO_H01: |-
+    With some reservations, Hydoor found himself joining the "hero" party tasked with
+    saving the world. Along the way, he took on the role as a warrior who charges ahead
+    and leads the group. His appearance in this form strongly evokes his past life as
+    a pirate. His parallel weapon, a pair of large cutlass-shaped blades, are similar
+    to the ones that he expertly wielded in his past. With two gleaming blades in hand,
+    he charges into the enemy lines, weaving through the battlefield and dodging
+    attacks with such strength and finesse, that you would see his figure as if he
+    was swimming gracefully in the ocean depths.
+  BIO_H02: |-
+    Born as a descendant of a dying race, Hydoor despised the defeatist atmosphere of
+    his homeland and threw himself into the ocean. He could no longer bear the attitude
+    of his people; they no longer considered a better tomorrow and instead spent the
+    days wallowing in sorrow. Ironically, this new world he found himself in carried the
+    same despondent air. That's why Hydoor chose to go against this world's supposed end
+    and fight with all that he can for its survival. No matter how illogical or unsure
+    it may seem, he's always been one to say that if ever he forgets to resist, then
+    that's when it's actually over. The cutlasses he wields still shine with the same
+    rebellious spirit he had when he was a pirate, the same spirit that could carve out
+    even destiny itself.
 sidekicks:
 - stockId: 10171
   BIO_S01: |-
@@ -41,7 +67,7 @@ sidekicks:
 
     He is very susceptible to both flattery and provocation, so he can be easily
     manipulated at times.
-  extra_sprites: fg_hydoor_s01_skin1
+  extra_sprites: fg_hydoor_s01_skin1,fg_hydoor_s01_skin2,fg_hydoor_s01_skin3,fg_hydoor_s01_skin4,fg_hydoor_s01_skin5
 ---
 
 {% include voice-table.html resourceName="hydoor"
@@ -71,8 +97,11 @@ TRAIN = "You will get hurt if you're careless!?"
 TRAINED = "This bastard…I will kill you!"
 %}
 
+{% include voice-table.html resourceName="hydoortravelers2504"
+%}
+
 ## Notes
-- His skill names is in Greek language :
+- His skill names for his base form is in Greek language :
   - Vieii Kýmata (βιαιη κύματα) : Violent Waves
   - Ydromasáz Silotas (υδρομασάζ σιλωτας) : Whirlpool Molding
   - Okeanós tou Drákos (ωκεανός του δράκος) : Ocean of the Dragon

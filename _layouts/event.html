@@ -8,9 +8,10 @@ layout: default
 {{ title | default: jp_title }}</a></h1>
 </div>
 
-<table class="event-infobox">
-<tr><th colspan="2">{{ title | default: jp_title }}</th></tr>
-<tr><td colspan="2"><img width="600" height="191" style="width: 100%" src="/cdn/Sprite/{{ banner_image }}" loading="lazy"></td></tr>
+<table id="event-{{ page.eventId }}" class="event-infobox">
+<tr><th colspan="2">{{ page.title | default: page.jp_title }}</th></tr>
+{% assign banner_image = "/cdn/Sprite/" | append: page.banner_image %}
+<tr><td colspan="2">{% include image-event.html path=banner_image style="width: 100%" %}</td></tr>
 <tr><th colspan="2">Duration</th></tr>
 {% if gacha %}
 <tr><th>Gacha</th><td data-expiry="{{ event_end_time }}">{{ event_start_time | date: site.date_format }} to {{ event_end_time | date: site.date_format }}</td></tr>
@@ -28,3 +29,26 @@ layout: default
 </table>
 
 {{ content }}
+
+{% assign eventId = page.eventId | downcase %}
+{% assign regionId = site.data.EventMaster[eventId].eventPortalJson.salesRegionIds[0] | downcase %}
+{% assign sales_reports = site.data.processed.sales_report_master[regionId] %}
+
+{% if sales_reports.size > 0 %}
+<h2 id="event-sales-report">Event Sales Report</h2>
+
+{% for sales_report in sales_reports %}
+
+<details><summary>{{ sales_report }}</summary>
+<p>{{ site.data.processed.jp_sales_report[sales_report] }}</p>
+</details>
+
+{% assign translated_sales_report = site.data.wiki.SalesReport[sales_report] %}
+{% if translated_sales_report %}
+<details><summary>{{ sales_report }} (Translated)</summary>
+<p>{{ translated_sales_report }}</p>
+</details>
+{% endif %}
+
+{% endfor %}
+{% endif %}

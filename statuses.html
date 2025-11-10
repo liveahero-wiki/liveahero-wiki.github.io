@@ -8,10 +8,10 @@ banner: true
 <p>Example: <code>{% raw %}{{ 1 | status_description }}{% endraw %}</code> will becomes {{ 1 | status_description }} when rendered.</p>
 
 <table>
-<tr><th>ID</th><th>Status</th></tr>
-{% for pair in StatusMaster %}
+<tr><th>ID</th><th>statusType</th><th>isGoodStatus</th><th>Status</th></tr>
+{% for pair in site.data.StatusMaster %}
 {% assign id = pair[0] %}
 {% assign iid = id | plus: 0 %}
-<tr><td>{{ id }}</td><td>{{ iid | status_description }}</td></tr>
+<tr><td>{{ id }}</td><td>{{ pair[1].statusType }}</td><td>{{ pair[1].isGoodStatus }}</td><td>{{ iid | status_description }}</td></tr>
 {% endfor %}
 </table>

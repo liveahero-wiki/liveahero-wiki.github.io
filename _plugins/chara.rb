@@ -61,7 +61,13 @@ module Jekyll
       end
 
       if page.data["unreleased"]
-        return "<a href=\"#{page.url}\"><span class=\"item\"><img src=\"/cdn/Sprite/icon_unknown_card.png\" loading=\"lazy\"></span> #{title}</a>"
+        img = page.data["icon"]
+        if img
+          img = "/assets/img/unreleased/#{img}.png"
+        else
+          img = "/cdn/Sprite/icon_unknown_card.png"
+        end
+        return "<a href=\"#{page.url}\"><span class=\"item\"><img src=\"#{img}\" loading=\"lazy\"></span> #{title}</a>"
       end
 
       if tokens.length == 2
@@ -86,6 +92,34 @@ module Jekyll
   end
 
   module CharaFilter
+
+    def charaPageToIcon(page)
+      if page["unreleased"]
+        img = page["icon"]
+        if img
+          img = "/assets/img/unreleased/#{img}.png" # unreleased chara
+        else
+          img = "/cdn/Sprite/icon_unknown_card.png"
+        end
+        return img
+      end
+      characterId = page["characterId"]
+      cardId = (100 * characterId) + 100011
+      resourceName = CharaLinkTag.sidekick_master(@context).dig(cardId.to_s, "resourceName")
+      if resourceName
+        img = "/cdn/Sprite/icon_#{resourceName}_s01.png"
+      else
+        img = "/cdn/Sprite/icon_unknown_card.png"
+      end
+      return img
+    end
+
+    def charaPageToLink(page)
+      title = page["title"]
+      url = page.url
+      img = charaPageToIcon(page)
+      return "<a class=\"item\" href=\"#{url}\"><img src=\"#{img}\" loading=\"lazy\"> #{title}</a>"
+    end
 
     def characterIdToPage(id)
       CharaMap.characterId_to_pages[id]
@@ -120,7 +154,7 @@ module Jekyll
         url = "/charas/"
       end
 
-      return title, "<a href=\"#{url}##{suffix}#{stockId}\"><span class=\"item\"><img src=\"/cdn/Sprite/icon_#{resourceName}_#{suffix}01.png\" loading=\"lazy\"></span> #{title}</a>"
+      return title, "<a href=\"#{url}##{suffix}#{stockId}\"><span class=\"item\"><img src=\"/cdn/Sprite/icon_#{resourceName}_#{suffix}01.png\" loading=\"lazy\" width=\"32\" height=\"32\"></span> #{title}</a>"
     end
 
     def stockIdToCharaTitle(stockId, type)

@@ -1,0 +1,95 @@
+{% assign firstCardInfo = include.firstCardInfo %}
+
+{% assign stockId = include.stockId | downcase %}
+{% assign cardProfileOverride = site.data.processed.CardProfileOverride[stockId].sidekick %}
+{% assign overrideIllustrator = site.data.processed.jp_profile[cardProfileOverride.illustrator] %}
+{% assign overrideAffiliation = site.data.processed.jp_profile[cardProfileOverride.affiliation] %}
+{% assign overridejob = site.data.processed.jp_profile[cardProfileOverride.job] %}
+
+<div class="heroinfobox">
+{% include atlas-gallery.html sprites=include.sprites %}
+<div>
+    <div class="header">
+        <div class="name">{{ firstCardInfo.stockId | stockIdToCharaTitle: 1 }}</div>
+        <div class="sub">{{ firstCardInfo.cardName }}</div>
+    </div>
+    <div style="display: flex; gap: 10px; padding: 10px;">
+        <div class="chara-badge">
+        {% if include.isHero %}
+        {% assign maxStars = 5 %}
+        {% assign starClass = "h-star" %}
+        <img class="chara-type" width="64" height="17" src="/assets/img/icons/ui_symbol_chara_hero.webp" loading="lazy" title="Hero">
+        {% else %}
+        {% assign maxStars = firstCardInfo.rarity | minus: 1 %}
+        {% assign starClass = "s-star" %}
+        <img class="chara-type" width="88" height="14" src="/assets/img/icons/ui_symbol_chara_sidekick.webp" loading="lazy" title="Sidekick">
+        {% endif %}
+
+        <div class="chara-stars" title="{{ firstCardInfo.rarity }} Stars">
+        {% for i in (1..firstCardInfo.rarity) %}
+        <span class="{{ starClass }}"></span>
+        {% endfor %}
+        {% for i in (firstCardInfo.rarity..maxStars) %}
+        <span class="g-star"></span>
+        {% endfor %}
+        </div>
+        </div>
+
+        {% if include.isHero %}
+        {% assign elementName = firstCardInfo.element | element_enum %}
+        <img width="56" height="56" src="/assets/img/icons/icon_element_{{ elementName | downcase }}.webp" loading="lazy" title="{{ elementName }}">
+        {% endif %}
+    </div>
+    <table>
+        <tbody>
+            {% if include.isHero %}
+            <tr>
+                <th>Role</th>
+                <td>{% include hero-role.html role=firstCardInfo.role %}</td>
+            </tr>
+            {% endif %}
+            <tr>
+                <th>Illustration</th>
+                <td>{% include chara-illustrator.html illustrator=firstCardInfo.illustrator override=overrideIllustrator %}</td>
+            </tr>
+            <tr>
+                <th>Voice</th>
+                <td>{% include chara-voice-actor.html cv=firstCardInfo.characterVoice %}</td>
+            </tr>
+            <tr>
+                <th>Affliation office</th>
+                <td>{% include chara-affiliation.html affiliation=firstCardInfo.affiliationOffice override=overrideAffiliation %}</td>
+            </tr>
+            <tr>
+                <th>Occupation</th>
+                <td>{% if overridejob %}<span class="masked">{% endif %}{{ page.occupation | default: firstCardInfo.job }}{% if overridejob %}</span>{% endif %}</td>
+            </tr>
+
+{% if page.profile %}
+            <tr>
+                <th>Birthplace</th>
+                <td>{{ page.profile.birthplace }}</td>
+            </tr>
+            <tr>
+                <th><abbr class="tippy" data-content="Converted to Earth Calendar">Age</abbr></th>
+                <td>{{ page.profile.age }}</td>
+            </tr>
+            <tr>
+                <th><abbr class="tippy" data-content="Converted to Earth Calendar">Birthday</abbr></th>
+                <td>{{ page.profile.birthday }}</td>
+            </tr>
+            <tr>
+                <th>Height (cm)</th>
+                <td>{{ page.profile.height }}</td>
+            </tr>
+            <tr>
+                <th>Weight (kg)</th>
+                <td>{{ page.profile.weight }}</td>
+            </tr>
+{% endif %}
+        </tbody>
+    </table>
+
+
+</div>
+</div>

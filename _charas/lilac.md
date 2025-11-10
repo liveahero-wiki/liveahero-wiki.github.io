@@ -1,6 +1,35 @@
 ---
 title: Lilac
 characterId: 101
+type: humanoid
+gender: male
+occupation: Florist
+profile:
+  age: 21
+  height: 177
+  weight: 85
+  birthday: 06/12
+  birthplace: Planet on Sunflower Galaxy, Wehmalt
+  5th_anniversary_intro: |-
+    Lilac is a florist hero active in the Sunflower Galaxy, a place far removed from the Earth Sphere. 
+    
+    His Parallel Weapon, shaped like a pair of floral shears, soars across the battlefield, moving freely at his will. Its cutting power is exceptional, so much so that he is frequently entrusted with the front lines even within Labor's Site, an agency boasting many physically powerful heroes. 
+    
+    In sharp contrast to his fierce demeanor in battle, his usual conduct is extremely gentle. This gap is undoubtably one of the secrets to Lilac in his popularity as a hero. 
+    
+    He himself claims that since he has only recently begun operating outside of Wehmalt, his expression often tenses up from nervousness, and he worries that he might be scaring the viewers. 
+    
+    The fans' response, however, would be to point out that the archive view counts often spike on the rare occasions when he breaks into a smile. 
+  5th_anniversary_true_self: |-
+    In the quiet town of Wehmalt, Lilac's day begins early. He heads to the flower market, carefully selecting the blossoms for his shop with his own eyes. 
+    
+    Then, after meticulously preparing each and every stem, he opens for business in a state of perfect readiness. His work doesn't stop with simply running the store; he is also kept extremely busy with tasks such as creating floral arrangements and maintaining the flowers he delivers to other establishments. 
+    
+    For the busy Lilac, his methods of relaxation are, as one might expect, also related to flowers. It's said that the herbal tea he savors on his breaks and the aromatic baths he takes with self-distilled oils at the end of the day are what sustain his daily vigor.
+    
+    The scents that support Lilac have only been made available to the public once. At the time, the lottery sale for his handmade aromatic hand cream, part of a Labor's Site project, had an astonishingly high number of applicants, cementing its position as a legendary fragrance among his fans. 
+h2:
+  title: '"Blessed Rain" Lilac'
 heroes:
 - stockId: 11011
   BIO_H01: |-
@@ -29,6 +58,8 @@ heroes:
   passiveSkillIds:
   - '8101101'
   - '8101102'
+- stockId: 11012
+  extra_sprites: fg_lilacSummerNight2407_h01_skin2,fg_lilacSummerNight2407_h01_skin3,fg_lilacSummerNight2407_h01_skin4,fg_lilacSummerNight2407_h01_skin5,fg_lilacSummerNight2407_h01_skin6,fg_lilacSummerNight2407_h01_skin7,fg_lilacSummerNight2407_h02_skin2
 sidekicks:
 - stockId: 11011
   BIO_S01: |-
@@ -45,12 +76,27 @@ sidekicks:
 
     He believes that flowers, which are often used as gifts to convey feelings, have
     the power to convey some sentiments better than words.
-  extra_sprites: fg_lilac_s01_skin1
+  extra_sprites: fg_lilac_s01_skin1,fg_lilac_s01_skin2,fg_lilac_s01_skin3
 ---
 
 {% include voice-table.html resourceName="lilac"
-h_gachaResult = "My name is Lilac.<br>I work in a florist shop.<br>This smell......<br>You're in the business of exterminating kaibutsu.<br>Leave it to me, I'll cut 'em down with these shears."
+h_gachaResult = "My name is Lilac.<br>I work in a flower shop.<br>This smell......<br>You're in the business of exterminating kaibutsu.<br>Leave it to me, I'll cut 'em down with these shears."
 s_gachaResult = "My name is Lilac. A florist.<br>I'm in charge of sidekicking this time, right?<br>Of course I can do it. I just finished a bouquet.<br>What do you think, beautiful, right?"
+salesStart = "I understand, I'll go."
+salesEnd = "I'm glad I could help."
+battleStart = "I can handle any enemy, I'll show you just how sharp these shears are."
+action = "I can go"
+attack = "Now"
+skill = "This is the power of plants!"
+special = "Cut out the roots of the spreading evil!<br>Standing Flowers<br>Niemals Vergessen!"
+smallDamage = "Guh"
+bigDamage = "Gwah!"
+win = "Thank you for your hard work. Your assistance with the operation was greatly appreciated.<br>It's important to take breaks and not push yourself too hard.<br>Let's relax a little with the scent of flowers."
+lose = "I can't... Muster the strength anymore... Brother... Is this the end for me..."
+assist = "I'll help you."
+assisted = "That was a big help."
+rankMax = "It's all thanks to you that I've grown this strong.<br>I'm sure my brother would be happy too.<br>I'll become even stronger to protect the people I care about."
+loveIndexMax = "Being with you fills my heart like the scent of flowers,<br>and I find myself wishing I could stay by your side forever.<br>Would you let me choose a flower that suits you?"
 APPRECIATION = "Thank you for your hard work. But please don't overdo it.<br>I'll make you a cup of herbal tea with a calming aroma.<br>I'll make it in your favorite fragrance."
 DAILY = "My brother taught me about herbs and flowers a long time ago.<br>Each one smells different, has its meaning in the language of flowers...<br>It makes me happy when I see people enjoying flowers, too."
 HERO = "I smell gunpowder on Flamier-san.<br>That's because she's a hero who attacks with bombs, huh?<br>...She doesn't just carry gunpowder all the time, right?"
@@ -63,9 +109,44 @@ EVENTA = "Welcome to Wemalt, the city of flowers.<br>Please enjoy the blooming f
 EVENTB = "There is a strange smell in the city...<br>What's going on? Is it really true that it is the work of ghosts?"
 %}
 
+{% include voice-table.html resourceName="lilacSummerNight2407"
+h_gachaResult = "Performing on a water stage... huh?<br>It's a job I'm not used to, but I'll do my best.<br>Please watch my performance on stage!"
+s_gachaResult = "A sidekick's job, I see. It's a little different from back home,<br>but with the power of wilderness plants, I'll be there to support you to the best of my ability."
+salesStart = "I'll make it a great stage."
+salesEnd = "I'm back. Was I of any help?"
+battleStart = "The rain teaches me. Feelings never fade, they'll sprout someday!"
+action = "Leave it to me!"
+attack = "There!"
+skill = "This is the rain of blessings!"
+special = "The seeds of desire will sprout and will one day bloom!<br>Standing Flowers<br>Wertvoll Erinnerung!"
+smallDamage = "Kuh...!"
+bigDamage = "I can still... stand!"
+win = "Thank you for your hard work, you're a little wet. Sorry,<br>I'll use my towel to dry you off right away. Don't move, leave it to me."
+lose = "I can't afford to fall...! The seeds of my resolve will wither away...!"
+assisted = "Thanks for the assist!"
+rankMax = "The bond we've built together...<br>Those memories have made me so much stronger.<br>I'd be happy if you continue to stay with me."
+APPRECIATION = "The sun is a bit strong today... Oh, right.<br>If you don't mind, this is flower oil sunscreen.<br>I'll apply it now, so could you please make yourself comfortable?"
+DAILY = "Even in a town in the wilderness, plants take root properly<br>and grow strong and resilient.<br>I love these moments when I feel that vitality."
+RELATION = "Every time I see Mr. Rudin, he smells different,<br>so when I asked why, he dodged the question.<br>He said it's a no-no to probe a magician's secrets..."
+HERO = "I really love Kalaski's photos. They're gentle and warm, and I feel like they exactly capture Kalaski's essence."
+PLAYER = "…Would it be okay if I held your hand?<br>I'm nervous about this unfamiliar job, but...<br>If you're watching over me, I feel like I can do it."
+TOUCH = "Your hands feel cool and so nice. I was practicing for the show<br>just now, so my body is hot...<br>Um, can we stay like this a little longer?"
+TRAIN = "I'm going to give it my all. Take this!"
+TRAINED = "It's... more intense than I thought...!"
+EVENTA = "This town is really lively, isn't it?<br>It reminds me a little of the flower festivals back home.<br>...Huh, do I look like I'm having fun?"
+EVENTB = "Since I became a hero, I've hardly had any chances<br>to appear on shows like this...<br>Um... would you mind helping me practice my smile?"
+EVENTC = "Would you like to help promote the show with me?<br>Mr. Rudin asked me to, but I also want to help the hotel staff<br>in any way I can."
+EVENTD = "Thanks for your hard work. This is a thank you gift.<br>...But for me, the best reward is the memory of working alongside you."
+%}
+
 ## Notes
 
 - His skills is in German language:
+- Base form:
   - Unsterblich : Immortal/Eternal
   - Ferne Erinnerung : Memories of distant past (Ferne = distant past, Erinnerung = memories)
   - Niemals Vergessen : Never forget (Niemals = never, Vergessen = forget)
+- Variant form:
+  - Veränderung : Change
+  - Erholung Von Schmerz : Recovery from pain (Erholung = recovery, Von = from, Schmerz = pain)
+  - Wertvoll Erinnerung : Valuable memories (Wertvoll = Valuable Erinnerung = memories)

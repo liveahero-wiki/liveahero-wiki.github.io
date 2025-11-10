@@ -26,7 +26,7 @@ You can get two kinds of skill manuals shop exchange of biweekly challenge simul
 
 > Without these equipment skill, heroes in auto battle will always use the first skill.
 
-You can get these skill manuals from the approval process of office feature:
+You can exchange these skill manuals with {% include item.html id=78 %} from the Approval Process of [Office](/guide/office/):
 
 - {% include item.html id=80 %}
   - Grants the hero a passive skill "Experience Accumulation"

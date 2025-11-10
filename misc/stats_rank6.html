@@ -1,22 +1,22 @@
 ---
 title: Basic Stats Hero Ranking (Level 60)
 banner: true
+wide_content: true
 ---
 
 <p>For simplicity sake, only 6 star heroes are ranked here.</p>
 
 {% assign cardInfos = CardMaster | where: "rarity", 6 %}
 
-<div class="table-scroll">
-<table class="sort-table">
-<tr><th data-type="string">Hero</th><th>HP</th><th>ATK</th><th>View</th><th>Speed</th></tr>
+<table class="sticky-header sort-table bordered">
+<tr><th data-type="string">Hero</th><th data-type="string">Role</th><th>HP</th><th>ATK</th><th>View</th><th>Speed</th></tr>
 {% for c in cardInfos %}
 {% assign page = c.characterId | characterIdToPage %}
 {% assign g = c.growths[4] %}
 <tr>
-<td><a class="item" href="{{ page.url }}/#h{{ c.stockId }}-stats"><img src="/cdn/Sprite/icon_{{ c.resourceName }}_{% if c.stockOrder >= 5 %}h01{% else %}h02{% endif %}.png" loading="lazy"> {{ page.title }}</a></td>
+<td><a class="item" href="{{ page.url }}#h{{ c.stockId }}"><img src="/cdn/Sprite/icon_{{ c.resourceName }}_{% if c.stockOrder >= 5 %}h01{% else %}h02{% endif %}.png" loading="lazy"> {{ page.title }}</a></td>
+<td>{% include hero-role.html role=c.role %}</td>
 <td>{{ g.hp }}</td><td>{{ g.attack }}</td><td>{{ g.addView }}</td><td>{{ g.agility }}</td>
 </tr>
 {% endfor %}
 </table>
-</div>

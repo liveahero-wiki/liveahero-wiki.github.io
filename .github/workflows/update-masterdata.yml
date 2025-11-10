@@ -12,15 +12,17 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.9]
+        python-version: [3.12]
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
+          cache: 'pip'
       - name: Download master data
         run: |
+          python -m pip install -r requirements.txt
           python tools/masterdata.py
       - name: Diff with previous commit and commit files
         run: |
@@ -39,13 +41,13 @@ jobs:
             echo "Master data is already up to date."
           fi
       - name: Upload JP properties files
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: JP Properties
           if-no-files-found: ignore
           path: _data/processed/Japanese.properties
       - name: Upload EN properties files
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: EN Properties
           if-no-files-found: ignore

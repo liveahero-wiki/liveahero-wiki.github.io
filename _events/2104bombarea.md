@@ -1,5 +1,6 @@
 ---
 title: Beware the exploding zone!
+eventId: 10
 jp_title: 強敵襲来 -爆裂地帯にご用心！
 news_link: https://live-a-hero.jp/campaign/1810
 banner_image: banner_campaign_2104bombarea.jpg 

@@ -1,5 +1,6 @@
 ---
 title: New Year 2021
+eventId: 6
 news_link: https://live-a-hero.jp/info/1197
 banner_image: banner_info_Newyear2101.jpg
 event_start_time: 2021-01-01T00:00:00+09

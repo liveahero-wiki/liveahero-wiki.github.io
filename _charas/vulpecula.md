@@ -1,6 +1,10 @@
 ---
 title: Vulpecula
 characterId: 65
+type: anthro
+gender: male
+h2:
+  title: '"Daybreak Harbinger" Vulpecula'
 heroes:
 - stockId: 10651
   BIO_H01: |-
@@ -32,6 +36,7 @@ heroes:
   passiveSkillIds:
   - '8065101'
   - '8065102'
+- stockId: 10652
 sidekicks:
 - stockId: 10651
   BIO_S01: |-
@@ -46,6 +51,7 @@ sidekicks:
 
     He always wears a fox mask and no one knows his true face, but because of that
     many copycats have appeared and begun to disturb society.
+  extra_sprites: fg_vulpecula_s01_skin1,fg_ADV_vulpecula_s01
 ---
 
 {% include voice-table.html resourceName="vulpecula"
@@ -61,6 +67,9 @@ TRAIN = "Let me show you, I'll make it bloom beautifully."
 TRAINED = "This kind of thing, is not beautiful…!"
 EVENTA = "Ladies and gentlemen trapped in the past, good day to all of you.<br>Tonight this phantom thief Vulpecula….<br>Will gracefully scatter all the petals of the past, please look forward to it."
 EVENTB = "It's showtime, Alchiba-kun.<br>That not-so-beautiful state of yours,<br>I will transform it into something artistic with my own hands."
+%}
+
+{% include voice-table.html resourceName="vulpeculaMirrors2511"
 %}
 
 ## Notes

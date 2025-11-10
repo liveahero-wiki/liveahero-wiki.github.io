@@ -1,6 +1,8 @@
 ---
 title: Sensettia
 characterId: 126
+type: humanoid
+gender: female
 heroes:
 - stockId: 11261
   BIO_H01: |-
@@ -29,8 +31,7 @@ sidekicks:
     on the streets wherever she goes on her wandering journey around the
     universe.<br> Due to the environment she grew up in she has a complex about her
     small wings, and can become defensive about them.
-  extraPassiveSkillIds:
-  - '8126101'
+  extra_sprites: fg_sensettia_s01_skin1,fg_sensettia_s01_skin2
 ---
 
 {% include voice-table.html resourceName="sensettia"

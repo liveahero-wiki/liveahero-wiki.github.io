@@ -1,6 +1,8 @@
 ---
 title: Rutilix
 characterId: 61
+type: anthro
+gender: male
 heroes:
 - stockId: 10611
   BIO_H01: |-

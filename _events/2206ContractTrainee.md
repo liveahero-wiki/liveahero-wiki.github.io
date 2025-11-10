@@ -1,5 +1,6 @@
 ---
 title: Character Contract Campaign - Trainee
+eventId: 35
 jp_title: 契約締結キャンペーン -トレイニ-
 news_link: https://live-a-hero.jp/info/3987
 banner_image: banner_campaign_2206ContractTrainee.jpg

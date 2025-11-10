@@ -1,6 +1,8 @@
 ---
 title: Sui
 characterId: 3
+type: humanoid
+gender: other
 occupation: Fashion Designer (服飾デザイナー)
 heroes:
 - stockId: 10031

@@ -21,6 +21,11 @@
 {% break %}{% comment %}Only use the first stockId, since they are usually refer to the same chara anyway{% endcomment %}
 {% endfor %}
 </ul></td></tr>
+{% when "HavingHeroCard" %}
+<tr><th>Card</th>
+<td>{{ cond.heroCardId | divided_by: 10 | stockIdToLink: 1 }}</td></tr>
+{% when "IsLimitBreakCard" %}
+{% comment %}Skipped{% endcomment %}
 {% else %}
 <tr><td>Unknown condition ({{ cond.class }})</td></tr>
 {% endcase %}
@@ -41,10 +46,13 @@
 {% endif %}
 
 {% if Q.enemies.size > 0 %}
-<tr><th>Enemies</th><td>
+<tr><th>Enemies</th><td class="enemy-info-row">
 {% for enemy in Q.enemies %}
+<div>
 <div class="hero-icon" data-element="{{ enemy.battleInfoElement }}">
 <img class="hero-chara-icon" src="/cdn/Sprite/{{ enemy.battleInfoIcon }}.png" loading="lazy">
+</div>
+<div>SPD: {{ enemy.battleInfoSpd }}</div>
 </div>
 {% endfor %}
 </td></tr>
@@ -81,6 +89,11 @@
 </td></tr>
 {% endfor %}
 </table></td></tr>
+{% endif %}
+
+{% if Q.scoreAttackHintTextKey.size > 0 %}
+<tr><th>Hint</th>
+<td><p>{{ site.data.processed.jp_score_attack[Q.scoreAttackHintTextKey] | default: Q.scoreAttackHintTextKey }}</p></td></tr>
 {% endif %}
 
 {% if Q.scoreAttackStandards.size > 0 %}

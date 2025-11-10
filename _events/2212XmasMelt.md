@@ -1,5 +1,6 @@
 ---
 title: Christmas Melt Countdown
+eventId: 49
 jp_title: クリスマスメルト・カウントダウン
 news_link: https://live-a-hero.jp/info/5067
 banner_image: banner_info_XmasMelt2212.jpg 
@@ -179,33 +180,6 @@ Listed below are the enemies skills in S difficulty:
 
 ### Special Quests
 
+Fan translations for special quests can be found [here](https://docs.google.com/spreadsheets/d/e/2PACX-1vSELESywdJubquJxmr4HAbEB5b2pKG_mYErA0cjEwzItoSkF0MFYC6Yq0GddH9XH4P9C6m4Ev_UkNjW/pubhtml)
+
 {% include quest-group.html chapterId=1025 %}
-
-## Sales Report
-
-<details><summary>Sales Report 1</summary>
-<p>クリスマス音楽フェスの会場で<br>警備を担当することになった <code>character0</code> 。<br><br>無事に見回りの仕事を終え戻ってくると、<br>ライトアップされたステージでは<br>聞き馴染みのあるクリスマスソングが流れている。<br><br>周囲を見渡しても辺りにはヒトの姿は無い。<br>心地よいクリスマスソングに任せて、ステージで<br> <code>character0</code> は一人、歌を口ずさむ。<br><br>曲が終わると、突如として拍手が<br> <code>character0</code> へと送られた。<br>驚いて振り返ると、その歌声を聞いていたのは、<br>イベントの主催を務めるディレクターだった。
-<br><br>音楽フェスへ、ぜひ参加してほしいと<br>ディレクターは目を輝かせて頼み込む。<br>困惑する <code>character0</code> だったが――<br><br>イベント当日、ステージの上には<br>緊張しながらもマイクを握る<br> <code>character0</code> の姿があったという。
-</p>
-</details>
-
-<details><summary>Sales Report 2</summary>
-<p>とある惑星の地域活性化イベントの仕事に呼ばれた<br> <code>character0</code> と <code>character1</code> 。<br><br>仕事の内容は、その地
-域の特産品である<br>クリスタルを使ったアクセサリーを<br>手作り体験してレポートするというもの。<br><br>しかし、慣れない作業に<br>悪戦苦 
-闘する <code>character0</code> 。<br>コツを掴んだ <code>character1</code> は、<br>自然に <code>character0</code> をアシストし、<br>２人
-は無事にアクセサリーを完成させる。<br><br>折角だから、互いに作ったものを交換しましょうと<br>イベントの担当者が提案するが、完成品に<br> 
-納得ができない様子の <code>character0</code> 。<br><br>しかし、 <code>character1</code> は <code>character0</code> が<br>作ったことが大
-事だと嬉しそうにそれを受け取った。<br><br>そのクリスタルは、想いを込めて誰かに贈ることで<br>御守りとしての意味を持つのだそう。<br><br> 
-それを知った <code>character0</code> が、<br>今度こそ上手く作ろうと<br>再びその星を訪れるのは、また別のお話。
-</p>
-</details>
-
-<details><summary>Sales Report 3</summary>
-<p> <code>character0</code> と <code>character1</code> は、<br>クリスマス音楽フェスにゲストとして招かれ、<br>ステージでのパフォーマンス
-を楽しんでいた。<br><br>しかし、次の演目が始まらず、会場がざわつき始める。<br>何かあったのだろうかと２人は会場裏へと向かった。<br><br> 
-そこには、突風で潰れてしまったテントと<br>このままでは機材が雪に埋もれてしまうと<br>右往左往するスタッフたちが。<br><br>それを見た <code>character0</code> は、<br>フェスを続けてほしい、<br>良いアイデアがあるから任せてと胸を叩く。<br>話を聞き、 <code>character1</code> は
-意気込んで頷くと、<br>すぐさま <code>character2</code> と<br> <code>character3</code> へ連絡を入れた。<br><br>しばらくして、 <code>character2</code> が大きなシャベルを、<br> <code>character3</code> は沢山のバケツを持って現れた。<br><br>協力して、急いで大きなかまくらを作
-るヒーローたち。<br>機材をそこに退避させ終えると、<br>これでもう大丈夫だろうと４人は笑う。<br>温かな雪の家の中に、優しい聖歌が聴こえて 
-来た。
-</p>
-</details>

@@ -1,6 +1,8 @@
 ---
 title: Goro
 characterId: 23
+type: anthro
+gender: male
 occupation: Carpenter
 h2:
   title: '"Delightful Performer" Goro'
@@ -20,6 +22,7 @@ heroes:
     building a house that could withstand even a giant monster attack.
     Consequently, when he sees two lovers or two family members get seperated, he
     loses his composure, even if they're strangers to him.
+  extra_sprites: fg_goro_h01_skin2,fg_goro_h01_skin3
 - stockId: 10232
   BIO_H01: |-
     Based on the design of the costume used at the Wemalt flower festival, Goro got
@@ -93,16 +96,30 @@ TRAINED = "Guh...my head is still ringing..."
 %}
 
 {% include voice-table.html resourceName="goroghostwoods2204"
+h_gachaResult = "It's a festival, and it's all about drinking, dancing, and music!<br>Will my performance make me popular?<br>Let's have fun until we get drunk."
 APPRECIATION = "Why, you look tired, chief.<br>Want me to sing you a lullaby?<br>Come on, drink this and relax."
 DAILY = "I dunno much about flowers... but it's nice to have a drink with some pretty scenery.<br>The important thing at a festival is to have fun, right?"
+EVENTA = "I was invited to set up the stage for the venue.<br>Now that work's done, at last...<br>Kuuh! Sweat's drippin' into my drink!!"
+EVENTB = "What's with this commotion about ghosts and weird smells?<br>Let's get this over with...did you just hear a strange sound?<br>N-no way, hey, you pulling my leg...?"
 HERO = "Lilac's a quiet guy, and he doesn't smile much.<br>But when it comes to battles, he can be quite passionate y'know.<br>Especially when it comes to Kaibutsu."
 PLAYER = "Oh, oh, there's a good selection of local sake here!<br>We've come all the way out here, let's have a drink.<br>Festivals are the best!"
 RELATION = "I heard Flamier-sensei volunteered to help out with the decoration.<br>I'm lookin' forward to what she comes up with, she's a bright lady with a lot of ambi- ...was that an explosion just now?"
 TOUCH = "Oh, you wanna hear me play?<br>Well, I'll let you have a special seat.<br>Why don't you sit here and listen?"
 TRAIN = "Get ready for the festival, get fired up!"
 TRAINED = "Did I drink too much?"
-EVENTA = "I was invited to set up the stage for the venue.<br>Now that work's done, at last...<br>Kuuh! Sweat's drippin' into my drink!!"
-EVENTB = "What's with this commotion about ghosts and weird smells?<br>Let's get this over with...did you just hear a strange sound?<br>N-no way, hey, you pulling my leg...?"
+battleStart = "Come on, let's get serious!<br>Let's move forward according to the sound!"
+action = "You called."
+attack = "Leave it to me!"
+skill = "Let's get lively!"
+special = "Let me show you my good side!<br>Build! High-end construct!"
+smallDamage = "Tete...!"
+bigDamage = "It'll break...!"
+win = "Haha! No big deal! Let's get back to the festival!<br>Let's celebrate with a drink, dance and make some noise!"
+lose = "Little one... I'm sorry... I'm sorry...!<br>I'll be with you from now on..."
+assisted = "Let's do it!"
+rankMax = "With this much power, there's nothing to be afraid of! It's all thanks to you, it took a lot of effort.<br>Now it's my turn! I'll live up to your expectations!"
+salesStart = "I'm going to deal with the children!"
+salesEnd = "Gahaha! The children were overjoyed!"
 %}
 
 ## Notes

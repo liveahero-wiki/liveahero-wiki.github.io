@@ -1,6 +1,56 @@
 ---
 title: Gammei
 characterId: 6
+type: humanoid
+gender: male
+occupation: Police Officer (City Police Detective Division, Sergeant)
+profile:
+  age: 30
+  height: 174
+  weight: 86
+  birthday: 12/13
+  birthplace: Earth, Japan, Chiba
+  5th_anniversary_intro: |-
+    The greatest characteristic of the resourceful detective hero, Justy Arrester,
+    is undoubtedly his main weapon - a pair of handcuffs that can freely
+    expand and contract, possessing powerful restraining capabilities.
+
+    Their use is not limited to simply immobilizing villains by restraining their
+    limbs. From Kaibutsu and getaway cars to even runaway trains, he is highly
+    valued on the scene of any incident, because he can invariably stop anything he
+    sets as a target for capture.
+
+    However, the wielder of this Parallel Weapon is also the key himself. He thinks
+    calmly and deliberately, acts with agility and adaptability, and activates his
+    weapon only after taking aim based on a prediction of his target's movements.
+
+    It is precisely because he can accomplish all this, that his exploits are
+    celebrated enough to make the news day after day
+  5th_anniversary_true_self: |-
+    Throughout the Earth Sphere, incidents involving villains and Kaibutsu
+    are a constant threat. This is, of course, no different in Orient City, the
+    jurisdiction where he works.
+
+    He belongs to a special team called the "Hero-Related Incidents Special
+    Investigation Unit" and works diligently day in and day out to solve cases
+    that cannot be handled by non-hero police officers.
+
+    Although he often mocks his own daily duties, calling them "sewer
+    dredging" or "a thankless job with no chance of promotion," he
+    nevertheless seems to approach his work with a sense of pride, viewing
+    it as a job that someone has to do.
+
+    When I asked this busy man how he spends his days off, he was at a
+    loss for an answer.
+
+    It seems that days off are a rarity for him, and that he himself is content
+    with the situation as is.
+
+    It may seem strange to an outside onlooker, but he seems to enjoy his
+    lifestyle: spending his rare holidays relaxing and visiting a bar with a
+    nice atmosphere whenever the mood strikes.
+h2:
+  title: '"Intoxicating Festival" Gammei'
 heroes:
 - stockId: 10061
   BIO_H01: |-
@@ -18,6 +68,21 @@ heroes:
     wanted a solution that only a hero could provide. Because of that he's going to
     be put to work on everything, and he's going to have to tidy up everything. So
     he goes to the scene of the crime today, complaining about it.
+- stockId: 10062
+  BIO_H01: |-
+    In order to conduct an undercover operation in the city during the festival season, 
+    UEHA commissioned Gammei to transform into a fighting form through parallel queue.
+    After the strong light faded, he was dressed in a new hero suit, festival costume style.
+    The parallel weapon in his hand called matoi, in the old days was used by Japan's firemen, 
+    in present day it's used by the vanguard of festival procession.
+    Wielding that, he rampages around the battlefield as if it's a garden.
+  BIO_H02: |-
+    He recalls his hometown. Life in the devastated city was never easy.
+    But the experiences he had there were irreplaceable for Gammei as a boy and became his starting point.
+    Justy Arrester is a hero who protects citizens.
+    He realizes that it is a way of life that transcends position and role, and is the way he himself wants to live.
+    Wearing the outfit that signifies the sunny day that the citizens look forward to, he lifts his matoi high up.
+  extra_sprites: fg_gammeiRakusai2304_h02_skin2,fg_gammeiRakusai2304_h02_skin3,fg_ADV_gammeiRakusai2304_h01,fg_ADV_gammeiRakusai2304_h01_skin1,fg_ADV_gammeiRakusai2304_h02,fg_ADV_gammeiRakusai2304_h02_skin1,fg_ADV_gammeiRakusai2304_h02_skin2,fg_ADV_gammeiRakusai2304_h02_skin3
 sidekicks:
 - stockId: 10061
   BIO_S01: |-
@@ -30,7 +95,7 @@ sidekicks:
     thrown several burdens from both above and below his position, So troubles never
     seem to end for him. His old looking face and meagre salary are the roots of his
     anguish.
-  extra_sprites: fg_gammei_s01_skin1
+  extra_sprites: fg_gammei_s01_skin1,fg_gammei_s01_skin2
 ---
 
 {% include voice-table.html resourceName="gammei"
@@ -58,6 +123,19 @@ RELATION = "His aim…never got better at all.<br>Even his stray bullets don't h
 TOUCH = "Uo! W-what are you doing!<br>Stop, I haven't took a proper bath since I'm on a stakeout.<br>I'm not dirty?…w-wahahah!"
 TRAIN = "Don't underestimate the strength of a cop, okay?"
 TRAINED = "Gah! Please give me a break...!"
+%}
+
+{% include voice-table.html resourceName="gammeirakusai2304"
+APPRECIATION = "How is it, working in Kyoto?<br>It's just a change in place, but it's a nice change right?<br>Since we have come to Kyoto, how about taking a stroll around Kamogawa river?"
+DAILY = "Guee…my head hurts.<br>Even when it's a festival I should not have drank so much.<br>By the way, when I'm drunk did I do something to you?<br>…nothing, right?"
+HERO = "Good grief, that guy Tsuneaki.<br>Even though he's friendly and easy to get close to,<br>when it comes to the crucial talk he avoids and make it confusing.<br>Show me your real character even for a bit already."
+PLAYER = "Yo! Looking forward to work with you again today, heheh.<br>I only say this now, but working with you has always been fun for me.<br>That alone is enough for me to be pleased with you, you know?"
+RELATION = "That actor boy, he sure can move well even though he's small.<br>And that impudent attitude, he reminds me of myself when I was still a kid…<br>Well, the appearance is totally diferent though."
+TOUCH = "What's the matter. You wanted to be close with me?<br>Wahaha, fine. No need to hold back, come here!<br>Here, hugs…aa? smells like alcohol!?"
+TRAIN = "Be my drink buddy!"
+TRAINED = "P-please! Go easy with me today!"
+EVENTA = "A city created by alien immigrants, huh.<br>And then they come to like the Earth's, and even more Japan's culture,<br>I kinda feel happy about it."
+EVENTB = "Sightseeing? What are you saying, we are here for investigation.<br>With my position something like that is…haah alright.<br>When the work is over, I will go with you wherever you want."  
 %}
 
 ## Notes

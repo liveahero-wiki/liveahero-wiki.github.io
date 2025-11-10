@@ -1,5 +1,6 @@
 ---
 title: Idol Live on Sandy Beach!
+eventId: 34
 jp_title: 強敵襲来 -砂浜のアイドル・ライブ！-
 news_link: https://live-a-hero.jp/info/3945
 banner_image: banner_campaign_2206Beach.jpg

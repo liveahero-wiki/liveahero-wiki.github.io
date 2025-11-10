@@ -1,6 +1,8 @@
 ---
 title: Shadow Mercenary
 characterId: 70
+type: anthro
+gender: male
 heroes:
 - stockId: 10701
   BIO_H01: |-

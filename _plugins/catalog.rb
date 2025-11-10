@@ -3,11 +3,14 @@
 module Jekyll
 
   module CatalogFilter
+
+    STAFF_SPLIT = /,|\+|＋/
+
     def processVoiceActor(name)
       if name == '？？？'
         name = '後藤ヒロキ,岩永悠平,天野ユウ,戸板優衣,樹元オリエ'
       end
-      name.split(",")
+      name.split(STAFF_SPLIT)
     end
 
     def processCharaGroup(cards, key, maps)

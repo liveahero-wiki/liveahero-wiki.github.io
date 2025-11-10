@@ -10,6 +10,74 @@ banner: true
 
 Pair a hero with a sidekick, and fight against monsters and other heroes. Winning the battle gives various rewards, depending on the type of [Quest](/guide/quest/). All quests award [Heroes](/guide/hero/) and [Sidekicks](/guide/sidekick/) with EXP, and the player with [Rank EXP](/guide/user_rank/).
 
+## About Team
+
+A team is made of up of 5 Heroes and 5 sidekicks.
+
+In most battles, you only need to have 4 pairs of your own heroes and sidekicks, then just borrow a friend support for one extra pair of hero and sidekick.
+
+Each hero can also equip some sidekick passives. Hero with <= 5 star rank can equip up to 2 sidekick passives. Hero with 6 star rank can equip up to 3 sidekick passives.
+
+4 heroes can fight at one time, with one of your heroes being sub-heroes. When one of the hero in your team is defeated, it will be swapped out for a sub-hero in its place at the next turn.
+
+### Team Formation UI
+
+<svg class="screenshot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1080 1926">
+
+<defs>
+  <filter x="0" y="0" width="1" height="1" id="solid">
+    <feFlood flood-color="#000" result="bg" />
+    <feMerge>
+      <feMergeNode in="bg"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+</defs>
+
+<image xlink:href="/assets/img/screenshot/team-formation.jpg" style="width: 1080px;"></image>
+<g class="tippy-tp" data-template="support-list-tip">
+<rect x="353.84615384615387" y="171.28205128205127" width="259.4871794871795" height="76.92307692307693" class="image-mapper-shape" data-index="1"></rect>
+<text filter="url(#solid)" x="430" y="190">
+<tspan x="430" dy="1.5rem">Support</tspan>
+<tspan x="430" dy="1.5rem">Settings</tspan>
+</text>
+</g>
+<g class="tippy-tp" data-template="enhancement-mode-tip">
+<rect x="647.1794871794872" y="176.4102564102564" width="265.64102564102564" height="66.66666666666666" class="image-mapper-shape" data-index="2"></rect>
+<text filter="url(#solid)" x="700" y="190">
+<tspan x="720" dy="1.5rem">Enhancement</tspan>
+<tspan x="720" dy="1.5rem">Mode</tspan>
+</text>
+</g>
+<g>
+<rect x="785.6410256410256" y="303.5897435897436" width="197.9487179487179" height="71.79487179487177" class="image-mapper-shape" data-index="3"></rect>
+<text filter="url(#solid)" x="820" y="360">Disband</text>
+</g>
+<g>
+<rect x="99.48717948717949" y="390.7692307692308" width="214.35897435897436" height="210.25641025641022" class="image-mapper-shape" data-index="4"></rect>
+<text filter="url(#solid)" x="130" y="600">Hero</text>
+</g>
+<g>
+<rect x="323.0769230769231" y="434.87179487179486" width="165.12820512820514" height="162.05128205128204" class="image-mapper-shape" data-index="5"></rect>
+<text filter="url(#solid)" x="340" y="600">Sidekick</text>
+</g>
+<g>
+<rect x="743.5897435897435" y="503.5897435897436" width="222.56410256410265" height="92.30769230769232" class="image-mapper-shape" data-index="6"></rect>
+<text filter="url(#solid)" x="750" y="600">Sidekick Passives</text>
+</g>
+</svg>
+
+<div style="display: none">
+<div id="support-list-tip" markdown="1">
+Setup your support list for other players to borrow
+
+See [Friend Support](/guide/friend_support/)
+</div>
+<div id="enhancement-mode-tip" markdown="1">
+Toggle on to enable directly upgrading current heroes / sidekicks and adjust fan count / engravement level in this UI
+</div>
+</div>
+
 ## Battle Interface
 
 {:refdef: style="text-align: center;"}
@@ -61,7 +129,7 @@ During the battle, the character can be affected by several statuses. The number
 
 Statuses that grant positive effects on the hero are displayed as a yellow icon, also known as "Buffs". Conversely, statuses that afflict the hero with negative effects are displayed as a blue icon, also known as "Debuffs".
 
-The available status modifiers are listed as follows:
+Full list of statuses can be found [here](/statuses/).
 
 #### Buffs
 
@@ -87,10 +155,10 @@ The available status modifiers are listed as follows:
 | {{ 11 | status_description }} | ATK Down | Attack is decreased by 0.5x. Duration decreases after the Hero performs an action. |
 | {{ 12 | status_description }} | DEF Down | Damage received is increased by 1.5x once. Duration decreases after taking damage. |
 | {{ 13 | status_description }} | SPD down | Speed is decreased by -10. Duration decreases after the Hero performs an action. |
-| {{ 14 | status_description }} | Super SPD Down | Speed is decreased by 30. Duration decreases after the Hero performs an action. |
-| {{ 15 | status_description }} | Mosaic | View Power gained from actions is decreased by 0.5x. Duration decreases after the Hero performs an action. |
+| {{ 29 | status_description }} | Super SPD Down | Speed is decreased by 30. Duration decreases after the Hero performs an action. |
+| {{ 14 | status_description }} | Mosaic | View Power gained from actions is decreased by 0.5x. Duration decreases after the Hero performs an action. |
 | {{ 16 | status_description }} | Misfortune | Activation rate of skills decreased by 20%. Duration decreases after the Hero performs an action. |
-| {{ 17 | status_description }} | Silence | Skill cannot be used. Duration decreases when the turn ends. It does not repeat. |
+| {{ 22 | status_description }} | Silence | Skill cannot be used. Duration decreases when the turn ends. It does not repeat. |
 | {{ 18 | status_description }} | Poison | Takes 5% of HP as damage at end of turn. Duration decreases when the turn ends. |
 | {{ 19 | status_description }} | Burn | Takes 10% of HP as damage at end of turn. Duration decreases when the turn ends. |
 

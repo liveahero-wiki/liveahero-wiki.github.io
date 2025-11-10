@@ -1,0 +1,78 @@
+wiki-tabs {
+  --hue: 328deg;
+  --accent: var(--hue) 100% 54%;
+  --indicator-size: 2px;
+  --space-1: .5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+
+  display: block;
+  /* flex-direction: column; */
+
+  /* establish primary containing box */
+  overflow: hidden;
+  position: relative;
+}
+
+.tabcontent {
+  /* be pushy about consuming all space */
+  block-size: 100%;
+  scroll-snap-align: start;
+}
+
+wiki-header {
+  display: flex;
+  flex-direction: column;
+  /* defend against <section> needing 100% */
+  flex-shrink: 0;
+  /* fixes cross browser quarks */
+  min-block-size: fit-content;
+}
+
+.scroll-snap-x {
+  /* browser decide if x is ok to scroll and show bars on, y hidden */
+  overflow: auto hidden;
+  /* prevent scroll chaining on x scroll */
+  overscroll-behavior-x: contain;
+  /* scrolling should snap children on x */
+  scroll-snap-type: x mandatory;
+}
+
+wiki-header nav {
+  display: flex;
+}
+
+wiki-header a {
+  padding: 1rem 1.5rem;
+  scroll-snap-align: start;
+
+  font-weight: 700;
+  color: hsl(var(--hue) 5% 40%);
+  text-decoration: none;
+
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+
+  border-block-end: var(--indicator-size) solid hsl(var(--accent) / 0%);
+  transition: color .7s ease, border-color .5s ease;
+}
+
+wiki-header a:hover {
+  text-decoration: none;
+  background: hsl(var(--accent)/5%);
+  transition: background-color .7s ease;
+}
+
+wiki-header a:is(:target, :active, [aria-selected]) {
+  color: #000;
+  border-block-end-color: hsl(var(--accent));
+}
+
+wiki-tabcontent {
+  block-size: 100%;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+}

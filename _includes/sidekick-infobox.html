@@ -1,6 +1,7 @@
 {% assign cardInfos = SidekickMaster | where: "stockId", include.stockId %}
 
 {% assign firstCardInfo = cardInfos | first %}
+{% assign lastCardInfo = cardInfos | last %}
 {% assign r = firstCardInfo.resourceName %}
 {% if r == "player" %}
 {% capture sprites %}fg_player1_s01,fg_player2_s01,fg_player3_s01,fg_player4_s01{% endcapture %}
@@ -11,34 +12,10 @@
 {% assign sprites = sprites | append: "," | append: include.extra_sprites %}
 {% endif %}
 
+{% assign stockId = include.stockId | downcase %}
+
 <div id="s{{ include.stockId }}" role="tabpanel" tabindex="0"  class="tabcontent contain elementNone">
-    <div class="heroinfobox">
-        <div class="header">
-            <div class="name">{{ title }}</div>
-            <div class="sub">{{ firstCardInfo.cardName }}</div>
-        </div>
-        {% include atlas-gallery.html sprites=sprites %}
-        <table>
-            <tbody>
-                <tr>
-                    <th colspan="2">Illustration</th>
-                    <td colspan="2">{% include chara-illustrator.html illustrator=firstCardInfo.illustrator %}</td>
-                </tr>
-                <tr>
-                    <th colspan="2">Voice</th>
-                    <td colspan="2">{% include chara-voice-actor.html cv=firstCardInfo.characterVoice %}</td>
-                </tr>
-                <tr>
-                    <th colspan="2">Occupation</th>
-                    <td colspan="2">{{ firstCardInfo.job }}</td>
-                </tr>
-                <tr>
-                    <th colspan="2">Affliation office</th>
-                    <td colspan="2">{% include chara-affiliation.html affiliation=firstCardInfo.affiliationOffice %}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+{% include hero-infobox-profile.html stockId=include.stockId firstCardInfo=firstCardInfo sprites=sprites %}
 
 {% assign detail_prefix = firstCardInfo.resourceName | upcase | prepend: "DETAIL_" %}
 {% assign bio_s01 = detail_prefix | append: "_S01" %}
@@ -47,11 +24,11 @@
 <p>{{ processed.jp_bio[bio_s01] }}</p>
 </details>
 {% if include.BIO_S01 != "" %}
-<details open>
+<details open markdown="1">
 <summary>Side Story (Translated)</summary>
-<div markdown="block">
+
 {{ include.BIO_S01 }}
-</div>
+
 </details>
 {% endif %}
 
@@ -95,14 +72,18 @@
     <h3>Active</h3>
     {% include skill-table-v2.html skillIds=skillIdsActive %}
  
-    {% if include.extraActiveSkillIds %}
+    {% if site.data.translation.SkillV2Whitelist.sidekicks[stockId] != true and include.extraActiveSkillIds.size > 0 %}
+    <!-- {{ passiveSkillIds | jsonify }} -->
     {% include skill-table-v2.html skillIds=include.extraActiveSkillIds hide_banner=true %}
     {% endif %}
 
     <h3>Passive</h3>
     {% include skill-table-v2.html skillIds=skillIdsPassive %}
 
-    {% if include.extraPassiveSkillIds %}
-    {% include skill-table-v2.html skillIds=include.extraPassiveSkillIds hide_banner=true %}
+    {% if site.data.translation.SkillV2Whitelist.sidekicks[stockId] != true and lastCardInfo.equipmentAppendSkills.size > 0 %}
+    <!-- {{ passiveSkillIds | jsonify }} -->
+    {% assign extraPassiveSkillIds = "" | split: "," | push: lastCardInfo.equipmentAppendSkills[0] %}
+    {% include skill-table-v2.html skillIds=extraPassiveSkillIds hide_banner=true %}
     {% endif %}
+
 </div>

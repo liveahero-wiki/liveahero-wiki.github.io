@@ -1,6 +1,8 @@
 ---
 title: Viscunam
 characterId: 125
+type: anthro
+gender: male
 heroes:
 - stockId: 11251
   BIO_H01: |-
@@ -32,6 +34,7 @@ sidekicks:
     his clients, so he keeps coming up with bizarre products one after another.<br>
     Although his skills are solid, he has unusually bad luck, and his freewheeling
     disposition often leads him to make mistakes.
+  extra_sprites: fg_viscunam_s01_skin1
 ---
 
 {% include voice-table.html resourceName="viscunam"
@@ -45,7 +48,7 @@ TOUCH = "Oh? You want to see my latest work up close?<br>Sure, sure, go ahead, e
 TRAIN = "Feel my inventions firsthand!"
 TRAINED = "I can't take it!"
 EVENTA = "The energy to power all this illumination...<br>I can make all the devices and medicines I want...<br>Christmas is indeed a dream come true..."
-EVENTB = ""
+EVENTB = "<span style=\"font-size: calc(15px * 0.75)\">Santa is said to have animals pulling his sleigh, but there is still room for progress.<br>For example, we could mount a propulsion mechanism in the limbs...no,<br>Can we add an automatic roaming function to the gift...?</span>"
 %}
 
 ## Notes

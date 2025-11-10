@@ -1,6 +1,10 @@
 ---
 title: Sadayoshi
 characterId: 81
+type: anthro
+gender: male
+h2:
+  title: '"Wild Freedom" Sadayoshi'
 heroes:
 - stockId: 10811
   BIO_H01: |-
@@ -29,6 +33,28 @@ heroes:
     he will become a stronger and more resilient hero than ever before.
   passiveSkillIds:
   - '8081101'
+- stockId: 10812
+  BIO_H01: |-
+    Surviving in an unhabited island, Sadayoshi has been able to break through his usual defenses and unleash his own emotions better than before.
+  
+    His new suit is similar to beach volleyball players.
+  
+    His sun visor-shaped parallel weapon can capture a target and determines the point of attack,
+    then the ball-shaped parallel weapon becomes a high-density energy projectile that   always lands at that point.
+  
+    Sadayoshi, now lighter after shedding his huge glove-shaped parallel weapon, leaps freely with his body as high as he can go.
+  BIO_H02: |-
+    Pushing aside his selfishness, Sadayoshi eat and sleep together with the villains who follows their own beliefs, and come into contact with the true meaning of freedom.
+  
+    Although his firm belief that wrongdoing will not be tolerated remains unchanged,
+    he begins to believe that learning about the other person is the first step toward changing his stiff self.
+  
+    And then, instead of walk a path other wants him to, he will choose his own path.
+  
+    With his own emotions overflowing from the depths of his heart, he jumps on the beach and stares at the ball, not caring about the sweat that pours out of him.
+  
+    That face showed his experience and confidence, decorated with a dazzling smile.
+  extra_sprites: fg_sadayoshiSurvival2309_h01_skin2,fg_sadayoshiSurvival2309_h01_skin3,fg_sadayoshiSurvival2309_h02_skin2
 sidekicks:
 - stockId: 10811
   BIO_S01: |-
@@ -48,7 +74,7 @@ sidekicks:
 
     Due to him following the path in his life laid out for him, he has a bad time
     getting along with people who go don't follow their own path.
-  extra_sprites: fg_sadayoshi_s01_skin1
+  extra_sprites: fg_sadayoshi_s01_skin1,fg_sadayoshi_s01_skin2,fg_sadayoshi_s01_skin3
 ---
 
 {% include voice-table.html resourceName="sadayoshi"
@@ -70,7 +96,7 @@ assisted = "Ashamed…!"
 rankMax = "Is this…a power given to me so that I can further work, officer?<br>Then…it won't do for me to not show you a work that answer your expectations."
 loveIndexMax= "I…no,I right now [^sada1] , someone who is in a position to devote himself to his country, have come to desire you.<br>With your own hand…please punish me.
 
-[^sada1]: he start the phrase with a formal I (私/Watashi) and then change it to a masculine and informal I (俺/Ore)"
+[^sada1]: he starts the phrase with a formal I (私/Watashi) and then changes it to a masculine and informal I (俺/Ore)"
 APPRECIATION = "Thank you for your hard work on today's mission, officer.<br>There, please have a seat.<br>I can make a pot of tea... Oh, The tea leaves have overflowed from the cup..."
 DAILY = "Good morning, officer.<br>I am fully prepared for today.<br>I'm ready to face any mission with all my might.<br>Now, give me your orders."
 HERO = "I've heard of his exploits from my parents, but I never thought I'd see his return with my own eyes.<br>I am... deeply moved."
@@ -81,7 +107,42 @@ TRAIN = "The situation has begun. I will not go easy on you."
 TRAINED = "I guess I didn't train hard enough..."
 %}
 
+{% include voice-table.html resourceName="sadayoshisurvival2309"
+h_gachaResult = "Colonel Sadayoshi Ikusabata effective immediately, will fulfill my duty to take leave!<br>Officer, I am fully prepared. I earnestly request your guidance on how to spend my days off!"
+salesStart = "Swimsuit check! Ball check! Off I go."
+salesEnd = "Reporting in! I'm back from vacation!"
+battleStart = "Enjoy this match to the fullest...I'm going to win!"
+action = "Come on!"
+attack = "Humph!"
+skill = "Leave the toss to me!"
+special = "I will defeat you!<br>Prepare!<br>Evil-destroying light blast!!"
+smallDamage = "Oops!"
+bigDamage = "My foot's stuck!?"
+win = "The victory I longed to grasp...<br>Feels incredibly satisfying now...!<br>This... this is what freedom feels like...!"
+lose = "What do you mean, freedom...?! I can't I even break free from this shell...!"
+assisted = "That's a big help!"
+rankMax = "Hmm... I see. So this is the power to enjoy a vacation...!<br>Leave it to me, living up to expectations is my way of being!<br>Together, let's enjoy ourselves to the fullest!"
+APPRECIATION = "You look tired, officer...understandably so.<br>Let's build a simple base first, so that you can rest.<br>Wait for a little bit, I will collect the necessary materials."
+DAILY = "…Never thought I would be stranded in an uninhabited island.<br>I have a lot of survival knowledge though.<br>Be at ease, we will certainly live and return together."
+HERO = "Giansar…I haven't changed my stance on his misdeeds being unacceptable.<br>Just…whether he's a villain or not, I think I want to know more about him."
+PLAYER = "I was ordered to enjoy my vacation to the fullest...<br>But it always ends up being spent worrying about what to do.<br>Officer, how do you usually spend your time?"
+RELATION = "Phantom thief Zaniah… Can she just stop with that self-proclaimed title!<br>The only result that will come from a small time villain proclaiming themselves like that is a higher chance of being caught..<br>I really don't understand her intention…"
+TOUCH = "Oh, what's the matter?<br>…no, I was wondering if you're worried about surviving on this island…<br>I will be by your side, be at ease and leave your body to me."
+TRAIN = "Come..let's have fun!"
+TRAINED = "T-this much…is nothing…!"
+EVENTA = "Those who don't have shipwreck training, don't be afraid, you can rely on me.<br>First is to procure water, like this coconut…hmph!<br>…burst it open, see it's this kind of liquid that we should procure."
+EVENTB = "Beach volley…hmm, this exercise seems to foster a sense of solidarity among personnel by playing a ball game together.<br>Then, I will give it my all, prepare youself!"
+EVENTC = "The supplies in this situation are truly a blessing.<br>...Officer, let's use these supplies to escape from this deserted island!"
+EVENTD = "Thank you for your hard work, Officer.<br>...For a change of pace, how about playing beach volleyball?<br>I'm ashamed to admit it, but I can't forget the thrill from back then..."
+%}
+
 ## Notes:
 
 - His full name is Sadayoshi Ikusabata (軍畑 サダヨシ)
 - He's in his forties as per his valentine special quest
+
+- - His quote in the game start screen (3rd Anniversary Campaign/Eternal Summer Survival Island):
+  - "LIVE A HERO."
+  Officer, I would like to offer my heartfelt congratulations on this third anniversary milestone.
+  I am happy that we can spend this auspicious day together.
+  I was eager to arrange a celebratory gun fire myself... Hmm, is that not necessary?

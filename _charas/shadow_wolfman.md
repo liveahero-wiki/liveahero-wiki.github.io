@@ -1,6 +1,8 @@
 ---
 title: Shadow Wolfman
 characterId: 45
+type: anthro
+gender: male
 heroes:
 - stockId: 10451
   BIO_H01: |-

@@ -37,6 +37,18 @@ when current attack kills the enemy
 when activating a skill that increases combo
 {% when 20 %}
 when invoker's attack causes damage to enemy
+{% when 21 %}
+Always active
+{% when 22 %}
+when receiving damage
+{% when 24 %}
+Always active
+{% when 27 %}
+current action end
+{% when 33 %}
+when an ally is damaged
+{% when 34 %}
+after activating a skill that deal damages
 {% else %}
 unknown timing ({{ include.timing }})
 {% endcase %}

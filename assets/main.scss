@@ -1,10 +1,16 @@
 ---
 ---
-$color50: #e3f2fd;
+$color50: #e5e5e5;
 $colorLight: #ffd95b;
 $colorPrimary: #ffa726;
 $colorDark: #c77800;
 $colorGrey: #ccc;
+$text: #000;
+$bg: #fafafa;
+
+$silver: #d0d0d0;
+$gold: linear-gradient(195deg, #f0b050, #ffe080, #f0b050);
+$rainbow: linear-gradient(195deg, #ff8080, #ffff80, #80ff80, #80ffff, #8080ff);
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -18,7 +24,7 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  background-color: #fafafa;
+  background-color: $bg;
 }
 header, .page-header, .pager, footer {
   flex: none;
@@ -70,11 +76,14 @@ a:hover {
 }
 .sidebar__logo {
   border-bottom: 1px solid $colorDark;
-  font-size: 36px;
   height: 130px;
+  /*font-size: 36px;
   line-height: 130px;
   margin-bottom: 0;
-  text-align: center;
+  text-align: center;*/
+}
+.sidebar__logo img {
+  filter: drop-shadow(0 0 0.25rem #fff);
 }
 .sidebar__nav {
   max-height: calc(100% - 130px);
@@ -94,7 +103,7 @@ a:hover {
   margin-bottom: 10px;
 }
 .sidebar li {
-  list-style: none;
+  list-style: square;
 }
 .search-box {
   margin-bottom: 20px;
@@ -127,8 +136,11 @@ a:hover {
   padding-bottom: 40px;
 }
 .content {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
+  padding: 0 40px;
+}
+.content__wider {
   padding: 0 40px;
 }
 .content__overlay {
@@ -163,11 +175,12 @@ article {
 }
 h1, h2, h3, h4 {
   line-height: 1;
-  font-weight: 400;
+  font-weight: 600;
   margin: 40px 0 20px;
 }
 h1 {
   font-size: 32px;
+  font-weight: 400;
 }
 h2 {
   font-size: 24px;
@@ -191,7 +204,7 @@ time {
   padding-left: 20px;
 }
 p, ul, ol, table, pre, dl {
-  margin: 0 0 20px;
+  margin: 20px 0;
 }
 ul ul, ol ol, ul ol, ol ul {
   margin: 0;
@@ -239,7 +252,7 @@ code, pre {
 blockquote {
   border-left: 3px solid #1de9b6;
   margin: 24px 0;
-  padding: 0 0 0 20px;
+  padding: 1px 12px;
   font-style: italic;
 }
 table {
@@ -263,17 +276,35 @@ th {
 .sticky-header th {
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 .bordered {
   th, td {
     border: 1px solid #000;
   }
 }
+.sort-table {
+  th {
+    cursor: pointer;
+  }
+  th::after {
+    content: ' \25BD';
+  }
+  th[data-order="1"]::after {
+    content: ' \25BC';
+  }
+  th[data-order="-1"]::after {
+    content: ' \25B2';
+  }
+}
+.sort-table td {
+  vertical-align: top;
+}
 details {
   contain: content;
   border: 1px solid #aaa;
 
-  p, ul, ol, table {
+  >p, >ul, >ol, >table, >blockquote {
     margin: 15px;
   }
 
@@ -329,6 +360,17 @@ figure {
   margin: 0;
   margin-bottom: 30px;
 }
+.clip-img {
+  aspect-ratio: 3/2;
+  overflow-y: scroll;
+}
+figure img {
+  display: block;
+  margin: auto;
+}
+.apache-chart {
+  width: 100%;
+}
 figcaption {
   font-size: 13px;
   background-color: #fff9c4;
@@ -346,6 +388,16 @@ figcaption {
 .translate {
   cursor: pointer;
 }
+.masked {
+  background-color: #000;
+  color: #000;
+  transition: color 0.13s;
+  filter: brightness(0);
+}
+.masked:hover {
+  color: #fff;
+  filter: none;
+}
 // Hero page
 .heroBox {
   display: inline-block;
@@ -360,6 +412,7 @@ figcaption {
 .atlas-gallery {
   img {
     display: block;
+    margin: auto;
   }
   select {
     width: 100%;
@@ -368,7 +421,7 @@ figcaption {
 @media (min-width: 1064px) {
   .atlas-gallery {
     img {
-      padding: 0 159px;
+      max-width: 320px;
     }
   }
 }
@@ -381,9 +434,12 @@ figcaption {
   grid-auto-flow: dense;
   margin-bottom: 20px;
 }
-.re-table div {
-  padding: 5px 10px;
-  border-bottom: 1px solid #e5e5e5;
+.re-table wiki-enhance {
+  background: $colorLight;
+}
+.re-A, .re-B, .re-C, .re-split {
+  padding: 10px;
+  border-bottom: 1px solid $text;
 }
 .re-A {
   background: #d5d5d5;
@@ -391,23 +447,71 @@ figcaption {
 .re-head {
   background: $colorPrimary;
 }
+.re-split {
+  grid-column: span 3;
+}
 @media (max-width: 550px) {
   .re-table {
       grid-template-columns: auto 55px;
   }
-  .re-B {
+  .re-B, .re-split {
       grid-column: span 2;
+  }
+  .re-B.re-head {
+    display: none;
   }
 }
 .heroinfobox {
   padding: 2px;
   margin-bottom: 10px;
+  display: grid;
+}
+@media (min-width: 1064px) {
+  .heroinfobox {
+    grid-template-columns: 320px auto;
+    gap: 5px;
+  }
 }
 .heroinfobox .header {
-  padding: 5px;
+  padding: 10px;
+}
+.heroinfobox .name {
+  font-size: 40px;
+  font-weight: 700;
 }
 .heroinfobox table {
   margin: 0;
+}
+.chara-badge {
+  border: 1.5px solid #000;
+  border-radius: 4px;
+  padding: 10px;
+}
+.chara-type {
+  display: block;
+  margin: auto;
+  margin-bottom: 2px;
+}
+.chara-stars {
+  display: flex;
+  gap: 1px;
+  justify-content: center;
+}
+.h-star, .s-star, .g-star {
+  width: 12px;
+  height: 12px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.h-star {
+  background-image: url(/assets/img/icons/ui_symbol_star_01.webp);
+}
+.s-star {
+  background-image: url(/assets/img/icons/ui_symbol_star_02.webp);
+}
+.g-star {
+  background-image: url(/assets/img/icons/ui_symbol_star_03.webp);
 }
 $elementColor: #f07d75, #88bcff, #5fcb58, #ffb251, #b88dff;
 @for $i from 1 to 6 {
@@ -417,7 +521,7 @@ $elementColor: #f07d75, #88bcff, #5fcb58, #ffb251, #b88dff;
       background: $color;
     }
     .heroinfobox {
-      border: 1px solid $color;
+      border: 2px solid $color;
     }
     summary {
       background-color: $color;
@@ -440,6 +544,49 @@ $elementColor: #f07d75, #88bcff, #5fcb58, #ffb251, #b88dff;
   details {
     border: 2px solid $colorGrey;
   }
+}
+.blooming {
+  display: grid;
+  grid-template-columns: fit-content(280px) 1fr;
+  grid-gap: 5px;
+  margin-bottom: 30px;
+}
+wiki-passive, wiki-auto-action {
+  display: block;
+  position: relative;
+  border-top: 1px solid $text;
+  padding-top: 1.25rem;
+  margin-top: 1.25rem;
+}
+wiki-passive::before, wiki-auto-action::before {
+  display: block;
+  position: absolute;
+  top: -.75rem;
+  left: 20px;
+  background: $bg;
+  padding: 2px;
+}
+wiki-passive::before {
+  content: 'Passive';
+}
+wiki-auto-action::before {
+  content: 'Auto action';
+}
+@media (max-width: 768px) {
+  .blooming {
+    grid-template-columns: 1fr;
+  }
+}
+.blooming_main {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+}
+.skill_tree tr:nth-child(odd) td {
+  background: $color50;
+}
+.skill_tree table {
+  margin: 0;
 }
 // Chara list page
 .card-list {
@@ -543,19 +690,67 @@ $elementName: fire, water, earth, light, shadow;
 .has-unit {
   background: $colorLight;
 }
-.item, .status {
+.filter-on {
+  opacity: 0.5;
+}
+.filtered {
+  display: none !important;
+}
+[data-radio-filter="1"] li:not(.has-unit) {
+  display: none !important;
+}
+[data-radio-filter="2"] li.has-unit {
+  display: none !important;
+}
+.item, .status, abbr {
+  position: relative;
   text-decoration: underline dashed 1px;
   text-underline-offset: 2px;
   cursor: help;
+}
+.item, .status {
   img {
+    width: 2em;
     height: 2em;
     vertical-align: middle;
   }
+  .status-s {
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
+.status span {
+  display: block;
+  position: absolute;
+  font-size: 10px;
+  text-align: center;
+  color: $bg;
+  background: $text;
+  border-radius: 6px;
+  height: 12px;
+  width: 12px;
+  top: 20px;
+  left: 24px;
 }
 // Skill
 .s-rand-g {
   margin-top: 10px;
   padding: 5px;
+}
+.skill-evo {
+  margin-bottom: 30px;
+}
+.indent {
+  padding-left: 20px;
+}
+.skill-1 {
+  background: $silver;
+}
+.skill-2 {
+  background: $gold;
+}
+.skill-3 {
+  background: $rainbow;
 }
 // Event page
 .event-infobox {
@@ -580,4 +775,28 @@ $elementName: fire, water, earth, light, shadow;
     width: 64px;
     height: 64px;
   }
+  .enemy-info-row {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+}
+.screenshot {
+  max-height: min(700px, 100vh);
+  width: auto;
+  max-width: 100%;
+  --font-size: 30px;
+}
+.screenshot text {
+  font: bold var(--font-size) sans-serif;
+  fill: white;
+}
+.image-mapper-shape {
+  fill: rgba(0, 0, 0, 0.5);
+  stroke: white;
+  stroke-width: 5px;
+}
+g:hover .image-mapper-shape {
+  opacity: 20%;
 }

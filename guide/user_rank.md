@@ -29,7 +29,7 @@ Clearing a battle will award user experience points, and accumulating user exper
 
 As the user rank increases, the max stamina limit will also increase, along with a stamina recovery.
 
-User Rank is currently maxed out at level 80. The current user rank can be checked at the top of the game screen.
+User Rank is currently maxed out at level 160. The current user rank can be checked at the top of the game screen.
 
 ### User Rank table
 

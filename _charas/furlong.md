@@ -1,6 +1,8 @@
 ---
 title: Furlong
 characterId: 8
+type: anthro
+gender: male
 occupation: Firefighter
 h2:
   title: '"Jumping Actor" Furlong'

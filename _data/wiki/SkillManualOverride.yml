@@ -1,33 +1,696 @@
 
 # Sort by character name > original/variant/sidekick > skill
 
-# Andrew variant S3
-1025203: "[base skill] Deal 50% of damage to target enemy, and deal another 50% of damage to target enemy for every Defense Up status that Andrew posesses, up to 3 extra hits /100%<br>\
+# Akashi Skevo S1
+
+1001105: "[base skill] Deal 70% of damage to target enemy /100%<br> \
+[base skill] Apply {{ 19 | status_description }} to target enemy for 2 turns /40%<br> \
+<mark>[battle start] Apply {{ 1001101 | status_description }} to self<br> \
+[when Akashi's attack damages an enemy] {{ 1001101 | status_description }} +1</mark>"
+
+8001106: ""
+8001107: "[when invoker's attack causes damage to enemy] Apply {{ 1001101 | status_description }} to self /100%"
+
+# Alphecca variant S1
+1062201: "[base skill] Deal 80% of damage to target enemy /100% "
+
+# Alphecca variant Passive
+8062201: "[when combo is multiple of 5] Deal 50% of damage to all enemies /100%"
+8062202: ""
+8062203: ""
+
+# Andrew variant S3, S1 Skevo
+1025203: "[base skill] Deal 50% of damage to target enemy, and deal another 50% of damage to target enemy for every {{ 2 | status_description }} status that Andrew posesses, up to 3 extra hits /100%<br>\
 [base skill] Deal 100% of damage to target enemy /100%<br>\
-[base skill] Remove 999 Defense Up status from self /100%"
+[base skill] Remove 999 {{ 2 | status_description }} status from self /100%"
+1025205: "[base skill] Deal 70% of damage to target enemy /100%<br>\
+[base skill] Apply {{ 2 | status_description }} to self for 1 next attack(s) /40%<br>\
+<mark>[when {{ 2 | status_description }} is applied] (extra_cond: possessing x <= 2  {{ 221 | status_description }} ) Apply {{ 221 | status_description }} to self /100%</mark>"
+
+# Astosis Passive
+8189101: "[When not debuffed] Rate of inflicting debuff is multiplied by 1.5x for all allies /100%"
+8189103: "[When enemy with debuff is damaged] Apply {{ 1189102 | status_description }} to self for 1 action /100%"
+8189104: ""
+8189105: ""
 
 # Barrel variant S3
 1007203: "[base skill] Deal 100% of damage to all enemies /100%<br>\
 [base skill] Increase the damage of this skill by 20% permanently, up until 160% of damage /100%"
 
-# Goro variant passive
-8023201: "[When caster is alive], ATK of all allies increases for another 10% for each buff they possess (up to extra 50% ATK with 5 buffs). This effect does not stack with similar effects."
+# Borealis Skevo S1
+1082105: "[base skill] Deal 60% of damage to target enemy /100%<br> \
+[base skill] Add 3000 views /100% <br> \
+<mark>Each time ally party generates 5000 View, Symphony Gauge +1. When Symphony Gauge is at max (10 gauges), change Skill 1 to [Ternio Cantus] during own action. <br> \
+[Ternio Cantus] Deal 60% damage to target enemy. After attacking, the allies with the highest and second highest ATK will do a follow-up attack with Skill 1. Reduce Symphony Gauge to 0.</mark>"
+
+# Bygul S2, SK
+1207102: "[base skill] Deal 110% of damage to target enemy /100%<br>\
+[base skill] Apply {{ 12 | status_description }} to target enemy for 1 next attack(s) /100%<br>\
+[base skill] Apply {{ 275 | status_description }} to self for 3 next attack(s) /100%"
+3207101: "[when appearing] Apply {{ 'status_attention' | status_manual: 'Recovery Skill', 'Increase HP recovery of recovery skill used by invoker by 2.5%' }} to self /100%<br>\
+[when an ally is damaged] Apply {{ 'status_bless' | status_manual: 'Bygul Special2', 'Increase HP recovery of recovery skill used by invoker by 5%' }} to self, removed when current turn ends /100%"
+3207102: "[when appearing] Apply {{ 'status_attention' | status_manual: 'Recovery Skill', 'Increase HP recovery of recovery skill used by invoker by 3%' }} to self /100%<br>\
+[when an ally is damaged] Apply {{ 'status_bless' | status_manual: 'Bygul Special2', 'Increase HP recovery of recovery skill used by invoker by 6%' }} to self, removed when current turn ends /100%"
+3207103: "[when appearing] Apply {{ 'status_attention' | status_manual: 'Recovery Skill', 'Increase HP recovery of recovery skill used by invoker by 3.5%' }} to self /100%<br>\
+[when an ally is damaged] Apply {{ 'status_bless' | status_manual: 'Bygul Special2', 'Increase HP recovery of recovery skill used by invoker by 7%' }} to self, removed when current turn ends /100%"
+3207104: "[when appearing] Apply {{ 'status_attention' | status_manual: 'Recovery Skill', 'Increase HP recovery of recovery skill used by invoker by 4%' }} to self /100%<br>\
+[when an ally is damaged] Apply {{ 'status_bless' | status_manual: 'Bygul Special2', 'Increase HP recovery of recovery skill used by invoker by 8%' }} to self, removed when current turn ends /100%"
+3207105: "[when appearing] Apply {{ 'status_attention' | status_manual: 'Recovery Skill', 'Increase HP recovery of recovery skill used by invoker by 4.5%' }} to self /100%<br>\
+[when an ally is damaged] Apply {{ 'status_bless' | status_manual: 'Bygul Special2', 'Increase HP recovery of recovery skill used by invoker by 9%' }} to self, removed when current turn ends /100%"
+3207106: "[when appearing] Apply {{ 'status_attention' | status_manual: 'Recovery Skill', 'Increase HP recovery of recovery skill used by invoker by 5%' }} to self /100%<br>\
+[when an ally is damaged] Apply {{ 'status_bless' | status_manual: 'Bygul Special2', 'Increase HP recovery of recovery skill used by invoker by 10%' }} to self, removed when current turn ends /100%"
+8207104: "[in auto mode] when an ally has <50% hp, prioritize S2 /100%"
+
+# Canes
+1210101: "[base skill] Deal 20% of damage to target enemy 3 times/100%<br>\
+[base skill] Add 1 combo for each hit/40%"
+1210103: "[base skill] Deal 160% of damage to target enemy /100%<br>\
+[base skill] Extend existing {{ 1 | status_description }} on all allies by 1 turn /100%<br>\
+[base skill] (extra_cond: Combo >= 5) Apply 1 action {{ 1 | status_description }} to all allies without it/100%"
+1210104: "[base skill] Deal 25% of damage to target enemy 3 times/100%<br>\
+[base skill] Add 1 combo for each hit/40%"
+8210101: "[When self has {{ 1 | status_description }} ] ATK +20% for all allies except self"
+8210104: ""
+8210105: ""
+
+# Cerastium S1 & Passive
+1123101: "[base skill] Deal 60% of damage to target enemy /100%<br>\
+[base skill] Apply {{ 11 | status_description }} target enemy for 1 next attack(s) /40%"
+1123104: "[base skill] Deal 60% of damage to target enemy /100%<br>\
+[base skill] Apply {{ 11 | status_description }} target enemy for 1 next attack(s) /100%"
+8123101: ""
+8123102: ""
+
+# Exio S2, passive
+1035102: "[base skill] For each {{ 1035101 | status_description }} status held, change skill view cost by -1000 for all allies except self for 1 turn(s) /100%<br>\
+[base skill] Remove all {{ 1035101 | status_description }} statuses /100%"
+8035101: "[when invoker's attack causes damage to enemy] Apply {{ 1035101 | status_description }} to self /100%"
+8035102: ""
+
+# Exio S3
+1035103: "[base skill] Deal 160% + 10% x {{ 1035101 | status_description }} of damage to target enemy, this damage is increased up to 100% depending on the amount 
+of view after the skill is cast (maxed at 13000 view) /100%<br>\
+[base skill] Remove all {{ 1035101 | status_description }} statuses /100%<br>\
+[base skill] Use up to 20000 View to apply {{ 1035101 | status_description }} to self (each {{ 1035101 | status_description }} use 5000 view) /100%"
+
+1035104: "[base skill] Deal 160% + 10% x {{ 1035101 | status_description }} of damage to target enemy, this damage is increased up to 100% depending on the amount 
+of view after the skill is cast (maxed at 11000 view) /100%<br>\
+[base skill] Remove all {{ 1035101 | status_description }} statuses /100%<br>\
+[base skill] Use up to 20000 View to apply {{ 1035101 | status_description }} to self (each {{ 1035101 | status_description }} use 5000 view) /100%"
 
 # Flamier variant S2
 1011202: "[base skill] Deal 50% of damage to all enemies /100%<br>\
-[base skill] Decrease HP by -10% to all enemies for 1 turn(s) /50%<br>\
+[base skill] Apply {{ 19 | status_description }} to all enemies for 1 turn(s) /50%<br>\
 [base skill] (extra_cond: Combo>=5) Activate this skill once again if Flamier is still alive, without gaining extra view /100%"
+
+# Furlong variant Passive
+8008201: "[when appearing] Apply {{ 87 | status_description }} to self /100%"
+
+# Gaisei
+1191101: "[base skill] Deal 70% of damage to target enemy /100% <br>\
+[base skill] Apply {{ 1211101 | status_description }} to target enemy /100% <br>\
+[base skill] Apply {{ 1191101 | status_description }} to target enemy /100%"
+1191102: "[base skill] Deal 70% of damage to all enemies /100% <br>\
+[when target has debuff(s)] Deal 105% of damage to enemy(s) instead /100% <br>\
+[when target has {{ 1191101 | status_description }} ] Also activate Reaper's Blade if self is still alive /100%"
+1191103: "[base skill] Apply {{ 3 | status_description }} to target enemy for 1 turn(s) /100% <br>\
+[base skill] Apply {{ 1191102 | status_description }} to self for 2 action /100% <br>\
+[base skill] Apply {{ 5 | status_description }} to self for 1 turn /100%"
+1191104: "[base skill] Deal 70% of damage to all enemies /100% <br>\
+[when target has debuff(s)] Deal 105% of damage to enemy(s) instead /100% <br>\
+[when target has {{ 1191101 | status_description }} ] Also activate Reaper's Blade if self is still alive /100%"
+8191101: "[base skill] (extra_cond: for target enemy(s) possessing x > 0  {{ 1191101 | status_description }} ) Deal 60% of damage to target enemy(s) /100% <br>\
+[base skill] Remove all {{ 1191101 | status_description }} status from all enemies /100%"
+8191103: "[when self take damage from an enemy] counter with Skill 1 <br>\
+[when self take damage from an ally] activate Skill 1 against a random single enemy. <br>\
+VP is not gained by this counter, max 4 times in a single turn"
+8191104: "[constant activation] Increases the likelihood of being targeted by enemies."
+8191105: "[when self has {{ 1191102 | status_description }} ] skill 1 changes into: <br>\
+[base skill] Deal 140%-280% of damage to target enemy as HP go from MAX to 0 /100% <br>\
+[base skill] Apply {{ 1211101 | status_description }} to target enemy /100% <br>\
+[base skill] Apply {{ 1191101 | status_description }} to target enemy /100%"
+
+# Gaius S1 Skevo
+1115105: "[base skill] Deal 80% of damage to target enemy /100%<br>\
+<mark>[When not debuffed] ATK+20% /100%</mark>"
+
+# Galvo S2, S3, S3+, passive
+1169102: "[base skill] Heal self for 80% of own ATK value /100%<br>\
+[base skill] Remove 2 debuff(s) from self /100%<br>\
+[base skill] (extra_cond: possessing x >= 2 debuffs) Perform 1 more action(s) per turn only/100%"
+8169102: "[Constant activation] When Galvo's HP recovers back from <50%, ATK+10% to self (up to 50%)"
+8169103: ""
+8169104: ""
+
+# Gammei S3 Skevo
+1006107: "<mark>[base skill] Deal 80% of damage to all enemies /100%</mark> <br>\
+[base skill] Apply {{ 13 | status_description }} to all enemies for 1 turn(s) /100%"
+
+# Ganran S1,S2,Passive, SK active
+1199101: "[base skill] Deal 60% of damage to target enemy /100% <br>\
+[base skill] Gain 2 stack of {{ 1199101 | status_description }} /100%"
+1199102: "[base skill] Apply {{ 'status_provocation' | status_manual: 'Metered Provocation', 'Enemies will be more likely to target you. Count -1 when damage is taken, carries over turns.' }} to self for 2 next attack /100% <br>\
+[base skill] Apply {{ 2 | status_description }} to self for 2 next attack(s) /100%"
+1199103: "[base skill] Deal 150% of damage to target enemy /100% <br>\
+[base skill] Apply {{ 11 | status_description }} to target enemy for 1 next attack(s) /100% <br>\
+[When self has 8x {{ 1199101 | status_description }} ] Apply {{ 'status_defdownplus' | status_manual: 'Defense Down+', 'multiply damage received by 1.8' }} to target for 3 next attack, reset {{ 1199101 | status_description }} stack to 1 /100%"
+1199104: "[base skill] Deal 150% of damage to target enemy /100% <br>\
+[base skill] Apply {{ 11 | status_description }} to target enemy for 1 next attack(s) /100% <br>\
+[When self has 8x {{ 1199101 | status_description }} ] Apply {{ 'status_defdownplus' | status_manual: 'Defense Down+', 'multiply damage received by 1.8' }} to target for 3 next attack, reset {{ 1199101 | status_description }} stack to 1 /100%"
+8199101: "[When appearing] Gain 1 stack of {{ 1199101 | status_description }} /100%"
+8199103: "[When taking damage] Gain 1 stack of {{ 1199101 | status_description }} /100%"
+8199104: "[Action end] lose 1 stack of {{ 1199101 | status_description }} /100%"
+2199101: "[base skill] Deal 100% of damage to target enemy /100% <br>\
+[base skill] Apply  {{ 'status_provocation' | status_manual: 'Metered Provocation', 'Enemies will be more likely to target you. Count -1 when damage is taken, carries over turns.' }} to self for 1 next attack /100% <br>\
+[base skill] Apply {{ 2 | status_description }} to self for 1 next attack(s) /100%"
+2199102: "[base skill] Deal 100% of damage to target enemy /100% <br>\
+[base skill] Apply  {{ 'status_provocation' | status_manual: 'Metered Provocation', 'Enemies will be more likely to target you. Count -1 when damage is taken, carries over turns.' }} to self for 1 next attack /100% <br>\
+[base skill] Apply {{ 2 | status_description }} to self for 1 next attack(s) /100%"
+2199103: "[base skill] Deal 100% of damage to target enemy /100% <br>\
+[base skill] Apply  {{ 'status_provocation' | status_manual: 'Metered Provocation', 'Enemies will be more likely to target you. Count -1 when damage is taken, carries over turns.' }} to self for 1 next attack /100% <br>\
+[base skill] Apply {{ 2 | status_description }} to self for 1 next attack(s) /100%"
+
+# Giansar S3, S3+, SK passive
+1124102: "[base skill] Apply {{ 123 | status_description }} to target enemy for 1 turn/100%<br>\
+[base skill] (extra_cond: current action is not activated by another skill) Highest ATK ally (excluding self) uses skill 1 on random enemy/100%"
+1124103: "[base skill] Gain 2 combo(s) /100%<br>\
+[base skill] (extra_cond: Enemy count = 1) SPD Down by -30 to all enemies for 1 action(s) /100%<br>\
+[base skill] (extra_cond: Enemy count = 1) Incoming damage to all enemies increased by 1.8x for 2 next attack(s) /100%<br><br>\
+[base skill] (extra_cond: Enemy count >= 2) SPD Down by -10 to all enemies for 1 action(s) /100%<br>\
+[base skill] (extra_cond: Enemy count >= 2) Incoming damage to all enemies increased by 1.5x for 1 next attack(s) /100%"
+1124104: "[base skill] Gain 3 combo(s) /100%<br>\
+[base skill] (extra_cond: Enemy count = 1) SPD Down by -30 to all enemies for 1 action(s) /100%<br>\
+[base skill] (extra_cond: Enemy count = 1) Incoming damage to all enemies increased by 1.8x for 2 next attack(s) /100%<br><br>\
+[base skill] (extra_cond: Enemy count >= 2) SPD Down by -10 to all enemies for 1 action(s) /100%<br>\
+[base skill] (extra_cond: Enemy count >= 2) Incoming damage to all enemies increased by 1.5x for 1 next attack(s) /100%"
+3124101: "[when invoker's attack causes damage to enemy] Apply {{ 15 | status_description }} to self for 1 turn(s) (once per turn) /10%"
+3124102: "[when invoker's attack causes damage to enemy] Apply {{ 15 | status_description }} to self for 1 turn(s) (once per turn) /12%"
+3124103: "[when invoker's attack causes damage to enemy] Apply {{ 15 | status_description }} to self for 1 turn(s) (once per turn) /14%"
+3124104: "[when invoker's attack causes damage to enemy] Apply {{ 15 | status_description }} to self for 1 turn(s) (once per turn) /16%"
+3124105: "[when invoker's attack causes damage to enemy] Apply {{ 15 | status_description }} to self for 1 turn(s) (once per turn) /18%"
+3124106: "[when invoker's attack causes damage to enemy] Apply {{ 15 | status_description }} to self for 1 turn(s) (once per turn) /20%"
+8124103: ""
+
+# Gomeisa S2 Skevo
+1033106: "<mark>[base skill] Apply {{ 1033101 | status_description }} to target ally for 1 action(s) /100%</mark><br>\
+[base skill] Add 7000 views /100%"
+
+# Goro variant passive
+8023201: "[When caster is alive] Apply {{ 96 | status_description }} to all allies /100%"
+
+# Grigory S2
+1170102: "[base skill] Remove 1 debuff(s) from all allies /100%<br>\
+[base skill] Apply {{ 10 | status_description }} to all allies for 1 turn(s) /100%<br>\
+[base skill] Perform 1 more action(s) (once per turn only) /100%"
+
+# Huckle S3 Skevo
+1034107: "[base skill] Deal 150% of damage to target enemy /100%<br>\
+<mark>[When SPD>129] Act again, cannot use sidekick skill for the extra act (only once per turn) /100%</mark>"
+
+# Kalaski Variant S3, passive
+1064203: "[base skill] Remove 1 buff(s) from target enemy /100% <br>\
+[base skill] Deal 180% of damage to target enemy /100% <br>\
+[base skill] Apply {{ 12 | status_description }} to target enemy for 1-4 next attack (Increased every 3000 available View after skill use, max 4 next attack at extra 12000 view) /100%"
+
+1064204: "[base skill] Remove 1 buff(s) from target enemy /100% <br>\
+[base skill] Deal 200% of damage to target enemy /100% <br>\
+[base skill] Apply {{ 12 | status_description }} to target enemy for 1-4 next attack (Increased every 3000 available View after skill use, max 4 next attack at extra 12000 view) /100%"
+
+8064201: ""
+8064202: ""
+8064204: "[Always active] Every 3000 view consumed by an ally increase a point of gauge(above the hp bar), when gauge is full (after 30000 view) apply {{ 1064202 | status_description }} to self and ally with view role<br>\
+[When {{ 1064202 | status_description }} is active ]change S1 effect into: 
+[base skill] Deal 130% of damage to target enemy /100% <br>\
+[base skill] Deal 50% of damage to all enemies except target /100% <br>\
+[base skill] Apply {{ 268 | status_description }} for 1 turn to all enemies /100%"
+8064205: ""
+
+# Kouki S1 Skevo
+1018105: "[base skill] Deal 60% of damage to target enemy /100% <br>\
+[base skill] Apply {{ 11 | status_description }} to target enemy for 1 action(s) /40% <br>\
+<mark>[base skill] Add 1500 views /100% <br>\
+[When invoker is alive] Reduce damage received by allies based on current VP (0-20% damage reduce at 0-50000 VP) /100%</mark>"
+
+# Kouki variant S2
+1018202: "[base skill] Deal 70% of damage to enemy<br>\
+[base skill] Apply one of the following random debuff (
+  {{ 11 | status_description }},
+  {{ 12 | status_description }},
+  {{ 58 | status_description }},
+  {{ 19 | status_description }}
+) to target enemy<br>\
+If the skill can be activated, activate this skill again (up to 4 times). Additional activation will not gain view."
+
+# Kouki variant Passive
+8018201: "[when appearing] (triggered when invoker is alive and target enemy possessing x > 1 debuff(s)) 
+Apply {{ 205 | status_description }} to all enemies /100%"
+8018202: ""
+
+# Kyoichi variant Skevo S1
+1010205: "[base skill] (extra_cond: possessing {{ 15 | status_description }} ) Deal 70% of damage and extra 30% of damage when condition in bracket is met /100%<br>\
+<mark>[Always active] Increase damage by 10% against debuffed target /100%</mark>"
+
+# Lilac variant S2,S3, passive
+1101202: "[base skill] Heal target ally for 80% of own ATK value /100% <br>\
+[base skill] Apply {{ 275 | status_description }} to target ally for 3 next attack(s) /100% <br>\
+[base skill] Extend ATK up status granted to self by 1 turn(s) /100% <br>\
+[when view >2000] Use 2000 view and act once more /100%"
+
+8101201: "[When alive] Apply 1 stack of {{ 1101201 | status_description }} to ally with max health that is targeted by an active recovery skill /100%"
+8101203: ""
+
+# Marfik Skevo S2
+1014106: "<mark>[base skill] Apply {{ 275 | status_description }} to an ally for 3 turn(s) /100% <br>\
+[base skill] Apply {{ 5 | status_description }} to self for 3 turn(s) /100% <br>\ </mark>
+[base skill] Remove 999 debuff(s) from self /100%"
+
+# Marfik variant Skevo S1
+1014205: "[base skill] Deal 60% of damage to target enemy /100%<br>\
+[base skill] Add 3000 views /100%<br>\
+<mark>[when appearing] Apply 5 stack of {{ 1014203 | status_description }} to all enemies /100%<br>\
+[Turn start] (extra condition : {{ 1014203 | status_description }} = 0) Apply 5 stack of {{ 1014203 | status_description }} to enemies that fulfill the condition /100%</mark>"
+
+# Monomasa Variant Passive
+8031201: "[when appearing] Apply {{ 1031201 | status_description }} to self /100%<br>\
+[when enemy take damage] Apply {{ 1031206 | status_description }} to target enemy /100%"
+
+8031205: ""
+
+8031206: "[Always active] (extra_cond: self has at least 2 stack of {{ 1031201 | status_description }} 
+and possessing > 0 {{ 1031209 | status_description }} ) Reset {{ 1031201 | status_description }} stack /100%"
+
+8031207: ""
+
+# Nessen Variant S1
+1051201: "[base skill] Remove 1 debuff(s) from target ally /100%<br>\
+[base skill] Remove all {{ 1051202 | status_description }} status from allies /100%<br>\
+[base skill] Apply {{ 1051202 | status_description }} to target allies for 2 turn /100%"
+
+# Nessen Variant S2
+1051202: "[base skill] Apply {{ 1 | status_description }} to target ally for 1 next attack(s) /100%<br>\
+[base skill] Add 6000 views /100%<br>"
+
+1051204: "[base skill] Apply {{ 1 | status_description }} to target ally for 1 next attack(s) /100%<br>\
+[base skill] Add 8000 views /100%<br>"
+
+# Nessen Variant S3
+1051203: "[base skill] Heal all allies for 70% of own ATK value /100%<br>\
+[base skill] Apply {{ 2 | status_description }} to all allies for 1 next attack(s) /100%<br>\
+[base skill] (extra_cond: View>10000) Act again (once per turn) /100%"
+
+# Nessen Variant Passive
+8051201: "[base skill] After using any skill (except sidekick skill), ally with {{ 1051202 | status_description }} will use skill 1 to random enemy /100%"
+8051202: ""
+
+# Obsidius S1
+1160101: "[base skill] Deal 50% of damage to target enemy /100%<br>\
+[base skill] Apply 2 stack of {{ 238 | status_description }} to self /100%"
+
+# Obsidius S2
+1160102: "[base skill] Deal 50% of damage 2 times to random enemy/100%<br>\
+[Each hit] Apply {{ 12 | status_description }} for 1 next attack(s) /50%<br>\
+[When has more than 3 {{ 238 | status_description }} ] Deal 1 additional hit and remove 3 stack of {{ 238 | status_description }} /100%"
+
+# Obsidius S3, passive
+1160103: "[base skill] Remove 1 buff(s) from all enemies /100%<br>\
+[base skill] Deal 90% of damage to all enemies, the less enemies hit the more the damage increase up to 180% against one enemy /100%<br>\
+[When has more than 5 {{ 238 | status_description }} ] Performs one more action this turn and remove 5 stack of {{ 238 | status_description }} /100%"
+
+1160104: "[base skill] Remove 1 buff(s) from all enemies /100%<br>\
+[base skill] Deal 90% of damage to all enemies, the less enemies hit the more the damage increase up to 180% against one enemy /100%<br>\
+[When has more than 5 {{ 238 | status_description }} ] Performs one more action this turn and remove 5 stack of {{ 238 | status_description }} /100%"
+
+8160101: "[When buffed] Add 1 stack of {{ 238 | status_description }} to self /100%"
+
+# Obsidius Variant S1, S3, Passive
+1160201: "[base skill] Deal 20% of damage to target enemy 3 times /100% <br>\
+[base skill] Apply 1 {{ 1160201 | status_description }} to target enemy /100%<br>"
+1160203: "[base skill] Deal 40% of damage to target enemy 4 times /100% <br>\
+[base skill] Each hit removes 1 buff /100% <br>\
+[When target has 0 {{ 1160201 | status_description }}] Each hit increase {{ 1160201 | status_description }} stack by 1 /100%"
+1160204: "[base skill] Deal 40% of damage to target enemy 4 times /100% <br>\
+[base skill] Each hit removes 1 buff /100% <br>\
+[When target has 0 {{ 1160201 | status_description }}] Each hit increase {{ 1160201 | status_description }} stack by 1 /100%"
+8160203: "[Always Active] {{ 1160201 | status_description }} /100%"
+8160204: "[Always Active] {{ 1160204 | status_description }} /100%"
+8160205: "[When alive] Apply {{ 117 | status_description }} to all allies /100%"
+
+# Okitaka passive
+8075101: ""
+8075102: ""
+
+# Okitaka Variant S3, Passive
+1075203: "[base skill] Remove all buff(s) from self /100% <br>\
+[base skill] Deal 100% of damage + extra damage based on duration of removed buffs <br>\
+extra damage has maximum of 10 tier as follows from 1-10 buffs duration (4% 16% 32% 64% 100% 144% 196% 256% 324% 400%) /100%<br>\
+[base skill] Apply {{ 1075211 | status_description }} to self for 2 next attack(s) /100%"
+8075201: ""
+8075202: ""
+8075204: ""
+
+# Orbiter
+1217103: "[base skill] Remove all {{ 1217101 | status_description }} from all allies /100% <br>\
+[base skill] Grants {{ 1217101 | status_description }} to target ally for 4 turns /100%"
+8101102: "[when a skill that increases the combo count is activated] further increase the combo count by 1. This effect does not stack with similar effects"
+8217101: ""
+8217102: ""
+3217101: "[After using skill 2] grant all allies {{ 'status_atkup' | status_manual: 'Overall ATK+', 'Increase all allies ATK by 5%, not stack with same effect buff' }} for 2 turns <br>\
+[AI choose target] (extra_cond: Enemy count=1) Prioritize skill 3 /100% <br>\
+[AI choose target] (extra_cond: Enemy count>1) Prioritize skill 2 /100%"
+3217102: "[After using skill 2] grant all allies {{ 'status_atkup' | status_manual: 'Overall ATK+', 'Increase all allies ATK by 6%, not stack with same effect buff' }} for 2 turns <br>\
+[AI choose target] (extra_cond: Enemy count=1) Prioritize skill 3 /100% <br>\
+[AI choose target] (extra_cond: Enemy count>1) Prioritize skill 2 /100%"
+3217103: "[After using skill 2] grant all allies {{ 'status_atkup' | status_manual: 'Overall ATK+', 'Increase all allies ATK by 7%, not stack with same effect buff' }} for 2 turns <br>\
+[AI choose target] (extra_cond: Enemy count=1) Prioritize skill 3 /100% <br>\
+[AI choose target] (extra_cond: Enemy count>1) Prioritize skill 2 /100%"
+3217104: "[After using skill 2] grant all allies {{ 'status_atkup' | status_manual: 'Overall ATK+', 'Increase all allies ATK by 8%, not stack with same effect buff' }} for 2 turns <br>\
+[AI choose target] (extra_cond: Enemy count=1) Prioritize skill 3 /100% <br>\
+[AI choose target] (extra_cond: Enemy count>1) Prioritize skill 2 /100%"
+3217105: "[After using skill 2] grant all allies {{ 'status_atkup' | status_manual: 'Overall ATK+', 'Increase all allies ATK by 9%, not stack with same effect buff' }} for 2 turns <br>\
+[AI choose target] (extra_cond: Enemy count=1) Prioritize skill 3 /100% <br>\
+[AI choose target] (extra_cond: Enemy count>1) Prioritize skill 2 /100%"
+3217106: "[After using skill 2] grant all allies {{ 'status_atkup' | status_manual: 'Overall ATK+', 'Increase all allies ATK by 10%, not stack with same effect buff' }} for 2 turns <br>\
+[AI choose target] (extra_cond: Enemy count=1) Prioritize skill 3 /100% <br>\
+[AI choose target] (extra_cond: Enemy count>1) Prioritize skill 2 /100%"
+
+# Polaris Mask S1 Skevo
+1015105: "[base skill] Deal 60% of damage to target enemy /100% <br>\
+[base skill] Add 3000 views /100%<br>\
+<mark>[When an enemy is damaged by self attack] Gain 500 View /100%</mark>"
+
+# Polaris Mask variant S1,S2, passive
+1015201: "[base skill] Deal 50% of damage to target enemy /100% <br>\
+[base skill] Heal self for 35% of own ATK value /100% <br>\
+[When {{ 1015203 | status_description }} = 0] Deal 50% of damage to all enemies and apply {{ 'status_defdown' | status_manual: 'Vertigo', 'Incoming damage x1.2' }} for 2 turns /100%"
+1015202: "[base skill] Heal self for 75% of own ATK value /100%<br>\
+[base skill] Reduce {{ 1015203 | status_description }} by 1 stack /100%<br>\
+[base skill] Perform 1 more action (once per turn) /100%<br>\
+[base skill] Apply {{ 5 | status_description }} to self for 2 turn(s) /100%"
+8015201: "[when taking damage] Reduce {{ 1015203 | status_description }} by 1 stack /100%"
+8015203: ""
+
+# Procy variant passive
+8032202: ""
+
+# Pubraseer variant 
+1073201: "[base skill] Deal 50% of damage to target enemy /100% <br>\
+[base skill] Gain 1 combo(s) /100% <br>\
+[when {{ 1073208 | status_description }} > 2] This skill changes to Asteria Odigos"
+1073202: "[base skill] Deal (70% 85% 110% 140%) of damage to all enemies based on how many enemies hit (4 3 2 1) /100% <br>\
+[base skill] Grants {{ 1 | status_description }} to self for 1 action /100% <br>\
+[when {{ 1073208 | status_description }} = 6] Consume all {{ 1073208 | status_description }}, grants {{ 'status_atkupplus' | status_manual: 'ATK up+', 'multiply ATK power by 1.8' }} to self for 1 action instead"
+8073201: "[constant activation] Each time a skill that increases the combo count is activated, {{ 1073208 | status_description }} +1"
+8073202: "[when combo reach a multiple of 5] {{ 1073208 | status_description }} +2"
+8073203: "[base skill] (activated 1-3 times based on {{ 1073208 | status_description }}) Consume 2 {{ 1073208 | status_description }}, Deal 50% of damage to target enemy and Heal 50% of damage to ally with the lowest HP <br>\ 
+This skill can only be activated once per turn /100%"
+8073204: ""
+8073205: ""
+8073207: ""
+8073208: ""
+
+# Rakta S3 Skevo
+1020107: "[base skill] Apply {{ 8 | status_description }} target ally for 2 turn(s) /100% <br>\
+[base skill] Remove 2 debuff(s) from target ally /100%  <br>\
+<mark>[base skill] If target has debuff, heal target by 50% own ATK /100%</mark>"
+
+# Rakta variant S3
+1020203: "[base skill] Grants {{ 1020201 | status_description }} to a single ally for 3 turns/100% <br>\
+{% assign se = site.data.SkillEffectMaster['684'] %}\
+[base skill] Grants {{ 74 | status_description: se.skillEffectJson }} to all alies except self for one action /100%"
+
+# reXer variant S1,S2,S3, Passive
+1122201: "[base skill] Deal 60% of damage to target enemy /100% <br>\
+Remove 1 buff(s) from target enemy /60%"
+1122202: "[base skill] Deal 90% of damage to target enemy /100% <br>\
+Apply {{ 13 | status_description }} to target enemy for 1 turn(s) /100%"
+1122203: "[base skill] Deal 130% of damage to target enemy /100% <br>\
+Also deal 50% of ATK as damage to non target enemy, when the non target enemy has not acted yet this turn, this damage is increased further by +50% of ATK /100%"
+1122204: "[base skill] Deal 60% of damage to target enemy /100% <br>\
+Remove 1 buff(s) from target enemy /100%"
+1000: "[When self has >= 110 Speed and has no debuff] Change {{ 24 | status_description }} into {{ 1122201 | status_description }} <br>\
+Using {{ 1122201 | status_description }} will:<br>\
+[base skill] Apply {{ 1122202 | status_description }} to self for 1 turn(s) /100% <br>\
+[base skill] Apply {{ 1122205 | status_description }} to self for 1 turn(s) /100% <br>\
+[base skill] Perform 1 more action(s) /100% <br>\
+Max 3 times in 1 turn"
+
+8122201: "[Action end] (When enemy(s) has {{ 13 | status_description }} or {{ 29 | status_description }}) Deal 50% of damage to enemy(s) with the debuff"
+
+8122203: ""
+
+8122205: "[turn end] Remove all {{ 1122202 | status_description }} from self /100% <br>\
+[turn end] Remove all {{ 1122205 | status_description }} from self /100%"
+
+# Roudin Passive
+3209101: "[when appearing] ATK Up by 2.5% to self, every 5000 view at the start of action also increase ATK by an extra 2.5% (max at 20000 view) /100%"
+3209102: "[when appearing] ATK Up by 3% to self, every 5000 view at the start of action also increase ATK by an extra 3% (max at 20000 view) /100%"
+3209103: "[when appearing] ATK Up by 3.5% to self, every 5000 view at the start of action also increase ATK by an extra 3.5% (max at 20000 view) /100%"
+3209104: "[when appearing] ATK Up by 4% to self, every 5000 view at the start of action also increase ATK by an extra 4% (max at 20000 view) /100%"
+3209105: "[when appearing] ATK Up by 4.5% to self, every 5000 view at the start of action also increase ATK by an extra 4.5% (max at 20000 view) /100%"
+3209106: "[when appearing] ATK Up by 5% to self, every 5000 view at the start of action also increase ATK by an extra 5% (max at 20000 view) /100%"
+8209101: "[Always active] Every 3000 view consumed by an ally increase a point of gauge(above the hp bar), when gauge is full (after 30000 view) +20% ATK for all allies for 1 next action"
+8209102: ""
+8209110: ""
+
+# Ryekie S3 Skevo
+1004107: "[base skill] Deal 90% of damage to all enemies + extra 1.8% damage for each point in speed difference with target (max 180% at 50 speed difference)/100% <br>\
+<mark>[When invoker has {{ 3 | status_description }} ] Extra damage for each point in speed difference is doubled (max damage at 25 speed difference) </mark>"
+
+# Ryekie variant S2 Skevo
+1004206: "[base skill] Apply {{ 1 | status_description }} to target ally for 1 next attack(s) /100% <br>\
+[base skill] Apply {{ 3 | status_description }} to target ally for 1 turn(s) /100% <br>\
+<mark>[When invoker is alive] Allies with speed up buff gain +20% ATK (doesn't stack) /100%</mark>"
+
+# Ryusei S2,S3, SK passive
+1198102: "[base skill] Apply {{ 1 | status_description }} to highest ATK ally for 2 next attack(s) /100% <br>\
+[If enough VP] Apply {{ 1 | status_description }} to 2nd highest ATK ally for 2 next attack(s) /100% (doesn't gain VP for 2nd activation)"
+1198103: "[base skill] Apply {{ 274 | status_description }} to all allies for 2 next attack(s) /100% <br>\
+[base skill] Apply {{ 275 | status_description }} to all allies for 3 next attack(s) /100%"
+1198104: "[base skill] Apply {{ 274 | status_description }} to all allies for 2 next attack(s) /100% <br>\
+[base skill] Apply {{ 275 | status_description }} to all allies for 3 next attack(s) /100%"
+3198101: "[after using S3] apply {{ 'status_atkup' | status_manual: 'Overall ATK+', 'Increase all allies ATK by 5%, not stack with same effect buff' }} to all allies for 2 turn /100%" 
+3198102: "[after using S3] apply {{ 'status_atkup' | status_manual: 'Overall ATK+', 'Increase all allies ATK by 6%, not stack with same effect buff' }} to all allies for 2 turn /100%"
+3198103: "[after using S3] apply {{ 'status_atkup' | status_manual: 'Overall ATK+', 'Increase all allies ATK by 7%, not stack with same effect buff' }} to all allies for 2 turn /100%"
+3198104: "[after using S3] apply {{ 'status_atkup' | status_manual: 'Overall ATK+', 'Increase all allies ATK by 8%, not stack with same effect buff' }} to all allies for 2 turn /100%"
+3198105: "[after using S3] apply {{ 'status_atkup' | status_manual: 'Overall ATK+', 'Increase all allies ATK by 9%, not stack with same effect buff' }} to all allies for 2 turn /100%"
+3198106: "[after using S3] apply {{ 'status_atkup' | status_manual: 'Overall ATK+', 'Increase all allies ATK by 10%, not stack with same effect buff' }} to all allies for 2 turn /100%"
+
+# Sadayoshi variant passive
+8081201: ""
+8081202: "[When buffed] Heal all allies except self by 5% of own ATK /100%."
+
+# Santetsu S1
+1112101: "[base skill] {{ 13 | status_description }} to target enemy for 1 action(s) /100%.<br>\
+[base skill] Allow Santetsu to instantly act again at most once in this turn. View cannot be acquired in this extra action."
+
+# Shaft variant passive
+8063201: ""
+
+# Shidemasu passive
+8206101: "[When an ally except self take damage and has <50% HP] Apply {{ 5 | status_description }} to self for 1 next attack /100%"
+
+# Shoen Skevo S1
+1012105: "[base skill] Deal 60% of damage to target enemy /100%<br>\
+[base skill] Apply {{ 11 | status_description }} to target enemy for 1 next attack(s) /50%<br>\
+<mark>[When alive] Reduce view consumption of ally by 4% for each buff they have (max 20%), this effect doesn't stack /100%</mark>"
+
+# Sterio
+1211101: "[base skill] Deal 50% of damage to target enemy /100%<br>\
+[base skill] Apply {{ 1211101 | status_description }} to target enemy for 1 next attack(s) /100%"
+1211102: "[base skill] Remove {{ 1211103 | status_description }} from all allies/100%<br>\
+[base skill] Apply {{ 1211103 | status_description }} to target ally for 2 turns/100%"
+1211103: "[base skill] Apply {{ 1 | status_description }} to ally with {{ 1211103 | status_description }} for 2 next attack(s) /100% <br>\
+[base skill] Apply {{ 3 | status_description }} and {{ 7 | status_description }} to ally with {{ 1211103 | status_description }} for 3 next attack(s) /100% <br>\
+[base skill] Target ally use S1 to target enemy /100%<br>\
+[When there are no ally with {{ 1211103 | status_description }} ] target random ally instead"
+1211104: "[base skill] Apply {{ 1 | status_description }} to ally with {{ 1211103 | status_description }} for 2 next attack(s) /100% <br>\
+[base skill] Apply {{ 3 | status_description }} and {{ 7 | status_description }} to ally with {{ 1211103 | status_description }} for 3 next attack(s) /100% <br>\
+[base skill] Target ally use S1 to target enemy /100%<br>\
+[When there are no ally with {{ 1211103 | status_description }} ] target random ally instead"
+2211101: "[base skill] Apply {{ 1 | status_description }} to target ally for 2 next attack(s) /100%<br>\
+[base skill] (extra_cond: skill receiver's HP<50) Apply {{ 275 | status_description }} to target ally for 3 next attack(s) /100%"
+2211102: "[base skill] Apply {{ 1 | status_description }} to target ally for 2 next attack(s) /100%<br>\
+[base skill] (extra_cond: skill receiver's HP<50) Apply {{ 275 | status_description }} to target ally for 3 next attack(s) /100%"
+2211103: "[base skill] Apply {{ 1 | status_description }} to target ally for 2 next attack(s) /100%<br>\
+[base skill] (extra_cond: skill receiver's HP<50) Apply {{ 275 | status_description }} to target ally for 3 next attack(s) /100%"
+3211101: "[When appearing] Apply {{ 1211111 | status_description }} to self for 1 next attack(s) /100%"
+3211102: "[When appearing] Apply {{ 1211111 | status_description }} to self for 1 next attack(s) /100%"
+3211103: "[When appearing] Apply {{ 1211111 | status_description }} to self for 1 next attack(s) /100%"
+3211104: "[When appearing] Apply {{ 1211111 | status_description }} to self for 1 next attack(s) /100%"
+3211105: "[When appearing] Apply {{ 1211111 | status_description }} to self for 1 next attack(s) /100%"
+3211106: "[When appearing] Apply {{ 1211111 | status_description }} to self for 1 next attack(s) /100%"
+8211101: "[when invoker's attack causes damage to enemy with {{ 1211101 | status_description }} ] +1 stack of {{ 1211101 | status_description }} "
+8211102: "[When ally with {{ 1211103 | status_description }} attack with active skill] Self attack target enemy(s) (max 2 times per turn, no combo gain) and add a stack of {{ 1211101 | status_description }} /100% <br>\
+Damage is proportional to how many enemy(s) hit:<br>\
+1 enemy = 50% ATK <br>\
+2 enemies = 30% ATK <br>\
+3 enemies = 20% ATK <br>\
+>3 enemies = 15% ATK "
+8211106: "[AI choose target] (extra_cond: no other ally has {{ 24 | status_description }} ) Self {{ 24 | status_description }} "
+
+# Suhail Skevo S2
+1030106: "[base skill] Deal 70% of damage to all enemy /100%<br>\
+[base skill] Apply {{ 18 | status_description }} 1 turn /75%<br>\
+<mark>[When alive] enemies inflicted with Damage-over-Time statuses take +20% more damage. This effect does not stack. /100%</mark>"
+
+# Tabit S3 , passive
+1151103: "[base skill] Deal 180% of damage to target enemy /100% <br>\
+[base skill] (extra_cond: target enemy is killed) Perform 1 more action (only once per turn)/100%"
+
+1151104: "[base skill] Deal 200% of damage to target enemy /100% <br>\
+[base skill] (extra_cond: target enemy is killed) Perform 1 more action (only once per turn)/100%"
+
+8151102: ""
+
+# Theoreol S3 , passive
+1161103: "[base skill] Grants all allies {{ 2 | status_description }} for 1 next attack(s) /100%.<br>\
+[base skill] Grants all allies {{ 239 | status_description }} for 2 turns /100%"
+8161101: "[In auto action] Prioritize the third skill when there is an ally with less than 50% HP"
+
+# Tsuneaki variant passive
+1140202: "[base skill] Deal 130% of damage to target enemy /100%<br>\
+[base skill] Apply {{ 12 | status_description }} to target enemy for 2 next attack(s) /80%<br>\
+[when this skill is self-triggered] Activate Ocean Sky Strike to target enemy /40% (chance increase by 20% for every debuff(s) on target)"
+8140201: "Rokusei has a special gauge under his HP bar<br>\
+[When buffed] +1 to gauge (max 5)/100%<br>\
+[When gauge > 0] change {{ 24 | status_description }} to {{ 1140203 | status_description }} "
+8140202: ""
+8140204: ""
+8140205: ""
+8140206: ""
+8140207: ""
+8140208: ""
+8140209: ""
+8140210: ""
+8140211: ""
+8140212: ""
+
+# Victom variant passive, skevo
+8009205: "[while alive] Apply {{ 67 | status_description }} to all allies, maxed at 100000 view"
+1009206: "<mark>[base skill] Grant {{ 274 | status_description }} to an ally for 2 actions /100%</mark><br>\
+[base skill] Add 9000 views /100%"
 
 # Viscunam S2
 1125102: "[base skill] Add 2000 views /100%<br>\
-[base skill] Gives a single ally one of the 3 random inventions (ATK x110% permanently, Incoming damage x90% permanently, Recover 20% of max HP) that activates after 3 actions. You can only grant up to 5 inventions of the same type to the same ally."
+[base skill] Apply one of the following invention to target ( 
+{{ 152 | status_description }}, 
+{{ 153 | status_description }}, 
+{{ 154 | status_description }} ) with a max of 5 stack for each type of invention /100%"
 
 # Vulpecula S1
 1065101: "[base skill] Deal 45% of damage to target enemy /100%<br>\
 [base skill] Decrease HP by -5% to target enemy for 2 turn(s) /60%<br>\
 [base skill] Activate this skill once again if the enemy is still alive /100%"
 
-# Santetsu S1
-1112101: "[base skill] SPD Down by -10 to target enemy for 1 action(s) /100%.<br>\
-[base skill] Allow Santetsu to instantly act again at most once in this turn. View cannot be acquired in this extra action."
+# Yohack S3
+1190103: "[base skill] Apply {{ 'status_atkupplus' | status_manual: 'Attack Up+', 'Multiply ATK by 1.8x, this status is treated as normal ATKup' }} to target ally for 1 action /100%<br>\
+[base skill] Apply {{ 264 | status_description }} to target ally for 1 action /100%<br>\
+[base skill] Apply {{ 8 | status_description }} to target ally for 1 action /100%<br>\
+[base skill] Apply {{ 1190101 | status_description }} to self for 3 turn /100%"
+
+# Yoshiori variant passive
+8072202: "[when taking damage] Apply {{ 215 | status_description }} to self for 1 turn(s) /100%<br>"
+8072203: ""
+
+# Yotaro passive
+3218101: "[after activating a skill that deal damages] Apply {{ 1 | status_description }} to self for 1 action /15% <br>\
+Make self more likely to be targeted by enemies"
+3218102: "[after activating a skill that deal damages] Apply {{ 1 | status_description }} to self for 1 action /18% <br>\
+Make self more likely to be targeted by enemies"
+3218103: "[after activating a skill that deal damages] Apply {{ 1 | status_description }} to self for 1 action /21% <br>\
+Make self more likely to be targeted by enemies"
+3218104: "[after activating a skill that deal damages] Apply {{ 1 | status_description }} to self for 1 action /24% <br>\
+Make self more likely to be targeted by enemies"
+3218105: "[after activating a skill that deal damages] Apply {{ 1 | status_description }} to self for 1 action /27% <br>\
+Make self more likely to be targeted by enemies"
+3218106: "[after activating a skill that deal damages] Apply {{ 1 | status_description }} to self for 1 action /30% <br>\
+Make self more likely to be targeted by enemies"
+8218101: "Make self more likely to be targeted by enemies"
+
+# Zaniah S2
+1182102: "[base skill] Deal 60% of damage to target ally. Gain damage x400 worth of View. /100%<br>\
+[base skill] Apply  {{ 2 | status_description }} to target ally for 1 next attack(s) /100%<br>\
+This skill cannot defeat an ally"
+
+# Unexplored Skills
+9000001: "View Gain or Special role allies' skill View Gain +100%"
+9000002: "At start of action, if View is 10,000 or more, gain 1 DEF UP"
+9000003: "At start of action, if View is 10,000 or more, gain 1 ATK UP"
+9000004: "Increase ATK based on current View Power (Gradually increase till max +50% when View at 20,000)"
+9000005: "When Speed or Special role allies still alive, <br>\
+increase all allies dealt damage to enemies by target's SPD difference x1% per Speed role heroes"
+9000006: "After heroes with SPD UP・Super SPD UP has acted, <br>\
+grant another action (Within same turn, every time regaining another action,<br>\
+the rate of gaining another action by this skill is halved)"
+9000007: "When Speed or Special role allies deal damage to enemies, <br>\
+deal target's 2% of MAX HP as extra damage"
+9000008: "When have SPD UP・Super SPD UP buff, ATK+30%"
+9000009: "Buffs granted by Support or Special role allies +1 Turn"
+9000012: "Debuff granted by Debuff or Special role allies +1 Turn"
+9000013: "When Debuff or Special role allies deal damage using skill, <br>\
+extends one of target's debuff by 1 Turn randomly"
+9000014: "When Debuff or Special role allies deal damage using skill, <br>\
+if target has any debuffs on them, trigger own Auto Action (once per turn)"
+9000015: "Heal or Special role allies' heal amount +50%"
+9000016: "When Heal or Special role allies heal HP, remove 1 debuff on target"
+9000017: "After Heal or Special role allies has acted, <br>\
+heal ally with the most lowest HP by 60% of own ATK"
+9000018: "Defense or Special role allies' damage taken -20%"
+9000019: "When Defense or Special role allies received damage, gain 1 ATK UP"
+9000020: "When Defense or Special role allies received damage, Counter with skill 1"
+9000021: "At start of battle, Attack or Special role allies gain 1 ATK UP"
+9000022: "When Attack or Special role allies incapacitated enemies, gain another action"
+9000023: "Every time Heroes deal damage, ATK+2%"
+9000025: "All skill View Cost -1000"
+9000026: "Every incapacitated allies, ATK+30%"
+9000027: "When using skill that increases Combo, additionally +1 Combo"
+9000028: "After action, if the Combo count is 8 or more, gain another action (once per turn for each Heroes)"
+9000029: "At start of action, if Combo count is 5 or more, gain 1 ATK UP"
+9000030: "When using non-attack skill, gain 1 SPD UP"
+9000031: "When Attack or Special role allies using non-damage skill, gain another action (once per turn)"
+9000032: "Allies with debuff ATK+20%"
+9000033: "Initial Rank 2 or below Heroes ATK+100%"
+9000034: "ATK +20% For heroes with affiliation office : Parallel Flight(PF)"
+9000035: "ATK +20% For heroes with affiliation office : <br>\
+United Earth Hero Dispatch(UE), Independent Heroes(ID), <br>\
+????(??), Japan Defense Bureau(JD)"
+9000036: "ATK +20% For heroes with affiliation office : <br>\
+Ardisia Kingdom Cavalry(AK), Guild Eagle Eyes(GE),<br>\
+Unaffiliated(NO), S&S Heros(SH)"
+9000037: "ATK +20% For heroes with affiliation office : <br>\
+Heroic Educators(HE), Galaxy Athletes(GA),<br>\
+M.A.H.A.(MA), Creative Brains(CB)"
+9000038: "ATK +20% For heroes with affiliation office : <br>\
+Laborer's Site(LS), Global Drivers Union(GD), <br>\
+Gourmet Fighters(GF), Neotalents Production(NP), Broadcasters(BC)"
+9000047: "Skill activation rate +20%"
+9000050: "When dealing damage to enemies with elemental advantages, effectiveness +0.5x"
+9000054: "When Defense or Special role allies use skills that damage to themselves for once,<br>\
+the damage is capped at 90% own MAX HP"
+9000055: "Initial Rank 3 or below Heroes ATK+50%"
+9000056: "Initial Rank 3 or below Heroes' non-damage skill View Cost is halved"
+9000059: "When View Gain or Special role allies gain View by using skill, deal 50% of gained View by the skill to all enemies"
+9000060: "Increase ATK further as HP drops (MAX +100%)"
+9000061: "When receiving heal from skill, gain 1 ATK+50% (Buff gained from this skill does not counted as duplicate buff)"
+9000062: "Skill activation rate +50%"
+9000063: "At start of battle, grant 1 time use Super Awakening (View Cost become 0)"
+9000064: "Max HP +50%"
+9000065: "At start of turn, grant Invention that will activates after 3 actions, granting another action for self. <br>\
+If there's already Invention granted, this skill won't activated"
+9000066: "Increase damage dealt to enemies based on number of debuffs on them (1 debuff +25%, max +100%)"
+9000068: "Base HP +3000, base ATK +1000, damage received -250"
+9000070: "When ally with speed or special role has acted this turn, all allies ATK +10%"
+9000073: "All allies do auto action at all times, all allies ATK+50%"
+9000074: "When in Wait grants ATK+30% and damage received +10%"
+9000075: "When an ally is damaged by another ally, grants ATK+25% for one action to damaged ally"
+9000076: "When an ally has <50% HP, grants a barrier for 3 action and ATK+20%"
+9000078: "When skill2 damage an enemy, give DEF down for 1 action to target"
+9000082: "At the start of battle, ATK+10% for every unique element in ally team"
+9000085: "When ally with speed or special role grants speed up to ally, apply 1 ATK up to target ally, <br>\
+when they deal speed down to enemy, apply 1 DEF down to target enemy"
+9000087: "Each time target takes damage apply +10% damage received debuff to target (max 100%), debuff removed when target takes action"
+9000089: "Increases damage taken by the opponent according to the total number of duration of debuffs on the enemy. <br>\
+(+10% per duration. Maximum 100%.)"
+9000090: "At the start of action, ATK +10% times the number of buff duration target ally has (max 100%) for one action"
+9000091: "At the start of turn, ATK +50% for all allies for one action"
 

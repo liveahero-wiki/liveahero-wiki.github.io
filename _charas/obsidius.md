@@ -1,0 +1,77 @@
+---
+title: Obsidius
+characterId: 160
+type: anthro
+gender: male
+occupation: Mineralogist
+profile:
+  age: 37
+  height: 215 (horns included)
+  weight: 191
+  birthday: 02/24 (Date rescued from escape pod)
+  birthplace: Unknown
+  5th_anniversary_intro: |-
+    With a helmet and work clothes, Obsidius transforms into a hero in a suit resembling a miner. 
+    
+    It's said that those who see his hero form for the first time often mistake him for a member of Labor's Site. However, that misconception is shattered the moment they see his rock drill-shaped Parallel Weapon in action. The hardness of his Parallel Weapon changes according to the amount of knowledge he possesses about the target. 
+    
+    Even if he can't destroy an object in one hit, breaking off even a single fragment allows him to acquire structural data from it, thereby increasing the weapon's hardness. 
+    
+    This is the very embodiment of the pride he holds as a researcher, which he expresses in his lectures: "Smash through the world's unknowns with curiosity and a spirit of inquiry, and transform them into knowledge. That is the essence of scholarship." 
+  5th_anniversary_true_self: |-
+    As a researcher, Professor Obsidius does not often lecture at Orient City University's Faculty of Planetary Environments.
+    
+    This is because he spends more than half the year traveling around the galaxy on fieldwork. As a result, students studying mineralogy under him inevitably develop strong physiques and, for some reason, pick up survival skills that could rival a professional's. 
+    
+    A similar phenomenon is said to occur with the students under Professor Marfik, who teaches archaeology at the same university. According to other students, it's easy to tell which seminar group someone belongs to just by looking at them. 
+    
+    Having grown up in an orphanage himself, he is an energetic participant in his agency's charity events such as free workshops. The charity bazaars are especially popular, drawing countless donations from fans inspired by his example and always proving to be a great success. He, however, does not speak of these things himself. 
+    
+    When a reporter expressed their gratitude and admiration, he simply laughed it off with his usual boisterous smile and said, "I'm just giving back what I received when I was a kid." 
+h2:
+  title: '"Bulldozing Destroyer" Obsidius'
+heroes:
+- stockId: 11601
+  BIO_H01: |-
+    Obsidius transforms into a hero dressed in a suit reminiscent of a miner, complete with helmet and work clothes.
+    His jackhammer-shaped parallel weapon in his hand becomes harder depending on the amount of knowledge Obsidius has about the object       being drilled.
+    Even if the target cannot be shattered with a single blow, if even a small part of it can be broken away,
+    the structure information of the target will be obtained from the fragments and the jackhammer's power will increase.
+    In the end, with enough persistence it will become the hardest jackhammer to "break through the unknown" and crush anything.
+  BIO_H02: |-
+    Obsidius was living in an orphanage as far back as he can remember.
+    The only clue to his origin was a bangle made of an unknown ore that he had worn since birth.
+    What is the ore used in the bangles? Is there a planet that produces the same ore? Is it home? All kinds of unknowns trouble him.         With a dream of "breaking through all unknowns" in his heart, he travels around the galaxy.
+- stockId: 11602
+  extra_sprites: fg_obsidiusCrisis2404_h01_skin2
+sidekicks:
+- stockId: 11601
+  BIO_S01: |-
+    Obsidious is an alien therianthrope - a minerology academic who resides in the Orient City University.
+    He is a field worker who goes around in the galaxy in search of rare ores,
+    and his curiosity and desire to dive into the unknown is matched by his toughness.
+    He is Marfik's colleague and during his time in the university before becoming a Professor,
+    he had a student/mentor relationship with him.
+    Because his main area of research is on-site, he is very bad with machinery that require precision.
+    Because he grew up in an orphanage and took care of younger children all the time, he now has a very caring attitude,
+    similar to that of an older brother. 
+  extra_sprites: fg_obsidius_s01_skin1,fg_obsidius_s01_skin2,fg_obsidius_s01_skin3,fg_obsidius_s01_skin4,fg_obsidius_s01_skin5,fg_obsidius_s01_skin6,fg_obsidius_s01_skin7
+---
+
+{% include voice-table.html resourceName="obsidius"
+h_gachaResult = "The rock driller who pierces through the unknown,<br>Obsidius is here!<br>Leave this to me!"
+s_gachaResult = "I am Obsidius, a mineralogist.<br>If there is any rare mineral ore I am….eh.<br>It's for sidekick job right, leave it to me!"
+APPRECIATION = "What? Why am I pattin' your head?<br>It's because you look so down in the dumps!<br>Come on, come on, let me pet you some more! Hahaha!"
+DAILY = "Oh, you've come to the right place!<br>You know how to operate this terminal, don't you?<br>I don't have a clue about these kinda non-work related machines!"
+HERO = "When I was a student, the Professor dragged me around all kinds of places,<br>He taught me a lot about fieldwork.<br>Hahaha! I can't tell you how many times we got in trouble!"
+PLAYER = "I've seen you go up against the hardest of walls....<br>I like guys like you!<br>I just want to take care of you!"
+RELATION = "A king who stands on the shoulders of his country, huh?<br>I've never seen my country..."
+TOUCH = "I've been working out in the field, so I'm confident in my physique.<br>Go ahead, touch it as much as you like and see for yourself!"
+TRAIN = "Prepare yourself for a hard hit."
+TRAINED = "Damn, he's gonna hit me hard!"
+EVENTA = "A mineral spring water with medicinal properties... That's gotta be it.<br>There must be some rare ore at the source of the water!<br>Hey, let's go take a look while we're sightseeing!"
+EVENTB = "The king...no, that Alphecca guy,<br>He's really getting worked up, huh?<br>That's one stressful job, so he oughta make the most of his vacation!"
+%}
+
+{% include voice-table.html resourceName="obsidiuscrisis2404"
+%}

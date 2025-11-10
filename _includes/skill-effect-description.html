@@ -13,12 +13,25 @@
 {% if skillEffectJson.trigger %}{{ skillEffectJson.trigger | skill_trigger_json: include.timing }}{% endif %}
 {% for effect in skillEffectJson.effects %}
 
-{% if effect.class == "NoneEffect" and skillEffectJson.effects.size > 1 %}{% continue %}{% endif %}
+{% if skillEffectJson.effects.size > 1 %}
+  {% if effect.class == "NoneEffect" or effect.class == "NoneEffectElapseTurnDamage" or effect.class == "NoneEffectElapseAfterTurnEnd" 
+     or effect.class == "NoneEffectElapseTurnBeforeSkill" %}
+    {% continue %}
+  {% endif %}
+{% endif %}
+
+{% if effect.class == "NoneEffect" or skillEffectJson.statudId == 0 %}
+  {% continue %}
+{% endif %}
+
+{% if effect.class == "ParticleStatus" %}{% continue %}{% endif %}
 
 {% assign turnDefinition = "action" %}
 {% case effect.class %}
 {% when "Damage" %}
 Deal {{ effect.parameter.value }}% of damage to {{ target }}
+{% when "NowHPDependDamageLimit" %}
+This skill's damage is capped at {{ effect.parameter.mult }}% of {{ target }} HP
 {% when "ChangeHp" %}
 {% assign turnDefinition = "turn" %}
 {% if effect.parameter.value >= 0 %}Decrease{% else %}Increase{% endif %} HP by {{ 0 | minus: effect.parameter.value }}% to {{ target }}
@@ -35,7 +48,11 @@ Gain {{ effect.parameter.value }}% of self's base view
 {% when "NotDamageSkillNeedViewValueChange" %}
 View cost of self's non-damaging skill changed by {{ effect.parameter.value }}
 {% when "MultipleDefence" %}
+{% if skillEffectJson.filterIds contains 12 %}
+{% assign turnDefinition = "turn" %}
+{% else %}
 {% assign turnDefinition = "next attack" %}
+{% endif %}
 {% if effect.parameter.value == 0 %}Nullify incoming damage to {{ target }}{% else %}Incoming damage to {{ target }} {% if effect.parameter.value >= 100 %}increased{% else %}reduced{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x{% endif %}
 {% when "SpdRateEmitDefence" %}
 {% assign turnDefinition = "next attack" %}
@@ -48,6 +65,8 @@ Remove {{ effect.parameter.value }} {% if effect.parameter.target %}{{ effect.pa
 Copy {{ effect.parameter.value }} {% if effect.parameter.target %}{{ effect.parameter.target | status_description }} status{% else %}buff(s){% endif %} from {{ target }}
 {% when "RemoveSystemEffect" %}
 Remove {{ effect.parameter.value }} {% if effect.parameter.target %}{{ effect.parameter.target | status_description }} status{% else %}system status(es){% endif %} from {{ target }}
+{% when "RegistBuffExecBuffed" %}
+Apply "Buff Immunity{% if effect.parameter.value !=0 %} {{ effect.parameter.value }}%{% endif %}" {% if effect.parameter.statusId != 0 %}(for {{ effect.parameter.statusId | status_description }}){% endif %} to {{ target }}
 {% when "ComboPlus" %}
 Gain {{ effect.parameter.value }} combo(s)
 {% when "AddPlusCombo" %}
@@ -58,13 +77,19 @@ Proc rate {% if effect.parameter.value >= 0 %}Up{% else %}Down{% endif %} by {{ 
 Perform {{ effect.parameter.value }} more action(s)
 {% when "SkillTurnExtension" %}
 Extend {{ target }}'s {% if effect.parameter.statusTypeValue == 1 %}buff{% else %}debuff{% endif %} status effect by {{ effect.parameter.value }} turn(s)
+{% when "InvokerSkillTurnExtension" %}
+Extend all allies' {% if effect.parameter.statusTypeValue == 1 %}buff{% else %}debuff{% endif %} status effect (bestowed by allies) by {{ effect.parameter.value }} turn(s)
 {% when "Heal" %}
 {% assign turnDefinition = "turn" %}
 Heal {{ target }} for {{ effect.parameter.value }}% of own ATK value
 {% when "HealMultipleAttack" %}
 Increase recovery amount of {{ target }}'s healing skill by {{ effect.parameter.value }}%
 {% when "HealMultipleDefence" %}
-Reduce recovery amount of {{ target }}'s healing skill by {{ 100 | minus: effect.parameter.value }}%
+{% if effect.parameter.value < 100 %}
+Reduce recovery amount of {{ target }}'s received healing by {{ 100 | minus: effect.parameter.value }}%
+{% else %}
+Increase recovery amount of {{ target }}'s received healing by {{ effect.parameter.value | minus: 100 }}%
+{% endif %}
 {% when "NeedViewChange" %}
 {% assign turnDefinition = "turn" %}
 Skill View cost {% if effect.parameter.value >= 100 %}Up{% else %}Down{% endif %} by {{ effect.parameter.value | divided_by: 100.0 }}x for {{ target }}
@@ -74,14 +99,20 @@ Apply {{ skillEffectJson.statusId | status_description }} to {{ target}}<br>&nbs
 Remove {{ effect.parameter.value }} debuff(s) from {{ target }}
 {% when "RegistDebuff" %}
 &quot;{{ effect.parameter.value }}% chance to resist {% if effect.parameter.statusId == 0 %}one debuff{% else %}{{ effect.parameter.statusId | status_description }}{% endif %}&quot; for {{ target }}
+{% when "RegistBuff" %}
+&quot;{{ effect.parameter.value }}% chance to resist {% if effect.parameter.statusId == 0 %}one buff{% else %}{{ effect.parameter.statusId | status_description }}{% endif %}&quot; for {{ target }}
 {% when "Provocation" %}
 {% assign turnDefinition = "turn" %}
 Give {{ target }} {{ 5 | status_description }}: opponents can target only {{ target }}
 {% when "Hide" %}
 {% assign turnDefinition = "turn" %}
 Give {{ target }} {{ 15 | status_description }}
+{% when "HidePenetration" %}
+Ignore enemy's {{ 15 | status_description }}
 {% when "HealthDamage" %}
 Deal {% if effect.parameter.evaluationIsMax == true %}{{ effect.parameter.value | times: 2 }}% -> {{ effect.parameter.value }}%{% else %}{{ effect.parameter.value }}% -> {{ effect.parameter.value | times: 2 }}%{% endif %} damage to {{ target }} as HP goes from Max to 0
+{% when "GetViewDamage" %}
+Deal {{ effect.parameter.value }}% of damage to {{ target }}. Gain <code>damage x{{ effect.parameter.viewMult }}</code> worth of View.
 {% when "DeleteTurn" %}
 Skip {{ effect.parameter.value }} enemy action(s)
 {% when "Silence" %}
@@ -89,6 +120,8 @@ Skip {{ effect.parameter.value }} enemy action(s)
 {% if effect.parameter.index %}{{ target }} cannot use skill {{ effect.parameter.index | plus: 1 }} again{% else %}{{ target }} cannot use view-costing skills{% endif %}
 {% when "AddMultDamage" %}
 Deal {{ effect.parameter.value }}% of damage and extra {{ effect.parameter.addMult }}% of damage when condition in bracket is met
+{% when "AddMultHeal" %}
+Heal {{ effect.parameter.value }}% of self' ATK to {{ target }} + extra {{ effect.parameter.addMult }}% when condition in bracket is met
 {% when "ComboDamage" %}
 Deal {{ effect.parameter.value }}% of damage and {{ effect.parameter.value | times: effect.parameter.combpMult | divided_by: 100.0 }}% extra for each combo to {{ target }}
 {% when "ElementPenetrateDamage" %}
@@ -103,12 +136,20 @@ Activate self's skill {{ effect.parameter.index | plus: 1 }} if {{ target }} is 
 ATK Up by {{ effect.parameter.value }}% to {{ target }} for each combo
 {% when "SpdDeferenceMultipleAttack" %}
 ATK Up by {{ effect.parameter.spdMult }}% to {{ target }} for each point in speed difference (???)
+{% when "SpdDifferenceMultipleAttack" %}
+ATK Up by {{ effect.parameter.spdMult }}% to {{ target }} for each point in speed difference between {{ target }} and enemy, capped at {{ effect.parameter.maxMult }}%
 {% when "HighestMultipleAttack" %}
 ATK Up by {{ effect.parameter.value }}% to {{ effect.parameter.target | skill_target }}
+(If there are overlapping effects with the same type and range, only the one with highest value will be applied)
+{% when "BeforeSkillTriggerMultipleAttack" %}
+ATK Up by {{ effect.parameter.value }}% to {{ target }} if target enemy has no acted yet
+{% when "HighestMultipleDefence" %}
+Incoming damage increases by {{ effect.parameter.value }}% to {{ target }}
 (If there are overlapping effects with the same type and range, only the one with highest value will be applied)
 {% when "Penetration" %}
 Make {{ target }} ignore Taunt
 {% when "TargetMark" %}
+{% assign turnDefinition = "turn" %}
 {{ target }} will have higher chance of being targeted when opponent is in auto action mode
 {% when "NoneEffectElapseTurnDamageAndTurnEnd" %}
 (Remove this effect at the end of turn even if unused){% continue %}
@@ -117,7 +158,7 @@ View-costing skills for {{ target }} now target all allies/enemies
 {% when "RandomTeamAttack" %}
 After attack, if targeted enemy is still alive, random ally will use skill 1 on targeted enemy
 {% when "TeamAttackRandomEnemy" %}
-Target ally use skill 1 on random enemy
+Target ally use {% if effect.parameter.isAutoSkill %}auto skill{% else %}skill 1{% endif %} on random enemy
 {% when "ViewPowerMultipleAttack" %}
 ATK Up by {{ effect.parameter.minMult }}% ~ {{ effect.parameter.maxMult }}% to all allies, scaled from 0 to {{ effect.parameter.maxView }} view power
 {% when "HighestViewPowerMultipleAttack" %}
@@ -126,6 +167,8 @@ ATK Up by {{ effect.parameter.minMult }}% ~ {{ effect.parameter.maxMult }}% to {
 ATK Up by {{ effect.parameter.minMult }}% ~ {{ effect.parameter.maxMult }}% to {{ effect.parameter.target | skill_target }}, scaled from 0 to {{ effect.parameter.maxCombo }} combo
 {% when "ForceAuto" %}
 Force auto action to {{ target }}
+{% when "TurnDecideAutoSkill" %}
+Prioritize using Skill {{ effect.parameter.value | plus: 1 }} for every {{ effect.parameter.modValue }} turn(s)
 {% when "MultipleHp" %}
 HP Up by {{ effect.parameter.value | divided_by: 100.0 }}x to {{ target }}
 {% when "StatusNumberMultipleAttack" %}
@@ -136,7 +179,7 @@ Change skill view cost by {{ effect.parameter.value }} for {{ target }}
 {% when "IgnoreElement" %}
 Make {{ target }} ignore element advantages
 {% when "NowViewDamage" %}
-Deal {{ effect.parameter.value }}% -> {{ effect.parameter.value | times:2 }}% of damage to {{ target }} as remaining Views go from 0 to {{ effect.parameter.viewMult | times:10000 }}
+Deal {{ effect.parameter.value }}% -> {{ effect.parameter.value | times:2 }}% of damage to {{ target }} as remaining Views go from 0 to {{ 1000000.0 | divided_by: effect.parameter.viewMult | round }}
 {% when "SpdDeferenceDamage" %}
 Deal {{ effect.parameter.value }}% of damage to {{ target }} + extra {{ effect.parameter.value | divided_by: 1000.0 | times:effect.parameter.spdMult | times:2 }}% damage for each point in speed difference with target
 {% when "StatusNumDamage" %}
@@ -149,7 +192,7 @@ Gain {{ effect.parameter.value }}% extra gold
 Gain {{ effect.parameter.value }}% extra XP
 {% when "Aggregation" %}
 {% assign turnDefinition = "turn" %}
-Apply {{ 26 | status_description }} to {{ target }}: <abbr title="Does not include single target attack">{{ target }} takes full damage of all-ranged attack done to their team</abbr>
+Apply {{ 26 | status_description }} to {{ target }}: <abbr class="tippy" data-content="Does not include single target attack">{{ target }} takes full damage of all-ranged attack done to their team</abbr>
 {% when "NoneEffect" %}
 {% assign turnDefinition = "turn" %}
 Apply {{ skillEffectJson.statusId | status_description }} to {{ target }}
@@ -165,18 +208,39 @@ Resurrect {{ target }} to {{ effect.parameter.value }}% HP
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the highest HP {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
 {% when "AimLowestAtkCharacter" %}
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the lowest ATK {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
+{% when "AimHighestAtkCharacter" %}
+(Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the highest ATK {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
 {% when "AimLeastDamagedCharacter" %}
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the least damaged {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
 {% when "AimMostDamagedCharacter" %}
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the most damaged {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
-{% when "AimHighestAtkCharacter" %}
-(Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the highest ATK {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
+{% when "AimLowestDebuffCountCharacter" %}
+(Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the lowest debuff count {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
+{% when "AimHighestDebuffCountCharacter" %}
+(Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the highest debuff count {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
+{% when "AimLowestBuffCountCharacter" %}
+(Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the lowest buff count {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
+{% when "AimHighestBuffCountCharacter" %}
+(Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the highest buff count {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
 {% when "AimLowestSpdCharacter" %}
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the lowest SPD {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
 {% when "AimHighestSpdCharacter" %}
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the highest SPD {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
 {% when "AimBossCharacter" %}
 (Auto action) Skill that targets {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %} will target the boss {% if effect.parameter.isTarget %}enemy{% else %}ally{% endif %}
+{% when "TriggerDecideAutoSkill" %}
+Prioritize skill {{ effect.parameter.value | plus: 1 }}
+{% when "ChangeSkillProbElapseTurnEnd" %}
+Proc rate of skill {{ effect.parameter.skillId }} is multiplied by {{ effect.parameter.value }}{% if effect.parameter.isPercent %}%{% else %}x{% endif %}
+{% when "PassiveBattleSkillEffect" %}
+Grant this skill to {{ target }}
+{% when "TurnBaseMultipleAttack" %}
+Apply {{ skillEffectJson.statusId | status_description }} to {{ target }}
+{% assign new_skill_id = effect.parameter.skillId | downcase %}
+{% assign new_skill = site.data.SkillMaster[new_skill_id] %}
+<fieldset>
+{% include skill-description.html skillId=new_skill_id skill=new_skill %}
+</fieldset>
 {% else %}
 Unknown effect class ({{ effect.class }})
 {% endcase %}

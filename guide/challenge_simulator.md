@@ -12,9 +12,9 @@ These high difficulty quests are much harder than any other content in the game.
 
 Each challenge will consist of multiple waves. Any damage your heroes take during a wave will be carried over to the next wave. You can check the number of enemy waves before entering the battle. Some challenge will have bonus stats given to certain Heroes or Sidekicks.
 
-Doing a challenge will grant you a score, the score will be calculated based on Quest Score Evaluation Criteria shown on the quest selection screen. You will get {% include item-icon.html id=68 %}Heronium depending on your score, which can be used as currency in the simulator exchange. You can exchange Heronium for {% include item-icon.html id=29 %} Legend Medal, {% include item-icon.html id=59 %} Parallel Quartz, and more.
+Doing a challenge will grant you a score, the score will be calculated based on Quest Score Evaluation Criteria shown on the quest selection screen. You will get {% include item.html id=68 %} depending on your score, which can be used as currency in the simulator exchange. You can exchange Heronium for {% include item.html id=29 %}, {% include item.html id=59 %}, and more.
 
-Quest in simulator will reset after a period of time (normally within 14 days), after which the quest will be changed.  Any unused Heronium will be converted to 150 {% include item-icon.html id=35 %} each when the quest reset.
+Quest in simulator will reset after a period of time (normally within 14 days), after which the quest will be changed.  Any unused Heronium will be converted to 150 {% include item.html id=35 %} each when the quest reset.
 
 ## Score threshold
 
@@ -24,225 +24,6 @@ Quest in simulator will reset after a period of time (normally within 14 days), 
 | >= 65000 | A |
 | >= 30000 | B |
 | < 30000 | C |
-
-## Previous Simulator Quests
-
-### Jul 14th 2021 - Jul 28th 2021
-
-{% include quest-group.html chapterId=601 %}
-{% include quest-group.html chapterId=606 %}
-{% include quest-group.html chapterId=607 %}
-
-### Jul 28th 2021 - Aug 11th 2021
-
-{% include quest-group.html chapterId=602 %}
-{% include quest-group.html chapterId=604 %}
-{% include quest-group.html chapterId=608 %}
-
-### Aug 11th 2021 - Aug 25th 2021
-
-{% include quest-group.html chapterId=603 %}
-{% include quest-group.html chapterId=605 %}
-{% include quest-group.html chapterId=609 %}
-
-### Aug 25th 2021 - Sep 08th 2021
-
-{% include quest-group.html chapterId=601 %}
-{% include quest-group.html chapterId=606 %}
-{% include quest-group.html chapterId=607 %}
-
-### Sep 08th 2021 - Sep 22th 2021
-
-{% include quest-group.html chapterId=602 %}
-{% include quest-group.html chapterId=604 %}
-{% include quest-group.html chapterId=608 %}
-
-### Sep 22th 2021 - Oct 06th 2021
-
-{% include quest-group.html chapterId=603 %}
-{% include quest-group.html chapterId=605 %}
-{% include quest-group.html chapterId=609 %}
-
-### Oct 06th 2021 - Oct 20th 2021
-
-{% include quest-group.html chapterId=601 %}
-{% include quest-group.html chapterId=606 %}
-{% include quest-group.html chapterId=607 %}
-
-### Oct 20th 2021 - Nov 03rd 2021
-
-{% include quest-group.html chapterId=602 %}
-{% include quest-group.html chapterId=604 %}
-{% include quest-group.html chapterId=608 %}
-
-### Nov 03rd 2021 - Nov 17th 2021
-
-{% include quest-group.html chapterId=603 %}
-{% include quest-group.html chapterId=605 %}
-{% include quest-group.html chapterId=609 %}
-
-### Nov 17th 2021 - Dec 01st 2021
-
-{% include quest-group.html chapterId=601 %}
-{% include quest-group.html chapterId=606 %}
-{% include quest-group.html chapterId=610 %}
-
-### Dec 01st 2021 - Dec 15th 2021
-
-{% include quest-group.html chapterId=602 %}
-{% include quest-group.html chapterId=604 %}
-{% include quest-group.html chapterId=608 %}
-
-### Dec 15th 2021 - Dec 29th 2021
-
-{% include quest-group.html chapterId=603 %}
-{% include quest-group.html chapterId=605 %}
-{% include quest-group.html chapterId=611 %}
-
-### Dec 29th 2021 - Jan 12th 2022
-
-{% include quest-group.html chapterId=601 %}
-{% include quest-group.html chapterId=606 %}
-{% include quest-group.html chapterId=610 %}
-
-### Jan 12th 2022 - Jan 26th 2022
-
-{% include quest-group.html chapterId=602 %}
-{% include quest-group.html chapterId=604 %}
-{% include quest-group.html chapterId=612 %}
-
-### Jan 26th 2022 - Feb 09th 2022
-
-{% include quest-group.html chapterId=603 %}
-{% include quest-group.html chapterId=605 %}
-{% include quest-group.html chapterId=611 %}
-
-### Feb 09th 2022 - Feb 23th 2022
-
-{% include quest-group.html chapterId=601 %}
-{% include quest-group.html chapterId=606 %}
-{% include quest-group.html chapterId=610 %}
-
-### Feb 23th 2022 - Mar 09th 2022
-
-{% include quest-group.html chapterId=602 %}
-{% include quest-group.html chapterId=604 %}
-{% include quest-group.html chapterId=612 %}
-
-### Mar 09th 2022 - Mar 23th 2022
-
-{% include quest-group.html chapterId=603 %}
-{% include quest-group.html chapterId=605 %}
-{% include quest-group.html chapterId=611 %}
-
-### Mar 23th 2022 - Apr 06th 2022
-
-{% include quest-group.html chapterId=601 %}
-{% include quest-group.html chapterId=606 %}
-{% include quest-group.html chapterId=607 %}
-
-### Apr 06th 2022 - Apr 20th 2022
-
-{% include quest-group.html chapterId=602 %}
-{% include quest-group.html chapterId=604 %}
-{% include quest-group.html chapterId=608 %}
-
-### Apr 20th 2022 - May 04th 2022
-
-{% include quest-group.html chapterId=603 %}
-{% include quest-group.html chapterId=605 %}
-{% include quest-group.html chapterId=609 %}
-
-### May 04th 2022 - May 18th 2022
-
-{% include quest-group.html chapterId=601 %}
-{% include quest-group.html chapterId=606 %}
-{% include quest-group.html chapterId=610 %}
-
-### May 18th 2022 - Jun 01st 2022
-
-{% include quest-group.html chapterId=602 %}
-{% include quest-group.html chapterId=604 %}
-{% include quest-group.html chapterId=612 %}
-
-### Jun 01st 2022 - Jun 15th 2022
-
-{% include quest-group.html chapterId=603 %}
-{% include quest-group.html chapterId=605 %}
-{% include quest-group.html chapterId=611 %}
-
-### Jun 15th 2022 - Jun 29th 2022
-
-{% include quest-group.html chapterId=601 %}
-{% include quest-group.html chapterId=606 %}
-{% include quest-group.html chapterId=607 %}
-
-### Jun 29th 2022 - Jul 13th 2022
-
-{% include quest-group.html chapterId=602 %}
-{% include quest-group.html chapterId=604 %}
-{% include quest-group.html chapterId=608 %}
-
-### Jul 13th 2022 - Jul 27th 2022
-
-{% include quest-group.html chapterId=603 %}
-{% include quest-group.html chapterId=605 %}
-{% include quest-group.html chapterId=609 %}
-
-### Jul 27th 2022 - Aug 10th 2022
-
-{% include quest-group.html chapterId=601 %}
-{% include quest-group.html chapterId=606 %}
-{% include quest-group.html chapterId=610 %}
-
-### Aug 10th 2022 - Aug 24th 2022
-
-{% include quest-group.html chapterId=602 %}
-{% include quest-group.html chapterId=604 %}
-{% include quest-group.html chapterId=612 %}
-
-### Aug 24th 2022 - Sep 7th 2022
-
-{% include quest-group.html chapterId=603 %}
-{% include quest-group.html chapterId=605 %}
-{% include quest-group.html chapterId=611 %}
-
-### Sep 7th 2022 - Sep 21th 2022
-
-{% include quest-group.html chapterId=601 %}
-{% include quest-group.html chapterId=606 %}
-{% include quest-group.html chapterId=607 %}
-
-### Sep 21th 2022 - Oct 5th 2022
-
-{% include quest-group.html chapterId=602 %}
-{% include quest-group.html chapterId=604 %}
-{% include quest-group.html chapterId=608 %}
-
-### Oct 5th 2022 - Oct 19th 2022
-
-{% include quest-group.html chapterId=603 %}
-{% include quest-group.html chapterId=605 %}
-{% include quest-group.html chapterId=609 %}
-
-### Oct 19th 2022 - Nov 2nd 2022
-
-{% include quest-group.html chapterId=601 %}
-{% include quest-group.html chapterId=606 %}
-{% include quest-group.html chapterId=610 %}
-
-### Nov 2nd 2022 - Nov 16th 2022
-
-{% include quest-group.html chapterId=602 %}
-{% include quest-group.html chapterId=604 %}
-{% include quest-group.html chapterId=612 %}
-
-### Nov 16th 2022 - Nov 30th 2022
-
-{% include quest-group.html chapterId=603 %}
-{% include quest-group.html chapterId=605 %}
-{% include quest-group.html chapterId=611 %}
-
 
 ## Guides
 
@@ -378,5 +159,90 @@ This Simulator has different Score condition which is:
 
 {% include skill-table-manual.html skillIds="4033107,4033106" equipmentSkills="6033102,6000003" %}
 
+### Simulated Ghost Kaibutsu (Difficulty: SS)
 
+#### Simulator Info
 
+Simulation Target: 
+
+| Target  | Element                                     | Speed     |
+|---------|---------------------------------------------|----------------|
+|Ghost Kaibutsu (Adult)|Wood|110|
+|Ghost Kaibutsu (Juvenile)|Light|115|
+|Ghost Kaibutsu (Juvenile)|Shadow|115|
+
+Details:
+
+Ghost Kaibutsu (Adult) applies multiple "Wandering Soul" debuffs to itself every few turns. The number of "Wandering Soul" debuffs increases its strength.
+
+At the start of every turn, Ghost Kaibutsu (Adult) revives Ghost Kaibutsu (Juvenile). The number of revives is equal to the number of "Wandering Soul" debuffs removed.
+
+Ghost Kaibutsu (Adult)'s attack power increases as its HP decreases, and some of its skills are further enhanced when in a critical state.
+
+Ghost Kaibutsu (Juvenile) has a skill that inflicts the "Grudge" status effect on itself.
+
+When Ghost Kaibutsu (Juvenile) with "Grudge" is defeated, it deals damage to all Heroes.
+
+#### Ghost Kaibutsu (Adult)'s skills
+
+{% include skill-table-manual.html skillIds="4109101,4109102,4109103" equipmentSkills="6109101,6109102,6121109,6121114" %}
+
+#### Ghost Kaibutsu (Juvenile)'s skills
+
+{% include skill-table-manual.html skillIds="4104101,4104102,4104103" equipmentSkills="6105101" %}
+
+### Simulated Meteorite Kaibutsu (Difficulty: SS)
+
+#### Simulator Info
+
+Simulation Target: 
+
+| Target  | Element                                     | Speed     |
+|---------|---------------------------------------------|----------------|
+|Meteorite Kaibutsu (Large)|Fire|108|
+|Meteorite Kaibutsu (Small)|Fire|109|
+|Meteorite Kaibutsu (Small)|Fire|110|
+
+Details:
+
+This quest is completed by surviving for 8 turns.
+
+Meteorite Kaibutsu (Large) randomly applies either a "single-target" or "all-target" status to itself every turn, and attacks accordingly based on that status. When Meteorite Kaibutsu (Large) takes damage, it switches between the "single-target" and "all-target" states.
+
+Meteorite Kaibutsu (Large) grants itself "Meteor Fragments" every turn. Once every 4 turns, it unleashes a powerful all-target attack based on the number of Meteor Fragments it has accumulated.
+
+"Meteor Fragments" can be removed by attacking Meteorite Kaibutsu (Large).
+
+Meteorite Kaibutsu (Small) performs single-target and area attacks that apply buffs and debuffs, and if it is knocked out by the fifth turn, it will revive.
+
+#### Meteorite Kaibutsu (Large)'s skills
+
+{% include skill-table-manual.html skillIds="4095103,4095104,4095105" equipmentSkills="6095101,6095111,6095110,6095108" %}
+
+#### Meteorite Kaibutsu (Small)'s skills
+
+{% include skill-table-manual.html skillIds="4089103,4089101,4089102" equipmentSkills="" %}
+
+### Simulated Plesiosaur Kaibutsu (Difficulty: SS)
+
+#### Simulator Info
+
+Simulation Target: 
+
+| Target  | Element                                     | Speed     |
+|---------|---------------------------------------------|----------------|
+|Plesiosaur Kaibutsu(?)|Water|106|
+
+Details:
+
+The Plesiosaur Kaibutsu(?) is a boss that performs multi-hit attacks on random targets and AoE (area-of-effect) attacks.
+Its ATK increases as its HP decreases.
+
+Once every 4 turns, the Plesiosaur Kaibutsu(?) unleashes a powerful charge attack. On the turn it prepares this charge attack, at the start of the turn, it grants itself a 3-hit shield and enters a charging state. After the charge, if the shield is still active when it executes the attack, the attack power increases.
+If the Plesiosaur Kaibutsu(?) has fewer than 3 debuffs at the time of the attack, the attack will also inflict Silence as an additional effect.
+
+When under 50% HP, the Plesiosaur Kaibutsu(?) will activate several additional effects upon taking damage, such as removing its own debuffs.
+
+#### Plesiosaur Kaibutsu(?)'s skills
+
+{% include skill-table-manual.html skillIds="4121111,4121108,4121109" equipmentSkills="6121102,6121115,6121111,6121114" %}

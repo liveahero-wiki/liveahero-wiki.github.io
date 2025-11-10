@@ -1,7 +1,11 @@
 ---
 title: Rakta
 characterId: 20
+type: humanoid
+gender: male
 occupation: Surgeon (外科医師)
+h2:
+  title: '"Compassion Flow" Rakta'
 heroes:
 - stockId: 10201
   BIO_H01: |-
@@ -18,6 +22,22 @@ heroes:
     his hands while transforming will never hurt or kill others. This is his
     prerequisite and oath to continue being a hero. A restraint of sorts so that he
     remains the same even in the battlefield.
+- stockId: 10202
+  BIO_H01: |-
+    Rakta went to visit a city famous as a summer retreat as a doctor.
+    What he saw there were people who kept themselves healthy in bathhouses that healed the body while using the beautiful scenery around     them to heal their minds.
+    He was so awestruck so much by this, that he vowed to become a doctor that will heal not only the body, but also the mind, which in       turn earned him a new hero form.
+    The water jug in his hands is his parallel weapon which gushes forth water that can nurture the city's beautiful scenery.
+    Those who touch the water feel more revitalized,
+    while the flowers that bloom on the water's surafce soothe the minds of those who look at them. 
+  BIO_H02: |-
+    One of the patients that Rakta was in charge of during his residency was a person who could not get out of bed no matter how healthy      his body became.
+    Regardless of the health of his body, his spirit was wracked with despair by the destruction of his home and the loss of everything       he had cared about.
+    Rakta had always regretted not being able to bring hope back to the man.
+    Swearing to accompany patients until they can stand up of their own volition and regain their mental and physical health,
+    his parallel weapon's flowing water nurtured a landscape of trees and flowers,
+    like the home that patient once loved. He is filled with renewed determination as a doctor.
+  extra_sprites: fg_raktaThermae2307_h02_skin2
 sidekicks:
 - stockId: 10201
   BIO_S01: |-
@@ -33,6 +53,7 @@ sidekicks:
     strength", he has undergone various health methods and attend the gym 5 times a
     week, which is an aspect of a health nut who spares no effort even when
     misguided.
+  extra_sprites: fg_rakta_s01_skin1,fg_rakta_s01_skin2,fg_rakta_s01_skin3
 ---
 
 {% include voice-table.html resourceName="rakta"
@@ -60,6 +81,21 @@ RELATION = "I can't help but wonder.<br>That detective's eating habit is going t
 TOUCH = "Hmm?  Are you interested in my body?  Yes, I am quite proud of this healthy body trained at the sports gym five times a week.  Come on!"
 TRAIN = "Let's take pride in our health!"
 TRAINED = "Guh, what a healthy body ...!"
+%}
+
+{% include voice-table.html resourceName="raktaThermae2307"
+h_gachaResult = "The water, the trees, the everyday scenery.<br>It's medicines that supports the heart.<br>Let's start client, it's treatment time!"
+s_gachaResult = "Well called, client.<br>Doctor Rakta, will strive hard to protect your health!<br>First, a house call, let's go!"
+APPRECIATION = "You look a little bit tired.<br>It's fine if it's just a small thing, you can talk to me about anything.<br>As a doctor, caring for your heart is also my duty."
+DAILY = "Client, let's go to the pool, with me!<br>Actually, since I entered it so often, I no longer feel much from it….<br>So, I want to collect more data from your bodily experience!"
+HERO = "A curing method through alchemy…what a rare thing.<br>I wonder how much passionnate research and trial has he piled on…<br>I want to have a heated discussion about health with him!"
+PLAYER = "I heard that being an operator is a tough job..<br>But you always look so lively!<br>Tell me the secrets of that health!"
+RELATION = "That is…professor Obsidius!<br>Every time I was invited to the college for doing physical examination, he was always absent…<br>This is a good opportunity, I won't stop until I have examined every nook and cranny!"
+TOUCH = "Oh? As I thought you're curious,<br>This healthy body, polished by the medical water!<br>Here, check it however much you want! Here!"
+TRAIN = "Your body and heart, I will thoroughly care for it!"
+TRAINED = "Y-you're quite fierce!"
+EVENTA = "The capital of water and health, very interesting!<br>I should verify it with my own body right now!<br>The goal is the domination of all pools, let's go client!"
+EVENTB = "Glittering trees…for the people here this is an everyday things.<br>This hometown scenery, supports the heart.<br>…really, health is such a profound thing!"
 %}
 
 ## Notes

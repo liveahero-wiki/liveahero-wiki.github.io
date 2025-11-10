@@ -1,0 +1,12 @@
+{% if include.path contains "ui_banner_event_questbanner" %}
+{% assign width = 492 %}
+{% assign height = 152 %}
+{% else %}
+{% assign width = 600 %}
+{% assign height = 192 %}
+{% endif %}
+<img src="{{ include.path }}" width="{{ width }}" height="{{ height }}" loading="lazy"
+    {% if include.title %}alt="{{ include.title | xml_escape }}"{% endif %}
+    {% if include.style %}style="{{ include.style }}"{% endif %}
+    {% if include.class %}class="{{ include.class }}"{% endif %}
+>

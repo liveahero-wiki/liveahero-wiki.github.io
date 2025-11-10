@@ -1,0 +1,8 @@
+<details>
+{%- capture title_key %}LIBRARY_TITLE_{{include.key}}{% endcapture %}
+{%- capture page_key %}LIBRARY_PAGE_{{include.key}}{% endcapture %}
+{%- assign title = site.data.processed.jp_library[title_key] | default: include.key | replace: "<@playerName>", "<code>Player</code>" %}
+{%- assign page = site.data.processed.jp_library[page_key] | replace: "<@playerName>", "<code>Player</code>" %}
+<summary><span class="item"><img src="/cdn/Sprite/ui_icon_note.png"></span> {{ title }}</summary>
+<p>{{ page }}</p>
+</details>
