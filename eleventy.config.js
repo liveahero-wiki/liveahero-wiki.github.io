@@ -100,7 +100,15 @@ export default function (eleventyConfig) {
     //    linkify: true,
     //}));
 
-    wiki_plugins(eleventyConfig, markdownIt)
+    let markdownInstance;
+    function markdownGetter() {
+        return markdownInstance;
+    }
+    eleventyConfig.amendLibrary("md", mdLib => {
+        markdownInstance = mdLib;
+    });
+
+    wiki_plugins(eleventyConfig, markdownGetter)
 
     // Customize Markdown library settings:
     //eleventyConfig.amendLibrary("md", mdLib => {
