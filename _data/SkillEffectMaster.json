@@ -22504,11 +22504,14 @@
       "parameter": false,
       "description": "クエストボーナスのSPD差ダメージ増加を1つ解除",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": true,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -34977,6 +34980,7 @@
       "canDuplicate": true,
       "isCountEffect": false,
       "isFieldEffect": false,
+      "effectFilename": "",
       "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
@@ -40344,11 +40348,14 @@
       "parameter": false,
       "description": "対象と自分のSPDの差だけダメージが上昇。差1につき2%上昇。",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": false,
       "persistence": true,
       "reaminDeath": false,
       "canDuplicate": true,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -80096,7 +80103,7 @@
       "isCountEffect": false,
       "isFieldEffect": false,
       "effectFilename": "",
-      "penetrateDeath": false,
+      "penetrateDeath": true,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -80140,7 +80147,7 @@
       "isCountEffect": false,
       "isFieldEffect": false,
       "effectFilename": "",
-      "penetrateDeath": false,
+      "penetrateDeath": true,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -80184,7 +80191,7 @@
       "isCountEffect": false,
       "isFieldEffect": false,
       "effectFilename": "",
-      "penetrateDeath": false,
+      "penetrateDeath": true,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -80368,7 +80375,7 @@
       "isCountEffect": false,
       "isFieldEffect": false,
       "effectFilename": "",
-      "penetrateDeath": false,
+      "penetrateDeath": true,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -80379,7 +80386,7 @@
       "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
-      "isDisplayPersistenceStatus": true,
+      "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
     }
   },
@@ -80810,7 +80817,7 @@
       ],
       "trigger": "[{\"value\":30,\"value2\":0,\"includeTemporary\":false,\"element\":0,\"statusId\":1065203,\"role\":0,\"class\":\"RemainInvokerSpecialEffectTurnTrigger\"}]",
       "filename": "",
-      "statusId": 1065211,
+      "statusId": 1065218,
       "canDispel": false,
       "filterIds": [],
       "parameter": false,
@@ -80820,7 +80827,7 @@
       "isImmediate": false,
       "persistence": true,
       "reaminDeath": true,
-      "canDuplicate": true,
+      "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
       "effectFilename": "",
@@ -81318,7 +81325,7 @@
       ],
       "trigger": "[{\"value\":2,\"value2\":0,\"includeTemporary\":false,\"element\":0,\"statusId\":1065214,\"role\":0,\"class\":\"OwnSystemStatusNumberExecTrigger\"}]",
       "filename": "",
-      "statusId": 1065211,
+      "statusId": 1065219,
       "canDispel": false,
       "filterIds": [],
       "parameter": false,
@@ -81328,7 +81335,7 @@
       "isImmediate": false,
       "persistence": true,
       "reaminDeath": true,
-      "canDuplicate": true,
+      "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
       "effectFilename": "",
@@ -81698,6 +81705,96 @@
       "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "自身以外の安全帯を所持しているキャラクターが攻撃された時、対象が受けるダメージの50%のダメージを付与者が引き受ける。対象がダメージによって戦闘不能になるダメージを受けた時、引き受けるダメージ量は90%になる。他の安全帯がすでに存在している場合、既に付与されている安全帯は解除される。<br>安全帯が付与されているキャラクターはHPが減少するほどATKが上昇する。（HP1の時、最大+40%）",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3727": {
+    "skillEffectId": 3727,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 1,
+            "target": 1065218,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果1065218番を１つ解除",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3728": {
+    "skillEffectId": 3728,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 1,
+            "target": 1065219,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果1065219番を１つ解除",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
     }
@@ -95000,6 +95097,7 @@
       "canDuplicate": true,
       "isCountEffect": false,
       "isFieldEffect": false,
+      "effectFilename": "",
       "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
