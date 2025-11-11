@@ -8,7 +8,7 @@
 {%- if rewardType == 1 %}
 {%- assign card = site.data.CardMaster[id] %}
 {%- assign r = card.resourceName | append: "_h01" %}
-{%- else if rewardType == 2 %}
+{%- elsif rewardType == 2 %}
 {%- assign card = site.data.SidekickMaster[id] %}
 {%- assign r = card.resourceName | append: "_s01" %}
 {%- endif %}
