@@ -6,6 +6,7 @@
   },
   "scripts": {
     "netlify": "netlify",
-    "dev": "eleventy --serve --output _site2"
+    "dev": "NODE_OPTIONS=--max-old-space-size=8192 eleventy --serve --output _site2",
+    "build": "NODE_OPTIONS=--max-old-space-size=8192 DEBUG=Eleventy* eleventy --output _site2"
   }
 }

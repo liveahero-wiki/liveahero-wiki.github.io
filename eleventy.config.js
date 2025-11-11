@@ -124,7 +124,7 @@ export default function (eleventyConfig) {
     eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
 
     eleventyConfig.addLayoutAlias('chara', 'chara.html');
-    eleventyConfig.addLayoutAlias("compress", 'compress.html');
+    eleventyConfig.addLayoutAlias("compress", 'none.html');
     eleventyConfig.addLayoutAlias("default", 'default.html');
     eleventyConfig.addLayoutAlias("event", 'event.html');
     eleventyConfig.addLayoutAlias("main_quests", 'main_quests.html');
@@ -170,16 +170,16 @@ export default function (eleventyConfig) {
     eleventyConfig.addGlobalData("site", function () {
         return site
     })
-    eleventyConfig.addGlobalData("site.data", function () {
-        console.log("accessing site.data", this);
-        console.log("accessing site.data", eleventyConfig);
-        return null;
-    })
+    //eleventyConfig.addGlobalData("site.data", function () {
+    //    console.log("accessing site.data", this);
+    //    console.log("accessing site.data", eleventyConfig);
+    //    return null;
+    //})
 
     eleventyConfig.setLiquidOptions({
         dynamicPartials: false,
         jekyllInclude: true,
-        //strictFilters: false, // renamed from `strict_filters` in Eleventy 1.0
+        strictFilters: false, // renamed from `strict_filters` in Eleventy 1.0
     });
 
     eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
@@ -199,7 +199,7 @@ export default function (eleventyConfig) {
             includes: "_includes",
             layouts: "_layouts",
             data: "_data",
-            output: "_site"
+            //output: "_site"
         },
 
         // -----------------------------------------------------------------
