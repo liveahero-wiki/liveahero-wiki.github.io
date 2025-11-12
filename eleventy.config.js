@@ -183,6 +183,8 @@ export default function (eleventyConfig) {
     eleventyConfig.addGlobalData("site", function () {
         return site
     })
+    eleventyConfig.addGlobalData("layout", "default");
+
     //eleventyConfig.addGlobalData("site.data", function () {
     //    console.log("accessing site.data", this);
     //    console.log("accessing site.data", eleventyConfig);
