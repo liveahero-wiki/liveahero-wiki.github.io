@@ -183,7 +183,17 @@ export default function (eleventyConfig) {
     eleventyConfig.addGlobalData("site", function () {
         return site
     })
+    const globalDataVars = fs.readdirSync("_data").forEach((file) => {
+        return path.basename(file);
+    });
     eleventyConfig.addGlobalData("layout", "default");
+    //eleventyConfig.addPreprocessor("rewrite-site-variable", ["html", "md"], (data, content) => {
+	//	let s = content.replace("site.data.", "");
+    //    for (const collection of collections) {
+    //        s = s.replace(`site.${collection}`, `collections.${collection}`);
+    //    }
+    //    return s;
+	//});
 
     //eleventyConfig.addGlobalData("site.data", function () {
     //    console.log("accessing site.data", this);
