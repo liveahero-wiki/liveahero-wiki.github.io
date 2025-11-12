@@ -19,8 +19,13 @@ export default function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy({
         "./assets/": "/assets/",
-        //"./cdn/": "/cdn/",
     });
+
+    if (fs.existsSync("./cdn/")) {
+        eleventyConfig.addPassthroughCopy({
+            "./cdn/": "/cdn/",
+        });
+    }
 
     // Run Eleventy when these files change:
     // https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
@@ -190,7 +195,16 @@ export default function (eleventyConfig) {
         strictFilters: false, // renamed from `strict_filters` in Eleventy 1.0
     });
 
-    eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
+    eleventyConfig.addDataExtension("yaml,yml", contents => yaml.load(contents));
+
+    const ignoreFiles = [
+        "**/.git/**",
+        "_site*/**",
+    ]
+    for (const file of ignoreFiles) {
+        eleventyConfig.ignores.add(file);
+    }
+    eleventyConfig.ignores.delete("_data/translation/**");
 
     return {
         // Control which files Eleventy will process
