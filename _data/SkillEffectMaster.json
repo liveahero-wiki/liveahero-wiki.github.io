@@ -13316,6 +13316,7 @@
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
+      "effectFilename": "",
       "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
@@ -55552,11 +55553,15 @@
       "parameter": false,
       "description": "70%ダメージ+HPが少ないほどダメージ量が上昇する",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -55564,6 +55569,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -84275,11 +84281,15 @@
       "parameter": false,
       "description": "View消費量-50%(システム）",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": false,
       "persistence": true,
       "reaminDeath": false,
       "canDuplicate": true,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -84287,6 +84297,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "View消費量-50%",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": true,
       "overrideStatusDescription": "ViewPowerを消費するスキルのView消費量が半分になる。",
       "isDisplayPersistenceStatus": true,
@@ -103919,11 +103930,15 @@
       "parameter": false,
       "description": "システム沈黙",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -103931,6 +103946,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -134620,6 +134636,155 @@
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
+    }
+  },
+  "6401": {
+    "skillEffectId": 6401,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ParticleStatus",
+          "parameter": {
+            "address": "eff_genji_h01_01"
+          }
+        },
+        {
+          "class": "PassiveBattleSkillEffect",
+          "parameter": {
+            "timing": 1,
+            "skillId": 8288105
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 1288103,
+      "canDispel": true,
+      "filterIds": [],
+      "parameter": false,
+      "description": "ゲンジParticle+パッシブ8288105（エネミー用永続）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "安全帯",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "自身以外の安全帯を所持しているキャラクターが攻撃された時、対象が受けるダメージの50%のダメージを付与者が引き受ける。対象がダメージによって戦闘不能になるダメージを受けた時、引き受けるダメージ量は90%になる。他の安全帯がすでに存在している場合、既に付与されている安全帯は解除される。<br>安全帯が付与されているキャラクターはHPが減少するほどATKが上昇する。（HP1の時、最大+40%）",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "6402": {
+    "skillEffectId": 6402,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Cover",
+          "parameter": {
+            "mult": 50,
+            "onDeathMult": 50
+          }
+        },
+        {
+          "class": "HealthMultipleAttack",
+          "parameter": {
+            "maxMult": 1,
+            "minMult": 1,
+            "evaluationIsMax": false
+          }
+        }
+      ],
+      "filename": "status_system_firepower",
+      "statusId": 1288103,
+      "canDispel": true,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "庇う（エネミー用）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "庇う",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "この状態変化を所持しているキャラクターが攻撃された時、対象が受けるダメージの50%のダメージを付与者が引き受ける。<br><color=#505050>付与したキャラクターが戦闘不能になった時、解除される。</color>",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "6403": {
+    "skillEffectId": 6403,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        },
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "filename": "status_system_atkup",
+      "statusId": 130,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATK+50%（システム・状態変化ID130）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATK+50%",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATK+50%。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
     }
   }
 }
