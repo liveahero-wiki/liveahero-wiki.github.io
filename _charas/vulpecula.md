@@ -37,6 +37,7 @@ heroes:
   - '8065101'
   - '8065102'
 - stockId: 10652
+  extra_sprites: fg_vulpeculaMirrors2511_h02_skin2
 sidekicks:
 - stockId: 10651
   BIO_S01: |-
