@@ -12,12 +12,6 @@
 {% assign sprites = sprites | append: "," | append: include.extra_sprites %}
 {% endif %}
 
-{% assign stockId = include.stockId | downcase %}
-{% assign cardProfileOverride = site.data.processed.CardProfileOverride[stockId].hero %}
-{% assign overrideIllustrator = site.data.processed.jp_profile[cardProfileOverride.illustrator] %}
-{% assign overrideAffiliation = site.data.processed.jp_profile[cardProfileOverride.affiliation] %}
-{% assign overridejob = site.data.processed.jp_profile[cardProfileOverride.job] %}
-
 <div id="h{{ include.stockId }}" role="tabpanel" tabindex="0"  class="tabcontent contain element{{ firstCardInfo.element }}">
 {% include hero-infobox-profile.html stockId=include.stockId firstCardInfo=firstCardInfo sprites=sprites isHero=true %}
 
@@ -51,6 +45,9 @@
 </details>
 {% endif %}
 {% endif %}
+
+{% assign stockId = include.stockId | downcase %}
+{% assign cardProfileOverride = site.data.processed.CardProfileOverride[stockId].hero %}
 
 {% assign spoiler_detail_h01 = site.data.processed.jp_bio[cardProfileOverride.detail_h01] %}
 {% assign spoiler_detail_h02 = site.data.processed.jp_bio[cardProfileOverride.detail_h02] %}
