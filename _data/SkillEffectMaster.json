@@ -9232,6 +9232,7 @@
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
+      "effectFilename": "",
       "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
@@ -18221,6 +18222,7 @@
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
+      "effectFilename": "",
       "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
@@ -34442,7 +34444,7 @@
           }
         }
       ],
-      "trigger": "[{\"value\":0,\"element\":0,\"statusId\":24,\"role\":0,\"class\":\"AfterSkillTrigger\"},{\"value\":0,\"element\":0,\"statusId\":13,\"role\":0,\"class\":\"OwnDeBuffNumberDontExecTrigger\"},{\"value\":0,\"element\":0,\"statusId\":29,\"role\":0,\"class\":\"OwnDeBuffNumberDontExecTrigger\"}]",
+      "trigger": "[{\"value\":0,\"value2\":0,\"includeTemporary\":false,\"element\":0,\"statusId\":24,\"role\":0,\"class\":\"AfterSkillTrigger\"},{\"value\":0,\"value2\":0,\"includeTemporary\":false,\"element\":0,\"statusId\":13,\"role\":0,\"class\":\"OwnDeBuffNumberDontExecTrigger\"},{\"value\":0,\"value2\":0,\"includeTemporary\":false,\"element\":0,\"statusId\":29,\"role\":0,\"class\":\"OwnDeBuffNumberDontExecTrigger\"}]",
       "filename": "status_defup",
       "statusId": 27,
       "canDispel": false,
@@ -34452,11 +34454,15 @@
       "parameter": false,
       "description": "自身が行動済みの時、被ダメージ-50%",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": false,
       "persistence": true,
       "reaminDeath": false,
       "canDuplicate": true,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -34464,6 +34470,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -77267,6 +77274,7 @@
       "canDuplicate": true,
       "isCountEffect": false,
       "isFieldEffect": false,
+      "effectFilename": "",
       "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
@@ -81826,6 +81834,101 @@
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
+    }
+  },
+  "3733": {
+    "skillEffectId": 3733,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HpThresholdDependDamageLimit",
+          "parameter": {
+            "mult": 10,
+            "isMult": true,
+            "affectDotDamage": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 129,
+      "canDispel": true,
+      "filterIds": [],
+      "parameter": false,
+      "description": "最大HPの10%までしかダメージを受けない（ドットダメージを含む）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3734": {
+    "skillEffectId": 3734,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": {
+            "timing": 1,
+            "avoidExtensionTurn": false
+          }
+        },
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "filename": "status_defdown",
+      "statusId": 130,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "被ダメージ+50%（弱点露出）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "effect_powerdown",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "弱点露出",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメージ+50%。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
     }
   },
   "4001": {
@@ -122224,6 +122327,54 @@
       "isOverrideStatusDescription": false
     }
   },
+  "5213": {
+    "skillEffectId": 5213,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "OtherParamBarrier",
+          "parameter": {
+            "mult": 10,
+            "value": 0,
+            "maxValue": 100000,
+            "paramType": 0
+          }
+        }
+      ],
+      "filename": "status_barrier",
+      "statusId": 275,
+      "canDispel": true,
+      "filterIds": [
+        5
+      ],
+      "parameter": true,
+      "description": "最大HP10%バリア最大100000",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        2
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "被ダメージ時、受けるダメージをバリア値だけ軽減する。バリア値は付与キャラクターの基礎最大HPの10%。<br><color=#505050>バリア値が無くなった時、解除される。</color>",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
   "5218": {
     "skillEffectId": 5218,
     "skillEffectJson": {
@@ -134979,6 +135130,188 @@
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
+    }
+  },
+  "6444": {
+    "skillEffectId": 6444,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseChangeAgi",
+          "parameter": {
+            "value": 1
+          }
+        }
+      ],
+      "filename": "status_system_speedatk",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "SPDチャージ（チャージ数1につきSPD+1。死亡後も継続版。システム効果127）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": true,
+      "isCharageEffect": true,
+      "elapseTurnTiming": [],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "SPDチャージ",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "チャージ数1につき、SPD+1。<br><color=#505050>特定のスキルによりチャージ数が増加する。</color>",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "6445": {
+    "skillEffectId": 6445,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": 1,
+            "isRandom": false,
+            "statusId": 127,
+            "statusNum": 0,
+            "extensionLimit": 30,
+            "statusTypeValue": 2
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "システム効果127を1ターン延長(最大30まで）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "effect_PowerUp",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "6446": {
+    "skillEffectId": 6446,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeAgi",
+          "parameter": {
+            "value": -10
+          }
+        }
+      ],
+      "filename": "status_spddown",
+      "statusId": 128,
+      "canDispel": false,
+      "filterIds": [
+        6
+      ],
+      "parameter": true,
+      "description": "SPD-10（1ターンの間）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "SPD-10",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "SPDが-10される。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "6454": {
+    "skillEffectId": 6454,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 100,
+            "statusId": 13
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 328,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "SPDダウン無効",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "SPDダウン無効",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "SPDダウンが付与されない。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
     }
   }
 }
