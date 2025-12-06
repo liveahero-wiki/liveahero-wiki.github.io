@@ -1,15 +1,19 @@
 @use "sass:list";
-$color50: #e5e5e5;
-$colorLight: #ffd95b;
-$colorPrimary: #ffa726;
-$colorDark: #c77800;
-$colorGrey: #ccc;
-$text: #000;
-$bg: #fafafa;
 
-$silver: #d0d0d0;
-$gold: linear-gradient(195deg, #f0b050, #ffe080, #f0b050);
-$rainbow: linear-gradient(195deg, #ff8080, #ffff80, #80ff80, #80ffff, #8080ff);
+:root {
+  --color50: #e5e5e5;
+  --colorLight: #ffd95b;
+  --colorPrimary: #ffa726;
+  --colorDark: #c77800;
+  --colorGrey: #ccc;
+  --text: #000;
+  --textLight: #fff;
+  --bg: #fafafa;
+
+  --silver: #d0d0d0;
+  --gold: linear-gradient(195deg, #f0b050, #ffe080, #f0b050);
+  --rainbow: linear-gradient(195deg, #ff8080, #ffff80, #80ff80, #80ffff, #8080ff);
+}
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -23,13 +27,13 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-  background-color: $bg;
+  background-color: var(--bg);
 }
 header, .page-header, .pager, footer {
   flex: none;
 }
 header {
-  background-color: $colorPrimary;
+  background-color: var(--colorPrimary);
   padding: 18px 0;
 }
 .clearfix:before, .clearfix:after {
@@ -42,7 +46,7 @@ header {
   background: #cce7ff;
 }
 a {
-  color: $colorDark;
+  color: var(--colorDark);
   text-decoration: none;
 }
 a:hover {
@@ -55,11 +59,11 @@ a:hover {
   margin: 22px 0;
 }
 .page-header a {
-  color: $colorPrimary;
+  color: var(--colorPrimary);
 }
 .sidebar {
   contain: content;
-  background: $colorLight;
+  background: var(--colorLight);
   visibility: hidden;
   width: 250px;
   position: fixed;
@@ -74,7 +78,7 @@ a:hover {
   visibility: visible;
 }
 .sidebar__logo {
-  border-bottom: 1px solid $colorDark;
+  border-bottom: 1px solid var(--colorDark);
   height: 130px;
   /*font-size: 36px;
   line-height: 130px;
@@ -224,7 +228,7 @@ li {
   padding-left: 8px;
 }
 #markdown-toc {
-  border-left: 4px solid $colorLight;
+  border-left: 4px solid var(--colorLight);
 }
 #markdown-toc li {
   list-style: none;
@@ -270,7 +274,7 @@ th > table, td > table {
   margin: 0;
 }
 th {
-  background-color: $colorPrimary;
+  background-color: var(--colorPrimary);
 }
 .sticky-header th {
   position: sticky;
@@ -318,7 +322,7 @@ td {
 }
 summary {
   cursor: pointer;
-  background: $colorGrey;
+  background: var(--colorGrey);
   padding: 15px;
 }
 hr {
@@ -330,14 +334,14 @@ hr {
   padding: 0
 }
 footer {
-  color: #fff;
+  color: var(--textLight);
   font-size: 12px;
-  background-color: $colorDark;
+  background-color: var(--colorDark);
   padding-top: 30px !important;
   padding-bottom: 15px !important;
 }
 footer a {
-  color: #fff;
+  color: var(--textLight);
   text-decoration: underline;
 }
 @media (max-width: 820px) {
@@ -376,7 +380,7 @@ figcaption {
   padding: 16px 20px 20px;
 }
 .takeaway {
-  color: #fff;
+  color: var(--textLight);
   background-color: #78909c;
   padding: 10px 30px 30px;
   margin-bottom: 30px;
@@ -388,26 +392,16 @@ figcaption {
   cursor: pointer;
 }
 .masked {
-  background-color: #000;
-  color: #000;
+  background-color: var(--text);
+  color: var(--text);
   transition: color 0.13s;
   filter: brightness(0);
 }
 .masked:hover {
-  color: #fff;
+  color: var(--textLight);
   filter: none;
 }
 // Hero page
-.heroBox {
-  display: inline-block;
-  border: #aaa 1px solid;
-  padding: 18px;
-  background-color: #f9f9f9;
-  max-width: 640px;
-}
-.heroBox .tabs span {
-  padding: 0 10px;
-}
 .atlas-gallery {
   img {
     display: block;
@@ -434,17 +428,17 @@ figcaption {
   margin-bottom: 20px;
 }
 .re-table wiki-enhance {
-  background: $colorLight;
+  background: var(--colorLight);
 }
 .re-A, .re-B, .re-C, .re-split {
   padding: 10px;
-  border-bottom: 1px solid $text;
+  border-bottom: 1px solid var(--text);
 }
 .re-A {
   background: #d5d5d5;
 }
 .re-head {
-  background: $colorPrimary;
+  background: var(--colorPrimary);
 }
 .re-split {
   grid-column: span 3;
@@ -529,7 +523,7 @@ figcaption {
   --color: #b88dff;
 }
 .elementNone {
-  --color: $colorGrey;
+  --color: var(--colorGrey);
 }
 
   .tabcontent {
@@ -556,7 +550,7 @@ figcaption {
 wiki-passive, wiki-auto-action {
   display: block;
   position: relative;
-  border-top: 1px solid $text;
+  border-top: 1px solid var(--text);
   padding-top: 1.25rem;
   margin-top: 1.25rem;
 }
@@ -565,7 +559,7 @@ wiki-passive::before, wiki-auto-action::before {
   position: absolute;
   top: -.75rem;
   left: 20px;
-  background: $bg;
+  background: var(--bg);
   padding: 2px;
 }
 wiki-passive::before {
@@ -585,7 +579,7 @@ wiki-auto-action::before {
   padding: 10px;
 }
 .skill_tree tr:nth-child(odd) td {
-  background: $color50;
+  background: var(--color50);
 }
 .skill_tree table {
   margin: 0;
@@ -602,7 +596,7 @@ wiki-auto-action::before {
 .card-list li {
   display: block;
   list-style: none;
-  border: 1px solid black;
+  border: 1px solid var(--text);
 }
 .card-list a {
   display: block;
@@ -690,7 +684,7 @@ $elementName: fire, water, earth, light, shadow;
   background-image: url(/cdn/Sprite/ui_frame_s_base_02.png);
 }
 .has-unit {
-  background: $colorLight;
+  background: var(--colorLight);
 }
 .filter-on {
   opacity: 0.5;
@@ -726,8 +720,8 @@ $elementName: fire, water, earth, light, shadow;
   position: absolute;
   font-size: 10px;
   text-align: center;
-  color: $bg;
-  background: $text;
+  color: var(--bg);
+  background: var(--text);
   border-radius: 6px;
   height: 12px;
   width: 12px;
@@ -746,20 +740,20 @@ $elementName: fire, water, earth, light, shadow;
   padding-left: 20px;
 }
 .skill-1 {
-  background: $silver;
+  background: var(--silver);
 }
 .skill-2 {
-  background: $gold;
+  background: var(--gold);
 }
 .skill-3 {
-  background: $rainbow;
+  background: var(--rainbow);
 }
 // Event page
 .event-infobox {
-  border: 2px solid $colorDark;
+  border: 2px solid var(--colorDark);
 }
 .event-infobox th {
-  background-color: $colorDark;
+  background-color: var(--colorDark);
   color: #fff;
   text-align: center;
 }
@@ -792,11 +786,11 @@ $elementName: fire, water, earth, light, shadow;
 }
 .screenshot text {
   font: bold var(--font-size) sans-serif;
-  fill: white;
+  fill: var(--textLight);
 }
 .image-mapper-shape {
   fill: rgba(0, 0, 0, 0.5);
-  stroke: white;
+  stroke: var(--textLight);
   stroke-width: 5px;
 }
 g:hover .image-mapper-shape {
