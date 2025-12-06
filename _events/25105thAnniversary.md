@@ -11,6 +11,12 @@ event_end_time: 2025-11-04T14:00:00+09
 * this will be unordered
 {:toc}
 
+## External Links
+
+- [5th Anniversary Message from LifeWonders](https://live-a-hero.jp/5th_anniversary)
+- [5th Anniversary Heroes Encyclopedia](https://live-a-hero.jp/5th_anniversary/heroes_encyclopedia2025)
+  - Fan Translation for the Heroes Interview: https://x.com/passzx/status/1973954384435556767
+
 ## Campaign Details
 
 ### 5th Anniversary Login Bonus
