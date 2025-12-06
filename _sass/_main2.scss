@@ -512,38 +512,41 @@ figcaption {
 .g-star {
   background-image: url(/assets/img/icons/ui_symbol_star_03.webp);
 }
-$elementColor: #f07d75, #88bcff, #5fcb58, #ffb251, #b88dff;
-@for $i from 1 to 6 {
-  .element#{$i} {
-    $color: list.nth($elementColor, $i);
-    th, .header, .re-head {
-      background: $color;
-    }
-    .heroinfobox {
-      border: 2px solid $color;
-    }
-    summary {
-      background-color: $color;
-    }
-    details {
-      border: 1px solid $color;
-    }
-  }
+
+.element1 {
+  --color: #f07d75;
+}
+.element2 {
+  --color: #88bcff;
+}
+.element3 {
+  --color: #5fcb58;
+}
+.element4 {
+  --color: #ffb251;
+}
+.element5 {
+  --color: #b88dff;
 }
 .elementNone {
-  th, .header, .re-head {
-    background: $colorGrey;
-  }
-  .heroinfobox {
-    border: 2px solid $colorGrey;
-  }
-  summary {
-    background-color: $colorGrey;
-  }
-  details {
-    border: 2px solid $colorGrey;
-  }
+  --color: $colorGrey;
 }
+
+  .tabcontent {
+    th, .header, .re-head {
+      background: var(--color);
+    }
+    .heroinfobox {
+      border: 2px solid var(--color);
+    }
+    summary {
+      background-color: var(--color);
+    }
+    details {
+      border: 1px solid var(--color);
+    }
+  }
+
 .blooming {
   display: grid;
   grid-template-columns: fit-content(280px) 1fr;
