@@ -97,7 +97,7 @@ a:hover {
   padding: 40px;
 }
 .sidebar a {
-  color: #000;
+  color: var(--text);
 }
 .section__header {
   font-size: 1em;
@@ -476,7 +476,7 @@ figcaption {
   margin: 0;
 }
 .chara-badge {
-  border: 1.5px solid #000;
+  border: 1.5px solid var(--text);
   border-radius: 4px;
   padding: 10px;
 }
@@ -574,7 +574,7 @@ wiki-auto-action::before {
   }
 }
 .blooming_main {
-  border: 1px solid #000;
+  border: 1px solid var(--text);
   border-radius: 5px;
   padding: 10px;
 }
@@ -754,11 +754,11 @@ $elementName: fire, water, earth, light, shadow;
 }
 .event-infobox th {
   background-color: var(--colorDark);
-  color: #fff;
+  color: var(--textLight);
   text-align: center;
 }
 .event-infobox th a {
-  color: #fff;
+  color: var(--textLight);
 }
 .quest-infobox {
   table-layout: fixed;
