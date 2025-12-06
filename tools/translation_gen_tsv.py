@@ -72,7 +72,7 @@ def main():
 
     with open("skill-jp.tsv", "w", encoding="utf-8") as f:
         writer = csv.writer(f, delimiter='\t')
-        #writer.writerow(["skillId", "charaNme", "skillName", "description"])
+        writer.writerow(["skillId", "charaNme", "skillName", "description"])
         for status in SkillMaster.values():
 
             si = int(status["skillId"])
@@ -88,7 +88,7 @@ def main():
     SkillEffectMaster = loadJson("_data/SkillEffectMaster.json")
     with open("skill-effect-jp.tsv", "w", encoding="utf-8") as f:
         writer = csv.writer(f, delimiter='\t')
-        #writer.writerow(["skillEffectId", "statusId", "overrideStatusName", "overrideStatusDescription"])
+        writer.writerow(["skillEffectId", "statusId", "overrideStatusName", "overrideStatusDescription"])
         for value in SkillEffectMaster.values():
             skillEffect = value["skillEffectJson"]
             if skillEffect["statusId"] == 0 or \
@@ -106,7 +106,7 @@ def main():
     StatusMaster = loadJson("_data/StatusMaster.json")
     with open("status-jp.tsv", "w", encoding="utf-8") as f:
         writer = csv.writer(f, delimiter='\t')
-        #writer.writerow(["statusId", "statusName", "description"])
+        writer.writerow(["statusId", "statusName", "description"])
         for status in StatusMaster.values():
             writer.writerow([
                 status["statusId"],
