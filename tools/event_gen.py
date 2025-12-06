@@ -23,7 +23,7 @@ def getCharaIdToPageMap() -> dict:
 
   return obj
 
-def generate_event(eventId: str):
+def generate_event(eventId: str, prefix: str = ""):
     E = EventMaster[eventId]
     baseResourceName = E.get("baseResourceName")
 
@@ -31,9 +31,13 @@ def generate_event(eventId: str):
 
     m = EVENT_NAME_PATTERN.match(baseResourceName)
     if not m:
-        print(f"Event name pattern not found for {baseResourceName}")
-        return
-    pageName = m.group(2) + m.group(1)
+        if prefix:
+            pageName = prefix + baseResourceName
+        else:
+            print(f"Event name pattern not found for {baseResourceName}. Use --prefix to add prefix")
+            return
+    else:
+        pageName = m.group(2) + m.group(1)
 
     shopId = E['eventPortalJson'].get('storeId')
     terms = E['eventPortalJson'].get('terms', [])
@@ -113,5 +117,6 @@ def generate_event(eventId: str):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("eventId", type=str, help="Event ID")
+    parser.add_argument("--prefix", type=str, help="Prefix for event name")
     args = parser.parse_args()
-    generate_event(args.eventId)
+    generate_event(args.eventId, args.prefix)
