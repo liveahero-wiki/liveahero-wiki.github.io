@@ -1,3 +1,4 @@
+@use "sass:list";
 $color50: #e5e5e5;
 $colorLight: #ffd95b;
 $colorPrimary: #ffa726;
@@ -514,7 +515,7 @@ figcaption {
 $elementColor: #f07d75, #88bcff, #5fcb58, #ffb251, #b88dff;
 @for $i from 1 to 6 {
   .element#{$i} {
-    $color: nth($elementColor, $i);
+    $color: list.nth($elementColor, $i);
     th, .header, .re-head {
       background: $color;
     }
@@ -634,7 +635,7 @@ wiki-auto-action::before {
 $elementName: fire, water, earth, light, shadow;
 @for $i from 1 to 6 {
   [data-element="#{$i}"] .hero-chara-icon {
-    $name: nth($elementName, $i);
+    $name: list.nth($elementName, $i);
     background-image: url(/cdn/Sprite/ui_frame_h_base_#{$name}.png);
   }
 }
