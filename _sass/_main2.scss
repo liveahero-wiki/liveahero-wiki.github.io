@@ -16,6 +16,8 @@
   --bg: #fafafa;
   --notiBg: #cce7ff;
 
+  --mask-filter: brightness(0);
+
   --sectionHeader: rgb(94 203 140);
   --sectionBg: #d3f8eb;
 
@@ -46,6 +48,8 @@ html[data-theme="dark"] {
   --notiBg: #11538d;
   --sectionHeader: rgb(18, 195, 92);
   --sectionBg: #077c53;
+
+  --mask-filter: brightness(1);
 
   --fire: #a50b00;
   --water: #0c4b9e;
@@ -401,6 +405,7 @@ footer a {
 //  text-shadow: none;
 //}
 figure {
+  background: #fafafa;
   margin: 0;
   margin-bottom: 30px;
 }
@@ -417,7 +422,7 @@ figure img {
 }
 figcaption {
   font-size: 13px;
-  background-color: #fff9c4;
+  background-color: var(--colorLight);
   padding: 16px 20px 20px;
 }
 .takeaway {
@@ -436,7 +441,7 @@ figcaption {
   background-color: var(--text);
   color: var(--text);
   transition: color 0.13s;
-  filter: brightness(0);
+  filter: var(--mask-filter);
 }
 .masked:hover {
   color: var(--textLight);
