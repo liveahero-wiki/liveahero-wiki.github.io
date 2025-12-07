@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     theme.value = theme.value === 'light' ? 'dark' : 'light';
     setPreference();
   });
-};
+});
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', ({matches:isDark}) => {
   theme.value = isDark ? 'dark' : 'light';
