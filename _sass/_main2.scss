@@ -1,6 +1,8 @@
 @use "sass:list";
 
 :root {
+  color-scheme: light;
+
   --color50: #e5e5e5;
   --color100: #ffd95b;
 
@@ -29,6 +31,8 @@
 }
 
 html[data-theme="dark"] {
+  color-scheme: dark;
+
   --color50: #333;
   --colorPrimary: #F57F17;
   --colorLight: #F9A825;
