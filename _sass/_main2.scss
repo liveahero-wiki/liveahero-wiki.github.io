@@ -2,7 +2,9 @@
 
 :root {
   --color50: #e5e5e5;
-  --colorLight: #ffd95b;
+  --color100: #ffd95b;
+
+  --colorLight: var(--color100);
   --colorPrimary: #ffa726;
   --colorDark: #c77800;
   --colorGrey: #aaa;
@@ -11,6 +13,9 @@
   --link: var(--colorDark);
   --bg: #fafafa;
   --notiBg: #cce7ff;
+
+  --sectionHeader: rgb(94 203 140);
+  --sectionBg: #077c53;
 
   --fire: #f07d75;
   --water: #88bcff;
@@ -24,13 +29,19 @@
 }
 
 html[data-theme="dark"] {
+  --color50: #333;
+  --colorPrimary: #F57F17;
+  --colorLight: #F9A825;
+  --colorDark: #c77800;
   --colorGrey: #555;
 
   --text: #fff;
   --textLight: #000;
-  --link: var(--colorLight);
+  --link: var(--color100);
   --bg: #0f0f1f;
   --notiBg: #2989dd;
+  --sectionHeader: rgb(94 203 140);
+  --sectionBg: #077c53;
 
   --fire: #a50b00;
   --water: #0c4b9e;
@@ -452,7 +463,8 @@ figcaption {
   grid-auto-flow: dense;
   margin-bottom: 20px;
 }
-.re-table wiki-enhance {
+wiki-enhance {
+  color: #000;
   background: var(--colorLight);
 }
 .re-A, .re-B, .re-C, .re-split {
@@ -460,7 +472,7 @@ figcaption {
   border-bottom: 1px solid var(--text);
 }
 .re-A {
-  background: #d5d5d5;
+  background: var(--colorGrey);
 }
 .re-head {
   background: var(--colorPrimary);
