@@ -65,7 +65,7 @@ wiki-header a:hover {
 }
 
 wiki-header a:is(:target, :active, [aria-selected]) {
-  color: #000;
+  color: var(--text);
   border-block-end-color: hsl(var(--accent));
 }
 

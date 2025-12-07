@@ -2,17 +2,52 @@
 
 :root {
   --color50: #e5e5e5;
-  --colorLight: #ffd95b;
+  --color100: #ffd95b;
+
+  --colorLight: var(--color100);
   --colorPrimary: #ffa726;
   --colorDark: #c77800;
-  --colorGrey: #ccc;
+  --colorGrey: #aaa;
   --text: #000;
   --textLight: #fff;
+  --link: var(--colorDark);
   --bg: #fafafa;
+  --notiBg: #cce7ff;
+
+  --sectionHeader: rgb(94 203 140);
+  --sectionBg: #d3f8eb;
+
+  --fire: #f07d75;
+  --water: #88bcff;
+  --earth: #5fcb58;
+  --light: #ffb251;
+  --shadow: #b88dff;
 
   --silver: #d0d0d0;
   --gold: linear-gradient(195deg, #f0b050, #ffe080, #f0b050);
   --rainbow: linear-gradient(195deg, #ff8080, #ffff80, #80ff80, #80ffff, #8080ff);
+}
+
+html[data-theme="dark"] {
+  --color50: #333;
+  --colorPrimary: #F57F17;
+  --colorLight: #F9A825;
+  --colorDark: #c77800;
+  --colorGrey: #555;
+
+  --text: #fff;
+  --textLight: #000;
+  --link: var(--color100);
+  --bg: #0f0f1f;
+  --notiBg: #11538d;
+  --sectionHeader: rgb(18, 195, 92);
+  --sectionBg: #077c53;
+
+  --fire: #a50b00;
+  --water: #0c4b9e;
+  --earth: #087800;
+  --light: #c97e1a;
+  --shadow: #59398b;
 }
 
 *, *:before, *:after {
@@ -20,6 +55,7 @@
 }
 html, body {
   font: 400 16px Roboto, Arial, sans-serif;
+  color:  var(--text);
   margin: 0;
   padding: 0;
   height: 100%;
@@ -43,10 +79,10 @@ header {
 }
 .wiki-msg {
   padding: 10px;
-  background: #cce7ff;
+  background: var(--notiBg);
 }
 a {
-  color: var(--colorDark);
+  color: var(--link);
   text-decoration: none;
 }
 a:hover {
@@ -120,18 +156,19 @@ a:hover {
 }
 .menu-button, .github-button {
   display: inline-block;
-  font-size: 15.75px;
+  font-size: 16px;
   background: none;
   border: none;
-  padding: 10px;
-  color: #5E5E5E;
+  padding: 6px;
+  margin-right: 10px;
+  color: var(--text);
 }
 .github-button {
   float: right;
 }
 .menu-button:hover, .github-button:hover {
   text-decoration: none;
-  background-color: #ddd;
+  background-color: var(--color50);
   transition: background-color 0.5s ease-out;
 }
 .content__area {
@@ -250,7 +287,7 @@ code {
 code, pre {
   font: 14px Consolas, "Liberation Mono", Menlo, Courier, monospace;
   line-height: 1.45;
-  background-color: #eee;
+  background-color: var(--colorGrey);
 }
 blockquote {
   border-left: 3px solid #1de9b6;
@@ -283,7 +320,7 @@ th {
 }
 .bordered {
   th, td {
-    border: 1px solid #000;
+    border: 1px solid var(--text);
   }
 }
 .sort-table {
@@ -305,7 +342,7 @@ th {
 }
 details {
   contain: content;
-  border: 1px solid #aaa;
+  border: 1px solid var(--colorGrey);
 
   >p, >ul, >ol, >table, >blockquote {
     margin: 15px;
@@ -329,7 +366,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--colorGrey);
   margin: 1em 0;
   padding: 0
 }
@@ -355,10 +392,10 @@ footer a {
     margin-top: 20px;
   }
 }
-::selection {
-  background-color: #b3d4fc;
-  text-shadow: none;
-}
+//::selection {
+//  background-color: #b3d4fc;
+//  text-shadow: none;
+//}
 figure {
   margin: 0;
   margin-bottom: 30px;
@@ -427,7 +464,8 @@ figcaption {
   grid-auto-flow: dense;
   margin-bottom: 20px;
 }
-.re-table wiki-enhance {
+wiki-enhance {
+  color: #000;
   background: var(--colorLight);
 }
 .re-A, .re-B, .re-C, .re-split {
@@ -435,7 +473,7 @@ figcaption {
   border-bottom: 1px solid var(--text);
 }
 .re-A {
-  background: #d5d5d5;
+  background: var(--color50);
 }
 .re-head {
   background: var(--colorPrimary);
@@ -508,19 +546,19 @@ figcaption {
 }
 
 .element1 {
-  --color: #f07d75;
+  --color: var(--fire);
 }
 .element2 {
-  --color: #88bcff;
+  --color: var(--water);
 }
 .element3 {
-  --color: #5fcb58;
+  --color: var(--earth);
 }
 .element4 {
-  --color: #ffb251;
+  --color: var(--light);
 }
 .element5 {
-  --color: #b88dff;
+  --color: var(--shadow);
 }
 .elementNone {
   --color: var(--colorGrey);

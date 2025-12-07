@@ -11,9 +11,31 @@ layout: compress
     </aside>
     <aside class="toolbar clearfix">
     <button class="menu-button" title="Open Menu" aria-label="Open Menu">
-        <span aria-hidden="true"><svg height="16" viewBox="0 0 12 16" width="12" xmlns="http://www.w3.org/2000/svg"><path d="m11.41 9h-10.82c-.59 0-.59-.41-.59-1s0-1 .59-1h10.81c.59 0 .59.41.59 1s0 1-.59 1zm0-4h-10.82c-.59 0-.59-.41-.59-1s0-1 .59-1h10.81c.59 0 .59.41.59 1s0 1-.59 1zm-10.82 6h10.81c.59 0 .59.41.59 1s0 1-.59 1h-10.81c-.59 0-.59-.41-.59-1s0-1 .59-1z"/></svg></span>
+        <span aria-hidden="true"><svg class="menu-icon" height="16" viewBox="0 -1 12 15" width="12" xmlns="http://www.w3.org/2000/svg">
+          <path d="m11.41 9h-10.82c-.59 0-.59-.41-.59-1s0-1 .59-1h10.81c.59 0 .59.41.59 1s0 1-.59 1zm0-4h-10.82c-.59 0-.59-.41-.59-1s0-1 .59-1h10.81c.59 0 .59.41.59 1s0 1-.59 1zm-10.82 6h10.81c.59 0 .59.41.59 1s0 1-.59 1h-10.81c-.59 0-.59-.41-.59-1s0-1 .59-1z"/></svg></span>
         <span>Menu</span>
     </button>
+
+<button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
+  <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+    <mask class="moon" id="moon-mask">
+      <rect x="0" y="0" width="100%" height="100%" fill="white" />
+      <circle cx="24" cy="10" r="6" fill="black" />
+    </mask>
+    <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+    <g class="sun-beams" stroke="currentColor">
+      <line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" />
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+      <line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" />
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+     </g>
+  </svg>
+</button>
+
     <a class="github-button" href="{{ site.github_repo }}/blob/master/{{ page.path }}?plain=1">View source</a>
     </aside>
 {% include banner.html %}
