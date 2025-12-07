@@ -9,18 +9,34 @@
     meteorSize: 24, // Head size
     meteorCount: 10, // Max concurrent meteors
     meteorTailLength: 150,
-    meteorTailWidth: 7,
+    meteorTailWidth: 10,
     meteorHeadImageSrc: 'https://liveahero-wiki.github.io/cdn/Sprite/item_stone01.png',
     particleCount: 5,
+    particleSize: 5,
     particleLife: 30, // Frames
   };
+
+  const SHAPES = [
+    [{x: -1, y: -1}, {x: -1, y: 0}, {x: 1, y: 1}],
+    [{x: -1, y: 1}, {x: 0.5, y: 0.5}, {x: 1, y: -1}, {x: -0.5, y: 0}],
+    [{x: 0, y: -1}, {x: 1, y: -1}, {x: -0.5, y: 0.5}],
+    [{x: -1, y: 0}, {x: -0.5, y: 1}, {x: 0.5, y: 1}, {x: 1, y: 0}],
+    [{x: 0, y: 1}, {x: 0.75, y: 0.5}, {x: 0, y: -1}],
+  ]
 
   // Assets
   const meteorImage = new Image();
   meteorImage.src = CONFIG.meteorHeadImageSrc;
 
+  const meteorAnimKey = "meteor";
+  function getUserSetting() {
+    const setting = localStorage.getItem(meteorAnimKey);
+    if (setting === null) return true;
+    return setting == "true";
+  }
+
   // State
-  let isRunning = true;
+  let isRunning = getUserSetting();
   let meteors = [];
   let particles = [];
   let canvas, ctx;
@@ -123,6 +139,8 @@
 
       this.life = CONFIG.particleLife;
       this.maxLife = CONFIG.particleLife;
+
+      this.shape = SHAPES[Math.floor(Math.random() * SHAPES.length)];
     }
 
     update() {
@@ -135,8 +153,18 @@
       const alpha = this.life / this.maxLife;
       ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
       ctx.beginPath();
-      ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+      
+      ctx.moveTo(...this.move(this.shape[0], CONFIG.particleSize));
+      for (let i = 1; i < this.shape.length; i++) {
+        ctx.lineTo(...this.move(this.shape[i], CONFIG.particleSize));
+      }
+      ctx.closePath();
+
       ctx.fill();
+    }
+
+    move(dir, scale) {
+      return [this.x + dir.x * scale, this.y + dir.y * scale];
     }
   }
 
@@ -214,6 +242,7 @@
 
     btn.onclick = (e) => {
       isRunning = !isRunning;
+      localStorage.setItem(meteorAnimKey, isRunning ? "true" : "false");
       if (isRunning) {
         loop();
       }
