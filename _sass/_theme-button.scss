@@ -4,11 +4,11 @@
   transform-origin: center;
 }
 
-.sun-and-moon> :is(.moon, .sun) {
+.sun-and-moon> :is(.moon, .sun), .menu-icon {
   fill: var(--icon-fill);
 }
 
-.theme-toggle:is(:hover, :focus-visible)>.sun-and-moon> :is(.moon, .sun) {
+.theme-toggle:is(:hover, :focus-visible)>.sun-and-moon> :is(.moon, .sun), .menu-icon {
   fill: var(--icon-fill-hover);
 }
 
@@ -78,8 +78,6 @@
 
 .theme-toggle {
   --size: 2rem;
-  --icon-fill: hsl(210 10% 30%);
-  --icon-fill-hover: hsl(210 10% 15%);
   background: none;
   border: none;
   padding: 0;
@@ -94,15 +92,20 @@
   float: right;
 }
 
+.toolbar {
+  --icon-fill: hsl(210 10% 30%);
+  --icon-fill-hover: hsl(210 10% 15%);
+}
+
+[data-theme=dark] .toolbar {
+  --icon-fill: hsl(210 10% 70%);
+  --icon-fill-hover: hsl(210 15% 90%)
+}
+
 .theme-toggle>svg {
   inline-size: 100%;
   block-size: 100%;
   stroke-linecap: round
-}
-
-[data-theme=dark] .theme-toggle {
-  --icon-fill: hsl(210 10% 70%);
-  --icon-fill-hover: hsl(210 15% 90%)
 }
 
 @media (hover: none) {

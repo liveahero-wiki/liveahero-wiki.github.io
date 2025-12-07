@@ -156,18 +156,19 @@ a:hover {
 }
 .menu-button, .github-button {
   display: inline-block;
-  font-size: 15.75px;
+  font-size: 16px;
   background: none;
   border: none;
-  padding: 10px;
-  color: #5E5E5E;
+  padding: 6px;
+  margin-right: 10px;
+  color: var(--text);
 }
 .github-button {
   float: right;
 }
 .menu-button:hover, .github-button:hover {
   text-decoration: none;
-  background-color: #ddd;
+  background-color: var(--color50);
   transition: background-color 0.5s ease-out;
 }
 .content__area {
