@@ -16,7 +16,7 @@
     meteorSize: 24, // Head size
     meteorCount: 10, // Max concurrent meteors
     meteorTailLength: 150,
-    meteorTailColor: 'rgba(255, 255, 255, 0.2)',
+    meteorTailWidth: 7,
     meteorHeadImageSrc: 'https://liveahero-wiki.github.io/cdn/Sprite/item_stone01.png',
     particleCount: 5,
     particleLife: 30, // Frames
@@ -89,7 +89,7 @@
 
       ctx.beginPath();
       ctx.strokeStyle = gradient;
-      ctx.lineWidth = 2;
+      ctx.lineWidth = CONFIG.meteorTailWidth;
       ctx.moveTo(this.x, this.y);
       ctx.lineTo(
         this.x - this.vx * (CONFIG.meteorTailLength / 5),
@@ -179,80 +179,49 @@
     // Inject Styles for Anchor Positioning
     const style = document.createElement('style');
     style.textContent = `
-            #meteor-toggle-btn {
-                anchor-name: --meteor-toggle-btn;
-            }
-            #meteor-shower-menu {
-                margin: 0; /* Override default popover margin */
-                position-anchor: --meteor-toggle-btn;
-                bottom: anchor(top);
-                right: anchor(right);
-                margin-bottom: 10px; /* Spacing */
-            }
-        `;
+      #meteor-toggle-btn {
+        anchor-name: --meteor-toggle-btn;
+        font-size: 24px;
+        background: #333;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+      }
+      #meteor-toggle-btn:hover {
+        background-color: #555;
+      }
+      #meteor-shower-menu {
+        margin: 0; /* Override default popover margin */
+        position-anchor: --meteor-toggle-btn;
+        bottom: anchor(top);
+        right: anchor(right);
+        margin-bottom: 10px; /* Spacing */
+      }
+      #meteor-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        font-family: sans-serif;
+      }
+    `;
     document.head.appendChild(style);
 
     const container = document.createElement('div');
-    container.style.position = 'fixed';
-    container.style.bottom = '20px';
-    container.style.right = '20px';
-    container.style.zIndex = '9999';
-    container.style.fontFamily = 'sans-serif';
+    container.id = 'meteor-container';
 
     // Toggle Button
     const btn = document.createElement('button');
     btn.id = 'meteor-toggle-btn'; // ID for styling
     btn.textContent = '☄️';
-    btn.style.fontSize = '24px';
-    btn.style.background = '#333';
-    btn.style.color = '#fff';
-    btn.style.border = 'none';
-    btn.style.borderRadius = '50%';
-    btn.style.width = '50px';
-    btn.style.height = '50px';
-    btn.style.cursor = 'pointer';
 
-    // Popover Menu
-    const menu = document.createElement('div');
-    menu.popover = 'auto';
-    menu.id = 'meteor-shower-menu';
-    menu.style.padding = '1rem';
-    menu.style.border = '1px solid #ccc';
-    menu.style.borderRadius = '8px';
-    menu.style.background = '#fff';
-    menu.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
-
-    // Use popovertarget for automatic toggling
-    btn.setAttribute('popovertarget', 'meteor-shower-menu');
-
-    const title = document.createElement('h4');
-    title.textContent = 'Meteor Control';
-    title.style.margin = '0 0 10px 0';
-
-    const toggleLabel = document.createElement('label');
-    toggleLabel.style.display = 'flex';
-    toggleLabel.style.alignItems = 'center';
-    toggleLabel.style.gap = '8px';
-
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.checked = isRunning;
-    checkbox.onchange = (e) => {
-      isRunning = e.target.checked;
+    btn.onclick = (e) => {
+      isRunning = !isRunning;
     };
 
-    toggleLabel.appendChild(checkbox);
-    toggleLabel.appendChild(document.createTextNode('Animation Active'));
-
-    menu.appendChild(title);
-    menu.appendChild(toggleLabel);
-
-    container.appendChild(btn);
-    // Container appends button, but Menu (popover) should be appended to body or somewhere 
-    // that allows it to break out? Actually top layer elements can be anywhere, 
-    // but for anchor positioning to work comfortably, they just need to see the anchor.
-    // Let's append menu to container or body. Body is safer for flow.
-    document.body.appendChild(menu);
     container.appendChild(btn);
     document.body.appendChild(container);
   }
