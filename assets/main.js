@@ -90,7 +90,7 @@ function setupWikiTabs() {
   }
 
   const determineActiveTabSection = () => {
-    const i = Math.floor(tabsection.scrollLeft / tabsection.clientWidth)
+    const i = Math.round(tabsection.scrollLeft / tabsection.clientWidth)
     const matchingNavItem = tabnavitems[i]
 
     matchingNavItem && setActiveTab(matchingNavItem)
