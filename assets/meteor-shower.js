@@ -1,12 +1,5 @@
 /**
  * Meteor Shower Animation
- * 
- * Requirement:
- * - Fullscreen canvas
- * - Meteor shower animation (start/stop)
- * - Menu button with Popover API
- * - Meteors break into particles on edge collision
- * - No third party libraries
  */
 
 (function () {
@@ -101,9 +94,7 @@
       ctx.save();
       ctx.translate(this.x, this.y);
       // Rotate to match direction
-      ctx.rotate(Math.atan2(this.vy, this.vx) - Math.PI / 4); // Adjust for image orientation?
-      // Assuming image is round-ish or we just draw it centered.
-      // If the stone image needs rotation, adjust here.
+      ctx.rotate(Math.atan2(this.vy, this.vx) - Math.PI / 4);
       ctx.drawImage(meteorImage, -this.size / 2, -this.size / 2, this.size, this.size);
       ctx.restore();
     }
@@ -151,21 +142,15 @@
 
   // Initialization
   function init() {
+    // Create UI
+    createControls();
+
     // Create Canvas
     canvas = document.createElement('canvas');
-    canvas.style.position = 'fixed';
-    canvas.style.top = '0';
-    canvas.style.left = '0';
-    canvas.style.width = '100%';
-    canvas.style.height = '100%';
-    canvas.style.zIndex = '-1'; // Background
-    canvas.style.pointerEvents = 'none'; // Let clicks pass through
+    canvas.id = 'meteor-shower-canvas';
     document.body.appendChild(canvas);
 
     ctx = canvas.getContext('2d');
-
-    // Create UI
-    createControls();
 
     // Bind Events
     window.addEventListener('resize', handleResize);
@@ -179,6 +164,22 @@
     // Inject Styles for Anchor Positioning
     const style = document.createElement('style');
     style.textContent = `
+      #meteor-container {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        font-family: sans-serif;
+      }
+      #meteor-shower-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        pointer-events: none;
+      }
       #meteor-toggle-btn {
         anchor-name: --meteor-toggle-btn;
         font-size: 24px;
@@ -200,13 +201,6 @@
         right: anchor(right);
         margin-bottom: 10px; /* Spacing */
       }
-      #meteor-container {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 9999;
-        font-family: sans-serif;
-      }
     `;
     document.head.appendChild(style);
 
@@ -215,11 +209,14 @@
 
     // Toggle Button
     const btn = document.createElement('button');
-    btn.id = 'meteor-toggle-btn'; // ID for styling
+    btn.id = 'meteor-toggle-btn';
     btn.textContent = '☄️';
 
     btn.onclick = (e) => {
       isRunning = !isRunning;
+      if (isRunning) {
+        loop();
+      }
     };
 
     container.appendChild(btn);
@@ -234,34 +231,34 @@
   }
 
   function loop() {
+    ctx.clearRect(0, 0, width, height);
+    if (!isRunning) {
+      return;
+    }
     animationFrameId = requestAnimationFrame(loop);
 
-    ctx.clearRect(0, 0, width, height);
+    // Spawn new meteors
+    if (meteors.length < CONFIG.meteorCount && Math.random() < 0.05) {
+      meteors.push(new Meteor());
+    }
 
-    if (isRunning) {
-      // Spawn new meteors
-      if (meteors.length < CONFIG.meteorCount && Math.random() < 0.05) {
-        meteors.push(new Meteor());
+    // Update & Draw Meteors
+    for (let i = meteors.length - 1; i >= 0; i--) {
+      let m = meteors[i];
+      m.update();
+      m.draw(ctx);
+      if (m.dead) {
+        meteors.splice(i, 1);
       }
+    }
 
-      // Update & Draw Meteors
-      for (let i = meteors.length - 1; i >= 0; i--) {
-        let m = meteors[i];
-        m.update();
-        m.draw(ctx);
-        if (m.dead) {
-          meteors.splice(i, 1);
-        }
-      }
-
-      // Update & Draw Particles
-      for (let i = particles.length - 1; i >= 0; i--) {
-        let p = particles[i];
-        p.update();
-        p.draw(ctx);
-        if (p.life <= 0) {
-          particles.splice(i, 1);
-        }
+    // Update & Draw Particles
+    for (let i = particles.length - 1; i >= 0; i--) {
+      let p = particles[i];
+      p.update();
+      p.draw(ctx);
+      if (p.life <= 0) {
+        particles.splice(i, 1);
       }
     }
   }
