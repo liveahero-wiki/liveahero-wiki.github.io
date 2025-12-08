@@ -34,7 +34,7 @@
 
   // Assets
   const meteorImage = new Image();
-  let meteorImageData;
+  let meteorImageData = null;
   meteorImage.onload = () => {
     meteorImageData = createMeteorWithFilter(meteorImage);
   };
