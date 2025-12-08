@@ -16,16 +16,28 @@
     particleLife: 30, // Frames
   };
 
-  const SHAPES = [
-    [{x: -1, y: -1}, {x: -1, y: 0}, {x: 1, y: 1}],
-    [{x: -1, y: 1}, {x: 0.5, y: 0.5}, {x: 1, y: -1}, {x: -0.5, y: 0}],
-    [{x: 0, y: -1}, {x: 1, y: -1}, {x: -0.5, y: 0.5}],
-    [{x: -1, y: 0}, {x: -0.5, y: 1}, {x: 0.5, y: 1}, {x: 1, y: 0}],
-    [{x: 0, y: 1}, {x: 0.75, y: 0.5}, {x: 0, y: -1}],
+  const PARTICLE_GLOW = [
+    {r: 100, g: 100, b: 255},
+    {r: 100, g: 200, b: 100},
+    {r: 155, g: 50, b: 155},
   ]
+
+  function createMeteorWithFilter(img) {
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = CONFIG.meteorSize * 2;
+    canvas.height = CONFIG.meteorSize * 2;
+    ctx.filter = `drop-shadow(0 0 ${CONFIG.meteorSize * 0.3}px #fff)`;
+    ctx.drawImage(img, CONFIG.meteorSize / 2, CONFIG.meteorSize / 2, CONFIG.meteorSize, CONFIG.meteorSize);
+    return canvas;
+  }
 
   // Assets
   const meteorImage = new Image();
+  let meteorImageData;
+  meteorImage.onload = () => {
+    meteorImageData = createMeteorWithFilter(meteorImage);
+  };
   meteorImage.src = CONFIG.meteorHeadImageSrc;
 
   const meteorAnimKey = "meteor";
@@ -70,7 +82,6 @@
       this.vy = Math.sin(angle) * speed * 3;
       this.size = CONFIG.meteorSize * (0.8 + Math.random() * 0.4);
       this.dead = false;
-      this.lightness = 1.0;
     }
 
     update() {
@@ -111,7 +122,7 @@
       ctx.translate(this.x, this.y);
       // Rotate to match direction
       ctx.rotate(Math.atan2(this.vy, this.vx) - Math.PI / 4);
-      ctx.drawImage(meteorImage, -this.size / 2, -this.size / 2, this.size, this.size);
+      ctx.drawImage(meteorImageData, -this.size, -this.size, this.size * 2, this.size * 2);
       ctx.restore();
     }
 
@@ -140,7 +151,7 @@
       this.life = CONFIG.particleLife;
       this.maxLife = CONFIG.particleLife;
 
-      this.shape = SHAPES[Math.floor(Math.random() * SHAPES.length)];
+      this.glow = PARTICLE_GLOW[Math.floor(Math.random() * PARTICLE_GLOW.length)];
     }
 
     update() {
@@ -151,16 +162,31 @@
 
     draw(ctx) {
       const alpha = this.life / this.maxLife;
+
+      const angle = 0;
+      const radius = CONFIG.particleSize;
+      const points = 5;
+
+      ctx.fillStyle = `rgba(${this.glow.r}, ${this.glow.g}, ${this.glow.b}, ${alpha*0.7})`;
+      this.drawStar(ctx, points, angle, radius * 2);
+      ctx.fill();
+
       ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+      this.drawStar(ctx, points, angle, radius);
+      ctx.fill();
+    }
+
+    drawStar(ctx, points, angle, radius) {
+      const step = Math.PI / points;
       ctx.beginPath();
-      
-      ctx.moveTo(...this.move(this.shape[0], CONFIG.particleSize));
-      for (let i = 1; i < this.shape.length; i++) {
-        ctx.lineTo(...this.move(this.shape[i], CONFIG.particleSize));
+      ctx.moveTo(this.x + Math.cos(angle) * radius, this.y + Math.sin(angle) * radius);
+      for (let i = 1; i <= points; i++) {
+        angle += step;
+        ctx.lineTo(this.x + Math.cos(angle) * radius * 0.7, this.y + Math.sin(angle) * radius * 0.7);
+        angle += step;
+        ctx.lineTo(this.x + Math.cos(angle) * radius, this.y + Math.sin(angle) * radius);
       }
       ctx.closePath();
-
-      ctx.fill();
     }
 
     move(dir, scale) {
@@ -265,6 +291,9 @@
       return;
     }
     animationFrameId = requestAnimationFrame(loop);
+    if (meteorImageData === null) {
+      return;
+    }
 
     // Spawn new meteors
     if (meteors.length < CONFIG.meteorCount && Math.random() < 0.05) {
