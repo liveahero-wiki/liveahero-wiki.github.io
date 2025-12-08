@@ -5,6 +5,7 @@
 
   --color50: #e5e5e5;
   --color100: #ffd95b;
+  --color800: #4E342E;
 
   --colorLight: var(--color100);
   --colorPrimary: #ffa726;
@@ -15,6 +16,8 @@
   --link: var(--colorDark);
   --bg: #fafafa;
   --notiBg: #cce7ff;
+  --sidebar-header: var(--colorPrimary);
+  --sidebar: var(--color100);
 
   --mask-filter: brightness(0);
 
@@ -38,16 +41,16 @@ html[data-theme="dark"] {
   --color50: #333;
   --colorPrimary: #F57F17;
   --colorLight: #F9A825;
-  --colorDark: #c77800;
   --colorGrey: #555;
 
   --text: #fff;
-  --textLight: #000;
   --link: var(--color100);
   --bg: #0f0f1f;
   --notiBg: #11538d;
   --sectionHeader: rgb(18, 195, 92);
   --sectionBg: #077c53;
+  --sidebar-header: #000;
+  --sidebar: var(--color800);
 
   --mask-filter: brightness(1);
 
@@ -77,7 +80,6 @@ header, .page-header, .pager, footer {
   flex: none;
 }
 header {
-  background-color: var(--colorPrimary);
   padding: 18px 0;
 }
 .clearfix:before, .clearfix:after {
@@ -107,7 +109,7 @@ a:hover {
 }
 .sidebar {
   contain: content;
-  background: var(--colorLight);
+  background: var(--sidebar);
   visibility: hidden;
   width: 250px;
   position: fixed;
@@ -122,6 +124,7 @@ a:hover {
   visibility: visible;
 }
 .sidebar__logo {
+  background-color: var(--sidebar-header);
   border-bottom: 1px solid var(--colorDark);
   height: 130px;
   /*font-size: 36px;
@@ -444,7 +447,7 @@ figcaption {
   filter: var(--mask-filter);
 }
 .masked:hover {
-  color: var(--textLight);
+  color: var(--bg);
   filter: none;
 }
 // Hero page
