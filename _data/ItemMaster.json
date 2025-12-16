@@ -3451,6 +3451,68 @@
     "prefabAddress": null,
     "limitValue": 0
   },
+  "266": {
+    "itemId": 266,
+    "itemName": "長期行動携帯食",
+    "resourceName": "Whiteout2512_exchange01",
+    "rarity": 3,
+    "itemType": 512,
+    "description": "雪山への携帯にも最適な木の実を練り込んだ甘い菓子パン。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "267": {
+    "itemId": 267,
+    "itemName": "雪の砦前ホログラム",
+    "resourceName": "icon_bg_battle_snowfort_day",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景に雪の砦前を投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_snowfort_day",
+        "bgTitleKey": "TITLE_BG_BATTLE_SNOWFORT_DAY_WALLPAPER"
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "268": {
+    "itemId": 268,
+    "itemName": "ホワイトアウトディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "ホワイトアウト・リベレーションのBGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_whiteout_adv",
+        "bgmTitleKey": "TITLE_BGM_WHITEOUT_ADV_RECORD"
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "269": {
+    "itemId": 269,
+    "itemName": "ホワイトアウト戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "ホワイトアウト・リベレーションの戦闘BGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_whiteout_battle",
+        "bgmTitleKey": "TITLE_BGM_WHITEOUT_BATTLE_RECORD"
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -6985,6 +7047,28 @@
     "prefabAddress": null,
     "limitValue": 0
   },
+  "112112": {
+    "itemId": 112112,
+    "itemName": "疾風のステリオの記憶片",
+    "resourceName": "piece_sterioWhiteout2512",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "疾風のステリオのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 12112
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
   "112121": {
     "itemId": 112121,
     "itemName": "火のアプレンティスの記憶片",
@@ -7416,6 +7500,50 @@
         "addFan": 50,
         "rarity": 0,
         "stockId": 12891
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "113011": {
+    "itemId": 113011,
+    "itemName": "デネボラの記憶片",
+    "resourceName": "piece_denebora",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "デネボラのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 13011
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "113021": {
+    "itemId": 113021,
+    "itemName": "ラスタバンの記憶片",
+    "resourceName": "piece_rastaban",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "ラスタバンのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 13021
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
@@ -10312,6 +10440,48 @@
     "prefabAddress": null,
     "limitValue": 0
   },
+  "213011": {
+    "itemId": 213011,
+    "itemName": "デネボラの心",
+    "resourceName": "heart_denebora",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "デネボラのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 13011
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "213021": {
+    "itemId": 213021,
+    "itemName": "ラスタバンの心",
+    "resourceName": "heart_rastaban",
+    "rarity": 4,
+    "itemType": 2048,
+    "description": "ラスタバンのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 13021
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
   "219991": {
     "itemId": 219991,
     "itemName": "@playerNameの心",
@@ -12885,6 +13055,17 @@
     "prefabAddress": null,
     "limitValue": 0
   },
+  "21211201": {
+    "itemId": 21211201,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
   "21212101": {
     "itemId": 21212101,
     "itemName": "開花の波動",
@@ -13096,6 +13277,28 @@
   },
   "21289101": {
     "itemId": 21289101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "21301101": {
+    "itemId": 21301101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "21302101": {
+    "itemId": 21302101,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,
