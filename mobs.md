@@ -340,6 +340,12 @@ sprites="fg_villainTraineeEarth_h01,fg_villainTraineeFire_h01,fg_villainTraineeL
 sprites="fg_kaibutsuXmas2012_h01"
 %}
 
+### Vikings
+
+{% include hero-infobox-unreleased.html name="Vikings" mob=true
+sprites="fg_villainVikingsEarth_h01,fg_villainVikingsFire_h01,fg_villainVikingsLight_h01,fg_villainVikingsShadow_h01,fg_villainVikingsWater_h01"
+%}
+
 ### Villain
 
 {% include hero-infobox-unreleased.html name="Villain" mob=true

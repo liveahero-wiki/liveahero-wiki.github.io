@@ -8,7 +8,7 @@ heroes:
 - stockId: 12112
 sidekicks:
 - stockId: 12111
-  extra_sprites: fg_sterio_s01_skin1
+  extra_sprites: fg_sterio_s01_skin1,fg_sterio_s01_skin2
 ---
 
 {% include voice-table.html resourceName="sterio"
