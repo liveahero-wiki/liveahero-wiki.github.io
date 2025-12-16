@@ -3,6 +3,8 @@ title: Sterio
 characterId: 211
 type: anthro
 gender: male
+h2:
+  title: "\"Wuthering Merriment\" Sterio"
 heroes:
 - stockId: 12111
 - stockId: 12112
