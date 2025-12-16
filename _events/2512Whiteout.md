@@ -1,5 +1,5 @@
 ---
-title: Whiteout Revelation
+title: Whiteout Liberation
 eventId: 151
 jp_title: ホワイトアウト・リベレーション
 banner_image: ui_banner_event_questbanner_Whiteout2512.jpg
