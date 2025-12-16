@@ -72,15 +72,15 @@ def main():
 
     with open("skill-jp.tsv", "w", encoding="utf-8") as f:
         writer = csv.writer(f, delimiter='\t')
-        writer.writerow(["skillId", "charaNme", "skillName", "description"])
+        writer.writerow(["skillId", "charaName", "skillName", "description"])
         for status in SkillMaster.values():
 
             si = int(status["skillId"])
-            charaNme = charaMap.get(si, "")
+            charaName = charaMap.get(si, "")
 
             writer.writerow([
                 status["skillId"],
-                charaNme,
+                charaName,
                 status["skillName"],
                 sanitizeSkillDescription(status["description"]),
             ])
