@@ -5,6 +5,7 @@ type: anthro
 gender: male
 heroes:
 - stockId: 12111
+- stockId: 12112
 sidekicks:
 - stockId: 12111
   extra_sprites: fg_sterio_s01_skin1
@@ -40,4 +41,7 @@ EVENTA = "So many people...! Is Earth always like this everywhere?<br>The look, 
 EVENTB = "The Hero Festa was fun. Earth is an interesting place!<br>When Canes and I become real heroes someday, we'd love to bring Papa and Mama to play again!"
 EVENTC = "What's this mission thing? Like running errands?<br>I'm good at that stuff, I do it all the time at home.<br>Is there a reward too? Alright, I'll work hard!"
 EVENTD = "It's all done! So many treats! More, more, more... is that all?<br>I see, then I'll have to use it wisely."
+%}
+
+{% include voice-table.html resourceName="steriowhiteout2512"
 %}
