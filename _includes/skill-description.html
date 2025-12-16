@@ -27,10 +27,10 @@
     {% assign changeSkill = site.data.SkillMaster[sid] %}
     {% if changeSkillId != include.skillId and changeSkill.skillName != skill.skillName %}
       {% assign skillName = site.data.translation.Skill[sid].skillName | default: changeSkill.skillName %}
-      <fieldset class="s-rand-g" data-id="{{ changeSkillId }}">
-        <legend>{{ skillName }}</legend>
-        {% include skill-description.html skillId=changeSkillId %}
-      </fieldset>
+      <details data-id="{{ changeSkillId }}">
+        <summary>{{ skillName }}</summary>
+        <p>{% include skill-description.html skillId=changeSkillId %}</p>
+      </details>
     {% endif %}
   {% endfor %}
 
