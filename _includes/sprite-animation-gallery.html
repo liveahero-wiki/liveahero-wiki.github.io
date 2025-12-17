@@ -1,0 +1,17 @@
+{% assign style = "" | split: "," %}
+{% if include.width %}
+{% assign s = "--sprite-width: " | append: include.width | append: "px" %}
+{% assign style = style | push: s %}
+{% endif %}
+{% if include.height %}
+{% assign s = "--sprite-height: " | append: include.height | append: "px" %}
+{% assign style = style | push: s %}
+{% endif %}
+{% if include.frames %}
+{% assign s = "--sprite-frames: " | append: include.frames %}
+{% assign style = style | push: s %}
+{% endif %}
+
+<div class="sprite-container" style="{{ style | join: ";" }}">
+<div class="sprite-frame" style="background-image: url({{ include.background }})"></div>
+</div>

@@ -41,6 +41,17 @@ begins to unfold in an unexpected direction…
 Will you be able to welcome the long-awaited festival day known as “Thawing Christmas,”
 with the entire “family” together at last?
 
+## Sprite Animations
+
+{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_canesWhiteout2512.png" frames="3" %}
+{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_canesWhiteout2512_2.png" frames="2" %}
+{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_deneboraWhiteout2512.png" frames="3" %}
+{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_deneboraWhiteout2512_2.png" frames="2" %}
+{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_rastabanWhiteout2512.png" frames="3" %}
+{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_rastabanWhiteout2512_2.png" frames="2" %}
+{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_sterioWhiteout2512.png" frames="3" %}
+{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_sterioWhiteout2512_2.png" frames="2" %}
+
 ## Event Banners
 
 This Event's gacha summon includes one time-limited variant {% chara_link Sterio|h2 %} (Hero) and two new characters {% chara_link Denebora %} (Hero & Sidekick), {% chara_link Rastaban %} (Hero & Sidekick)
