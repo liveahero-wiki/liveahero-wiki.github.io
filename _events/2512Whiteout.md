@@ -41,16 +41,32 @@ begins to unfold in an unexpected direction…
 Will you be able to welcome the long-awaited festival day known as “Thawing Christmas,”
 with the entire “family” together at last?
 
+<style>
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+</style>
+
 ## Sprite Animations
 
-{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_canesWhiteout2512.png" frames="3" %}
+<div class="grid-wrapper">
+{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_canesWhiteout2512.png"
+    animation="sprite-walk" step-func="step-start" %}
+{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_deneboraWhiteout2512.png"
+    animation="sprite-walk" step-func="step-start" %}
+{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_rastabanWhiteout2512.png"
+    animation="sprite-walk" step-func="step-start" %}
+{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_sterioWhiteout2512.png"
+    animation="sprite-walk" step-func="step-start" %}
+</div>
+
+<div class="grid-wrapper">
 {% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_canesWhiteout2512_2.png" frames="2" %}
-{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_deneboraWhiteout2512.png" frames="3" %}
 {% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_deneboraWhiteout2512_2.png" frames="2" %}
-{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_rastabanWhiteout2512.png" frames="3" %}
 {% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_rastabanWhiteout2512_2.png" frames="2" %}
-{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_sterioWhiteout2512.png" frames="3" %}
 {% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_sterioWhiteout2512_2.png" frames="2" %}
+</div>
 
 ## Event Banners
 

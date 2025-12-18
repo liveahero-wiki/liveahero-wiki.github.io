@@ -1,10 +1,4 @@
-:root {
-  --sprite-width: 128px;
-  --sprite-height: 128px;
-  --sprite-animation-length: 1s;
-}
-
-@keyframes sprite-play {
+@keyframes sprite-simple {
   from {
     background-position-x: 0;
   }
@@ -14,19 +8,40 @@
   }
 }
 
+@keyframes sprite-walk {
+  0% {
+    background-position-x: 0;
+  }
+  25% {
+    background-position-x: calc(var(--sprite-width) * -1);
+  }
+  50% {
+    background-position-x: 0;
+  }
+  75% {
+    background-position-x: calc(var(--sprite-width) * -2);
+  }
+}
+
 .sprite-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: max(var(--sprite-width), 200px);
-  height: max(var(--sprite-height), 200px);
+  width: max(var(--sprite-width), 160px);
+  height: max(var(--sprite-height), 160px);
   border: 1px solid var(--colorGrey);
   overflow: hidden;
+
+  --sprite-width: 128px;
+  --sprite-height: 128px;
+  --sprite-animation-length: 1s;
+  --sprite-animation: sprite-simple;
+  --sprite-step-func: steps(var(--sprite-frames));
 }
 .sprite-frame {
   width: var(--sprite-width);
   height: var(--sprite-height);
   margin: auto;
   background-repeat: no-repeat;
-  animation: sprite-play var(--sprite-animation-length) steps(var(--sprite-frames)) infinite;
+  animation: var(--sprite-animation) var(--sprite-animation-length) var(--sprite-step-func) infinite;
 }
