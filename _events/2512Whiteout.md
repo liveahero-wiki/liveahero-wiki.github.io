@@ -51,21 +51,21 @@ with the entire “family” together at last?
 ## Sprite Animations
 
 <div class="grid-wrapper">
-{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_canesWhiteout2512.png"
-    animation="sprite-walk" step-func="step-start" %}
 {% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_deneboraWhiteout2512.png"
     animation="sprite-walk" step-func="step-start" %}
-{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_rastabanWhiteout2512.png"
-    animation="sprite-walk" step-func="step-start" %}
 {% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_sterioWhiteout2512.png"
+    animation="sprite-walk" step-func="step-start" %}
+{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_canesWhiteout2512.png"
+    animation="sprite-walk" step-func="step-start" %}
+{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_rastabanWhiteout2512.png"
     animation="sprite-walk" step-func="step-start" %}
 </div>
 
 <div class="grid-wrapper">
-{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_canesWhiteout2512_2.png" frames="2" %}
 {% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_deneboraWhiteout2512_2.png" frames="2" %}
-{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_rastabanWhiteout2512_2.png" frames="2" %}
 {% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_sterioWhiteout2512_2.png" frames="2" %}
+{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_canesWhiteout2512_2.png" frames="2" %}
+{% include sprite-animation-gallery.html background="/cdn/Texture2D/tex_pixel_rastabanWhiteout2512_2.png" frames="2" %}
 </div>
 
 ## Event Banners
