@@ -45,6 +45,8 @@ with the entire “family” together at last?
 .grid-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    border: 1px var(--colorGrey) solid;
+    margin: 30px 0;
 }
 </style>
 
