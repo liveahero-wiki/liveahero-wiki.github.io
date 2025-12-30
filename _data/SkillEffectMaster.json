@@ -33384,6 +33384,7 @@
       "canDuplicate": true,
       "isCountEffect": false,
       "isFieldEffect": false,
+      "effectFilename": "",
       "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
@@ -57583,6 +57584,7 @@
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
+      "effectFilename": "",
       "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
@@ -57591,6 +57593,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -65375,16 +65378,21 @@
       "parameter": false,
       "description": "ATKチャージ",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": true,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
       "isCharageEffect": true,
       "elapseTurnTiming": [],
       "canDuplicateForce": true,
       "isCountDownEffect": false,
       "overrideStatusName": "ATKチャージ",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": true,
       "overrideStatusDescription": "チャージ数1につき、ATK+10%。<br><color=#505050>特定のスキルによりチャージ数が増加する。</color>",
       "isDisplayPersistenceStatus": false,
@@ -106752,12 +106760,14 @@
       "parameter": false,
       "description": "敵のターンを１ターン削減（死亡時も貫通）",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
+      "effectFilename": "",
       "penetrateDeath": true,
       "isCharageEffect": false,
       "elapseTurnTiming": [
@@ -106766,6 +106776,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -126084,6 +126095,53 @@
       "isOverrideStatusDescription": false
     }
   },
+  "5320": {
+    "skillEffectId": 5320,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HPDependentDamage",
+          "parameter": {
+            "value": 200,
+            "dontCallDamaged": false,
+            "dontCallDefenced": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "最大HPの200%の貫通ダメージ",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "6001": {
     "skillEffectId": 6001,
     "skillEffectJson": {
@@ -129089,6 +129147,7 @@
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
+      "effectFilename": "",
       "penetrateDeath": true,
       "isCharageEffect": false,
       "elapseTurnTiming": [
@@ -134981,6 +135040,45 @@
       "elapseTurnTiming": [
         0
       ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "6319": {
+    "skillEffectId": 6319,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 128,
+      "canDispel": true,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果128番付与（死亡貫通）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": true,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [],
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
@@ -141146,6 +141244,101 @@
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
+    }
+  },
+  "6494": {
+    "skillEffectId": 6494,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 130
+          }
+        }
+      ],
+      "filename": "status_system_atkup",
+      "statusId": 186,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATK+30%（システム効果、死亡時も貫通・継続）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATK+30%",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "ATK+30%。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "6495": {
+    "skillEffectId": 6495,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": {
+            "timing": 1,
+            "avoidExtensionTurn": false
+          }
+        },
+        {
+          "class": "MultipleDefence",
+          "parameter": {
+            "value": 150
+          }
+        }
+      ],
+      "filename": "status_system_defdown",
+      "statusId": 130,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "被ダメージ+50%（システムアイコン）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "effect_powerdown",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        1
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "被ダメージ+50%",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "被ダメージ+50%。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
     }
   }
 }
