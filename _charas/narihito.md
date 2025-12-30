@@ -65,7 +65,7 @@ sidekicks:
 
     As a knowledgeable connoisseur, he experts at profiling information about
     heroes, villains, and kaibutsu from all times and places.
-  extra_sprites: fg_narihito_s01_skin1
+  extra_sprites: fg_narihito_s01_skin1,fg_narihito_s01_skin2
 ---
 
 {% include voice-table.html resourceName="narihito"

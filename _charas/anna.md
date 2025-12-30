@@ -29,7 +29,7 @@ sidekicks:
     She often demonstrates a fatal lack of sense of direction by walking around without looking at a map and eventually getting lost.<br>
     On the other hand, her open and honest manner of speaking makes her popular among her classmates, 
     regardless of gender, race, or personality, as she is easy to talk to.
-  extra_sprites: fg_anna_s01_skin1,fg_anna_s01_skin2
+  extra_sprites: fg_anna_s01_skin1,fg_anna_s01_skin2,fg_anna_s01_skin3
 ---
 
 {% include voice-table.html resourceName="anna"
