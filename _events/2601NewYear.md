@@ -2,7 +2,7 @@
 title: New Year 2026
 eventId: 152
 jp_title: 謹賀新年2026！
-banner_image: 
+banner_image: ui_banner_event_questbanner_NewYear2601.jpg
 gacha: true
 event_start_time: 2026-01-01T00:00:00+09
 event_end_time: 2026-01-22T14:00:00+09
