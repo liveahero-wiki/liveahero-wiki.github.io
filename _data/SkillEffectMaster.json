@@ -59416,7 +59416,7 @@
       "overrideStatusName": "今盛りなり",
       "notDisplayTeamEdit": false,
       "isOverrideStatusName": true,
-      "overrideStatusDescription": "敵全体からランダムに3回40%ダメージ+チャージ数1の傷跡を付与。 ",
+      "overrideStatusDescription": "敵全体からランダムに3回40%ダメージ。1HIT毎にチャージ数1の傷跡を付与。 ",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
     }
@@ -59502,7 +59502,7 @@
       "overrideStatusName": "君がため醸みし待酒",
       "notDisplayTeamEdit": true,
       "isOverrideStatusName": true,
-      "overrideStatusDescription": "【自身に使用した場合】自身に2ターンの間泥酔を付与。<br>最大HPの30%の貫通ダメージ。<br>【自身以外に使用した場合】自身と対象に2ターンの間宴席を付与。<br>最大HPの15%の貫通ダメージ。<br>自身の行動順にスキル発動後、続けて行動をする。このスキルではコンボ数、Viewを獲得できない。<br>味方に宴席、もしくは泥酔が付与されている間、このスキルは「今盛りなり」になる。",
+      "overrideStatusDescription": "【自身に使用した場合】自身に2ターンの間泥酔を付与。<br>最大HPの30%の貫通ダメージ。<br>【自身以外に使用した場合】自身と対象に2ターンの間宴席を付与。<br>最大HPの15%の貫通ダメージ。<br>自身の行動時にスキル発動後、続けて行動をする。このスキルではコンボ数、Viewを獲得できない。<br>味方に宴席、もしくは泥酔が付与されている間、このスキルは「今盛りなり」になる。",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
     }
@@ -82521,7 +82521,7 @@
           }
         }
       ],
-      "filename": "status_spdup",
+      "filename": "",
       "statusId": 1303103,
       "canDispel": false,
       "filterIds": [],
@@ -82547,7 +82547,7 @@
       "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
-      "isDisplayPersistenceStatus": true,
+      "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
     }
   },
@@ -141884,6 +141884,54 @@
       "overrideStatusDescription": "被ダメージ+50%。",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
+    }
+  },
+  "6496": {
+    "skillEffectId": 6496,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HPDependentDamage",
+          "parameter": {
+            "value": 15,
+            "dontCallDamaged": false,
+            "dontCallDefenced": true,
+            "useReceiverMaxHp": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "最大HPの15%の貫通ダメージ’（対象の）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
     }
   }
 }
