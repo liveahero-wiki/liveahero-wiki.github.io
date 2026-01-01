@@ -89,6 +89,13 @@ Here is the bonus:
 | 2 Event Heroes |     30    |
 | 3 Event Heroes |     50    |
 
+## Title Mission
+
+| No  | Description      | Rewards      |
+|----|-----------------------------------------------------------|----------------|
+| 1  | Clear all main event quest | Title Unlocked:「ほろ酔い気分の」"Feeling Tipsy"  |
+| 2  | Clear all Mission | Title Unlocked:「馬サイズの」"Horse-sized"   |
+
 ## Limited Time Mission
 
 Here is a list of this event's limited time Missions:
