@@ -40760,11 +40760,15 @@
       "parameter": false,
       "description": "味方がランダムな敵にオート行動スキルを誘発(誘発説明用)",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -40772,6 +40776,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -46439,11 +46444,15 @@
       "parameter": false,
       "description": "HPを基礎ATKの300%回復する",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -46451,6 +46460,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -67186,11 +67196,15 @@
       "parameter": false,
       "description": "110%ダメージ+対象と自分のSPDの差だけダメージ量が上昇（対象とのSPD差が25の時最大ダメージに到達。））",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -67198,6 +67212,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -82853,6 +82868,103 @@
       "isOverrideStatusDescription": false
     }
   },
+  "3781": {
+    "skillEffectId": 3781,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeActiveSkill",
+          "parameter": {
+            "index": 1,
+            "timing": 21,
+            "skillId": 6303103
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"value2\":0,\"includeTemporary\":false,\"element\":0,\"statusId\":1303101,\"role\":0,\"class\":\"TeamAllSystemStatusNumberExecTrigger\"}]",
+      "filename": "",
+      "statusId": 1303102,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "スキル2を特殊スキル2に置き換え（モリヤスエネミー）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": true,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3782": {
+    "skillEffectId": 3782,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TeamAttackRandomEnemy",
+          "parameter": {
+            "skillId": 6303102,
+            "isActive": true,
+            "isAutoSkill": false,
+            "executeTiming": 5,
+            "dontGetBaseView": true,
+            "dontGetBaseCombo": true,
+            "isInvokeAddDamage": true,
+            "isRecalculateTarget": true,
+            "notExecuteInTargetReversal": false
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "モリヤス特殊スキル誘発エネミー版（状態変化版）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": true,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "4001": {
     "skillEffectId": 4001,
     "skillEffectJson": {
@@ -92545,6 +92657,7 @@
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
+      "effectFilename": "",
       "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
