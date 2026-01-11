@@ -2,7 +2,18 @@ const chartElements = document.querySelectorAll(".apache-chart");
 const EE = [];
 for (const chartElement of chartElements) {
   try {
-    const options = JSON.parse(chartElement.querySelector("script").innerText);
+    const options = JSON.parse(chartElement.querySelector("script").innerHTML);
+    const title = chartElement.parentElement.querySelector("figcaption")?.textContent;
+    const subtext = chartElement.dataset.subtext;
+    if (title) {
+      options.title = {
+        text: title,
+        left: 'center'
+      };
+      if (subtext) {
+        options.title.subtext = subtext;
+      }
+    }
     const E = echarts.init(chartElement);
     E.setOption(options);
     EE.push(E);
