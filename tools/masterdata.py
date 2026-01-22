@@ -2,6 +2,7 @@ import urllib.request
 import os.path
 import json
 import sys
+import argparse
 
 from wiki_util import ensureDirs
 from preprocess import *
@@ -60,20 +61,19 @@ def downloadProperties(masterVersion, filename):
     f.write(data.encode())
 
 if __name__ == '__main__':
-  force_download = False
-  if len(sys.argv) > 1:
-    mV = int(sys.argv[1])
-    force_download = True
+  parser = argparse.ArgumentParser()
+  parser.add_argument("-f", "--force_download", help="Force download (version)", type=int)
+  parser.add_argument("--skip_data", help="Skip masterdata download", action="store_true")
+  args = parser.parse_args()
+
+  if args.force_download:
+    mV = args.force_download
   else:
     appV, mV = getVersion()
-
-  cur_ver = int(getWikiVersion())
-  if not force_download and mV <= cur_ver:
-    print("Already up to date")
-    sys.exit(0)
-
-  print(f"Downloading masterdata ver {mV}")
-  updateWikiVersion(mV)
+    cur_ver = int(getWikiVersion())
+    if mV <= cur_ver:
+      print("Already up to date")
+      sys.exit(0)
 
   masterDataList = [
     'MasterDataCatalog',
@@ -101,13 +101,18 @@ if __name__ == '__main__':
     'SerifOverwriteMaster',
     'SalesMaster',
   ]
-  #for m in masterDataList:
-  #  downloadMasterdata(mV, m)
 
-  processMasterDataCatalog()
-  processShopFile()
-  processCardProfileOverride()
-  processSalesFile()
+  if not args.skip_data:
+    print(f"Downloading masterdata ver {mV}")
+    updateWikiVersion(mV)
+
+    for m in masterDataList:
+      downloadMasterdata(mV, m)
+
+    processMasterDataCatalog()
+    processShopFile()
+    processCardProfileOverride()
+    processSalesFile()
 
   prop_files = [
     "Japanese.json",
