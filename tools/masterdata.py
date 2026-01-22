@@ -3,6 +3,7 @@ import os.path
 import json
 import sys
 
+from wiki_util import ensureDirs
 from preprocess import *
 
 HEADER = {
@@ -53,8 +54,9 @@ def downloadMasterdata(masterVersion, filename):
 
 
 def downloadProperties(masterVersion, filename):
+  ensureDirs("zzz/")
   data = httpRequest(f"https://d1itvxfdul6wxg.cloudfront.net/datas/catalog/{filename}")
-  with open(os.path.join("_data", "processed", filename), "wb") as f:
+  with open(os.path.join("zzz", filename), "wb") as f:
     f.write(data.encode())
 
 if __name__ == '__main__':
@@ -99,8 +101,8 @@ if __name__ == '__main__':
     'SerifOverwriteMaster',
     'SalesMaster',
   ]
-  for m in masterDataList:
-    downloadMasterdata(mV, m)
+  #for m in masterDataList:
+  #  downloadMasterdata(mV, m)
 
   processMasterDataCatalog()
   processShopFile()
@@ -108,12 +110,23 @@ if __name__ == '__main__':
   processSalesFile()
 
   prop_files = [
-    "Japanese.properties",
-    "English.properties",
-    "ChineseTraditional.properties",
-    "ChineseSimplified.properties",
+    "Japanese.json",
+    "English.json",
+    "ChineseTraditional.json",
+    "ChineseSimplified.json",
+  ]
+
+  tl_suffixes = [
+    "_bio.json",
+    "_serif.json",
+    "_profile.json",
+    "_library.json",
+    "_sales_report.json",
+    "_score_attack.json",
   ]
 
   for p in prop_files:
     downloadProperties(mV, p)
-  processPropertiesFile("Japanese.properties", "jp_bio.json", "jp_serif.json", "jp_profile.json", "jp_library.json", "jp_sales_report.json", "jp_score_attack.json")
+
+  processPropertiesFile("Japanese.json", *[f"jp{s}" for s in tl_suffixes])
+  processPropertiesFile("English.json", *[f"en{s}" for s in tl_suffixes])

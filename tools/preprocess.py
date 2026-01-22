@@ -11,8 +11,8 @@ from wiki_util import dumpJson, sanitizeText
 def processPropertiesFile(raw_file, bio_file, serif_file, profile_file, library_file, sales_report_file,
     score_attack_file,
 ):
-    with open(os.path.join("_data", "processed", raw_file), "r", encoding="utf-8") as f:
-        lines = f.readlines()
+    with open(os.path.join("zzz", raw_file), "rb") as f:
+        obj = json.load(f)
 
     detail = {}
     serif = {}
@@ -21,8 +21,8 @@ def processPropertiesFile(raw_file, bio_file, serif_file, profile_file, library_
     sales_report = {}
     score_attack = {}
 
-    for line in lines:
-        s = line.split("=", 1)
+    for key, value in obj.items():
+        s = [key, value]
 
         if s[0].startswith("DETAIL"):
             detail[s[0]] = sanitizeText(s[1])
@@ -128,4 +128,4 @@ def processCardProfileOverride():
 
 if __name__ == "__main__":
     processCardProfileOverride()
-    processPropertiesFile("Japanese.properties", "jp_bio.json", "jp_serif.json", "jp_profile.json", "jp_library.json", "jp_sales_report.json", "jp_score_attack.json")
+    processPropertiesFile("Japanese.json", "jp_bio.json", "jp_serif.json", "jp_profile.json", "jp_library.json", "jp_sales_report.json", "jp_score_attack.json")
