@@ -34,7 +34,7 @@ banner: true
     {% assign nid = s.baseSkillId | plus: 0 %}
     {% assign sid = s.baseSkillId | downcase %}
     {% assign skill = site.data.SkillMaster[sid] %}
-    {% assign skillName = site.data.translation.Skill[nid].skillName %}
+    {% assign skillName = site.data.translation.Skill[sid].skillName %}
     <tr>
         <td title="{{ sid }}" class="translate skill-{{ s.rarity }}" data-translate="{% if skillName %}{{ skill.skillName }}{% endif %}" data-effects="{{ skill.effects | map: 'skillEffectId' | join: ',' }}">{{ skillName | default: skill.skillName }}</td>
         <td>{{ s.rarity }}</td>
