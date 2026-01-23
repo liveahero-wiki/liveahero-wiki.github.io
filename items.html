@@ -14,7 +14,7 @@ banner: true
 {% for pair in site.data.ItemMaster %}
 {% assign id = pair[0] %}
 {% assign iid = id | plus: 0 %}
-{% if iid > 100000 %}{% break %}{% endif %}
+{% if iid > 100000 and iid < 10000000 %}{% break %}{% endif %}
 <tr><td>{{ id }}</td><td>{% include item.html id=iid %}</td></tr>
 {% endfor %}
 </table>
