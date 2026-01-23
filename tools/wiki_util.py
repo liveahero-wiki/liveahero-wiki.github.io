@@ -34,7 +34,8 @@ AUTO_ACTION_MARKER = '<style="オート行動"></style>'
 AUTO_ACTION_PATTERN = re.compile(r'<style="オート行動">(.*?)</style>', re.DOTALL)
 
 def sanitizeSkillDescription(s: str) -> str:
-    s = sanitizeText(s)
+    s = COLOR_PATTERN.sub(r'\2', s.strip())
+    s = SIZE_PATTERN.sub(r'\2', s)
 
     s = s.replace(r'<style="改行"></style>', '<br>')
     s = PASSIVE_SKILL_PATTERN.sub(r'<wiki-passive>\1</wiki-passive>', s)

@@ -108,7 +108,7 @@ def main():
                 skillEffect["overrideStatusName"],
                 sanitizeSkillDescription(skillEffect["overrideStatusDescription"]),
                 EnglishMaster.get(f"OVERRIDE_STATUS_NAME_{sei}", ""),
-                EnglishMaster.get(f"OVERRIDE_STATUS_DESCRIPTION_{sei}", ""),
+                sanitizeSkillDescription(EnglishMaster.get(f"OVERRIDE_STATUS_DESCRIPTION_{sei}", "")),
             ])
 
     StatusMaster = loadJson("_data/StatusMaster.json")

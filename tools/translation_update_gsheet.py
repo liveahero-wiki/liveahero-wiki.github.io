@@ -27,7 +27,7 @@ def load_credentials():
             with open("credentials.json", "r") as f:
                 return json.load(f)
         raise ValueError("GOOGLE_CREDENTIALS_JSON environment variable not set")
-    
+
     # Parse JSON from env var and return dict
     return json.loads(creds_json)
 
@@ -56,7 +56,7 @@ def update_sheet(gc: gspread.Client, sheet: gspread.Worksheet, sheet_name: str, 
     patch_if_empty_cols: list of str, columns to patch if empty (e.g. ['description'])
     """
     print(f"Processing {sheet_name}...")
-    
+
     try:
         current_data = sheet.get_all_records()
         headers = sheet.row_values(1)
@@ -73,18 +73,18 @@ def update_sheet(gc: gspread.Client, sheet: gspread.Worksheet, sheet_name: str, 
 
     updates = [] # List of Cell objects
     new_rows = []
-    
+
     updated_ids = []
     new_ids = []
 
     # Column mapping (Header Name -> Index)
-    col_indices = {name: get_column_index(headers, name) for name in updatable_cols}
+    col_indices = {name: get_column_index(headers, name) for name in (updatable_cols + patch_if_empty_cols)}
     # PK indices for sorting
     pk_indices = [get_column_index(headers, name) for name in pks]
 
     for row in data:
         pk = get_pk(row)
-        
+
         if pk in existing_rows:
             row_idx, current_row = existing_rows[pk]
             # Check for changes
@@ -92,11 +92,11 @@ def update_sheet(gc: gspread.Client, sheet: gspread.Worksheet, sheet_name: str, 
             for col in updatable_cols:
                 new_val = row.get(col, "")
                 old_val = str(current_row.get(col, ""))
-                
+
                 # Normalize newlines just in case
                 if new_val != old_val:
                     print(f"  [UPDATE] {pk}: {col} '{old_val}' -> '{new_val}'")
-                    
+
                     col_idx = col_indices[col]
                     if col_idx:
                         updates.append(gspread.Cell(row_idx, col_idx, new_val))
@@ -120,9 +120,9 @@ def update_sheet(gc: gspread.Client, sheet: gspread.Worksheet, sheet_name: str, 
             new_row_data = []
             for h in headers:
                 new_row_data.append(row.get(h, ""))
-            
+
             print(f"  [NEW] {pk}")
-            
+
             new_rows.append(new_row_data)
             new_ids.append(pk)
 
@@ -162,10 +162,10 @@ def main():
 
     # 2. Read TSVs
     print("Reading generated TSVs...")
-    
+
     with open("skill-jp.tsv", "r", encoding="utf-8") as f:
         skill_data = list(csv.DictReader(f, delimiter='\t'))
-        
+
     with open("skill-effect-jp.tsv", "r", encoding="utf-8") as f:
         skill_effect_data = list(csv.DictReader(f, delimiter='\t'))
 
@@ -188,23 +188,23 @@ def main():
 
     # Skill
     sheet = sh.worksheet("EN skill")
-    updated_s, new_s = update_sheet(gc, sheet, "EN skill", skill_data, 
+    updated_s, new_s = update_sheet(gc, sheet, "EN skill", skill_data,
                                 ['skillId'], ['charaName', 'skillName', 'description'],
                                 ['skillNameTranslated'],
                                 args.dry_run)
-    
+
     sheet = sh.worksheet("EN skill effect")
-    updated_se, new_se = update_sheet(gc, sheet, "EN skill effect", skill_effect_data, 
+    updated_se, new_se = update_sheet(gc, sheet, "EN skill effect", skill_effect_data,
                                   ['skillEffectId'], ['statusId', 'overrideStatusName', 'overrideStatusDescription'],
                                   ['overrideStatusNameTranslated', 'overrideStatusDescriptionTranslated'],
                                   args.dry_run)
-                                  
+
     sheet = sh.worksheet("EN status")
-    updated_st, new_st = update_sheet(gc, sheet, "EN status", status_data, 
+    updated_st, new_st = update_sheet(gc, sheet, "EN status", status_data,
                                   ['statusId'], ['statusName', 'description'],
                                   ['statusNameTranslated', 'descriptionTranslated'],
                                   args.dry_run)
-    
+
     # Report
     msg = io.StringIO()
     msg.write("## Translation Sheet Update Report\n")
@@ -213,7 +213,7 @@ def main():
 
     def joined_pks(ids: list[tuple[str, ...]]) -> str:
         return ", ".join("-".join(id) for id in ids)
-        
+
     if updated_s or new_s:
         msg.write(f"- **Skills**: {len(updated_s)} updated, {len(new_s)} new\n")
         msg.write("  - Updated IDs: ")
@@ -238,7 +238,7 @@ def main():
         msg.write("  - New IDs: ")
         msg.write(joined_pks(new_st))
         msg.write("\n")
-    
+
     if not (updated_s or new_s or updated_se or new_se or updated_st or new_st):
         msg.write("No changes detected.\n")
 
@@ -254,5 +254,5 @@ def main():
 
 if __name__ == "__main__":
     import masterdata
-    masterdata.main(["--force_download=1", "--skip_data"])
+    #masterdata.main(["--force_download=1", "--skip_data"])
     main()
