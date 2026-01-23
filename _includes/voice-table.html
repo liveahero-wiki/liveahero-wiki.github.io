@@ -24,14 +24,15 @@
     {% assign p = part %}
     {% assign key = "SERIF" | append: name | append: part %}
     {% assign jp_line = site.data.processed.jp_serif[key] %}
+    {% assign en_line = site.data.processed.en_serif[key] %}
     {% if name contains "PLAYER" %}
       {% if part != "TRAINED" %}{% continue %}{% endif %}
       {% assign p = key | replace: "SERIF_", "" %}
     {% endif %}
-    {% assign translated = include[p] %}
+    {% assign translated = include[p] | default: en_line %}
     {% if jp_line %}<tr><th data-part="{{ p | downcase }}">{{ p }}</th>
 <td markdown="1" class="translate" data-translate="{% if translated %}{{ jp_line | escape }}{% endif %}">
-{{ translated | default: jp_line }}
+{{ translated }}
 </td></tr>{% endif %}
   {% endfor %}
 

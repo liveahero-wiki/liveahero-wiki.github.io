@@ -27,7 +27,7 @@
 <details open markdown="1">
 <summary>Side Story (Translated)</summary>
 
-{{ include.BIO_S01 }}
+{{ include.BIO_S01 | default: site.data.processed.en_bio[bio_s01] }}
 
 </details>
 {% endif %}

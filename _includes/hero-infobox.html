@@ -25,7 +25,7 @@
 <details open markdown="1">
 <summary>Personal Data 1 (Translated)</summary>
 
-{{ include.BIO_H01 }}
+{{ include.BIO_H01 | default: site.data.processed.en_bio[bio_h01] }}
 
 </details>
 {% endif %}
@@ -40,7 +40,7 @@
 <details open markdown="1">
 <summary>Personal Data 2 (Translated)</summary>
 
-{{ include.BIO_H02 }}
+{{ include.BIO_H02 | default: site.data.processed.en_bio[bio_h02] }}
 
 </details>
 {% endif %}
@@ -58,14 +58,14 @@
 {% if spoiler_detail_h01 %}
 <details>
 <summary>Personal Data 1</summary>
-<p>{{ spoiler_detail_h01 }}</p>
+<p>{{ spoiler_detail_h01 | default: site.data.processed.en_bio[cardProfileOverride.detail_h01] }}</p>
 </details>
 {% endif %}
 
 {% if spoiler_detail_h02 %}
 <details>
 <summary>Personal Data 2</summary>
-<p>{{ spoiler_detail_h02 }}</p>
+<p>{{ spoiler_detail_h02 | default: site.data.processed.en_bio[cardProfileOverride.detail_h02] }}</p>
 </details>
 {% endif %}
 
