@@ -46,13 +46,14 @@ def get_column_index(headers: list[str], name: str) -> int | None:
     except ValueError:
         return None
 
-def update_sheet(gc: gspread.Client, sheet: gspread.Worksheet, sheet_name: str, data: list, pks: list, updatable_cols: list, dry_run: bool = False):
+def update_sheet(gc: gspread.Client, sheet: gspread.Worksheet, sheet_name: str, data: list, pks: list, updatable_cols: list, patch_if_empty_cols: list, dry_run: bool = False):
     """
     sheet: gspread worksheet object
     sheet_name: str name for logging
     data: list of dicts (from csv)
     pks: list of str, primary key column names (e.g. ['skillId'])
     updatable_cols: list of str, columns to update (e.g. ['skillName', 'description'])
+    patch_if_empty_cols: list of str, columns to patch if empty (e.g. ['description'])
     """
     print(f"Processing {sheet_name}...")
     
@@ -100,7 +101,17 @@ def update_sheet(gc: gspread.Client, sheet: gspread.Worksheet, sheet_name: str, 
                     if col_idx:
                         updates.append(gspread.Cell(row_idx, col_idx, new_val))
                         changed = True
-            
+
+            for col in patch_if_empty_cols:
+                new_val = row.get(col, "")
+                old_val = str(current_row.get(col, ""))
+                if old_val == "" and new_val != "":
+                    print(f"  [PATCH] {pk}: {col} '{new_val}'")
+                    col_idx = col_indices[col]
+                    if col_idx:
+                        updates.append(gspread.Cell(row_idx, col_idx, new_val))
+                        changed = True
+
             if changed:
                 updated_ids.append(pk)
         else:
@@ -178,15 +189,21 @@ def main():
     # Skill
     sheet = sh.worksheet("EN skill")
     updated_s, new_s = update_sheet(gc, sheet, "EN skill", skill_data, 
-                                ['skillId'], ['charaName', 'skillName', 'description'], args.dry_run)
+                                ['skillId'], ['charaName', 'skillName', 'description'],
+                                ['skillNameTranslated'],
+                                args.dry_run)
     
     sheet = sh.worksheet("EN skill effect")
     updated_se, new_se = update_sheet(gc, sheet, "EN skill effect", skill_effect_data, 
-                                  ['skillEffectId'], ['statusId', 'overrideStatusName', 'overrideStatusDescription'], args.dry_run)
+                                  ['skillEffectId'], ['statusId', 'overrideStatusName', 'overrideStatusDescription'],
+                                  ['overrideStatusNameTranslated', 'overrideStatusDescriptionTranslated'],
+                                  args.dry_run)
                                   
     sheet = sh.worksheet("EN status")
     updated_st, new_st = update_sheet(gc, sheet, "EN status", status_data, 
-                                  ['statusId'], ['statusName', 'description'], args.dry_run)
+                                  ['statusId'], ['statusName', 'description'],
+                                  ['statusNameTranslated', 'descriptionTranslated'],
+                                  args.dry_run)
     
     # Report
     msg = io.StringIO()
@@ -236,4 +253,6 @@ def main():
             print("DISCORD_WEBHOOK_URL not set, skipping webhook.")
 
 if __name__ == "__main__":
+    import masterdata
+    masterdata.main(["--force_download=1", "--skip_data"])
     main()
