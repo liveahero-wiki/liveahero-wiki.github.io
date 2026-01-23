@@ -52,7 +52,7 @@ html[data-theme="dark"] {
   --sidebar-header: #000;
   --sidebar: var(--color800);
 
-  --mask-filter: brightness(1);
+  --mask-filter: brightness(0) invert(1);
 
   --fire: #a50b00;
   --water: #0c4b9e;
@@ -446,7 +446,7 @@ figcaption {
 }
 .masked {
   background-color: var(--text);
-  color: var(--text);
+  color: var(--text) !important;
   transition: color 0.13s;
   filter: var(--mask-filter);
 }
