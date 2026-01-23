@@ -60,11 +60,11 @@ def downloadProperties(masterVersion, filename):
   with open(os.path.join("zzz", filename), "wb") as f:
     f.write(data.encode())
 
-if __name__ == '__main__':
+def main(argv):
   parser = argparse.ArgumentParser()
   parser.add_argument("-f", "--force_download", help="Force download (version)", type=int)
   parser.add_argument("--skip_data", help="Skip masterdata download", action="store_true")
-  args = parser.parse_args()
+  args = parser.parse_args(argv)
 
   if args.force_download:
     mV = args.force_download
@@ -135,3 +135,6 @@ if __name__ == '__main__':
 
   processPropertiesFile("Japanese.json", *[f"jp{s}" for s in tl_suffixes])
   processPropertiesFile("English.json", *[f"en{s}" for s in tl_suffixes])
+
+if __name__ == '__main__':
+  main(None)

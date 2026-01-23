@@ -68,11 +68,13 @@ def writeEnglishStatus():
 def main():
     SkillMaster = loadJson("_data/SkillMaster.json")
 
+    EnglishMaster = loadJson("zzz/English.json")
+
     charaMap = skillIdToCharaResourceNameMap()
 
     with open("skill-jp.tsv", "w", encoding="utf-8") as f:
         writer = csv.writer(f, delimiter='\t')
-        writer.writerow(["skillId", "charaName", "skillName", "description"])
+        writer.writerow(["skillId", "charaName", "skillName", "description", "skillNameTranslated", "descriptionTranslated"])
         for status in SkillMaster.values():
 
             si = int(status["skillId"])
@@ -83,12 +85,14 @@ def main():
                 charaName,
                 status["skillName"],
                 sanitizeSkillDescription(status["description"]),
+                EnglishMaster.get(f"SKILL_NAME_{si}", ""),
+                sanitizeSkillDescription(EnglishMaster.get(f"SKILL_DESCRIPTION_{si}", "")),
             ])
 
     SkillEffectMaster = loadJson("_data/SkillEffectMaster.json")
     with open("skill-effect-jp.tsv", "w", encoding="utf-8") as f:
         writer = csv.writer(f, delimiter='\t')
-        writer.writerow(["skillEffectId", "statusId", "overrideStatusName", "overrideStatusDescription"])
+        writer.writerow(["skillEffectId", "statusId", "overrideStatusName", "overrideStatusDescription", "overrideStatusNameTranslated", "overrideStatusDescriptionTranslated"])
         for value in SkillEffectMaster.values():
             skillEffect = value["skillEffectJson"]
             if skillEffect["statusId"] == 0 or \
@@ -96,22 +100,30 @@ def main():
                 skillEffect.get("isOverrideStatusDescription", False)):
                 continue
 
+            sei = int(value["skillEffectId"])
+
             writer.writerow([
                 value["skillEffectId"],
                 skillEffect["statusId"],
                 skillEffect["overrideStatusName"],
                 sanitizeSkillDescription(skillEffect["overrideStatusDescription"]),
+                EnglishMaster.get(f"OVERRIDE_STATUS_NAME_{sei}", ""),
+                sanitizeSkillDescription(EnglishMaster.get(f"OVERRIDE_STATUS_DESCRIPTION_{sei}", "")),
             ])
 
     StatusMaster = loadJson("_data/StatusMaster.json")
     with open("status-jp.tsv", "w", encoding="utf-8") as f:
         writer = csv.writer(f, delimiter='\t')
-        writer.writerow(["statusId", "statusName", "description"])
+        writer.writerow(["statusId", "statusName", "description", "statusNameTranslated", "descriptionTranslated"])
         for status in StatusMaster.values():
+            si = int(status["statusId"])
+
             writer.writerow([
                 status["statusId"],
                 status["statusName"],
                 sanitizeSkillDescription(status["description"]),
+                EnglishMaster.get(f"STATUS_NAME_{si}", ""),
+                sanitizeSkillDescription(EnglishMaster.get(f"STATUS_DESCRIPTION_{si}", "")),
             ])
 
 if __name__ == '__main__':
