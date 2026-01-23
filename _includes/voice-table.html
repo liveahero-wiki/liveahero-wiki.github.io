@@ -10,9 +10,10 @@
   {% assign name = n | upcase | prepend: "_" | append: "_" %}
 
   {% for part in greeting %}
-    {% assign translated = include[part] %}
     {% capture key %}voice_{{ n }}_{{ part }}{% endcapture %}
     {% assign jp_line = site.data.processed.jp_greeting[key] %}
+    {% assign en_line = site.data.processed.en_greeting[key] %}
+    {% assign translated = include[part] | default: en_line %}
 
     {% if translated or jp_line %}<tr><th data-part="{{ part }}">{{ part | replace: "h_", "Hero " | replace: "s_", "Sidekick " }}</th>
 <td markdown="1" class="translate" data-translate="{% if translated %}{{ jp_line | escape }}{% endif %}">
