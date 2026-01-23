@@ -1,0 +1,10 @@
+<details><summary>{{ sales_report }}</summary>
+<p>{{ site.data.processed.jp_sales_report[sales_report] }}</p>
+</details>
+    
+{% assign translated_sales_report = site.data.wiki.SalesReport[sales_report] | default: site.data.processed.en_sales_report[sales_report] %}
+{% if translated_sales_report %}
+<details><summary>{{ sales_report }} (Translated)</summary>
+<p>{{ translated_sales_report }}</p>
+</details>
+{% endif %}

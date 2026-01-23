@@ -83,6 +83,12 @@ the name of the hero(es) sent to the sale.
 
 For special sales report released in events, please see event info pages listed in [Events](/events/).
 
+{% for i in (1..15) %}
+{% assign sales_report = "SALES_REPORT_" | append: i %}
+{% include sales-report.html sales_report=sales_report %}
+{% endfor %}
+
+<!--
 <details><summary>Sales Report 1</summary>
 <p> <code>character0</code> は待ち合わせ場所に到着した。<br>すると現れた仲介業者の男が頭を下げてきた。<br>「どうしても欠員が出ちゃって…お願いします！」<br>言われるがままに、 <code>character0</code> は更衣室に入った。<br>そこにあったのは、ファンシーな着ぐるみだった。<br> <code>character0</code> はそれを着用し、台本通りに役をこなした。<br>ベタなショーの内容に、子供 たちは冷め気味……。<br><br>しかし、途中現れたチンピラを取り押さえたことで、<br> <code>character0</code> は一躍子供たちの人 気者に。<br>沢山の子供達と共に写真を撮った。<br><br>ハプニングだらけの営業活動だったが、<br>満更でもない気持ちで帰還したのだった……。
 </p>
@@ -234,3 +240,4 @@ For special sales report released in events, please see event info pages listed 
 </p>
 </details>
 
+-->

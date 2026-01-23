@@ -6,3 +6,10 @@
 <summary><span class="item"><img src="/cdn/Sprite/ui_icon_note.png"></span> {{ title }}</summary>
 <p>{{ page }}</p>
 </details>
+
+{%- assign en_title = site.data.processed.en_library[title_key] | default: include.key | replace: "<@playerName>", "<code>Player</code>" %}
+{%- assign en_page = site.data.processed.en_library[page_key] | replace: "<@playerName>", "<code>Player</code>" %}
+<details>
+<summary><span class="item"><img src="/cdn/Sprite/ui_icon_note.png"></span> {{ en_title }}</summary>
+<p>{{ en_page }}</p>
+</details>
