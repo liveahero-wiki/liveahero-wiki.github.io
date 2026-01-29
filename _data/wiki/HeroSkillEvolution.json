@@ -548,6 +548,143 @@
       }
     ]
   },
+  "10072": {
+    "name": "Barrel",
+    "evolutions": [
+      {
+        "skillUpgrade": 1,
+        "skills": [
+          {
+            "skillId": 1007201,
+            "tree": [
+              [
+                {
+                  "text": "Gain +1 gauge upon using S1",
+                  "tooltip": ""
+                }
+              ],
+              [
+                {
+                  "text": "When S1 is activated and Combo >= 5, deal 30% damage to enemies adjacent to the target.",
+                  "tooltip": "Damage to adjacent target = 30%"
+                },
+                {
+                  "text": "While this character is alive, when an ally activates S1, there is a 10% chance to increase Combo by 1.",
+                  "tooltip": "Chance to increase Combo = 10%"
+                }
+              ],
+              [
+                {
+                  "text": "S1 damage to adjacent target +10%",
+                  "tooltip": "Damage to adjacent target = 40%"
+                },
+                {
+                  "text": "Combo increase chance +15%",
+                  "tooltip": "Chance to increase Combo = 25%"
+                }
+              ],
+              [
+                {
+                  "text": "S1 damage to adjacent target +10%",
+                  "tooltip": "Damage to adjacent target = 50%"
+                },
+                {
+                  "text": "Combo increase chance +20%",
+                  "tooltip": "Chance to increase Combo = 45%"
+                }
+              ],
+              [
+                {
+                   "text": "S1 damage to adjacent target +10%",
+                  "tooltip": "Damage to adjacent target = 60%"
+                },
+                {
+                  "text": "Combo increase chance +25%",
+                  "tooltip": "Chance to increase Combo = 70%"
+                }
+              ],
+              [
+                {
+                  "text": "Combo increase chance +30%",
+                  "tooltip": "[If Combo >=5] deal 60% damage to adjacent target, [when an ally use S1] Increase Combo by 1"
+                }
+              ]
+            ]
+          },
+          {
+            "skillId": 1007204,
+            "tree": [
+              [
+                {
+                  "text": "Increase damage by 5%",
+                  "tooltip": "Damage = 95%"
+                }
+              ],
+              [
+                {
+                  "text": "Increase damage by 5%",
+                  "tooltip": "Damage = 100%"
+                }
+              ],
+              [
+                {
+                  "text": "Increase damage by 10%",
+                  "tooltip": "Damage = 110%"
+                }
+              ],
+              [
+                {
+                  "text": "Increase damage by 10%",
+                  "tooltip": "Damage = 120%"
+                }
+              ],
+              [
+                {
+                  "text": "[Before an enemy’s action] if Combo >= 10, deal 50% damage to all enemies and apply +10% damage taken for 1 hit",
+                  "tooltip": "120% damage"
+                }
+              ]
+            ]
+          },
+          {
+            "skillId": 1007207,
+            "tree": [
+              [
+                {
+                  "text": "Decrease View cost by 200",
+                  "tooltip": "View cost -200"
+                }
+              ],
+              [
+                {
+                  "text": "Decrease View cost by 300",
+                  "tooltip": "View cost -500"
+                }
+              ],
+              [
+                {
+                  "text": "Decrease View cost by 400",
+                  "tooltip": "View cost -900"
+                }
+              ],
+              [
+                {
+                  "text": "Decrease View cost by 500",
+                  "tooltip": "View cost -1400"
+                }
+              ],
+              [
+                {
+                  "text": "Decrease View cost by 600",
+                  "tooltip": "View cost -2000"
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "10092": {
     "name": "Victom",
     "evolutions": [
@@ -1827,7 +1964,7 @@
               [
                 {
                   "text": "If Combo >= 21, S1 passive add further ATK +8%",
-                  "tooltip": "Combo >=21 : Atk +40%"
+                  "tooltip": "100% {{ 19 | status_description }}, Combo >=21 : Atk +40%"
                 }
               ]
             ]
@@ -1885,25 +2022,25 @@
               [
                 {
                   "text": "Increase S3 base damage by 2%",
-                  "tooltip": "Total damage = 82%"
+                  "tooltip": "Total damage = 82% (164% at 10 Combo)"
                 }
               ],
               [
                 {
                   "text": "Increase S3 base damage by 2%",
-                  "tooltip": "Total damage = 84%"
+                  "tooltip": "Total damage = 84% (168% at 10 Combo)"
                 }
               ],
               [
                 {
                   "text": "Increase S3 base damage by 3%",
-                  "tooltip": "Total damage = 87%"
+                  "tooltip": "Total damage = 87% (174% at 10 Combo)"
                 }
               ],
               [
                 {
                   "text": "Increase S3 base damage by 3%",
-                  "tooltip": "Total damage = 90%"
+                  "tooltip": "Total damage = 90% (180% at 10 Combo)"
                 }
               ]
             ]
@@ -2597,5 +2734,6 @@
     ]
   }
 }
+
 
 
