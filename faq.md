@@ -39,20 +39,20 @@ the wiki's navigation sidebar.
 For story translation, Roureem has been doing fan translation summaries at [https://housamosummaries.blogspot.com/](https://housamosummaries.blogspot.com/).
 Please wait patiently for new translation as he has been translating this game and Tokyo Afterschool Summoner together.
 
-## Where is Wood Wolfman (and other obtainable mob)'s information on Wiki？
+## Where is Wood Wolfman (and other obtainable mob)'s information on Wiki?
 
 Obtainable mobs are listed in [Heroes/Sidekicks](/charas/) like other characters.
 
 For non-obtainable version of mobs, see [here](/mobs/).
 
-## Where can I find voice audio files on Wiki？
+## Where can I find voice audio files on Wiki?
 
 Due to LifeWonders' copyright guidelines, "it is prohibited to rip data such as music or character voice lines from the game through methods such as datamining and recording.",
 so we can't publish them here. ~~Plus this Wiki only has 1GB space.~~
 
 The voice line translations are available in their respective character pages.
 
-## Is this Wiki affiliated with LifeWonders？
+## Is this Wiki affiliated with LifeWonders?
 
 No, but we know that LifeWonders employee(s) are aware of our work.
 
