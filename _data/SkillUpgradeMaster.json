@@ -919,6 +919,236 @@
     ],
     "nextEntryIds": null
   },
+  "100720501": {
+    "skillEntryId": 100720501,
+    "skillId": 1007205,
+    "iconAddress": "skillTree_special",
+    "description": "【冷やしてやるッス！】の発動時、自身のゲージ+1",
+    "conditionIds": null,
+    "nextEntryIds": [
+      100720502,
+      100720503
+    ]
+  },
+  "100720502": {
+    "skillEntryId": 100720502,
+    "skillId": 1007205,
+    "iconAddress": "skillTree_damageAll",
+    "description": "【冷やしてやるッス！】の発動時にコンボ数が5以上の時、対象に隣接する敵に30%ダメージ",
+    "conditionIds": [
+      100720501
+    ],
+    "nextEntryIds": [
+      100720504
+    ]
+  },
+  "100720503": {
+    "skillEntryId": 100720503,
+    "skillId": 1007205,
+    "iconAddress": "skillTree_combo",
+    "description": "【冷やしてやるッス！】のパッシブ効果に「自身が生存している間、味方がスキル1を発動した時、10%の確率でコンボを+1する」効果を追加",
+    "conditionIds": [
+      100720501
+    ],
+    "nextEntryIds": [
+      100720505
+    ]
+  },
+  "100720504": {
+    "skillEntryId": 100720504,
+    "skillId": 1007205,
+    "iconAddress": "skillTree_damageAll",
+    "description": "【冷やしてやるッス！】の隣接する敵へのダメージ+10%",
+    "conditionIds": [
+      100720502
+    ],
+    "nextEntryIds": [
+      100720506
+    ]
+  },
+  "100720505": {
+    "skillEntryId": 100720505,
+    "skillId": 1007205,
+    "iconAddress": "skillTree_combo",
+    "description": "【冷やしてやるッス！】のパッシブ効果によるコンボ増加発動率+15%",
+    "conditionIds": [
+      100720503
+    ],
+    "nextEntryIds": [
+      100720507
+    ]
+  },
+  "100720506": {
+    "skillEntryId": 100720506,
+    "skillId": 1007205,
+    "iconAddress": "skillTree_damageAll",
+    "description": "【冷やしてやるッス！】の隣接する敵へのダメージ+10%",
+    "conditionIds": [
+      100720504
+    ],
+    "nextEntryIds": [
+      100720508
+    ]
+  },
+  "100720507": {
+    "skillEntryId": 100720507,
+    "skillId": 1007205,
+    "iconAddress": "skillTree_combo",
+    "description": "【冷やしてやるッス！】のパッシブ効果によるコンボ増加発動率+20%",
+    "conditionIds": [
+      100720505
+    ],
+    "nextEntryIds": [
+      100720509
+    ]
+  },
+  "100720508": {
+    "skillEntryId": 100720508,
+    "skillId": 1007205,
+    "iconAddress": "skillTree_damageAll",
+    "description": "【冷やしてやるッス！】の隣接する敵へのダメージ+10%",
+    "conditionIds": [
+      100720506
+    ],
+    "nextEntryIds": [
+      100720510
+    ]
+  },
+  "100720509": {
+    "skillEntryId": 100720509,
+    "skillId": 1007205,
+    "iconAddress": "skillTree_combo",
+    "description": "【冷やしてやるッス！】のパッシブ効果によるコンボ増加発動率+25%",
+    "conditionIds": [
+      100720507
+    ],
+    "nextEntryIds": [
+      100720510
+    ]
+  },
+  "100720510": {
+    "skillEntryId": 100720510,
+    "skillId": 1007205,
+    "iconAddress": "skillTree_combo",
+    "description": "【冷やしてやるッス！】のパッシブ効果によるコンボ増加発動率+30%",
+    "conditionIds": [
+      100720508,
+      100720509
+    ],
+    "nextEntryIds": null
+  },
+  "100720601": {
+    "skillEntryId": 100720601,
+    "skillId": 1007206,
+    "iconAddress": "skillTree_damage",
+    "description": "【ずぶ濡れにするッス！+】のダメージ+5%",
+    "conditionIds": null,
+    "nextEntryIds": [
+      100720602
+    ]
+  },
+  "100720602": {
+    "skillEntryId": 100720602,
+    "skillId": 1007206,
+    "iconAddress": "skillTree_damage",
+    "description": "【ずぶ濡れにするッス！+】のダメージ+5%",
+    "conditionIds": [
+      100720601
+    ],
+    "nextEntryIds": [
+      100720603
+    ]
+  },
+  "100720603": {
+    "skillEntryId": 100720603,
+    "skillId": 1007206,
+    "iconAddress": "skillTree_damage",
+    "description": "【ずぶ濡れにするッス！+】のダメージ+10%",
+    "conditionIds": [
+      100720602
+    ],
+    "nextEntryIds": [
+      100720604
+    ]
+  },
+  "100720604": {
+    "skillEntryId": 100720604,
+    "skillId": 1007206,
+    "iconAddress": "skillTree_damage",
+    "description": "【ずぶ濡れにするッス！+】のダメージ+10%",
+    "conditionIds": [
+      100720603
+    ],
+    "nextEntryIds": [
+      100720605
+    ]
+  },
+  "100720605": {
+    "skillEntryId": 100720605,
+    "skillId": 1007206,
+    "iconAddress": "skillTree_damageAll",
+    "description": "【ずぶ濡れにするッス！+】のパッシブ効果に「敵の行動開始前にコンボ数が10以上の時、敵全体に50%ダメージ。1回分の被ダメージ+10%を付与」を追加",
+    "conditionIds": [
+      100720604
+    ],
+    "nextEntryIds": null
+  },
+  "100720701": {
+    "skillEntryId": 100720701,
+    "skillId": 1007207,
+    "iconAddress": "skillTree_useless",
+    "description": "【BANG&BANG&BANG!!+】のView消費量-200",
+    "conditionIds": null,
+    "nextEntryIds": [
+      100720702
+    ]
+  },
+  "100720702": {
+    "skillEntryId": 100720702,
+    "skillId": 1007207,
+    "iconAddress": "skillTree_useless",
+    "description": "【BANG&BANG&BANG!!+】のView消費量-300",
+    "conditionIds": [
+      100720701
+    ],
+    "nextEntryIds": [
+      100720703
+    ]
+  },
+  "100720703": {
+    "skillEntryId": 100720703,
+    "skillId": 1007207,
+    "iconAddress": "skillTree_useless",
+    "description": "【BANG&BANG&BANG!!+】のView消費量-400",
+    "conditionIds": [
+      100720702
+    ],
+    "nextEntryIds": [
+      100720704
+    ]
+  },
+  "100720704": {
+    "skillEntryId": 100720704,
+    "skillId": 1007207,
+    "iconAddress": "skillTree_useless",
+    "description": "【BANG&BANG&BANG!!+】のView消費量-500",
+    "conditionIds": [
+      100720703
+    ],
+    "nextEntryIds": [
+      100720705
+    ]
+  },
+  "100720705": {
+    "skillEntryId": 100720705,
+    "skillId": 1007207,
+    "iconAddress": "skillTree_useless",
+    "description": "【BANG&BANG&BANG!!+】のView消費量-600",
+    "conditionIds": [
+      100720704
+    ],
+    "nextEntryIds": null
+  },
   "100920501": {
     "skillEntryId": 100920501,
     "skillId": 1009205,
@@ -2990,6 +3220,238 @@
     "description": "【ジェミニィズ・ディサイド】の攻撃回数増加の条件がDEFアップから鋼拳の数に変化する。解除対象がDEFアップから鋼拳に変化する。",
     "conditionIds": [
       102520704
+    ],
+    "nextEntryIds": null
+  },
+  "102620501": {
+    "skillEntryId": 102620501,
+    "skillId": 1026205,
+    "iconAddress": "skillTree_buffAll",
+    "description": "【レピダ・ステレオシス】のパッシブ効果に「味方キャラクターの行動終了時、コンボ数が1以上の時ATK+8%」を追加",
+    "conditionIds": null,
+    "nextEntryIds": [
+      102620502,
+      102620503
+    ]
+  },
+  "102620502": {
+    "skillEntryId": 102620502,
+    "skillId": 1026205,
+    "iconAddress": "skillTree_buffAll",
+    "description": "【レピダ・ステレオシス】のパッシブ効果はコンボ数が6以上の時ATKを更に+8%",
+    "conditionIds": [
+      102620501
+    ],
+    "nextEntryIds": [
+      102620504
+    ]
+  },
+  "102620503": {
+    "skillEntryId": 102620503,
+    "skillId": 1026205,
+    "iconAddress": "skillTree_flame",
+    "description": "【レピダ・ステレオシス】の火傷発動率+10%",
+    "conditionIds": [
+      102620501
+    ],
+    "nextEntryIds": [
+      102620505
+    ]
+  },
+  "102620504": {
+    "skillEntryId": 102620504,
+    "skillId": 1026205,
+    "iconAddress": "skillTree_buffAll",
+    "description": "【レピダ・ステレオシス】のパッシブ効果はコンボ数が11以上の時ATKを更に+8%",
+    "conditionIds": [
+      102620502
+    ],
+    "nextEntryIds": [
+      102620506
+    ]
+  },
+  "102620505": {
+    "skillEntryId": 102620505,
+    "skillId": 1026205,
+    "iconAddress": "skillTree_flame",
+    "description": "【レピダ・ステレオシス】の火傷発動率+10%",
+    "conditionIds": [
+      102620503
+    ],
+    "nextEntryIds": [
+      102620507
+    ]
+  },
+  "102620506": {
+    "skillEntryId": 102620506,
+    "skillId": 1026205,
+    "iconAddress": "skillTree_buffAll",
+    "description": "【レピダ・ステレオシス】のパッシブ効果はコンボ数が16以上の時ATKを更に+8%",
+    "conditionIds": [
+      102620504
+    ],
+    "nextEntryIds": [
+      102620508
+    ]
+  },
+  "102620507": {
+    "skillEntryId": 102620507,
+    "skillId": 1026205,
+    "iconAddress": "skillTree_flame",
+    "description": "【レピダ・ステレオシス】の火傷発動率+20%",
+    "conditionIds": [
+      102620505
+    ],
+    "nextEntryIds": [
+      102620508
+    ]
+  },
+  "102620508": {
+    "skillEntryId": 102620508,
+    "skillId": 1026205,
+    "iconAddress": "skillTree_buffAll",
+    "description": "【レピダ・ステレオシス】のパッシブ効果はコンボ数が21以上の時ATKを更に+8%",
+    "conditionIds": [
+      102620506,
+      102620507
+    ],
+    "nextEntryIds": null
+  },
+  "102620601": {
+    "skillEntryId": 102620601,
+    "skillId": 1026206,
+    "iconAddress": "skillTree_useless",
+    "description": "【スフェラ・カタディキ+】の弾丸の獲得に必要なView消費量を1000減少",
+    "conditionIds": null,
+    "nextEntryIds": [
+      102620602,
+      102620603
+    ]
+  },
+  "102620602": {
+    "skillEntryId": 102620602,
+    "skillId": 1026206,
+    "iconAddress": "skillTree_useless",
+    "description": "【スフェラ・カタディキ+】の弾丸の獲得に必要なView消費量を2000減少",
+    "conditionIds": [
+      102620601
+    ],
+    "nextEntryIds": [
+      102620604
+    ]
+  },
+  "102620603": {
+    "skillEntryId": 102620603,
+    "skillId": 1026206,
+    "iconAddress": "skillTree_damage",
+    "description": "【スフェラ・カタディキ+】の3回目、4回目のダメージの発動確率が上昇",
+    "conditionIds": [
+      102620601
+    ],
+    "nextEntryIds": [
+      102620605
+    ]
+  },
+  "102620604": {
+    "skillEntryId": 102620604,
+    "skillId": 1026206,
+    "iconAddress": "skillTree_useless",
+    "description": "【スフェラ・カタディキ+】の弾丸の獲得に必要なView消費量を3000減少",
+    "conditionIds": [
+      102620602
+    ],
+    "nextEntryIds": [
+      102620606
+    ]
+  },
+  "102620605": {
+    "skillEntryId": 102620605,
+    "skillId": 1026206,
+    "iconAddress": "skillTree_damage",
+    "description": "【スフェラ・カタディキ+】の3回目のダメージが確定で発動する",
+    "conditionIds": [
+      102620603
+    ],
+    "nextEntryIds": [
+      102620607
+    ]
+  },
+  "102620606": {
+    "skillEntryId": 102620606,
+    "skillId": 1026206,
+    "iconAddress": "skillTree_useless",
+    "description": "【スフェラ・カタディキ+】の弾丸の獲得に必要なView消費量を4000減少",
+    "conditionIds": [
+      102620604
+    ],
+    "nextEntryIds": [
+      102620608
+    ]
+  },
+  "102620607": {
+    "skillEntryId": 102620607,
+    "skillId": 1026206,
+    "iconAddress": "skillTree_damage",
+    "description": "【スフェラ・カタディキ+】の4回目のダメージの発動確率が上昇",
+    "conditionIds": [
+      102620605
+    ],
+    "nextEntryIds": [
+      102620608
+    ]
+  },
+  "102620608": {
+    "skillEntryId": 102620608,
+    "skillId": 1026206,
+    "iconAddress": "skillTree_damage",
+    "description": "【スフェラ・カタディキ+】のダメージ発生回数の最大値が5になる",
+    "conditionIds": [
+      102620606,
+      102620607
+    ],
+    "nextEntryIds": null
+  },
+  "102620701": {
+    "skillEntryId": 102620701,
+    "skillId": 1026207,
+    "iconAddress": "skillTree_damageAll",
+    "description": "【マヴロ・アスプロ+】のダメージ+2%",
+    "conditionIds": null,
+    "nextEntryIds": [
+      102620702
+    ]
+  },
+  "102620702": {
+    "skillEntryId": 102620702,
+    "skillId": 1026207,
+    "iconAddress": "skillTree_damageAll",
+    "description": "【マヴロ・アスプロ+】のダメージ+2%",
+    "conditionIds": [
+      102620701
+    ],
+    "nextEntryIds": [
+      102620703
+    ]
+  },
+  "102620703": {
+    "skillEntryId": 102620703,
+    "skillId": 1026207,
+    "iconAddress": "skillTree_damageAll",
+    "description": "【マヴロ・アスプロ+】のダメージ+3%",
+    "conditionIds": [
+      102620702
+    ],
+    "nextEntryIds": [
+      102620704
+    ]
+  },
+  "102620704": {
+    "skillEntryId": 102620704,
+    "skillId": 1026207,
+    "iconAddress": "skillTree_damageAll",
+    "description": "【マヴロ・アスプロ+】のダメージ+3%",
+    "conditionIds": [
+      102620703
     ],
     "nextEntryIds": null
   },

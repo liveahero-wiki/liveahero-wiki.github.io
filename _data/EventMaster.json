@@ -24500,12 +24500,12 @@
   "151": {
     "eventId": 151,
     "chapterId": 1225,
-    "lookBackChapterId": 0,
-    "baseResourceName": "Whiteout2512_epilogue",
+    "lookBackChapterId": 546,
+    "baseResourceName": "Whiteout2512",
     "questSelectPrefabAddress": "",
-    "startAt": "2025-12-16 14:00:00",
+    "startAt": null,
     "endAt": "2026-01-06 14:00:00",
-    "canRemember": 0,
+    "canRemember": 1,
     "eventPortalJson": {
       "bg": "bg_gavlebockenbase_day_base1",
       "bgm": "bgm_whiteout_adv",
@@ -24761,7 +24761,66 @@
       "missionCategoryButtonLabels": null
     },
     "roguePortalJson": null,
-    "pastPortalJson": null,
+    "pastPortalJson": {
+      "bg": "bg_gavlebockenbase_day_base1",
+      "bgm": "bgm_whiteout_adv",
+      "logo": "Whiteout2512_title",
+      "terms": [],
+      "storeId": 0,
+      "isArchived": false,
+      "questInfos": [
+        {
+          "type": 5,
+          "chapterId": 546,
+          "buttonType": 0
+        }
+      ],
+      "tutorialKey": "Whiteout2512",
+      "eventItemIds": [],
+      "missionViews": [],
+      "portalWindow": "EventPortalWindowWhiteout2512_past",
+      "characterViews": [
+        {
+          "skinId": 0,
+          "stockId": 12112,
+          "cardType": 1,
+          "serifKinds": [
+            27,
+            28
+          ],
+          "visualType": 1,
+          "resourceName": "sterioWhiteout2512",
+          "characterName": "ステリオ"
+        },
+        {
+          "skinId": 0,
+          "stockId": 13011,
+          "cardType": 2,
+          "serifKinds": [
+            27,
+            28
+          ],
+          "visualType": 1,
+          "resourceName": "denebora",
+          "characterName": "デネボラ"
+        },
+        {
+          "skinId": 0,
+          "stockId": 13021,
+          "cardType": 2,
+          "serifKinds": [
+            27,
+            28
+          ],
+          "visualType": 1,
+          "resourceName": "rastaban",
+          "characterName": "ラスタバン"
+        }
+      ],
+      "missionGroupId": 0,
+      "missionGroupIds": [],
+      "missionCategoryButtonLabels": null
+    },
     "summary": {
       "description": "UI_EVENT_SUMMARY_2512WHITEOUT",
       "mainChapterId": 108,
@@ -24917,12 +24976,12 @@
   "152": {
     "eventId": 152,
     "chapterId": 1229,
-    "lookBackChapterId": 0,
-    "baseResourceName": "NewYear2601_epilogue",
+    "lookBackChapterId": 547,
+    "baseResourceName": "NewYear2601",
     "questSelectPrefabAddress": "",
-    "startAt": "2025-12-31 16:00:00",
+    "startAt": null,
     "endAt": "2026-01-22 14:00:00",
-    "canRemember": 0,
+    "canRemember": 1,
     "eventPortalJson": {
       "bg": "ui_bg_sprite_event_NewYear2601",
       "bgm": "bgm_newyear2026_adv",
@@ -25220,7 +25279,7 @@
   "156": {
     "eventId": 156,
     "chapterId": 1234,
-    "lookBackChapterId": 537,
+    "lookBackChapterId": 0,
     "baseResourceName": "LightYearsRevival2601",
     "questSelectPrefabAddress": "",
     "startAt": "2026-01-22 14:00:00",
@@ -25236,7 +25295,8 @@
             "UI_MAIN_QUEST",
             "UI_EPILOGUE_QUEST",
             "UI_MISSION",
-            "UI_EXCHANGE"
+            "UI_EXCHANGE",
+            "UI_CHALLENGE_QUEST"
           ],
           "endAt": "2026-02-12 14:00:00"
         },
@@ -25265,6 +25325,11 @@
           "type": 7,
           "chapterId": 1236,
           "buttonType": 0
+        },
+        {
+          "type": 6,
+          "chapterId": 1237,
+          "buttonType": 1
         }
       ],
       "tutorialKey": "LightYearsRevival2601",
