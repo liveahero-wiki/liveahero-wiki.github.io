@@ -18,9 +18,13 @@ banner: true
 {% for human in groups %}
 
 {% if human.en %}
-<h3 id="{{ human.en | slugify }}">{{ human.en }} ({{ human.name }})</h3>
+<h3 id="{{ human.en | slugify }}">
+<a href="#{{ human.en | slugify }}"></a>
+{{ human.en }} ({{ human.name }})</h3>
 {% else %}
-<h3 id="{{ human.name | slugify }}">{{ human.name }}</h3>
+<h3 id="{{ human.name | slugify }}">
+<a href="#{{ human.name | slugify }}"></a>
+{{ human.name }}</h3>
 {% endif %}
 
 <ul class="card-list">

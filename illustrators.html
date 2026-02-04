@@ -18,9 +18,21 @@ banner: true
 {% for human in groups %}
 
 {% if human.en %}
-<h3 id="{{ human.en | slugify }}">{{ human.en }} ({{ human.name }})</h3>
+<h3 id="{{ human.en | slugify }}">
+<a href="#{{ human.en | slugify }}"></a>
+{{ human.en }} ({{ human.name }})</h3>
 {% else %}
-<h3 id="{{ human.name | slugify }}">{{ human.name }}</h3>
+<h3 id="{{ human.name | slugify }}">
+<a href="#{{ human.name | slugify }}"></a>
+{{ human.name }}</h3>
+{% endif %}
+
+{% assign illustrator = site.data.wiki.Illustrator[human.name] %}
+{% if illustrator.twitter or illustrator.pixiv %}
+<ul>
+{% if illustrator.twitter %}<li>X/Twitter: <a href="https://x.com/{{ illustrator.twitter }}">@{{ illustrator.twitter }}</a></li>{% endif %}
+{% if illustrator.pixiv %}<li>Pixiv: <a href="https://pixiv.com/en/users/{{ illustrator.pixiv }}">{{ illustrator.pixiv }}</a></li>{% endif %}
+</ul>
 {% endif %}
 
 <ul class="card-list">
