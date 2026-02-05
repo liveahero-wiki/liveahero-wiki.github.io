@@ -29,6 +29,14 @@ banner: true
 {{ human.name }}</h3>
 {% endif %}
 
+{% assign voice_actor = site.data.wiki.VoiceActor[human.name] %}
+{% if voice_actor.twitter or voice_actor.talent %}
+<ul>
+{% if voice_actor.twitter %}<li>X/Twitter: <a href="https://x.com/{{ voice_actor.twitter }}">@{{ voice_actor.twitter }}</a></li>{% endif %}
+{% if voice_actor.talent %}<li>Talent Profile: <a href="{{ voice_actor.talent }}">[Link]</a></li>{% endif %}
+</ul>
+{% endif %}
+
 <ul class="card-list">
 {% for item in human.items %}
 {% if item.stockOrder %}
