@@ -3,6 +3,8 @@ title: Santetsu
 characterId: 112
 type: humanoid
 gender: male
+h1:
+  title: '"Wondrous Knight" Santetsu'
 occupation: Librarian
 profile:
   age: 28
@@ -81,6 +83,7 @@ heroes:
   - '8112103'
   - '8112104'
   extra_sprites: fg_santetsu_h01_skin2,fg_santetsu_h01_skin3
+- stockId: 11122
 sidekicks:
 - stockId: 11121
   BIO_S01: |-
@@ -112,6 +115,9 @@ RELATION = "Tenma-sensei is a very forceful person, but he also has lots of good
 TOUCH = "W-what's with you suddenly?<br>You called me but I'm not responding? My bad, I was engrossed in my book…<br>Wai! Stop rubbing! Please stop rubbing!"
 TRAIN = "I don't want to do anything tiring though."
 TRAINED = "G-got it! I will do it!"
+%}
+
+{% include voice-table.html resourceName="santetsuWonderLand2602"
 %}
 
 ## Notes

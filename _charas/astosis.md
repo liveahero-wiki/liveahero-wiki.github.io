@@ -3,6 +3,8 @@ title: Astosis
 characterId: 189
 type: anthro
 gender: male
+h2:
+  title: '"Guilding Oscillation" Astosis'
 occupation: Lawyer
 profile:
   age: 36
@@ -59,6 +61,7 @@ heroes:
     However, his harsh but fulfilling days came to an abrupt end with his father's suicide.
     Left alone, Astosis still refuses to let go of his badge, the sign of a lawyer. With a firm conviction in his heart, he enters the courtroom.
   extra_sprites: fg_astosisBoss_h02,fg_astosisBoss_h02_skin1
+- stockId: 11892
 sidekicks:
 - stockId: 11891
   BIO_S01: |-
@@ -99,6 +102,9 @@ EVENTA = "The Poderna is a historically and culturally significant garment.<br>I
 EVENTB = "Your reputation precedes you.<br>I've heard you're a very good operator.<br>The police seem to trust in your abilities as well.<br>I have high expectations."
 EVENTC = "I'm sorry, but I need to ask you to take on some extra work.<br>I need you to collect the corsages we distributed to the guests.<br>Of course, I have compensation ready.<br>Will you do it for me?"
 EVENTD = "You've lived up to your reputation and did an excellent job.<br>Now, take your reward. I'm personally pleased with your performance."
+%}
+
+{% include voice-table.html resourceName="astosisWonderLand2602"
 %}
 
 ## Notes
