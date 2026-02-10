@@ -59792,7 +59792,7 @@
       "overrideStatusName": "君がため醸みし待酒",
       "notDisplayTeamEdit": true,
       "isOverrideStatusName": true,
-      "overrideStatusDescription": "【自身に使用した場合】自身に2ターンの間泥酔を付与。<br>最大HPの30%の貫通ダメージ。<br>【自身以外に使用した場合】自身と対象に2ターンの間宴席を付与。<br>最大HPの15%の貫通ダメージ。<br>自身の行動時にスキル発動後、続けて行動をする。このスキルではコンボ数、Viewを獲得できない。<br>味方に宴席、もしくは泥酔が付与されている間、このスキルは「今盛りなり」になる。",
+      "overrideStatusDescription": "【自身に使用した場合】自身に2ターンの間泥酔を付与。<br>最大HPの30%の貫通ダメージ。<br>【自身以外に使用した場合】自身と対象に2ターンの間宴席を付与。<br>最大HPの15%の貫通ダメージ。<br>自身の行動時にこのスキルを発動した場合、連続行動をする。<br>味方に宴席、もしくは泥酔が付与されている間、このスキルは「今盛りなり」になる。",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
     }
@@ -69844,11 +69844,15 @@
       "parameter": false,
       "description": "ツネアキスキル1説明用1",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -69856,6 +69860,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -69874,28 +69879,33 @@
         }
       ],
       "filename": "",
-      "statusId": 1140206,
+      "statusId": 305,
       "canDispel": false,
       "filterIds": [],
       "parameter": false,
       "description": "ツネアキスキル1説明用2",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
       ],
       "canDuplicateForce": false,
       "isCountDownEffect": false,
-      "overrideStatusName": "",
-      "isOverrideStatusName": false,
-      "overrideStatusDescription": "",
+      "overrideStatusName": "水塊圧縮",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "自身のバフカウントを0にする。1回の行動の間消費したバフカウント×15%ATKが上昇。連続行動をする。",
       "isDisplayPersistenceStatus": false,
-      "isOverrideStatusDescription": false
+      "isOverrideStatusDescription": true
     }
   },
   "3364": {
@@ -94536,17 +94546,21 @@
         }
       ],
       "filename": "b_skill_wait",
-      "statusId": 1122202,
+      "statusId": 305,
       "canDispel": false,
       "filterIds": [],
       "parameter": true,
       "description": "リブート（説明用）",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": true,
       "canDuplicate": true,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
       "isCharageEffect": true,
       "elapseTurnTiming": [
         0
@@ -94554,8 +94568,9 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "リブート",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": true,
-      "overrideStatusDescription": "自身のリミット解除と減速のチャージ数を+1。もう１度行動をする。(1ターンに3回まで）",
+      "overrideStatusDescription": "自身のリミット解除と減速のチャージ数を+1。連続行動をする。(1ターンに3回まで）",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
     }
@@ -94703,11 +94718,15 @@
       "parameter": false,
       "description": "103.5%ダメージ",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -94715,6 +94734,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -94743,11 +94763,15 @@
       "parameter": false,
       "description": "117%ダメージ",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -94755,6 +94779,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -94784,11 +94809,15 @@
       "parameter": false,
       "description": "130.5%ダメージ",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -94796,6 +94825,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -109948,7 +109978,7 @@
       "overrideStatusName": "臨戦態勢",
       "notDisplayTeamEdit": false,
       "isOverrideStatusName": true,
-      "overrideStatusDescription": "1回の行動の間、自身に投錨を付与。<br>風凪の持続を-1。もう一度行動をする。<br>このスキルは1ターンに1回しか発動できない。",
+      "overrideStatusDescription": "1回の行動の間、自身に投錨を付与。<br>風凪の持続を-1。連続行動をする。<br>このスキルは1ターンに1回しか発動できない。",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": true
     }
