@@ -201,6 +201,18 @@ sprites="fg_villainMafiaEarth_s01,fg_villainMafiaFire_s01,fg_villainMafiaLight_s
 sprites="fg_villainMafiaEarth_h01,fg_villainMafiaFire_h01,fg_villainMafiaLight_h01,fg_villainMafiaShadow_h01,fg_villainMafiaWater_h01"
 %}
 
+### Maid
+
+{% include hero-infobox-unreleased.html name="Maid" mob=true
+sprites="fg_villainMaidEarth_s01,fg_villainMaidFire_s01,fg_villainMaidLight_s01,fg_villainMaidShadow_s01,fg_villainMaidWater_s01"
+%}
+
+### Maid (Transform)
+
+{% include hero-infobox-unreleased.html name="Transformed Maid" mob=true
+sprites="fg_villainMaidEarth_h01,fg_villainMaidFire_h01,fg_villainMaidLight_h01,fg_villainMaidShadow_h01,fg_villainMaidWater_h01"
+%}
+
 ### Mercenary (Clown)
 
 {% include hero-infobox-unreleased.html name="Clowning Mercenary" mob=true

@@ -2,7 +2,7 @@
 title: Chocolate Fight Wonderland
 eventId: 157
 jp_title: チョコレートファイト・ワンダーランド
-banner_image: 
+banner_image: ui_banner_event_questbanner_WonderLand2602.jpg
 gacha: true
 event_start_time: 2026-02-10T20:00:00+09
 event_end_time: 2026-03-10T14:00:00+09
