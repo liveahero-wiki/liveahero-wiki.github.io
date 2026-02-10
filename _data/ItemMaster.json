@@ -3541,6 +3541,68 @@
     "prefabAddress": null,
     "limitValue": 0
   },
+  "272": {
+    "itemId": 272,
+    "itemName": "森の幸バスケット",
+    "resourceName": "WonderLand2602_exchange01",
+    "rarity": 3,
+    "itemType": 512,
+    "description": "不思議な森で穫れた食材を集めた籠。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "273": {
+    "itemId": 273,
+    "itemName": "巨大樹の森ホログラム",
+    "resourceName": "icon_bg_battle_wonderlandforest_day",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景に巨大樹の森を投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_wonderlandforest_day",
+        "bgTitleKey": "TITLE_BG_BATTLE_WONDERLANDFOREST_DAY_WALLPAPER"
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "274": {
+    "itemId": 274,
+    "itemName": "ワンダーランドディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "チョコレートファイト・ワンダーランドのBGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_wonderland_adv",
+        "bgmTitleKey": "TITLE_BGM_WONDERLAND_ADV_RECORD"
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "275": {
+    "itemId": 275,
+    "itemName": "ワンダーランド戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "チョコレートファイト・ワンダーランドの戦闘BGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_wonderland_battle",
+        "bgmTitleKey": "TITLE_BGM_WONDERLAND_BATTLE_RECORD"
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -5845,6 +5907,28 @@
     "prefabAddress": null,
     "limitValue": 0
   },
+  "111122": {
+    "itemId": 111122,
+    "itemName": "幻想のサンテツの記憶片",
+    "resourceName": "piece_santetsuWonderLand2602",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "幻想のサンテツのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 11122
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
   "111131": {
     "itemId": 111131,
     "itemName": "ロイカーの記憶片",
@@ -6652,6 +6736,28 @@
         "addFan": 200,
         "rarity": 0,
         "stockId": 11891
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "111892": {
+    "itemId": 111892,
+    "itemName": "導刻のアストシスの記憶片",
+    "resourceName": "piece_astosisWonderLand2602",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "導刻のアストシスのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 11892
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
@@ -7598,6 +7704,28 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 20
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "113051": {
+    "itemId": 113051,
+    "itemName": "コンチェの記憶片",
+    "resourceName": "piece_conche",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "コンチェのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 13051
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
       }
     ],
     "prefabAddress": null,
@@ -10553,6 +10681,27 @@
     "prefabAddress": null,
     "limitValue": 0
   },
+  "213051": {
+    "itemId": 213051,
+    "itemName": "コンチェの心",
+    "resourceName": "heart_conche",
+    "rarity": 4,
+    "itemType": 2048,
+    "description": "コンチェのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 13051
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
   "219991": {
     "itemId": 219991,
     "itemName": "@playerNameの心",
@@ -10571,6 +10720,138 @@
         "exchangeValue": 1
       }
     ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "312001": {
+    "itemId": 312001,
+    "itemName": "ガルンデラ風チョコ",
+    "resourceName": "romantic_present",
+    "rarity": 3,
+    "itemType": 2097152,
+    "description": "バレンタインにバルテから贈られたもの。<I>「見た目はもちろん、材料にもこだわったぜ！」</I>",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "312551": {
+    "itemId": 312551,
+    "itemName": "故郷に響く調べ",
+    "resourceName": "romantic_present",
+    "rarity": 3,
+    "itemType": 2097152,
+    "description": "バレンタインにノーモンから贈られたオルゴール。<I>「忘れられない、貴方様との思い出の曲です」</I>",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "312611": {
+    "itemId": 312611,
+    "itemName": "シニャースくんチョコ",
+    "resourceName": "romantic_present",
+    "rarity": 3,
+    "itemType": 2097152,
+    "description": "バレンタインにサオトメから贈られたもの。<I>「なかなか良くできとるだろう？」</I>",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "312641": {
+    "itemId": 312641,
+    "itemName": "未来に芽吹く種",
+    "resourceName": "romantic_present",
+    "rarity": 3,
+    "itemType": 2097152,
+    "description": "バレンタインにアンタレスとともに植えた種。<I>「やがて、君と私をつなぐものに育つだろう」</I>",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "312651": {
+    "itemId": 312651,
+    "itemName": "完璧なもてなしの記憶",
+    "resourceName": "romantic_present",
+    "rarity": 3,
+    "itemType": 2097152,
+    "description": "バレンタインにタイカから贈られた時間の記憶。<I>「フフフ、最早我輩なしではいられなくなったろう？」</I>",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "312661": {
+    "itemId": 312661,
+    "itemName": "CEO直筆メッセージ",
+    "resourceName": "romantic_present",
+    "rarity": 3,
+    "itemType": 2097152,
+    "description": "バレンタインにフーレイから贈られたメッセージカード。<I>「色々と使い道はあるでしょ？」</I>",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "312871": {
+    "itemId": 312871,
+    "itemName": "すごく悩んで決めた贈り物",
+    "resourceName": "romantic_present",
+    "rarity": 3,
+    "itemType": 2097152,
+    "description": "バレンタインにターバックから贈られたブレスレット。<I>「俺の想いが、君と繋がればいいな」</I>",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "312881": {
+    "itemId": 312881,
+    "itemName": "親方直通の連絡先",
+    "resourceName": "romantic_present",
+    "rarity": 3,
+    "itemType": 2097152,
+    "description": "バレンタインにゲンジから密かに渡された紙切れ。<I>「気安く他の奴に教えるんじゃねぇぞ？」</I>",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "312891": {
+    "itemId": 312891,
+    "itemName": "コグスデン探訪記",
+    "resourceName": "romantic_present",
+    "rarity": 3,
+    "itemType": 2097152,
+    "description": "バレンタインにファーデンと巡った街の記録。<I>「売れっ子になったらこんなこと、もう無いかもね？」</I>",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "313011": {
+    "itemId": 313011,
+    "itemName": "遥かなる旅の安全守り",
+    "resourceName": "romantic_present",
+    "rarity": 3,
+    "itemType": 2097152,
+    "description": "バレンタインにデネボラから贈られたプレゼント。<I>「最後には、必ずオマエを迎えに行くと誓おう」</I>",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "313021": {
+    "itemId": 313021,
+    "itemName": "鉱山のお守り石",
+    "resourceName": "romantic_present",
+    "rarity": 3,
+    "itemType": 2097152,
+    "description": "バレンタインにラスタバンから贈られた宝石。<I>「お……オレの意気地無しィ……」</I>",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "313031": {
+    "itemId": 313031,
+    "itemName": "ふたりだけの宴",
+    "resourceName": "romantic_present",
+    "rarity": 3,
+    "itemType": 2097152,
+    "description": "バレンタインにモリヤスと過ごした記憶。<I>「お前さんとの思い出が醸す最高の一杯さぁ」</I>",
+    "effect": [],
     "prefabAddress": null,
     "limitValue": 0
   },
@@ -12554,6 +12835,17 @@
     "prefabAddress": null,
     "limitValue": 0
   },
+  "21112201": {
+    "itemId": 21112201,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
   "21113101": {
     "itemId": 21113101,
     "itemName": "開花の波動",
@@ -12941,6 +13233,17 @@
   },
   "21189101": {
     "itemId": 21189101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "21189201": {
+    "itemId": 21189201,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,
@@ -13414,6 +13717,17 @@
   },
   "21303101": {
     "itemId": 21303101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "21305101": {
+    "itemId": 21305101,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,
