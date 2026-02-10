@@ -3,7 +3,7 @@ title: Santetsu
 characterId: 112
 type: humanoid
 gender: male
-h1:
+h2:
   title: '"Wondrous Knight" Santetsu'
 occupation: Librarian
 profile:
