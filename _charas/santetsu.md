@@ -115,6 +115,12 @@ RELATION = "Tenma-sensei is a very forceful person, but he also has lots of good
 TOUCH = "W-what's with you suddenly?<br>You called me but I'm not responding? My bad, I was engrossed in my book…<br>Wai! Stop rubbing! Please stop rubbing!"
 TRAIN = "I don't want to do anything tiring though."
 TRAINED = "G-got it! I will do it!"
+battleStart = "I don’t like trouble.<br>I’ll finish this in the shortest time possible.<br>Prepare yourself!"
+special = "I will open up the future with writings from the past!<br>Read and understand—Olvasó Mozgások!"
+win = "I can’t even read a book in peace.<br>I wish they’d at least be a little quieter"
+lose = "It wasn’t supposed to be like this…<br>Please, don’t abandon me…!"
+rankMax = "I want to read more books.<br>And then i want to get stronger.<br>If i do that then surely...I can be..more helpful to you"
+loveIndexMax= "Honestly, aside from the characters in books, you’re the only one who’s ever moved me this much…<br>So I want to get to know you better."
 %}
 
 {% include voice-table.html resourceName="santetsuWonderLand2602"
