@@ -25,6 +25,7 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -70,6 +71,7 @@
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": true,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -205,6 +207,7 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -295,6 +298,7 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -1079,6 +1083,7 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -1433,6 +1438,7 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -2087,6 +2093,7 @@
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": true,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -2644,6 +2651,7 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -9092,6 +9100,7 @@
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": true,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -9828,11 +9837,15 @@
       "parameter": false,
       "description": "HPを基礎ATKの130%回復する",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
       "canDuplicate": false,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -9840,6 +9853,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -10650,6 +10664,7 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -13174,6 +13189,7 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -15519,6 +15535,7 @@
       "isImmediate": false,
       "persistence": true,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": true,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -15565,6 +15582,7 @@
       "isImmediate": false,
       "persistence": true,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": true,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -16417,7 +16435,7 @@
           }
         }
       ],
-      "trigger": "[{\"value\":50,\"element\":0,\"statusId\":0,\"role\":0,\"class\":\"PinchExecTrigger\"}]",
+      "trigger": "[{\"value\":50,\"value2\":0,\"includeTemporary\":false,\"element\":0,\"statusId\":0,\"role\":0,\"class\":\"PinchExecTrigger\"}]",
       "filename": "status_atkup",
       "statusId": 27,
       "canDispel": false,
@@ -16427,11 +16445,16 @@
       "parameter": false,
       "description": "ピンチ状態の時、ATK+30%",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": false,
       "persistence": true,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": true,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -16439,6 +16462,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -22914,6 +22938,7 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -27698,6 +27723,7 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -38769,6 +38795,7 @@
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": true,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -46354,6 +46381,7 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -50295,11 +50323,16 @@
       "parameter": false,
       "description": "被ダメージ-20%",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": false,
       "persistence": true,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": true,
       "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -50307,6 +50340,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "防御の心得",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": true,
       "overrideStatusDescription": "被ダメージ-20%。",
       "isDisplayPersistenceStatus": true,
@@ -54714,6 +54748,7 @@
       "isImmediate": false,
       "persistence": true,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -60417,6 +60452,7 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -63925,6 +63961,7 @@
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -65897,6 +65934,7 @@
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": true,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -77223,6 +77261,7 @@
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": true,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -85612,6 +85651,106 @@
       "isOverrideStatusDescription": true
     }
   },
+  "3810": {
+    "skillEffectId": 3810,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "DamageCount",
+          "parameter": {
+            "addTurn": false,
+            "minCount": 0,
+            "usePercent": false,
+            "minCountValue": 0,
+            "targetIsEnemy": true,
+            "teamCountMult": 100,
+            "dontChangeTurn": true,
+            "isCalcImmediately": true,
+            "receiverCountMult": 100
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 1305105,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "コンチェHPカウンター状態変化",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": true,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3811": {
+    "skillEffectId": 3811,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "CountValueMessenger",
+          "parameter": {
+            "key": "WonderLand7_gage_1",
+            "value": 10000,
+            "statusId": 1305105
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "自身の特定状態変化のカウント数をメッセージとして送信する（コンチェ用・基礎値10000）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "3812": {
     "skillEffectId": 3812,
     "skillEffectJson": {
@@ -85660,6 +85799,52 @@
       "isOverrideStatusDescription": false
     }
   },
+  "3813": {
+    "skillEffectId": 3813,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "MultipleAttack",
+          "parameter": {
+            "value": 120
+          }
+        }
+      ],
+      "filename": "status_atkup",
+      "statusId": 330,
+      "canDispel": true,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATK増加",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        2
+      ],
+      "canDuplicateForce": true,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "4001": {
     "skillEffectId": 4001,
     "skillEffectJson": {
@@ -85686,6 +85871,7 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -91539,6 +91725,7 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -107914,6 +108101,7 @@
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -119987,6 +120175,7 @@
       "canDuplicate": true,
       "isCountEffect": false,
       "isFieldEffect": false,
+      "effectFilename": "",
       "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
@@ -119995,6 +120184,7 @@
       "canDuplicateForce": true,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -120381,9 +120571,11 @@
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": true,
       "isCountEffect": false,
       "isFieldEffect": false,
+      "effectFilename": "",
       "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
@@ -120392,6 +120584,7 @@
       "canDuplicateForce": true,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -120408,6 +120601,7 @@
           "class": "SkillTurnExtension",
           "parameter": {
             "value": -1,
+            "timing": 5,
             "isRandom": false,
             "statusId": 311,
             "statusTypeValue": 1
@@ -120422,20 +120616,23 @@
       "description": "剣舞のチャージ数を-1",
       "isCountTurn": false,
       "isDotDamage": false,
-      "isImmediate": true,
+      "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
-      "canDuplicate": false,
+      "addSortOrder": -1,
+      "canDuplicate": true,
       "isCountEffect": false,
       "isFieldEffect": false,
+      "effectFilename": "",
       "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
       ],
-      "canDuplicateForce": false,
+      "canDuplicateForce": true,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -129239,6 +129436,7 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -129834,6 +130032,7 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -130205,6 +130404,7 @@
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -130344,6 +130544,7 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -134295,6 +134496,7 @@
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": true,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -136406,9 +136608,11 @@
       "isImmediate": false,
       "persistence": true,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": true,
       "isCountEffect": false,
       "isFieldEffect": false,
+      "effectFilename": "",
       "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [],
@@ -137380,9 +137584,11 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
+      "effectFilename": "",
       "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
@@ -143535,6 +143741,7 @@
       "isImmediate": false,
       "persistence": true,
       "reaminDeath": true,
+      "addSortOrder": 0,
       "canDuplicate": true,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -147117,6 +147324,7 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -147158,6 +147366,7 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -147514,6 +147723,7 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
@@ -147982,6 +148192,63 @@
       "isOverrideStatusDescription": true
     }
   },
+  "6551": {
+    "skillEffectId": 6551,
+    "skillEffectJson": {
+      "turn": 9,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": {
+            "timing": 17,
+            "avoidExtensionTurn": false
+          }
+        },
+        {
+          "class": "HealExecAllCharacterActionEnd",
+          "parameter": {
+            "value": 15
+          }
+        },
+        {
+          "class": "PassiveBattleSkillEffect",
+          "parameter": {
+            "skillId": 8305102
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"value2\":0,\"includeTemporary\":false,\"element\":0,\"statusId\":0,\"role\":0,\"class\":\"EnemyFullHpNotExecTrigger\"}]",
+      "filename": "status_regenerate",
+      "statusId": 329,
+      "canDispel": true,
+      "filterIds": [],
+      "parameter": false,
+      "description": "オートヒール",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        3
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "6553": {
     "skillEffectId": 6553,
     "skillEffectJson": {
@@ -148015,6 +148282,102 @@
       "isCountEffect": false,
       "isFieldEffect": false,
       "effectFilename": "effect_powerdown",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "6556": {
+    "skillEffectId": 6556,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "CountValueMessenger",
+          "parameter": {
+            "key": "WonderLand7_gage_1",
+            "value": 25000,
+            "statusId": 1305105
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "自身の特定状態変化のカウント数をメッセージとして送信する（コンチェ用・基礎値25000）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "6557": {
+    "skillEffectId": 6557,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "CountValueMessenger",
+          "parameter": {
+            "key": "WonderLand7_gage_1",
+            "value": 50000,
+            "statusId": 1305105
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "自身の特定状態変化のカウント数をメッセージとして送信する（コンチェ用・基礎値50000）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
       "penetrateDeath": false,
       "isCharageEffect": false,
       "elapseTurnTiming": [
