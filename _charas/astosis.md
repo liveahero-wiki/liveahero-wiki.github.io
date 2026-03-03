@@ -62,6 +62,7 @@ heroes:
     Left alone, Astosis still refuses to let go of his badge, the sign of a lawyer. With a firm conviction in his heart, he enters the courtroom.
   extra_sprites: fg_astosisBoss_h02,fg_astosisBoss_h02_skin1
 - stockId: 11892
+  extra_sprites: fg_astosisWonderLand2602_h02_skin2
 sidekicks:
 - stockId: 11891
   BIO_S01: |-

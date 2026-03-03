@@ -84,6 +84,7 @@ heroes:
   - '8112104'
   extra_sprites: fg_santetsu_h01_skin2,fg_santetsu_h01_skin3
 - stockId: 11122
+  extra_sprites: fg_santetsuWonderLand2602_h02_skin2
 sidekicks:
 - stockId: 11121
   BIO_S01: |-
