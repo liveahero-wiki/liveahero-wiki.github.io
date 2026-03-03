@@ -25698,9 +25698,9 @@
     "eventId": 157,
     "chapterId": 1239,
     "lookBackChapterId": 0,
-    "baseResourceName": "WonderLand2602",
+    "baseResourceName": "WonderLand2602_epilogue",
     "questSelectPrefabAddress": "",
-    "startAt": "2026-02-10 14:00:00",
+    "startAt": null,
     "endAt": "2026-03-10 14:00:00",
     "canRemember": 0,
     "eventPortalJson": {
@@ -25711,10 +25711,11 @@
         {
           "keys": [
             "UI_MAIN_QUEST",
-            "UI_MISSION",
-            "UI_EXCHANGE",
+            "UI_EPILOGUE_QUEST",
             "UI_CHALLENGE_QUEST",
-            "UI_ROMANTIC_QUEST"
+            "UI_ROMANTIC_QUEST",
+            "UI_MISSION",
+            "UI_EXCHANGE"
           ],
           "endAt": "2026-03-10 14:00:00"
         },
@@ -25748,6 +25749,11 @@
           "type": 6,
           "chapterId": 1242,
           "buttonType": 1
+        },
+        {
+          "type": 7,
+          "chapterId": 1241,
+          "buttonType": 0
         }
       ],
       "tutorialKey": "WonderLand2602",
