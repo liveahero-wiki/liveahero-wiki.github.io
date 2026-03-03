@@ -4,7 +4,7 @@ characterId: 189
 type: anthro
 gender: male
 h2:
-  title: '"Guilding Oscillation" Astosis'
+  title: '"Guiding Oscillation" Astosis'
 occupation: Lawyer
 profile:
   age: 36
