@@ -23,6 +23,28 @@ def getCharaIdToPageMap() -> dict:
 
   return obj
 
+def generate_campaign(eventId: str, pageName: str, E: dict):
+    with open(f"_events/{pageName}.md", "w", encoding="utf-8") as f:
+        f.write(f"---\n")
+        f.write(f"title: \n")
+        f.write(f"eventId: {eventId}\n")
+        f.write(f"jp_title: \n")
+        f.write(f"banner_image: \n")
+        f.write(f"gacha: false\n")
+
+        startAt = E.get("startAt", "").replace(" ", "T") + "+09"
+        endAt = E.get("startAt", "").replace(" ", "T") + "+09"
+        f.write(f"event_start_time: {startAt}\n")
+        f.write(f"event_end_time: {endAt}\n")
+
+        f.write(f"news_link: \n")
+        f.write(f"---\n\n")
+        f.write(f"* this will be unordered\n{{:toc}}\n\n")
+
+        f.write(f"## Quest Details\n\n")
+
+        f.write(f"{{% include quest-group.html chapterId={E.get('chapterId')} %}}")
+
 def generate_event(eventId: str, prefix: str = ""):
     E = EventMaster[eventId]
     baseResourceName = E.get("baseResourceName")
@@ -38,6 +60,10 @@ def generate_event(eventId: str, prefix: str = ""):
             return
     else:
         pageName = m.group(2) + m.group(1)
+
+    if not E['eventPortalJson']:
+        generate_campaign(eventId, pageName, E)
+        return
 
     shopId = E['eventPortalJson'].get('storeId')
     terms = E['eventPortalJson'].get('terms', [])
@@ -70,7 +96,7 @@ def generate_event(eventId: str, prefix: str = ""):
         f.write(f"* this will be unordered\n{{:toc}}\n\n")
         f.write(f"## Event Preview\n\nTODO\n\n")
         f.write(f"## Event Banners\n\nTODO\n\n")
-        
+
         if questBonusJsons:
             f.write(f"## Free Quest Bonus\n\n")
             f.write(f"Here is a list of heroes and sidekicks which grants bonus in this event:\n\n")
@@ -86,7 +112,7 @@ def generate_event(eventId: str, prefix: str = ""):
                 if bonusClass == "HeroQuestRewardBonus":
                     suffix = f"|h{variant}"
                     f.write(f"| {{% chara_link {charaIdToPageMap[charaId]}{suffix} %}} | {questBonusJson.get('bonusValue')} |\n")
-            
+
             f.write(f"\n| Sidekick | +Bonus (%) |\n")
             f.write(f"|---|---|\n")
             for questBonusJson in questBonusJsons:
