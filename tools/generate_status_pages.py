@@ -113,7 +113,7 @@ def main():
                 add_to_status(sid, 'sidekick_active', stock_id, skill_id)
         
         # Passive skills
-        for skill_id in sk.get('equipmentSkills', []):
+        for skill_id in sk.get('equipmentSkills', [])[-1:]:
             if skill_id == 0: continue
             status_ids = extract_status_ids_from_skill(skill_id, skill_master_dict, skill_effect_master_dict)
             for sid in status_ids:
