@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+{% assign status_id = page.status_id | downcase %}
+{% assign status = site.data.translation.Status[status_id] %}
+
+<hgroup class="page-header">
+    <h1><img width="64" height="64" style="vertical-align: middle;" src="/cdn/Sprite/{{ status.icon }}.png"> {{ status.name }}</h1>
+    <h2>{{ status.description }}</h2>
+</hgroup>
+
+{{ content }}
