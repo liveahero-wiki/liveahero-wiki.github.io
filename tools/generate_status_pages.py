@@ -1,6 +1,7 @@
 import json
 import os
 import re
+import io
 
 # Setup paths
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', '_data')
@@ -142,33 +143,43 @@ def main():
              
         # Escape quotes in title
         title_escaped = title.replace('"', '\\"')
-
-        md_content = f"""---
+        writer = io.StringIO()
+        writer.write(f"""---
 title: "{title_escaped}"
 status_id: {status_id_str}
 ---
 
-"""
+""")
         
-        def render_category(cat_name, cat_list, chara_type_num):
-             if not cat_list: return ""
-             content = f"## {cat_name}\n\n"
-             for item in cat_list:
-                 stock_id = item['stockId']
-                 skill_id = item['skillId']
-                 content += f"{{% assign skill = site.data.SkillMaster[{skill_id}] %}}\n"
-                 content += f"{{% include skill-description.html skill=skill %}}\n"
-                 content += f"<a href=\"{{{{ {stock_id} | stockIdToLink }}}}\">{{{{ {stock_id} | stockIdToCharaTitle: {chara_type_num} }}}}</a>\n\n"
-             return content
+        def render_category(cat_name, cat_list, chara_type_num, writer: io.BufferedWriter):
+            if not cat_list: return
+            writer.write(f"## {cat_name}\n\n")
+            writer.write("<table>\n")
+            for item in cat_list:
+                stock_id = item['stockId']
+                skill_id = item['skillId']
+                writer.write("<tr>\n")
 
-        md_content += render_category("Hero Skills", categories['hero'], 1)
-        md_content += render_category("Sidekick Active Skills", categories['sidekick_active'], 2)
-        md_content += render_category("Sidekick Passive Skills", categories['sidekick_passive'], 2)
+                writer.write("<td>\n")
+                writer.write(f"<a href=\"{{{{ {stock_id} | stockIdToLink: {chara_type_num} }}}}\">{{{{ {stock_id} | stockIdToCharaTitle: {chara_type_num} }}}}</a>\n\n")
+                writer.write("</td>\n")
+
+                writer.write("<td>\n")
+                writer.write(f"{{% assign skill = site.data.SkillMaster[{skill_id}] %}}\n")
+                writer.write(f"{{% include skill-description.html skill=skill %}}\n")
+                writer.write("</td>\n")
+
+                writer.write("</tr>\n")
+            writer.write("</table>")
+
+        render_category("Hero Skills", categories['hero'], 1, writer)
+        render_category("Sidekick Active Skills", categories['sidekick_active'], 2, writer)
+        render_category("Sidekick Passive Skills", categories['sidekick_passive'], 2, writer)
         
         file_path = os.path.join(OUTPUT_DIR, f"{status_id_str}.md")
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(md_content)
-            
+            f.write(writer.getvalue())
+
     print(f"Generated {len(status_to_skills)} status pages in {OUTPUT_DIR}")
 
 if __name__ == "__main__":
