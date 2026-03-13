@@ -496,8 +496,14 @@ module LahWiki
         end
       end
 
+      status_type = @@status_type_map[status['isGoodStatus']]
+      isFieldEffect = skillEffectJson['isFieldEffect']
+      if isFieldEffect
+        status_type = "Other"
+      end
+
       label = "<b>#{name} [#{
-        @@status_type_map[status['isGoodStatus']]
+        status_type
       }/#{
         @@stackable_map[skillEffectJson['canDuplicate']]
       }#{
@@ -505,7 +511,7 @@ module LahWiki
       }#{
         @@dot_damage_map[skillEffectJson['isDotDamage']]
       }#{
-        @@field_map[skillEffectJson['isFieldEffect']]
+        @@field_map[isFieldEffect]
       }#{
         @@count_map[skillEffectJson['isCountEffect']]
       }]</b><br>"
