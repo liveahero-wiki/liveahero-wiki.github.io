@@ -161,12 +161,12 @@ status_id: {status_id_str}
                 writer.write("<tr>\n")
 
                 writer.write("<td>\n")
-                writer.write(f"<a href=\"{{{{ {stock_id} | stockIdToLink: {chara_type_num} }}}}\">{{{{ {stock_id} | stockIdToCharaTitle: {chara_type_num} }}}}</a>\n\n")
+                writer.write(f"{{{{ {stock_id} | stockIdToLink: {chara_type_num} }}}}")
                 writer.write("</td>\n")
 
                 writer.write("<td>\n")
-                writer.write(f"{{% assign skill = site.data.SkillMaster[{skill_id}] %}}\n")
-                writer.write(f"{{% include skill-description.html skill=skill %}}\n")
+                writer.write(f"{{% assign skill = site.data.SkillMaster[\"{skill_id}\"] %}}\n")
+                writer.write(f"{{% include skill-description.html skillId={skill_id} skill=skill %}}\n")
                 writer.write("</td>\n")
 
                 writer.write("</tr>\n")
