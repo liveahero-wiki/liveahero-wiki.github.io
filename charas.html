@@ -4,19 +4,8 @@ title: Characters
 banner: true
 permalink: /charas/
 redirect_from: /heroes/
-additional_scripts: ["/assets/chara.js"]
+additional_scripts: ["/assets/chara.js", "/assets/filter.js"]
 ---
-
-<style>
-.control-panel {
-  display: grid;
-  grid-template-columns: min-content auto;
-  row-gap: 5px;
-}
-.control-panel div {
-  padding: 0 3px;
-}
-</style>
 
 <h2>Released units</h2>
 
@@ -26,11 +15,11 @@ additional_scripts: ["/assets/chara.js"]
 <p><button id="collection-btn">Activate Collection Mode</button>
 </p>
 
-<fieldset id="collection-radio-group" name="collection-filter">
+<fieldset id="collection-radio-group" name="radioFilter">
 <legend>Display</legend>
-<label><input type="radio" name="collection-filter" value="0" checked>All</label>
-<label><input type="radio" name="collection-filter" value="1">Selected only</label>
-<label><input type="radio" name="collection-filter" value="2">Unselected only</label>
+<label><input type="radio" name="radioFilter" value="0" checked data-target-list="#hero-list,#sidekick-list">All</label>
+<label><input type="radio" name="radioFilter" value="1" data-target-list="#hero-list,#sidekick-list">Selected only</label>
+<label><input type="radio" name="radioFilter" value="2" data-target-list="#hero-list,#sidekick-list">Unselected only</label>
 </fieldset>
 
 </fieldset>

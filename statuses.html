@@ -1,17 +1,67 @@
 ---
 title: Statuses
 banner: true
+additional_scripts: ["/assets/filter.js"]
 ---
 
 <p>To add a status when writing a Wiki page, write <code>{% raw %}{{ id_number | status_description }}{% endraw %}</code>.</p>
 
 <p>Example: <code>{% raw %}{{ 1 | status_description }}{% endraw %}</code> will becomes {{ 1 | status_description }} when rendered.</p>
 
-<table>
+<style>
+[data-has-page-filter="1"] tr.no-page {
+    display: none;
+}
+</style>
+
+<fieldset class="chara-filter" data-list="#status-list">
+    <legend>Filter</legend>
+    <div class="control-panel">
+        <div>StatusType</div>
+        <div> |
+            <button data-field="st" data-value="0">Debuff</button>
+            <button data-field="st" data-value="1">Buff</button>
+            <button data-field="st" data-value="2">Other 1</button>
+            <button data-field="st" data-value="3">Other 2</button>
+            | <button data-reset="st">All</button>
+        </div>
+        <div>IsGoodStatus</div>
+        <div> |
+            <button data-field="igs" data-value="1">Yes</button>
+            <button data-field="igs" data-value="0">No</button>
+            | <button data-reset="igs">All</button>
+        </div>
+    </div>
+</fieldset>
+
+<fieldset id="collection-radio-group" name="hasPageFilter">
+    <legend>Status without page</legend>
+    <label><input type="radio" name="hasPageFilter" value="0" data-target-list="#status-list">Show</label>
+    <label><input type="radio" name="hasPageFilter" value="1" checked data-target-list="#status-list">Hide</label>
+</fieldset>
+
+<table id="status-list" data-has-page-filter="1">
+<thead>
 <tr><th>ID</th><th>statusType</th><th>isGoodStatus</th><th>Status</th></tr>
+</thead>
+<tbody>
 {% for pair in site.data.StatusMaster %}
 {% assign id = pair[0] %}
 {% assign iid = id | plus: 0 %}
-<tr><td>{{ id }}</td><td>{{ pair[1].statusType }}</td><td>{{ pair[1].isGoodStatus }}</td><td>{{ iid | status_description }}</td></tr>
+{% assign has_page = false %}
+{% for s in site.statuses %}
+    {% if s.status_id == iid %}
+        {% assign has_page = true %}
+        {% break %}
+    {% endif %}
 {% endfor %}
+
+<tr {% if has_page == false %}class="no-page"{% endif %} data-st="{{ pair[1].statusType }}" data-igs="{{ pair[1].isGoodStatus }}">
+
+<td>{% if has_page %}<a href="/statuses/{{ id }}/">{{ id }}</a>{% else %}{{ id }}{% endif %}</td>
+
+<td>{{ pair[1].statusType }}</td><td>{{ pair[1].isGoodStatus }}</td><td>{{ iid | status_description }}</td>
+</tr>
+{% endfor %}
+</tbody>
 </table>

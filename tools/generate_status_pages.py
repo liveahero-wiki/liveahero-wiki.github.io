@@ -151,10 +151,17 @@ status_id: {status_id_str}
 
 """)
         
-        def render_category(cat_name, cat_list, chara_type_num, writer: io.BufferedWriter):
+        def render_category(cat_name, cat_list, chara_type_num, showCost: bool, writer: io.BufferedWriter):
             if not cat_list: return
             writer.write(f"## {cat_name}\n\n")
-            writer.write("<table>\n")
+            writer.write("<table class=\"bordered\">\n")
+            writer.write("<thead>\n")
+            writer.write("<tr>\n")
+            writer.write("<th>Character</th>\n")
+            if showCost:
+                writer.write("<th>View Cost</th>\n")
+            writer.write("<th>Skill</th>\n")
+            writer.write("</tr></thead><tbody>\n")
             for item in cat_list:
                 stock_id = item['stockId']
                 skill_id = item['skillId']
@@ -164,17 +171,20 @@ status_id: {status_id_str}
                 writer.write(f"{{{{ {stock_id} | stockIdToLink: {chara_type_num} }}}}")
                 writer.write("</td>\n")
 
-                writer.write("<td>\n")
                 writer.write(f"{{% assign skill = site.data.SkillMaster[\"{skill_id}\"] %}}\n")
+                if showCost:
+                    writer.write(f"<td>{{{{ skill.useView }}}}</td>\n")
+
+                writer.write("<td>\n")
                 writer.write(f"{{% include skill-description.html skillId={skill_id} skill=skill %}}\n")
                 writer.write("</td>\n")
 
                 writer.write("</tr>\n")
-            writer.write("</table>")
+            writer.write("</tbody></table>")
 
-        render_category("Hero Skills", categories['hero'], 1, writer)
-        render_category("Sidekick Active Skills", categories['sidekick_active'], 2, writer)
-        render_category("Sidekick Passive Skills", categories['sidekick_passive'], 2, writer)
+        render_category("Hero Skills", categories['hero'], 1, True, writer)
+        render_category("Sidekick Active Skills", categories['sidekick_active'], 2, True, writer)
+        render_category("Sidekick Passive Skills", categories['sidekick_passive'], 2, False, writer)
         
         file_path = os.path.join(OUTPUT_DIR, f"{status_id_str}.md")
         with open(file_path, 'w', encoding='utf-8') as f:
