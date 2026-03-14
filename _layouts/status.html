@@ -6,8 +6,10 @@ layout: default
 {% assign status = site.data.translation.Status[status_id] %}
 
 <hgroup class="page-header">
-    <h1><img width="64" height="64" style="vertical-align: middle;" src="/cdn/Sprite/{{ status.icon }}.png"> {{ status.name }}</h1>
-    <h2>{{ status.description }}</h2>
+{% assign defaultStatusName = "System status " | append: status_id %}
+    <h1><img width="64" height="64" style="vertical-align: middle;" src="/cdn/Sprite/{{ status.icon | default: 'b_skill_special' }}.png"> 
+        {{ status.name | default: defaultStatusName }}</h1>
+    <p>{{ status.description }}</p>
 </hgroup>
 
 {{ content }}
