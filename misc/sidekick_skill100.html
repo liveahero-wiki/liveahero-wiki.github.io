@@ -2,10 +2,11 @@
 title: Sidekick Skill List 100
 banner: true
 wide_content: true
+additional_scripts: ["/assets/filter.js"]
 ---
 
 <style>
-[data-radio-filter="1"] tr.no-auto-passive {
+[data-auto-passive-filter="1"] tr.no-auto-passive {
     display: none;
 }
 #collection-radio-group {
@@ -13,10 +14,10 @@ wide_content: true
 }
 </style>
 
-<fieldset id="collection-radio-group" name="auto-passive-filter">
+<fieldset id="collection-radio-group" name="autoPassiveFilter">
     <legend>Display</legend>
-    <label><input type="radio" name="auto-passive-filter" value="0" checked>All</label>
-    <label><input type="radio" name="auto-passive-filter" value="1">Has auto passive only</label>
+    <label><input type="radio" name="autoPassiveFilter" data-target-list="#main-table" value="0" checked>All</label>
+    <label><input type="radio" name="autoPassiveFilter" data-target-list="#main-table" value="1">Has auto passive only</label>
 </fieldset>
 
 <p>For simplicity sake, only active and passive skills at level 100 are listed.</p>
@@ -50,11 +51,3 @@ wide_content: true
 {% endfor %}
 </table>
 </div>
-
-<script>
-for (const radio of document.querySelectorAll("#collection-radio-group input[type=radio]")) {
-  radio.addEventListener("change", () => {
-    document.querySelector("#main-table").dataset.radioFilter = radio.value;
-  });
-}
-</script>

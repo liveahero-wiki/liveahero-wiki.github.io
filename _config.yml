@@ -34,6 +34,10 @@ defaults:
     values:
       layout: main_quest
   - scope:
+      type: "statuses"
+    values:
+      layout: status
+  - scope:
       path: "assets"
     values:
       sitemap: false
@@ -55,6 +59,9 @@ collections:
   main_quests:
     output: true
     sort_by: chapterId
+  statuses:
+    output: true
+    sort_by: status_id
 
 exclude:
   - "_site2"
