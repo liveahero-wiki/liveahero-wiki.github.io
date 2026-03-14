@@ -38,6 +38,7 @@ module LahWiki
       0 => "Debuff",
       1 => "Buff",
       2 => "Other",
+      3 => "Field",
     }
 
     @@stackable_map = {
