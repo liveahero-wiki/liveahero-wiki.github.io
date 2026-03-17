@@ -3,12 +3,6 @@ title: Community Survey Result 2024
 date: 2024-10-25 12:00:00 +08
 ---
 
-<style>
-.comment {
-  color: blue;
-}
-</style>
-
 > This article is very long and contain a few visualizations. For better reading experience, please read this article in wider screen.
 
 * unordered
