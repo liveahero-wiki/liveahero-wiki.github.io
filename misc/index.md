@@ -14,6 +14,8 @@ Special lists that don't fit anywhere else.
 - [Sidekick Stats at Level 50](sidekick_stats)
 - [Sidekick Stats at Level 100](sidekick_stats100/)
 - [Role List](role/)
+- [Status List](/statuses/)
+- [Item List](/items/)
 
 ### Character info list
 
