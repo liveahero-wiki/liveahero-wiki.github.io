@@ -85,6 +85,7 @@ const aprilFoolSpriteMap = {
   "astar": "goblinfire01b_skin2",
   "astosis": "pazuzu01",
   "barrel": "tindalos01",
+  "canes": "cuchulainn01_skin2",
   //"barte": "ellie01_skin7",
   "cerastium": "ziz01",
   "danzo": "kokopelli01",
