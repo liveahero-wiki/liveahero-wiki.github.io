@@ -264,7 +264,7 @@
     // Toggle Button
     const btn = document.createElement('button');
     btn.id = 'meteor-toggle-btn';
-    btn.textContent = '☄️';
+    btn.textContent = '🌟';
 
     btn.onclick = (e) => {
       isRunning = !isRunning;
