@@ -1,6 +1,6 @@
 ---
 title: Spring Campaign 2026
-eventId: 165
+eventId: 167
 jp_title: スプリングキャンペーン2026
 banner_image: banner_info_Spring2604.jpg
 gacha: true
