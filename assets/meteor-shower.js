@@ -5,7 +5,7 @@
 (function () {
   // Config
   const CONFIG = {
-    meteorSpeed: 2, // Base speed
+    meteorSpeed: 1.5, // Base speed
     meteorSize: 24, // Head size
     meteorCount: 10, // Max concurrent meteors
     meteorTailLength: 150,
@@ -264,7 +264,7 @@
     // Toggle Button
     const btn = document.createElement('button');
     btn.id = 'meteor-toggle-btn';
-    btn.textContent = '☄️';
+    btn.textContent = '🌟';
 
     btn.onclick = (e) => {
       isRunning = !isRunning;
