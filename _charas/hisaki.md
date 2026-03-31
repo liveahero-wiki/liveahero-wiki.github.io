@@ -77,7 +77,7 @@ sidekicks:
 
     He calls his college senior Crowne his big sis, and both trusts and lives in
     fear of her at the same time.
-  extra_sprites: fg_hisaki_s01_skin1,fg_hisaki_s01_skin2,fg_hisaki_s01_skin3,fg_hisaki_s01_skin4
+  extra_sprites: fg_hisaki_s01_skin1,fg_hisaki_s01_skin2,fg_hisaki_s01_skin3,fg_hisaki_s01_skin4,fg_hisaki_s01_skin5
 ---
 
 {% include voice-table.html resourceName="hisaki"

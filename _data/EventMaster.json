@@ -18159,12 +18159,12 @@
   "114": {
     "eventId": 114,
     "chapterId": 1160,
-    "lookBackChapterId": 0,
+    "lookBackChapterId": 539,
     "baseResourceName": "Seekers2502",
     "questSelectPrefabAddress": "",
     "startAt": null,
     "endAt": "2025-03-19 14:00:00",
-    "canRemember": 0,
+    "canRemember": 1,
     "eventPortalJson": {
       "bg": "ui_bg_sprite_event_Seekers2502",
       "bgm": "bgm_seekers_adv",
@@ -26340,7 +26340,8 @@
             "UI_MAIN_QUEST",
             "UI_EPILOGUE_QUEST",
             "UI_MISSION",
-            "UI_EXCHANGE"
+            "UI_EXCHANGE",
+            "UI_CHALLENGE_QUEST"
           ],
           "endAt": "2026-03-31 14:00:00"
         },
@@ -26369,6 +26370,11 @@
           "type": 7,
           "chapterId": 1252,
           "buttonType": 0
+        },
+        {
+          "type": 6,
+          "chapterId": 1253,
+          "buttonType": 1
         }
       ],
       "tutorialKey": "SeekersRevival2603",
@@ -26752,5 +26758,350 @@
         "targetStockId": 10121
       }
     ]
+  },
+  "164": {
+    "eventId": 164,
+    "chapterId": 1254,
+    "lookBackChapterId": 0,
+    "baseResourceName": "SandStorm2503",
+    "questSelectPrefabAddress": "",
+    "startAt": "2026-03-26 18:00:00",
+    "endAt": "2026-04-16 14:00:00",
+    "canRemember": 0,
+    "eventPortalJson": null,
+    "roguePortalJson": null,
+    "pastPortalJson": null,
+    "summary": null,
+    "url": null,
+    "questBonusJsons": []
+  },
+  "165": {
+    "eventId": 165,
+    "chapterId": 1255,
+    "lookBackChapterId": 0,
+    "baseResourceName": "ContractLocalIdol2604",
+    "questSelectPrefabAddress": "",
+    "startAt": "2026-03-31 00:00:00",
+    "endAt": "2026-04-21 14:00:00",
+    "canRemember": 0,
+    "eventPortalJson": {
+      "bg": "ui_bg_sprite_portal_3rdAnniversary",
+      "bgm": "bgm_main",
+      "logo": "ContractLocalIdol2604_title",
+      "terms": [
+        {
+          "keys": [
+            "UI_FREE_QUEST"
+          ],
+          "endAt": "2026-04-16 14:00:00"
+        },
+        {
+          "keys": [
+            "UI_MISSION",
+            "UI_EXCHANGE"
+          ],
+          "endAt": "2026-04-21 14:00:00"
+        }
+      ],
+      "gachaId": null,
+      "storeId": 97,
+      "questInfos": [
+        {
+          "type": 6,
+          "chapterId": 1255,
+          "buttonType": 1
+        }
+      ],
+      "tutorialKey": "ContractLocalIdol2604",
+      "eventItemIds": [
+        52
+      ],
+      "missionViews": [
+        {
+          "skinId": 0,
+          "stockId": 12381,
+          "cardType": 2,
+          "serifKinds": [
+            29
+          ],
+          "visualType": 1,
+          "serifEntity": [
+            {
+              "priority": 0,
+              "serifKind": 29,
+              "conditions": []
+            },
+            {
+              "priority": 1,
+              "serifKind": 30,
+              "conditions": [
+                {
+                  "class": "MissionClear",
+                  "questId": 0,
+                  "missionIds": [
+                    22336,
+                    22337,
+                    22338,
+                    22339,
+                    22340,
+                    22341,
+                    22342,
+                    22343,
+                    22344
+                  ],
+                  "isCheckClear": true
+                }
+              ]
+            }
+          ],
+          "resourceName": "localIdolFire",
+          "characterName": "火のローカルアイドル"
+        },
+        {
+          "skinId": 0,
+          "stockId": 12391,
+          "cardType": 2,
+          "serifKinds": [
+            29
+          ],
+          "visualType": 1,
+          "serifEntity": [
+            {
+              "priority": 0,
+              "serifKind": 29,
+              "conditions": []
+            },
+            {
+              "priority": 1,
+              "serifKind": 30,
+              "conditions": [
+                {
+                  "class": "MissionClear",
+                  "questId": 0,
+                  "missionIds": [
+                    22336,
+                    22337,
+                    22338,
+                    22339,
+                    22340,
+                    22341,
+                    22342,
+                    22343,
+                    22344
+                  ],
+                  "isCheckClear": true
+                }
+              ]
+            }
+          ],
+          "resourceName": "localIdolWater",
+          "characterName": "水のローカルアイドル"
+        },
+        {
+          "skinId": 0,
+          "stockId": 12401,
+          "cardType": 2,
+          "serifKinds": [
+            29
+          ],
+          "visualType": 1,
+          "serifEntity": [
+            {
+              "priority": 0,
+              "serifKind": 29,
+              "conditions": []
+            },
+            {
+              "priority": 1,
+              "serifKind": 30,
+              "conditions": [
+                {
+                  "class": "MissionClear",
+                  "questId": 0,
+                  "missionIds": [
+                    22336,
+                    22337,
+                    22338,
+                    22339,
+                    22340,
+                    22341,
+                    22342,
+                    22343,
+                    22344
+                  ],
+                  "isCheckClear": true
+                }
+              ]
+            }
+          ],
+          "resourceName": "localIdolEarth",
+          "characterName": "木のローカルアイドル"
+        },
+        {
+          "skinId": 0,
+          "stockId": 12411,
+          "cardType": 2,
+          "serifKinds": [
+            29
+          ],
+          "visualType": 1,
+          "serifEntity": [
+            {
+              "priority": 0,
+              "serifKind": 29,
+              "conditions": []
+            },
+            {
+              "priority": 1,
+              "serifKind": 30,
+              "conditions": [
+                {
+                  "class": "MissionClear",
+                  "questId": 0,
+                  "missionIds": [
+                    22336,
+                    22337,
+                    22338,
+                    22339,
+                    22340,
+                    22341,
+                    22342,
+                    22343,
+                    22344
+                  ],
+                  "isCheckClear": true
+                }
+              ]
+            }
+          ],
+          "resourceName": "localIdolLight",
+          "characterName": "光のローカルアイドル"
+        },
+        {
+          "skinId": 0,
+          "stockId": 12421,
+          "cardType": 2,
+          "serifKinds": [
+            29
+          ],
+          "visualType": 1,
+          "serifEntity": [
+            {
+              "priority": 0,
+              "serifKind": 29,
+              "conditions": []
+            },
+            {
+              "priority": 1,
+              "serifKind": 30,
+              "conditions": [
+                {
+                  "class": "MissionClear",
+                  "questId": 0,
+                  "missionIds": [
+                    22336,
+                    22337,
+                    22338,
+                    22339,
+                    22340,
+                    22341,
+                    22342,
+                    22343,
+                    22344
+                  ],
+                  "isCheckClear": true
+                }
+              ]
+            }
+          ],
+          "resourceName": "localIdolShadow",
+          "characterName": "影のローカルアイドル"
+        }
+      ],
+      "portalWindow": "EventPortalWindowContractDiver2504",
+      "characterViews": [
+        {
+          "skinId": 0,
+          "stockId": 12381,
+          "cardType": 2,
+          "serifKinds": [
+            27
+          ],
+          "visualType": 1,
+          "resourceName": "localIdolFire",
+          "characterName": "火のローカルアイドル"
+        },
+        {
+          "skinId": 0,
+          "stockId": 12391,
+          "cardType": 2,
+          "serifKinds": [
+            27
+          ],
+          "visualType": 1,
+          "resourceName": "localIdolWater",
+          "characterName": "水のローカルアイドル"
+        },
+        {
+          "skinId": 0,
+          "stockId": 12401,
+          "cardType": 2,
+          "serifKinds": [
+            27
+          ],
+          "visualType": 1,
+          "resourceName": "localIdolEarth",
+          "characterName": "木のローカルアイドル"
+        },
+        {
+          "skinId": 0,
+          "stockId": 12411,
+          "cardType": 2,
+          "serifKinds": [
+            27
+          ],
+          "visualType": 1,
+          "resourceName": "localIdolLight",
+          "characterName": "光のローカルアイドル"
+        },
+        {
+          "skinId": 0,
+          "stockId": 12421,
+          "cardType": 2,
+          "serifKinds": [
+            27
+          ],
+          "visualType": 1,
+          "resourceName": "localIdolShadow",
+          "characterName": "影のローカルアイドル"
+        }
+      ],
+      "salesRegionIds": [],
+      "missionGroupIds": [
+        1255
+      ],
+      "missionCategoryButtonLabels": null
+    },
+    "roguePortalJson": null,
+    "pastPortalJson": null,
+    "summary": null,
+    "url": null,
+    "questBonusJsons": []
+  },
+  "167": {
+    "eventId": 167,
+    "chapterId": 1261,
+    "lookBackChapterId": 0,
+    "baseResourceName": "linkQuestSpring2604",
+    "questSelectPrefabAddress": "",
+    "startAt": "2026-03-30 00:00:00",
+    "endAt": "2026-04-16 14:00:00",
+    "canRemember": 0,
+    "eventPortalJson": null,
+    "roguePortalJson": null,
+    "pastPortalJson": null,
+    "summary": null,
+    "url": null,
+    "questBonusJsons": []
   }
 }
