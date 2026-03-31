@@ -2,7 +2,7 @@
 title: Spring Campaign 2026
 eventId: 165
 jp_title: スプリングキャンペーン2026
-banner_image: 
+banner_image: banner_info_Spring2604.jpg
 gacha: true
 farm_start_time: 2026-03-31T20:00:00+09
 farm_end_time: 2026-04-16T14:00:00+09
