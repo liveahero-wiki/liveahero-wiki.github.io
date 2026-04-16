@@ -3,7 +3,7 @@ title: Super Catch! Battleship Fishers
 eventId: 109
 jp_title: 超大漁！バトルシップ・フィッシャーズ
 news_link: https://live-a-hero.jp/info/10130
-banner_image: banner_info_BattleShip2411.jpg
+banner_image: banner_info_BattleShip2411.webp
 gacha: true
 event_start_time: 2024-11-26T20:00:00+09
 event_end_time: 2024-12-24T14:00:00+09

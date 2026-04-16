@@ -3,7 +3,7 @@ title: Chocolate Seekers
 eventId: 114
 jp_title: チョコレート・シーカーズ
 news_link: https://live-a-hero.jp/info/10707
-banner_image: banner_info_Seekers2502.jpg
+banner_image: banner_info_Seekers2502.webp
 gacha: true
 event_start_time: 2025-02-13T20:00:00+09
 event_end_time: 2025-03-19T14:00:00+09

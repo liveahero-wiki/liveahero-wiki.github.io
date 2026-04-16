@@ -2,7 +2,7 @@
 title: Echoes of Frontier Memories
 eventId: 166
 jp_title: 残響のフロンティアメモリーズ
-banner_image: 
+banner_image: banner_info_Frontier2604_en.webp
 gacha: true
 event_start_time: 2026-04-16T20:00:00+09
 event_end_time: 2026-05-14T14:00:00+09

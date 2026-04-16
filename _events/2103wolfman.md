@@ -3,7 +3,7 @@ title: Character Contract Campaign - Shadow Wolfman
 eventId: 9
 jp_title: キャラクター契約締結キャンペーン -影のウルフマン-
 news_link: https://live-a-hero.jp/info/1770
-banner_image: banner_campaign_ContractWolfmanShadow2103.jpg
+banner_image: banner_campaign_ContractWolfmanShadow2103.webp
 event_start_time: 2021-03-26T18:00:00+09
 event_end_time: 2021-04-16T18:00:00+09
 farm_start_time: 2021-03-26T18:00:00+09
