@@ -286,6 +286,18 @@ sprites="fg_kaibutsuOctopusEarth_h01,fg_kaibutsuOctopusFire_h01,fg_kaibutsuOctop
 sprites="fg_kaibutsuMikoshiEarth_h01,fg_kaibutsuMikoshiFire_h01,fg_kaibutsuMikoshiLight_h01,fg_kaibutsuMikoshiShadow_h01,fg_kaibutsuMikoshiWater_h01"
 %}
 
+### Phantasm Kaibutsu (Adult)
+
+{% include hero-infobox-unreleased.html name="Phantasm Kaibutsu (Adult)" mob=true
+sprites="fg_kaibutsuPhantasmAdultEarth_h01,fg_kaibutsuPhantasmAdultFire_h01,fg_kaibutsuPhantasmAdultLight_h01,fg_kaibutsuPhantasmAdultShadow_h01,fg_kaibutsuPhantasmAdultWater_h01"
+%}
+
+### Phantasm Kaibutsu (Juvenile)
+
+{% include hero-infobox-unreleased.html name="Phantasm Kaibutsu (Juvenile)" mob=true
+sprites="fg_kaibutsuPhantasmLarvaEarth_h01,fg_kaibutsuPhantasmLarvaFire_h01,fg_kaibutsuPhantasmLarvaLight_h01,fg_kaibutsuPhantasmLarvaShadow_h01,fg_kaibutsuPhantasmLarvaWater_h01"
+%}
+
 ### Salvager (Transform)
 
 {% include hero-infobox-unreleased.html name="Transformed Salvager" mob=true
