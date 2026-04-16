@@ -19,16 +19,17 @@ Totally or mostly translated :
 - Others main sections of the menu : Training, Formation, Gacha (Ether shearch and banner) and Shop.
 - Quest menu and its differents sections, like Training/growth quests or Boss simulator
 - Most characters informations (names, powers names and descriptions, personnal informations,...), as well as their home menu voicelines and event lobby voicelines (when diplayed in an infobox)
-- Chapter 1 of the main campaign (entirely), and all other main campaign quest titles (but not the storylines except Chapter 1)
+- Chapter 1 and 2 of the main campaign, and all other main campaign quest titles (but not the storylines except Chapter 1)
+- The first 2 Past Event "Golden Spirit of Dawn" and "Hot Spring Battlefield: Christmas Edition"
 - (Past) Event lobby main hub and Past Event description and challenge / reward section (Events storyline aren't translated yet)
 
 Partially translated :
 
-- Some buttons from various places (such as Sales "Bulk receipt" or "Mass departure")
+- Some buttons from various places
 - Some Victory / Defeat conditions displayed in the up right corner during battle
 - Some earned titles from the Profile selection
 - Some alternatives quests name
-- Some sub-sections such as Office
+- Some sub-sections such as Office (Like the name of items and proposals)
 - Some contract memories (thoses of the most recents characters hasn't been translated)
 
 ## How can I play?
