@@ -100,6 +100,10 @@ def main(argv):
     #'SerifMaster',
     'SerifOverwriteMaster',
     'SalesMaster',
+    "BromideGroupMaster",
+    "BromideMaster",
+    "BromideStockMaster",
+    "RewardLootBoxMaster",
   ]
 
   if not args.skip_data:
