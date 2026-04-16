@@ -2,7 +2,7 @@
 title: Chocolate Seekers (Reprint)
 eventId: 163
 jp_title: 【復刻】チョコレート・シーカーズ
-banner_image: ui_banner_event_questbanner_SeekersRevival2603.jpg
+banner_image: ui_banner_info_SeekersRevival2603.webp
 gacha: true
 event_start_time: 2026-03-10T20:00:00+09
 event_end_time: 2026-03-31T14:00:00+09

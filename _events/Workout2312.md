@@ -3,7 +3,7 @@ title: Santa Claus Workout
 eventId: 71
 jp_title: サンタクロース・ワークアウト
 news_link: https://live-a-hero.jp/info/7444
-banner_image: ui_banner_info_Workout2312.jpg
+banner_image: ui_banner_info_Workout2312.webp
 gacha: true
 event_start_time: 2023-12-21T20:00:00+09
 event_end_time: 2024-01-18T14:00:00+09
