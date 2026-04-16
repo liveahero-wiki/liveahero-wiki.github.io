@@ -3,7 +3,7 @@ title: Christmas Melt Countdown
 eventId: 49
 jp_title: クリスマスメルト・カウントダウン
 news_link: https://live-a-hero.jp/info/5067
-banner_image: banner_info_XmasMelt2212.jpg 
+banner_image: banner_info_XmasMelt2212.webp 
 gacha: true
 event_start_time: 2022-12-23T20:00:00+09
 event_end_time: 2023-01-20T14:00:00+09

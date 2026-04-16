@@ -3,7 +3,7 @@ title: Challenge Simulator SSS-Rank - Slime-Type Kaibutsu
 eventId: 148
 jp_title: 強敵シミュレーターSSS級 -スライム型カイブツ-
 news_link: https://live-a-hero.jp/info/12762
-banner_image: ui_banner_event_questbanner_campaignSlime_SSS.jpg
+banner_image: ui_banner_event_questbanner_campaignSlime_SSS.webp
 event_start_time: 2025-11-12T14:00:00+09
 event_end_time: 2025-12-10T14:00:00+09
 ---

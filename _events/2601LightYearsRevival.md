@@ -2,7 +2,7 @@
 title: Light Years Illumination (Reprint)
 eventId: 156
 jp_title: 【復刻】ライトイヤーズ・イルミネーション開催！
-banner_image: banner_info_LightYears2412.jpg
+banner_image: banner_info_LightYears2412.webp
 gacha: true
 event_start_time: 2026-01-22T20:00:00+09
 event_end_time: 2026-02-12T14:00:00+09

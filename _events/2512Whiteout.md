@@ -2,7 +2,7 @@
 title: Whiteout Liberation
 eventId: 151
 jp_title: ホワイトアウト・リベレーション
-banner_image: ui_banner_event_questbanner_Whiteout2512.jpg
+banner_image: ui_banner_event_questbanner_Whiteout2512.webp
 gacha: true
 event_start_time: 2025-12-16T20:00:00+09
 event_end_time: 2026-01-06T14:00:00+09

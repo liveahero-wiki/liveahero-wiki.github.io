@@ -3,7 +3,7 @@ title: Santa Claus Workout (Revival)
 eventId: 112
 jp_title: サンタクロース・ワークアウト
 news_link: https://live-a-hero.jp/info/10377
-banner_image: banner_info_WorkoutRevival2501.jpg
+banner_image: banner_info_WorkoutRevival2501.webp
 gacha: true
 event_start_time: 2025-01-23T20:00:00+09
 event_end_time: 2025-02-13T14:00:00+09

@@ -3,7 +3,7 @@ title: Chocolate Festa (Reprint)
 eventId: 76
 jp_title: 押忍！チョコ学園祭メモリーズ！開催
 news_link: https://live-a-hero.jp/info/7824
-banner_image: banner_campaign_chocoFesta.jpg
+banner_image: banner_info_ChocolatefesRevival2402.webp
 gacha: true
 event_start_time: 2024-02-01T20:00:00+09
 event_end_time: 2024-02-22T14:00:00+09

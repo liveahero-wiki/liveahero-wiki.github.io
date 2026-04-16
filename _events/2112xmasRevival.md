@@ -3,7 +3,7 @@ title: Melody Meteorite Christmas (Reprint)
 eventId: 43
 jp_title: 【復刻】 旋律のメテオライト･クリスマス
 news_link: https://live-a-hero.jp/info/4930
-banner_image: banner_info_MeteoriteRevival2211.jpg 
+banner_image: banner_info_MeteoriteRevival2211.webp 
 gacha: true
 event_start_time: 2022-11-17T20:00:00+09
 event_end_time: 2022-12-08T14:00:00+09

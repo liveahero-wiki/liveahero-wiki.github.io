@@ -3,7 +3,7 @@ title: Rakusai Travelouge ～When stars connect～ (Reprint)
 eventId: 83
 jp_title: 洛祭紀行～星つなぐとき～ 開催
 news_link: https://live-a-hero.jp/info/8132
-banner_image: banner_info_RakusaiRevival2403.jpg
+banner_image: banner_info_RakusaiRevival2403.webp
 gacha: true
 event_start_time: 2024-03-26T20:00:00+09
 event_end_time: 2024-04-16T14:00:00+09

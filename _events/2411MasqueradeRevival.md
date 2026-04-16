@@ -3,7 +3,7 @@ title: Moonlight Dance ～Masquerade of Conspiracy～(Reprint)
 eventId: 106
 jp_title: 月光群舞 ～陰謀のマスカレード～(復刻)
 news_link: https://live-a-hero.jp/info/10026
-banner_image: banner_info_MasqueradeRevival2411.jpg
+banner_image: banner_info_MasqueradeRevival2411.webp
 gacha: true
 event_start_time: 2024-11-05T20:00:00+09
 event_end_time: 2024-11-26T14:00:00+09

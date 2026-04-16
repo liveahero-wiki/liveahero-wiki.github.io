@@ -3,7 +3,7 @@ title: 3rd Anniversary
 eventId: 66
 jp_title: 3周年記念キャンペーン
 news_link: https://live-a-hero.jp/info/6759
-banner_image: ui_banner_3rdAnniversary.jpg
+banner_image: ui_banner_3rdAnniversary.webp
 event_start_time: 2023-09-28T20:00:00+09
 event_end_time: 2023-10-31T14:00:00+09
 ---

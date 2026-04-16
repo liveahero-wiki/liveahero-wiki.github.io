@@ -3,7 +3,7 @@ title: Rookies Summer Festa
 eventId: 101
 jp_title: ルーキーズ・サマーフェスタ
 news_link: https://live-a-hero.jp/info/9398
-banner_image: ui_banner_info_Rookies2408.jpg
+banner_image: ui_banner_info_Rookies2408.webp
 gacha: true
 event_start_time: 2024-08-29T20:00:00+09
 event_end_time: 2024-09-26T14:00:00+09

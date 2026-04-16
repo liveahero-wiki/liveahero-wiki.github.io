@@ -3,7 +3,7 @@ title: 2nd Anniversary
 eventId: 41
 jp_title: 2周年記念キャンペーン
 news_link: https://live-a-hero.jp/campaign/4553
-banner_image: banner_notice_2ndAnniversary.jpg 
+banner_image: banner_notice_2ndAnniversary.webp 
 event_start_time: 2022-09-30T20:00:00+09
 event_end_time: 2022-10-25T23:59:00+09
 ---

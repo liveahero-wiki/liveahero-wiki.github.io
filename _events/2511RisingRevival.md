@@ -2,7 +2,7 @@
 title: The Glorious Rising Moon (Reprint)
 eventId: 149
 jp_title: 栄光のライジング・ムーン
-banner_image: ui_banner_info_RisingRevival2511.jpg
+banner_image: banner_info_RisingMoon2410.webp
 gacha: true
 event_start_time: 2025-11-28T20:00:00+09
 event_end_time: 2025-12-18T14:00:00+09

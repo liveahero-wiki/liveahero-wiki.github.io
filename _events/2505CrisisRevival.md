@@ -3,7 +3,7 @@ title: Jailbreak! Health Check Crisis! (Reprint)
 eventId: 130
 jp_title: 【復刻】脱獄！ヘルスチェック・クライシス 
 news_link: https://live-a-hero.jp/info/11278
-banner_image: banner_info_CrisisRevival2505.jpg
+banner_image: banner_info_CrisisRevival2505.webp
 gacha: true
 event_start_time: 2025-05-27T20:00:00+09
 event_end_time: 2025-06-24T14:00:00+09

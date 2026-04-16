@@ -3,7 +3,7 @@ title: Main Quest Book 2 Chapter 3
 gacha: true
 no_limited_quest: true
 news_link: https://live-a-hero.jp/info/11775
-banner_image: banner_campaign_01_main23.jpg
+banner_image: banner_campaign_01_main23.webp
 event_start_time: 2025-08-28T20:00:00+09
 event_end_time: 2025-09-23T14:00:00+09
 ---

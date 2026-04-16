@@ -2,7 +2,7 @@
 title: City of Engraved Partings ～Smoke and Mirrors～
 eventId: 147
 jp_title: さよならを刻む街 ～Smoke and Mirrors～
-banner_image: banner_info_Mirrors2511.jpg
+banner_image: banner_info_Mirrors2511.webp
 gacha: true
 event_start_time: 2025-11-05T20:00:00+09
 event_end_time: 2025-12-03T14:00:00+09

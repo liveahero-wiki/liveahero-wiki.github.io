@@ -3,7 +3,7 @@ title: ~With Love, from~ Choco Volcano
 eventId: 81
 jp_title: チョコ・ヴォルカーノより愛を込めて
 news_link: https://live-a-hero.jp/info/7954
-banner_image: ui_banner_info_Volcano2402.jpg
+banner_image: ui_banner_info_Volcano2402.webp
 gacha: true
 event_start_time: 2024-02-27T20:00:00+09
 event_end_time: 2024-03-26T14:00:00+09

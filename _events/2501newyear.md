@@ -2,7 +2,7 @@
 title: New Year 2025
 eventId: 111
 news_link: https://live-a-hero.jp/info/10481
-banner_image: banner_info_NewYear2501.jpg
+banner_image: banner_info_NewYear2501.webp
 event_start_time: 2025-01-01T00:00:00+09
 event_end_time: 2025-01-16T20:00:00+09
 ---

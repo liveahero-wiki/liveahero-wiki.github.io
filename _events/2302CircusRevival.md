@@ -3,7 +3,7 @@ title: Chocolate Circus (Reprint)
 eventId: 52
 jp_title: 【復刻】チョコレイト・サーカス！
 news_link: https://live-a-hero.jp/info/5322
-banner_image: banner_info_CircusRevival2302.jpg
+banner_image: banner_info_CircusRevival2302.webp
 gacha: true
 event_start_time: 2023-02-09T20:00:00+09
 event_end_time: 2023-03-02T14:00:00+09

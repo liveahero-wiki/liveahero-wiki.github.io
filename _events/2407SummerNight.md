@@ -3,7 +3,7 @@ title: Summer Night Last Illusion
 eventId: 97
 jp_title: サマーナイツ・ラストイリュージョン
 news_link: https://live-a-hero.jp/info/9090
-banner_image: ui_banner_info_SummerNight2407.jpg
+banner_image: ui_banner_info_SummerNight2407.webp
 gacha: true
 event_start_time: 2024-07-11T20:00:00+09
 event_end_time: 2024-08-08T14:00:00+09

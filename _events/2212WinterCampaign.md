@@ -2,7 +2,7 @@
 title: Winter Campaign 2022
 jp_title: ウィンターキャンペーン2022
 news_link: https://live-a-hero.jp/info/4994
-banner_image: banner_campaign_WinterCampaign2212.jpg
+banner_image: banner_campaign_WinterCampaign2212.webp
 no_limited_quest: true
 event_start_time: 2022-12-08T20:00:00+09
 event_end_time: 2022-12-29T14:00:00+09
