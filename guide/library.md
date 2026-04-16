@@ -49,3 +49,11 @@ These are notes written by <span class="masked" markdown="0">{% chara_link Exio 
 {% include library-info.html key="UNIQUE" %}
 {% include library-info.html key="PARALELL_WORLD" %}
 {% include library-info.html key="GATEKEEPER" %}
+
+## Echo
+
+{% include library-info.html key="ECHO_1" %}
+{% include library-info.html key="ECHO_2" %}
+{% include library-info.html key="ECHO_3" %}
+{% include library-info.html key="ECHO_4" %}
+{% include library-info.html key="ECHO_5" %}

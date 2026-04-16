@@ -20,9 +20,14 @@ def omitEmptyDict(**kwargs) -> dict:
 
 COLOR_PATTERN = re.compile(r"<color=(.*?)>(.*?)</color>", re.DOTALL)
 SIZE_PATTERN = re.compile(r"<size=(\d+)>(.*?)</size>", re.DOTALL)
+SPRITE_PATTERN = re.compile(r"<sprite=(\d+)>", re.DOTALL)
+ALIGN_PATTERN = re.compile(r"<align=center>(.*?)</align>", re.DOTALL)
 
 def sanitizeText(s: str):
     s = COLOR_PATTERN.sub(r'\2', s.strip())
+    #s = s.replace('<align=center>', '')
+    s = SPRITE_PATTERN.sub(r'(Sprite \1)', s) # TODO
+    s = ALIGN_PATTERN.sub(r'\1', s)
     s = SIZE_PATTERN.sub(r'<span style="font-size: calc(\1px * 0.75)">\2</span>', s)
     return s
 
