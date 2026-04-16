@@ -26,30 +26,32 @@ def sanitizeText(s: str):
     s = SIZE_PATTERN.sub(r'<span style="font-size: calc(\1px * 0.75)">\2</span>', s)
     return s
 
-PASSIVE_SKILL_FRONT_MARKER = '<style="パッシブ領域">'
+PASSIVE_SKILL_FRONT_MARKER = ['<style="パッシブ領域_en">', '<style="パッシブ領域">']
 
-PASSIVE_SKILL_PATTERN = re.compile(PASSIVE_SKILL_FRONT_MARKER + r'(.*?)</style>', re.DOTALL)
-ENHANCEMENT_PATTERN = re.compile(r'<style="スキル強化">(.*?)</style>', re.DOTALL)
-AUTO_ACTION_MARKER = '<style="オート行動"></style>'
-AUTO_ACTION_PATTERN = re.compile(r'<style="オート行動">(.*?)</style>', re.DOTALL)
+PASSIVE_SKILL_PATTERN = re.compile(r'<style="パッシブ領域(_en)?">(.*?)</style>', re.DOTALL)
+ENHANCEMENT_PATTERN = re.compile(r'<style="スキル強化(_en)?">(.*?)</style>', re.DOTALL)
+AUTO_ACTION_MARKER = ['<style="オート行動_en"></style>', '<style="オート行動"></style>']
+AUTO_ACTION_PATTERN = re.compile(r'<style="オート行動(_en)?">(.*?)</style>', re.DOTALL)
 
 def sanitizeSkillDescription(s: str) -> str:
     s = COLOR_PATTERN.sub(r'\2', s.strip())
     s = SIZE_PATTERN.sub(r'\2', s)
 
     s = s.replace(r'<style="改行"></style>', '<br>')
-    s = PASSIVE_SKILL_PATTERN.sub(r'<wiki-passive>\1</wiki-passive>', s)
-    s = ENHANCEMENT_PATTERN.sub(r'<wiki-enhance>\1</wiki-enhance>', s)
-    if AUTO_ACTION_MARKER in s:
-        s = s.replace(AUTO_ACTION_MARKER, '<wiki-auto-action>') + '</wiki-auto-action>'
-    s = AUTO_ACTION_PATTERN.sub(r'<wiki-auto-action>\1</wiki-auto-action>', s)
+    s = PASSIVE_SKILL_PATTERN.sub(r'<wiki-passive>\2</wiki-passive>', s)
+    s = ENHANCEMENT_PATTERN.sub(r'<wiki-enhance>\2</wiki-enhance>', s)
+
+    for marker in AUTO_ACTION_MARKER:
+        if marker in s:
+            s = s.replace(marker, '<wiki-auto-action>') + '</wiki-auto-action>'
+
+    s = AUTO_ACTION_PATTERN.sub(r'<wiki-auto-action>\2</wiki-auto-action>', s)
 
     # LW cannot be trusted to close their tag
-    if PASSIVE_SKILL_FRONT_MARKER in s:
-        s = s.replace(PASSIVE_SKILL_FRONT_MARKER, '<wiki-passive>') + '</wiki-passive>'
+    for marker in PASSIVE_SKILL_FRONT_MARKER:
+        if marker in s:
+            s = s.replace(marker, '<wiki-passive>') + '</wiki-passive>'
     s = s.replace('<style="改行">', '')
-    s = s.replace('<style="パッシブ領域_en">', '<br>')
-    s = s.replace('<style="オート行動_en">', '<br>')
     s = s.replace('</style>', '')
 
     return s
