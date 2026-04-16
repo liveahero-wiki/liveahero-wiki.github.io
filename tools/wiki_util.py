@@ -48,6 +48,8 @@ def sanitizeSkillDescription(s: str) -> str:
     if PASSIVE_SKILL_FRONT_MARKER in s:
         s = s.replace(PASSIVE_SKILL_FRONT_MARKER, '<wiki-passive>') + '</wiki-passive>'
     s = s.replace('<style="改行">', '')
+    s = s.replace('<style="パッシブ領域_en">', '<br>')
+    s = s.replace('<style="オート行動_en">', '<br>')
     s = s.replace('</style>', '')
 
     return s
