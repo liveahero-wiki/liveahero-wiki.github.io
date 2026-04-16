@@ -1,3 +1,4 @@
+#! python3
 import csv
 import io
 import argparse
