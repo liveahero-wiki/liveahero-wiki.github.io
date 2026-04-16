@@ -1,9 +1,13 @@
 ---
 title: Reticul
-unreleased: true
+characterId: 316
 type: anthro
 gender: male
-sprites: fg_reticul_s01
-#icon: icon_broker_s01
+heroes:
+- stockId: 13161
+sidekicks:
+- stockId: 13161
 ---
 
+{% include voice-table.html resourceName="reticul"
+%}

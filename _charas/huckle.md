@@ -3,6 +3,8 @@ title: Huckle
 characterId: 34
 type: anthro
 gender: male
+h2:
+  title: '"Boundless Voyage" Huckle'
 occupation: Hero Office Manager
 profile:
   age: 35
@@ -55,6 +57,7 @@ heroes:
     His parallel weapon, which amplifies the abilities of his legs and feet, and his
     costume, which is reminiscent of a traveler in old tales, are born from the
     longing of that child.
+- stockId: 10342
 sidekicks:
 - stockId: 10341
   BIO_S01: |-
@@ -105,6 +108,9 @@ RELATION = "That waiter who works at Procy's bar.<br>I can't wait to see what ki
 TOUCH = "Oops, what's wrong?.<br>Haha, I've been getting lax since I stopped being a hero.<br>It's a little embarrassing to be touched like that."
 TRAIN = "Let's get used to it. I won't be lenient though."
 TRAINED = "Hn! As I thought I'm not as good as I was in my prime."
+%}
+
+{% include voice-table.html resourceName="huckleFrontier2604"
 %}
 
 ## Notes:

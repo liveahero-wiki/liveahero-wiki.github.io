@@ -5,6 +5,8 @@ type: humanoid
 gender: male
 h2:
   title: '"The Riptide" Andrew'
+h3:
+  title: '"Dyadic Dreams" Andrew'
 heroes:
 - stockId: 10251
   BIO_H01: |-
@@ -60,6 +62,7 @@ heroes:
     While carefully embracing the massive overflow of errors that he is unable to
     process.
   extra_sprites: fg_andrewLostAncients2208_h02_skin2
+- stockId: 10253
 sidekicks:
 - stockId: 10251
   BIO_S01: |-
@@ -121,4 +124,6 @@ EVENTA = "The inventor Hisaki-san.<br>It's amazing how he can make devices that 
 EVENTB = "It's a very rare cobalt blue lake!<br>If the water is this clear, we will be able to see the guardian deity right away.<br>Okay, let's search for it!"
 %}
 
+{% include voice-table.html resourceName="andrewFrontier2604"
+%}
 
