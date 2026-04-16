@@ -3620,6 +3620,101 @@
     "prefabAddress": null,
     "limitValue": 0
   },
+  "277": {
+    "itemId": 277,
+    "itemName": "調査レポート",
+    "resourceName": "Frontier2604_surveydata",
+    "rarity": 3,
+    "itemType": 512,
+    "description": "フロンティア・ノードの調査状況をまとめたレポート。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "278": {
+    "itemId": 278,
+    "itemName": "カードパック",
+    "resourceName": "card_pack",
+    "rarity": 5,
+    "itemType": 8388608,
+    "description": "ヒーローコレクションカードが入手できるカードパック。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "279": {
+    "itemId": 279,
+    "itemName": "5.5周年記念メダル",
+    "resourceName": "HalfAnniversary2604_medal",
+    "rarity": 5,
+    "itemType": 4,
+    "description": "5.5周年記念に配布された、特設交換所で使用できるチケット。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "280": {
+    "itemId": 280,
+    "itemName": "フロンティア専用エーテルチケット",
+    "resourceName": "event_stone_ticket",
+    "rarity": 3,
+    "itemType": 4,
+    "description": "残響のフロンティアメモリーズエーテルサーチを1回行うことができるチケット",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "281": {
+    "itemId": 281,
+    "itemName": "調査拠点ホログラム",
+    "resourceName": "icon_bg_battle_frontierbridge",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景に調査拠点を投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_frontierbridge",
+        "bgTitleKey": "TITLE_BG_BATTLE_FRONTIERBRIDGE_WALLPAPER"
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "282": {
+    "itemId": 282,
+    "itemName": "フロンティアディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "残響のフロンティアメモリーズのBGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_frontier_adv",
+        "bgmTitleKey": "TITLE_BGM_FRONTIER_ADV_RECORD"
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "283": {
+    "itemId": 283,
+    "itemName": "フロンティア戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "残響のフロンティアメモリーズの戦闘BGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_frontier_battle",
+        "bgmTitleKey": "TITLE_BGM_FRONTIER_BATTLE_RECORD"
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -4632,6 +4727,28 @@
     "prefabAddress": null,
     "limitValue": 0
   },
+  "110253": {
+    "itemId": 110253,
+    "itemName": "共生のアンドリューの記憶片",
+    "resourceName": "piece_andrewFrontier2604",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "共生のアンドリューのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10253
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
   "110261": {
     "itemId": 110261,
     "itemName": "アルキバの記憶片",
@@ -4957,6 +5074,28 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 5
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "110342": {
+    "itemId": 110342,
+    "itemName": "雄飛のハックルの記憶片",
+    "resourceName": "piece_huckleFrontier2604",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "雄飛のハックルのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 10342
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
       }
     ],
     "prefabAddress": null,
@@ -7849,6 +7988,28 @@
         "addFan": 50,
         "rarity": 0,
         "stockId": 13051
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "113161": {
+    "itemId": 113161,
+    "itemName": "レティクルの記憶片",
+    "resourceName": "piece_reticul",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "レティクルのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 13161
       },
       {
         "class": "GeneralCurrencyExchangeItemEffect",
@@ -10934,6 +11095,27 @@
     "prefabAddress": null,
     "limitValue": 0
   },
+  "213161": {
+    "itemId": 213161,
+    "itemName": "レティクルの心",
+    "resourceName": "heart_reticul",
+    "rarity": 4,
+    "itemType": 2048,
+    "description": "レティクルのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 13161
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
   "219991": {
     "itemId": 219991,
     "itemName": "@playerNameの心",
@@ -11084,6 +11266,465 @@
     "itemType": 2097152,
     "description": "バレンタインにモリヤスと過ごした記憶。<I>「お前さんとの思い出が醸す最高の一杯さぁ」</I>",
     "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4000000": {
+    "itemId": 4000000,
+    "itemName": "パラレルフライト・カードピース",
+    "resourceName": "bromide_upgrade",
+    "rarity": 3,
+    "itemType": 4718592,
+    "description": "第1弾「パラレルフライト」の各キャラクター専用のカードピースと交換できる。第1弾のコレクションカードを入手するときに入手できる。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4100111": {
+    "itemId": 4100111,
+    "itemName": "アカシのカードピース(P)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 5,
+    "itemType": 4194304,
+    "description": "アカシのポートレートカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1001101
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4100112": {
+    "itemId": 4100112,
+    "itemName": "アカシのカードピース(H)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 2,
+    "itemType": 4194304,
+    "description": "アカシのヒーローカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1001102
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4100113": {
+    "itemId": 4100113,
+    "itemName": "アカシのカードピース(SP)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 3,
+    "itemType": 4194304,
+    "description": "アカシのスペシャルカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1001103
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4100211": {
+    "itemId": 4100211,
+    "itemName": "マイティのカードピース(P)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 1,
+    "itemType": 4194304,
+    "description": "マイティ・ナックルのポートレートカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1002101
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4100212": {
+    "itemId": 4100212,
+    "itemName": "マイティのカードピース(H)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 2,
+    "itemType": 4194304,
+    "description": "マイティ・ナックルのヒーローカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1002102
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4100213": {
+    "itemId": 4100213,
+    "itemName": "マイティのカードピース(SP)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 3,
+    "itemType": 4194304,
+    "description": "マイティ・ナックルのスペシャルカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1002103
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4100311": {
+    "itemId": 4100311,
+    "itemName": "スイのカードピース(P)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 1,
+    "itemType": 4194304,
+    "description": "スイのポートレートカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1003101
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4100312": {
+    "itemId": 4100312,
+    "itemName": "スイのカードピース(H)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 2,
+    "itemType": 4194304,
+    "description": "スイのヒーローカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1003102
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4100313": {
+    "itemId": 4100313,
+    "itemName": "スイのカードピース(SP)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 3,
+    "itemType": 4194304,
+    "description": "スイのスペシャルカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1003103
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4100411": {
+    "itemId": 4100411,
+    "itemName": "ジャスティスのカードピース(P)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 1,
+    "itemType": 4194304,
+    "description": "ザップ・ザ・ジャスティスのポートレートカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1004101
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4100412": {
+    "itemId": 4100412,
+    "itemName": "ジャスティスのカードピース(H)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 2,
+    "itemType": 4194304,
+    "description": "ザップ・ザ・ジャスティスのヒーローカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1004102
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4100413": {
+    "itemId": 4100413,
+    "itemName": "ジャスティスのカードピース(SP)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 1,
+    "itemType": 4194304,
+    "description": "ザップ・ザ・ジャスティスのスペシャルカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1004103
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4100511": {
+    "itemId": 4100511,
+    "itemName": "クローネのカードピース(P)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 1,
+    "itemType": 4194304,
+    "description": "クローネのポートレートカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1005101
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4100512": {
+    "itemId": 4100512,
+    "itemName": "クローネのカードピース(H)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 1,
+    "itemType": 4194304,
+    "description": "クローネのヒーローカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1005102
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4100513": {
+    "itemId": 4100513,
+    "itemName": "クローネのカードピース(SP)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 1,
+    "itemType": 4194304,
+    "description": "クローネのスペシャルカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1005103
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4103411": {
+    "itemId": 4103411,
+    "itemName": "ホッパーのカードピース(P)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 0,
+    "itemType": 4194304,
+    "description": "ホッパー・ザ・フェイスのポートレートカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1034101
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4103412": {
+    "itemId": 4103412,
+    "itemName": "ホッパーのカードピース(H)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 0,
+    "itemType": 4194304,
+    "description": "ホッパー・ザ・フェイスのヒーローカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1034102
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4103413": {
+    "itemId": 4103413,
+    "itemName": "ホッパーのカードピース(SP)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 0,
+    "itemType": 4194304,
+    "description": "ホッパー・ザ・フェイスのスペシャルカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1034103
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4104111": {
+    "itemId": 4104111,
+    "itemName": "火のウルフマンのカードピース(P)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 1,
+    "itemType": 4194304,
+    "description": "火のウルフマンのポートレートカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1041101
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4104112": {
+    "itemId": 4104112,
+    "itemName": "火のウルフマンのカードピース(H)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 1,
+    "itemType": 4194304,
+    "description": "火のウルフマンのヒーローカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1041102
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4104211": {
+    "itemId": 4104211,
+    "itemName": "水のウルフマンのカードピース(P)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 1,
+    "itemType": 4194304,
+    "description": "水のウルフマンのポートレートカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1042101
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4104212": {
+    "itemId": 4104212,
+    "itemName": "水のウルフマンのカードピース(H)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 1,
+    "itemType": 4194304,
+    "description": "水のウルフマンのヒーローカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1042102
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4104311": {
+    "itemId": 4104311,
+    "itemName": "木のウルフマンのカードピース(P)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 1,
+    "itemType": 4194304,
+    "description": "木のウルフマンのポートレートカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1043101
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4104312": {
+    "itemId": 4104312,
+    "itemName": "木のウルフマンのカードピース(H)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 1,
+    "itemType": 4194304,
+    "description": "木のウルフマンのヒーローカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1043102
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4104411": {
+    "itemId": 4104411,
+    "itemName": "光のウルフマンのカードピース(P)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 1,
+    "itemType": 4194304,
+    "description": "光のウルフマンのポートレートカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1044101
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4104412": {
+    "itemId": 4104412,
+    "itemName": "光のウルフマンのカードピース(H)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 1,
+    "itemType": 4194304,
+    "description": "光のウルフマンのヒーローカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1044102
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4104511": {
+    "itemId": 4104511,
+    "itemName": "影のウルフマンのカードピース(P)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 1,
+    "itemType": 4194304,
+    "description": "影のウルフマンのポートレートカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1045101
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4104512": {
+    "itemId": 4104512,
+    "itemName": "影のウルフマンのカードピース(H)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 1,
+    "itemType": 4194304,
+    "description": "影のウルフマンのヒーローカードのレアリティを上昇させるのに必要なアイテム",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 1045102
+      }
+    ],
     "prefabAddress": null,
     "limitValue": 0
   },
@@ -12440,6 +13081,17 @@
     "prefabAddress": null,
     "limitValue": 0
   },
+  "21025301": {
+    "itemId": 21025301,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
   "21026101": {
     "itemId": 21026101,
     "itemName": "開花の波動",
@@ -12596,6 +13248,17 @@
   },
   "21034101": {
     "itemId": 21034101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "21034201": {
+    "itemId": 21034201,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,
@@ -14048,6 +14711,17 @@
   },
   "21305101": {
     "itemId": 21305101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "21316101": {
+    "itemId": 21316101,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,
