@@ -4,6 +4,11 @@ characterId: 3
 type: humanoid
 gender: other
 occupation: Fashion Designer (服飾デザイナー)
+profile:
+  age: 19
+  height: 168
+  weight: 60
+  birthday: 02/15
 heroes:
 - stockId: 10031
   BIO_H01: |-

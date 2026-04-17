@@ -4,7 +4,11 @@ characterId: 2
 type: anthro
 gender: male
 occupation: Video Production Staff
-Affiliation Office: Parallel Flight
+profile:
+  age: 23
+  height: 164
+  weight: 122
+  birthday: 10/02
 profile:
   age: 23
   height: 164
