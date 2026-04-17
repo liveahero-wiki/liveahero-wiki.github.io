@@ -113,7 +113,12 @@
         {%- endfor %}
       </tbody>
     </table>
-    <p>{{ total_count }} event currency needed to open the first {{ regular_box_count }} box(es).</p>
+    <p>
+      {% for price in group.prices %}
+      {% unless forloop.first %} + {% endunless %}
+      {{ price.objectValue | times: total_count}}x {% include item.html id=price.objectId rewardType=price.objectType %}
+      {% endfor %}
+      are required to open the first {{ regular_box_count }} box(es).</p>
   </div>
 
   <h4>Lootbox Details</h4>
