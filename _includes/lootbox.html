@@ -1,0 +1,150 @@
+{%- assign group_id = include.id | downcase -%}
+{%- assign group = site.data.RewardLootBoxMaster[group_id] -%}
+{%- assign boxes = group.boxes -%}
+
+{%- comment -%}Flatten all objects from non-infinity boxes for summary{%- endcomment -%}
+{%- assign non_inf_objects = "" | split: "" -%}
+{%- assign regular_box_count = 0 -%}
+{%- for box in boxes -%}
+  {%- unless box.isInfinity -%}
+    {%- assign non_inf_objects = non_inf_objects | concat: box.objects -%}
+    {%- assign regular_box_count = regular_box_count | plus: 1 -%}
+  {%- endunless -%}
+{%- endfor -%}
+
+{%- assign unique_objects = non_inf_objects | group_by_exp: "item", "item.objectId" -%}
+
+<style>
+.lootbox-group {
+  margin: 1rem 0;
+}
+.lootbox-scroll {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+.lootbox-card {
+  flex: 0 0 auto;
+  min-width: 200px;
+  border: 1px solid var(--border-color, #ccc);
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: 0.85rem;
+}
+.lootbox-card.is-infinity {
+  border-color: var(--accent-color, #e8a000);
+  border-width: 2px;
+}
+.lootbox-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3rem 0.6rem;
+  background: var(--table-header-bg, #f0f0f0);
+  color: var(--text-color, #000);
+  font-weight: bold;
+  gap: 0.4rem;
+}
+.lootbox-card.is-infinity .lootbox-card-header {
+  background: var(--accent-bg, #fff3cd);
+}
+.lootbox-infinity-badge {
+  font-size: 0.7rem;
+  background: var(--accent-color, #e8a000);
+  color: #fff;
+  border-radius: 3px;
+  padding: 0 4px;
+}
+.lootbox-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+.lootbox-card table th,
+.lootbox-card table td {
+  padding: 0.25rem 0.5rem;
+  border-top: 1px solid var(--border-color, #e0e0e0);
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.lootbox-card table th {
+  background: var(--table-header-bg, #f8f8f8);
+  color: var(--text-color, #000);
+  font-size: 0.75rem;
+  text-align: center;
+}
+.lootbox-card table td:last-child {
+  text-align: right;
+}
+.lootbox-summary {
+  margin-top: 1.5rem;
+}
+.lootbox-summary h4 {
+  margin-bottom: 0.5rem;
+}
+</style>
+
+<div class="lootbox-group">
+
+  <div class="lootbox-summary">
+    {% assign total_count = 0 %}
+    <h4>Cumulative Rewards -- Boxes 1-{{ regular_box_count }}</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Total Rewards</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%- for obj in unique_objects %}
+        {%- assign first_item = obj.items.first -%}
+        {%- assign row_total = 0 -%}
+        {%- for item in obj.items -%}
+          {%- assign total_count = total_count | plus: item.perBoxCount -%}
+          {%- assign row_value = item.perBoxCount | times: item.objectValue -%}
+          {%- assign row_total = row_total | plus: row_value -%}
+        {%- endfor %}
+        <tr>
+          <td>{% include item.html id=first_item.objectId rewardType=first_item.objectType %}</td>
+          <td>{{ row_total }}</td>
+        </tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+    <p>{{ total_count }} event currency needed to open the first {{ regular_box_count }} box(es).</p>
+  </div>
+
+  <h4>Lootbox Details</h4>
+
+  <div class="lootbox-scroll">
+    {%- for box in boxes %}
+    <div class="lootbox-card{% if box.isInfinity %} is-infinity{% endif %}">
+      <div class="lootbox-card-header">
+        <span>Box {{ box.serialNo }}</span>
+        {%- if box.isInfinity %}<span class="lootbox-infinity-badge">Repeatable</span>{%- endif %}
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Value</th>
+            <th>Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for obj in box.objects %}
+          <tr>
+            <td>{% include item-icon.html id=obj.objectId rewardType=obj.objectType %}</td>
+            <td>{{ obj.objectValue }}</td>
+            <td>{{ obj.perBoxCount }}</td>
+          </tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+    </div>
+    {%- endfor %}
+  </div>
+
+</div>

@@ -172,7 +172,10 @@ Here is a list of this event's limited time Missions:
 
 {% include quest-group.html chapterId=1257 %}
 
-### Free Quests
+### Challenge Quests
 
 {% include quest-group.html chapterId=1259 %}
 
+## Lootbox
+
+{% include lootbox.html id=1 %}
