@@ -168,6 +168,12 @@ Here is a list of this event's limited time Missions:
 
 {% include quest-group.html chapterId=1256 %}
 
+Here is a list of this event's fan translated episodes:
+
+| Episode  | Translation      | 
+|------------|------------------|
+| 1  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vSg6PuJy4ECiqn4heHZ9_TlEiuu5HaCZdCH5eOc1Gck61VUZu6YLYiNCXc9E54c_zeN0QldH7DJgv99/pubhtml?gid=670938847&single=true) |
+
 ### Free Quests
 
 {% include quest-group.html chapterId=1257 %}
