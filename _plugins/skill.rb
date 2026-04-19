@@ -667,6 +667,10 @@ module LahWiki
     def hasAutoActionMarker(s)
       return s.include?('<style="オート行動"></style>')
     end
+
+    def sanitizePlayerName(s)
+      return s.gsub(/<@playerName>/, "<code>Player</code>")
+    end
   end
 end
 
