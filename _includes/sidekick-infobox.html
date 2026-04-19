@@ -19,18 +19,7 @@
 
 {% assign detail_prefix = firstCardInfo.resourceName | upcase | prepend: "DETAIL_" %}
 {% assign bio_s01 = detail_prefix | append: "_S01" %}
-<details>
-<summary>Side Story</summary>
-<p>{{ site.data.processed.jp_bio[bio_s01] }}</p>
-</details>
-{% if include.BIO_S01 != "" %}
-<details open markdown="1">
-<summary>Side Story (Translated)</summary>
-
-{{ include.BIO_S01 | default: site.data.processed.en_bio[bio_s01] }}
-
-</details>
-{% endif %}
+{% include bio-infobox.html bio=bio_s01 title="Side Story" %}
 
 
 {% assign skillIdsActive = firstCardInfo.skillIds %}

@@ -17,33 +17,11 @@
 
 {% assign detail_prefix = firstCardInfo.resourceName | upcase | prepend: "DETAIL_" %}
 {% assign bio_h01 = detail_prefix | append: "_H01" %}
-<details>
-<summary>Personal Data 1</summary>
-<p>{{ site.data.processed.jp_bio[bio_h01] }}</p>
-</details>
-{% if include.BIO_H01 != "" %}
-<details open markdown="1">
-<summary>Personal Data 1 (Translated)</summary>
-
-{{ include.BIO_H01 | default: site.data.processed.en_bio[bio_h01] }}
-
-</details>
-{% endif %}
+{% include bio-infobox.html bio=bio_h01 title="Personal Data 1" %}
 
 {% if firstCardInfo.rarity >= 3 %}
 {% assign bio_h02 = detail_prefix | append: "_H02" %}
-<details>
-<summary>Personal Data 2</summary>
-<p>{{ site.data.processed.jp_bio[bio_h02] }}</p>
-</details>
-{% if include.BIO_H02 != "" %}
-<details open markdown="1">
-<summary>Personal Data 2 (Translated)</summary>
-
-{{ include.BIO_H02 | default: site.data.processed.en_bio[bio_h02] }}
-
-</details>
-{% endif %}
+{% include bio-infobox.html bio=bio_h02 title="Personal Data 2" %}
 {% endif %}
 
 {% assign stockId = include.stockId | downcase %}
@@ -56,17 +34,11 @@
 <summary>Spoilers</summary>
 
 {% if spoiler_detail_h01 %}
-<details>
-<summary>Personal Data 1</summary>
-<p>{{ spoiler_detail_h01 | default: site.data.processed.en_bio[cardProfileOverride.detail_h01] }}</p>
-</details>
+{% include bio-infobox.html bio=cardProfileOverride.detail_h01 title="Personal Data 1" %}
 {% endif %}
 
 {% if spoiler_detail_h02 %}
-<details>
-<summary>Personal Data 2</summary>
-<p>{{ spoiler_detail_h02 | default: site.data.processed.en_bio[cardProfileOverride.detail_h02] }}</p>
-</details>
+{% include bio-infobox.html bio=cardProfileOverride.detail_h02 title="Personal Data 2" %}
 {% endif %}
 
 </details>
