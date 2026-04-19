@@ -52,9 +52,7 @@
 <div role="tabpanel" class="tabcontent contain" id="card-collection-{{resourceName}}-{{ locale }}">
     {% for collection_suffix in collection_suffix %}
     {% capture collection_key %}COLLECTION_{{ upcaseResourceName }}_{{ collection_suffix }}{% endcapture %}
-    <!-- {{ collection_key }} -->
     {% assign collection_value = dataSources[localeIdx][collection_key] %}
-    <!-- {{ collection_value }} -->
     {% if collection_value %}
     <h4>{{ collection_suffix }}</h4>
     <p>{{ collection_value }}</p>
