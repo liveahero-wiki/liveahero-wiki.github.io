@@ -37,6 +37,11 @@ layout: markdownify
 </wiki-tabcontent>
 
 </wiki-tabs>
+
+{% assign cardId = page.characterId | times: 100 | plus: 100011 | downcase %}
+{% assign collectionResourceName = site.data.CardMaster[cardId].resourceName %}
+{% include card-collection-info.html resourceName=collectionResourceName %}
+
 {% endif %}
 {{content}}
 

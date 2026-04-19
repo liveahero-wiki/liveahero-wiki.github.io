@@ -20,6 +20,7 @@
   --sidebar: var(--color100);
 
   --mask-filter: brightness(0);
+  --invert-filter: none;
 
   --sectionHeader: rgb(94 203 140);
   --sectionBg: #d3f8eb;
@@ -53,6 +54,7 @@ html[data-theme="dark"] {
   --sidebar: var(--color800);
 
   --mask-filter: brightness(0) invert(1);
+  --invert-filter: invert(1);
 
   --fire: #a50b00;
   --water: #0c4b9e;
@@ -659,6 +661,14 @@ wiki-auto-action::before {
 }
 .skill_tree table {
   margin: 0;
+}
+.signature {
+  border: 1px solid var(--colorGrey);
+  max-width: 512px;
+  margin-bottom: 20px;
+  img {
+    filter: var(--invert-filter);
+  }
 }
 // Chara list page
 .card-list {

@@ -10,6 +10,7 @@ from wiki_util import dumpJson, sanitizeText
 
 def processPropertiesFile(raw_file, bio_file, serif_file, profile_file, library_file, sales_report_file,
     score_attack_file,
+    card_collection_file,
 ):
     with open(os.path.join("zzz", raw_file), "rb") as f:
         obj = json.load(f)
@@ -20,6 +21,7 @@ def processPropertiesFile(raw_file, bio_file, serif_file, profile_file, library_
     library = {}
     sales_report = {}
     score_attack = {}
+    card_collection = {}
 
     for key, value in obj.items():
         s = [key, value]
@@ -41,6 +43,9 @@ def processPropertiesFile(raw_file, bio_file, serif_file, profile_file, library_
         
         if s[0].startswith("HINT_SCORE_ATTACK_"):
             score_attack[s[0]] = sanitizeText(s[1])
+        
+        if s[0].startswith("COLLECTION_"):
+            card_collection[s[0]] = sanitizeText(s[1])
 
     detail = collections.OrderedDict(sorted(detail.items()))
     serif = collections.OrderedDict(sorted(serif.items()))
@@ -48,6 +53,7 @@ def processPropertiesFile(raw_file, bio_file, serif_file, profile_file, library_
     library = collections.OrderedDict(sorted(library.items()))
     sales_report = collections.OrderedDict(sorted(sales_report.items()))
     score_attack = collections.OrderedDict(sorted(score_attack.items()))
+    card_collection = collections.OrderedDict(sorted(card_collection.items()))
 
     dumpJson(os.path.join("_data", "processed", bio_file), detail)
     dumpJson(os.path.join("_data", "processed", serif_file), serif)
@@ -55,7 +61,7 @@ def processPropertiesFile(raw_file, bio_file, serif_file, profile_file, library_
     dumpJson(os.path.join("_data", "processed", library_file), library)
     dumpJson(os.path.join("_data", "processed", sales_report_file), sales_report)
     dumpJson(os.path.join("_data", "processed", score_attack_file), score_attack)
-
+    dumpJson(os.path.join("_data", "processed", card_collection_file), card_collection)
 
 def processShopFile():
     with open(os.path.join("_data", "ShopMaster.json"), "r", encoding="utf-8") as f:

@@ -132,6 +132,7 @@ def main(argv):
     "_library.json",
     "_sales_report.json",
     "_score_attack.json",
+    "_card_collection.json",
   ]
 
   for p in prop_files:

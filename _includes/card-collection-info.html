@@ -1,0 +1,59 @@
+{% assign resourceName = include.resourceName %}
+{% assign upcaseResourceName = resourceName | upcase %}
+{% assign s01_collection_key = upcaseResourceName | prepend: "COLLECTION_" | append: "_S01_PRE_INFO" %}
+{% assign jp_data = site.data.processed.jp_card_collection[s01_collection_key] %}
+
+{% assign locales = "" | split: "," %}
+{% assign dataSources = "" | split: "," %}
+
+{% assign en_data = site.data.processed.en_card_collection[s01_collection_key] %}
+{% if en_data and en_data != jp_data %}
+    {% assign locales = locales | push: "en" %}
+    {% assign dataSources = dataSources | push: site.data.processed.en_card_collection %}
+{% endif %}
+{% if jp_data %}
+    {% assign locales = locales | push: "jp" %}
+    {% assign dataSources = dataSources | push: site.data.processed.jp_card_collection %}
+{% endif %}
+
+{% assign collection_suffix = "H01_PRE_INFO,H01_POST_INFO,H02_PRE_INFO,H02_POST_INFO,S01_PRE_INFO,S01_POST_INFO" | split: "," %}
+
+{% if locales.size > 0 %}
+<h2>Card Collection</h2>
+
+<figure class="signature">
+<img src="/cdn/Texture2D/Sign/sign_{{ resourceName }}.png" alt="{{ page.title | xml_escape }}'s Signature" width="512" height="512">
+<figcaption>{{ page.title }}'s Signature</figcaption>
+</figure>
+
+<wiki-tabs class="mini-tabs">
+ 
+<wiki-header class="scroll-snap-x">
+<nav role="tablist">
+{% for locale in locales %}
+    <a role="tab" aria-controls="card-collection-{{resourceName}}-{{ locale }}" href="#card-collection-{{resourceName}}-{{ locale }}">{{ locale | upcase }}</a>
+{% endfor %}
+</nav>
+</wiki-header>
+
+<wiki-tabcontent class="scroll-snap-x">
+{% for locale in locales %}
+{% assign localeIdx = forloop.index0 %}
+<div role="tabpanel" class="tabcontent contain" id="card-collection-{{resourceName}}-{{ locale }}">
+    {% for collection_suffix in collection_suffix %}
+    {% capture collection_key %}COLLECTION_{{ upcaseResourceName }}_{{ collection_suffix }}{% endcapture %}
+    <!-- {{ collection_key }} -->
+    {% assign collection_value = dataSources[localeIdx][collection_key] %}
+    <!-- {{ collection_value }} -->
+    {% if collection_value %}
+    <h4>{{ collection_suffix }}</h4>
+    <p>{{ collection_value }}</p>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endfor %}
+</wiki-tabcontent>
+
+</wiki-tabs>
+
+{% endif %}

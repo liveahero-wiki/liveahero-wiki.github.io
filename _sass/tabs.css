@@ -76,3 +76,19 @@ wiki-tabcontent {
   grid-auto-flow: column;
   grid-auto-columns: 100%;
 }
+
+.mini-tabs {
+  --color-tabs: var(--color, var(--colorGrey));
+  border: 1px solid var(--color-tabs);
+  margin-bottom: 10px;
+
+  wiki-tabtitle {
+    display: flex;
+    background: var(--color-tabs);
+    padding: 15px;
+  }
+
+  > wiki-tabcontent > .tabcontent {
+    padding: 0 20px;
+  }
+}
