@@ -3,6 +3,8 @@
 
 {% assign jp_data = site.data.processed.jp_bio[include.bio] %}
 {% assign en_data = site.data.processed.en_bio[include.bio] %}
+{% assign hans_data = site.data.processed.hans_bio[include.bio] %}
+{% assign hant_data = site.data.processed.hant_bio[include.bio] %}
 {% if en_data and en_data != jp_data %}
 {% assign locales = locales | push: "en" %}
 {% assign dataSources = dataSources | push: site.data.processed.en_bio %}
@@ -11,6 +13,14 @@
 {% assign locales = locales | push: "jp" %}
 {% assign dataSources = dataSources | push: site.data.processed.jp_bio %}
 {% endif %}
+{% if hans_data and hans_data != jp_data %}
+{% assign locales = locales | push: "hans" %}
+{% assign dataSources = dataSources | push: site.data.processed.hans_bio %}
+{% endif %}
+{% if hant_data and hant_data != jp_data %}
+{% assign locales = locales | push: "hant" %}
+{% assign dataSources = dataSources | push: site.data.processed.hant_bio %}
+{% endif %}
 
 <wiki-tabs class="mini-tabs">
 <wiki-tabtitle>{{ include.title }}</wiki-tabtitle>
@@ -18,7 +28,7 @@
 <nav role="tablist">
 {% for locale in locales %}
 <a role="tab" aria-controls="bio-{{include.bio | downcase}}-{{ locale }}"
-    href="#bio-{{include.bio | downcase}}-{{ locale }}">{{ locale | upcase }}</a>
+    href="#bio-{{include.bio | downcase}}-{{ locale }}">{{ locale | convertLang }}</a>
 {% endfor %}
 </nav>
 </wiki-header>

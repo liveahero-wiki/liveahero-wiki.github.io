@@ -9,6 +9,8 @@
 
 {% assign jp_data = site.data.processed.jp_library[page_key] %}
 {% assign en_data = site.data.processed.en_library[page_key] %}
+{% assign hans_data = site.data.processed.hans_library[page_key] %}
+{% assign hant_data = site.data.processed.hant_library[page_key] %}
 {% if en_data and en_data != jp_data %}
     {% assign locales = locales | push: "en" %}
     {% assign dataSources = dataSources | push: site.data.processed.en_library %}
@@ -17,12 +19,20 @@
     {% assign locales = locales | push: "jp" %}
     {% assign dataSources = dataSources | push: site.data.processed.jp_library %}
 {% endif %}
+{% if hans_data and hans_data != jp_data %}
+    {% assign locales = locales | push: "hans" %}
+    {% assign dataSources = dataSources | push: site.data.processed.hans_library %}
+{% endif %}
+{% if hant_data and hant_data != jp_data %}
+    {% assign locales = locales | push: "hant" %}
+    {% assign dataSources = dataSources | push: site.data.processed.hant_library %}
+{% endif %}
 
 <wiki-tabs class="mini-tabs">
 <wiki-header class="scroll-snap-x">
 <nav role="tablist">
 {% for locale in locales %}
-    <a role="tab" aria-controls="library-{{include.key | downcase}}-{{ locale }}" href="#library-{{include.key | downcase}}-{{ locale }}">{{ locale | upcase }}</a>
+    <a role="tab" aria-controls="library-{{include.key | downcase}}-{{ locale }}" href="#library-{{include.key | downcase}}-{{ locale }}">{{ locale | convertLang }}</a>
 {% endfor %}
 </nav>
 </wiki-header>

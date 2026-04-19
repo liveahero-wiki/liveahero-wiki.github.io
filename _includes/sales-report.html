@@ -1,3 +1,29 @@
+{% assign sales_report_id = sales_report | downcase %}
+
+{% assign locales = "" | split: "," %}
+{% assign dataSources = "" | split: "," %}
+
+{% assign jp_data = site.data.processed.jp_sales_report[sales_report] %}
+{% assign en_data = site.data.processed.en_sales_report[sales_report] %}
+{% assign hans_data = site.data.processed.hans_sales_report[sales_report] %}
+{% assign hant_data = site.data.processed.hant_sales_report[sales_report] %}
+{% if en_data and en_data != jp_data %}
+    {% assign locales = locales | push: "en" %}
+    {% assign dataSources = dataSources | push: site.data.processed.en_sales_report %}
+{% endif %}
+{% if jp_data %}
+    {% assign locales = locales | push: "jp" %}
+    {% assign dataSources = dataSources | push: site.data.processed.jp_sales_report %}
+{% endif %}
+{% if hans_data and hans_data != jp_data %}
+    {% assign locales = locales | push: "hans" %}
+    {% assign dataSources = dataSources | push: site.data.processed.hans_sales_report %}
+{% endif %}
+{% if hant_data and hant_data != jp_data %}
+    {% assign locales = locales | push: "hant" %}
+    {% assign dataSources = dataSources | push: site.data.processed.hant_sales_report %}
+{% endif %}
+
 <wiki-tabs class="mini-tabs">
 {% assign sales_report_id = sales_report | downcase %}
 
@@ -5,16 +31,19 @@
 
 <wiki-header class="scroll-snap-x">
 <nav role="tablist">
-<a role="tab" aria-controls="{{ sales_report_id }}-en" href="#{{ sales_report_id }}-en">EN</a>
-<a role="tab" aria-controls="{{ sales_report_id }}-jp" href="#{{ sales_report_id }}-jp">JP</a>
+{% for locale in locales %}
+    <a role="tab" aria-controls="{{ sales_report_id }}-{{ locale }}" href="#{{ sales_report_id }}-{{ locale }}">{{ locale | convertLang }}</a>
+{% endfor %}
 </nav>
 </wiki-header>
 
 <wiki-tabcontent class="scroll-snap-x">
-<div role="tabpanel" class="tabcontent contain" id="{{ sales_report_id }}-en">
-    <p>{{ site.data.processed.en_sales_report[sales_report] | sanitizeSalesCharaName }}</p></div>
-<div role="tabpanel" class="tabcontent contain" id="{{ sales_report_id }}-jp">
-    <p>{{ site.data.processed.jp_sales_report[sales_report] | sanitizeSalesCharaName }}</p></div>
+{% for locale in locales %}
+{% assign localeIdx = forloop.index0 %}
+<div role="tabpanel" class="tabcontent contain" id="{{ sales_report_id }}-{{ locale }}">
+    <p markdown="1">{{ dataSources[localeIdx][sales_report] | sanitizeSalesCharaName }}</p>
+</div>
+{% endfor %}
 </wiki-tabcontent>
 
 </wiki-tabs>

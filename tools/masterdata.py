@@ -140,6 +140,8 @@ def main(argv):
 
   processPropertiesFile("Japanese.json", *[f"jp{s}" for s in tl_suffixes])
   processPropertiesFile("English.json", *[f"en{s}" for s in tl_suffixes])
+  processPropertiesFile("ChineseSimplified.json", *[f"hans{s}" for s in tl_suffixes])
+  processPropertiesFile("ChineseTraditional.json", *[f"hant{s}" for s in tl_suffixes])
 
 if __name__ == '__main__':
   main(None)

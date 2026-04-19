@@ -675,6 +675,16 @@ module LahWiki
     def sanitizeSalesCharaName(s)
       return s.gsub(/\{(\d+)\}/, '<wiki-editable-name storage-key="wiki_chara\1_name">Chara \1</wiki-editable-name>')
     end
+
+    @@lang_map = {
+      "en" => "EN",
+      "jp" => "日文",
+      "hans" => "简中",
+      "hant" => "繁中",
+    }
+    def convertLang(lang)
+      return @@lang_map[lang] || lang
+    end
   end
 end
 

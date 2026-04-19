@@ -7,6 +7,8 @@
 {% assign dataSources = "" | split: "," %}
 
 {% assign en_data = site.data.processed.en_card_collection[s01_collection_key] %}
+{% assign hans_data = site.data.processed.hans_card_collection[s01_collection_key] %}
+{% assign hant_data = site.data.processed.hant_card_collection[s01_collection_key] %}
 {% if en_data and en_data != jp_data %}
     {% assign locales = locales | push: "en" %}
     {% assign dataSources = dataSources | push: site.data.processed.en_card_collection %}
@@ -14,6 +16,14 @@
 {% if jp_data %}
     {% assign locales = locales | push: "jp" %}
     {% assign dataSources = dataSources | push: site.data.processed.jp_card_collection %}
+{% endif %}
+{% if hans_data and hans_data != jp_data %}
+    {% assign locales = locales | push: "hans" %}
+    {% assign dataSources = dataSources | push: site.data.processed.hans_card_collection %}
+{% endif %}
+{% if hant_data and hant_data != jp_data %}
+    {% assign locales = locales | push: "hant" %}
+    {% assign dataSources = dataSources | push: site.data.processed.hant_card_collection %}
 {% endif %}
 
 {% assign collection_suffix = "H01_PRE_INFO,H01_POST_INFO,H02_PRE_INFO,H02_POST_INFO,S01_PRE_INFO,S01_POST_INFO" | split: "," %}
@@ -31,7 +41,7 @@
 <wiki-header class="scroll-snap-x">
 <nav role="tablist">
 {% for locale in locales %}
-    <a role="tab" aria-controls="card-collection-{{resourceName}}-{{ locale }}" href="#card-collection-{{resourceName}}-{{ locale }}">{{ locale | upcase }}</a>
+    <a role="tab" aria-controls="card-collection-{{resourceName}}-{{ locale }}" href="#card-collection-{{resourceName}}-{{ locale }}">{{ locale | convertLang }}</a>
 {% endfor %}
 </nav>
 </wiki-header>
