@@ -1,10 +1,20 @@
-<details><summary>{{ sales_report }}</summary>
-<p>{{ site.data.processed.jp_sales_report[sales_report] }}</p>
-</details>
+<wiki-tabs class="mini-tabs">
+{% assign sales_report_id = sales_report | downcase %}
+
+<wiki-tabtitle>{{ sales_report }}</wiki-tabtitle>
+
+<wiki-header class="scroll-snap-x">
+<nav role="tablist">
+<a role="tab" aria-controls="{{ sales_report_id }}-en" href="#{{ sales_report_id }}-en">EN</a>
+<a role="tab" aria-controls="{{ sales_report_id }}-jp" href="#{{ sales_report_id }}-jp">JP</a>
+</nav>
+</wiki-header>
     
-{% assign translated_sales_report = site.data.wiki.SalesReport[sales_report] | default: site.data.processed.en_sales_report[sales_report] %}
-{% if translated_sales_report %}
-<details><summary>{{ sales_report }} (Translated)</summary>
-<p>{{ translated_sales_report }}</p>
-</details>
-{% endif %}
+<wiki-tabcontent class="scroll-snap-x">
+<div role="tabpanel" class="tabcontent contain" id="{{ sales_report_id }}-en">
+    <p>{{ site.data.processed.en_sales_report[sales_report] }}</p></div>
+<div role="tabpanel" class="tabcontent contain" id="{{ sales_report_id }}-jp">
+    <p>{{ site.data.processed.jp_sales_report[sales_report] }}</p></div>
+</wiki-tabcontent>
+    
+</wiki-tabs>
