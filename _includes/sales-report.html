@@ -9,12 +9,12 @@
 <a role="tab" aria-controls="{{ sales_report_id }}-jp" href="#{{ sales_report_id }}-jp">JP</a>
 </nav>
 </wiki-header>
-    
+
 <wiki-tabcontent class="scroll-snap-x">
 <div role="tabpanel" class="tabcontent contain" id="{{ sales_report_id }}-en">
-    <p>{{ site.data.processed.en_sales_report[sales_report] }}</p></div>
+    <p>{{ site.data.processed.en_sales_report[sales_report] | sanitizeSalesCharaName }}</p></div>
 <div role="tabpanel" class="tabcontent contain" id="{{ sales_report_id }}-jp">
-    <p>{{ site.data.processed.jp_sales_report[sales_report] }}</p></div>
+    <p>{{ site.data.processed.jp_sales_report[sales_report] | sanitizeSalesCharaName }}</p></div>
 </wiki-tabcontent>
-    
+
 </wiki-tabs>

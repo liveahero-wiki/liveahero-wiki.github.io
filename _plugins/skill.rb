@@ -669,7 +669,11 @@ module LahWiki
     end
 
     def sanitizePlayerName(s)
-      return s.gsub(/<@playerName>/, "<code>Player</code>")
+      return s.gsub(/<@playerName>/, "<wiki-editable-name storage-key=\"wiki_player_name\">Player</wiki-editable-name>")
+    end
+
+    def sanitizeSalesCharaName(s)
+      return s.gsub(/\{(\d+)\}/, '<wiki-editable-name storage-key="wiki_chara\1_name">Chara \1</wiki-editable-name>')
     end
   end
 end

@@ -1,6 +1,7 @@
 ---
 title: Sale
 banner: true
+additional_scripts: ["/assets/editable.js"]
 ---
 
 * this will be unordered

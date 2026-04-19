@@ -11,6 +11,7 @@
   --colorPrimary: #ffa726;
   --colorDark: #c77800;
   --colorGrey: #cacaca;
+  --colorBlue: #0066cc;
   --text: #000;
   --textLight: #fff;
   --link: var(--colorDark);
@@ -43,6 +44,7 @@ html[data-theme="dark"] {
   --colorPrimary: #F57F17;
   --colorLight: #F9A825;
   --colorGrey: #555;
+  --colorBlue: #4f8fff;
 
   --text: #fff;
   --link: var(--color100);
@@ -891,8 +893,5 @@ g:hover .image-mapper-shape {
   opacity: 20%;
 }
 .comment {
-  color: blue;
-}
-html[data-theme="dark"] .comment {
-  color: #4f8fff;
+  color: var(--colorBlue);
 }

@@ -1,6 +1,7 @@
 ---
 title: ???'s Notes
 banner: true
+additional_scripts: ["/assets/editable.js"]
 ---
 
 > Warning: This page contain heavy spoiler to game's story, especially [Main Quest](/main_quests/)
