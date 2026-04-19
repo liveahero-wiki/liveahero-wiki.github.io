@@ -74,19 +74,30 @@ function setupSortTable() {
 }
 
 function setupWikiTabs() {
-  // grab and stash elements
-  const tabgroup = document.querySelector('wiki-tabs')
-  if (tabgroup == null) return
+  document.querySelectorAll("wiki-tabs").forEach(setupWikiTab)
+}
+
+function setupWikiTab(tabgroup) {
   const tabsection = tabgroup.querySelector(':scope > wiki-tabcontent')
+  const tabheader = tabgroup.querySelector(':scope > wiki-header')
   const tabnav = tabgroup.querySelector(':scope nav')
   const tabnavitems = tabnav.querySelectorAll(':scope a')
+  const isMiniTabs = tabgroup.classList.contains('mini-tabs')
 
-  const setActiveTab = tabbtn => {
+  const setActiveTab = (tabbtn, scrollTabSection = false) => {
     const t = tabnav.querySelector(':scope a[aria-selected="true"]')
     if (t !== null) t.removeAttribute('aria-selected')
 
     tabbtn.setAttribute('aria-selected', 'true')
-    tabbtn.scrollIntoView()
+    tabheader.scrollTo({
+      left: tabbtn.offsetLeft,
+      behavior: 'smooth'
+    })
+  
+    if (scrollTabSection) tabsection.scrollLeft = tabsection.querySelector(tabbtn.hash).offsetLeft
+    if (!isMiniTabs) {
+      history.replaceState(null, '', tabbtn.hash)
+    }
   }
 
   const determineActiveTabSection = () => {
@@ -98,7 +109,8 @@ function setupWikiTabs() {
 
   tabnav.addEventListener('click', e => {
     if (e.target.nodeName !== "A") return
-    setActiveTab(e.target)
+    setActiveTab(e.target, true)
+    e.preventDefault()
   })
 
   tabsection.addEventListener('scroll', (e) => {
@@ -107,7 +119,7 @@ function setupWikiTabs() {
   })
 
   if (location.hash) {
-    const tab = document.querySelector(location.hash)
+    const tab = tabgroup.querySelector(location.hash)
     if (tab !== null) tabsection.scrollLeft = tab.offsetLeft
   }
   determineActiveTabSection()
