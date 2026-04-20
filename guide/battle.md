@@ -74,7 +74,7 @@ Setup your support list for other players to borrow
 See [Friend Support](/guide/friend_support/)
 </div>
 <div id="enhancement-mode-tip" markdown="1">
-Toggle on to enable directly upgrading current heroes / sidekicks and adjust fan count / engravement level in this UI
+Toggle on to enable directly upgrading current heroes / sidekicks and adjust fan count / seal level in this UI
 </div>
 </div>
 

@@ -35,7 +35,7 @@ Exchange will be available until 2024/11/12 14:00 JST.
 
 > only permanent 4 star will be available for exchange
 
-> If you already have the character, Record Cube and Engravement level will be added, if Engravement level is already max, you will get {% include item.html id=74 %} instead.
+> If you already have the character, Record Cube and Seal level will be added, if Seal level is already max, you will get {% include item.html id=74 %} instead.
 
 Here is a list of available hero/sidekick for exchange:
 
