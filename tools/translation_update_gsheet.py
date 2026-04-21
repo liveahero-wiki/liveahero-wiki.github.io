@@ -202,8 +202,8 @@ def main():
 
     sheet = sh.worksheet("EN status")
     updated_st, new_st = update_sheet(gc, sheet, "EN status", status_data,
-                                  ['statusId'], ['statusName', 'description'],
-                                  ['statusNameTranslated', 'descriptionTranslated'],
+                                  ['statusId'], ['statusName', 'description', 'statusNameTranslated'],
+                                  ['descriptionTranslated'],
                                   args.dry_run)
 
     # Report
