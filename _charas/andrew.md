@@ -63,6 +63,7 @@ heroes:
     process.
   extra_sprites: fg_andrewLostAncients2208_h02_skin2
 - stockId: 10253
+  extra_sprites: fg_andrewFrontier2604_h01_skin2,fg_andrewFrontier2604_h01_skin3
 sidekicks:
 - stockId: 10251
   BIO_S01: |-
