@@ -3,6 +3,7 @@ import json
 import sys
 import re
 import collections
+import yaml
 
 from collections import defaultdict
 
@@ -105,6 +106,41 @@ def processMasterDataCatalog():
 
     dumpJson(os.path.join("_data", "MasterDataCatalog_list.json"), obj)
 
+# Skip ether stones
+ITEM_NAME_BLACKLIST = [
+    1,
+    2,
+]
+
+def processItemInfo():
+    with open(os.path.join("zzz", "English.json"), "rb") as f:
+        obj = json.load(f)
+
+    with open(os.path.join("_data", "ItemMaster.json"), "rb") as f:
+        ItemMaster = json.load(f)
+
+    with open(os.path.join("_data", "wiki", "Item.yml"), "rb") as f:
+        ItemWiki = yaml.load(f, Loader=yaml.FullLoader)
+
+    newItemWiki = {}
+
+    for itemId in ItemMaster.keys():
+        iid = int(itemId)
+        if iid > 100000 and iid < 300000:
+            continue
+        if iid > 20000000 and iid < 30000000:
+            continue
+
+        origItemWikiName = ItemWiki.get(iid, {}).get("name", "")
+        itemNameTranslated = obj.get(f"ITEM_NAME_{itemId}", "")
+        itemDescriptionTranslated = obj.get(f"ITEM_DESCRIPTION_{itemId}", "")
+        newItemWiki[iid] = {
+            "name": itemNameTranslated if iid not in ITEM_NAME_BLACKLIST else origItemWikiName,
+            "description": ItemWiki.get(iid, {}).get("description", itemDescriptionTranslated),
+        }
+
+    with open(os.path.join("_data", "wiki", "Item.yml"), "w", encoding="utf-8") as f:
+        yaml.dump(newItemWiki, f, allow_unicode=True, sort_keys=False)
 
 CARD_OVERRIDE_ITEM = {
     1: "affiliation",

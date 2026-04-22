@@ -143,5 +143,7 @@ def main(argv):
   processPropertiesFile("ChineseSimplified.json", *[f"hans{s}" for s in tl_suffixes])
   processPropertiesFile("ChineseTraditional.json", *[f"hant{s}" for s in tl_suffixes])
 
+  processItemInfo()
+
 if __name__ == '__main__':
   main(None)
