@@ -135678,6 +135678,104 @@
       "isOverrideStatusDescription": true
     }
   },
+  "5437": {
+    "skillEffectId": 5437,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseChangeAgi",
+          "parameter": {
+            "value": 2
+          }
+        },
+        {
+          "class": "PassiveBattleSkillEffect",
+          "parameter": {
+            "timing": 17,
+            "skillId": 6316102
+          }
+        }
+      ],
+      "filename": "status_system_speedatk",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "SPDチャージ（チャージ数1につきSPD+2。システム効果127。耐久ゲージが0の時解除）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": true,
+      "elapseTurnTiming": [],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "SPDチャージ",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "チャージ数1につき、SPD+2。<br><color=#505050>特定のスキルによりチャージ数が増加する。<br>付与されたキャラクターの耐久ゲージが0になった時、解除される。</color>",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "5439": {
+    "skillEffectId": 5439,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RateChangeView",
+          "parameter": {
+            "value": 300,
+            "ignoreCombo": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        3
+      ],
+      "parameter": false,
+      "description": "自身のViewの300%を獲得。コンボ数を無視。",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "6001": {
     "skillEffectId": 6001,
     "skillEffectJson": {
@@ -155075,6 +155173,60 @@
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "6642": {
+    "skillEffectId": 6642,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": {
+            "timing": 1,
+            "avoidExtensionTurn": false
+          }
+        },
+        {
+          "class": "Silence",
+          "parameter": {
+            "isForce": false
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 166,
+      "canDispel": false,
+      "filterIds": [
+        9
+      ],
+      "parameter": false,
+      "description": "システム沈黙（状態変化ID166・1ターン）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        1
       ],
       "canDuplicateForce": false,
       "isCountDownEffect": false,
