@@ -17,7 +17,7 @@ module Jekyll
       idInt = id
       id = id.to_s
       if rewardType == 3
-        item = @context.registers[:site].data["ItemMaster"]
+        item = @context.registers[:site].data["ItemMaster"].dig(id)
         itemWiki = @context.registers[:site].data["wiki"]["Item"].dig(idInt) || {}
         itemName = itemWiki.dig("name") 
         itemName = (itemName.nil? || itemName.empty?) ? item["itemName"] : itemName
@@ -53,7 +53,7 @@ module Jekyll
       idInt = id
       id = id.to_s
       if rewardType == 3
-        item = @context.registers[:site].data["ItemMaster"]
+        item = @context.registers[:site].data["ItemMaster"].dig(id)
         itemWiki = @context.registers[:site].data["wiki"]["Item"].dig(idInt) || {}
         itemDesc = itemWiki.dig("description")
         itemDesc = (itemDesc.nil? || itemDesc.empty?) ? item["description"] : itemDesc
