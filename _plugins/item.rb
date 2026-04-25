@@ -64,7 +64,7 @@ module Jekyll
   end
 
   def self.itemWikiNameToIdMap(context)
-    @@itemWikiNameToIdMap ||= itemWikiNameToIdMap_imp(context)
+    @@itemWikiNameToIdMap ||= LahItemFilter::itemWikiNameToIdMap_imp(context)
   end
 
   def self.itemWikiNameToIdMap_imp(context)
