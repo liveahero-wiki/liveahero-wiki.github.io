@@ -16,7 +16,7 @@ module Jekyll
         itemWiki = @context.registers[:site].data["wiki"]["Item"].dig(id) || {}
         itemName = itemWiki.dig("name") || item["itemName"]
         itemDesc = itemWiki.dig("description") || item["description"]
-        return "<span class=\"item\" class=\"tippy\" data-content=\"#{ itemDesc }\"><img src=\"/cdn/Sprite/item_#{ item['resourceName'] }.png\" loading=\"lazy\"> #{ itemName }</span>"
+        return "<span class=\"item tippy\" data-content=\"#{ itemDesc }\"><img src=\"/cdn/Sprite/item_#{ item['resourceName'] }.png\" loading=\"lazy\"> #{ itemName }</span>"
       end
 
       if rewardType == 1
@@ -44,7 +44,7 @@ module Jekyll
         item = @context.registers[:site].data["ItemMaster"]
         itemWiki = @context.registers[:site].data["wiki"]["Item"].dig(id) || {}
         itemDesc = itemWiki.dig("description") || item["description"]
-        return "<span class=\"item\" class=\"tippy\" data-content=\"#{ itemDesc }\"><img src=\"/cdn/Sprite/item_#{ item['resourceName'] }.png\" loading=\"lazy\">/span>"
+        return "<span class=\"item tippy\" data-content=\"#{ itemDesc }\"><img src=\"/cdn/Sprite/item_#{ item['resourceName'] }.png\" loading=\"lazy\"></span>"
       end
 
       if rewardType == 1
@@ -61,20 +61,20 @@ module Jekyll
 
       return "<span class=\"item\"><img src=\"/cdn/Sprite/icon_#{ resourceName }.png\" loading=\"lazy\"></span>"
     end
-  end
-
-  def self.itemWikiNameToIdMap(context)
-    @@itemWikiNameToIdMap ||= LahItemFilter::itemWikiNameToIdMap_imp(context)
-  end
-
-  def self.itemWikiNameToIdMap_imp(context)
-    itemWikiNameToIdMap = {}
-    itemWiki = context.registers[:site].data["wiki"]["Item"]
-    itemWiki.each do |id, item|
-      itemWikiNameToIdMap[item["name"]] = id
+    def self.itemWikiNameToIdMap(context)
+      @@itemWikiNameToIdMap ||= self.itemWikiNameToIdMap_imp(context)
     end
-    return itemWikiNameToIdMap
-  end 
+
+    def self.itemWikiNameToIdMap_imp(context)
+      itemWikiNameToIdMap = {}
+      itemWiki = context.registers[:site].data["wiki"]["Item"]
+      itemWiki.each do |id, item|
+        itemWikiNameToIdMap[item["name"]] = id
+      end
+      return itemWikiNameToIdMap
+    end 
+  end
+
 end
 
 Liquid::Template.register_filter(Jekyll::LahItemFilter)
