@@ -5,15 +5,20 @@ module Jekyll
 
   module LahItemFilter
 
-    def lah_item(id, rewardType=3, name=nil)
+    def lah_item(id, rewardType=nil, name=nil)
       if !id && name
         id = LahItemFilter::itemWikiNameToIdMap(@context).dig(name)
       end
 
+      if !rewardType
+        rewardType = 3
+      end
+
+      idInt = id
       id = id.to_s
       if rewardType == 3
         item = @context.registers[:site].data["ItemMaster"]
-        itemWiki = @context.registers[:site].data["wiki"]["Item"].dig(id) || {}
+        itemWiki = @context.registers[:site].data["wiki"]["Item"].dig(idInt) || {}
         itemName = itemWiki.dig("name") || item["itemName"]
         itemDesc = itemWiki.dig("description") || item["description"]
         return "<span class=\"item tippy\" data-content=\"#{ itemDesc }\"><img src=\"/cdn/Sprite/item_#{ item['resourceName'] }.png\" loading=\"lazy\"> #{ itemName }</span>"
@@ -34,15 +39,20 @@ module Jekyll
       return "<span class=\"item\"><img src=\"/cdn/Sprite/icon_#{ resourceName }.png\" loading=\"lazy\"> #{ card['name'] }</span>"
     end
 
-    def lah_item_icon(id, rewardType=3, name=nil)
+    def lah_item_icon(id, rewardType=nil, name=nil)
       if !id && name
         id = LahItemFilter::itemWikiNameToIdMap(@context).dig(name)
       end
 
+      if !rewardType
+        rewardType = 3
+      end
+
+      idInt = id
       id = id.to_s
       if rewardType == 3
         item = @context.registers[:site].data["ItemMaster"]
-        itemWiki = @context.registers[:site].data["wiki"]["Item"].dig(id) || {}
+        itemWiki = @context.registers[:site].data["wiki"]["Item"].dig(idInt) || {}
         itemDesc = itemWiki.dig("description") || item["description"]
         return "<span class=\"item tippy\" data-content=\"#{ itemDesc }\"><img src=\"/cdn/Sprite/item_#{ item['resourceName'] }.png\" loading=\"lazy\"></span>"
       end
