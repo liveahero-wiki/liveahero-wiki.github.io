@@ -9,6 +9,8 @@ banner: true
 
 <p>Example: <code>{% raw %}{% include item-icon.html id=42 %}{% endraw %}</code> will becomes {% include item-icon.html id=42 %} when rendered.</p>
 
+<p>Example: <code>{% raw %}{% include item.html name="Training Band" %}{% endraw %}</code> will becomes {% include item.html name="Training Band" %} when rendered.</p>
+
 <table>
 <tr><th>ID</th><th>Item</th></tr>
 {% for pair in site.data.ItemMaster %}
