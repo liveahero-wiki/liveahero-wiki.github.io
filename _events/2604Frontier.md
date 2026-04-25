@@ -40,7 +40,7 @@ Cut off from all external communication, surrounded by a stifling sense of confi
 and faced with an investigation that refuses to go smoothly—
 still, the heroes press on without breaking.
 
-But an ominous shadow of monsters begins to creep closer.
+But an ominous shadow of Kaibutsu begins to creep closer.
 
 And then, a mysterious phenomenon that appears alongside light—
 “Echo”—
