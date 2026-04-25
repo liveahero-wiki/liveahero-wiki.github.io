@@ -13,17 +13,18 @@ module Jekyll
       id = id.to_s
       if rewardType == 3
         item = @context.registers[:site].data["ItemMaster"]
-        itemWiki = @context.registers[:site].data["wiki"]["Item"].dig(id)
-        itemName = itemWiki&.dig("name") || item["itemName"]
-        itemDesc = itemWiki&.dig("description") || item["description"]
+        itemWiki = @context.registers[:site].data["wiki"]["Item"].dig(id) || {}
+        itemName = itemWiki.dig("name") || item["itemName"]
+        itemDesc = itemWiki.dig("description") || item["description"]
         return "<span class=\"item\" class=\"tippy\" data-content=\"#{ itemDesc }\"><img src=\"/cdn/Sprite/item_#{ item['resourceName'] }.png\" loading=\"lazy\"> #{ itemName }</span>"
       end
 
       if rewardType == 1
-        card = @context.registers[:site].data["CardMaster"].dig(id)
-        resourceName = @context.registers[:site].data["CardMaster"].dig(id, "resourceName") + "_h01"
+        card = @context.registers[:site].data["CardMaster"].dig(id) || {}
+        resourceName = card.dig("resourceName") + "_h01"
       elsif rewardType == 2
-        resourceName = @context.registers[:site].data["SidekickMaster"].dig(id, "resourceName") + "_s01"
+        card = @context.registers[:site].data["SidekickMaster"].dig(id) || {}
+        resourceName = card.dig("resourceName") + "_s01"
       elsif rewardType == 10
         return "Skill evolution"
       else
@@ -41,16 +42,17 @@ module Jekyll
       id = id.to_s
       if rewardType == 3
         item = @context.registers[:site].data["ItemMaster"]
-        itemWiki = @context.registers[:site].data["wiki"]["Item"].dig(id)
-        itemDesc = itemWiki&.dig("description") || item["description"]
+        itemWiki = @context.registers[:site].data["wiki"]["Item"].dig(id) || {}
+        itemDesc = itemWiki.dig("description") || item["description"]
         return "<span class=\"item\" class=\"tippy\" data-content=\"#{ itemDesc }\"><img src=\"/cdn/Sprite/item_#{ item['resourceName'] }.png\" loading=\"lazy\">/span>"
       end
 
       if rewardType == 1
-        card = @context.registers[:site].data["CardMaster"].dig(id)
-        resourceName = @context.registers[:site].data["CardMaster"].dig(id, "resourceName") + "_h01"
+        card = @context.registers[:site].data["CardMaster"].dig(id) || {}
+        resourceName = card.dig("resourceName") + "_h01"
       elsif rewardType == 2
-        resourceName = @context.registers[:site].data["SidekickMaster"].dig(id, "resourceName") + "_s01"
+        card = @context.registers[:site].data["SidekickMaster"].dig(id) || {}
+        resourceName = card.dig("resourceName") + "_s01"
       elsif rewardType == 10
         return "Skill evolution"
       else
