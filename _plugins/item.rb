@@ -19,8 +19,10 @@ module Jekyll
       if rewardType == 3
         item = @context.registers[:site].data["ItemMaster"]
         itemWiki = @context.registers[:site].data["wiki"]["Item"].dig(idInt) || {}
-        itemName = itemWiki.dig("name") || item["itemName"]
-        itemDesc = itemWiki.dig("description") || item["description"]
+        itemName = itemWiki.dig("name") 
+        itemName = itemName.nil? || itemName.empty? ? item["itemName"] : itemName
+        itemDesc = itemWiki.dig("description")
+        itemDesc = itemDesc.nil? || itemDesc.empty? ? item["description"] : itemDesc
         return "<span class=\"item tippy\" data-content=\"#{ itemDesc }\"><img src=\"/cdn/Sprite/item_#{ item['resourceName'] }.png\" loading=\"lazy\"> #{ itemName }</span>"
       end
 
@@ -53,7 +55,8 @@ module Jekyll
       if rewardType == 3
         item = @context.registers[:site].data["ItemMaster"]
         itemWiki = @context.registers[:site].data["wiki"]["Item"].dig(idInt) || {}
-        itemDesc = itemWiki.dig("description") || item["description"]
+        itemDesc = itemWiki.dig("description")
+        itemDesc = itemDesc.nil? || itemDesc.empty? ? item["description"] : itemDesc
         return "<span class=\"item tippy\" data-content=\"#{ itemDesc }\"><img src=\"/cdn/Sprite/item_#{ item['resourceName'] }.png\" loading=\"lazy\"></span>"
       end
 
