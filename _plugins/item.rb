@@ -7,7 +7,7 @@ module Jekyll
 
     def lah_item(id, rewardType=3, name=nil)
       if !id && name
-        id = LahItemFilter.itemWikiNameToIdMap(@context).dig(name)
+        id = LahItemFilter::itemWikiNameToIdMap(@context).dig(name)
       end
 
       id = id.to_s
@@ -36,7 +36,7 @@ module Jekyll
 
     def lah_item_icon(id, rewardType=3, name=nil)
       if !id && name
-        id = LahItemFilter.itemWikiNameToIdMap(@context).dig(name)
+        id = LahItemFilter::itemWikiNameToIdMap(@context).dig(name)
       end
 
       id = id.to_s
