@@ -95,7 +95,7 @@ def update_sheet(gc: gspread.Client, sheet: gspread.Worksheet, sheet_name: str, 
                 old_val = str(current_row.get(col, ""))
 
                 # Normalize newlines just in case
-                if new_val != old_val:
+                if new_val != old_val and new_val != "":
                     print(f"  [UPDATE] {pk}: {col} '{old_val}' -> '{new_val}'")
 
                     col_idx = col_indices[col]
