@@ -134,10 +134,12 @@ def processItemInfo():
         origItemWikiName = ItemWiki.get(iid, {}).get("name", "")
         itemNameTranslated = obj.get(f"ITEM_NAME_{itemId}", "")
         itemDescriptionTranslated = obj.get(f"ITEM_DESCRIPTION_{itemId}", "")
-        newItemWiki[iid] = omitEmptyDict({
-            "name": itemNameTranslated if iid not in ITEM_NAME_BLACKLIST else origItemWikiName,
-            "description": ItemWiki.get(iid, {}).get("description", itemDescriptionTranslated),
-        })
+        x = omitEmptyDict(
+            name=itemNameTranslated if iid not in ITEM_NAME_BLACKLIST else origItemWikiName,
+            description=ItemWiki.get(iid, {}).get("description", itemDescriptionTranslated),
+        )
+        if x:
+            newItemWiki[iid] = x
 
     with open(os.path.join("_data", "wiki", "Item.yml"), "w", encoding="utf-8") as f:
         yaml.dump(newItemWiki, f, allow_unicode=True, sort_keys=False)
