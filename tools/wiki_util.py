@@ -38,6 +38,8 @@ ENHANCEMENT_PATTERN = re.compile(r'<style="スキル強化(_en)?">(.*?)</style>'
 AUTO_ACTION_MARKER = ['<style="オート行動_en"></style>', '<style="オート行動"></style>']
 AUTO_ACTION_PATTERN = re.compile(r'<style="オート行動(_en)?">(.*?)</style>', re.DOTALL)
 
+FORMULA_PREFIX_PATTERN = re.compile(r'^[\+\=]')
+
 def sanitizeSkillDescription(s: str) -> str:
     s = COLOR_PATTERN.sub(r'\2', s.strip())
     s = SIZE_PATTERN.sub(r'\2', s)
@@ -58,6 +60,10 @@ def sanitizeSkillDescription(s: str) -> str:
             s = s.replace(marker, '<wiki-passive>') + '</wiki-passive>'
     s = s.replace('<style="改行">', '')
     s = s.replace('</style>', '')
+
+    # Prevent Google Sheet from turning this to formula
+    if FORMULA_PREFIX_PATTERN.match(s):
+        s = "'" + s
 
     return s
 

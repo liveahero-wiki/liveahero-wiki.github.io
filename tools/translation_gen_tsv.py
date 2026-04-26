@@ -95,9 +95,12 @@ def main():
         writer.writerow(["skillEffectId", "statusId", "overrideStatusName", "overrideStatusDescription", "overrideStatusNameTranslated", "overrideStatusDescriptionTranslated"])
         for value in SkillEffectMaster.values():
             skillEffect = value["skillEffectJson"]
+            #if skillEffect["statusId"] == 0 or \
+            #    not (skillEffect.get("isOverrideStatusName", False) or \
+            #    skillEffect.get("isOverrideStatusDescription", False)):
+            #    continue
             if skillEffect["statusId"] == 0 or \
-                not (skillEffect.get("isOverrideStatusName", False) or \
-                skillEffect.get("isOverrideStatusDescription", False)):
+                len(skillEffect.get("overrideStatusDescription", "")) == 0:
                 continue
 
             sei = int(value["skillEffectId"])
