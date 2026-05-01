@@ -60099,6 +60099,53 @@
       "isOverrideStatusDescription": true
     }
   },
+  "2160": {
+    "skillEffectId": 2160,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 134,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果134番全除去(死亡時貫通)",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": true,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "3001": {
     "skillEffectId": 3001,
     "skillEffectJson": {
@@ -87573,6 +87620,106 @@
       "isDotDamage": false,
       "isImmediate": true,
       "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3845": {
+    "skillEffectId": 3845,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Ressurection",
+          "parameter": {
+            "value": 100,
+            "resurrectSettingKey": "Reinforce"
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "100%のHPで復活（増援アニメーションあり）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3846": {
+    "skillEffectId": 3846,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistSystemEffect",
+          "parameter": {
+            "value": 100,
+            "statusId": 1025311
+          }
+        },
+        {
+          "class": "Summon",
+          "parameter": {
+            "summonInfo": "{\"job\":\"\",\"role\":99,\"level\":60,\"nowHp\":10000,\"rarity\":0,\"skinId\":0,\"element\":1,\"sealExp\":0,\"stockId\":0,\"cardName\":\"\",\"fanValue\":0,\"heroType\":0,\"playerId\":0,\"parameter\":{\"hp\":10000,\"attack\":2000,\"addView\":1500,\"agility\":50},\"sealLevel\":0,\"baseRarity\":5,\"heroCardId\":1425301,\"visualType\":1,\"characterId\":25,\"illustrator\":\"\",\"spineCustom\":{\"stock_id\":0,\"select_items\":[]},\"supportType\":0,\"damageSkinId\":0,\"resourceName\":\"frontierBoss\",\"characterVoice\":\"\",\"detailPosition\":{\"scale\":0.0,\"xPosition\":0.0,\"yPosition\":0.0},\"parallelWeapon\":{\"hpUp\":0,\"level\":0,\"attackUp\":0,\"totalExp\":0,\"decreaseDamage\":0,\"parallelWeaponFormId\":0},\"playerBodyType\":0,\"limitBreakCount\":0,\"playerVoiceType\":0,\"affiliationOffice\":\"\",\"skillUpgradeStatus\":{\"openedNum\":0,\"unusedNum\":0,\"skillUpgrade\":0,\"achievedSkillEntryIds\":[]},\"useSealSkillEffect\":false,\"sidekick\":null,\"skillIds\":[4317101],\"equipmentSkills\":[],\"passiveSkillIds\":[],\"name\":\"フロンティアボス\",\"hideFlags\":0}",
+            "isDisplaySpdOnIcon": false
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"value2\":0,\"includeTemporary\":false,\"element\":0,\"statusId\":1025308,\"role\":0,\"class\":\"OddTurnTrigger\",\"targetStates\":null}]",
+      "filename": "",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "フロンティアボス召喚",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": true,
       "reaminDeath": false,
       "addSortOrder": 0,
       "canDuplicate": false,
@@ -135821,6 +135968,142 @@
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
       "isOverrideStatusDescription": false
+    }
+  },
+  "5441": {
+    "skillEffectId": 5441,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": {
+            "timing": 17,
+            "avoidExtensionTurn": false
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 1025308,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "エネミーアンドリュー召喚エフェクト",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": true,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "5443": {
+    "skillEffectId": 5443,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeActiveSkill",
+          "parameter": {
+            "index": 2,
+            "skillId": 4025303
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"value2\":0,\"includeTemporary\":false,\"element\":0,\"statusId\":128,\"role\":0,\"class\":\"OwnSystemStatusNumberDontExecTrigger\",\"targetStates\":null}]",
+      "filename": "",
+      "statusId": 133,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "エネミーアンドリュースキル3変化用",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "5449": {
+    "skillEffectId": 5449,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 305,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "エネミーアンドリュースキル説明用",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "フルウエポンズ・バラージ [消費ViewPower:8000]",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "敵単体に180%ダメージ。2回の行動の間SPDダウンを付与。<br>バフを2つ解除。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
     }
   },
   "6001": {
