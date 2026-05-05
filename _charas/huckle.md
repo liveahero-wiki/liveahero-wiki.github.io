@@ -58,6 +58,7 @@ heroes:
     costume, which is reminiscent of a traveler in old tales, are born from the
     longing of that child.
 - stockId: 10342
+  extra_sprites: fg_huckleFrontier2604_h02_skin2
 sidekicks:
 - stockId: 10341
   BIO_S01: |-
