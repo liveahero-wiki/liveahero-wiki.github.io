@@ -76,11 +76,11 @@ jobs:
 
     - name: Setup Pages
       if: ${{ github.ref == 'refs/heads/master' }}
-      uses: actions/configure-pages@v5
+      uses: actions/configure-pages@v@v6
 
     - name: Upload artifact
       if: ${{ github.ref == 'refs/heads/master' }}
-      uses: actions/upload-pages-artifact@v4
+      uses: actions/upload-pages-artifact@v5
       with:
         path: './_site'
 
@@ -94,4 +94,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
