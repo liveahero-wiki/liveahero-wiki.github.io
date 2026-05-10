@@ -179,6 +179,7 @@ Here is a list of this event's fan translated episodes:
 | 5  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vSg6PuJy4ECiqn4heHZ9_TlEiuu5HaCZdCH5eOc1Gck61VUZu6YLYiNCXc9E54c_zeN0QldH7DJgv99/pubhtml?gid=1629607132&single=true) |
 | 6  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vSg6PuJy4ECiqn4heHZ9_TlEiuu5HaCZdCH5eOc1Gck61VUZu6YLYiNCXc9E54c_zeN0QldH7DJgv99/pubhtml?gid=1372196099&single=true) |
 | 7  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vSg6PuJy4ECiqn4heHZ9_TlEiuu5HaCZdCH5eOc1Gck61VUZu6YLYiNCXc9E54c_zeN0QldH7DJgv99/pubhtml?gid=547518155&single=true) |
+| 8  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vSg6PuJy4ECiqn4heHZ9_TlEiuu5HaCZdCH5eOc1Gck61VUZu6YLYiNCXc9E54c_zeN0QldH7DJgv99/pubhtml?gid=1755048676&single=true) |
 | Echoes | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vSg6PuJy4ECiqn4heHZ9_TlEiuu5HaCZdCH5eOc1Gck61VUZu6YLYiNCXc9E54c_zeN0QldH7DJgv99/pubhtml?gid=1864341555&single=true) |
 
 
