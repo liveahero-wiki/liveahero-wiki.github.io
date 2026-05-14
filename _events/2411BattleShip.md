@@ -1,5 +1,5 @@
 ---
-title: Super Catch! Battleship Fishers
+title: Bumper Crop! Battleship Fishers
 eventId: 109
 jp_title: 超大漁！バトルシップ・フィッシャーズ
 news_link: https://live-a-hero.jp/info/10130
@@ -18,20 +18,23 @@ sales_end_time: 2024-12-17T20:00:00+09
 
 ## Event Preview
 
-The Estevolta Urban Fleet is about to enter war!
+On the oceanic planet of Muirauqa IV, a proxy war has broken out over navigational routes, dubbed "Fishing War."
 
-On the oceanic planet Muirauqa IV, a proxy war over trade routes, known as the Fishing War, is about to begin.
+The rule is simple and clear: the fleet that lands the larger catch wins!
+And the stage for this proxy war is—a ruined sea area teeming with Kaibutsu!?
 
-The rules are simple and clear: the fleet that catches the bigger prey will be the victor!
-And the battleground for this proxy war is—a sea filled with Kaibutsu in a desolate ocean region!?
+Accepting a request from a familiar fisher Hero,
+you depart from Orient City as a field operator.
 
-Having received a request from a familiar fisherman hero, you depart from Orient City as a field operator.
+Visiting Este Volta for the first time in a while, you meet
+the laid-back admiral famous for his ability to goof off,
+and the hard-working boy wonder of a navigator who assists him.
 
-Upon your return to Estevolta, you meet the carefree captain, famous for his love of fun, and the hardworking young navigator who assists him.
+However, as crew members on the same ship,
+they are a mismatched duo whose "parent-child squabbles" never end—!?
 
-However, despite being members of the same crew, these two are a mismatched pair constantly bickering like a father and son—!?
-
-Joining forces with the heroes of Estevolta, you aim to win the Fishing War. But soon, you will face the greatest crisis in Muirauqa IV's history—!
+As you work together with the Heroes of the Este Volta to win the Fishing War,
+you end up witnessing Muirauqa IV's greatest catastrophe yet.
 
 ## Event Banners
 
