@@ -132,14 +132,14 @@ Here is a list of this event's limited time Missions:
 
 ## Event Shop
 
-{% include shop-table.html id=73 %}
+{% include shop-table.html id=100 %}
 
 ## Quest Details
 
 ### Main Quests
 
-{% include quest-group.html chapterId=1146 %}
+{% include quest-group.html chapterId=1263 %}
 
 ### Free Quests
 
-{% include quest-group.html chapterId=1147 %}
+{% include quest-group.html chapterId=1264 %}
