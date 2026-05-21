@@ -8780,11 +8780,13 @@
       "isImmediate": true,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
       "effectFilename": "",
       "penetrateDeath": false,
+      "disappearTiming": 17,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -98004,10 +98006,13 @@
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
+      "effectFilename": "",
       "penetrateDeath": false,
+      "disappearTiming": 17,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         4
@@ -98015,6 +98020,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -114253,13 +114259,17 @@
       "parameter": false,
       "description": "雷雨（フィールド効果）エネミーSPD-10",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": false,
       "persistence": true,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": true,
       "isCountEffect": false,
-      "isFieldEffect": false,
+      "isFieldEffect": true,
+      "effectFilename": "",
       "penetrateDeath": false,
+      "disappearTiming": 17,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -114267,10 +114277,11 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
-      "isOverrideStatusName": true,
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
-      "isOverrideStatusDescription": true
+      "isOverrideStatusDescription": false
     }
   },
   "4789": {
@@ -114280,9 +114291,13 @@
       "count": 0,
       "effects": [
         {
-          "class": "NoneEffect",
+          "class": "RemoveFieldEffect",
           "parameter": {
-            "timing": 1
+            "value": 999,
+            "timing": 1,
+            "isForce": true,
+            "isTemporaryRemove": false,
+            "isExecChangeInternalTurn": false
           }
         },
         {
@@ -114292,6 +114307,7 @@
           }
         }
       ],
+      "trigger": "[{\"value\":1,\"value2\":0,\"includeTemporary\":false,\"element\":0,\"statusId\":0,\"role\":0,\"class\":\"RemainInternalTurnTrigger\",\"targetStates\":null}]",
       "filename": "status_field",
       "statusId": 307,
       "canDispel": true,
@@ -114299,20 +114315,25 @@
       "parameter": false,
       "description": "雷雨",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": false,
       "persistence": false,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": true,
+      "effectFilename": "",
       "penetrateDeath": false,
+      "disappearTiming": 17,
       "isCharageEffect": false,
       "elapseTurnTiming": [
-        1
+        0
       ],
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "雷雨",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": true,
       "overrideStatusDescription": "敵全体のATK-30% & SPD-10。<br><color=#505050>異なるフィールド効果がいずれかのキャラクターに付与された時、解除される。</color>",
       "isDisplayPersistenceStatus": false,
@@ -114458,20 +114479,24 @@
           }
         }
       ],
-      "filename": "",
+      "filename": "status_field",
       "statusId": 308,
       "canDispel": true,
       "filterIds": [],
       "parameter": false,
       "description": "雷雨（フィールド効果）エネミーATK-30%",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": false,
       "persistence": true,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": true,
       "isCountEffect": false,
-      "isFieldEffect": false,
+      "isFieldEffect": true,
+      "effectFilename": "",
       "penetrateDeath": false,
+      "disappearTiming": 17,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -114479,6 +114504,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": true,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
@@ -114550,13 +114576,17 @@
       "parameter": false,
       "description": "フィールド効果解除用汎用マスク効果(ターン開始時。フィールド効果でSPD操作する場合は持たせること)",
       "isCountTurn": false,
+      "isDotDamage": false,
       "isImmediate": false,
       "persistence": true,
       "reaminDeath": false,
+      "addSortOrder": 0,
       "canDuplicate": true,
       "isCountEffect": false,
-      "isFieldEffect": false,
+      "isFieldEffect": true,
+      "effectFilename": "",
       "penetrateDeath": false,
+      "disappearTiming": 17,
       "isCharageEffect": false,
       "elapseTurnTiming": [
         0
@@ -114564,6 +114594,7 @@
       "canDuplicateForce": false,
       "isCountDownEffect": false,
       "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
       "isOverrideStatusName": true,
       "overrideStatusDescription": "",
       "isDisplayPersistenceStatus": false,
