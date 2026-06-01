@@ -31,9 +31,9 @@
     {% assign label_name = part | replace: "h_", "Hero " | replace: "s_", "Sidekick " %}
 
     {% if translated or jp_line %}
-      {% assign en_val = translated | default: en_line | default: jp_line %}
-      {% assign hans_val = site.data.processed.hans_greeting[key] | default: en_val %}
-      {% assign hant_val = site.data.processed.hant_greeting[key] | default: en_val %}
+      {% assign en_val = translated | default: en_line | default: '-' %}
+      {% assign hans_val = site.data.processed.hans_greeting[key] | default: '-' %}
+      {% assign hant_val = site.data.processed.hant_greeting[key] | default: '-' %}
       <tr>
         <td class="voice-jp-cell">
           <div class="voice-key-badge">{{ label_name }}</div>
