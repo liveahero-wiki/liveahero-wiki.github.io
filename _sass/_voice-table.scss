@@ -1,0 +1,115 @@
+.voice-table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+
+  th, td {
+    width: 50%;
+    vertical-align: top;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--colorGrey);
+    line-height: 1.5;
+  }
+
+  th {
+    color: var(--textLight);
+    font-weight: 600;
+  }
+
+  .voice-jp-cell {
+    border-right: 1px solid var(--colorGrey);
+  }
+
+  .voice-key-badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text);
+    background-color: var(--color50);
+    border: 1px solid var(--colorGrey);
+    border-radius: 4px;
+    padding: 2px 6px;
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+
+  .voice-text {
+    word-break: break-word;
+  }
+
+  .voice-translation-cell {
+    word-break: break-word;
+  }
+}
+
+.voice-header-right {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 16px !important;
+  min-height: 48px;
+
+  .voice-header-title {
+    font-weight: 600;
+  }
+}
+
+.voice-tab-bar {
+  display: inline-flex;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  padding: 2px;
+  gap: 2px;
+
+  html[data-theme="dark"] & {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.voice-tab-btn {
+  background: none;
+  border: none;
+  color: var(--textLight);
+  opacity: 0.7;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  line-height: 1.2;
+
+  &:hover {
+    opacity: 0.9;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  &[aria-selected="true"] {
+    background-color: var(--bg);
+    color: var(--text);
+    opacity: 1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Visibility rules for toggling translation languages */
+.voice-lang-content {
+  display: none;
+}
+
+.voice-table[data-active-lang="en"] .voice-lang-content[data-lang="en"] {
+  display: block;
+}
+
+.voice-table[data-active-lang="hans"] .voice-lang-content[data-lang="hans"] {
+  display: block;
+}
+
+.voice-table[data-active-lang="hant"] .voice-lang-content[data-lang="hant"] {
+  display: block;
+}

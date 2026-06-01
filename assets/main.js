@@ -125,7 +125,40 @@ function setupWikiTab(tabgroup) {
   determineActiveTabSection()
 }
 
-const tasks = [setupWikiTabs, setupMenu, setupTranslate, setupExpiry, setupSortTable];
+function setupVoiceTableTabs() {
+  const tables = document.querySelectorAll(".voice-table");
+  if (tables.length === 0) return;
+
+  const activeLang = localStorage.getItem("voice_lang") || "en";
+
+  const updateAllTables = (lang) => {
+    tables.forEach(table => {
+      table.setAttribute("data-active-lang", lang);
+      const buttons = table.querySelectorAll(".voice-tab-btn");
+      buttons.forEach(btn => {
+        if (btn.dataset.langTarget === lang) {
+          btn.setAttribute("aria-selected", "true");
+        } else {
+          btn.removeAttribute("aria-selected");
+        }
+      });
+    });
+    localStorage.setItem("voice_lang", lang);
+  };
+
+  updateAllTables(activeLang);
+
+  tables.forEach(table => {
+    table.querySelectorAll(".voice-tab-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const lang = btn.dataset.langTarget;
+        updateAllTables(lang);
+      });
+    });
+  });
+}
+
+const tasks = [setupWikiTabs, setupMenu, setupTranslate, setupExpiry, setupSortTable, setupVoiceTableTabs];
 for (const t of tasks) {
   setTimeout(t, 0)
 }

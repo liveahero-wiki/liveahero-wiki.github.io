@@ -5,7 +5,21 @@
 {% assign greeting = "h_gachaResult,s_gachaResult" | split: "," %}
 
 <h2>Voice Lines ({{ names | join: ", " }})</h2>
-<table class="voice-table" data-resourceName="{{ include.resourceName }}">
+<table class="voice-table" data-resourceName="{{ include.resourceName }}" data-active-lang="en">
+  <thead>
+    <tr>
+      <th>Japanese (JP)</th>
+      <th class="voice-header-right">
+        <span class="voice-header-title">Translation</span>
+        <div class="voice-tab-bar">
+          <button type="button" class="voice-tab-btn" data-lang-target="en" aria-selected="true">EN</button>
+          <button type="button" class="voice-tab-btn" data-lang-target="hans">简中</button>
+          <button type="button" class="voice-tab-btn" data-lang-target="hant">繁中</button>
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
 {% for n in names %}
   {% assign name = n | upcase | prepend: "_" | append: "_" %}
 
@@ -14,11 +28,24 @@
     {% assign jp_line = site.data.processed.jp_greeting[key] %}
     {% assign en_line = site.data.processed.en_greeting[key] %}
     {% assign translated = include[part] | default: en_line %}
+    {% assign label_name = part | replace: "h_", "Hero " | replace: "s_", "Sidekick " %}
 
-    {% if translated or jp_line %}<tr><th data-part="{{ part }}">{{ part | replace: "h_", "Hero " | replace: "s_", "Sidekick " }}</th>
-<td markdown="1" class="translate" data-translate="{% if translated %}{{ jp_line | escape }}{% endif %}">
-{{ translated | default: jp_line }}
-</td></tr>{% endif %}
+    {% if translated or jp_line %}
+      {% assign en_val = translated | default: en_line | default: jp_line %}
+      {% assign hans_val = site.data.processed.hans_greeting[key] | default: en_val %}
+      {% assign hant_val = site.data.processed.hant_greeting[key] | default: en_val %}
+      <tr>
+        <td class="voice-jp-cell">
+          <div class="voice-key-badge">{{ label_name }}</div>
+          <div class="voice-text">{{ jp_line | default: "-" }}</div>
+        </td>
+        <td class="voice-translation-cell">
+          <div class="voice-lang-content" data-lang="en">{{ en_val }}</div>
+          <div class="voice-lang-content" data-lang="hans">{{ hans_val }}</div>
+          <div class="voice-lang-content" data-lang="hant">{{ hant_val }}</div>
+        </td>
+      </tr>
+    {% endif %}
   {% endfor %}
 
   {% for part in whitelist %}
@@ -31,18 +58,41 @@
       {% assign p = key | replace: "SERIF_", "" %}
     {% endif %}
     {% assign translated = include[p] | default: en_line %}
-    {% if jp_line %}<tr><th data-part="{{ p | downcase }}">{{ p }}</th>
-<td markdown="1" class="translate" data-translate="{% if translated %}{{ jp_line | escape }}{% endif %}">
-{{ translated }}
-</td></tr>{% endif %}
+
+    {% if jp_line %}
+      {% assign en_val = translated | default: en_line | default: jp_line %}
+      {% assign hans_val = site.data.processed.hans_serif[key] | default: en_val %}
+      {% assign hant_val = site.data.processed.hant_serif[key] | default: en_val %}
+      <tr>
+        <td class="voice-jp-cell">
+          <div class="voice-key-badge">{{ p }}</div>
+          <div class="voice-text">{{ jp_line }}</div>
+        </td>
+        <td class="voice-translation-cell">
+          <div class="voice-lang-content" data-lang="en">{{ en_val }}</div>
+          <div class="voice-lang-content" data-lang="hans">{{ hans_val }}</div>
+          <div class="voice-lang-content" data-lang="hant">{{ hant_val }}</div>
+        </td>
+      </tr>
+    {% endif %}
   {% endfor %}
 
   {% for part in manual %}
-  {% assign line = include[part] %}
-  {% if line %}<tr><th data-part="{{ part }}">{{ part }}</th>
-<td markdown="1">
-{{ line }}
-</td></tr>{% endif %}
+    {% assign line = include[part] %}
+    {% if line %}
+      <tr>
+        <td class="voice-jp-cell">
+          <div class="voice-key-badge">{{ part }}</div>
+          <div class="voice-text">-</div>
+        </td>
+        <td class="voice-translation-cell">
+          <div class="voice-lang-content" data-lang="en">{{ line }}</div>
+          <div class="voice-lang-content" data-lang="hans">-</div>
+          <div class="voice-lang-content" data-lang="hant">-</div>
+        </td>
+      </tr>
+    {% endif %}
   {% endfor %}
 {% endfor %}
+  </tbody>
 </table>
