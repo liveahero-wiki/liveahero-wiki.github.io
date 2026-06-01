@@ -45,7 +45,6 @@ layout: markdownify
 {% for sk in page.sidekicks %}
 {% assign stockIDS = sk.stockId | downcase %}
 {% if site.data.BromideStockMaster[stockIDS].upgradeLabels.size > 0 %}
-{% assign collectionResourceName = site.data.BromideStockMaster[stockIDS].resourceName %}
 {% include card-collection-story.html stockId=sk.stockId %}
 {% endif %}
 {% endfor %}

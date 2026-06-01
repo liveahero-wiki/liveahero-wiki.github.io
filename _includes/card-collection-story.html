@@ -1,4 +1,5 @@
-{% assign bromideData = site.data.BromideStockMaster[include.stockId] %}
+{% assign stockIdStr = include.stockId | downcase %}
+{% assign bromideData = site.data.BromideStockMaster[stockIdStr] %}
 {% assign upgradeLabels = bromideData.upgradeLabels %}
 
 {% if upgradeLabels.size > 0 %}
