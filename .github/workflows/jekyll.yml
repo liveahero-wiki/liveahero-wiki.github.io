@@ -78,7 +78,7 @@ jobs:
   preview-netlify:
     needs: build-and-test
     # Triggers only on PRs where the label check passed
-    if: github.event_name == 'pull_request_target' && needs:build-and-test.outputs.is_approved == 'true'
+    if: "github.event_name == 'pull_request_target' && needs['build-and-test'].outputs.is_approved == 'true'"
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Code (for package.json/scripts)
