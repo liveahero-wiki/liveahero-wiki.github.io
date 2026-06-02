@@ -1,0 +1,64 @@
+{% assign stockIdStr = include.stockId | downcase %}
+{% assign bromideData = site.data.BromideStockMaster[stockIdStr] %}
+{% assign upgradeLabels = bromideData.upgradeLabels %}
+
+{% if upgradeLabels.size > 0 %}
+{% assign firstLabel = upgradeLabels[0].advLabel %}
+
+{% assign jp_data   = site.data.processed.jp_signature[firstLabel] %}
+{% assign en_data   = site.data.processed.en_signature[firstLabel] %}
+{% assign hans_data = site.data.processed.hans_signature[firstLabel] %}
+{% assign hant_data = site.data.processed.hant_signature[firstLabel] %}
+
+{% assign locales     = "" | split: "," %}
+{% assign dataSources = "" | split: "," %}
+
+{% if en_data and en_data != jp_data %}
+{% assign locales     = locales     | push: "en" %}
+{% assign dataSources = dataSources | push: site.data.processed.en_signature %}
+{% endif %}
+{% if jp_data %}
+{% assign locales     = locales     | push: "jp" %}
+{% assign dataSources = dataSources | push: site.data.processed.jp_signature %}
+{% endif %}
+{% if hans_data and hans_data != jp_data %}
+{% assign locales     = locales     | push: "hans" %}
+{% assign dataSources = dataSources | push: site.data.processed.hans_signature %}
+{% endif %}
+{% if hant_data and hant_data != jp_data %}
+{% assign locales     = locales     | push: "hant" %}
+{% assign dataSources = dataSources | push: site.data.processed.hant_signature %}
+{% endif %}
+
+{% if locales.size > 0 %}
+<h2>Signature Stories</h2>
+
+<wiki-tabs class="mini-tabs">
+<wiki-header class="scroll-snap-x">
+<nav role="tablist">
+{% for locale in locales %}
+<a role="tab" aria-controls="sign-story-{{ include.stockId }}-{{ locale }}" href="#sign-story-{{ include.stockId }}-{{ locale }}">{{ locale | convertLang }}</a>
+{% endfor %}
+</nav>
+</wiki-header>
+
+<wiki-tabcontent class="scroll-snap-x">
+{% for locale in locales %}
+{% assign localeIdx = forloop.index0 %}
+<div role="tabpanel" class="tabcontent contain" id="sign-story-{{ include.stockId }}-{{ locale }}">
+{% for label in upgradeLabels %}
+{% assign storyText = dataSources[localeIdx][label.advLabel] %}
+{% if storyText %}
+<fieldset>
+<legend>Card {{ forloop.index }}</legend>
+<p>{{ storyText }}</p>
+</fieldset>
+{% endif %}
+{% endfor %}
+</div>
+{% endfor %}
+</wiki-tabcontent>
+
+</wiki-tabs>
+{% endif %}
+{% endif %}
