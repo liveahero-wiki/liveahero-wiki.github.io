@@ -2,7 +2,7 @@
 title: Character Contract Campaign - Trainee -
 eventId: 172
 jp_title: キャラクター契約締結キャンペーン -トレイニー-
-banner_image: banner_campaign_2206ContractTrainee.jpg
+banner_image: ui_banner_event_questbanner_ContractTrainee2606.webp
 gacha: true
 farm_start_time: 2026-06-02T20:00:00+09
 farm_end_time: 2026-06-11T14:00:00+09
