@@ -16,15 +16,7 @@ news_link: https://live-a-hero.jp/campaign/14052
 
 ## Event Preview
 
-TODO
-
-## Event Banners
-
-TODO
-
-## Event Sales Bonus
-
-TODO
+In this campaign you can collect items through free quest and exchange them at the campaign store for the new mob hero/sidekick Trainee for each element.
 
 ## Special Mission
 
