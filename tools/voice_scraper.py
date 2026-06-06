@@ -1,9 +1,11 @@
 """Scrape character voice tables from the Japanese fan wiki (wikiwiki.jp/live-a-hero)
 and assemble them into an index keyed by characterId.
 
-The index is first built from the game masters (CardMaster.json / SidekickMaster.json),
-then enriched with the `parts` (voice lines) scraped from each character's wiki page.
-Reruns reload the existing index and only re-fetch the requested characters.
+The index is built from VoiceMaster.json (stockId discovery, voiceFilename, buttonLabel)
+and SidekickMaster.json / CardMaster.json (jp_name). The index is then enriched with
+`parts` (voice lines) scraped from each character's wiki page.
+Reruns reload the existing index, augment it with any new stockIds from VoiceMaster,
+then only re-fetch the requested characters.
 
 Usage:
     python tools/voice_scraper.py [resourceA,resourceB,...] \
@@ -23,6 +25,7 @@ from lxml import etree, html
 
 from wiki_util import loadJson, dumpJson, ensureDirs
 
+VOICE_MASTER = "_data/VoiceMaster.json"
 CARD_MASTER = "_data/CardMaster.json"
 SIDEKICK_MASTER = "_data/SidekickMaster.json"
 
@@ -65,88 +68,129 @@ VOICE_KIND_MAP = {
     35: "touch_another",
 }
 
-# Voice-table column 1 label -> partName, split by section context.
-# Some labels (トレーニング, アシスト, 他のヒーローについて) differ between hero/sidekick.
-HERO_MAP = {
-    "ヒーロー契約": "hero_gachaResult",
-    "ヒーロー契約２": "hero_gachaResult_another",
-    "あなたについて": "player",
-    "あなたについて２": "player2",
-    "他のヒーローについて": "hero",
-    "他のヒーローについて２": "hero2",
-    "営業出発": "salesStart",
-    "営業帰着": "salesEnd",
-    "トレーニング": "train",
-    "イベント1": "eventA",
-    "イベント2": "eventB",
-    "イベント3": "eventC",
-    "イベント4": "eventD",
-    "タッチ": "touch",
-    "タッチ２": "touch2",
-    "最高ランク到達": "rankMax",
-    "バトル開始": "battleStart",
-    "行動時": "action",
-    "攻撃時": "attack",
-    "追加攻撃時": "skillA",
-    "スキル": "skill",
-    "スキル2": "skillB",
-    "ダメージ１": "smallDamage",
-    "ダメージ２": "bigDamage",
-    "アシスト": "assisted",
-    "必殺技": "special",
-    "バトル勝利": "win",
-    "バトル敗北": "lose",
-}
 
-SIDEKICK_MAP = {
-    "サイドキック契約": "sidekick_gachaResult",
-    "サイドキック契約2": "sidekick_gachaResult_another",
-    "日常会話": "daily",
-    "日常会話2": "daily2",
-    "人間関係について": "relation",
-    "人間関係について2": "relation2",
-    "他のヒーローについて": "relation",
-    "他のヒーローについて２": "relation2",
-    "励まし": "appreciation",
-    "励まし2": "appreciation2",
-    "最大リレーション到達": "loveIndexMax",
-    "トレーニング": "trained",
-    "アシスト": "assist",
-}
+# --------------------------------------------------------------------------- #
+# Helpers
+# --------------------------------------------------------------------------- #
+def _cid(sid: int) -> int:
+    """Derive characterId from stockId."""
+    return (sid // 10) % 1000
+
+
+def build_name_lookup(card: dict, sidekick: dict) -> dict:
+    """Return {characterId: cardName} using the minimum-stockId entry per character."""
+    names = {}  # characterId -> (min_stockId, cardName)
+    for e in list(card.values()) + list(sidekick.values()):
+        cid = e["characterId"]
+        sid = e["stockId"]
+        cur = names.get(cid)
+        if cur is None or sid < cur[0]:
+            names[cid] = (sid, e["cardName"])
+    return {cid: v[1] for cid, v in names.items()}
+
+
+def build_voice_meta(voice_master: dict) -> dict:
+    """Return {stockId_int: {"hero": {partName: filename}, "sidekick": {partName: filename}}}."""
+    result = {}
+    for sid_str, entries in voice_master.items():
+        sid = int(sid_str)
+        meta = {"hero": {}, "sidekick": {}}
+        for e in entries:
+            part = VOICE_KIND_MAP.get(e.get("voiceKind"))
+            if part is None:
+                continue
+            type_key = "hero" if e["cardType"] == 1 else "sidekick"
+            filename = e.get("voiceFilename") or ""
+            if not filename:
+                filename = f"voice_{e['resourceName']}_{part}"
+            meta[type_key][part] = filename
+        result[sid] = meta
+    return result
+
+
+def build_label_maps(voice_master: dict):
+    """Return (hero_map, sidekick_map): {buttonLabel -> partName} built from VoiceMaster."""
+    hero_map = {}
+    sidekick_map = {}
+    for entries in voice_master.values():
+        for e in entries:
+            label = e.get("buttonLabel", "").strip()
+            part = VOICE_KIND_MAP.get(e.get("voiceKind"))
+            if not label or part is None:
+                continue
+            if e["cardType"] == 1:
+                hero_map[label] = part
+            else:
+                sidekick_map[label] = part
+    return hero_map, sidekick_map
 
 
 # --------------------------------------------------------------------------- #
 # Index building
 # --------------------------------------------------------------------------- #
-def build_index() -> dict:
-    """Build the initial index from CardMaster / SidekickMaster."""
+def build_index(voice_master: dict) -> dict:
+    """Build the initial index from VoiceMaster (structure) + CardMaster/SidekickMaster (jp_name)."""
     card = loadJson(CARD_MASTER)
     sidekick = loadJson(SIDEKICK_MASTER)
+    name_lookup = build_name_lookup(card, sidekick)
 
-    chars = {}   # characterId -> {(type, stockId): child}
-    names = {}   # characterId -> (min_stockId, cardName)
+    chars = {}  # characterId -> {(type, stockId): child}
 
-    def consume(entries, ctype):
-        for e in entries.values():
-            cid = e["characterId"]
-            sid = e["stockId"]
-            cur = names.get(cid)
-            if cur is None or sid < cur[0]:
-                names[cid] = (sid, e["cardName"])
+    for sid_str, entries in voice_master.items():
+        sid = int(sid_str)
+        cid = _cid(sid)
+        resource = entries[0]["resourceName"]
+        types_present = {e["cardType"] for e in entries}
+        if 1 in types_present:
             chars.setdefault(cid, {}).setdefault(
-                (ctype, sid),
-                {"stockId": sid, "type": ctype, "resourceName": e["resourceName"]},
+                ("hero", sid),
+                {"stockId": sid, "type": "hero", "resourceName": resource},
             )
-
-    consume(card, "hero")
-    consume(sidekick, "sidekick")
+        if 2 in types_present:
+            chars.setdefault(cid, {}).setdefault(
+                ("sidekick", sid),
+                {"stockId": sid, "type": "sidekick", "resourceName": resource},
+            )
 
     index = {}
     for cid in sorted(chars):
-        # Sort by stockId; stable, so hero precedes sidekick on equal stockId.
+        jp_name = name_lookup.get(cid, str(cid))
         children = sorted(chars[cid].values(), key=lambda c: c["stockId"])
-        index[str(cid)] = {"jp_name": names[cid][1], "children": children}
+        index[str(cid)] = {"jp_name": jp_name, "children": children}
     return index
+
+
+def augment_index(index: dict, voice_master: dict, name_lookup: dict) -> bool:
+    """Add new stockId children (and new character entries) discovered in VoiceMaster.
+
+    Returns True if the index was modified.
+    """
+    changed = False
+    for sid_str, entries in voice_master.items():
+        sid = int(sid_str)
+        cid = _cid(sid)
+        cid_str = str(cid)
+        resource = entries[0]["resourceName"]
+        types_present = {e["cardType"] for e in entries}
+
+        if cid_str not in index:
+            index[cid_str] = {"jp_name": name_lookup.get(cid, str(cid)), "children": []}
+            changed = True
+
+        entry = index[cid_str]
+        existing = {(c["type"], c["stockId"]) for c in entry["children"]}
+        added = False
+
+        for ctype, type_key in ((1, "hero"), (2, "sidekick")):
+            if ctype in types_present and (type_key, sid) not in existing:
+                entry["children"].append({"stockId": sid, "type": type_key, "resourceName": resource})
+                added = True
+                changed = True
+
+        if added:
+            entry["children"].sort(key=lambda c: c["stockId"])
+
+    return changed
 
 
 # --------------------------------------------------------------------------- #
@@ -200,7 +244,7 @@ def _label_text(td) -> str:
     return "".join(td.itertext()).strip()
 
 
-def parse_voice(content: str):
+def parse_voice(content: str, hero_map: dict, sidekick_map: dict):
     """Parse a page's HTML and return the ordered list of voice sections:
 
         [{"type": "hero"|"sidekick",
@@ -219,7 +263,7 @@ def parse_voice(content: str):
             continue  # skip タイトルコール, キャラクターPV, nested spoiler folds, etc.
 
         is_sidekick = title.startswith("サイドキック")
-        mapping = SIDEKICK_MAP if is_sidekick else HERO_MAP
+        mapping = sidekick_map if is_sidekick else hero_map
 
         container = summary.getparent()
         contents = container.xpath("./div[contains(@class,'fold-content')]")
@@ -256,8 +300,8 @@ def parse_voice(content: str):
 # --------------------------------------------------------------------------- #
 # Merging parsed sections back into the index
 # --------------------------------------------------------------------------- #
-def merge_sections(entry: dict, sections: list):
-    """Assign each parsed section's parts to the right child and log leftovers."""
+def merge_sections(entry: dict, sections: list, voice_meta: dict):
+    """Assign each parsed section's parts to the right child, add voiceFilename, and log leftovers."""
     jp_name = entry["jp_name"]
     children = entry["children"]
     hero_children = [c for c in children if c["type"] == "hero"]
@@ -266,6 +310,16 @@ def merge_sections(entry: dict, sections: list):
     hero_sections = [s for s in sections if s["type"] == "hero"]
     side_sections = [s for s in sections if s["type"] == "sidekick"]
 
+    def enrich_parts(child, parts):
+        type_key = child["type"]
+        fm = voice_meta.get(child["stockId"], {}).get(type_key, {})
+        for p in parts:
+            p["voiceFilename"] = fm.get(
+                p["partName"],
+                f"voice_{child['resourceName']}_{p['partName']}",
+            )
+        return parts
+
     def log_unmatched(sec):
         for label in sec["unmatched"]:
             print(f"  [{jp_name}] [{sec['summary']}] unmatched row: {label!r}")
@@ -273,7 +327,7 @@ def merge_sections(entry: dict, sections: list):
     # Heroes: positional match in document / stockId order.
     for i, sec in enumerate(hero_sections):
         if i < len(hero_children):
-            hero_children[i]["parts"] = sec["parts"]
+            hero_children[i]["parts"] = enrich_parts(hero_children[i], sec["parts"])
         else:
             print(f"  [{jp_name}] extra hero section '{sec['summary']}' has no matching child")
         log_unmatched(sec)
@@ -284,7 +338,7 @@ def merge_sections(entry: dict, sections: list):
     # Sidekick: the single sidekick child.
     for sec in side_sections:
         if sidekick_children:
-            sidekick_children[0]["parts"] = sec["parts"]
+            sidekick_children[0]["parts"] = enrich_parts(sidekick_children[0], sec["parts"])
         else:
             print(f"  [{jp_name}] sidekick section '{sec['summary']}' but no sidekick child")
         log_unmatched(sec)
@@ -309,12 +363,21 @@ def main(argv=None):
     parser.add_argument("--cache-dir", default="zzz/voice_html", help="Raw HTML cache directory")
     args = parser.parse_args(argv)
 
+    voice_master = loadJson(VOICE_MASTER)
+    voice_meta = build_voice_meta(voice_master)
+    hero_map, sidekick_map = build_label_maps(voice_master)
+
     if args.force_rebuild or not os.path.exists(args.index):
         print("Building index from masters...")
-        index = build_index()
+        index = build_index(voice_master)
     else:
         print(f"Loading index from {args.index}")
         index = loadJson(args.index)
+        card = loadJson(CARD_MASTER)
+        sidekick_master = loadJson(SIDEKICK_MASTER)
+        name_lookup = build_name_lookup(card, sidekick_master)
+        if augment_index(index, voice_master, name_lookup):
+            print("Index augmented with new stockId data from VoiceMaster")
 
     wanted = None
     if args.resources:
@@ -334,11 +397,11 @@ def main(argv=None):
             print(f"  [{jp_name}] fetch failed: {exc}")
             continue
 
-        sections = parse_voice(content)
+        sections = parse_voice(content, hero_map, sidekick_map)
         if not sections:
             print(f"  [{jp_name}] no voice sections found")
             continue
-        merge_sections(entry, sections)
+        merge_sections(entry, sections, voice_meta)
 
     ensureDirs(args.index)
     dumpJson(args.index, index, indent="\t")
