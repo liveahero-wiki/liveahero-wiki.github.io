@@ -85,7 +85,8 @@ def _norm_label(label: str) -> str:
 # Wiki pages occasionally use a label text that differs from VoiceMaster's buttonLabel.
 # Map the wiki variant to the normalized VoiceMaster string so it resolves correctly.
 _LABEL_ALIASES = {
-    "ヒーロー契約2": "ヒーロー契約時2",  # Exio wiki omits 時; VoiceMaster has ヒーロー契約時２
+    ("35", "ヒーロー契約2"): "ヒーロー契約時2",  # Exio wiki omits 時; VoiceMaster has ヒーロー契約時２
+    ("25", "必殺技(変化後)"): "必殺技(変化時)", # Andrew anniversary
 }
 
 
@@ -262,7 +263,7 @@ def _label_text(td) -> str:
     return "".join(td.itertext()).strip()
 
 
-def parse_voice(content: str, hero_map: dict, sidekick_map: dict):
+def parse_voice(content: str, hero_map: dict, sidekick_map: dict, characterId: str):
     """Parse a page's HTML and return the ordered list of voice sections:
 
         [{"type": "hero"|"sidekick",
@@ -297,7 +298,7 @@ def parse_voice(content: str, hero_map: dict, sidekick_map: dict):
                 if len(tds) < 2:
                     continue  # heading row (th) or malformed -> skip silently
                 label = _norm_label(_label_text(tds[0]))
-                label = _LABEL_ALIASES.get(label, label)
+                label = _LABEL_ALIASES.get((characterId, label), label)
                 part_name = mapping.get(label)
                 if part_name is None:
                     unmatched.append(label)
@@ -416,7 +417,7 @@ def main(argv=None):
             print(f"  [{jp_name}] fetch failed: {exc}")
             continue
 
-        sections = parse_voice(content, hero_map, sidekick_map)
+        sections = parse_voice(content, hero_map, sidekick_map, cid)
         if not sections:
             print(f"  [{jp_name}] no voice sections found")
             continue
