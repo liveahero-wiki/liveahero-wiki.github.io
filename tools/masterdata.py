@@ -104,6 +104,7 @@ def main(argv):
     "BromideMaster",
     "BromideStockMaster",
     "RewardLootBoxMaster",
+    "VoiceMaster",
   ]
 
   if not args.skip_data:
