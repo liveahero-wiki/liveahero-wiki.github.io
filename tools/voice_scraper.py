@@ -45,7 +45,8 @@ VOICE_KIND_MAP = {
     10: "trained",
     11: "appreciation",
     12: "touch",
-    13: "rankMax",
+    13: "loveIndexMax",
+    14: "rankMax",
     15: "battleStart",
     16: "action",
     17: "attack",
@@ -53,6 +54,7 @@ VOICE_KIND_MAP = {
     19: "skillB",
     20: "smallDamage",
     21: "bigDamage",
+    22: "assist",
     23: "assisted",
     24: "special",
     25: "win",
@@ -72,6 +74,21 @@ VOICE_KIND_MAP = {
 # --------------------------------------------------------------------------- #
 # Helpers
 # --------------------------------------------------------------------------- #
+_FULLWIDTH_TABLE = str.maketrans("０１２３４５６７８９（）", "0123456789()")
+
+
+def _norm_label(label: str) -> str:
+    """Normalize fullwidth digits/parentheses to ASCII so VoiceMaster labels match wiki labels."""
+    return label.translate(_FULLWIDTH_TABLE)
+
+
+# Wiki pages occasionally use a label text that differs from VoiceMaster's buttonLabel.
+# Map the wiki variant to the normalized VoiceMaster string so it resolves correctly.
+_LABEL_ALIASES = {
+    "ヒーロー契約2": "ヒーロー契約時2",  # Exio wiki omits 時; VoiceMaster has ヒーロー契約時２
+}
+
+
 def _cid(sid: int) -> int:
     """Derive characterId from stockId."""
     return (sid // 10) % 1000
@@ -118,6 +135,7 @@ def build_label_maps(voice_master: dict):
             part = VOICE_KIND_MAP.get(e.get("voiceKind"))
             if not label or part is None:
                 continue
+            label = _norm_label(label)
             if e["cardType"] == 1:
                 hero_map[label] = part
             else:
@@ -278,7 +296,8 @@ def parse_voice(content: str, hero_map: dict, sidekick_map: dict):
                 tds = tr.findall("td")
                 if len(tds) < 2:
                     continue  # heading row (th) or malformed -> skip silently
-                label = _label_text(tds[0])
+                label = _norm_label(_label_text(tds[0]))
+                label = _LABEL_ALIASES.get(label, label)
                 part_name = mapping.get(label)
                 if part_name is None:
                     unmatched.append(label)
