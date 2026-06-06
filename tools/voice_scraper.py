@@ -87,8 +87,12 @@ def _norm_label(label: str) -> str:
 _LABEL_ALIASES = {
     ("35", "ヒーロー契約2"): "ヒーロー契約時2",  # Exio wiki omits 時; VoiceMaster has ヒーロー契約時２
     ("25", "必殺技(変化後)"): "必殺技(変化時)", # Andrew anniversary
+    ("128", "最高ランク到"): "最高ランク到達", # Phein
 }
 
+_JP_NAME_TO_WIKI_PAGES = {
+    "コウキ": "コウキ＆シリウス",
+}
 
 def _cid(sid: int) -> int:
     """Derive characterId from stockId."""
@@ -223,6 +227,7 @@ def fetch_html(jp_name: str, cache_dir: str, refresh: bool) -> str:
         with open(cache_path, encoding="utf-8") as f:
             return f.read()
 
+    jp_name = _JP_NAME_TO_WIKI_PAGES.get(jp_name, jp_name)
     url = BASE_URL + quote(jp_name, safe="")
     print(f"GET {url}")
     resp = requests.get(url, headers=HEADER)
