@@ -29,11 +29,47 @@ SIDEKICK_MASTER = "_data/SidekickMaster.json"
 BASE_URL = "https://wikiwiki.jp/live-a-hero/"
 HEADER = {"User-Agent": "LiveAHeroAPI"}
 
+VOICE_KIND_MAP = {
+    1: "h_gachaResult",
+    2: "s_gachaResult",
+    3: "daily",
+    4: "player",
+    5: "hero",
+    6: "relation",
+    7: "salesStart",
+    8: "salesEnd",
+    9: "train",
+    10: "trained",
+    11: "appreciation",
+    12: "touch",
+    13: "rankMax",
+    15: "battleStart",
+    16: "action",
+    17: "attack",
+    18: "skillA",
+    19: "skillB",
+    20: "smallDamage",
+    21: "bigDamage",
+    23: "assisted",
+    24: "special",
+    25: "win",
+    26: "lose",
+    27: "eventA",
+    28: "eventB",
+    29: "eventC",
+    30: "eventD",
+    # 32-35 are not fixed, need to check voiceFilename in VoiceMaster
+    32: "h_gachaResult_another",
+    33: "player_another",
+    34: "hero_another",
+    35: "touch_another",
+}
+
 # Voice-table column 1 label -> partName, split by section context.
 # Some labels (トレーニング, アシスト, 他のヒーローについて) differ between hero/sidekick.
 HERO_MAP = {
     "ヒーロー契約": "hero_gachaResult",
-    "ヒーロー契約２": "hero_gachaResult2",
+    "ヒーロー契約２": "hero_gachaResult_another",
     "あなたについて": "player",
     "あなたについて２": "player2",
     "他のヒーローについて": "hero",
@@ -64,6 +100,7 @@ HERO_MAP = {
 
 SIDEKICK_MAP = {
     "サイドキック契約": "sidekick_gachaResult",
+    "サイドキック契約2": "sidekick_gachaResult_another",
     "日常会話": "daily",
     "日常会話2": "daily2",
     "人間関係について": "relation",
@@ -152,7 +189,7 @@ def cell_text(td) -> str:
     for child in td:
         chunks.append(etree.tostring(child, encoding="unicode", method="html"))
     s = "".join(chunks)
-    s = RUBY_DROP_PATTERN.sub("", s)   # drop <rt>/<rp> reading annotations
+    #s = RUBY_DROP_PATTERN.sub("", s)   # drop <rt>/<rp> reading annotations
     s = BR_PATTERN.sub("<br>", s)      # normalize <br class="spacer"> -> <br>
     s = TAG_PATTERN.sub("", s)         # strip remaining tags (ruby, spans, ...)
     s = unescape(s).strip()
