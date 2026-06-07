@@ -139,7 +139,8 @@ def build_label_maps_v2(voice_master: dict):
         sid = int(sid_str)
         cid = str(_cid(sid))
         variant = str(sid % 10)
-        
+
+        entries.sort(key=lambda x: x["voiceKind"])
         for e in entries:
             cardType = e.get("cardType")
             if cardType not in [1, 2]:
