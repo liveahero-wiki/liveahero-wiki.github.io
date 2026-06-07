@@ -3,6 +3,7 @@ import json
 import yaml
 import os
 import os.path
+import xml.etree.ElementTree as ET
 
 def ensureDirs(path):
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -80,3 +81,23 @@ def dumpJson(filename, obj, **kwargs):
         kwargs["indent"] = ""
     with open(filename, "w", encoding="utf-8", newline="\n") as f:
         json.dump(obj, f, ensure_ascii=False, **kwargs)
+
+has_invalid_html = False
+
+LESSER_PATTERN = re.compile(r"\s<(\s|=|\d)")
+GREATER_PATTERN = re.compile(r"\s<(\s|=|\d)")
+
+def validateHtml(s: str):
+    try:
+        # a bunch of hack because html is more leniant than actual xml
+        # we only want to detect if html tags are closed correctly
+        s = LESSER_PATTERN.sub(" ", s)
+        s = GREATER_PATTERN.sub(" ", s)
+        s = s.replace("<br>", " ").replace(" & ", " ").replace("&nbsp;", "")
+
+        ET.fromstring("<xml>" + s + "</xml>")
+        return None
+    except ET.ParseError as e:
+        global has_invalid_html
+        has_invalid_html = True
+        return e
