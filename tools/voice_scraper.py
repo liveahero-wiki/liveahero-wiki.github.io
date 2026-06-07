@@ -19,6 +19,7 @@ import os.path
 import re
 from html import unescape
 from urllib.parse import quote
+from collections import defaultdict
 
 import requests
 from lxml import etree, html
@@ -131,24 +132,31 @@ def build_voice_meta(voice_master: dict) -> dict:
         result[sid] = meta
     return result
 
-
-def build_label_maps(voice_master: dict):
-    """Return (hero_map, sidekick_map): {buttonLabel -> partName} built from VoiceMaster."""
-    hero_map = {}
-    sidekick_map = {}
-    for entries in voice_master.values():
+def build_label_maps_v2(voice_master: dict):
+    hero_map = defaultdict(lambda: defaultdict(dict))
+    sidekick_map = defaultdict(lambda: defaultdict(dict))
+    for sid_str, entries in voice_master.items():
+        sid = int(sid_str)
+        cid = str(_cid(sid))
+        variant = str(sid % 10)
+        
         for e in entries:
-            label = e.get("buttonLabel", "").strip()
+            cardType = e.get("cardType")
+            if cardType not in [1, 2]:
+                continue
+            mapping = hero_map if cardType == 1 else sidekick_map
+            label = _norm_label(e.get("buttonLabel", ""))
             part = VOICE_KIND_MAP.get(e.get("voiceKind"))
             if not label or part is None:
                 continue
-            label = _norm_label(label)
-            if e["cardType"] == 1:
-                hero_map[label] = part
-            else:
-                sidekick_map[label] = part
-    return hero_map, sidekick_map
 
+            x = mapping[cid][variant]
+            y = x.get(label)
+            if y is not None:
+                print(f"[WARNING] Duplicate label for {e.get('resourceName')}/{variant}: {label} -> {y} and {part}")
+            else:
+                x[label] = part
+    return hero_map, sidekick_map
 
 # --------------------------------------------------------------------------- #
 # Index building
@@ -271,6 +279,8 @@ def _label_text(td) -> str:
     return "".join(td.itertext()).strip()
 
 
+SKILL_NUMBER_PATTERN = re.compile(r"^スキル(1|2|3|4)$")
+
 def parse_voice(content: str, hero_map: dict, sidekick_map: dict, characterId: str):
     """Parse a page's HTML and return the ordered list of voice sections:
 
@@ -284,13 +294,23 @@ def parse_voice(content: str, hero_map: dict, sidekick_map: dict, characterId: s
     tree = html.fromstring(content)
     sections = []
 
+    hero_variant = 1
+    sidekick_variant = 1
+
     for summary in tree.xpath("//div[contains(@class,'fold-summary')]"):
         title = summary.text_content().strip()
         if not title.endswith("/ボイス"):
             continue  # skip タイトルコール, キャラクターPV, nested spoiler folds, etc.
 
         is_sidekick = title.startswith("サイドキック")
-        mapping = sidekick_map if is_sidekick else hero_map
+        if is_sidekick:
+            variant = str(sidekick_variant)
+            sidekick_variant += 1
+            mapping = sidekick_map[characterId][variant]
+        else:
+            variant = str(hero_variant)
+            hero_variant += 1
+            mapping = hero_map[characterId][variant]
 
         container = summary.getparent()
         contents = container.xpath("./div[contains(@class,'fold-content')]")
@@ -309,8 +329,13 @@ def parse_voice(content: str, hero_map: dict, sidekick_map: dict, characterId: s
                 label = _LABEL_ALIASES.get((characterId, label), label)
                 part_name = mapping.get(label)
                 if part_name is None:
-                    unmatched.append(label)
-                    continue
+                    m = SKILL_NUMBER_PATTERN.match(label)
+                    if m:
+                        c = int(m.group(1))-1
+                        part_name = f'skill{chr(c+ord("A"))}'
+                    else:
+                        unmatched.append(label)
+                        continue
                 parts.append({"partName": part_name, "jp": cell_text(tds[1])})
 
         sections.append(
@@ -393,7 +418,7 @@ def main(argv=None):
 
     voice_master = loadJson(VOICE_MASTER)
     voice_meta = build_voice_meta(voice_master)
-    hero_map, sidekick_map = build_label_maps(voice_master)
+    hero_map, sidekick_map = build_label_maps_v2(voice_master)
 
     if args.force_rebuild or not os.path.exists(args.index):
         print("Building index from masters...")
