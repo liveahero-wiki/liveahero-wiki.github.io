@@ -81,7 +81,7 @@
     {% capture voiceFilename %}voice_{{ include.resourceName }}_{{ part }}{% endcapture %}
     {% assign jp_line = site.data.processed.jp_voice[voiceFilename] %}
     {% assign line = include[part] %}
-    {% if voiceFilename or line %}
+    {% if jp_line or line %}
       <tr>
         <td class="voice-jp-cell">
           <div class="voice-key-badge">{{ part }}</div>
