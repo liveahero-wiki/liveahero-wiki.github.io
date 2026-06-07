@@ -94,6 +94,8 @@ _JP_NAME_TO_WIKI_PAGES = {
     "コウキ": "コウキ＆シリウス",
 }
 
+DEFAULT_SPOILER_TEXT = "ここにテキストを入力"
+
 def _cid(sid: int) -> int:
     """Derive characterId from stockId."""
     return (sid // 10) % 1000
@@ -260,6 +262,7 @@ def cell_text(td) -> str:
     #s = RUBY_DROP_PATTERN.sub("", s)   # drop <rt>/<rp> reading annotations
     s = BR_PATTERN.sub("<br>", s)      # normalize <br class="spacer"> -> <br>
     s = TAG_PATTERN.sub("", s)         # strip remaining tags (ruby, spans, ...)
+    s = s.replace(DEFAULT_SPOILER_TEXT, "")
     s = unescape(s).strip()
     return re.sub(r"^(?:<br>)+|(?:<br>)+$", "", s)  # trim leading/trailing breaks
 
