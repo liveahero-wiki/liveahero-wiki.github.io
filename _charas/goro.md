@@ -95,7 +95,7 @@ TRAIN = "It's just a bit of training.  So c'mon, hang out with me."
 TRAINED = "Guh...my head is still ringing..."
 %}
 
-{% include voice-table.html resourceName="goroghostwoods2204"
+{% include voice-table.html resourceName="goroGhostWoods2204"
 h_gachaResult = "It's a festival, and it's all about drinking, dancing, and music!<br>Will my performance make me popular?<br>Let's have fun until we get drunk."
 APPRECIATION = "Why, you look tired, chief.<br>Want me to sing you a lullaby?<br>Come on, drink this and relax."
 DAILY = "I dunno much about flowers... but it's nice to have a drink with some pretty scenery.<br>The important thing at a festival is to have fun, right?"
