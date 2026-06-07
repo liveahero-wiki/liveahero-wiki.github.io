@@ -41,6 +41,7 @@ jobs:
       run: |
         python -m pip install -r requirements.txt
         python tools/translation_download_tsv.py
+        python tools/voice_gsheet.py download
         python tools/skill_evo.py
         python tools/generate_status_pages.py
 
