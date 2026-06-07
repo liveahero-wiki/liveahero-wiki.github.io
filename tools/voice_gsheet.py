@@ -7,10 +7,12 @@ import gspread
 
 sys.path.insert(0, os.path.dirname(__file__))
 import wiki_util
-from sheet_util import load_gsheet_credentials, update_sheet
+from sheet_util import load_gsheet_credentials, update_sheet, getTranslatedCsv
 
 GOOGLE_SHEET_ID = "1PVTqJxN2-VF1TwSdlisrrLgW1vWlRKJSmv1cpCBaY-I"
 VOICE_SHEET_NAME = "Voice"
+VOICE_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGnHrxbjI27aRZLsu52ZiBlhZIqLEA4nsd0nICwGlzFPH_v2AQlvC5hf7mvvs8i7-XhfRkq0HcbhU1/pub?gid=689437481&single=true&output=csv"
+VOICE_CSV_CACHE = "zzz/voice-tl.csv"
 
 SERIF_PARTS = {
     "appreciation", "daily", "eventA", "eventB", "eventC", "eventD",
@@ -159,19 +161,10 @@ def cmd_patch_temp(args):
 
 
 def cmd_download(args):
-    try:
-        _, sh = _connect(GOOGLE_SHEET_ID)
-    except Exception as e:
-        print(f"Failed to connect to Google Sheet: {e}")
-        return
-
-    sheet = sh.worksheet(VOICE_SHEET_NAME)
-    records = sheet.get_all_records()
-
     jp_voice: dict[str, str] = {}
     en_voice: dict[str, str] = {}
 
-    for row in records:
+    for row in getTranslatedCsv(VOICE_CSV_URL, VOICE_CSV_CACHE, use_local=args.local):
         filename = row.get("voiceFilename", "")
         if not filename:
             continue
@@ -200,7 +193,8 @@ def main():
 
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser("upload", help="Upload voice lines to Google Sheet")
-    subparsers.add_parser("download", help="Download voice lines from Google Sheet")
+    dl_parser = subparsers.add_parser("download", help="Download voice lines from Google Sheet")
+    dl_parser.add_argument("--local", action="store_true", help=f"Use cached CSV at {VOICE_CSV_CACHE} instead of fetching")
     subparsers.add_parser("patch_temp", help="Patch enApproved from zzz/TempVoice.json into Google Sheet")
 
     args = parser.parse_args()
