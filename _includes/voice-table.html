@@ -2,7 +2,7 @@
 {% assign names = include.resourceName | split: "," %}
 
 {% assign manual = "battleStart,boss_battleStart,action,attack,skill,skillA,skillB,special,special2,smallDamage,bigDamage,win,lose,assist,assisted,loveIndexMax,rankMax,salesStart,salesEnd" | split: "," %}
-{% assign greeting = "h_gachaResult,s_gachaResult" | split: "," %}
+{% assign greeting = "h_gachaResult,h_gachaResult_another,s_gachaResult,s_gachaResult_another" | split: "," %}
 
 <h2>Voice Lines ({{ names | join: ", " }})</h2>
 <table class="voice-table" data-resourceName="{{ include.resourceName }}" data-active-lang="en">
@@ -24,14 +24,14 @@
   {% assign name = n | upcase | prepend: "_" | append: "_" %}
 
   {% for part in greeting %}
-    {% capture key %}voice_{{ n }}_{{ part }}{% endcapture %}
+    {% capture key %}voice_{{ include.resourceName }}_{{ part }}{% endcapture %}
     {% assign jp_line = site.data.processed.jp_greeting[key] %}
     {% assign en_line = site.data.processed.en_greeting[key] %}
-    {% assign translated = include[part] | default: en_line %}
+    {% assign translated = en_line | default: site.data.processed.en_voice[key] %}
     {% assign label_name = part | replace: "h_", "Hero " | replace: "s_", "Sidekick " %}
 
     {% if translated or jp_line %}
-      {% assign en_val = translated | default: en_line | default: '-' %}
+      {% assign en_val = translated | default: '-' %}
       {% assign hans_val = site.data.processed.hans_greeting[key] | default: '-' %}
       {% assign hant_val = site.data.processed.hant_greeting[key] | default: '-' %}
       <tr>
@@ -50,6 +50,7 @@
 
   {% for part in whitelist %}
     {% assign p = part %}
+    {% capture voiceFilename %}voice_{{ include.resourceName }}_{{ part | lowercase }}{% endcapture %}
     {% assign key = "SERIF" | append: name | append: part %}
     {% assign jp_line = site.data.processed.jp_serif[key] %}
     {% assign en_line = site.data.processed.en_serif[key] %}
@@ -57,12 +58,12 @@
       {% if part != "TRAINED" %}{% continue %}{% endif %}
       {% assign p = key | replace: "SERIF_", "" %}
     {% endif %}
-    {% assign translated = include[p] | default: en_line %}
+    {% assign translated = en_line | default: site.data.processed.en_voice[voiceFilename] %}
 
     {% if jp_line %}
-      {% assign en_val = translated | default: en_line | default: jp_line %}
-      {% assign hans_val = site.data.processed.hans_serif[key] | default: en_val %}
-      {% assign hant_val = site.data.processed.hant_serif[key] | default: en_val %}
+      {% assign en_val = translated | default: '-' %}
+      {% assign hans_val = site.data.processed.hans_serif[key] | default: '-' %}
+      {% assign hant_val = site.data.processed.hant_serif[key] | default: '-' %}
       <tr>
         <td class="voice-jp-cell">
           <div class="voice-key-badge">{{ p }}</div>
@@ -78,15 +79,17 @@
   {% endfor %}
 
   {% for part in manual %}
-    {% assign line = include[part] %}
-    {% if line %}
+    {% capture voiceFilename %}voice_{{ include.resourceName }}_{{ part }}{% endcapture %}
+    {% assign jp_line = site.data.processed.jp_voice[voiceFilename] %}
+    {% assign en_line = site.data.processed.en_voice[voiceFilename] %}
+    {% if jp_line or en_line %}
       <tr>
         <td class="voice-jp-cell">
           <div class="voice-key-badge">{{ part }}</div>
-          <div class="voice-text">-</div>
+          <div class="voice-text">{{ jp_line | default: '-' }}</div>
         </td>
         <td class="voice-translation-cell">
-          <div class="voice-lang-content" data-lang="en">{{ line }}</div>
+          <div class="voice-lang-content" data-lang="en">{{ en_line }}</div>
           <div class="voice-lang-content" data-lang="hans">-</div>
           <div class="voice-lang-content" data-lang="hant">-</div>
         </td>
