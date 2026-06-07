@@ -58,11 +58,15 @@ def generate_voice_rows(index_path: str) -> list[dict]:
                     jp = jp_greeting.get(voice_filename, part.get("jp", ""))
                     en_approved = en_greeting.get(voice_filename, "")
                 elif part_name in SERIF_PARTS:
-                    serif_key = voice_filename.replace("voice_", "serif_").upper()#f"SERIF_{resource_name.upper()}_{part_name.upper()}"
+                    serif_key = voice_filename.replace("voice_", "serif_").upper()
                     jp = jp_serif.get(serif_key, part.get("jp", ""))
                     en_approved = en_serif.get(serif_key, "")
                 else:
                     jp = part.get("jp", "")
+                    en_approved = ""
+                
+                # NOTE: Don't push if jp == en_approved, as this means the line hasn't been translated yet.
+                if jp == en_approved:
                     en_approved = ""
 
                 row = wiki_util.omitEmptyDict(
@@ -111,6 +115,49 @@ def _is_serif_or_greeting(voice_filename: str) -> bool:
     return any(voice_filename.endswith(f"_{p}") for p in SERIF_PARTS | GREETING_PARTS)
 
 
+def cmd_patch_temp(args):
+    temp_voice = wiki_util.loadJson("zzz/TempVoice.json")
+    en_greeting = wiki_util.loadJson("_data/processed/en_greeting.json")
+    en_serif = wiki_util.loadJson("_data/processed/en_serif.json")
+
+    rows = []
+    for resource_name, parts_list in temp_voice.items():
+        for entry in parts_list:
+            part = entry.get("part", "")
+            en_approved = entry.get("enApproved", "")
+            if not part or not en_approved:
+                continue
+            voice_filename = f"voice_{resource_name}_{part}"
+            if part in GREETING_PARTS:
+                if en_greeting.get(voice_filename):
+                    continue
+            elif part in SERIF_PARTS:
+                serif_key = voice_filename.replace("voice_", "serif_").upper()
+                if en_serif.get(serif_key):
+                    continue
+
+            rows.append({"voiceFilename": voice_filename, "enApproved": en_approved})
+
+    print(f"Loaded {len(rows)} entries from zzz/TempVoice.json")
+
+    try:
+        gc, sh = _connect(GOOGLE_SHEET_ID)
+    except Exception as e:
+        print(f"Failed to connect to Google Sheet: {e}")
+        return
+
+    sheet = sh.worksheet(VOICE_SHEET_NAME)
+    updated, new = update_sheet(
+        gc, sheet, VOICE_SHEET_NAME, rows,
+        pks=["voiceFilename"],
+        updatable_cols=[],
+        patch_if_empty_cols=["enApproved"],
+        dry_run=args.dry_run,
+    )
+
+    print(f"\nSummary: {len(updated)} patched, {len(new)} new rows")
+
+
 def cmd_download(args):
     try:
         _, sh = _connect(GOOGLE_SHEET_ID)
@@ -154,6 +201,7 @@ def main():
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser("upload", help="Upload voice lines to Google Sheet")
     subparsers.add_parser("download", help="Download voice lines from Google Sheet")
+    subparsers.add_parser("patch_temp", help="Patch enApproved from zzz/TempVoice.json into Google Sheet")
 
     args = parser.parse_args()
 
@@ -161,6 +209,8 @@ def main():
         cmd_upload(args)
     elif args.command == "download":
         cmd_download(args)
+    elif args.command == "patch_temp":
+        cmd_patch_temp(args)
 
 
 if __name__ == "__main__":
