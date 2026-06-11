@@ -4,6 +4,8 @@ characterId: 21
 type: humanoid
 gender: male
 occupation: Nurse (看護師)
+h2:
+  title: "\"Prevention Aegis\" Loren"
 heroes:
 - stockId: 10211
   BIO_H01: |-
@@ -32,6 +34,7 @@ heroes:
     As long as the object to be saved continues to exist in this world, he will
     continue to flap his wings to save lives.
   extra_sprites: fg_loren_h01_skin2,fg_loren_h01_skin3
+- stockId: 10212
 sidekicks:
 - stockId: 10211
   BIO_S01: |-
@@ -72,6 +75,9 @@ RELATION = "That professor sure has amazing strength and resilience.<br>Even tho
 TOUCH = "Waah! W-what is it!?<br>Is my belly really that comfortable to touch?<br>Y-you're tickling me, ahahaha!"
 TRAIN = "Moderate exercise to maintain good health! Let's go!"
 TRAINED = "Uhh, Time-out! It's tough!"
+%}
+
+{% include voice-table.html resourceName="lorenMain24"
 %}
 
 ## Notes

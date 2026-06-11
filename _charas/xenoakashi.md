@@ -1,0 +1,15 @@
+---
+title: Xeno Akashi
+characterId: 318
+type: human
+gender: male
+heroes:
+- stockId: 13181
+sidekicks:
+- stockId: 13181
+---
+
+{% include voice-table.html resourceName="xenoAkashi"
+%}
+
+## Notes
