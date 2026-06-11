@@ -79,6 +79,8 @@ Standard missions are permanent missions that can be cleared at any point of tim
 |Clear the main quest: Book 2 Chapter 2|{%include item.html id=135%} x 5|
 |Clear the main quest: Book 2 Chapter 3|{%include item.html id=2%} x 10|
 |Clear the main quest: Book 2 Chapter 3|{%include item.html id=135%} x 5|
+|Clear the main quest: Book 2 Chapter 4|{%include item.html id=2%} x 10|
+|Clear the main quest: Book 2 Chapter 4|{%include item.html id=135%} x 5|
 
 ### Player Login
 
@@ -103,6 +105,32 @@ Standard missions are permanent missions that can be cleared at any point of tim
 |Log in on the 600th day|{%include item.html id=2%} x 20|
 |Log in on the 650th day|{%include item.html id=2%} x 10|
 |Log in on the 700th day|{%include item.html id=2%} x 20|
+|Log in on the 750th day|{%include item.html id=2%} x 10|
+|Log in on the 800th day|{%include item.html id=2%} x 20|
+|Log in on the 850th day|{%include item.html id=2%} x 10|
+|Log in on the 900th day|{%include item.html id=2%} x 20|
+|Log in on the 950th day|{%include item.html id=2%} x 10|
+|Log in on the 1000th day|{%include item.html id=2%} x 50|
+|Log in on the 1050th day|{%include item.html id=2%} x 10|
+|Log in on the 1100th day|{%include item.html id=2%} x 20|
+|Log in on the 1150th day|{%include item.html id=2%} x 10|
+|Log in on the 1200th day|{%include item.html id=2%} x 20|
+|Log in on the 1250th day|{%include item.html id=2%} x 10|
+|Log in on the 1300th day|{%include item.html id=2%} x 20|
+|Log in on the 1350th day|{%include item.html id=2%} x 10|
+|Log in on the 1400th day|{%include item.html id=2%} x 20|
+|Log in on the 1450th day|{%include item.html id=2%} x 10|
+|Log in on the 1500th day|{%include item.html id=2%} x 20|
+|Log in on the 1550th day|{%include item.html id=2%} x 10|
+|Log in on the 1600th day|{%include item.html id=2%} x 20|
+|Log in on the 1650th day|{%include item.html id=2%} x 10|
+|Log in on the 1700th day|{%include item.html id=2%} x 20|
+|Log in on the 1750th day|{%include item.html id=2%} x 10|
+|Log in on the 1800th day|{%include item.html id=2%} x 20|
+|Log in on the 1850th day|{%include item.html id=2%} x 10|
+|Log in on the 1900th day|{%include item.html id=2%} x 20|
+|Log in on the 1950th day|{%include item.html id=2%} x 10|
+|Log in on the 2000th day|{%include item.html id=2%} x 50|
 
 ### Player Rank
 
