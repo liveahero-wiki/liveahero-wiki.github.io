@@ -1,5 +1,5 @@
 ---
-title: Xeno Akashi
+title: ⇌Akashi
 characterId: 318
 type: human
 gender: male
