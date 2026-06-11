@@ -7,6 +7,7 @@ heroes:
 - stockId: 13181
 sidekicks:
 - stockId: 13181
+redirect_from: /charas/if_akashi/
 ---
 
 {% include voice-table.html resourceName="xenoAkashi"
