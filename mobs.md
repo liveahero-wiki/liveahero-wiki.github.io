@@ -298,6 +298,18 @@ sprites="fg_kaibutsuPhantasmAdultEarth_h01,fg_kaibutsuPhantasmAdultFire_h01,fg_k
 sprites="fg_kaibutsuPhantasmLarvaEarth_h01,fg_kaibutsuPhantasmLarvaFire_h01,fg_kaibutsuPhantasmLarvaLight_h01,fg_kaibutsuPhantasmLarvaShadow_h01,fg_kaibutsuPhantasmLarvaWater_h01"
 %}
 
+### Ranger
+
+{% include hero-infobox-unreleased.html name="Ranger" mob=true
+sprites="fg_villainRangerEarth_s01,fg_villainRangerFire_s01,fg_villainRangerLight_s01,fg_villainRangerShadow_s01,fg_villainRangerWater_s01"
+%}
+
+### Ranger (Transform)
+
+{% include hero-infobox-unreleased.html name="Transformed Ranger" mob=true
+sprites="fg_villainRangerEarth_h01,fg_villainRangerFire_h01,fg_villainRangerLight_h01,fg_villainRangerShadow_h01,fg_villainRangerWater_h01"
+%}
+
 ### Salvager (Transform)
 
 {% include hero-infobox-unreleased.html name="Transformed Salvager" mob=true
