@@ -28027,14 +28027,14 @@
   "166": {
     "eventId": 166,
     "chapterId": 1256,
-    "lookBackChapterId": 0,
+    "lookBackChapterId": 549,
     "baseResourceName": "Frontier2604",
     "questSelectPrefabAddress": "",
     "appendPrefabAddressInHome": null,
     "appendPrefabAddressInWindow": null,
     "startAt": null,
     "endAt": "2026-05-14 14:00:00",
-    "canRemember": 0,
+    "canRemember": 1,
     "eventPortalJson": {
       "bg": "ui_bg_sprite_quest_Frontier2604",
       "bgm": "bgm_frontier_adv",
@@ -28079,7 +28079,7 @@
         {
           "type": 7,
           "chapterId": 1258,
-          "buttonType": 0
+          "buttonType": 3
         }
       ],
       "tutorialKey": "Frontier2604",
@@ -28303,7 +28303,71 @@
       "missionCategoryButtonLabels": null
     },
     "roguePortalJson": null,
-    "pastPortalJson": null,
+    "pastPortalJson": {
+      "bg": "ui_bg_sprite_quest_Frontier2604",
+      "bgm": "bgm_frontier_adv",
+      "logo": "Frontier2604_title",
+      "terms": [],
+      "storeId": 0,
+      "isArchived": false,
+      "questInfos": [
+        {
+          "type": 5,
+          "chapterId": 549,
+          "buttonType": 0
+        },
+        {
+          "type": 7,
+          "chapterId": 550,
+          "buttonType": 3
+        }
+      ],
+      "tutorialKey": "",
+      "eventItemIds": [],
+      "missionViews": [],
+      "portalWindow": "EventPortalWindowFrontier2604_past",
+      "characterViews": [
+        {
+          "skinId": 0,
+          "stockId": 10253,
+          "cardType": 1,
+          "serifKinds": [
+            27,
+            28
+          ],
+          "visualType": 1,
+          "resourceName": "andrewFrontier2604",
+          "characterName": "アンドリュー"
+        },
+        {
+          "skinId": 0,
+          "stockId": 10342,
+          "cardType": 1,
+          "serifKinds": [
+            27,
+            28
+          ],
+          "visualType": 1,
+          "resourceName": "huckleFrontier2604",
+          "characterName": "ハックル"
+        },
+        {
+          "skinId": 0,
+          "stockId": 13161,
+          "cardType": 2,
+          "serifKinds": [
+            27,
+            28
+          ],
+          "visualType": 1,
+          "resourceName": "reticul",
+          "characterName": "レティクル"
+        }
+      ],
+      "missionGroupId": 0,
+      "missionGroupIds": [],
+      "missionCategoryButtonLabels": null
+    },
     "summary": {
       "description": "UI_EVENT_SUMMARY_2604FRONTIER",
       "mainChapterId": 108,
@@ -29159,6 +29223,553 @@
         "objectId": 225,
         "bonusValue": 10,
         "targetStockId": 10201
+      }
+    ]
+  },
+  "170": {
+    "eventId": 170,
+    "chapterId": 109,
+    "lookBackChapterId": 0,
+    "baseResourceName": "Main24",
+    "questSelectPrefabAddress": "",
+    "appendPrefabAddressInHome": null,
+    "appendPrefabAddressInWindow": null,
+    "startAt": "2026-06-11 14:00:00",
+    "endAt": "2026-07-09 14:00:00",
+    "canRemember": 0,
+    "eventPortalJson": {
+      "bg": "ui_bg_sprite_event_Main24",
+      "bgm": "bgm_main2-4_adv",
+      "logo": "Main24_title",
+      "terms": [
+        {
+          "keys": [
+            "UI_MISSION",
+            "UI_EXCHANGE"
+          ],
+          "endAt": "2026-07-09 14:00:00"
+        },
+        {
+          "keys": [
+            "UI_FREE_QUEST"
+          ],
+          "endAt": "2026-07-02 20:00:00"
+        },
+        {
+          "keys": [
+            "UI_SALES_BONUS"
+          ],
+          "endAt": "2026-07-02 20:00:00"
+        }
+      ],
+      "gachaId": 208,
+      "storeId": 102,
+      "questInfos": [
+        {
+          "type": 5,
+          "chapterId": 109,
+          "buttonType": 0
+        },
+        {
+          "type": 6,
+          "chapterId": 1268,
+          "buttonType": 1
+        },
+        {
+          "type": 0,
+          "chapterId": 101,
+          "buttonType": 4
+        },
+        {
+          "type": 0,
+          "chapterId": 102,
+          "buttonType": 4
+        },
+        {
+          "type": 0,
+          "chapterId": 103,
+          "buttonType": 4
+        },
+        {
+          "type": 0,
+          "chapterId": 104,
+          "buttonType": 4
+        },
+        {
+          "type": 0,
+          "chapterId": 105,
+          "buttonType": 4
+        },
+        {
+          "type": 0,
+          "chapterId": 106,
+          "buttonType": 4
+        },
+        {
+          "type": 0,
+          "chapterId": 107,
+          "buttonType": 4
+        },
+        {
+          "type": 0,
+          "chapterId": 108,
+          "buttonType": 4
+        }
+      ],
+      "tutorialKey": "Main24",
+      "eventItemIds": [
+        249
+      ],
+      "missionViews": [
+        {
+          "skinId": 0,
+          "stockId": 13181,
+          "cardType": 2,
+          "serifKinds": [
+            29
+          ],
+          "visualType": 1,
+          "serifEntity": [
+            {
+              "priority": 0,
+              "serifKind": 29,
+              "conditions": []
+            },
+            {
+              "priority": 1,
+              "serifKind": 30,
+              "conditions": [
+                {
+                  "class": "MissionClear",
+                  "questId": 0,
+                  "missionIds": [
+                    22273,
+                    22274,
+                    22275,
+                    22276,
+                    22277,
+                    22278,
+                    22279,
+                    22280,
+                    22281,
+                    22282,
+                    22283,
+                    22284,
+                    22285,
+                    22286,
+                    22287,
+                    22288,
+                    22289,
+                    22290,
+                    22291,
+                    22292,
+                    22293
+                  ],
+                  "isCheckClear": true
+                }
+              ]
+            }
+          ],
+          "resourceName": "xenoAkashi",
+          "characterName": "⇌アカシ"
+        },
+        {
+          "skinId": 0,
+          "stockId": 13191,
+          "cardType": 2,
+          "serifKinds": [
+            29
+          ],
+          "visualType": 1,
+          "serifEntity": [
+            {
+              "priority": 0,
+              "serifKind": 29,
+              "conditions": []
+            },
+            {
+              "priority": 1,
+              "serifKind": 30,
+              "conditions": [
+                {
+                  "class": "MissionClear",
+                  "questId": 0,
+                  "missionIds": [
+                    22273,
+                    22274,
+                    22275,
+                    22276,
+                    22277,
+                    22278,
+                    22279,
+                    22280,
+                    22281,
+                    22282,
+                    22283,
+                    22284,
+                    22285,
+                    22286,
+                    22287,
+                    22288,
+                    22289,
+                    22290,
+                    22291,
+                    22292,
+                    22293
+                  ],
+                  "isCheckClear": true
+                }
+              ]
+            }
+          ],
+          "resourceName": "norbrand",
+          "characterName": "ノルブランド"
+        },
+        {
+          "skinId": 0,
+          "stockId": 10212,
+          "cardType": 1,
+          "serifKinds": [
+            29
+          ],
+          "visualType": 1,
+          "serifEntity": [
+            {
+              "priority": 0,
+              "serifKind": 29,
+              "conditions": []
+            },
+            {
+              "priority": 1,
+              "serifKind": 30,
+              "conditions": [
+                {
+                  "class": "MissionClear",
+                  "questId": 0,
+                  "missionIds": [
+                    22273,
+                    22274,
+                    22275,
+                    22276,
+                    22277,
+                    22278,
+                    22279,
+                    22280,
+                    22281,
+                    22282,
+                    22283,
+                    22284,
+                    22285,
+                    22286,
+                    22287,
+                    22288,
+                    22289,
+                    22290,
+                    22291,
+                    22292,
+                    22293
+                  ],
+                  "isCheckClear": true
+                }
+              ]
+            }
+          ],
+          "resourceName": "lorenMain24",
+          "characterName": "ロレン"
+        }
+      ],
+      "portalWindow": "EventPortalWindowMain2_4",
+      "characterViews": [
+        {
+          "skinId": 0,
+          "stockId": 13181,
+          "cardType": 2,
+          "serifKinds": [
+            27,
+            28
+          ],
+          "visualType": 1,
+          "resourceName": "xenoAkashi",
+          "characterName": "⇌アカシ"
+        },
+        {
+          "skinId": 0,
+          "stockId": 13191,
+          "cardType": 2,
+          "serifKinds": [
+            27,
+            28
+          ],
+          "visualType": 1,
+          "resourceName": "norbrand",
+          "characterName": "ノルブランド"
+        },
+        {
+          "skinId": 0,
+          "stockId": 10212,
+          "cardType": 1,
+          "serifKinds": [
+            27,
+            28
+          ],
+          "visualType": 1,
+          "resourceName": "lorenMain24",
+          "characterName": "ロレン"
+        }
+      ],
+      "salesRegionIds": [
+        101,
+        103,
+        104
+      ],
+      "missionGroupIds": [
+        1268,
+        1269
+      ],
+      "missionCategoryButtonLabels": null
+    },
+    "roguePortalJson": null,
+    "pastPortalJson": null,
+    "summary": null,
+    "url": null,
+    "questBonusJsons": [
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 40,
+        "targetStockId": 13181
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 40,
+        "targetStockId": 13191
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 30,
+        "targetStockId": 10212
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 10211
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 20,
+        "targetStockId": 10222
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 20,
+        "targetStockId": 12291
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 12301
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 20,
+        "targetStockId": 12641
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 20,
+        "targetStockId": 12651
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 12661
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 20,
+        "targetStockId": 10351
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 20,
+        "targetStockId": 11681
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 11691
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 11701
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 11401
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 20,
+        "targetStockId": 11121
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 11131
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 20,
+        "targetStockId": 13181
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 20,
+        "targetStockId": 13191
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 10211
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 12291
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 12301
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 12641
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 12651
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 12661
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 11401
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 10351
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 11681
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 11691
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 11701
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 11141
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 11121
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 11131
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 249,
+        "bonusValue": 10,
+        "targetStockId": 19991
       }
     ]
   },

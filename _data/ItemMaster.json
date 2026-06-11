@@ -3732,6 +3732,23 @@
     "prefabAddress": null,
     "limitValue": 0
   },
+  "286": {
+    "itemId": 286,
+    "itemName": "災蕾の繁茂ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "第２部４章のBGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_main2-4_adv",
+        "bgmTitleKey": "TITLE_BGM_MAIN2-4_ADV_RECORD"
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -4585,6 +4602,28 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 1
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "110212": {
+    "itemId": 110212,
+    "itemName": "哨戒のロレンの記憶片",
+    "resourceName": "piece_lorenMain24",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "哨戒のロレンのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 10212
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
       }
     ],
     "prefabAddress": null,
@@ -8036,6 +8075,50 @@
     "prefabAddress": null,
     "limitValue": 0
   },
+  "113181": {
+    "itemId": 113181,
+    "itemName": "⇌アカシの記憶片",
+    "resourceName": "piece_xenoAkashi",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "⇌アカシのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 13181
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "113191": {
+    "itemId": 113191,
+    "itemName": "ノルブランドの記憶片",
+    "resourceName": "piece_norbrand",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "ノルブランドのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 13191
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
   "210011": {
     "itemId": 210011,
     "itemName": "アカシの心",
@@ -11133,6 +11216,48 @@
     "prefabAddress": null,
     "limitValue": 0
   },
+  "213181": {
+    "itemId": 213181,
+    "itemName": "⇌アカシの心",
+    "resourceName": "heart_xenoAkashi",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "⇌アカシのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 13181
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "213191": {
+    "itemId": 213191,
+    "itemName": "ノルブランドの心",
+    "resourceName": "heart_norbrand",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "ノルブランドのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 13191
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
   "219991": {
     "itemId": 219991,
     "itemName": "@playerNameの心",
@@ -13054,6 +13179,17 @@
     "prefabAddress": null,
     "limitValue": 0
   },
+  "21021201": {
+    "itemId": 21021201,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
   "21022101": {
     "itemId": 21022101,
     "itemName": "開花の波動",
@@ -14772,6 +14908,28 @@
   },
   "21316101": {
     "itemId": 21316101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "21318101": {
+    "itemId": 21318101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "21319101": {
+    "itemId": 21319101,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,
