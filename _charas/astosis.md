@@ -10,7 +10,7 @@ profile:
   age: 36
   height: 190
   weight: 113
-  birthday: 06/16
+  birthday: 06/15
   birthplace: Planet on Sunflower Galaxy, Clouge
   5th_anniversary_intro: |-
     A hero of law and judgment has appeared in S&S Heroes, and that hero is
