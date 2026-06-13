@@ -61,6 +61,7 @@ win = "Fufu, wasn't that nice, the way I tailored the opponent earlier.<br>I kin
 lose = "This is the end…I'll finally get to meet you again...Mother…"
 assist = "Go ahead, have at it."
 assisted = "I'm saved."
+rankMax = "This is... me? I never imagined I could be like this...<br>If you say so... then maybe I'll keep trying to live my life a little longer"
 loveIndexMax = "Is it because I'm with you that I can fight?<br>Is it because I'm with you that I want to live on?<br>if that is so, then really, thank you very much."
 APPRECIATION = "Hmm, so you can get that worn out.<br>Just get some rest, and I'll get this document done.<br>When in trouble we should aid each other, right?"
 DAILY = "…n, Hi<br>My condition? Un, it's fine.<br>So, what job will we do today?"
@@ -74,4 +75,4 @@ TRAINED = "My clothes are ripping…!"
 
 ## Notes
 
-- She is 19 years old
+- They're 19 years old
