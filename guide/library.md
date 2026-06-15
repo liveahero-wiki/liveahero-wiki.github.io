@@ -25,6 +25,11 @@ These are notes written by <span class="masked" markdown="0">{% chara_link Exio 
 {% include library-info.html key="ANTARES_2" %}
 {% include library-info.html key="TAIKA" %}
 {% include library-info.html key="HURAY" %}
+{% include library-info.html key="LOREN" %}
+{% include library-info.html key="ZENOAKASHI" %}
+{% include library-info.html key="GARBO" %}
+{% include library-info.html key="ZENOMELIDE" %}
+{% include library-info.html key="ATERRID" %}
 
 ## Organization
 
@@ -37,19 +42,26 @@ These are notes written by <span class="masked" markdown="0">{% chara_link Exio 
 {% include library-info.html key="ZEROTRUST" %}
 {% include library-info.html key="FORESIGHT" %}
 {% include library-info.html key="HERO_LICENSE_ASSOCIATION" %}
+{% include library-info.html key="PROJECT_1" %}
+{% include library-info.html key="PROJECT_2" %}
 
 ## Area
 
 {% include library-info.html key="MT_FUJI" %}
+{% include library-info.html key="MT_FUJI_2" %}
 {% include library-info.html key="BIOTOPE" %}
+{% include library-info.html key="BIOTOPE_2" %}
 
 ## Phenomenon / Event
 
 {% include library-info.html key="HERO_AND_VILLAIN" %}
 {% include library-info.html key="HERO_LICENSE" %}
+{% include library-info.html key="HERO_LICENSE_2" %}
 {% include library-info.html key="UNIQUE" %}
 {% include library-info.html key="PARALELL_WORLD" %}
 {% include library-info.html key="GATEKEEPER" %}
+{% include library-info.html key="ZENOS" %}
+{% include library-info.html key="ORIGIN_HERO_SCALES" %}
 
 ## Echo
 
