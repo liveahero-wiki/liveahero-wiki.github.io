@@ -14,25 +14,22 @@ news_link: https://live-a-hero.jp/info/13538
 * this will be unordered
 {:toc}
 
-## Event Preview
-
-TODO
-
-## Event Banners
-
-TODO
-
-## Event Sales Bonus
-
-TODO
-
-## Special Mission
-
-TODO
 
 ## Limited Time Mission
 
-TODO
+Here is a list of this campaign's limited time Missions:
+
+| No | Description | Rewards |
+|----|-----------------------------------------------------------|----------------|
+| 1  | Finish {% include item.html id=35 %} rank B campaign quest | 600 {% include item-icon.html id=52 %} |
+| 2  | Finish {% include item.html id=35 %} rank A campaign quest | 800 {% include item-icon.html id=52 %} |
+| 3  | Finish {% include item.html id=35 %} rank S campaign quest | 1000 {% include item-icon.html id=52 %} |
+| 4  | Finish {% include item.html id=30 %} rank B campaign quest | 600 {% include item-icon.html id=52 %} |
+| 5  | Finish {% include item.html id=30 %} rank A campaign quest | 800 {% include item-icon.html id=52 %} |
+| 6  | Finish {% include item.html id=30 %} rank S campaign quest | 1000 {% include item-icon.html id=52 %} |
+| 7  | Finish {% include item.html id=11 %} rank B campaign quest | 600 {% include item-icon.html id=52 %} |
+| 8  | Finish {% include item.html id=11 %} rank A campaign quest | 800 {% include item-icon.html id=52 %} |
+| 9  | Finish {% include item.html id=11 %} rank S campaign quest | 1000 {% include item-icon.html id=52 %} |
 
 ## Event Shop
 
