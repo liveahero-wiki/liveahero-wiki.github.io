@@ -35,6 +35,7 @@ heroes:
     continue to flap his wings to save lives.
   extra_sprites: fg_loren_h01_skin2,fg_loren_h01_skin3
 - stockId: 10212
+  extra_sprites: fg_lorenMain24_h02_skin2
 sidekicks:
 - stockId: 10211
   BIO_S01: |-
