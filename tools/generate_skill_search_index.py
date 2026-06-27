@@ -24,14 +24,26 @@ import os
 import hashlib
 from collections import Counter, OrderedDict
 
-from wiki_util import sanitizeSkillDescription
+from wiki_util import sanitizeSkillDescription, build_chara_pages
 
 DATA = "_data"
 API = "api"
+ZZZ = "zzz"
+CHARAS = "_charas"
 
 
 def load(name, sub=None):
     path = os.path.join(DATA, sub, name) if sub else os.path.join(DATA, name)
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def load_english():
+    """The raw English localization dump. Optional: missing -> {} so that the
+    raw-Japanese fallback still works (it is a temp dump under zzz/)."""
+    path = os.path.join(ZZZ, "English.json")
+    if not os.path.exists(path):
+        return {}
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
@@ -306,14 +318,32 @@ def label_skill(skill_id, SM, SEM, SMA, visited):
     return labels, status_ids
 
 
-def skill_obj(slot, skill_id, SM, SEM, SMA):
-    skill = SM.get(str(skill_id), {})
+def skill_name(skill_id, SM, SkillTrans, English):
+    """Skill.json translation -> English.json -> raw Japanese master string."""
+    sid = str(skill_id)
+    return (SkillTrans.get(sid, {}).get("skillName")
+            or English.get(f"SKILL_NAME_{sid}")
+            or SM.get(sid, {}).get("skillName", ""))
+
+
+def skill_description(skill_id, SM, SkillTrans, English):
+    """Skill.json translation -> English.json -> raw Japanese master string,
+    always sanitized for the wiki tag set."""
+    sid = str(skill_id)
+    d = (SkillTrans.get(sid, {}).get("description")
+         or English.get(f"SKILL_DESCRIPTION_{sid}")
+         or SM.get(sid, {}).get("description", ""))
+    return sanitizeSkillDescription(d or "")
+
+
+def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English):
     labels, status_ids = label_skill(skill_id, SM, SEM, SMA, set())
+    skill = SM.get(str(skill_id), {})
     return {
         "slot": slot,
         "skillId": skill_id,
-        "name": skill.get("skillName", ""),
-        "description": sanitizeSkillDescription(skill.get("description", "")),
+        "name": skill_name(skill_id, SM, SkillTrans, English),
+        "description": skill_description(skill_id, SM, SkillTrans, English),
         "useView": skill.get("useView", 0),
         "labels": sorted(labels),
         "statusIds": sorted(status_ids),
@@ -327,7 +357,23 @@ def aggregate(skills, key):
     return sorted(out)
 
 
-def build_hero(stock_entries, SM, SEM, SMA):
+def chara_name_and_page(rep, suffix, chara_pages):
+    """Resolve the English page title (variant-aware) and page url for an
+    entity, mirroring the Liquid `stockIdToLink` filter. Falls back to the raw
+    Japanese cardName + the chara index when the page is missing/unreleased."""
+    stock_id = rep.get("stockId") or 0
+    variant = stock_id % 10
+    page = chara_pages.get(rep.get("characterId"))
+    if page:
+        if variant > 1:
+            title = (page["data"].get(f"{suffix}{variant}") or {}).get("title") or page["title"]
+        else:
+            title = page["title"]
+        return title, page["url"]
+    return rep.get("cardName", ""), "/charas/"
+
+
+def build_hero(stock_entries, SM, SEM, SMA, SkillTrans, English, chara_pages):
     """stock_entries: list of CardMaster entries sharing a stockId."""
     rarities = [e.get("rarity") for e in stock_entries if e.get("rarity") is not None]
     rep = next((e for e in stock_entries if e.get("rarity") == 6), None)
@@ -349,15 +395,18 @@ def build_hero(stock_entries, SM, SEM, SMA):
         for c in q.get("changeSkills") or []:
             change_map[c.get("beforeSkillId")] = c.get("afterSkillId")
 
-    base_skills = [skill_obj(f"active{i+1}", a["skillId"], SM, SEM, SMA)
+    base_skills = [skill_obj(f"active{i+1}", a["skillId"], SM, SEM, SMA, SkillTrans, English)
                    for i, a in enumerate(base_actives)]
-    base_skills += [skill_obj("passive", p["skillId"], SM, SEM, SMA) for p in base_passives]
+    base_skills += [skill_obj("passive", p["skillId"], SM, SEM, SMA, SkillTrans, English)
+                    for p in base_passives]
 
+    name, page = chara_name_and_page(rep, "h", chara_pages)
     has_tree = bool(rep.get("hasSkillUpgrade")) and (bool(change_map) or bool(bloom_actives))
     entity = {
         "stockId": rep.get("stockId"),
         "kind": "hero",
-        "name": rep.get("cardName", ""),
+        "name": name,
+        "page": page,
         "resourceName": rep.get("resourceName", ""),
         "rarity": rep.get("rarity"),
         "isMob": min(rarities) == 1 if rarities else False,
@@ -378,10 +427,10 @@ def build_hero(stock_entries, SM, SEM, SMA):
                 mid = bloom_actives[i]["skillId"]
             if mid is None:
                 mid = bid
-            maxed.append(skill_obj(f"active{i+1}", mid, SM, SEM, SMA))
+            maxed.append(skill_obj(f"active{i+1}", mid, SM, SEM, SMA, SkillTrans, English))
         # all passives (skill-tree unlocks included)
         for p in passives:
-            maxed.append(skill_obj("passive", p["skillId"], SM, SEM, SMA))
+            maxed.append(skill_obj("passive", p["skillId"], SM, SEM, SMA, SkillTrans, English))
         entity["skillsMaxed"] = maxed
         entity["labelsMaxed"] = aggregate(maxed, "labels")
         entity["statusIdsMaxed"] = aggregate(maxed, "statusIds")
@@ -389,7 +438,7 @@ def build_hero(stock_entries, SM, SEM, SMA):
     return entity
 
 
-def build_sidekick(stock_entries, SM, SEM, SMA):
+def build_sidekick(stock_entries, SM, SEM, SMA, SkillTrans, English, chara_pages):
     rarities = [e.get("rarity") for e in stock_entries if e.get("rarity") is not None]
     rep = next((e for e in stock_entries if e.get("levelZone") == 6), None)
     if rep is None:
@@ -397,14 +446,16 @@ def build_sidekick(stock_entries, SM, SEM, SMA):
 
     skills = []
     for sid in rep.get("skillIds") or []:
-        skills.append(skill_obj("sidekick_active", sid, SM, SEM, SMA))
+        skills.append(skill_obj("sidekick_active", sid, SM, SEM, SMA, SkillTrans, English))
     for pid in rep.get("passiveSkillIds") or []:
-        skills.append(skill_obj("sidekick_passive", pid, SM, SEM, SMA))
+        skills.append(skill_obj("sidekick_passive", pid, SM, SEM, SMA, SkillTrans, English))
 
+    name, page = chara_name_and_page(rep, "s", chara_pages)
     return {
         "stockId": rep.get("stockId"),
         "kind": "sidekick",
-        "name": rep.get("cardName", ""),
+        "name": name,
+        "page": page,
         "resourceName": rep.get("resourceName", ""),
         "rarity": rep.get("rarity"),
         "isMob": min(rarities) == 1 if rarities else False,
@@ -466,14 +517,17 @@ def main():
     SEM = load("SkillEffectMaster.json")
     SMA = load("StatusMaster.json")
     StatusTrans = load("Status.json", sub="translation")
+    SkillTrans = load("Skill.json", sub="translation")
+    English = load_english()
+    chara_pages = build_chara_pages(CHARAS)
 
     entities = []
     hero_groups = group_by_stock(CardMaster)
     for stock_id, group in hero_groups.items():
-        entities.append(build_hero(group, SM, SEM, SMA))
+        entities.append(build_hero(group, SM, SEM, SMA, SkillTrans, English, chara_pages))
     side_groups = group_by_stock(SidekickMaster)
     for stock_id, group in side_groups.items():
-        entities.append(build_sidekick(group, SM, SEM, SMA))
+        entities.append(build_sidekick(group, SM, SEM, SMA, SkillTrans, English, chara_pages))
 
     # Many StatusMaster entries are internal system/particle placeholders with
     # empty names. They are useless for the "Has status" autocomplete and only
