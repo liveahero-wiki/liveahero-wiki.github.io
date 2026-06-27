@@ -37,7 +37,10 @@ CHARAS = "_charas"
 # stale cache. r2: skill-tree skills now resolve conditionDescription fallback.
 # r3: sidekick passive now resolved from equipmentSkills[-1] (was a dead
 # passiveSkillIds field, so sidekicks previously had no passive indexed).
-INDEX_SCHEMA_REV = "r3"
+# r4: maxed skill-tree skills now assemble their full description from
+# terminal-tier effects[].conditionDescription lines and recompute useView from
+# additive ChangeSkillBaseView deltas (see maxed_skill_description / maxed_use_view).
+INDEX_SCHEMA_REV = "r4"
 
 
 def load(name, sub=None):
@@ -364,6 +367,82 @@ def skill_description(skill_id, SM, SkillTrans, English):
     return sanitizeSkillDescription(d or "")
 
 
+def maxed_skill_description(skill_id, SM, SEM, SkillTrans, English, SUM):
+    """Full fully-bloomed description of a skill-tree (bloom) skill.
+
+    A bloom skill keeps the same skillId through its whole SkillUpgradeMaster
+    tree; its text is the top-level `description` plus selected
+    effects[].conditionDescription lines. Each effect's `conditionEntityId`
+    references a SkillUpgradeMaster node (0 == unconditional).
+
+    Tiered variants of one line replace each other as the tree is climbed, but
+    they do not necessarily share a skillEffectId (e.g. a damage line whose
+    %-value rises uses a fresh skillEffectId per tier). We therefore group
+    condition lines by their effect *signature* (inner effect classes + the
+    applied statusId). A line is kept when it is either (a) unconditional and
+    its signature has NO tree-gated tier (so standalone passives survive while
+    the tier-0 base of a progression is dropped), or (b) gated by a *terminal*
+    node (nextEntryIds == null) -- the final value of a tiered line, since
+    maxing unlocks the whole tree. Lines are emitted in serialNo order; English
+    dump preferred, raw Japanese master fallback; result sanitized."""
+    sid = str(skill_id)
+    skill = SM.get(sid, {})
+
+    def is_terminal(eid):
+        node = SUM.get(str(eid))
+        return node is not None and not node.get("nextEntryIds")
+
+    def sig(eff):
+        sej = SEM.get(str(eff.get("skillEffectId")), {}).get("skillEffectJson", {})
+        return (tuple(i.get("class") for i in sej.get("effects", [])),
+                sej.get("statusId"))
+
+    cond_effects = [e for e in (skill.get("effects") or [])
+                    if (e.get("conditionDescription") or "")]
+    # signatures that have at least one tree-gated tier -> their tier-0
+    # (conditionEntityId == 0) line is just the un-enhanced base, so skip it.
+    gated_sigs = {sig(e) for e in cond_effects if e.get("conditionEntityId", 0) != 0}
+
+    base = (English.get(f"SKILL_DESCRIPTION_{sid}")
+            or SkillTrans.get(sid, {}).get("description")
+            or skill.get("description") or "")
+
+    kept = []
+    for eff in cond_effects:
+        cei = eff.get("conditionEntityId", 0)
+        if cei == 0:
+            if sig(eff) not in gated_sigs:
+                kept.append(eff)
+        elif is_terminal(cei):
+            kept.append(eff)
+    kept.sort(key=lambda e: e.get("serialNo", 0))
+
+    parts = [base]
+    for eff in kept:
+        sn = eff.get("serialNo")
+        parts.append(English.get(f"SKILL_EFFECT_CONDITION_DESCRIPTION_{sid}_{sn}")
+                     or eff.get("conditionDescription") or "")
+    return sanitizeSkillDescription("".join(parts))
+
+
+def maxed_use_view(skill_id, SM, SEM):
+    """Maxed View cost: base useView plus every ChangeSkillBaseView delta.
+
+    Skill-tree view-cost reductions are ChangeSkillBaseView effects (negative
+    parameter.value) gated by tree nodes, and they are *additive* across the
+    chain (unlike the replacement-style damage/burn tiers), so maxing sums them
+    all. Multiplier-style view classes (ChangeViewCoefficient/FixView/...) are
+    not modeled and leave the cost at base."""
+    skill = SM.get(str(skill_id), {})
+    total = skill.get("useView", 0)
+    for eff in skill.get("effects") or []:
+        sej = SEM.get(str(eff.get("skillEffectId")), {}).get("skillEffectJson", {})
+        for inner in sej.get("effects", []):
+            if inner.get("class") == "ChangeSkillBaseView":
+                total += (inner.get("parameter") or {}).get("value", 0)
+    return total
+
+
 def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English):
     labels, status_ids = label_skill(skill_id, SM, SEM, SMA, set())
     skill = SM.get(str(skill_id), {})
@@ -401,7 +480,7 @@ def chara_name_and_page(rep, suffix, chara_pages):
     return rep.get("cardName", ""), "/charas/"
 
 
-def build_hero(stock_entries, SM, SEM, SMA, SkillTrans, English, chara_pages):
+def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, chara_pages):
     """stock_entries: list of CardMaster entries sharing a stockId."""
     rarities = [e.get("rarity") for e in stock_entries if e.get("rarity") is not None]
     rep = next((e for e in stock_entries if e.get("rarity") == 6), None)
@@ -455,10 +534,17 @@ def build_hero(stock_entries, SM, SEM, SMA, SkillTrans, English, chara_pages):
                 mid = bloom_actives[i]["skillId"]
             if mid is None:
                 mid = bid
-            maxed.append(skill_obj(f"active{i+1}", mid, SM, SEM, SMA, SkillTrans, English))
+            so = skill_obj(f"active{i+1}", mid, SM, SEM, SMA, SkillTrans, English)
+            so["description"] = maxed_skill_description(mid, SM, SEM, SkillTrans, English, SUM)
+            so["useView"] = maxed_use_view(mid, SM, SEM)
+            maxed.append(so)
         # all passives (skill-tree unlocks included)
         for p in passives:
-            maxed.append(skill_obj("passive", p["skillId"], SM, SEM, SMA, SkillTrans, English))
+            pid = p["skillId"]
+            so = skill_obj("passive", pid, SM, SEM, SMA, SkillTrans, English)
+            so["description"] = maxed_skill_description(pid, SM, SEM, SkillTrans, English, SUM)
+            so["useView"] = maxed_use_view(pid, SM, SEM)
+            maxed.append(so)
         entity["skillsMaxed"] = maxed
         entity["labelsMaxed"] = aggregate(maxed, "labels")
         entity["statusIdsMaxed"] = aggregate(maxed, "statusIds")
@@ -547,6 +633,7 @@ def main():
     SM = load("SkillMaster.json")
     SEM = load("SkillEffectMaster.json")
     SMA = load("StatusMaster.json")
+    SUM = load("SkillUpgradeMaster.json")
     StatusTrans = load("Status.json", sub="translation")
     SkillTrans = load("Skill.json", sub="translation")
     English = load_english()
@@ -555,7 +642,7 @@ def main():
     entities = []
     hero_groups = group_by_stock(CardMaster)
     for stock_id, group in hero_groups.items():
-        entities.append(build_hero(group, SM, SEM, SMA, SkillTrans, English, chara_pages))
+        entities.append(build_hero(group, SM, SEM, SMA, SUM, SkillTrans, English, chara_pages))
     side_groups = group_by_stock(SidekickMaster)
     for stock_id, group in side_groups.items():
         entities.append(build_sidekick(group, SM, SEM, SMA, SkillTrans, English, chara_pages))
