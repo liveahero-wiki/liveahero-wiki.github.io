@@ -31,6 +31,14 @@ API = "api"
 ZZZ = "zzz"
 CHARAS = "_charas"
 
+# Bumped whenever the index *generation logic* changes in a way that alters the
+# emitted JSON without a masterdata version change. Appended to the cache key so
+# clients (search/src/data/loadIndex.js) refetch the index instead of reusing a
+# stale cache. r2: skill-tree skills now resolve conditionDescription fallback.
+# r3: sidekick passive now resolved from equipmentSkills[-1] (was a dead
+# passiveSkillIds field, so sidekicks previously had no passive indexed).
+INDEX_SCHEMA_REV = "r3"
+
 
 def load(name, sub=None):
     path = os.path.join(DATA, sub, name) if sub else os.path.join(DATA, name)
@@ -326,13 +334,33 @@ def skill_name(skill_id, SM, SkillTrans, English):
             or SM.get(sid, {}).get("skillName", ""))
 
 
+def base_condition_description(skill_id, SM, English):
+    """Skill-tree-upgraded skills often have an empty top-level `description`;
+    the real text lives in effects[].conditionDescription on the base effect
+    (conditionEntityId == 0), mirroring _includes/skill-description.html.
+    Prefer the English dump, fall back to raw Japanese master text."""
+    sid = str(skill_id)
+    for eff in SM.get(sid, {}).get("effects") or []:
+        if eff.get("conditionEntityId", 0) != 0:
+            continue
+        en = English.get(f"SKILL_EFFECT_CONDITION_DESCRIPTION_{sid}_{eff.get('serialNo')}")
+        if en:
+            return en
+        jp = eff.get("conditionDescription")
+        if jp:
+            return jp
+    return ""
+
+
 def skill_description(skill_id, SM, SkillTrans, English):
-    """Skill.json translation -> English.json -> raw Japanese master string,
-    always sanitized for the wiki tag set."""
+    """Skill.json translation -> English.json -> raw Japanese master string ->
+    base-effect conditionDescription (for skill-tree-upgraded skills whose
+    top-level description is empty), always sanitized for the wiki tag set."""
     sid = str(skill_id)
     d = (SkillTrans.get(sid, {}).get("description")
          or English.get(f"SKILL_DESCRIPTION_{sid}")
-         or SM.get(sid, {}).get("description", ""))
+         or SM.get(sid, {}).get("description")
+         or base_condition_description(skill_id, SM, English))
     return sanitizeSkillDescription(d or "")
 
 
@@ -447,8 +475,11 @@ def build_sidekick(stock_entries, SM, SEM, SMA, SkillTrans, English, chara_pages
     skills = []
     for sid in rep.get("skillIds") or []:
         skills.append(skill_obj("sidekick_active", sid, SM, SEM, SMA, SkillTrans, English))
-    for pid in rep.get("passiveSkillIds") or []:
-        skills.append(skill_obj("sidekick_passive", pid, SM, SEM, SMA, SkillTrans, English))
+    # Sidekick passive: equipmentSkills holds ascending tiers; the last entry of
+    # the highest-level card is the maxed passive (mirrors generate_status_pages).
+    equip = rep.get("equipmentSkills") or []
+    if equip:
+        skills.append(skill_obj("sidekick_passive", equip[-1], SM, SEM, SMA, SkillTrans, English))
 
     name, page = chara_name_and_page(rep, "s", chara_pages)
     return {
@@ -553,7 +584,7 @@ def main():
             "type": status_type(master),
         }
 
-    version = get_version()
+    version = f"{get_version()}-{INDEX_SCHEMA_REV}"
     index = {
         "version": version,
         "categories": CATEGORIES,
