@@ -132,6 +132,7 @@ export function flattenToRows(matched, skillTree) {
         useView: s.useView,
         labels: s.labels,
         statusIds: s.statusIds,
+        changeSkills: s.changeSkills,
       })
     }
   }

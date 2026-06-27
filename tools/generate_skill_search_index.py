@@ -22,7 +22,7 @@ LiquidJS-rendered text later.
 import json
 import os
 import hashlib
-from collections import Counter, OrderedDict
+from collections import Counter, OrderedDict, defaultdict
 
 from wiki_util import sanitizeSkillDescription, build_chara_pages
 
@@ -40,7 +40,10 @@ CHARAS = "_charas"
 # r4: maxed skill-tree skills now assemble their full description from
 # terminal-tier effects[].conditionDescription lines and recompute useView from
 # additive ChangeSkillBaseView deltas (see maxed_skill_description / maxed_use_view).
-INDEX_SCHEMA_REV = "r4"
+# r5: active skills now carry a changeSkills field listing the in-combat
+# ChangeActiveSkill transform targets (name + description), mirroring the wiki's
+# _includes/skill-description.html <details> blocks.
+INDEX_SCHEMA_REV = "r5"
 
 
 def load(name, sub=None):
@@ -448,7 +451,44 @@ def maxed_use_view(skill_id, SM, SEM):
     return total
 
 
-def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English):
+def collect_change_skills(skill_ids, SM, SEM):
+    """Bucket in-combat ChangeActiveSkill transform targets by the active slot
+    they replace, mirroring _plugins/skill.rb `collect_change_skills`. Returns
+    {slotIndex: [target skillId, ...]} where slotIndex == parameter.index + 1."""
+    by_slot = defaultdict(list)
+    for skill_id in skill_ids:
+        skill = SM.get(str(skill_id))
+        if not skill:
+            continue
+        for eff in skill.get("effects") or []:
+            sej = SEM.get(str(eff.get("skillEffectId")), {}).get("skillEffectJson", {})
+            for inner in sej.get("effects", []):
+                if inner.get("class") == "ChangeActiveSkill":
+                    p = inner.get("parameter") or {}
+                    if p.get("skillId"):
+                        by_slot[p.get("index", 0) + 1].append(p["skillId"])
+    return by_slot
+
+
+def change_skills(change_ids, skill_id, SM, SkillTrans, English):
+    """Resolve change-skill target IDs to [{name, description}], applying the
+    two guards from _includes/skill-description.html: skip the skill itself and
+    skip targets whose master skillName matches the current skill's."""
+    own_name = SM.get(str(skill_id), {}).get("skillName")
+    out = []
+    for cid in change_ids:
+        if cid == skill_id:
+            continue
+        if SM.get(str(cid), {}).get("skillName") == own_name:
+            continue
+        out.append({
+            "name": skill_name(cid, SM, SkillTrans, English),
+            "description": skill_description(cid, SM, SkillTrans, English),
+        })
+    return out
+
+
+def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English, change_ids=()):
     labels, status_ids = label_skill(skill_id, SM, SEM, SMA, set())
     skill = SM.get(str(skill_id), {})
     return {
@@ -459,6 +499,7 @@ def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English):
         "useView": skill.get("useView", 0),
         "labels": sorted(labels),
         "statusIds": sorted(status_ids),
+        "changeSkills": change_skills(change_ids, skill_id, SM, SkillTrans, English),
     }
 
 
@@ -507,7 +548,14 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, chara_page
         for c in q.get("changeSkills") or []:
             change_map[c.get("beforeSkillId")] = c.get("afterSkillId")
 
-    base_skills = [skill_obj(f"active{i+1}", a["skillId"], SM, SEM, SMA, SkillTrans, English)
+    # in-combat ChangeActiveSkill transforms, bucketed by the active slot they
+    # replace (entity-wide, over base skills), mirroring the wiki infobox.
+    change_by_slot = collect_change_skills(
+        [a["skillId"] for a in base_actives] + [p["skillId"] for p in base_passives],
+        SM, SEM)
+
+    base_skills = [skill_obj(f"active{i+1}", a["skillId"], SM, SEM, SMA, SkillTrans, English,
+                             change_ids=change_by_slot.get(i + 1, ()))
                    for i, a in enumerate(base_actives)]
     base_skills += [skill_obj("passive", p["skillId"], SM, SEM, SMA, SkillTrans, English)
                     for p in base_passives]
@@ -539,7 +587,8 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, chara_page
                 mid = bloom_actives[i]["skillId"]
             if mid is None:
                 mid = bid
-            so = skill_obj(f"active{i+1}", mid, SM, SEM, SMA, SkillTrans, English)
+            so = skill_obj(f"active{i+1}", mid, SM, SEM, SMA, SkillTrans, English,
+                           change_ids=change_by_slot.get(i + 1, ()))
             so["description"] = maxed_skill_description(mid, SM, SEM, SkillTrans, English, SUM)
             so["useView"] = maxed_use_view(mid, SM, SEM)
             maxed.append(so)
