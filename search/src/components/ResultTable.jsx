@@ -6,7 +6,8 @@ import {
   getSortedRowModel,
   useReactTable,
 } from '@tanstack/react-table'
-import { useMemo, useState } from 'preact/hooks'
+import { useVirtualizer } from '@tanstack/react-virtual'
+import { useMemo, useRef, useState } from 'preact/hooks'
 import { charaLink, portrait, statusIcon } from '../lib/urls.js'
 import { SkillDescription } from './SkillDescription.jsx'
 
@@ -106,9 +107,24 @@ export function ResultTable({ rows, statuses }) {
     getSortedRowModel: getSortedRowModel(),
   })
 
+  const { rows: tableRows } = table.getRowModel()
+  const totalWidth = table.getCenterTotalSize()
+
+  // Virtualize the rows so only the visible window is rendered. Without this,
+  // every filter/sort toggle reconciles all ~1,200 rows (each with a
+  // dangerouslySetInnerHTML description + images) — the slow click in the trace.
+  const scrollRef = useRef(null)
+  const virtualizer = useVirtualizer({
+    count: tableRows.length,
+    getScrollElement: () => scrollRef.current,
+    estimateSize: () => 56,
+    overscan: 12,
+  })
+  const virtualRows = virtualizer.getVirtualItems()
+
   return (
-    <div class="table-wrap">
-      <table class="result-table" style={{ width: table.getCenterTotalSize() }}>
+    <div ref={scrollRef} class="table-wrap">
+      <table class="result-table" style={{ width: totalWidth }}>
         <thead>
           {table.getHeaderGroups().map((hg) => (
             <tr key={hg.id}>
@@ -126,16 +142,24 @@ export function ResultTable({ rows, statuses }) {
             </tr>
           ))}
         </thead>
-        <tbody>
-          {table.getRowModel().rows.map((row) => (
-            <tr key={row.id}>
-              {row.getVisibleCells().map((cell) => (
-                <td key={cell.id} style={{ width: cell.column.getSize() }}>
-                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                </td>
-              ))}
-            </tr>
-          ))}
+        <tbody style={{ height: virtualizer.getTotalSize() }}>
+          {virtualRows.map((vRow) => {
+            const row = tableRows[vRow.index]
+            return (
+              <tr
+                key={row.id}
+                data-index={vRow.index}
+                ref={virtualizer.measureElement}
+                style={{ transform: `translateY(${vRow.start}px)` }}
+              >
+                {row.getVisibleCells().map((cell) => (
+                  <td key={cell.id} style={{ width: cell.column.getSize() }}>
+                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  </td>
+                ))}
+              </tr>
+            )
+          })}
         </tbody>
       </table>
     </div>

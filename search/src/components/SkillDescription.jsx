@@ -8,9 +8,14 @@
 // FUTURE: swap this for LiquidJS rendering of _includes/skill-description.html
 // to get fully resolved status references and translated text.
 
-export function SkillDescription({ html }) {
+import { memo } from 'preact/compat'
+
+// Memoized on the (referentially-stable) html string from the index, so rows
+// that stay in the virtualized window across a filter/sort change don't re-set
+// innerHTML — the dominant cost in the click trace.
+export const SkillDescription = memo(function SkillDescription({ html }) {
   if (!html) return null
   return (
     <span class="skill-desc" dangerouslySetInnerHTML={{ __html: html }} />
   )
-}
+})

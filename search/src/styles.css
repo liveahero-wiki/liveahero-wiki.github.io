@@ -215,22 +215,57 @@ body {
   color: #999;
 }
 
-/* ---- Result table ---- */
+/* ---- Result table (virtualized) ----
+   The rows are windowed with @tanstack/react-virtual: the tbody is a
+   positioning context whose height = total virtual size, and each rendered row
+   is absolutely placed via translateY. Native table display can't do that, so
+   the table is laid out with grid/flex instead. */
 .table-wrap {
-  overflow-x: auto;
+  position: relative;
+  max-height: 70vh;
+  overflow: auto;
 }
 
 .result-table {
-  border-collapse: collapse;
-  table-layout: fixed;
+  display: grid;
+  width: max-content;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.result-table thead {
+  display: grid;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.result-table tbody {
+  display: grid;
+  position: relative;
+}
+
+.result-table thead tr,
+.result-table tbody tr {
+  display: flex;
+  width: 100%;
+}
+
+.result-table tbody tr {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .result-table th,
 .result-table td {
-  border: 1px solid var(--border);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
   padding: 4px 6px;
   text-align: left;
-  vertical-align: top;
   overflow: hidden;
 }
 
