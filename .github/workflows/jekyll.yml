@@ -102,10 +102,12 @@ jobs:
         cache-dependency-path: './deploy/package-lock.json'
 
     - name: Install Dependencies
-      run: npm ci --workspace=deploy
+      working-directory: deploy
+      run: npm ci
 
     - name: Publish to Netlify (preview)
-      run: npm --workspace=deploy run netlify -- deploy --dir=_site --alias pr-${{ github.event.pull_request.number }} --no-build
+      working-directory: deploy
+      run: npm run netlify -- deploy --dir=../_site --alias pr-${{ github.event.pull_request.number }} --no-build 
       env:
         NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
