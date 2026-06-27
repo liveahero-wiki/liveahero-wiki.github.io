@@ -3,6 +3,7 @@ import json
 import yaml
 import os
 import os.path
+import glob
 import xml.etree.ElementTree as ET
 
 def ensureDirs(path):
@@ -67,6 +68,37 @@ def sanitizeSkillDescription(s: str) -> str:
         s = "'" + s
 
     return s
+
+FRONT_MATTER_PATTERN = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.DOTALL)
+
+def read_front_matter(path):
+    """Return the parsed YAML front-matter of a Jekyll markdown file, or None."""
+    with open(path, "r", encoding="utf-8") as f:
+        text = f.read()
+    m = FRONT_MATTER_PATTERN.match(text)
+    if not m:
+        return None
+    return yaml.safe_load(m.group(1))
+
+def build_chara_pages(charas_dir) -> dict:
+    """Map characterId -> { title, url, data } for released chara pages.
+
+    Mirrors Jekyll's CharaMap (skips `unreleased`) so the resolved title/url
+    match what the `stockIdToLink` Liquid filter would produce. The url is the
+    explicit `permalink` front-matter or Jekyll's default `/charas/<filename>/`.
+    """
+    pages = {}
+    for path in glob.glob(os.path.join(charas_dir, "*.md")):
+        fm = read_front_matter(path)
+        if not fm:
+            continue
+        cid = fm.get("characterId")
+        if cid is None or fm.get("unreleased"):
+            continue
+        filename = os.path.splitext(os.path.basename(path))[0]
+        url = fm.get("permalink") or f"/charas/{filename}/"
+        pages[cid] = {"title": fm.get("title", ""), "url": url, "data": fm}
+    return pages
 
 def loadJson(filename) -> dict:
     with open(filename, "rb") as f:
