@@ -176,14 +176,16 @@ graph TD
 ---
 
 ### 13. `tools/generate_skill_search_index.py`
-*   **Purpose**: Builds the prebuilt index that powers the advanced skill search. Deduplicates heroes/sidekicks by `stockId` (heroes use the rarity-6 entry, falling back to the highest rarity; sidekicks use the `levelZone == 6` entry; either is flagged `isMob` when the stock's smallest rarity is `1`), then walks the `SkillMaster → SkillEffectMaster → StatusMaster` join chain to label each skill with effect categories (e.g. `attack.single`, `damage.dot`) and collect the named statuses it applies. Folds `ChangeActiveSkill` target skills and granted passives into the source skill, and emits both a base and a fully-bloomed (`skillsMaxed`) loadout for heroes with a skill tree. Unrecognized effect classes are reported as `UNMAPPED CLASSES` for review. Outputs are plain static JSON (no front matter) so Jekyll copies them verbatim into `_site/api/`, fetchable at `/api/skill-index.json`. Run after `tools/translation_download_tsv.py` (it consumes `Status.json`).
+*   **Purpose**: Builds the prebuilt index that powers the advanced skill search. Deduplicates heroes/sidekicks by `stockId` (heroes use the rarity-6 entry, falling back to the highest rarity; sidekicks use the `levelZone == 6` entry; either is flagged `isMob` when the stock's smallest rarity is `1`), then walks the `SkillMaster → SkillEffectMaster → StatusMaster` join chain to label each skill with effect categories (e.g. `attack.single`, `damage.dot`) and collect the named statuses it applies. Folds `ChangeActiveSkill` target skills and granted passives into the source skill, and emits both a base and a fully-bloomed (`skillsMaxed`) loadout for heroes with a skill tree. For the `skillsMaxed` entries the per-skill `description` and `useView` are reassembled to the fully-unlocked skill-tree state — see [Skill-Tree Enhancement](./DATA_SCHEMAS.md#7-skill-tree-enhancement-skillupgrademaster--tiered-effects) in the data-schema guide for the tier/terminal-node rules. Unrecognized effect classes are reported as `UNMAPPED CLASSES` for review. Outputs are plain static JSON (no front matter) so Jekyll copies them verbatim into `_site/api/`, fetchable at `/api/skill-index.json`. Run after `tools/translation_download_tsv.py` (it consumes `Status.json`).
 *   **Input Files**:
     *   `_data/CardMaster.json`
     *   `_data/SidekickMaster.json`
     *   `_data/SkillMaster.json`
     *   `_data/SkillEffectMaster.json`
     *   `_data/StatusMaster.json`
+    *   `_data/SkillUpgradeMaster.json` (skill-tree graph; drives the `skillsMaxed` description/useView assembly)
     *   `_data/translation/Status.json`
+    *   `zzz/English.json` (optional English localization dump; missing → raw-Japanese fallback)
     *   `tools/masterdata_ver.txt` (index version; falls back to a hash of the input masters)
 *   **Output Files**:
     *   `api/skill-index.json` (full search index: categories, statuses, entities)
