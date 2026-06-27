@@ -20,6 +20,9 @@ graph TD
     G -->|tools/event_gen.py| I[_events/ event pages]
     
     D -->|tools/skill_evo.py| J[Pre-rendered HTML Skill Upgrade Tree]
+
+    G -->|tools/generate_skill_search_index.py| K[api/ skill-index.json search index]
+    B -->|tools/generate_skill_search_index.py| K
 ```
 
 ## 📂 Core Scripts Reference
@@ -172,7 +175,23 @@ graph TD
 
 ---
 
-### 13. `preprocess.py` (root directory)
+### 13. `tools/generate_skill_search_index.py`
+*   **Purpose**: Builds the prebuilt index that powers the advanced skill search. Deduplicates heroes/sidekicks by `stockId` (heroes use the rarity-6 entry, falling back to the highest rarity; sidekicks use the `levelZone == 6` entry; either is flagged `isMob` when the stock's smallest rarity is `1`), then walks the `SkillMaster → SkillEffectMaster → StatusMaster` join chain to label each skill with effect categories (e.g. `attack.single`, `damage.dot`) and collect the named statuses it applies. Folds `ChangeActiveSkill` target skills and granted passives into the source skill, and emits both a base and a fully-bloomed (`skillsMaxed`) loadout for heroes with a skill tree. Unrecognized effect classes are reported as `UNMAPPED CLASSES` for review. Outputs are plain static JSON (no front matter) so Jekyll copies them verbatim into `_site/api/`, fetchable at `/api/skill-index.json`. Run after `tools/translation_download_tsv.py` (it consumes `Status.json`).
+*   **Input Files**:
+    *   `_data/CardMaster.json`
+    *   `_data/SidekickMaster.json`
+    *   `_data/SkillMaster.json`
+    *   `_data/SkillEffectMaster.json`
+    *   `_data/StatusMaster.json`
+    *   `_data/translation/Status.json`
+    *   `tools/masterdata_ver.txt` (index version; falls back to a hash of the input masters)
+*   **Output Files**:
+    *   `api/skill-index.json` (full search index: categories, statuses, entities)
+    *   `api/skill-index-version.json` (tiny version probe for browser cache invalidation)
+
+---
+
+### 14. `preprocess.py` (root directory)
 *   **Purpose**: Preprocesses and optimizes game assets. Currently configured to optimize and compress raw PNG banner/survey assets under `Sprite` and survey directories, converting them to compressed, web-ready progressive JPGs using Pillow (`PIL`).
 *   **Input Files**:
     *   `Sprite/banner_*.png`
