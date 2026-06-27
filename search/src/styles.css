@@ -354,3 +354,22 @@ body {
   margin-top: 2px;
   padding-top: 2px;
 }
+
+/* In-combat skill transforms (ChangeActiveSkill), collapsed by default. */
+.change-skill {
+  margin-top: 4px;
+  font-size: 13px;
+}
+
+.change-skill > summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.change-skill > .skill-desc {
+  display: block;
+  margin-top: 2px;
+  padding-left: 12px;
+  border-left: 2px solid var(--border);
+}

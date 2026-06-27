@@ -82,7 +82,7 @@ export function ResultTable({ rows, statuses }) {
                   ) : null
                 })}
               </div>
-              <SkillDescription html={r.description} />
+              <SkillDescription html={r.description} changeSkills={r.changeSkills} />
             </div>
           )
         },
