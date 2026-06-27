@@ -1,0 +1,26 @@
+{
+  "name": "lah-skill-search",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync-index": "node scripts/sync-index.mjs",
+    "predev": "node scripts/sync-index.mjs",
+    "dev": "vite",
+    "prebuild": "node scripts/sync-index.mjs",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tanstack/react-table": "^8.21.3",
+    "downshift": "^9.0.10",
+    "preact": "^10.27.2"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.2",
+    "vite": "^7.1.11"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": ["esbuild"]
+  }
+}
