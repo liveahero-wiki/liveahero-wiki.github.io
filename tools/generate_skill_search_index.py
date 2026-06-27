@@ -109,6 +109,7 @@ CATEGORIES = [
         {"key": "defense.cover", "label": "Cover / Taunt"},
         {"key": "defense.stealth", "label": "Stealth"},
         {"key": "defense.revive", "label": "Revive"},
+        {"key": "defense.hp", "label": "Max HP up"},
     ]},
     {"key": "skillctl", "label": "Skill control", "labels": [
         {"key": "skillctl.change", "label": "Skill change"},
@@ -197,6 +198,8 @@ CLASS_TO_LABELS = {
     "IncreaseExp": ["acq.exp"], "IncreaseRelation": ["acq.relation"],
     # field
     "RemoveFieldEffect": ["field.remove"], "RemoveGainViewStock": ["field.remove"],
+    # stat buffs (max-HP up; survivability)
+    "MultipleHp": ["defense.hp"],
 }
 
 # Classes we knowingly do not surface as labels (pure mechanics / display).
@@ -230,6 +233,8 @@ def classify(cls, inner):
         v = (inner.get("parameter") or {}).get("value", 0)
         return {"spd.up" if v > 0 else "spd.down" if v < 0 else "spd.other"}, False, True
     if cls.startswith("Aim"):
+        return {"skillctl.auto"}, False, True
+    if "DecideAutoSkill" in cls:
         return {"skillctl.auto"}, False, True
     # ordered substring rules (specific before generic)
     if "AddPlusCombo" in cls:
