@@ -45,6 +45,7 @@ jobs:
         python tools/voice_gsheet.py download
         python tools/skill_evo.py
         python tools/generate_status_pages.py
+        python tools/generate_skill_search_index.py
 
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
@@ -54,6 +55,25 @@ jobs:
 
     - name: Install dependencies
       run: bundle install
+
+    # Build the skill-search frontend (Vite/Preact) into assets/skill-search.*
+    # before Jekyll runs so the bundle is included in _site.
+    - name: Set up pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        version: 11
+
+    - name: Set up Node
+      uses: actions/setup-node@v6
+      with:
+        node-version: '24'
+        cache: 'pnpm'
+        cache-dependency-path: './pnpm-lock.yaml'
+
+    - name: Build skill-search bundle
+      run: |
+        pnpm install --frozen-lockfile
+        pnpm build
 
     # Every PR and push will hit this step to test for syntax errors / build issues
     - name: Build site
