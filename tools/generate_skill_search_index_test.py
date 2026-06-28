@@ -2,9 +2,10 @@ import json
 import os
 import unittest
 
+import generate_skill_search_index as gen
 from generate_skill_search_index import (
     build_status_descs, maxed_skill_description, maxed_use_view, label_skill,
-    build_hero, group_by_stock)
+    build_hero, group_by_stock, is_terminal_node)
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "_data")
 
@@ -91,6 +92,30 @@ class TestSkillTreeMaxed(unittest.TestCase):
             self.assertNotIn(
                 intermediate, names,
                 f"intermediate VP Cost {intermediate!r} must not appear after maxing")
+
+
+class TestIsTerminalNode(unittest.TestCase):
+    """is_terminal_node and its recall-safe handling of unknown node ids."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.SUM = load("SkillUpgradeMaster.json")
+
+    def test_unconditional_and_non_tree_are_terminal(self):
+        self.assertTrue(is_terminal_node(0, self.SUM))      # unconditional
+        self.assertTrue(is_terminal_node(100110501, None))  # no tree context
+
+    def test_terminal_vs_intermediate_node(self):
+        self.assertTrue(is_terminal_node(100110504, self.SUM))   # no nextEntryIds
+        self.assertFalse(is_terminal_node(100110501, self.SUM))  # has nextEntryIds
+
+    def test_missing_node_is_terminal_and_warned(self):
+        # A gated node id absent from SkillUpgradeMaster must be treated as
+        # terminal (include, recall-safe) and recorded for the report, rather
+        # than silently dropping the final tier.
+        gen.missing_upgrade_nodes.clear()
+        self.assertTrue(is_terminal_node(999999999, self.SUM))
+        self.assertEqual(gen.missing_upgrade_nodes[999999999], 1)
 
 
 class TestMaxedChangeSkills(unittest.TestCase):
