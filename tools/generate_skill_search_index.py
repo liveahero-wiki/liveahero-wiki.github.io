@@ -49,7 +49,10 @@ CHARAS = "_charas"
 # r7: skills now carry statusDescs [{name, desc}] for every named status effect,
 # mirroring status_description_v2 so the search UI can attach tippy tooltips.
 # r8: statusDescs entries gain optional icon field (filename override > Status.json icon)
-INDEX_SCHEMA_REV = "r8"
+# r9: corrected targetFlag attack-range labels (3=all allies, 7=random enemy were
+# mislabelled), restored standalone passive lines dropped by maxed-desc signature
+# collisions, and recompute change_by_slot over the maxed skill set.
+INDEX_SCHEMA_REV = "r9"
 
 
 # --- Undocumented game-data enums / magic numbers ---------------------------
