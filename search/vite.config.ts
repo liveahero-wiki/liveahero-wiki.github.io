@@ -16,7 +16,7 @@ export default defineConfig({
       configureServer(server) {
         const assetsDir = path.resolve(__dirname, '../assets')
         server.middlewares.use('/assets', (req, res, next) => {
-          const file = path.join(assetsDir, req.url)
+          const file = path.join(assetsDir, req.url ?? '')
           if (fs.existsSync(file) && fs.statSync(file).isFile()) {
             res.setHeader('Content-Type', 'application/javascript')
             fs.createReadStream(file).pipe(res)

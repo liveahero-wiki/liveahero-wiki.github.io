@@ -16,19 +16,29 @@
 // we use the fully-maxed projections (skillsMaxed); otherwise the base ones.
 // Sidekicks are unaffected.
 
-const categoryOf = (labelKey) => labelKey.split('.')[0]
+import type { Entity, Query, Row, Skill } from '../types'
+import type { Status } from '../types'
+
+const categoryOf = (labelKey: string): string => labelKey.split('.')[0]
 
 /** Effective skills for an entity given the skill-tree toggle. */
-export function effectiveSkills(entity, skillTree) {
-  const maxed = skillTree && entity.kind === 'hero' && entity.skillsMaxed
-  return maxed ? entity.skillsMaxed : entity.skills
+export function effectiveSkills(entity: Entity, skillTree: boolean): Skill[] {
+  if (skillTree && entity.kind === 'hero' && entity.skillsMaxed) {
+    return entity.skillsMaxed
+  }
+  return entity.skills
 }
 
 /**
  * Does a single skill satisfy the category/status/view-cost filters?
  * Type and mob filters are entity-level and handled by the caller.
  */
-function skillMatches(skill, labelsByCat, query, statuses) {
+function skillMatches(
+  skill: Skill,
+  labelsByCat: Map<string, Set<string>>,
+  query: Query,
+  statuses: Record<string, Status>,
+): boolean {
   const { statusTypes, statusIds, viewMin, viewMax } = query
   const matchLabels = new Set(skill.matchLabels)
   const matchStatusIds = new Set(skill.matchStatusIds)
@@ -86,24 +96,23 @@ function skillMatches(skill, labelsByCat, query, statuses) {
 /**
  * Filter entities + skills to rows. One row per visible skill that matches every
  * filter. Each row carries its `entity` so the UI can open the full-kit dialog.
- *
- * @param {Array} entities
- * @param {object} query - see app.jsx initial state
- * @param {object} statuses - id -> { name, icon, type }
- * @returns Array of row objects
  */
-export function filterRows(entities, query, statuses) {
+export function filterRows(
+  entities: Entity[],
+  query: Query,
+  statuses: Record<string, Status>,
+): Row[] {
   const { types, skillTree, includeMob } = query
 
   // Group selected labels by their category prefix once.
-  const labelsByCat = new Map()
+  const labelsByCat = new Map<string, Set<string>>()
   for (const key of query.labels) {
     const cat = categoryOf(key)
     if (!labelsByCat.has(cat)) labelsByCat.set(cat, new Set())
-    labelsByCat.get(cat).add(key)
+    labelsByCat.get(cat)!.add(key)
   }
 
-  const rows = []
+  const rows: Row[] = []
   for (const entity of entities) {
     // Entity-level gates.
     if (types.size && !types.has(entity.kind)) continue

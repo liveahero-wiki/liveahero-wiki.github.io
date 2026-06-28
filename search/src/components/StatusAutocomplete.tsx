@@ -4,13 +4,23 @@
 
 import { useCombobox } from 'downshift'
 import { useMemo, useState } from 'preact/hooks'
-import { statusIcon } from '../lib/urls.js'
+import type { Status } from '../types'
+import { statusIcon } from '../lib/urls'
 
-export function StatusAutocomplete({ statuses, selected, onAdd, onRemove }) {
+type StatusItem = Status & { id: number }
+
+interface StatusAutocompleteProps {
+  statuses: Record<string, Status>
+  selected: Set<number>
+  onAdd: (id: number) => void
+  onRemove: (id: number) => void
+}
+
+export function StatusAutocomplete({ statuses, selected, onAdd, onRemove }: StatusAutocompleteProps) {
   const [input, setInput] = useState('')
 
   // Stable list of { id, name, icon, type } from the statuses dict.
-  const all = useMemo(
+  const all = useMemo<StatusItem[]>(
     () =>
       Object.entries(statuses).map(([id, s]) => ({
         id: Number(id),
@@ -33,7 +43,7 @@ export function StatusAutocomplete({ statuses, selected, onAdd, onRemove }) {
     getInputProps,
     getItemProps,
     highlightedIndex,
-  } = useCombobox({
+  } = useCombobox<StatusItem>({
     items,
     inputValue: input,
     selectedItem: null,

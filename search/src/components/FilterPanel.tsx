@@ -1,8 +1,11 @@
 // The query builder: type / category / status-type button rows, the status
 // autocomplete, a view-cost range, and the skill-tree / mob toggles.
 
-import { ButtonRow } from './ButtonRow.jsx'
-import { StatusAutocomplete } from './StatusAutocomplete.jsx'
+import type { JSX } from 'preact'
+import type { Query, SkillIndex } from '../types'
+import type { QueryAction } from '../app'
+import { ButtonRow } from './ButtonRow'
+import { StatusAutocomplete } from './StatusAutocomplete'
 
 const TYPE_OPTIONS = [
   { key: 'hero', label: 'Hero' },
@@ -15,7 +18,14 @@ const STATUS_TYPE_OPTIONS = [
   { key: 'field', label: 'Field' },
 ]
 
-export function FilterPanel({ index, query, dispatch, resultCount }) {
+interface FilterPanelProps {
+  index: SkillIndex
+  query: Query
+  dispatch: (action: QueryAction) => void
+  resultCount: number
+}
+
+export function FilterPanel({ index, query, dispatch, resultCount }: FilterPanelProps) {
   return (
     <div class="filter-panel">
       <ButtonRow
@@ -69,8 +79,8 @@ export function FilterPanel({ index, query, dispatch, resultCount }) {
             type="number"
             class="vp-input"
             placeholder="min"
-            onInput={(e) =>
-              dispatch({ type: 'setView', field: 'viewMin', value: e.target.value })
+            onInput={(e: JSX.TargetedEvent<HTMLInputElement>) =>
+              dispatch({ type: 'setView', field: 'viewMin', value: e.currentTarget.value })
             }
           />
           <span>–</span>
@@ -79,8 +89,8 @@ export function FilterPanel({ index, query, dispatch, resultCount }) {
             type="number"
             class="vp-input"
             placeholder="max"
-            onInput={(e) =>
-              dispatch({ type: 'setView', field: 'viewMax', value: e.target.value })
+            onInput={(e: JSX.TargetedEvent<HTMLInputElement>) =>
+              dispatch({ type: 'setView', field: 'viewMax', value: e.currentTarget.value })
             }
           />
         </div>
