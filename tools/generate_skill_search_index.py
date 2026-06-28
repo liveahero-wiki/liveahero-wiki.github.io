@@ -102,7 +102,7 @@ CATEGORIES = [
     ]},
     {"key": "vp", "label": "VP / View", "labels": [
         {"key": "vp.gain", "label": "VP gain"},
-        {"key": "vp.costdown", "label": "View cost down"},
+        {"key": "vp.costdown", "label": "View cost change"},
     ]},
     {"key": "interf", "label": "Skill interference", "labels": [
         {"key": "interf.debuff_remove", "label": "Debuff removal"},
