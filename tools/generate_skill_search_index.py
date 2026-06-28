@@ -154,7 +154,6 @@ CATEGORIES = [
     ]},
     {"key": "defense", "label": "Defense / Survival", "labels": [
         {"key": "defense.barrier", "label": "Barrier"},
-        {"key": "defense.absorb", "label": "Damage absorb"},
         {"key": "defense.cover", "label": "Cover / Taunt"},
         {"key": "defense.stealth", "label": "Stealth"},
         {"key": "defense.revive", "label": "Revive"},
@@ -279,7 +278,7 @@ CLASS_TO_LABELS = {
     "Barrier": ["defense.barrier"], 
     "OtherParamBarrier": ["defense.barrier"],
     "BarrierExtension": ["defense.barrier", "interf.extend"],
-    "AbsorbDamage": ["defense.absorb", "damage.down"],
+    "AbsorbDamage": ["heal.heal", "attack.single"],
     "Cover": ["defense.cover"], 
     "Provocation": ["defense.cover"],
     "TargetMark": ["defense.cover"], 
