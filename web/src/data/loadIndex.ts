@@ -38,6 +38,13 @@ function writeCache(version: string, raw: string): void {
   }
 }
 
+export function clearCache(): void {
+  try {
+    localStorage.removeItem(LS_VERSION)
+    localStorage.removeItem(LS_INDEX)
+  } catch { /* quota / private mode */ }
+}
+
 /**
  * Returns the parsed index { version, categories, statuses, entities }.
  * Flow: probe version -> if it matches cache, use cache -> else download full

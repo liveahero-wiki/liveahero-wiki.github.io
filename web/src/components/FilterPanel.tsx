@@ -23,9 +23,11 @@ interface FilterPanelProps {
   query: Query
   dispatch: (action: QueryAction) => void
   resultCount: number
+  showLabels: boolean
+  onToggleLabels: () => void
 }
 
-export function FilterPanel({ index, query, dispatch, resultCount }: FilterPanelProps) {
+export function FilterPanel({ index, query, dispatch, resultCount, showLabels, onToggleLabels }: FilterPanelProps) {
   return (
     <div class="filter-panel">
       <ButtonRow
@@ -112,6 +114,14 @@ export function FilterPanel({ index, query, dispatch, resultCount }: FilterPanel
             onChange={() => dispatch({ type: 'toggleFlag', field: 'includeMob' })}
           />
           Include Mob
+        </label>
+        <label class="check">
+          <input
+            type="checkbox"
+            checked={showLabels}
+            onChange={onToggleLabels}
+          />
+          Show Labels
         </label>
         <button type="button" class="reset" onClick={() => dispatch({ type: 'reset' })}>
           Reset all
