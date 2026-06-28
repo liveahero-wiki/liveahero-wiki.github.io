@@ -149,6 +149,7 @@ export function ResultTable({ rows, statuses, onOpenKit }: ResultTableProps) {
     getScrollElement: () => scrollRef.current,
     estimateSize: () => 56,
     overscan: 12,
+    getItemKey: (index) => tableRows[index].id,
   })
   const virtualRows = virtualizer.getVirtualItems()
 
