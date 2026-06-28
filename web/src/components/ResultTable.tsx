@@ -49,7 +49,7 @@ export function ResultTable({ rows, statuses, onOpenKit }: ResultTableProps) {
         id: 'character',
         header: 'Character',
         accessorKey: 'name',
-        size: 180,
+        size: 240,
         cell: ({ row }) => {
           const e = row.original.entity
           return (
@@ -83,7 +83,7 @@ export function ResultTable({ rows, statuses, onOpenKit }: ResultTableProps) {
         id: 'kind',
         header: 'Type',
         accessorKey: 'kind',
-        size: 90,
+        size: 80,
         cell: ({ row }) => (row.original.kind === 'hero' ? 'Hero' : 'Sidekick'),
       },
       {
