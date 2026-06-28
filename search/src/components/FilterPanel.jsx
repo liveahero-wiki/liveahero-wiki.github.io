@@ -16,16 +16,6 @@ const STATUS_TYPE_OPTIONS = [
 ]
 
 export function FilterPanel({ index, query, dispatch, resultCount }) {
-  // View-cost inputs commit on blur or Enter (not per keystroke).
-  const commitView = (field) => (e) =>
-    dispatch({ type: 'setView', field, value: e.target.value })
-  const onViewKey = (field) => (e) => {
-    if (e.key === 'Enter') {
-      commitView(field)(e)
-      e.currentTarget.blur()
-    }
-  }
-
   return (
     <div class="filter-panel">
       <ButtonRow
@@ -79,8 +69,9 @@ export function FilterPanel({ index, query, dispatch, resultCount }) {
             type="number"
             class="vp-input"
             placeholder="min"
-            onBlur={commitView('viewMin')}
-            onKeyDown={onViewKey('viewMin')}
+            onInput={(e) =>
+              dispatch({ type: 'setView', field: 'viewMin', value: e.target.value })
+            }
           />
           <span>–</span>
           <input
@@ -88,8 +79,9 @@ export function FilterPanel({ index, query, dispatch, resultCount }) {
             type="number"
             class="vp-input"
             placeholder="max"
-            onBlur={commitView('viewMax')}
-            onKeyDown={onViewKey('viewMax')}
+            onInput={(e) =>
+              dispatch({ type: 'setView', field: 'viewMax', value: e.target.value })
+            }
           />
         </div>
       </div>
