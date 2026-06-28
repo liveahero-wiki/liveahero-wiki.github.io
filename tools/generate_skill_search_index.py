@@ -47,7 +47,8 @@ CHARAS = "_charas"
 # but hidden; their labels/statuses are attributed to visible <wiki-passive> carriers.
 # r7: skills now carry statusDescs [{name, desc}] for every named status effect,
 # mirroring status_description_v2 so the search UI can attach tippy tooltips.
-INDEX_SCHEMA_REV = "r7"
+# r8: statusDescs entries gain optional icon field (filename override > Status.json icon)
+INDEX_SCHEMA_REV = "r8"
 
 
 def load(name, sub=None):
@@ -528,7 +529,11 @@ def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans):
                 base = ""
             desc = base or SMA.get(sid, {}).get("description", "")
 
-        results.append({"name": name, "desc": desc or ""})
+        icon = sej.get("filename") or StatusTrans.get(sid, {}).get("icon") or ""
+        entry = {"name": name, "desc": desc or ""}
+        if icon:
+            entry["icon"] = icon
+        results.append(entry)
     return results
 
 
