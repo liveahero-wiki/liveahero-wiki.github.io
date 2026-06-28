@@ -2,7 +2,8 @@ import json
 import os
 import unittest
 
-from generate_skill_search_index import build_status_descs, maxed_skill_description, maxed_use_view
+from generate_skill_search_index import (
+    build_status_descs, maxed_skill_description, maxed_use_view, label_skill)
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "_data")
 
@@ -89,6 +90,50 @@ class TestSkillTreeMaxed(unittest.TestCase):
             self.assertNotIn(
                 intermediate, names,
                 f"intermediate VP Cost {intermediate!r} must not appear after maxing")
+
+
+class TestTargetFlagLabels(unittest.TestCase):
+    """Attack-range labels derived from SkillMaster.targetFlag, using the enum
+    semantics from _plugins/skill.rb skill_target."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.SM = load("SkillMaster.json")
+        cls.SEM = load("SkillEffectMaster.json")
+        cls.SMA = load("StatusMaster.json")
+
+    def labels(self, skill_id):
+        l, _ = label_skill(str(skill_id), self.SM, self.SEM, self.SMA, set())
+        return l
+
+    def test_single_enemy_is_single(self):
+        # 1001101 targetFlag 2 (target enemy) -> single, not all/ally
+        labels = self.labels(1001101)
+        self.assertIn("attack.single", labels)
+        self.assertNotIn("attack.all", labels)
+
+    def test_random_enemy_is_single_not_all(self):
+        # 1017101 targetFlag 7 (random enemy) -> single. Regression: it used to
+        # be mislabelled attack.all + attack.multi.
+        labels = self.labels(1017101)
+        self.assertIn("attack.single", labels)
+        self.assertNotIn("attack.all", labels)
+        self.assertNotIn("attack.multi", labels)  # no MultipleAttack class here
+
+    def test_all_enemies_is_all(self):
+        # 117 targetFlag 4 (all enemies) -> all
+        self.assertIn("attack.all", self.labels(117))
+
+    def test_all_allies_damage_is_ally_not_all(self):
+        # 22 targetFlag 3 (all allies) -> ally. Regression: 3 used to be treated
+        # as "all enemies" and labelled attack.all.
+        labels = self.labels(22)
+        self.assertIn("attack.ally", labels)
+        self.assertNotIn("attack.all", labels)
+
+    def test_lowest_hp_ally_damage_is_ally(self):
+        # 4261102 targetFlag 11 (ally with lowest HP) -> ally
+        self.assertIn("attack.ally", self.labels(4261102))
 
 
 if __name__ == "__main__":
