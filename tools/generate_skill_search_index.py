@@ -163,6 +163,7 @@ CATEGORIES = [
     {"key": "skillctl", "label": "Skill control", "labels": [
         {"key": "skillctl.change", "label": "Skill change"},
         {"key": "skillctl.auto", "label": "Auto-action control"},
+        {"key": "skillctl.ratechange", "label": "Skill rate change"},
     ]},
     {"key": "acq", "label": "Increased Acquisition", "labels": [
         {"key": "acq.coin", "label": "Coin / sales boost"},
@@ -324,6 +325,7 @@ CLASS_TO_LABELS = {
     "ForceAuto": ["skillctl.auto"],
     "TargetReversal": ["skillctl.auto"],
     "DecideUniqueByStatusPassiveBattleSkillEffect": ["skillctl.auto"],
+    "ChangeSkillProve": ["skillctl.ratechange"],
 
     # acquisition
     "SalesBonusCheat": ["acq.coin"], 
@@ -412,7 +414,7 @@ def _is_ignored_class(cls):
     """Knowingly ignored mechanics / placeholders / handled-elsewhere classes."""
     return (cls in IGNORED_CLASSES or "NoneEffect" in cls or "Critical" in cls
             or cls.startswith("Regist") or "ChangeSkillProb" in cls
-            or "ChangeSkillProve" in cls or "CopyBuff" in cls
+            or "CopyBuff" in cls
             or cls.endswith("Status"))
 
 
