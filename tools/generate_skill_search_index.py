@@ -51,6 +51,39 @@ CHARAS = "_charas"
 INDEX_SCHEMA_REV = "r8"
 
 
+# --- Undocumented game-data enums / magic numbers ---------------------------
+# These bare integers come straight from the masterdata and have no symbolic
+# names in the source dumps. Centralized here so each meaning is discoverable in
+# one place and a future enum change is a single edit.
+
+# SkillMaster.targetFlag: the game's skill-targeting enum. Used to derive
+# attack.* labels for damage-dealing skills (see label_skill).
+TARGET_FLAG_ALLY = 1        # targets an ally
+TARGET_FLAG_SINGLE = 2      # single enemy
+TARGET_FLAG_ALL = (3, 4)    # all enemies (two encodings observed in data)
+TARGET_FLAG_ALL_MULTI = 7   # all enemies, multi-hit
+
+# StatusMaster.statusType -> our status-bucket name. Anything not listed here
+# (the `else` branch) is treated as an internal/system status.
+STATUS_TYPE_MAP = {0: "debuff", 1: "buff", 3: "field"}
+STATUS_TYPE_DEFAULT = "system"
+
+# CardMaster/SidekickMaster.stockId encodes the costume/art variant in its last
+# decimal digit (stockId % 10). Variants at or below this threshold use the base
+# page title; higher variants get a per-variant title suffix. Mirrors the Liquid
+# `stockIdToLink` filter.
+STOCK_ID_VARIANT_MODULO = 10
+STOCK_ID_BASE_VARIANT = 1   # variant > this -> use the variant-specific title
+
+# CardMaster.rarity value identifying the max-rarity card in a hero stock group;
+# that entry is used as the representative for indexing.
+HERO_MAX_RARITY = 6
+
+# SidekickMaster.levelZone value identifying the max-level sidekick card in a
+# stock group; that entry is used as the representative for indexing.
+SIDEKICK_MAX_LEVEL_ZONE = 6
+
+
 def load(name, sub=None):
     path = os.path.join(DATA, sub, name) if sub else os.path.join(DATA, name)
     with open(path, "r", encoding="utf-8") as f:
@@ -223,7 +256,7 @@ liquid_template_statuses = Counter()  # status IDs whose base desc contains Liqu
 
 def status_type(status_master_entry):
     t = status_master_entry.get("statusType")
-    return {0: "debuff", 1: "buff", 3: "field"}.get(t, "system")
+    return STATUS_TYPE_MAP.get(t, STATUS_TYPE_DEFAULT)
 
 
 def classify(cls, inner):
@@ -329,13 +362,13 @@ def label_skill(skill_id, SM, SEM, SMA, visited):
 
     # target-based attack labels
     if deals_damage:
-        if target_flag == 2:
+        if target_flag == TARGET_FLAG_SINGLE:
             labels.add("attack.single")
-        elif target_flag in (3, 4):
+        elif target_flag in TARGET_FLAG_ALL:
             labels.add("attack.all")
-        elif target_flag == 7:
+        elif target_flag == TARGET_FLAG_ALL_MULTI:
             labels.update(["attack.all", "attack.multi"])
-        elif target_flag == 1:
+        elif target_flag == TARGET_FLAG_ALLY:
             labels.add("attack.ally")
         if "隣" in description:  # adjacent-target wording
             labels.add("attack.special")
@@ -617,10 +650,10 @@ def chara_name_and_page(rep, suffix, chara_pages):
     entity, mirroring the Liquid `stockIdToLink` filter. Falls back to the raw
     Japanese cardName + the chara index when the page is missing/unreleased."""
     stock_id = rep.get("stockId") or 0
-    variant = stock_id % 10
+    variant = stock_id % STOCK_ID_VARIANT_MODULO
     page = chara_pages.get(rep.get("characterId"))
     if page:
-        if variant > 1:
+        if variant > STOCK_ID_BASE_VARIANT:
             title = (page["data"].get(f"{suffix}{variant}") or {}).get("title") or page["title"]
         else:
             title = page["title"]
@@ -631,7 +664,7 @@ def chara_name_and_page(rep, suffix, chara_pages):
 def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, SkillEffectTrans, StatusTrans, chara_pages):
     """stock_entries: list of CardMaster entries sharing a stockId."""
     rarities = [e.get("rarity") for e in stock_entries if e.get("rarity") is not None]
-    rep = next((e for e in stock_entries if e.get("rarity") == 6), None)
+    rep = next((e for e in stock_entries if e.get("rarity") == HERO_MAX_RARITY), None)
     if rep is None:
         rep = max(stock_entries, key=lambda e: e.get("rarity", 0))
 
@@ -716,7 +749,7 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, SkillEffec
 
 def build_sidekick(stock_entries, SM, SEM, SMA, SkillTrans, English, SkillEffectTrans, StatusTrans, chara_pages):
     rarities = [e.get("rarity") for e in stock_entries if e.get("rarity") is not None]
-    rep = next((e for e in stock_entries if e.get("levelZone") == 6), None)
+    rep = next((e for e in stock_entries if e.get("levelZone") == SIDEKICK_MAX_LEVEL_ZONE), None)
     if rep is None:
         rep = max(stock_entries, key=lambda e: e.get("levelZone", 0))
 
