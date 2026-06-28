@@ -5,13 +5,16 @@ import {
   getCoreRowModel,
   getSortedRowModel,
   useReactTable,
+  type ColumnDef,
+  type SortingState,
 } from '@tanstack/react-table'
 import { useVirtualizer } from '@tanstack/react-virtual'
 import { useMemo, useRef, useState } from 'preact/hooks'
-import { charaLink, portrait, statusIcon } from '../lib/urls.js'
-import { SkillDescription } from './SkillDescription.jsx'
+import type { Entity, Row, Status } from '../types'
+import { charaLink, portrait, statusIcon } from '../lib/urls'
+import { SkillDescription } from './SkillDescription'
 
-const SLOT_LABEL = {
+const SLOT_LABEL: Record<string, string> = {
   active1: 'Active 1',
   active2: 'Active 2',
   active3: 'Active 3',
@@ -21,9 +24,9 @@ const SLOT_LABEL = {
   sidekick_append: 'SK Append',
 }
 
-export function dedupByName(ids, statuses) {
-  const seen = new Set()
-  return ids.filter(id => {
+export function dedupByName(ids: number[], statuses: Record<string, Status>): number[] {
+  const seen = new Set<string>()
+  return ids.filter((id) => {
     const name = statuses[id]?.name
     if (!name || seen.has(name)) return false
     seen.add(name)
@@ -31,10 +34,16 @@ export function dedupByName(ids, statuses) {
   })
 }
 
-export function ResultTable({ rows, statuses, onOpenKit }) {
-  const [sorting, setSorting] = useState([])
+interface ResultTableProps {
+  rows: Row[]
+  statuses: Record<string, Status>
+  onOpenKit: (entity: Entity) => void
+}
 
-  const columns = useMemo(
+export function ResultTable({ rows, statuses, onOpenKit }: ResultTableProps) {
+  const [sorting, setSorting] = useState<SortingState>([])
+
+  const columns = useMemo<ColumnDef<Row>[]>(
     () => [
       {
         id: 'character',
@@ -52,7 +61,7 @@ export function ResultTable({ rows, statuses, onOpenKit }) {
                   alt=""
                   loading="lazy"
                   onError={(ev) => {
-                    ev.target.style.visibility = 'hidden'
+                    ev.currentTarget.style.visibility = 'hidden'
                   }}
                 />
                 <span>{e.name}</span>
@@ -75,7 +84,7 @@ export function ResultTable({ rows, statuses, onOpenKit }) {
         header: 'Type',
         accessorKey: 'kind',
         size: 90,
-        cell: ({ getValue }) => (getValue() === 'hero' ? 'Hero' : 'Sidekick'),
+        cell: ({ row }) => (row.original.kind === 'hero' ? 'Hero' : 'Sidekick'),
       },
       {
         id: 'skill',
@@ -113,7 +122,7 @@ export function ResultTable({ rows, statuses, onOpenKit }) {
         header: 'View Cost',
         accessorKey: 'useView',
         size: 100,
-        cell: ({ getValue }) => getValue().toLocaleString(),
+        cell: ({ row }) => row.original.useView.toLocaleString(),
       },
     ],
     [statuses, onOpenKit],
@@ -134,7 +143,7 @@ export function ResultTable({ rows, statuses, onOpenKit }) {
   // Virtualize the rows so only the visible window is rendered. Without this,
   // every filter/sort toggle reconciles all ~1,200 rows (each with a
   // dangerouslySetInnerHTML description + images) — the slow click in the trace.
-  const scrollRef = useRef(null)
+  const scrollRef = useRef<HTMLDivElement>(null)
   const virtualizer = useVirtualizer({
     count: tableRows.length,
     getScrollElement: () => scrollRef.current,
@@ -156,7 +165,7 @@ export function ResultTable({ rows, statuses, onOpenKit }) {
                     onClick={header.column.getToggleSortingHandler()}
                   >
                     {flexRender(header.column.columnDef.header, header.getContext())}
-                    {{ asc: ' ▲', desc: ' ▼' }[header.column.getIsSorted()] ?? ''}
+                    {{ asc: ' ▲', desc: ' ▼' }[header.column.getIsSorted() as string] ?? ''}
                   </span>
                 </th>
               ))}

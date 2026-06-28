@@ -1,7 +1,15 @@
 // Reusable toggle-button row with a trailing [All] reset button.
 // `selected` is a Set; `onToggle(value)` flips one; `onClear()` empties the row.
 
-export function ButtonRow({ label, options, selected, onToggle, onClear }) {
+interface ButtonRowProps {
+  label: string | null
+  options: Array<{ key: string; label: string }>
+  selected: Set<string>
+  onToggle: (value: string) => void
+  onClear: () => void
+}
+
+export function ButtonRow({ label, options, selected, onToggle, onClear }: ButtonRowProps) {
   return (
     <div class="row">
       {label && <span class="row-label">{label}</span>}

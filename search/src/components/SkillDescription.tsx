@@ -10,33 +10,44 @@
 // and get tippy tooltips. A status footer is always shown at the bottom.
 
 import { memo, useEffect, useRef } from 'preact/compat'
+import type { ChangeSkill, StatusDesc } from '../types'
 import { statusIcon } from '../lib/urls'
 
-function processStatusHtml(html, statusDescs) {
+function processStatusHtml(html: string, statusDescs: StatusDesc[] | undefined): string {
   if (!html || !statusDescs?.length) return html
-  const map = Object.fromEntries(statusDescs.map(s => [s.name, s]))
-  return html.replace(/<wiki-status>(.*?)<\/wiki-status>/g, (_, name) => {
+  const map = Object.fromEntries(statusDescs.map((s) => [s.name, s]))
+  return html.replace(/<wiki-status>(.*?)<\/wiki-status>/g, (_, name: string) => {
     const n = name.trim()
-    const st = map[n]
+    const st = map[n] as StatusDesc | undefined
     const img = st?.icon ? `<img class="status-s" src="${statusIcon(st.icon)}">` : ''
     return `<span class="status" data-status-name="${n}">${img} ${n}</span>`
   })
 }
 
-export const SkillDescription = memo(function SkillDescription({ html, changeSkills, statusDescs }) {
-  const ref = useRef(null)
+interface SkillDescriptionProps {
+  html: string
+  changeSkills?: ChangeSkill[]
+  statusDescs?: StatusDesc[]
+}
+
+export const SkillDescription = memo(function SkillDescription({
+  html,
+  changeSkills,
+  statusDescs,
+}: SkillDescriptionProps) {
+  const ref = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
     const el = ref.current
     if (!el || !statusDescs?.length) return
-    const descMap = Object.fromEntries(statusDescs.map(s => [s.name, s.desc]))
-    const instances = []
-    el.querySelectorAll('[data-status-name]').forEach(node => {
-      const desc = descMap[node.dataset.statusName]
+    const descMap = Object.fromEntries(statusDescs.map((s) => [s.name, s.desc]))
+    const instances: TippyInstance[] = []
+    el.querySelectorAll('[data-status-name]').forEach((node) => {
+      const desc = descMap[(node as HTMLElement).dataset.statusName ?? '']
       if (!desc) return
       instances.push(window.tippy(node, { content: desc, allowHTML: true, interactive: true }))
     })
-    return () => instances.forEach(i => i?.destroy())
+    return () => instances.forEach((i) => i?.destroy())
   }, [html, statusDescs])
 
   if (!html && !(changeSkills && changeSkills.length)) return null
@@ -49,7 +60,7 @@ export const SkillDescription = memo(function SkillDescription({ html, changeSki
           <span class="skill-desc" dangerouslySetInnerHTML={{ __html: processStatusHtml(cs.description, statusDescs) }} />
         </details>
       ))}
-      {statusDescs?.length > 0 && (
+      {statusDescs?.length ? (
         <>
           <hr class="status-hr" />
           {statusDescs.map((st, i) => [
@@ -57,10 +68,10 @@ export const SkillDescription = memo(function SkillDescription({ html, changeSki
             <span key={i} class="status" data-status-name={st.name}>
               {st.icon && <img class="status-s" src={statusIcon(st.icon)} />}
               {' '}{st.name}
-            </span>
+            </span>,
           ])}
         </>
-      )}
+      ) : null}
     </span>
   )
 })

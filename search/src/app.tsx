@@ -1,11 +1,26 @@
 import { useEffect, useMemo, useReducer, useState } from 'preact/hooks'
-import { loadIndex } from './data/loadIndex.js'
-import { filterRows } from './lib/filters.js'
-import { FilterPanel } from './components/FilterPanel.jsx'
-import { ResultTable } from './components/ResultTable.jsx'
-import { SkillKitDialog } from './components/SkillKitDialog.jsx'
+import type { Entity, Query, SkillIndex } from './types'
+import { loadIndex } from './data/loadIndex'
+import { filterRows } from './lib/filters'
+import { FilterPanel } from './components/FilterPanel'
+import { ResultTable } from './components/ResultTable'
+import { SkillKitDialog } from './components/SkillKitDialog'
 
-function initialQuery() {
+type SetField = 'types' | 'labels' | 'statusTypes'
+type FlagField = 'skillTree' | 'includeMob'
+type ViewField = 'viewMin' | 'viewMax'
+
+export type QueryAction =
+  | { type: 'toggle'; field: SetField; value: string }
+  | { type: 'clear'; field: SetField }
+  | { type: 'clearKeys'; field: SetField; keys: string[] }
+  | { type: 'addStatus'; value: number }
+  | { type: 'removeStatus'; value: number }
+  | { type: 'setView'; field: ViewField; value: string }
+  | { type: 'toggleFlag'; field: FlagField }
+  | { type: 'reset' }
+
+function initialQuery(): Query {
   return {
     types: new Set(),
     labels: new Set(),
@@ -21,7 +36,7 @@ function initialQuery() {
 
 // Sets live in state; each reducer branch returns a fresh object/Set so Preact
 // re-renders.
-function reducer(state, action) {
+function reducer(state: Query, action: QueryAction): Query {
   switch (action.type) {
     case 'toggle': {
       const next = new Set(state[action.field])
@@ -50,21 +65,21 @@ function reducer(state, action) {
     case 'toggleFlag':
       return { ...state, [action.field]: !state[action.field] }
     case 'reset':
-      return { ...initialQuery(), _vcKey: (state._vcKey ?? 0) + 1 }
+      return { ...initialQuery(), _vcKey: state._vcKey + 1 }
     default:
       return state
   }
 }
 
 export function App() {
-  const [index, setIndex] = useState(null)
-  const [error, setError] = useState(null)
-  const [query, dispatch] = useReducer(reducer, undefined, initialQuery)
+  const [index, setIndex] = useState<SkillIndex | null>(null)
+  const [error, setError] = useState<string | null>(null)
+  const [query, dispatch] = useReducer(reducer, initialQuery())
   // Character whose full skill kit is shown in the modal (null = closed).
-  const [kitEntity, setKitEntity] = useState(null)
+  const [kitEntity, setKitEntity] = useState<Entity | null>(null)
 
   useEffect(() => {
-    loadIndex().then(setIndex).catch((e) => setError(String(e)))
+    loadIndex().then(setIndex).catch((e: unknown) => setError(String(e)))
   }, [])
 
   const rows = useMemo(() => {

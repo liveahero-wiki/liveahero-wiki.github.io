@@ -5,12 +5,13 @@
 // skills' <wiki-passive> blocks.
 
 import { useEffect, useRef } from 'preact/hooks'
-import { effectiveSkills } from '../lib/filters.js'
-import { statusIcon, portrait } from '../lib/urls.js'
-import { SkillDescription } from './SkillDescription.jsx'
-import { dedupByName } from './ResultTable.jsx'
+import type { Entity, Status } from '../types'
+import { effectiveSkills } from '../lib/filters'
+import { statusIcon, portrait } from '../lib/urls'
+import { SkillDescription } from './SkillDescription'
+import { dedupByName } from './ResultTable'
 
-const SLOT_LABEL = {
+const SLOT_LABEL: Record<string, string> = {
   active1: 'Active 1',
   active2: 'Active 2',
   active3: 'Active 3',
@@ -24,8 +25,20 @@ const SLOT_LABEL = {
 // doesn't support it yet — fall back to a manual backdrop-click handler.
 const SUPPORTS_CLOSEDBY = 'closedBy' in HTMLDialogElement.prototype
 
-export function SkillKitDialog({ entity, skillTree, statuses, onClose }) {
-  const ref = useRef(null)
+interface SkillKitDialogProps {
+  entity: Entity | null
+  skillTree: boolean
+  statuses: Record<string, Status>
+  onClose: () => void
+}
+
+export function SkillKitDialog({ entity, skillTree, statuses, onClose }: SkillKitDialogProps) {
+  const ref = useRef<HTMLDialogElement>(null)
+
+  // Set closedby="any" imperatively to avoid JSX type issues with this new attribute.
+  useEffect(() => {
+    ref.current?.setAttribute('closedby', 'any')
+  }, [])
 
   // Open/close the native modal in sync with the selected entity.
   useEffect(() => {
@@ -35,10 +48,10 @@ export function SkillKitDialog({ entity, skillTree, statuses, onClose }) {
     else if (!entity && dlg.open) dlg.close()
   }, [entity])
 
-  const onBackdropClick = (e) => {
+  const onBackdropClick = (e: MouseEvent) => {
     if (SUPPORTS_CLOSEDBY) return // native light-dismiss handles it
     const dlg = ref.current
-    if (e.target !== dlg) return // click landed on inner content
+    if (!dlg || e.target !== dlg) return // click landed on inner content
     const r = dlg.getBoundingClientRect()
     const inside =
       r.top <= e.clientY && e.clientY <= r.top + r.height &&
@@ -52,7 +65,6 @@ export function SkillKitDialog({ entity, skillTree, statuses, onClose }) {
     <dialog
       ref={ref}
       class="kit-dialog"
-      closedby="any"
       aria-labelledby="kit-dialog-title"
       onClose={onClose}
       onClick={onBackdropClick}
@@ -60,8 +72,15 @@ export function SkillKitDialog({ entity, skillTree, statuses, onClose }) {
       {entity && (
         <div class="kit-body">
           <header class="kit-head">
-            <img class="chara-icon" src={portrait(entity)} alt="" loading="lazy"
-              onError={(ev) => { ev.target.style.visibility = 'hidden' }} />
+            <img
+              class="chara-icon"
+              src={portrait(entity)}
+              alt=""
+              loading="lazy"
+              onError={(ev) => {
+                ev.currentTarget.style.visibility = 'hidden'
+              }}
+            />
             <h2 id="kit-dialog-title">{entity.name}</h2>
             <span class="kit-kind">{entity.kind === 'hero' ? 'Hero' : 'Sidekick'}</span>
             <button
@@ -83,8 +102,14 @@ export function SkillKitDialog({ entity, skillTree, statuses, onClose }) {
                   {dedupByName(s.statusIds, statuses).map((id) => {
                     const st = statuses[id]
                     return st ? (
-                      <img key={id} class="inline-status" src={statusIcon(st.icon)}
-                        title={st.name} alt={st.name} loading="lazy" />
+                      <img
+                        key={id}
+                        class="inline-status"
+                        src={statusIcon(st.icon)}
+                        title={st.name}
+                        alt={st.name}
+                        loading="lazy"
+                      />
                     ) : null
                   })}
                 </div>
