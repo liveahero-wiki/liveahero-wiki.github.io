@@ -428,6 +428,16 @@ def _has_visible_text(s):
     return bool(_VISIBLE_TEXT_RE.sub("", s or ""))
 
 
+def is_terminal_node(eid, SUM):
+    """A SkillUpgradeMaster node is terminal (the final tree tier) when it has no
+    nextEntryIds. An unconditional effect (eid 0) or a non-tree context (SUM is
+    None) is treated as terminal -- it is not a gated tier to be superseded."""
+    if not eid or SUM is None:
+        return True
+    node = SUM.get(str(eid))
+    return node is not None and not node.get("nextEntryIds")
+
+
 def maxed_skill_description(skill_id, SM, SEM, SkillTrans, English, SUM):
     """Full fully-bloomed description of a skill-tree (bloom) skill.
 
@@ -448,10 +458,6 @@ def maxed_skill_description(skill_id, SM, SEM, SkillTrans, English, SUM):
     dump preferred, raw Japanese master fallback; result sanitized."""
     sid = str(skill_id)
     skill = SM.get(sid, {})
-
-    def is_terminal(eid):
-        node = SUM.get(str(eid))
-        return node is not None and not node.get("nextEntryIds")
 
     def sig(eff):
         sej = SEM.get(str(eff.get("skillEffectId")), {}).get("skillEffectJson", {})
@@ -478,7 +484,7 @@ def maxed_skill_description(skill_id, SM, SEM, SkillTrans, English, SUM):
         if cei == 0:
             if sig(eff) not in gated_sigs:
                 kept.append(eff)
-        elif is_terminal(cei):
+        elif is_terminal_node(cei, SUM):
             kept.append(eff)
     kept.sort(key=lambda e: e.get("serialNo", 0))
 
@@ -558,18 +564,10 @@ def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SU
     (nextEntryIds is absent/null), mirroring maxed_skill_description. This
     prevents intermediate tree-stage status entries (e.g. View消費量+100 … +750
     for a progression that ends at +1000) from appearing alongside the final one."""
-    def is_terminal(eid):
-        if not eid:
-            return True
-        if SUM is None:
-            return True
-        node = SUM.get(str(eid))
-        return node is not None and not node.get("nextEntryIds")
-
     skill = SM.get(str(skill_id), {})
     results, seen_names = [], set()
     for eff in skill.get("effects", []) or []:
-        if not is_terminal(eff.get("conditionEntityId", 0)):
+        if not is_terminal_node(eff.get("conditionEntityId", 0), SUM):
             continue
         seid = str(eff.get("skillEffectId", ""))
         sej = SEM.get(seid, {}).get("skillEffectJson", {})
