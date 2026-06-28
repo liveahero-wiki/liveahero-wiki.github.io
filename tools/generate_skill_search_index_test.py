@@ -253,6 +253,30 @@ class TestClassifyValueSign(unittest.TestCase):
         self.assertEqual(self.classify(6), {"vp.gain"})    # 6 "注目" value 150
         self.assertEqual(self.classify(212), {"vp.loss"})  # 212 value 50 -> reduced gain
 
+    def test_change_view_positive_is_vp_gain(self):
+        # SE 345 (Suhail active1): "Gained 1000 Views", value 1000 -> vp.gain
+        labels, _, recognized = gen.classify("ChangeView", {"parameter": {"value": 1000}})
+        self.assertTrue(recognized)
+        self.assertEqual(labels, {"vp.gain"})
+
+    def test_change_view_negative_is_vp_loss(self):
+        # SE 3234 (Danzo active2): "Views reduced by 3000", value -3000 -> vp.loss
+        labels, _, recognized = gen.classify("ChangeView", {"parameter": {"value": -3000}})
+        self.assertTrue(recognized)
+        self.assertEqual(labels, {"vp.loss"})
+
+    def test_need_view_value_change_negative_is_vp_costdown(self):
+        # SE 4043 (Exio active2): "View consumption -1000", value -1000 -> vp.costdown
+        labels, _, recognized = gen.classify("NeedViewValueChange", {"parameter": {"value": -1000}})
+        self.assertTrue(recognized)
+        self.assertEqual(labels, {"vp.costdown"})
+
+    def test_need_view_value_change_positive_is_vp_costup(self):
+        # SE 1092 (Fire Local Idol): "View consumption +2000", value 2000 -> vp.costup
+        labels, _, recognized = gen.classify("NeedViewValueChange", {"parameter": {"value": 2000}})
+        self.assertTrue(recognized)
+        self.assertEqual(labels, {"vp.costup"})
+
 
 if __name__ == "__main__":
     unittest.main()
