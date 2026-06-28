@@ -266,6 +266,12 @@ def status_type(status_master_entry):
     return STATUS_TYPE_MAP.get(t, STATUS_TYPE_DEFAULT)
 
 
+def resolve_status_name(sid, StatusTrans, SMA):
+    """A status's display name: Status.json translation -> raw StatusMaster."""
+    return (StatusTrans.get(str(sid), {}).get("name")
+            or SMA.get(str(sid), {}).get("statusName", ""))
+
+
 def classify(cls, inner):
     """Map a single effect class to label keys.
 
@@ -594,8 +600,7 @@ def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SU
 
         name = (se_trans.get("overrideStatusName")
                 or sej.get("overrideStatusName")
-                or StatusTrans.get(sid, {}).get("name")
-                or SMA.get(sid, {}).get("statusName", ""))
+                or resolve_status_name(sid, StatusTrans, SMA))
         if not name or name in seen_names:
             continue
         seen_names.add(name)
@@ -900,8 +905,7 @@ def main():
     # empty names. They are useless for the "Has status" autocomplete and only
     # bloat the index, so keep only statuses that resolve to a non-empty name.
     def status_name(sid):
-        return (StatusTrans.get(str(sid), {}).get("name")
-                or SMA.get(str(sid), {}).get("statusName", "")).strip()
+        return resolve_status_name(sid, StatusTrans, SMA).strip()
     named = {str(sid) for sid in SMA if status_name(sid)}
     finalize_entities(entities, named)
 
