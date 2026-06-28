@@ -43,7 +43,7 @@ CHARAS = "_charas"
 # r5: active skills now carry a changeSkills field listing the in-combat
 # ChangeActiveSkill transform targets (name + description), mirroring the wiki's
 # _includes/skill-description.html <details> blocks.
-INDEX_SCHEMA_REV = "r5"
+INDEX_SCHEMA_REV = "r6"
 
 
 def load(name, sub=None):
@@ -488,19 +488,55 @@ def change_skills(change_ids, skill_id, SM, SkillTrans, English):
     return out
 
 
-def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English, change_ids=()):
+def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English, change_ids=(), hidden=False):
     labels, status_ids = label_skill(skill_id, SM, SEM, SMA, set())
     skill = SM.get(str(skill_id), {})
     return {
         "slot": slot,
         "skillId": skill_id,
+        # Hidden passives (hero passive skills, sidekick append-passives) are never
+        # shown as their own row in-game; their effects are described inside the
+        # visible skills' <wiki-passive> blocks. They are kept in the index (for the
+        # full-kit dialog) but the UI hides their rows and attributes their labels.
+        "hidden": hidden,
         "name": skill_name(skill_id, SM, SkillTrans, English),
         "description": skill_description(skill_id, SM, SkillTrans, English),
         "useView": skill.get("useView", 0),
         "labels": sorted(labels),
         "statusIds": sorted(status_ids),
+        # match* default to own labels/statuses; attribute_passives() folds hidden
+        # passives' passive-only labels into the visible <wiki-passive> carrier(s).
+        "matchLabels": sorted(labels),
+        "matchStatusIds": sorted(status_ids),
         "changeSkills": change_skills(change_ids, skill_id, SM, SkillTrans, English),
     }
+
+
+def attribute_passives(skills):
+    """Fold the hidden passives' passive-only labels/statuses into the visible
+    skill(s) whose description carries a <wiki-passive> block (the in-game carrier
+    of that passive text), mutating each skill's matchLabels/matchStatusIds.
+
+    Keyed on the `hidden` flag (not slot) so it serves heroes (hidden = passive
+    skills) and sidekicks (hidden = append-passive) identically. Recall is
+    preserved: union(visible matchLabels) == union(all own labels) == entity
+    labels, because passive-only labels are redistributed onto visible skills."""
+    visible = [s for s in skills if not s["hidden"]]
+    hidden = [s for s in skills if s["hidden"]]
+    if not visible or not hidden:
+        return
+    vis_l = set().union(*(s["labels"] for s in visible))
+    vis_s = set().union(*(s["statusIds"] for s in visible))
+    hid_l = set().union(*(s["labels"] for s in hidden))
+    hid_s = set().union(*(s["statusIds"] for s in hidden))
+    only_l, only_s = hid_l - vis_l, hid_s - vis_s
+    if not only_l and not only_s:
+        return  # nothing the visible skills don't already carry (e.g. sidekicks)
+    carriers = [s for s in visible if "<wiki-passive>" in (s["description"] or "")]
+    targets = carriers or visible  # orphan fallback: no carrier -> all visible skills
+    for s in targets:
+        s["matchLabels"] = sorted(set(s["matchLabels"]) | only_l)
+        s["matchStatusIds"] = sorted(set(s["matchStatusIds"]) | only_s)
 
 
 def aggregate(skills, key):
@@ -557,8 +593,10 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, chara_page
     base_skills = [skill_obj(f"active{i+1}", a["skillId"], SM, SEM, SMA, SkillTrans, English,
                              change_ids=change_by_slot.get(i + 1, ()))
                    for i, a in enumerate(base_actives)]
-    base_skills += [skill_obj("passive", p["skillId"], SM, SEM, SMA, SkillTrans, English)
+    base_skills += [skill_obj("passive", p["skillId"], SM, SEM, SMA, SkillTrans, English,
+                              hidden=True)
                     for p in base_passives]
+    attribute_passives(base_skills)
 
     name, page = chara_name_and_page(rep, "h", chara_pages)
     has_tree = bool(rep.get("hasSkillUpgrade")) and (bool(change_map) or bool(bloom_actives))
@@ -595,10 +633,11 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, chara_page
         # all passives (skill-tree unlocks included)
         for p in passives:
             pid = p["skillId"]
-            so = skill_obj("passive", pid, SM, SEM, SMA, SkillTrans, English)
+            so = skill_obj("passive", pid, SM, SEM, SMA, SkillTrans, English, hidden=True)
             so["description"] = maxed_skill_description(pid, SM, SEM, SkillTrans, English, SUM)
             so["useView"] = maxed_use_view(pid, SM, SEM)
             maxed.append(so)
+        attribute_passives(maxed)
         entity["skillsMaxed"] = maxed
         entity["labelsMaxed"] = aggregate(maxed, "labels")
         entity["statusIdsMaxed"] = aggregate(maxed, "statusIds")
@@ -620,6 +659,14 @@ def build_sidekick(stock_entries, SM, SEM, SMA, SkillTrans, English, chara_pages
     equip = rep.get("equipmentSkills") or []
     if equip:
         skills.append(skill_obj("sidekick_passive", equip[-1], SM, SEM, SMA, SkillTrans, English))
+    # Sidekick append-passive: a hidden passive (8xxxxxx id family) granted on top of
+    # the equipment skill, never shown as its own row in-game. equipmentAppendSkills
+    # holds ascending tiers like equipmentSkills; the last entry is the maxed append.
+    append = rep.get("equipmentAppendSkills") or []
+    if append:
+        skills.append(skill_obj("sidekick_append", append[-1], SM, SEM, SMA, SkillTrans,
+                                English, hidden=True))
+    attribute_passives(skills)
 
     name, page = chara_name_and_page(rep, "s", chara_pages)
     return {
@@ -671,6 +718,7 @@ def finalize_entities(entities, named):
             kept = []
             for s in e[key]:
                 s["statusIds"] = [x for x in s["statusIds"] if str(x) in named]
+                s["matchStatusIds"] = [x for x in s["matchStatusIds"] if str(x) in named]
                 if s["name"] or s["description"] or s["labels"] or s["statusIds"]:
                     kept.append(s)
             e[key] = kept
