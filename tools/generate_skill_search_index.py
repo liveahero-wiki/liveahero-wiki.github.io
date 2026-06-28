@@ -35,24 +35,8 @@ CHARAS = "_charas"
 # Bumped whenever the index *generation logic* changes in a way that alters the
 # emitted JSON without a masterdata version change. Appended to the cache key so
 # clients (search/src/data/loadIndex.js) refetch the index instead of reusing a
-# stale cache. r2: skill-tree skills now resolve conditionDescription fallback.
-# r3: sidekick passive now resolved from equipmentSkills[-1] (was a dead
-# passiveSkillIds field, so sidekicks previously had no passive indexed).
-# r4: maxed skill-tree skills now assemble their full description from
-# terminal-tier effects[].conditionDescription lines and recompute useView from
-# additive ChangeSkillBaseView deltas (see maxed_skill_description / maxed_use_view).
-# r5: active skills now carry a changeSkills field listing the in-combat
-# ChangeActiveSkill transform targets (name + description), mirroring the wiki's
-# _includes/skill-description.html <details> blocks.
-# r6: hidden passives (hero passive + sidekick equipmentAppendSkills) are indexed
-# but hidden; their labels/statuses are attributed to visible <wiki-passive> carriers.
-# r7: skills now carry statusDescs [{name, desc}] for every named status effect,
-# mirroring status_description_v2 so the search UI can attach tippy tooltips.
-# r8: statusDescs entries gain optional icon field (filename override > Status.json icon)
-# r9: corrected targetFlag attack-range labels (3=all allies, 7=random enemy were
-# mislabelled), restored standalone passive lines dropped by maxed-desc signature
-# collisions, and recompute change_by_slot over the maxed skill set.
-INDEX_SCHEMA_REV = "r9"
+# stale cache.
+INDEX_SCHEMA_REV = "r10"
 
 
 # --- Undocumented game-data enums / magic numbers ---------------------------
@@ -143,7 +127,8 @@ CATEGORIES = [
     {"key": "vp", "label": "VP / View", "labels": [
         {"key": "vp.gain", "label": "VP gain"},
         {"key": "vp.loss", "label": "Reduce VP gain"},
-        {"key": "vp.costdown", "label": "View cost change"},
+        {"key": "vp.costdown", "label": "View cost down"},
+        {"key": "vp.costup", "label": "View cost up"},
     ]},
     {"key": "interf", "label": "Skill interference", "labels": [
         {"key": "interf.debuff_remove", "label": "Debuff removal"},
@@ -276,7 +261,7 @@ CLASS_TO_LABELS = {
     "AddPlusCombo": ["combo.up"],
 
     # view
-    "ChangeView": ["vp.gain"],
+    # ChangeView flips on parameter.value -> VALUE_SIGN_RULES
     "SpdDeferenceChangeView": ["vp.gain"],
     "ChangeBaseView": ["vp.gain"],
     "GetViewDamage": ["vp.gain"],
@@ -285,8 +270,8 @@ CLASS_TO_LABELS = {
     "ViewChangeHp": ["vp.gain"],
     "NeedViewChange": ["vp.costdown"],
     "HighestNeedViewChange": ["vp.costdown"],
-    "NeedViewValueChange": ["vp.costdown"],
-    "NotDamageSkillNeedViewChange": ["vp.costdown"], 
+    # NeedViewValueChange flips on parameter.value -> VALUE_SIGN_RULES
+    "NotDamageSkillNeedViewChange": ["vp.costdown"],
     "NotDamageSkillNeedViewValueChange": ["vp.costdown"],
     "FixView": ["vp.costdown"], 
     "ChangeSkillBaseView": ["vp.costdown"],
@@ -407,6 +392,8 @@ VALUE_SIGN_RULES = {
     "TurnBaseMultipleAttack":  ("damage.up", "damage.down", None, 100),
     "TurnBaseMultipleDefence": ("damage.up", "damage.down", None, 100),
     "MultipleBaseView":        ("vp.gain", "vp.loss", None, 100),
+    "ChangeView":              ("vp.gain", "vp.loss", None, 0),
+    "NeedViewValueChange":     ("vp.costup", "vp.costdown", None, 0),
 }
 
 
