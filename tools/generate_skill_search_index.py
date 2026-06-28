@@ -256,6 +256,7 @@ IGNORED_CLASSES = {
 
 unmapped = Counter()
 unmapped_target_flags = Counter()  # damage skills whose targetFlag has no range label
+missing_upgrade_nodes = Counter()  # gated node ids absent from SkillUpgradeMaster
 liquid_template_statuses = Counter()  # status IDs whose base desc contains Liquid {{ }}
 
 
@@ -431,11 +432,18 @@ def _has_visible_text(s):
 def is_terminal_node(eid, SUM):
     """A SkillUpgradeMaster node is terminal (the final tree tier) when it has no
     nextEntryIds. An unconditional effect (eid 0) or a non-tree context (SUM is
-    None) is treated as terminal -- it is not a gated tier to be superseded."""
+    None) is treated as terminal -- it is not a gated tier to be superseded.
+
+    A node id absent from SkillUpgradeMaster is treated as terminal (recall-safe:
+    include the line rather than silently drop the final tier) and recorded so
+    the run reports it -- this should not happen with consistent masterdata."""
     if not eid or SUM is None:
         return True
     node = SUM.get(str(eid))
-    return node is not None and not node.get("nextEntryIds")
+    if node is None:
+        missing_upgrade_nodes[eid] += 1
+        return True
+    return not node.get("nextEntryIds")
 
 
 def maxed_skill_description(skill_id, SM, SEM, SkillTrans, English, SUM):
@@ -940,6 +948,11 @@ def main():
               f"damage skills with no attack-range label, add to TARGET_FLAGS_*:")
         for tf, n in unmapped_target_flags.most_common():
             print(f"  targetFlag {tf}: {n} skill effect(s)")
+    if missing_upgrade_nodes:
+        print(f"\nMISSING SKILL-UPGRADE NODES ({len(missing_upgrade_nodes)}) -- "
+              f"gated effects kept as terminal (recall-safe); check masterdata:")
+        for eid, n in missing_upgrade_nodes.most_common():
+            print(f"  node {eid}: {n} effect(s)")
     if liquid_template_statuses:
         print(f"\nSTATUS IDs WITH LIQUID TEMPLATES (desc skipped, {len(liquid_template_statuses)} status IDs):")
         for sid, n in liquid_template_statuses.most_common():
