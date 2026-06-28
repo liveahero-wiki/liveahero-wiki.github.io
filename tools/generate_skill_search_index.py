@@ -177,75 +177,134 @@ CATEGORIES = [
 # Effect classes that deal damage -> the skill counts as an "attack" and gets
 # a target-based label (single / all / random) from its targetFlag.
 DAMAGE_CLASSES = {
-    "Damage", "ComboDamage", "DamageCount", "MultipleAttack", "AllAttack",
-    "ComboMultipleAttack", "HealthDamage", "HealthMultipleAttack",
-    "HPDependentDamage", "HighestHealthMultipleAttack", "SpdDeferenceDamage",
-    "SpdDifferenceMultipleAttack", "StatusNumDamage", "StatusNumberMultipleAttack",
-    "RandomTeamAttack", "TeamAttackEnemy", "TeamAttackRandomEnemy",
-    "ElementPenetrateDamage", "Penetration", "NowViewDamage",
-    "ViewPowerMultipleAttack", "DamageMultipleAdjust",
-    "BeforeSkillTriggerMultipleAttack", "HighestBarrierMultipleAttack",
+    "Damage",
+    "CountDamage",
+    "ComboDamage",
+    "DamageCount",
+    "AllAttack",
+    "ComboMultipleAttack",
+    "HealthDamage",
+    "HPDependentDamage",
+    "SpdDeferenceDamage",
+    "SpdDifferenceMultipleAttack",
+    "StatusNumDamage",
+    "RandomTeamAttack",
+    "TeamAttackEnemy",
+    "TeamAttackRandomEnemy",
+    "ElementPenetrateDamage",
+    "Penetration",
+    "NowViewDamage",
+    "DamageMultipleAdjust",
     "OtherParamAddAttack",
 }
 
 # Direct effect-class -> label-key(s) mapping. Classes needing value-sign or
 # other context (ChangeAgi, ChangeView, target/dot flags) are handled in code.
 CLASS_TO_LABELS = {
-    # multiple attacks
-    "MultipleAttack": ["attack.multi"], "ComboMultipleAttack": ["attack.multi"],
-    "HealthMultipleAttack": ["attack.multi"], "HighestHealthMultipleAttack": ["attack.multi"],
-    "SpdDifferenceMultipleAttack": ["attack.multi"], "StatusNumberMultipleAttack": ["attack.multi"],
-    "ViewPowerMultipleAttack": ["attack.multi"], "BeforeSkillTriggerMultipleAttack": ["attack.multi", "attack.induction"],
-    "HighestBarrierMultipleAttack": ["attack.multi"], "DamageCount": ["attack.multi"],
     # penetrate / counter / extra action / pursuit
-    "Penetration": ["attack.penetrate"], "ElementPenetrateDamage": ["attack.penetrate"],
+    "Penetration": ["attack.penetrate"],
+    "ElementPenetrateDamage": ["attack.penetrate"],
     "HidePenetration": ["attack.penetrate"],
-    "CounterAttack": ["attack.counter"], "CounterAttackRecalculateTarget": ["attack.counter"],
-    "MoreTurn": ["attack.extra_action"], "MoreTurnExecBeforeSkill": ["attack.extra_action"],
+    "CounterAttack": ["attack.counter"],
+    "CounterAttackRecalculateTarget": ["attack.counter"],
+    "MoreTurn": ["attack.extra_action"],
+    "MoreTurnExecBeforeSkill": ["attack.extra_action"],
     "ReleaseWait": ["attack.extra_action"],
     "Induction": ["attack.induction"],
+    "OwnAttack": ["attack.induction"],
+
     # damage modifiers
-    "AddMultDamage": ["damage.up"], "DamageMultipleAdjust": ["damage.up"],
-    "DamageLimit": ["damage.down"], "MultipleDefence": ["damage.down"],
+    "AddMultDamage": ["damage.up"], 
+    "DamageMultipleAdjust": ["damage.up"],
+    "DamageLimit": ["damage.down"], 
+    "MultipleDefence": ["damage.down"],
+
+    # MultipleAttack classes
+    "MultipleAttack": ["damage.up"],
+    "ComboMultipleAttack": ["damage.up"],
+    "HealthMultipleAttack": ["damage.up"], 
+    "HighestMultipleAttack": ["damage.up"],
+    "SpdDifferenceMultipleAttack": ["damage.up"], 
+    "StatusNumberMultipleAttack": ["damage.up"],
+    "ViewPowerMultipleAttack": ["damage.up"], 
+    "BeforeSkillTriggerMultipleAttack": ["damage.up", "attack.induction"],
+    "HighestBarrierMultipleAttack": ["damage.up"], 
+    "HighestMultipleAttack": ["damage.up"],
+    "DamageCount": ["damage.up"],
+
     # spd
-    "TurnBaseChangeAgi": ["spd.other"], "Wait": ["spd.other"],
+    "TurnBaseChangeAgi": ["spd.other"], 
+    "Wait": ["spd.other"],
+
     # heal
-    "Heal": ["heal.heal"], "OneTimeHeal": ["heal.heal"], "HealthHeal": ["heal.heal"],
-    "HealCount": ["heal.heal"], "HealMultipleAttack": ["heal.heal"],
+    "Heal": ["heal.heal"], 
+    "OneTimeHeal": ["heal.heal"], 
+    "HealthHeal": ["heal.heal"],
+    "HealCount": ["heal.heal"], 
+    "HealMultipleAttack": ["heal.heal"],
     "AddMultHeal": ["heal.change"],
+
     # combo
-    "ComboPlus": ["combo.up"], "AddPlusCombo": ["combo.up"],
+    "ComboPlus": ["combo.up"], 
+    "AddPlusCombo": ["combo.up"],
+
     # view
-    "ChangeView": ["vp.gain"], "ChangeBaseView": ["vp.gain"], "GetViewDamage": ["vp.gain"],
-    "ViewCount": ["vp.gain"], "ViewChangeHp": ["vp.gain"],
-    "NeedViewChange": ["vp.costdown"], "NeedViewValueChange": ["vp.costdown"],
-    "NotDamageSkillNeedViewChange": ["vp.costdown"], "NotDamageSkillNeedViewValueChange": ["vp.costdown"],
-    "FixView": ["vp.costdown"], "ChangeSkillBaseView": ["vp.costdown"],
-    "RateChangeView": ["vp.costdown"], "ChangeViewCoefficient": ["vp.costdown"],
+    "ChangeView": ["vp.gain"], 
+    "ChangeBaseView": ["vp.gain"], 
+    "MultipleBaseView": ["vp.gain"],
+    "GetViewDamage": ["vp.gain"],
+    "ViewCount": ["vp.gain"], 
+    "ViewChangeHp": ["vp.gain"],
+    "NeedViewChange": ["vp.costdown"], 
+    "NeedViewValueChange": ["vp.costdown"],
+    "NotDamageSkillNeedViewChange": ["vp.costdown"], 
+    "NotDamageSkillNeedViewValueChange": ["vp.costdown"],
+    "FixView": ["vp.costdown"], 
+    "ChangeSkillBaseView": ["vp.costdown"],
+    "RateChangeView": ["vp.costdown"], 
+    "ChangeViewCoefficient": ["vp.costdown"],
+
     # interference
     "Cure": ["interf.debuff_remove"],
-    "RemoveBuff": ["interf.buff_remove"], "RemoveSystemEffect": ["interf.buff_remove"],
-    "RegistDebuff": ["interf.debuff_resist"], "RegistDeBuffExecDeBuffed": ["interf.debuff_resist"],
-    "SkillTurnExtension": ["interf.extend"], "SkillTurnExtensionByStatus": ["interf.extend"],
-    "Silence": ["interf.silence"], "SkillSkip": ["interf.silence"],
+    "RemoveBuff": ["interf.buff_remove"], 
+    "RemoveSystemEffect": ["interf.buff_remove"],
+    "RegistDebuff": ["interf.debuff_resist"], 
+    "RegistDeBuffExecDeBuffed": ["interf.debuff_resist"],
+    "SkillTurnExtension": ["interf.extend"], 
+    "SkillTurnExtensionByStatus": ["interf.extend"],
+    "Silence": ["interf.silence"], 
+    "SkillSkip": ["interf.silence"],
+
     # defense / survival
-    "Barrier": ["defense.barrier"], "OtherParamBarrier": ["defense.barrier"],
+    "Barrier": ["defense.barrier"], 
+    "OtherParamBarrier": ["defense.barrier"],
     "BarrierExtension": ["defense.barrier", "interf.extend"],
     "AbsorbDamage": ["defense.absorb", "damage.down"],
-    "Cover": ["defense.cover"], "Provocation": ["defense.cover"],
-    "TargetMark": ["defense.cover"], "Aggregation": ["defense.cover"],
+    "Cover": ["defense.cover"], 
+    "Provocation": ["defense.cover"],
+    "TargetMark": ["defense.cover"], 
+    "Aggregation": ["defense.cover"],
     "Hide": ["defense.stealth"],
-    "Ressurection": ["defense.revive"], "RessurectOrHeal": ["defense.revive", "heal.heal"],
+    "Ressurection": ["defense.revive"], 
+    "RessurectOrHeal": ["defense.revive", "heal.heal"],
+
     # skill control
     "ChangeActiveSkill": ["skillctl.change"],
-    "DecideAutoSkill": ["skillctl.auto"], "ForceAuto": ["skillctl.auto"],
+    "DecideAutoSkill": ["skillctl.auto"], 
+    "ForceAuto": ["skillctl.auto"],
     "TargetReversal": ["skillctl.auto"],
     "DecideUniqueByStatusPassiveBattleSkillEffect": ["skillctl.auto"],
+
     # acquisition
-    "SalesBonusCheat": ["acq.coin"], "IncreaseLAH": ["acq.coin"],
-    "IncreaseExp": ["acq.exp"], "IncreaseRelation": ["acq.relation"],
+    "SalesBonusCheat": ["acq.coin"], 
+    "IncreaseLAH": ["acq.coin"],
+    "IncreaseExp": ["acq.exp"], 
+    "IncreaseRelation": ["acq.relation"],
+    
     # field
-    "RemoveFieldEffect": ["field.remove"], "RemoveGainViewStock": ["field.remove"],
+    "RemoveFieldEffect": ["field.remove"], 
+    "RemoveGainViewStock": ["field.remove"],
+    
     # stat buffs (max-HP up; survivability)
     "MultipleHp": ["defense.hp"],
 }
@@ -281,18 +340,18 @@ def resolve_status_name(sid, StatusTrans, SMA):
 # (predicate(class_name) -> bool, labels, deals_damage). CLASS_TO_LABELS and
 # DAMAGE_CLASSES (checked before this table in classify) still take precedence.
 SUBSTRING_RULES = [
-    (lambda c: "AddPlusCombo" in c, {"combo.up"}, False),
-    (lambda c: "TargetMark" in c, {"defense.cover"}, False),
-    (lambda c: "TurnExtension" in c, {"interf.extend"}, False),
-    (lambda c: "NeedView" in c, {"vp.costdown"}, False),
-    (lambda c: "Heal" in c and "Health" not in c, {"heal.heal"}, False),
-    (lambda c: "DamageLimit" in c, {"damage.down"}, False),
-    (lambda c: "Defence" in c, {"damage.down"}, False),
-    (lambda c: "MultipleAttack" in c, {"attack.multi"}, True),
-    (lambda c: "DotDamage" in c or "ElapseTurnDamage" in c, {"damage.dot"}, False),
-    (lambda c: "Damage" in c, set(), True),
-    (lambda c: c.endswith("Attack") or c.endswith("Atk"), set(), True),
-    (lambda c: "View" in c, {"vp.gain"}, False),
+    #(lambda c: "AddPlusCombo" in c, {"combo.up"}, False),
+    #(lambda c: "TargetMark" in c, {"defense.cover"}, False),
+    #(lambda c: "TurnExtension" in c, {"interf.extend"}, False),
+    #(lambda c: "NeedView" in c, {"vp.costdown"}, False),
+    #(lambda c: "Heal" in c and "Health" not in c, {"heal.heal"}, False),
+    #(lambda c: "DamageLimit" in c, {"damage.down"}, False),
+    #(lambda c: "Defence" in c, {"damage.down"}, False),
+    ##(lambda c: "MultipleAttack" in c, {"attack.multi"}, True),
+    #(lambda c: "DotDamage" in c or "ElapseTurnDamage" in c, {"damage.dot"}, False),
+    #(lambda c: "Damage" in c, set(), True),
+    #(lambda c: c.endswith("Attack") or c.endswith("Atk"), set(), True),
+    #(lambda c: "View" in c, {"vp.gain"}, False),
 ]
 
 
