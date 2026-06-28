@@ -708,9 +708,30 @@ def chara_name_and_page(rep, suffix, chara_pages):
     return rep.get("cardName", ""), "/charas/"
 
 
+def make_entity(rep, stock_entries, kind, suffix, skills, chara_pages, has_tree=False):
+    """Assemble the entity record shared by heroes and sidekicks. isMob is true
+    when the stock group includes a rarity-1 card. labels/statusIds aggregate the
+    given (base) skills; callers add the *Maxed variants afterwards."""
+    rarities = [e.get("rarity") for e in stock_entries if e.get("rarity") is not None]
+    name, page = chara_name_and_page(rep, suffix, chara_pages)
+    return {
+        "stockId": rep.get("stockId"),
+        "kind": kind,
+        "name": name,
+        "page": page,
+        "resourceName": rep.get("resourceName", ""),
+        "rarity": rep.get("rarity"),
+        "isMob": min(rarities) == 1 if rarities else False,
+        "characterId": rep.get("characterId"),
+        "hasSkillTree": has_tree,
+        "skills": skills,
+        "labels": aggregate(skills, "labels"),
+        "statusIds": aggregate(skills, "statusIds"),
+    }
+
+
 def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, SkillEffectTrans, StatusTrans, chara_pages):
     """stock_entries: list of CardMaster entries sharing a stockId."""
-    rarities = [e.get("rarity") for e in stock_entries if e.get("rarity") is not None]
     rep = next((e for e in stock_entries if e.get("rarity") == HERO_MAX_RARITY), None)
     if rep is None:
         rep = max(stock_entries, key=lambda e: e.get("rarity", 0))
@@ -745,22 +766,8 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, SkillEffec
                     for p in base_passives]
     attribute_passives(base_skills)
 
-    name, page = chara_name_and_page(rep, "h", chara_pages)
     has_tree = bool(rep.get("hasSkillUpgrade")) and (bool(change_map) or bool(bloom_actives))
-    entity = {
-        "stockId": rep.get("stockId"),
-        "kind": "hero",
-        "name": name,
-        "page": page,
-        "resourceName": rep.get("resourceName", ""),
-        "rarity": rep.get("rarity"),
-        "isMob": min(rarities) == 1 if rarities else False,
-        "characterId": rep.get("characterId"),
-        "hasSkillTree": has_tree,
-        "skills": base_skills,
-        "labels": aggregate(base_skills, "labels"),
-        "statusIds": aggregate(base_skills, "statusIds"),
-    }
+    entity = make_entity(rep, stock_entries, "hero", "h", base_skills, chara_pages, has_tree)
 
     if has_tree:
         # resolve the maxed active skillId per slot (explicit change map, else
@@ -799,7 +806,6 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, SkillEffec
 
 
 def build_sidekick(stock_entries, SM, SEM, SMA, SkillTrans, English, SkillEffectTrans, StatusTrans, chara_pages):
-    rarities = [e.get("rarity") for e in stock_entries if e.get("rarity") is not None]
     rep = next((e for e in stock_entries if e.get("levelZone") == SIDEKICK_MAX_LEVEL_ZONE), None)
     if rep is None:
         rep = max(stock_entries, key=lambda e: e.get("levelZone", 0))
@@ -823,21 +829,7 @@ def build_sidekick(stock_entries, SM, SEM, SMA, SkillTrans, English, SkillEffect
                                 English, SkillEffectTrans, StatusTrans, hidden=True))
     attribute_passives(skills)
 
-    name, page = chara_name_and_page(rep, "s", chara_pages)
-    return {
-        "stockId": rep.get("stockId"),
-        "kind": "sidekick",
-        "name": name,
-        "page": page,
-        "resourceName": rep.get("resourceName", ""),
-        "rarity": rep.get("rarity"),
-        "isMob": min(rarities) == 1 if rarities else False,
-        "characterId": rep.get("characterId"),
-        "hasSkillTree": False,
-        "skills": skills,
-        "labels": aggregate(skills, "labels"),
-        "statusIds": aggregate(skills, "statusIds"),
-    }
+    return make_entity(rep, stock_entries, "sidekick", "s", skills, chara_pages)
 
 
 def group_by_stock(master):
