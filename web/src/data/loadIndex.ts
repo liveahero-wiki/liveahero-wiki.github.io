@@ -49,8 +49,13 @@ export async function loadIndex(): Promise<SkillIndex> {
 
   let remoteVersion: string | null = null
   try {
-    const probe = await fetchJson(VERSION_URL) as { version: string }
-    remoteVersion = probe.version
+    const probe = await fetchJson(VERSION_URL) as { version?: unknown }
+    // Guard: the cast above is not a runtime check. Only accept a non-empty
+    // string so a missing/malformed version field doesn't silently defeat the
+    // cache by comparing undefined === cached-version-string.
+    if (typeof probe.version === 'string' && probe.version) {
+      remoteVersion = probe.version
+    }
   } catch {
     if (cache) return cache.index
     // No cache and probe failed — try the full index directly.
@@ -61,7 +66,15 @@ export async function loadIndex(): Promise<SkillIndex> {
   }
 
   // Download full index. Store the raw text so we cache exactly what we parsed.
-  const res = await fetch(INDEX_URL, { cache: 'no-cache' })
+  // Wrap in try/catch so a network error after cache expiry falls back to the
+  // stale cache rather than surfacing an uncaught promise rejection.
+  let res: Response
+  try {
+    res = await fetch(INDEX_URL, { cache: 'no-cache' })
+  } catch (err) {
+    if (cache) return cache.index
+    throw err
+  }
   if (!res.ok) {
     if (cache) return cache.index
     throw new Error(`fetch ${INDEX_URL} -> ${res.status}`)

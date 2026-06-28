@@ -13,14 +13,18 @@ import { memo, useEffect, useRef } from 'preact/compat'
 import type { ChangeSkill, StatusDesc } from '../types'
 import { statusIcon } from '../lib/urls'
 
+function escHtml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+}
+
 function processStatusHtml(html: string, statusDescs: StatusDesc[] | undefined): string {
   if (!html || !statusDescs?.length) return html
   const map = Object.fromEntries(statusDescs.map((s) => [s.name, s]))
   return html.replace(/<wiki-status>(.*?)<\/wiki-status>/g, (_, name: string) => {
     const n = name.trim()
     const st = map[n] as StatusDesc | undefined
-    const img = st?.icon ? `<img class="status-s" src="${statusIcon(st.icon)}">` : ''
-    return `<span class="status" data-status-name="${n}">${img} ${n}</span>`
+    const img = st?.icon ? `<img class="status-s" src="${escHtml(statusIcon(st.icon))}">` : ''
+    return `<span class="status" data-status-name="${escHtml(n)}">${img} ${escHtml(n)}</span>`
   })
 }
 
