@@ -56,6 +56,15 @@ class TestSkillTreeMaxed(unittest.TestCase):
         self.assertNotIn("最大180%まで上昇", desc)  # tier-0 base, superseded
         self.assertEqual(desc.count("敵全体に"), 1, desc)  # no duplicated damage line
 
+    def test_standalone_passive_not_dropped_by_filler_collision(self):
+        # 1115105 "ロイヤルブレイカー+": the unconditional (conditionEntityId==0)
+        # passive line "デバフが付与されていない時、自身のATK+20%" shares its effect
+        # signature ((NoneEffect,), statusId 0) with several tree-gated "</style>"
+        # filler effects. Those fillers carry no visible text, so they must NOT
+        # mark the signature as "has an enhanced tier" and drop the real passive.
+        desc = maxed_skill_description(1115105, self.SM, self.SEM, {}, {}, self.SUM)
+        self.assertIn("ATK+20%", desc, desc)
+
     def test_no_view_effect_keeps_base(self):
         # A skill with no ChangeSkillBaseView keeps its base useView untouched.
         base_skill = 1001101  # Akashi's pre-bloom active 1

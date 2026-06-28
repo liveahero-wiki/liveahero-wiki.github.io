@@ -21,6 +21,7 @@ LiquidJS-rendered text later.
 
 import json
 import os
+import re
 import hashlib
 from collections import Counter, OrderedDict, defaultdict
 
@@ -414,6 +415,15 @@ def skill_description(skill_id, SM, SkillTrans, English):
     return sanitizeSkillDescription(d or "")
 
 
+# Strips wiki/style tags and whitespace; used to tell a real text-bearing
+# condition line apart from a markup-only filler (e.g. a lone "</style>").
+_VISIBLE_TEXT_RE = re.compile(r"<[^>]+>|\s")
+
+
+def _has_visible_text(s):
+    return bool(_VISIBLE_TEXT_RE.sub("", s or ""))
+
+
 def maxed_skill_description(skill_id, SM, SEM, SkillTrans, English, SUM):
     """Full fully-bloomed description of a skill-tree (bloom) skill.
 
@@ -448,7 +458,11 @@ def maxed_skill_description(skill_id, SM, SEM, SkillTrans, English, SUM):
                     if (e.get("conditionDescription") or "")]
     # signatures that have at least one tree-gated tier -> their tier-0
     # (conditionEntityId == 0) line is just the un-enhanced base, so skip it.
-    gated_sigs = {sig(e) for e in cond_effects if e.get("conditionEntityId", 0) != 0}
+    # Markup-only filler effects (e.g. a lone "</style>") share the empty
+    # signature but are not real tiers, so they must not gate a standalone line.
+    gated_sigs = {sig(e) for e in cond_effects
+                  if e.get("conditionEntityId", 0) != 0
+                  and _has_visible_text(e.get("conditionDescription"))}
 
     base = (English.get(f"SKILL_DESCRIPTION_{sid}")
             or SkillTrans.get(sid, {}).get("description")
