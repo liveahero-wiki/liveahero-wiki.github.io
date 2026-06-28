@@ -10,7 +10,7 @@ import {
 } from '@tanstack/react-table'
 import { useVirtualizer } from '@tanstack/react-virtual'
 import { useMemo, useRef, useState } from 'preact/hooks'
-import type { Entity, Row, Status } from '../types'
+import type { Category, Entity, Row, Status } from '../types'
 import { charaLink, portrait, statusIcon } from '../lib/urls'
 import { SkillDescription } from './SkillDescription'
 
@@ -38,10 +38,19 @@ interface ResultTableProps {
   rows: Row[]
   statuses: Record<string, Status>
   onOpenKit: (entity: Entity) => void
+  showLabels: boolean
+  categories: Category[]
 }
 
-export function ResultTable({ rows, statuses, onOpenKit }: ResultTableProps) {
+export function ResultTable({ rows, statuses, onOpenKit, showLabels, categories }: ResultTableProps) {
   const [sorting, setSorting] = useState<SortingState>([])
+
+  const labelMap = useMemo(() => {
+    const m = new Map<string, string>()
+    for (const cat of categories)
+      for (const l of cat.labels) m.set(l.key, l.label)
+    return m
+  }, [categories])
 
   const columns = useMemo<ColumnDef<Row>[]>(
     () => [
@@ -117,6 +126,21 @@ export function ResultTable({ rows, statuses, onOpenKit }: ResultTableProps) {
           )
         },
       },
+      ...(showLabels
+        ? [
+            {
+              id: 'labels',
+              header: 'Labels',
+              accessorKey: 'labels',
+              size: 220,
+              cell: ({ row }: { row: { original: Row } }) =>
+                row.original.labels
+                  .map((k) => labelMap.get(k) ?? k)
+                  .sort()
+                  .join(', '),
+            } satisfies ColumnDef<Row>,
+          ]
+        : []),
       {
         id: 'useView',
         header: 'View Cost',
@@ -125,7 +149,7 @@ export function ResultTable({ rows, statuses, onOpenKit }: ResultTableProps) {
         cell: ({ row }) => row.original.useView.toLocaleString(),
       },
     ],
-    [statuses, onOpenKit],
+    [statuses, onOpenKit, showLabels, labelMap],
   )
 
   const table = useReactTable({

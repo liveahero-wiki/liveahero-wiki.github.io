@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useReducer, useState } from 'preact/hooks'
 import type { Entity, Query, SkillIndex } from './types'
-import { loadIndex } from './data/loadIndex'
+import { clearCache, loadIndex } from './data/loadIndex'
 import { filterRows } from './lib/filters'
 import { FilterPanel } from './components/FilterPanel'
 import { ResultTable } from './components/ResultTable'
@@ -75,12 +75,19 @@ export function App() {
   const [index, setIndex] = useState<SkillIndex | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [query, dispatch] = useReducer(reducer, initialQuery())
-  // Character whose full skill kit is shown in the modal (null = closed).
   const [kitEntity, setKitEntity] = useState<Entity | null>(null)
+  const [showLabels, setShowLabels] = useState(false)
 
   useEffect(() => {
     loadIndex().then(setIndex).catch((e: unknown) => setError(String(e)))
   }, [])
+
+  function forceReload() {
+    clearCache()
+    setIndex(null)
+    setError(null)
+    loadIndex().then(setIndex).catch((e: unknown) => setError(String(e)))
+  }
 
   const rows = useMemo(() => {
     if (!index) return []
@@ -95,14 +102,23 @@ export function App() {
       <header class="app-header">
         <h1>LAH Skill Search</h1>
         <span class="ver">index v{index.version}</span>
+        <button type="button" class="reload-btn" onClick={forceReload} title="Force redownload skill index">↻</button>
       </header>
       <FilterPanel
         index={index}
         query={query}
         dispatch={dispatch}
         resultCount={rows.length}
+        showLabels={showLabels}
+        onToggleLabels={() => setShowLabels((v) => !v)}
       />
-      <ResultTable rows={rows} statuses={index.statuses} onOpenKit={setKitEntity} />
+      <ResultTable
+        rows={rows}
+        statuses={index.statuses}
+        onOpenKit={setKitEntity}
+        showLabels={showLabels}
+        categories={index.categories}
+      />
       <SkillKitDialog
         entity={kitEntity}
         skillTree={query.skillTree}
