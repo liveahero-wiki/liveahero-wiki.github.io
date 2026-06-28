@@ -54,12 +54,6 @@ export const SkillDescription = memo(function SkillDescription({
   return (
     <span ref={ref}>
       {html && <span class="skill-desc" dangerouslySetInnerHTML={{ __html: processStatusHtml(html, statusDescs) }} />}
-      {changeSkills && changeSkills.map((cs, i) => (
-        <details key={i} class="change-skill">
-          <summary>{cs.name}</summary>
-          <span class="skill-desc" dangerouslySetInnerHTML={{ __html: processStatusHtml(cs.description, statusDescs) }} />
-        </details>
-      ))}
       {statusDescs?.length ? (
         <>
           <hr class="status-hr" />
@@ -72,6 +66,12 @@ export const SkillDescription = memo(function SkillDescription({
           ])}
         </>
       ) : null}
+      {changeSkills && changeSkills.map((cs, i) => (
+        <details key={i} class="change-skill">
+          <summary>{cs.name}</summary>
+          <span class="skill-desc" dangerouslySetInnerHTML={{ __html: processStatusHtml(cs.description, statusDescs) }} />
+        </details>
+      ))}
     </span>
   )
 })
