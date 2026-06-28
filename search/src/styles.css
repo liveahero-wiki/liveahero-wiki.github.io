@@ -282,8 +282,37 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.chara-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   text-decoration: none;
   color: var(--accent);
+  min-width: 0;
+}
+
+.chara-link > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kit-btn {
+  margin-left: auto;
+  flex: none;
+  font-size: 11px;
+  cursor: pointer;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 7px;
+  color: var(--accent);
+}
+
+.kit-btn:hover {
+  border-color: var(--accent);
 }
 
 .chara-icon {
@@ -372,4 +401,131 @@ body {
   margin-top: 2px;
   padding-left: 12px;
   border-left: 2px solid var(--border);
+}
+
+/* ---- Full skill-kit dialog ---- */
+.kit-dialog {
+  width: min(680px, 92vw);
+  max-height: 85vh;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  /* Entry animation (top-layer) — see modern dialog guidance. */
+  opacity: 0;
+  transform: scale(0.96);
+  transition-property: opacity, transform, display, overlay;
+  transition-duration: 0.18s;
+  transition-timing-function: ease-out;
+  transition-behavior: allow-discrete;
+  overflow-y: hidden;
+}
+
+.kit-dialog[open] {
+  opacity: 1;
+  transform: scale(1);
+
+  @starting-style {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+.kit-dialog::backdrop {
+  background: rgba(0, 0, 0, 0);
+  transition:
+    display 0.18s allow-discrete,
+    overlay 0.18s allow-discrete,
+    background-color 0.18s ease-out;
+}
+
+.kit-dialog[open]::backdrop {
+  background: rgba(0, 0, 0, 0.45);
+
+  @starting-style {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kit-dialog {
+    transform: none;
+    transition-duration: 0.05s;
+  }
+  .kit-dialog[open] {
+    transform: none;
+    @starting-style {
+      transform: none;
+    }
+  }
+}
+
+.kit-body {
+  display: flex;
+  flex-direction: column;
+  max-height: 85vh;
+}
+
+.kit-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: #fff;
+}
+
+.kit-head h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.kit-kind {
+  font-size: 11px;
+  color: #777;
+}
+
+.kit-close {
+  margin-left: auto;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #777;
+  padding: 0 4px;
+}
+
+.kit-close:hover {
+  color: #222;
+}
+
+.kit-skills {
+  overflow-y: auto;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.kit-skill {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.kit-skill.is-hidden {
+  opacity: 0.85;
+  border-left: 2px dashed var(--border);
+  padding-left: 8px;
+}
+
+.hidden-badge {
+  font-size: 10px;
+  background: #bbb;
+  color: #fff;
+  border-radius: 3px;
+  padding: 0 4px;
 }

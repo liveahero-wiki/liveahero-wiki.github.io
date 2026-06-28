@@ -18,9 +18,10 @@ const SLOT_LABEL = {
   passive: 'Passive',
   sidekick_active: 'SK Active',
   sidekick_passive: 'SK Passive',
+  sidekick_append: 'SK Append',
 }
 
-export function ResultTable({ rows, statuses }) {
+export function ResultTable({ rows, statuses, onOpenKit }) {
   const [sorting, setSorting] = useState([])
 
   const columns = useMemo(
@@ -33,19 +34,29 @@ export function ResultTable({ rows, statuses }) {
         cell: ({ row }) => {
           const e = row.original.entity
           return (
-            <a class="chara-cell" href={charaLink(e)} target="_blank" rel="noreferrer">
-              <img
-                class="chara-icon"
-                src={portrait(e)}
-                alt=""
-                loading="lazy"
-                onError={(ev) => {
-                  ev.target.style.visibility = 'hidden'
-                }}
-              />
-              <span>{e.name}</span>
-              {e.isMob && <span class="mob-tag">mob</span>}
-            </a>
+            <div class="chara-cell">
+              <a class="chara-link" href={charaLink(e)} target="_blank" rel="noreferrer">
+                <img
+                  class="chara-icon"
+                  src={portrait(e)}
+                  alt=""
+                  loading="lazy"
+                  onError={(ev) => {
+                    ev.target.style.visibility = 'hidden'
+                  }}
+                />
+                <span>{e.name}</span>
+                {e.isMob && <span class="mob-tag">mob</span>}
+              </a>
+              <button
+                type="button"
+                class="kit-btn"
+                title="Show full skill kit"
+                onClick={() => onOpenKit(e)}
+              >
+                Kit
+              </button>
+            </div>
           )
         },
       },
@@ -95,7 +106,7 @@ export function ResultTable({ rows, statuses }) {
         cell: ({ getValue }) => getValue().toLocaleString(),
       },
     ],
-    [statuses],
+    [statuses, onOpenKit],
   )
 
   const table = useReactTable({

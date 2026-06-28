@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useReducer, useState } from 'preact/hooks'
 import { loadIndex } from './data/loadIndex.js'
-import { filterEntities, flattenToRows } from './lib/filters.js'
+import { filterRows } from './lib/filters.js'
 import { FilterPanel } from './components/FilterPanel.jsx'
 import { ResultTable } from './components/ResultTable.jsx'
+import { SkillKitDialog } from './components/SkillKitDialog.jsx'
 
 function initialQuery() {
   return {
@@ -59,6 +60,8 @@ export function App() {
   const [index, setIndex] = useState(null)
   const [error, setError] = useState(null)
   const [query, dispatch] = useReducer(reducer, undefined, initialQuery)
+  // Character whose full skill kit is shown in the modal (null = closed).
+  const [kitEntity, setKitEntity] = useState(null)
 
   useEffect(() => {
     loadIndex().then(setIndex).catch((e) => setError(String(e)))
@@ -66,8 +69,7 @@ export function App() {
 
   const rows = useMemo(() => {
     if (!index) return []
-    const matched = filterEntities(index.entities, query, index.statuses)
-    return flattenToRows(matched, query.skillTree)
+    return filterRows(index.entities, query, index.statuses)
   }, [index, query])
 
   if (error) return <div class="loading">Failed to load index: {error}</div>
@@ -85,7 +87,13 @@ export function App() {
         dispatch={dispatch}
         resultCount={rows.length}
       />
-      <ResultTable rows={rows} statuses={index.statuses} />
+      <ResultTable rows={rows} statuses={index.statuses} onOpenKit={setKitEntity} />
+      <SkillKitDialog
+        entity={kitEntity}
+        skillTree={query.skillTree}
+        statuses={index.statuses}
+        onClose={() => setKitEntity(null)}
+      />
     </div>
   )
 }
