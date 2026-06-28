@@ -272,13 +272,43 @@ def resolve_status_name(sid, StatusTrans, SMA):
             or SMA.get(str(sid), {}).get("statusName", ""))
 
 
+# Ordered substring fallback for class-name variants not in CLASS_TO_LABELS.
+# FIRST MATCH WINS, so specific patterns must precede generic ones (e.g.
+# Heal-not-Health and DamageLimit before the bare "Damage" rule). Each entry is
+# (predicate(class_name) -> bool, labels, deals_damage). CLASS_TO_LABELS and
+# DAMAGE_CLASSES (checked before this table in classify) still take precedence.
+SUBSTRING_RULES = [
+    (lambda c: "AddPlusCombo" in c, {"combo.up"}, False),
+    (lambda c: "TargetMark" in c, {"defense.cover"}, False),
+    (lambda c: "TurnExtension" in c, {"interf.extend"}, False),
+    (lambda c: "NeedView" in c, {"vp.costdown"}, False),
+    (lambda c: "Heal" in c and "Health" not in c, {"heal.heal"}, False),
+    (lambda c: "DamageLimit" in c, {"damage.down"}, False),
+    (lambda c: "Defence" in c, {"damage.down"}, False),
+    (lambda c: "MultipleAttack" in c, {"attack.multi"}, True),
+    (lambda c: "DotDamage" in c or "ElapseTurnDamage" in c, {"damage.dot"}, False),
+    (lambda c: "Damage" in c, set(), True),
+    (lambda c: c.endswith("Attack") or c.endswith("Atk"), set(), True),
+    (lambda c: "View" in c, {"vp.gain"}, False),
+]
+
+
+def _is_ignored_class(cls):
+    """Knowingly ignored mechanics / placeholders / handled-elsewhere classes."""
+    return (cls in IGNORED_CLASSES or "NoneEffect" in cls or "Critical" in cls
+            or cls.startswith("Regist") or "ChangeSkillProb" in cls
+            or "ChangeSkillProve" in cls or "CopyBuff" in cls
+            or cls.endswith("Status"))
+
+
 def classify(cls, inner):
     """Map a single effect class to label keys.
 
-    Returns (labels:set, deals_damage:bool, recognized:bool). The explicit
-    CLASS_TO_LABELS map wins outright; otherwise ordered substring rules cover
-    the long tail of mechanical variants (e.g. every *MultipleAttack) so new
-    classes auto-map. Anything left unrecognized is reported for review.
+    Returns (labels:set, deals_damage:bool, recognized:bool). Precedence, in
+    order: the explicit CLASS_TO_LABELS map and DAMAGE_CLASSES set win outright;
+    then the value/name special cases; then the ordered SUBSTRING_RULES table
+    (first match wins) which covers the long tail of mechanical variants so new
+    classes auto-map; finally the ignored set. Anything left is reported.
     """
     if cls in CLASS_TO_LABELS:
         return set(CLASS_TO_LABELS[cls]), cls in DAMAGE_CLASSES, True
@@ -287,40 +317,12 @@ def classify(cls, inner):
     if cls in ("ChangeAgi", "OtherParamChangeAgi"):
         v = (inner.get("parameter") or {}).get("value", 0)
         return {"spd.up" if v > 0 else "spd.down" if v < 0 else "spd.other"}, False, True
-    if cls.startswith("Aim"):
+    if cls.startswith("Aim") or "DecideAutoSkill" in cls:
         return {"skillctl.auto"}, False, True
-    if "DecideAutoSkill" in cls:
-        return {"skillctl.auto"}, False, True
-    # ordered substring rules (specific before generic)
-    if "AddPlusCombo" in cls:
-        return {"combo.up"}, False, True
-    if "TargetMark" in cls:
-        return {"defense.cover"}, False, True
-    if "TurnExtension" in cls:
-        return {"interf.extend"}, False, True
-    if "NeedView" in cls:
-        return {"vp.costdown"}, False, True
-    if "Heal" in cls and "Health" not in cls:
-        return {"heal.heal"}, False, True
-    if "DamageLimit" in cls:
-        return {"damage.down"}, False, True
-    if "Defence" in cls:
-        return {"damage.down"}, False, True
-    if "MultipleAttack" in cls:
-        return {"attack.multi"}, True, True
-    if "DotDamage" in cls or "ElapseTurnDamage" in cls:
-        return {"damage.dot"}, False, True
-    if "Damage" in cls:
-        return set(), True, True
-    if cls.endswith("Attack") or cls.endswith("Atk"):
-        return set(), True, True
-    if "View" in cls:
-        return {"vp.gain"}, False, True
-    # knowingly ignored mechanics / placeholders / handled-elsewhere classes
-    if (cls in IGNORED_CLASSES or "NoneEffect" in cls or "Critical" in cls
-            or cls.startswith("Regist") or "ChangeSkillProb" in cls
-            or "ChangeSkillProve" in cls or "CopyBuff" in cls
-            or cls.endswith("Status")):
+    for predicate, labels, deals_damage in SUBSTRING_RULES:
+        if predicate(cls):
+            return set(labels), deals_damage, True
+    if _is_ignored_class(cls):
         return set(), False, True
     return set(), False, False
 
