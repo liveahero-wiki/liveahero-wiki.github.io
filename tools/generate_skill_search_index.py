@@ -199,6 +199,8 @@ DAMAGE_CLASSES = {
     "OtherParamAddAttack",
     "StatusTurnDamage",
     "HighestOtherParamAddAttack",
+    "AbsorbDamage", # Damage then heal the damage amount
+    "AddMultDamage",
 }
 
 # Direct effect-class -> label-key(s) mapping. Classes needing value-sign or
@@ -262,7 +264,7 @@ CLASS_TO_LABELS = {
     "OneTimeHeal": ["heal.heal"], 
     "HealthHeal": ["heal.heal"],
     "HealCount": ["heal.heal"], 
-    "HealMultipleAttack": ["heal.heal"],
+    "HealMultipleAttack": ["heal.change"],
     "HealExecAllCharacterActionEnd": ["heal.heal"],
     "HealExecDefenced": ["heal.heal"],
     "AddMultHeal": ["heal.change"],
@@ -306,7 +308,7 @@ CLASS_TO_LABELS = {
     "Barrier": ["defense.barrier"], 
     "OtherParamBarrier": ["defense.barrier"],
     "BarrierExtension": ["defense.barrier", "interf.extend"],
-    "AbsorbDamage": ["heal.heal", "attack.single"],
+    "AbsorbDamage": ["heal.heal"],
     "Cover": ["defense.cover"], 
     "Provocation": ["defense.cover"],
     "TargetMark": ["defense.cover"],
