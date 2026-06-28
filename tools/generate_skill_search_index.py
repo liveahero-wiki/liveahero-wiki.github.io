@@ -65,8 +65,8 @@ INDEX_SCHEMA_REV = "r9"
 # it hits: enemies -> single/all attack, allies -> "attack allies". 0 (self) and
 # 5 (event bonus unit) get no attack-range label. Multi-hit comes from the
 # *MultipleAttack classes, not from targetFlag.
-TARGET_FLAGS_ENEMY_ALL = {4, 16}                    # all enemies / all except target
-TARGET_FLAGS_ENEMY_SINGLE = {2, 7}                  # single / random enemy
+TARGET_FLAGS_ENEMY_ALL = {4, 16, 27}                # all enemies / all except target
+TARGET_FLAGS_ENEMY_SINGLE = {2, 7, 29}              # single / random enemy
 TARGET_FLAGS_ALLY = {1, 3, 6, 9, 11, 12, 13, 14}    # any ally-directed damage
 TARGET_FLAGS_NO_RANGE = {0, 5}                       # self / event bonus unit
 
@@ -158,6 +158,7 @@ CATEGORIES = [
         {"key": "defense.stealth", "label": "Stealth"},
         {"key": "defense.revive", "label": "Revive"},
         {"key": "defense.hp", "label": "Max HP up"},
+        {"key": "defense.dodge", "label": "Evasion / Dodge"},
     ]},
     {"key": "skillctl", "label": "Skill control", "labels": [
         {"key": "skillctl.change", "label": "Skill change"},
@@ -196,6 +197,8 @@ DAMAGE_CLASSES = {
     "NowViewDamage",
     "DamageMultipleAdjust",
     "OtherParamAddAttack",
+    "StatusTurnDamage",
+    "HighestOtherParamAddAttack",
 }
 
 # Direct effect-class -> label-key(s) mapping. Classes needing value-sign or
@@ -217,19 +220,38 @@ CLASS_TO_LABELS = {
     "AddMultDamage": ["damage.up"],
     "DamageMultipleAdjust": ["damage.up"],
     "DamageLimit": ["damage.down"],
+    "NowHPDependDamageLimit": ["damage.down"],
     # MultipleAttack / MultipleDefence flip on parameter.value -> VALUE_SIGN_RULES
 
     # MultipleAttack classes
     "ComboMultipleAttack": ["damage.up"],
-    "HealthMultipleAttack": ["damage.up"], 
+    "HealthMultipleAttack": ["damage.up"],
     "HighestMultipleAttack": ["damage.up"],
-    "SpdDifferenceMultipleAttack": ["damage.up"], 
+    "SpdDifferenceMultipleAttack": ["damage.up"],
     "StatusNumberMultipleAttack": ["damage.up"],
-    "ViewPowerMultipleAttack": ["damage.up"], 
+    "ViewPowerMultipleAttack": ["damage.up"],
     "BeforeSkillTriggerMultipleAttack": ["damage.up", "attack.induction"],
-    "HighestBarrierMultipleAttack": ["damage.up"], 
-    "HighestMultipleAttack": ["damage.up"],
+    "HighestBarrierMultipleAttack": ["damage.up"],
     "DamageCount": ["damage.up"],
+    # VP-scaled / param-scaled / condition-scaled ATK-up variants
+    "TimingFixHighestViewPowerMultipleAttack": ["damage.up"],
+    "HighestViewPowerMultipleAttack": ["damage.up"],
+    "StatusTurnDamage": ["damage.up"],
+    "OtherParamMultipleAttack": ["damage.up"],
+    "HighestOtherParamAddAttack": ["damage.up"],
+    "HighestHealthMultipleAttack": ["damage.up"],
+    "StatusTurnMultipleAttack": ["damage.up"],
+    "HighestComboMultipleAttack": ["damage.up"],
+    "HighestStatusNumberMultipleDefence": ["damage.up"],
+    "HighestMultipleDefence": ["damage.up"],
+    "PersistenceIconChangeMultipleAttack": ["damage.up"],
+    "ComboMultipleDefence": ["damage.up"],
+    # VP-scaled DEF-up / persistent DEF variants
+    "HighestViewPowerMultipleDefence": ["damage.down"],
+    "PersistenceIconChangeMultipleDefence": ["damage.down"],
+    # DoT spread / amplification
+    "SpreadDotDamage": ["damage.dot"],
+    "MultipleDotDamageDefence": ["damage.dot"],
 
     # spd
     "TurnBaseChangeAgi": ["spd.other"], 
@@ -241,7 +263,10 @@ CLASS_TO_LABELS = {
     "HealthHeal": ["heal.heal"],
     "HealCount": ["heal.heal"], 
     "HealMultipleAttack": ["heal.heal"],
+    "HealExecAllCharacterActionEnd": ["heal.heal"],
+    "HealExecDefenced": ["heal.heal"],
     "AddMultHeal": ["heal.change"],
+    "HealMultipleDefence": ["heal.change"],
 
     # combo
     "ComboPlus": ["combo.up"], 
@@ -249,12 +274,14 @@ CLASS_TO_LABELS = {
 
     # view
     "ChangeView": ["vp.gain"],
+    "SpdDeferenceChangeView": ["vp.gain"],
     "ChangeBaseView": ["vp.gain"],
     "GetViewDamage": ["vp.gain"],
     # MultipleBaseView flips on parameter.value -> VALUE_SIGN_RULES
     "ViewCount": ["vp.gain"], 
     "ViewChangeHp": ["vp.gain"],
-    "NeedViewChange": ["vp.costdown"], 
+    "NeedViewChange": ["vp.costdown"],
+    "HighestNeedViewChange": ["vp.costdown"],
     "NeedViewValueChange": ["vp.costdown"],
     "NotDamageSkillNeedViewChange": ["vp.costdown"], 
     "NotDamageSkillNeedViewValueChange": ["vp.costdown"],
@@ -269,8 +296,9 @@ CLASS_TO_LABELS = {
     "RemoveSystemEffect": ["interf.buff_remove"],
     "RegistDebuff": ["interf.debuff_resist"], 
     "RegistDeBuffExecDeBuffed": ["interf.debuff_resist"],
-    "SkillTurnExtension": ["interf.extend"], 
+    "SkillTurnExtension": ["interf.extend"],
     "SkillTurnExtensionByStatus": ["interf.extend"],
+    "DamageDependentParamDifferenceTurnExtension": ["interf.extend"],
     "Silence": ["interf.silence"], 
     "SkillSkip": ["interf.silence"],
 
@@ -281,7 +309,8 @@ CLASS_TO_LABELS = {
     "AbsorbDamage": ["heal.heal", "attack.single"],
     "Cover": ["defense.cover"], 
     "Provocation": ["defense.cover"],
-    "TargetMark": ["defense.cover"], 
+    "TargetMark": ["defense.cover"],
+    "LowestAgilityTargetMark": ["defense.cover"],
     "Aggregation": ["defense.cover"],
     "Hide": ["defense.stealth"],
     "Ressurection": ["defense.revive"], 
@@ -306,6 +335,8 @@ CLASS_TO_LABELS = {
     
     # stat buffs (max-HP up; survivability)
     "MultipleHp": ["defense.hp"],
+    # evasion / dodge
+    "SpdRateEmitDefence": ["defense.dodge"],
 }
 
 # Classes we knowingly do not surface as labels (pure mechanics / display).
@@ -313,6 +344,8 @@ IGNORED_CLASSES = {
     "ChangeHp", "Critical", "IgnoreElement", "Burst", "Summon", "ItemEffectMark",
     "ParticleStatus", "PassiveBattleSkillEffect", "ForceExecDotDamage",
     "ChangeHpExecBeforeSkill", "Delete Turn",
+    "NowViewTurn",       # Victom's internal VP-threshold turn counter (system status)
+    "UseInvokerBaseAtk", # internal damage-calc flag for Akashi's Armament
 }
 
 unmapped = Counter()
