@@ -10,6 +10,10 @@
 
 const categoryOf = (labelKey) => labelKey.split('.')[0]
 
+// Slots whose view cost is always 0 — excluded from view-cost matching so the
+// range filter is meaningful (hero/sidekick passives + the basic hero skill 1).
+const COST_EXEMPT_SLOTS = new Set(['passive', 'sidekick_passive', 'active1'])
+
 /** Effective skills/labels/statuses for an entity given the skill-tree toggle. */
 export function effectiveOf(entity, skillTree) {
   const maxed = skillTree && entity.kind === 'hero' && entity.skillsMaxed
@@ -99,10 +103,10 @@ export function filterEntities(entities, query, statuses) {
       if (!hit) return false
     }
 
-    // View cost: some effective skill within [min, max].
+    // View cost: some cost-bearing effective skill within [min, max].
     if (hasMin || hasMax) {
       const inRange = eff.skills.some(
-        (s) => s.useView >= min && s.useView <= max,
+        (s) => !COST_EXEMPT_SLOTS.has(s.slot) && s.useView >= min && s.useView <= max,
       )
       if (!inRange) return false
     }
