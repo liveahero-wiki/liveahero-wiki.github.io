@@ -2,7 +2,7 @@ import json
 import os
 import unittest
 
-from generate_skill_search_index import maxed_skill_description, maxed_use_view
+from generate_skill_search_index import build_status_descs, maxed_skill_description, maxed_use_view
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "_data")
 
@@ -23,6 +23,7 @@ class TestSkillTreeMaxed(unittest.TestCase):
         cls.SM = load("SkillMaster.json")
         cls.SEM = load("SkillEffectMaster.json")
         cls.SUM = load("SkillUpgradeMaster.json")
+        cls.SMA = load("StatusMaster.json")
 
     def test_akashi_active1_terminal_tier_description(self):
         # 1001105 "燃ゆる白球+": base hit + terminal-tier burn + standalone passive,
@@ -62,6 +63,23 @@ class TestSkillTreeMaxed(unittest.TestCase):
             maxed_use_view(base_skill, self.SM, self.SEM),
             self.SM["1001101"].get("useView", 0),
         )
+
+    def test_gammei_hero_active1_status_descs_maxed(self):
+        # Skill 1006105 "公務執行" (Gammei bloom active 1) has 6 tree-gated VP Cost
+        # effects (+100, +250, +400, +550, +750, +1000) with distinct override names,
+        # plus DEF Down (1 unconditional base + tree improvement tiers sharing the
+        # same name). After maxing, only the terminal VP Cost (+1000) and the base
+        # DEF Down should appear; intermediate VP Cost stages must be excluded.
+        descs = build_status_descs(
+            1006105, self.SM, self.SEM, self.SMA, {}, {}, self.SUM)
+        names = [d["name"] for d in descs]
+        self.assertIn("DEFダウン", names)
+        self.assertIn("View消費量+1000", names)
+        for intermediate in ("View消費量+100", "View消費量+250",
+                             "View消費量+400", "View消費量+550", "View消費量+750"):
+            self.assertNotIn(
+                intermediate, names,
+                f"intermediate VP Cost {intermediate!r} must not appear after maxing")
 
 
 if __name__ == "__main__":

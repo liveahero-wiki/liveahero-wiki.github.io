@@ -494,16 +494,32 @@ def change_skills(change_ids, skill_id, SM, SkillTrans, English):
     return out
 
 
-def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans):
+def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SUM=None):
     """[{name, desc}] per distinct named status granted by this skill's direct effects.
 
     Mirrors status_description_v2 priority:
       SkillEffect.json override > raw skillEffectJson override
         > Status.json (skip if contains {{ Liquid template) > StatusMaster raw.
-    Deduped by resolved name. Effects with statusId==0 are skipped."""
+    Deduped by resolved name. Effects with statusId==0 are skipped.
+
+    When SUM (SkillUpgradeMaster) is provided, tree-gated effects
+    (conditionEntityId != 0) are only included if their node is terminal
+    (nextEntryIds is absent/null), mirroring maxed_skill_description. This
+    prevents intermediate tree-stage status entries (e.g. View消費量+100 … +750
+    for a progression that ends at +1000) from appearing alongside the final one."""
+    def is_terminal(eid):
+        if not eid:
+            return True
+        if SUM is None:
+            return True
+        node = SUM.get(str(eid))
+        return node is not None and not node.get("nextEntryIds")
+
     skill = SM.get(str(skill_id), {})
     results, seen_names = [], set()
     for eff in skill.get("effects", []) or []:
+        if not is_terminal(eff.get("conditionEntityId", 0)):
+            continue
         seid = str(eff.get("skillEffectId", ""))
         sej = SEM.get(seid, {}).get("skillEffectJson", {})
         status_id = sej.get("statusId")
@@ -537,7 +553,7 @@ def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans):
     return results
 
 
-def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English, SkillEffectTrans, StatusTrans, change_ids=(), hidden=False):
+def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English, SkillEffectTrans, StatusTrans, change_ids=(), hidden=False, SUM=None):
     labels, status_ids = label_skill(skill_id, SM, SEM, SMA, set())
     skill = SM.get(str(skill_id), {})
     return {
@@ -558,7 +574,7 @@ def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English, SkillEffectTran
         "matchLabels": sorted(labels),
         "matchStatusIds": sorted(status_ids),
         "changeSkills": change_skills(change_ids, skill_id, SM, SkillTrans, English),
-        "statusDescs": build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans),
+        "statusDescs": build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SUM),
     }
 
 
@@ -678,7 +694,7 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, SkillEffec
                 mid = bid
             so = skill_obj(f"active{i+1}", mid, SM, SEM, SMA, SkillTrans, English,
                            SkillEffectTrans, StatusTrans,
-                           change_ids=change_by_slot.get(i + 1, ()))
+                           change_ids=change_by_slot.get(i + 1, ()), SUM=SUM)
             so["description"] = maxed_skill_description(mid, SM, SEM, SkillTrans, English, SUM)
             so["useView"] = maxed_use_view(mid, SM, SEM)
             maxed.append(so)
@@ -686,7 +702,7 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, SkillEffec
         for p in passives:
             pid = p["skillId"]
             so = skill_obj("passive", pid, SM, SEM, SMA, SkillTrans, English,
-                           SkillEffectTrans, StatusTrans, hidden=True)
+                           SkillEffectTrans, StatusTrans, hidden=True, SUM=SUM)
             so["description"] = maxed_skill_description(pid, SM, SEM, SkillTrans, English, SUM)
             so["useView"] = maxed_use_view(pid, SM, SEM)
             maxed.append(so)
