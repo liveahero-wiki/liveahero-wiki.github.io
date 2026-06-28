@@ -622,9 +622,18 @@ def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SU
     return results
 
 
-def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English, SkillEffectTrans, StatusTrans, change_ids=(), hidden=False, SUM=None):
+def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English, SkillEffectTrans, StatusTrans, change_ids=(), hidden=False, SUM=None, maxed=False):
     labels, status_ids = label_skill(skill_id, SM, SEM, SMA, set())
     skill = SM.get(str(skill_id), {})
+    # maxed (skill-tree fully bloomed) rows assemble their description from the
+    # terminal-tier condition lines and sum the View-cost deltas; base rows use
+    # the top-level description and raw useView.
+    if maxed:
+        description = maxed_skill_description(skill_id, SM, SEM, SkillTrans, English, SUM)
+        use_view = maxed_use_view(skill_id, SM, SEM)
+    else:
+        description = skill_description(skill_id, SM, SkillTrans, English)
+        use_view = skill.get("useView", 0)
     return {
         "slot": slot,
         "skillId": skill_id,
@@ -634,8 +643,8 @@ def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English, SkillEffectTran
         # full-kit dialog) but the UI hides their rows and attributes their labels.
         "hidden": hidden,
         "name": skill_name(skill_id, SM, SkillTrans, English),
-        "description": skill_description(skill_id, SM, SkillTrans, English),
-        "useView": skill.get("useView", 0),
+        "description": description,
+        "useView": use_view,
         "labels": sorted(labels),
         "statusIds": sorted(status_ids),
         # match* default to own labels/statuses; attribute_passives() folds hidden
@@ -770,20 +779,15 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, SkillEffec
 
         maxed = []
         for i, mid in enumerate(maxed_active_ids):
-            so = skill_obj(f"active{i+1}", mid, SM, SEM, SMA, SkillTrans, English,
-                           SkillEffectTrans, StatusTrans,
-                           change_ids=maxed_change_by_slot.get(i + 1, ()), SUM=SUM)
-            so["description"] = maxed_skill_description(mid, SM, SEM, SkillTrans, English, SUM)
-            so["useView"] = maxed_use_view(mid, SM, SEM)
-            maxed.append(so)
+            maxed.append(skill_obj(f"active{i+1}", mid, SM, SEM, SMA, SkillTrans, English,
+                                   SkillEffectTrans, StatusTrans,
+                                   change_ids=maxed_change_by_slot.get(i + 1, ()),
+                                   SUM=SUM, maxed=True))
         # all passives (skill-tree unlocks included)
         for p in passives:
-            pid = p["skillId"]
-            so = skill_obj("passive", pid, SM, SEM, SMA, SkillTrans, English,
-                           SkillEffectTrans, StatusTrans, hidden=True, SUM=SUM)
-            so["description"] = maxed_skill_description(pid, SM, SEM, SkillTrans, English, SUM)
-            so["useView"] = maxed_use_view(pid, SM, SEM)
-            maxed.append(so)
+            maxed.append(skill_obj("passive", p["skillId"], SM, SEM, SMA, SkillTrans, English,
+                                   SkillEffectTrans, StatusTrans, hidden=True,
+                                   SUM=SUM, maxed=True))
         attribute_passives(maxed)
         entity["skillsMaxed"] = maxed
         entity["labelsMaxed"] = aggregate(maxed, "labels")
