@@ -81,6 +81,14 @@ exclude:
   - CLAUDE.md
   - docs/
   - deploy/
+  # Skill-search frontend (Vite/Preact) build tooling — source under web/,
+  # only the built assets/skill-search.* are served.
+  - web/
+  - package.json
+  - pnpm-lock.yaml
+  - pnpm-workspace.yaml
+  - vite.config.ts
+  - tsconfig.json
 
 compress_html:
   ignore:
