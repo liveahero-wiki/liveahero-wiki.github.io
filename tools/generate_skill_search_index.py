@@ -734,18 +734,27 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, SkillEffec
     }
 
     if has_tree:
-        maxed = []
+        # resolve the maxed active skillId per slot (explicit change map, else
+        # positional bloom pairing, else unchanged base)
+        maxed_active_ids = []
         for i, a in enumerate(base_actives):
             bid = a["skillId"]
-            # prefer explicit change map, fall back to positional bloom pairing
             mid = change_map.get(bid)
             if mid is None and i < len(bloom_actives):
                 mid = bloom_actives[i]["skillId"]
             if mid is None:
                 mid = bid
+            maxed_active_ids.append(mid)
+        # recompute the in-combat transforms over the maxed set: bloom skills can
+        # introduce ChangeActiveSkill targets the base set did not have.
+        maxed_change_by_slot = collect_change_skills(
+            maxed_active_ids + [p["skillId"] for p in passives], SM, SEM)
+
+        maxed = []
+        for i, mid in enumerate(maxed_active_ids):
             so = skill_obj(f"active{i+1}", mid, SM, SEM, SMA, SkillTrans, English,
                            SkillEffectTrans, StatusTrans,
-                           change_ids=change_by_slot.get(i + 1, ()), SUM=SUM)
+                           change_ids=maxed_change_by_slot.get(i + 1, ()), SUM=SUM)
             so["description"] = maxed_skill_description(mid, SM, SEM, SkillTrans, English, SUM)
             so["useView"] = maxed_use_view(mid, SM, SEM)
             maxed.append(so)

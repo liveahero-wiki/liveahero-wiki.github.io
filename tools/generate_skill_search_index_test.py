@@ -3,7 +3,8 @@ import os
 import unittest
 
 from generate_skill_search_index import (
-    build_status_descs, maxed_skill_description, maxed_use_view, label_skill)
+    build_status_descs, maxed_skill_description, maxed_use_view, label_skill,
+    build_hero, group_by_stock)
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "_data")
 
@@ -90,6 +91,33 @@ class TestSkillTreeMaxed(unittest.TestCase):
             self.assertNotIn(
                 intermediate, names,
                 f"intermediate VP Cost {intermediate!r} must not appear after maxing")
+
+
+class TestMaxedChangeSkills(unittest.TestCase):
+    """change_by_slot must be recomputed over the maxed skill set: bloom skills
+    can introduce ChangeActiveSkill transforms the base set lacks. Pinned to
+    Borealis (stockId 10821), whose maxed active1 gains a transform target."""
+
+    def test_borealis_maxed_active1_has_change_skill(self):
+        def load(name, sub=None):
+            p = os.path.join(DATA, sub, name) if sub else os.path.join(DATA, name)
+            with open(p, "r", encoding="utf-8") as f:
+                return json.load(f)
+        SM = load("SkillMaster.json"); SEM = load("SkillEffectMaster.json")
+        SMA = load("StatusMaster.json"); SUM = load("SkillUpgradeMaster.json")
+        SkillTrans = load("Skill.json", "translation")
+        SkillEffectTrans = load("SkillEffect.json", "translation")
+        StatusTrans = load("Status.json", "translation")
+        groups = group_by_stock(load("CardMaster.json"))
+        entity = build_hero(groups[10821], SM, SEM, SMA, SUM, SkillTrans, {},
+                            SkillEffectTrans, StatusTrans, {})
+        active1 = next(s for s in entity["skillsMaxed"] if s["slot"] == "active1")
+        names = [c["name"] for c in active1["changeSkills"]]
+        # base-derived change_by_slot would leave this empty; the maxed-set
+        # recompute surfaces the bloom-introduced transform (テルニオ・カントゥーム,
+        # translated to "Ternio Cantum" via Skill.json).
+        self.assertTrue(names, "maxed active1 should carry a change-skill target")
+        self.assertIn("Ternio Cantum", names)
 
 
 class TestTargetFlagLabels(unittest.TestCase):
