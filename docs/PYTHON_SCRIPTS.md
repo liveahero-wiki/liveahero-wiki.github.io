@@ -193,7 +193,15 @@ graph TD
 
 ---
 
-### 14. `preprocess.py` (root directory)
+### 14. `tools/audit_skill_effects.py`
+*   **Purpose**: Audits the skill-effect `class`es used by the search index, **scoped to the same skills reachable from `CardMaster`/`SidekickMaster`** that `generate_skill_search_index.py` indexes (it imports that module's `load_all`, `build_entities`, and `classify`, so its frequency counts match the generator's `UNMAPPED CLASSES` report). Used to drive labelling improvements: for each class it gathers the real Japanese descriptions, parameter shapes, and the labels `classify()` currently produces, so the right taxonomy mapping can be deduced from evidence rather than the (misleading) English class name. Subcommands: `classes` (every reachable class by descending frequency, with a recognized/UNMAPPED flag), `class <Name>…` (occurrences of the given class(es) collapsed into distinct signatures with `value` ranges, persistence counts, statuses, and example characters), and `report` (browsable HTML, one collapsed `<details>` per class, sorted for clean diffs). Add `--json` to `classes`/`class` for machine-readable output. Read-only apart from the optional HTML report. See the `audit-effect-classes` skill for the full audit workflow.
+*   **Input Files**: same masters as `generate_skill_search_index.py` (loaded via its `load_all`), plus `_charas/*.md` for character-page links.
+*   **Output Files**:
+    *   `api/skill-effects-audit.html` (only when running `report`; override with `--out`)
+
+---
+
+### 15. `preprocess.py` (root directory)
 *   **Purpose**: Preprocesses and optimizes game assets. Currently configured to optimize and compress raw PNG banner/survey assets under `Sprite` and survey directories, converting them to compressed, web-ready progressive JPGs using Pillow (`PIL`).
 *   **Input Files**:
     *   `Sprite/banner_*.png`
