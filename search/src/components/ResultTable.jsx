@@ -21,6 +21,16 @@ const SLOT_LABEL = {
   sidekick_append: 'SK Append',
 }
 
+export function dedupByName(ids, statuses) {
+  const seen = new Set()
+  return ids.filter(id => {
+    const name = statuses[id]?.name
+    if (!name || seen.has(name)) return false
+    seen.add(name)
+    return true
+  })
+}
+
 export function ResultTable({ rows, statuses, onOpenKit }) {
   const [sorting, setSorting] = useState([])
 
@@ -79,7 +89,7 @@ export function ResultTable({ rows, statuses, onOpenKit }) {
               <div class="skill-head">
                 <span class="slot-badge">{SLOT_LABEL[r.slot] ?? r.slot}</span>
                 <span class="skill-name">{r.skillName}</span>
-                {r.statusIds.map((id) => {
+                {dedupByName(r.statusIds, statuses).map((id) => {
                   const s = statuses[id]
                   return s ? (
                     <img
@@ -93,7 +103,7 @@ export function ResultTable({ rows, statuses, onOpenKit }) {
                   ) : null
                 })}
               </div>
-              <SkillDescription html={r.description} changeSkills={r.changeSkills} />
+              <SkillDescription html={r.description} changeSkills={r.changeSkills} statusDescs={r.statusDescs} />
             </div>
           )
         },

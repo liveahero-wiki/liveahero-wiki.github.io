@@ -43,7 +43,11 @@ CHARAS = "_charas"
 # r5: active skills now carry a changeSkills field listing the in-combat
 # ChangeActiveSkill transform targets (name + description), mirroring the wiki's
 # _includes/skill-description.html <details> blocks.
-INDEX_SCHEMA_REV = "r6"
+# r6: hidden passives (hero passive + sidekick equipmentAppendSkills) are indexed
+# but hidden; their labels/statuses are attributed to visible <wiki-passive> carriers.
+# r7: skills now carry statusDescs [{name, desc}] for every named status effect,
+# mirroring status_description_v2 so the search UI can attach tippy tooltips.
+INDEX_SCHEMA_REV = "r7"
 
 
 def load(name, sub=None):
@@ -213,6 +217,7 @@ IGNORED_CLASSES = {
 }
 
 unmapped = Counter()
+liquid_template_statuses = Counter()  # status IDs whose base desc contains Liquid {{ }}
 
 
 def status_type(status_master_entry):
@@ -488,7 +493,46 @@ def change_skills(change_ids, skill_id, SM, SkillTrans, English):
     return out
 
 
-def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English, change_ids=(), hidden=False):
+def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans):
+    """[{name, desc}] per distinct named status granted by this skill's direct effects.
+
+    Mirrors status_description_v2 priority:
+      SkillEffect.json override > raw skillEffectJson override
+        > Status.json (skip if contains {{ Liquid template) > StatusMaster raw.
+    Deduped by resolved name. Effects with statusId==0 are skipped."""
+    skill = SM.get(str(skill_id), {})
+    results, seen_names = [], set()
+    for eff in skill.get("effects", []) or []:
+        seid = str(eff.get("skillEffectId", ""))
+        sej = SEM.get(seid, {}).get("skillEffectJson", {})
+        status_id = sej.get("statusId")
+        if not status_id:
+            continue
+        se_trans = SkillEffectTrans.get(seid, {})
+        sid = str(status_id)
+
+        name = (se_trans.get("overrideStatusName")
+                or sej.get("overrideStatusName")
+                or StatusTrans.get(sid, {}).get("name")
+                or SMA.get(sid, {}).get("statusName", ""))
+        if not name or name in seen_names:
+            continue
+        seen_names.add(name)
+
+        desc = (se_trans.get("overrideStatusDescription")
+                or sej.get("overrideStatusDescription", ""))
+        if not desc:
+            base = StatusTrans.get(sid, {}).get("description", "")
+            if "{{" in base:
+                liquid_template_statuses[sid] += 1
+                base = ""
+            desc = base or SMA.get(sid, {}).get("description", "")
+
+        results.append({"name": name, "desc": desc or ""})
+    return results
+
+
+def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English, SkillEffectTrans, StatusTrans, change_ids=(), hidden=False):
     labels, status_ids = label_skill(skill_id, SM, SEM, SMA, set())
     skill = SM.get(str(skill_id), {})
     return {
@@ -509,6 +553,7 @@ def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English, change_ids=(), 
         "matchLabels": sorted(labels),
         "matchStatusIds": sorted(status_ids),
         "changeSkills": change_skills(change_ids, skill_id, SM, SkillTrans, English),
+        "statusDescs": build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans),
     }
 
 
@@ -562,7 +607,7 @@ def chara_name_and_page(rep, suffix, chara_pages):
     return rep.get("cardName", ""), "/charas/"
 
 
-def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, chara_pages):
+def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, SkillEffectTrans, StatusTrans, chara_pages):
     """stock_entries: list of CardMaster entries sharing a stockId."""
     rarities = [e.get("rarity") for e in stock_entries if e.get("rarity") is not None]
     rep = next((e for e in stock_entries if e.get("rarity") == 6), None)
@@ -591,10 +636,11 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, chara_page
         SM, SEM)
 
     base_skills = [skill_obj(f"active{i+1}", a["skillId"], SM, SEM, SMA, SkillTrans, English,
+                             SkillEffectTrans, StatusTrans,
                              change_ids=change_by_slot.get(i + 1, ()))
                    for i, a in enumerate(base_actives)]
     base_skills += [skill_obj("passive", p["skillId"], SM, SEM, SMA, SkillTrans, English,
-                              hidden=True)
+                              SkillEffectTrans, StatusTrans, hidden=True)
                     for p in base_passives]
     attribute_passives(base_skills)
 
@@ -626,6 +672,7 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, chara_page
             if mid is None:
                 mid = bid
             so = skill_obj(f"active{i+1}", mid, SM, SEM, SMA, SkillTrans, English,
+                           SkillEffectTrans, StatusTrans,
                            change_ids=change_by_slot.get(i + 1, ()))
             so["description"] = maxed_skill_description(mid, SM, SEM, SkillTrans, English, SUM)
             so["useView"] = maxed_use_view(mid, SM, SEM)
@@ -633,7 +680,8 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, chara_page
         # all passives (skill-tree unlocks included)
         for p in passives:
             pid = p["skillId"]
-            so = skill_obj("passive", pid, SM, SEM, SMA, SkillTrans, English, hidden=True)
+            so = skill_obj("passive", pid, SM, SEM, SMA, SkillTrans, English,
+                           SkillEffectTrans, StatusTrans, hidden=True)
             so["description"] = maxed_skill_description(pid, SM, SEM, SkillTrans, English, SUM)
             so["useView"] = maxed_use_view(pid, SM, SEM)
             maxed.append(so)
@@ -645,7 +693,7 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, chara_page
     return entity
 
 
-def build_sidekick(stock_entries, SM, SEM, SMA, SkillTrans, English, chara_pages):
+def build_sidekick(stock_entries, SM, SEM, SMA, SkillTrans, English, SkillEffectTrans, StatusTrans, chara_pages):
     rarities = [e.get("rarity") for e in stock_entries if e.get("rarity") is not None]
     rep = next((e for e in stock_entries if e.get("levelZone") == 6), None)
     if rep is None:
@@ -653,19 +701,21 @@ def build_sidekick(stock_entries, SM, SEM, SMA, SkillTrans, English, chara_pages
 
     skills = []
     for sid in rep.get("skillIds") or []:
-        skills.append(skill_obj("sidekick_active", sid, SM, SEM, SMA, SkillTrans, English))
+        skills.append(skill_obj("sidekick_active", sid, SM, SEM, SMA, SkillTrans, English,
+                                SkillEffectTrans, StatusTrans))
     # Sidekick passive: equipmentSkills holds ascending tiers; the last entry of
     # the highest-level card is the maxed passive (mirrors generate_status_pages).
     equip = rep.get("equipmentSkills") or []
     if equip:
-        skills.append(skill_obj("sidekick_passive", equip[-1], SM, SEM, SMA, SkillTrans, English))
+        skills.append(skill_obj("sidekick_passive", equip[-1], SM, SEM, SMA, SkillTrans, English,
+                                SkillEffectTrans, StatusTrans))
     # Sidekick append-passive: a hidden passive (8xxxxxx id family) granted on top of
     # the equipment skill, never shown as its own row in-game. equipmentAppendSkills
     # holds ascending tiers like equipmentSkills; the last entry is the maxed append.
     append = rep.get("equipmentAppendSkills") or []
     if append:
         skills.append(skill_obj("sidekick_append", append[-1], SM, SEM, SMA, SkillTrans,
-                                English, hidden=True))
+                                English, SkillEffectTrans, StatusTrans, hidden=True))
     attribute_passives(skills)
 
     name, page = chara_name_and_page(rep, "s", chara_pages)
@@ -737,6 +787,7 @@ def main():
     SMA = load("StatusMaster.json")
     SUM = load("SkillUpgradeMaster.json")
     StatusTrans = load("Status.json", sub="translation")
+    SkillEffectTrans = load("SkillEffect.json", sub="translation")
     SkillTrans = load("Skill.json", sub="translation")
     English = load_english()
     chara_pages = build_chara_pages(CHARAS)
@@ -744,10 +795,12 @@ def main():
     entities = []
     hero_groups = group_by_stock(CardMaster)
     for stock_id, group in hero_groups.items():
-        entities.append(build_hero(group, SM, SEM, SMA, SUM, SkillTrans, English, chara_pages))
+        entities.append(build_hero(group, SM, SEM, SMA, SUM, SkillTrans, English,
+                                   SkillEffectTrans, StatusTrans, chara_pages))
     side_groups = group_by_stock(SidekickMaster)
     for stock_id, group in side_groups.items():
-        entities.append(build_sidekick(group, SM, SEM, SMA, SkillTrans, English, chara_pages))
+        entities.append(build_sidekick(group, SM, SEM, SMA, SkillTrans, English,
+                                       SkillEffectTrans, StatusTrans, chara_pages))
 
     # Many StatusMaster entries are internal system/particle placeholders with
     # empty names. They are useless for the "Has status" autocomplete and only
@@ -803,6 +856,11 @@ def main():
             print(f"  {cls}: {n}")
     else:
         print("\nno unmapped effect classes")
+    if liquid_template_statuses:
+        print(f"\nSTATUS IDs WITH LIQUID TEMPLATES (desc skipped, {len(liquid_template_statuses)} status IDs):")
+        for sid, n in liquid_template_statuses.most_common():
+            sname = StatusTrans.get(sid, {}).get("name") or SMA.get(sid, {}).get("statusName", "?")
+            print(f"  {sid} ({sname}): {n} effect(s)")
 
 
 if __name__ == "__main__":
