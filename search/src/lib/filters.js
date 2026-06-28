@@ -124,6 +124,7 @@ export function filterRows(entities, query, statuses) {
         labels: s.labels,
         statusIds: s.statusIds,
         changeSkills: s.changeSkills,
+        statusDescs: s.statusDescs,
       })
     }
   }

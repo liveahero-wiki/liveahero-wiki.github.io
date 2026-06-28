@@ -8,6 +8,7 @@ import { useEffect, useRef } from 'preact/hooks'
 import { effectiveSkills } from '../lib/filters.js'
 import { statusIcon, portrait } from '../lib/urls.js'
 import { SkillDescription } from './SkillDescription.jsx'
+import { dedupByName } from './ResultTable.jsx'
 
 const SLOT_LABEL = {
   active1: 'Active 1',
@@ -79,7 +80,7 @@ export function SkillKitDialog({ entity, skillTree, statuses, onClose }) {
                   <span class="slot-badge">{SLOT_LABEL[s.slot] ?? s.slot}</span>
                   <span class="skill-name">{s.name}</span>
                   {s.hidden && <span class="hidden-badge" title="Not shown in-game">hidden</span>}
-                  {s.statusIds.map((id) => {
+                  {dedupByName(s.statusIds, statuses).map((id) => {
                     const st = statuses[id]
                     return st ? (
                       <img key={id} class="inline-status" src={statusIcon(st.icon)}
@@ -87,7 +88,7 @@ export function SkillKitDialog({ entity, skillTree, statuses, onClose }) {
                     ) : null
                   })}
                 </div>
-                <SkillDescription html={s.description} changeSkills={s.changeSkills} />
+                <SkillDescription html={s.description} changeSkills={s.changeSkills} statusDescs={s.statusDescs} />
               </section>
             ))}
           </div>

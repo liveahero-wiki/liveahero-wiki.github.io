@@ -5,18 +5,30 @@
 // <wiki-auto-action>). We render it directly and style the known tags via CSS
 // (see styles.css). The browser treats unknown elements as inline spans.
 //
-// FUTURE: swap this for LiquidJS rendering of _includes/skill-description.html
-// to get fully resolved status references and translated text.
+// statusDescs: [{name, desc}] — when provided, wiki-status elements in the
+// rendered HTML get tippy tooltips whose content is the matching desc.
 
-import { memo } from 'preact/compat'
+import { memo, useEffect, useRef } from 'preact/compat'
 
-// Memoized on the (referentially-stable) html string from the index, so rows
-// that stay in the virtualized window across a filter/sort change don't re-set
-// innerHTML — the dominant cost in the click trace.
-export const SkillDescription = memo(function SkillDescription({ html, changeSkills }) {
+export const SkillDescription = memo(function SkillDescription({ html, changeSkills, statusDescs }) {
+  const ref = useRef(null)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el || !statusDescs?.length) return
+    const descMap = Object.fromEntries(statusDescs.map(s => [s.name, s.desc]))
+    const instances = []
+    el.querySelectorAll('wiki-status').forEach(node => {
+      const desc = descMap[node.textContent.trim()]
+      if (!desc) return
+      instances.push(window.tippy(node, { content: desc, allowHTML: true, interactive: true }))
+    })
+    return () => instances.forEach(i => i?.destroy())
+  }, [html, statusDescs])
+
   if (!html && !(changeSkills && changeSkills.length)) return null
   return (
-    <>
+    <span ref={ref}>
       {html && <span class="skill-desc" dangerouslySetInnerHTML={{ __html: html }} />}
       {changeSkills && changeSkills.map((cs, i) => (
         <details key={i} class="change-skill">
@@ -24,6 +36,6 @@ export const SkillDescription = memo(function SkillDescription({ html, changeSki
           <span class="skill-desc" dangerouslySetInnerHTML={{ __html: cs.description }} />
         </details>
       ))}
-    </>
+    </span>
   )
 })
