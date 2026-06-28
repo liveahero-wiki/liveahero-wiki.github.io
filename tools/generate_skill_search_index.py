@@ -57,12 +57,15 @@ INDEX_SCHEMA_REV = "r8"
 # names in the source dumps. Centralized here so each meaning is discoverable in
 # one place and a future enum change is a single edit.
 
-# SkillMaster.targetFlag: the game's skill-targeting enum. Used to derive
-# attack.* labels for damage-dealing skills (see label_skill).
-TARGET_FLAG_ALLY = 1        # targets an ally
-TARGET_FLAG_SINGLE = 2      # single enemy
-TARGET_FLAG_ALL = (3, 4)    # all enemies (two encodings observed in data)
-TARGET_FLAG_ALL_MULTI = 7   # all enemies, multi-hit
+# SkillMaster.targetFlag: the game's skill-targeting enum, from _plugins/skill.rb
+# skill_target. A damage-dealing skill gets an attack-range label from which side
+# it hits: enemies -> single/all attack, allies -> "attack allies". 0 (self) and
+# 5 (event bonus unit) get no attack-range label. Multi-hit comes from the
+# *MultipleAttack classes, not from targetFlag.
+TARGET_FLAGS_ENEMY_ALL = {4, 16}                    # all enemies / all except target
+TARGET_FLAGS_ENEMY_SINGLE = {2, 7}                  # single / random enemy
+TARGET_FLAGS_ALLY = {1, 3, 6, 9, 11, 12, 13, 14}    # any ally-directed damage
+TARGET_FLAGS_NO_RANGE = {0, 5}                       # self / event bonus unit
 
 # StatusMaster.statusType -> our status-bucket name. Anything not listed here
 # (the `else` branch) is treated as an internal/system status.
@@ -252,6 +255,7 @@ IGNORED_CLASSES = {
 }
 
 unmapped = Counter()
+unmapped_target_flags = Counter()  # damage skills whose targetFlag has no range label
 liquid_template_statuses = Counter()  # status IDs whose base desc contains Liquid {{ }}
 
 
@@ -361,16 +365,16 @@ def label_skill(skill_id, SM, SEM, SMA, visited):
         labels.update(l2)
         status_ids.update(s2)
 
-    # target-based attack labels
+    # target-based attack labels (multi-hit comes from *MultipleAttack classes)
     if deals_damage:
-        if target_flag == TARGET_FLAG_SINGLE:
-            labels.add("attack.single")
-        elif target_flag in TARGET_FLAG_ALL:
+        if target_flag in TARGET_FLAGS_ENEMY_ALL:
             labels.add("attack.all")
-        elif target_flag == TARGET_FLAG_ALL_MULTI:
-            labels.update(["attack.all", "attack.multi"])
-        elif target_flag == TARGET_FLAG_ALLY:
+        elif target_flag in TARGET_FLAGS_ENEMY_SINGLE:
+            labels.add("attack.single")
+        elif target_flag in TARGET_FLAGS_ALLY:
             labels.add("attack.ally")
+        elif target_flag not in TARGET_FLAGS_NO_RANGE:
+            unmapped_target_flags[target_flag] += 1
         if "隣" in description:  # adjacent-target wording
             labels.add("attack.special")
 
@@ -924,6 +928,11 @@ def main():
             print(f"  {cls}: {n}")
     else:
         print("\nno unmapped effect classes")
+    if unmapped_target_flags:
+        print(f"\nUNMAPPED TARGET FLAGS ({len(unmapped_target_flags)}) -- "
+              f"damage skills with no attack-range label, add to TARGET_FLAGS_*:")
+        for tf, n in unmapped_target_flags.most_common():
+            print(f"  targetFlag {tf}: {n} skill effect(s)")
     if liquid_template_statuses:
         print(f"\nSTATUS IDs WITH LIQUID TEMPLATES (desc skipped, {len(liquid_template_statuses)} status IDs):")
         for sid, n in liquid_template_statuses.most_common():
