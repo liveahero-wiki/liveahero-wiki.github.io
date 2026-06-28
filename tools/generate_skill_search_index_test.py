@@ -118,6 +118,34 @@ class TestIsTerminalNode(unittest.TestCase):
         self.assertEqual(gen.missing_upgrade_nodes[999999999], 1)
 
 
+class TestSuspiciousViewCost(unittest.TestCase):
+    """maxed_use_view assumes ChangeSkillBaseView deltas are additive; a total
+    that goes negative signals a replacement-style tier was double-counted and
+    must be reported."""
+
+    def test_negative_total_is_recorded(self):
+        SM = {"1": {"useView": 1000,
+                    "effects": [{"skillEffectId": 10}, {"skillEffectId": 11}]}}
+        SEM = {
+            "10": {"skillEffectJson": {"effects": [
+                {"class": "ChangeSkillBaseView", "parameter": {"value": -800}}]}},
+            "11": {"skillEffectJson": {"effects": [
+                {"class": "ChangeSkillBaseView", "parameter": {"value": -800}}]}},
+        }
+        gen.suspicious_view_costs.clear()
+        self.assertEqual(maxed_use_view("1", SM, SEM), -600)
+        self.assertIn(("1", -600), gen.suspicious_view_costs)
+
+    def test_non_negative_total_not_recorded(self):
+        SM = {"1": {"useView": 1000,
+                    "effects": [{"skillEffectId": 10}]}}
+        SEM = {"10": {"skillEffectJson": {"effects": [
+            {"class": "ChangeSkillBaseView", "parameter": {"value": -400}}]}}}
+        gen.suspicious_view_costs.clear()
+        self.assertEqual(maxed_use_view("1", SM, SEM), 600)
+        self.assertEqual(gen.suspicious_view_costs, [])
+
+
 class TestMaxedChangeSkills(unittest.TestCase):
     """change_by_slot must be recomputed over the maxed skill set: bloom skills
     can introduce ChangeActiveSkill transforms the base set lacks. Pinned to

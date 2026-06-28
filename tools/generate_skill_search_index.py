@@ -257,6 +257,7 @@ IGNORED_CLASSES = {
 unmapped = Counter()
 unmapped_target_flags = Counter()  # damage skills whose targetFlag has no range label
 missing_upgrade_nodes = Counter()  # gated node ids absent from SkillUpgradeMaster
+suspicious_view_costs = []  # (skillId, total) where summed maxed View cost < 0
 liquid_template_statuses = Counter()  # status IDs whose base desc contains Liquid {{ }}
 
 
@@ -511,7 +512,11 @@ def maxed_use_view(skill_id, SM, SEM):
     parameter.value) gated by tree nodes, and they are *additive* across the
     chain (unlike the replacement-style damage/burn tiers), so maxing sums them
     all. Multiplier-style view classes (ChangeViewCoefficient/FixView/...) are
-    not modeled and leave the cost at base."""
+    not modeled and leave the cost at base.
+
+    The additive assumption can't be proven statically; a total that goes
+    negative means a replacement-style tier was almost certainly double-counted,
+    so such skills are recorded for the run report rather than emitted silently."""
     skill = SM.get(str(skill_id), {})
     total = skill.get("useView", 0)
     for eff in skill.get("effects") or []:
@@ -519,6 +524,8 @@ def maxed_use_view(skill_id, SM, SEM):
         for inner in sej.get("effects", []):
             if inner.get("class") == "ChangeSkillBaseView":
                 total += (inner.get("parameter") or {}).get("value", 0)
+    if total < 0:
+        suspicious_view_costs.append((skill_id, total))
     return total
 
 
@@ -953,6 +960,11 @@ def main():
               f"gated effects kept as terminal (recall-safe); check masterdata:")
         for eid, n in missing_upgrade_nodes.most_common():
             print(f"  node {eid}: {n} effect(s)")
+    if suspicious_view_costs:
+        print(f"\nSUSPICIOUS MAXED VIEW COSTS ({len(suspicious_view_costs)}) -- "
+              f"summed below 0, additive assumption likely broken:")
+        for skill_id, total in suspicious_view_costs:
+            print(f"  skill {skill_id}: {total}")
     if liquid_template_statuses:
         print(f"\nSTATUS IDs WITH LIQUID TEMPLATES (desc skipped, {len(liquid_template_statuses)} status IDs):")
         for sid, n in liquid_template_statuses.most_common():
