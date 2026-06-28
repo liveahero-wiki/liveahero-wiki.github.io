@@ -12,7 +12,10 @@ function serveRepoFolder(name: string) {
     name: `serve-repo-${name}`,
     configureServer(server: any) {
       server.middlewares.use(`/${name}`, (req: any, res: any, next: any) => {
-        const file = path.join(dir, req.url ?? '')
+        // Resolve then verify the result stays inside dir to prevent path
+        // traversal (e.g. req.url = '/../../../etc/passwd').
+        const file = path.resolve(dir, (req.url ?? '').replace(/^\/+/, ''))
+        if (!file.startsWith(dir + path.sep) && file !== dir) return next()
         if (fs.existsSync(file) && fs.statSync(file).isFile()) {
           if (file.endsWith('.json')) res.setHeader('Content-Type', 'application/json')
           else if (file.endsWith('.js')) res.setHeader('Content-Type', 'application/javascript')
