@@ -14,22 +14,22 @@ class TestTextSanitize(unittest.TestCase):
         s = "+5% ATK plus another +15% when exposed.<style=\"オート行動\"></style>Prioritize using Skill 3 if buffed."
         self.assertEqual(
             sanitizeSkillDescription(s),
-            "+5% ATK plus another +15% when exposed.<wiki-auto-action>Prioritize using Skill 3 if buffed.</wiki-auto-action>",
+            "'+5% ATK plus another +15% when exposed.<wiki-auto-action>Prioritize using Skill 3 if buffed.</wiki-auto-action>",
             )
         s = "+5% ATK plus another +15% when exposed.<style=\"オート行動_en\"></style>Prioritize using Skill 3 if buffed."
         self.assertEqual(
             sanitizeSkillDescription(s),
-            "+5% ATK plus another +15% when exposed.<wiki-auto-action>Prioritize using Skill 3 if buffed.</wiki-auto-action>",
+            "'+5% ATK plus another +15% when exposed.<wiki-auto-action>Prioritize using Skill 3 if buffed.</wiki-auto-action>",
             )
         s = "+5% ATK plus another +15% when exposed.<style=\"オート行動\">Prioritize using Skill 3 if buffed.</style>"
         self.assertEqual(
             sanitizeSkillDescription(s),
-            "+5% ATK plus another +15% when exposed.<wiki-auto-action>Prioritize using Skill 3 if buffed.</wiki-auto-action>",
+            "'+5% ATK plus another +15% when exposed.<wiki-auto-action>Prioritize using Skill 3 if buffed.</wiki-auto-action>",
             )
         s = "+5% ATK plus another +15% when exposed.<style=\"オート行動_en\">Prioritize using Skill 3 if buffed.</style>"
         self.assertEqual(
             sanitizeSkillDescription(s),
-            "+5% ATK plus another +15% when exposed.<wiki-auto-action>Prioritize using Skill 3 if buffed.</wiki-auto-action>",
+            "'+5% ATK plus another +15% when exposed.<wiki-auto-action>Prioritize using Skill 3 if buffed.</wiki-auto-action>",
             )
 
     def test_skill_enhance(self):
