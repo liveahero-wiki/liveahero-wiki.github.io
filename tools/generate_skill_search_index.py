@@ -142,6 +142,7 @@ CATEGORIES = [
     ]},
     {"key": "vp", "label": "VP / View", "labels": [
         {"key": "vp.gain", "label": "VP gain"},
+        {"key": "vp.loss", "label": "Reduce VP gain"},
         {"key": "vp.costdown", "label": "View cost change"},
     ]},
     {"key": "interf", "label": "Skill interference", "labels": [
@@ -214,13 +215,12 @@ CLASS_TO_LABELS = {
     "OwnAttack": ["attack.induction"],
 
     # damage modifiers
-    "AddMultDamage": ["damage.up"], 
+    "AddMultDamage": ["damage.up"],
     "DamageMultipleAdjust": ["damage.up"],
-    "DamageLimit": ["damage.down"], 
-    "MultipleDefence": ["damage.down"],
+    "DamageLimit": ["damage.down"],
+    # MultipleAttack / MultipleDefence flip on parameter.value -> VALUE_SIGN_RULES
 
     # MultipleAttack classes
-    "MultipleAttack": ["damage.up"],
     "ComboMultipleAttack": ["damage.up"],
     "HealthMultipleAttack": ["damage.up"], 
     "HighestMultipleAttack": ["damage.up"],
@@ -249,10 +249,10 @@ CLASS_TO_LABELS = {
     "AddPlusCombo": ["combo.up"],
 
     # view
-    "ChangeView": ["vp.gain"], 
-    "ChangeBaseView": ["vp.gain"], 
-    "MultipleBaseView": ["vp.gain"],
+    "ChangeView": ["vp.gain"],
+    "ChangeBaseView": ["vp.gain"],
     "GetViewDamage": ["vp.gain"],
+    # MultipleBaseView flips on parameter.value -> VALUE_SIGN_RULES
     "ViewCount": ["vp.gain"], 
     "ViewChangeHp": ["vp.gain"],
     "NeedViewChange": ["vp.costdown"], 
@@ -355,6 +355,25 @@ SUBSTRING_RULES = [
 ]
 
 
+# Classes whose label depends on the sign of parameter.value (a percentage
+# multiplier for the *Multiple* families: value/100 x, so 100 is a no-op). Each
+# entry is (label if value > threshold, label if value < threshold, label if
+# value == threshold, threshold); a None label means "no label" (a value at the
+# boundary is a no-op / marker, e.g. a x1.0 multiplier or a Provoke status). The
+# Japanese descriptions confirm the direction: MultipleDefence value>100 is
+# "DEFダウン" (target takes MORE damage -> damage.up), value<100 is "DEFアップ"
+# (defensive -> damage.down). Checked before CLASS_TO_LABELS in classify.
+VALUE_SIGN_RULES = {
+    "ChangeAgi":               ("spd.up", "spd.down", "spd.other", 0),
+    "OtherParamChangeAgi":     ("spd.up", "spd.down", "spd.other", 0),
+    "MultipleAttack":          ("damage.up", "damage.down", None, 100),
+    "MultipleDefence":         ("damage.up", "damage.down", None, 100),
+    "TurnBaseMultipleAttack":  ("damage.up", "damage.down", None, 100),
+    "TurnBaseMultipleDefence": ("damage.up", "damage.down", None, 100),
+    "MultipleBaseView":        ("vp.gain", "vp.loss", None, 100),
+}
+
+
 def _is_ignored_class(cls):
     """Knowingly ignored mechanics / placeholders / handled-elsewhere classes."""
     return (cls in IGNORED_CLASSES or "NoneEffect" in cls or "Critical" in cls
@@ -367,18 +386,21 @@ def classify(cls, inner):
     """Map a single effect class to label keys.
 
     Returns (labels:set, deals_damage:bool, recognized:bool). Precedence, in
-    order: the explicit CLASS_TO_LABELS map and DAMAGE_CLASSES set win outright;
-    then the value/name special cases; then the ordered SUBSTRING_RULES table
-    (first match wins) which covers the long tail of mechanical variants so new
-    classes auto-map; finally the ignored set. Anything left is reported.
+    order: the value-sign table (classes whose label flips on parameter.value);
+    then the explicit CLASS_TO_LABELS map and DAMAGE_CLASSES set; then the
+    name-based special cases; then the ordered SUBSTRING_RULES table (first match
+    wins) which covers the long tail of mechanical variants so new classes
+    auto-map; finally the ignored set. Anything left is reported.
     """
+    if cls in VALUE_SIGN_RULES:
+        gt, lt, eq, thr = VALUE_SIGN_RULES[cls]
+        v = (inner.get("parameter") or {}).get("value", thr)
+        label = gt if v > thr else lt if v < thr else eq
+        return ({label} if label else set()), cls in DAMAGE_CLASSES, True
     if cls in CLASS_TO_LABELS:
         return set(CLASS_TO_LABELS[cls]), cls in DAMAGE_CLASSES, True
     if cls in DAMAGE_CLASSES:
         return set(), True, True
-    if cls in ("ChangeAgi", "OtherParamChangeAgi"):
-        v = (inner.get("parameter") or {}).get("value", 0)
-        return {"spd.up" if v > 0 else "spd.down" if v < 0 else "spd.other"}, False, True
     if cls.startswith("Aim") or "DecideAutoSkill" in cls:
         return {"skillctl.auto"}, False, True
     for predicate, labels, deals_damage in SUBSTRING_RULES:
@@ -938,28 +960,45 @@ def finalize_entities(entities, named):
             e["statusIdsMaxed"] = aggregate(e["skillsMaxed"], "statusIds")
 
 
-def main():
-    CardMaster = load("CardMaster.json")
-    SidekickMaster = load("SidekickMaster.json")
-    SM = load("SkillMaster.json")
-    SEM = load("SkillEffectMaster.json")
-    SMA = load("StatusMaster.json")
-    SUM = load("SkillUpgradeMaster.json")
-    StatusTrans = load("Status.json", sub="translation")
-    SkillEffectTrans = load("SkillEffect.json", sub="translation")
-    SkillTrans = load("Skill.json", sub="translation")
-    English = load_english()
-    chara_pages = build_chara_pages(CHARAS)
+def load_all():
+    """Load every master/translation file the index needs into one dict, keyed
+    by the short names the build_* helpers use. Shared with tools/audit_skill_effects.py
+    so the auditor walks the exact same masterdata the index is built from."""
+    return {
+        "CardMaster": load("CardMaster.json"),
+        "SidekickMaster": load("SidekickMaster.json"),
+        "SM": load("SkillMaster.json"),
+        "SEM": load("SkillEffectMaster.json"),
+        "SMA": load("StatusMaster.json"),
+        "SUM": load("SkillUpgradeMaster.json"),
+        "StatusTrans": load("Status.json", sub="translation"),
+        "SkillEffectTrans": load("SkillEffect.json", sub="translation"),
+        "SkillTrans": load("Skill.json", sub="translation"),
+        "English": load_english(),
+        "chara_pages": build_chara_pages(CHARAS),
+    }
 
+
+def build_entities(m):
+    """Walk CardMaster/SidekickMaster into the reachable hero/sidekick entity
+    records (before status pruning). `m` is a load_all() dict. Returns the list."""
     entities = []
-    hero_groups = group_by_stock(CardMaster)
-    for stock_id, group in hero_groups.items():
-        entities.append(build_hero(group, SM, SEM, SMA, SUM, SkillTrans, English,
-                                   SkillEffectTrans, StatusTrans, chara_pages))
-    side_groups = group_by_stock(SidekickMaster)
-    for stock_id, group in side_groups.items():
-        entities.append(build_sidekick(group, SM, SEM, SMA, SkillTrans, English,
-                                       SkillEffectTrans, StatusTrans, chara_pages))
+    for stock_id, group in group_by_stock(m["CardMaster"]).items():
+        entities.append(build_hero(group, m["SM"], m["SEM"], m["SMA"], m["SUM"],
+                                   m["SkillTrans"], m["English"], m["SkillEffectTrans"],
+                                   m["StatusTrans"], m["chara_pages"]))
+    for stock_id, group in group_by_stock(m["SidekickMaster"]).items():
+        entities.append(build_sidekick(group, m["SM"], m["SEM"], m["SMA"],
+                                       m["SkillTrans"], m["English"], m["SkillEffectTrans"],
+                                       m["StatusTrans"], m["chara_pages"]))
+    return entities
+
+
+def main():
+    m = load_all()
+    SMA = m["SMA"]
+    StatusTrans = m["StatusTrans"]
+    entities = build_entities(m)
 
     # Many StatusMaster entries are internal system/particle placeholders with
     # empty names. They are useless for the "Has status" autocomplete and only

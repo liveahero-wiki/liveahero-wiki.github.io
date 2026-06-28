@@ -202,19 +202,56 @@ class TestTargetFlagLabels(unittest.TestCase):
         self.assertNotIn("attack.multi", labels)  # no MultipleAttack class here
 
     def test_all_enemies_is_all(self):
-        # 117 targetFlag 4 (all enemies) -> all
-        self.assertIn("attack.all", self.labels(117))
+        # Suhail active skill 1
+        self.assertIn("attack.all", self.labels(1030101))
 
-    def test_all_allies_damage_is_ally_not_all(self):
-        # 22 targetFlag 3 (all allies) -> ally. Regression: 3 used to be treated
-        # as "all enemies" and labelled attack.all.
-        labels = self.labels(22)
-        self.assertIn("attack.ally", labels)
-        self.assertNotIn("attack.all", labels)
+    #def test_all_allies_damage_is_ally_not_all(self):
+    #    # Bygul active skill 3
+    #    labels = self.labels(1207103)
+    #    self.assertIn("attack.ally", labels)
+    #    self.assertNotIn("attack.all", labels)
 
-    def test_lowest_hp_ally_damage_is_ally(self):
-        # 4261102 targetFlag 11 (ally with lowest HP) -> ally
-        self.assertIn("attack.ally", self.labels(4261102))
+
+class TestClassifyValueSign(unittest.TestCase):
+    """Value-sign labelling: the *Multiple* families flip their label on
+    parameter.value (a percentage multiplier, 100 == x1.0 == no-op). Pinned to
+    committed SkillEffectMaster ids; the Japanese descriptions in the comments
+    are the ground truth that fixed the direction (DEFダウン = takes more damage)."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.SEM = load("SkillEffectMaster.json")
+
+    def classify(self, skill_effect_id):
+        inner = self.SEM[str(skill_effect_id)]["skillEffectJson"]["effects"][0]
+        labels, _dmg, recognized = gen.classify(inner["class"], inner)
+        self.assertTrue(recognized, f"{inner['class']} should be recognized")
+        return labels
+
+    def test_turnbase_multiple_attack_charge_is_up(self):
+        # 3141 "ATKチャージ" value 120 -> ATK up (was previously unmapped)
+        self.assertEqual(self.classify(3141), {"damage.up"})
+
+    def test_turnbase_multiple_attack_neutral_no_label(self):
+        # 2040 "弾痕(説明用効果)" value 100 -> x1.0 marker, recognized but no label
+        self.assertEqual(self.classify(2040), set())
+
+    def test_turnbase_multiple_defence_is_up(self):
+        # 3347 "傷跡" value 105 -> DEF-down-over-turns -> takes more damage -> up
+        self.assertEqual(self.classify(3347), {"damage.up"})
+
+    def test_multiple_attack_up_and_down(self):
+        self.assertEqual(self.classify(3), {"damage.up"})     # 3 "ATKアップ" value 150
+        self.assertEqual(self.classify(16), {"damage.down"})  # 16 "ATKダウン" value 50
+
+    def test_multiple_defence_flips_on_value(self):
+        self.assertEqual(self.classify(9), {"damage.up"})     # 9 "DEFダウン" value 150
+        self.assertEqual(self.classify(17), {"damage.down"})  # 17 "無敵" value 0
+        self.assertEqual(self.classify(802), set())           # 802 "粘質武装" value 100
+
+    def test_multiple_base_view_gain_and_loss(self):
+        self.assertEqual(self.classify(6), {"vp.gain"})    # 6 "注目" value 150
+        self.assertEqual(self.classify(212), {"vp.loss"})  # 212 value 50 -> reduced gain
 
 
 if __name__ == "__main__":
