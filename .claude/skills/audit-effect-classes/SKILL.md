@@ -57,18 +57,24 @@ It also writes `api/skill-index.json`; that's expected. If it ends with
 
 ### 2. Gather evidence for each unmapped class
 
-Names lie; the descriptions and parameters in the masterdata don't. Use the bundled
-helper, which aggregates every occurrence of each class from `SkillEffectMaster.json`:
+Names lie; the descriptions and parameters in the masterdata don't. Use the audit
+tool, which aggregates every occurrence of each class **scoped to the skills
+reachable from CardMaster/SidekickMaster** (the same set the index is built from —
+not the whole `SkillEffectMaster.json`, which is full of mob/unused effects). Run
+it from the repo root:
 
 ```bash
-python .claude/skills/audit-effect-classes/scripts/gather_evidence.py TriggerDecideAutoSkill MultipleHp TurnDecideAutoSkill
+python tools/audit_skill_effects.py class TriggerDecideAutoSkill MultipleHp TurnDecideAutoSkill
 ```
 
-For each class it reports: occurrence count, how many are `persistence:true` (a standing
-buff/state vs. a one-shot), the distinct `statusId`s applied, sample Japanese
-`description`s, and sample `parameter` shapes. Pass `--json` for machine-readable output.
-(The script finds `_data/SkillEffectMaster.json` by searching upward from the cwd; pass
-`--data <path>` to override.)
+For each class it collapses occurrences into **distinct signatures** keyed by
+(description, parameter shape, resulting labels) and reports: per-signature count,
+the `value` range (the key threshold signal for value-sign classes), how many are
+`persistence:true` (a standing buff/state vs. a one-shot), the distinct `statusId`s
+applied, sample Japanese `description`s, and example characters. Pass `--json` for
+machine-readable output. `python tools/audit_skill_effects.py classes` lists every
+reachable class by descending frequency (its counts match the generator's UNMAPPED
+list); `... report` writes a browsable HTML report to `api/skill-effects-audit.html`.
 
 Read the descriptions — they are the ground truth. A quick glossary of recurring terms:
 
@@ -90,7 +96,12 @@ The taxonomy and the mapping logic live in the generator and are the **single so
 truth** — read them before deciding so you match existing conventions:
 
 - `CATEGORIES` — the category → label tree that drives the search UI buttons.
-- `CLASS_TO_LABELS` — exact class → label-key(s) map (checked first).
+- `VALUE_SIGN_RULES` — classes whose label flips on `parameter.value` (checked
+  first): a percentage-multiplier class like `MultipleAttack`/`MultipleDefence`
+  is ATK/DEF up vs. down around a threshold (100 == x1.0 == no-op → no label).
+  Use this (not a static `CLASS_TO_LABELS` entry) when the `value` range from
+  `audit_skill_effects.py class <Name>` spans both sides of the threshold.
+- `CLASS_TO_LABELS` — exact class → label-key(s) map (value-independent).
 - `DAMAGE_CLASSES` — classes that deal damage (get a target-based attack label).
 - The ordered substring rules inside `classify()` — family fallbacks like every
   `*MultipleAttack` → `attack.multi`, so new variants auto-map.
@@ -150,8 +161,9 @@ now carries the expected label key.
 Beyond clearing the warning, look for weaknesses worth raising:
 
 - **Ignored-but-real**: scan `IGNORED_CLASSES` for anything that is actually a
-  player-facing effect now searchable demand exists (run `gather_evidence.py` on
-  suspects). E.g. a max-HP buff hiding among display mechanics deserves a label.
+  player-facing effect now searchable demand exists (run `audit_skill_effects.py
+  class <Name>` on suspects). E.g. a max-HP buff hiding among display mechanics
+  deserves a label.
 - **Overloaded / catch-all labels**: a label absorbing semantically different classes
   (a vague "other") may warrant splitting.
 - **Missing dimension**: a recurring effect family with no category at all (note that in
@@ -166,5 +178,5 @@ restructures without the user's buy-in, since they change the search UI.
 
 - **Never edit `SkillEffectMaster.json` or other master JSON** — they are CDN-fetched and
   overwritten by the pipeline (see CLAUDE.md). All changes go in the generator's mapping.
-- The descriptions are Japanese; rely on them (and `gather_evidence.py`), not on the
-  English class name, for what a class does.
+- The descriptions are Japanese; rely on them (and `tools/audit_skill_effects.py`),
+  not on the English class name, for what a class does.
