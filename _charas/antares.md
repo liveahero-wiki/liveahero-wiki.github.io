@@ -12,3 +12,7 @@ sidekicks:
 
 {% include voice-table.html resourceName="antares"
 %}
+
+## Notes
+
+- Despite not being (Seasonal) Variant unit, both Antares Hero and Sidekick units are only obtainable in banners where they are featured ; They are not available through regular Ether search nor through any other Seasonal banner.
