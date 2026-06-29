@@ -182,9 +182,7 @@ DAMAGE_CLASSES = {
     "Penetration",
     "NowViewDamage",
     "DamageMultipleAdjust",
-    "OtherParamAddAttack",
     "StatusTurnDamage",
-    "HighestOtherParamAddAttack",
     "AbsorbDamage", # Damage then heal the damage amount
     "AddMultDamage",
 }
@@ -226,6 +224,7 @@ CLASS_TO_LABELS = {
     "HighestViewPowerMultipleAttack": ["damage.up"],
     "StatusTurnDamage": ["damage.up"],
     "OtherParamMultipleAttack": ["damage.up"],
+    "OtherParamAddAttack": ["damage.up"],
     "HighestOtherParamAddAttack": ["damage.up"],
     "HighestHealthMultipleAttack": ["damage.up"],
     "StatusTurnMultipleAttack": ["damage.up"],
