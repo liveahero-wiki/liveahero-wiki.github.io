@@ -311,6 +311,7 @@ CLASS_TO_LABELS = {
     "TargetReversal": ["skillctl.auto"],
     "DecideUniqueByStatusPassiveBattleSkillEffect": ["skillctl.auto"],
     "ChangeSkillProve": ["skillctl.ratechange"],
+    "HighestChangeSkillProb": ["skillctl.ratechange"],
 
     # acquisition
     "SalesBonusCheat": ["acq.coin"], 
@@ -400,7 +401,7 @@ VALUE_SIGN_RULES = {
 def _is_ignored_class(cls):
     """Knowingly ignored mechanics / placeholders / handled-elsewhere classes."""
     return (cls in IGNORED_CLASSES or "NoneEffect" in cls or "Critical" in cls
-            or cls.startswith("Regist") or "ChangeSkillProb" in cls
+            or cls.startswith("Regist")
             or "CopyBuff" in cls
             or cls.endswith("Status"))
 
@@ -446,12 +447,11 @@ def label_skill(skill_id, SM, SEM, SMA, visited):
     if not skill:
         return labels, status_ids
 
-    target_flag = skill.get("targetFlag")
     description = skill.get("description") or ""
-    deals_damage = False
 
     for eff in skill.get("effects", []) or []:
         sem = SEM.get(str(eff.get("skillEffectId")))
+        effectTarget = eff.get("effectTarget")
         if not sem:
             continue
         sej = sem.get("skillEffectJson", {})
@@ -463,9 +463,21 @@ def label_skill(skill_id, SM, SEM, SMA, visited):
             labels.add("field.field")
         for inner in sej.get("effects", []):
             cls = inner.get("class", "")
-            l, dmg, recognized = classify(cls, inner)
+            l, deals_damage, recognized = classify(cls, inner)
             labels.update(l)
-            deals_damage = deals_damage or dmg
+
+            if deals_damage:
+                if effectTarget in TARGET_FLAGS_ENEMY_ALL:
+                    labels.add("attack.all")
+                elif effectTarget in TARGET_FLAGS_ENEMY_SINGLE:
+                    labels.add("attack.single")
+                elif effectTarget in TARGET_FLAGS_ALLY:
+                    labels.add("attack.ally")
+                elif effectTarget not in TARGET_FLAGS_NO_RANGE:
+                    unmapped_target_flags[effectTarget] += 1
+                if "隣" in description:  # adjacent-target wording
+                    labels.add("attack.special")
+            
             if not recognized:
                 unmapped[cls] += 1
             # fold in skill-change targets
@@ -481,19 +493,6 @@ def label_skill(skill_id, SM, SEM, SMA, visited):
         l2, s2 = label_skill(pid, SM, SEM, SMA, visited)
         labels.update(l2)
         status_ids.update(s2)
-
-    # target-based attack labels (multi-hit comes from *MultipleAttack classes)
-    if deals_damage:
-        if target_flag in TARGET_FLAGS_ENEMY_ALL:
-            labels.add("attack.all")
-        elif target_flag in TARGET_FLAGS_ENEMY_SINGLE:
-            labels.add("attack.single")
-        elif target_flag in TARGET_FLAGS_ALLY:
-            labels.add("attack.ally")
-        elif target_flag not in TARGET_FLAGS_NO_RANGE:
-            unmapped_target_flags[target_flag] += 1
-        if "隣" in description:  # adjacent-target wording
-            labels.add("attack.special")
 
     return labels, status_ids
 

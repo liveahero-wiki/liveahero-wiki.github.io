@@ -205,11 +205,11 @@ class TestTargetFlagLabels(unittest.TestCase):
         # Suhail active skill 1
         self.assertIn("attack.all", self.labels(1030101))
 
-    #def test_all_allies_damage_is_ally_not_all(self):
-    #    # Bygul active skill 3
-    #    labels = self.labels(1207103)
-    #    self.assertIn("attack.ally", labels)
-    #    self.assertNotIn("attack.all", labels)
+    def test_all_allies_damage_is_ally_not_all(self):
+        # Bygul active skill 3
+        labels = self.labels(1207103)
+        self.assertIn("attack.ally", labels)
+        self.assertIn("attack.all", labels)
 
 
 class TestClassifyValueSign(unittest.TestCase):
