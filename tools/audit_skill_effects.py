@@ -247,7 +247,9 @@ def cmd_report(m, args):
         ".jp{font-size:13px}</style>",
         f"<h1>Skill-effect class audit</h1><p>{len(rows)} classes, "
         f"{sum(1 for r in rows if not r['recognized'])} unmapped, "
-        f"{len(occ)} reachable occurrences. Version {esc(gen.get_version())}.</p>",
+        f"{len(occ)} reachable occurrences. Version {esc(gen.get_version())}.</p>"
+        "<p><button onclick=\"document.querySelectorAll('details').forEach(d=>d.open=true)\">Expand all</button>"
+        " <button onclick=\"document.querySelectorAll('details').forEach(d=>d.open=false)\">Collapse all</button></p>",
     ]
     # one <details> per class, sorted by class name for stable diffs
     for cls in sorted(groups):
