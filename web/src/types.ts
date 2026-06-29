@@ -66,6 +66,7 @@ export interface Query {
   statusIds: Set<number>
   viewMin: string
   viewMax: string
+  characterName: string
   skillTree: boolean
   includeMob: boolean
   _vcKey: number

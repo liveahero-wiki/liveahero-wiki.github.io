@@ -30,6 +30,21 @@ interface FilterPanelProps {
 export function FilterPanel({ index, query, dispatch, resultCount, showLabels, onToggleLabels }: FilterPanelProps) {
   return (
     <div class="filter-panel">
+      <div class="row">
+        <span class="row-label">Character</span>
+        <div class="row-buttons">
+          <input
+            type="text"
+            class="char-input"
+            placeholder="character name…"
+            value={query.characterName}
+            onInput={(e: JSX.TargetedEvent<HTMLInputElement>) =>
+              dispatch({ type: 'setCharacterName', value: e.currentTarget.value })
+            }
+          />
+        </div>
+      </div>
+
       <ButtonRow
         label="Type"
         options={TYPE_OPTIONS}

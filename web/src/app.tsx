@@ -17,6 +17,7 @@ export type QueryAction =
   | { type: 'addStatus'; value: number }
   | { type: 'removeStatus'; value: number }
   | { type: 'setView'; field: ViewField; value: string }
+  | { type: 'setCharacterName'; value: string }
   | { type: 'toggleFlag'; field: FlagField }
   | { type: 'reset' }
 
@@ -28,6 +29,7 @@ function initialQuery(): Query {
     statusIds: new Set(),
     viewMin: '',
     viewMax: '',
+    characterName: '',
     skillTree: true,
     includeMob: true,
     _vcKey: 0,
@@ -62,6 +64,8 @@ function reducer(state: Query, action: QueryAction): Query {
     }
     case 'setView':
       return { ...state, [action.field]: action.value }
+    case 'setCharacterName':
+      return { ...state, characterName: action.value }
     case 'toggleFlag':
       return { ...state, [action.field]: !state[action.field] }
     case 'reset':
