@@ -234,6 +234,7 @@ def cmd_report(m, args):
 
     parts = [
         "<!doctype html><meta charset='utf-8'>",
+        r"<base href='https://liveahero-wiki.github.io/'>",
         "<title>Skill-effect class audit</title>",
         "<style>body{font:14px/1.5 system-ui,sans-serif;margin:2rem;max-width:80rem}"
         "details{border:1px solid #ccc;border-radius:6px;margin:.4rem 0;padding:.4rem .8rem}"
