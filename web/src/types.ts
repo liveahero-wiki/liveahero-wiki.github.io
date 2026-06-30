@@ -48,6 +48,7 @@ export interface Entity {
   resourceName: string
   page?: string
   isMob?: boolean
+  role?: string
   skills: Skill[]
   skillsMaxed?: Skill[]
 }
@@ -61,6 +62,7 @@ export interface SkillIndex {
 
 export interface Query {
   types: Set<string>
+  roles: Set<string>
   labels: Set<string>
   statusTypes: Set<string>
   statusIds: Set<number>

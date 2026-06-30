@@ -6,7 +6,7 @@ import { FilterPanel } from './components/FilterPanel'
 import { ResultTable } from './components/ResultTable'
 import { SkillKitDialog } from './components/SkillKitDialog'
 
-type SetField = 'types' | 'labels' | 'statusTypes'
+type SetField = 'types' | 'roles' | 'labels' | 'statusTypes'
 type FlagField = 'skillTree' | 'includeMob'
 type ViewField = 'viewMin' | 'viewMax'
 
@@ -24,6 +24,7 @@ export type QueryAction =
 function initialQuery(): Query {
   return {
     types: new Set(),
+    roles: new Set(),
     labels: new Set(),
     statusTypes: new Set(),
     statusIds: new Set(),
