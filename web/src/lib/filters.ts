@@ -112,14 +112,15 @@ export function filterRows(
     labelsByCat.get(cat)!.add(key)
   }
 
+  const characterName = query.characterName.trim().toLowerCase()
+
   const rows: Row[] = []
   for (const entity of entities) {
     // Entity-level gates.
     if (types.size && !types.has(entity.kind)) continue
     if (!includeMob && entity.isMob) continue
-    if (query.characterName.trim()) {
-      const needle = query.characterName.trim().toLowerCase()
-      if (!entity.name.toLowerCase().includes(needle)) continue
+    if (characterName) {
+      if (!entity.name.toLowerCase().includes(characterName)) continue
     }
 
     for (const s of effectiveSkills(entity, skillTree)) {
