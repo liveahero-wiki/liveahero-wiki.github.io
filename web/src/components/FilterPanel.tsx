@@ -12,6 +12,17 @@ const TYPE_OPTIONS = [
   { key: 'sidekick', label: 'Sidekick' },
 ]
 
+const ROLE_OPTIONS = [
+  { key: 'attack',     label: 'Attack' },
+  { key: 'defense',    label: 'Defense' },
+  { key: 'assistance', label: 'Assistance' },
+  { key: 'debuff',     label: 'Debuff' },
+  { key: 'speed',      label: 'Speed' },
+  { key: 'vp_gain',    label: 'VP Gain' },
+  { key: 'heal',       label: 'Heal' },
+  { key: 'special',    label: 'Special' },
+]
+
 const STATUS_TYPE_OPTIONS = [
   { key: 'buff', label: 'Buff' },
   { key: 'debuff', label: 'Debuff' },
@@ -51,6 +62,14 @@ export function FilterPanel({ index, query, dispatch, resultCount, showLabels, o
         selected={query.types}
         onToggle={(v) => dispatch({ type: 'toggle', field: 'types', value: v })}
         onClear={() => dispatch({ type: 'clear', field: 'types' })}
+      />
+
+      <ButtonRow
+        label="Role"
+        options={ROLE_OPTIONS}
+        selected={query.roles}
+        onToggle={(v) => dispatch({ type: 'toggle', field: 'roles', value: v })}
+        onClear={() => dispatch({ type: 'clear', field: 'roles' })}
       />
 
       {index.categories.map((cat) => (

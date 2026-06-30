@@ -36,7 +36,7 @@ CHARAS = "_charas"
 # emitted JSON without a masterdata version change. Appended to the cache key so
 # clients (search/src/data/loadIndex.js) refetch the index instead of reusing a
 # stale cache.
-INDEX_SCHEMA_REV = "r10"
+INDEX_SCHEMA_REV = "r11"
 
 
 # --- Undocumented game-data enums / magic numbers ---------------------------
@@ -73,6 +73,19 @@ HERO_MAX_RARITY = 6
 # SidekickMaster.levelZone value identifying the max-level sidekick card in a
 # stock group; that entry is used as the representative for indexing.
 SIDEKICK_MAX_LEVEL_ZONE = 6
+
+# CardMaster/SidekickMaster.role -> filter key. Role 0 (no role) maps to None
+# and is omitted from the entity record. Mirrors the map in _plugins/skill.rb.
+ROLE_MAP = {
+    1: "attack",
+    2: "defense",
+    3: "assistance",
+    4: "debuff",
+    5: "speed",
+    6: "vp_gain",
+    7: "heal",
+    99: "special",
+}
 
 
 def load(name, sub=None):
@@ -829,6 +842,7 @@ def make_entity(rep, stock_entries, kind, suffix, skills, chara_pages, has_tree=
         "isMob": min(rarities) == 1 if rarities else False,
         "characterId": rep.get("characterId"),
         "hasSkillTree": has_tree,
+        "role": ROLE_MAP.get(rep.get("role")),
         "skills": skills,
         "labels": aggregate(skills, "labels"),
         "statusIds": aggregate(skills, "statusIds"),

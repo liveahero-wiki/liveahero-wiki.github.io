@@ -102,7 +102,7 @@ export function filterRows(
   query: Query,
   statuses: Record<string, Status>,
 ): Row[] {
-  const { types, skillTree, includeMob } = query
+  const { types, roles, skillTree, includeMob } = query
 
   // Group selected labels by their category prefix once.
   const labelsByCat = new Map<string, Set<string>>()
@@ -118,6 +118,7 @@ export function filterRows(
   for (const entity of entities) {
     // Entity-level gates.
     if (types.size && !types.has(entity.kind)) continue
+    if (roles.size && !roles.has(entity.role ?? '')) continue
     if (!includeMob && entity.isMob) continue
     if (characterName) {
       if (!entity.name.toLowerCase().includes(characterName)) continue
