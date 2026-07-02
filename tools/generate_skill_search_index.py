@@ -151,10 +151,12 @@ CATEGORIES = [
         {"key": "interf.silence", "label": "Silence / skip"},
     ]},
     {"key": "defense", "label": "Defense / Survival", "labels": [
+        {"key": "defense.up", "label": "Increase defense"},
+        {"key": "defense.down", "label": "Decrease defense"},
         {"key": "defense.barrier", "label": "Barrier"},
-        {"key": "defense.cover", "label": "Cover / Taunt"},
+        {"key": "defense.provoke", "label": "Provoke"},
+        {"key": "defense.aggregation", "label": "Damage aggregation"},
         {"key": "defense.stealth", "label": "Stealth"},
-        {"key": "defense.revive", "label": "Revive"},
         {"key": "defense.hp", "label": "Max HP up"},
         {"key": "defense.dodge", "label": "Evasion / Dodge"},
     ]},
@@ -241,14 +243,7 @@ CLASS_TO_LABELS = {
     "HighestOtherParamAddAttack": ["damage.up"],
     "HighestHealthMultipleAttack": ["damage.up"],
     "StatusTurnMultipleAttack": ["damage.up"],
-    "HighestComboMultipleAttack": ["damage.up"],
-    "HighestStatusNumberMultipleDefence": ["damage.up"],
-    "HighestMultipleDefence": ["damage.up"],
-    "PersistenceIconChangeMultipleAttack": ["damage.up"],
-    "ComboMultipleDefence": ["damage.up"],
-    # VP-scaled DEF-up / persistent DEF variants
-    "HighestViewPowerMultipleDefence": ["damage.down"],
-    "PersistenceIconChangeMultipleDefence": ["damage.down"],
+
     # DoT spread / amplification
     "SpreadDotDamage": ["damage.dot"],
     "MultipleDotDamageDefence": ["damage.dot"],
@@ -307,14 +302,14 @@ CLASS_TO_LABELS = {
     "OtherParamBarrier": ["defense.barrier"],
     "BarrierExtension": ["defense.barrier", "interf.extend"],
     "AbsorbDamage": ["heal.heal"],
-    "Cover": ["defense.cover"], 
-    "Provocation": ["defense.cover"],
-    "TargetMark": ["defense.cover"],
-    "LowestAgilityTargetMark": ["defense.cover"],
-    "Aggregation": ["defense.cover"],
+    "Cover": ["defense.provoke"], 
+    "Provocation": ["defense.provoke"],
+    "TargetMark": ["defense.stealth"],
+    "LowestAgilityTargetMark": ["defense.provoke"],
+    "Aggregation": ["defense.aggregation"],
     "Hide": ["defense.stealth"],
-    "Ressurection": ["defense.revive"], 
-    "RessurectOrHeal": ["defense.revive", "heal.heal"],
+    #"Ressurection": ["defense.revive"], 
+    #"RessurectOrHeal": ["defense.revive", "heal.heal"],
 
     # skill control
     "ChangeActiveSkill": ["skillctl.change"],
@@ -375,7 +370,7 @@ def resolve_status_name(sid, StatusTrans, SMA):
 # DAMAGE_CLASSES (checked before this table in classify) still take precedence.
 SUBSTRING_RULES = [
     #(lambda c: "AddPlusCombo" in c, {"combo.up"}, False),
-    #(lambda c: "TargetMark" in c, {"defense.cover"}, False),
+    #(lambda c: "TargetMark" in c, {"defense.provoke"}, False),
     #(lambda c: "TurnExtension" in c, {"interf.extend"}, False),
     #(lambda c: "NeedView" in c, {"vp.costdown"}, False),
     #(lambda c: "Heal" in c and "Health" not in c, {"heal.heal"}, False),
@@ -400,15 +395,31 @@ SUBSTRING_RULES = [
 VALUE_SIGN_RULES = {
     "ChangeAgi":               ("spd.up", "spd.down", "spd.other", 0),
     "OtherParamChangeAgi":     ("spd.up", "spd.down", "spd.other", 0),
+
     "MultipleAttack":          ("damage.up", "damage.down", None, 100),
-    "MultipleDefence":         ("damage.up", "damage.down", None, 100),
     "TurnBaseMultipleAttack":  ("damage.up", "damage.down", None, 100),
-    "TurnBaseMultipleDefence": ("damage.up", "damage.down", None, 100),
+    "HighestComboMultipleAttack": ("damage.up", "damage.down", None, 100),
+    "PersistenceIconChangeMultipleAttack": ("damage.up", "damage.down", None, 100),
+
     "MultipleBaseView":        ("vp.gain", "vp.loss", None, 100),
     "ChangeView":              ("vp.gain", "vp.loss", None, 0),
     "NeedViewValueChange":     ("vp.costup", "vp.costdown", None, 0),
+
+    "MultipleDefence":         ("defense.down", "defense.up", None, 100),
+    "TurnBaseMultipleDefence": ("defense.down", "defense.up", None, 100),
+    "HighestMultipleDefence": ("defense.down", "defense.up", None, 100),
+    "PersistenceIconChangeMultipleDefence": ("defense.down", "defense.up", None, 100),
 }
 
+MAXMULT_SIGN_RULES = {
+    "ComboMultipleDefence": ("defense.down", "defense.up", None, 100),
+    "HighestMultipleDefence": ("defense.down", "defense.up", None, 100),
+    "HighestViewPowerMultipleDefence": ("defense.down", "defense.up", None, 100),
+}
+
+STATUSMULT_SIGN_RULES = {
+    "HighestStatusNumberMultipleDefence": ("defense.down", "defense.up", None, 0),
+}
 
 def _is_ignored_class(cls):
     """Knowingly ignored mechanics / placeholders / handled-elsewhere classes."""
@@ -417,6 +428,12 @@ def _is_ignored_class(cls):
             or "CopyBuff" in cls
             or cls.endswith("Status"))
 
+
+def _value_sign_classifer(cls, inner, rules, key):
+    gt, lt, eq, thr = rules[cls]
+    v = (inner.get("parameter") or {}).get(key, thr)
+    label = gt if v > thr else lt if v < thr else eq
+    return ({label} if label else set()), cls in DAMAGE_CLASSES, True
 
 def classify(cls, inner):
     """Map a single effect class to label keys.
@@ -429,10 +446,12 @@ def classify(cls, inner):
     auto-map; finally the ignored set. Anything left is reported.
     """
     if cls in VALUE_SIGN_RULES:
-        gt, lt, eq, thr = VALUE_SIGN_RULES[cls]
-        v = (inner.get("parameter") or {}).get("value", thr)
-        label = gt if v > thr else lt if v < thr else eq
-        return ({label} if label else set()), cls in DAMAGE_CLASSES, True
+        return _value_sign_classifer(cls, inner, VALUE_SIGN_RULES, "value")
+    if cls in MAXMULT_SIGN_RULES:
+        return _value_sign_classifer(cls, inner, MAXMULT_SIGN_RULES, "maxMult")
+    if cls in STATUSMULT_SIGN_RULES:
+        return _value_sign_classifer(cls, inner, STATUSMULT_SIGN_RULES, "statusMult")
+
     if cls in CLASS_TO_LABELS:
         return set(CLASS_TO_LABELS[cls]), cls in DAMAGE_CLASSES, True
     if cls in DAMAGE_CLASSES:
