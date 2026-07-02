@@ -1,0 +1,529 @@
+/* Minimal MVP styling. */
+:root {
+  --colorLight: #ffe9a8;
+  --border: #d0d0d0;
+  --accent: #3b6ea5;
+  --bg-soft: #f5f5f5;
+}
+
+[data-theme="dark"] {
+  --colorLight: #4b2b10;
+  --border: #3c3c3c;
+  --accent: #4e91e3;
+  --bg-soft: #1e1e1e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.loading {
+  padding: 2rem;
+  font-size: 16px;
+}
+
+.app {
+  padding: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.app-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.app-header h1 {
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem;
+}
+
+.ver {
+  color: #888;
+  font-size: 12px;
+}
+
+.reload-btn {
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 6px;
+  color: #888;
+}
+
+.reload-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ---- Filter panel ---- */
+.filter-panel {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+  background: var(--bg-soft);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+  flex-wrap: wrap;
+}
+
+.row-label {
+  flex: 0 0 130px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.row-buttons {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.chip {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.chip:hover {
+  border-color: var(--accent);
+}
+
+.chip-on {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.chip-all {
+  font-style: italic;
+}
+
+.vp-input {
+  width: 80px;
+  padding: 2px 6px;
+}
+
+.char-input {
+  width: 16rem;
+  padding: 2px 6px;
+}
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 13px;
+}
+
+.reset {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.result-count {
+  font-size: 12px;
+  color: #666;
+}
+
+/* ---- Status autocomplete ---- */
+.status-ac {
+  position: relative;
+  flex: 1;
+  min-width: 240px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  padding: 3px 5px;
+}
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 1px 6px;
+  font-size: 12px;
+}
+
+.status-chip img {
+  width: 16px;
+  height: 16px;
+}
+
+.status-chip button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  color: #999;
+}
+
+.status-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  min-width: 100px;
+  font-size: 13px;
+}
+
+.ac-menu {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  margin: 2px 0 0;
+  padding: 0;
+  list-style: none;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  max-height: 260px;
+  overflow-y: auto;
+  display: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ac-menu.open {
+  display: block;
+}
+
+.ac-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.ac-item img {
+  width: 18px;
+  height: 18px;
+}
+
+.ac-item.hl {
+  background: var(--bg-soft);
+}
+
+.ac-type {
+  margin-left: auto;
+  font-size: 11px;
+  color: #999;
+}
+
+/* ---- Result table (virtualized) ----
+   The rows are windowed with @tanstack/react-virtual: the tbody is a
+   positioning context whose height = total virtual size, and each rendered row
+   is absolutely placed via translateY. Native table display can't do that, so
+   the table is laid out with grid/flex instead. */
+.table-wrap {
+  position: relative;
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.result-table {
+  display: grid;
+  width: max-content;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.result-table thead {
+  display: grid;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.result-table tbody {
+  display: grid;
+  position: relative;
+}
+
+.result-table thead tr,
+.result-table tbody tr {
+  display: flex;
+  width: 100%;
+}
+
+.result-table tbody tr {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.result-table th,
+.result-table td {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 4px 6px;
+  text-align: left;
+  overflow: hidden;
+}
+
+.result-table th {
+  background: var(--bg-soft);
+  user-select: none;
+}
+
+.th-label.sortable {
+  cursor: pointer;
+}
+
+.chara-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.chara-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: var(--accent);
+  min-width: 0;
+}
+
+.chara-link > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kit-btn {
+  margin-left: auto;
+  flex: none;
+  cursor: pointer;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 7px;
+  color: var(--accent);
+}
+
+.kit-btn:hover {
+  border-color: var(--accent);
+}
+
+.chara-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+}
+
+.mob-tag {
+  font-size: 10px;
+  background: var(--colorGrey);
+  color: #fff;
+  border-radius: 3px;
+  padding: 0 3px;
+}
+
+.skill-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.skill-head {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.slot-badge {
+  font-size: 10px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 3px;
+  padding: 0 4px;
+}
+
+.skill-name {
+  font-weight: 600;
+}
+
+.inline-status {
+  width: 16px;
+  height: 16px;
+}
+
+/* Skill description custom tags (raw JP HTML from the index). */
+.skill-desc {
+  line-height: 1.5;
+}
+
+hr.status-hr {
+  margin: 6px 0 4px;
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+/* In-combat skill transforms (ChangeActiveSkill), collapsed by default. */
+.change-skill {
+  margin-top: 4px;
+}
+
+.change-skill > .skill-desc {
+  display: block;
+  padding: 10px;
+}
+
+/* ---- Full skill-kit dialog ---- */
+.kit-dialog {
+  width: min(680px, 92vw);
+  max-height: 85vh;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  /* Entry animation (top-layer) — see modern dialog guidance. */
+  opacity: 0;
+  transform: scale(0.96);
+  transition-property: opacity, transform, display, overlay;
+  transition-duration: 0.18s;
+  transition-timing-function: ease-out;
+  transition-behavior: allow-discrete;
+  overflow-y: hidden;
+}
+
+.kit-dialog[open] {
+  opacity: 1;
+  transform: scale(1);
+
+  @starting-style {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+
+.kit-dialog::backdrop {
+  background: rgba(0, 0, 0, 0);
+  transition:
+    display 0.18s allow-discrete,
+    overlay 0.18s allow-discrete,
+    background-color 0.18s ease-out;
+}
+
+.kit-dialog[open]::backdrop {
+  background: rgba(0, 0, 0, 0.45);
+
+  @starting-style {
+    background: rgba(0, 0, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kit-dialog {
+    transform: none;
+    transition-duration: 0.05s;
+  }
+  .kit-dialog[open] {
+    transform: none;
+    @starting-style {
+      transform: none;
+    }
+  }
+}
+
+.kit-body {
+  display: flex;
+  flex-direction: column;
+  max-height: 85vh;
+}
+
+.kit-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+}
+
+.kit-head h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.kit-kind {
+  font-size: 11px;
+  color: #777;
+}
+
+.kit-close {
+  margin-left: auto;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #777;
+  padding: 0 4px;
+}
+
+.kit-close:hover {
+  color: #222;
+}
+
+.kit-skills {
+  overflow-y: auto;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.kit-skill {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 5px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+
+.kit-skill.is-hidden {
+  display: none;
+  /*opacity: 0.85;
+  border-left: 2px dashed var(--border);
+  padding-left: 8px;*/
+}
+
+.hidden-badge {
+  font-size: 10px;
+  background: var(--colorGrey);
+  color: #fff;
+  border-radius: 3px;
+  padding: 0 4px;
+}

@@ -70,6 +70,50 @@ erDiagram
         *   `questInfos` (array): References to associated farm quest chapters.
     *   `questBonusJsons` (array): Multiplier bonuses granting specific heroes and sidekicks bonus points/drops.
 
+### 7. Skill-Tree Enhancement (`SkillUpgradeMaster` + tiered effects)
+
+Some heroes unlock a **skill tree** that upgrades their active skills. Resolving
+the *fully-maxed* skill text/cost (as done for the `skillsMaxed` projection in
+`tools/generate_skill_search_index.py`) relies on a few non-obvious relationships:
+
+*   **Bloom skills**: in `CardMaster.skillProvider.activeSkills[]`, entries with
+    `skillUpgrade == 1` are the skill-tree ("bloom") versions of the base actives
+    (`skillUpgrade == 0`). `CardMaster.skillUpgradeQuestInfos[].changeSkills[]`
+    gives the authoritative `beforeSkillId → afterSkillId` (base → bloom) map.
+*   **`SkillUpgradeMaster.json`**: keyed by `skillEntryId`. Every node for one
+    bloom skill shares that skill's `skillId` and forms a DAG via `conditionIds`
+    (prerequisite nodes) and `nextEntryIds` (successor nodes). A node with
+    `nextEntryIds == null` is **terminal**. Maxing a tree unlocks **every** node.
+    Each node's own `description` is just the in-tree tooltip for that step.
+*   **Where the maxed text actually lives**: a bloom skill keeps the **same
+    `skillId`** through the whole tree. Its full text = the top-level
+    `SkillMaster[sid].description` **plus** selected `effects[].conditionDescription`
+    lines. Each effect carries a `serialNo`, a `skillEffectId`, and a
+    `conditionEntityId` that points at a `SkillUpgradeMaster` node (`0` means
+    unconditional).
+*   **Incremental vs final** — the key distinction:
+    *   **Tiered (replacement) lines** climb the tree (e.g. Burn 40→45→50→55→60%,
+        or a damage cap 180→…→220%). Only the variant gated by a **terminal** node
+        is the final value; intermediate tiers and the tier-0 base
+        (`conditionEntityId == 0`) are superseded and dropped. Note the tiers do
+        **not** always reuse one `skillEffectId` — group them by effect *signature*
+        (inner effect classes + applied `statusId`) to recognise the progression.
+    *   **Standalone unconditional lines** (e.g. a passive at `conditionEntityId == 0`
+        with no tiered successor) are always kept.
+    *   **Additive lines** — `ChangeSkillBaseView` View-cost reductions
+        (negative `parameter.value`) are gated by separate tree nodes and *stack*;
+        the maxed `useView` = base `useView` + the sum of all of them (e.g. Akashi
+        active 3: 16000 − 500 − 500 − 1000 − 2000 = 12000). Multiplier-style view
+        classes (`ChangeViewCoefficient`, `FixView`, …) are not modeled.
+*   **Localization keys** (in `zzz/English.json`): `SKILL_DESCRIPTION_{skillId}`
+    and `SKILL_EFFECT_CONDITION_DESCRIPTION_{skillId}_{serialNo}`. Beware:
+    `SKILL_UPGRADE_DESCRIPTION_{skillEntryId}` is the tree-node **tooltip**, not the
+    resolved skill text.
+
+`tools/skill_evo.py` separately pre-renders the raw node-`description` DAG into
+`_data/processed/SkillUpgradeMaster.json` (`<details>` HTML) for the character
+page's visual skill-tree; that is independent of the maxed-text assembly above.
+
 ---
 
 ## 💻 How Jekyll Pages Use Game Schemas

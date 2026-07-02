@@ -20,6 +20,9 @@ graph TD
     G -->|tools/event_gen.py| I[_events/ event pages]
     
     D -->|tools/skill_evo.py| J[Pre-rendered HTML Skill Upgrade Tree]
+
+    G -->|tools/generate_skill_search_index.py| K[api/ skill-index.json search index]
+    B -->|tools/generate_skill_search_index.py| K
 ```
 
 ## 📂 Core Scripts Reference
@@ -172,7 +175,33 @@ graph TD
 
 ---
 
-### 13. `preprocess.py` (root directory)
+### 13. `tools/generate_skill_search_index.py`
+*   **Purpose**: Builds the prebuilt index that powers the advanced skill search. Deduplicates heroes/sidekicks by `stockId` (heroes use the rarity-6 entry, falling back to the highest rarity; sidekicks use the `levelZone == 6` entry; either is flagged `isMob` when the stock's smallest rarity is `1`), then walks the `SkillMaster → SkillEffectMaster → StatusMaster` join chain to label each skill with effect categories (e.g. `attack.single`, `damage.dot`) and collect the named statuses it applies. Folds `ChangeActiveSkill` target skills and granted passives into the source skill, and emits both a base and a fully-bloomed (`skillsMaxed`) loadout for heroes with a skill tree. For the `skillsMaxed` entries the per-skill `description` and `useView` are reassembled to the fully-unlocked skill-tree state — see [Skill-Tree Enhancement](./DATA_SCHEMAS.md#7-skill-tree-enhancement-skillupgrademaster--tiered-effects) in the data-schema guide for the tier/terminal-node rules. Unrecognized effect classes are reported as `UNMAPPED CLASSES` for review. Outputs are plain static JSON (no front matter) so Jekyll copies them verbatim into `_site/api/`, fetchable at `/api/skill-index.json`. Run after `tools/translation_download_tsv.py` (it consumes `Status.json`).
+*   **Input Files**:
+    *   `_data/CardMaster.json`
+    *   `_data/SidekickMaster.json`
+    *   `_data/SkillMaster.json`
+    *   `_data/SkillEffectMaster.json`
+    *   `_data/StatusMaster.json`
+    *   `_data/SkillUpgradeMaster.json` (skill-tree graph; drives the `skillsMaxed` description/useView assembly)
+    *   `_data/translation/Status.json`
+    *   `zzz/English.json` (optional English localization dump; missing → raw-Japanese fallback)
+    *   `tools/masterdata_ver.txt` (index version; falls back to a hash of the input masters)
+*   **Output Files**:
+    *   `api/skill-index.json` (full search index: categories, statuses, entities)
+    *   `api/skill-index-version.json` (tiny version probe for browser cache invalidation)
+
+---
+
+### 14. `tools/audit_skill_effects.py`
+*   **Purpose**: Audits the skill-effect `class`es used by the search index, **scoped to the same skills reachable from `CardMaster`/`SidekickMaster`** that `generate_skill_search_index.py` indexes (it imports that module's `load_all`, `build_entities`, and `classify`, so its frequency counts match the generator's `UNMAPPED CLASSES` report). Used to drive labelling improvements: for each class it gathers the real Japanese descriptions, parameter shapes, and the labels `classify()` currently produces, so the right taxonomy mapping can be deduced from evidence rather than the (misleading) English class name. Subcommands: `classes` (every reachable class by descending frequency, with a recognized/UNMAPPED flag), `class <Name>…` (occurrences of the given class(es) collapsed into distinct signatures with `value` ranges, persistence counts, statuses, and example characters), and `report` (browsable HTML, one collapsed `<details>` per class, sorted for clean diffs). Add `--json` to `classes`/`class` for machine-readable output. Read-only apart from the optional HTML report. See the `audit-effect-classes` skill for the full audit workflow.
+*   **Input Files**: same masters as `generate_skill_search_index.py` (loaded via its `load_all`), plus `_charas/*.md` for character-page links.
+*   **Output Files**:
+    *   `api/skill-effects-audit.html` (only when running `report`; override with `--out`)
+
+---
+
+### 15. `preprocess.py` (root directory)
 *   **Purpose**: Preprocesses and optimizes game assets. Currently configured to optimize and compress raw PNG banner/survey assets under `Sprite` and survey directories, converting them to compressed, web-ready progressive JPGs using Pillow (`PIL`).
 *   **Input Files**:
     *   `Sprite/banner_*.png`
