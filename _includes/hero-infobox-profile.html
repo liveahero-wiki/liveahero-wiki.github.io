@@ -13,7 +13,7 @@
     <div class="header">
         <div class="name">{{ firstCardInfo.stockId | stockIdToCharaTitle: 1 }}</div>
         <div class="sub">{{ firstCardInfo.cardName }}</div>
-        {% if include.limited or variantIndex > 1 %}<span class="wiki-badge" style="margin-top: 5px">Limited-time unit</span>{% endif %}
+        {% if include.limited or variantIndex > 1 %}<span class="wiki-badge" style="margin-top: 0.5rem">Limited-time unit</span>{% endif %}
     </div>
     <div style="display: flex; gap: 10px; padding: 10px;">
         <div class="chara-badge">
