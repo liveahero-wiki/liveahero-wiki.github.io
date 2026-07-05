@@ -114,7 +114,6 @@ CATEGORIES = [
         {"key": "attack.all", "label": "All-range attack"},
         {"key": "attack.special", "label": "Special-range attack"},
         {"key": "attack.multi", "label": "Multiple attacks"},
-        {"key": "attack.extra_action", "label": "Additional actions"},
         {"key": "attack.induction", "label": "Pursuit / Induction"},
         {"key": "attack.counter", "label": "Counterattack"},
         {"key": "attack.ally", "label": "Attack allies"},
@@ -148,7 +147,7 @@ CATEGORIES = [
         {"key": "interf.buff_remove", "label": "Buff removal"},
         {"key": "interf.debuff_resist", "label": "Debuff resistance"},
         {"key": "interf.extend", "label": "Buff / debuff extension"},
-        {"key": "interf.silence", "label": "Silence / skip"},
+        {"key": "interf.silence", "label": "Skill lock"},
     ]},
     {"key": "defense", "label": "Defense / Survival", "labels": [
         {"key": "defense.up", "label": "Increase defense"},
@@ -162,6 +161,8 @@ CATEGORIES = [
     ]},
     {"key": "skillctl", "label": "Skill control", "labels": [
         {"key": "skillctl.change", "label": "Skill change"},
+        {"key": "skillctl.extra_action", "label": "Additional actions"},
+        {"key": "skillctl.extra_activation", "label": "Additional activation"},
         {"key": "skillctl.auto", "label": "Auto-action control"},
         {"key": "skillctl.ratechange", "label": "Skill rate change"},
     ]},
@@ -210,12 +211,12 @@ CLASS_TO_LABELS = {
     "ElementPenetrateDamage": ["attack.penetrate"],
     "HidePenetration": ["attack.penetrate"],
     "CounterAttack": ["attack.counter"],
-    "CounterAttackRecalculateTarget": ["attack.counter"],
-    "MoreTurn": ["attack.extra_action"],
-    "MoreTurnExecBeforeSkill": ["attack.extra_action"],
-    "ReleaseWait": ["attack.extra_action"],
+    "CounterAttackRecalculateTarget": [],
+    "MoreTurn": ["skillctl.extra_action"],
+    "MoreTurnExecBeforeSkill": ["skillctl.extra_action"],
+    "ReleaseWait": ["skillctl.extra_action"],
     "Induction": ["attack.induction"],
-    "OwnAttack": ["attack.induction"],
+    "OwnAttack": ["skillctl.extra_activation"],
 
     # damage modifiers
     "AddMultDamage": ["damage.up"],
@@ -225,13 +226,11 @@ CLASS_TO_LABELS = {
     # MultipleAttack / MultipleDefence flip on parameter.value -> VALUE_SIGN_RULES
 
     # MultipleAttack classes
-    "ComboMultipleAttack": ["damage.up"],
     "HealthMultipleAttack": ["damage.up"],
     "HighestMultipleAttack": ["damage.up"],
     "SpdDifferenceMultipleAttack": ["damage.up"],
     "StatusNumberMultipleAttack": ["damage.up"],
     "ViewPowerMultipleAttack": ["damage.up"],
-    "BeforeSkillTriggerMultipleAttack": ["damage.up", "attack.induction"],
     "HighestBarrierMultipleAttack": ["damage.up"],
     "DamageCount": ["damage.up"],
     # VP-scaled / param-scaled / condition-scaled ATK-up variants
@@ -240,9 +239,6 @@ CLASS_TO_LABELS = {
     "StatusTurnDamage": ["damage.up"],
     "OtherParamMultipleAttack": ["damage.up"],
     "OtherParamAddAttack": ["damage.up"],
-    "HighestOtherParamAddAttack": ["damage.up"],
-    "HighestHealthMultipleAttack": ["damage.up"],
-    "StatusTurnMultipleAttack": ["damage.up"],
 
     # DoT spread / amplification
     "SpreadDotDamage": ["damage.dot"],
@@ -317,8 +313,8 @@ CLASS_TO_LABELS = {
     "ForceAuto": ["skillctl.auto"],
     "TargetReversal": ["skillctl.auto"],
     "DecideUniqueByStatusPassiveBattleSkillEffect": ["skillctl.auto"],
-    "ChangeSkillProve": ["skillctl.ratechange"],
-    "HighestChangeSkillProb": ["skillctl.ratechange"],
+    "ChangeSkillProve": ["skillctl.extra_action"],
+    "HighestChangeSkillProb": ["skillctl.extra_action"],
 
     # acquisition
     "SalesBonusCheat": ["acq.coin"], 
@@ -340,7 +336,7 @@ CLASS_TO_LABELS = {
 IGNORED_CLASSES = {
     "ChangeHp", "Critical", "IgnoreElement", "Burst", "Summon", "ItemEffectMark",
     "ParticleStatus", "PassiveBattleSkillEffect", "ForceExecDotDamage",
-    "ChangeHpExecBeforeSkill", "Delete Turn",
+    "ChangeHpExecBeforeSkill",
     "NowViewTurn",       # Victom's internal VP-threshold turn counter (system status)
     "UseInvokerBaseAtk", # internal damage-calc flag for Akashi's Armament
 }
@@ -398,8 +394,9 @@ VALUE_SIGN_RULES = {
 
     "MultipleAttack":          ("damage.up", "damage.down", None, 100),
     "TurnBaseMultipleAttack":  ("damage.up", "damage.down", None, 100),
-    "HighestComboMultipleAttack": ("damage.up", "damage.down", None, 100),
     "PersistenceIconChangeMultipleAttack": ("damage.up", "damage.down", None, 100),
+    "BeforeSkillTriggerMultipleAttack": ("damage.up", "damage.down", None, 0),
+    "HighestOtherParamAddAttack": ("damage.up", "damage.down", None, 0),
 
     "MultipleBaseView":        ("vp.gain", "vp.loss", None, 100),
     "ChangeView":              ("vp.gain", "vp.loss", None, 0),
@@ -412,12 +409,17 @@ VALUE_SIGN_RULES = {
 }
 
 MAXMULT_SIGN_RULES = {
+    "HighestComboMultipleAttack": ("damage.up", "damage.down", None, 100),
+    "HighestHealthMultipleAttack": ("damage.up", "damage.down", None, 1),
+
     "ComboMultipleDefence": ("defense.down", "defense.up", None, 100),
     "HighestMultipleDefence": ("defense.down", "defense.up", None, 100),
     "HighestViewPowerMultipleDefence": ("defense.down", "defense.up", None, 100),
 }
 
 STATUSMULT_SIGN_RULES = {
+    "StatusTurnMultipleAttack": ("damage.up", "damage.down", None, 0),
+
     "HighestStatusNumberMultipleDefence": ("defense.down", "defense.up", None, 0),
 }
 
