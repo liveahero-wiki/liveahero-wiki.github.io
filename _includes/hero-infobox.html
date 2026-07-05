@@ -13,7 +13,7 @@
 {% endif %}
 
 <div id="h{{ include.stockId }}" role="tabpanel" tabindex="0"  class="tabcontent contain element{{ firstCardInfo.element }}">
-{% include hero-infobox-profile.html stockId=include.stockId firstCardInfo=firstCardInfo sprites=sprites isHero=true %}
+{% include hero-infobox-profile.html stockId=include.stockId firstCardInfo=firstCardInfo sprites=sprites isHero=true limited=include.limited %}
 
 {% assign detail_prefix = firstCardInfo.resourceName | upcase | prepend: "DETAIL_" %}
 {% assign bio_h01 = detail_prefix | append: "_H01" %}

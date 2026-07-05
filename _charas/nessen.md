@@ -7,6 +7,7 @@ h2:
   title: '"Moonlight Shadow" Nessen'
 heroes:
 - stockId: 10511
+  limited: true
   BIO_H01: |-
     He transforms into a bathhouse attendant and has a weapon that is made of fir
     and resembles a paddle or a sword. The paddle is clad in a water-like energy and
@@ -39,6 +40,7 @@ heroes:
   extra_sprites: fg_nessenMasquerade2310_h01_skin2,fg_nessenMasquerade2310_h01_skin3,fg_nessenMasquerade2310_h02_skin2
 sidekicks:
 - stockId: 10511
+  limited: true
   BIO_S01: |-
     A man who manages both a hot spring resort in the southern part of Orient City
     and one of the hot spring inns located there. Born in Shizuoka, Japan, his full

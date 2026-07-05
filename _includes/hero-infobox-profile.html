@@ -5,6 +5,7 @@
 {% assign overrideIllustrator = site.data.processed.jp_profile[cardProfileOverride.illustrator] %}
 {% assign overrideAffiliation = site.data.processed.jp_profile[cardProfileOverride.affiliation] %}
 {% assign overridejob = site.data.processed.jp_profile[cardProfileOverride.job] %}
+{% assign variantIndex = include.stockId | modulo: 10 %}
 
 <div class="heroinfobox">
 {% include atlas-gallery.html sprites=include.sprites %}
@@ -12,6 +13,7 @@
     <div class="header">
         <div class="name">{{ firstCardInfo.stockId | stockIdToCharaTitle: 1 }}</div>
         <div class="sub">{{ firstCardInfo.cardName }}</div>
+        {% if include.limited or variantIndex > 1 %}<span class="wiki-badge" style="margin-top: 5px">Limited-time unit</span>{% endif %}
     </div>
     <div style="display: flex; gap: 10px; padding: 10px;">
         <div class="chara-badge">

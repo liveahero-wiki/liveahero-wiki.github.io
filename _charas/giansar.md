@@ -7,6 +7,7 @@ h2:
   title: "\"Shattering Horizons\" Giansar"
 heroes:
 - stockId: 11241
+  limited: true
   BIO_H01: |-
     The knife-shaped parallel weapon collects and analyzes information about the target it stabs and reproduces their appearance in his own suit.
   
@@ -34,6 +35,7 @@ heroes:
   extra_sprites: fg_giansarLightYears2412_h02_skin2
 sidekicks:
 - stockId: 11241
+  limited: true
   BIO_S01: |-
     With a deep and highly technical knowledge of various systems, both software and hardware, Giansar is very meticulous in contrast to his rough tone and demeanor.
   
