@@ -38,6 +38,14 @@ layout: compress
 </button>
 
     <a class="github-button" href="{{ site.github_repo }}/blob/master/{{ page.path }}?plain=1">View source</a>
+    {% assign chara_id = page.characterId %}
+    {% if chara_id %}
+      {% assign sidekick_card_id = chara_id | times: 100 | plus: 100011 | downcase %}
+      {% assign sidekick_card = site.data.SidekickMaster[sidekick_card_id] %}
+      {% if sidekick_card %}
+        <a class="github-button" href="https://wikiwiki.jp/live-a-hero/{{ sidekick_card.cardName | uri_escape }}">JP Wiki</a>
+      {% endif %}
+    {% endif %}
     </aside>
 {% include banner.html %}
 {{ content }}
