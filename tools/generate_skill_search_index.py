@@ -155,6 +155,7 @@ CATEGORIES = [
         {"key": "defense.barrier", "label": "Barrier"},
         {"key": "defense.provoke", "label": "Provoke"},
         {"key": "defense.aggregation", "label": "Damage aggregation"},
+        {"key": "defense.target", "label": "Attack focus"},
         {"key": "defense.stealth", "label": "Stealth"},
         {"key": "defense.hp", "label": "Max HP up"},
         {"key": "defense.dodge", "label": "Evasion / Dodge"},
@@ -170,11 +171,7 @@ CATEGORIES = [
         {"key": "acq.coin", "label": "Coin / sales boost"},
         {"key": "acq.exp", "label": "EXP boost"},
         {"key": "acq.relation", "label": "Relation boost"},
-    ]},
-    {"key": "field", "label": "Field", "labels": [
-        {"key": "field.field", "label": "Field effect"},
-        {"key": "field.remove", "label": "Remove field effect"},
-    ]},
+    ]}
 ]
 
 # Effect classes that deal damage -> the skill counts as an "attack" and gets
@@ -217,6 +214,7 @@ CLASS_TO_LABELS = {
     "ReleaseWait": ["skillctl.extra_action"],
     "Induction": ["attack.induction"],
     "OwnAttack": ["skillctl.extra_activation"],
+    "TeamAttackEnemy": ["skillctl.extra_activation"],
 
     # damage modifiers
     "AddMultDamage": ["damage.up"],
@@ -268,8 +266,9 @@ CLASS_TO_LABELS = {
     "SpdDeferenceChangeView": ["vp.gain"],
     "ChangeBaseView": ["vp.gain"],
     "GetViewDamage": ["vp.gain"],
+    "RemoveGainViewStock": ["view.gain"],
     # MultipleBaseView flips on parameter.value -> VALUE_SIGN_RULES
-    "ViewCount": ["vp.gain"], 
+    "ViewCount": [], 
     "ViewChangeHp": ["vp.gain"],
     "NeedViewChange": ["vp.costdown"],
     "HighestNeedViewChange": ["vp.costdown"],
@@ -278,13 +277,12 @@ CLASS_TO_LABELS = {
     "NotDamageSkillNeedViewValueChange": ["vp.costdown"],
     "FixView": ["vp.costdown"], 
     "ChangeSkillBaseView": ["vp.costdown"],
-    "RateChangeView": ["vp.costdown"], 
     "ChangeViewCoefficient": ["vp.costdown"],
 
     # interference
     "Cure": ["interf.debuff_remove"],
     "RemoveBuff": ["interf.buff_remove"], 
-    "RemoveSystemEffect": ["interf.buff_remove"],
+    "RemoveSystemEffect": [],
     "RegistDebuff": ["interf.debuff_resist"], 
     "RegistDeBuffExecDeBuffed": ["interf.debuff_resist"],
     "SkillTurnExtension": ["interf.extend"],
@@ -300,8 +298,8 @@ CLASS_TO_LABELS = {
     "AbsorbDamage": ["heal.heal"],
     "Cover": ["defense.provoke"], 
     "Provocation": ["defense.provoke"],
-    "TargetMark": ["defense.stealth"],
-    "LowestAgilityTargetMark": ["defense.provoke"],
+    "TargetMark": ["defense.target"],
+    "LowestAgilityTargetMark": ["defense.target"],
     "Aggregation": ["defense.aggregation"],
     "Hide": ["defense.stealth"],
     #"Ressurection": ["defense.revive"], 
@@ -323,8 +321,7 @@ CLASS_TO_LABELS = {
     "IncreaseRelation": ["acq.relation"],
     
     # field
-    "RemoveFieldEffect": ["field.remove"], 
-    "RemoveGainViewStock": ["field.remove"],
+    "RemoveFieldEffect": [], 
     
     # stat buffs (max-HP up; survivability)
     "MultipleHp": ["defense.hp"],
@@ -400,6 +397,7 @@ VALUE_SIGN_RULES = {
 
     "MultipleBaseView":        ("vp.gain", "vp.loss", None, 100),
     "ChangeView":              ("vp.gain", "vp.loss", None, 0),
+    "RateChangeView":          ("vp.gain", "vp.loss", None, 0),
     "NeedViewValueChange":     ("vp.costup", "vp.costdown", None, 0),
 
     "MultipleDefence":         ("defense.down", "defense.up", None, 100),
