@@ -211,7 +211,7 @@ CLASS_TO_LABELS = {
     "CounterAttackRecalculateTarget": [],
     "MoreTurn": ["skillctl.extra_action"],
     "MoreTurnExecBeforeSkill": ["skillctl.extra_action"],
-    "ReleaseWait": ["skillctl.extra_action"],
+    "ReleaseWait": [],
     "Induction": ["attack.induction"],
     "OwnAttack": ["skillctl.extra_activation"],
     "TeamAttackEnemy": ["skillctl.extra_activation"],
@@ -219,13 +219,12 @@ CLASS_TO_LABELS = {
     # damage modifiers
     "AddMultDamage": ["damage.up"],
     "DamageMultipleAdjust": ["damage.up"],
-    "DamageLimit": ["damage.down"],
-    "NowHPDependDamageLimit": ["damage.down"],
-    # MultipleAttack / MultipleDefence flip on parameter.value -> VALUE_SIGN_RULES
+    "NowViewDamage": ["damage.up"],
+    "DamageLimit": [],
+    "NowHPDependDamageLimit": [], # cap damage to percentage of HP
 
     # MultipleAttack classes
     "HealthMultipleAttack": ["damage.up"],
-    "HighestMultipleAttack": ["damage.up"],
     "SpdDifferenceMultipleAttack": ["damage.up"],
     "StatusNumberMultipleAttack": ["damage.up"],
     "ViewPowerMultipleAttack": ["damage.up"],
@@ -270,11 +269,8 @@ CLASS_TO_LABELS = {
     # MultipleBaseView flips on parameter.value -> VALUE_SIGN_RULES
     "ViewCount": [], 
     "ViewChangeHp": ["vp.gain"],
-    "NeedViewChange": ["vp.costdown"],
-    "HighestNeedViewChange": ["vp.costdown"],
     # NeedViewValueChange flips on parameter.value -> VALUE_SIGN_RULES
-    "NotDamageSkillNeedViewChange": ["vp.costdown"],
-    "NotDamageSkillNeedViewValueChange": ["vp.costdown"],
+
     "FixView": ["vp.costdown"], 
     "ChangeSkillBaseView": ["vp.costdown"],
     "ChangeViewCoefficient": ["vp.costdown"],
@@ -311,8 +307,8 @@ CLASS_TO_LABELS = {
     "ForceAuto": ["skillctl.auto"],
     "TargetReversal": ["skillctl.auto"],
     "DecideUniqueByStatusPassiveBattleSkillEffect": ["skillctl.auto"],
-    "ChangeSkillProve": ["skillctl.extra_action"],
-    "HighestChangeSkillProb": ["skillctl.extra_action"],
+    "ChangeSkillProve": ["skillctl.ratechange"],
+    "HighestChangeSkillProb": ["skillctl.ratechange"],
 
     # acquisition
     "SalesBonusCheat": ["acq.coin"], 
@@ -390,6 +386,7 @@ VALUE_SIGN_RULES = {
     "OtherParamChangeAgi":     ("spd.up", "spd.down", "spd.other", 0),
 
     "MultipleAttack":          ("damage.up", "damage.down", None, 100),
+    "HighestMultipleAttack":   ("damage.up", "damage.down", None, 100),
     "TurnBaseMultipleAttack":  ("damage.up", "damage.down", None, 100),
     "PersistenceIconChangeMultipleAttack": ("damage.up", "damage.down", None, 100),
     "BeforeSkillTriggerMultipleAttack": ("damage.up", "damage.down", None, 0),
@@ -399,6 +396,10 @@ VALUE_SIGN_RULES = {
     "ChangeView":              ("vp.gain", "vp.loss", None, 0),
     "RateChangeView":          ("vp.gain", "vp.loss", None, 0),
     "NeedViewValueChange":     ("vp.costup", "vp.costdown", None, 0),
+    "NeedViewChange":          ("vp.costup", "vp.costdown", None, 100),
+    "HighestNeedViewChange":   ("vp.costup", "vp.costdown", None, 100),
+    "NotDamageSkillNeedViewChange": ("vp.costup", "vp.costdown", None, 100),
+    "NotDamageSkillNeedViewValueChange": ("vp.costup", "vp.costdown", None, 100),
 
     "MultipleDefence":         ("defense.down", "defense.up", None, 100),
     "TurnBaseMultipleDefence": ("defense.down", "defense.up", None, 100),
