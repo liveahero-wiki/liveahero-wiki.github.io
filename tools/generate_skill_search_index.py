@@ -47,8 +47,11 @@ INDEX_SCHEMA_REV = "r11"
 # SkillMaster.targetFlag: the game's skill-targeting enum, from _plugins/skill.rb
 # skill_target. A damage-dealing skill gets an attack-range label from which side
 # it hits: enemies -> single/all attack, allies -> "attack allies". 0 (self) and
-# 5 (event bonus unit) get no attack-range label. Multi-hit comes from the
-# *MultipleAttack classes, not from targetFlag.
+# 5 (event bonus unit) get no attack-range label. Multi-hit is structural, not
+# class-based: it comes from a skill having more than one distinct
+# sequenceGroupId among its damage-dealing SkillMaster.effects[] rows (see
+# label_skill). The *MultipleAttack classes are single-instance damage-scaling
+# effects (-> damage.scaling), not repeated hits.
 TARGET_FLAGS_ENEMY_ALL = {4, 16, 27}                # all enemies / all except target
 TARGET_FLAGS_ENEMY_SINGLE = {2, 7, 29}              # single / random enemy
 TARGET_FLAGS_ALLY = {1, 3, 6, 9, 11, 12, 13, 14}    # any ally-directed damage
@@ -365,7 +368,6 @@ SUBSTRING_RULES = [
     #(lambda c: "Heal" in c and "Health" not in c, {"heal.heal"}, False),
     #(lambda c: "DamageLimit" in c, {"damage.down"}, False),
     #(lambda c: "Defence" in c, {"damage.down"}, False),
-    ##(lambda c: "MultipleAttack" in c, {"attack.multi"}, True),
     #(lambda c: "DotDamage" in c or "ElapseTurnDamage" in c, {"damage.dot"}, False),
     #(lambda c: "Damage" in c, set(), True),
     #(lambda c: c.endswith("Attack") or c.endswith("Atk"), set(), True),
@@ -474,6 +476,7 @@ def label_skill(skill_id, SM, SEM, SMA, visited):
         return labels, status_ids
 
     description = skill.get("description") or ""
+    damage_group_ids = set()
 
     for eff in skill.get("effects", []) or []:
         sem = SEM.get(str(eff.get("skillEffectId")))
@@ -487,12 +490,14 @@ def label_skill(skill_id, SM, SEM, SMA, visited):
             labels.add("damage.dot")
         if sej.get("isFieldEffect"):
             labels.add("field.field")
+        row_deals_damage = False
         for inner in sej.get("effects", []):
             cls = inner.get("class", "")
             l, deals_damage, recognized = classify(cls, inner)
             labels.update(l)
 
             if deals_damage:
+                row_deals_damage = True
                 if effectTarget in TARGET_FLAGS_ENEMY_ALL:
                     labels.add("attack.all")
                 elif effectTarget in TARGET_FLAGS_ENEMY_SINGLE:
@@ -503,7 +508,7 @@ def label_skill(skill_id, SM, SEM, SMA, visited):
                     unmapped_target_flags[effectTarget] += 1
                 if "隣" in description:  # adjacent-target wording
                     labels.add("attack.special")
-            
+
             if not recognized:
                 unmapped[cls] += 1
             # fold in skill-change targets
@@ -513,6 +518,15 @@ def label_skill(skill_id, SM, SEM, SMA, visited):
                     l2, s2 = label_skill(tgt, SM, SEM, SMA, visited)
                     labels.update(l2)
                     status_ids.update(s2)
+        if row_deals_damage:
+            # Rows sharing a sequenceGroupId are alternate power tiers of the
+            # same hit (mutually exclusive); rows missing it collapse into one
+            # shared bucket (dict key None). Distinct groups are concurrent
+            # hits within a single skill use -> multi-hit.
+            damage_group_ids.add(eff.get("sequenceGroupId"))
+
+    if len(damage_group_ids) > 1:
+        labels.add("attack.multi")
 
     # granted passive skills attached to this skill
     for pid in skill.get("appendPassiveSkillIds") or []:

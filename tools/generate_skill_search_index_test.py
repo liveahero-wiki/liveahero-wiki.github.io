@@ -194,12 +194,15 @@ class TestTargetFlagLabels(unittest.TestCase):
         self.assertNotIn("attack.all", labels)
 
     def test_random_enemy_is_single_not_all(self):
-        # 1017101 targetFlag 7 (random enemy) -> single. Regression: it used to
-        # be mislabelled attack.all + attack.multi.
+        # 1017101 targetFlag 7 (random enemy) -> single, not all. Regression:
+        # it used to be mislabelled attack.all (conflating "random target" with
+        # "all enemies"). It genuinely is a 2-hit attack though ("敵全体から
+        # ランダムに2回45%ダメージ" - two Damage rows at sequenceGroupId 0/1),
+        # so attack.multi is correctly present.
         labels = self.labels(1017101)
         self.assertIn("attack.single", labels)
         self.assertNotIn("attack.all", labels)
-        self.assertNotIn("attack.multi", labels)  # no MultipleAttack class here
+        self.assertIn("attack.multi", labels)
 
     def test_all_enemies_is_all(self):
         # Suhail active skill 1
@@ -210,6 +213,55 @@ class TestTargetFlagLabels(unittest.TestCase):
         labels = self.labels(1207103)
         self.assertIn("attack.ally", labels)
         self.assertIn("attack.all", labels)
+
+
+class TestAttackMultiLabel(unittest.TestCase):
+    """attack.multi: derived in label_skill() from grouping a skill's
+    damage-dealing SkillMaster.effects[] rows by sequenceGroupId. More than one
+    distinct group means concurrent/repeated hits in one skill use, whether via
+    RNG cascade (static prob) or a triggerJson condition (ally count, ViewPower)."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.SM = load("SkillMaster.json")
+        cls.SEM = load("SkillEffectMaster.json")
+        cls.SMA = load("StatusMaster.json")
+
+    def labels(self, skill_id):
+        l, _ = label_skill(str(skill_id), self.SM, self.SEM, self.SMA, set())
+        return l
+
+    def test_probabilistic_cascade_hits_is_multi(self):
+        # 1026206 (スフェラ・カタディキ+): 2-4x 40% dmg to a single enemy -
+        # two guaranteed Damage rows (sequenceGroupId 1,2, prob 100) plus two
+        # probabilistic extra rows (sequenceGroupId 3,4, prob 60/30).
+        self.assertIn("attack.multi", self.labels(1026206))
+
+    def test_two_fixed_hits_is_multi(self):
+        # 1265102 (露払い、そして守護): 35% dmg x2 to a single enemy - two
+        # Damage rows at sequenceGroupId 0 and 1, both prob 100.
+        self.assertIn("attack.multi", self.labels(1265102))
+
+    def test_ally_count_conditional_hits_is_multi(self):
+        # 1212104 (マキシマムラッシュ+): 120% base + 0-3x 20% extra hits based
+        # on the number of Fire allies other than self - base Damage row
+        # (sequenceGroupId 1) plus three triggerJson-gated rows (sequenceGroupId
+        # 2,3,4) each keyed to an ally-count threshold.
+        self.assertIn("attack.multi", self.labels(1212104))
+
+    def test_viewpower_conditional_hits_is_multi(self):
+        # 1007304 (ZAP&SLASH!!+): 200% base + 1-2 extra 50% hits based on
+        # ViewPower if the enemy is still alive - base Damage row
+        # (sequenceGroupId 0) plus two ViewTrigger-gated rows (sequenceGroupId
+        # 1,2) at increasing ViewPower thresholds.
+        self.assertIn("attack.multi", self.labels(1007304))
+
+    def test_skill_tree_tier_duplicates_not_multi(self):
+        # 1001107 (百烈打砲): 24 Damage-family effect rows, but they're all
+        # mutually-exclusive skill-tree tier variants of a single hit, gated
+        # by distinct conditionEntityId values while sharing sequenceGroupId
+        # 0 - not concurrent hits, so no attack.multi.
+        self.assertNotIn("attack.multi", self.labels(1001107))
 
 
 class TestClassifyValueSign(unittest.TestCase):

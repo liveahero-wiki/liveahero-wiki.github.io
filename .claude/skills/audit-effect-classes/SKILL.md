@@ -101,10 +101,20 @@ truth** — read them before deciding so you match existing conventions:
   is ATK/DEF up vs. down around a threshold (100 == x1.0 == no-op → no label).
   Use this (not a static `CLASS_TO_LABELS` entry) when the `value` range from
   `audit_skill_effects.py class <Name>` spans both sides of the threshold.
-- `CLASS_TO_LABELS` — exact class → label-key(s) map (value-independent).
+- `CLASS_TO_LABELS` — exact class → label-key(s) map (value-independent). Note
+  the `*MultipleAttack` family (`ViewPowerMultipleAttack`, `ComboMultipleAttack`,
+  etc.) maps to `damage.scaling` — they're single-instance damage that scales
+  off some stat, not repeated hits.
 - `DAMAGE_CLASSES` — classes that deal damage (get a target-based attack label).
-- The ordered substring rules inside `classify()` — family fallbacks like every
-  `*MultipleAttack` → `attack.multi`, so new variants auto-map.
+- The ordered substring rules inside `classify()` — family fallbacks so new
+  class variants sharing a stem auto-map.
+- `attack.multi` is **not** assigned in `classify()` at all — it's structural,
+  computed in `label_skill()` by grouping a skill's damage-dealing
+  `SkillMaster.effects[]` rows by `sequenceGroupId`: more than one distinct
+  group means concurrent/repeated hits within one skill use (RNG-cascade or
+  conditionally-gated extra hits), as opposed to mutually-exclusive
+  skill-tree tier variants of a single hit (which don't set distinct
+  `sequenceGroupId`s).
 - `IGNORED_CLASSES` and the catch-all ignore branch at the end of `classify()` —
   classes knowingly not surfaced (pure mechanics / display / placeholders).
 
