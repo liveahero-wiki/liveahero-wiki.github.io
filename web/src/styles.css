@@ -83,6 +83,13 @@
   font-size: 13px;
 }
 
+/* OR rows (Type / Role / Status type): any selected chip matches. */
+.row-or .row-buttons {
+  background: color-mix(in srgb, var(--accent) 30%, transparent);
+  border-radius: 6px;
+  padding: 0.25rem;
+}
+
 .row-buttons {
   display: flex;
   gap: 0.3rem;

@@ -13,7 +13,6 @@ type ViewField = 'viewMin' | 'viewMax'
 export type QueryAction =
   | { type: 'toggle'; field: SetField; value: string }
   | { type: 'clear'; field: SetField }
-  | { type: 'clearKeys'; field: SetField; keys: string[] }
   | { type: 'addStatus'; value: number }
   | { type: 'removeStatus'; value: number }
   | { type: 'setView'; field: ViewField; value: string }
@@ -48,11 +47,6 @@ function reducer(state: Query, action: QueryAction): Query {
     }
     case 'clear':
       return { ...state, [action.field]: new Set() }
-    case 'clearKeys': {
-      const next = new Set(state[action.field])
-      for (const k of action.keys) next.delete(k)
-      return { ...state, [action.field]: next }
-    }
     case 'addStatus': {
       const next = new Set(state.statusIds)
       next.add(action.value)

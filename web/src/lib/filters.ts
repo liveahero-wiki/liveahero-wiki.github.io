@@ -1,9 +1,12 @@
 // Pure, in-memory filtering over the index entities, producing one row per
 // *matching, visible* skill.
 //
-// Filter semantics: OR within a row, AND across rows.
-//   - Within one category row, any selected label matches (OR).
-//   - Across category rows (and the other filter rows), all must pass (AND).
+// Filter semantics vary by row, but all rows AND against each other:
+//   - Type / Role / Status-type rows: OR within the row (any selected value
+//     matches) — these are single-valued entity/skill attributes.
+//   - Dynamic per-category label rows: AND within the row (every selected
+//     label in that category must match).
+//   - Across all rows, every row's condition must pass (AND).
 //
 // Matching is per-skill (not entity-level): a skill is shown only if it itself
 // satisfies every filter, using its `matchLabels`/`matchStatusIds` — which the
@@ -43,16 +46,11 @@ function skillMatches(
   const matchLabels = new Set(skill.matchLabels)
   const matchStatusIds = new Set(skill.matchStatusIds)
 
-  // Categories: each selected category-row must intersect (OR within / AND across).
+  // Categories: every selected label in a category-row must match (AND within / AND across).
   for (const [, group] of labelsByCat) {
-    let hit = false
     for (const key of group) {
-      if (matchLabels.has(key)) {
-        hit = true
-        break
-      }
+      if (!matchLabels.has(key)) return false
     }
-    if (!hit) return false
   }
 
   // Status type (one row, OR within): some status of a selected type.

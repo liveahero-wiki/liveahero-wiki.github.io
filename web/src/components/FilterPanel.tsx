@@ -60,6 +60,7 @@ export function FilterPanel({ index, query, dispatch, resultCount, showLabels, o
         label="Type"
         options={TYPE_OPTIONS}
         selected={query.types}
+        relation="or"
         onToggle={(v) => dispatch({ type: 'toggle', field: 'types', value: v })}
         onClear={() => dispatch({ type: 'clear', field: 'types' })}
       />
@@ -68,6 +69,7 @@ export function FilterPanel({ index, query, dispatch, resultCount, showLabels, o
         label="Role"
         options={ROLE_OPTIONS}
         selected={query.roles}
+        relation="or"
         onToggle={(v) => dispatch({ type: 'toggle', field: 'roles', value: v })}
         onClear={() => dispatch({ type: 'clear', field: 'roles' })}
       />
@@ -78,14 +80,8 @@ export function FilterPanel({ index, query, dispatch, resultCount, showLabels, o
           label={cat.label}
           options={cat.labels}
           selected={query.labels}
+          relation="and"
           onToggle={(v) => dispatch({ type: 'toggle', field: 'labels', value: v })}
-          onClear={() =>
-            dispatch({
-              type: 'clearKeys',
-              field: 'labels',
-              keys: cat.labels.map((l) => l.key),
-            })
-          }
         />
       ))}
 
@@ -93,6 +89,7 @@ export function FilterPanel({ index, query, dispatch, resultCount, showLabels, o
         label="Status type"
         options={STATUS_TYPE_OPTIONS}
         selected={query.statusTypes}
+        relation="or"
         onToggle={(v) => dispatch({ type: 'toggle', field: 'statusTypes', value: v })}
         onClear={() => dispatch({ type: 'clear', field: 'statusTypes' })}
       />
