@@ -122,6 +122,7 @@ CATEGORIES = [
     {"key": "damage", "label": "Damage", "labels": [
         {"key": "damage.up", "label": "Increase damage"},
         {"key": "damage.down", "label": "Decrease damage"},
+        {"key": "damage.scaling", "label": "Scaling damage"},
         {"key": "damage.dot", "label": "Damage over time"},
     ]},
     {"key": "spd", "label": "SPD", "labels": [
@@ -168,7 +169,7 @@ CATEGORIES = [
         {"key": "skillctl.ratechange", "label": "Skill rate change"},
     ]},
     {"key": "acq", "label": "Increased Acquisition", "labels": [
-        {"key": "acq.coin", "label": "Coin / sales boost"},
+        {"key": "acq.coin", "label": "Coin boost"},
         {"key": "acq.exp", "label": "EXP boost"},
         {"key": "acq.relation", "label": "Relation boost"},
     ]}
@@ -180,7 +181,6 @@ DAMAGE_CLASSES = {
     "Damage",
     "CountDamage",
     "ComboDamage",
-    "DamageCount",
     "AllAttack",
     "ComboMultipleAttack",
     "HealthDamage",
@@ -216,26 +216,26 @@ CLASS_TO_LABELS = {
     "OwnAttack": ["skillctl.extra_activation"],
     "TeamAttackEnemy": ["skillctl.extra_activation"],
 
-    # damage modifiers
-    "AddMultDamage": ["damage.up"],
-    "DamageMultipleAdjust": ["damage.up"],
-    "NowViewDamage": ["damage.up"],
+    # Damage cap
     "DamageLimit": [],
     "NowHPDependDamageLimit": [], # cap damage to percentage of HP
 
-    # MultipleAttack classes
-    "HealthMultipleAttack": ["damage.up"],
-    "SpdDifferenceMultipleAttack": ["damage.up"],
-    "StatusNumberMultipleAttack": ["damage.up"],
-    "ViewPowerMultipleAttack": ["damage.up"],
-    "HighestBarrierMultipleAttack": ["damage.up"],
-    "DamageCount": ["damage.up"],
-    # VP-scaled / param-scaled / condition-scaled ATK-up variants
-    "TimingFixHighestViewPowerMultipleAttack": ["damage.up"],
-    "HighestViewPowerMultipleAttack": ["damage.up"],
-    "StatusTurnDamage": ["damage.up"],
-    "OtherParamMultipleAttack": ["damage.up"],
-    "OtherParamAddAttack": ["damage.up"],
+    "DamageCount": [],
+
+    # Damage scaling
+    "AddMultDamage": ["damage.up"],
+    "DamageMultipleAdjust": ["damage.scaling"],
+    "NowViewDamage": ["damage.scaling"],
+    "HealthMultipleAttack": ["damage.scaling"],
+    "SpdDifferenceMultipleAttack": ["damage.scaling"],
+    "StatusNumberMultipleAttack": ["damage.scaling"],
+    "ViewPowerMultipleAttack": ["damage.scaling"],
+    "HighestBarrierMultipleAttack": ["damage.scaling"],
+    "TimingFixHighestViewPowerMultipleAttack": ["damage.scaling"],
+    "HighestViewPowerMultipleAttack": ["damage.scaling"],
+    "StatusTurnDamage": ["damage.scaling"],
+    "OtherParamMultipleAttack": ["damage.scaling"],
+    "OtherParamAddAttack": ["damage.scaling"],
 
     # DoT spread / amplification
     "SpreadDotDamage": ["damage.dot"],
