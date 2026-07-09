@@ -114,7 +114,6 @@ CATEGORIES = [
         {"key": "attack.all", "label": "All-range attack"},
         {"key": "attack.special", "label": "Special-range attack"},
         {"key": "attack.multi", "label": "Multiple attacks"},
-        {"key": "attack.induction", "label": "Pursuit / Induction"},
         {"key": "attack.counter", "label": "Counterattack"},
         {"key": "attack.ally", "label": "Attack allies"},
         {"key": "attack.penetrate", "label": "Penetrating damage"},
@@ -206,7 +205,6 @@ CLASS_TO_LABELS = {
     "MoreTurn": ["skillctl.extra_action"],
     "MoreTurnExecBeforeSkill": ["skillctl.extra_action"],
     "ReleaseWait": [],
-    "Induction": ["attack.induction"],
     "OwnAttack": ["skillctl.extra_activation"],
     "RandomTeamAttack": ["skillctl.extra_activation"],
     "TeamAttackEnemy": ["skillctl.extra_activation"],
@@ -223,6 +221,9 @@ CLASS_TO_LABELS = {
     "DamageMultipleAdjust": ["damage.scaling"],
     "NowViewDamage": ["damage.scaling"],
     "HealthMultipleAttack": ["damage.scaling"],
+    "HighestHealthMultipleAttack": ["damage.scaling"],
+    "ComboMultipleAttack": ["damage.scaling"],
+    "HighestComboMultipleAttack": ["damage.scaling"],
     "SpdDifferenceMultipleAttack": ["damage.scaling"],
     "StatusNumberMultipleAttack": ["damage.scaling"],
     "ViewPowerMultipleAttack": ["damage.scaling"],
@@ -230,8 +231,10 @@ CLASS_TO_LABELS = {
     "TimingFixHighestViewPowerMultipleAttack": ["damage.scaling"],
     "HighestViewPowerMultipleAttack": ["damage.scaling"],
     "StatusTurnDamage": ["damage.scaling"],
+    "StatusTurnMultipleAttack": ["damage.scaling"],
     "OtherParamMultipleAttack": ["damage.scaling"],
     "OtherParamAddAttack": ["damage.scaling"],
+    "HighestOtherParamAddAttack": ["damage.scaling"], # look at parameter.paramType to determine it scales based on what param
 
     # DoT spread / amplification
     "SpreadDotDamage": ["damage.dot"],
@@ -290,6 +293,7 @@ CLASS_TO_LABELS = {
     "AbsorbDamage": ["heal.heal"],
     "Cover": ["defense.provoke"], 
     "Provocation": ["defense.provoke"],
+    "Induction": ["defense.target"],
     "TargetMark": ["defense.target"],
     "LowestAgilityTargetMark": ["defense.target"],
     "Aggregation": ["defense.aggregation"],
@@ -386,7 +390,6 @@ VALUE_SIGN_RULES = {
     "TurnBaseMultipleAttack":  ("damage.up", "damage.down", None, 100),
     "PersistenceIconChangeMultipleAttack": ("damage.up", "damage.down", None, 100),
     "BeforeSkillTriggerMultipleAttack": ("damage.up", "damage.down", None, 0),
-    "HighestOtherParamAddAttack": ("damage.up", "damage.down", None, 0),
 
     "MultipleBaseView":        ("vp.gain", "vp.loss", None, 100),
     "ChangeView":              ("vp.gain", "vp.loss", None, 0),
@@ -404,17 +407,12 @@ VALUE_SIGN_RULES = {
 }
 
 MAXMULT_SIGN_RULES = {
-    "HighestComboMultipleAttack": ("damage.up", "damage.down", None, 100),
-    "HighestHealthMultipleAttack": ("damage.up", "damage.down", None, 1),
-
     "ComboMultipleDefence": ("defense.down", "defense.up", None, 100),
     "HighestMultipleDefence": ("defense.down", "defense.up", None, 100),
     "HighestViewPowerMultipleDefence": ("defense.down", "defense.up", None, 100),
 }
 
 STATUSMULT_SIGN_RULES = {
-    "StatusTurnMultipleAttack": ("damage.up", "damage.down", None, 0),
-
     "HighestStatusNumberMultipleDefence": ("defense.down", "defense.up", None, 0),
 }
 
