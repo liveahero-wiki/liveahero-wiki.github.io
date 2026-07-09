@@ -238,6 +238,7 @@ def cmd_report(m, args):
         "<title>Skill-effect class audit</title>",
         "<style>body{font:14px/1.5 system-ui,sans-serif;margin:2rem;max-width:80rem}"
         "details{border:1px solid #ccc;border-radius:6px;margin:.4rem 0;padding:.4rem .8rem}"
+        ".control{position:fixed;top:5px;right:5px}"
         "summary{cursor:pointer;font-weight:600}"
         "summary .n{color:#888;font-weight:400}"
         ".unmapped summary{color:#b00}"
@@ -248,7 +249,7 @@ def cmd_report(m, args):
         f"<h1>Skill-effect class audit</h1><p>{len(rows)} classes, "
         f"{sum(1 for r in rows if not r['recognized'])} unmapped, "
         f"{len(occ)} reachable occurrences. Version {esc(gen.get_version())}.</p>"
-        "<p><button onclick=\"document.querySelectorAll('details').forEach(d=>d.open=true)\">Expand all</button>"
+        "<p class=\"control\"><button onclick=\"document.querySelectorAll('details').forEach(d=>d.open=true)\">Expand all</button>"
         " <button onclick=\"document.querySelectorAll('details').forEach(d=>d.open=false)\">Collapse all</button></p>",
     ]
     # one <details> per class, sorted by class name for stable diffs
