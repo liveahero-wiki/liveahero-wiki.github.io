@@ -238,15 +238,15 @@ class TestClassifyValueSign(unittest.TestCase):
 
     def test_turnbase_multiple_defence_is_up(self):
         # 3347 "傷跡" value 105 -> DEF-down-over-turns -> takes more damage -> up
-        self.assertEqual(self.classify(3347), {"damage.up"})
+        self.assertEqual(self.classify(3347), {"defense.down"})
 
     def test_multiple_attack_up_and_down(self):
         self.assertEqual(self.classify(3), {"damage.up"})     # 3 "ATKアップ" value 150
         self.assertEqual(self.classify(16), {"damage.down"})  # 16 "ATKダウン" value 50
 
     def test_multiple_defence_flips_on_value(self):
-        self.assertEqual(self.classify(9), {"damage.up"})     # 9 "DEFダウン" value 150
-        self.assertEqual(self.classify(17), {"damage.down"})  # 17 "無敵" value 0
+        self.assertEqual(self.classify(9), {"defense.down"})     # 9 "DEFダウン" value 150
+        self.assertEqual(self.classify(17), {"defense.up"})  # 17 "無敵" value 0
         self.assertEqual(self.classify(802), set())           # 802 "粘質武装" value 100
 
     def test_multiple_base_view_gain_and_loss(self):
