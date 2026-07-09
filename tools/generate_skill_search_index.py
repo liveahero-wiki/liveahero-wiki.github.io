@@ -223,6 +223,7 @@ CLASS_TO_LABELS = {
     "AddMultDamage": ["damage.up"],
     "DamageMultipleAdjust": ["damage.scaling"],
     "NowViewDamage": ["damage.scaling"],
+    "HealthAttack": ["damage.scaling"],
     "HealthMultipleAttack": ["damage.scaling"],
     "HighestHealthMultipleAttack": ["damage.scaling"],
     "ComboMultipleAttack": ["damage.scaling"],
