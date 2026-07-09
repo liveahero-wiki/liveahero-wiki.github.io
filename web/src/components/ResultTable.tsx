@@ -106,7 +106,9 @@ export function ResultTable({ rows, statuses, onOpenKit, showLabels, categories 
             <div class="skill-cell">
               <div class="skill-head">
                 <span class="slot-badge">{SLOT_LABEL[r.slot] ?? r.slot}</span>
-                <span class="skill-name">{r.skillName}</span>
+                <span class="skill-name" title={`skill id: ${r.skillId}`}>
+                  {r.skillName}
+                </span>
                 {dedupByName(r.statusIds, statuses).map((id) => {
                   const s = statuses[id]
                   return s ? (

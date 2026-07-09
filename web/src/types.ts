@@ -80,6 +80,7 @@ export interface Row {
   kind: 'hero' | 'sidekick'
   name: string
   slot: string
+  skillId: number
   skillName: string
   description: string
   useView: number

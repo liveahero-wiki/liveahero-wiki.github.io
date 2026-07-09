@@ -131,6 +131,7 @@ export function filterRows(
         kind: entity.kind,
         name: entity.name,
         slot: s.slot,
+        skillId: s.skillId,
         skillName: s.name,
         description: s.description,
         useView: s.useView,
