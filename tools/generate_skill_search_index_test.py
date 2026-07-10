@@ -76,6 +76,29 @@ class TestSkillTreeMaxed(unittest.TestCase):
             self.SM["1001101"].get("useView", 0),
         )
 
+    def test_suhail_active1_diamond_tree_extra_activation(self):
+        # 1030105 "マーチソン・メテオ+": diamond upgrade tree where two paths
+        # (extra-activation threshold 6→5→4→3 and damage 30→32→34→37→40%) converge
+        # at terminal node 103010508 (damage-only). The last extra-activation tier
+        # sits at non-terminal node 103010506 → must still appear in the maxed desc.
+        desc = maxed_skill_description(1030105, self.SM, self.SEM, {}, {}, self.SUM)
+        self.assertIn("40%", desc)               # final damage tier (terminal node)
+        self.assertIn("もう一度発動", desc)       # best extra-activation tier (non-terminal)
+        # Terminal damage must appear before the non-terminal extra-activation line.
+        self.assertLess(desc.index("40%"), desc.index("もう一度発動"))
+
+    def test_akashi_active2_linear_unique_sig_per_tier(self):
+        # 1001106: linear chain of 6 nodes where each tier has a unique sig
+        # (ParticleStatus with a different statusId = target skillId per tier).
+        # Only the terminal node should appear; the 5 non-terminal tiers must
+        # be suppressed even though no two tiers share a sig.
+        desc = maxed_skill_description(1001106, self.SM, self.SEM, {}, {}, self.SUM)
+        # The terminal entry is a ParticleStatus pointing at skill 1001107 ("百烈打砲");
+        # count how many skill-upgrade lines appear (each starts with the same prefix).
+        # There should be exactly one.
+        count = desc.count("スキル1で与えるダメージが")
+        self.assertEqual(count, 1, "expected exactly 1 skill-upgrade line, got %d: %r" % (count, desc))
+
     def test_gammei_hero_active1_status_descs_maxed(self):
         # Skill 1006105 "公務執行" (Gammei bloom active 1) has 6 tree-gated VP Cost
         # effects (+100, +250, +400, +550, +750, +1000) with distinct override names,
@@ -184,7 +207,7 @@ class TestTargetFlagLabels(unittest.TestCase):
         cls.SMA = load("StatusMaster.json")
 
     def labels(self, skill_id):
-        l, _ = label_skill(str(skill_id), self.SM, self.SEM, self.SMA, set())
+        l, _, _ = label_skill(str(skill_id), self.SM, self.SEM, self.SMA, set())
         return l
 
     def test_single_enemy_is_single(self):
@@ -228,7 +251,7 @@ class TestAttackMultiLabel(unittest.TestCase):
         cls.SMA = load("StatusMaster.json")
 
     def labels(self, skill_id):
-        l, _ = label_skill(str(skill_id), self.SM, self.SEM, self.SMA, set())
+        l, _, _ = label_skill(str(skill_id), self.SM, self.SEM, self.SMA, set())
         return l
 
     def test_probabilistic_cascade_hits_is_multi(self):

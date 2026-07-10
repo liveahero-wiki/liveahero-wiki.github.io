@@ -808,6 +808,64 @@ def maxed_skill_description(skill_id, SM, SEM, SkillTrans, English, SUM):
                   if e.get("conditionEntityId", 0) != 0
                   and _has_visible_text(e.get("conditionDescription"))}
 
+    # For non-linear (diamond) upgrade trees: a gated effect at node N is the
+    # last tier of its signature when (a) no descendant of N carries that same
+    # sig AND (b) the subtree from N contains a branch or merge point. The
+    # second guard is essential: in a strictly linear chain every tier gets a
+    # unique sig if the effect class or statusId differs across tiers (e.g.
+    # ParticleStatus whose statusId is the target skillId changes each tier),
+    # so sig-only matching cannot detect supersession — the terminal-only rule
+    # must remain authoritative for linear chains.
+    node_to_sigs = {}
+    for e in cond_effects:
+        c = e.get("conditionEntityId", 0)
+        if c != 0 and _has_visible_text(e.get("conditionDescription")):
+            node_to_sigs.setdefault(c, set()).add(sig(e))
+
+    # child_id -> parent count; a count > 1 marks a merge/convergence node.
+    child_parent_count = {}
+    if SUM:
+        for _node in SUM.values():
+            for _child in (_node.get("nextEntryIds") or []):
+                child_parent_count[_child] = child_parent_count.get(_child, 0) + 1
+
+    def descendant_sigs(start):
+        """Sigs present on any strict descendant of `start` in the upgrade tree."""
+        if SUM is None:
+            return set()
+        visited, result, queue = set(), set(), [start]
+        while queue:
+            nid = queue.pop()
+            if nid in visited:
+                continue
+            visited.add(nid)
+            node = SUM.get(str(nid), {})
+            for child in (node.get("nextEntryIds") or []):
+                result.update(node_to_sigs.get(child, set()))
+                queue.append(child)
+        return result
+
+    def in_nonlinear_subtree(start):
+        """True if the subtree rooted at `start` contains any branch (>1 child)
+        or merge (>1 parent). Returns False for strictly linear chains."""
+        if SUM is None:
+            return False
+        visited, queue = set(), [start]
+        while queue:
+            nid = queue.pop()
+            if nid in visited:
+                continue
+            visited.add(nid)
+            node = SUM.get(str(nid), {})
+            children = node.get("nextEntryIds") or []
+            if len(children) > 1:
+                return True
+            for child in children:
+                if child_parent_count.get(child, 0) > 1:
+                    return True
+                queue.append(child)
+        return False
+
     base = (English.get(f"SKILL_DESCRIPTION_{sid}")
             or SkillTrans.get(sid, {}).get("description")
             or skill.get("description") or "")
@@ -820,7 +878,14 @@ def maxed_skill_description(skill_id, SM, SEM, SkillTrans, English, SUM):
                 kept.append(eff)
         elif is_terminal_node(cei, SUM):
             kept.append(eff)
-    kept.sort(key=lambda e: e.get("serialNo", 0))
+        elif (sig(eff) not in descendant_sigs(cei)
+              and in_nonlinear_subtree(cei)):
+            # Non-terminal, last tier of its sig, inside a diamond/branching tree
+            kept.append(eff)
+    # Terminal/unconditional effects sort before non-terminal diamond-escaped ones;
+    # serialNo breaks ties within each group.
+    kept.sort(key=lambda e: (not is_terminal_node(e.get("conditionEntityId", 0), SUM),
+                             e.get("serialNo", 0)))
 
     parts = [base]
     for eff in kept:
