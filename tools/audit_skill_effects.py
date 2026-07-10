@@ -26,7 +26,9 @@ import sys
 from collections import Counter, OrderedDict, defaultdict
 
 import generate_skill_search_index as gen
-from generate_skill_search_index import classify, resolve_status_name
+from generate_skill_search_index import (
+    classify, resolve_status_name, get_attack_labels, TARGET_TO_SUBLABEL,
+)
 
 
 # --- reachable effect-occurrence collection --------------------------------
@@ -49,7 +51,7 @@ def walk_skill_effects(skill_id, SM, SEM, visited):
             continue
         sej = sem.get("skillEffectJson", {})
         for inner in sej.get("effects", []):
-            yield skill_id, eff.get("skillEffectId"), sej, inner
+            yield skill_id, eff.get("skillEffectId"), sej, inner, eff.get("effectTarget")
             if inner.get("class") == "ChangeActiveSkill":
                 tgt = (inner.get("parameter") or {}).get("skillId")
                 if tgt:
@@ -73,10 +75,13 @@ def collect_occurrences(m):
         for row in rows:
             maxed = row.get("_maxed", False)
             visited = set()  # fresh per skill row, mirroring skill_obj/label_skill
-            for owner_sid, se_id, sej, inner in walk_skill_effects(
+            for owner_sid, se_id, sej, inner, effectTarget in walk_skill_effects(
                     row["skillId"], SM, SEM, visited):
                 cls = inner.get("class", "")
-                labels, _dmg, recognized = classify(cls, inner)
+                labels, deals_damage, recognized = classify(cls, inner)
+                description = sej.get("description") or ""
+                attack_label, attack_special = get_attack_labels(
+                    effectTarget, deals_damage, description)
                 params = inner.get("parameter") or {}
                 status_id = sej.get("statusId") or 0
                 occ.append({
@@ -85,7 +90,7 @@ def collect_occurrences(m):
                     "labels": sorted(labels),
                     "skillEffectId": se_id,
                     "ownerSkillId": owner_sid,
-                    "description": sej.get("description") or "",
+                    "description": description,
                     "overrideName": sej.get("overrideStatusName") or "",
                     "overrideDesc": sej.get("overrideStatusDescription") or "",
                     "statusId": status_id,
@@ -100,6 +105,11 @@ def collect_occurrences(m):
                     "slot": row.get("slot", ""),
                     "maxed": maxed,
                     "skillLabels": row.get("labels") or [],
+                    "effectTarget": effectTarget,
+                    "effectTargetLabel": (TARGET_TO_SUBLABEL.get(effectTarget)
+                                          if effectTarget is not None else None),
+                    "attackLabel": attack_label,
+                    "attackSpecial": attack_special,
                 })
     return occ
 
@@ -265,6 +275,7 @@ def cmd_report(m, args):
             f"{esc(','.join(cls_labels) or '-')}</span></summary>")
         parts.append("<table><tr><th>Character</th><th>Slot</th><th>Skill</th>"
                      "<th>SE#</th><th>Description</th><th>Parameter</th>"
+                     "<th>effectTarget</th><th>Attack</th>"
                      "<th>Effect labels</th></tr>")
         # sort occurrences deterministically for diffing
         for o in sorted(items, key=lambda o: (o["entity"], o["ownerSkillId"],
@@ -274,10 +285,18 @@ def cmd_report(m, args):
             slot = o["slot"] + (" (maxed)" if o["maxed"] else "")
             desc = o["description"] or o["overrideName"] or ""
             param = json.dumps(o["parameter"], ensure_ascii=False, sort_keys=True)
+            et = o["effectTarget"]
+            et_lbl = o["effectTargetLabel"]
+            et_cell = (f"{et} ({et_lbl})" if et_lbl else str(et)) if et is not None else ""
+            atk_parts = ([o["attackLabel"]] if o["attackLabel"] else [])
+            if o["attackSpecial"]:
+                atk_parts.append("attack.special")
+            atk_cell = " + ".join(atk_parts)
             parts.append(
                 f"<tr><td>{link}</td><td>{esc(slot)}</td>"
                 f"<td>{esc(o['ownerSkillId'])}</td><td>{esc(o['skillEffectId'])}</td>"
                 f"<td class='jp'>{esc(desc)}</td><td><code>{esc(param)}</code></td>"
+                f"<td>{esc(et_cell)}</td><td>{esc(atk_cell)}</td>"
                 f"<td>{esc(','.join(o['labels']) or '-')}</td></tr>")
         parts.append("</table></details>")
 

@@ -565,6 +565,25 @@ def _is_ignored_class(cls):
             or cls.endswith("Status"))
 
 
+def get_attack_labels(effectTarget, deals_damage, description):
+    """Return (attack_range_label, attack_special) for one effect occurrence.
+
+    attack_range_label is 'attack.all', 'attack.single', 'attack.ally', or None.
+    attack_special is True when deals_damage and '隣' appears in the description.
+    Does NOT count unmapped targets — callers that care should check separately.
+    """
+    attack_label = None
+    if deals_damage:
+        if effectTarget in TARGET_FLAGS_ENEMY_ALL:
+            attack_label = "attack.all"
+        elif effectTarget in TARGET_FLAGS_ENEMY_SINGLE:
+            attack_label = "attack.single"
+        elif effectTarget in TARGET_FLAGS_ALLY:
+            attack_label = "attack.ally"
+    attack_special = deals_damage and "隣" in (description or "")
+    return attack_label, attack_special
+
+
 def _value_sign_classifer(cls, inner, rules, key):
     gt, lt, eq, thr = rules[cls]
     v = (inner.get("parameter") or {}).get(key, thr)
@@ -679,15 +698,13 @@ def label_skill(skill_id, SM, SEM, SMA, visited):
 
             if deals_damage:
                 row_deals_damage = True
-                if effectTarget in TARGET_FLAGS_ENEMY_ALL:
-                    labels.add("attack.all")
-                elif effectTarget in TARGET_FLAGS_ENEMY_SINGLE:
-                    labels.add("attack.single")
-                elif effectTarget in TARGET_FLAGS_ALLY:
-                    labels.add("attack.ally")
+                attack_label, attack_special = get_attack_labels(
+                    effectTarget, deals_damage, description)
+                if attack_label:
+                    labels.add(attack_label)
                 elif effectTarget not in TARGET_FLAGS_NO_RANGE:
                     unmapped_target_flags[effectTarget] += 1
-                if "隣" in description:  # adjacent-target wording
+                if attack_special:
                     labels.add("attack.special")
 
             if not recognized:
