@@ -89,6 +89,7 @@ export interface Row {
   description: string
   useView: number
   labels: string[]
+  matchLabels: string[]
   statusIds: number[]
   changeSkills?: ChangeSkill[]
   statusDescs?: StatusDesc[]

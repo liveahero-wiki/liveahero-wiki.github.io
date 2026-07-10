@@ -152,7 +152,7 @@ export function FilterPanel({ index, query, dispatch, resultCount, showLabels, o
             checked={showLabels}
             onChange={onToggleLabels}
           />
-          Show Labels
+          Show Debug Info
         </label>
         <button type="button" class="reset" onClick={() => dispatch({ type: 'reset' })}>
           Reset all

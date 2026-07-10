@@ -132,14 +132,11 @@ export function ResultTable({ rows, statuses, onOpenKit, showLabels, categories 
         ? [
             {
               id: 'labels',
-              header: 'Labels',
+              header: 'matchLabels',
               accessorKey: 'labels',
               size: 220,
               cell: ({ row }: { row: { original: Row } }) =>
-                row.original.labels
-                  .map((k) => labelMap.get(k) ?? k)
-                  .sort()
-                  .join(', '),
+                row.original.matchLabels.slice().sort().join(', '),
             } satisfies ColumnDef<Row>,
           ]
         : []),

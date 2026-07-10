@@ -149,6 +149,7 @@ export function filterRows(
         description: s.description,
         useView: s.useView,
         labels: s.labels,
+        matchLabels: s.matchLabels,
         statusIds: s.statusIds,
         changeSkills: s.changeSkills,
         statusDescs: s.statusDescs,
