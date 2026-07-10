@@ -1264,6 +1264,23 @@ def finalize_entities(entities, named):
             e["statusIdsMaxed"] = aggregate(e["skillsMaxed"], "statusIds")
 
 
+def prune_sublabels(categories, entities):
+    """Remove sublabels whose composite key is not referenced by any skill's
+    matchLabels (in either the base or maxed skill lists)."""
+    used = set()
+    for e in entities:
+        for key in ("skills", "skillsMaxed"):
+            for s in e.get(key, []):
+                used.update(s.get("matchLabels", []))
+    for cat in categories:
+        for lab in cat["labels"]:
+            if "sublabels" not in lab:
+                continue
+            lab["sublabels"] = [sl for sl in lab["sublabels"] if sl["key"] in used]
+            if not lab["sublabels"]:
+                del lab["sublabels"]
+
+
 def load_all():
     """Load every master/translation file the index needs into one dict, keyed
     by the short names the build_* helpers use. Shared with tools/audit_skill_effects.py
@@ -1311,6 +1328,7 @@ def main():
         return resolve_status_name(sid, StatusTrans, SMA).strip()
     named = {str(sid) for sid in SMA if status_name(sid)}
     finalize_entities(entities, named)
+    prune_sublabels(CATEGORIES, entities)
 
     # status dictionary for autocomplete / "Has status" filter, restricted to
     # named statuses actually referenced by an indexed skill.
