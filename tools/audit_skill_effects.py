@@ -80,8 +80,8 @@ def collect_occurrences(m):
                 cls = inner.get("class", "")
                 labels, deals_damage, recognized = classify(cls, inner)
                 description = sej.get("description") or ""
-                attack_label, attack_special = get_attack_labels(
-                    effectTarget, deals_damage, description)
+                attack_label = get_attack_labels(
+                    effectTarget, deals_damage)
                 params = inner.get("parameter") or {}
                 status_id = sej.get("statusId") or 0
                 occ.append({
@@ -109,7 +109,6 @@ def collect_occurrences(m):
                     "effectTargetLabel": (TARGET_TO_SUBLABEL.get(effectTarget)
                                           if effectTarget is not None else None),
                     "attackLabel": attack_label,
-                    "attackSpecial": attack_special,
                 })
     return occ
 
@@ -289,8 +288,6 @@ def cmd_report(m, args):
             et_lbl = o["effectTargetLabel"]
             et_cell = (f"{et} ({et_lbl})" if et_lbl else str(et)) if et is not None else ""
             atk_parts = ([o["attackLabel"]] if o["attackLabel"] else [])
-            if o["attackSpecial"]:
-                atk_parts.append("attack.special")
             atk_cell = " + ".join(atk_parts)
             parts.append(
                 f"<tr><td>{link}</td><td>{esc(slot)}</td>"

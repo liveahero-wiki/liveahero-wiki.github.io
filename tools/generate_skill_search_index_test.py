@@ -223,7 +223,7 @@ class TestTargetFlagLabels(unittest.TestCase):
         # ランダムに2回45%ダメージ" - two Damage rows at sequenceGroupId 0/1),
         # so attack.multi is correctly present.
         labels = self.labels(1017101)
-        self.assertIn("attack.single", labels)
+        self.assertIn("attack.other", labels)
         self.assertNotIn("attack.all", labels)
         self.assertIn("attack.multi", labels)
 

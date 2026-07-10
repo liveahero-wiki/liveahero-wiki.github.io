@@ -52,18 +52,16 @@ INDEX_SCHEMA_REV = "r12"
 # sequenceGroupId among its damage-dealing SkillMaster.effects[] rows (see
 # label_skill). The *MultipleAttack classes are single-instance damage-scaling
 # effects (-> damage.scaling), not repeated hits.
-TARGET_FLAGS_ENEMY_ALL = {4, 16, 27}                # all enemies / all except target
-TARGET_FLAGS_ENEMY_SINGLE = {2, 7, 29}              # single / random enemy
-TARGET_FLAGS_ALLY = {1, 3, 6, 9, 11, 12, 13, 14}    # any ally-directed damage
-TARGET_FLAGS_NO_RANGE = {0, 5}                       # self / event bonus unit
+TARGET_FLAGS_ENEMY_ALL = {4, 16}                    # all enemies / all except target
+TARGET_FLAGS_ENEMY_SINGLE = {2}                         # single enemy
+TARGET_FLAGS_ENEMY_OTHER = {7, 21, 25, 29, 31, 32, 33}  # random / ATK-order / adjacent / other enemy
+TARGET_FLAGS_ALLY = {1, 3, 6, 9, 11, 12, 13, 14}        # any ally-directed damage
+TARGET_FLAGS_NO_RANGE = {0, 5}                           # self / event bonus
 
 # effectTarget -> target-sublabel suffix for the labels in
 # TARGET_SUBLABEL_PARENTS. A None suffix means "deliberately no sublabel" (not
 # reported as unmapped); values absent from this map are counted in
-# unmapped_sublabel_targets and reported at the end of a run. Verified beyond
-# _plugins/skill.rb's enum from JP descriptions: 21 = enemies adjacent to
-# target, 22 = allies adjacent to target, 24 = allies adjacent to self,
-# 29 = single enemy.
+# unmapped_sublabel_targets and reported at the end of a run.
 TARGET_TO_SUBLABEL = {
     0: "self",
     1: "ally-single",
@@ -78,11 +76,17 @@ TARGET_TO_SUBLABEL = {
     12: "ally-other",   # each ally
     13: "ally-other",   # highest-ATK ally
     14: "ally-other",   # all allies except self
+    15: None,           # sub-characters (sidekick units, both sides)
     16: "enemy-other",  # all enemies except target
+    19: "ally-other",   # second highest-ATK ally
     21: "enemy-adjacent",
     22: "ally-adjacent",
     24: "ally-adjacent",
+    25: "enemy-other",  # 1st enemy by ATK order
     29: "enemy-single",
+    31: "enemy-other",  # 2nd enemy by ATK order
+    32: "enemy-other",  # 3rd enemy by ATK order
+    33: "enemy-other",  # 4th enemy by ATK order
 }
 
 # Labels that get a "/<target-sublabel>" composite key in matchLabels so users
@@ -565,11 +569,10 @@ def _is_ignored_class(cls):
             or cls.endswith("Status"))
 
 
-def get_attack_labels(effectTarget, deals_damage, description):
+def get_attack_labels(effectTarget, deals_damage):
     """Return (attack_range_label, attack_special) for one effect occurrence.
 
     attack_range_label is 'attack.all', 'attack.single', 'attack.ally', or None.
-    attack_special is True when deals_damage and '隣' appears in the description.
     Does NOT count unmapped targets — callers that care should check separately.
     """
     attack_label = None
@@ -580,8 +583,9 @@ def get_attack_labels(effectTarget, deals_damage, description):
             attack_label = "attack.single"
         elif effectTarget in TARGET_FLAGS_ALLY:
             attack_label = "attack.ally"
-    attack_special = deals_damage and "隣" in (description or "")
-    return attack_label, attack_special
+        elif effectTarget in TARGET_FLAGS_ENEMY_OTHER:
+            attack_label = "attack.other"
+    return attack_label
 
 
 def _value_sign_classifer(cls, inner, rules, key):
@@ -698,14 +702,12 @@ def label_skill(skill_id, SM, SEM, SMA, visited):
 
             if deals_damage:
                 row_deals_damage = True
-                attack_label, attack_special = get_attack_labels(
-                    effectTarget, deals_damage, description)
+                attack_label = get_attack_labels(
+                    effectTarget, deals_damage)
                 if attack_label:
                     labels.add(attack_label)
                 elif effectTarget not in TARGET_FLAGS_NO_RANGE:
                     unmapped_target_flags[effectTarget] += 1
-                if attack_special:
-                    labels.add("attack.special")
 
             if not recognized:
                 unmapped[cls] += 1
