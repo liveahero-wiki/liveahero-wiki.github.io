@@ -26,7 +26,6 @@ const ROLE_OPTIONS = [
 const STATUS_TYPE_OPTIONS = [
   { key: 'buff', label: 'Buff' },
   { key: 'debuff', label: 'Debuff' },
-  { key: 'field', label: 'Field' },
 ]
 
 interface FilterPanelProps {

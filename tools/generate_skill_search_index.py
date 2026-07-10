@@ -244,13 +244,6 @@ CATEGORIES = [
         {"key": "vp.costup", "label": "View cost up"},
         {"key": "vp.costdown", "label": "View cost down"},
     ]},
-    {"key": "interf", "label": "Skill interference", "labels": [
-        {"key": "interf.debuff_remove", "label": "Debuff removal"},
-        {"key": "interf.buff_remove", "label": "Buff removal"},
-        {"key": "interf.debuff_resist", "label": "Debuff resistance"},
-        {"key": "interf.extend", "label": "Buff / debuff extension"},
-        {"key": "interf.silence", "label": "Skill lock"},
-    ]},
     {"key": "defense", "label": "Defense / Survival", "labels": [
         {"key": "defense.up", "label": "Increase defense"},
         {"key": "defense.down", "label": "Decrease defense"},
@@ -262,12 +255,20 @@ CATEGORIES = [
         {"key": "defense.hp", "label": "Max HP up"},
         {"key": "defense.dodge", "label": "Evasion / Dodge"},
     ]},
+    {"key": "interf", "label": "Status control", "labels": [
+        {"key": "interf.debuff_remove", "label": "Debuff removal"},
+        {"key": "interf.buff_remove", "label": "Buff removal"},
+        {"key": "interf.debuff_resist", "label": "Debuff resistance"},
+        {"key": "interf.extend", "label": "Buff / debuff extension"},
+        {"key": "field.field", "label": "Field effect"},
+    ]},
     {"key": "skillctl", "label": "Skill control", "labels": [
         {"key": "skillctl.change", "label": "Skill change"},
         {"key": "skillctl.extra_action", "label": "Additional actions"},
         {"key": "skillctl.extra_activation", "label": "Additional activation"},
         {"key": "skillctl.auto", "label": "Auto-action control"},
         {"key": "skillctl.ratechange", "label": "Skill rate change"},
+        {"key": "interf.silence", "label": "Skill lock"},
     ]},
     {"key": "acq", "label": "Increased Acquisition", "labels": [
         {"key": "acq.coin", "label": "Coin boost"},
@@ -460,7 +461,7 @@ CLASS_TO_LABELS = {
     "IncreaseRelation": ["acq.relation"],
     
     # field
-    "RemoveFieldEffect": [], 
+    "RemoveFieldEffect": ["field.field"], 
     
     # stat buffs (max-HP up; survivability)
     "MultipleHp": ["defense.hp"],
