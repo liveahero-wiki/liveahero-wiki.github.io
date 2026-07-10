@@ -450,7 +450,7 @@ CLASS_TO_LABELS = {
     #"RessurectOrHeal": ["defense.revive", "heal.heal"],
 
     # skill control
-    "ChangeActiveSkill": ["skillctl.change"],
+    "ChangeActiveSkill": [],
     "DecideAutoSkill": ["skillctl.auto"], 
     "ForceAuto": ["skillctl.auto"],
     "TargetReversal": ["skillctl.auto"],
@@ -499,26 +499,6 @@ def resolve_status_name(sid, StatusTrans, SMA):
     """A status's display name: Status.json translation -> raw StatusMaster."""
     return (StatusTrans.get(str(sid), {}).get("name")
             or SMA.get(str(sid), {}).get("statusName", ""))
-
-
-# Ordered substring fallback for class-name variants not in CLASS_TO_LABELS.
-# FIRST MATCH WINS, so specific patterns must precede generic ones (e.g.
-# Heal-not-Health and DamageLimit before the bare "Damage" rule). Each entry is
-# (predicate(class_name) -> bool, labels, deals_damage). CLASS_TO_LABELS and
-# DAMAGE_CLASSES (checked before this table in classify) still take precedence.
-SUBSTRING_RULES = [
-    #(lambda c: "AddPlusCombo" in c, {"combo.up"}, False),
-    #(lambda c: "TargetMark" in c, {"defense.provoke"}, False),
-    #(lambda c: "TurnExtension" in c, {"interf.extend"}, False),
-    #(lambda c: "NeedView" in c, {"vp.costdown"}, False),
-    #(lambda c: "Heal" in c and "Health" not in c, {"heal.heal"}, False),
-    #(lambda c: "DamageLimit" in c, {"damage.down"}, False),
-    #(lambda c: "Defence" in c, {"damage.down"}, False),
-    #(lambda c: "DotDamage" in c or "ElapseTurnDamage" in c, {"damage.dot"}, False),
-    #(lambda c: "Damage" in c, set(), True),
-    #(lambda c: c.endswith("Attack") or c.endswith("Atk"), set(), True),
-    #(lambda c: "View" in c, {"vp.gain"}, False),
-]
 
 
 # Classes whose label depends on the sign of parameter.value (a percentage
@@ -625,9 +605,6 @@ def classify(cls, inner):
         return set(), True, True
     if cls.startswith("Aim") or "DecideAutoSkill" in cls:
         return {"skillctl.auto"}, False, True
-    for predicate, labels, deals_damage in SUBSTRING_RULES:
-        if predicate(cls):
-            return set(labels), deals_damage, True
     if _is_ignored_class(cls):
         return set(), False, True
     return set(), False, False
@@ -721,8 +698,13 @@ def label_skill(skill_id, SM, SEM, SMA, visited):
                 unmapped[cls] += 1
             # fold in skill-change targets
             if cls == "ChangeActiveSkill":
-                tgt = (inner.get("parameter") or {}).get("skillId")
-                if tgt:
+                param = inner.get("parameter", {})
+                tgt = param.get("skillId")
+                timing = param.get("timing")
+                # 0~2 maps to active skill 1~3, 3 maps to sidekick active, 4 maps to Wait
+                index = param.get("index")
+                if tgt and index <= 2:
+                    labels.add("skillctl.change")
                     l2, m2, s2 = label_skill(tgt, SM, SEM, SMA, visited)
                     labels.update(l2)
                     match_extras.update(m2)
