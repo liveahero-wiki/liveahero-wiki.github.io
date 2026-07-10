@@ -88,15 +88,15 @@ TARGET_TO_SUBLABEL = {
 # Labels that get a "/<target-sublabel>" composite key in matchLabels so users
 # can filter e.g. "extra action to self" or "damage up to all allies".
 TARGET_SUBLABEL_PARENTS = {
-    "skillctl.extra_activation",
+    #"skillctl.extra_activation",
     "damage.up",
     "damage.down",
     "defense.up",
     "defense.down",
-    "vp.gain",
-    "vp.loss",
-    "vp.costdown",
+    "vp.statup",
+    "vp.statdown",
     "vp.costup",
+    "vp.costdown",
     "heal.heal",
     "spd.up",
     "spd.down",
@@ -228,9 +228,11 @@ CATEGORIES = [
     ]},
     {"key": "vp", "label": "VP / View", "labels": [
         {"key": "vp.gain", "label": "VP gain"},
-        {"key": "vp.loss", "label": "Reduce VP gain"},
-        {"key": "vp.costdown", "label": "View cost down"},
+        {"key": "vp.consume", "label": "VP consume"},
+        {"key": "vp.statup", "label": "VP stat up"},
+        {"key": "vp.statdown", "label": "VP stat down"},
         {"key": "vp.costup", "label": "View cost up"},
+        {"key": "vp.costdown", "label": "View cost down"},
     ]},
     {"key": "interf", "label": "Skill interference", "labels": [
         {"key": "interf.debuff_remove", "label": "Debuff removal"},
@@ -520,9 +522,9 @@ VALUE_SIGN_RULES = {
     "PersistenceIconChangeMultipleAttack": ("damage.up", "damage.down", None, 100),
     "BeforeSkillTriggerMultipleAttack": ("damage.up", "damage.down", None, 0),
 
-    "MultipleBaseView":        ("vp.gain", "vp.loss", None, 100),
-    "ChangeView":              ("vp.gain", "vp.loss", None, 0),
-    "RateChangeView":          ("vp.gain", "vp.loss", None, 0),
+    "MultipleBaseView":        ("vp.statup", "vp.statdown", None, 100),
+    "ChangeView":              ("vp.gain", "vp.consume", None, 0),
+    "RateChangeView":          ("vp.gain", "vp.consume", None, 0),
     "NeedViewValueChange":     ("vp.costup", "vp.costdown", None, 0),
     "NeedViewChange":          ("vp.costup", "vp.costdown", None, 100),
     "HighestNeedViewChange":   ("vp.costup", "vp.costdown", None, 100),
