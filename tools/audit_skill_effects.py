@@ -106,7 +106,7 @@ def collect_occurrences(m):
                     "maxed": maxed,
                     "skillLabels": row.get("labels") or [],
                     "effectTarget": effectTarget,
-                    "effectTargetLabel": (TARGET_TO_SUBLABEL.get(effectTarget)
+                    "effectTargetLabel": (TARGET_TO_SUBLABEL.get(effectTarget, "unknown")
                                           if effectTarget is not None else None),
                     "attackLabel": attack_label,
                 })
