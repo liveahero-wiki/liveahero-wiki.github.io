@@ -111,32 +111,38 @@ PARAM_TARGET_CLASSES = {"AbsorbDamage"}
 # damage.scaling classes -> what the damage scales by. Classes here get a
 # "damage.scaling/<suffix>" composite key.
 SCALING_CLASS_TO_SUBLABEL = {
+    "HealthDamage": "hp",
     "HealthAttack": "hp",
     "HealthMultipleAttack": "hp",
     "HighestHealthMultipleAttack": "hp",
+    "ComboDamage": "combo",
     "ComboMultipleAttack": "combo",
     "HighestComboMultipleAttack": "combo",
     "NowViewDamage": "view",
     "ViewPowerMultipleAttack": "view",
     "HighestViewPowerMultipleAttack": "view",
     "TimingFixHighestViewPowerMultipleAttack": "view",
+    "SpdDeferenceDamage": "spd",
     "SpdDifferenceMultipleAttack": "spd",
     "StatusNumberMultipleAttack": "status-count",
     "StatusTurnDamage": "status-turns",
     "StatusTurnMultipleAttack": "status-turns",
     "AddMultDamage": "other",
+    "DamageMultipleAdjust": "other",
 }
 
 # damage.scaling classes whose scaling stat is selected by parameter.paramType.
 # The paramType enum (observed 0-3) is still undocumented, so every occurrence
 # is reported via unmapped_scaling_sources until the map below is filled in.
 SCALING_PARAMTYPE_CLASSES = {
-    "DamageMultipleAdjust",
     "OtherParamMultipleAttack",
     "OtherParamAddAttack",
     "HighestOtherParamAddAttack",
 }
-SCALING_PARAMTYPE_TO_SUBLABEL = {}
+SCALING_PARAMTYPE_TO_SUBLABEL = {
+    1: "spd",
+    2: "view",
+}
 
 # damage.scaling classes knowingly left without a scaling sublabel (so they
 # don't spam the unmapped report).
@@ -328,6 +334,7 @@ CLASS_TO_LABELS = {
     # penetrate / counter / extra action / pursuit
     "Penetration": ["attack.penetrate"],
     "ElementPenetrateDamage": ["attack.penetrate"],
+    "HPDependentDamage": ["attack.penetrate"],
     "HidePenetration": ["attack.penetrate"],
     "CounterAttack": ["attack.counter"],
     "CounterAttackRecalculateTarget": [],
@@ -349,11 +356,14 @@ CLASS_TO_LABELS = {
     "AddMultDamage": ["damage.scaling"],
     "DamageMultipleAdjust": ["damage.scaling"],
     "NowViewDamage": ["damage.scaling"],
+    "HealthDamage": ["damage.scaling"],
     "HealthAttack": ["damage.scaling"],
     "HealthMultipleAttack": ["damage.scaling"],
     "HighestHealthMultipleAttack": ["damage.scaling"],
+    "ComboDamage": ["damage.scaling"],
     "ComboMultipleAttack": ["damage.scaling"],
     "HighestComboMultipleAttack": ["damage.scaling"],
+    "SpdDeferenceDamage": ["damage.scaling"],
     "SpdDifferenceMultipleAttack": ["damage.scaling"],
     "StatusNumberMultipleAttack": ["damage.scaling"],
     "ViewPowerMultipleAttack": ["damage.scaling"],
@@ -400,9 +410,8 @@ CLASS_TO_LABELS = {
     "ViewChangeHp": ["vp.gain"],
     # NeedViewValueChange flips on parameter.value -> VALUE_SIGN_RULES
 
-    "FixView": ["vp.costdown"], 
-    "ChangeSkillBaseView": ["vp.costdown"],
-    "ChangeViewCoefficient": ["vp.costdown"],
+    #"FixView": ["vp.costdown"],
+    "ChangeSkillBaseView": [], # This is used for skill tree view cost reduction
 
     # interference
     "Cure": ["interf.debuff_remove"],
@@ -523,6 +532,7 @@ VALUE_SIGN_RULES = {
     "BeforeSkillTriggerMultipleAttack": ("damage.up", "damage.down", None, 0),
 
     "MultipleBaseView":        ("vp.statup", "vp.statdown", None, 100),
+    "ChangeViewCoefficient":   ("vp.statup", "vp.statdown", None, 100),
     "ChangeView":              ("vp.gain", "vp.consume", None, 0),
     "RateChangeView":          ("vp.gain", "vp.consume", None, 0),
     "NeedViewValueChange":     ("vp.costup", "vp.costdown", None, 0),
