@@ -412,7 +412,6 @@ CLASS_TO_LABELS = {
     # view
     # ChangeView flips on parameter.value -> VALUE_SIGN_RULES
     "SpdDeferenceChangeView": ["vp.gain"],
-    "ChangeBaseView": ["vp.gain"],
     "GetViewDamage": ["vp.gain"],
     "RemoveGainViewStock": ["vp.gain"],
     # MultipleBaseView flips on parameter.value -> VALUE_SIGN_RULES
@@ -545,6 +544,7 @@ VALUE_SIGN_RULES = {
 
     "MultipleBaseView":        ("vp.statup", "vp.statdown", None, 100),
     "ChangeViewCoefficient":   ("vp.statup", "vp.statdown", None, 100),
+    "ChangeBaseView":          ("vp.statup", "vp.statdown", None, 0),
     "ChangeView":              ("vp.gain", "vp.consume", None, 0),
     "RateChangeView":          ("vp.gain", "vp.consume", None, 0),
     "NeedViewValueChange":     ("vp.costup", "vp.costdown", None, 0),
