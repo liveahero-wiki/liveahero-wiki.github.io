@@ -125,6 +125,7 @@ SCALING_CLASS_TO_SUBLABEL = {
     "StatusNumberMultipleAttack": "status-count",
     "StatusTurnDamage": "status-turns",
     "StatusTurnMultipleAttack": "status-turns",
+    "AddMultDamage": "other",
 }
 
 # damage.scaling classes whose scaling stat is selected by parameter.paramType.
@@ -285,6 +286,7 @@ SCALING_SUBLABEL_DEFS = [
     ("spd", "SPD"),
     ("status-count", "# status"),
     ("status-turns", "# status turn"),
+    ("other", "Other"),
 ]
 
 for _cat in CATEGORIES:
@@ -343,7 +345,7 @@ CLASS_TO_LABELS = {
     "DamageCount": [],
 
     # Damage scaling
-    "AddMultDamage": ["damage.up"],
+    "AddMultDamage": ["damage.scaling"],
     "DamageMultipleAdjust": ["damage.scaling"],
     "NowViewDamage": ["damage.scaling"],
     "HealthAttack": ["damage.scaling"],
