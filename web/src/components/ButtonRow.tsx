@@ -4,9 +4,12 @@
 //            trailing [All] reset button and gets the `.row-or` styling.
 //   - 'and': every selected chip must match — no [All] button.
 
+import type { Label } from '../types'
+import { SublabelChip } from './SublabelChip'
+
 interface ButtonRowProps {
   label: string | null
-  options: Array<{ key: string; label: string }>
+  options: Label[]
   selected: Set<string>
   relation: 'or' | 'and'
   onToggle: (value: string) => void
@@ -18,16 +21,20 @@ export function ButtonRow({ label, options, selected, relation, onToggle, onClea
     <div class={'row' + (relation === 'or' ? ' row-or' : ' row-and')}>
       {label && <span class="row-label">{label}</span>}
       <div class="row-buttons">
-        {options.map((opt) => (
-          <button
-            key={opt.key}
-            type="button"
-            class={'chip' + (selected.has(opt.key) ? ' chip-on' : '')}
-            onClick={() => onToggle(opt.key)}
-          >
-            {opt.label}
-          </button>
-        ))}
+        {options.map((opt) =>
+          opt.sublabels?.length ? (
+            <SublabelChip key={opt.key} opt={opt} selected={selected} onToggle={onToggle} />
+          ) : (
+            <button
+              key={opt.key}
+              type="button"
+              class={'chip' + (selected.has(opt.key) ? ' chip-on' : '')}
+              onClick={() => onToggle(opt.key)}
+            >
+              {opt.label}
+            </button>
+          ),
+        )}
         {relation === 'or' && (
           <button type="button" class="chip chip-all" onClick={onClear}>
             All

@@ -120,6 +120,64 @@
   font-style: italic;
 }
 
+/* ---- Split chip: label body + ▾ caret opening a sublabel popover ---- */
+.chip-split {
+  display: inline-flex;
+}
+
+.chip-split .chip-main {
+  border-radius: 5px 0 0 5px;
+}
+
+.chip-split .chip-caret {
+  border-radius: 0 5px 5px 0;
+  border-left: 0;
+  padding: 3px 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* Only sublabels selected: outline the chip without the full chip-on fill. */
+.chip-part {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 25%, transparent);
+}
+
+.chip-count {
+  font-size: 10px;
+  line-height: 1;
+  padding: 1px 4px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+}
+
+.chip-on .chip-count {
+  background: #fff;
+  color: var(--accent);
+}
+
+/* Top-layer popover; top/left are set in JS from the caret's rect. */
+.sub-pop {
+  position: fixed;
+  inset: auto;
+  margin: 0;
+  padding: 0.4rem;
+  display: none;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  max-width: 320px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 0.25);
+  background: var(--bg-soft);
+}
+
+.sub-pop:popover-open {
+  display: flex;
+}
+
 .vp-input {
   width: 80px;
   padding: 2px 6px;

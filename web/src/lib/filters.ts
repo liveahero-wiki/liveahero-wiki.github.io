@@ -4,8 +4,10 @@
 // Filter semantics vary by row, but all rows AND against each other:
 //   - Type / Role / Status-type rows: OR within the row (any selected value
 //     matches) — these are single-valued entity/skill attributes.
-//   - Dynamic per-category label rows: AND within the row (every selected
-//     label in that category must match).
+//   - Labels: AND across labels (every selected label must match). Sublabels
+//     ('<parent>/<suffix>' composite keys) OR within their parent label and
+//     *replace* the bare-parent requirement — any composite in matchLabels
+//     implies the parent, since the generator always emits both.
 //   - Across all rows, every row's condition must pass (AND).
 //
 // Matching is per-skill (not entity-level): a skill is shown only if it itself
@@ -22,7 +24,11 @@
 import type { Entity, Query, Row, Skill } from '../types'
 import type { Status } from '../types'
 
-const categoryOf = (labelKey: string): string => labelKey.split('.')[0]
+const parentOf = (labelKey: string): string => labelKey.split('/')[0]
+
+/** Selected sublabel keys grouped by parent label; a bare-parent selection is
+ * an entry with no sublabels. */
+type LabelGroups = Map<string, string[]>
 
 /** Effective skills for an entity given the skill-tree toggle. */
 export function effectiveSkills(entity: Entity, skillTree: boolean): Skill[] {
@@ -38,7 +44,7 @@ export function effectiveSkills(entity: Entity, skillTree: boolean): Skill[] {
  */
 function skillMatches(
   skill: Skill,
-  labelsByCat: Map<string, Set<string>>,
+  labelGroups: LabelGroups,
   query: Query,
   statuses: Record<string, Status>,
 ): boolean {
@@ -46,10 +52,13 @@ function skillMatches(
   const matchLabels = new Set(skill.matchLabels)
   const matchStatusIds = new Set(skill.matchStatusIds)
 
-  // Categories: every selected label in a category-row must match (AND within / AND across).
-  for (const [, group] of labelsByCat) {
-    for (const key of group) {
-      if (!matchLabels.has(key)) return false
+  // Labels AND across parents; sublabels of one parent OR together and replace
+  // the bare-parent requirement.
+  for (const [parent, subs] of labelGroups) {
+    if (subs.length) {
+      if (!subs.some((key) => matchLabels.has(key))) return false
+    } else if (!matchLabels.has(parent)) {
+      return false
     }
   }
 
@@ -102,12 +111,16 @@ export function filterRows(
 ): Row[] {
   const { types, roles, skillTree, includeMob } = query
 
-  // Group selected labels by their category prefix once.
-  const labelsByCat = new Map<string, Set<string>>()
+  // Group selected label keys by their parent label once.
+  const labelGroups: LabelGroups = new Map()
   for (const key of query.labels) {
-    const cat = categoryOf(key)
-    if (!labelsByCat.has(cat)) labelsByCat.set(cat, new Set())
-    labelsByCat.get(cat)!.add(key)
+    const parent = parentOf(key)
+    let subs = labelGroups.get(parent)
+    if (!subs) {
+      subs = []
+      labelGroups.set(parent, subs)
+    }
+    if (key !== parent) subs.push(key)
   }
 
   const characterName = query.characterName.trim().toLowerCase()
@@ -124,7 +137,7 @@ export function filterRows(
 
     for (const s of effectiveSkills(entity, skillTree)) {
       if (s.hidden) continue // hero passives + sidekick append-passives
-      if (!skillMatches(s, labelsByCat, query, statuses)) continue
+      if (!skillMatches(s, labelGroups, query, statuses)) continue
       rows.push({
         id: `${entity.kind}-${entity.stockId}-${s.slot}-${s.skillId}`,
         entity,

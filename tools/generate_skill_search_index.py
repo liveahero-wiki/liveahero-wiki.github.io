@@ -36,7 +36,7 @@ CHARAS = "_charas"
 # emitted JSON without a masterdata version change. Appended to the cache key so
 # clients (search/src/data/loadIndex.js) refetch the index instead of reusing a
 # stale cache.
-INDEX_SCHEMA_REV = "r11"
+INDEX_SCHEMA_REV = "r12"
 
 
 # --- Undocumented game-data enums / magic numbers ---------------------------
@@ -56,6 +56,93 @@ TARGET_FLAGS_ENEMY_ALL = {4, 16, 27}                # all enemies / all except t
 TARGET_FLAGS_ENEMY_SINGLE = {2, 7, 29}              # single / random enemy
 TARGET_FLAGS_ALLY = {1, 3, 6, 9, 11, 12, 13, 14}    # any ally-directed damage
 TARGET_FLAGS_NO_RANGE = {0, 5}                       # self / event bonus unit
+
+# effectTarget -> target-sublabel suffix for the labels in
+# TARGET_SUBLABEL_PARENTS. A None suffix means "deliberately no sublabel" (not
+# reported as unmapped); values absent from this map are counted in
+# unmapped_sublabel_targets and reported at the end of a run. Verified beyond
+# _plugins/skill.rb's enum from JP descriptions: 21 = enemies adjacent to
+# target, 22 = allies adjacent to target, 24 = allies adjacent to self,
+# 29 = single enemy.
+TARGET_TO_SUBLABEL = {
+    0: "self",
+    1: "ally-single",
+    2: "enemy-single",
+    3: "ally-all",
+    4: "enemy-all",
+    5: None,  # event bonus unit
+    6: "ally-other",    # random ally
+    7: "enemy-other",   # random enemy
+    9: "ally-other",    # random ally
+    11: "ally-other",   # lowest-HP ally
+    12: "ally-other",   # each ally
+    13: "ally-other",   # highest-ATK ally
+    14: "ally-other",   # all allies except self
+    16: "enemy-other",  # all enemies except target
+    21: "enemy-adjacent",
+    22: "ally-adjacent",
+    24: "ally-adjacent",
+    29: "enemy-single",
+}
+
+# Labels that get a "/<target-sublabel>" composite key in matchLabels so users
+# can filter e.g. "extra action to self" or "damage up to all allies".
+TARGET_SUBLABEL_PARENTS = {
+    "skillctl.extra_action",
+    "skillctl.extra_activation",
+    "damage.up",
+    "damage.down",
+    "defense.up",
+    "defense.down",
+    "vp.gain",
+    "vp.loss",
+    "vp.costdown",
+    "vp.costup",
+    "heal.heal",
+    "spd.up",
+    "spd.down",
+}
+
+# Classes whose inner parameter.target is a target enum for the non-damage side
+# of the effect (e.g. AbsorbDamage heals parameter.target while the damage goes
+# to the row's effectTarget). For other classes parameter.target can be a
+# skillId, so it must never be read generically.
+PARAM_TARGET_CLASSES = {"AbsorbDamage"}
+
+# damage.scaling classes -> what the damage scales by. Classes here get a
+# "damage.scaling/<suffix>" composite key.
+SCALING_CLASS_TO_SUBLABEL = {
+    "HealthAttack": "hp",
+    "HealthMultipleAttack": "hp",
+    "HighestHealthMultipleAttack": "hp",
+    "ComboMultipleAttack": "combo",
+    "HighestComboMultipleAttack": "combo",
+    "NowViewDamage": "view",
+    "ViewPowerMultipleAttack": "view",
+    "HighestViewPowerMultipleAttack": "view",
+    "TimingFixHighestViewPowerMultipleAttack": "view",
+    "SpdDifferenceMultipleAttack": "spd",
+    "StatusNumberMultipleAttack": "status-count",
+    "StatusTurnDamage": "status-turns",
+    "StatusTurnMultipleAttack": "status-turns",
+}
+
+# damage.scaling classes whose scaling stat is selected by parameter.paramType.
+# The paramType enum (observed 0-3) is still undocumented, so every occurrence
+# is reported via unmapped_scaling_sources until the map below is filled in.
+SCALING_PARAMTYPE_CLASSES = {
+    "DamageMultipleAdjust",
+    "OtherParamMultipleAttack",
+    "OtherParamAddAttack",
+    "HighestOtherParamAddAttack",
+}
+SCALING_PARAMTYPE_TO_SUBLABEL = {}
+
+# damage.scaling classes knowingly left without a scaling sublabel (so they
+# don't spam the unmapped report).
+SCALING_NO_SUBLABEL = {
+    "HighestBarrierMultipleAttack"  # scales by barrier
+}
 
 # StatusMaster.statusType -> our status-bucket name. Anything not listed here
 # (the `else` branch) is treated as an internal/system status.
@@ -176,6 +263,42 @@ CATEGORIES = [
         {"key": "acq.relation", "label": "Relation boost"},
     ]}
 ]
+
+# Sublabel display definitions, attached below to every label that supports
+# them. The UI receives fully-formed composite keys ("<parent>/<suffix>") so it
+# never concatenates strings itself.
+TARGET_SUBLABEL_DEFS = [
+    ("self", "Self"),
+    ("enemy-single", "Single enemy"),
+    ("enemy-adjacent", "Adjacent enemies"),
+    ("enemy-all", "All enemies"),
+    ("enemy-other", "Other enemy range"),
+    ("ally-single", "Single ally"),
+    ("ally-adjacent", "Adjacent allies"),
+    ("ally-all", "All allies"),
+    ("ally-other", "Other ally range"),
+]
+SCALING_SUBLABEL_DEFS = [
+    ("hp", "HP"),
+    ("combo", "Combo"),
+    ("view", "View"),
+    ("spd", "SPD"),
+    ("status-count", "# status"),
+    ("status-turns", "# status turn"),
+]
+
+for _cat in CATEGORIES:
+    for _lab in _cat["labels"]:
+        if _lab["key"] in TARGET_SUBLABEL_PARENTS:
+            _defs = TARGET_SUBLABEL_DEFS
+        elif _lab["key"] == "damage.scaling":
+            _defs = SCALING_SUBLABEL_DEFS
+        else:
+            continue
+        _lab["sublabels"] = [
+            {"key": f'{_lab["key"]}/{suffix}', "label": name}
+            for suffix, name in _defs
+        ]
 
 # Effect classes that deal damage -> the skill counts as an "attack" and gets
 # a target-based label (single / all / random) from its targetFlag.
@@ -340,6 +463,8 @@ IGNORED_CLASSES = {
 
 unmapped = Counter()
 unmapped_target_flags = Counter()  # damage skills whose targetFlag has no range label
+unmapped_sublabel_targets = Counter()  # effectTarget with no target-sublabel mapping
+unmapped_scaling_sources = Counter()  # (class, paramType) scaling with no sublabel
 missing_upgrade_nodes = Counter()  # gated node ids absent from SkillUpgradeMaster
 suspicious_view_costs = []  # (skillId, total) where summed maxed View cost < 0
 liquid_template_statuses = Counter()  # status IDs whose base desc contains Liquid {{ }}
@@ -464,17 +589,56 @@ def classify(cls, inner):
     return set(), False, False
 
 
+def sublabels_for(labels, cls, inner, effect_target):
+    """Composite "<parent>/<suffix>" keys for one inner effect's labels.
+
+    Target sublabels come from the row's effectTarget, except for
+    PARAM_TARGET_CLASSES where the non-damage side targets parameter.target
+    (never fall back to effectTarget there -- that is the damage side).
+    damage.scaling sublabels come from the class name (SCALING_CLASS_TO_SUBLABEL)
+    or, for the OtherParam* family, parameter.paramType. Unknown targets and
+    scaling sources yield no sublabel (the parent label still applies) and are
+    counted for the end-of-run report.
+    """
+    out = set()
+    tgt = effect_target
+    if cls in PARAM_TARGET_CLASSES:
+        tgt = (inner.get("parameter") or {}).get("target")
+    for lab in labels & TARGET_SUBLABEL_PARENTS:
+        if tgt in TARGET_TO_SUBLABEL:
+            suffix = TARGET_TO_SUBLABEL[tgt]
+            if suffix:
+                out.add(f"{lab}/{suffix}")
+        else:
+            unmapped_sublabel_targets[tgt] += 1
+    if "damage.scaling" in labels:
+        if cls in SCALING_CLASS_TO_SUBLABEL:
+            out.add(f"damage.scaling/{SCALING_CLASS_TO_SUBLABEL[cls]}")
+        elif cls in SCALING_PARAMTYPE_CLASSES:
+            pt = (inner.get("parameter") or {}).get("paramType")
+            if pt in SCALING_PARAMTYPE_TO_SUBLABEL:
+                out.add(f"damage.scaling/{SCALING_PARAMTYPE_TO_SUBLABEL[pt]}")
+            else:
+                unmapped_scaling_sources[(cls, pt)] += 1
+        elif cls not in SCALING_NO_SUBLABEL:
+            unmapped_scaling_sources[(cls, None)] += 1
+    return out
+
+
 def label_skill(skill_id, SM, SEM, SMA, visited):
-    """Return (labels:set, status_ids:set) for a skill, folding in any
-    ChangeActiveSkill target skills and granted passive skills (recursively)."""
-    labels, status_ids = set(), set()
+    """Return (labels:set, match_extras:set, status_ids:set) for a skill,
+    folding in any ChangeActiveSkill target skills and granted passive skills
+    (recursively). match_extras holds only composite "<parent>/<sublabel>"
+    keys; they are merged into matchLabels (filtering) but kept out of the
+    display labels."""
+    labels, match_extras, status_ids = set(), set(), set()
     sid = str(skill_id)
     if sid in visited:
-        return labels, status_ids
+        return labels, match_extras, status_ids
     visited.add(sid)
     skill = SM.get(sid)
     if not skill:
-        return labels, status_ids
+        return labels, match_extras, status_ids
 
     description = skill.get("description") or ""
     damage_group_ids = set()
@@ -496,6 +660,9 @@ def label_skill(skill_id, SM, SEM, SMA, visited):
             cls = inner.get("class", "")
             l, deals_damage, recognized = classify(cls, inner)
             labels.update(l)
+            # Use this inner effect's labels `l`, not the accumulated set, so a
+            # later row's target can't re-qualify an earlier row's label.
+            match_extras.update(sublabels_for(l, cls, inner, effectTarget))
 
             if deals_damage:
                 row_deals_damage = True
@@ -516,8 +683,9 @@ def label_skill(skill_id, SM, SEM, SMA, visited):
             if cls == "ChangeActiveSkill":
                 tgt = (inner.get("parameter") or {}).get("skillId")
                 if tgt:
-                    l2, s2 = label_skill(tgt, SM, SEM, SMA, visited)
+                    l2, m2, s2 = label_skill(tgt, SM, SEM, SMA, visited)
                     labels.update(l2)
+                    match_extras.update(m2)
                     status_ids.update(s2)
         if row_deals_damage:
             # Rows sharing a sequenceGroupId are alternate power tiers of the
@@ -531,11 +699,12 @@ def label_skill(skill_id, SM, SEM, SMA, visited):
 
     # granted passive skills attached to this skill
     for pid in skill.get("appendPassiveSkillIds") or []:
-        l2, s2 = label_skill(pid, SM, SEM, SMA, visited)
+        l2, m2, s2 = label_skill(pid, SM, SEM, SMA, visited)
         labels.update(l2)
+        match_extras.update(m2)
         status_ids.update(s2)
 
-    return labels, status_ids
+    return labels, match_extras, status_ids
 
 
 def skill_name(skill_id, SM, SkillTrans, English):
@@ -772,7 +941,7 @@ def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SU
 
 
 def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English, SkillEffectTrans, StatusTrans, change_ids=(), hidden=False, SUM=None, maxed=False):
-    labels, status_ids = label_skill(skill_id, SM, SEM, SMA, set())
+    labels, match_extras, status_ids = label_skill(skill_id, SM, SEM, SMA, set())
     skill = SM.get(str(skill_id), {})
     # maxed (skill-tree fully bloomed) rows assemble their description from the
     # terminal-tier condition lines and sum the View-cost deltas; base rows use
@@ -796,9 +965,10 @@ def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English, SkillEffectTran
         "useView": use_view,
         "labels": sorted(labels),
         "statusIds": sorted(status_ids),
-        # match* default to own labels/statuses; attribute_passives() folds hidden
-        # passives' passive-only labels into the visible <wiki-passive> carrier(s).
-        "matchLabels": sorted(labels),
+        # match* default to own labels/statuses (plus composite sublabel keys,
+        # which are filter-only); attribute_passives() folds hidden passives'
+        # passive-only labels into the visible <wiki-passive> carrier(s).
+        "matchLabels": sorted(labels | match_extras),
         "matchStatusIds": sorted(status_ids),
         "changeSkills": change_skills(change_ids, skill_id, SM, SkillTrans, English),
         "statusDescs": build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SUM),
@@ -818,10 +988,12 @@ def attribute_passives(skills):
     hidden = [s for s in skills if s["hidden"]]
     if not visible or not hidden:
         return
-    vis_l = set().union(*(s["labels"] for s in visible))
-    vis_s = set().union(*(s["statusIds"] for s in visible))
-    hid_l = set().union(*(s["labels"] for s in hidden))
-    hid_s = set().union(*(s["statusIds"] for s in hidden))
+    # Union matchLabels (== labels + own composite sublabel keys at this point),
+    # not labels, so hidden passives' sublabels flow to the carriers too.
+    vis_l = set().union(*(s["matchLabels"] for s in visible))
+    vis_s = set().union(*(s["matchStatusIds"] for s in visible))
+    hid_l = set().union(*(s["matchLabels"] for s in hidden))
+    hid_s = set().union(*(s["matchStatusIds"] for s in hidden))
     only_l, only_s = hid_l - vis_l, hid_s - vis_s
     if not only_l and not only_s:
         return  # nothing the visible skills don't already carry (e.g. sidekicks)
@@ -1122,6 +1294,16 @@ def main():
               f"damage skills with no attack-range label, add to TARGET_FLAGS_*:")
         for tf, n in unmapped_target_flags.most_common():
             print(f"  targetFlag {tf}: {n} skill effect(s)")
+    if unmapped_sublabel_targets:
+        print(f"\nUNMAPPED SUBLABEL TARGETS ({len(unmapped_sublabel_targets)}) -- "
+              f"no target sublabel (parent label still applied), add to TARGET_TO_SUBLABEL:")
+        for tf, n in unmapped_sublabel_targets.most_common():
+            print(f"  effectTarget {tf}: {n} skill effect(s)")
+    if unmapped_scaling_sources:
+        print(f"\nUNMAPPED SCALING SOURCES ({len(unmapped_scaling_sources)}) -- "
+              f"damage.scaling with no source sublabel, add to SCALING_* maps:")
+        for (cls, pt), n in unmapped_scaling_sources.most_common():
+            print(f"  {cls} paramType={pt}: {n} skill effect(s)")
     if missing_upgrade_nodes:
         print(f"\nMISSING SKILL-UPGRADE NODES ({len(missing_upgrade_nodes)}) -- "
               f"gated effects kept as terminal (recall-safe); check masterdata:")

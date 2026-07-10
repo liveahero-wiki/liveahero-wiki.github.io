@@ -1,6 +1,10 @@
 export interface Label {
   key: string
   label: string
+  // Optional more-specific filters (e.g. target range or scaling source). Keys
+  // are fully-formed composites '<parent>/<suffix>' that appear only in a
+  // skill's matchLabels, never in its display labels.
+  sublabels?: Label[]
 }
 
 export interface Category {
