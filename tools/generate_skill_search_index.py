@@ -88,7 +88,6 @@ TARGET_TO_SUBLABEL = {
 # Labels that get a "/<target-sublabel>" composite key in matchLabels so users
 # can filter e.g. "extra action to self" or "damage up to all allies".
 TARGET_SUBLABEL_PARENTS = {
-    "skillctl.extra_action",
     "skillctl.extra_activation",
     "damage.up",
     "damage.down",
