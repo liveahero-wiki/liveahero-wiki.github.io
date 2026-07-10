@@ -391,7 +391,7 @@ CLASS_TO_LABELS = {
     "SpdDeferenceChangeView": ["vp.gain"],
     "ChangeBaseView": ["vp.gain"],
     "GetViewDamage": ["vp.gain"],
-    "RemoveGainViewStock": ["view.gain"],
+    "RemoveGainViewStock": ["vp.gain"],
     # MultipleBaseView flips on parameter.value -> VALUE_SIGN_RULES
     "ViewCount": [], 
     "ViewChangeHp": ["vp.gain"],
