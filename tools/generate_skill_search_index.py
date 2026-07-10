@@ -235,6 +235,7 @@ CATEGORIES = [
     ]},
     {"key": "heal", "label": "Healing", "labels": [
         {"key": "heal.heal", "label": "Heal"},
+        {"key": "heal.regen", "label": "Regen"},
         {"key": "heal.change", "label": "Change heal amount"},
     ]},
     {"key": "combo", "label": "Combo", "labels": [
@@ -475,9 +476,8 @@ CLASS_TO_LABELS = {
 
 # Classes we knowingly do not surface as labels (pure mechanics / display).
 IGNORED_CLASSES = {
-    "ChangeHp", "Critical", "IgnoreElement", "Burst", "Summon", "ItemEffectMark",
+    "Critical", "IgnoreElement", "Burst", "Summon", "ItemEffectMark",
     "ParticleStatus", "PassiveBattleSkillEffect", "ForceExecDotDamage",
-    "ChangeHpExecBeforeSkill",
     "NowViewTurn",       # Victom's internal VP-threshold turn counter (system status)
     "UseInvokerBaseAtk", # internal damage-calc flag for Akashi's Armament
 }
@@ -531,6 +531,9 @@ SUBSTRING_RULES = [
 # "DEFダウン" (target takes MORE damage -> damage.up), value<100 is "DEFアップ"
 # (defensive -> damage.down). Checked before CLASS_TO_LABELS in classify.
 VALUE_SIGN_RULES = {
+    "ChangeHp":                (None, "heal.regen", None, 0),
+    "ChangeHpExecBeforeSkill": (None, "heal.regen", None, 0),
+
     "ChangeAgi":               ("spd.up", "spd.down", "spd.other", 0),
     "OtherParamChangeAgi":     ("spd.up", "spd.down", "spd.other", 0),
 
