@@ -104,6 +104,10 @@ TARGET_SUBLABEL_PARENTS = {
     "heal.heal",
     "spd.up",
     "spd.down",
+    "defense.barrier",
+    "interf.debuff_remove",
+    "interf.buff_remove",
+    "interf.debuff_resist",
 }
 
 # Classes whose inner parameter.target is a target enum for the non-damage side
