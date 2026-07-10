@@ -9,7 +9,6 @@
 // wires aria-expanded on the invoker natively. Clicks inside don't light-
 // dismiss, so several sublabels can be toggled in one open.
 
-import { useRef } from 'preact/hooks'
 import type { Label } from '../types'
 
 interface SublabelChipProps {
@@ -19,30 +18,12 @@ interface SublabelChipProps {
 }
 
 export function SublabelChip({ opt, selected, onToggle }: SublabelChipProps) {
-  const popRef = useRef<HTMLDivElement>(null)
-  const caretRef = useRef<HTMLButtonElement>(null)
   const sublabels = opt.sublabels ?? []
   const parentOn = selected.has(opt.key)
   const nSel = sublabels.reduce((n, s) => n + (selected.has(s.key) ? 1 : 0), 0)
   const stateClass = parentOn ? ' chip-on' : nSel ? ' chip-part' : ''
   const popId = `subpop-${opt.key}`
-
-  // Manual anchoring: CSS anchor positioning has no cross-browser support yet,
-  // so place the top-layer popover next to the caret on open, clamped to the
-  // viewport and flipped above when it would overflow the bottom.
-  const position = (e: Event) => {
-    if ((e as ToggleEvent).newState !== 'open') return
-    const pop = popRef.current
-    const caret = caretRef.current
-    if (!pop || !caret) return
-    const a = caret.getBoundingClientRect()
-    const p = pop.getBoundingClientRect()
-    let top = a.bottom + 4
-    if (top + p.height > window.innerHeight - 8) top = Math.max(8, a.top - p.height - 4)
-    const left = Math.min(Math.max(8, a.left), Math.max(8, window.innerWidth - p.width - 8))
-    pop.style.top = `${top}px`
-    pop.style.left = `${left}px`
-  }
+  const anchorName = `--subpop-${opt.key.replace(/[^a-zA-Z0-9_-]/g, '-')}`
 
   return (
     <span class="chip-split">
@@ -55,15 +36,15 @@ export function SublabelChip({ opt, selected, onToggle }: SublabelChipProps) {
         {opt.label}
       </button>
       <button
-        ref={caretRef}
         type="button"
         class={'chip chip-caret' + stateClass}
         popovertarget={popId}
         aria-label={`${opt.label}: sub-filters`}
+        style={{ anchorName } as JSX.CSSProperties}
       >
         ▾{nSel > 0 && <span class="chip-count">{nSel}</span>}
       </button>
-      <div id={popId} ref={popRef} popover="auto" class="sub-pop" onToggle={position}>
+      <div id={popId} popover="auto" class="sub-pop" style={{ positionAnchor: anchorName } as JSX.CSSProperties}>
         {sublabels.map((s) => (
           <button
             key={s.key}

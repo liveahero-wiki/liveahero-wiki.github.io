@@ -158,10 +158,9 @@
   color: var(--accent);
 }
 
-/* Top-layer popover; top/left are set in JS from the caret's rect. */
+/* Top-layer popover; position-anchor is set per-instance via inline style. */
 .sub-pop {
   position: fixed;
-  inset: auto;
   margin: 0;
   padding: 0.4rem;
   display: none;
@@ -172,6 +171,10 @@
   border-radius: 6px;
   box-shadow: 0 4px 14px rgb(0 0 0 / 0.25);
   background: var(--bg-soft);
+  /* CSS Anchor Positioning — replaces the JS toggle-event positioning */
+  top: calc(anchor(bottom) + 4px);
+  left: clamp(8px, anchor(left), calc(100vw - 320px - 8px));
+  position-try-fallbacks: flip-block;
 }
 
 .sub-pop:popover-open {
