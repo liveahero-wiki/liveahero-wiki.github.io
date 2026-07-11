@@ -9,14 +9,9 @@ and emits a prebuilt, browser-fetchable index plus a tiny version probe.
 Outputs (plain static JSON, no Jekyll front-matter, so they are copied
 verbatim into _site/api/ and can be fetched at /api/skill-index.json):
     api/skill-index.json          - the full index
-    api/skill-index-version.json  - { "version": "<masterdata version>" }
+    api/skill-index-version.json  - { "version": "<masterdata version>-<INDEX_SCHEMA_REV>" }
 
 Run from the repo root:  python tools/generate_skill_search_index.py
-
-Follows the same plain-json / write-under-repo pattern as tools/skill_evo.py
-and tools/generate_status_pages.py. MVP uses the raw Japanese
-SkillMaster.description; the schema leaves room to swap in translated /
-LiquidJS-rendered text later.
 """
 
 import json
@@ -24,6 +19,7 @@ import os
 import re
 import hashlib
 from collections import Counter, OrderedDict, defaultdict
+from typing import Any
 
 from wiki_util import sanitizeSkillDescription, build_chara_pages
 
@@ -212,7 +208,7 @@ def load_english():
 # Category taxonomy (drives the query-UI buttons). Each label key is
 # "<category>.<label>"; skills carry a flat list of these keys.
 # ---------------------------------------------------------------------------
-CATEGORIES = [
+CATEGORIES: list[dict[str, Any]] = [
     {"key": "attack", "label": "Attack", "labels": [
         {"key": "attack.single", "label": "Single-target attack"},
         {"key": "attack.all", "label": "All-range attack"},
