@@ -5,8 +5,10 @@ wide_content: true
 additional_styles: ["/assets/skill-search.css"]
 ---
 
-<details markdown="1">
+<details>
 <summary>More Info</summary>
+
+<div style="padding: 10px" markdown="1">
 
 The skill effect implementation of this game is extremely complex and messy.
 We are still improving the labeling, but there are some known issues and limitations that are not very possible to solve.
@@ -44,6 +46,7 @@ We welcome bug report and feedback. If you want to dive deep into the implementa
 - [Skill effects audit](/api/skill-effects-audit.html)
 - [Skill index generation script](https://github.com/liveahero-wiki/liveahero-wiki.github.io/blob/master/tools/generate_skill_search_index.py)
 
+</div>
 </details>
 
 <div id="app"></div>
