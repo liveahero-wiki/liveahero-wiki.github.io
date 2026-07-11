@@ -45,6 +45,7 @@ jobs:
         python tools/voice_gsheet.py download
         python tools/skill_evo.py
         python tools/generate_status_pages.py
+        python tools/masterdata.py -f=1 --skip_data
         python tools/generate_skill_search_index.py
         python tools/audit_skill_effects.py report
 
