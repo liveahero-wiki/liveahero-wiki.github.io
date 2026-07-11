@@ -49,7 +49,20 @@ export const SkillDescription = memo(function SkillDescription({
     el.querySelectorAll('[data-status-name]').forEach((node) => {
       const desc = descMap[(node as HTMLElement).dataset.statusName ?? '']
       if (!desc) return
-      instances.push(window.tippy(node, { content: desc, allowHTML: true, interactive: true }))
+      instances.push(
+        window.tippy(node, {
+          content: desc,
+          allowHTML: true,
+          interactive: true,
+          // Tippy's default appendTo, when interactive, mounts the popup as a
+          // sibling inside the reference's own parent (an a11y focus-order
+          // affordance). Our rows are virtualized with `transform` + absolute
+          // positioning, which makes that parent row a stacking context — the
+          // popup's z-index would then only compete within its own row and
+          // get painted over by later sibling rows. Force it to document.body.
+          appendTo: () => document.body,
+        }),
+      )
     })
     return () => instances.forEach((i) => i?.destroy())
   }, [html, statusDescs])
