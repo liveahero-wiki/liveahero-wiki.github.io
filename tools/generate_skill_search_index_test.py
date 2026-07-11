@@ -19,7 +19,7 @@ class TestSkillTreeMaxed(unittest.TestCase):
     """Skill-tree maxed-skill assembly, pinned to committed Akashi (stockId
     10011) and Raiki (stockId 10041) master data. We assert on the raw Japanese
     master strings (always present in _data/) and the language-independent View
-    cost, and pass English={} so the test is deterministic without zzz/."""
+    cost, and pass GameTrans={} so the test is deterministic without zzz/."""
 
     @classmethod
     def setUpClass(cls):

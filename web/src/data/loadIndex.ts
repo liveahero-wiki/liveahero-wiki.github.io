@@ -4,13 +4,29 @@
 //
 // Search runs fully in memory over a few hundred entities, so a single
 // LocalStorage blob (well under the ~5 MB limit) is sufficient — no IndexedDB.
+//
+// One index file exists per language (see tools/generate_skill_search_index.py
+// --lang); the cache is namespaced per language so switching languages doesn't
+// clobber another language's cached copy.
 
 import type { SkillIndex } from '../types'
+import type { Lang } from '../lib/lang'
 
-const VERSION_URL = '/api/skill-index-version.json'
-const INDEX_URL = '/api/skill-index.json'
-const LS_VERSION = 'skillIndexVersion'
-const LS_INDEX = 'skillIndex'
+function versionUrl(lang: Lang): string {
+  return `/api/skill-index-version.${lang}.json`
+}
+
+function indexUrl(lang: Lang): string {
+  return `/api/skill-index.${lang}.json`
+}
+
+function lsVersionKey(lang: Lang): string {
+  return `skillIndexVersion:${lang}`
+}
+
+function lsIndexKey(lang: Lang): string {
+  return `skillIndex:${lang}`
+}
 
 async function fetchJson(url: string): Promise<unknown> {
   const res = await fetch(url, { cache: 'no-cache' })
@@ -18,10 +34,10 @@ async function fetchJson(url: string): Promise<unknown> {
   return res.json()
 }
 
-function readCache(): { version: string; index: SkillIndex } | null {
+function readCache(lang: Lang): { version: string; index: SkillIndex } | null {
   try {
-    const version = localStorage.getItem(LS_VERSION)
-    const raw = localStorage.getItem(LS_INDEX)
+    const version = localStorage.getItem(lsVersionKey(lang))
+    const raw = localStorage.getItem(lsIndexKey(lang))
     if (version && raw) return { version, index: JSON.parse(raw) as SkillIndex }
   } catch {
     /* corrupt cache — ignore */
@@ -29,34 +45,34 @@ function readCache(): { version: string; index: SkillIndex } | null {
   return null
 }
 
-function writeCache(version: string, raw: string): void {
+function writeCache(lang: Lang, version: string, raw: string): void {
   try {
-    localStorage.setItem(LS_VERSION, version)
-    localStorage.setItem(LS_INDEX, raw)
+    localStorage.setItem(lsVersionKey(lang), version)
+    localStorage.setItem(lsIndexKey(lang), raw)
   } catch {
     /* quota / private mode — non-fatal, app still works this session */
   }
 }
 
-export function clearCache(): void {
+export function clearCache(lang: Lang): void {
   try {
-    localStorage.removeItem(LS_VERSION)
-    localStorage.removeItem(LS_INDEX)
+    localStorage.removeItem(lsVersionKey(lang))
+    localStorage.removeItem(lsIndexKey(lang))
   } catch { /* quota / private mode */ }
 }
 
 /**
- * Returns the parsed index { version, categories, statuses, entities }.
+ * Returns the parsed index { version, categories, statuses, entities } for `lang`.
  * Flow: probe version -> if it matches cache, use cache -> else download full
  * index and refresh cache. Falls back to cache (then direct download) if the
  * probe fails.
  */
-export async function loadIndex(): Promise<SkillIndex> {
-  const cache = readCache()
+export async function loadIndex(lang: Lang): Promise<SkillIndex> {
+  const cache = readCache(lang)
 
   let remoteVersion: string | null = null
   try {
-    const probe = await fetchJson(VERSION_URL) as { version?: unknown }
+    const probe = await fetchJson(versionUrl(lang)) as { version?: unknown }
     // Guard: the cast above is not a runtime check. Only accept a non-empty
     // string so a missing/malformed version field doesn't silently defeat the
     // cache by comparing undefined === cached-version-string.
@@ -76,18 +92,19 @@ export async function loadIndex(): Promise<SkillIndex> {
   // Wrap in try/catch so a network error after cache expiry falls back to the
   // stale cache rather than surfacing an uncaught promise rejection.
   let res: Response
+  const url = indexUrl(lang)
   try {
-    res = await fetch(INDEX_URL, { cache: 'no-cache' })
+    res = await fetch(url, { cache: 'no-cache' })
   } catch (err) {
     if (cache) return cache.index
     throw err
   }
   if (!res.ok) {
     if (cache) return cache.index
-    throw new Error(`fetch ${INDEX_URL} -> ${res.status}`)
+    throw new Error(`fetch ${url} -> ${res.status}`)
   }
   const raw = await res.text()
   const index = JSON.parse(raw) as SkillIndex
-  writeCache(index.version ?? remoteVersion ?? '', raw)
+  writeCache(lang, index.version ?? remoteVersion ?? '', raw)
   return index
 }

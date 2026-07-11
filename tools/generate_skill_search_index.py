@@ -4,16 +4,23 @@ Walks the master-data join chain
     CardMaster / SidekickMaster  ->  SkillMaster.effects[].skillEffectId
         ->  SkillEffectMaster.skillEffectJson (effects[].class, statusId)
         ->  StatusMaster (+ _data/translation/Status.json for name/icon)
-and emits a prebuilt, browser-fetchable index plus a tiny version probe.
+and emits a prebuilt, browser-fetchable index plus a tiny version probe, one
+language at a time (see --lang / LANG_ZZZ_FILE).
 
 Outputs (plain static JSON, no Jekyll front-matter, so they are copied
-verbatim into _site/api/ and can be fetched at /api/skill-index.json):
-    api/skill-index.json          - the full index
-    api/skill-index-version.json  - { "version": "<masterdata version>-<INDEX_SCHEMA_REV>" }
+verbatim into _site/api/ and can be fetched at /api/skill-index.<lang>.json):
+    api/skill-index.<lang>.json          - the full index for that language
+    api/skill-index-version.<lang>.json  - { "version": "<masterdata version>-<INDEX_SCHEMA_REV>" }
 
-Run from the repo root:  python tools/generate_skill_search_index.py
+Run from the repo root, once per language:
+    python tools/generate_skill_search_index.py --lang en
+    python tools/generate_skill_search_index.py --lang zh-Hans
+    python tools/generate_skill_search_index.py --lang zh-Hant
+    python tools/generate_skill_search_index.py --lang ja
 """
 
+import argparse
+import copy
 import json
 import os
 import re
@@ -32,7 +39,7 @@ CHARAS = "_charas"
 # emitted JSON without a masterdata version change. Appended to the cache key so
 # clients (search/src/data/loadIndex.js) refetch the index instead of reusing a
 # stale cache.
-INDEX_SCHEMA_REV = "r12"
+INDEX_SCHEMA_REV = "r13"
 
 
 # --- Undocumented game-data enums / magic numbers ---------------------------
@@ -194,14 +201,35 @@ def load(name, sub=None):
         return json.load(f)
 
 
-def load_english():
-    """The raw English localization dump. Optional: missing -> {} so that the
-    raw-Japanese fallback still works (it is a temp dump under zzz/)."""
-    path = os.path.join(ZZZ, "English.json")
+# Maps a supported --lang code to its raw client localization dump under zzz/.
+LANG_ZZZ_FILE = {
+    "en": "English.json",
+    "zh-Hans": "ChineseSimplified.json",
+    "zh-Hant": "ChineseTraditional.json",
+    "ja": "Japanese.json",
+}
+
+
+def load_game_trans(lang):
+    """The raw client localization dump for `lang` (KEY_CONSTANT -> string, e.g.
+    SKILL_NAME_24, STATUS_NAME_1). Optional: missing -> {} so that the
+    raw-Japanese fallback still works (these are temp dumps under zzz/)."""
+    path = os.path.join(ZZZ, LANG_ZZZ_FILE[lang])
     if not os.path.exists(path):
         return {}
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
+
+
+def scoped_status_trans(raw, lang):
+    """_data/translation/Status.json is a community English translation: for the
+    `en` build it's used as-is (name/description/icon). For every other
+    language its `name`/`description` fields are irrelevant (English text), but
+    `icon` is a language-independent asset filename, so non-English builds keep
+    only that field per status id."""
+    if lang == "en":
+        return raw
+    return {sid: {"icon": v["icon"]} for sid, v in raw.items() if v.get("icon")}
 
 
 # ---------------------------------------------------------------------------
@@ -314,6 +342,114 @@ for _cat in CATEGORIES:
             {"key": f'{_lab["key"]}/{suffix}', "label": name}
             for suffix, name in _defs
         ]
+
+CATEGORY_LABEL_TRANSLATIONS: dict[str, dict[str, str]] = {
+    "attack": {"zh-Hans": "攻击", "zh-Hant": "攻擊", "ja": "攻撃"},
+    "attack.single": {"zh-Hans": "单体攻击", "zh-Hant": "單體攻擊", "ja": "単体攻撃"},
+    "attack.all": {"zh-Hans": "全体攻击", "zh-Hant": "全體攻擊", "ja": "全体攻撃"},
+    "attack.special": {"zh-Hans": "特殊范围攻击", "zh-Hant": "特殊範圍攻擊", "ja": "特殊範囲攻撃"},
+    "attack.multi": {"zh-Hans": "多重攻击", "zh-Hant": "多重攻擊", "ja": "連続攻撃"},
+    "attack.counter": {"zh-Hans": "反击", "zh-Hant": "反擊", "ja": "反撃"},
+    "attack.ally": {"zh-Hans": "攻击我方", "zh-Hant": "攻擊我方", "ja": "味方への攻撃"},
+    "attack.penetrate": {"zh-Hans": "贯穿伤害", "zh-Hant": "貫穿傷害", "ja": "貫通ダメージ"},
+
+    "damage": {"zh-Hans": "伤害", "zh-Hant": "傷害", "ja": "ダメージ"},
+    "damage.up": {"zh-Hans": "提高伤害", "zh-Hant": "提高傷害", "ja": "ダメージ上昇"},
+    "damage.down": {"zh-Hans": "降低伤害", "zh-Hant": "降低傷害", "ja": "ダメージ低下"},
+    "damage.scaling": {"zh-Hans": "伤害加成来源", "zh-Hant": "傷害加成來源", "ja": "ダメージ倍率参照"},
+    "damage.dot": {"zh-Hans": "持续伤害", "zh-Hant": "持續傷害", "ja": "継続ダメージ"},
+
+    "spd": {"zh-Hans": "速度", "zh-Hant": "速度", "ja": "SPD"},
+    "spd.up": {"zh-Hans": "提高速度", "zh-Hant": "提高速度", "ja": "SPD上昇"},
+    "spd.down": {"zh-Hans": "降低速度", "zh-Hant": "降低速度", "ja": "SPD低下"},
+    "spd.other": {"zh-Hans": "其他速度技能", "zh-Hant": "其他速度技能", "ja": "その他のSPDスキル"},
+
+    "heal": {"zh-Hans": "治疗", "zh-Hant": "治療", "ja": "回復"},
+    "heal.heal": {"zh-Hans": "治疗", "zh-Hant": "治療", "ja": "回復"},
+    "heal.regen": {"zh-Hans": "持续治疗", "zh-Hant": "持續治療", "ja": "リジェネ"},
+    "heal.change": {"zh-Hans": "改变治疗量", "zh-Hant": "改變治療量", "ja": "回復量変化"},
+
+    "combo": {"zh-Hans": "连击", "zh-Hant": "連擊", "ja": "コンボ"},
+    "combo.up": {"zh-Hans": "提高连击", "zh-Hant": "提高連擊", "ja": "コンボ上昇"},
+
+    "vp": {"zh-Hans": "VP / View", "zh-Hant": "VP / View", "ja": "VP / View"},
+    "vp.gain": {"zh-Hans": "VP获得", "zh-Hant": "VP獲得", "ja": "VP獲得"},
+    "vp.consume": {"zh-Hans": "VP消耗", "zh-Hant": "VP消耗", "ja": "VP消費"},
+    "vp.statup": {"zh-Hans": "VP能力提升", "zh-Hant": "VP能力提升", "ja": "VPステータス上昇"},
+    "vp.statdown": {"zh-Hans": "VP能力下降", "zh-Hant": "VP能力下降", "ja": "VPステータス低下"},
+    "vp.costup": {"zh-Hans": "消耗View增加", "zh-Hant": "消耗View增加", "ja": "View消費量アップ"},
+    "vp.costdown": {"zh-Hans": "消耗View减少", "zh-Hant": "消耗View減少", "ja": "View消費量ダウン"},
+
+    "defense": {"zh-Hans": "防御 / 生存", "zh-Hant": "防禦 / 生存", "ja": "防御 / 生存"},
+    "defense.up": {"zh-Hans": "提高防御", "zh-Hant": "提高防禦", "ja": "DEF上昇"},
+    "defense.down": {"zh-Hans": "降低防御", "zh-Hant": "降低防禦", "ja": "DEF低下"},
+    "defense.barrier": {"zh-Hans": "护盾", "zh-Hant": "護盾", "ja": "バリア"},
+    "defense.provoke": {"zh-Hans": "挑衅", "zh-Hant": "挑釁", "ja": "挑発"},
+    "defense.aggregation": {"zh-Hans": "伤害集中", "zh-Hant": "傷害集中", "ja": "ダメージ集中"},
+    "defense.target": {"zh-Hans": "攻击目标锁定", "zh-Hant": "攻擊目標鎖定", "ja": "狙われ率変化"},
+    "defense.stealth": {"zh-Hans": "隐身", "zh-Hant": "隱身", "ja": "ステルス"},
+    "defense.hp": {"zh-Hans": "提高最大HP", "zh-Hant": "提高最大HP", "ja": "最大HPアップ"},
+    "defense.dodge": {"zh-Hans": "闪避", "zh-Hant": "閃避", "ja": "回避"},
+
+    "interf": {"zh-Hans": "状态控制", "zh-Hant": "狀態控制", "ja": "状態異常操作"},
+    "interf.debuff_remove": {"zh-Hans": "解除减益", "zh-Hant": "解除減益", "ja": "デバフ解除"},
+    "interf.buff_remove": {"zh-Hans": "解除增益", "zh-Hant": "解除增益", "ja": "バフ解除"},
+    "interf.debuff_resist": {"zh-Hans": "减益抗性", "zh-Hant": "減益抗性", "ja": "デバフ耐性"},
+    "interf.extend": {"zh-Hans": "增益/减益延长", "zh-Hant": "增益/減益延長", "ja": "バフ・デバフ延長"},
+    "field.field": {"zh-Hans": "场地效果", "zh-Hant": "場地效果", "ja": "フィールド効果"},
+
+    "skillctl": {"zh-Hans": "技能控制", "zh-Hant": "技能控制", "ja": "スキル操作"},
+    "skillctl.change": {"zh-Hans": "技能变更", "zh-Hant": "技能變更", "ja": "スキル変化"},
+    "skillctl.extra_action": {"zh-Hans": "追加行动", "zh-Hant": "追加行動", "ja": "追加行動"},
+    "skillctl.extra_activation": {"zh-Hans": "追加发动", "zh-Hant": "追加發動", "ja": "追加発動"},
+    "skillctl.auto": {"zh-Hans": "自动行动控制", "zh-Hant": "自動行動控制", "ja": "オート行動操作"},
+    "skillctl.ratechange": {"zh-Hans": "技能几率变化", "zh-Hant": "技能機率變化", "ja": "スキル確率変化"},
+    "interf.silence": {"zh-Hans": "技能封印", "zh-Hant": "技能封印", "ja": "スキル封印"},
+
+    "acq": {"zh-Hans": "获取增加", "zh-Hant": "獲取增加", "ja": "獲得量アップ"},
+    "acq.coin": {"zh-Hans": "金币加成", "zh-Hant": "金幣加成", "ja": "コイン増加"},
+    "acq.exp": {"zh-Hans": "经验值加成", "zh-Hant": "經驗值加成", "ja": "経験値増加"},
+    "acq.relation": {"zh-Hans": "好感度加成", "zh-Hant": "好感度加成", "ja": "親密度増加"},
+}
+
+SUBLABEL_TRANSLATIONS: dict[str, dict[str, str]] = {
+    "self": {"zh-Hans": "自身", "zh-Hant": "自身", "ja": "自分"},
+    "enemy-single": {"zh-Hans": "单个敌人", "zh-Hant": "單個敵人", "ja": "敵単体"},
+    "enemy-adjacent": {"zh-Hans": "相邻敌人", "zh-Hant": "相鄰敵人", "ja": "隣接する敵"},
+    "enemy-all": {"zh-Hans": "全体敌人", "zh-Hant": "全體敵人", "ja": "敵全体"},
+    "enemy-other": {"zh-Hans": "其他敌方范围", "zh-Hant": "其他敵方範圍", "ja": "その他の敵範囲"},
+    "ally-single": {"zh-Hans": "单个我方", "zh-Hant": "單個我方", "ja": "味方単体"},
+    "ally-adjacent": {"zh-Hans": "相邻我方", "zh-Hant": "相鄰我方", "ja": "隣接する味方"},
+    "ally-all": {"zh-Hans": "全体我方", "zh-Hant": "全體我方", "ja": "味方全体"},
+    "ally-other": {"zh-Hans": "其他我方范围", "zh-Hant": "其他我方範圍", "ja": "その他の味方範囲"},
+
+    "hp": {"zh-Hans": "HP", "zh-Hant": "HP", "ja": "HP"},
+    "combo": {"zh-Hans": "连击", "zh-Hant": "連擊", "ja": "コンボ"},
+    "view": {"zh-Hans": "View", "zh-Hant": "View", "ja": "View"},
+    "spd": {"zh-Hans": "速度", "zh-Hant": "速度", "ja": "SPD"},
+    "status-count": {"zh-Hans": "状态数量", "zh-Hant": "狀態數量", "ja": "状態の数"},
+    "status-turns": {"zh-Hans": "状态回合数", "zh-Hant": "狀態回合數", "ja": "状態のターン数"},
+    "other": {"zh-Hans": "其他", "zh-Hant": "其他", "ja": "その他"},
+}
+
+
+def localize_categories(categories, lang):
+    """Returns `categories` unchanged for `en`; otherwise a deep copy with every
+    category/label/sublabel "label" overwritten from the translation tables
+    above (falling back to the existing English string if a key is somehow
+    missing, so a gap in translation coverage never drops a filter button)."""
+    if lang == "en":
+        return categories
+    out = copy.deepcopy(categories)
+    for cat in out:
+        cat["label"] = CATEGORY_LABEL_TRANSLATIONS.get(cat["key"], {}).get(lang, cat["label"])
+        for lab in cat["labels"]:
+            lab["label"] = CATEGORY_LABEL_TRANSLATIONS.get(lab["key"], {}).get(lang, lab["label"])
+            for sl in lab.get("sublabels", []):
+                suffix = sl["key"].split("/", 1)[1]
+                sl["label"] = SUBLABEL_TRANSLATIONS.get(suffix, {}).get(lang, sl["label"])
+    return out
+
 
 # Effect classes that deal damage -> the skill counts as an "attack" and gets
 # a target-based label (single / all / random) from its targetFlag.
@@ -491,9 +627,11 @@ def status_type(status_master_entry):
     return STATUS_TYPE_MAP.get(t, STATUS_TYPE_DEFAULT)
 
 
-def resolve_status_name(sid, StatusTrans, SMA):
-    """A status's display name: Status.json translation -> raw StatusMaster."""
+def resolve_status_name(sid, StatusTrans, SMA, GameTrans=None):
+    """A status's display name: Status.json translation -> GameTrans dump ->
+    raw StatusMaster."""
     return (StatusTrans.get(str(sid), {}).get("name")
+            or (GameTrans or {}).get(f"STATUS_NAME_{sid}")
             or SMA.get(str(sid), {}).get("statusName", ""))
 
 
@@ -725,24 +863,24 @@ def label_skill(skill_id, SM, SEM, SMA, visited):
     return labels, match_extras, status_ids
 
 
-def skill_name(skill_id, SM, SkillTrans, English):
-    """Skill.json translation -> English.json -> raw Japanese master string."""
+def skill_name(skill_id, SM, SkillTrans, GameTrans):
+    """Skill.json translation -> GameTrans dump -> raw Japanese master string."""
     sid = str(skill_id)
     return (SkillTrans.get(sid, {}).get("skillName")
-            or English.get(f"SKILL_NAME_{sid}")
+            or GameTrans.get(f"SKILL_NAME_{sid}")
             or SM.get(sid, {}).get("skillName", ""))
 
 
-def base_condition_description(skill_id, SM, English):
+def base_condition_description(skill_id, SM, GameTrans):
     """Skill-tree-upgraded skills often have an empty top-level `description`;
     the real text lives in effects[].conditionDescription on the base effect
     (conditionEntityId == 0), mirroring _includes/skill-description.html.
-    Prefer the English dump, fall back to raw Japanese master text."""
+    Prefer the GameTrans dump, fall back to raw Japanese master text."""
     sid = str(skill_id)
     for eff in SM.get(sid, {}).get("effects") or []:
         if eff.get("conditionEntityId", 0) != 0:
             continue
-        en = English.get(f"SKILL_EFFECT_CONDITION_DESCRIPTION_{sid}_{eff.get('serialNo')}")
+        en = GameTrans.get(f"SKILL_EFFECT_CONDITION_DESCRIPTION_{sid}_{eff.get('serialNo')}")
         if en:
             return en
         jp = eff.get("conditionDescription")
@@ -751,15 +889,15 @@ def base_condition_description(skill_id, SM, English):
     return ""
 
 
-def skill_description(skill_id, SM, SkillTrans, English):
-    """Skill.json translation -> English.json -> raw Japanese master string ->
+def skill_description(skill_id, SM, SkillTrans, GameTrans):
+    """Skill.json translation -> GameTrans dump -> raw Japanese master string ->
     base-effect conditionDescription (for skill-tree-upgraded skills whose
     top-level description is empty), always sanitized for the wiki tag set."""
     sid = str(skill_id)
     d = (SkillTrans.get(sid, {}).get("description")
-         or English.get(f"SKILL_DESCRIPTION_{sid}")
+         or GameTrans.get(f"SKILL_DESCRIPTION_{sid}")
          or SM.get(sid, {}).get("description")
-         or base_condition_description(skill_id, SM, English))
+         or base_condition_description(skill_id, SM, GameTrans))
     return sanitizeSkillDescription(d or "")
 
 
@@ -789,7 +927,7 @@ def is_terminal_node(eid, SUM):
     return not node.get("nextEntryIds")
 
 
-def maxed_skill_description(skill_id, SM, SEM, SkillTrans, English, SUM):
+def maxed_skill_description(skill_id, SM, SEM, SkillTrans, GameTrans, SUM):
     """Full fully-bloomed description of a skill-tree (bloom) skill.
 
     A bloom skill keeps the same skillId through its whole SkillUpgradeMaster
@@ -805,7 +943,7 @@ def maxed_skill_description(skill_id, SM, SEM, SkillTrans, English, SUM):
     its signature has NO tree-gated tier (so standalone passives survive while
     the tier-0 base of a progression is dropped), or (b) gated by a *terminal*
     node (nextEntryIds == null) -- the final value of a tiered line, since
-    maxing unlocks the whole tree. Lines are emitted in serialNo order; English
+    maxing unlocks the whole tree. Lines are emitted in serialNo order; GameTrans
     dump preferred, raw Japanese master fallback; result sanitized."""
     sid = str(skill_id)
     skill = SM.get(sid, {})
@@ -883,7 +1021,7 @@ def maxed_skill_description(skill_id, SM, SEM, SkillTrans, English, SUM):
                 queue.append(child)
         return False
 
-    base = (English.get(f"SKILL_DESCRIPTION_{sid}")
+    base = (GameTrans.get(f"SKILL_DESCRIPTION_{sid}")
             or SkillTrans.get(sid, {}).get("description")
             or skill.get("description") or "")
 
@@ -907,7 +1045,7 @@ def maxed_skill_description(skill_id, SM, SEM, SkillTrans, English, SUM):
     parts = [base]
     for eff in kept:
         sn = eff.get("serialNo")
-        parts.append(English.get(f"SKILL_EFFECT_CONDITION_DESCRIPTION_{sid}_{sn}")
+        parts.append(GameTrans.get(f"SKILL_EFFECT_CONDITION_DESCRIPTION_{sid}_{sn}")
                      or eff.get("conditionDescription") or "")
     return sanitizeSkillDescription("".join(parts))
 
@@ -955,7 +1093,7 @@ def collect_change_skills(skill_ids, SM, SEM):
     return by_slot
 
 
-def change_skills(change_ids, skill_id, SM, SkillTrans, English):
+def change_skills(change_ids, skill_id, SM, SkillTrans, GameTrans):
     """Resolve change-skill target IDs to [{name, description}], applying the
     two guards from _includes/skill-description.html: skip the skill itself and
     skip targets whose master skillName matches the current skill's."""
@@ -967,18 +1105,21 @@ def change_skills(change_ids, skill_id, SM, SkillTrans, English):
         if SM.get(str(cid), {}).get("skillName") == own_name:
             continue
         out.append({
-            "name": skill_name(cid, SM, SkillTrans, English),
-            "description": skill_description(cid, SM, SkillTrans, English),
+            "name": skill_name(cid, SM, SkillTrans, GameTrans),
+            "description": skill_description(cid, SM, SkillTrans, GameTrans),
         })
     return out
 
 
-def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SUM=None):
+def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SUM=None, GameTrans=None):
     """[{name, desc}] per distinct named status granted by this skill's direct effects.
 
     Mirrors status_description_v2 priority:
       SkillEffect.json override > raw skillEffectJson override
-        > Status.json (skip if contains {{ Liquid template) > StatusMaster raw.
+        > Status.json (skip if contains {{ Liquid template) > GameTrans dump
+        > StatusMaster raw. Status.json is English-only community translation,
+    so for non-English builds it's pre-scoped (scoped_status_trans) to just the
+    icon field and this tier falls straight through to GameTrans/raw.
     Deduped by resolved name. Effects with statusId==0 are skipped.
 
     When SUM (SkillUpgradeMaster) is provided, tree-gated effects
@@ -1001,7 +1142,7 @@ def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SU
 
         name = (se_trans.get("overrideStatusName")
                 or sej.get("overrideStatusName")
-                or resolve_status_name(sid, StatusTrans, SMA))
+                or resolve_status_name(sid, StatusTrans, SMA, GameTrans))
         if not name or name in seen_names:
             continue
         seen_names.add(name)
@@ -1009,7 +1150,8 @@ def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SU
         desc = (se_trans.get("overrideStatusDescription")
                 or sej.get("overrideStatusDescription", ""))
         if not desc:
-            base = StatusTrans.get(sid, {}).get("description", "")
+            base = (StatusTrans.get(sid, {}).get("description", "")
+                    or (GameTrans or {}).get(f"STATUS_DESCRIPTION_{sid}", ""))
             if "{{" in base:
                 liquid_template_statuses[sid] += 1
                 base = ""
@@ -1023,17 +1165,17 @@ def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SU
     return results
 
 
-def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English, SkillEffectTrans, StatusTrans, change_ids=(), hidden=False, SUM=None, maxed=False):
+def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, GameTrans, SkillEffectTrans, StatusTrans, change_ids=(), hidden=False, SUM=None, maxed=False):
     labels, match_extras, status_ids = label_skill(skill_id, SM, SEM, SMA, set())
     skill = SM.get(str(skill_id), {})
     # maxed (skill-tree fully bloomed) rows assemble their description from the
     # terminal-tier condition lines and sum the View-cost deltas; base rows use
     # the top-level description and raw useView.
     if maxed:
-        description = maxed_skill_description(skill_id, SM, SEM, SkillTrans, English, SUM)
+        description = maxed_skill_description(skill_id, SM, SEM, SkillTrans, GameTrans, SUM)
         use_view = maxed_use_view(skill_id, SM, SEM)
     else:
-        description = skill_description(skill_id, SM, SkillTrans, English)
+        description = skill_description(skill_id, SM, SkillTrans, GameTrans)
         use_view = skill.get("useView", 0)
     return {
         "slot": slot,
@@ -1043,7 +1185,7 @@ def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English, SkillEffectTran
         # visible skills' <wiki-passive> blocks. They are kept in the index (for the
         # full-kit dialog) but the UI hides their rows and attributes their labels.
         "hidden": hidden,
-        "name": skill_name(skill_id, SM, SkillTrans, English),
+        "name": skill_name(skill_id, SM, SkillTrans, GameTrans),
         "description": description,
         "useView": use_view,
         "labels": sorted(labels),
@@ -1053,8 +1195,8 @@ def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, English, SkillEffectTran
         # passive-only labels into the visible <wiki-passive> carrier(s).
         "matchLabels": sorted(labels | match_extras),
         "matchStatusIds": sorted(status_ids),
-        "changeSkills": change_skills(change_ids, skill_id, SM, SkillTrans, English),
-        "statusDescs": build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SUM),
+        "changeSkills": change_skills(change_ids, skill_id, SM, SkillTrans, GameTrans),
+        "statusDescs": build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SUM, GameTrans),
     }
 
 
@@ -1133,7 +1275,7 @@ def make_entity(rep, stock_entries, kind, suffix, skills, chara_pages, has_tree=
     }
 
 
-def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, SkillEffectTrans, StatusTrans, chara_pages):
+def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, GameTrans, SkillEffectTrans, StatusTrans, chara_pages):
     """stock_entries: list of CardMaster entries sharing a stockId."""
     rep = next((e for e in stock_entries if e.get("rarity") == HERO_MAX_RARITY), None)
     if rep is None:
@@ -1160,11 +1302,11 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, SkillEffec
         [a["skillId"] for a in base_actives] + [p["skillId"] for p in base_passives],
         SM, SEM)
 
-    base_skills = [skill_obj(f"active{i+1}", a["skillId"], SM, SEM, SMA, SkillTrans, English,
+    base_skills = [skill_obj(f"active{i+1}", a["skillId"], SM, SEM, SMA, SkillTrans, GameTrans,
                              SkillEffectTrans, StatusTrans,
                              change_ids=change_by_slot.get(i + 1, ()))
                    for i, a in enumerate(base_actives)]
-    base_skills += [skill_obj("passive", p["skillId"], SM, SEM, SMA, SkillTrans, English,
+    base_skills += [skill_obj("passive", p["skillId"], SM, SEM, SMA, SkillTrans, GameTrans,
                               SkillEffectTrans, StatusTrans, hidden=True)
                     for p in base_passives]
     attribute_passives(base_skills)
@@ -1191,13 +1333,13 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, SkillEffec
 
         maxed = []
         for i, mid in enumerate(maxed_active_ids):
-            maxed.append(skill_obj(f"active{i+1}", mid, SM, SEM, SMA, SkillTrans, English,
+            maxed.append(skill_obj(f"active{i+1}", mid, SM, SEM, SMA, SkillTrans, GameTrans,
                                    SkillEffectTrans, StatusTrans,
                                    change_ids=maxed_change_by_slot.get(i + 1, ()),
                                    SUM=SUM, maxed=True))
         # all passives (skill-tree unlocks included)
         for p in passives:
-            maxed.append(skill_obj("passive", p["skillId"], SM, SEM, SMA, SkillTrans, English,
+            maxed.append(skill_obj("passive", p["skillId"], SM, SEM, SMA, SkillTrans, GameTrans,
                                    SkillEffectTrans, StatusTrans, hidden=True,
                                    SUM=SUM, maxed=True))
         attribute_passives(maxed)
@@ -1208,20 +1350,20 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, English, SkillEffec
     return entity
 
 
-def build_sidekick(stock_entries, SM, SEM, SMA, SkillTrans, English, SkillEffectTrans, StatusTrans, chara_pages):
+def build_sidekick(stock_entries, SM, SEM, SMA, SkillTrans, GameTrans, SkillEffectTrans, StatusTrans, chara_pages):
     rep = next((e for e in stock_entries if e.get("levelZone") == SIDEKICK_MAX_LEVEL_ZONE), None)
     if rep is None:
         rep = max(stock_entries, key=lambda e: e.get("levelZone", 0))
 
     skills = []
     for sid in rep.get("skillIds") or []:
-        skills.append(skill_obj("sidekick_active", sid, SM, SEM, SMA, SkillTrans, English,
+        skills.append(skill_obj("sidekick_active", sid, SM, SEM, SMA, SkillTrans, GameTrans,
                                 SkillEffectTrans, StatusTrans))
     # Sidekick passive: equipmentSkills holds ascending tiers; the last entry of
     # the highest-level card is the maxed passive (mirrors generate_status_pages).
     equip = rep.get("equipmentSkills") or []
     if equip:
-        skills.append(skill_obj("sidekick_passive", equip[-1], SM, SEM, SMA, SkillTrans, English,
+        skills.append(skill_obj("sidekick_passive", equip[-1], SM, SEM, SMA, SkillTrans, GameTrans,
                                 SkillEffectTrans, StatusTrans))
     # Sidekick append-passive: a hidden passive (8xxxxxx id family) granted on top of
     # the equipment skill, never shown as its own row in-game. equipmentAppendSkills
@@ -1229,7 +1371,7 @@ def build_sidekick(stock_entries, SM, SEM, SMA, SkillTrans, English, SkillEffect
     append = rep.get("equipmentAppendSkills") or []
     if append:
         skills.append(skill_obj("sidekick_append", append[-1], SM, SEM, SMA, SkillTrans,
-                                English, SkillEffectTrans, StatusTrans, hidden=True))
+                                GameTrans, SkillEffectTrans, StatusTrans, hidden=True))
     attribute_passives(skills)
 
     return make_entity(rep, stock_entries, "sidekick", "s", skills, chara_pages)
@@ -1296,10 +1438,19 @@ def prune_sublabels(categories, entities):
                 del lab["sublabels"]
 
 
-def load_all():
+def load_all(lang="en"):
     """Load every master/translation file the index needs into one dict, keyed
     by the short names the build_* helpers use. Shared with tools/audit_skill_effects.py
-    so the auditor walks the exact same masterdata the index is built from."""
+    so the auditor walks the exact same masterdata the index is built from
+    (which always calls this with the default lang="en").
+
+    `_data/translation/{Skill,SkillEffect}.json` are community English-only
+    translations, so they're only loaded for the `en` build; other languages
+    get {} and fall straight through to the GameTrans dump / raw Japanese.
+    `_data/translation/Status.json` is scoped the same way except its `icon`
+    field survives for every language (see scoped_status_trans)."""
+    is_english = lang == "en"
+    status_trans_raw = load("Status.json", sub="translation")
     return {
         "CardMaster": load("CardMaster.json"),
         "SidekickMaster": load("SidekickMaster.json"),
@@ -1307,10 +1458,10 @@ def load_all():
         "SEM": load("SkillEffectMaster.json"),
         "SMA": load("StatusMaster.json"),
         "SUM": load("SkillUpgradeMaster.json"),
-        "StatusTrans": load("Status.json", sub="translation"),
-        "SkillEffectTrans": load("SkillEffect.json", sub="translation"),
-        "SkillTrans": load("Skill.json", sub="translation"),
-        "English": load_english(),
+        "StatusTrans": scoped_status_trans(status_trans_raw, lang),
+        "SkillEffectTrans": load("SkillEffect.json", sub="translation") if is_english else {},
+        "SkillTrans": load("Skill.json", sub="translation") if is_english else {},
+        "GameTrans": load_game_trans(lang),
         "chara_pages": build_chara_pages(CHARAS),
     }
 
@@ -1321,29 +1472,42 @@ def build_entities(m):
     entities = []
     for stock_id, group in group_by_stock(m["CardMaster"]).items():
         entities.append(build_hero(group, m["SM"], m["SEM"], m["SMA"], m["SUM"],
-                                   m["SkillTrans"], m["English"], m["SkillEffectTrans"],
+                                   m["SkillTrans"], m["GameTrans"], m["SkillEffectTrans"],
                                    m["StatusTrans"], m["chara_pages"]))
     for stock_id, group in group_by_stock(m["SidekickMaster"]).items():
         entities.append(build_sidekick(group, m["SM"], m["SEM"], m["SMA"],
-                                       m["SkillTrans"], m["English"], m["SkillEffectTrans"],
+                                       m["SkillTrans"], m["GameTrans"], m["SkillEffectTrans"],
                                        m["StatusTrans"], m["chara_pages"]))
     return entities
 
 
+def parse_args():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--lang", choices=list(LANG_ZZZ_FILE), default="en",
+                        help="Language to build the index for (default: en). "
+                             "Builds exactly one language per invocation.")
+    return parser.parse_args()
+
+
 def main():
-    m = load_all()
+    args = parse_args()
+    lang = args.lang
+    m = load_all(lang)
     SMA = m["SMA"]
     StatusTrans = m["StatusTrans"]
+    GameTrans = m["GameTrans"]
     entities = build_entities(m)
+    categories = copy.deepcopy(CATEGORIES)
 
     # Many StatusMaster entries are internal system/particle placeholders with
     # empty names. They are useless for the "Has status" autocomplete and only
     # bloat the index, so keep only statuses that resolve to a non-empty name.
     def status_name(sid):
-        return resolve_status_name(sid, StatusTrans, SMA).strip()
+        return resolve_status_name(sid, StatusTrans, SMA, GameTrans).strip()
     named = {str(sid) for sid in SMA if status_name(sid)}
     finalize_entities(entities, named)
-    prune_sublabels(CATEGORIES, entities)
+    prune_sublabels(categories, entities)
+    categories = localize_categories(categories, lang)
 
     # status dictionary for autocomplete / "Has status" filter, restricted to
     # named statuses actually referenced by an indexed skill.
@@ -1363,18 +1527,19 @@ def main():
     version = f"{get_version()}-{INDEX_SCHEMA_REV}"
     index = {
         "version": version,
-        "categories": CATEGORIES,
+        "categories": categories,
         "statuses": statuses,
         "entities": entities,
     }
 
     os.makedirs(API, exist_ok=True)
-    with open(os.path.join(API, "skill-index.json"), "w", encoding="utf-8") as f:
+    with open(os.path.join(API, f"skill-index.{lang}.json"), "w", encoding="utf-8") as f:
         json.dump(index, f, ensure_ascii=False, separators=(",", ":"))
-    with open(os.path.join(API, "skill-index-version.json"), "w", encoding="utf-8") as f:
+    with open(os.path.join(API, f"skill-index-version.{lang}.json"), "w", encoding="utf-8") as f:
         json.dump({"version": version}, f, ensure_ascii=False)
 
     # ----- report -----
+    print(f"lang: {lang}")
     heroes = [e for e in entities if e["kind"] == "hero"]
     sidekicks = [e for e in entities if e["kind"] == "sidekick"]
     print(f"version: {version}")
@@ -1418,7 +1583,7 @@ def main():
     if liquid_template_statuses:
         print(f"\nSTATUS IDs WITH LIQUID TEMPLATES (desc skipped, {len(liquid_template_statuses)} status IDs):")
         for sid, n in liquid_template_statuses.most_common():
-            sname = StatusTrans.get(sid, {}).get("name") or SMA.get(sid, {}).get("statusName", "?")
+            sname = resolve_status_name(sid, StatusTrans, SMA, GameTrans) or "?"
             print(f"  {sid} ({sname}): {n} effect(s)")
 
 

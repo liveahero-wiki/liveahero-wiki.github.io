@@ -2,6 +2,7 @@ import { useEffect, useMemo, useReducer, useState } from 'preact/hooks'
 import type { Entity, Query, SkillIndex } from './types'
 import { clearCache, loadIndex } from './data/loadIndex'
 import { filterRows } from './lib/filters'
+import { getInitialLang, LANGS, storeLang, type Lang } from './lib/lang'
 import { FilterPanel } from './components/FilterPanel'
 import { ResultTable } from './components/ResultTable'
 import { SkillKitDialog } from './components/SkillKitDialog'
@@ -71,6 +72,7 @@ function reducer(state: Query, action: QueryAction): Query {
 }
 
 export function App() {
+  const [lang, setLang] = useState<Lang>(getInitialLang)
   const [index, setIndex] = useState<SkillIndex | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [query, dispatch] = useReducer(reducer, initialQuery())
@@ -78,14 +80,25 @@ export function App() {
   const [showLabels, setShowLabels] = useState(false)
 
   useEffect(() => {
-    loadIndex().then(setIndex).catch((e: unknown) => setError(String(e)))
-  }, [])
-
-  function forceReload() {
-    clearCache()
     setIndex(null)
     setError(null)
-    loadIndex().then(setIndex).catch((e: unknown) => setError(String(e)))
+    loadIndex(lang).then(setIndex).catch((e: unknown) => setError(String(e)))
+  }, [lang])
+
+  useEffect(() => {
+    document.documentElement.lang = lang
+  }, [lang])
+
+  function forceReload() {
+    clearCache(lang)
+    setIndex(null)
+    setError(null)
+    loadIndex(lang).then(setIndex).catch((e: unknown) => setError(String(e)))
+  }
+
+  function handleLangChange(next: Lang) {
+    storeLang(next)
+    setLang(next)
   }
 
   const rows = useMemo(() => {
@@ -100,6 +113,16 @@ export function App() {
     <div class="app">
       <header class="app-header">
         <h1>LAH Skill Search</h1>
+        <select
+          class="lang-select"
+          value={lang}
+          onChange={(e) => handleLangChange(e.currentTarget.value as Lang)}
+          title="Language"
+        >
+          {LANGS.map((l) => (
+            <option key={l.code} value={l.code}>{l.label}</option>
+          ))}
+        </select>
         <span class="ver">index v{index.version}</span>
         <button type="button" class="reload-btn" onClick={forceReload} title="Force redownload skill index">↻</button>
       </header>
