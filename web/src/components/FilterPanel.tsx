@@ -42,7 +42,7 @@ export function FilterPanel({ index, query, dispatch, resultCount, showLabels, o
     <div class="filter-panel">
       <div class="row">
         <span class="row-label">Character</span>
-        <div class="row-buttons">
+        <div class="row-buttons" focusgroup="toolbar">
           <input
             type="text"
             class="char-input"
@@ -105,7 +105,7 @@ export function FilterPanel({ index, query, dispatch, resultCount, showLabels, o
 
       <div class="row">
         <span class="row-label">View Cost</span>
-        <div class="row-buttons">
+        <div class="row-buttons" focusgroup="toolbar">
           <input
             key={`vcMin-${query._vcKey}`}
             type="number"

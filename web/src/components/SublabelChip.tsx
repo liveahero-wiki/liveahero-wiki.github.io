@@ -44,7 +44,7 @@ export function SublabelChip({ opt, selected, onToggle }: SublabelChipProps) {
       >
         ▾{nSel > 0 && <span class="chip-count">{nSel}</span>}
       </button>
-      <div id={popId} popover="auto" class="sub-pop" style={{ positionAnchor: anchorName } as JSX.CSSProperties}>
+      <div id={popId} popover="auto" class="sub-pop" focusgroup="toolbar" style={{ positionAnchor: anchorName } as JSX.CSSProperties}>
         {sublabels.map((s) => (
           <button
             key={s.key}

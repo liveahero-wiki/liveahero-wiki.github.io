@@ -20,7 +20,7 @@ export function ButtonRow({ label, options, selected, relation, onToggle, onClea
   return (
     <div class={'row' + (relation === 'or' ? ' row-or' : ' row-and')}>
       {label && <span class="row-label">{label}</span>}
-      <div class="row-buttons">
+      <div class="row-buttons" focusgroup="toolbar">
         {options.map((opt) =>
           opt.sublabels?.length ? (
             <SublabelChip key={opt.key} opt={opt} selected={selected} onToggle={onToggle} />
