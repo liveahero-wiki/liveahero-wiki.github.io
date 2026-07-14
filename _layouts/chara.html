@@ -40,9 +40,8 @@ layout: markdownify
 
 </wiki-tabs>
 
-{% assign cardId = page.characterId | times: 100 | plus: 100011 | downcase %}
-{% assign collectionResourceName = site.data.CardMaster[cardId].resourceName %}
-{% include card-collection-info.html resourceName=collectionResourceName %}
+{% assign bromideStockId = page.characterId | plus: 1000 | times: 10 | plus: 1 %}
+{% include card-collection-info.html stockId=bromideStockId %}
 
 {% for sk in page.sidekicks %}
 {% assign stockIDS = sk.stockId | downcase %}
