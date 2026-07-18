@@ -3,6 +3,8 @@ import type { Entity, Query, SkillIndex } from './types'
 import { clearCache, loadIndex } from './data/loadIndex'
 import { filterRows } from './lib/filters'
 import { getInitialLang, LANGS, storeLang, type Lang } from './lib/lang'
+import { localizeCategories } from './lib/categoryTranslations'
+import { t } from './lib/uiTranslations'
 import { FilterPanel } from './components/FilterPanel'
 import { ResultTable } from './components/ResultTable'
 import { SkillKitDialog } from './components/SkillKitDialog'
@@ -82,7 +84,9 @@ export function App() {
   useEffect(() => {
     setIndex(null)
     setError(null)
-    loadIndex(lang).then(setIndex).catch((e: unknown) => setError(String(e)))
+    loadIndex(lang)
+      .then(idx => setIndex({ ...idx, categories: localizeCategories(idx.categories, lang) }))
+      .catch((e: unknown) => setError(String(e)))
   }, [lang])
 
   useEffect(() => {
@@ -93,7 +97,9 @@ export function App() {
     clearCache(lang)
     setIndex(null)
     setError(null)
-    loadIndex(lang).then(setIndex).catch((e: unknown) => setError(String(e)))
+    loadIndex(lang)
+      .then(idx => setIndex({ ...idx, categories: localizeCategories(idx.categories, lang) }))
+      .catch((e: unknown) => setError(String(e)))
   }
 
   function handleLangChange(next: Lang) {
@@ -106,8 +112,8 @@ export function App() {
     return filterRows(index.entities, query, index.statuses)
   }, [index, query])
 
-  if (error) return <div class="loading">Failed to load index: {error}</div>
-  if (!index) return <div class="loading">Loading skill index…</div>
+  if (error) return <div class="loading">{t(lang, 'load_error')}{error}</div>
+  if (!index) return <div class="loading">{t(lang, 'loading')}</div>
 
   return (
     <div class="app">
@@ -117,14 +123,14 @@ export function App() {
           class="lang-select"
           value={lang}
           onChange={(e) => handleLangChange(e.currentTarget.value as Lang)}
-          title="Language"
+          title={t(lang, 'lang_title')}
         >
           {LANGS.map((l) => (
             <option key={l.code} value={l.code}>{l.label}</option>
           ))}
         </select>
         <span class="ver">index v{index.version}</span>
-        <button type="button" class="reload-btn" onClick={forceReload} title="Force redownload skill index">↻</button>
+        <button type="button" class="reload-btn" onClick={forceReload} title={t(lang, 'reload_title')}>↻</button>
       </header>
       <FilterPanel
         index={index}
@@ -133,6 +139,7 @@ export function App() {
         resultCount={rows.length}
         showLabels={showLabels}
         onToggleLabels={() => setShowLabels((v) => !v)}
+        lang={lang}
       />
       <ResultTable
         rows={rows}
@@ -140,12 +147,14 @@ export function App() {
         onOpenKit={setKitEntity}
         showLabels={showLabels}
         categories={index.categories}
+        lang={lang}
       />
       <SkillKitDialog
         entity={kitEntity}
         skillTree={query.skillTree}
         statuses={index.statuses}
         onClose={() => setKitEntity(null)}
+        lang={lang}
       />
     </div>
   )

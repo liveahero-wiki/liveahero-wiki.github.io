@@ -5,6 +5,8 @@
 import { useCombobox } from 'downshift'
 import { useMemo, useState } from 'preact/hooks'
 import type { Status } from '../types'
+import type { Lang } from '../lib/lang'
+import { t } from '../lib/uiTranslations'
 import { statusIcon } from '../lib/urls'
 
 type StatusItem = Status & { id: number }
@@ -12,11 +14,12 @@ type StatusItem = Status & { id: number }
 interface StatusAutocompleteProps {
   statuses: Record<string, Status>
   selected: Set<number>
+  lang: Lang
   onAdd: (id: number) => void
   onRemove: (id: number) => void
 }
 
-export function StatusAutocomplete({ statuses, selected, onAdd, onRemove }: StatusAutocompleteProps) {
+export function StatusAutocomplete({ statuses, selected, lang, onAdd, onRemove }: StatusAutocompleteProps) {
   const [input, setInput] = useState('')
 
   // Stable list of { id, name, icon, type } from the statuses dict.
@@ -67,14 +70,14 @@ export function StatusAutocomplete({ statuses, selected, onAdd, onRemove }: Stat
             <span key={id} class="status-chip">
               <img src={statusIcon(s.icon)} alt="" loading="lazy" />
               {s.name}
-              <button type="button" onClick={() => onRemove(id)} aria-label="remove">
+              <button type="button" onClick={() => onRemove(id)} aria-label={t(lang, 'remove')}>
                 ×
               </button>
             </span>
           )
         })}
         <input
-          {...getInputProps({ placeholder: 'Type a status…' })}
+          {...getInputProps({ placeholder: t(lang, 'type_a_status') })}
           class="status-input"
         />
       </div>

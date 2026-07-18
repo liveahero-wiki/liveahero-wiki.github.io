@@ -6,20 +6,12 @@
 
 import { useEffect, useRef } from 'preact/hooks'
 import type { Entity, Status } from '../types'
+import type { Lang } from '../lib/lang'
+import { t, slotLabel } from '../lib/uiTranslations'
 import { effectiveSkills } from '../lib/filters'
 import { statusIcon, portrait } from '../lib/urls'
 import { SkillDescription } from './SkillDescription'
 import { dedupByName } from './ResultTable'
-
-const SLOT_LABEL: Record<string, string> = {
-  active1: 'Active 1',
-  active2: 'Active 2',
-  active3: 'Active 3',
-  passive: 'Passive',
-  sidekick_active: 'SK Active',
-  sidekick_passive: 'SK Passive',
-  sidekick_append: 'SK Append',
-}
 
 // closedby="any" gives Esc + backdrop light-dismiss declaratively, but Safari
 // doesn't support it yet — fall back to a manual backdrop-click handler.
@@ -29,10 +21,11 @@ interface SkillKitDialogProps {
   entity: Entity | null
   skillTree: boolean
   statuses: Record<string, Status>
+  lang: Lang
   onClose: () => void
 }
 
-export function SkillKitDialog({ entity, skillTree, statuses, onClose }: SkillKitDialogProps) {
+export function SkillKitDialog({ entity, skillTree, statuses, lang, onClose }: SkillKitDialogProps) {
   const ref = useRef<HTMLDialogElement>(null)
 
   // Set closedby="any" imperatively to avoid JSX type issues with this new attribute.
@@ -82,11 +75,11 @@ export function SkillKitDialog({ entity, skillTree, statuses, onClose }: SkillKi
               }}
             />
             <h2 id="kit-dialog-title">{entity.name}</h2>
-            <span class="kit-kind">{entity.kind === 'hero' ? 'Hero' : 'Sidekick'}</span>
+            <span class="kit-kind">{entity.kind === 'hero' ? t(lang, 'kind_hero') : t(lang, 'kind_sidekick')}</span>
             <button
               type="button"
               class="kit-close"
-              aria-label="Close"
+              aria-label={t(lang, 'close')}
               onClick={() => ref.current?.close()}
             >
               ×
@@ -96,9 +89,9 @@ export function SkillKitDialog({ entity, skillTree, statuses, onClose }: SkillKi
             {skills.map((s) => (
               <section key={`${s.slot}-${s.skillId}`} class={'kit-skill' + (s.hidden ? ' is-hidden' : '')}>
                 <div class="skill-head">
-                  <span class="slot-badge">{SLOT_LABEL[s.slot] ?? s.slot}</span>
+                  <span class="slot-badge">{slotLabel(lang, s.slot)}</span>
                   <span class="skill-name">{s.name}</span>
-                  {s.hidden && <span class="hidden-badge" title="Not shown in-game">hidden</span>}
+                  {s.hidden && <span class="hidden-badge" title={t(lang, 'hidden_title')}>{t(lang, 'hidden_badge')}</span>}
                   {dedupByName(s.statusIds, statuses).map((id) => {
                     const st = statuses[id]
                     return st ? (

@@ -5,6 +5,8 @@
 //   - 'and': every selected chip must match — no [All] button.
 
 import type { Label } from '../types'
+import type { Lang } from '../lib/lang'
+import { t } from '../lib/uiTranslations'
 import { SublabelChip } from './SublabelChip'
 
 interface ButtonRowProps {
@@ -12,18 +14,19 @@ interface ButtonRowProps {
   options: Label[]
   selected: Set<string>
   relation: 'or' | 'and'
+  lang: Lang
   onToggle: (value: string) => void
   onClear?: () => void
 }
 
-export function ButtonRow({ label, options, selected, relation, onToggle, onClear }: ButtonRowProps) {
+export function ButtonRow({ label, options, selected, relation, lang, onToggle, onClear }: ButtonRowProps) {
   return (
     <div class={'row' + (relation === 'or' ? ' row-or' : ' row-and')}>
       {label && <span class="row-label">{label}</span>}
       <div class="row-buttons" focusgroup="toolbar">
         {options.map((opt) =>
           opt.sublabels?.length ? (
-            <SublabelChip key={opt.key} opt={opt} selected={selected} onToggle={onToggle} />
+            <SublabelChip key={opt.key} opt={opt} selected={selected} lang={lang} onToggle={onToggle} />
           ) : (
             <button
               key={opt.key}
@@ -37,7 +40,7 @@ export function ButtonRow({ label, options, selected, relation, onToggle, onClea
         )}
         {relation === 'or' && (
           <button type="button" class="chip chip-all" onClick={onClear}>
-            All
+            {t(lang, 'all')}
           </button>
         )}
       </div>

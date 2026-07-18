@@ -11,18 +11,10 @@ import {
 import { useVirtualizer } from '@tanstack/react-virtual'
 import { useMemo, useRef, useState } from 'preact/hooks'
 import type { Category, Entity, Row, Status } from '../types'
+import type { Lang } from '../lib/lang'
+import { t, slotLabel } from '../lib/uiTranslations'
 import { charaLink, portrait, statusIcon } from '../lib/urls'
 import { SkillDescription } from './SkillDescription'
-
-const SLOT_LABEL: Record<string, string> = {
-  active1: 'Active 1',
-  active2: 'Active 2',
-  active3: 'Active 3',
-  passive: 'Passive',
-  sidekick_active: 'SK Active',
-  sidekick_passive: 'SK Passive',
-  sidekick_append: 'SK Append',
-}
 
 export function dedupByName(ids: number[], statuses: Record<string, Status>): number[] {
   const seen = new Set<string>()
@@ -40,9 +32,10 @@ interface ResultTableProps {
   onOpenKit: (entity: Entity) => void
   showLabels: boolean
   categories: Category[]
+  lang: Lang
 }
 
-export function ResultTable({ rows, statuses, onOpenKit, showLabels, categories }: ResultTableProps) {
+export function ResultTable({ rows, statuses, onOpenKit, showLabels, categories, lang }: ResultTableProps) {
   const [sorting, setSorting] = useState<SortingState>([])
 
   const labelMap = useMemo(() => {
@@ -56,7 +49,7 @@ export function ResultTable({ rows, statuses, onOpenKit, showLabels, categories 
     () => [
       {
         id: 'character',
-        header: 'Character',
+        header: t(lang, 'col_character'),
         accessorKey: 'name',
         size: 240,
         cell: ({ row }) => {
@@ -74,15 +67,15 @@ export function ResultTable({ rows, statuses, onOpenKit, showLabels, categories 
                   }}
                 />
                 <span>{e.name}</span>
-                {e.isMob && <span class="mob-tag">mob</span>}
+                {e.isMob && <span class="mob-tag">{t(lang, 'mob_badge')}</span>}
               </a>
               <button
                 type="button"
                 class="kit-btn"
-                title="Show full skill kit"
+                title={t(lang, 'kit_title')}
                 onClick={() => onOpenKit(e)}
               >
-                Kit
+                {t(lang, 'kit_button')}
               </button>
             </div>
           )
@@ -90,14 +83,14 @@ export function ResultTable({ rows, statuses, onOpenKit, showLabels, categories 
       },
       {
         id: 'kind',
-        header: 'Type',
+        header: t(lang, 'col_type'),
         accessorKey: 'kind',
         size: 80,
-        cell: ({ row }) => (row.original.kind === 'hero' ? 'Hero' : 'Sidekick'),
+        cell: ({ row }) => (row.original.kind === 'hero' ? t(lang, 'kind_hero') : t(lang, 'kind_sidekick')),
       },
       {
         id: 'skill',
-        header: 'Skill',
+        header: t(lang, 'col_skill'),
         accessorKey: 'skillName',
         size: 480,
         cell: ({ row }) => {
@@ -105,7 +98,7 @@ export function ResultTable({ rows, statuses, onOpenKit, showLabels, categories 
           return (
             <div class="skill-cell">
               <div class="skill-head">
-                <span class="slot-badge">{SLOT_LABEL[r.slot] ?? r.slot}</span>
+                <span class="slot-badge">{slotLabel(lang, r.slot)}</span>
                 <span class="skill-name" title={`skill id: ${r.skillId}`}>
                   {r.skillName}
                 </span>
@@ -142,13 +135,13 @@ export function ResultTable({ rows, statuses, onOpenKit, showLabels, categories 
         : []),
       {
         id: 'useView',
-        header: 'View Cost',
+        header: t(lang, 'col_view_cost'),
         accessorKey: 'useView',
         size: 100,
         cell: ({ row }) => row.original.useView.toLocaleString(),
       },
     ],
-    [statuses, onOpenKit, showLabels, labelMap],
+    [lang, statuses, onOpenKit, showLabels, labelMap],
   )
 
   const table = useReactTable({

@@ -10,14 +10,17 @@
 // dismiss, so several sublabels can be toggled in one open.
 
 import type { Label } from '../types'
+import type { Lang } from '../lib/lang'
+import { t } from '../lib/uiTranslations'
 
 interface SublabelChipProps {
   opt: Label
   selected: Set<string>
+  lang: Lang
   onToggle: (value: string) => void
 }
 
-export function SublabelChip({ opt, selected, onToggle }: SublabelChipProps) {
+export function SublabelChip({ opt, selected, lang, onToggle }: SublabelChipProps) {
   const sublabels = opt.sublabels ?? []
   const parentOn = selected.has(opt.key)
   const nSel = sublabels.reduce((n, s) => n + (selected.has(s.key) ? 1 : 0), 0)
@@ -39,7 +42,7 @@ export function SublabelChip({ opt, selected, onToggle }: SublabelChipProps) {
         type="button"
         class={'chip chip-caret' + stateClass}
         popovertarget={popId}
-        aria-label={`${opt.label}: sub-filters`}
+        aria-label={`${opt.label}${t(lang, 'sub_filters_suffix')}`}
         style={{ anchorName } as JSX.CSSProperties}
       >
         ▾{nSel > 0 && <span class="chip-count">{nSel}</span>}
