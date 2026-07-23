@@ -28,6 +28,8 @@ export interface StatusDesc {
   name: string
   desc: string
   icon?: string
+  tp?: string   // 'b'|'d'|'o'|'f'|'s' — display type (Buff/Debuff/Other/Field/System)
+  fl?: number   // flag bitmask: 1=stackable, 2=charge, 4=dot, 8=field, 16=count
 }
 
 export interface Skill {

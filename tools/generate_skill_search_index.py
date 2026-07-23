@@ -1007,8 +1007,11 @@ def change_skills(change_ids, skill_id, SM, SkillTrans, GameTrans):
     return out
 
 
+_TP_MAP = {0: 'd', 1: 'b', 2: 'o', 3: 'f'}
+
+
 def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SUM=None, GameTrans=None):
-    """[{name, desc}] per distinct named status granted by this skill's direct effects.
+    """[{name, desc, tp, fl?, icon?}] per distinct named status granted by this skill's direct effects.
 
     Mirrors status_description_v2 priority:
       SkillEffect.json override > raw skillEffectJson override
@@ -1017,6 +1020,9 @@ def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SU
     so for non-English builds it's pre-scoped (scoped_status_trans) to just the
     icon field and this tier falls straight through to GameTrans/raw.
     Deduped by resolved name. Effects with statusId==0 are skipped.
+
+    tp: display type char — 'b'=Buff, 'd'=Debuff, 'o'=Other, 'f'=Field, 's'=System.
+    fl: flag bitmask (omitted when 0) — 1=stackable, 2=charge, 4=dot, 8=field, 16=count.
 
     When SUM (SkillUpgradeMaster) is provided, tree-gated effects
     (conditionEntityId != 0) are only included if their node is terminal
@@ -1054,9 +1060,23 @@ def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SU
             desc = base or SMA.get(sid, {}).get("description", "")
 
         icon = sej.get("filename") or StatusTrans.get(sid, {}).get("icon") or ""
-        entry = {"name": name, "desc": desc or ""}
+
+        is_field = bool(sej.get("isFieldEffect"))
+        ig = SMA.get(sid, {}).get("isGoodStatus", 1)
+        tp = 'o' if is_field else _TP_MAP.get(ig, 's')
+
+        fl = 0
+        if sej.get("canDuplicate"):    fl |= 1
+        if sej.get("isCharageEffect"): fl |= 2   # note: typo in game data
+        if sej.get("isDotDamage"):     fl |= 4
+        if is_field:                   fl |= 8
+        if sej.get("isCountEffect"):   fl |= 16
+
+        entry = {"name": name, "desc": desc or "", "tp": tp}
         if icon:
             entry["icon"] = icon
+        if fl:
+            entry["fl"] = fl
         results.append(entry)
     return results
 

@@ -5,9 +5,11 @@
 // <wiki-auto-action>). We render it directly and style the known tags via CSS
 // (see styles.css). The browser treats unknown elements as inline spans.
 //
-// statusDescs: [{name, desc, icon?}] — when provided, <wiki-status> elements in
-// the rendered HTML are replaced with <span class="status"> (with optional icon)
-// and get tippy tooltips. A status footer is always shown at the bottom.
+// statusDescs: [{name, desc, tp?, fl?, icon?}] — when provided, <wiki-status>
+// elements in the rendered HTML are replaced with <span class="status"> (with
+// optional icon) and get tippy tooltips. A status footer is always shown at
+// the bottom. When tp is present, the tooltip prepends a [Buff/Stackable]-style
+// label matching status_description_v2 in _plugins/skill.rb.
 
 import { memo, useEffect, useRef } from 'preact/compat'
 import type { ChangeSkill, StatusDesc } from '../types'
@@ -15,6 +17,21 @@ import { statusIcon } from '../lib/urls'
 
 function escHtml(s: string): string {
   return s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+}
+
+const TYPE_LABEL: Record<string, string> = { b: 'Buff', d: 'Debuff', o: 'Other', f: 'Field', s: 'System' }
+
+function statusTooltipContent(st: StatusDesc): string {
+  if (!st.tp) return st.desc
+  const fl = st.fl ?? 0
+  const typeStr = fl & 8 ? 'Other' : (TYPE_LABEL[st.tp] ?? st.tp)
+  const stackable = fl & 1 ? 'Stackable' : 'Unstackable'
+  const mods = stackable
+    + (fl & 2 ? '/Charge' : '')
+    + (fl & 4 ? '/Damage over time' : '')
+    + (fl & 8 ? '/Field' : '')
+    + (fl & 16 ? '/Count' : '')
+  return `<b>[${typeStr}/${mods}]</b><br>${st.desc}`
 }
 
 function processStatusHtml(html: string, statusDescs: StatusDesc[] | undefined): string {
@@ -44,7 +61,7 @@ export const SkillDescription = memo(function SkillDescription({
   useEffect(() => {
     const el = ref.current
     if (!el || !statusDescs?.length) return
-    const descMap = Object.fromEntries(statusDescs.map((s) => [s.name, s.desc]))
+    const descMap = Object.fromEntries(statusDescs.map((s) => [s.name, statusTooltipContent(s)]))
     const instances: TippyInstance[] = []
     el.querySelectorAll('[data-status-name]').forEach((node) => {
       const desc = descMap[(node as HTMLElement).dataset.statusName ?? '']
