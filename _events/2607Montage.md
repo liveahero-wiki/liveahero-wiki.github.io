@@ -2,7 +2,7 @@
 title: Summer Montage Halation
 eventId: 176
 jp_title: サマーモンタージュ・ハレーション
-banner_image: 
+banner_image: ui_banner_event_questbanner_Montage2607.webp
 event_start_time: 2026-07-30T20:00:00+09
 event_end_time: 2026-08-26T14:00:00+09
 farm_start_time: 2026-07-30T20:00:00+09
