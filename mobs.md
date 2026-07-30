@@ -93,6 +93,12 @@ sprites="fg_villainChasseurEarth_h01,fg_villainChasseurFire_h01,fg_villainChasse
 sprites="fg_kaibutsuCoalTarEarth_h01,fg_kaibutsuCoalTarFire_h01,fg_kaibutsuCoalTarLight_h01,fg_kaibutsuCoalTarShadow_h01,fg_kaibutsuCoalTarWater_h01"
 %}
 
+### Dream-Eating Kaibutsu
+
+{% include hero-infobox-unreleased.html name="Dream-Eating Kaibutsu" mob=true
+sprites="fg_kaibutsuIxtlEarth_h01,fg_kaibutsuIxtlFire_h01,fg_kaibutsuIxtlLight_h01,fg_kaibutsuIxtlShadow_h01,fg_kaibutsuIxtlWater_h01"
+%}
+
 ### Engine Kaibutsu (Adult)
 
 {% include hero-infobox-unreleased.html name="Engine Kaibutsu (Adult)" mob=true
@@ -108,7 +114,7 @@ sprites="fg_kaibutsuEngineLarvaEarth_h01,fg_kaibutsuEngineLarvaFire_h01,fg_kaibu
 ### Eno Seaman
 
 {% include hero-infobox-unreleased.html name="Eno Seaman" mob=true
-sprites="fg_enoseaman_h01,fg_enoseaman_s01,fg_enoseamanBoss_h01,fg_enoseamanBoss_h02"
+sprites="fg_enoseaman_h01,fg_enoseaman_s01"
 %}
 
 ### Ghost Kaibutsu (Adult)
