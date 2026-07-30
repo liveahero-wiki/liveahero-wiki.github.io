@@ -3,6 +3,8 @@ title: Roiker
 characterId: 113
 type: anthro
 gender: male
+h2:
+  title: '"Brilliant Zenith" Roiker'
 heroes:
 - stockId: 11131
   BIO_H01: |-
@@ -29,6 +31,7 @@ heroes:
     It was inevitable, in a sense, that he began to study the parallel universe and
     to desire to know more about it, as he want to meet and talk to himself in the
     parallel universe.
+- stockId: 11132
 sidekicks:
 - stockId: 11131
   BIO_S01: |-
@@ -47,7 +50,7 @@ sidekicks:
     delicious.
 
     Circumstances have restrained his hero activities, so he has few of it.
-  extra_sprites: fg_roiker_s01_skin1,fg_roiker_s01_skin2,fg_roiker_s01_skin3
+  extra_sprites: fg_roiker_s01_skin1,fg_roiker_s01_skin2,fg_roiker_s01_skin3,fg_roiker_s01_skin4,fg_roiker_s01_skin5
 ---
 
 {% include voice-table.html resourceName="roiker"
