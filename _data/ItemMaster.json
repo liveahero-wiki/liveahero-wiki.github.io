@@ -3766,6 +3766,96 @@
     "prefabAddress": null,
     "limitValue": 0
   },
+  "288": {
+    "itemId": 288,
+    "itemName": "親愛のかけら",
+    "resourceName": "interaction_point",
+    "rarity": 3,
+    "itemType": 4,
+    "description": "心の距離を縮める、不思議な輝きを宿した結晶。交流マップ画面でキャラクターとの交流に使用できる。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "289": {
+    "itemId": 289,
+    "itemName": "記録フラグメント",
+    "resourceName": "Montage2607_exchange01",
+    "rarity": 3,
+    "itemType": 512,
+    "description": "バーチャル空間で視覚化された情報の断片。交換所でアイテムと交換してもらえる。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "290": {
+    "itemId": 290,
+    "itemName": "モンタージュディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "サマーモンタージュ・ハレーションのBGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_montage_adv1",
+        "bgmTitleKey": "TITLE_BGM_MONTAGE_ADV_RECORD"
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "291": {
+    "itemId": 291,
+    "itemName": "モンタージュ戦闘ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "サマーモンタージュの戦闘BGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_montage_battle",
+        "bgmTitleKey": "TITLE_BGM_MONTAGE_BATTLE_RECORD"
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "292": {
+    "itemId": 292,
+    "itemName": "モンタージュ沈潜ディスク",
+    "resourceName": "office_sound",
+    "rarity": 3,
+    "itemType": 65536,
+    "description": "サマーモンタージュ・ハレーションのキーシーンBGMのディスク。オフィスのBGMを変更できる。",
+    "effect": [
+      {
+        "class": "BGMRecordItemEffect",
+        "bgmAddress": "bgm_montage_adv2",
+        "bgmTitleKey": "TITLE_BGM_MONTAGE_ADV2_RECORD"
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "293": {
+    "itemId": 293,
+    "itemName": "境界の平原ホログラム",
+    "resourceName": "icon_bg_battle_archipelagoplain_day",
+    "rarity": 3,
+    "itemType": 131072,
+    "description": "オフィスの背景に境界の平原を投影するホログラム。オフィスの背景を変更できる。",
+    "effect": [
+      {
+        "class": "OfficeWallpaperItemEffect",
+        "bgAddress": "bg_battle_archipelagoplain_day",
+        "bgTitleKey": "TITLE_BG_BATTLE_ARCHIPELAGOPLAIN_WALLPAPER"
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
   "110011": {
     "itemId": 110011,
     "itemName": "アカシの記憶片",
@@ -6180,6 +6270,28 @@
     "prefabAddress": null,
     "limitValue": 0
   },
+  "111132": {
+    "itemId": 111132,
+    "itemName": "導星のロイカーの記憶片",
+    "resourceName": "piece_roikerMontage2607",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "導星のロイカーのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 11132
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
   "111151": {
     "itemId": 111151,
     "itemName": "ガイウスの記憶片",
@@ -8131,6 +8243,72 @@
       {
         "class": "GeneralCurrencyExchangeItemEffect",
         "exchangeValue": 20
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "113261": {
+    "itemId": 113261,
+    "itemName": "シラトリの記憶片",
+    "resourceName": "piece_shiratori",
+    "rarity": 5,
+    "itemType": 1024,
+    "description": "シラトリのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 200,
+        "rarity": 0,
+        "stockId": 13261
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 20
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "113271": {
+    "itemId": 113271,
+    "itemName": "イヴァガの記憶片",
+    "resourceName": "piece_yvaga",
+    "rarity": 4,
+    "itemType": 1024,
+    "description": "イヴァガのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 50,
+        "rarity": 0,
+        "stockId": 13271
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 5
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "113281": {
+    "itemId": 113281,
+    "itemName": "ルクバスの記憶片",
+    "resourceName": "piece_ruchbath",
+    "rarity": 3,
+    "itemType": 1024,
+    "description": "ルクバスのファン数を増やすことが出来る不思議な結晶。",
+    "effect": [
+      {
+        "class": "HeroPieceItemEffect",
+        "addFan": 10,
+        "rarity": 0,
+        "stockId": 13281
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
       }
     ],
     "prefabAddress": null,
@@ -11275,6 +11453,69 @@
     "prefabAddress": null,
     "limitValue": 0
   },
+  "213261": {
+    "itemId": 213261,
+    "itemName": "シラトリの心",
+    "resourceName": "heart_shiratori",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "シラトリのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 13261
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "213271": {
+    "itemId": 213271,
+    "itemName": "イヴァガの心",
+    "resourceName": "heart_yvaga",
+    "rarity": 4,
+    "itemType": 2048,
+    "description": "イヴァガのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 13271
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "213281": {
+    "itemId": 213281,
+    "itemName": "ルクバスの心",
+    "resourceName": "heart_ruchbath",
+    "rarity": 3,
+    "itemType": 2048,
+    "description": "ルクバスのランクを１段階上げることが出来る不思議なアイテム。",
+    "effect": [
+      {
+        "class": "SidekickHeartItemEffect",
+        "rarity": 0,
+        "stockId": 13281
+      },
+      {
+        "class": "GeneralCurrencyExchangeItemEffect",
+        "exchangeValue": 1
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
   "219991": {
     "itemId": 219991,
     "itemName": "@playerNameの心",
@@ -11882,6 +12123,166 @@
       {
         "class": "BromideItemEffect",
         "bromideId": 1045102
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4211311": {
+    "itemId": 4211311,
+    "itemName": "ロイカーのカードピース(PR)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 3,
+    "itemType": 4194304,
+    "description": "",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 2113101
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4212811": {
+    "itemId": 4212811,
+    "itemName": "フェインのカードピース(PR)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 3,
+    "itemType": 4194304,
+    "description": "",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 2128101
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4215111": {
+    "itemId": 4215111,
+    "itemName": "タビトのカードピース(PR)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 3,
+    "itemType": 4194304,
+    "description": "",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 2151101
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4216811": {
+    "itemId": 4216811,
+    "itemName": "ダンゾーのカードピース(PR)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 3,
+    "itemType": 4194304,
+    "description": "",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 2168101
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4228911": {
+    "itemId": 4228911,
+    "itemName": "ファーデンのカードピース(PR)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 3,
+    "itemType": 4194304,
+    "description": "",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 2289101
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4230111": {
+    "itemId": 4230111,
+    "itemName": "デネボラのカードピース(PR)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 3,
+    "itemType": 4194304,
+    "description": "",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 2301101
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4230211": {
+    "itemId": 4230211,
+    "itemName": "ラスタバンのカードピース(PR)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 3,
+    "itemType": 4194304,
+    "description": "",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 2302101
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4232611": {
+    "itemId": 4232611,
+    "itemName": "シラトリのカードピース(PR)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 3,
+    "itemType": 4194304,
+    "description": "",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 2326101
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4232711": {
+    "itemId": 4232711,
+    "itemName": "イヴァガのカードピース(PR)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 3,
+    "itemType": 4194304,
+    "description": "",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 2327101
+      }
+    ],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "4232811": {
+    "itemId": 4232811,
+    "itemName": "ルクバスのカードピース(PR)",
+    "resourceName": "bromide_upgrade",
+    "rarity": 3,
+    "itemType": 4194304,
+    "description": "",
+    "effect": [
+      {
+        "class": "BromideItemEffect",
+        "bromideId": 2328101
       }
     ],
     "prefabAddress": null,
@@ -14021,6 +14422,17 @@
     "prefabAddress": null,
     "limitValue": 0
   },
+  "21113201": {
+    "itemId": 21113201,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
   "21115101": {
     "itemId": 21115101,
     "itemName": "開花の波動",
@@ -14980,6 +15392,39 @@
   },
   "21319101": {
     "itemId": 21319101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "21326101": {
+    "itemId": 21326101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "21327101": {
+    "itemId": 21327101,
+    "itemName": "開花の波動",
+    "resourceName": "custom_blooming_effect",
+    "rarity": 3,
+    "itemType": 786432,
+    "description": "開花によって獲得した波動。バトル中、行動開始時に波動を身に纏う。",
+    "effect": [],
+    "prefabAddress": null,
+    "limitValue": 0
+  },
+  "21328101": {
+    "itemId": 21328101,
     "itemName": "開花の波動",
     "resourceName": "custom_blooming_effect",
     "rarity": 3,
