@@ -22,6 +22,7 @@ def omitEmptyDict(**kwargs) -> dict:
 
 COLOR_PATTERN = re.compile(r"<color=(.*?)>(.*?)</color>", re.DOTALL)
 SIZE_PATTERN = re.compile(r"<size=(\d+)>(.*?)</size>", re.DOTALL)
+SIZE_PREFIX = re.compile(r"<size=(\d+)>", re.DOTALL)
 SPRITE_PATTERN = re.compile(r"<sprite=(\d+)>", re.DOTALL)
 ALIGN_PATTERN = re.compile(r"<align=center>(.*?)</align>", re.DOTALL)
 
@@ -62,6 +63,8 @@ def sanitizeSkillDescription(s: str) -> str:
             s = s.replace(marker, '<wiki-passive>') + '</wiki-passive>'
     s = s.replace('<style="改行">', '')
     s = s.replace('</style>', '')
+    # remove stray size tag
+    s = SIZE_PREFIX.sub('', s)
 
     # Prevent Google Sheet from turning this to formula
     if FORMULA_PREFIX_PATTERN.match(s):

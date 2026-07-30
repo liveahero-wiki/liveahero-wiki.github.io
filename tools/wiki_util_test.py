@@ -55,6 +55,13 @@ class TestTextSanitize(unittest.TestCase):
             sanitizeSkillDescription(s),
             "<wiki-passive>ATK+10%</wiki-passive>",
             )
+    
+    def test_sanitize_skill_description_size(self):
+        s = "<size=16>Give 1 enemy SPD Down for 2 actions.<br>Give all allies a Barrier equal to 40% of own Views for 3 actions."
+        self.assertEqual(
+            sanitizeSkillDescription(s),
+            "Give 1 enemy SPD Down for 2 actions.<br>Give all allies a Barrier equal to 40% of own Views for 3 actions.",
+            )
 
 if __name__ == '__main__':
     unittest.main()
