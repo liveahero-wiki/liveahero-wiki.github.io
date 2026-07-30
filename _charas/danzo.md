@@ -65,6 +65,7 @@ sidekicks:
     he himself is always showy and full of enthusiasm, totally opposite of how a ninja should be.
   
     Though sometimes, he can show a chillingly cool-headed attitude.
+  extra_sprites: fg_danzo_s01_skin1,fg_danzo_s01_skin2
 ---
 
 {% include voice-table.html resourceName="danzo"
