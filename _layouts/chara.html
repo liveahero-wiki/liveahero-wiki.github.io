@@ -42,13 +42,11 @@ layout: markdownify
 
 {% assign bromideStockId = page.characterId | plus: 1000 | times: 10 | plus: 1 %}
 {% include card-collection-info.html stockId=bromideStockId %}
+{% include card-collection-story.html stockId=bromideStockId %}
 
-{% for sk in page.sidekicks %}
-{% assign stockIDS = sk.stockId | downcase %}
-{% if site.data.BromideStockMaster[stockIDS].upgradeLabels.size > 0 %}
-{% include card-collection-story.html stockId=sk.stockId %}
-{% endif %}
-{% endfor %}
+{% assign bromideStockId = bromideStockId | plus: 10000 %}
+{% include card-collection-info.html stockId=bromideStockId %}
+{% include card-collection-story.html stockId=bromideStockId %}
 
 {% endif %}
 {{content}}
