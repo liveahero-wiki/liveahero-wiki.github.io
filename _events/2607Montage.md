@@ -20,14 +20,14 @@ news_link: https://live-a-hero.jp/en/info/14416
 
 "I want you to find someone who can uncover the truth about this world."
 
-Only Heroes and Observers can visit it in their dreams—a place known as the Phantom Archipelago.
+Only Heroes and Observers can visit it in their dreams—a place known as the Phantasm Archipelago.
 It is said that those who arrive there are entrusted with this wish by a mysterious young man.
 
 Countless eyewitness accounts describe strange, inexplicable phenomena that are difficult to believe...
 Even a Hero who researches the multiverse has been pursuing the truth behind them.
 
 A technology researcher who loves sharing ideas insists that this place is actually a virtual world.
-Together with the Heroes—and you, their Operator—they attempt an experiment to access the Phantom Archipelago.
+Together with the Heroes—and you, their Operator—they attempt an experiment to access the Phantasm Archipelago.
 
 What appears before them is an endless tropical paradise stretching as far as the eye can see...!?
 Along the way, they encounter a listless white-hat hacker Hero and a former local government employee from a remote island.
@@ -137,19 +137,19 @@ Here is the bonus:
 | No  | Description      | Rewards      |
 |----|-----------------------------------------------------------|----------------|
 | 1  | Clear event main quest chapter 2 | 5 {% include item.html name="Ether Crystal" %}    |
-| 2  | Clear event main quest chapter 3 | 10 {% include item.html id=113281" %}    |
+| 2  | Clear event main quest chapter 3 | 10 {% include item.html id=113281 %}    |
 | 3  | Clear event main quest chapter 3 | 2 {% include item.html name="Ether Crystal" %}    |
-| 4  | Clear event main quest chapter 4 | 10 {% include item.html id=113281" %}     |
+| 4  | Clear event main quest chapter 4 | 10 {% include item.html id=113281 %}     |
 | 5  | Clear event main quest chapter 4 | 2 {% include item.html name="Ether Crystal" %}    |
-| 6  | Clear event main quest chapter 5 | 10 {% include item.html id=113281" %}    |
+| 6  | Clear event main quest chapter 5 | 10 {% include item.html id=113281 %}    |
 | 7  | Clear event main quest chapter 5 | 2 {% include item.html name="Ether Crystal" %}    |
-| 8  | Clear event main quest chapter 6 | 10 {% include item.html id=113281" %}     |
+| 8  | Clear event main quest chapter 6 | 10 {% include item.html id=113281 %}     |
 | 9  | Clear event main quest chapter 6 | 2 {% include item.html name="Ether Crystal" %}    |
-| 10  | Clear event main quest chapter 7 | 10 {% include item.html id=113281" %}     |
+| 10  | Clear event main quest chapter 7 | 10 {% include item.html id=113281 %}     |
 | 11  | Clear event main quest chapter 7 | 2 {% include item.html name="Ether Crystal" %}    |
 | 12  | Clear event main quest chapter 8 | 5 {% include item.html name="Ether Crystal" %}    |
-| 13  | Clear event free quest 10 times | 1 {% include item.html id=213281" %}    |
-| 14  | Clear event sales 10 times | 1 {% include item.html id=213281" %}    |
+| 13  | Clear event free quest 10 times | 1 {% include item.html id=213281 %}    |
+| 14  | Clear event sales 10 times | 1 {% include item.html id=213281 %}    |
 
 ## Limited Time Mission
 
