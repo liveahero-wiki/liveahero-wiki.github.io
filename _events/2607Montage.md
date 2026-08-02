@@ -18,11 +18,48 @@ news_link: https://live-a-hero.jp/en/info/14416
 
 ## Event Preview
 
-TODO
+"I want you to find someone who can uncover the truth about this world."
+
+Only Heroes and Observers can visit it in their dreams—a place known as the Phantom Archipelago.
+It is said that those who arrive there are entrusted with this wish by a mysterious young man.
+
+Countless eyewitness accounts describe strange, inexplicable phenomena that are difficult to believe...
+Even a Hero who researches the multiverse has been pursuing the truth behind them.
+
+A technology researcher who loves sharing ideas insists that this place is actually a virtual world.
+Together with the Heroes—and you, their Operator—they attempt an experiment to access the Phantom Archipelago.
+
+What appears before them is an endless tropical paradise stretching as far as the eye can see...!?
+Along the way, they encounter a listless white-hat hacker Hero and a former local government employee from a remote island.
+As the group cheerfully explores the islands with the carefree spirit of a vacation, what kind of truth awaits them beyond the horizon...?
+
+...And yet, somehow, this doesn't feel like just a "dream."
 
 ## Event Banners
 
-TODO
+Rates as follow:
+
+| Character                                                | Rates (Single) | Rates (Multis) |
+|----------------------------------------------------------|----------------|----------------|
+| {% chara_link Roiker|h2 %}                            | 0.8 %            | 1.6 %            |
+| {% chara_link Shiratori|h1 %}                            | 0.8 %            | 1.6 %           |
+| {% chara_link Yvaga|h1 %}                               | 2 %              | 32 %             |
+| {% chara_link Shiratori %}                                    | 12 %              | 0 %              |
+| {% chara_link Tabit %}                                    | 6 %              | 0 %              |
+| {% chara_link Danzo %}                                    | 6 %              | 0 %              |
+| {% chara_link Denebora %}                                    | 6 %              | 0 %              |
+| {% chara_link Yvaga %}                                  | 5 %             | 0 %              |
+| {% chara_link Phein %}                                  | 1  %             | 0 %              |
+| {% chara_link Farden %}                                  | 1  %             | 0 %              |
+| {% chara_link Rastaban %}                                  | 1  %             | 0 %              |
+| Offbanner 5 star hero                                    | 0.4 %            | 0.8 %            |
+| Offbanner 4 star hero                                    | 6 %              | 64 %             |
+| Offbanner 3 star hero                                    | 35 %             | 0 %              |
+| Offbanner 4 star sidekick                                | 2 %              | 0 %              |
+| Offbanner 3 star sidekick                                | 15 %             | 0 %              |
+
+>Rates (Multis) is the rate of the tenth pull in a multi pull, pull number 1-9 still use the Rates (Single)
+
 
 ## Free Quest Bonus
 
@@ -71,15 +108,70 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 
 ## Event Sales Bonus
 
-TODO
+Event sales bonus added according to how much event hero you have in a single sales, Which is
+{% chara_link Roiker|h2 %}, {% chara_link Shiratori|h1 %}, {% chara_link Yvaga|h1 %}, and {% chara_link Ruchbath|h1 %}
+
+Here is the bonus:
+
+| Hero   | +Bonus(%) |
+|--------|-----------|
+| 1 Event Hero   |     10    |
+| 2 Event Heroes |     30    |
+| 3 Event Heroes |     50    |
+| 3 Event Heroes |     70    |
+
+## Title Mission
+
+| No  | Description      | Rewards      |
+|----|-----------------------------------------------------------|----------------|
+| 1  | Get rank C 2 times in event score attack | 1 {% include item.html name="Ether Ticket" %}    |
+| 2  | Get rank B 2 times in event score attack | 1 {% include item-icon.html id=34 %}   |
+| 3  | Get rank A 2 times in event score attack | 1 {% include item.html name="Ether Ticket" %}    |
+| 4  | Clear all event main quest | Title : Beachside's [ビーチサイドの]    |
+| 5  | Clear Score attack normal.hard with A rank 2 times | Title : Explorer [探訪者]    |
+| 6  | Clear Score attack very hard with A rank | Title : Orochi-sama [大蛇様]    |
+| 7  | Clear all title mission | Title : Sleepyhead [お寝坊さん]    |
 
 ## Special Mission
 
-TODO
+| No  | Description      | Rewards      |
+|----|-----------------------------------------------------------|----------------|
+| 1  | Clear event main quest chapter 2 | 5 {% include item.html name="Ether Crystal" %}    |
+| 2  | Clear event main quest chapter 3 | 10 {% include item.html id=113281" %}    |
+| 3  | Clear event main quest chapter 3 | 2 {% include item.html name="Ether Crystal" %}    |
+| 4  | Clear event main quest chapter 4 | 10 {% include item.html id=113281" %}     |
+| 5  | Clear event main quest chapter 4 | 2 {% include item.html name="Ether Crystal" %}    |
+| 6  | Clear event main quest chapter 5 | 10 {% include item.html id=113281" %}    |
+| 7  | Clear event main quest chapter 5 | 2 {% include item.html name="Ether Crystal" %}    |
+| 8  | Clear event main quest chapter 6 | 10 {% include item.html id=113281" %}     |
+| 9  | Clear event main quest chapter 6 | 2 {% include item.html name="Ether Crystal" %}    |
+| 10  | Clear event main quest chapter 7 | 10 {% include item.html id=113281" %}     |
+| 11  | Clear event main quest chapter 7 | 2 {% include item.html name="Ether Crystal" %}    |
+| 12  | Clear event main quest chapter 8 | 5 {% include item.html name="Ether Crystal" %}    |
+| 13  | Clear event free quest 10 times | 1 {% include item.html id=213281" %}    |
+| 14  | Clear event sales 10 times | 1 {% include item.html id=213281" %}    |
 
 ## Limited Time Mission
 
-TODO
+| No  | Description      | Rewards      |
+|----|-----------------------------------------------------------|----------------|
+| 1  | Finish any rank event free quest 5 times | 500 {% include item-icon.html id=289 %}    |
+| 2  | Finish any rank event free quest 10 times | 1 {% include item-icon.html id=34 %}    |
+| 3  | Finish any rank event free quest 15 times | 500 {% include item-icon.html id=289 %}    |
+| 4  | Finish any rank event free quest 20 times | 1 {% include item-icon.html id=34 %}    |
+| 5  | Finish any rank event free quest 30 times | 1 {% include item-icon.html id=34 %}    |
+| 6  | Finish any rank event free quest 35 times | 750 {% include item-icon.html id=289 %}    |
+| 7  | Finish any rank event free quest 40 times | 1 {% include item-icon.html id=34 %}    |
+| 8  | Finish any rank event free quest 50 times | 1 {% include item-icon.html id=34 %}    |
+| 9  | Finish any rank event free quest 70 times | 1000 {% include item-icon.html id=289 %}    |
+| 10  | Finish any rank event free quest 90 times | 1500 {% include item-icon.html id=289 %}    |
+| 11 | Clear event free quest rank B  | 800 {% include item-icon.html id=289 %}    |
+| 12 | Clear event free quest rank A  | 800 {% include item-icon.html id=289 %}    |
+| 13 | Clear event free quest rank S  | 900 {% include item-icon.html id=289 %}    |
+| 14 | Clear event free quest beginner  | 800 {% include item-icon.html id=289 %}    |
+| 15 | Clear event free quest expert  | 900 {% include item-icon.html id=289 %}    |
+| 16 | Clear event free quest rank B,A,S  | 3 {% include item.html name="Ether Crystal" %}    |
+| 17 | Finish event sales 10 times  | 1 {% include item-icon.html id=34 %}    |
 
 ## Event Shop
 
