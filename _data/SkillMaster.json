@@ -82717,7 +82717,7 @@
         "subIconAddress": "",
         "notDisplayHint": false,
         "triggerJson": [],
-        "receiverTriggerJson": null,
+        "receiverTriggerJson": [],
         "targetEntity": {
           "json": null,
           "target": 2
@@ -82741,7 +82741,7 @@
         "subIconAddress": "",
         "notDisplayHint": false,
         "triggerJson": [],
-        "receiverTriggerJson": null,
+        "receiverTriggerJson": [],
         "targetEntity": {
           "json": null,
           "target": 2
@@ -82802,13 +82802,14 @@
         "notDisplayHint": false,
         "triggerJson": [
           {
+            "role": 0,
             "class": "EnemyBuffNumberDontExecTrigger",
             "value": 0,
             "element": 0,
             "statusId": 0
           }
         ],
-        "receiverTriggerJson": null,
+        "receiverTriggerJson": [],
         "targetEntity": {
           "json": null,
           "target": 2
@@ -82833,13 +82834,14 @@
         "notDisplayHint": false,
         "triggerJson": [
           {
+            "role": 0,
             "class": "EnemyBuffNumberExecTrigger",
             "value": 0,
             "element": 0,
             "statusId": 0
           }
         ],
-        "receiverTriggerJson": null,
+        "receiverTriggerJson": [],
         "targetEntity": {
           "json": null,
           "target": 2
@@ -82899,7 +82901,7 @@
         "subIconAddress": "",
         "notDisplayHint": false,
         "triggerJson": [],
-        "receiverTriggerJson": null,
+        "receiverTriggerJson": [],
         "targetEntity": {
           "json": null,
           "target": 2
@@ -436884,6 +436886,71 @@
     ],
     "appendPassiveSkillIds": null
   },
+  "4329102": {
+    "skillId": 4329102,
+    "skillName": "エンタングル",
+    "skillIndex": 0,
+    "useView": 3000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体に1回分のDEFダウンを付与。（敵専用）",
+    "shortenDescription": "",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuIxtl_h01_02",
+        "execPassive": false,
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 2
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 4329102,
+        "serialNo": 0,
+        "skillEffectId": 31,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 2
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
   "4329103": {
     "skillId": 4329103,
     "skillName": "プライマル・フィア",
@@ -608266,13 +608333,16 @@
         "notDisplayHint": false,
         "triggerJson": [
           {
+            "role": 0,
             "class": "EnemyBuffNumberDontExecTrigger",
             "value": 0,
+            "value2": 0,
             "element": 0,
-            "statusId": 15
+            "statusId": 15,
+            "includeTemporary": false
           }
         ],
-        "receiverTriggerJson": null,
+        "receiverTriggerJson": [],
         "targetEntity": {
           "json": null,
           "target": 2
@@ -648341,6 +648411,7 @@
         "receiverTriggerJson": [],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 5
         }
       },
@@ -648365,6 +648436,7 @@
         "receiverTriggerJson": [],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 2
         }
       }
@@ -648534,11 +648606,22 @@
         "triggerJson": [
           {
             "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 10,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
             "class": "OverInvokerSpecialEffectTurnTrigger",
             "value": 6,
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
@@ -648550,11 +648633,13 @@
             "value2": 0,
             "element": 0,
             "statusId": 1266103,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 24
         }
       },
@@ -648578,24 +648663,104 @@
         "triggerJson": [
           {
             "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 15,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
             "class": "OverInvokerSpecialEffectTurnTrigger",
             "value": 11,
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
-        "receiverTriggerJson": [],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266103,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 24
         }
       },
       {
         "skillId": 8266104,
         "serialNo": 2,
-        "skillEffectId": 6220,
+        "skillEffectId": 6798,
+        "prob": 100,
+        "effectTarget": 24,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 15,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OverInvokerSpecialEffectTurnTrigger",
+            "value": 11,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266103,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 24
+        }
+      },
+      {
+        "skillId": 8266104,
+        "serialNo": 3,
+        "skillEffectId": 6798,
         "prob": 100,
         "effectTarget": 24,
         "sequenceGroupId": 2,
@@ -648612,24 +648777,104 @@
         "triggerJson": [
           {
             "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 20,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
             "class": "OverInvokerSpecialEffectTurnTrigger",
             "value": 16,
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
-        "receiverTriggerJson": [],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266103,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 24
         }
       },
       {
         "skillId": 8266104,
-        "serialNo": 3,
-        "skillEffectId": 6220,
+        "serialNo": 4,
+        "skillEffectId": 6799,
+        "prob": 100,
+        "effectTarget": 24,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 20,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OverInvokerSpecialEffectTurnTrigger",
+            "value": 16,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266103,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 24
+        }
+      },
+      {
+        "skillId": 8266104,
+        "serialNo": 5,
+        "skillEffectId": 6799,
         "prob": 100,
         "effectTarget": 24,
         "sequenceGroupId": 3,
@@ -648646,24 +648891,104 @@
         "triggerJson": [
           {
             "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 25,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
             "class": "OverInvokerSpecialEffectTurnTrigger",
             "value": 21,
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
-        "receiverTriggerJson": [],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266103,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 24
         }
       },
       {
         "skillId": 8266104,
-        "serialNo": 4,
-        "skillEffectId": 6220,
+        "serialNo": 6,
+        "skillEffectId": 6800,
+        "prob": 100,
+        "effectTarget": 24,
+        "sequenceGroupId": 3,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 25,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OverInvokerSpecialEffectTurnTrigger",
+            "value": 21,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266103,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 24
+        }
+      },
+      {
+        "skillId": 8266104,
+        "serialNo": 7,
+        "skillEffectId": 6800,
         "prob": 100,
         "effectTarget": 24,
         "sequenceGroupId": 4,
@@ -648680,24 +649005,104 @@
         "triggerJson": [
           {
             "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 30,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
             "class": "OverInvokerSpecialEffectTurnTrigger",
             "value": 26,
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
-        "receiverTriggerJson": [],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266103,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 24
         }
       },
       {
         "skillId": 8266104,
-        "serialNo": 5,
-        "skillEffectId": 6220,
+        "serialNo": 8,
+        "skillEffectId": 6801,
+        "prob": 100,
+        "effectTarget": 24,
+        "sequenceGroupId": 4,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 30,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OverInvokerSpecialEffectTurnTrigger",
+            "value": 26,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266103,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 24
+        }
+      },
+      {
+        "skillId": 8266104,
+        "serialNo": 9,
+        "skillEffectId": 6801,
         "prob": 100,
         "effectTarget": 24,
         "sequenceGroupId": 5,
@@ -648714,24 +649119,104 @@
         "triggerJson": [
           {
             "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 35,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
             "class": "OverInvokerSpecialEffectTurnTrigger",
             "value": 31,
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
-        "receiverTriggerJson": [],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266103,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 24
         }
       },
       {
         "skillId": 8266104,
-        "serialNo": 6,
-        "skillEffectId": 6220,
+        "serialNo": 10,
+        "skillEffectId": 6802,
+        "prob": 100,
+        "effectTarget": 24,
+        "sequenceGroupId": 5,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 35,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OverInvokerSpecialEffectTurnTrigger",
+            "value": 31,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266103,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 24
+        }
+      },
+      {
+        "skillId": 8266104,
+        "serialNo": 11,
+        "skillEffectId": 6802,
         "prob": 100,
         "effectTarget": 24,
         "sequenceGroupId": 6,
@@ -648748,24 +649233,104 @@
         "triggerJson": [
           {
             "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 40,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
             "class": "OverInvokerSpecialEffectTurnTrigger",
             "value": 36,
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
-        "receiverTriggerJson": [],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266103,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 24
         }
       },
       {
         "skillId": 8266104,
-        "serialNo": 7,
-        "skillEffectId": 6220,
+        "serialNo": 12,
+        "skillEffectId": 6803,
+        "prob": 100,
+        "effectTarget": 24,
+        "sequenceGroupId": 6,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 40,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OverInvokerSpecialEffectTurnTrigger",
+            "value": 36,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266103,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 24
+        }
+      },
+      {
+        "skillId": 8266104,
+        "serialNo": 13,
+        "skillEffectId": 6803,
         "prob": 100,
         "effectTarget": 24,
         "sequenceGroupId": 7,
@@ -648782,24 +649347,104 @@
         "triggerJson": [
           {
             "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 45,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
             "class": "OverInvokerSpecialEffectTurnTrigger",
             "value": 41,
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
-        "receiverTriggerJson": [],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266103,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 24
         }
       },
       {
         "skillId": 8266104,
-        "serialNo": 8,
-        "skillEffectId": 6220,
+        "serialNo": 14,
+        "skillEffectId": 6804,
+        "prob": 100,
+        "effectTarget": 24,
+        "sequenceGroupId": 7,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 45,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OverInvokerSpecialEffectTurnTrigger",
+            "value": 41,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266103,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 24
+        }
+      },
+      {
+        "skillId": 8266104,
+        "serialNo": 15,
+        "skillEffectId": 6804,
         "prob": 100,
         "effectTarget": 24,
         "sequenceGroupId": 8,
@@ -648816,27 +649461,107 @@
         "triggerJson": [
           {
             "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 50,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
             "class": "OverInvokerSpecialEffectTurnTrigger",
             "value": 46,
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
-        "receiverTriggerJson": [],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266103,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 24
         }
       },
       {
         "skillId": 8266104,
-        "serialNo": 9,
-        "skillEffectId": 6220,
+        "serialNo": 16,
+        "skillEffectId": 6805,
         "prob": 100,
         "effectTarget": 24,
-        "sequenceGroupId": 9,
+        "sequenceGroupId": 8,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 50,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OverInvokerSpecialEffectTurnTrigger",
+            "value": 46,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266102,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266103,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 24
+        }
+      },
+      {
+        "skillId": 8266104,
+        "serialNo": 17,
+        "skillEffectId": 6805,
+        "prob": 100,
+        "effectTarget": 24,
+        "sequenceGroupId": 8,
         "probGroupId": 0,
         "randomGroupId": 0,
         "popupTimingId": 0,
@@ -648855,18 +649580,20 @@
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
         "receiverTriggerJson": [],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 24
         }
       },
       {
         "skillId": 8266104,
-        "serialNo": 10,
+        "serialNo": 18,
         "skillEffectId": 6209,
         "prob": 100,
         "effectTarget": 0,
@@ -648889,6 +649616,7 @@
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           },
           {
@@ -648898,18 +649626,20 @@
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
         "receiverTriggerJson": [],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 0
         }
       },
       {
         "skillId": 8266104,
-        "serialNo": 11,
+        "serialNo": 19,
         "skillEffectId": 6210,
         "prob": 100,
         "effectTarget": 0,
@@ -648932,6 +649662,7 @@
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           },
           {
@@ -648941,18 +649672,20 @@
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
         "receiverTriggerJson": [],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 0
         }
       },
       {
         "skillId": 8266104,
-        "serialNo": 12,
+        "serialNo": 20,
         "skillEffectId": 6211,
         "prob": 100,
         "effectTarget": 0,
@@ -648975,6 +649708,7 @@
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           },
           {
@@ -648984,18 +649718,20 @@
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
         "receiverTriggerJson": [],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 0
         }
       },
       {
         "skillId": 8266104,
-        "serialNo": 13,
+        "serialNo": 21,
         "skillEffectId": 6212,
         "prob": 100,
         "effectTarget": 0,
@@ -649018,6 +649754,7 @@
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           },
           {
@@ -649027,18 +649764,20 @@
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
         "receiverTriggerJson": [],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 0
         }
       },
       {
         "skillId": 8266104,
-        "serialNo": 14,
+        "serialNo": 22,
         "skillEffectId": 6213,
         "prob": 100,
         "effectTarget": 0,
@@ -649061,6 +649800,7 @@
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           },
           {
@@ -649070,18 +649810,20 @@
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
         "receiverTriggerJson": [],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 0
         }
       },
       {
         "skillId": 8266104,
-        "serialNo": 15,
+        "serialNo": 23,
         "skillEffectId": 6214,
         "prob": 100,
         "effectTarget": 0,
@@ -649104,6 +649846,7 @@
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           },
           {
@@ -649113,18 +649856,20 @@
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
         "receiverTriggerJson": [],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 0
         }
       },
       {
         "skillId": 8266104,
-        "serialNo": 16,
+        "serialNo": 24,
         "skillEffectId": 6215,
         "prob": 100,
         "effectTarget": 0,
@@ -649147,6 +649892,7 @@
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           },
           {
@@ -649156,18 +649902,20 @@
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
         "receiverTriggerJson": [],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 0
         }
       },
       {
         "skillId": 8266104,
-        "serialNo": 17,
+        "serialNo": 25,
         "skillEffectId": 6216,
         "prob": 100,
         "effectTarget": 0,
@@ -649190,6 +649938,7 @@
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           },
           {
@@ -649199,18 +649948,20 @@
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
         "receiverTriggerJson": [],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 0
         }
       },
       {
         "skillId": 8266104,
-        "serialNo": 18,
+        "serialNo": 26,
         "skillEffectId": 6217,
         "prob": 100,
         "effectTarget": 0,
@@ -649233,6 +649984,7 @@
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           },
           {
@@ -649242,18 +649994,20 @@
             "value2": 0,
             "element": 0,
             "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
         "receiverTriggerJson": [],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 0
         }
       },
       {
         "skillId": 8266104,
-        "serialNo": 19,
+        "serialNo": 27,
         "skillEffectId": 6218,
         "prob": 100,
         "effectTarget": 0,
@@ -649275,19 +650029,21 @@
             "value": 51,
             "value2": 0,
             "element": 0,
-            "statusId": 1022203,
+            "statusId": 1266102,
+            "targetStates": null,
             "includeTemporary": false
           }
         ],
         "receiverTriggerJson": [],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 0
         }
       },
       {
         "skillId": 8266104,
-        "serialNo": 20,
+        "serialNo": 28,
         "skillEffectId": 6221,
         "prob": 100,
         "effectTarget": 24,
@@ -649302,10 +650058,22 @@
         "conditionDescription": "",
         "subIconAddress": "",
         "notDisplayHint": false,
-        "triggerJson": [],
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1266103,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
         "receiverTriggerJson": [],
         "targetEntity": {
           "json": null,
+          "isLoop": false,
           "target": 24
         }
       }
