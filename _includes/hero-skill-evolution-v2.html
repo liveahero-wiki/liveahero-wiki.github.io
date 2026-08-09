@@ -1,0 +1,45 @@
+{% assign stockId = include.stockId | downcase %}
+{% assign heroEvo = site.data.wiki.SkillUpgradeModel[stockId] %}
+
+<h2>Skill evolution</h2>
+
+<p>Every node in a skill's tree is active by default (fully bloomed). Tap a node
+  to deactivate it — its children deactivate too — and the skill description and
+  View cost update to match. Tap it again to re-activate it and its parents.</p>
+
+<p>Note to wiki contributor: skill evolution is generated from master data by
+  <code>tools/gen_skill_upgrade_model.py</code> into
+  <code>_data/wiki/SkillUpgradeModel.json</code>; upgrade-node translations come
+  from the "EN skill upgrade" sheet.</p>
+
+{% assign STCOL = "abcdefgh" | split: "" %}
+{% for skill in heroEvo.skills %}
+{% assign maxcol = 1 %}
+{% for row in skill.rows %}{% if row.size > maxcol %}{% assign maxcol = row.size %}{% endif %}{% endfor %}
+<div class="blooming skill-tree" data-skill-tree>
+  <div class="blooming_main">
+    <b>{{ skill.skillName }}</b>
+    <p>View: <span data-st-view>{{ skill.maxedView }}</span></p>
+    <div class="st-desc" data-st-desc>{{ skill.maxedText }}</div>
+  </div>
+
+  <div class="skill_tree">
+    <div class="st-grid" data-col="{{ maxcol }}">
+      {% for row in skill.rows %}
+      {% assign rnum = forloop.index %}
+      <div class="st-row" data-size="{{ row.size }}">
+        {% for cell in row %}
+        <button type="button" class="st-node is-active tippy" data-node="{{ cell.id }}"
+          data-content="{{ cell.desc | xml_escape }}">
+          <span class="st-tier">{{ rnum }}{% if row.size > 1 %}{{ STCOL[forloop.index0] }}{% endif %}</span>
+          <img src="/cdn/Sprite/{{ cell.icon }}.png" loading="lazy" width="40" height="40">
+        </button>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <script type="application/json" class="st-model">{{ skill | jsonify }}</script>
+</div>
+{% endfor %}

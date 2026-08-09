@@ -104,8 +104,8 @@
 {% include skill-table-v2.html skillIds=lastSkillIds split=true last=true index=skillUpgradedIndex
     changeSkillIds=changeSkillIds %}
 
-{% if site.data.wiki.HeroSkillEvolution[stockId] != nil %}
-{% include hero-skill-evolution.html stockId=include.stockId %}
+{% if site.data.wiki.SkillUpgradeModel[stockId] != nil %}
+{% include hero-skill-evolution-v2.html stockId=include.stockId %}
 {% endif %}
 
 </div>

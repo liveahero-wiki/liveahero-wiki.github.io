@@ -12,6 +12,16 @@ def skillIdToCharaResourceNameMap() -> dict:
         for skillId in chara["skillIds"]:
             obj[skillId] = chara["resourceName"]
 
+        # bloom (skill-tree) skill ids are not in skillIds; map them too so the
+        # skill-upgrade sheet gets a chara name. They live on skillProvider and
+        # in the before->after skillUpgradeQuestInfos change map.
+        provider = chara.get("skillProvider") or {}
+        for a in (provider.get("activeSkills") or []) + (provider.get("passiveSkills") or []):
+            obj[a["skillId"]] = chara["resourceName"]
+        for q in (chara.get("skillUpgradeQuestInfos") or []):
+            for c in (q.get("changeSkills") or []):
+                obj[c["afterSkillId"]] = chara["resourceName"]
+
     for chara in SidekickMaster.values():
         for skillId in chara["skillIds"]:
             obj[skillId] = chara["resourceName"]
@@ -127,6 +137,22 @@ def main():
                 sanitizeSkillDescription(status["description"]),
                 EnglishMaster.get(f"STATUS_NAME_{si}", ""),
                 sanitizeSkillDescription(EnglishMaster.get(f"STATUS_DESCRIPTION_{si}", "")),
+            ])
+
+    SkillUpgradeMaster = loadJson("_data/SkillUpgradeMaster.json")
+    with open("skill-upgrade-jp.tsv", "w", encoding="utf-8") as f:
+        writer = csv.writer(f, delimiter='\t')
+        writer.writerow(["skillEntryId", "skillId", "charaName", "description", "descriptionTranslated"])
+        for node in SkillUpgradeMaster.values():
+            ei = int(node["skillEntryId"])
+            sk = int(node["skillId"])
+
+            writer.writerow([
+                node["skillEntryId"],
+                node["skillId"],
+                charaMap.get(sk, ""),
+                sanitizeSkillDescription(node["description"]),
+                sanitizeSkillDescription(EnglishMaster.get(f"SKILL_UPGRADE_DESCRIPTION_{ei}", "")),
             ])
 
 if __name__ == '__main__':

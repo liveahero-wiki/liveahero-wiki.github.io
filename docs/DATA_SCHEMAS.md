@@ -110,9 +110,11 @@ the *fully-maxed* skill text/cost (as done for the `skillsMaxed` projection in
     `SKILL_UPGRADE_DESCRIPTION_{skillEntryId}` is the tree-node **tooltip**, not the
     resolved skill text.
 
-`tools/skill_evo.py` separately pre-renders the raw node-`description` DAG into
-`_data/processed/SkillUpgradeMaster.json` (`<details>` HTML) for the character
-page's visual skill-tree; that is independent of the maxed-text assembly above.
+`tools/gen_skill_upgrade_model.py` reuses the resolution helpers above to emit
+`_data/wiki/SkillUpgradeModel.json` — the raw per-tier lines + View deltas + DAG
+topology powering the interactive skill-tree UI (`_includes/hero-skill-evolution-v2.html`
++ `assets/skill-tree.js`), which recomputes the resolved description/cost for any
+subset of active nodes and reproduces the maxed assembly above when all nodes are on.
 
 ---
 
