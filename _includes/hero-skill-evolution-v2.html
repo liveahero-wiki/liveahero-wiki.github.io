@@ -7,11 +7,6 @@
   to deactivate it — its children deactivate too — and the skill description and
   View cost update to match. Tap it again to re-activate it and its parents.</p>
 
-<p>Note to wiki contributor: skill evolution is generated from master data by
-  <code>tools/gen_skill_upgrade_model.py</code> into
-  <code>_data/wiki/SkillUpgradeModel.json</code>; upgrade-node translations come
-  from the "EN skill upgrade" sheet.</p>
-
 {% assign STCOL = "abcdefgh" | split: "" %}
 {% for skill in heroEvo.skills %}
 {% assign maxcol = 1 %}
