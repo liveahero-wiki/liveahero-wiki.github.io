@@ -39,6 +39,9 @@ def main():
     with open("status-jp.tsv", "r", encoding="utf-8") as f:
         status_data = list(csv.DictReader(f, delimiter='\t'))
 
+    with open("skill-upgrade-jp.tsv", "r", encoding="utf-8") as f:
+        skill_upgrade_data = list(csv.DictReader(f, delimiter='\t'))
+
     # 3. Update Sheets
     try:
         creds = load_gsheet_credentials()
@@ -69,6 +72,12 @@ def main():
     sheet = sh.worksheet("EN status")
     updated_st, new_st = update_sheet(gc, sheet, "EN status", status_data,
                                   ['statusId'], ['statusName', 'description', 'statusNameTranslated'],
+                                  ['descriptionTranslated'],
+                                  args.dry_run)
+
+    sheet = sh.worksheet("EN skill upgrade")
+    updated_su, new_su = update_sheet(gc, sheet, "EN skill upgrade", skill_upgrade_data,
+                                  ['skillEntryId'], ['skillId', 'charaName', 'description'],
                                   ['descriptionTranslated'],
                                   args.dry_run)
 
@@ -106,7 +115,17 @@ def main():
         msg.write(joined_pks(new_st))
         msg.write("\n")
 
-    if not (updated_s or new_s or updated_se or new_se or updated_st or new_st):
+    if updated_su or new_su:
+        msg.write(f"- **Skill Upgrades**: {len(updated_su)} updated, {len(new_su)} new\n")
+        msg.write("  - Updated IDs: ")
+        msg.write(joined_pks(updated_su))
+        msg.write("\n")
+        msg.write("  - New IDs: ")
+        msg.write(joined_pks(new_su))
+        msg.write("\n")
+
+    if not (updated_s or new_s or updated_se or new_se or updated_st or new_st
+            or updated_su or new_su):
         msg.write("No changes detected.\n")
 
     report = msg.getvalue()

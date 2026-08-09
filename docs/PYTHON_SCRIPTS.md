@@ -19,7 +19,7 @@ graph TD
     G -->|tools/generate_status_pages.py| H[_statuses/ status pages]
     G -->|tools/event_gen.py| I[_events/ event pages]
     
-    D -->|tools/skill_evo.py| J[Pre-rendered HTML Skill Upgrade Tree]
+    D -->|tools/gen_skill_upgrade_model.py| J[_data/wiki/SkillUpgradeModel.json interactive tree model]
 
     G -->|tools/generate_skill_search_index.py| K[api/ skill-index.json search index]
     B -->|tools/generate_skill_search_index.py| K
@@ -140,12 +140,13 @@ graph TD
 
 ---
 
-### 9. `tools/skill_evo.py`
-*   **Purpose**: Parses upgrade branch tables in `SkillUpgradeMaster.json`, performs a depth-first search (DFS) traversal to reconstruct branching upgrade trees, and saves pre-rendered Liquid-compatible `<details>` HTML tree tags to process skill evolution page displays.
+### 9. `tools/gen_skill_upgrade_model.py`
+*   **Purpose**: Builds the data model for the interactive skill-tree ("bloom") UI (`_includes/hero-skill-evolution-v2.html` + `assets/skill-tree.js`). For each hero with a skill tree it emits, per bloom skill, the raw per-tier condition lines, View-cost deltas, the `SkillUpgradeMaster` DAG topology, a depth-based visual row layout, and the fully-maxed text/cost — so the browser can recompute the resolved description + View cost for ANY subset of active upgrade nodes. Reuses the maxed-resolution helpers from `generate_skill_search_index.py` and self-checks that the all-active reconstruction byte-matches `maxed_skill_description` / `maxed_use_view` (aborts on mismatch).
 *   **Input Files**:
-    *   `_data/SkillUpgradeMaster.json`
+    *   `_data/SkillUpgradeMaster.json`, `_data/SkillMaster.json`, `_data/SkillEffectMaster.json`, `_data/StatusMaster.json`, `_data/CardMaster.json`
+    *   `zzz/English.json`; `_data/translation/{Skill,SkillEffect,Status,SkillUpgrade}.json` (optional community overrides)
 *   **Output Files**:
-    *   `_data/processed/SkillUpgradeMaster.json`
+    *   `_data/wiki/SkillUpgradeModel.json` (keyed by `stockId`)
 
 ---
 
