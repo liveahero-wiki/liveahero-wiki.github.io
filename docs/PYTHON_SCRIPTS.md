@@ -74,10 +74,14 @@ graph TD
     *   `_data/SkillEffectMaster.json`
     *   `_data/StatusMaster.json`
     *   `zzz/English.json`
+*   **Input Files** (additional):
+    *   `_data/SkillUpgradeMaster.json`
 *   **Output Files**:
     *   `skill-jp.tsv` (Skill list spreadsheet layout)
     *   `skill-effect-jp.tsv` (Skill status override details spreadsheet layout)
     *   `status-jp.tsv` (Raw battle status list spreadsheet layout)
+    *   `skill-upgrade-jp.tsv` (Bloom skill-tree node tooltips, keyed by `skillEntryId`)
+    *   `skill-condition-jp.tsv` (Bloom skill-tree per-tier condition lines shown in `hero-skill-evolution-v2.html`, keyed by `skillId` + `serialNo`; only text-bearing lines)
 
 ---
 
@@ -85,9 +89,9 @@ graph TD
 *   **Purpose**: Synchronizes local TSVs with the community translation Google Sheet (ID: `1PVTqJxN2-VF1TwSdlisrrLgW1vWlRKJSmv1cpCBaY-I`) using the Google Sheets API (`gspread`). It matches records by primary key, appends new rows, patches empty translation cells, sorts worksheets, and sends a Discord webhook report.
 *   **Input Files**:
     *   `credentials.json` (or `GOOGLE_CREDENTIALS_JSON` environment variable)
-    *   `skill-jp.tsv`, `skill-effect-jp.tsv`, `status-jp.tsv` (generated locally)
+    *   `skill-jp.tsv`, `skill-effect-jp.tsv`, `status-jp.tsv`, `skill-upgrade-jp.tsv`, `skill-condition-jp.tsv` (generated locally)
 *   **Output Web Targets**:
-    *   Edits to target worksheets: "EN skill", "EN skill effect", "EN status" in Google Sheets
+    *   Edits to target worksheets: "EN skill", "EN skill effect", "EN status", "EN skill upgrade", "EN skill condition" in Google Sheets. The "EN skill condition" worksheet is auto-created on first run if it does not exist.
     *   Discord summary notification via webhook `DISCORD_WEBHOOK_URL`
 
 ---
@@ -95,7 +99,7 @@ graph TD
 ### 5. `tools/translation_download_tsv.py`
 *   **Purpose**: Connects to the public Google Sheet published CSV endpoints (or reads local TSVs) to pull down approved community translations, validates HTML/liquid-like markup structure for strict tag closures (to avoid Jekyll breaking), and saves the compiled dictionaries.
 *   **Input Files**:
-    *   Spreadsheets online CSV streams OR local files `skill-tl.tsv`, `skill-effect-tl.tsv`, `status-tl.tsv` (when `--use_local` flag is provided)
+    *   Spreadsheets online CSV streams OR local files `skill-tl.tsv`, `skill-effect-tl.tsv`, `status-tl.tsv`, `skill-upgrade-tl.tsv`, `skill-condition-tl.tsv` (when `--use_local` flag is provided)
     *   `_data/CardMaster.json`
     *   `_data/SidekickMaster.json`
 *   **Output Files**:
@@ -103,6 +107,8 @@ graph TD
     *   `_data/translation/SkillV2Whitelist.json` (whitelist of characters with fully translated skills)
     *   `_data/translation/SkillEffect.json`
     *   `_data/translation/Status.json`
+    *   `_data/translation/SkillUpgrade.json` (bloom node tooltips, keyed by `skillEntryId`)
+    *   `_data/translation/SkillCondition.json` (bloom per-tier condition lines, keyed `"{skillId}_{serialNo}"`). Skipped until `SKILL_CONDITION_TL_URL`'s `gid` is filled in (the "EN skill condition" tab must exist and be published first).
 
 ---
 

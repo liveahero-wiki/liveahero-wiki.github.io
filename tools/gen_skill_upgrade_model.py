@@ -105,7 +105,8 @@ def build_skill_model(skill_id, m, nodes_by_skill, SkillUpgradeTrans):
         cond = e.get("conditionDescription") or ""
         sn = e.get("serialNo")
         if _has_visible_text(cond):
-            raw = (GameTrans.get(f"SKILL_EFFECT_CONDITION_DESCRIPTION_{sid}_{sn}")
+            raw = (m["SkillCondTrans"].get(f"{sid}_{sn}", {}).get("description")
+                   or GameTrans.get(f"SKILL_EFFECT_CONDITION_DESCRIPTION_{sid}_{sn}")
                    or cond)
             lines.append({
                 "node": cei,
@@ -148,7 +149,8 @@ def build_skill_model(skill_id, m, nodes_by_skill, SkillUpgradeTrans):
                   for n in row] for row in compute_rows(tree)],
         # initial (all-active / fully-bloomed) render for no-JS + first paint;
         # the client recomputes these on every toggle.
-        "maxedText": G.maxed_skill_description(skill_id, SM, SEM, SkillTrans, GameTrans, SUM),
+        "maxedText": G.maxed_skill_description(skill_id, SM, SEM, SkillTrans, GameTrans, SUM,
+                                               m["SkillCondTrans"]),
         "maxedView": G.maxed_use_view(skill_id, SM, SEM),
         "statusDescs": G.build_status_descs(
             skill_id, SM, SEM, m["SMA"], m["StatusTrans"],
@@ -282,7 +284,8 @@ def main():
             # self-check: all-active reconstruction must match the authoritative maxed
             active = set(nodes_by_skill[skill_id])
             got_text, got_view = _resolve(model, active, SUM)
-            want_text = G.maxed_skill_description(skill_id, SM, SEM, SkillTrans, GameTrans, SUM)
+            want_text = G.maxed_skill_description(skill_id, SM, SEM, SkillTrans, GameTrans, SUM,
+                                                  m["SkillCondTrans"])
             want_view = G.maxed_use_view(skill_id, SM, SEM)
             if got_text == want_text:
                 text_ok += 1
