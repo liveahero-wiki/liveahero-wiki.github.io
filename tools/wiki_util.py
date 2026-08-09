@@ -128,7 +128,7 @@ def validateHtml(s: str):
         # we only want to detect if html tags are closed correctly
         s = LESSER_PATTERN.sub(" ", s)
         s = GREATER_PATTERN.sub(" ", s)
-        s = s.replace("<br>", " ").replace(" & ", " ").replace("&nbsp;", "")
+        s = s.replace("<br>", " ").replace("&nbsp;", "").replace("&", " ")
 
         ET.fromstring("<xml>" + s + "</xml>")
         return None
