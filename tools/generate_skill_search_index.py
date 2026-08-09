@@ -507,6 +507,7 @@ IGNORED_CLASSES = {
     "ParticleStatus", "PassiveBattleSkillEffect", "ForceExecDotDamage",
     "NowViewTurn",       # Victom's internal VP-threshold turn counter (system status)
     "UseInvokerBaseAtk", # internal damage-calc flag for Akashi's Armament
+    "UseStatusIdCharacterAgi", "UseLowestAgi", "OverrideOrderPriority",  # Roiker clone-summon turn-order sync
 }
 
 unmapped = Counter()
