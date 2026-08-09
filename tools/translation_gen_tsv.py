@@ -1,6 +1,17 @@
 import csv
+import re
 
 from wiki_util import *
+
+# Strips wiki/style tags and whitespace; used to tell a real text-bearing
+# condition line apart from a markup-only filler (e.g. a lone <style="改行"></style>).
+# Mirrors _has_visible_text in generate_skill_search_index / gen_skill_upgrade_model.
+_VISIBLE_TEXT_RE = re.compile(r"<[^>]+>|\s")
+
+
+def _has_visible_text(s) -> bool:
+    return bool(_VISIBLE_TEXT_RE.sub("", s or ""))
+
 
 def skillIdToCharaResourceNameMap() -> dict:
     HeroMaster = loadJson("_data/CardMaster.json")
@@ -154,6 +165,28 @@ def main():
                 sanitizeSkillDescription(node["description"]),
                 sanitizeSkillDescription(EnglishMaster.get(f"SKILL_UPGRADE_DESCRIPTION_{ei}", "")),
             ])
+
+    # Per-tier condition lines shown in the bloom skill tree
+    # (_includes/hero-skill-evolution-v2.html). Keyed by (skillId, serialNo);
+    # not covered by any other sheet. Only text-bearing lines are emitted.
+    with open("skill-condition-jp.tsv", "w", encoding="utf-8") as f:
+        writer = csv.writer(f, delimiter='\t')
+        writer.writerow(["skillId", "serialNo", "charaName", "description", "descriptionTranslated"])
+        for skill in SkillMaster.values():
+            si = int(skill["skillId"])
+            for e in (skill.get("effects") or []):
+                cond = e.get("conditionDescription") or ""
+                if not _has_visible_text(cond):
+                    continue
+                sn = e.get("serialNo")
+
+                writer.writerow([
+                    skill["skillId"],
+                    sn,
+                    charaMap.get(si, ""),
+                    sanitizeSkillDescription(cond),
+                    sanitizeSkillDescription(EnglishMaster.get(f"SKILL_EFFECT_CONDITION_DESCRIPTION_{si}_{sn}", "")),
+                ])
 
 if __name__ == '__main__':
     main()

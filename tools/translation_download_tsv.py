@@ -9,6 +9,7 @@ SKILL_TL_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGnHrxbjI27aRZL
 SKILL_EFFECT_TL_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGnHrxbjI27aRZLsu52ZiBlhZIqLEA4nsd0nICwGlzFPH_v2AQlvC5hf7mvvs8i7-XhfRkq0HcbhU1/pub?gid=1473812801&single=true&output=csv"
 STATUS_TL_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGnHrxbjI27aRZLsu52ZiBlhZIqLEA4nsd0nICwGlzFPH_v2AQlvC5hf7mvvs8i7-XhfRkq0HcbhU1/pub?gid=1446280214&single=true&output=csv"
 SKILL_UPGRADE_TL_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGnHrxbjI27aRZLsu52ZiBlhZIqLEA4nsd0nICwGlzFPH_v2AQlvC5hf7mvvs8i7-XhfRkq0HcbhU1/pub?gid=1193866639&single=true&output=csv"
+SKILL_CONDITION_TL_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQGnHrxbjI27aRZLsu52ZiBlhZIqLEA4nsd0nICwGlzFPH_v2AQlvC5hf7mvvs8i7-XhfRkq0HcbhU1/pub?gid=958089851&single=true&output=csv"
 
 def processSkillTranslation(use_local: bool):
     rows = sheet_util.getTranslatedCsv(SKILL_TL_URL, "skill-tl.tsv", use_local)
@@ -111,6 +112,22 @@ def processSkillUpgradeTranslation(use_local: bool):
     wiki_util.ensureDirs("_data/translation/")
     wiki_util.dumpJson("_data/translation/SkillUpgrade.json", obj, indent=2)
 
+def processSkillConditionTranslation(use_local: bool):
+    rows = sheet_util.getTranslatedCsv(SKILL_CONDITION_TL_URL, "skill-condition-tl.tsv", use_local)
+
+    obj = {}
+    for row in rows:
+        condition = wiki_util.omitEmptyDict(
+            description=row["descriptionTranslated"],
+        )
+        if condition:
+            if (e := wiki_util.validateHtml(row["descriptionTranslated"])) is not None:
+                print(f"Invalid skillCondition html({row["skillId"]}_{row["serialNo"]}):", row["descriptionTranslated"], e)
+            obj[f"{row["skillId"]}_{row["serialNo"]}"] = condition
+
+    wiki_util.ensureDirs("_data/translation/")
+    wiki_util.dumpJson("_data/translation/SkillCondition.json", obj, indent=2)
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--use_local", action="store_true")
@@ -120,6 +137,7 @@ if __name__ == '__main__':
     processSkillEffectTranslation(ARGS.use_local)
     processStatusTranslation(ARGS.use_local)
     processSkillUpgradeTranslation(ARGS.use_local)
+    processSkillConditionTranslation(ARGS.use_local)
 
     if wiki_util.has_invalid_html:
         sys.exit(1)

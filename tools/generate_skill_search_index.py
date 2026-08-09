@@ -517,6 +517,12 @@ missing_upgrade_nodes = Counter()  # gated node ids absent from SkillUpgradeMast
 suspicious_view_costs = []  # (skillId, total) where summed maxed View cost < 0
 liquid_template_statuses = Counter()  # status IDs whose base desc contains Liquid {{ }}
 
+# Community translations for per-tier condition lines, keyed "{skillId}_{serialNo}".
+# Set by load_all() so the condition-line resolvers pick them up without threading
+# the dict through skill_obj/build_hero/build_sidekick. Callers with the dict in
+# scope (gen_skill_upgrade_model) may still pass it explicitly to override.
+_SKILL_COND_TRANS = {}
+
 
 def status_type(status_master_entry):
     t = status_master_entry.get("statusType")
@@ -767,16 +773,23 @@ def skill_name(skill_id, SM, SkillTrans, GameTrans):
             or SM.get(sid, {}).get("skillName", ""))
 
 
-def base_condition_description(skill_id, SM, GameTrans):
+def base_condition_description(skill_id, SM, GameTrans, SkillCondTrans=None):
     """Skill-tree-upgraded skills often have an empty top-level `description`;
     the real text lives in effects[].conditionDescription on the base effect
     (conditionEntityId == 0), mirroring _includes/skill-description.html.
-    Prefer the GameTrans dump, fall back to raw Japanese master text."""
+    Prefer the community translation, then the GameTrans dump, fall back to raw
+    Japanese master text."""
+    if SkillCondTrans is None:
+        SkillCondTrans = _SKILL_COND_TRANS
     sid = str(skill_id)
     for eff in SM.get(sid, {}).get("effects") or []:
         if eff.get("conditionEntityId", 0) != 0:
             continue
-        en = GameTrans.get(f"SKILL_EFFECT_CONDITION_DESCRIPTION_{sid}_{eff.get('serialNo')}")
+        sn = eff.get("serialNo")
+        tl = SkillCondTrans.get(f"{sid}_{sn}", {}).get("description")
+        if tl:
+            return tl
+        en = GameTrans.get(f"SKILL_EFFECT_CONDITION_DESCRIPTION_{sid}_{sn}")
         if en:
             return en
         jp = eff.get("conditionDescription")
@@ -785,15 +798,17 @@ def base_condition_description(skill_id, SM, GameTrans):
     return ""
 
 
-def skill_description(skill_id, SM, SkillTrans, GameTrans):
+def skill_description(skill_id, SM, SkillTrans, GameTrans, SkillCondTrans=None):
     """Skill.json translation -> GameTrans dump -> raw Japanese master string ->
     base-effect conditionDescription (for skill-tree-upgraded skills whose
     top-level description is empty), always sanitized for the wiki tag set."""
+    if SkillCondTrans is None:
+        SkillCondTrans = _SKILL_COND_TRANS
     sid = str(skill_id)
     d = (SkillTrans.get(sid, {}).get("description")
          or GameTrans.get(f"SKILL_DESCRIPTION_{sid}")
          or SM.get(sid, {}).get("description")
-         or base_condition_description(skill_id, SM, GameTrans))
+         or base_condition_description(skill_id, SM, GameTrans, SkillCondTrans))
     return sanitizeSkillDescription(d or "")
 
 
@@ -823,7 +838,7 @@ def is_terminal_node(eid, SUM):
     return not node.get("nextEntryIds")
 
 
-def maxed_skill_description(skill_id, SM, SEM, SkillTrans, GameTrans, SUM):
+def maxed_skill_description(skill_id, SM, SEM, SkillTrans, GameTrans, SUM, SkillCondTrans=None):
     """Full fully-bloomed description of a skill-tree (bloom) skill.
 
     A bloom skill keeps the same skillId through its whole SkillUpgradeMaster
@@ -841,6 +856,8 @@ def maxed_skill_description(skill_id, SM, SEM, SkillTrans, GameTrans, SUM):
     node (nextEntryIds == null) -- the final value of a tiered line, since
     maxing unlocks the whole tree. Lines are emitted in serialNo order; GameTrans
     dump preferred, raw Japanese master fallback; result sanitized."""
+    if SkillCondTrans is None:
+        SkillCondTrans = _SKILL_COND_TRANS
     sid = str(skill_id)
     skill = SM.get(sid, {})
 
@@ -941,7 +958,8 @@ def maxed_skill_description(skill_id, SM, SEM, SkillTrans, GameTrans, SUM):
     parts = [base]
     for eff in kept:
         sn = eff.get("serialNo")
-        parts.append(GameTrans.get(f"SKILL_EFFECT_CONDITION_DESCRIPTION_{sid}_{sn}")
+        parts.append(SkillCondTrans.get(f"{sid}_{sn}", {}).get("description")
+                     or GameTrans.get(f"SKILL_EFFECT_CONDITION_DESCRIPTION_{sid}_{sn}")
                      or eff.get("conditionDescription") or "")
     return sanitizeSkillDescription("".join(parts))
 
@@ -1367,6 +1385,11 @@ def load_all(lang="en"):
     field survives for every language (see scoped_status_trans)."""
     is_english = lang == "en"
     status_trans_raw = load("Status.json", sub="translation")
+    skill_cond_trans = load("SkillCondition.json", sub="translation") if is_english else {}
+    # publish to the module global so the condition-line resolvers pick it up
+    # without threading the dict through skill_obj/build_hero/build_sidekick.
+    global _SKILL_COND_TRANS
+    _SKILL_COND_TRANS = skill_cond_trans
     return {
         "CardMaster": load("CardMaster.json"),
         "SidekickMaster": load("SidekickMaster.json"),
@@ -1377,6 +1400,7 @@ def load_all(lang="en"):
         "StatusTrans": scoped_status_trans(status_trans_raw, lang),
         "SkillEffectTrans": load("SkillEffect.json", sub="translation") if is_english else {},
         "SkillTrans": load("Skill.json", sub="translation") if is_english else {},
+        "SkillCondTrans": skill_cond_trans,
         "GameTrans": load_game_trans(lang),
         "chara_pages": build_chara_pages(CHARAS),
     }

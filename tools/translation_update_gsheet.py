@@ -18,6 +18,22 @@ sys.stderr = io.TextIOWrapper(sys.stderr.detach(), encoding='utf-8')
 # Hardcoded Sheet ID
 GOOGLE_SHEET_ID = "1PVTqJxN2-VF1TwSdlisrrLgW1vWlRKJSmv1cpCBaY-I"
 
+def get_or_create_worksheet(sh, name, header, dry_run=False):
+    """Return the worksheet named `name`, creating it (with `header` as row 1)
+    if it does not exist yet. In dry-run, skip creation and return None so the
+    caller reports the rows it *would* add without touching the sheet."""
+    try:
+        return sh.worksheet(name)
+    except gspread.WorksheetNotFound:
+        if dry_run:
+            print(f"[DRY RUN] Worksheet '{name}' missing; would create it with header {header}")
+            return None
+        print(f"Worksheet '{name}' not found, creating it...")
+        ws = sh.add_worksheet(title=name, rows=1, cols=len(header))
+        ws.update([header])
+        ws.freeze(rows=1)
+        return ws
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true", help="Print actions without executing")
@@ -41,6 +57,9 @@ def main():
 
     with open("skill-upgrade-jp.tsv", "r", encoding="utf-8") as f:
         skill_upgrade_data = list(csv.DictReader(f, delimiter='\t'))
+
+    with open("skill-condition-jp.tsv", "r", encoding="utf-8") as f:
+        skill_condition_data = list(csv.DictReader(f, delimiter='\t'))
 
     # 3. Update Sheets
     try:
@@ -80,6 +99,13 @@ def main():
                                   ['skillEntryId'], ['skillId', 'charaName', 'description'],
                                   ['descriptionTranslated'],
                                   args.dry_run)
+
+    # Bloom skill-tree per-tier condition lines.
+    sheet = sh.worksheet("EN skill condition")
+    updated_sc, new_sc = update_sheet(gc, sheet, "EN skill condition", skill_condition_data,
+                                      ['skillId', 'serialNo'], ['charaName', 'description'],
+                                      ['descriptionTranslated'],
+                                      args.dry_run)
 
     # Report
     msg = io.StringIO()
@@ -124,8 +150,17 @@ def main():
         msg.write(joined_pks(new_su))
         msg.write("\n")
 
+    if updated_sc or new_sc:
+        msg.write(f"- **Skill Conditions**: {len(updated_sc)} updated, {len(new_sc)} new\n")
+        msg.write("  - Updated IDs: ")
+        msg.write(joined_pks(updated_sc))
+        msg.write("\n")
+        msg.write("  - New IDs: ")
+        msg.write(joined_pks(new_sc))
+        msg.write("\n")
+
     if not (updated_s or new_s or updated_se or new_se or updated_st or new_st
-            or updated_su or new_su):
+            or updated_su or new_su or updated_sc or new_sc):
         msg.write("No changes detected.\n")
 
     report = msg.getvalue()
