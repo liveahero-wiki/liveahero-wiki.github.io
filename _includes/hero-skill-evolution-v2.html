@@ -8,10 +8,11 @@
   View cost update to match. Tap it again to re-activate it and its parents.</p>
 
 {% assign STCOL = "abcdefgh" | split: "" %}
+<div class="blooming">
 {% for skill in heroEvo.skills %}
 {% assign maxcol = 1 %}
 {% for row in skill.rows %}{% if row.size > maxcol %}{% assign maxcol = row.size %}{% endif %}{% endfor %}
-<div class="blooming skill-tree" data-skill-tree>
+<div class="skill-tree" data-skill-tree>
   <div class="blooming_main">
     <b>{{ skill.skillName }}</b>
     <p>View: <span data-st-view>{{ skill.maxedView }}</span></p>
@@ -38,3 +39,4 @@
   <script type="application/json" class="st-model">{{ skill | jsonify }}</script>
 </div>
 {% endfor %}
+</div>

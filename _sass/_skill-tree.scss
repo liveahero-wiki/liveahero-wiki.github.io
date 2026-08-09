@@ -1,4 +1,10 @@
-@media (max-width: 768px) {
+.blooming {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 5px;
+  margin-bottom: 30px;
+}
+@media (max-width: 400px) {
   .blooming {
     grid-template-columns: 1fr;
   }
@@ -8,14 +14,12 @@
   border-radius: 5px;
   padding: 10px;
 }
-.skill_tree tr:nth-child(odd) td {
-  background: var(--color50);
-}
-.skill_tree table {
-  margin: 0;
-}
 // Interactive skill-tree (bloom) UI — _includes/hero-skill-evolution-v2.html
 .skill-tree {
+  grid-column: 1 / -1; 
+  display: grid;
+  grid-template-columns: subgrid;
+
   .st-desc {
     margin-top: 8px;
   }
@@ -63,7 +67,7 @@
     img {
       width: 40px;
       height: 40px;
-      filter: var(--invert-filter);
+      filter: var(--mask-filter);
       object-fit: contain;
       object-position: center;
     }
