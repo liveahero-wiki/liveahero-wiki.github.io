@@ -183,6 +183,12 @@ Here is the bonus:
 
 {% include quest-group.html chapterId=1278 %}
 
+Here is a list of this event's fan translated episodes:
+
+| Episode  | Translation      | 
+|------------|------------------|
+| 1  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRb42_ox-WcqtesuWg4PFUNK7v616GExmHxsY5AWEeWyAE7Ghmznk3_nLrfvfuNL7yAF0foK_1Kr_6K/pubhtml?gid=0&single=true) |
+
 ### Free Quests
 
 {% include quest-group.html chapterId=1279 %}
