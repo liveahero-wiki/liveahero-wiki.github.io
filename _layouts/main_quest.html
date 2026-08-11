@@ -2,9 +2,11 @@
 layout: default
 ---
 
-<div class="page-header">
-<h1><a href="{{ page.url }}">Main Quest {{ page.book }}-{{page.chapter }}: {{ page.title }}</a></h1>
-</div>
+<table id="event-{{ page.eventId }}" class="event-infobox">
+<tr><th>Main Quest {{ page.book }}-{{page.chapter }}: {{ page.title }}</th></tr>
+{% assign banner_image = "/cdn/Sprite/" | append: page.banner_image %}
+<tr><td>{% include image-event.html path=banner_image style="width: 100%" %}</td></tr>
+</table>
 
 <h2>Quest Details</h2>
 
