@@ -1,5 +1,6 @@
 ---
 title: Main Quest Chapter 2
+mainQuestChapterId: 102
 gacha: true
 no_limited_quest: true
 news_link: https://live-a-hero.jp/info/847

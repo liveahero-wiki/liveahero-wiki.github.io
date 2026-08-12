@@ -1,0 +1,46 @@
+---
+title: Story Reading Order
+banner: true
+---
+
+{% assign events = site.events | sort: "eventId" %}
+{% assign counter = 1 %}
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for event in events %}
+  {% assign eventId = event.eventId | downcase %}
+  {% assign eventInfo = site.data.EventMaster[eventId] %}
+  {% if event.mainQuestChapterId %}
+    {% for mainQuest in site.main_quests %}
+      {% if mainQuest.chapterId == event.mainQuestChapterId %}
+        <tr>
+          <td>{{ counter }}</td>
+          <td><a href="{{ mainQuest.url }}">Main Quest Book {{ mainQuest.book }} Chapter {{ mainQuest.chapter }}: {{ mainQuest.title }}</a>
+            {% include image-event.html path=mainQuest.banner_image %}
+          </td>
+        </tr>
+        {% assign counter = counter | plus: 1 %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% elsif eventInfo.canRemember %}
+    <tr>
+      <td>{{ counter }}</td>
+      <td><a href="{{ event.url }}">{{ eventInfo.title }}</a>
+        {% assign bannerPath = "ui_banner_event_questbanner_" | append: eventInfo.baseResourceName | append: ".jpg" %}
+        {% include image-event.html path=bannerPath %}
+      </td>
+    </tr>
+    {% assign counter = counter | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+  </tbody>
+</table>
