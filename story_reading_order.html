@@ -3,10 +3,16 @@ title: Story Reading Order
 banner: true
 ---
 
-{% assign events = site.events | sort: "eventId" %}
+{% assign events = site.events %}
 {% assign counter = 1 %}
 
-<table>
+<style>
+.reading-order img {
+  display: block;
+}
+</style>
+
+<table class="reading-order">
   <thead>
     <tr>
       <th>#</th>
