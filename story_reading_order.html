@@ -23,7 +23,8 @@ banner: true
         <tr>
           <td>{{ counter }}</td>
           <td><a href="{{ mainQuest.url }}">Main Quest Book {{ mainQuest.book }} Chapter {{ mainQuest.chapter }}: {{ mainQuest.title }}</a>
-            {% include image-event.html path=mainQuest.banner_image %}
+            {% assign bannerPath = "https://liveahero-wiki.github.io/cdn/Sprite/" | append: mainQuest.banner_image %}
+            {% include image-event.html path=bannerPath %}
           </td>
         </tr>
         {% assign counter = counter | plus: 1 %}
@@ -33,8 +34,8 @@ banner: true
   {% elsif eventInfo.canRemember %}
     <tr>
       <td>{{ counter }}</td>
-      <td><a href="{{ event.url }}">{{ eventInfo.title }}</a>
-        {% assign bannerPath = "ui_banner_event_questbanner_" | append: eventInfo.baseResourceName | append: ".jpg" %}
+      <td><a href="{{ event.url }}">{{ event.title }}</a>
+        {% assign bannerPath = "https://liveahero-wiki.github.io/cdn/Sprite/ui_banner_event_questbanner_" | append: eventInfo.baseResourceName | append: ".webp" %}
         {% include image-event.html path=bannerPath %}
       </td>
     </tr>
