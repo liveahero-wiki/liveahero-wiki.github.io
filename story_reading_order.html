@@ -37,7 +37,7 @@ banner: true
         {% break %}
       {% endif %}
     {% endfor %}
-  {% elsif eventInfo.canRemember %}
+  {% elsif eventInfo.canRemember == 1 %}
     <tr>
       <td>{{ counter }}</td>
       <td><a href="{{ event.url }}">{{ event.title }}</a>
