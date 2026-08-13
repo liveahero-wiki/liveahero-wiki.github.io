@@ -18,12 +18,12 @@ importers:
         specifier: ^9.0.10
         version: 9.3.6(react@19.2.7)
       preact:
-        specifier: ^10.29.7
-        version: 10.29.7
+        specifier: ^10.29.8
+        version: 10.29.8
     devDependencies:
       '@preact/preset-vite':
         specifier: ^2.10.6
-        version: 2.10.6(@babel/core@7.29.7)(preact@10.29.7)(rollup@4.61.1)(vite@8.1.5(@types/node@25.9.3)(esbuild@0.27.7))
+        version: 2.10.6(@babel/core@7.29.7)(preact@10.29.8)(rollup@4.61.1)(vite@8.1.5(@types/node@25.9.3)(esbuild@0.27.7))
       '@types/node':
         specifier: ^25.9.3
         version: 25.9.3
@@ -987,8 +987,8 @@ packages:
     resolution: {integrity: sha512-lW616l85ucIQL+FocMmL7pQFPqBmwejrCMg+iPxyImlrANNJG9NHq/RkyCZopDhd8C3LA03PHRJDjkbGu8vvug==}
     engines: {node: ^10 || ^12 || >=14}
 
-  preact@10.29.7:
-    resolution: {integrity: sha512-DCHYrK/B10yUD3ZjLfhZ3WIE/9Vf9VFUODcRE2dRomTYDpJk6z6L9wecSfhfE6M9ZTHUdyQkoC46arIDhEV84Q==}
+  preact@10.29.8:
+    resolution: {integrity: sha512-ej2aVZ+vZ8WO7tvlQWRM9N63A0KzF9q4mWJfDUHgYaIofWY9hu74QdnQrjoPMmZi2/nZ5gN0bJCQF49xQqx09Q==}
     peerDependencies:
       preact-render-to-string: '>=5'
     peerDependenciesMeta:
@@ -1375,12 +1375,12 @@ snapshots:
 
   '@oxc-project/types@0.139.0': {}
 
-  '@preact/preset-vite@2.10.6(@babel/core@7.29.7)(preact@10.29.7)(rollup@4.61.1)(vite@8.1.5(@types/node@25.9.3)(esbuild@0.27.7))':
+  '@preact/preset-vite@2.10.6(@babel/core@7.29.7)(preact@10.29.8)(rollup@4.61.1)(vite@8.1.5(@types/node@25.9.3)(esbuild@0.27.7))':
     dependencies:
       '@babel/core': 7.29.7
       '@babel/plugin-transform-react-jsx': 7.29.7(@babel/core@7.29.7)
       '@babel/plugin-transform-react-jsx-development': 7.29.7(@babel/core@7.29.7)
-      '@prefresh/vite': 2.4.12(preact@10.29.7)(vite@8.1.5(@types/node@25.9.3)(esbuild@0.27.7))
+      '@prefresh/vite': 2.4.12(preact@10.29.8)(vite@8.1.5(@types/node@25.9.3)(esbuild@0.27.7))
       '@rollup/pluginutils': 5.4.0(rollup@4.61.1)
       babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.29.7)
       debug: 4.4.3
@@ -1396,20 +1396,20 @@ snapshots:
 
   '@prefresh/babel-plugin@0.5.3': {}
 
-  '@prefresh/core@1.5.10(preact@10.29.7)':
+  '@prefresh/core@1.5.10(preact@10.29.8)':
     dependencies:
-      preact: 10.29.7
+      preact: 10.29.8
 
   '@prefresh/utils@1.2.1': {}
 
-  '@prefresh/vite@2.4.12(preact@10.29.7)(vite@8.1.5(@types/node@25.9.3)(esbuild@0.27.7))':
+  '@prefresh/vite@2.4.12(preact@10.29.8)(vite@8.1.5(@types/node@25.9.3)(esbuild@0.27.7))':
     dependencies:
       '@babel/core': 7.29.7
       '@prefresh/babel-plugin': 0.5.3
-      '@prefresh/core': 1.5.10(preact@10.29.7)
+      '@prefresh/core': 1.5.10(preact@10.29.8)
       '@prefresh/utils': 1.2.1
       '@rollup/pluginutils': 4.2.1
-      preact: 10.29.7
+      preact: 10.29.8
       vite: 8.1.5(@types/node@25.9.3)(esbuild@0.27.7)
     transitivePeerDependencies:
       - supports-color
@@ -1852,7 +1852,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  preact@10.29.7: {}
+  preact@10.29.8: {}
 
   prop-types@15.8.1:
     dependencies:
