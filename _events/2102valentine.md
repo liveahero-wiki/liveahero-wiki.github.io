@@ -11,6 +11,7 @@ farm_start_time: 2021-02-22T20:00:00+09
 farm_end_time: 2021-03-15T20:00:00+09
 sales_start_time: 2021-02-22T20:00:00+09
 sales_end_time: 2021-03-15T20:00:00+09
+translated: true
 ---
 
 ## Event Details
