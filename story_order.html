@@ -1,0 +1,66 @@
+---
+title: Story Order
+banner: true
+---
+
+{% assign events = site.events %}
+{% assign counter = 2 %}
+
+<style>
+.reading-order img {
+  display: block;
+}
+.translated {
+  background-color: rgb(144 230 144 / 30%);
+}
+</style>
+
+<p>Events and Main Quests are sorted by the order they appear in-game. Highlighted rows have been officially translated in-game.</p>
+
+<table class="reading-order">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% assign mainQuest = site.main_quests[0] %}
+    <tr class="translated">
+      <td>1</td>
+      <td><a href="{{ mainQuest.url }}">Main Quest Book {{ mainQuest.book }} Chapter {{ mainQuest.chapter }}: {{ mainQuest.title }}</a>
+        {% assign bannerPath = "https://liveahero-wiki.github.io/cdn/Sprite/" | append: mainQuest.banner_image %}
+        {% include image-event.html path=bannerPath %}
+      </td>
+    </tr>
+{% for event in events %}
+  {% assign eventId = event.eventId | downcase %}
+  {% assign eventInfo = site.data.EventMaster[eventId] %}
+  {% if event.mainQuestChapterId %}
+    {% for mainQuest in site.main_quests %}
+      {% if mainQuest.chapterId == event.mainQuestChapterId %}
+        <tr {% if mainQuest.translated %}class="translated"{% endif %}>
+          <td>{{ counter }}</td>
+          <td><a href="{{ mainQuest.url }}">Main Quest Book {{ mainQuest.book }} Chapter {{ mainQuest.chapter }}: {{ mainQuest.title }}</a>
+            {% assign bannerPath = "https://liveahero-wiki.github.io/cdn/Sprite/" | append: mainQuest.banner_image %}
+            {% include image-event.html path=bannerPath %}
+          </td>
+        </tr>
+        {% assign counter = counter | plus: 1 %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% elsif eventInfo.canRemember == 1 %}
+    <tr {% if event.translated %}class="translated"{% endif %}>
+      <td>{{ counter }}</td>
+      <td><a href="{{ event.url }}">{{ event.title }}</a>
+        {% assign bannerPath = "https://liveahero-wiki.github.io/cdn/Sprite/ui_banner_event_questbanner_" | append: eventInfo.baseResourceName | append: ".webp" %}
+        {% include image-event.html path=bannerPath %}
+      </td>
+    </tr>
+    {% assign counter = counter | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+  </tbody>
+</table>

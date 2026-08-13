@@ -1,6 +1,6 @@
 ---
 title: Bumper Crop! Battleship Fishers (Re-run)
-eventId: 109
+eventId: 169
 jp_title: 【復刻】超大漁！バトルシップ・フィッシャーズ
 news_link: https://live-a-hero.jp/en/info/13919
 banner_image: banner_info_BattleShip2411.webp

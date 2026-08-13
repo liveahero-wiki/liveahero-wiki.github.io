@@ -1,5 +1,6 @@
 ---
 title: Main Quest Chapter 4
+mainQuestChapterId: 104
 eventId: 17
 gacha: true
 no_limited_quest: true

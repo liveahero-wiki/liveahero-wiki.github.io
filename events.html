@@ -3,6 +3,8 @@ title: Events
 banner: true
 ---
 
+<p>Click <a href="/story_order/">here</a> to see the story reading order.</p>
+
 {% assign eventsByYear  = site.events | group_by_exp: "event", "event.event_start_time | date: '%Y'" %}
 {% assign current_date = site.time | date: "%s" | plus: 0 %}
 {% for year in eventsByYear reversed %}

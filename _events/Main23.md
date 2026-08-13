@@ -1,5 +1,6 @@
 ---
 title: Main Quest Book 2 Chapter 3
+mainQuestChapterId: 108
 gacha: true
 no_limited_quest: true
 news_link: https://live-a-hero.jp/info/11775
