@@ -293418,6 +293418,77 @@
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
   },
+  "1278006": {
+    "questId": 1278006,
+    "questName": "プロジェクト・ファンタズマ",
+    "subName": "第６話",
+    "questKind": 5,
+    "chapterId": 1278,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "questEffectWindowAddress": "",
+    "startAt": "2026-08-14 18:00:00",
+    "endAt": "2026-08-27 14:00:00",
+    "questEffectLimitCount": 0,
+    "dayOfWeek": 0,
+    "sortWeight": 6,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "canReturnScenes": [],
+    "questReturnOption": 2,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isAddReward": false,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 288,
+        "objectValue": 5,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isAddReward": false,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1278005,
+        "checkNotCleared": false,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
   "1279001": {
     "questId": 1279001,
     "questName": "夢幻のリゾート防衛戦！",
@@ -294504,6 +294575,143 @@
     "dayOfWeek": 0,
     "sortWeight": 0,
     "enemyLevel": 55,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "canReturnScenes": [],
+    "questReturnOption": 0,
+    "rewards": [],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1278001,
+        "checkNotCleared": false,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuSnakeCoreEX_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 105
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuSnakeCoreEX2_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 107
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": true,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": [
+      {
+        "score": 0,
+        "iconAddress": "ui_symbol_estimation_C"
+      },
+      {
+        "score": 30000,
+        "iconAddress": "ui_symbol_estimation_B"
+      },
+      {
+        "score": 65000,
+        "iconAddress": "ui_symbol_estimation_A"
+      },
+      {
+        "score": 90000,
+        "iconAddress": "ui_symbol_estimation_S"
+      }
+    ],
+    "scoreAttackBonuses": [
+      {
+        "description": "UI_BONUS_TARGET_HERO",
+        "characters": [
+          {
+            "stockId": 13261,
+            "cardType": 1,
+            "skillId": 79
+          },
+          {
+            "stockId": 13271,
+            "cardType": 1,
+            "skillId": 79
+          },
+          {
+            "stockId": 11132,
+            "cardType": 1,
+            "skillId": 70
+          },
+          {
+            "stockId": 13281,
+            "cardType": 1,
+            "skillId": 70
+          }
+        ]
+      },
+      {
+        "description": "UI_BONUS_TARGET_SIDEKICK",
+        "characters": [
+          {
+            "stockId": 13261,
+            "cardType": 2,
+            "skillId": 75
+          },
+          {
+            "stockId": 13271,
+            "cardType": 2,
+            "skillId": 75
+          },
+          {
+            "stockId": 13281,
+            "cardType": 2,
+            "skillId": 75
+          }
+        ]
+      }
+    ],
+    "scoreAttackStandards": [
+      {
+        "label": "UI_SCORE_ATTACK_CLEAR_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_CLEAR_BONUS_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_HP_SCORE_LABEL",
+        "description": "UI_SCORE_ATTACK_HP_SCORE_DESCRIPTION"
+      },
+      {
+        "label": "UI_SCORE_ATTACK_TURN_BONUS_LABEL",
+        "description": "UI_SCORE_ATTACK_TURN_BONUS_DESCRIPTION"
+      }
+    ],
+    "scoreAttackHintTextKey": "UI_QUEST_DETAIL_SPECIAL_CONDITION_MONTAGE",
+    "scoreAttackBattleCount": 1,
+    "rewardUpRate": null
+  },
+  "1283001": {
+    "questId": 1283001,
+    "questName": "夢幻の海に潜む大蛇",
+    "subName": "難易度：ベリーハード",
+    "questKind": 8,
+    "chapterId": 1283,
+    "bannerResourceName": "ui_window_quest_07",
+    "iconFilename": "icon_kaibutsuSnakeCoreEX_h01",
+    "questEffectWindowAddress": "",
+    "startAt": "2026-08-14 18:00:00",
+    "endAt": "2026-08-27 14:00:00",
+    "questEffectLimitCount": 0,
+    "dayOfWeek": 0,
+    "sortWeight": 0,
+    "enemyLevel": 65,
     "canNotRetire": false,
     "canNotContinue": true,
     "canNotGetFriendPoint": true,
@@ -295884,6 +296092,49 @@
     "questEffectWindowAddress": "",
     "startAt": null,
     "endAt": null,
+    "questEffectLimitCount": 0,
+    "dayOfWeek": 0,
+    "sortWeight": 10,
+    "enemyLevel": 0,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "canReturnScenes": [],
+    "questReturnOption": 2,
+    "rewards": [],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [],
+    "enemies": [],
+    "hasAdv": true,
+    "hasBattle": false,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1295001": {
+    "questId": 1295001,
+    "questName": "プロローグ",
+    "subName": "バケーションクエスト",
+    "questKind": 7,
+    "chapterId": 1295,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "questEffectWindowAddress": "",
+    "startAt": null,
+    "endAt": "2026-08-27 14:00:00",
     "questEffectLimitCount": 0,
     "dayOfWeek": 0,
     "sortWeight": 10,
