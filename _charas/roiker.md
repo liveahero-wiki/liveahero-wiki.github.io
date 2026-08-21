@@ -32,6 +32,7 @@ heroes:
     to desire to know more about it, as he want to meet and talk to himself in the
     parallel universe.
 - stockId: 11132
+  extra_sprites: fg_roikerMontage2607_h02_skin2
 sidekicks:
 - stockId: 11131
   BIO_S01: |-
