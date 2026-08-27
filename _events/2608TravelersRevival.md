@@ -10,7 +10,7 @@ farm_start_time: 2026-08-27T20:00:00+09
 farm_end_time: 2026-09-17T14:00:00+09
 sales_start_time: 2026-08-27T20:00:00+09
 sales_end_time: 2026-09-17T14:00:00+09
-news_link: 
+news_link: https://live-a-hero.jp/info/14624
 ---
 
 * this will be unordered
