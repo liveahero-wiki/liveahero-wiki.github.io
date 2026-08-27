@@ -1,6 +1,7 @@
 ---
 title: Chocolate Seekers
 eventId: 114
+has_story: true
 jp_title: チョコレート・シーカーズ
 news_link: https://live-a-hero.jp/info/10707
 banner_image: banner_info_Seekers2502.webp

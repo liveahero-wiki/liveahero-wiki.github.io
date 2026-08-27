@@ -1,6 +1,7 @@
 ---
 title: Akatsuki's Golden Spirit
 eventId: 2
+has_story: true
 jp_title: 暁のゴールデン・スピリット
 news_link: https://live-a-hero.jp/info/692
 banner_image: banner_info_2010akatsuki.jpg

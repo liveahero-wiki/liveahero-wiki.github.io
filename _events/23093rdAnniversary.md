@@ -1,6 +1,7 @@
 ---
 title: 3rd Anniversary
 eventId: 66
+has_story: true
 jp_title: 3周年記念キャンペーン
 news_link: https://live-a-hero.jp/info/6759
 banner_image: ui_banner_3rdAnniversary.webp

@@ -1,6 +1,7 @@
 ---
 title: Valentine Cyber Wars
 eventId: 8
+has_story: true
 jp_title: バレンタイン・サイバーウォー
 news_link: https://live-a-hero.jp/info/1404
 banner_image: banner_info_2102Valentine.jpg

@@ -1,6 +1,7 @@
 ---
 title: Stella Link Carnival
 eventId: 143
+has_story: true
 jp_title: ステラリンク・カーニバル 
 banner_image: banner_info_Stella2510.jpg
 gacha: true

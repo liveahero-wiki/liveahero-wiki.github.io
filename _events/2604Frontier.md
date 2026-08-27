@@ -1,6 +1,7 @@
 ---
 title: Echoes of Frontier Memories
 eventId: 166
+has_story: true
 jp_title: 残響のフロンティアメモリーズ
 banner_image: banner_info_Frontier2604_en.webp
 gacha: true

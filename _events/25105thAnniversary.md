@@ -1,6 +1,7 @@
 ---
 title: 5th Anniversary
 eventId: 144
+has_story: true
 jp_title: 5周年記念キャンペーン
 news_link: https://live-a-hero.jp/info/12066
 banner_image: ui_banner_event_questbanner_5thAnniversary2510.jpg

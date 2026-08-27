@@ -1,6 +1,7 @@
 ---
 title: Rookies Summer Festa
 eventId: 101
+has_story: true
 jp_title: ルーキーズ・サマーフェスタ
 news_link: https://live-a-hero.jp/info/9398
 banner_image: ui_banner_info_Rookies2408.webp

@@ -1,6 +1,7 @@
 ---
 title: Light Years Illumination
 eventId: 110
+has_story: true
 jp_title: ライトイヤーズ・イルミネーション
 news_link: https://live-a-hero.jp/info/10298
 banner_image: banner_info_LightYears2412.jpg

@@ -1,6 +1,7 @@
 ---
 title: Bumper Crop! Battleship Fishers
 eventId: 109
+has_story: true
 jp_title: 超大漁！バトルシップ・フィッシャーズ
 news_link: https://live-a-hero.jp/info/10130
 banner_image: banner_info_BattleShip2411.webp

@@ -1,6 +1,7 @@
 ---
 title: World End Travelers
 eventId: 126
+has_story: true
 jp_title: ワールドエンド・トラベラーズ
 news_link: https://live-a-hero.jp/info/11057
 banner_image: banner_info_Travelers2504.webp

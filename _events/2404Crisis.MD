@@ -1,6 +1,7 @@
 ---
 title: Jailbreak! Health Check Crisis!
 eventId: 87
+has_story: true
 jp_title: 脱獄！ヘルスチェック・クライシス
 news_link: https://live-a-hero.jp/info/8228
 banner_image: ui_banner_info_Crisis2404.jpg

@@ -1,6 +1,7 @@
 ---
 title: Summer Night Last Illusion
 eventId: 97
+has_story: true
 jp_title: サマーナイツ・ラストイリュージョン
 news_link: https://live-a-hero.jp/info/9090
 banner_image: ui_banner_info_SummerNight2407.webp

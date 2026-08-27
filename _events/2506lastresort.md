@@ -1,6 +1,7 @@
 ---
 title: Enoshima Last Resort
 eventId: 131
+has_story: true
 jp_title: チョコレート・シーカーズ
 news_link: https://live-a-hero.jp/info/11404
 banner_image: banner_info_LastResort2506.webp

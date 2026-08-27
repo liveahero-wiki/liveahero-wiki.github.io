@@ -1,6 +1,7 @@
 ---
 title: New Year 2026
 eventId: 152
+has_story: true
 jp_title: 謹賀新年2026！
 banner_image: ui_banner_event_questbanner_NewYear2601.webp
 gacha: true

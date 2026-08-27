@@ -1,6 +1,7 @@
 ---
 title: City of Engraved Partings ～Smoke and Mirrors～
 eventId: 147
+has_story: true
 jp_title: さよならを刻む街 ～Smoke and Mirrors～
 banner_image: banner_info_Mirrors2511.webp
 gacha: true

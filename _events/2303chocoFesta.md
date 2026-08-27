@@ -1,6 +1,7 @@
 ---
 title: Chocolate Festa
 eventId: 54
+has_story: true
 jp_title: 押忍！チョコ学園祭メモリーズ
 news_link: https://live-a-hero.jp/info/5460
 banner_image: banner_campaign_chocoFesta.jpg

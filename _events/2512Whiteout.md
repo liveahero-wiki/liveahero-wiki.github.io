@@ -1,6 +1,7 @@
 ---
 title: Whiteout Liberation
 eventId: 151
+has_story: true
 jp_title: ホワイトアウト・リベレーション
 banner_image: ui_banner_event_questbanner_Whiteout2512.webp
 gacha: true

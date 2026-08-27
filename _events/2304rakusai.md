@@ -1,6 +1,7 @@
 ---
 title: Rakusai Travelouge ～When stars connect～
 eventId: 55
+has_story: true
 jp_title: 洛祭紀行～星つなぐとき～
 news_link: https://live-a-hero.jp/info/5683
 banner_image: ui_banner_info_Rakusai2304.webp

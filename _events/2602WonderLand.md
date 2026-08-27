@@ -1,6 +1,7 @@
 ---
 title: Chocolate Fight Wonderland
 eventId: 157
+has_story: true
 jp_title: チョコレートファイト・ワンダーランド
 banner_image: banner_info_WonderLand2602.webp
 gacha: true

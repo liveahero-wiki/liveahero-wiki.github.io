@@ -1,6 +1,7 @@
 ---
 title: ~With Love, from~ Choco Volcano
 eventId: 81
+has_story: true
 jp_title: チョコ・ヴォルカーノより愛を込めて
 news_link: https://live-a-hero.jp/info/7954
 banner_image: ui_banner_info_Volcano2402.webp

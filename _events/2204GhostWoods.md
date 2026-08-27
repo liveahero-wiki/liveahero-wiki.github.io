@@ -1,6 +1,7 @@
 ---
 title: Reminiscence of Ghostwoods
 eventId: 32
+has_story: true
 jp_title: 追憶のゴーストウッズ
 news_link: https://live-a-hero.jp/info/3744
 banner_image: banner_info_2204GhostWoods.jpg

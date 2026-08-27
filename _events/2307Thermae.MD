@@ -1,6 +1,7 @@
 ---
 title: Aqua Vacation Thermae Panic!
 eventId: 61
+has_story: true
 jp_title: アクアバケーション・テルマエパニック！
 news_link: https://live-a-hero.jp/info/6373
 banner_image: ui_banner_info_Thermae2307.jpg
