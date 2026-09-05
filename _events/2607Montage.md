@@ -192,6 +192,7 @@ Here is a list of this event's fan translated episodes:
 | 3  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRb42_ox-WcqtesuWg4PFUNK7v616GExmHxsY5AWEeWyAE7Ghmznk3_nLrfvfuNL7yAF0foK_1Kr_6K/pubhtml?gid=1130549155&single=true) |
 | 4  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRb42_ox-WcqtesuWg4PFUNK7v616GExmHxsY5AWEeWyAE7Ghmznk3_nLrfvfuNL7yAF0foK_1Kr_6K/pubhtml?gid=402657304&single=true) |
 | 5  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRb42_ox-WcqtesuWg4PFUNK7v616GExmHxsY5AWEeWyAE7Ghmznk3_nLrfvfuNL7yAF0foK_1Kr_6K/pubhtml?gid=1117877134&single=true) |
+| 6  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRb42_ox-WcqtesuWg4PFUNK7v616GExmHxsY5AWEeWyAE7Ghmznk3_nLrfvfuNL7yAF0foK_1Kr_6K/pubhtml?gid=614396491&single=true) |
 | Epilogue: Roiker  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRb42_ox-WcqtesuWg4PFUNK7v616GExmHxsY5AWEeWyAE7Ghmznk3_nLrfvfuNL7yAF0foK_1Kr_6K/pubhtml?gid=367047181&single=true) |
 
 ### Free Quests
