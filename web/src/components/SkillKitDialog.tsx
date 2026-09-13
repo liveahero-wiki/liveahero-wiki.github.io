@@ -7,7 +7,7 @@
 import { useEffect, useRef } from 'preact/hooks'
 import type { Entity, Status } from '../types'
 import type { Lang } from '../lib/lang'
-import { t, slotLabel } from '../lib/uiTranslations'
+import { t, slotLabel, elementLabel } from '../lib/uiTranslations'
 import { effectiveSkills } from '../lib/filters'
 import { statusIcon, portrait } from '../lib/urls'
 import { SkillDescription } from './SkillDescription'
@@ -75,7 +75,12 @@ export function SkillKitDialog({ entity, skillTree, statuses, lang, onClose }: S
               }}
             />
             <h2 id="kit-dialog-title">{entity.name}</h2>
-            <span class="kit-kind">{entity.kind === 'hero' ? t(lang, 'kind_hero') : t(lang, 'kind_sidekick')}</span>
+            <span class="kit-kind">
+              {entity.kind === 'hero' ? t(lang, 'kind_hero') : t(lang, 'kind_sidekick')}
+              {entity.kind === 'hero' && entity.element != null
+                ? ` · ${elementLabel(lang, entity.element)}`
+                : ''}
+            </span>
             <button
               type="button"
               class="kit-close"

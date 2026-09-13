@@ -116,6 +116,13 @@ class TestSkillTreeMaxed(unittest.TestCase):
                 intermediate, names,
                 f"intermediate VP Cost {intermediate!r} must not appear after maxing")
 
+    def test_hero_attribute_is_integer(self):
+        cards = load("CardMaster.json")
+        akashi_entries = [c for c in cards.values() if c.get("stockId") == 10011]
+        hero = build_hero(akashi_entries, self.SM, self.SEM, self.SMA, self.SUM, {}, {}, {}, {}, {})
+        self.assertIsInstance(hero.get("element"), int)
+        self.assertEqual(hero["element"], 1)
+
 
 class TestIsTerminalNode(unittest.TestCase):
     """is_terminal_node and its recall-safe handling of unknown node ids."""

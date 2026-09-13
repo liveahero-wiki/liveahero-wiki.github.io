@@ -1,9 +1,10 @@
 import type { Lang } from './lang'
 
 export type UIKey =
-  | 'character' | 'type' | 'role' | 'status_type' | 'has_status' | 'view_cost'
+  | 'character' | 'type' | 'element' | 'role' | 'status_type' | 'has_status' | 'view_cost'
   | 'hero' | 'sidekick'
   | 'attack' | 'defense' | 'assistance' | 'debuff' | 'speed' | 'vp_gain' | 'heal' | 'special'
+  | 'elem_fire' | 'elem_water' | 'elem_wood' | 'elem_light' | 'elem_shadow'
   | 'buff'
   | 'enable_skill_tree' | 'include_mob' | 'show_debug_info' | 'reset_all'
   | 'skills_suffix' | 'char_placeholder' | 'view_min' | 'view_max'
@@ -23,6 +24,7 @@ type Translations = Record<UIKey, { en: string } & Partial<Record<Lang, string>>
 const TRANSLATIONS: Translations = {
   character: { en: 'Character', 'zh-Hans': '角色', 'zh-Hant': '角色', ja: 'キャラ' },
   type: { en: 'Type', 'zh-Hans': '类型', 'zh-Hant': '類型', ja: 'タイプ' },
+  element: { en: 'Element', 'zh-Hans': '属性', 'zh-Hant': '屬性', ja: '属性' },
   role: { en: 'Role', 'zh-Hans': '角色定位', 'zh-Hant': '角色定位', ja: 'ロール' },
   status_type: { en: 'Status type', 'zh-Hans': '状态类型', 'zh-Hant': '狀態類型', ja: '状態種別' },
   has_status: { en: 'Has status', 'zh-Hans': '含有状态', 'zh-Hant': '含有狀態', ja: '状態を持つ' },
@@ -30,6 +32,11 @@ const TRANSLATIONS: Translations = {
 
   hero: { en: 'Hero', 'zh-Hans': '英雄', 'zh-Hant': '英雄', ja: 'ヒーロー' },
   sidekick: { en: 'Sidekick', 'zh-Hans': '助手', 'zh-Hant': '助手', ja: 'サイドキック' },
+  elem_fire: { en: 'Fire', 'zh-Hans': '火', 'zh-Hant': '火', ja: '火' },
+  elem_water: { en: 'Water', 'zh-Hans': '水', 'zh-Hant': '水', ja: '水' },
+  elem_wood: { en: 'Wood', 'zh-Hans': '木', 'zh-Hant': '木', ja: '木' },
+  elem_light: { en: 'Light', 'zh-Hans': '光', 'zh-Hant': '光', ja: '光' },
+  elem_shadow: { en: 'Shadow', 'zh-Hans': '影', 'zh-Hant': '影', ja: '影' },
   attack: { en: 'Attack', 'zh-Hans': '攻击', 'zh-Hant': '攻擊', ja: '攻撃' },
   defense: { en: 'Defense', 'zh-Hans': '防御', 'zh-Hant': '防禦', ja: '防御' },
   assistance: { en: 'Assistance', 'zh-Hans': '辅助', 'zh-Hant': '輔助', ja: 'サポート' },
@@ -104,4 +111,17 @@ const SLOT_KEY_MAP: Record<string, UIKey> = {
 export function slotLabel(lang: Lang, slot: string): string {
   const key = SLOT_KEY_MAP[slot]
   return key ? t(lang, key) : slot
+}
+
+const ELEMENT_KEY_MAP: Record<number, UIKey> = {
+  1: 'elem_fire',
+  2: 'elem_water',
+  3: 'elem_wood',
+  4: 'elem_light',
+  5: 'elem_shadow',
+}
+
+export function elementLabel(lang: Lang, elementId: number): string {
+  const key = ELEMENT_KEY_MAP[elementId]
+  return key ? t(lang, key) : String(elementId)
 }

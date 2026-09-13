@@ -5,7 +5,7 @@ import type { JSX } from 'preact'
 import type { Query, SkillIndex } from '../types'
 import type { Lang } from '../lib/lang'
 import type { QueryAction } from '../app'
-import { t } from '../lib/uiTranslations'
+import { t, elementLabel } from '../lib/uiTranslations'
 import { ButtonRow } from './ButtonRow'
 import { StatusAutocomplete } from './StatusAutocomplete'
 
@@ -24,6 +24,11 @@ export function FilterPanel({ index, query, dispatch, resultCount, showLabels, o
     { key: 'hero',     label: t(lang, 'hero') },
     { key: 'sidekick', label: t(lang, 'sidekick') },
   ]
+
+  const ELEMENT_OPTIONS = [1, 2, 3, 4, 5].map((id) => ({
+    key: String(id),
+    label: elementLabel(lang, id),
+  }))
 
   const ROLE_OPTIONS = [
     { key: 'attack',     label: t(lang, 'attack') },
@@ -66,6 +71,16 @@ export function FilterPanel({ index, query, dispatch, resultCount, showLabels, o
         lang={lang}
         onToggle={(v) => dispatch({ type: 'toggle', field: 'types', value: v })}
         onClear={() => dispatch({ type: 'clear', field: 'types' })}
+      />
+
+      <ButtonRow
+        label={t(lang, 'element')}
+        options={ELEMENT_OPTIONS}
+        selected={query.elements}
+        relation="or"
+        lang={lang}
+        onToggle={(v) => dispatch({ type: 'toggle', field: 'elements', value: v })}
+        onClear={() => dispatch({ type: 'clear', field: 'elements' })}
       />
 
       <ButtonRow

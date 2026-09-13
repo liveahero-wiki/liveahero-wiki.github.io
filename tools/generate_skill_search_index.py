@@ -39,7 +39,7 @@ CHARAS = "_charas"
 # emitted JSON without a masterdata version change. Appended to the cache key so
 # clients (search/src/data/loadIndex.js) refetch the index instead of reusing a
 # stale cache.
-INDEX_SCHEMA_REV = "r14"
+INDEX_SCHEMA_REV = "r15"
 
 
 # --- Undocumented game-data enums / magic numbers ---------------------------
@@ -1193,7 +1193,8 @@ def make_entity(rep, stock_entries, kind, suffix, skills, chara_pages, has_tree=
     given (base) skills; callers add the *Maxed variants afterwards."""
     rarities = [e.get("rarity") for e in stock_entries if e.get("rarity") is not None]
     name, page = chara_name_and_page(rep, suffix, chara_pages)
-    return {
+    element = rep.get("element")
+    entity = {
         "stockId": rep.get("stockId"),
         "kind": kind,
         "name": name,
@@ -1208,6 +1209,9 @@ def make_entity(rep, stock_entries, kind, suffix, skills, chara_pages, has_tree=
         "labels": aggregate(skills, "labels"),
         "statusIds": aggregate(skills, "statusIds"),
     }
+    if element is not None:
+        entity["element"] = element
+    return entity
 
 
 def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, GameTrans, SkillEffectTrans, StatusTrans, chara_pages):
