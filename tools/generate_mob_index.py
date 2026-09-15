@@ -96,6 +96,19 @@ def icon_filename(sprite):
     return "icon_" + sprite[len("fg_"):] + ".png"
 
 
+VILLAIN_PREFIX_PATTERN = re.compile(r'^fg_villain([A-Z].*)$')
+
+
+def strip_villain_prefix(sprite):
+    """fg_villainAndroidSoldierFire_s01 -> fg_androidSoldierFire_s01, or None
+    if sprite isn't villain-prefixed."""
+    m = VILLAIN_PREFIX_PATTERN.match(sprite)
+    if not m:
+        return None
+    rest = m.group(1)
+    return "fg_" + rest[0].lower() + rest[1:]
+
+
 def strip_element(filename):
     return ELEMENT_PATTERN.sub("", filename, count=1)
 
@@ -128,6 +141,11 @@ def build_series(entry):
         return None
 
     resolved = resolve_icons(sprites)
+    if not resolved:
+        stripped = [strip_villain_prefix(s) for s in sprites]
+        if all(stripped):
+            print(f"  no icons found for villain-prefixed sprites, retrying without 'villain' prefix")
+            resolved = resolve_icons(stripped)
     if not resolved:
         print(f"  warning: no icons resolved for '{heading}', skipping")
         return None
