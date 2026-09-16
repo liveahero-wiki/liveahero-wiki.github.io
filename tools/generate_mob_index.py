@@ -55,8 +55,8 @@ BLACKLIST = set([
 
 HARDCODE_KAIBUTSU = [
     {
-        "id": "armor-kaibutsu",
-        "name": "Armor Kaibutsu",
+        "id": "gatekeeper",
+        "name": "Gatekeeper",
         "category": "kaibutsu",
         "parentSeries": None,
         "icon": "/" + OUT_DIR.replace(os.sep, "/") + "/icon_kaibutsuArmorBlack_h01.png",
