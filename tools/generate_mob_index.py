@@ -45,12 +45,42 @@ SUBVARIANT_OF = {
 # Override the auto-detected category (default: "kaibutsu" if the heading
 # contains "Kaibutsu", else "villain") for headings that don't fit that rule.
 CATEGORY_OVERRIDES = {
-    "Imposter": "kaibutsu"
+    "Imposter": "kaibutsu",
+    "Id Replica": "kaibutsu",
 }
 
 BLACKLIST = set([
     "Eno Seaman",
 ])
+
+HARDCODE_KAIBUTSU = [
+    {
+        "id": "armor-kaibutsu",
+        "name": "Armor Kaibutsu",
+        "category": "kaibutsu",
+        "parentSeries": None,
+        "icon": "/" + OUT_DIR.replace(os.sep, "/") + "/icon_kaibutsuArmorBlack_h01.png",
+        "sprites": [
+            "fg_kaibutsuArmorBlack_h01.png"
+        ],
+    },
+    {
+        "id": "tear-kaibutsu",
+        "name": "Tear (Kaibutsu)",
+        "category": "kaibutsu",
+        "parentSeries": None,
+        "icon": "/" + OUT_DIR.replace(os.sep, "/") + "/icon_kaibutsuHokorobi_h01.png",
+        "sprites": [
+            "fg_kaibutsuHokorobi_h01.png"
+        ],
+    },
+]
+
+NAME_OVERRIDE_MAP = {
+    "Villain": "Wolfman",
+    "Villain (Summer)": "Wolfman (Summer)",
+    "Villain (Transform)": "Wolfman (Transform)",
+}
 
 HEADING_PATTERN = re.compile(
     r'^### (?P<heading>.+?)\s*\n+'
@@ -139,6 +169,8 @@ def build_series(entry):
 
     if heading in BLACKLIST:
         return None
+
+    heading = NAME_OVERRIDE_MAP.get(heading, heading)
 
     resolved = resolve_icons(sprites)
     if not resolved:
@@ -258,6 +290,8 @@ def main():
         del series["_icon_paths"]
         del series["_out_path"]
         series_list.append(series)
+
+    series_list.extend(HARDCODE_KAIBUTSU)
 
     version = f"{get_version()}-{INDEX_SCHEMA_REV}"
     index = {"version": version, "series": series_list}
