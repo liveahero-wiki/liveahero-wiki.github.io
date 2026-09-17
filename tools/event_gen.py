@@ -32,8 +32,8 @@ def generate_campaign(eventId: str, pageName: str, E: dict):
         f.write(f"banner_image: \n")
         f.write(f"gacha: false\n")
 
-        startAt = E.get("startAt", "").replace(" ", "T") + "+09"
-        endAt = E.get("endAt", "").replace(" ", "T") + "+09"
+        startAt = (E.get("startAt", "") or "").replace(" ", "T") + "+09"
+        endAt = (E.get("endAt", "") or "").replace(" ", "T") + "+09"
         f.write(f"event_start_time: {startAt}\n")
         f.write(f"event_end_time: {endAt}\n")
 
