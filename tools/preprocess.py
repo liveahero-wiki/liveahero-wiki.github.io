@@ -12,6 +12,7 @@ from wiki_util import dumpJson, sanitizeText, omitEmptyDict
 def processPropertiesFile(raw_file, bio_file, serif_file, profile_file, library_file, sales_report_file,
     score_attack_file,
     card_collection_file,
+    jp_map=None,
 ):
     with open(os.path.join("zzz", raw_file), "rb") as f:
         obj = json.load(f)
@@ -56,6 +57,24 @@ def processPropertiesFile(raw_file, bio_file, serif_file, profile_file, library_
     score_attack = collections.OrderedDict(sorted(score_attack.items()))
     card_collection = collections.OrderedDict(sorted(card_collection.items()))
 
+    our_map = dict(
+        detail=detail,
+        serif=serif,
+        profile=profile,
+        library=library,
+        sales_report=sales_report,
+        score_attack=score_attack,
+        card_collection=card_collection,
+    )
+
+    if jp_map:
+        for key in our_map.keys():
+            jp_m = jp_map[key]
+            our_m = our_map[key]
+            for k in list(our_m.keys()):
+                if jp_m.get(k) == our_m.get(k):
+                    del our_m[k]
+
     dumpJson(os.path.join("_data", "processed", bio_file), detail)
     dumpJson(os.path.join("_data", "processed", serif_file), serif)
     dumpJson(os.path.join("_data", "processed", profile_file), profile)
@@ -63,6 +82,8 @@ def processPropertiesFile(raw_file, bio_file, serif_file, profile_file, library_
     dumpJson(os.path.join("_data", "processed", sales_report_file), sales_report)
     dumpJson(os.path.join("_data", "processed", score_attack_file), score_attack)
     dumpJson(os.path.join("_data", "processed", card_collection_file), card_collection)
+
+    return our_map
 
 def processShopFile():
     with open(os.path.join("_data", "ShopMaster.json"), "r", encoding="utf-8") as f:
