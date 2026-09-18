@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live A Hero 2026 Community Survey</title>
+<style>
+    html, body {
+        margin: 0;
+    }
+    iframe {
+        height: 100vh;
+        width: 100%;
+        border: 0;
+    }
+</style>
+</head>
+<script>
+    window.addEventListener("message", (event) => {
+        if (event.source !== document.getElementById("survey").contentWindow) return;
+        if (event.data.type === "resize") {
+            document.getElementById("survey").style.height = event.data.height + "px";
+        }
+    });
+</script>
+<body>
+<iframe id="survey" src="https://rongjie-survey-platform.netlify.app/lah-2026.html"></iframe>
+</body>
+</html>
