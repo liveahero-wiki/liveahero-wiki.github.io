@@ -31,21 +31,15 @@ additional_scripts: ["/assets/filter.js"]
 
 <details>
     <summary>{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_SKILL1_SUBJECT }}</summary>
-    <div markdown="1">
-        {{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_SKILL1_BODY }}
-    </div>
+    <div markdown="1">{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_SKILL1_BODY }}</div>
 </details>
 <details>
     <summary>{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_ROOKIE_SUBJECT }}</summary>
-    <div markdown="1">
-        {{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_ROOKIE_BODY }}
-    </div>
+    <div markdown="1">{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_ROOKIE_BODY }}</div>
 </details>
 <details>
     <summary>{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_HAISUI_SUBJECT }}</summary>
-    <div markdown="1">
-        {{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_HAISUI_BODY }}
-    </div>
+    <div markdown="1">{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_HAISUI_BODY }}</div>
 </details>
 
 <fieldset class="chara-filter" data-list="#unexplored-list">
