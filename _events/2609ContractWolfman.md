@@ -50,11 +50,11 @@ Here is a list of this campaign's limited time Missions:
 | 9  | Clear campaign quest "Heroic Ordeal: Special Battle! EXP" S-class | 1000 {% include item.html id=52 %}    |
 
 ## About Stamina Drink Mini
-At this campaign's "Campaign Item Exchange Shop," "Stamina Drink Mini" can be exchanged.
-"Stamina Drink Mini" is an item that can restore 20 Stamina when you do not have enough Stamina while playing quests.
+At this campaign's "Campaign Item Exchange Shop," {% include item.html id=182 %} can be exchanged.
+{% include item.html id=182 %} is an item that can restore 20 Stamina when you do not have enough Stamina while playing quests.
 
-The "Stamina Drink Mini" in this campaign can only be exchanged once a day, and the stock will be replenished every day.
-Any unexchanged amounts for the day cannot be exchanged together on the following days, so please be careful not to forget to exchange them. Note that Stamina Drink Mini available only until the end of this campaign.
+The {% include item.html id=182 %} in this campaign can only be exchanged once a day, and the stock will be replenished every day.
+Any unexchanged amounts for the day cannot be exchanged together on the following days, so please be careful not to forget to exchange them. Note that {% include item.html id=182 %} available only until the end of this campaign.
 
 ## About Rank 1/2 Characters
 
