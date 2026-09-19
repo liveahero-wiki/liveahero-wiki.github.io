@@ -50,7 +50,7 @@ function sortTable(table, column, btn) {
   });
 
   for (const x of array) {
-    table.appendChild(x.element);
+    table.tBodies[0].appendChild(x.element);
   }
 }
 
