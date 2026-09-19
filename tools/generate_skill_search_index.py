@@ -23,7 +23,6 @@ import argparse
 import copy
 import json
 import os
-import re
 import hashlib
 from collections import Counter, OrderedDict, defaultdict
 from typing import Any
@@ -39,7 +38,7 @@ CHARAS = "_charas"
 # emitted JSON without a masterdata version change. Appended to the cache key so
 # clients (search/src/data/loadIndex.js) refetch the index instead of reusing a
 # stale cache.
-INDEX_SCHEMA_REV = "r15"
+INDEX_SCHEMA_REV = "r16"
 
 
 # --- Undocumented game-data enums / magic numbers ---------------------------
@@ -813,155 +812,88 @@ def skill_description(skill_id, SM, SkillTrans, GameTrans, SkillCondTrans=None):
     return sanitizeSkillDescription(d or "")
 
 
-# Strips wiki/style tags and whitespace; used to tell a real text-bearing
-# condition line apart from a markup-only filler (e.g. a lone "</style>").
-_VISIBLE_TEXT_RE = re.compile(r"<[^>]+>|\s")
+def select_condition_rows(skill, SUM=None, active=None):
+    """The effects[] rows the game actually applies (and prints) for a given set
+    of unlocked skill-tree nodes.
+
+    Every row carries conditionGroupId + conditionPriority, which is the game's
+    own tier bookkeeping. Rows sharing a *non-zero* conditionGroupId are tiers of
+    one line: only the highest conditionPriority whose conditionEntityId is
+    unlocked survives, and it replaces every lower tier -- including the
+    conditionEntityId == 0 row, which is just the un-enhanced base. A
+    conditionGroupId of 0 means ungrouped: the row stands alone and is never
+    superseded.
+
+    Reading the groups directly beats any heuristic over effect signatures or
+    tree topology: independent lines that share a skillEffectId (notably 836,
+    the "ダミー効果" text carrier) stay independent, a branch's last tier is
+    recognised even though it is not a leaf of the tree, and a tier whose text is
+    empty correctly erases the line it supersedes.
+
+    `active` is the set of unlocked SkillUpgradeMaster node ids; None means fully
+    bloomed. Rows come back in the order the game lays them out -- by the group's
+    first serialNo, so a line keeps its place whichever tier won."""
+    def unlocked(eff):
+        cei = eff.get("conditionEntityId", 0)
+        if not cei:
+            return True
+        if SUM is not None and str(cei) not in SUM:
+            # Inconsistent masterdata: keep the tier (recall-safe) and report it.
+            missing_upgrade_nodes[cei] += 1
+            return True
+        return active is None or cei in active
+
+    groups = OrderedDict()
+    for eff in skill.get("effects") or []:
+        gid = eff.get("conditionGroupId", 0)
+        # ungrouped -> a singleton group of its own, so it never competes
+        key = ("g", gid) if gid else ("s", eff.get("serialNo", 0))
+        groups.setdefault(key, []).append(eff)
+
+    picked = []
+    for rows in groups.values():
+        live = [e for e in rows if unlocked(e)]
+        if not live:
+            continue
+        top = max(e.get("conditionPriority", 0) for e in live)
+        picked.append((min(e.get("serialNo", 0) for e in rows),
+                       [e for e in live if e.get("conditionPriority", 0) == top]))
+    picked.sort(key=lambda kv: kv[0])
+    return [e for _, winners in picked for e in winners]
 
 
-def _has_visible_text(s):
-    return bool(_VISIBLE_TEXT_RE.sub("", s or ""))
-
-
-def is_terminal_node(eid, SUM):
-    """A SkillUpgradeMaster node is terminal (the final tree tier) when it has no
-    nextEntryIds. An unconditional effect (eid 0) or a non-tree context (SUM is
-    None) is treated as terminal -- it is not a gated tier to be superseded.
-
-    A node id absent from SkillUpgradeMaster is treated as terminal (recall-safe:
-    include the line rather than silently drop the final tier) and recorded so
-    the run reports it -- this should not happen with consistent masterdata."""
-    if not eid or SUM is None:
-        return True
-    node = SUM.get(str(eid))
-    if node is None:
-        missing_upgrade_nodes[eid] += 1
-        return True
-    return not node.get("nextEntryIds")
-
-
-def maxed_skill_description(skill_id, SM, SEM, SkillTrans, GameTrans, SUM, SkillCondTrans=None):
+def maxed_skill_description(skill_id, SM, SkillTrans, GameTrans, SUM, SkillCondTrans=None):
     """Full fully-bloomed description of a skill-tree (bloom) skill.
 
     A bloom skill keeps the same skillId through its whole SkillUpgradeMaster
-    tree; its text is the top-level `description` plus selected
-    effects[].conditionDescription lines. Each effect's `conditionEntityId`
-    references a SkillUpgradeMaster node (0 == unconditional).
-
-    Tiered variants of one line replace each other as the tree is climbed, but
-    they do not necessarily share a skillEffectId (e.g. a damage line whose
-    %-value rises uses a fresh skillEffectId per tier). We therefore group
-    condition lines by their effect *signature* (inner effect classes + the
-    applied statusId). A line is kept when it is either (a) unconditional and
-    its signature has NO tree-gated tier (so standalone passives survive while
-    the tier-0 base of a progression is dropped), or (b) gated by a *terminal*
-    node (nextEntryIds == null) -- the final value of a tiered line, since
-    maxing unlocks the whole tree. Lines are emitted in serialNo order; GameTrans
-    dump preferred, raw Japanese master fallback; result sanitized."""
+    tree; its text is the top-level `description` plus the
+    effects[].conditionDescription of every row that survives
+    select_condition_rows with all nodes unlocked. Where the master data lists
+    the same winning tier twice (byte-identical text in one condition group) the
+    line is printed once. Community translation preferred, then the GameTrans
+    dump, raw Japanese master last; the assembled result is sanitized as a whole.
+    """
     if SkillCondTrans is None:
         SkillCondTrans = _SKILL_COND_TRANS
     sid = str(skill_id)
     skill = SM.get(sid, {})
 
-    def sig(eff):
-        sej = SEM.get(str(eff.get("skillEffectId")), {}).get("skillEffectJson", {})
-        return (tuple(i.get("class") for i in sej.get("effects", [])),
-                sej.get("statusId"))
-
-    cond_effects = [e for e in (skill.get("effects") or [])
-                    if (e.get("conditionDescription") or "")]
-    # signatures that have at least one tree-gated tier -> their tier-0
-    # (conditionEntityId == 0) line is just the un-enhanced base, so skip it.
-    # Markup-only filler effects (e.g. a lone "</style>") share the empty
-    # signature but are not real tiers, so they must not gate a standalone line.
-    gated_sigs = {sig(e) for e in cond_effects
-                  if e.get("conditionEntityId", 0) != 0
-                  and _has_visible_text(e.get("conditionDescription"))}
-
-    # For non-linear (diamond) upgrade trees: a gated effect at node N is the
-    # last tier of its signature when (a) no descendant of N carries that same
-    # sig AND (b) the subtree from N contains a branch or merge point. The
-    # second guard is essential: in a strictly linear chain every tier gets a
-    # unique sig if the effect class or statusId differs across tiers (e.g.
-    # ParticleStatus whose statusId is the target skillId changes each tier),
-    # so sig-only matching cannot detect supersession — the terminal-only rule
-    # must remain authoritative for linear chains.
-    node_to_sigs = {}
-    for e in cond_effects:
-        c = e.get("conditionEntityId", 0)
-        if c != 0 and _has_visible_text(e.get("conditionDescription")):
-            node_to_sigs.setdefault(c, set()).add(sig(e))
-
-    # child_id -> parent count; a count > 1 marks a merge/convergence node.
-    child_parent_count = {}
-    if SUM:
-        for _node in SUM.values():
-            for _child in (_node.get("nextEntryIds") or []):
-                child_parent_count[_child] = child_parent_count.get(_child, 0) + 1
-
-    def descendant_sigs(start):
-        """Sigs present on any strict descendant of `start` in the upgrade tree."""
-        if SUM is None:
-            return set()
-        visited, result, queue = set(), set(), [start]
-        while queue:
-            nid = queue.pop()
-            if nid in visited:
-                continue
-            visited.add(nid)
-            node = SUM.get(str(nid), {})
-            for child in (node.get("nextEntryIds") or []):
-                result.update(node_to_sigs.get(child, set()))
-                queue.append(child)
-        return result
-
-    def in_nonlinear_subtree(start):
-        """True if the subtree rooted at `start` contains any branch (>1 child)
-        or merge (>1 parent). Returns False for strictly linear chains."""
-        if SUM is None:
-            return False
-        visited, queue = set(), [start]
-        while queue:
-            nid = queue.pop()
-            if nid in visited:
-                continue
-            visited.add(nid)
-            node = SUM.get(str(nid), {})
-            children = node.get("nextEntryIds") or []
-            if len(children) > 1:
-                return True
-            for child in children:
-                if child_parent_count.get(child, 0) > 1:
-                    return True
-                queue.append(child)
-        return False
-
-    base = (GameTrans.get(f"SKILL_DESCRIPTION_{sid}")
-            or SkillTrans.get(sid, {}).get("description")
-            or skill.get("description") or "")
-
-    kept = []
-    for eff in cond_effects:
-        cei = eff.get("conditionEntityId", 0)
-        if cei == 0:
-            if sig(eff) not in gated_sigs:
-                kept.append(eff)
-        elif is_terminal_node(cei, SUM):
-            kept.append(eff)
-        elif (sig(eff) not in descendant_sigs(cei)
-              and in_nonlinear_subtree(cei)):
-            # Non-terminal, last tier of its sig, inside a diamond/branching tree
-            kept.append(eff)
-    # Terminal/unconditional effects sort before non-terminal diamond-escaped ones;
-    # serialNo breaks ties within each group.
-    kept.sort(key=lambda e: (not is_terminal_node(e.get("conditionEntityId", 0), SUM),
-                             e.get("serialNo", 0)))
-
-    parts = [base]
-    for eff in kept:
+    parts = [(GameTrans.get(f"SKILL_DESCRIPTION_{sid}")
+              or SkillTrans.get(sid, {}).get("description")
+              or skill.get("description") or "")]
+    seen = set()
+    for eff in select_condition_rows(skill, SUM):
+        if not (eff.get("conditionDescription") or ""):
+            continue
         sn = eff.get("serialNo")
-        parts.append(SkillCondTrans.get(f"{sid}_{sn}", {}).get("description")
-                     or GameTrans.get(f"SKILL_EFFECT_CONDITION_DESCRIPTION_{sid}_{sn}")
-                     or eff.get("conditionDescription") or "")
+        line = (SkillCondTrans.get(f"{sid}_{sn}", {}).get("description")
+                or GameTrans.get(f"SKILL_EFFECT_CONDITION_DESCRIPTION_{sid}_{sn}")
+                or eff.get("conditionDescription") or "")
+        key = (eff.get("conditionGroupId", 0), line)
+        if eff.get("conditionGroupId", 0) and key in seen:
+            continue
+        seen.add(key)
+        parts.append(line)
     return sanitizeSkillDescription("".join(parts))
 
 
@@ -1043,16 +975,16 @@ def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SU
     tp: display type char — 'b'=Buff, 'd'=Debuff, 'o'=Other, 'f'=Field, 's'=System.
     fl: flag bitmask (omitted when 0) — 1=stackable, 2=charge, 4=dot, 8=field, 16=count.
 
-    When SUM (SkillUpgradeMaster) is provided, tree-gated effects
-    (conditionEntityId != 0) are only included if their node is terminal
-    (nextEntryIds is absent/null), mirroring maxed_skill_description. This
-    prevents intermediate tree-stage status entries (e.g. View消費量+100 … +750
-    for a progression that ends at +1000) from appearing alongside the final one."""
+    When SUM (SkillUpgradeMaster) is provided the effects are narrowed to the
+    fully-bloomed set via select_condition_rows, mirroring
+    maxed_skill_description. This keeps superseded tree tiers (e.g. View消費量+100
+    … +750 for a progression that ends at +1000) from appearing alongside the
+    final one."""
     skill = SM.get(str(skill_id), {})
+    effects = (select_condition_rows(skill, SUM) if SUM is not None
+               else (skill.get("effects") or []))
     results, seen_names = [], set()
-    for eff in skill.get("effects", []) or []:
-        if not is_terminal_node(eff.get("conditionEntityId", 0), SUM):
-            continue
+    for eff in effects:
         seid = str(eff.get("skillEffectId", ""))
         sej = SEM.get(seid, {}).get("skillEffectJson", {})
         status_id = sej.get("statusId")
@@ -1104,10 +1036,10 @@ def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, GameTrans, SkillEffectTr
     labels, match_extras, status_ids = label_skill(skill_id, SM, SEM, SMA, set())
     skill = SM.get(str(skill_id), {})
     # maxed (skill-tree fully bloomed) rows assemble their description from the
-    # terminal-tier condition lines and sum the View-cost deltas; base rows use
+    # winning condition-group tiers and sum the View-cost deltas; base rows use
     # the top-level description and raw useView.
     if maxed:
-        description = maxed_skill_description(skill_id, SM, SEM, SkillTrans, GameTrans, SUM)
+        description = maxed_skill_description(skill_id, SM, SkillTrans, GameTrans, SUM)
         use_view = maxed_use_view(skill_id, SM, SEM)
     else:
         description = skill_description(skill_id, SM, SkillTrans, GameTrans)

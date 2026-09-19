@@ -17,6 +17,12 @@
     <b>{{ skill.skillName }}</b>
     <p>View: <span data-st-view>{{ skill.maxedView }}</span></p>
     <div class="st-desc" data-st-desc>{{ skill.maxedText }}</div>
+    {% for changeSkill in skill.changeSkills %}
+    <details>
+      <summary>{{ changeSkill.name }}</summary>
+      <p>{{ changeSkill.description }}</p>
+    </details>
+    {% endfor %}
   </div>
 
   <div class="skill_tree">

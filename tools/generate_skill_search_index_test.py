@@ -5,7 +5,7 @@ import unittest
 import generate_skill_search_index as gen
 from generate_skill_search_index import (
     build_status_descs, maxed_skill_description, maxed_use_view, label_skill,
-    build_hero, group_by_stock, is_terminal_node)
+    build_hero, group_by_stock, select_condition_rows)
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "_data")
 
@@ -29,9 +29,9 @@ class TestSkillTreeMaxed(unittest.TestCase):
         cls.SMA = load("StatusMaster.json")
 
     def test_akashi_active1_terminal_tier_description(self):
-        # 1001105 "燃ゆる白球+": base hit + terminal-tier burn + standalone passive,
-        # with the intermediate/superseded burn tiers dropped.
-        desc = maxed_skill_description(1001105, self.SM, self.SEM, {}, {}, self.SUM)
+        # 1001105 "燃ゆる白球+": base hit + top-tier burn + standalone passive,
+        # with the lower-priority burn tiers of the same condition group dropped.
+        desc = maxed_skill_description(1001105, self.SM, {}, {}, self.SUM)
         self.assertTrue(desc.startswith("敵単体に70%ダメージ。"), desc)
         self.assertIn("60%の確率で2ターンの間火傷を付与", desc)
         self.assertIn("バトル開始時、自身に闘魂を付与", desc)
@@ -39,9 +39,9 @@ class TestSkillTreeMaxed(unittest.TestCase):
             self.assertNotIn(superseded, desc)
 
     def test_akashi_active3_terminal_damage_and_view(self):
-        # 1001107 "百烈打砲": terminal 160% damage line, intermediate 125% dropped,
+        # 1001107 "百烈打砲": top-tier 160% damage line, intermediate 125% dropped,
         # and View cost 16000 - 500 - 500 - 1000 - 2000 = 12000.
-        desc = maxed_skill_description(1001107, self.SM, self.SEM, {}, {}, self.SUM)
+        desc = maxed_skill_description(1001107, self.SM, {}, {}, self.SUM)
         self.assertIn("160%に増加", desc)
         self.assertNotIn("125%に増加", desc)
         self.assertEqual(maxed_use_view(1001107, self.SM, self.SEM), 12000)
@@ -52,20 +52,21 @@ class TestSkillTreeMaxed(unittest.TestCase):
 
     def test_raiki_active3_single_terminal_damage_tier(self):
         # 1004107: the damage line climbs 90->...->110% across tiers that use
-        # DIFFERENT skillEffectIds, so the tier-0 base (180% cap) must still be
-        # superseded by the terminal (220% cap) and appear exactly once.
-        desc = maxed_skill_description(1004107, self.SM, self.SEM, {}, {}, self.SUM)
+        # DIFFERENT skillEffectIds; they share one conditionGroupId, so the
+        # tier-0 base (180% cap) is replaced by the top tier (220% cap) and the
+        # line appears exactly once.
+        desc = maxed_skill_description(1004107, self.SM, {}, {}, self.SUM)
         self.assertIn("最大220%まで上昇", desc)
         self.assertNotIn("最大180%まで上昇", desc)  # tier-0 base, superseded
         self.assertEqual(desc.count("敵全体に"), 1, desc)  # no duplicated damage line
 
     def test_standalone_passive_not_dropped_by_filler_collision(self):
         # 1115105 "ロイヤルブレイカー+": the unconditional (conditionEntityId==0)
-        # passive line "デバフが付与されていない時、自身のATK+20%" shares its effect
-        # signature ((NoneEffect,), statusId 0) with several tree-gated "</style>"
-        # filler effects. Those fillers carry no visible text, so they must NOT
-        # mark the signature as "has an enhanced tier" and drop the real passive.
-        desc = maxed_skill_description(1115105, self.SM, self.SEM, {}, {}, self.SUM)
+        # passive line "デバフが付与されていない時、自身のATK+20%" is carried by 836
+        # "ダミー効果" (a pure text row), the same effect several tree-gated
+        # "</style>" fillers use. It sits in its own conditionGroupId, so no
+        # filler tier may supersede it.
+        desc = maxed_skill_description(1115105, self.SM, {}, {}, self.SUM)
         self.assertIn("ATK+20%", desc, desc)
 
     def test_no_view_effect_keeps_base(self):
@@ -79,20 +80,20 @@ class TestSkillTreeMaxed(unittest.TestCase):
     def test_suhail_active1_diamond_tree_extra_activation(self):
         # 1030105 "マーチソン・メテオ+": diamond upgrade tree where two paths
         # (extra-activation threshold 6→5→4→3 and damage 30→32→34→37→40%) converge
-        # at terminal node 103010508 (damage-only). The last extra-activation tier
-        # sits at non-terminal node 103010506 → must still appear in the maxed desc.
-        desc = maxed_skill_description(1030105, self.SM, self.SEM, {}, {}, self.SUM)
-        self.assertIn("40%", desc)               # final damage tier (terminal node)
-        self.assertIn("もう一度発動", desc)       # best extra-activation tier (non-terminal)
-        # Terminal damage must appear before the non-terminal extra-activation line.
+        # at leaf node 103010508 (damage-only). The last extra-activation tier
+        # sits at NON-leaf node 103010506, so it survives only by topping its
+        # own condition group -- tree position must not decide.
+        desc = maxed_skill_description(1030105, self.SM, {}, {}, self.SUM)
+        self.assertIn("40%", desc)               # final damage tier
+        self.assertIn("もう一度発動", desc)       # best extra-activation tier
+        # Each group renders at its own first serialNo: damage, then extra-activation.
         self.assertLess(desc.index("40%"), desc.index("もう一度発動"))
 
     def test_akashi_active2_linear_unique_sig_per_tier(self):
-        # 1001106: linear chain of 6 nodes where each tier has a unique sig
-        # (ParticleStatus with a different statusId = target skillId per tier).
-        # Only the terminal node should appear; the 5 non-terminal tiers must
-        # be suppressed even though no two tiers share a sig.
-        desc = maxed_skill_description(1001106, self.SM, self.SEM, {}, {}, self.SUM)
+        # 1001106: linear chain of 6 nodes where every tier has a DIFFERENT effect
+        # signature (ParticleStatus whose statusId is the target skillId). They
+        # still share one conditionGroupId, so only the top tier appears.
+        desc = maxed_skill_description(1001106, self.SM, {}, {}, self.SUM)
         # The terminal entry is a ParticleStatus pointing at skill 1001107 ("百烈打砲");
         # count how many skill-upgrade lines appear (each starts with the same prefix).
         # There should be exactly one.
@@ -103,7 +104,7 @@ class TestSkillTreeMaxed(unittest.TestCase):
         # Skill 1006105 "公務執行" (Gammei bloom active 1) has 6 tree-gated VP Cost
         # effects (+100, +250, +400, +550, +750, +1000) with distinct override names,
         # plus DEF Down (1 unconditional base + tree improvement tiers sharing the
-        # same name). After maxing, only the terminal VP Cost (+1000) and the base
+        # same name). After maxing, only the top VP Cost tier (+1000) and the base
         # DEF Down should appear; intermediate VP Cost stages must be excluded.
         descs = build_status_descs(
             1006105, self.SM, self.SEM, self.SMA, {}, {}, self.SUM)
@@ -124,27 +125,47 @@ class TestSkillTreeMaxed(unittest.TestCase):
         self.assertEqual(hero["element"], 1)
 
 
-class TestIsTerminalNode(unittest.TestCase):
-    """is_terminal_node and its recall-safe handling of unknown node ids."""
+class TestSelectConditionRows(unittest.TestCase):
+    """select_condition_rows: the conditionGroupId/conditionPriority tier rule."""
 
     @classmethod
     def setUpClass(cls):
         cls.SUM = load("SkillUpgradeMaster.json")
 
-    def test_unconditional_and_non_tree_are_terminal(self):
-        self.assertTrue(is_terminal_node(0, self.SUM))      # unconditional
-        self.assertTrue(is_terminal_node(100110501, None))  # no tree context
+    @staticmethod
+    def _skill(*rows):
+        keys = ("serialNo", "conditionEntityId", "conditionGroupId", "conditionPriority")
+        return {"effects": [dict(zip(keys, r)) for r in rows]}
 
-    def test_terminal_vs_intermediate_node(self):
-        self.assertTrue(is_terminal_node(100110504, self.SUM))   # no nextEntryIds
-        self.assertFalse(is_terminal_node(100110501, self.SUM))  # has nextEntryIds
+    def _picked(self, skill, **kw):
+        return [e["serialNo"] for e in select_condition_rows(skill, self.SUM, **kw)]
 
-    def test_missing_node_is_terminal_and_warned(self):
+    def test_group_keeps_only_top_unlocked_priority(self):
+        skill = self._skill((0, 0, 1, 0), (1, 100110501, 1, 1), (2, 100110502, 1, 2))
+        self.assertEqual(self._picked(skill), [2])
+        # Only the first node unlocked -> its tier wins instead.
+        self.assertEqual(self._picked(skill, active={100110501}), [1])
+        # Nothing unlocked -> the conditionEntityId == 0 base survives.
+        self.assertEqual(self._picked(skill, active=set()), [0])
+
+    def test_ungrouped_rows_are_independent(self):
+        # conditionGroupId 0 never competes, even with rising conditionPriority
+        # (view-cost reductions look like this and are additive).
+        skill = self._skill((0, 100110501, 0, 1), (1, 100110502, 0, 2))
+        self.assertEqual(self._picked(skill), [0, 1])
+
+    def test_rows_ordered_by_group_start_not_winning_tier(self):
+        # group 1 starts at serialNo 0 but wins at 3; it must still render first.
+        skill = self._skill((0, 0, 1, 0), (1, 0, 2, 0), (3, 100110501, 1, 1))
+        self.assertEqual(self._picked(skill), [3, 1])
+
+    def test_missing_node_is_unlocked_and_warned(self):
         # A gated node id absent from SkillUpgradeMaster must be treated as
-        # terminal (include, recall-safe) and recorded for the report, rather
-        # than silently dropping the final tier.
+        # unlocked (include it, recall-safe) and recorded for the run report,
+        # rather than silently dropping the final tier.
         gen.missing_upgrade_nodes.clear()
-        self.assertTrue(is_terminal_node(999999999, self.SUM))
+        skill = self._skill((0, 999999999, 1, 1))
+        self.assertEqual(self._picked(skill), [0])
         self.assertEqual(gen.missing_upgrade_nodes[999999999], 1)
 
 

@@ -11,9 +11,17 @@ Output: _data/wiki/SkillUpgradeModel.json, keyed by stockId:
     { "<stockId>": { "heroName": str, "skills": [ <skill model>, ... ] } }
 each skill model:
     { skillId, skillName, baseText, baseUseView,
-      lines:  [ {node, serialNo, sig, type: "text"|"view", text, viewDelta} ],
+      lines:  [ {node, serialNo, group, prio, order, type: "text"|"view",
+                 text, viewDelta} ],
       tree:   { "<nodeId>": {cond:[...], next:[...], desc, icon} },
+      changeSkills: [ {name, description} ],
       statusDescs: [ {name, desc, tp, fl?, icon?} ] }
+
+A text line's (group, prio) is the game's own conditionGroupId /
+conditionPriority: lines sharing a non-zero group are tiers of one sentence and
+only the unlocked one with the highest prio is printed; group 0 lines are
+independent. `order` is the group's first serialNo -- where the sentence sits in
+the description no matter which tier won.
 
 The client selection algorithm (which line of a tiered progression survives for
 a given active-node set) is validated here at build time: reconstructing the
@@ -24,7 +32,6 @@ generate_skill_search_index.py. A mismatch aborts the build.
 Run from the repo root:  py tools/gen_skill_upgrade_model.py
 """
 import os
-import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -33,18 +40,6 @@ import generate_skill_search_index as G
 from wiki_util import loadJson, dumpJson, ensureDirs
 
 OUT = "_data/wiki/SkillUpgradeModel.json"
-
-_VISIBLE = re.compile(r"<[^>]+>|\s")
-
-
-def _has_visible_text(s):
-    return bool(_VISIBLE.sub("", s or ""))
-
-
-def _sig(e, SEM):
-    sej = SEM.get(str(e.get("skillEffectId")), {}).get("skillEffectJson", {})
-    classes = ",".join(str(i.get("class")) for i in sej.get("effects", []))
-    return f"{classes}|{sej.get('statusId')}"
 
 
 def _view_delta(e, SEM):
@@ -99,31 +94,49 @@ def build_skill_model(skill_id, m, nodes_by_skill, SkillUpgradeTrans):
                  or SkillTrans.get(sid, {}).get("description")
                  or skill.get("description") or "")
 
-    lines = []
+    # Text lines carry the game's conditionGroupId/conditionPriority so the
+    # client can run G.select_condition_rows' selection for any active-node set.
+    # A whole group is emitted (tiers with empty text included): an empty-texted
+    # tier that outranks the others legitimately erases the sentence -- see
+    # 1033207, where unlocking the "all allies" tier drops the "self only" line.
+    groups = {}
     for e in (skill.get("effects") or []):
-        cei = e.get("conditionEntityId", 0)
-        cond = e.get("conditionDescription") or ""
-        sn = e.get("serialNo")
-        if _has_visible_text(cond):
-            raw = (m["SkillCondTrans"].get(f"{sid}_{sn}", {}).get("description")
-                   or GameTrans.get(f"SKILL_EFFECT_CONDITION_DESCRIPTION_{sid}_{sn}")
-                   or cond)
+        gid = e.get("conditionGroupId", 0)
+        key = ("g", gid) if gid else ("s", e.get("serialNo", 0))
+        groups.setdefault(key, []).append(e)
+
+    lines = []
+    for rows in groups.values():
+        if not any(e.get("conditionDescription") for e in rows):
+            continue  # markup/effect-only group, nothing to print at any tier
+        order = min(e.get("serialNo", 0) for e in rows)
+        for e in rows:
+            sn = e.get("serialNo")
+            cond = e.get("conditionDescription") or ""
             lines.append({
-                "node": cei,
+                "node": e.get("conditionEntityId", 0),
                 "serialNo": sn,
-                "sig": _sig(e, SEM),
+                "group": e.get("conditionGroupId", 0),
+                "prio": e.get("conditionPriority", 0),
+                "order": order,
                 "type": "text",
-                "text": raw,
+                "text": (m["SkillCondTrans"].get(f"{sid}_{sn}", {}).get("description")
+                         or GameTrans.get(f"SKILL_EFFECT_CONDITION_DESCRIPTION_{sid}_{sn}")
+                         or cond) if cond else "",
             })
+
+    # View-cost deltas are additive per unlocked node (never replacement tiers),
+    # so they need no group bookkeeping -- see G.maxed_use_view.
+    for e in (skill.get("effects") or []):
         vd = _view_delta(e, SEM)
         if vd:
             lines.append({
-                "node": cei,
-                "serialNo": sn,
-                "sig": _sig(e, SEM),
+                "node": e.get("conditionEntityId", 0),
+                "serialNo": e.get("serialNo"),
                 "type": "view",
                 "viewDelta": vd,
             })
+    lines.sort(key=lambda l: (l["type"] != "text", l.get("order", 0), l["serialNo"]))
 
     tree = {}
     for entry_id in sorted(nodes_by_skill[skill_id]):
@@ -147,9 +160,16 @@ def build_skill_model(skill_id, m, nodes_by_skill, SkillUpgradeTrans):
         # client uses for cascade + resolution.
         "rows": [[{"id": n, "icon": tree[str(n)]["icon"], "desc": tree[str(n)]["desc"]}
                   for n in row] for row in compute_rows(tree)],
+        # in-combat ChangeActiveSkill transforms this skill gains (a bloom skill
+        # can introduce one the un-upgraded skill never had), rendered as the
+        # same <details> the base skill table uses.
+        "changeSkills": G.change_skills(
+            [cid for ids in G.collect_change_skills([skill_id], SM, SEM).values()
+             for cid in ids],
+            skill_id, SM, SkillTrans, GameTrans),
         # initial (all-active / fully-bloomed) render for no-JS + first paint;
         # the client recomputes these on every toggle.
-        "maxedText": G.maxed_skill_description(skill_id, SM, SEM, SkillTrans, GameTrans, SUM,
+        "maxedText": G.maxed_skill_description(skill_id, SM, SkillTrans, GameTrans, SUM,
                                                m["SkillCondTrans"]),
         "maxedView": G.maxed_use_view(skill_id, SM, SEM),
         "statusDescs": G.build_status_descs(
@@ -163,61 +183,30 @@ def build_skill_model(skill_id, m, nodes_by_skill, SkillUpgradeTrans):
 # emitted model against the authoritative maxed_* resolution. assets/skill-tree.js
 # must mirror this exactly.
 # --------------------------------------------------------------------------
-def _resolve(model, active, SUM):
-    tree = model["tree"]
-
-    def children(n):
-        return tree.get(str(n), {}).get("next", [])
-
-    # global parent count over the WHOLE game tree (structural diamond detection,
-    # matching maxed_skill_description.in_nonlinear_subtree)
-    def descendants(n):
-        seen, q = set(), list(children(n))
-        while q:
-            x = q.pop()
-            if x in seen:
-                continue
-            seen.add(x)
-            q.extend(children(x))
-        return seen
-
-    def subtree_nonlinear(n):
-        for x in {n} | descendants(n):
-            ch = children(x)
-            if len(ch) > 1:
-                return True
-            for c in ch:
-                if _GLOBAL_PARENTS.get(c, 0) > 1:
-                    return True
-        return False
-
+def _resolve(model, active):
     text_lines = [l for l in model["lines"] if l["type"] == "text"]
-    gated = {l["sig"] for l in text_lines if l["node"] != 0}
-    node_sigs = {}
-    for l in text_lines:
-        if l["node"] != 0:
-            node_sigs.setdefault(l["node"], set()).add(l["sig"])
 
-    kept = []
-    for l in text_lines:
-        node, s = l["node"], l["sig"]
-        if node == 0:
-            if s not in gated or not any(o["node"] in active and o["sig"] == s
-                                         for o in text_lines if o["node"] != 0):
-                kept.append(l)
-            continue
-        if node not in active:
-            continue
-        ad = descendants(node) & active
-        if not ad:
-            kept.append(l)
-        elif any(s in node_sigs.get(d, set()) for d in ad):
-            pass
-        elif subtree_nonlinear(node):
-            kept.append(l)
+    def gkey(l):
+        return ("g", l["group"]) if l["group"] else ("s", l["serialNo"])
 
-    kept.sort(key=lambda l: (bool(descendants(l["node"]) & active) if l["node"] else False,
-                             l["serialNo"]))
+    live = [l for l in text_lines if l["node"] == 0 or l["node"] in active]
+    top = {}
+    for l in live:
+        k = gkey(l)
+        top[k] = max(top.get(k, l["prio"]), l["prio"])
+
+    kept, seen = [], set()
+    for l in live:
+        k = gkey(l)
+        if l["prio"] != top[k] or not l["text"]:
+            continue
+        if l["group"]:
+            if (k, l["text"]) in seen:
+                continue  # same winning tier listed twice in the master data
+            seen.add((k, l["text"]))
+        kept.append(l)
+
+    kept.sort(key=lambda l: (l["order"], l["serialNo"]))
     text = G.sanitizeSkillDescription(model["baseText"] + "".join(l["text"] for l in kept))
 
     view = model["baseUseView"] + sum(l["viewDelta"] for l in model["lines"]
@@ -226,21 +215,12 @@ def _resolve(model, active, SUM):
     return text, view
 
 
-_GLOBAL_PARENTS = {}
-
-
 def main():
     m = G.load_all("en")
     SM, SEM, SUM = m["SM"], m["SEM"], m["SUM"]
     SkillTrans, GameTrans = m["SkillTrans"], m["GameTrans"]
     SkillUpgradeTrans = loadJson("_data/translation/SkillUpgrade.json") \
         if os.path.exists("_data/translation/SkillUpgrade.json") else {}
-
-    global _GLOBAL_PARENTS
-    _GLOBAL_PARENTS = {}
-    for v in SUM.values():
-        for c in (v.get("nextEntryIds") or []):
-            _GLOBAL_PARENTS[c] = _GLOBAL_PARENTS.get(c, 0) + 1
 
     nodes_by_skill = {}
     for k, v in SUM.items():
@@ -283,8 +263,8 @@ def main():
 
             # self-check: all-active reconstruction must match the authoritative maxed
             active = set(nodes_by_skill[skill_id])
-            got_text, got_view = _resolve(model, active, SUM)
-            want_text = G.maxed_skill_description(skill_id, SM, SEM, SkillTrans, GameTrans, SUM,
+            got_text, got_view = _resolve(model, active)
+            want_text = G.maxed_skill_description(skill_id, SM, SkillTrans, GameTrans, SUM,
                                                   m["SkillCondTrans"])
             want_view = G.maxed_use_view(skill_id, SM, SEM)
             if got_text == want_text:

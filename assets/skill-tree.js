@@ -61,12 +61,6 @@
     function children(n) { return (tree[n] && tree[n].next) || []; }
     function parents(n) { return (tree[n] && tree[n].cond) || []; }
 
-    // global parent count over the whole tree (structural diamond detection)
-    var gparent = {};
-    nodes.forEach(function (n) {
-      children(n).forEach(function (c) { gparent[c] = (gparent[c] || 0) + 1; });
-    });
-
     function reachable(n, step) {
       var seen = new Set(), q = step(n).slice();
       while (q.length) {
@@ -82,23 +76,6 @@
       desc[n] = reachable(n, children);
       anc[n] = reachable(n, parents);
     });
-
-    function subtreeNonlinear(n) {
-      var all = new Set(desc[n]); all.add(n);
-      var res = false;
-      all.forEach(function (x) {
-        var ch = children(x);
-        if (ch.length > 1) res = true;
-        ch.forEach(function (c) { if ((gparent[c] || 0) > 1) res = true; });
-      });
-      return res;
-    }
-
-    function activeDescendants(n) {
-      var out = [];
-      desc[n].forEach(function (d) { if (active.has(d)) out.push(d); });
-      return out;
-    }
 
     function toggle(n) {
       if (active.has(n)) {
@@ -116,44 +93,42 @@
         buttons[n].classList.toggle("is-active", active.has(n));
       });
 
-      var lines = model.lines || [];
-      var textLines = lines.filter(function (l) { return l.type === "text"; });
-      var gated = new Set();
-      textLines.forEach(function (l) { if (l.node !== 0) gated.add(l.sig); });
-      var nodeSigs = {};
-      textLines.forEach(function (l) {
-        if (l.node !== 0) (nodeSigs[l.node] = nodeSigs[l.node] || new Set()).add(l.sig);
+      // Tier selection, mirroring G.select_condition_rows: lines sharing a
+      // non-zero `group` are tiers of one sentence and only the unlocked one
+      // with the highest `prio` is printed (an empty-texted winner erases the
+      // sentence); `group` 0 lines stand alone. `order` places the surviving
+      // line where the group starts, so a sentence keeps its slot in the
+      // description whichever tier won.
+      var live = (model.lines || []).filter(function (l) {
+        return l.type === "text" && (l.node === 0 || active.has(l.node));
+      });
+      function gkey(l) { return l.group ? "g" + l.group : "s" + l.serialNo; }
+
+      var top = {};
+      live.forEach(function (l) {
+        var k = gkey(l);
+        if (!(k in top) || l.prio > top[k]) top[k] = l.prio;
       });
 
-      var kept = [];
-      textLines.forEach(function (l) {
-        if (l.node === 0) {
-          var anyActive = textLines.some(function (o) {
-            return o.node !== 0 && active.has(o.node) && o.sig === l.sig;
-          });
-          if (!gated.has(l.sig) || !anyActive) kept.push(l);
-          return;
+      var kept = [], seen = new Set();
+      live.forEach(function (l) {
+        var k = gkey(l);
+        if (l.prio !== top[k] || !l.text) return;
+        if (l.group) {
+          var dk = k + "|" + l.text;
+          if (seen.has(dk)) return;  // same winning tier listed twice in the data
+          seen.add(dk);
         }
-        if (!active.has(l.node)) return;
-        var ad = activeDescendants(l.node);
-        if (ad.length === 0) { kept.push(l); return; }
-        var supersededSameSig = ad.some(function (d) {
-          return nodeSigs[d] && nodeSigs[d].has(l.sig);
-        });
-        if (supersededSameSig) return;
-        if (subtreeNonlinear(l.node)) kept.push(l);
+        kept.push(l);
       });
 
-      kept.sort(function (a, b) {
-        var ta = a.node ? (activeDescendants(a.node).length ? 1 : 0) : 0;
-        var tb = b.node ? (activeDescendants(b.node).length ? 1 : 0) : 0;
-        return ta - tb || a.serialNo - b.serialNo;
-      });
+      kept.sort(function (a, b) { return a.order - b.order || a.serialNo - b.serialNo; });
 
       var text = sanitize(model.baseText + kept.map(function (l) { return l.text; }).join(""));
 
+      // View-cost deltas are additive per unlocked node, never replacement tiers.
       var view = model.baseUseView;
-      lines.forEach(function (l) {
+      (model.lines || []).forEach(function (l) {
         if (l.type === "view" && (l.node === 0 || active.has(l.node))) view += l.viewDelta;
       });
 

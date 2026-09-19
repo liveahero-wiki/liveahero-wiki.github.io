@@ -91,15 +91,30 @@ the *fully-maxed* skill text/cost (as done for the `skillsMaxed` projection in
     lines. Each effect carries a `serialNo`, a `skillEffectId`, and a
     `conditionEntityId` that points at a `SkillUpgradeMaster` node (`0` means
     unconditional).
-*   **Incremental vs final** — the key distinction:
+*   **`conditionGroupId` / `conditionPriority` — the authoritative tier rule**:
+    every `effects[]` row carries both. Rows sharing a **non-zero**
+    `conditionGroupId` are tiers of *one sentence*: only the highest
+    `conditionPriority` whose `conditionEntityId` is unlocked applies and prints,
+    replacing every lower tier — including the `conditionEntityId == 0` row, which
+    is merely the un-enhanced base. `conditionGroupId == 0` means **ungrouped**: the
+    row stands alone and is never superseded. A group renders at its **lowest
+    `serialNo`**, so the sentence keeps its place in the description whichever tier
+    won, and a winning tier with *empty* text deliberately erases the sentence
+    (skill `1033207`: unlocking the "all allies" tier removes the "self only" line).
+
+    Do **not** try to infer tiers from effect signatures or from tree position.
+    Unrelated sentences routinely share a `skillEffectId` — notably **836,
+    `ダミー効果`**, a `NoneEffect` row that exists only to carry description text —
+    and a branch's last tier is not a leaf node when the branches merge.
+    `generate_skill_search_index.select_condition_rows()` implements this once;
+    `gen_skill_upgrade_model._resolve` and `assets/skill-tree.js` mirror it.
+*   **Incremental vs final** — the remaining distinction:
     *   **Tiered (replacement) lines** climb the tree (e.g. Burn 40→45→50→55→60%,
-        or a damage cap 180→…→220%). Only the variant gated by a **terminal** node
-        is the final value; intermediate tiers and the tier-0 base
-        (`conditionEntityId == 0`) are superseded and dropped. Note the tiers do
-        **not** always reuse one `skillEffectId` — group them by effect *signature*
-        (inner effect classes + applied `statusId`) to recognise the progression.
-    *   **Standalone unconditional lines** (e.g. a passive at `conditionEntityId == 0`
-        with no tiered successor) are always kept.
+        or a damage cap 180→…→220%) and share one `conditionGroupId`. The tiers do
+        **not** always reuse one `skillEffectId`, which is exactly why the group id
+        rather than the effect is authoritative.
+    *   **Standalone lines** (e.g. a passive at `conditionEntityId == 0` in its own
+        group) are always kept.
     *   **Additive lines** — `ChangeSkillBaseView` View-cost reductions
         (negative `parameter.value`) are gated by separate tree nodes and *stack*;
         the maxed `useView` = base `useView` + the sum of all of them (e.g. Akashi
