@@ -31,19 +31,19 @@ additional_scripts: ["/assets/filter.js"]
 
 <details>
     <summary>{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_SKILL1_SUBJECT }}</summary>
-    <div>
+    <div markdown="1">
         {{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_SKILL1_BODY }}
     </div>
 </details>
 <details>
     <summary>{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_ROOKIE_SUBJECT }}</summary>
-    <div>
+    <div markdown="1">
         {{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_ROOKIE_BODY }}
     </div>
 </details>
 <details>
     <summary>{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_HAISUI_SUBJECT }}</summary>
-    <div>
+    <div markdown="1">
         {{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_HAISUI_BODY }}
     </div>
 </details>
@@ -82,13 +82,12 @@ additional_scripts: ["/assets/filter.js"]
     {% if s.hintEntry %}
     {% assign tagKey = s.hintEntry.hintSubject | remove: "UI_SUPPORT_SKILL_TAG_" | remove: "_SUBJECT" %}
     {% assign tagSubject = site.data.wiki.UITranslation[s.hintEntry.hintSubject] | default: s.hintEntry.hintSubject %}
-    {% assign tagBody = site.data.wiki.UITranslation[s.hintEntry.hintBody] | default: s.hintEntry.hintBody %}
     {% endif %}
     <tr data-tag="{{ tagKey }}">
         <td title="{{ sid }}" class="translate skill-{{ s.rarity }}" data-translate="{% if skillName %}{{ skill.skillName }}{% endif %}" data-effects="{{ skill.effects | map: 'skillEffectId' | join: ',' }}">{{ skillName | default: skill.skillName }}</td>
         <td>{{ s.rarity }}</td>
         <td class="translate">{% include skill-description.html skillId=nid skill=skill %}</td>
-        <td title="{{ tagBody }}">{{ tagSubject }}</td>
+        <td>{{ tagSubject }}</td>
     </tr>
     {% endfor %}
     </tbody>
