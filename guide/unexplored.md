@@ -27,6 +27,27 @@ additional_scripts: ["/assets/filter.js"]
 {% assign skills = skills | push: pair[1] %}
 {% endfor %}
 
+### Available skill tags
+
+<details>
+    <summary>{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_SKILL1_SUBJECT }}</summary>
+    <div>
+        {{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_SKILL1_BODY }}
+    </div>
+</details>
+<details>
+    <summary>{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_ROOKIE_SUBJECT }}</summary>
+    <div>
+        {{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_ROOKIE_BODY }}
+    </div>
+</details>
+<details>
+    <summary>{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_HAISUI_SUBJECT }}</summary>
+    <div>
+        {{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_HAISUI_BODY }}
+    </div>
+</details>
+
 <fieldset class="chara-filter" data-list="#unexplored-list">
     <legend>Filter</legend>
     <div class="control-panel">
