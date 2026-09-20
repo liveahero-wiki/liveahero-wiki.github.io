@@ -56,17 +56,18 @@ def generate_voice_rows(index_path: str) -> list[dict]:
                     continue
                 seen.add(voice_filename)
 
+                serif_key = voice_filename.replace("voice_", "serif_").upper()
+
                 if part_name in GREETING_PARTS:
-                    jp = jp_greeting.get(voice_filename, part.get("jp", ""))
-                    en_approved = en_greeting.get(voice_filename, "")
+                    jp = jp_greeting.get(voice_filename, jp_serif.get(serif_key, part.get("jp", "")))
+                    en_approved = en_greeting.get(voice_filename, en_serif.get(serif_key, ""))
                 elif part_name in SERIF_PARTS:
-                    serif_key = voice_filename.replace("voice_", "serif_").upper()
                     jp = jp_serif.get(serif_key, part.get("jp", ""))
                     en_approved = en_serif.get(serif_key, "")
                 else:
                     jp = part.get("jp", "")
                     en_approved = ""
-                
+
                 # NOTE: Don't push if jp == en_approved, as this means the line hasn't been translated yet.
                 if jp == en_approved:
                     en_approved = ""
