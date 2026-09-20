@@ -17,6 +17,7 @@ import argparse
 import os
 import os.path
 import re
+import time
 from html import unescape
 from urllib.parse import quote
 from collections import defaultdict
@@ -32,6 +33,13 @@ SIDEKICK_MASTER = "_data/SidekickMaster.json"
 
 BASE_URL = "https://wikiwiki.jp/live-a-hero/"
 HEADER = {"User-Agent": "LiveAHeroAPI"}
+
+# wikiwiki.jp throttles aggressive scraping with HTTP 429; pace requests and
+# back off when throttled instead of hammering it.
+REQUEST_DELAY_SECONDS = 3
+MAX_RETRIES = 5
+MAX_BACKOFF_SECONDS = 60
+_last_request_time = None
 
 VOICE_KIND_MAP = {
     1: "h_gachaResult",
@@ -240,11 +248,37 @@ def fetch_html(jp_name: str, cache_dir: str, refresh: bool) -> str:
 
     jp_name = _JP_NAME_TO_WIKI_PAGES.get(jp_name, jp_name)
     url = BASE_URL + quote(jp_name, safe="")
-    print(f"GET {url}")
-    resp = requests.get(url, headers=HEADER)
-    resp.encoding = "utf-8"
-    if resp.status_code != 200:
-        raise FileNotFoundError(f"{url} -> HTTP {resp.status_code}")
+
+    global _last_request_time
+    for attempt in range(MAX_RETRIES):
+        if _last_request_time is not None:
+            elapsed = time.monotonic() - _last_request_time
+            if elapsed < REQUEST_DELAY_SECONDS:
+                time.sleep(REQUEST_DELAY_SECONDS - elapsed)
+
+        print(f"GET {url}")
+        resp = requests.get(url, headers=HEADER)
+        _last_request_time = time.monotonic()
+        resp.encoding = "utf-8"
+
+        if resp.status_code == 429 and attempt < MAX_RETRIES - 1:
+            retry_after = resp.headers.get("Retry-After")
+            wait = None
+            if retry_after is not None:
+                try:
+                    wait = float(retry_after)
+                except ValueError:
+                    wait = None
+            if wait is None:
+                wait = min(REQUEST_DELAY_SECONDS * 2 ** attempt, MAX_BACKOFF_SECONDS)
+            print(f"  429 rate limited, retrying in {wait:.0f}s...")
+            time.sleep(wait)
+            _last_request_time = time.monotonic()
+            continue
+
+        if resp.status_code != 200:
+            raise FileNotFoundError(f"{url} -> HTTP {resp.status_code}")
+        break
 
     ensureDirs(cache_path)
     with open(cache_path, "w", encoding="utf-8", newline="\n") as f:
