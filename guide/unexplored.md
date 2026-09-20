@@ -29,20 +29,22 @@ additional_scripts: ["/assets/filter.js"]
 
 ### Available skill tags
 
-<details>
-    <summary>{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_SKILL1_SUBJECT }}</summary>
-    <div markdown="1">{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_SKILL1_BODY }}
-    </div>
+<details markdown="1">
+<summary>{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_SKILL1_SUBJECT }}</summary>
+
+{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_SKILL1_BODY }}
+
 </details>
-<details>
-    <summary>{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_ROOKIE_SUBJECT }}</summary>
-    <div markdown="1">{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_ROOKIE_BODY }}
-    </div>
+<details markdown="1">
+<summary>{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_ROOKIE_SUBJECT }}</summary>
+
+{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_ROOKIE_BODY }}
 </details>
-<details>
-    <summary>{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_HAISUI_SUBJECT }}</summary>
-    <div markdown="1">{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_HAISUI_BODY }}
-    </div>
+<details markdown="1">
+<summary>{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_HAISUI_SUBJECT }}</summary>
+
+{{ site.data.wiki.UITranslation.UI_SUPPORT_SKILL_TAG_HAISUI_BODY }}
+
 </details>
 
 <fieldset class="chara-filter" data-list="#unexplored-list">
