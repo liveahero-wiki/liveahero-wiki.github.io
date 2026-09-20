@@ -76,8 +76,12 @@ export const SkillDescription = memo(function SkillDescription({
           // affordance). Our rows are virtualized with `transform` + absolute
           // positioning, which makes that parent row a stacking context — the
           // popup's z-index would then only compete within its own row and
-          // get painted over by later sibling rows. Force it to document.body.
-          appendTo: () => document.body,
+          // get painted over by later sibling rows. Force it to document.body
+          // instead — except inside the native <dialog> (SkillKitDialog),
+          // whose top-layer promotion means a document.body-appended popup
+          // renders *behind* it regardless of z-index; there, append inside
+          // the dialog so the popup shares its top layer.
+          appendTo: () => node.closest('dialog') ?? document.body,
         }),
       )
     })
