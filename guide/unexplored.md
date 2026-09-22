@@ -22,11 +22,6 @@ additional_scripts: ["/assets/filter.js"]
 
 ## Exploration skills
 
-{% assign skills = "" | split: "," %}
-{% for pair in site.data.UnexploredSkillMaster %}
-{% assign skills = skills | push: pair[1] %}
-{% endfor %}
-
 ### Available skill tags
 
 <details markdown="1">
@@ -50,6 +45,13 @@ additional_scripts: ["/assets/filter.js"]
 <fieldset class="chara-filter" data-list="#unexplored-list">
     <legend>Filter</legend>
     <div class="control-panel">
+        <div>Rarity</div>
+        <div> |
+            <button data-field="rarity" data-value="1">1</button>
+            <button data-field="rarity" data-value="2">2</button>
+            <button data-field="rarity" data-value="3">3</button>
+            | <button data-reset="rarity">All</button>
+        </div>
         <div>Tag</div>
         <div> |
             <button data-field="tag" data-value="SKILL1">Skill 1</button>
@@ -60,6 +62,11 @@ additional_scripts: ["/assets/filter.js"]
         </div>
     </div>
 </fieldset>
+
+{% assign skills = "" | split: "," %}
+{% for pair in site.data.UnexploredSkillMaster %}
+{% assign skills = skills | push: pair[1] %}
+{% endfor %}
 
 <div class="table-scroll">
 <table id="unexplored-list" class="sort-table">
@@ -72,6 +79,7 @@ additional_scripts: ["/assets/filter.js"]
     {% for s in skills %}
     {% assign nid = s.baseSkillId | plus: 0 %}
     {% assign sid = s.baseSkillId | downcase %}
+    {% if nid == 9000165 or nid == 9000068 %}{% continue %}{% endif %}
     {% assign skill = site.data.SkillMaster[sid] %}
     {% if skill.skillName == "" %}{% continue %}{% endif %}
     {% assign skillName = site.data.translation.Skill[sid].skillName %}
@@ -82,7 +90,7 @@ additional_scripts: ["/assets/filter.js"]
     {% assign tagKey = s.hintEntry.hintSubject | remove: "UI_SUPPORT_SKILL_TAG_" | remove: "_SUBJECT" %}
     {% assign tagSubject = site.data.wiki.UITranslation[s.hintEntry.hintSubject] | default: s.hintEntry.hintSubject %}
     {% endif %}
-    <tr data-tag="{{ tagKey }}">
+    <tr data-rarity="{{ s.rarity }}" data-tag="{{ tagKey }}">
         <td title="{{ sid }}" class="translate skill-{{ s.rarity }}" data-translate="{% if skillName %}{{ skill.skillName }}{% endif %}" data-effects="{{ skill.effects | map: 'skillEffectId' | join: ',' }}">{{ skillName | default: skill.skillName }}</td>
         <td>{{ s.rarity }}</td>
         <td class="translate">{% include skill-description.html skillId=nid skill=skill %}</td>
