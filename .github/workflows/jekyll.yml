@@ -84,6 +84,9 @@ jobs:
     - name: Build site
       run: JEKYLL_ENV=production bundle exec jekyll build --future
 
+    - name: Pagefind index
+      run: npx pagefind
+
     # Save the _site artifact so downstream jobs (Netlify/Pages) can use it without rebuilding
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v4
