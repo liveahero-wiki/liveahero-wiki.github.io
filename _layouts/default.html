@@ -34,9 +34,15 @@ layout: compress
   </svg>
 </button>
 
-    <a class="github-button" href="{{ site.github_repo }}/blob/master/{{ page.path }}?plain=1">View source</a>
-
+    <button class="search-icon-button" id="search-toggle" title="Search" aria-label="Search">
+      <svg class="search-icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="7"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </button>
     {% include pagefind-search.html %}
+
+    <a class="github-button" href="{{ site.github_repo }}/blob/master/{{ page.path }}?plain=1">View source</a>
 
     {% assign chara_id = page.characterId %}
     {% if chara_id %}

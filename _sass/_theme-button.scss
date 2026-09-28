@@ -113,3 +113,48 @@
     --size: 36px
   }
 }
+
+.search-icon-button {
+  --size: 2rem;
+  background: none;
+  border: none;
+  padding: 0;
+  inline-size: var(--size);
+  block-size: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  outline-offset: 5px;
+  float: right;
+  margin-right: 10px;
+}
+
+.search-icon-button > svg {
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.search-icon {
+  fill: none;
+  stroke: var(--icon-fill);
+  stroke-width: 2;
+}
+
+.search-icon-button:is(:hover, :focus-visible) .search-icon {
+  stroke: var(--icon-fill-hover);
+}
+
+@media (hover: none) {
+  .search-icon-button {
+    --size: 36px
+  }
+}
+
+// Pagefind's own stylesheet is injected lazily, after this one, and sets
+// its own default display on this element - !important guarantees it always
+// stays hidden regardless of load order.
+pagefind-modal-trigger {
+  display: none !important;
+}
