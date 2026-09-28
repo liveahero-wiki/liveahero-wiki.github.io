@@ -154,7 +154,7 @@ status_id: {status_id_str}
         def render_category(cat_name, cat_list, chara_type_num, showCost: bool, writer: io.BufferedWriter):
             if not cat_list: return
             writer.write(f"## {cat_name}\n\n")
-            writer.write("<table class=\"bordered\">\n")
+            writer.write("<table class=\"bordered\" data-pagefind-ignore>\n")
             writer.write("<thead>\n")
             writer.write("<tr>\n")
             writer.write("<th>Character</th>\n")
