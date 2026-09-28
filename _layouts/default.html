@@ -2,7 +2,7 @@
 layout: compress
 ---
 {% include header.html %}
-<main class="content__area">
+<main class="content__area" data-pagefind-body>
 <div class="content{% if page.wide_content %}__wider{% endif %}">
     <aside class="wiki-msg">
         <a href="/survey/2026.html">Live A Hero Community Survey (2026)</a> has begun! Please take some time to participate before 30 Sep 2026.
@@ -35,6 +35,9 @@ layout: compress
 </button>
 
     <a class="github-button" href="{{ site.github_repo }}/blob/master/{{ page.path }}?plain=1">View source</a>
+
+    {% include pagefind-search.html %}
+
     {% assign chara_id = page.characterId %}
     {% if chara_id %}
       {% assign sidekick_card_id = chara_id | times: 100 | plus: 100011 | downcase %}

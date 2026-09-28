@@ -12,6 +12,7 @@ const setPreference = () => {
 
 const reflectPreference = () => {
   document.firstElementChild.setAttribute('data-theme', theme.value);
+  document.documentElement.setAttribute("data-pf-theme", theme.value);
   document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme.value);
 };
 
