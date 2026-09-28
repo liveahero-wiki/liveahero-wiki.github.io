@@ -23,15 +23,23 @@ const loadPagefindAssets = () => {
   return pagefindAssetsPromise;
 };
 
-const openSearch = () => {
-  loadPagefindAssets().then(() => {
-    document.querySelector('pagefind-modal-trigger')?.querySelector('button')?.click();
-  });
+const triggerModal = () => {
+  const btn = document.querySelector('pagefind-modal-trigger')?.querySelector('button');
+  if (btn) {
+    btn.click();
+    return true;
+  }
+  return false;
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelector('#search-toggle')?.addEventListener('click', openSearch);
-});
+const openSearch = async () => {
+  await loadPagefindAssets();
+  if (!triggerModal()) {
+    requestAnimationFrame(triggerModal);
+  }
+};
+
+document.querySelector('#search-toggle')?.addEventListener('click', openSearch);
 
 document.addEventListener('keydown', (event) => {
   // Once Pagefind's own assets have loaded, it registers its own Ctrl+K/Cmd+K
