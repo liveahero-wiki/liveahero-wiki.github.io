@@ -1,4 +1,5 @@
 {% assign locales = "" | split: "," %}
+{% assign langCodes = "" | split: "," %}
 {% assign dataSources = "" | split: "," %}
 
 {% assign jp_data = site.data.processed.jp_bio[include.bio] %}
@@ -7,18 +8,22 @@
 {% assign hant_data = site.data.processed.hant_bio[include.bio] %}
 {% if en_data and en_data != jp_data %}
 {% assign locales = locales | push: "en" %}
+{% assign langCodes = langCodes | push: "en" %}
 {% assign dataSources = dataSources | push: site.data.processed.en_bio %}
 {% endif %}
 {% if jp_data %}
 {% assign locales = locales | push: "jp" %}
+{% assign langCodes = langCodes | push: "ja" %}
 {% assign dataSources = dataSources | push: site.data.processed.jp_bio %}
 {% endif %}
 {% if hans_data and hans_data != jp_data %}
 {% assign locales = locales | push: "hans" %}
+{% assign langCodes = langCodes | push: "zh-Hans" %}
 {% assign dataSources = dataSources | push: site.data.processed.hans_bio %}
 {% endif %}
 {% if hant_data and hant_data != jp_data %}
 {% assign locales = locales | push: "hant" %}
+{% assign langCodes = langCodes | push: "zh-Hant" %}
 {% assign dataSources = dataSources | push: site.data.processed.hant_bio %}
 {% endif %}
 
@@ -36,7 +41,7 @@
 <wiki-tabcontent class="scroll-snap-x">
 {% for locale in locales %}
 {% assign localeIdx = forloop.index0 %}
-<div role="tabpanel" class="tabcontent contain" id="bio-{{include.bio | downcase}}-{{ locale }}" markdown="1">
+<div role="tabpanel" class="tabcontent contain" id="bio-{{include.bio | downcase}}-{{ locale }}" markdown="1" lang="{{ langCodes[localeIdx] }}">
 
 {{ dataSources[localeIdx][include.bio] }}
 

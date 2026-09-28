@@ -12,6 +12,7 @@
 {% endfor %}
 
 {% assign locales = "" | split: "," %}
+{% assign langCodes = "" | split: "," %}
 {% assign dataSources = "" | split: "," %}
 
 {% assign jp_data   = site.data.processed.jp_card_collection[referenceKey] %}
@@ -20,18 +21,22 @@
 {% assign hant_data = site.data.processed.hant_card_collection[referenceKey] %}
 {% if en_data and en_data != jp_data %}
     {% assign locales = locales | push: "en" %}
+    {% assign langCodes = langCodes | push: "en" %}
     {% assign dataSources = dataSources | push: site.data.processed.en_card_collection %}
 {% endif %}
 {% if jp_data %}
     {% assign locales = locales | push: "jp" %}
+    {% assign langCodes = langCodes | push: "ja" %}
     {% assign dataSources = dataSources | push: site.data.processed.jp_card_collection %}
 {% endif %}
 {% if hans_data and hans_data != jp_data %}
     {% assign locales = locales | push: "hans" %}
+    {% assign langCodes = langCodes | push: "zh-Hans" %}
     {% assign dataSources = dataSources | push: site.data.processed.hans_card_collection %}
 {% endif %}
 {% if hant_data and hant_data != jp_data %}
     {% assign locales = locales | push: "hant" %}
+    {% assign langCodes = langCodes | push: "zh-Hant" %}
     {% assign dataSources = dataSources | push: site.data.processed.hant_card_collection %}
 {% endif %}
 
@@ -59,7 +64,7 @@
 <wiki-tabcontent class="scroll-snap-x">
 {% for locale in locales %}
 {% assign localeIdx = forloop.index0 %}
-<div role="tabpanel" class="tabcontent contain" id="card-collection-{{targetStockId}}-{{ locale }}">
+<div role="tabpanel" class="tabcontent contain" id="card-collection-{{targetStockId}}-{{ locale }}" lang="{{ langCodes[localeIdx] }}">
     {% for entry in site.data.BromideMaster %}
     {% assign bromide = entry[1] %}
     {% if bromide.bromideStockId == targetStockId %}

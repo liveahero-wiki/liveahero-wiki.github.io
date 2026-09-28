@@ -37,12 +37,12 @@
       <tr>
         <td class="voice-jp-cell">
           <div class="voice-key-badge">{{ label_name }}</div>
-          <div class="voice-text">{{ jp_line | default: "-" }}</div>
+          <div class="voice-text" lang="ja">{{ jp_line | default: "-" }}</div>
         </td>
         <td class="voice-translation-cell">
-          <div class="voice-lang-content" data-lang="en">{{ en_val }}</div>
-          <div class="voice-lang-content" data-lang="hans">{{ hans_val }}</div>
-          <div class="voice-lang-content" data-lang="hant">{{ hant_val }}</div>
+          <div class="voice-lang-content" lang="en" data-lang="en">{{ en_val }}</div>
+          <div class="voice-lang-content" lang="zh-Hans" data-lang="hans">{{ hans_val }}</div>
+          <div class="voice-lang-content" lang="zh-Hant" data-lang="hant">{{ hant_val }}</div>
         </td>
       </tr>
     {% endif %}
@@ -67,12 +67,12 @@
       <tr>
         <td class="voice-jp-cell">
           <div class="voice-key-badge">{{ p }}</div>
-          <div class="voice-text">{{ jp_line }}</div>
+          <div class="voice-text" lang="ja">{{ jp_line }}</div>
         </td>
         <td class="voice-translation-cell">
-          <div class="voice-lang-content" data-lang="en">{{ en_val }}</div>
-          <div class="voice-lang-content" data-lang="hans">{{ hans_val }}</div>
-          <div class="voice-lang-content" data-lang="hant">{{ hant_val }}</div>
+          <div class="voice-lang-content" lang="en" data-lang="en">{{ en_val }}</div>
+          <div class="voice-lang-content" lang="zh-Hans" data-lang="hans">{{ hans_val }}</div>
+          <div class="voice-lang-content" lang="zh-Hant" data-lang="hant">{{ hant_val }}</div>
         </td>
       </tr>
     {% endif %}
