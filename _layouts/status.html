@@ -7,7 +7,10 @@ layout: default
 
 <hgroup class="page-header">
 {% assign defaultStatusName = "System status " | append: status_id %}
-    <h1><img width="64" height="64" style="vertical-align: middle;" src="/cdn/Sprite/{{ status.icon | default: 'b_skill_special' }}.png"> 
+    <h1 data-pagefind-meta="title">
+        <img width="64" height="64" style="vertical-align: middle;" src="/cdn/Sprite/{{ status.icon | default: 'b_skill_special' }}.png"
+            data-pagefind-meta="image[src]"
+        > 
         {{ status.name | default: defaultStatusName }}</h1>
     <p>{{ status.description }}</p>
 </hgroup>
