@@ -3,7 +3,7 @@ layout: default
 ---
 
 <table id="event-{{ page.eventId }}" class="event-infobox">
-<tr><th>Main Quest {{ page.book }}-{{page.chapter }}: {{ page.title }}</th></tr>
+<tr><th data-pagefind-meta="title" data-pagefind-weight="7">Main Quest {{ page.book }}-{{page.chapter }}: {{ page.title }}</th></tr>
 {% assign banner_image = "/cdn/Sprite/" | append: page.banner_image %}
 <tr><td>{% include image-event.html path=banner_image style="width: 100%" %}</td></tr>
 </table>
