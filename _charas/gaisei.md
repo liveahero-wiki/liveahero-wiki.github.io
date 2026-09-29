@@ -5,6 +5,7 @@ type: humanoid
 gender: male
 heroes:
 - stockId: 11911
+  limited: true
   BIO_H01: |-
     The blade-type parallel weapon extending from the forearm is a further enhancement of Gaisei's racial characteristic, where the bones     of his body are as hard as metal.
 
@@ -20,6 +21,7 @@ heroes:
   extra_sprites: fg_gaisei_h02_skin2,fg_gaisei_h02_skin3
 sidekicks:
 - stockId: 11911
+  limited: true
   BIO_S01: |-
     He is a young alien with a humanoid appearance who works as a bodyguard for a pawn shop and antique dealer with a troubled past.
   

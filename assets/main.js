@@ -50,7 +50,7 @@ function sortTable(table, column, btn) {
   });
 
   for (const x of array) {
-    table.appendChild(x.element);
+    table.tBodies[0].appendChild(x.element);
   }
 }
 
@@ -74,23 +74,34 @@ function setupSortTable() {
 }
 
 function setupWikiTabs() {
-  // grab and stash elements
-  const tabgroup = document.querySelector('wiki-tabs')
-  if (tabgroup == null) return
+  document.querySelectorAll("wiki-tabs").forEach(setupWikiTab)
+}
+
+function setupWikiTab(tabgroup) {
   const tabsection = tabgroup.querySelector(':scope > wiki-tabcontent')
+  const tabheader = tabgroup.querySelector(':scope > wiki-header')
   const tabnav = tabgroup.querySelector(':scope nav')
   const tabnavitems = tabnav.querySelectorAll(':scope a')
+  const isMiniTabs = tabgroup.classList.contains('mini-tabs')
 
-  const setActiveTab = tabbtn => {
+  const setActiveTab = (tabbtn, scrollTabSection = false) => {
     const t = tabnav.querySelector(':scope a[aria-selected="true"]')
     if (t !== null) t.removeAttribute('aria-selected')
 
     tabbtn.setAttribute('aria-selected', 'true')
-    tabbtn.scrollIntoView()
+    tabheader.scrollTo({
+      left: tabbtn.offsetLeft,
+      behavior: 'smooth'
+    })
+  
+    if (scrollTabSection) tabsection.scrollLeft = tabsection.querySelector(tabbtn.hash).offsetLeft
+    if (!isMiniTabs) {
+      history.replaceState(null, '', tabbtn.hash)
+    }
   }
 
   const determineActiveTabSection = () => {
-    const i = tabsection.scrollLeft / tabsection.clientWidth
+    const i = Math.round(tabsection.scrollLeft / tabsection.clientWidth)
     const matchingNavItem = tabnavitems[i]
 
     matchingNavItem && setActiveTab(matchingNavItem)
@@ -98,7 +109,8 @@ function setupWikiTabs() {
 
   tabnav.addEventListener('click', e => {
     if (e.target.nodeName !== "A") return
-    setActiveTab(e.target)
+    setActiveTab(e.target, true)
+    e.preventDefault()
   })
 
   tabsection.addEventListener('scroll', (e) => {
@@ -107,13 +119,46 @@ function setupWikiTabs() {
   })
 
   if (location.hash) {
-    const tab = document.querySelector(location.hash)
+    const tab = tabgroup.querySelector(location.hash)
     if (tab !== null) tabsection.scrollLeft = tab.offsetLeft
   }
   determineActiveTabSection()
 }
 
-const tasks = [setupWikiTabs, setupMenu, setupTranslate, setupExpiry, setupSortTable];
+function setupVoiceTableTabs() {
+  const tables = document.querySelectorAll(".voice-table");
+  if (tables.length === 0) return;
+
+  const activeLang = localStorage.getItem("voice_lang") || "en";
+
+  const updateAllTables = (lang) => {
+    tables.forEach(table => {
+      table.setAttribute("data-active-lang", lang);
+      const buttons = table.querySelectorAll(".voice-tab-btn");
+      buttons.forEach(btn => {
+        if (btn.dataset.langTarget === lang) {
+          btn.setAttribute("aria-selected", "true");
+        } else {
+          btn.removeAttribute("aria-selected");
+        }
+      });
+    });
+    localStorage.setItem("voice_lang", lang);
+  };
+
+  updateAllTables(activeLang);
+
+  tables.forEach(table => {
+    table.querySelectorAll(".voice-tab-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const lang = btn.dataset.langTarget;
+        updateAllTables(lang);
+      });
+    });
+  });
+}
+
+const tasks = [setupWikiTabs, setupMenu, setupTranslate, setupExpiry, setupSortTable, setupVoiceTableTabs];
 for (const t of tasks) {
   setTimeout(t, 0)
 }

@@ -1,6 +1,7 @@
 ---
 title: 5th Anniversary
-eventId: 103
+eventId: 144
+has_story: true
 jp_title: 5周年記念キャンペーン
 news_link: https://live-a-hero.jp/info/12066
 banner_image: ui_banner_event_questbanner_5thAnniversary2510.jpg
@@ -10,6 +11,12 @@ event_end_time: 2025-11-04T14:00:00+09
 
 * this will be unordered
 {:toc}
+
+## External Links
+
+- [5th Anniversary Message from LifeWonders](https://live-a-hero.jp/5th_anniversary)
+- [5th Anniversary Heroes Encyclopedia](https://live-a-hero.jp/5th_anniversary/heroes_encyclopedia2025)
+  - Fan Translation for the Heroes Interview: https://x.com/passzx/status/1973954384435556767
 
 ## Campaign Details
 
@@ -35,7 +42,7 @@ Exchange will be available until 2025/11/12 14:00 JST.
 
 > only permanent 4 star will be available for exchange
 
-> If you already have the character, Record Cube and Engravement level will be added, if Engravement level is already max, you will get {% include item.html id=74 %} instead.
+> If you already have the character, Record Cube and Seal level will be added, if Seal level is already max, you will get {% include item.html id=74 %} instead.
 
 Here is a list of available hero/sidekick for exchange:
 

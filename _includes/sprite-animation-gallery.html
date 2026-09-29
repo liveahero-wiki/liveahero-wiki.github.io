@@ -1,0 +1,12 @@
+{% assign style = "" | split: "," %}
+{% assign sprite_properties = "width,height,frames,animation,step-func" | split: "," %}
+{% for property in sprite_properties %}
+{% if include[property] %}
+{% assign s = "--sprite-" | append: property | append: ": " | append: include[property] %}
+{% assign style = style | push: s %}
+{% endif %}
+{% endfor %}
+
+<div class="sprite-container" style="{{ style | join: ";" }}">
+<div class="sprite-frame" style="background-image: url({{ include.background }})"></div>
+</div>

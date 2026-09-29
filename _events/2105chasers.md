@@ -1,6 +1,7 @@
 ---
 title: Space Taxi Chasers！
 eventId: 14
+has_story: true
 jp_title: スペース・タクシー・チェイサーズ！
 news_link: https://live-a-hero.jp/info/2133
 banner_image: banner_info_Chasers2105.jpg

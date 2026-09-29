@@ -1,8 +1,9 @@
 /_site
-/_site2
+/_site2/
 .sass-cache
 .jekyll-cache/
 .jekyll-metadata
+.vite/
 *.pyc
 **/node_modules
 e.txt
@@ -14,14 +15,32 @@ e.txt
 /_data/SalesMaster.json
 /_data/MasterDataCatalog.json
 /_charas2/
+/_statuses/
 /cdn/
-/_data/processed/SkillUpgradeMaster.json
+/_data/wiki/SkillUpgradeModel.json
 .DS_Store
 sales_report.txt
 greeting.sh
-test.html
+/test*.html
 *.tsv
 Gemfile.lock
+credentials.json
+/zzz/
+pyrightconfig.json
+
+/_data/processed/jp_voice.json
+/_data/processed/en_voice.json
+/_data/processed/hans_voice.json
+/_data/processed/hant_voice.json
+/tools/voice_index.json
+/api/skill-index.*.json
+/api/skill-index-version.*.json
+/api/skill-effects-audit.html
+
+# Skill-search bundle (built by `pnpm build` into assets/)
+/assets/skill-search.js
+/assets/skill-search.css
 
 # Local Netlify folder
 .netlify
+.vscode/launch.json

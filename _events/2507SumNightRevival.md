@@ -3,7 +3,7 @@ title: Summer Night Last Illusion (Reprint)
 eventId: 134
 jp_title: サマーナイツ・ラストイリュージョン開催！
 news_link: https://live-a-hero.jp/info/11531
-banner_image: ui_banner_info_SummerNightRevival2507.jpg
+banner_image: ui_banner_info_SummerNightRevival2507.webp
 gacha: true
 event_start_time: 2025-07-22T20:00:00+09
 event_end_time: 2025-08-12T14:00:00+09

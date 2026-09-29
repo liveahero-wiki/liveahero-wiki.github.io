@@ -1,0 +1,385 @@
+import json
+import os
+import unittest
+
+import generate_skill_search_index as gen
+from generate_skill_search_index import (
+    build_status_descs, maxed_skill_description, maxed_use_view, label_skill,
+    build_hero, group_by_stock, select_condition_rows)
+
+DATA = os.path.join(os.path.dirname(__file__), "..", "_data")
+
+
+def load(name):
+    with open(os.path.join(DATA, name), "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+class TestSkillTreeMaxed(unittest.TestCase):
+    """Skill-tree maxed-skill assembly, pinned to committed Akashi (stockId
+    10011) and Raiki (stockId 10041) master data. We assert on the raw Japanese
+    master strings (always present in _data/) and the language-independent View
+    cost, and pass GameTrans={} so the test is deterministic without zzz/."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.SM = load("SkillMaster.json")
+        cls.SEM = load("SkillEffectMaster.json")
+        cls.SUM = load("SkillUpgradeMaster.json")
+        cls.SMA = load("StatusMaster.json")
+
+    def test_akashi_active1_terminal_tier_description(self):
+        # 1001105 "燃ゆる白球+": base hit + top-tier burn + standalone passive,
+        # with the lower-priority burn tiers of the same condition group dropped.
+        desc = maxed_skill_description(1001105, self.SM, {}, {}, self.SUM)
+        self.assertTrue(desc.startswith("敵単体に70%ダメージ。"), desc)
+        self.assertIn("60%の確率で2ターンの間火傷を付与", desc)
+        self.assertIn("バトル開始時、自身に闘魂を付与", desc)
+        for superseded in ("40%の確率", "45%の確率", "50%の確率", "55%の確率"):
+            self.assertNotIn(superseded, desc)
+
+    def test_akashi_active3_terminal_damage_and_view(self):
+        # 1001107 "百烈打砲": top-tier 160% damage line, intermediate 125% dropped,
+        # and View cost 16000 - 500 - 500 - 1000 - 2000 = 12000.
+        desc = maxed_skill_description(1001107, self.SM, {}, {}, self.SUM)
+        self.assertIn("160%に増加", desc)
+        self.assertNotIn("125%に増加", desc)
+        self.assertEqual(maxed_use_view(1001107, self.SM, self.SEM), 12000)
+
+    def test_raiki_active2_view_reduction(self):
+        # 1004106 "メガボルト・クラッシュ": View cost 10000 - 2000 = 8000.
+        self.assertEqual(maxed_use_view(1004106, self.SM, self.SEM), 8000)
+
+    def test_raiki_active3_single_terminal_damage_tier(self):
+        # 1004107: the damage line climbs 90->...->110% across tiers that use
+        # DIFFERENT skillEffectIds; they share one conditionGroupId, so the
+        # tier-0 base (180% cap) is replaced by the top tier (220% cap) and the
+        # line appears exactly once.
+        desc = maxed_skill_description(1004107, self.SM, {}, {}, self.SUM)
+        self.assertIn("最大220%まで上昇", desc)
+        self.assertNotIn("最大180%まで上昇", desc)  # tier-0 base, superseded
+        self.assertEqual(desc.count("敵全体に"), 1, desc)  # no duplicated damage line
+
+    def test_standalone_passive_not_dropped_by_filler_collision(self):
+        # 1115105 "ロイヤルブレイカー+": the unconditional (conditionEntityId==0)
+        # passive line "デバフが付与されていない時、自身のATK+20%" is carried by 836
+        # "ダミー効果" (a pure text row), the same effect several tree-gated
+        # "</style>" fillers use. It sits in its own conditionGroupId, so no
+        # filler tier may supersede it.
+        desc = maxed_skill_description(1115105, self.SM, {}, {}, self.SUM)
+        self.assertIn("ATK+20%", desc, desc)
+
+    def test_no_view_effect_keeps_base(self):
+        # A skill with no ChangeSkillBaseView keeps its base useView untouched.
+        base_skill = 1001101  # Akashi's pre-bloom active 1
+        self.assertEqual(
+            maxed_use_view(base_skill, self.SM, self.SEM),
+            self.SM["1001101"].get("useView", 0),
+        )
+
+    def test_suhail_active1_diamond_tree_extra_activation(self):
+        # 1030105 "マーチソン・メテオ+": diamond upgrade tree where two paths
+        # (extra-activation threshold 6→5→4→3 and damage 30→32→34→37→40%) converge
+        # at leaf node 103010508 (damage-only). The last extra-activation tier
+        # sits at NON-leaf node 103010506, so it survives only by topping its
+        # own condition group -- tree position must not decide.
+        desc = maxed_skill_description(1030105, self.SM, {}, {}, self.SUM)
+        self.assertIn("40%", desc)               # final damage tier
+        self.assertIn("もう一度発動", desc)       # best extra-activation tier
+        # Each group renders at its own first serialNo: damage, then extra-activation.
+        self.assertLess(desc.index("40%"), desc.index("もう一度発動"))
+
+    def test_akashi_active2_linear_unique_sig_per_tier(self):
+        # 1001106: linear chain of 6 nodes where every tier has a DIFFERENT effect
+        # signature (ParticleStatus whose statusId is the target skillId). They
+        # still share one conditionGroupId, so only the top tier appears.
+        desc = maxed_skill_description(1001106, self.SM, {}, {}, self.SUM)
+        # The terminal entry is a ParticleStatus pointing at skill 1001107 ("百烈打砲");
+        # count how many skill-upgrade lines appear (each starts with the same prefix).
+        # There should be exactly one.
+        count = desc.count("スキル1で与えるダメージが")
+        self.assertEqual(count, 1, "expected exactly 1 skill-upgrade line, got %d: %r" % (count, desc))
+
+    def test_gammei_hero_active1_status_descs_maxed(self):
+        # Skill 1006105 "公務執行" (Gammei bloom active 1) has 6 tree-gated VP Cost
+        # effects (+100, +250, +400, +550, +750, +1000) with distinct override names,
+        # plus DEF Down (1 unconditional base + tree improvement tiers sharing the
+        # same name). After maxing, only the top VP Cost tier (+1000) and the base
+        # DEF Down should appear; intermediate VP Cost stages must be excluded.
+        descs = build_status_descs(
+            1006105, self.SM, self.SEM, self.SMA, {}, {}, self.SUM)
+        names = [d["name"] for d in descs]
+        self.assertIn("DEFダウン", names)
+        self.assertIn("View消費量+1000", names)
+        for intermediate in ("View消費量+100", "View消費量+250",
+                             "View消費量+400", "View消費量+550", "View消費量+750"):
+            self.assertNotIn(
+                intermediate, names,
+                f"intermediate VP Cost {intermediate!r} must not appear after maxing")
+
+    def test_hero_attribute_is_integer(self):
+        cards = load("CardMaster.json")
+        akashi_entries = [c for c in cards.values() if c.get("stockId") == 10011]
+        hero = build_hero(akashi_entries, self.SM, self.SEM, self.SMA, self.SUM, {}, {}, {}, {}, {})
+        self.assertIsInstance(hero.get("element"), int)
+        self.assertEqual(hero["element"], 1)
+
+
+class TestSelectConditionRows(unittest.TestCase):
+    """select_condition_rows: the conditionGroupId/conditionPriority tier rule."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.SUM = load("SkillUpgradeMaster.json")
+
+    @staticmethod
+    def _skill(*rows):
+        keys = ("serialNo", "conditionEntityId", "conditionGroupId", "conditionPriority")
+        return {"effects": [dict(zip(keys, r)) for r in rows]}
+
+    def _picked(self, skill, **kw):
+        return [e["serialNo"] for e in select_condition_rows(skill, self.SUM, **kw)]
+
+    def test_group_keeps_only_top_unlocked_priority(self):
+        skill = self._skill((0, 0, 1, 0), (1, 100110501, 1, 1), (2, 100110502, 1, 2))
+        self.assertEqual(self._picked(skill), [2])
+        # Only the first node unlocked -> its tier wins instead.
+        self.assertEqual(self._picked(skill, active={100110501}), [1])
+        # Nothing unlocked -> the conditionEntityId == 0 base survives.
+        self.assertEqual(self._picked(skill, active=set()), [0])
+
+    def test_ungrouped_rows_are_independent(self):
+        # conditionGroupId 0 never competes, even with rising conditionPriority
+        # (view-cost reductions look like this and are additive).
+        skill = self._skill((0, 100110501, 0, 1), (1, 100110502, 0, 2))
+        self.assertEqual(self._picked(skill), [0, 1])
+
+    def test_rows_ordered_by_group_start_not_winning_tier(self):
+        # group 1 starts at serialNo 0 but wins at 3; it must still render first.
+        skill = self._skill((0, 0, 1, 0), (1, 0, 2, 0), (3, 100110501, 1, 1))
+        self.assertEqual(self._picked(skill), [3, 1])
+
+    def test_missing_node_is_unlocked_and_warned(self):
+        # A gated node id absent from SkillUpgradeMaster must be treated as
+        # unlocked (include it, recall-safe) and recorded for the run report,
+        # rather than silently dropping the final tier.
+        gen.missing_upgrade_nodes.clear()
+        skill = self._skill((0, 999999999, 1, 1))
+        self.assertEqual(self._picked(skill), [0])
+        self.assertEqual(gen.missing_upgrade_nodes[999999999], 1)
+
+
+class TestSuspiciousViewCost(unittest.TestCase):
+    """maxed_use_view assumes ChangeSkillBaseView deltas are additive; a total
+    that goes negative signals a replacement-style tier was double-counted and
+    must be reported."""
+
+    def test_negative_total_is_recorded(self):
+        SM = {"1": {"useView": 1000,
+                    "effects": [{"skillEffectId": 10}, {"skillEffectId": 11}]}}
+        SEM = {
+            "10": {"skillEffectJson": {"effects": [
+                {"class": "ChangeSkillBaseView", "parameter": {"value": -800}}]}},
+            "11": {"skillEffectJson": {"effects": [
+                {"class": "ChangeSkillBaseView", "parameter": {"value": -800}}]}},
+        }
+        gen.suspicious_view_costs.clear()
+        self.assertEqual(maxed_use_view("1", SM, SEM), -600)
+        self.assertIn(("1", -600), gen.suspicious_view_costs)
+
+    def test_non_negative_total_not_recorded(self):
+        SM = {"1": {"useView": 1000,
+                    "effects": [{"skillEffectId": 10}]}}
+        SEM = {"10": {"skillEffectJson": {"effects": [
+            {"class": "ChangeSkillBaseView", "parameter": {"value": -400}}]}}}
+        gen.suspicious_view_costs.clear()
+        self.assertEqual(maxed_use_view("1", SM, SEM), 600)
+        self.assertEqual(gen.suspicious_view_costs, [])
+
+
+class TestMaxedChangeSkills(unittest.TestCase):
+    """change_by_slot must be recomputed over the maxed skill set: bloom skills
+    can introduce ChangeActiveSkill transforms the base set lacks. Pinned to
+    Borealis (stockId 10821), whose maxed active1 gains a transform target."""
+
+    def test_borealis_maxed_active1_has_change_skill(self):
+        def load(name, sub=None):
+            p = os.path.join(DATA, sub, name) if sub else os.path.join(DATA, name)
+            with open(p, "r", encoding="utf-8") as f:
+                return json.load(f)
+        SM = load("SkillMaster.json"); SEM = load("SkillEffectMaster.json")
+        SMA = load("StatusMaster.json"); SUM = load("SkillUpgradeMaster.json")
+        SkillTrans = load("Skill.json", "translation")
+        SkillEffectTrans = load("SkillEffect.json", "translation")
+        StatusTrans = load("Status.json", "translation")
+        groups = group_by_stock(load("CardMaster.json"))
+        entity = build_hero(groups[10821], SM, SEM, SMA, SUM, SkillTrans, {},
+                            SkillEffectTrans, StatusTrans, {})
+        active1 = next(s for s in entity["skillsMaxed"] if s["slot"] == "active1")
+        names = [c["name"] for c in active1["changeSkills"]]
+        # base-derived change_by_slot would leave this empty; the maxed-set
+        # recompute surfaces the bloom-introduced transform (テルニオ・カントゥーム,
+        # translated to "Ternio Cantum" via Skill.json).
+        self.assertTrue(names, "maxed active1 should carry a change-skill target")
+        self.assertIn("Ternio Cantum", names)
+
+
+class TestTargetFlagLabels(unittest.TestCase):
+    """Attack-range labels derived from SkillMaster.targetFlag, using the enum
+    semantics from _plugins/skill.rb skill_target."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.SM = load("SkillMaster.json")
+        cls.SEM = load("SkillEffectMaster.json")
+        cls.SMA = load("StatusMaster.json")
+
+    def labels(self, skill_id):
+        l, _, _ = label_skill(str(skill_id), self.SM, self.SEM, self.SMA, set())
+        return l
+
+    def test_single_enemy_is_single(self):
+        # 1001101 targetFlag 2 (target enemy) -> single, not all/ally
+        labels = self.labels(1001101)
+        self.assertIn("attack.single", labels)
+        self.assertNotIn("attack.all", labels)
+
+    def test_random_enemy_is_single_not_all(self):
+        # 1017101 targetFlag 7 (random enemy) -> single, not all. Regression:
+        # it used to be mislabelled attack.all (conflating "random target" with
+        # "all enemies"). It genuinely is a 2-hit attack though ("敵全体から
+        # ランダムに2回45%ダメージ" - two Damage rows at sequenceGroupId 0/1),
+        # so attack.multi is correctly present.
+        labels = self.labels(1017101)
+        self.assertIn("attack.other", labels)
+        self.assertNotIn("attack.all", labels)
+        self.assertIn("attack.multi", labels)
+
+    def test_all_enemies_is_all(self):
+        # Suhail active skill 1
+        self.assertIn("attack.all", self.labels(1030101))
+
+    def test_all_allies_damage_is_ally_not_all(self):
+        # Bygul active skill 3
+        labels = self.labels(1207103)
+        self.assertIn("attack.ally", labels)
+        self.assertIn("attack.all", labels)
+
+
+class TestAttackMultiLabel(unittest.TestCase):
+    """attack.multi: derived in label_skill() from grouping a skill's
+    damage-dealing SkillMaster.effects[] rows by sequenceGroupId. More than one
+    distinct group means concurrent/repeated hits in one skill use, whether via
+    RNG cascade (static prob) or a triggerJson condition (ally count, ViewPower)."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.SM = load("SkillMaster.json")
+        cls.SEM = load("SkillEffectMaster.json")
+        cls.SMA = load("StatusMaster.json")
+
+    def labels(self, skill_id):
+        l, _, _ = label_skill(str(skill_id), self.SM, self.SEM, self.SMA, set())
+        return l
+
+    def test_probabilistic_cascade_hits_is_multi(self):
+        # 1026206 (スフェラ・カタディキ+): 2-4x 40% dmg to a single enemy -
+        # two guaranteed Damage rows (sequenceGroupId 1,2, prob 100) plus two
+        # probabilistic extra rows (sequenceGroupId 3,4, prob 60/30).
+        self.assertIn("attack.multi", self.labels(1026206))
+
+    def test_two_fixed_hits_is_multi(self):
+        # 1265102 (露払い、そして守護): 35% dmg x2 to a single enemy - two
+        # Damage rows at sequenceGroupId 0 and 1, both prob 100.
+        self.assertIn("attack.multi", self.labels(1265102))
+
+    def test_ally_count_conditional_hits_is_multi(self):
+        # 1212104 (マキシマムラッシュ+): 120% base + 0-3x 20% extra hits based
+        # on the number of Fire allies other than self - base Damage row
+        # (sequenceGroupId 1) plus three triggerJson-gated rows (sequenceGroupId
+        # 2,3,4) each keyed to an ally-count threshold.
+        self.assertIn("attack.multi", self.labels(1212104))
+
+    def test_viewpower_conditional_hits_is_multi(self):
+        # 1007304 (ZAP&SLASH!!+): 200% base + 1-2 extra 50% hits based on
+        # ViewPower if the enemy is still alive - base Damage row
+        # (sequenceGroupId 0) plus two ViewTrigger-gated rows (sequenceGroupId
+        # 1,2) at increasing ViewPower thresholds.
+        self.assertIn("attack.multi", self.labels(1007304))
+
+    def test_skill_tree_tier_duplicates_not_multi(self):
+        # 1001107 (百烈打砲): 24 Damage-family effect rows, but they're all
+        # mutually-exclusive skill-tree tier variants of a single hit, gated
+        # by distinct conditionEntityId values while sharing sequenceGroupId
+        # 0 - not concurrent hits, so no attack.multi.
+        self.assertNotIn("attack.multi", self.labels(1001107))
+
+
+class TestClassifyValueSign(unittest.TestCase):
+    """Value-sign labelling: the *Multiple* families flip their label on
+    parameter.value (a percentage multiplier, 100 == x1.0 == no-op). Pinned to
+    committed SkillEffectMaster ids; the Japanese descriptions in the comments
+    are the ground truth that fixed the direction (DEFダウン = takes more damage)."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.SEM = load("SkillEffectMaster.json")
+
+    def classify(self, skill_effect_id):
+        inner = self.SEM[str(skill_effect_id)]["skillEffectJson"]["effects"][0]
+        labels, _dmg, recognized = gen.classify(inner["class"], inner)
+        self.assertTrue(recognized, f"{inner['class']} should be recognized")
+        return labels
+
+    def test_turnbase_multiple_attack_charge_is_up(self):
+        # 3141 "ATKチャージ" value 120 -> ATK up (was previously unmapped)
+        self.assertEqual(self.classify(3141), {"damage.up"})
+
+    def test_turnbase_multiple_attack_neutral_no_label(self):
+        # 2040 "弾痕(説明用効果)" value 100 -> x1.0 marker, recognized but no label
+        self.assertEqual(self.classify(2040), set())
+
+    def test_turnbase_multiple_defence_is_up(self):
+        # 3347 "傷跡" value 105 -> DEF-down-over-turns -> takes more damage -> up
+        self.assertEqual(self.classify(3347), {"defense.down"})
+
+    def test_multiple_attack_up_and_down(self):
+        self.assertEqual(self.classify(3), {"damage.up"})     # 3 "ATKアップ" value 150
+        self.assertEqual(self.classify(16), {"damage.down"})  # 16 "ATKダウン" value 50
+
+    def test_multiple_defence_flips_on_value(self):
+        self.assertEqual(self.classify(9), {"defense.down"})     # 9 "DEFダウン" value 150
+        self.assertEqual(self.classify(17), {"defense.up"})  # 17 "無敵" value 0
+        self.assertEqual(self.classify(802), set())           # 802 "粘質武装" value 100
+
+    def test_multiple_base_view_gain_and_loss(self):
+        self.assertEqual(self.classify(6), {"vp.statup"})    # 6 "注目" value 150
+        self.assertEqual(self.classify(212), {"vp.statdown"})  # 212 value 50 -> reduced gain
+
+    def test_change_view_positive_is_vp_gain(self):
+        # SE 345 (Suhail active1): "Gained 1000 Views", value 1000 -> vp.gain
+        labels, _, recognized = gen.classify("ChangeView", {"parameter": {"value": 1000}})
+        self.assertTrue(recognized)
+        self.assertEqual(labels, {"vp.gain"})
+
+    def test_change_view_negative_is_vp_consume(self):
+        # SE 3234 (Danzo active2): "Views reduced by 3000", value -3000 -> vp.consume
+        labels, _, recognized = gen.classify("ChangeView", {"parameter": {"value": -3000}})
+        self.assertTrue(recognized)
+        self.assertEqual(labels, {"vp.consume"})
+
+    def test_need_view_value_change_negative_is_vp_costdown(self):
+        # SE 4043 (Exio active2): "View consumption -1000", value -1000 -> vp.costdown
+        labels, _, recognized = gen.classify("NeedViewValueChange", {"parameter": {"value": -1000}})
+        self.assertTrue(recognized)
+        self.assertEqual(labels, {"vp.costdown"})
+
+    def test_need_view_value_change_positive_is_vp_costup(self):
+        # SE 1092 (Fire Local Idol): "View consumption +2000", value 2000 -> vp.costup
+        labels, _, recognized = gen.classify("NeedViewValueChange", {"parameter": {"value": 2000}})
+        self.assertTrue(recognized)
+        self.assertEqual(labels, {"vp.costup"})
+
+
+if __name__ == "__main__":
+    unittest.main()

@@ -1,12 +1,32 @@
 {
+  "name": "lah-skill-search",
+  "version": "0.1.0",
+  "private": true,
   "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "eleventy:dev": "NODE_OPTIONS=--max-old-space-size=8192 eleventy --serve --output _site2",
+    "eleventy:build": "NODE_OPTIONS=--max-old-space-size=8192 DEBUG=Eleventy* eleventy --output _site2"
+  },
+  "dependencies": {
+    "@tanstack/react-table": "^8.21.3",
+    "@tanstack/react-virtual": "^3.14.10",
+    "downshift": "^9.0.10",
+    "preact": "^10.29.8"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "netlify-cli": "^23.9.5"
+    "@preact/preset-vite": "^2.10.6",
+    "@types/node": "^26.4.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2"
   },
-  "scripts": {
-    "netlify": "netlify",
-    "dev": "NODE_OPTIONS=--max-old-space-size=8192 eleventy --serve --output _site2",
-    "build": "NODE_OPTIONS=--max-old-space-size=8192 DEBUG=Eleventy* eleventy --output _site2"
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }

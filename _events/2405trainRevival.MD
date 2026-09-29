@@ -3,7 +3,7 @@ title: Cruise Train of Star Ocean (Reprint)
 eventId: 89
 jp_title: 【復刻】星海往くクルーズトレイン
 news_link: https://live-a-hero.jp/info/8704
-banner_image: banner_info_TrainRevival2405.jpg
+banner_image: banner_info_TrainRevival2405.webp
 gacha: true
 event_start_time: 2024-05-16T20:00:00+09
 event_end_time: 2024-06-06T14:00:00+09

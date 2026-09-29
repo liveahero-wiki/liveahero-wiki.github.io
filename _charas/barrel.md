@@ -164,4 +164,4 @@ EVENTB = "It's nice to have a lively festival, it makes me feel excited!<br>Hey,
 
 - His relation lines refers to {% chara_link Gammei %}
 - His hero lines refers to {% chara_link Flamier %}
-- His Full name is Barrel Crankrack (バレル・クランクラック)
+- His Full name is Barrel Krankrack (バレル・クランクラック)

@@ -93,6 +93,12 @@ sprites="fg_villainChasseurEarth_h01,fg_villainChasseurFire_h01,fg_villainChasse
 sprites="fg_kaibutsuCoalTarEarth_h01,fg_kaibutsuCoalTarFire_h01,fg_kaibutsuCoalTarLight_h01,fg_kaibutsuCoalTarShadow_h01,fg_kaibutsuCoalTarWater_h01"
 %}
 
+### Dream-Eating Kaibutsu
+
+{% include hero-infobox-unreleased.html name="Dream-Eating Kaibutsu" mob=true
+sprites="fg_kaibutsuIxtlEarth_h01,fg_kaibutsuIxtlFire_h01,fg_kaibutsuIxtlLight_h01,fg_kaibutsuIxtlShadow_h01,fg_kaibutsuIxtlWater_h01"
+%}
+
 ### Engine Kaibutsu (Adult)
 
 {% include hero-infobox-unreleased.html name="Engine Kaibutsu (Adult)" mob=true
@@ -108,7 +114,7 @@ sprites="fg_kaibutsuEngineLarvaEarth_h01,fg_kaibutsuEngineLarvaFire_h01,fg_kaibu
 ### Eno Seaman
 
 {% include hero-infobox-unreleased.html name="Eno Seaman" mob=true
-sprites="fg_enoseaman_h01,fg_enoseaman_s01,fg_enoseamanBoss_h01,fg_enoseamanBoss_h02"
+sprites="fg_enoseaman_h01,fg_enoseaman_s01"
 %}
 
 ### Ghost Kaibutsu (Adult)
@@ -201,6 +207,18 @@ sprites="fg_villainMafiaEarth_s01,fg_villainMafiaFire_s01,fg_villainMafiaLight_s
 sprites="fg_villainMafiaEarth_h01,fg_villainMafiaFire_h01,fg_villainMafiaLight_h01,fg_villainMafiaShadow_h01,fg_villainMafiaWater_h01"
 %}
 
+### Maid
+
+{% include hero-infobox-unreleased.html name="Maid" mob=true
+sprites="fg_villainMaidEarth_s01,fg_villainMaidFire_s01,fg_villainMaidLight_s01,fg_villainMaidShadow_s01,fg_villainMaidWater_s01"
+%}
+
+### Maid (Transform)
+
+{% include hero-infobox-unreleased.html name="Transformed Maid" mob=true
+sprites="fg_villainMaidEarth_h01,fg_villainMaidFire_h01,fg_villainMaidLight_h01,fg_villainMaidShadow_h01,fg_villainMaidWater_h01"
+%}
+
 ### Mercenary (Clown)
 
 {% include hero-infobox-unreleased.html name="Clowning Mercenary" mob=true
@@ -274,6 +292,30 @@ sprites="fg_kaibutsuOctopusEarth_h01,fg_kaibutsuOctopusFire_h01,fg_kaibutsuOctop
 sprites="fg_kaibutsuMikoshiEarth_h01,fg_kaibutsuMikoshiFire_h01,fg_kaibutsuMikoshiLight_h01,fg_kaibutsuMikoshiShadow_h01,fg_kaibutsuMikoshiWater_h01"
 %}
 
+### Phantasm Kaibutsu (Adult)
+
+{% include hero-infobox-unreleased.html name="Phantasm Kaibutsu (Adult)" mob=true
+sprites="fg_kaibutsuPhantasmAdultEarth_h01,fg_kaibutsuPhantasmAdultFire_h01,fg_kaibutsuPhantasmAdultLight_h01,fg_kaibutsuPhantasmAdultShadow_h01,fg_kaibutsuPhantasmAdultWater_h01"
+%}
+
+### Phantasm Kaibutsu (Juvenile)
+
+{% include hero-infobox-unreleased.html name="Phantasm Kaibutsu (Juvenile)" mob=true
+sprites="fg_kaibutsuPhantasmLarvaEarth_h01,fg_kaibutsuPhantasmLarvaFire_h01,fg_kaibutsuPhantasmLarvaLight_h01,fg_kaibutsuPhantasmLarvaShadow_h01,fg_kaibutsuPhantasmLarvaWater_h01"
+%}
+
+### Ranger
+
+{% include hero-infobox-unreleased.html name="Ranger" mob=true
+sprites="fg_villainRangerEarth_s01,fg_villainRangerFire_s01,fg_villainRangerLight_s01,fg_villainRangerShadow_s01,fg_villainRangerWater_s01"
+%}
+
+### Ranger (Transform)
+
+{% include hero-infobox-unreleased.html name="Transformed Ranger" mob=true
+sprites="fg_villainRangerEarth_h01,fg_villainRangerFire_h01,fg_villainRangerLight_h01,fg_villainRangerShadow_h01,fg_villainRangerWater_h01"
+%}
+
 ### Salvager (Transform)
 
 {% include hero-infobox-unreleased.html name="Transformed Salvager" mob=true
@@ -338,6 +380,12 @@ sprites="fg_villainTraineeEarth_h01,fg_villainTraineeFire_h01,fg_villainTraineeL
 
 {% include hero-infobox-unreleased.html name="Tree Kaibutsu" mob=true
 sprites="fg_kaibutsuXmas2012_h01"
+%}
+
+### Vikings
+
+{% include hero-infobox-unreleased.html name="Vikings" mob=true
+sprites="fg_villainVikingsEarth_h01,fg_villainVikingsFire_h01,fg_villainVikingsLight_h01,fg_villainVikingsShadow_h01,fg_villainVikingsWater_h01"
 %}
 
 ### Villain

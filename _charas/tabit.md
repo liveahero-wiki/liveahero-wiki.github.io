@@ -39,6 +39,7 @@ sidekicks:
     
     Although he does not seem to be too concerned about it, 
     there seems to be a reason for the abnormality in some of his language functions.
+  extra_sprites: fg_tabit_s01_skin1,fg_tabit_s01_skin2
 ---
 
 {% include voice-table.html resourceName="tabit"

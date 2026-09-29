@@ -1,9 +1,10 @@
 ---
 title: 2nd Anniversary
 eventId: 41
+has_story: true
 jp_title: 2周年記念キャンペーン
 news_link: https://live-a-hero.jp/campaign/4553
-banner_image: banner_notice_2ndAnniversary.jpg 
+banner_image: banner_notice_2ndAnniversary.webp 
 event_start_time: 2022-09-30T20:00:00+09
 event_end_time: 2022-10-25T23:59:00+09
 ---
@@ -39,7 +40,7 @@ Exchange will be available until 2022/10/31 23:59 JST.
 
 > only permanent 4 star will be available for exchange
 
-> If you already have the character, Record Cube and Engravement level will be added, if Engravement level is already max, you will get {% include item-icon.html id=74 %} Record cube fragments instead.
+> If you already have the character, Record Cube and Seal level will be added, if Seal level is already max, you will get {% include item-icon.html id=74 %} Record cube fragments instead.
 
 Here is a list of available hero/sidekick for exchange:
 

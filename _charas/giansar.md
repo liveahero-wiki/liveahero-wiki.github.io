@@ -7,6 +7,7 @@ h2:
   title: "\"Shattering Horizons\" Giansar"
 heroes:
 - stockId: 11241
+  limited: true
   BIO_H01: |-
     The knife-shaped parallel weapon collects and analyzes information about the target it stabs and reproduces their appearance in his own suit.
   
@@ -25,9 +26,16 @@ heroes:
   
     He will become the strongest hero, with information over all heroes, a real hero that he always admire and long to be.
 - stockId: 11242
+  BIO_H01: |-
+    Christmas is traditionally said to be a time when good children receive rewards and bad children are punished. However, what Giansar delivers while clad in     a black Santa Claus suit is neither of the two.
+
+    The present box he carries is a parallel weapon containing massive quantities of condensed energy. When defined by Giansar, this energy takes physical form     and is released outward. What appears to be a bomb may turn out to be nothing more than a fake composed of sound and light, while an innocently wrapped         piece of candy can detonate in a spectacular explosion.
+
+    The many surprise gifts deployed by Giansar, interweaving truth and deception, vividly decorate the battlefield as if to dismantle the very notion of           “correctness” that separates good children from bad ones.
   extra_sprites: fg_giansarLightYears2412_h02_skin2
 sidekicks:
 - stockId: 11241
+  limited: true
   BIO_S01: |-
     With a deep and highly technical knowledge of various systems, both software and hardware, Giansar is very meticulous in contrast to his rough tone and demeanor.
   

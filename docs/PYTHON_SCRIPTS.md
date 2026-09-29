@@ -1,0 +1,218 @@
+# Live A Hero Wiki — Python Scripts & Automation Tools
+
+All automation scripts are maintained in the root directory or the `tools/` directory. 
+
+```mermaid
+graph TD
+    A[Live A Hero API / CDN] -->|tools/masterdata.py| B[Raw MasterData JSONs in _data/]
+    A -->|tools/masterdata.py| C[Raw Property JSONs in zzz/]
+    
+    C -->|tools/masterdata.py| D[Language-Processed JSONs in _data/processed/]
+    B -->|tools/masterdata.py| D
+    
+    D -->|tools/translation_gen_tsv.py| E[Local TSV Templates]
+    E -->|tools/translation_update_gsheet.py| F[Google Sheets API]
+    F -->|Community Translation Process| F
+    
+    F -->|tools/translation_download_tsv.py| G[_data/translation/ JSON databases]
+    
+    G -->|tools/generate_status_pages.py| H[_statuses/ status pages]
+    G -->|tools/event_gen.py| I[_events/ event pages]
+    
+    D -->|tools/gen_skill_upgrade_model.py| J[_data/wiki/SkillUpgradeModel.json interactive tree model]
+
+    G -->|tools/generate_skill_search_index.py| K[api/ skill-index.json search index]
+    B -->|tools/generate_skill_search_index.py| K
+```
+
+## 📂 Core Scripts Reference
+
+### 1. `tools/masterdata.py`
+*   **Purpose**: The central pipeline updater. It checks the live gateway API for client/master data updates. If a new version is detected, it downloads the full list of MasterData JSON files from the CDN, stores them in `_data/`, downloads raw localization property files (Japanese, English, Traditional/Simplified Chinese) to `zzz/`, and triggers all required preprocessing steps.
+*   **Input Files**:
+    *   `tools/masterdata_ver.txt` (local version tracking)
+*   **Output Files**:
+    *   `tools/masterdata_ver.txt` (updated version string)
+    *   `_data/<MasterDataName>.json` (all updated master catalogs)
+    *   `zzz/Japanese.json`, `zzz/English.json`, `zzz/ChineseTraditional.json`, `zzz/ChineseSimplified.json`
+*   **Preprocess Calls Triggered**:
+    *   `processMasterDataCatalog()`
+    *   `processShopFile()`
+    *   `processCardProfileOverride()`
+    *   `processSalesFile()`
+    *   `processPropertiesFile()`
+    *   `processItemInfo()`
+
+---
+
+### 2. `tools/preprocess.py`
+*   **Purpose**: Contains data utility and formatting functions that restructure raw MasterData and asset catalog tables into ordered, clean, and normalized JSON structures suitable for the Jekyll site engine.
+*   **Input Files**:
+    *   `_data/CardProfileOverrideMaster.json`
+    *   `_data/ShopMaster.json`
+    *   `_data/SalesMaster.json`
+    *   `_data/MasterDataCatalog.json`
+    *   `_data/ItemMaster.json`
+    *   `_data/wiki/Item.yml`
+    *   `zzz/Japanese.json` / `zzz/English.json` (and other localization files)
+*   **Output Files**:
+    *   `_data/processed/CardProfileOverride.json`
+    *   `_data/stores/<id>.json` (individual store files)
+    *   `_data/processed/sales_report_master.json`
+    *   `_data/MasterDataCatalog_list.json`
+    *   `_data/wiki/Item.yml` (merged translated item definitions)
+    *   `_data/processed/*_bio.json`, `*_serif.json`, `*_profile.json`, `*_library.json`, `*_sales_report.json`, `*_score_attack.json` (for all language configurations)
+
+---
+
+### 3. `tools/translation_gen_tsv.py`
+*   **Purpose**: Generates and formats clean TSV spreadsheets representing game Skills, Skill Effects, and Status elements side-by-side with official English translations (if available in raw `zzz/English.json`). These files act as templates for community members to manually refine translations.
+*   **Input Files**:
+    *   `_data/SkillMaster.json`
+    *   `_data/CardMaster.json`
+    *   `_data/SidekickMaster.json`
+    *   `_data/SkillEffectMaster.json`
+    *   `_data/StatusMaster.json`
+    *   `zzz/English.json`
+*   **Input Files** (additional):
+    *   `_data/SkillUpgradeMaster.json`
+*   **Output Files**:
+    *   `skill-jp.tsv` (Skill list spreadsheet layout)
+    *   `skill-effect-jp.tsv` (Skill status override details spreadsheet layout)
+    *   `status-jp.tsv` (Raw battle status list spreadsheet layout)
+    *   `skill-upgrade-jp.tsv` (Bloom skill-tree node tooltips, keyed by `skillEntryId`)
+    *   `skill-condition-jp.tsv` (Bloom skill-tree per-tier condition lines shown in `hero-skill-evolution-v2.html`, keyed by `skillId` + `serialNo`; only text-bearing lines)
+
+---
+
+### 4. `tools/translation_update_gsheet.py`
+*   **Purpose**: Synchronizes local TSVs with the community translation Google Sheet (ID: `1PVTqJxN2-VF1TwSdlisrrLgW1vWlRKJSmv1cpCBaY-I`) using the Google Sheets API (`gspread`). It matches records by primary key, appends new rows, patches empty translation cells, sorts worksheets, and sends a Discord webhook report.
+*   **Input Files**:
+    *   `credentials.json` (or `GOOGLE_CREDENTIALS_JSON` environment variable)
+    *   `skill-jp.tsv`, `skill-effect-jp.tsv`, `status-jp.tsv`, `skill-upgrade-jp.tsv`, `skill-condition-jp.tsv` (generated locally)
+*   **Output Web Targets**:
+    *   Edits to target worksheets: "EN skill", "EN skill effect", "EN status", "EN skill upgrade", "EN skill condition" in Google Sheets. The "EN skill condition" worksheet is auto-created on first run if it does not exist.
+    *   Discord summary notification via webhook `DISCORD_WEBHOOK_URL`
+
+---
+
+### 5. `tools/translation_download_tsv.py`
+*   **Purpose**: Connects to the public Google Sheet published CSV endpoints (or reads local TSVs) to pull down approved community translations, validates HTML/liquid-like markup structure for strict tag closures (to avoid Jekyll breaking), and saves the compiled dictionaries.
+*   **Input Files**:
+    *   Spreadsheets online CSV streams OR local files `skill-tl.tsv`, `skill-effect-tl.tsv`, `status-tl.tsv`, `skill-upgrade-tl.tsv`, `skill-condition-tl.tsv` (when `--use_local` flag is provided)
+    *   `_data/CardMaster.json`
+    *   `_data/SidekickMaster.json`
+*   **Output Files**:
+    *   `_data/translation/Skill.json`
+    *   `_data/translation/SkillV2Whitelist.json` (whitelist of characters with fully translated skills)
+    *   `_data/translation/SkillEffect.json`
+    *   `_data/translation/Status.json`
+    *   `_data/translation/SkillUpgrade.json` (bloom node tooltips, keyed by `skillEntryId`)
+    *   `_data/translation/SkillCondition.json` (bloom per-tier condition lines, keyed `"{skillId}_{serialNo}"`). Skipped until `SKILL_CONDITION_TL_URL`'s `gid` is filled in (the "EN skill condition" tab must exist and be published first).
+
+---
+
+### 6. `tools/generate_status_pages.py`
+*   **Purpose**: Scans all hero and sidekick master data to map skills that apply battle status effects. It automatically generates dedicated Jekyll status page markdown documents grouped by status IDs.
+*   **Input Files**:
+    *   `_data/CardMaster.json`
+    *   `_data/SidekickMaster.json`
+    *   `_data/SkillMaster.json`
+    *   `_data/SkillEffectMaster.json`
+    *   `_data/StatusMaster.json`
+    *   `_data/translation/Status.json`
+*   **Output Files**:
+    *   `_statuses/<status_id>.md` (individual Jekyll markdown status pages)
+
+---
+
+### 7. `tools/event_gen.py`
+*   **Purpose**: Automatically scaffolds new event pages under `_events/<pageName>.md` from structured event master definitions, resolving character IDs to page names and building hero/sidekick bonus rewards tables.
+*   **Input Files**:
+    *   `_data/EventMaster.json`
+    *   `_charas/*.md` (used to build character ID maps)
+*   **Output Files**:
+    *   `_events/<pageName>.md` (scaffolded Jekyll markdown event page template)
+
+---
+
+### 8. `tools/event_patch.py`
+*   **Purpose**: A script to patch `_events/` front matter by mapping a page's `banner_image` path back to its corresponding `eventId` in `_data/EventMaster.json` and cleanly injecting it back into the front-matter block.
+*   **Input Files**:
+    *   `_events/*.md`
+    *   `_data/EventMaster.json`
+*   **Output Files**:
+    *   `_events/*.md` (modified front matter block)
+
+---
+
+### 9. `tools/gen_skill_upgrade_model.py`
+*   **Purpose**: Builds the data model for the interactive skill-tree ("bloom") UI (`_includes/hero-skill-evolution-v2.html` + `assets/skill-tree.js`). For each hero with a skill tree it emits, per bloom skill, the raw per-tier condition lines, View-cost deltas, the `SkillUpgradeMaster` DAG topology, a depth-based visual row layout, and the fully-maxed text/cost — so the browser can recompute the resolved description + View cost for ANY subset of active upgrade nodes. Reuses the maxed-resolution helpers from `generate_skill_search_index.py` and self-checks that the all-active reconstruction byte-matches `maxed_skill_description` / `maxed_use_view` (aborts on mismatch).
+*   **Input Files**:
+    *   `_data/SkillUpgradeMaster.json`, `_data/SkillMaster.json`, `_data/SkillEffectMaster.json`, `_data/StatusMaster.json`, `_data/CardMaster.json`
+    *   `zzz/English.json`; `_data/translation/{Skill,SkillEffect,Status,SkillUpgrade}.json` (optional community overrides)
+*   **Output Files**:
+    *   `_data/wiki/SkillUpgradeModel.json` (keyed by `stockId`)
+
+---
+
+### 10. `tools/sales_report.py`
+*   **Purpose**: Extracts event-specific sales dialog translations written directly inside `<details>` HTML details markers in Jekyll events pages and aggregates them into a centralized JSON lookup table.
+*   **Input Files**:
+    *   `_events/*.md`
+    *   `_data/processed/sales_report_master.json`
+    *   `_data/EventMaster.json`
+*   **Output Files**:
+    *   `_data/wiki/SalesReport.json`
+
+---
+
+### 11. `tools/rewrite.py`
+*   **Purpose**: Converts old character markdown structures located in `_charas2/` (which used custom verbose Liquid capturing blocks) into structured, modern, front-matter-driven YAML formatting located in `_charas/`.
+*   **Input Files**:
+    *   `_charas2/*.md`
+*   **Output Files**:
+    *   `_charas/*.md`
+
+---
+
+### 12. `tools/wiki_util.py` / `tools/wiki_util_test.py`
+*   **Purpose**: Provides text-sanitizing utilities that parse game-specific style tags (like `<color=...>`, `<size=...>`, `<style="オート行動">`, etc.) and formats them into clean web-safe standard tags (like HTML spans, classes, `<wiki-passive>`, `<wiki-auto-action>`). Also provides test suites to validate regex performance.
+*   **Input/Output**: Utility function libraries imported by most data pipeline scripts.
+
+---
+
+### 13. `tools/generate_skill_search_index.py`
+*   **Purpose**: Builds the prebuilt index that powers the advanced skill search, one language per run via `--lang {en,zh-Hans,zh-Hant,ja}` (default `en`). Deduplicates heroes/sidekicks by `stockId` (heroes use the rarity-6 entry, falling back to the highest rarity; sidekicks use the `levelZone == 6` entry; either is flagged `isMob` when the stock's smallest rarity is `1`), then walks the `SkillMaster → SkillEffectMaster → StatusMaster` join chain to label each skill with effect categories (e.g. `attack.single`, `damage.dot`) and collect the named statuses it applies. Folds `ChangeActiveSkill` target skills and granted passives into the source skill, and emits both a base and a fully-bloomed (`skillsMaxed`) loadout for heroes with a skill tree. For the `skillsMaxed` entries the per-skill `description` and `useView` are reassembled to the fully-unlocked skill-tree state — see [Skill-Tree Enhancement](./DATA_SCHEMAS.md#7-skill-tree-enhancement-skillupgrademaster--tiered-effects) in the data-schema guide for the `conditionGroupId`/`conditionPriority` tier rules. Unrecognized effect classes are reported as `UNMAPPED CLASSES` for review. Skill/status name and description text is sourced from the `zzz/<lang>.json` client localization dump for the requested language (`_data/translation/{Skill,SkillEffect}.json` community translations are only applied for `en`; `_data/translation/Status.json` always supplies the language-independent status `icon`, but its `name`/`description` are `en`-only), falling back to raw Japanese masterdata text where a translation is missing. The `CATEGORIES` filter taxonomy (category/label/sublabel button text) is separately hand-translated per language via `CATEGORY_LABEL_TRANSLATIONS`/`SUBLABEL_TRANSLATIONS`. Outputs are plain static JSON (no front matter) so Jekyll copies them verbatim into `_site/api/`, fetchable at `/api/skill-index.<lang>.json`. Run after `tools/translation_download_tsv.py` (it consumes `Status.json`).
+*   **Input Files**:
+    *   `_data/CardMaster.json`
+    *   `_data/SidekickMaster.json`
+    *   `_data/SkillMaster.json`
+    *   `_data/SkillEffectMaster.json`
+    *   `_data/StatusMaster.json`
+    *   `_data/SkillUpgradeMaster.json` (skill-tree graph; drives the `skillsMaxed` description/useView assembly)
+    *   `_data/translation/Status.json`
+    *   `zzz/English.json` / `zzz/ChineseSimplified.json` / `zzz/ChineseTraditional.json` / `zzz/Japanese.json` (client localization dump for the requested `--lang`; optional, missing → raw-Japanese fallback)
+    *   `tools/masterdata_ver.txt` (index version; falls back to a hash of the input masters)
+*   **Output Files** (per `--lang` invocation):
+    *   `api/skill-index.<lang>.json` (full search index for that language: categories, statuses, entities)
+    *   `api/skill-index-version.<lang>.json` (tiny version probe for browser cache invalidation)
+
+---
+
+### 14. `tools/audit_skill_effects.py`
+*   **Purpose**: Audits the skill-effect `class`es used by the search index, **scoped to the same skills reachable from `CardMaster`/`SidekickMaster`** that `generate_skill_search_index.py` indexes (it imports that module's `load_all`, `build_entities`, and `classify`, so its frequency counts match the generator's `UNMAPPED CLASSES` report). Used to drive labelling improvements: for each class it gathers the real Japanese descriptions, parameter shapes, and the labels `classify()` currently produces, so the right taxonomy mapping can be deduced from evidence rather than the (misleading) English class name. Subcommands: `classes` (every reachable class by descending frequency, with a recognized/UNMAPPED flag), `class <Name>…` (occurrences of the given class(es) collapsed into distinct signatures with `value` ranges, persistence counts, statuses, and example characters), and `report` (browsable HTML, one collapsed `<details>` per class, sorted for clean diffs). Add `--json` to `classes`/`class` for machine-readable output. Read-only apart from the optional HTML report. See the `audit-effect-classes` skill for the full audit workflow.
+*   **Input Files**: same masters as `generate_skill_search_index.py` (loaded via its `load_all`), plus `_charas/*.md` for character-page links.
+*   **Output Files**:
+    *   `api/skill-effects-audit.html` (only when running `report`; override with `--out`)
+
+---
+
+### 15. `preprocess.py` (root directory)
+*   **Purpose**: Preprocesses and optimizes game assets. Currently configured to optimize and compress raw PNG banner/survey assets under `Sprite` and survey directories, converting them to compressed, web-ready progressive JPGs using Pillow (`PIL`).
+*   **Input Files**:
+    *   `Sprite/banner_*.png`
+    *   `assets/img/survey-2025/*.png`
+*   **Output Files**:
+    *   `Sprite/banner_*.jpg`
+    *   `assets/img/survey-2025/*.jpg`

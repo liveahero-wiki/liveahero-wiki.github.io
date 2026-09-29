@@ -1,6 +1,7 @@
 ---
 title: Valentine Cyber Wars
 eventId: 8
+has_story: true
 jp_title: バレンタイン・サイバーウォー
 news_link: https://live-a-hero.jp/info/1404
 banner_image: banner_info_2102Valentine.jpg
@@ -11,6 +12,7 @@ farm_start_time: 2021-02-22T20:00:00+09
 farm_end_time: 2021-03-15T20:00:00+09
 sales_start_time: 2021-02-22T20:00:00+09
 sales_end_time: 2021-03-15T20:00:00+09
+translated: true
 ---
 
 ## Event Details

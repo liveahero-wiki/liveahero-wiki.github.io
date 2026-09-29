@@ -12,45 +12,20 @@
 {% assign sprites = sprites | append: "," | append: include.extra_sprites %}
 {% endif %}
 
-{% assign stockId = include.stockId | downcase %}
-{% assign cardProfileOverride = site.data.processed.CardProfileOverride[stockId].hero %}
-{% assign overrideIllustrator = site.data.processed.jp_profile[cardProfileOverride.illustrator] %}
-{% assign overrideAffiliation = site.data.processed.jp_profile[cardProfileOverride.affiliation] %}
-{% assign overridejob = site.data.processed.jp_profile[cardProfileOverride.job] %}
-
 <div id="h{{ include.stockId }}" role="tabpanel" tabindex="0"  class="tabcontent contain element{{ firstCardInfo.element }}">
-{% include hero-infobox-profile.html stockId=include.stockId firstCardInfo=firstCardInfo sprites=sprites isHero=true %}
+{% include hero-infobox-profile.html stockId=include.stockId firstCardInfo=firstCardInfo sprites=sprites isHero=true limited=include.limited %}
 
 {% assign detail_prefix = firstCardInfo.resourceName | upcase | prepend: "DETAIL_" %}
 {% assign bio_h01 = detail_prefix | append: "_H01" %}
-<details>
-<summary>Personal Data 1</summary>
-<p>{{ site.data.processed.jp_bio[bio_h01] }}</p>
-</details>
-{% if include.BIO_H01 != "" %}
-<details open markdown="1">
-<summary>Personal Data 1 (Translated)</summary>
-
-{{ include.BIO_H01 }}
-
-</details>
-{% endif %}
+{% include bio-infobox.html bio=bio_h01 title="Personal Data 1" %}
 
 {% if firstCardInfo.rarity >= 3 %}
 {% assign bio_h02 = detail_prefix | append: "_H02" %}
-<details>
-<summary>Personal Data 2</summary>
-<p>{{ site.data.processed.jp_bio[bio_h02] }}</p>
-</details>
-{% if include.BIO_H02 != "" %}
-<details open markdown="1">
-<summary>Personal Data 2 (Translated)</summary>
-
-{{ include.BIO_H02 }}
-
-</details>
+{% include bio-infobox.html bio=bio_h02 title="Personal Data 2" %}
 {% endif %}
-{% endif %}
+
+{% assign stockId = include.stockId | downcase %}
+{% assign cardProfileOverride = site.data.processed.CardProfileOverride[stockId].hero %}
 
 {% assign spoiler_detail_h01 = site.data.processed.jp_bio[cardProfileOverride.detail_h01] %}
 {% assign spoiler_detail_h02 = site.data.processed.jp_bio[cardProfileOverride.detail_h02] %}
@@ -59,17 +34,11 @@
 <summary>Spoilers</summary>
 
 {% if spoiler_detail_h01 %}
-<details>
-<summary>Personal Data 1</summary>
-<p>{{ spoiler_detail_h01 }}</p>
-</details>
+{% include bio-infobox.html bio=cardProfileOverride.detail_h01 title="Personal Data 1" %}
 {% endif %}
 
 {% if spoiler_detail_h02 %}
-<details>
-<summary>Personal Data 2</summary>
-<p>{{ spoiler_detail_h02 }}</p>
-</details>
+{% include bio-infobox.html bio=cardProfileOverride.detail_h02 title="Personal Data 2" %}
 {% endif %}
 
 </details>
@@ -77,7 +46,7 @@
 
 <h2 id="h{{ include.stockId }}-stats">Stats</h2>
     
-<div class="table-scroll">
+<div class="table-scroll" data-pagefind-ignore>
     <table>
         <tr>
             <th>Rarity</th><th>Level</th><th>HP</th><th>ATK</th><th>SPD</th><th>View</th>
@@ -135,8 +104,8 @@
 {% include skill-table-v2.html skillIds=lastSkillIds split=true last=true index=skillUpgradedIndex
     changeSkillIds=changeSkillIds %}
 
-{% if site.data.wiki.HeroSkillEvolution[stockId] != nil %}
-{% include hero-skill-evolution.html stockId=include.stockId %}
+{% if site.data.wiki.SkillUpgradeModel[stockId] != nil %}
+{% include hero-skill-evolution-v2.html stockId=include.stockId %}
 {% endif %}
 
 </div>

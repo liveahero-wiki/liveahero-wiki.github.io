@@ -1,9 +1,10 @@
 ---
 title: 3rd Anniversary
 eventId: 66
+has_story: true
 jp_title: 3周年記念キャンペーン
 news_link: https://live-a-hero.jp/info/6759
-banner_image: ui_banner_3rdAnniversary.jpg
+banner_image: ui_banner_3rdAnniversary.webp
 event_start_time: 2023-09-28T20:00:00+09
 event_end_time: 2023-10-31T14:00:00+09
 ---
@@ -35,7 +36,7 @@ Exchange will be available until 2023/11/07 14:00 JST.
 
 > only permanent 4 star will be available for exchange
 
-> If you already have the character, Record Cube and Engravement level will be added, if Engravement level is already max, you will get {% include item.html id=74 %} instead.
+> If you already have the character, Record Cube and Seal level will be added, if Seal level is already max, you will get {% include item.html id=74 %} instead.
 
 Here is a list of available hero/sidekick for exchange:
 

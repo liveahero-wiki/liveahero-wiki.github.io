@@ -1,9 +1,10 @@
 ---
 title: Enoshima Last Resort
 eventId: 131
+has_story: true
 jp_title: チョコレート・シーカーズ
 news_link: https://live-a-hero.jp/info/11404
-banner_image: banner_info_LastResort2506.jpg
+banner_image: banner_info_LastResort2506.webp
 gacha: true
 event_start_time: 2025-06-24T20:00:00+09
 event_end_time: 2025-07-22T14:00:00+09

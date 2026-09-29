@@ -4,7 +4,11 @@ characterId: 1
 type: humanoid
 gender: male
 occupation: University Student (Part-timer)
-Affiliation Office: Parallel Flight
+profile:
+  age: 21
+  height: 178
+  weight: 88
+  birthday: 08/17
 h2:
   title: '"Water Bullet" Akashi'
 heroes:

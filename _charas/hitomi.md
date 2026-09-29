@@ -99,7 +99,7 @@ sidekicks:
 
     Because of this, she is especially afraid of situations in which she has to
     touch another person's body, such as handshake events.
-  extra_sprites: fg_hitomi_s01_skin1
+  extra_sprites: fg_hitomi_s01_skin1,fg_hitomi_s01_skin2
 ---
 
 {% include voice-table.html resourceName="hitomi"

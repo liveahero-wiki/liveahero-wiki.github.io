@@ -134,7 +134,7 @@ rankMax = "I can say that I'm here right now because of you. Truly, thank you.<b
 loveIndexMax= "I don't want to lose someone precious again.<br>That’s why until this body turned into stardust…<br>I promise I will never leave your side, not even for a moment."
 %}
 
-{% include voice-table.html resourceName="pubraseerrisingmoon2410"
+{% include voice-table.html resourceName="pubraseerRisingMoon2410"
 h_gachaResult = "I am truly happy to be with you on this joyous occasion.<br>Now, let's go my friend. I am...<br>No, I will fulfill the hope entrusted to me this time."
 salesStart = "Now, let's go out with pride."
 salesEnd = "I'm back. Phew...<br>Let's take a little break."

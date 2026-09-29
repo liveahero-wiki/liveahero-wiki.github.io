@@ -5,8 +5,10 @@ type: anthro
 gender: male
 heroes:
 - stockId: 12481
+  limited: true
 sidekicks:
 - stockId: 12481
+  limited: true
   extra_sprites: fg_vlaham_s01_skin1
 ---
 

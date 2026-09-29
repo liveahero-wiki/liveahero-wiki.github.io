@@ -2,7 +2,7 @@
 title: Early Summer Campaign 2024
 jp_title: アーリーサマーキャンペーン2024
 news_link: https://live-a-hero.jp/campaign/8799
-banner_image: banner_info_EarlySummer2406.jpg
+banner_image: banner_info_EarlySummer2406.webp
 no_limited_quest: true
 event_start_time: 2024-06-06T20:00:00+09
 event_end_time: 2024-06-27T14:00:00+09

@@ -1,5 +1,6 @@
 ---
 title: Main Quest Chapter 5
+mainQuestChapterId: 105
 gacha: true
 no_limited_quest: true
 news_link: https://live-a-hero.jp/info/3096

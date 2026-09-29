@@ -107,7 +107,7 @@ TRAIN = "The situation has begun. I will not go easy on you."
 TRAINED = "I guess I didn't train hard enough..."
 %}
 
-{% include voice-table.html resourceName="sadayoshisurvival2309"
+{% include voice-table.html resourceName="sadayoshiSurvival2309"
 h_gachaResult = "Colonel Sadayoshi Ikusabata effective immediately, will fulfill my duty to take leave!<br>Officer, I am fully prepared. I earnestly request your guidance on how to spend my days off!"
 salesStart = "Swimsuit check! Ball check! Off I go."
 salesEnd = "Reporting in! I'm back from vacation!"

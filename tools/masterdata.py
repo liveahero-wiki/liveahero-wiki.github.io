@@ -2,7 +2,9 @@ import urllib.request
 import os.path
 import json
 import sys
+import argparse
 
+from wiki_util import ensureDirs
 from preprocess import *
 
 HEADER = {
@@ -53,25 +55,25 @@ def downloadMasterdata(masterVersion, filename):
 
 
 def downloadProperties(masterVersion, filename):
+  ensureDirs("zzz/")
   data = httpRequest(f"https://d1itvxfdul6wxg.cloudfront.net/datas/catalog/{filename}")
-  with open(os.path.join("_data", "processed", filename), "wb") as f:
+  with open(os.path.join("zzz", filename), "wb") as f:
     f.write(data.encode())
 
-if __name__ == '__main__':
-  force_download = False
-  if len(sys.argv) > 1:
-    mV = int(sys.argv[1])
-    force_download = True
+def main(argv):
+  parser = argparse.ArgumentParser()
+  parser.add_argument("-f", "--force_download", help="Force download (version)", type=int)
+  parser.add_argument("--skip_data", help="Skip masterdata download", action="store_true")
+  args = parser.parse_args(argv)
+
+  if args.force_download:
+    mV = args.force_download
   else:
     appV, mV = getVersion()
-
-  cur_ver = int(getWikiVersion())
-  if not force_download and mV <= cur_ver:
-    print("Already up to date")
-    sys.exit(0)
-
-  print(f"Downloading masterdata ver {mV}")
-  updateWikiVersion(mV)
+    cur_ver = int(getWikiVersion())
+    if mV <= cur_ver:
+      print("Already up to date")
+      sys.exit(0)
 
   masterDataList = [
     'MasterDataCatalog',
@@ -98,22 +100,51 @@ if __name__ == '__main__':
     #'SerifMaster',
     'SerifOverwriteMaster',
     'SalesMaster',
+    "BromideGroupMaster",
+    "BromideMaster",
+    "BromideStockMaster",
+    "RewardLootBoxMaster",
+    "VoiceMaster",
   ]
-  for m in masterDataList:
-    downloadMasterdata(mV, m)
 
-  processMasterDataCatalog()
-  processShopFile()
-  processCardProfileOverride()
-  processSalesFile()
+  if not args.skip_data:
+    print(f"Downloading masterdata ver {mV}")
+    updateWikiVersion(mV)
+
+    for m in masterDataList:
+      downloadMasterdata(mV, m)
+
+    processMasterDataCatalog()
+    processShopFile()
+    processCardProfileOverride()
+    processSalesFile()
 
   prop_files = [
-    "Japanese.properties",
-    "English.properties",
-    "ChineseTraditional.properties",
-    "ChineseSimplified.properties",
+    "Japanese.json",
+    "English.json",
+    "ChineseTraditional.json",
+    "ChineseSimplified.json",
+  ]
+
+  tl_suffixes = [
+    "_bio.json",
+    "_serif.json",
+    "_profile.json",
+    "_library.json",
+    "_sales_report.json",
+    "_score_attack.json",
+    "_card_collection.json",
   ]
 
   for p in prop_files:
     downloadProperties(mV, p)
-  processPropertiesFile("Japanese.properties", "jp_bio.json", "jp_serif.json", "jp_profile.json", "jp_library.json", "jp_sales_report.json", "jp_score_attack.json")
+
+  jp_map = processPropertiesFile("Japanese.json", *[f"jp{s}" for s in tl_suffixes])
+  processPropertiesFile("English.json", *[f"en{s}" for s in tl_suffixes], jp_map=jp_map)
+  processPropertiesFile("ChineseSimplified.json", *[f"hans{s}" for s in tl_suffixes], jp_map=jp_map)
+  processPropertiesFile("ChineseTraditional.json", *[f"hant{s}" for s in tl_suffixes], jp_map=jp_map)
+
+  processItemInfo()
+
+if __name__ == '__main__':
+  main(None)

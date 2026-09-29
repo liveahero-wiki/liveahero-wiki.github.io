@@ -3,16 +3,19 @@ import json
 import sys
 import re
 import collections
+import yaml
 
 from collections import defaultdict
 
-from wiki_util import dumpJson, sanitizeText
+from wiki_util import dumpJson, sanitizeText, omitEmptyDict
 
 def processPropertiesFile(raw_file, bio_file, serif_file, profile_file, library_file, sales_report_file,
     score_attack_file,
+    card_collection_file,
+    jp_map=None,
 ):
-    with open(os.path.join("_data", "processed", raw_file), "r", encoding="utf-8") as f:
-        lines = f.readlines()
+    with open(os.path.join("zzz", raw_file), "rb") as f:
+        obj = json.load(f)
 
     detail = {}
     serif = {}
@@ -20,9 +23,10 @@ def processPropertiesFile(raw_file, bio_file, serif_file, profile_file, library_
     library = {}
     sales_report = {}
     score_attack = {}
+    card_collection = {}
 
-    for line in lines:
-        s = line.split("=", 1)
+    for key, value in obj.items():
+        s = [key, value]
 
         if s[0].startswith("DETAIL"):
             detail[s[0]] = sanitizeText(s[1])
@@ -41,6 +45,9 @@ def processPropertiesFile(raw_file, bio_file, serif_file, profile_file, library_
         
         if s[0].startswith("HINT_SCORE_ATTACK_"):
             score_attack[s[0]] = sanitizeText(s[1])
+        
+        if s[0].startswith("COLLECTION_"):
+            card_collection[s[0]] = sanitizeText(s[1])
 
     detail = collections.OrderedDict(sorted(detail.items()))
     serif = collections.OrderedDict(sorted(serif.items()))
@@ -48,6 +55,25 @@ def processPropertiesFile(raw_file, bio_file, serif_file, profile_file, library_
     library = collections.OrderedDict(sorted(library.items()))
     sales_report = collections.OrderedDict(sorted(sales_report.items()))
     score_attack = collections.OrderedDict(sorted(score_attack.items()))
+    card_collection = collections.OrderedDict(sorted(card_collection.items()))
+
+    our_map = dict(
+        detail=detail,
+        serif=serif,
+        profile=profile,
+        library=library,
+        sales_report=sales_report,
+        score_attack=score_attack,
+        card_collection=card_collection,
+    )
+
+    if jp_map:
+        for key in our_map.keys():
+            jp_m = jp_map[key]
+            our_m = our_map[key]
+            for k in list(our_m.keys()):
+                if jp_m.get(k) == our_m.get(k):
+                    del our_m[k]
 
     dumpJson(os.path.join("_data", "processed", bio_file), detail)
     dumpJson(os.path.join("_data", "processed", serif_file), serif)
@@ -55,7 +81,9 @@ def processPropertiesFile(raw_file, bio_file, serif_file, profile_file, library_
     dumpJson(os.path.join("_data", "processed", library_file), library)
     dumpJson(os.path.join("_data", "processed", sales_report_file), sales_report)
     dumpJson(os.path.join("_data", "processed", score_attack_file), score_attack)
+    dumpJson(os.path.join("_data", "processed", card_collection_file), card_collection)
 
+    return our_map
 
 def processShopFile():
     with open(os.path.join("_data", "ShopMaster.json"), "r", encoding="utf-8") as f:
@@ -99,6 +127,43 @@ def processMasterDataCatalog():
 
     dumpJson(os.path.join("_data", "MasterDataCatalog_list.json"), obj)
 
+# Skip ether stones
+ITEM_NAME_BLACKLIST = [
+    1,
+    2,
+]
+
+def processItemInfo():
+    with open(os.path.join("zzz", "English.json"), "rb") as f:
+        obj = json.load(f)
+
+    with open(os.path.join("_data", "ItemMaster.json"), "rb") as f:
+        ItemMaster = json.load(f)
+
+    with open(os.path.join("_data", "wiki", "Item.yml"), "rb") as f:
+        ItemWiki = yaml.load(f, Loader=yaml.FullLoader)
+
+    newItemWiki = {}
+
+    for itemId in ItemMaster.keys():
+        iid = int(itemId)
+        if iid > 100000 and iid < 300000:
+            continue
+        if iid > 20000000 and iid < 30000000:
+            continue
+
+        origItemWikiName = ItemWiki.get(iid, {}).get("name", "")
+        itemNameTranslated = obj.get(f"ITEM_NAME_{itemId}", "")
+        itemDescriptionTranslated = obj.get(f"ITEM_DESCRIPTION_{itemId}", "")
+        x = omitEmptyDict(
+            name=itemNameTranslated if iid not in ITEM_NAME_BLACKLIST else origItemWikiName,
+            description=ItemWiki.get(iid, {}).get("description", itemDescriptionTranslated),
+        )
+        if x:
+            newItemWiki[iid] = x
+
+    with open(os.path.join("_data", "wiki", "Item.yml"), "w", encoding="utf-8") as f:
+        yaml.dump(newItemWiki, f, allow_unicode=True, sort_keys=False)
 
 CARD_OVERRIDE_ITEM = {
     1: "affiliation",
@@ -128,4 +193,4 @@ def processCardProfileOverride():
 
 if __name__ == "__main__":
     processCardProfileOverride()
-    processPropertiesFile("Japanese.properties", "jp_bio.json", "jp_serif.json", "jp_profile.json", "jp_library.json", "jp_sales_report.json", "jp_score_attack.json")
+    processPropertiesFile("Japanese.json", "jp_bio.json", "jp_serif.json", "jp_profile.json", "jp_library.json", "jp_sales_report.json", "jp_score_attack.json")

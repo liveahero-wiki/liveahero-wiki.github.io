@@ -3,12 +3,6 @@ title: Community Survey Result 2025
 date: 2025-10-20 15:00:00 +08
 ---
 
-<style>
-.comment {
-  color: blue;
-}
-</style>
-
 > この記事には日本語版があります。詳しくは[こちら](/blog/2025/community-survey-2025.jp/)をご覧ください。
 
 > This article is very long and contain a few visualizations. Some interactive charts do not work well in small screen size.

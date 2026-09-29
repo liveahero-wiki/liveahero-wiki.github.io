@@ -3,6 +3,23 @@ title: Open Letter to LifeWonders (2025-09-30)
 date: 2025-09-30 20:00:00 +08
 ---
 
+<details open markdown="1">
+<summary>Update on 2026-01-22</summary>
+
+ライフワンダーズ様は2026年1月22日、公式翻訳の早期アクセス版を公開し、本年4月にフル翻訳版をリリースする計画を公表されました。
+
+本公開書簡の提出から数ヶ月を経ての回答ではありますが、今回の前向きな対応、および翻訳リリース計画の透明化を図っていただいたことに対し、深く感謝申し上げます。
+
+貴社が引き続き本件に取り組まれ、より多くの国際的なプレイヤーがこの素晴らしいコミュニティに加わることを心より願っております。
+
+LifeWonders has released the early access version of the official game translation on 2026-01-22 and [announced that they plan to release the full translation April this year](https://live-a-hero.jp/info/13155).
+
+Although the statement from the game company is several months late after we published this open letter, we would still like to thank LifeWonders for making the right step and provided more transparency on the translation release plan.
+
+We wish that LifeWonders will continue to work on this, and more new international players may join this wonderful community.
+
+</details>
+
 ライフワンダーズチーム 御中
 
 この公開書簡の主要なメッセージは、約束された公式翻訳は一体どこにあるのか、という点にあります。

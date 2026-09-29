@@ -1,6 +1,7 @@
 ---
 title: Investigation! The Knight and Ruins Adventure!
 eventId: 13
+has_story: true
 jp_title: 探索! 騎士と遺跡アドベンチャー
 news_link: https://live-a-hero.jp/info/1933
 banner_image: banner_info_2104Ruins.jpg
@@ -11,6 +12,7 @@ farm_start_time: 2021-04-23T20:00:00+09
 farm_end_time: 2021-05-14T20:00:00+09
 sales_start_time: 2021-04-23T20:00:00+09
 sales_end_time: 2021-05-14T20:00:00+09
+translated: true
 ---
 
 ## Event Details

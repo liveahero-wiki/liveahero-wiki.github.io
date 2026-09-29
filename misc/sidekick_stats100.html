@@ -8,7 +8,7 @@ wide_content: true
 
 {% assign cardInfos = site.data.SidekickMaster | where: "levelZone", 6 %}
 
-<table class="sticky-header sort-table bordered">
+<table class="sticky-header sort-table bordered" data-pagefind-ignore>
 <tr><th data-type="string">Sidekick</th><th>HP</th><th>ATK</th><th>View</th><th>Speed</th></tr>
 {% for c in cardInfos %}
 {% assign page = c.characterId | characterIdToPage %}

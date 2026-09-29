@@ -38,6 +38,7 @@ module LahWiki
       0 => "Debuff",
       1 => "Buff",
       2 => "Other",
+      3 => "Field",
     }
 
     @@stackable_map = {
@@ -447,11 +448,15 @@ module LahWiki
         return "unknown status #{id_s}"
       end
 
-      if status["statusType"] == 2 &&
-        status["isGoodStatus"] != 2 &&
-        status['description']&.length == 0 &&
-        !skillEffectJson["isOverrideStatusName"] &&
-        !skillEffectJson["isOverrideStatusDescription"]
+      #if status["statusType"] == 2 &&
+      #  status["isGoodStatus"] != 2 &&
+      #  status['description']&.length == 0 &&
+      #  !skillEffectJson["isOverrideStatusName"] &&
+      #  !skillEffectJson["isOverrideStatusDescription"]
+      #  return nil
+      #end
+      if (status['description'] || "").length == 0 &&
+        (skillEffectJson["overrideStatusDescription"] || "").length == 0
         return nil
       end
 
@@ -492,8 +497,14 @@ module LahWiki
         end
       end
 
+      status_type = @@status_type_map[status['isGoodStatus']]
+      isFieldEffect = skillEffectJson['isFieldEffect']
+      if isFieldEffect
+        status_type = "Other"
+      end
+
       label = "<b>#{name} [#{
-        @@status_type_map[status['isGoodStatus']]
+        status_type
       }/#{
         @@stackable_map[skillEffectJson['canDuplicate']]
       }#{
@@ -501,7 +512,7 @@ module LahWiki
       }#{
         @@dot_damage_map[skillEffectJson['isDotDamage']]
       }#{
-        @@field_map[skillEffectJson['isFieldEffect']]
+        @@field_map[isFieldEffect]
       }#{
         @@count_map[skillEffectJson['isCountEffect']]
       }]</b><br>"
@@ -655,6 +666,24 @@ module LahWiki
 
     def hasAutoActionMarker(s)
       return s.include?('<style="オート行動"></style>')
+    end
+
+    def sanitizePlayerName(s)
+      return s&.gsub(/<@playerName>/, "<wiki-editable-name storage-key=\"wiki_player_name\">Player</wiki-editable-name>")
+    end
+
+    def sanitizeSalesCharaName(s)
+      return s&.gsub(/\{(\d+)\}/, '<wiki-editable-name storage-key="wiki_chara\1_name">Chara \1</wiki-editable-name>')
+    end
+
+    @@lang_map = {
+      "en" => "EN",
+      "jp" => "日文",
+      "hans" => "简中",
+      "hant" => "繁中",
+    }
+    def convertLang(lang)
+      return @@lang_map[lang] || lang
     end
   end
 end

@@ -1,0 +1,21 @@
+/* Add some basic styling to indicate it's clickable/editable */
+wiki-editable-name {
+  display: inline-block;
+  cursor: pointer;
+  color: var(--colorBlue);
+  font-weight: bold;
+  border-bottom: 1px dashed var(--colorBlue);
+  padding: 0 4px;
+  transition: background-color 0.2s;
+}
+
+wiki-editable-name:hover {
+  background-color: #f0f8ff;
+}
+
+wiki-editable-name[contenteditable="true"] {
+  cursor: text;
+  outline: 2px solid var(--colorBlue);
+  border-bottom: none;
+  background-color: #fff;
+}

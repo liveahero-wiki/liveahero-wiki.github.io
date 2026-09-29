@@ -1,0 +1,56 @@
+<pagefind-modal-trigger compact hide-shortcut></pagefind-modal-trigger>
+<pagefind-modal>
+  <pagefind-modal-header>
+    <pagefind-input></pagefind-input>
+  </pagefind-modal-header>
+  <pagefind-modal-body>
+    <pagefind-summary></pagefind-summary>
+    <pagefind-results show-images hide-sub-results>
+   <script type="text/pagefind-template">
+{% raw %}
+    <li class="pf-result">
+      <div class="pf-result-card">
+        {{#if and(options.show_images, meta.image)}}
+        <img class="pf-result-image" src="{{ meta.image | resolveUrl(meta.url | default(url)) }}" alt="{{ meta.image_alt | default(meta.title) }}" loading="lazy">
+        {{/if}}
+        <div class="pf-result-content">
+          <p class="pf-result-title">
+            <a class="pf-result-link" href="{{ meta.url | default(url) | safeUrl }}"{{#if options.link_target}} target="{{ options.link_target }}"{{/if}}{{#if eq(options.link_target, "_blank")}} rel="noopener"{{/if}}>{{ meta.title }}</a>
+          </p>
+          {{#if excerpt}}
+          <p class="pf-result-excerpt">{{+ excerpt +}}</p>
+          {{/if}}
+        </div>
+      </div>
+      {{#if sub_results}}
+      <ul class="pf-heading-chips">
+        {{#each sub_results as sub}}
+        <li class="pf-heading-chip">
+          <a class="pf-heading-link" href="{{ sub.url | safeUrl }}"{{#if options.link_target}} target="{{ options.link_target }}"{{/if}}{{#if eq(options.link_target, "_blank")}} rel="noopener"{{/if}}>{{ sub.title }}</a>
+          <p class="pf-heading-excerpt">{{+ sub.excerpt +}}</p>
+        </li>
+        {{/each}}
+      </ul>
+      {{/if}}
+    </li>
+{% endraw %}
+  </script>
+  <script type="text/pagefind-template" data-template="placeholder">
+{% raw %}
+    <li class="pf-result" aria-hidden="true">
+      <div class="pf-result-card">
+        <div class="pf-skeleton pf-skeleton-image"></div>
+        <div class="pf-result-content">
+          <p class="pf-result-title pf-skeleton pf-skeleton-title"></p>
+          <p class="pf-result-excerpt pf-skeleton pf-skeleton-excerpt"></p>
+        </div>
+      </div>
+    </li>
+{% endraw %}
+  </script>
+    </pagefind-results>
+  </pagefind-modal-body>
+  <pagefind-modal-footer>
+    <pagefind-keyboard-hints></pagefind-keyboard-hints>
+  </pagefind-modal-footer>
+</pagefind-modal>

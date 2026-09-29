@@ -3,7 +3,7 @@ title: ~With Love, from~ Choco Volcano (Reprint)
 eventId: 120
 jp_title: \[復刻\]チョコ・ヴォルカーノより愛を込めて
 news_link: https://live-a-hero.jp/info/10567
-banner_image: banner_info_VolcanoRevival2503.jpg
+banner_image: banner_info_VolcanoRevival2503.webp
 gacha: true
 event_start_time: 2025-03-19T20:00:00+09
 event_end_time: 2025-04-10T14:00:00+09

@@ -3,7 +3,7 @@ title: Rookies Summer Festa (Reprint)
 eventId: 141
 jp_title: 【復刻】ルーキーズ・サマーフェスタ
 news_link: https://live-a-hero.jp/info/11977
-banner_image: ui_banner_info_RookiesRevival2509.jpg
+banner_image: ui_banner_info_Rookies2408.webp
 gacha: true
 event_start_time: 2025-09-18T20:00:00+09
 event_end_time: 2025-10-07T14:00:00+09

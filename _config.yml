@@ -23,16 +23,21 @@ defaults:
     values:
       layout: chara
       unreleased: false
-      additional_scripts: ["/assets/atlas.min.js"]
+      additional_scripts: ["/assets/atlas.min.js", "/assets/skill-tree.js"]
   - scope:
       type: "events"
     values:
       layout: event
       timed_bomb: false
+      additional_scripts: ["/assets/editable.js"]
   - scope:
       type: "main_quests"
     values:
       layout: main_quest
+  - scope:
+      type: "statuses"
+    values:
+      layout: status
   - scope:
       path: "assets"
     values:
@@ -55,8 +60,12 @@ collections:
   main_quests:
     output: true
     sort_by: chapterId
+  statuses:
+    output: true
+    sort_by: status_id
 
 exclude:
+  - "_site2"
   - "*.py"
   - "*.pyc"
   - "*.tsv"
@@ -68,7 +77,23 @@ exclude:
   - ".git"
   - tools/
   - "cdn/.git"
+  - AGENTS.md
+  - CLAUDE.md
+  - docs/
+  - deploy/
+  # Skill-search frontend (Vite/Preact) build tooling — source under web/,
+  # only the built assets/skill-search.* are served.
+  - web/
+  - package.json
+  - pnpm-lock.yaml
+  - pnpm-workspace.yaml
+  - vite.config.ts
+  - tsconfig.json
+  - pagefind.yml
 
 compress_html:
   ignore:
     envs: ["development"]
+
+kramdown:
+  header_links: true

@@ -1,6 +1,7 @@
 ---
 title: Akatsuki's Golden Spirit
 eventId: 2
+has_story: true
 jp_title: 暁のゴールデン・スピリット
 news_link: https://live-a-hero.jp/info/692
 banner_image: banner_info_2010akatsuki.jpg
@@ -11,6 +12,7 @@ farm_start_time: 2020-10-16T20:00:00+09
 farm_end_time: 2020-11-06T20:00:00+09
 sales_start_time: 2020-10-16T20:00:00+09
 sales_end_time: 2020-11-06T20:00:00+09
+translated: true
 ---
 
 ## Event Details

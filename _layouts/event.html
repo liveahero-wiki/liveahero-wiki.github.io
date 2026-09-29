@@ -39,16 +39,7 @@ layout: default
 
 {% for sales_report in sales_reports %}
 
-<details><summary>{{ sales_report }}</summary>
-<p>{{ site.data.processed.jp_sales_report[sales_report] }}</p>
-</details>
-
-{% assign translated_sales_report = site.data.wiki.SalesReport[sales_report] %}
-{% if translated_sales_report %}
-<details><summary>{{ sales_report }} (Translated)</summary>
-<p>{{ translated_sales_report }}</p>
-</details>
-{% endif %}
+{% include sales-report.html sales_report=sales_report %}
 
 {% endfor %}
 {% endif %}

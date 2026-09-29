@@ -7,6 +7,7 @@ h2:
   title: '"Daybreak Harbinger" Vulpecula'
 heroes:
 - stockId: 10651
+  limited: true
   BIO_H01: |-
     Vulpecula's parallel weapon is the altered pocket watch he wears on a daily
     basis, it can affect time itself, both for himself and his surroundings.
@@ -37,8 +38,10 @@ heroes:
   - '8065101'
   - '8065102'
 - stockId: 10652
+  extra_sprites: fg_vulpeculaMirrors2511_h02_skin2
 sidekicks:
 - stockId: 10651
+  limited: true
   BIO_S01: |-
     A phantom thief by the name of Vulpecula who is known to steal valuable cultural
     properties and destroy places of cultural heritage.

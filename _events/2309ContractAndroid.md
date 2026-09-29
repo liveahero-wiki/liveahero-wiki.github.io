@@ -2,7 +2,7 @@
 title: Character Training & Contract Campaign - Android
 jp_title: キャラクター契約締結キャンペーン＋ヒーロー登竜門-アンドロイド兵-
 news_link: https://live-a-hero.jp/info/6678
-banner_image: banner_campaign_2309ContractAndroidSoldier.jpg
+banner_image: banner_campaign_2309ContractAndroidSoldier.webp
 event_start_time: 2023-09-14T20:00:00+09
 event_end_time: 2023-10-05T14:00:00+09
 farm_start_time: 2023-09-14T20:00:00+09
