@@ -1,5 +1,5 @@
 ---
-title: Miscellaneous 
+title: Miscellaneous List
 banner: true
 ---
 
