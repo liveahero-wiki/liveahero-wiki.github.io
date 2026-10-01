@@ -5,10 +5,10 @@ type: anthro
 gender: male
 occupation: Kendo Artist (剣道家)
 profile:
-  age: 25
-  height: 167
-  weight: 53
-  birthday: 07/09
+  age: 36
+  height: 199
+  weight: 126
+  birthday: 11/20
 h2:
   title: '"Swordman Spirit" Toshu'
 heroes:

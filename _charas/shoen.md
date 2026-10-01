@@ -5,10 +5,10 @@ type: anthro
 gender: male
 occupation: Calligrapher (書道家)
 profile:
-  age: 36
-  height: 199
-  weight: 126
-  birthday: 11/12
+  age: 45
+  height: 191
+  weight: 154
+  birthday: 09/07
 h2:
   title: '"Secret Agent" Shoen'
 heroes:
