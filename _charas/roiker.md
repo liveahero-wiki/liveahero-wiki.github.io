@@ -3,6 +3,11 @@ title: Roiker
 characterId: 113
 type: anthro
 gender: male
+profile:
+  age: 27
+  height: 166
+  weight: 62
+  birthday: 10/02
 h2:
   title: '"Brilliant Zenith" Roiker'
 heroes:
