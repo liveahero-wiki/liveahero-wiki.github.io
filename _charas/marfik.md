@@ -4,6 +4,11 @@ characterId: 14
 type: humanoid
 gender: male
 occupation: University Professor (Archeology)
+profile:
+  age: 61
+  height: 185
+  weight: 103
+  birthday: 07/01
 h2:
   title: '"The Adventurer" Marfik'
 heroes:
