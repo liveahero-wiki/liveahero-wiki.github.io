@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "eleventy:dev": "cross-env NODE_OPTIONS=--max-old-space-size=8192 eleventy --serve --incremental",
+    "eleventy:dev:fast": "cross-env NODE_OPTIONS=--max-old-space-size=8192 eleventy --serve --incremental --ignore-initial",
     "eleventy:build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 eleventy",
     "eleventy:strict": "cross-env ELEVENTY_STRICT=1 NODE_OPTIONS=--max-old-space-size=8192 eleventy",
     "test": "node --test \"wiki_plugins/**/*.test.js\""
