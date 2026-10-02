@@ -42,12 +42,18 @@ test("arithmetic filters print Ruby floats", async () => {
   assert.equal(await render("{{ 7 | divided_by: 2 | floor }}"), "3");
 });
 
-test("date uses the site format, Ruby time offsets and %R", async () => {
+test("date shows the site timezone, whatever the build machine's", async () => {
   const { site, render: r } = createTestEngine();
-  assert.equal(
-    await r('{{ t | date: site.date_format }}', { t: new (await import("../lib/ruby-time.js")).RubyTime(Date.UTC(2026, 0, 22, 11, 0), 540) }),
-    "22 Jan 2026 20:00 JST",
-  );
+  const { RubyTime } = await import("../lib/ruby-time.js");
+  const t = new RubyTime(Date.UTC(2026, 0, 22, 11, 0), 540);
+  assert.equal(await r("{{ t | date: site.date_format }}", { t }), "22 Jan 2026 20:00 JST");
+  assert.equal(await r("{{ t | date: '%s' }}", { t }), String(Math.floor(t.getTime() / 1000)));
+  assert.equal(await r("{{ t | date_to_xmlschema }}", { t }), "2026-01-22T20:00:00+09:00");
+  // a +00 date late in the day is already the next day in Tokyo
+  const late = new RubyTime(Date.UTC(2026, 0, 22, 20, 0), 0);
+  assert.equal(await r("{{ t | date: '%-d %b %Y' }}", { t: late }), "23 Jan 2026");
+  // zone-less quest times (quest-infobox.html) get the site offset appended
+  assert.equal(await r("{{ q | append: '+09' | date: site.date_format }}", { q: "2020-12-20 20:00:00" }), "20 Dec 2020 20:00 JST");
   assert.ok(site.time instanceof Date);
 });
 

@@ -12,7 +12,7 @@ wiki_plugins/
 │   ├── site-data.js      # _data/** -> site.data
 │   ├── documents.js      # `page` and collection documents, flattened like Jekyll's
 │   ├── chara.js, item.js, catalog.js, image.js, skill.js, skill-trigger.js   # ported from _plugins/*.rb
-│   └── ruby*.js, decimal.js, strftime.js    # Ruby semantics: Time, Float, Integer-vs-String hash keys
+│   └── ruby*.js, decimal.js    # Ruby semantics: Time, Float, Integer-vs-String hash keys
 ├── liquid/               # LiquidJS engine, Jekyll-semantics filters, Liquid adapters for lib/
 └── markdown/             # markdown-it configured to behave like kramdown
 sitemap.11ty.js           # /sitemap.xml
@@ -46,7 +46,7 @@ Generated inputs have to exist before building, as in CI: `_statuses/`, `_data/t
 LiquidJS is not Ruby Liquid. These would silently change the output, so they are emulated (`wiki_plugins/liquid/`, `wiki_plugins/lib/`):
 
 - `{% include a.html x=y %}` with `include.x` (LiquidJS `jekyllInclude`); quoted parameters follow Jekyll's rules (`\"` is the only escape), other tags take strings literally (`'a\nb'` keeps the backslash) — `string-literals.js`.
-- `where`, `where_exp`, `group_by`, `group_by_exp` iterate the values of Hashes and compare as strings; `sort` puts items without the key first; `split: " "` is awk-style; `slugify` keeps non-ASCII letters; `date` understands `%R`, Ruby Time offsets and the site timezone; `jsonify` of nothing is `null`; `xml_escape` leaves `'` alone.
+- `where`, `where_exp`, `group_by`, `group_by_exp` iterate the values of Hashes and compare as strings; `sort` puts items without the key first; `split: " "` is awk-style; `slugify` keeps non-ASCII letters; `date` is LiquidJS's own, pinned to the site timezone (`timezoneOffset`; Asia/Tokyo) and without `%R`, and a time without a zone has to get one (`| append: '+09'`) or it is read in the build machine's; `jsonify` of nothing is `null`; `xml_escape` leaves `'` alone.
 - `divided_by` always divides as floating point, and every arithmetic filter on Floats is exact decimal arithmetic (Ruby Liquid goes through BigDecimal), printing `2.0` like Ruby does. Use `| floor` if an integer is wanted.
 - `status_description` and friends read `skillEffectJson` from the calling template's context and render Liquid text stored in `_data` (`translation/Status.json`, `wiki/SkillManualOverride.yml`).
 
@@ -57,8 +57,8 @@ LiquidJS is not Ruby Liquid. These would silently change the output, so they are
 - headings: `<h2 id="quest-details"><a href="#quest-details"></a>Quest Details</h2>` (ids as in kramdown-parser-gfm, `-1`/`-2` for duplicates); `_sass/_main2.scss` draws the `#`.
 - `* anything` followed by `{:toc}` is the table of contents (`ul#markdown-toc`); `{:.no_toc}` excludes a heading; `{:name: attrs}` / `{: name}` attribute lists.
 - block HTML is raw up to its matching close tag, however many blank lines are inside; `markdown="1"` (also `block`, `span`, `0`) parses an element's content as markdown, even inside a raw block; text after a close tag starts a new block; stray `<` in raw HTML is escaped, as kramdown does.
-- smart quotes, `--`, `---`, `...`; `~~x~~` is `<del>`; footnotes and definition lists in kramdown's markup; code spans and fences with rouge's classes (no syntax highlighting).
-- tables: `+` in the separator row, tables without a header; lists: a marker line right after an item nests however little it is indented; whether an item gets `<p>` is decided per item, not per list.
+- footnotes and definition lists in kramdown's markup; code spans and fences with rouge's classes (no syntax highlighting). Quotes are curly (markdown-it's `smartquotes`); `--`, `...` and `~~x~~` (`<s>`) are markdown-it's own.
+- lists: a marker line right after an item nests however little it is indented; whether an item gets `<p>` is decided per item, not per list.
 
 ## Checking a change against Jekyll
 

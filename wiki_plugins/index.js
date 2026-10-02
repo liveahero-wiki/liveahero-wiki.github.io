@@ -74,7 +74,7 @@ export default function wikiPlugins(eleventyConfig, { site, markdown }) {
     return redirects;
   });
 
-  registerJekyllFilters(eleventyConfig, { site, siteOffset: SITE_OFFSET_MINUTES, markdown });
+  registerJekyllFilters(eleventyConfig, { site, markdown });
 
   registerRubyPlugins(eleventyConfig, { site, charaIndex });
 }

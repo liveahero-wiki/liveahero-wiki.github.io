@@ -6,7 +6,7 @@
 const NON_WORD = /[^\p{L}\p{M}\p{Nd}\p{Pc}\- \t]/gu;
 
 /**
- * @param {string} rawText the header's plain text (after typographic conversion)
+ * @param {string} rawText the header's plain text (after smart quotes)
  * @param {Map<string, number>} counters per-document duplicate counters
  */
 export function gfmHeaderId(rawText, counters) {

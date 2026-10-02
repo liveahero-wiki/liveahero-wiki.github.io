@@ -7,6 +7,7 @@ import path from "node:path";
 import { Context, Liquid } from "liquidjs";
 
 import { toPage } from "../lib/documents.js";
+import { SITE_OFFSET_MINUTES } from "../site.js";
 import { keepBackslashesInStrings } from "./string-literals.js";
 
 /** LiquidJS's own node file system, except that included files go through keepBackslashesInStrings. */
@@ -32,6 +33,8 @@ export class JekyllLiquid extends Liquid {
    */
   constructor(options, site) {
     super({
+      // dates are shown in the site timezone (Asia/Tokyo, no DST), whatever the build machine uses
+      timezoneOffset: -SITE_OFFSET_MINUTES,
       ...options,
       fs: includeFs,
       globals: {

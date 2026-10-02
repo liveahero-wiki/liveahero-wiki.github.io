@@ -1,8 +1,4 @@
-// Kramdown block IALs and attribute list definitions:
-//
-//   {:refdef: style="text-align: center;"}     defines a named attribute list (no output)
-//   <img src="…">
-//   {: refdef}                                 applies it to the block right above
+// Kramdown block IALs:
 //
 //   * unordered
 //   {:toc}                                     marks the list above as the table of contents
@@ -10,16 +6,19 @@
 //   ## Heading
 //   {:.no_toc}                                 adds a class to the heading above
 //
-// Only block IALs are supported; span IALs and `{::options}` are not used on the wiki.
+//   | a | b |
+//   {: style="display: block"}                 sets attributes on the block above
+//
+// Only block IALs are supported; span IALs, named attribute lists (`{:name: …}` / `{: name}`)
+// and `{::options}` are not used on the wiki.
 
-const ALD_LINE = /^\{:(\w[\w-]*):(.*)\}[ \t]*$/;
 const IAL_LINE = /^\{:(?![:/])(.*)\}[ \t]*$/;
 
 const ATTR_TOKEN =
   /(?:^|\s)(?:(\w[\w-]*)=("|')((?:\\\}|\\\2|(?!\2).)*?)\2|((?:#\w[\w:-]*|\.\w[\w-]*)+)|(\w[\w-]*))(?=\s|$)/gy;
 
 /**
- * Parse the inside of an IAL: `.class #id key="value" ref`.
+ * Parse the inside of an IAL: `.class #id key="value" word`.
  * @returns {{ attrs: Array<[string, string]>, classes: string[], refs: string[] }}
  */
 export function parseAttributeList(text) {
@@ -48,12 +47,9 @@ export function parseAttributeList(text) {
   return out;
 }
 
-function applyList(token, list, alds) {
-  for (const ref of list.refs) {
-    const ald = alds[ref];
-    if (ald) applyList(token, ald, alds);
-    else (token.meta ??= {}).refs = [...(token.meta.refs ?? []), ref];
-  }
+/** Bare words (`{:toc}`) are kept in `token.meta.refs` for the plugins that look for them. */
+function applyList(token, list) {
+  if (list.refs.length) (token.meta ??= {}).refs = [...(token.meta.refs ?? []), ...list.refs];
   for (const [name, value] of list.attrs) token.attrSet(name, value);
   for (const cls of list.classes) token.attrJoin("class", cls);
 }
@@ -80,19 +76,13 @@ function ialRule(state, startLine, endLine, silent) {
   if (state.src.charCodeAt(pos) !== 0x7b || state.src.charCodeAt(pos + 1) !== 0x3a) return false;
   const line = state.src.slice(pos, state.eMarks[startLine]);
 
-  const ald = ALD_LINE.exec(line);
-  const ial = ald ? null : IAL_LINE.exec(line);
-  if (!ald && !ial) return false;
+  const ial = IAL_LINE.exec(line);
+  if (!ial) return false;
   if (silent) return true;
 
-  const alds = (state.env.kramdownAlds ??= {});
-  if (ald) {
-    alds[ald[1]] = parseAttributeList(ald[2]);
-  } else {
-    const prev = startLine > 0 && !state.isEmpty(startLine - 1) ? previousBlock(state) : null;
-    if (prev) applyList(prev, parseAttributeList(ial[1]), alds);
-    // An IAL after a blank line applies to the next block in kramdown; not used on the wiki.
-  }
+  const prev = startLine > 0 && !state.isEmpty(startLine - 1) ? previousBlock(state) : null;
+  if (prev) applyList(prev, parseAttributeList(ial[1]));
+  // An IAL after a blank line applies to the next block in kramdown; not used on the wiki.
   state.line = startLine + 1;
   return true;
 }

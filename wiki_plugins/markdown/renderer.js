@@ -6,10 +6,6 @@ const escapeHtml = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace
 export default function kramdownRenderer(md) {
   const rules = md.renderer.rules;
 
-  // ~~struck~~ -> <del>, not <s>
-  rules.s_open = () => "<del>";
-  rules.s_close = () => "</del>";
-
   // Footnotes in kramdown's markup (markdown-it-footnote emits different ids and classes).
   const name = (meta) => escapeHtml(String(meta.label ?? meta.id + 1));
   rules.footnote_ref = (tokens, idx) => {
@@ -44,13 +40,4 @@ export default function kramdownRenderer(md) {
       `<pre class="highlight"><code>${escapeHtml(token.content)}</code></pre></div></div>\n`
     );
   };
-
-  // kramdown writes `style="text-align: center"`; markdown-it `style="text-align:center"`.
-  md.core.ruler.push("kramdown_table_style", (state) => {
-    for (const token of state.tokens) {
-      if (token.type !== "th_open" && token.type !== "td_open") continue;
-      const style = token.attrGet("style");
-      if (style) token.attrSet("style", style.replace(/^text-align:\s*/, "text-align: "));
-    }
-  });
 }

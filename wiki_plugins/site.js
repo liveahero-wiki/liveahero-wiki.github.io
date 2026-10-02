@@ -13,7 +13,7 @@ export function createSite() {
     url: "https://liveahero-wiki.github.io",
     github_repo: "https://github.com/liveahero-wiki/liveahero-wiki.github.io",
     timezone: "Asia/Tokyo",
-    date_format: "%-d %b %Y %R JST",
+    date_format: "%-d %b %Y %H:%M JST",
     excerpt_separator: "<!--more-->",
     time: nowInOffset(SITE_OFFSET_MINUTES),
     // filled in by the plugin

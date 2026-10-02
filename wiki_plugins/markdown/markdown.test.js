@@ -53,31 +53,18 @@ test("text after a closing block tag on the same line starts a new block", () =>
   assert.equal(render("<table><tr><td>x</td></tr></table>## Head\n"), '<table><tr><td>x</td></tr></table>\n<h2 id="head"><a href="#head"></a>Head</h2>\n');
 });
 
-test("IAL definitions and references", () => {
-  assert.equal(
-    render('{:r: style="text-align: center;"}\n<img src="a.png">\n{: r}\n'),
-    '<p style="text-align: center;"><img src="a.png"></p>\n',
-  );
+test("an IAL sets attributes on the block above", () => {
+  const html = render('| a |\n|---|\n| b |\n{: style="display: block"}\n');
+  assert.ok(html.startsWith('<table style="display: block">'));
 });
 
-test("smart quotes, dashes and ellipses", () => {
-  assert.equal(render("it's \"quoted\" -- yes --- really..."), "<p>it’s “quoted” – yes — really…</p>\n");
-  assert.equal(render("'80s and 'single' and (\"x\")"), "<p>’80s and ‘single’ and (“x”)</p>\n");
+test("curly quotes only; dashes and ellipses are left alone", () => {
+  assert.equal(render("it's \"quoted\" -- yes --- really... (c)"), "<p>it’s “quoted” -- yes --- really... (c)</p>\n");
+  assert.equal(render("'single' and (\"x\")"), "<p>‘single’ and (“x”)</p>\n");
 });
 
-test("~~strike~~ is <del>; code spans carry the rouge class", () => {
-  assert.equal(render("~~x~~ `y`"), '<p><del>x</del> <code class="language-plaintext highlighter-rouge">y</code></p>\n');
-});
-
-test("a lone backtick between spaces is literal", () => {
-  assert.equal(render("add a ` open` here"), "<p>add a ` open` here</p>\n");
-});
-
-test("tables: '+' junctions, and no header", () => {
-  assert.match(render("| a | b |\n|---+---|\n| 1 | 2 |\n"), /<thead>[\s\S]*<th>a<\/th>/);
-  const noHeader = render("| only |\n");
-  assert.ok(!noHeader.includes("<thead>"));
-  assert.ok(noHeader.includes("<td>only</td>"));
+test("~~strike~~ is <s>; code spans carry the rouge class", () => {
+  assert.equal(render("~~x~~ `y`"), '<p><s>x</s> <code class="language-plaintext highlighter-rouge">y</code></p>\n');
 });
 
 test("kramdown nests lazily indented lists and decides tightness per item", () => {

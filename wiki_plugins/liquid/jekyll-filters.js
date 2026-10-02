@@ -3,8 +3,6 @@
 // taken from LiquidJS as is; wiki_plugins/liquid/jekyll-filters.test.js pins the behaviour.
 
 import { Value } from "liquidjs";
-import { RubyTime, parseTimestamp } from "../lib/ruby-time.js";
-import { strftime } from "../lib/strftime.js";
 import { arithmeticFilters } from "../lib/ruby-numeric.js";
 
 /** Jekyll iterates a Hash's values; LiquidJS would wrap the Hash in a one element array. */
@@ -94,23 +92,6 @@ function* groupByExp(input, variable, expression) {
   return groupsToList(groups);
 }
 
-/** Liquid::Utils.to_date: Time/Date as is, "now"/"today", numeric epoch, or a parseable string. */
-export function toDate(input, siteOffset = 540) {
-  if (input instanceof Date) return input;
-  if (input === "now" || input === "today") return new RubyTime(Date.now(), siteOffset);
-  if (typeof input === "number") return new RubyTime(input * 1000, siteOffset);
-  if (typeof input === "string") {
-    const s = input.trim();
-    if (/^\d+$/.test(s)) return new RubyTime(Number(s) * 1000, siteOffset);
-    // Time.parse treats a zone-less time as local time, which Jekyll pins to site.timezone.
-    const t = parseTimestamp(s, siteOffset);
-    if (t) return t;
-    const ms = Date.parse(s);
-    if (!Number.isNaN(ms)) return new RubyTime(ms, siteOffset);
-  }
-  return null;
-}
-
 /** Jekyll's parse_sort_input: number-like strings sort as numbers. */
 function sortValue(v) {
   return typeof v === "string" && /^\s*-?(?:\d+\.?\d*|\.\d+)\s*$/.test(v) ? Number.parseFloat(v) : v;
@@ -162,9 +143,9 @@ export function slugify(input) {
 
 /**
  * @param {import("@11ty/eleventy").UserConfig} eleventyConfig
- * @param {{ site: { time?: Date, url: string }, siteOffset: number, markdown: () => any }} deps
+ * @param {{ site: { time?: Date, url: string }, markdown: () => any }} deps
  */
-export function registerJekyllFilters(eleventyConfig, { site, siteOffset, markdown }) {
+export function registerJekyllFilters(eleventyConfig, { site, markdown }) {
   const add = (name, fn) => eleventyConfig.addLiquidFilter(name, fn);
 
   add("where", where);
@@ -176,24 +157,6 @@ export function registerJekyllFilters(eleventyConfig, { site, siteOffset, markdo
   add("slugify", slugify);
 
   for (const [name, fn] of Object.entries(arithmeticFilters)) add(name, fn);
-
-  add("date", function (input, format) {
-    if (format === undefined || format === null || String(format) === "") return input;
-    const d = toDate(input, siteOffset);
-    if (!d) return input;
-    return strftime(d, String(format), siteOffset);
-  });
-
-  add("date_to_xmlschema", (input) => {
-    const d = toDate(input, siteOffset);
-    if (!d) return input;
-    const offset = d instanceof RubyTime ? d.offsetMinutes : siteOffset;
-    const tz =
-      offset === 0
-        ? "Z"
-        : strftime(d, "%z", siteOffset).replace(/^([-+]\d\d)(\d\d)$/, "$1:$2");
-    return strftime(d, "%Y-%m-%dT%H:%M:%S", siteOffset) + tz;
-  });
 
   add("absolute_url", (input) => {
     const s = input === null || input === undefined ? "" : String(input);

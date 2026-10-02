@@ -10,16 +10,17 @@ import kramdownHtmlBlock, { splitAfterHtmlBlocks, stripInlineMarkdownAttribute }
 import kramdownIal from "./ial.js";
 import kramdownQuirks from "./quirks.js";
 import kramdownRenderer from "./renderer.js";
-import kramdownTypography from "./typography.js";
 
 export function createMarkdown() {
   const md = new MarkdownIt({
     html: true,
     linkify: false,
-    // markdown-it's typographer is replaced by kramdown_typography
-    typographer: false,
+    // curly quotes only (see the `replacements` rule disabled below)
+    typographer: true,
     breaks: false,
   });
+  // typographer: true also enables `replacements` ((c) -> ©, -- -> –, ... -> …); keep just the quotes
+  md.core.ruler.disable("replacements");
   md.use(footnote);
   md.use(deflist);
   md.use(kramdownQuirks);
@@ -27,7 +28,6 @@ export function createMarkdown() {
   md.use(kramdownHtmlBlock);
   md.use(splitAfterHtmlBlocks);
   md.use(stripInlineMarkdownAttribute);
-  md.use(kramdownTypography);
   md.use(kramdownHeadings, { headerLinks: true });
   md.use(kramdownRenderer);
   return md;

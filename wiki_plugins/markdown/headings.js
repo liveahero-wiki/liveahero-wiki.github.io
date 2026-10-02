@@ -67,7 +67,7 @@ function renderToc(md, state, listToken) {
 }
 
 export default function kramdownHeadings(md, { headerLinks = true } = {}) {
-  md.core.ruler.after("kramdown_typography", "kramdown_headings", (state) => {
+  md.core.ruler.after("smartquotes", "kramdown_headings", (state) => {
     const counters = new Map();
     const entries = [];
     const tokens = state.tokens;

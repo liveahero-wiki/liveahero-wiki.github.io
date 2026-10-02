@@ -7,7 +7,7 @@ import { JekyllLiquid } from "./liquid/engine.js";
 import { registerJekyllFilters } from "./liquid/jekyll-filters.js";
 import { registerRubyPlugins } from "./liquid/ruby-plugins.js";
 import { createMarkdown } from "./markdown/index.js";
-import { createSite, SITE_OFFSET_MINUTES } from "./site.js";
+import { createSite } from "./site.js";
 
 /**
  * @param {{ data?: object, charas?: object[] }} options `data` becomes `site.data`
@@ -25,7 +25,7 @@ export function createTestEngine({ data = {}, charas = [] } = {}) {
     addLiquidFilter: (name, fn) => liquid.registerFilter(name, fn),
     addLiquidTag: (name, fn) => liquid.registerTag(name, fn(liquid)),
   };
-  registerJekyllFilters(config, { site, siteOffset: SITE_OFFSET_MINUTES, markdown: () => markdown });
+  registerJekyllFilters(config, { site, markdown: () => markdown });
   registerRubyPlugins(config, { site, charaIndex });
 
   return {
