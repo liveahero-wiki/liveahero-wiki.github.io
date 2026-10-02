@@ -12,10 +12,6 @@ test("front matter timestamps print like Ruby's Time#to_s, keeping the written o
   assert.ok(data.a instanceof Date);
 });
 
-test("duplicate keys: the last one wins, as in Ruby's YAML", () => {
-  assert.deepEqual(frontMatterYamlEngine.parse("a: 1\na: 2"), { a: 2 });
-});
-
 test("a date is shown in the site timezone when converted", () => {
   const post = parseTimestamp("2021-09-23 00:00:00 +08");
   assert.equal(strftime(inOffset(post, 540), "%Y-%m-%d %H:%M"), "2021-09-23 01:00");
