@@ -8,10 +8,11 @@ banner: true
 
 ## Notes for Programmers
 
-This wiki is powered by [Jekyll](https://jekyllrb.com/docs/), a static site generator. The templating language is [Liquid](https://shopify.github.io/liquid/basics/introduction/). Jekyll has provided [additional Liquid filters and tags](https://jekyllrb.com/docs/liquid/) to make life easier.
+This wiki is powered by [Eleventy](https://www.11ty.dev/docs/), a static site generator. The templating language is [Liquid](https://shopify.github.io/liquid/basics/introduction/) with the [additional filters and tags that Jekyll provides](https://jekyllrb.com/docs/liquid/): the site was built with Jekyll before, and a compatibility layer keeps its templates working (`site.data`, `page.title`, `{% raw %}{% include a.html x=y %}{% endraw %}`, kramdown-style markdown). See [`docs/ELEVENTY.md`](https://github.com/liveahero-wiki/liveahero-wiki.github.io/blob/master/docs/ELEVENTY.md) for the details.
 
-- [Testing your GitHub Pages site locally with Jekyll](https://docs.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll)
-- [Jekyll Cheatsheet](https://learn.cloudcannon.com/jekyll-cheat-sheet/). Super useful
+To preview the site locally, install [Node.js](https://nodejs.org/) and [pnpm](https://pnpm.io/), run `pnpm install`, then `pnpm eleventy:dev` and open the address it prints. `pnpm test` runs the unit tests of the plugins.
+
+- [Jekyll Cheatsheet](https://learn.cloudcannon.com/jekyll-cheat-sheet/). Super useful for the Liquid and markdown syntax
 
 > I swear to god that Jekyll/Liquid's documentation is a lot easier to understand than SemanticWiki's documentation, so please read.
 
@@ -23,11 +24,11 @@ For code change related to website design, please include screenshot preview whe
 
 You can use any modern HTML/CSS/JS features you like. **Bootstrap and JQuery are banned**, other dependencies can be considered.
 
-We do most of the content processing and rendering in Jekyll/Liquid so that the content is ready as soon as web browser downloads
-a page. However, if certain feature is too difficult to implement in Jekyll/Liquid or it is not neccessary to load as soon as possible, it is good to embed some information as [`data-*` attribute](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+We do most of the content processing and rendering in Liquid and the JavaScript plugins so that the content is ready as soon as web browser downloads
+a page. However, if certain feature is too difficult to implement in Liquid or it is not neccessary to load as soon as possible, it is good to embed some information as [`data-*` attribute](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 in some HTML elements and do more processing in client-side JS. Think: progressive enhancement.
 
-## Random things about Jekyll/Liquid templating
+## Random things about Liquid templating
 
 1. To enumerate all objects in a map/dictionary (e.g. `{"a": 1, "b": b}`), do this:
 
@@ -49,7 +50,7 @@ in some HTML elements and do more processing in client-side JS. Think: progressi
    Username: {% raw %}{{ include.username }}{% endraw %}
    ```
 
-1. Comment syntax in Jekyll/Liquid is `{% raw %}{% comment %}blah blah{% endcomment %}{% endraw %}`.
+1. Comment syntax in Liquid is `{% raw %}{% comment %}blah blah{% endcomment %}{% endraw %}`.
 
 1. Key of map/dictionary is type sensitive. `{1: "hello", 2: "world"}` uses integer as key. `{"1": "hello", "2": "world"}`
    string as key. Make sure you the key is in correct type when you do `{% raw %}{% assign value = obj_map[key] %}{% endraw %}`.

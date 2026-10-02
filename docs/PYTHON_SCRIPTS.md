@@ -122,7 +122,7 @@ graph TD
     *   `_data/StatusMaster.json`
     *   `_data/translation/Status.json`
 *   **Output Files**:
-    *   `_statuses/<status_id>.md` (individual Jekyll markdown status pages)
+    *   `_statuses/<status_id>.md` (individual markdown status pages)
 
 ---
 
@@ -132,7 +132,7 @@ graph TD
     *   `_data/EventMaster.json`
     *   `_charas/*.md` (used to build character ID maps)
 *   **Output Files**:
-    *   `_events/<pageName>.md` (scaffolded Jekyll markdown event page template)
+    *   `_events/<pageName>.md` (scaffolded markdown event page template)
 
 ---
 
@@ -157,7 +157,7 @@ graph TD
 ---
 
 ### 10. `tools/sales_report.py`
-*   **Purpose**: Extracts event-specific sales dialog translations written directly inside `<details>` HTML details markers in Jekyll events pages and aggregates them into a centralized JSON lookup table.
+*   **Purpose**: Extracts event-specific sales dialog translations written directly inside `<details>` HTML details markers in events pages and aggregates them into a centralized JSON lookup table.
 *   **Input Files**:
     *   `_events/*.md`
     *   `_data/processed/sales_report_master.json`

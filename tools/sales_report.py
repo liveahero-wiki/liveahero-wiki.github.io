@@ -35,7 +35,7 @@ def extractSalesReport():
   yaml.add_representer(Bio, str_presenter)
   yaml.representer.SafeRepresenter.add_representer(Bio, str_presenter)
 
-  files = next(os.walk("_events"))[2]
+  files = [f for f in next(os.walk("_events"))[2] if f.endswith(".md")]
 
   with open("_data/processed/sales_report_master.json", "r", encoding="utf-8") as f:
     sales_report_master: dict = json.load(f)

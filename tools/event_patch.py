@@ -34,7 +34,7 @@ def main():
 
   wrapper = TextWrapper(width=80)
 
-  files = next(os.walk("_events"))[2]
+  files = [f for f in next(os.walk("_events"))[2] if f.endswith(".md")]
 
   for file in files:
     with open(os.path.join("_events", file), "r", encoding="utf-8") as f:

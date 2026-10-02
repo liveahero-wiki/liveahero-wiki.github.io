@@ -1,6 +1,7 @@
 /_site
-/_site2/
-.sass-cache
+# a Jekyll build downloaded from CI, the reference for scripts/compare-page.mjs
+/jekyll-site/
+# caches of the old Jekyll build that may still be lying around
 .jekyll-cache/
 .jekyll-metadata
 .vite/
@@ -15,7 +16,8 @@ e.txt
 /_data/SalesMaster.json
 /_data/MasterDataCatalog.json
 /_charas2/
-/_statuses/
+/_statuses/*
+!/_statuses/_statuses.11tydata.js
 /cdn/
 /_data/wiki/SkillUpgradeModel.json
 .DS_Store

@@ -7,17 +7,33 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "eleventy:dev": "cross-env NODE_OPTIONS=--max-old-space-size=8192 eleventy --serve --incremental",
+    "eleventy:build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 eleventy",
+    "eleventy:strict": "cross-env ELEVENTY_STRICT=1 NODE_OPTIONS=--max-old-space-size=8192 eleventy",
+    "test": "node --test \"wiki_plugins/**/*.test.js\""
   },
   "dependencies": {
     "@tanstack/react-table": "^8.21.3",
     "@tanstack/react-virtual": "^3.14.10",
     "downshift": "^9.0.10",
-    "preact": "^10.29.8"
+    "html-minifier-terser": "^7.2.0",
+    "image-size": "^2.0.4",
+    "js-yaml": "^4.3.2",
+    "liquidjs": "^10.29.0",
+    "luxon": "^3.7.2",
+    "markdown-it": "^15.0.2",
+    "markdown-it-deflist": "^4.0.0",
+    "markdown-it-footnote": "^4.0.0",
+    "preact": "^10.29.8",
+    "sass": "^1.104.1"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
     "@preact/preset-vite": "^2.10.6",
     "@types/node": "^26.4.0",
+    "cross-env": "^10.1.0",
+    "parse5": "^8.0.1",
     "typescript": "^7.0.2",
     "vite": "^8.2.2"
   },

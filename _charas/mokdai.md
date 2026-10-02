@@ -9,11 +9,6 @@ profile:
   height: 164
   weight: 122
   birthday: 10/02
-profile:
-  age: 23
-  height: 164
-  weight: 122
-  birthday: 10/02
   birthplace: Earth, Japan, Fukuoka
   5th_anniversary_intro: |-
     Living up to his name of "Mighty Knuckle", he literally smashes his foes with his fists! 

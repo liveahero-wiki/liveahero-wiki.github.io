@@ -23,7 +23,7 @@
 </ul></td></tr>
 {% when "HavingHeroCard" %}
 <tr><th>Card</th>
-<td>{{ cond.heroCardId | divided_by: 10 | stockIdToLink: 1 }}</td></tr>
+<td>{{ cond.heroCardId | divided_by: 10 | floor | stockIdToLink: 1 }}</td></tr>
 {% when "IsLimitBreakCard" %}
 {% comment %}Skipped{% endcomment %}
 {% else %}

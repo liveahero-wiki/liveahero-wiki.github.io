@@ -1,2 +1,4 @@
 allowBuilds:
   esbuild: true
+  # optional file-watcher addon pulled in by sass; sass falls back to polling
+  '@parcel/watcher': false
