@@ -117,6 +117,30 @@ class TestSkillTreeMaxed(unittest.TestCase):
                 intermediate, names,
                 f"intermediate VP Cost {intermediate!r} must not appear after maxing")
 
+    def _status_names(self, skill_id):
+        return [d["name"] for d in build_status_descs(
+            skill_id, self.SM, self.SEM, self.SMA, {}, {}, self.SUM)]
+
+    def test_unflagged_override_status_is_hidden(self):
+        # Polaris Mask 1015202: SE 3098 carries the placeholder override name
+        # "限定ポラリスパッシブスキル用" but isOverrideStatusName is false and
+        # StatusMaster has no name for it, so the game shows no chip. SE 3110
+        # (Liberation, prob 0) is a plain StatusMaster status and stays.
+        self.assertEqual(self._status_names(1015202), ["挑発", "解放"])
+
+    def test_not_display_hint_rows_are_hidden(self):
+        # Reticul 1316102/1316103: the Acceleration/Deceleration Signal tiers are
+        # notDisplayHint rows, and the つのぶえ…マーカー/加速信号 rows have unflagged
+        # overrides. Only the visible status and the prob-0 help row (no icon) remain.
+        self.assertEqual(self._status_names(1316102), ["SPDアップ", "加速信号"])
+        self.assertEqual(self._status_names(1316103), ["ATKダウン", "減速信号"])
+
+    def test_flagged_override_without_hint_flag_is_kept(self):
+        # Pubraseer 1073202: override names are flagged, so ATK Up+ and the
+        # enemy-count note appear next to plain ATK Up.
+        self.assertEqual(self._status_names(1073202),
+                         ["ATKアップ", "ATKアップ+", "敵の数に応じた威力増加"])
+
     def test_hero_attribute_is_integer(self):
         cards = load("CardMaster.json")
         akashi_entries = [c for c in cards.values() if c.get("stockId") == 10011]

@@ -130,7 +130,15 @@ export function statusDescriptionV2(skillEffectId, skillEffectJson, data, render
   const status = data.statusMaster[idS];
   if (!status) return `unknown status ${idS}`;
 
-  if (str(status.description).length === 0 && str(skillEffectJson.overrideStatusDescription).length === 0) {
+  // The game only honours the override strings when their flag is set; an unflagged string is a
+  // developer placeholder (e.g. "…マーカー"), so the status falls back to StatusMaster (and is
+  // hidden if that has no name).
+  const overrideName = skillEffectJson.isOverrideStatusName ? skillEffectJson.overrideStatusName : "";
+  const overrideDescription = skillEffectJson.isOverrideStatusDescription
+    ? skillEffectJson.overrideStatusDescription
+    : "";
+
+  if (str(status.description).length === 0 && str(overrideDescription).length === 0) {
     return null;
   }
 
@@ -143,13 +151,11 @@ export function statusDescriptionV2(skillEffectId, skillEffectJson, data, render
   let name = dig(data.statusWiki, idS, "name") ?? status.statusName;
   let description = dig(data.statusWiki, idS, "description") ?? status.description;
 
-  const overrideName = skillEffectJson.overrideStatusName;
   if (str(overrideName).length > 0) {
     name = dig(data.skillEffectWiki, skillEffectId, "overrideStatusName") ?? overrideName;
   }
   if (!name || name.length === 0) return null;
 
-  const overrideDescription = skillEffectJson.overrideStatusDescription;
   if (str(overrideDescription).length > 0) {
     description = dig(data.skillEffectWiki, skillEffectId, "overrideStatusDescription") ?? overrideDescription;
   }

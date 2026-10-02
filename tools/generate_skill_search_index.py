@@ -970,7 +970,12 @@ def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SU
         > StatusMaster raw. Status.json is English-only community translation,
     so for non-English builds it's pre-scoped (scoped_status_trans) to just the
     icon field and this tier falls straight through to GameTrans/raw.
-    Deduped by resolved name. Effects with statusId==0 are skipped.
+    Deduped by resolved name. Effects with statusId==0 are skipped, as are rows
+    flagged notDisplayHint (the game hides them from the skill's status list).
+    The override name/description only apply when the effect's isOverrideStatusName /
+    isOverrideStatusDescription flag is set; an unflagged override string is a developer
+    placeholder, so the name falls back to StatusMaster (and the status is dropped if
+    that has no name).
 
     tp: display type char — 'b'=Buff, 'd'=Debuff, 'o'=Other, 'f'=Field, 's'=System.
     fl: flag bitmask (omitted when 0) — 1=stackable, 2=charge, 4=dot, 8=field, 16=count.
@@ -985,6 +990,8 @@ def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SU
                else (skill.get("effects") or []))
     results, seen_names = [], set()
     for eff in effects:
+        if eff.get("notDisplayHint"):
+            continue
         seid = str(eff.get("skillEffectId", ""))
         sej = SEM.get(seid, {}).get("skillEffectJson", {})
         status_id = sej.get("statusId")
@@ -993,15 +1000,18 @@ def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SU
         se_trans = SkillEffectTrans.get(seid, {})
         sid = str(status_id)
 
-        name = (se_trans.get("overrideStatusName")
-                or sej.get("overrideStatusName")
-                or resolve_status_name(sid, StatusTrans, SMA, GameTrans))
+        override_name = ((se_trans.get("overrideStatusName") or sej.get("overrideStatusName"))
+                         if sej.get("isOverrideStatusName") else "")
+        override_desc = ((se_trans.get("overrideStatusDescription")
+                          or sej.get("overrideStatusDescription", ""))
+                         if sej.get("isOverrideStatusDescription") else "")
+
+        name = override_name or resolve_status_name(sid, StatusTrans, SMA, GameTrans)
         if not name or name in seen_names:
             continue
         seen_names.add(name)
 
-        desc = (se_trans.get("overrideStatusDescription")
-                or sej.get("overrideStatusDescription", ""))
+        desc = override_desc
         if not desc:
             base = (StatusTrans.get(sid, {}).get("description", "")
                     or (GameTrans or {}).get(f"STATUS_DESCRIPTION_{sid}", ""))
