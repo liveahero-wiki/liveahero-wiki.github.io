@@ -133,9 +133,9 @@ subset of active nodes and reproduces the maxed assembly above when all nodes ar
 
 ---
 
-## 💻 How Jekyll Pages Use Game Schemas
+## 💻 How Pages Use Game Schemas
 
-The dynamic parts of Jekyll layouts perform relative relational joins:
+The dynamic parts of the layouts perform relative relational joins:
 
 ### Character Profile Rendering (`chara.html`)
 1.  Loads character markdown files under `_charas/` which hold characterId front-matter.

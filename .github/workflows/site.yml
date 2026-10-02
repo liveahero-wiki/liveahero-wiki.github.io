@@ -1,4 +1,4 @@
-name: Jekyll site CI
+name: Site CI
 
 on:
   workflow_dispatch: ~
@@ -52,17 +52,8 @@ jobs:
         python tools/generate_skill_search_index.py --lang ja
         python tools/audit_skill_effects.py report
 
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.3'
-        bundler-cache: true
-
-    - name: Install dependencies
-      run: bundle install
-
     # Build the skill-search frontend (Vite/Preact) into assets/skill-search.*
-    # before Jekyll runs so the bundle is included in _site.
+    # before Eleventy runs so the bundle is included in _site.
     - name: Set up pnpm
       uses: pnpm/action-setup@v4
       with:
@@ -80,9 +71,16 @@ jobs:
         pnpm install --frozen-lockfile
         pnpm build
 
-    # Every PR and push will hit this step to test for syntax errors / build issues
+    - name: Unit tests
+      run: pnpm test
+
+    # Every PR and push will hit this step to test for syntax errors / build issues.
+    # ELEVENTY_STRICT makes an unknown Liquid filter fail the build instead of silently printing nothing.
     - name: Build site
-      run: JEKYLL_ENV=production bundle exec jekyll build --future
+      run: pnpm eleventy:build
+      env:
+        ELEVENTY_ENV: production
+        ELEVENTY_STRICT: '1'
 
     - name: Pagefind index
       run: npx pagefind
@@ -91,7 +89,7 @@ jobs:
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: jekyll-site
+        name: site
         path: ./_site
 
     # Check if the required label is present
@@ -120,7 +118,7 @@ jobs:
     - name: Download Build Artifact
       uses: actions/download-artifact@v4
       with:
-        name: jekyll-site
+        name: site
         path: ./_site
 
     - uses: actions/setup-node@v6
@@ -156,7 +154,7 @@ jobs:
       - name: Download Build Artifact
         uses: actions/download-artifact@v4
         with:
-          name: jekyll-site
+          name: site
           path: './_site'
 
       - name: Setup Pages

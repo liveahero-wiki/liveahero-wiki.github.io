@@ -50,7 +50,7 @@
 
   {% for part in whitelist %}
     {% assign p = part %}
-    {% capture voiceFilename %}voice_{{ include.resourceName }}_{{ part | lowercase }}{% endcapture %}
+    {% capture voiceFilename %}voice_{{ include.resourceName }}_{{ part }}{% endcapture %}
     {% assign key = "SERIF" | append: name | append: part %}
     {% assign jp_line = site.data.processed.jp_serif[key] %}
     {% assign en_line = site.data.processed.en_serif[key] %}

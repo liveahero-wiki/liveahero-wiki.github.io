@@ -11,7 +11,7 @@ with open("_data/EventMaster.json", "r", encoding="utf-8") as f:
     EventMaster: dict = json.load(f)
 
 def getCharaIdToPageMap() -> dict:
-  files = next(os.walk("_charas"))[2]
+  files = [f for f in next(os.walk("_charas"))[2] if f.endswith(".md")]
 
   obj = {}
   for file in files:

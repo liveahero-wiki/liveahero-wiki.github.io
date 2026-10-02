@@ -1,251 +1,111 @@
-import { DateTime } from "luxon";
-import yaml from "js-yaml";
-// const markdownItAnchor = require("markdown-it-anchor");
+import fs from "node:fs";
+import path from "node:path";
 
-// const pluginRss = require("@11ty/eleventy-plugin-rss");
-// const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-// const pluginNavigation = require("@11ty/eleventy-navigation");
-// const eleventyImage = require("@11ty/eleventy-img");
-import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
+import { createSite } from "./wiki_plugins/site.js";
+import { createMarkdown } from "./wiki_plugins/markdown/index.js";
+import { JekyllLiquid } from "./wiki_plugins/liquid/engine.js";
+import { frontMatterYamlEngine } from "./wiki_plugins/lib/ruby-time.js";
+import { findStaticTemplateFiles } from "./wiki_plugins/lib/static-files.js";
+import wikiPlugins from "./wiki_plugins/index.js";
+import minifyPlugin from "./wiki_plugins/minify.js";
+import sassPlugin from "./wiki_plugins/sass.js";
 
-import fs from 'fs';
-import path from 'path';
-import markdownIt from "markdown-it";
+const STRICT = Boolean(process.env.ELEVENTY_STRICT);
 
-import wiki_plugins from "./wiki_plugins/index.js";
+// Repository documents that are neither pages nor static site files.
+const NOT_SITE_FILES = new Set(["readme.md", "CONTRIBUTING.md", "AGENTS.md", "CLAUDE.md"]);
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default function (eleventyConfig) {
+  const site = createSite();
+  const markdown = createMarkdown();
 
-    eleventyConfig.addPassthroughCopy({
-        "./assets/": "/assets/",
-    });
+  // Front matter timestamps are Ruby Times in Jekyll (they print as "2026-01-22 20:00:00 +0900").
+  eleventyConfig.setFrontMatterParsingOptions({ engines: { yaml: frontMatterYamlEngine } });
 
-    if (fs.existsSync("./cdn/")) {
-        eleventyConfig.addPassthroughCopy({
-            "./cdn/": "/cdn/",
-        });
-    }
-
-    // Run Eleventy when these files change:
-    // https://www.11ty.dev/docs/watch-serve/#add-your-own-watch-targets
-
-    // Process content images to the image pipeline.
-    // eleventyConfig.addWatchTarget("content/**/*.{png,jpeg}");
-
-
-    // Plugins
-    // eleventyConfig.addPlugin(pluginRss);
-    // eleventyConfig.addPlugin(pluginSyntaxHighlight);
-    // eleventyConfig.addPlugin(pluginNavigation);
-    eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-
-    // Eleventy Image shortcode
-    // https://www.11ty.dev/docs/plugins/image/
-    eleventyConfig.addPlugin(eleventyConfig => {
-        function relativeToInputPath(inputPath, relativeFilePath) {
-            let split = inputPath.split("/");
-            split.pop();
-
-            return path.resolve(split.join(path.sep), relativeFilePath);
-        }
-
-        // eleventyConfig.addAsyncShortcode("image", async function imageShortcode(src, alt, sizes) {
-        // 	let file = relativeToInputPath(this.page.inputPath, src);
-        // 	let metadata = await eleventyImage(file, {
-        // 		widths: ["auto"],
-        // 		// You can add "avif" or "jpeg" here if you’d like!
-        // 		formats: ["webp", "png"],
-        // 		outputDir: path.join(eleventyConfig.dir.output, "img"), // Advanced usage note: `eleventyConfig.dir` works here because we’re using addPlugin.
-        // 	});
-        // 	let imageAttributes = {
-        // 		alt,
-        // 		sizes,
-        // 		loading: "lazy",
-        // 		decoding: "async",
-        // 	};
-        // 	return eleventyImage.generateHTML(metadata, imageAttributes);
-        // });
-    });
-
-    // Drafts implementation, see `content/content.11tydata.js` for additional code.
-    // This section *could* be simplified to an environment variable in an npm script,
-    // but this way an ENV is not required and this code works cross-platform.
-    eleventyConfig.addPlugin(function enableDrafts(eleventyConfig) {
-        let logged = false;
-        eleventyConfig.on("eleventy.before", ({ runMode }) => {
-            // Only show drafts in serve/watch modes
-            if (runMode === "serve" || runMode === "watch") {
-                process.env.BUILD_DRAFTS = true;
-
-                // Only log once.
-                if (!logged) {
-                    console.log("[11ty/eleventy-base-blog] including `draft: true` posts");
-                }
-
-                logged = true;
-            }
-        });
-    })
-
-    // Filters
-    eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
-        // Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
-        return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");
-    });
-
-    eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-        // dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-        return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
-    });
-
-    //eleventyConfig.setLibrary("md", markdownIt({
-    //    html: true,
-    //    breaks: true,
-    //    linkify: true,
-    //}));
-
-    let markdownInstance;
-    function markdownGetter() {
-        return markdownInstance;
-    }
-    eleventyConfig.amendLibrary("md", mdLib => {
-        markdownInstance = mdLib;
-    });
-
-    wiki_plugins(eleventyConfig, markdownGetter)
-
-    // Customize Markdown library settings:
-    //eleventyConfig.amendLibrary("md", mdLib => {
-    //	mdLib.use(markdownItAnchor, {
-    //		permalink: markdownItAnchor.permalink.ariaHidden({
-    //			placement: "after",
-    //			class: "direct-link",
-    //			symbol: "#",
-    //		}),
-    //		level: [1,2,3,4],
-    //		slugify: eleventyConfig.getFilter("slugify")
-    //	});
-    //});
-
-    // Features to make your build faster (when you need them)
-
-    // If your passthrough copy gets heavy and cumbersome, add this line
-    // to emulate the file copy on the dev server. Learn more:
-    // https://www.11ty.dev/docs/copy/#emulate-passthrough-copy-during-serve
-
-    eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
-
-    eleventyConfig.addLayoutAlias('chara', 'chara.html');
-    eleventyConfig.addLayoutAlias("compress", 'none.html');
-    eleventyConfig.addLayoutAlias("default", 'default.html');
-    eleventyConfig.addLayoutAlias("event", 'event.html');
-    eleventyConfig.addLayoutAlias("main_quests", 'main_quests.html');
-    eleventyConfig.addLayoutAlias("markdownify", 'markdownify.html');
-    eleventyConfig.addLayoutAlias("post", 'post.html');
-    eleventyConfig.addLayoutAlias("scss", 'scss.html');
-
-    const site = {
-        "title": "Live A Hero Wiki",
-        "url": "https://liveahero-wiki.github.io",
-        "github_repo": "https://github.com/liveahero-wiki/liveahero-wiki.github.io",
-        "timezone": "Asia/Tokyo",
-        "date_format": "%-d %b %Y %R JST",
-        "time": new Date(),
-    };
-    const collections = ["posts", "events", "charas", "main_quests"];
-
-    function traverseDataDir(currentDir) {
-        const files = fs.readdirSync(currentDir);
-        const obj = {};
-    
-        files.forEach((file) => {
-            
-        });
-    }
-
-    for (const collection of collections) {
-        let pages = null;
-
-        eleventyConfig.addCollection(collection, function (collectionApi) {
-            pages = collectionApi.getFilteredByGlob(`_${collection}/*.md`);
-            if (collection == "event") {
-                pages.sort(function(a, b) {
-                    return a.data.event_start_time - b.data.event_start_time;
-                });
-            }
-
-            return pages
-        });
-        site[collection] = () => pages;
-    }
-
-    eleventyConfig.addGlobalData("site", function () {
-        return site
-    })
-    const globalDataVars = fs.readdirSync("_data").forEach((file) => {
-        return path.basename(file);
-    });
-    eleventyConfig.addGlobalData("layout", "default");
-    //eleventyConfig.addPreprocessor("rewrite-site-variable", ["html", "md"], (data, content) => {
-	//	let s = content.replace("site.data.", "");
-    //    for (const collection of collections) {
-    //        s = s.replace(`site.${collection}`, `collections.${collection}`);
-    //    }
-    //    return s;
-	//});
-
-    //eleventyConfig.addGlobalData("site.data", function () {
-    //    console.log("accessing site.data", this);
-    //    console.log("accessing site.data", eleventyConfig);
-    //    return null;
-    //})
-
-    eleventyConfig.setLiquidOptions({
-        dynamicPartials: false,
+  eleventyConfig.setLibrary("md", markdown);
+  eleventyConfig.setLibrary(
+    "liquid",
+    new JekyllLiquid(
+      {
+        root: [path.resolve("_includes"), path.resolve(".")],
+        // `{% include foo.html a=b %}` + `include.a`, like Jekyll
         jekyllInclude: true,
-        strictFilters: false, // renamed from `strict_filters` in Eleventy 1.0
-    });
+        // Jekyll silently ignores unknown filters; ELEVENTY_STRICT=1 makes them fail the build.
+        strictFilters: STRICT,
+      },
+      site,
+    ),
+  );
 
-    eleventyConfig.addDataExtension("yaml,yml", contents => yaml.load(contents));
+  wikiPlugins(eleventyConfig, { site, markdown: () => markdown });
+  eleventyConfig.addPlugin(sassPlugin);
+  eleventyConfig.addPlugin(minifyPlugin);
+  eleventyConfig.addGlobalData("siteUrl", site.url);
 
-    const ignoreFiles = [
-        "**/.git/**",
-        "_site*/**",
-    ]
-    for (const file of ignoreFiles) {
-        eleventyConfig.ignores.add(file);
-    }
-    eleventyConfig.ignores.delete("_data/translation/**");
+  // ---- which files are pages -------------------------------------------------------------
+  // Jekyll's `exclude:` plus the non-site folders of this repo.
+  for (const pattern of [
+    "_data/**",
+    "_plugins/**",
+    "_sass/**",
+    "_site*/**",
+    "wiki_plugins/**",
+    "web/**",
+    "tools/**",
+    "docs/**",
+    "deploy/**",
+    "zzz/**",
+    "cdn/**",
+    ".github/**",
+    ".claude/**",
+    "jekyll-site/**", // a downloaded Jekyll CI build, used as the reference for scripts/compare-page.mjs
+    ...NOT_SITE_FILES,
+  ]) {
+    eleventyConfig.ignores.add(pattern);
+  }
+  // .gitignore lists generated inputs we do want to build (_statuses/, _data/translation/, api/skill-index*).
+  eleventyConfig.setUseGitIgnore(false);
 
-    return {
-        // Control which files Eleventy will process
-        // e.g.: *.md, *.njk, *.html, *.liquid
-        templateFormats: [
-            "md",
-            "html",
-            "liquid"
-        ],
+  // ---- static files ---------------------------------------------------------------------
+  eleventyConfig.addPassthroughCopy("assets", {
+    filter: ["**/*", "!**/*.scss", "!atlas.js"],
+  });
+  // Files without front matter, which Jekyll copied verbatim (json is not a template format here).
+  eleventyConfig.addPassthroughCopy("api/mob.json");
+  eleventyConfig.addPassthroughCopy("api/skill-*.json");
+  const staticFiles = findStaticTemplateFiles(".", NOT_SITE_FILES);
+  for (const file of staticFiles) {
+    eleventyConfig.ignores.add(file);
+    eleventyConfig.addPassthroughCopy(file);
+  }
 
+  // cdn/ is a 2 GB checkout of the sprite repo; only the dev server (which serves it in place) needs it.
+  const serving = process.argv.includes("--serve");
+  if (fs.existsSync("cdn") && (serving || process.env.ELEVENTY_COPY_CDN === "1")) {
+    eleventyConfig.addPassthroughCopy("cdn");
+  }
+  eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
 
-        dir: {
-            input: ".",
-            includes: "_includes",
-            layouts: "_layouts",
-            data: "_data",
-            //output: "_site"
-        },
+  // ---- layouts ---------------------------------------------------------------------------
+  // Jekyll's `layout: default` -> _layouts/default.html. Every other template gets `default`
+  // unless its directory data says otherwise (_charas/_charas.11tydata.js, …).
+  for (const name of ["default", "chara", "event", "main_quest", "post", "status", "markdownify", "none"]) {
+    eleventyConfig.addLayoutAlias(name, `${name}.html`);
+  }
+  eleventyConfig.addGlobalData("layout", "default");
 
-        // -----------------------------------------------------------------
-        // Optional items:
-        // -----------------------------------------------------------------
-
-        // If your site deploys to a subdirectory, change `pathPrefix`.
-        // Read more: https://www.11ty.dev/docs/config/#deploy-to-a-subdirectory-with-a-path-prefix
-
-        // When paired with the HTML <base> plugin https://www.11ty.dev/docs/plugins/html-base/
-        // it will transform any absolute URLs in your HTML to include this
-        // folder name and does **not** affect where things go in the output folder.
-        pathPrefix: "/",
-    };
-};
+  return {
+    templateFormats: ["md", "html", "liquid", "11ty.js"],
+    dir: {
+      input: ".",
+      output: "_site",
+      includes: "_includes",
+      layouts: "_layouts",
+      // Deliberately not _data: that folder is loaded once by wiki_plugins/lib/site-data.js
+      // into `site.data` instead of being deep-merged into every template's data.
+      data: "_11ty_data",
+    },
+    pathPrefix: "/",
+  };
+}
