@@ -90,6 +90,10 @@ RELATION = "hello world"
 - Please contact @rongjie in `#lah-wiki` to get access permission and coordinate works.
 - You are welcomed to report bug related to skill info in `#lah-wiki`:
   - Please post the skill menu screenshot with expanded status details.
+- A skill description comes from the sheet when it has been translated there, otherwise from the game's own
+  English text (and from its Chinese and Japanese text for readers of those languages).
+  Status names in the text are linked to their tooltips automatically; there is no need to wrap them in
+  `<wiki-status>` any more (an existing tag is still understood).
 
 <!--### Translate skill name
 
@@ -104,18 +108,6 @@ Take {% chara_link Exio|h1 %} hero S1 skill for example:
 
 TODO
 
-### Manually override a skill description
-
-When the auto generated version is too long and simplifying by code is nearly impossible, we just override the description with a hand-written one
-
-Take {% chara_link Exio|h1 %} hero S1 skill for example:
-
-1. Hover your mouse cursor over the skill name, you will see the skill id (an integer)
-  - In this example, it is `1035101`
-1. Go to [`_data/wiki/SkillManualOverride.yml``](https://github.com/liveahero-wiki/liveahero-wiki.github.io/blob/master/_data/wiki/SkillManualOverride.yml)
-1. Add a new hand-written skill description like `1035101: "<new skill description>"`
-  - New line should be written as `<br>`
-  - Double quote needs to be written as `\"`
 -->
 <!--
 

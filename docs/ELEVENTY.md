@@ -11,7 +11,7 @@ wiki_plugins/
 ├── lib/                  # framework-free logic, importable from web/ later
 │   ├── site-data.js      # _data/** -> site.data
 │   ├── documents.js      # `page` and collection documents, flattened like Jekyll's
-│   ├── chara.js, item.js, catalog.js, image.js, skill.js, skill-trigger.js   # ported from _plugins/*.rb
+│   ├── chara.js, item.js, catalog.js, image.js, skill.js, skill-text.js   # ported from _plugins/*.rb (skill-text.js is new)
 │   └── ruby*.js, decimal.js    # Ruby semantics: Time, Float, Integer-vs-String hash keys
 ├── liquid/               # LiquidJS engine, Jekyll-semantics filters, Liquid adapters for lib/
 └── markdown/             # markdown-it configured to behave like kramdown
@@ -31,11 +31,11 @@ scripts/compare-page.mjs  # compare the output with a Jekyll build
 
 `ELEVENTY_ENV=production` additionally minifies the HTML (the CI does this). `ELEVENTY_COPY_CDN=1` copies the 2 GB `cdn/` checkout into the output.
 
-Generated inputs have to exist before building, as in CI: `_statuses/`, `_data/translation/`, `_data/processed/*_voice.json`, `_data/wiki/SkillUpgradeModel.json` and `api/skill-index*.json` come from the Python tools (see `docs/PYTHON_SCRIPTS.md`). Eleventy ignores `.gitignore`, so these gitignored files are built.
+Generated inputs have to exist before building, as in CI: `_statuses/`, `_data/translation/`, `_data/processed/*_voice.json`, `_data/processed/SkillText.json` (every skill name and description; without it a `ELEVENTY_STRICT=1` build fails and a normal build warns once and prints empty skill tables), `_data/wiki/SkillUpgradeModel.json` and `api/skill-index*.json` come from the Python tools (see `docs/PYTHON_SCRIPTS.md`). Eleventy ignores `.gitignore`, so these gitignored files are built.
 
 ## What templates see
 
-- **`site.data`** is `_data/**` loaded once per build (`lib/site-data.js`), not Eleventy's data cascade — deep-merging 45 MB of data into every page would cost minutes. Folders nest, file names are keys. YAML mappings with integer keys (`Item.yml`, `SkillManualOverride.yml`) are `IntKeyMap`s that, like Ruby hashes, answer a lookup with the number `7` but not with the string `"7"`.
+- **`site.data`** is `_data/**` loaded once per build (`lib/site-data.js`), not Eleventy's data cascade — deep-merging 45 MB of data into every page would cost minutes. Folders nest, file names are keys. YAML mappings with integer keys (`Item.yml`) are `IntKeyMap`s that, like Ruby hashes, answer a lookup with the number `7` but not with the string `"7"`.
 - **`site.charas`, `site.events`, `site.main_quests`, `site.statuses`, `site.posts`** are arrays of documents with the front matter at the top level (`chara.title`, `event.event_start_time`), sorted as `_config.yml` used to sort them. `site.time` is the build time, `site.url`, `site.date_format`, … are in `wiki_plugins/site.js`.
 - **`page`** has the front matter at the top level (`page.title`, `page.characterId`) plus `page.url`, `page.path`, `page.date`; Eleventy's own `page.fileSlug` and `page.inputPath` stay available. Dates are in Asia/Tokyo.
 - **Front matter timestamps** are `RubyTime`s: `{{ page.event_end_time }}` prints `2026-01-22 20:00:00 +0900`, which `assets/main.js` parses.
@@ -48,7 +48,7 @@ LiquidJS is not Ruby Liquid. These would silently change the output, so they are
 - `{% include a.html x=y %}` with `include.x` (LiquidJS `jekyllInclude`); quoted parameters follow Jekyll's rules (`\"` is the only escape), other tags take strings literally (`'a\nb'` keeps the backslash) — `string-literals.js`.
 - `where`, `where_exp`, `group_by`, `group_by_exp` iterate the values of Hashes and compare as strings; `sort` puts items without the key first; `split: " "` is awk-style; `slugify` keeps non-ASCII letters; `date` is LiquidJS's own, pinned to the site timezone (`timezoneOffset`; Asia/Tokyo) and without `%R`, and a time without a zone has to get one (`| append: '+09'`) or it is read in the build machine's; `jsonify` of nothing is `null`; `xml_escape` leaves `'` alone.
 - `divided_by` always divides as floating point, and every arithmetic filter on Floats is exact decimal arithmetic (Ruby Liquid goes through BigDecimal), printing `2.0` like Ruby does. Use `| floor` if an integer is wanted.
-- `status_description` and friends read `skillEffectJson` from the calling template's context and render Liquid text stored in `_data` (`translation/Status.json`, `wiki/SkillManualOverride.yml`).
+- `status_description` and friends read `skillEffectJson` from the calling template's context and render Liquid text stored in `_data` (`translation/Status.json`).
 
 ## Markdown differences that are handled
 

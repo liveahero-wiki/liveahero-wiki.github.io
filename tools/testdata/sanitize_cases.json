@@ -1,0 +1,92 @@
+[
+  {
+    "name": "plain text is untouched (no formula guard in the display variant)",
+    "input": "+5% ATK for 1 turn.",
+    "display": "+5% ATK for 1 turn."
+  },
+  {
+    "name": "line break markers",
+    "input": "Line one.<style=\"改行\"></style>Line two.",
+    "display": "Line one.<br>Line two."
+  },
+  {
+    "name": "color and size wrappers are dropped, content kept",
+    "input": "<color=#ff0000>Burn</color> for <size=14>2</size> turns",
+    "display": "Burn for 2 turns"
+  },
+  {
+    "name": "stray size opener",
+    "input": "<size=16>Give 1 enemy SPD Down.",
+    "display": "Give 1 enemy SPD Down."
+  },
+  {
+    "name": "passive region, plain",
+    "input": "A<style=\"パッシブ領域\">B</style>C",
+    "display": "A<wiki-passive>B</wiki-passive>C"
+  },
+  {
+    "name": "passive region, _en suffix",
+    "input": "A<style=\"パッシブ領域_en\">B</style>C",
+    "display": "A<wiki-passive>B</wiki-passive>C"
+  },
+  {
+    "name": "passive region, _cn suffix",
+    "input": "A<style=\"パッシブ領域_cn\">B</style>C",
+    "display": "A<wiki-passive>B</wiki-passive>C"
+  },
+  {
+    "name": "passive region, _tw suffix",
+    "input": "A<style=\"パッシブ領域_tw\">B</style>C",
+    "display": "A<wiki-passive>B</wiki-passive>C"
+  },
+  {
+    "name": "passive region with the opening quote missing",
+    "input": "A<style=パッシブ領域\">B</style>C",
+    "display": "A<wiki-passive>B</wiki-passive>C"
+  },
+  {
+    "name": "passive region that is never closed runs to the end",
+    "input": "A<style=\"パッシブ領域_cn\">B",
+    "display": "A<wiki-passive>B</wiki-passive>"
+  },
+  {
+    "name": "skill enhance region, suffixes",
+    "input": "<style=\"スキル強化\">ATK+10%</style> <style=\"スキル強化_tw\">DEF+10%</style>",
+    "display": "<wiki-enhance>ATK+10%</wiki-enhance> <wiki-enhance>DEF+10%</wiki-enhance>"
+  },
+  {
+    "name": "auto action region",
+    "input": "A<style=\"オート行動\">B</style>",
+    "display": "A<wiki-auto-action>B</wiki-auto-action>"
+  },
+  {
+    "name": "auto action empty marker opens a region that runs to the end",
+    "input": "A<style=\"オート行動_cn\"></style>B",
+    "display": "A<wiki-auto-action>B</wiki-auto-action>"
+  },
+  {
+    "name": "leftover closing style tags are removed",
+    "input": "A</style>B",
+    "display": "AB"
+  },
+  {
+    "name": "surrounding whitespace is trimmed",
+    "input": "  A  ",
+    "display": "A"
+  },
+  {
+    "name": "enhance region under its short name",
+    "input": "<style=\"強化\">A</style>",
+    "display": "<wiki-enhance>A</wiki-enhance>"
+  },
+  {
+    "name": "an enhance opener that is never closed is dropped",
+    "input": "Deal <style=\"スキル強化\">180% damage. Heal all allies.",
+    "display": "Deal 180% damage. Heal all allies."
+  },
+  {
+    "name": "a color opener that is never closed is dropped",
+    "input": "<color=#fff>x</color> and <color=#505050>y",
+    "display": "x and y"
+  }
+]

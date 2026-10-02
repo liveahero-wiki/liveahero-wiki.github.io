@@ -14,15 +14,14 @@ function setupMenu() {
   })
 }
 
-function toggleTranslate(e) {
-  const tmp = this.dataset.translate;
-  if (tmp.length === 0) return;
-  this.dataset.translate = this.innerHTML;
-  this.innerHTML = tmp;
-}
-
-function setupTranslate() {
-  document.querySelectorAll(".translate").forEach(t => t.addEventListener('click', toggleTranslate));
+// The language skill names and descriptions are shown in (_includes/js/skill-lang.js picks the first
+// one before paint; the picker only has to switch it and show it).
+function setupSkillLangPicker() {
+  const picker = document.querySelector(".skill-lang-picker");
+  if (!picker || !window.setSkillLang) return;
+  picker.disabled = false;
+  picker.addEventListener("change", () => window.setSkillLang(picker.value));
+  document.addEventListener("skilllangchange", e => { picker.value = e.detail.lang });
 }
 
 function setupExpiry() {
@@ -158,7 +157,7 @@ function setupVoiceTableTabs() {
   });
 }
 
-const tasks = [setupWikiTabs, setupMenu, setupTranslate, setupExpiry, setupSortTable, setupVoiceTableTabs];
+const tasks = [setupWikiTabs, setupMenu, setupSkillLangPicker, setupExpiry, setupSortTable, setupVoiceTableTabs];
 for (const t of tasks) {
   setTimeout(t, 0)
 }

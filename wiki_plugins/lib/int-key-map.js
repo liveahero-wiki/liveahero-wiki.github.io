@@ -1,8 +1,8 @@
 // Ruby hashes are type-strict: a YAML mapping with integer keys (`8210105: ""`) is found with the
 // Integer 8210105 but not with the String "8210105". JavaScript objects coerce every key to a
 // string, so such mappings are loaded as IntKeyMap, which only answers numeric lookups. Templates
-// that look keys up with strings (`skillId=passiveSkillIdS`, a `| downcase` result) then behave
-// exactly as they did under Jekyll, e.g. the empty override in SkillManualOverride.yml is skipped.
+// that look keys up with strings (a `| downcase` result) then behave exactly as they did under
+// Jekyll.
 
 import { Drop } from "liquidjs";
 

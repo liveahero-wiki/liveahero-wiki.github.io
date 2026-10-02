@@ -22,8 +22,18 @@ export interface Status {
 export interface ChangeSkill {
   name: string
   description: string
+  // The <wiki-status i=N> tags in `description` index THIS list, not the parent skill's.
+  statusDescs?: StatusDesc[]
 }
 
+// Words of the status tooltip header ("[Buff/Stackable]"), in the index's language.
+// Keys: b d o f s (types) and stk unstk chg dot fld cnt (modifiers); see
+// tools/skill_text.py STATUS_LABELS.
+export type StatusLabels = Record<string, string>
+
+// One status a skill applies or names. The skill's description carries
+// <wiki-status i=N>text</wiki-status> where N is the position in `statusDescs`;
+// the list always starts with the statuses the game shows for the skill.
 export interface StatusDesc {
   name: string
   desc: string
@@ -62,6 +72,7 @@ export interface Entity {
 
 export interface SkillIndex {
   version: string
+  statusLabels?: StatusLabels
   categories: Category[]
   statuses: Record<string, Status>
   entities: Entity[]

@@ -1,6 +1,6 @@
 // Liquid filters and tags that used to be the Ruby plugins in _plugins/ (chara, item, catalog,
 // image, skill). The logic lives in ../lib; this file only connects it to LiquidJS: it supplies
-// `site.data`, and for the skill filters the current Liquid context, because status descriptions
+// `site.data`, and for `status_description` the current Liquid context, because status descriptions
 // are Liquid templates themselves and are rendered with `skillEffectJson` / `effects` in scope.
 
 import { processCharaGroup, processVoiceActor } from "../lib/catalog.js";
@@ -10,7 +10,7 @@ import { OrderedIntHash } from "../lib/int-key-map.js";
 import { lahItem, lahItemIcon } from "../lib/item.js";
 import { xmlEscape } from "../lib/ruby.js";
 import * as skill from "../lib/skill.js";
-import { skillTrigger, statusDescriptionUnknown } from "../lib/skill-trigger.js";
+import { createSkillText } from "../lib/skill-text.js";
 
 /**
  * @param {import("@11ty/eleventy").UserConfig} eleventyConfig
@@ -56,7 +56,6 @@ export function registerRubyPlugins(eleventyConfig, { site, charaIndex }) {
   const statusData = () => ({
     statusMaster: site.data.StatusMaster,
     statusWiki: site.data.translation.Status,
-    skillEffectWiki: site.data.translation.SkillEffect,
   });
 
   // Status descriptions are Liquid templates: parse once, render in the caller's context with extra variables.
@@ -76,41 +75,21 @@ export function registerRubyPlugins(eleventyConfig, { site, charaIndex }) {
     }
   }
 
-  /** `status_description(id)` as called from inside a template: skillEffectJson comes from the context. */
-  function describeStatus(self, id, skillEffectJson) {
-    const json = skillEffectJson ?? self.context.get(["skillEffectJson"]);
-    return skill.statusDescription(id, json, statusData(), (t, v) => renderInContext(self, t, v));
-  }
-
-  filter("render_liquid", function (content) {
-    return renderInContext(this, content, {});
-  });
+  /** `status_description(id)` as called from a page or template: skillEffectJson may come from the context. */
   filter("status_description", function (id, skillEffectJson) {
-    return describeStatus(this, id, skillEffectJson);
-  });
-  filter("status_description_v2", function (skillEffectId, skillEffectJson) {
-    return skill.statusDescriptionV2(skillEffectId, skillEffectJson, statusData(), (t, v) =>
-      renderInContext(this, t, v),
-    );
-  });
-  filter("status_manual", skill.statusManual);
-
-  function triggerHelpers(self) {
-    const statusDescription = (id) => describeStatus(self, id);
-    return {
-      statusDescription,
-      statusDescriptionUnknown: (id, type) => statusDescriptionUnknown(id, type, statusDescription),
-    };
-  }
-  filter("skill_trigger", function (triggers, timing) {
-    return skillTrigger(triggers, timing, triggerHelpers(this));
-  });
-  filter("skill_trigger_json", function (triggerJson, timing) {
-    if (!triggerJson) return "";
-    return skillTrigger(JSON.parse(triggerJson), timing, triggerHelpers(this));
+    const json = skillEffectJson ?? this.context.get(["skillEffectJson"]);
+    return skill.statusDescription(id, json, statusData(), (t, v) => renderInContext(this, t, v));
   });
 
-  filter("render_skill_description", skill.renderSkillDescription);
+  // Skill names/descriptions in every language (see lib/skill-text.js)
+  const skillText = createSkillText(site, { strict: Boolean(process.env.ELEVENTY_STRICT) });
+  filter("skill_html", (skillId, changeSkillIds) => skillText.skillHtml(skillId, changeSkillIds));
+  filter("skill_name_html", (skillId) => skillText.skillNameHtml(skillId));
+  filter("skill_has_text", (skillId) => skillText.hasText(skillId));
+  filter("skill_tree_name", (model) => skillText.treeNameHtml(model));
+  filter("skill_tree_html", (model) => skillText.treeHtml(model));
+  filter("skill_tree_node_tip", (model, nodeId) => skillText.treeNodeTip(model, nodeId));
+  filter("skill_tree_json", (model) => skillText.treeJson(model));
   filter(
     "collect_change_skills",
     (providers) =>
@@ -121,10 +100,7 @@ export function registerRubyPlugins(eleventyConfig, { site, charaIndex }) {
         }),
       ),
   );
-  filter("should_skip_skill_effect", skill.shouldSkipSkillEffect);
-  filter("skill_target", skill.skillTarget);
   filter("element_enum", skill.elementEnum);
-  filter("sanitizeSkillDescription", skill.sanitizeSkillDescription);
   filter("hasAutoActionMarker", skill.hasAutoActionMarker);
   filter("sanitizePlayerName", skill.sanitizePlayerName);
   filter("sanitizeSalesCharaName", skill.sanitizeSalesCharaName);

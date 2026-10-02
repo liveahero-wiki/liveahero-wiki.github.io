@@ -44,9 +44,9 @@ additional_scripts: ["/assets/filter.js"]
 <td><a class="item" href="{{ page.url }}#s{{ c.stockId }}"><img src="/cdn/Sprite/icon_{{ c.resourceName }}_s01.png" loading="lazy"> {{ page.title }}</a></td>
 <td>{{ g.agility }}</td>
 
-<td title="{{ active_skill.description | sanitizeSkillDescription }}">{% include skill-description.html skill=active_skill skillId=activeInt %}</td>
+<td>{% include skill-description.html skillId=activeInt %}</td>
 <td>{{ active_skill.useView }}</td>
-<td title="{{ passive_skill.description | sanitizeSkillDescription }}">{% include skill-description.html skill=passive_skill skillId=passiveInt %}</td>
+<td>{% include skill-description.html skillId=passiveInt %}</td>
 </tr>
 {% endfor %}
 </table>

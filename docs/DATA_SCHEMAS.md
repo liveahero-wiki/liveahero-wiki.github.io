@@ -130,6 +130,30 @@ the *fully-maxed* skill text/cost (as done for the `skillsMaxed` projection in
 topology powering the interactive skill-tree UI (`_includes/hero-skill-evolution-v2.html`
 + `assets/skill-tree.js`), which recomputes the resolved description/cost for any
 subset of active nodes and reproduces the maxed assembly above when all nodes are on.
+The text is emitted once per language under `langs.<lang>` (`base`, one `lt` entry per
+line, `nodes`, `maxed`, the status list `st` with `foot`, and `changes`).
+
+### 8. Skill text for the wiki pages (`SkillText.json`)
+
+`tools/gen_skill_text.py` writes `_data/processed/SkillText.json` (gitignored), which
+every skill description and skill name on the wiki is rendered from:
+
+```jsonc
+{ "rev": 1,
+  "labels":   { "<lang>": { "b": "Buff", "d": "Debuff", "stk": "Stackable", … } },   // tooltip header words
+  "statuses": [ { "id": 1, "icon": "status_atkup", "tp": "b", "fl": 1,                // tp: b/d/o/f/s, fl: bit flags
+                  "n": { "<lang>": "ATK Up" }, "d": { "<lang>": "Increase ATK by 1.5x" } } ],
+  "skills":   { "1001101": {
+      "n": { "<lang>": "Burning Baseball" },
+      "t": { "<lang>": "… give <wiki-status i=0>Burn</wiki-status> for 2 turns." },
+      "s": { "<lang>": [17] }                       // tag i -> statuses[s[lang][i]]
+  } } }
+```
+`<lang>` is `en`, `zh-Hans`, `zh-Hant` or `ja`. A language key is present only when the
+text really is in that language; a skill with no text anywhere has no entry. The text is
+the community English translation, else the game's own localization (`zzz/<lang>.json`),
+else the raw Japanese master text, sanitized to the wiki tag set
+(`wiki_util.sanitizeSkillDescriptionForDisplay`).
 
 ---
 

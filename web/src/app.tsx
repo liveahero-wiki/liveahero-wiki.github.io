@@ -8,6 +8,7 @@ import { t } from './lib/uiTranslations'
 import { FilterPanel } from './components/FilterPanel'
 import { ResultTable } from './components/ResultTable'
 import { SkillKitDialog } from './components/SkillKitDialog'
+import { EN_STATUS_LABELS, StatusLabelsContext } from './components/SkillDescription'
 
 type SetField = 'types' | 'roles' | 'elements' | 'labels' | 'statusTypes'
 type FlagField = 'skillTree' | 'includeMob'
@@ -117,6 +118,7 @@ export function App() {
   if (!index) return <div class="loading">{t(lang, 'loading')}</div>
 
   return (
+    <StatusLabelsContext.Provider value={index.statusLabels ?? EN_STATUS_LABELS}>
     <div class="app">
       <header class="app-header">
         <h1>LAH Skill Search</h1>
@@ -158,5 +160,6 @@ export function App() {
         lang={lang}
       />
     </div>
+    </StatusLabelsContext.Provider>
   )
 }

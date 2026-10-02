@@ -37,6 +37,8 @@
       </svg>
     </button>
 
+    {% if content contains 'class="sdv' %}{% include skill-lang-picker.html %}{% endif %}
+
     <a class="github-button" href="{{ site.github_repo }}/blob/master/{{ page.path }}?plain=1">View source</a>
 
     {% assign chara_id = page.characterId %}

@@ -28,39 +28,6 @@ def processSkillTranslation(use_local: bool):
     wiki_util.ensureDirs("_data/translation/")
     wiki_util.dumpJson("_data/translation/Skill.json", obj, indent=2)
 
-    CardMaster = wiki_util.loadJson("_data/CardMaster.json")
-    SidekickMaster = wiki_util.loadJson("_data/SidekickMaster.json")
-
-    heroes={}
-    sidekicks={}
-    for chara in CardMaster.values():
-        all_present = True
-        for skillId in chara["skillIds"]:
-            skill = obj.get(str(skillId))
-            if not skill or not skill.get("description"):
-                all_present = False
-                break
-        if all_present:
-            heroes[chara["stockId"]] = True
-
-    for chara in SidekickMaster.values():
-        all_present = True
-        for skillId in chara["skillIds"]:
-            skill = obj.get(str(skillId))
-            if not skill or not skill.get("description"):
-                all_present = False
-                break
-        for skillId in chara["equipmentSkills"]:
-            skill = obj.get(str(skillId))
-            if not skill or not skill.get("description"):
-                all_present = False
-                break
-
-        if all_present:
-            sidekicks[chara["stockId"]] = True
-
-    wiki_util.dumpJson("_data/translation/SkillV2Whitelist.json", dict(heroes=heroes, sidekicks=sidekicks))
-
 def processSkillEffectTranslation(use_local: bool):
     rows = sheet_util.getTranslatedCsv(SKILL_EFFECT_TL_URL, "skill-effect-tl.tsv", use_local)
 

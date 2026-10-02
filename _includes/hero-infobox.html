@@ -71,7 +71,6 @@
 
 {% assign skillIds = firstCardInfo.skillIds %}
 {% assign changeSkillIds = firstCardInfo.skillProvider.activeSkills | concat: firstCardInfo.skillProvider.passiveSkills | collect_change_skills %}
-<!-- {{ changeSkillIds | jsonify }} -->
 
 {% include skill-table-v2.html skillIds=skillIds split=true first=true
     changeSkillIds=changeSkillIds %}
@@ -87,7 +86,6 @@
 
 {% assign lastSkillIds = "" | split: "," %}
 {% assign changeSkillIds = lastCardInfo.skillProvider.activeSkills | concat: lastCardInfo.skillProvider.passiveSkills | collect_change_skills %}
-<!-- {{ changeSkillIds | jsonify }} -->
 {% assign skillUpgradedIndex = 1 %}
 {% for id in lastCardInfo.skillIds %}
     {% unless threeStar.skillIds contains id %}

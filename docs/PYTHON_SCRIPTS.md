@@ -20,6 +20,7 @@ graph TD
     G -->|tools/event_gen.py| I[_events/ event pages]
     
     D -->|tools/gen_skill_upgrade_model.py| J[_data/wiki/SkillUpgradeModel.json interactive tree model]
+    G -->|tools/gen_skill_text.py| L[_data/processed/SkillText.json skill names and descriptions in every language]
 
     G -->|tools/generate_skill_search_index.py| K[api/ skill-index.json search index]
     B -->|tools/generate_skill_search_index.py| K
@@ -104,7 +105,6 @@ graph TD
     *   `_data/SidekickMaster.json`
 *   **Output Files**:
     *   `_data/translation/Skill.json`
-    *   `_data/translation/SkillV2Whitelist.json` (whitelist of characters with fully translated skills)
     *   `_data/translation/SkillEffect.json`
     *   `_data/translation/Status.json`
     *   `_data/translation/SkillUpgrade.json` (bloom node tooltips, keyed by `skillEntryId`)
@@ -147,10 +147,10 @@ graph TD
 ---
 
 ### 9. `tools/gen_skill_upgrade_model.py`
-*   **Purpose**: Builds the data model for the interactive skill-tree ("bloom") UI (`_includes/hero-skill-evolution-v2.html` + `assets/skill-tree.js`). For each hero with a skill tree it emits, per bloom skill, the raw per-tier condition lines, View-cost deltas, the `SkillUpgradeMaster` DAG topology, a depth-based visual row layout, and the fully-maxed text/cost — so the browser can recompute the resolved description + View cost for ANY subset of active upgrade nodes. Reuses the maxed-resolution helpers from `generate_skill_search_index.py` and self-checks that the all-active reconstruction byte-matches `maxed_skill_description` / `maxed_use_view` (aborts on mismatch).
+*   **Purpose**: Builds the data model for the interactive skill-tree ("bloom") UI (`_includes/hero-skill-evolution-v2.html` + `assets/skill-tree.js`). For each hero with a skill tree it emits, per bloom skill, the raw per-tier condition lines, View-cost deltas, the `SkillUpgradeMaster` DAG topology, a depth-based visual row layout, and, **for each of en / zh-Hans / zh-Hant / ja**, the raw text parts (with the statuses already tagged), the node tooltips, the status list and the fully-maxed text — so the browser can recompute the resolved description + View cost for ANY subset of active upgrade nodes, in any language. A language is left out when its text is not really in that language (the page then shows Japanese). Reuses the maxed-resolution helpers from `generate_skill_search_index.py` and self-checks, per language, that the all-active reconstruction reproduces `maxed_skill_description` / `maxed_use_view` (status tags aside; aborts on mismatch). `wiki_plugins/lib/skill-tree.test.js` repeats the check in JavaScript against `assets/skill-tree.js`.
 *   **Input Files**:
     *   `_data/SkillUpgradeMaster.json`, `_data/SkillMaster.json`, `_data/SkillEffectMaster.json`, `_data/StatusMaster.json`, `_data/CardMaster.json`
-    *   `zzz/English.json`; `_data/translation/{Skill,SkillEffect,Status,SkillUpgrade}.json` (optional community overrides)
+    *   `zzz/{English,ChineseSimplified,ChineseTraditional,Japanese}.json`; `_data/translation/{Skill,SkillEffect,Status,SkillUpgrade,SkillCondition}.json` (English community text)
 *   **Output Files**:
     *   `_data/wiki/SkillUpgradeModel.json` (keyed by `stockId`)
 
@@ -183,7 +183,7 @@ graph TD
 ---
 
 ### 13. `tools/generate_skill_search_index.py`
-*   **Purpose**: Builds the prebuilt index that powers the advanced skill search, one language per run via `--lang {en,zh-Hans,zh-Hant,ja}` (default `en`). Deduplicates heroes/sidekicks by `stockId` (heroes use the rarity-6 entry, falling back to the highest rarity; sidekicks use the `levelZone == 6` entry; either is flagged `isMob` when the stock's smallest rarity is `1`), then walks the `SkillMaster → SkillEffectMaster → StatusMaster` join chain to label each skill with effect categories (e.g. `attack.single`, `damage.dot`) and collect the named statuses it applies. Folds `ChangeActiveSkill` target skills and granted passives into the source skill, and emits both a base and a fully-bloomed (`skillsMaxed`) loadout for heroes with a skill tree. For the `skillsMaxed` entries the per-skill `description` and `useView` are reassembled to the fully-unlocked skill-tree state — see [Skill-Tree Enhancement](./DATA_SCHEMAS.md#7-skill-tree-enhancement-skillupgrademaster--tiered-effects) in the data-schema guide for the `conditionGroupId`/`conditionPriority` tier rules. Unrecognized effect classes are reported as `UNMAPPED CLASSES` for review. Skill/status name and description text is sourced from the `zzz/<lang>.json` client localization dump for the requested language (`_data/translation/{Skill,SkillEffect}.json` community translations are only applied for `en`; `_data/translation/Status.json` always supplies the language-independent status `icon`, but its `name`/`description` are `en`-only), falling back to raw Japanese masterdata text where a translation is missing. The `CATEGORIES` filter taxonomy (category/label/sublabel button text) is separately hand-translated per language via `CATEGORY_LABEL_TRANSLATIONS`/`SUBLABEL_TRANSLATIONS`. Outputs are plain static JSON (no front matter) so Jekyll copies them verbatim into `_site/api/`, fetchable at `/api/skill-index.<lang>.json`. Run after `tools/translation_download_tsv.py` (it consumes `Status.json`).
+*   **Purpose**: Builds the prebuilt index that powers the advanced skill search, one language per run via `--lang {en,zh-Hans,zh-Hant,ja}` (default `en`). Deduplicates heroes/sidekicks by `stockId` (heroes use the rarity-6 entry, falling back to the highest rarity; sidekicks use the `levelZone == 6` entry; either is flagged `isMob` when the stock's smallest rarity is `1`), then walks the `SkillMaster → SkillEffectMaster → StatusMaster` join chain to label each skill with effect categories (e.g. `attack.single`, `damage.dot`) and collect the named statuses it applies. Folds `ChangeActiveSkill` target skills and granted passives into the source skill, and emits both a base and a fully-bloomed (`skillsMaxed`) loadout for heroes with a skill tree. For the `skillsMaxed` entries the per-skill `description` and `useView` are reassembled to the fully-unlocked skill-tree state — see [Skill-Tree Enhancement](./DATA_SCHEMAS.md#7-skill-tree-enhancement-skillupgrademaster--tiered-effects) in the data-schema guide for the `conditionGroupId`/`conditionPriority` tier rules. Unrecognized effect classes are reported as `UNMAPPED CLASSES` for review. Skill/status name and description text is sourced from the `zzz/<lang>.json` client localization dump for the requested language (`_data/translation/{Skill,SkillEffect}.json` community translations are only applied for `en`; `_data/translation/Status.json` always supplies the language-independent status `icon`, but its `name`/`description` are `en`-only), falling back to raw Japanese masterdata text where a translation is missing. The `CATEGORIES` filter taxonomy (category/label/sublabel button text) stays English in the index and is translated in the browser (`web/src/lib/categoryTranslations.ts`). Descriptions carry `<wiki-status i=N>` tags (see `skill_text.py` above) indexing the skill's `statusDescs`, and the index root carries `statusLabels` for the tooltip header. Outputs are plain static JSON (no front matter) so Jekyll copies them verbatim into `_site/api/`, fetchable at `/api/skill-index.<lang>.json`. Run after `tools/translation_download_tsv.py` (it consumes `Status.json`).
 *   **Input Files**:
     *   `_data/CardMaster.json`
     *   `_data/SidekickMaster.json`
@@ -197,6 +197,17 @@ graph TD
 *   **Output Files** (per `--lang` invocation):
     *   `api/skill-index.<lang>.json` (full search index for that language: categories, statuses, entities)
     *   `api/skill-index-version.<lang>.json` (tiny version probe for browser cache invalidation)
+
+---
+
+### 13b. `tools/skill_text.py` and `tools/gen_skill_text.py`
+*   **Purpose**: One source of skill text for the wiki pages and the search UI.
+    *   `skill_text.py` holds the pure parts, shared by the generators: `StatusResolver` (a status's name, description, icon and flags for one language: community override > `zzz` > raw Japanese; it renders the small Liquid subset some `Status.json` descriptions use and fails on anything else), `walk_skill_statuses` (every status a skill can name: its own effects, its triggers, and what appended / changed skills bring in), the `Annotator`, `STATUS_LABELS` (the words of the tooltip header in each language) and `is_available` (whether a text is really in a language rather than untranslated Japanese).
+    *   The **Annotator** finds the statuses a description names without the sheet's hand-written `<wiki-status>` tags: one pass over the text outside HTML tags, the longest name first (so `ATK Up+` wins over `ATK Up`, and a replaced span is never scanned again), with word boundaries for Latin names, exact case (ALL-CAPS names also match case-insensitively) and "blocker" names (`ATK Up (Unstackable)` is consumed, not linked as `ATK Up`). Candidates are the skill's own displayed statuses, then the others it can name (triggers, appended/changed skills, then the whole hero's/sidekick's kit, which is where hidden-passive text lives). It writes `<wiki-status i=N>matched text</wiki-status>`, `N` indexing the skill's status list. A hand-written tag is only a hint now. Run `py tools/gen_skill_text.py --report` to see what it could not place.
+    *   `gen_skill_text.py` writes `_data/processed/SkillText.json` for every skill with text: `skills[id].n/t/s` (name, tagged description, status list) per language, a shared `statuses` table and the tooltip `labels`. A language key exists only when that text is available; Eleventy shows Japanese for the others (see `docs/LIQUID.md`, `skill-description.html`).
+*   **Input Files**: the masters and `zzz/*.json` listed under `generate_skill_search_index.py`, plus `_data/translation/*.json` (English community text).
+*   **Output Files**: `_data/processed/SkillText.json` (gitignored, generated in CI before the Eleventy build).
+*   **Tests**: `py -B -m unittest discover -p "*_test.py"` from `tools/` (CI runs it too).
 
 ---
 

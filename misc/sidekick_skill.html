@@ -25,9 +25,9 @@ wide_content: true
 
 {% assign active_skill = site.data.SkillMaster[active] %}
 {% assign passive_skill = site.data.SkillMaster[passive] %}
-<td>{% include skill-description.html skill=active_skill skillId=activeInt %}</td>
+<td>{% include skill-description.html skillId=activeInt %}</td>
 <td>{{ active_skill.useView }}</td>
-<td>{% include skill-description.html skill=passive_skill skillId=passiveInt %}</td>
+<td>{% include skill-description.html skillId=passiveInt %}</td>
 </tr>
 {% endfor %}
 </table>

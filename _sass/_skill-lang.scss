@@ -1,0 +1,46 @@
+// Skill names and descriptions are written once per language (wiki_plugins/lib/skill-text.js):
+//
+//   <div class="sdv" lang="ja" data-l="zh-Hans zh-Hant ja">…</div>
+//
+// data-l lists the languages a block serves. The language shown is <html data-skill-lang>, set before
+// the first paint by _includes/js/skill-lang.js, so a reader never sees English first. Without
+// JavaScript the attribute is missing and English is shown.
+
+$skill-langs: en, zh-Hans, zh-Hant, ja;
+
+@each $lang in $skill-langs {
+  html[data-skill-lang="#{$lang}"] .sdv:not([data-l~="#{$lang}"]) {
+    display: none;
+  }
+}
+
+html:not([data-skill-lang]) .sdv:not([data-l~="en"]) {
+  display: none;
+}
+
+// Labels the stylesheet draws itself (_main2.scss) follow the language of the text they sit in.
+wiki-passive:lang(ja)::before { content: 'パッシブ'; }
+wiki-passive:lang(zh-Hans)::before { content: '被动'; }
+wiki-passive:lang(zh-Hant)::before { content: '被動'; }
+wiki-auto-action:lang(ja)::before { content: 'オート行動'; }
+wiki-auto-action:lang(zh-Hans)::before { content: '自动行动'; }
+wiki-auto-action:lang(zh-Hant)::before { content: '自動行動'; }
+
+// The language picker in the toolbar (_includes/skill-lang-picker.html).
+.skill-lang-picker {
+  float: right;
+  margin-right: 10px;
+  padding: 4px 6px;
+  font: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--colorGrey);
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.6;
+  }
+}
