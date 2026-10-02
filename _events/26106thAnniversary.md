@@ -7,7 +7,7 @@ banner_image: banner_info_6th_anniversary.webp
 gacha: false
 event_start_time: 2026-09-30T20:00:00+09
 event_end_time: 2026-10-08T14:00:00+09
-news_link: https://live-a-hero.jp/info/14864
+news_link: https://live-a-hero.jp/en/6th_anniversary
 ---
 
 * this will be unordered
