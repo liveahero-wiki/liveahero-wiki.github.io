@@ -9,9 +9,7 @@ additional_scripts: ["/assets/editable.js"]
 
 ## About Sale
 
-{:refdef: style="text-align: center;"}
-<img src="/assets/img/systempage_4.png" alt="Battle Flow" height=500px loading="lazy">
-{: refdef}
+<p style="text-align: center;"><img src="/assets/img/systempage_4.png" alt="Battle Flow" height=500px loading="lazy"></p>
 
 You can leave the hero for a set amount of time during the business. Sales reward currency needed to improve your characters: {% include item.html id=11 %}, {% include item.html id=35 %} (Laf), and {% include item.html id=30 %} (Training Bands). All sale types reward some EXP.
 

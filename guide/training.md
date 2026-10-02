@@ -97,9 +97,7 @@ See [Blooming](/guide/blooming/)
 
 ## Level Enhancement
 
-{:refdef: style="text-align: center;"}
-<img src="/assets/img/levelup.png" alt="training" height=500px loading="lazy">
-{: refdef}
+<p style="text-align: center;"><img src="/assets/img/levelup.png" alt="training" height=500px loading="lazy"></p>
 
 By using {% include item.html id=11 %}, you could raise the level of your heroes.
 

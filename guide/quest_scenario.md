@@ -6,9 +6,7 @@ banner: true
 * this will be unordered
 {:toc}
 
-{:refdef: style="text-align: center;"}
-<img src="/assets/img/QuestScenario.png" alt="QuestScenario" height=500px loading="lazy">
-{: refdef}
+<p style="text-align: center;"><img src="/assets/img/QuestScenario.png" alt="QuestScenario" height=500px loading="lazy"></p>
 
 ## Auto Mode
 

@@ -187,7 +187,7 @@ See a breakdown for each item every 1,000 multis (10,000 slots per row) [^bigtab
     |   9   |  1  | 133950  | 137450  | 182150  | 164  | 97  | 397  | 125  | 67  |
     |   10  |  1  | 132000  | 131275  | 185150  | 164  | 83  | 426  | 141  | 65  |
     | Total |  9  | 1338550 | 1339800 | 1841475 | 1679 | 833 | 3997 | 1334 | 690 |
-    {:refdef style="display: block; overflow-x: scroll"}
+    {: style="display: block; overflow-x: scroll"}
 
 ### Rates with Parallel Quartz (after Sept 30th 2021)
 

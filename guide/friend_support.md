@@ -31,9 +31,7 @@ On the lower part of the screen you will find your Player ID. Noting this number
 
 ### Setup Your Support List
 
-{:refdef: style="text-align: center;"}
-<img src="/assets/img/Support.png" alt="Team" height=500px loading="lazy">
-{: refdef}
+<p style="text-align: center;"><img src="/assets/img/Support.png" alt="Team" height=500px loading="lazy"></p>
 
 You can set your own list of support units from the support setting button in team menu.
 

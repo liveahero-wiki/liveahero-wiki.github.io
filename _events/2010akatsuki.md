@@ -31,7 +31,7 @@ The event has event specific free quest and sales, with bonus using the banner u
 ### Event Sales Bonus
 
 | Hero | +Bonus (%) |
-|------------+---------------|
+|------------|---------------|
 | {% chara_link Gomeisa|h1 %} | 25 |
 | {% chara_link Barrel|h1 %}  | 25 |
 

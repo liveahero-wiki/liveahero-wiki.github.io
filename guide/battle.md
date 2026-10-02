@@ -80,9 +80,7 @@ Toggle on to enable directly upgrading current heroes / sidekicks and adjust fan
 
 ## Battle Interface
 
-{:refdef: style="text-align: center;"}
-<img src="/assets/img/uipage_3_Number.png" alt="Battle Flow" height=500px loading="lazy">
-{: refdef}
+<p style="text-align: center;"><img src="/assets/img/uipage_3_Number.png" alt="Battle Flow" height=500px loading="lazy"></p>
 
 | Item                  | Description                                                |
 |-----------------------|------------------------------------------------------------|

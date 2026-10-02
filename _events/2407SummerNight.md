@@ -114,7 +114,7 @@ Here is the bonus:
 An additional login bonus is available for the duration of this event:
 
 | Day  | Rewards      |
-|----||----------------|
+|----|----------------|
 | 1  |  2 {% include item-icon.html id=2 %} , 1 {% include item-icon.html id=34 %} , 50000 {% include item-icon.html id=35 %}    |
 | 2  |  2 {% include item-icon.html id=2 %} , 25000 {% include item-icon.html id=11 %}    |
 | 3  |  5 {% include item-icon.html id=2 %} , 1 {% include item-icon.html id=34 %} , 20 {% include item-icon.html id=59 %}    |

@@ -233,7 +233,7 @@ Listed below are the enemies skills:
 
 Special effect for this quest:
 
-| Buff and Debuff cannot be stacked   |   
+- Buff and Debuff cannot be stacked
 
 Achievement target for this quest as follows:
 
@@ -262,7 +262,7 @@ Listed below are the enemies skills:
 
 Special effect for this quest:
 
-| Buff and Debuff cannot be stacked   |   
+- Buff and Debuff cannot be stacked
 
 Achievement target for this quest as follows:
 

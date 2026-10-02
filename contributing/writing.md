@@ -111,13 +111,13 @@ Write `![game logo](/assets/img/logo.png)` to add this:
 
 ```
 | Header1 | Header2 | Header3 |
-|---------+---------+---------|
+|---------|---------|---------|
 | a       | b       | c       |
 | d       | e       | f       |
 ```
 
 | Header1 | Header2 | Header3 |
-|---------+---------+---------|
+|---------|---------|---------|
 | a       | b       | c       |
 | d       | e       | f       |
 
@@ -125,7 +125,7 @@ If you are really lazy, you can choose not to add extra whitespace and `-`.
 
 ```
 | Header1 | Header2 | Header3 |
-|-+-+-|
+|-|-|-|
 | a | b | c |
 | d | e | f |
 ```
