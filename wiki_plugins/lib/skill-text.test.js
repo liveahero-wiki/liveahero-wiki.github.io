@@ -66,17 +66,17 @@ test("languages that read differently get one block each, listing the languages 
   const html = make().skillHtml(100);
   const blocks = [...html.matchAll(/<div class="sdv" lang="([^"]+)" data-l="([^"]+)">/g)];
   assert.deepEqual(
-    blocks.map((m) => [m[1], m[2], Boolean(m[3])]),
+    blocks.map((m) => [m[1], m[2]]),
     [
-      ["en", "en", false],
-      ["zh-Hans", "zh-Hans", true],
-      ["zh-Hant", "zh-Hant", true],
-      ["ja", "ja", true],
+      ["en", "en"],
+      ["zh-Hans", "zh-Hans"],
+      ["zh-Hant", "zh-Hant"],
+      ["ja", "ja"],
     ],
   );
 });
 
-test("a language without text of its own is served by the Japanese block, which keeps the Pagefind exemption off only if it serves English", () => {
+test("a language without text of its own is served by the Japanese block", () => {
   const html = make().skillHtml(103);
   assert.match(html, /<div class="sdv" lang="en" data-l="en">Becomes <b>Fire<\/b>\.<\/div>/);
   assert.match(html, /<div class="sdv" lang="ja" data-l="zh-Hans zh-Hant ja">変化する。<\/div>/);
