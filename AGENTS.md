@@ -70,10 +70,10 @@ The community spreadsheets contain complex game style tags (like colors, sizes, 
 For more in-depth documentation on the different layers of this workspace, refer to the following guides:
 
 * **Python Scripts & Pipelines**: Detailed descriptions, inputs, and outputs of all automation tools.
-    *   See [docs/PYTHON_SCRIPTS.md](file:///c:/Users/jie/Github/lah-wiki/docs/PYTHON_SCRIPTS.md)
+    *   See [docs/PYTHON_SCRIPTS.md](/docs/PYTHON_SCRIPTS.md)
 * **Eleventy Build**: How `site.data`, `page`, collections, Liquid filters and kramdown-style markdown are provided, and how to check the output against a Jekyll build.
-    *   See [docs/ELEVENTY.md](file:///c:/Users/jie/Github/lah-wiki/docs/ELEVENTY.md)
+    *   See [docs/ELEVENTY.md](/docs/ELEVENTY.md)
 * **Liquid Templates & Plugins**: How layouts, custom inclusions, and JavaScript plugins build pages.
-    *   See [docs/LIQUID.md](file:///c:/Users/jie/Github/lah-wiki/docs/LIQUID.md)
+    *   See [docs/LIQUID.md](/docs/LIQUID.md)
 * **Game Data Schemas & Relationships**: Understanding JSON relational schemas and Liquid joins.
-    *   See [docs/DATA_SCHEMAS.md](file:///c:/Users/jie/Github/lah-wiki/docs/DATA_SCHEMAS.md)
+    *   See [docs/DATA_SCHEMAS.md](/docs/DATA_SCHEMAS.md)
