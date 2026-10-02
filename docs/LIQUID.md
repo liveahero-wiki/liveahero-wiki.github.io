@@ -58,10 +58,12 @@ Includes are reusable HTML/Liquid template fragments that compile master data at
     *   Renders reward structures (loot icons and values) and drops probabilities percentages.
 
 ### 3. `skill-description.html`
-*   **Purpose**: The central skill block component.
+*   **Purpose**: The central skill description component: `{% include skill-description.html skillId=… %}`.
 *   **Details**:
-    *   Renders active skill cooldowns, VP requirements, targets, and trigger conditions.
-    *   Invokes `skill-effect-description-v2.html` to compile status effects, damage percentages, and specific action modifiers.
+    *   A one-line wrapper around the `skill_html` filter. The text is not generated in Liquid: `tools/gen_skill_text.py` writes it, in every language, to `_data/processed/SkillText.json` (community English, else the game's own text, else raw Japanese), with the status names already tagged. The filter turns that into HTML: the text with status chips (tippy tooltips), the list of the skill's statuses, and a `<details>` for each skill it can change into (`include.changeSkillIds[include.index]`, from `collect_change_skills`).
+    *   Every language is written to the page as a `<div class="sdv" lang="…" data-l="…">` block; `data-l` lists the languages the block serves (a language without its own text is served by the Japanese block). `_sass/_skill-lang.scss` shows the ones for `<html data-skill-lang>`, which `_includes/js/skill-lang.js` sets in `<head>` from `localStorage.skillSearchLang` or the browser language (same rules as `web/src/lib/lang.ts`). English is the default. The picker in the toolbar (`skill-lang-picker.html`) appears on pages that have such blocks.
+    *   Skill names use the same scheme through the `skill_name_html` filter (`{{ skillId | skill_name_html }}`).
+    *   A skill with no text in any language renders nothing; `skill_has_text` tells whether there is any.
 
 ### 4. `shop-table.html`
 *   **Purpose**: Formats event-store reward grids.
@@ -92,13 +94,13 @@ The plugins perform server-side calculations during the compilation phase, injec
         *   *Usage*: `{{ itemId | lah_item: rewardType, customName }}`
     *   `lah_item_icon`: Renders only the item icon badge without the descriptive name.
 
-### 3. `lib/skill.js` and `lib/skill-trigger.js`
-*   **Liquid Filters**:
-    *   `render_liquid`: Renders a Liquid string stored in data (e.g. `_data/wiki/SkillManualOverride.yml`) in the current context.
+### 3. `lib/skill-text.js` and `lib/skill.js`
+*   **Liquid Filters** (`lib/skill-text.js`, see `skill-description.html` above):
+    *   `skill_html`, `skill_name_html`, `skill_has_text`: a skill's description / name in every language, from `SkillText.json`.
+    *   `skill_tree_name`, `skill_tree_html`, `skill_tree_node_tip`, `skill_tree_json`: the same for a bloom skill of `_data/wiki/SkillUpgradeModel.json` (`hero-skill-evolution-v2.html`). `skill_tree_json` is what `assets/skill-tree.js` reads: the lines and the tree, and per language the raw text parts with their status chips already in them.
+*   **Liquid Filters** (`lib/skill.js`):
     *   `element_enum`: Maps element integer IDs (1-5) to their localization strings (Fire, Water, Earth, Light, Shadow).
-    *   `skill_target`: Standardizes skill target values into descriptive categories (e.g., "Ally with lowest HP", "All enemies except target").
-    *   `skill_trigger`: Formulates clear trigger requirement descriptions from complex skill condition blocks (e.g. combo criteria, own/enemy HP percentages, active status possessions).
-    *   `status_description` / `status_description_v2`: Resolves status effects to formatted badges containing icons, classifications (Buff/Debuff/System), stackability indicators, and detailed tooltips.
+    *   `status_description`: A status badge with its tooltip (icon, name, description; the description may itself be a Liquid template). Used by the guide pages.
     *   `collect_change_skills`: Traces dynamic skill swap mechanics during combat (e.g., active skills that temporarily transform into other skill nodes).
 
 ### 4. `lib/catalog.js` and `lib/image.js`

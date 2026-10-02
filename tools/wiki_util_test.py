@@ -63,5 +63,25 @@ class TestTextSanitize(unittest.TestCase):
             "Give 1 enemy SPD Down for 2 actions.<br>Give all allies a Barrier equal to 40% of own Views for 3 actions.",
             )
 
+class TestSanitizeSharedCases(unittest.TestCase):
+    """tools/testdata/sanitize_cases.json is also run against assets/skill-tree.js
+    (wiki_plugins/lib/skill-tree.test.js), so the two sanitizers cannot drift apart."""
+
+    CASES = json.load(open(os.path.join(os.path.dirname(__file__), "testdata", "sanitize_cases.json"),
+                           encoding="utf-8"))
+
+    def test_display_variant(self):
+        for case in self.CASES:
+            with self.subTest(case["name"]):
+                self.assertEqual(sanitizeSkillDescriptionForDisplay(case["input"]), case["display"])
+
+    def test_sheet_variant_only_adds_the_formula_guard(self):
+        for case in self.CASES:
+            with self.subTest(case["name"]):
+                want = case["display"]
+                if want[:1] in "+=":
+                    want = "'" + want
+                self.assertEqual(sanitizeSkillDescription(case["input"]), want)
+
 if __name__ == '__main__':
     unittest.main()

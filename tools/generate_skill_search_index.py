@@ -27,7 +27,10 @@ import hashlib
 from collections import Counter, OrderedDict, defaultdict
 from typing import Any
 
-from wiki_util import sanitizeSkillDescription, build_chara_pages
+from skill_text import (
+    Annotator, STATUS_LABELS, StatusResolver, StatusRow, walk_skill_statuses,
+)
+from wiki_util import sanitizeSkillDescriptionForDisplay, build_chara_pages
 
 DATA = "_data"
 API = "api"
@@ -38,7 +41,7 @@ CHARAS = "_charas"
 # emitted JSON without a masterdata version change. Appended to the cache key so
 # clients (search/src/data/loadIndex.js) refetch the index instead of reusing a
 # stale cache.
-INDEX_SCHEMA_REV = "r16"
+INDEX_SCHEMA_REV = "r17"
 
 
 # --- Undocumented game-data enums / magic numbers ---------------------------
@@ -515,7 +518,6 @@ unmapped_sublabel_targets = Counter()  # effectTarget with no target-sublabel ma
 unmapped_scaling_sources = Counter()  # (class, paramType) scaling with no sublabel
 missing_upgrade_nodes = Counter()  # gated node ids absent from SkillUpgradeMaster
 suspicious_view_costs = []  # (skillId, total) where summed maxed View cost < 0
-liquid_template_statuses = Counter()  # status IDs whose base desc contains Liquid {{ }}
 
 # Community translations for per-tier condition lines, keyed "{skillId}_{serialNo}".
 # Set by load_all() so the condition-line resolvers pick them up without threading
@@ -809,7 +811,7 @@ def skill_description(skill_id, SM, SkillTrans, GameTrans, SkillCondTrans=None):
          or GameTrans.get(f"SKILL_DESCRIPTION_{sid}")
          or SM.get(sid, {}).get("description")
          or base_condition_description(skill_id, SM, GameTrans, SkillCondTrans))
-    return sanitizeSkillDescription(d or "")
+    return sanitizeSkillDescriptionForDisplay(d or "")
 
 
 def select_condition_rows(skill, SUM=None, active=None):
@@ -871,15 +873,16 @@ def maxed_skill_description(skill_id, SM, SkillTrans, GameTrans, SUM, SkillCondT
     select_condition_rows with all nodes unlocked. Where the master data lists
     the same winning tier twice (byte-identical text in one condition group) the
     line is printed once. Community translation preferred, then the GameTrans
-    dump, raw Japanese master last; the assembled result is sanitized as a whole.
+    dump, raw Japanese master last (the same order as skill_description); the
+    assembled result is sanitized as a whole.
     """
     if SkillCondTrans is None:
         SkillCondTrans = _SKILL_COND_TRANS
     sid = str(skill_id)
     skill = SM.get(sid, {})
 
-    parts = [(GameTrans.get(f"SKILL_DESCRIPTION_{sid}")
-              or SkillTrans.get(sid, {}).get("description")
+    parts = [(SkillTrans.get(sid, {}).get("description")
+              or GameTrans.get(f"SKILL_DESCRIPTION_{sid}")
               or skill.get("description") or "")]
     seen = set()
     for eff in select_condition_rows(skill, SUM):
@@ -894,7 +897,7 @@ def maxed_skill_description(skill_id, SM, SkillTrans, GameTrans, SUM, SkillCondT
             continue
         seen.add(key)
         parts.append(line)
-    return sanitizeSkillDescription("".join(parts))
+    return sanitizeSkillDescriptionForDisplay("".join(parts))
 
 
 def maxed_use_view(skill_id, SM, SEM):
@@ -940,10 +943,13 @@ def collect_change_skills(skill_ids, SM, SEM):
     return by_slot
 
 
-def change_skills(change_ids, skill_id, SM, SkillTrans, GameTrans):
-    """Resolve change-skill target IDs to [{name, description}], applying the
+def change_skills(change_ids, skill_id, SM, SkillTrans, GameTrans, annotate=None):
+    """Resolve change-skill target IDs to [{name, description, statusDescs?}], applying the
     two guards from _includes/skill-description.html: skip the skill itself and
-    skip targets whose master skillName matches the current skill's."""
+    skip targets whose master skillName matches the current skill's.
+
+    `annotate(skill_id, text) -> (text, statusDescs)` tags the statuses in a target's text;
+    each target then carries its own statusDescs, which its tags index."""
     own_name = SM.get(str(skill_id), {}).get("skillName")
     out = []
     for cid in change_ids:
@@ -951,109 +957,180 @@ def change_skills(change_ids, skill_id, SM, SkillTrans, GameTrans):
             continue
         if SM.get(str(cid), {}).get("skillName") == own_name:
             continue
-        out.append({
+        entry = {
             "name": skill_name(cid, SM, SkillTrans, GameTrans),
             "description": skill_description(cid, SM, SkillTrans, GameTrans),
-        })
+        }
+        if annotate is not None:
+            entry["description"], descs = annotate(cid, entry["description"])
+            if descs:
+                entry["statusDescs"] = descs
+        out.append(entry)
     return out
 
 
-_TP_MAP = {0: 'd', 1: 'b', 2: 'o', 3: 'f'}
+# ---------------------------------------------------------------------------
+# Statuses: rows, descriptions, and tagging the text that names them
+# ---------------------------------------------------------------------------
+_RESOLVERS: dict = {}
 
 
-def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SUM=None, GameTrans=None):
-    """[{name, desc, tp, fl?, icon?}] per distinct named status granted by this skill's direct effects.
+def resolver_for(SMA, SEM, StatusTrans, SkillEffectTrans, GameTrans):
+    """The StatusResolver (and its caches) for one set of loaded dicts. The build_* helpers take
+    those dicts as plain arguments, so the resolver is looked up by their identity; the dicts are
+    kept alive alongside it so an id can never be reused by a different dict."""
+    dicts = (SMA, SEM, StatusTrans, SkillEffectTrans, GameTrans if GameTrans is not None else {})
+    key = tuple(id(d) for d in dicts)
+    hit = _RESOLVERS.get(key)
+    if hit is None:
+        if len(_RESOLVERS) >= 8:
+            _RESOLVERS.pop(next(iter(_RESOLVERS)))
+        hit = _RESOLVERS[key] = (dicts, StatusResolver(*dicts))
+    return hit[1]
 
-    Mirrors status_description_v2 priority:
-      SkillEffect.json override > raw skillEffectJson override
-        > Status.json (skip if contains {{ Liquid template) > GameTrans dump
-        > StatusMaster raw. Status.json is English-only community translation,
-    so for non-English builds it's pre-scoped (scoped_status_trans) to just the
-    icon field and this tier falls straight through to GameTrans/raw.
-    Deduped by resolved name. Effects with statusId==0 are skipped, as are rows
-    flagged notDisplayHint (the game hides them from the skill's status list).
-    The override name/description only apply when the effect's isOverrideStatusName /
-    isOverrideStatusDescription flag is set; an unflagged override string is a developer
-    placeholder, so the name falls back to StatusMaster (and the status is dropped if
-    that has no name).
 
-    tp: display type char — 'b'=Buff, 'd'=Debuff, 'o'=Other, 'f'=Field, 's'=System.
-    fl: flag bitmask (omitted when 0) — 1=stackable, 2=charge, 4=dot, 8=field, 16=count.
+def _annotator(resolver):
+    if getattr(resolver, "annotator", None) is None:
+        resolver.annotator = Annotator(resolver.catalog())
+        resolver.walk_memo = {}
+    return resolver.annotator
 
-    When SUM (SkillUpgradeMaster) is provided the effects are narrowed to the
-    fully-bloomed set via select_condition_rows, mirroring
-    maxed_skill_description. This keeps superseded tree tiers (e.g. View消費量+100
-    … +750 for a progression that ends at +1000) from appearing alongside the
-    final one."""
-    skill = SM.get(str(skill_id), {})
+
+def displayed_status_rows(skill, resolver, SUM=None):
+    """The status rows the game lists for a skill, in order, one per distinct name. Effects with
+    statusId==0 are skipped, as are rows flagged notDisplayHint (the game hides them from the
+    skill's status list), and effects whose status has no name. When SUM
+    (SkillUpgradeMaster) is provided the effects are narrowed to the fully-bloomed set via
+    select_condition_rows, mirroring maxed_skill_description. This keeps superseded tree tiers
+    (e.g. View消費量+100 ... +750 for a progression that ends at +1000) from appearing alongside
+    the final one."""
     effects = (select_condition_rows(skill, SUM) if SUM is not None
                else (skill.get("effects") or []))
-    results, seen_names = [], set()
+    rows, seen = [], set()
     for eff in effects:
         if eff.get("notDisplayHint"):
             continue
-        seid = str(eff.get("skillEffectId", ""))
-        sej = SEM.get(seid, {}).get("skillEffectJson", {})
-        status_id = sej.get("statusId")
-        if not status_id:
+        row = resolver.effect_row(eff.get("skillEffectId", ""))
+        if row is None or row.name in seen:
             continue
-        se_trans = SkillEffectTrans.get(seid, {})
-        sid = str(status_id)
-
-        override_name = ((se_trans.get("overrideStatusName") or sej.get("overrideStatusName"))
-                         if sej.get("isOverrideStatusName") else "")
-        override_desc = ((se_trans.get("overrideStatusDescription")
-                          or sej.get("overrideStatusDescription", ""))
-                         if sej.get("isOverrideStatusDescription") else "")
-
-        name = override_name or resolve_status_name(sid, StatusTrans, SMA, GameTrans)
-        if not name or name in seen_names:
-            continue
-        seen_names.add(name)
-
-        desc = override_desc
-        if not desc:
-            base = (StatusTrans.get(sid, {}).get("description", "")
-                    or (GameTrans or {}).get(f"STATUS_DESCRIPTION_{sid}", ""))
-            if "{{" in base:
-                liquid_template_statuses[sid] += 1
-                base = ""
-            desc = base or SMA.get(sid, {}).get("description", "")
-
-        icon = sej.get("filename") or StatusTrans.get(sid, {}).get("icon") or ""
-
-        is_field = bool(sej.get("isFieldEffect"))
-        ig = SMA.get(sid, {}).get("isGoodStatus", 1)
-        tp = 'o' if is_field else _TP_MAP.get(ig, 's')
-
-        fl = 0
-        if sej.get("canDuplicate"):    fl |= 1
-        if sej.get("isCharageEffect"): fl |= 2   # note: typo in game data
-        if sej.get("isDotDamage"):     fl |= 4
-        if is_field:                   fl |= 8
-        if sej.get("isCountEffect"):   fl |= 16
-
-        entry = {"name": name, "desc": desc or "", "tp": tp}
-        if icon:
-            entry["icon"] = icon
-        if fl:
-            entry["fl"] = fl
-        results.append(entry)
-    return results
+        seen.add(row.name)
+        rows.append(row)
+    return rows
 
 
-def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, GameTrans, SkillEffectTrans, StatusTrans, change_ids=(), hidden=False, SUM=None, maxed=False):
+def row_to_desc(row: StatusRow):
+    """The emitted shape of a status: {name, desc, tp, fl?, icon?}.
+
+    tp: display type char -- 'b'=Buff, 'd'=Debuff, 'o'=Other, 'f'=Field, 's'=System.
+    fl: flag bitmask (omitted when 0) -- 1=stackable, 2=charge, 4=dot, 8=field, 16=count."""
+    entry = {"name": row.name, "desc": row.desc or "", "tp": row.tp}
+    if row.icon:
+        entry["icon"] = row.icon
+    if row.fl:
+        entry["fl"] = row.fl
+    return entry
+
+
+def build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SUM=None, GameTrans=None):
+    """[{name, desc, tp, fl?, icon?}] per distinct named status granted by this skill's direct
+    effects (see displayed_status_rows).
+
+    Mirrors the wiki's status priority (skill_text.StatusResolver):
+      SkillEffect.json override > zzz OVERRIDE_STATUS_* > raw skillEffectJson override
+        > Status.json > zzz STATUS_* > StatusMaster raw.
+    Status.json is an English-only community translation, so for non-English builds it's
+    pre-scoped (scoped_status_trans) to just the icon field and those tiers fall straight through
+    to GameTrans/raw. The override name/description only apply when the effect's
+    isOverrideStatusName / isOverrideStatusDescription flag is set; an unflagged override string
+    is a developer placeholder, so the name falls back to StatusMaster (and the status is dropped
+    if that has no name)."""
+    resolver = resolver_for(SMA, SEM, StatusTrans, SkillEffectTrans, GameTrans)
+    return [row_to_desc(r) for r in displayed_status_rows(SM.get(str(skill_id), {}), resolver, SUM)]
+
+
+def annotation_candidates(skill_id, SM, SEM, resolver, SUM=None, kit_rows=()):
+    """(footer, others) for annotating a skill's text: its own displayed statuses (the start of the
+    status list a tag indexes), then the others it can name -- statuses its triggers and
+    appended/changed skills mention, and finally the rest of its hero's/sidekick's kit
+    (`kit_rows`), which is where hidden-passive text lives."""
+    _annotator(resolver)    # makes resolver.walk_memo
+    footer = displayed_status_rows(SM.get(str(skill_id), {}), resolver, SUM)
+    others, seen = [], {r.ident for r in footer}
+    for row in (list(walk_skill_statuses(skill_id, SM, SEM, resolver, resolver.walk_memo))
+                + list(kit_rows)):
+        if row.ident not in seen:
+            seen.add(row.ident)
+            others.append(row)
+    return footer, others
+
+
+def annotate_rows(skill_id, text, SM, SEM, resolver, SUM=None, kit_rows=()):
+    """Tag the statuses named in `text` (see skill_text.Annotator) and return
+    (tagged_text, [StatusRow]); a tag's `i` indexes that list (see annotation_candidates)."""
+    footer, others = annotation_candidates(skill_id, SM, SEM, resolver, SUM, kit_rows)
+    return _annotator(resolver).annotate(text, footer, others, ctx=str(skill_id))
+
+
+def annotated_text(skill_id, text, SM, SEM, resolver, SUM=None, kit_rows=()):
+    """annotate_rows, with the statuses in their emitted {name, desc, tp, fl?, icon?} form."""
+    tagged, rows = annotate_rows(skill_id, text, SM, SEM, resolver, SUM=SUM, kit_rows=kit_rows)
+    return tagged, [row_to_desc(r) for r in rows]
+
+
+def kit_status_rows(skill_ids, SM, SEM, resolver):
+    """Every status row any skill in a hero's/sidekick's kit can name, deduplicated."""
+    _annotator(resolver)
+    rows, seen = [], set()
+    for sid in skill_ids:
+        for row in walk_skill_statuses(sid, SM, SEM, resolver, resolver.walk_memo):
+            if row.ident not in seen:
+                seen.add(row.ident)
+                rows.append(row)
+    return rows
+
+
+def hero_kit_skill_ids(stock_entries):
+    """Every skill id a hero (all rarities of one stockId) can have: provider actives and
+    passives at every skill-tree level, bloom change targets, and the card's own skillIds."""
+    ids = []
+    for entry in stock_entries:
+        provider = entry.get("skillProvider") or {}
+        ids += [a.get("skillId") for a in provider.get("activeSkills") or []]
+        ids += [p.get("skillId") for p in provider.get("passiveSkills") or []]
+        for q in entry.get("skillUpgradeQuestInfos") or []:
+            ids += [c.get("afterSkillId") for c in q.get("changeSkills") or []]
+        ids += entry.get("skillIds") or []
+    return [i for i in dict.fromkeys(ids) if i]
+
+
+def sidekick_kit_skill_ids(stock_entries):
+    """Every skill id a sidekick (all levels of one stockId) can have."""
+    ids = []
+    for entry in stock_entries:
+        ids += entry.get("skillIds") or []
+        ids += entry.get("equipmentSkills") or []
+        ids += entry.get("equipmentAppendSkills") or []
+    return [i for i in dict.fromkeys(ids) if i]
+
+
+def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, GameTrans, SkillEffectTrans, StatusTrans, change_ids=(), hidden=False, SUM=None, maxed=False, kit_rows=()):
     labels, match_extras, status_ids = label_skill(skill_id, SM, SEM, SMA, set())
     skill = SM.get(str(skill_id), {})
+    resolver = resolver_for(SMA, SEM, StatusTrans, SkillEffectTrans, GameTrans)
     # maxed (skill-tree fully bloomed) rows assemble their description from the
     # winning condition-group tiers and sum the View-cost deltas; base rows use
     # the top-level description and raw useView.
     if maxed:
         description = maxed_skill_description(skill_id, SM, SkillTrans, GameTrans, SUM)
         use_view = maxed_use_view(skill_id, SM, SEM)
+        status_scope = SUM
     else:
         description = skill_description(skill_id, SM, SkillTrans, GameTrans)
         use_view = skill.get("useView", 0)
+        status_scope = None
+
+    description, status_descs = annotated_text(skill_id, description, SM, SEM, resolver,
+                                               SUM=status_scope, kit_rows=kit_rows)
     return {
         "slot": slot,
         "skillId": skill_id,
@@ -1072,8 +1149,10 @@ def skill_obj(slot, skill_id, SM, SEM, SMA, SkillTrans, GameTrans, SkillEffectTr
         # passive-only labels into the visible <wiki-passive> carrier(s).
         "matchLabels": sorted(labels | match_extras),
         "matchStatusIds": sorted(status_ids),
-        "changeSkills": change_skills(change_ids, skill_id, SM, SkillTrans, GameTrans),
-        "statusDescs": build_status_descs(skill_id, SM, SEM, SMA, StatusTrans, SkillEffectTrans, SUM, GameTrans),
+        "changeSkills": change_skills(
+            change_ids, skill_id, SM, SkillTrans, GameTrans,
+            annotate=lambda sid, text: annotated_text(sid, text, SM, SEM, resolver, kit_rows=kit_rows)),
+        "statusDescs": status_descs,
     }
 
 
@@ -1165,6 +1244,8 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, GameTrans, SkillEff
     provider = rep.get("skillProvider") or {}
     actives = provider.get("activeSkills") or []
     passives = provider.get("passiveSkills") or []
+    kit_rows = kit_status_rows(hero_kit_skill_ids(stock_entries), SM, SEM,
+                               resolver_for(SMA, SEM, StatusTrans, SkillEffectTrans, GameTrans))
     base_actives = sorted((a for a in actives if a.get("skillUpgrade", 0) == 0),
                           key=lambda a: a.get("skillLearnNo", 0))
     bloom_actives = sorted((a for a in actives if a.get("skillUpgrade", 0) >= 1),
@@ -1185,10 +1266,10 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, GameTrans, SkillEff
 
     base_skills = [skill_obj(f"active{i+1}", a["skillId"], SM, SEM, SMA, SkillTrans, GameTrans,
                              SkillEffectTrans, StatusTrans,
-                             change_ids=change_by_slot.get(i + 1, ()))
+                             change_ids=change_by_slot.get(i + 1, ()), kit_rows=kit_rows)
                    for i, a in enumerate(base_actives)]
     base_skills += [skill_obj("passive", p["skillId"], SM, SEM, SMA, SkillTrans, GameTrans,
-                              SkillEffectTrans, StatusTrans, hidden=True)
+                              SkillEffectTrans, StatusTrans, hidden=True, kit_rows=kit_rows)
                     for p in base_passives]
     attribute_passives(base_skills)
 
@@ -1217,12 +1298,12 @@ def build_hero(stock_entries, SM, SEM, SMA, SUM, SkillTrans, GameTrans, SkillEff
             maxed.append(skill_obj(f"active{i+1}", mid, SM, SEM, SMA, SkillTrans, GameTrans,
                                    SkillEffectTrans, StatusTrans,
                                    change_ids=maxed_change_by_slot.get(i + 1, ()),
-                                   SUM=SUM, maxed=True))
+                                   SUM=SUM, maxed=True, kit_rows=kit_rows))
         # all passives (skill-tree unlocks included)
         for p in passives:
             maxed.append(skill_obj("passive", p["skillId"], SM, SEM, SMA, SkillTrans, GameTrans,
                                    SkillEffectTrans, StatusTrans, hidden=True,
-                                   SUM=SUM, maxed=True))
+                                   SUM=SUM, maxed=True, kit_rows=kit_rows))
         attribute_passives(maxed)
         entity["skillsMaxed"] = maxed
         entity["labelsMaxed"] = aggregate(maxed, "labels")
@@ -1236,23 +1317,26 @@ def build_sidekick(stock_entries, SM, SEM, SMA, SkillTrans, GameTrans, SkillEffe
     if rep is None:
         rep = max(stock_entries, key=lambda e: e.get("levelZone", 0))
 
+    kit_rows = kit_status_rows(sidekick_kit_skill_ids(stock_entries), SM, SEM,
+                               resolver_for(SMA, SEM, StatusTrans, SkillEffectTrans, GameTrans))
     skills = []
     for sid in rep.get("skillIds") or []:
         skills.append(skill_obj("sidekick_active", sid, SM, SEM, SMA, SkillTrans, GameTrans,
-                                SkillEffectTrans, StatusTrans))
+                                SkillEffectTrans, StatusTrans, kit_rows=kit_rows))
     # Sidekick passive: equipmentSkills holds ascending tiers; the last entry of
     # the highest-level card is the maxed passive (mirrors generate_status_pages).
     equip = rep.get("equipmentSkills") or []
     if equip:
         skills.append(skill_obj("sidekick_passive", equip[-1], SM, SEM, SMA, SkillTrans, GameTrans,
-                                SkillEffectTrans, StatusTrans))
+                                SkillEffectTrans, StatusTrans, kit_rows=kit_rows))
     # Sidekick append-passive: a hidden passive (8xxxxxx id family) granted on top of
     # the equipment skill, never shown as its own row in-game. equipmentAppendSkills
     # holds ascending tiers like equipmentSkills; the last entry is the maxed append.
     append = rep.get("equipmentAppendSkills") or []
     if append:
         skills.append(skill_obj("sidekick_append", append[-1], SM, SEM, SMA, SkillTrans,
-                                GameTrans, SkillEffectTrans, StatusTrans, hidden=True))
+                                GameTrans, SkillEffectTrans, StatusTrans, hidden=True,
+                                kit_rows=kit_rows))
     attribute_passives(skills)
 
     return make_entity(rep, stock_entries, "sidekick", "s", skills, chara_pages)
@@ -1413,6 +1497,8 @@ def main():
     version = f"{get_version()}-{INDEX_SCHEMA_REV}"
     index = {
         "version": version,
+        # words of the status tooltip header ([Buff/Stackable]); see skill_text.STATUS_LABELS
+        "statusLabels": STATUS_LABELS[lang],
         "categories": categories,
         "statuses": statuses,
         "entities": entities,
@@ -1466,11 +1552,17 @@ def main():
               f"summed below 0, additive assumption likely broken:")
         for skill_id, total in suspicious_view_costs:
             print(f"  skill {skill_id}: {total}")
-    if liquid_template_statuses:
-        print(f"\nSTATUS IDs WITH LIQUID TEMPLATES (desc skipped, {len(liquid_template_statuses)} status IDs):")
-        for sid, n in liquid_template_statuses.most_common():
-            sname = resolve_status_name(sid, StatusTrans, SMA, GameTrans) or "?"
-            print(f"  {sid} ({sname}): {n} effect(s)")
+    resolver = resolver_for(SMA, m["SEM"], StatusTrans, m["SkillEffectTrans"], GameTrans)
+    if resolver.template_missing:
+        print(f"\nSTATUS DESCRIPTION TEMPLATES WITH A MISSING VALUE ({len(resolver.template_missing)}):")
+        for (ctx, path), n in resolver.template_missing.most_common():
+            print(f"  {ctx}: {path} (x{n})")
+    annotator = getattr(resolver, "annotator", None)
+    if annotator is not None:
+        rep = annotator.report
+        print(f"\nstatus tags: {rep.matches} found in text, {rep.hints} hand-written tags "
+              f"({rep.hints_local} resolved on the skill, {rep.hints_global} elsewhere, "
+              f"{len(rep.hints_unresolved)} unresolved)")
 
 
 if __name__ == "__main__":

@@ -8,10 +8,9 @@
     {% assign nid = id | plus: 0 %}
     {% assign sid = id | downcase %}
     {% assign skill = site.data.SkillMaster[sid] %}
-    {% assign skillName = site.data.wiki.SkillNameTranslation[nid] %}
     <tr>
-        <td title="{{ sid }}" class="translate" data-translate="{% if skillName %}{{ skill.skillName }}{% endif %}" data-effects="{{ skill.effects | map: 'skillEffectId' | join: ',' }}">{{ skillName | default: skill.skillName }}</td>
-        <td title="{{ skill.description | sanitizeSkillDescription }}">{% include skill-description.html skillId=nid skill=skill %}</td>
+        <td title="{{ sid }}" data-effects="{{ skill.effects | map: 'skillEffectId' | join: ',' }}">{{ nid | skill_name_html }}</td>
+        <td>{% include skill-description.html skillId=nid %}</td>
         <td>{{ skill.useView }}</td>
     </tr>
     {% endfor %}
@@ -22,10 +21,9 @@
     {% assign nid = id | plus: 0 %}
     {% assign sid = id | downcase %}
     {% assign skill = site.data.SkillMaster[sid] %}
-    {% assign skillName = site.data.wiki.SkillNameTranslation[nid] %}
     <tr>
-        <td title="{{ sid }}" class="translate" data-translate="{% if skillName %}{{ skill.skillName }}{% endif %}" data-effects="{{ skill.effects | map: 'skillEffectId' | join: ',' }}">{{ skillName | default: skill.skillName }}</td>
-        <td title="{{ skill.description | sanitizeSkillDescription }}">{% include skill-description.html skillId=nid skill=skill %}</td>
+        <td title="{{ sid }}" data-effects="{{ skill.effects | map: 'skillEffectId' | join: ',' }}">{{ nid | skill_name_html }}</td>
+        <td>{% include skill-description.html skillId=nid %}</td>
         <td>{{ skill.useView }}</td>
     </tr>
     {% endfor %}

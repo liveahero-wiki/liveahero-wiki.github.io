@@ -23,6 +23,7 @@ def omitEmptyDict(**kwargs) -> dict:
 COLOR_PATTERN = re.compile(r"<color=(.*?)>(.*?)</color>", re.DOTALL)
 SIZE_PATTERN = re.compile(r"<size=(\d+)>(.*?)</size>", re.DOTALL)
 SIZE_PREFIX = re.compile(r"<size=(\d+)>", re.DOTALL)
+COLOR_PREFIX = re.compile(r"<color=[^>]*>")
 SPRITE_PATTERN = re.compile(r"<sprite=(\d+)>", re.DOTALL)
 ALIGN_PATTERN = re.compile(r"<align=center>(.*?)</align>", re.DOTALL)
 
@@ -34,42 +35,60 @@ def sanitizeText(s: str):
     s = SIZE_PATTERN.sub(r'<span style="font-size: calc(\1px * 0.75)">\2</span>', s)
     return s
 
-PASSIVE_SKILL_FRONT_MARKER = ['<style="パッシブ領域_en">', '<style="パッシブ領域">']
+# The game marks styled regions as <style="パッシブ領域">, <style="スキル強化">, <style="オート行動">.
+# Localized dumps append a language suffix (_en, _cn, _tw, ...), and some strings drop a quote
+# (<style=パッシブ領域">), so the suffix and both quotes are matched leniently.
+_STYLE_OPEN = r'<style="?{name}(?:_[A-Za-z]{{2}})?"?>'
 
-PASSIVE_SKILL_PATTERN = re.compile(r'<style="パッシブ領域(_en)?">(.*?)</style>', re.DOTALL)
-ENHANCEMENT_PATTERN = re.compile(r'<style="スキル強化(_en)?">(.*?)</style>', re.DOTALL)
-AUTO_ACTION_MARKER = ['<style="オート行動_en"></style>', '<style="オート行動"></style>']
-AUTO_ACTION_PATTERN = re.compile(r'<style="オート行動(_en)?">(.*?)</style>', re.DOTALL)
+def _style(name: str) -> str:
+    return _STYLE_OPEN.format(name=name)
+
+PASSIVE_SKILL_PATTERN = re.compile(_style('パッシブ領域') + r'(.*?)</style>', re.DOTALL)
+PASSIVE_SKILL_FRONT_MARKER = re.compile(_style('パッシブ領域'))
+ENHANCEMENT_PATTERN = re.compile(_style('(?:スキル)?強化') + r'(.*?)</style>', re.DOTALL)
+ENHANCEMENT_OPEN_PATTERN = re.compile(_style('(?:スキル)?強化'))
+AUTO_ACTION_MARKER = re.compile(_style('オート行動') + '</style>')
+AUTO_ACTION_PATTERN = re.compile(_style('オート行動') + r'(.*?)</style>', re.DOTALL)
+LINE_BREAK_PATTERN = re.compile(r'<style="?改行"?></style>')
+LINE_BREAK_OPEN_PATTERN = re.compile(r'<style="?改行"?>')
 
 FORMULA_PREFIX_PATTERN = re.compile(r'^[\+\=]')
 
-def sanitizeSkillDescription(s: str) -> str:
+def sanitizeSkillDescriptionForDisplay(s: str) -> str:
+    """Game markup -> the wiki tag set (<br>, <wiki-passive>, <wiki-enhance>, <wiki-auto-action>).
+
+    This is the text shown to readers. assets/skill-tree.js ports it line by line and
+    tools/testdata/sanitize_cases.json pins both implementations to the same cases."""
     s = COLOR_PATTERN.sub(r'\2', s.strip())
     s = SIZE_PATTERN.sub(r'\2', s)
 
-    s = s.replace(r'<style="改行"></style>', '<br>')
-    s = PASSIVE_SKILL_PATTERN.sub(r'<wiki-passive>\2</wiki-passive>', s)
-    s = ENHANCEMENT_PATTERN.sub(r'<wiki-enhance>\2</wiki-enhance>', s)
+    s = LINE_BREAK_PATTERN.sub('<br>', s)
+    s = PASSIVE_SKILL_PATTERN.sub(r'<wiki-passive>\1</wiki-passive>', s)
+    s = ENHANCEMENT_PATTERN.sub(r'<wiki-enhance>\1</wiki-enhance>', s)
 
-    for marker in AUTO_ACTION_MARKER:
-        if marker in s:
-            s = s.replace(marker, '<wiki-auto-action>') + '</wiki-auto-action>'
+    if AUTO_ACTION_MARKER.search(s):
+        s = AUTO_ACTION_MARKER.sub('<wiki-auto-action>', s) + '</wiki-auto-action>'
 
-    s = AUTO_ACTION_PATTERN.sub(r'<wiki-auto-action>\2</wiki-auto-action>', s)
+    s = AUTO_ACTION_PATTERN.sub(r'<wiki-auto-action>\1</wiki-auto-action>', s)
 
     # LW cannot be trusted to close their tag
-    for marker in PASSIVE_SKILL_FRONT_MARKER:
-        if marker in s:
-            s = s.replace(marker, '<wiki-passive>') + '</wiki-passive>'
-    s = s.replace('<style="改行">', '')
+    if PASSIVE_SKILL_FRONT_MARKER.search(s):
+        s = PASSIVE_SKILL_FRONT_MARKER.sub('<wiki-passive>', s) + '</wiki-passive>'
+    s = LINE_BREAK_OPEN_PATTERN.sub('', s)
+    # an enhance region whose end is missing: how far it ran is unknown, so it is not highlighted
+    s = ENHANCEMENT_OPEN_PATTERN.sub('', s)
     s = s.replace('</style>', '')
-    # remove stray size tag
+    # remove stray size / color openers (the game does not always close them)
     s = SIZE_PREFIX.sub('', s)
+    s = COLOR_PREFIX.sub('', s)
+    return s
 
-    # Prevent Google Sheet from turning this to formula
+def sanitizeSkillDescription(s: str) -> str:
+    """sanitizeSkillDescriptionForDisplay + a guard for the Google Sheet round trip
+    (translation_gen_tsv.py): a leading + or = would be turned into a formula."""
+    s = sanitizeSkillDescriptionForDisplay(s)
     if FORMULA_PREFIX_PATTERN.match(s):
         s = "'" + s
-
     return s
 
 FRONT_MATTER_PATTERN = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.DOTALL)

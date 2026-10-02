@@ -14,15 +14,9 @@
 {% for row in skill.rows %}{% if row.size > maxcol %}{% assign maxcol = row.size %}{% endif %}{% endfor %}
 <div class="skill-tree" data-skill-tree>
   <div class="blooming_main">
-    <b>{{ skill.skillName }}</b>
+    <b>{{ skill | skill_tree_name }}</b>
     <p>View: <span data-st-view>{{ skill.maxedView }}</span></p>
-    <div class="st-desc" data-st-desc>{{ skill.maxedText }}</div>
-    {% for changeSkill in skill.changeSkills %}
-    <details>
-      <summary>{{ changeSkill.name }}</summary>
-      <p>{{ changeSkill.description }}</p>
-    </details>
-    {% endfor %}
+    <div class="st-desc" data-st-desc>{{ skill | skill_tree_html }}</div>
   </div>
 
   <div class="skill_tree">
@@ -32,7 +26,7 @@
       <div class="st-row" data-size="{{ row.size }}">
         {% for cell in row %}
         <button type="button" class="st-node is-active tippy" data-node="{{ cell.id }}"
-          data-content="{{ cell.desc | xml_escape }}">
+          data-content="{{ skill | skill_tree_node_tip: cell.id | xml_escape }}">
           <span class="st-tier">{{ rnum }}{% if row.size > 1 %}{{ STCOL[forloop.index0] }}{% endif %}</span>
           <img src="/cdn/Sprite/{{ cell.icon }}.png" loading="lazy" width="40" height="40">
         </button>
@@ -42,7 +36,7 @@
     </div>
   </div>
 
-  <script type="application/json" class="st-model">{{ skill | jsonify }}</script>
+  <script type="application/json" class="st-model">{{ skill | skill_tree_json }}</script>
 </div>
 {% endfor %}
 </div>

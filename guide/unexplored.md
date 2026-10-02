@@ -83,7 +83,6 @@ additional_scripts: ["/assets/filter.js"]
     {% if nid == 9000165 or nid == 9000068 %}{% continue %}{% endif %}
     {% assign skill = site.data.SkillMaster[sid] %}
     {% if skill.skillName == "" %}{% continue %}{% endif %}
-    {% assign skillName = site.data.translation.Skill[sid].skillName %}
     {% assign tagKey = "" %}
     {% assign tagSubject = "" %}
     {% assign tagBody = "" %}
@@ -92,9 +91,9 @@ additional_scripts: ["/assets/filter.js"]
     {% assign tagSubject = site.data.wiki.UITranslation[s.hintEntry.hintSubject] | default: s.hintEntry.hintSubject %}
     {% endif %}
     <tr data-rarity="{{ s.rarity }}" data-tag="{{ tagKey }}">
-        <td title="{{ sid }}" class="translate skill-{{ s.rarity }}" data-translate="{% if skillName %}{{ skill.skillName }}{% endif %}" data-effects="{{ skill.effects | map: 'skillEffectId' | join: ',' }}">{{ skillName | default: skill.skillName }}</td>
+        <td title="{{ sid }}" class="skill-{{ s.rarity }}" data-effects="{{ skill.effects | map: 'skillEffectId' | join: ',' }}">{{ nid | skill_name_html }}</td>
         <td>{{ s.rarity }}</td>
-        <td class="translate">{% include skill-description.html skillId=nid skill=skill %}</td>
+        <td>{% include skill-description.html skillId=nid %}</td>
         <td>{{ tagSubject }}</td>
     </tr>
     {% endfor %}

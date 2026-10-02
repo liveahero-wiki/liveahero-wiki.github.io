@@ -45,12 +45,17 @@ jobs:
         python tools/voice_gsheet.py download
         python tools/generate_status_pages.py
         python tools/masterdata.py -f=1 --skip_data
+        python tools/gen_skill_text.py
         python tools/gen_skill_upgrade_model.py
         python tools/generate_skill_search_index.py --lang en
         python tools/generate_skill_search_index.py --lang zh-Hans
         python tools/generate_skill_search_index.py --lang zh-Hant
         python tools/generate_skill_search_index.py --lang ja
         python tools/audit_skill_effects.py report
+
+    - name: Python unit tests
+      working-directory: tools
+      run: python -m unittest discover -p "*_test.py"
 
     # Build the skill-search frontend (Vite/Preact) into assets/skill-search.*
     # before Eleventy runs so the bundle is included in _site.
