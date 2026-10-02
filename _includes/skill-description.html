@@ -11,7 +11,7 @@
     {% assign skillEffect = site.data.SkillEffectMaster[skillEffectId] %}
     {% assign skillEffectJson = skillEffect.skillEffectJson %}
 
-    {% if skillEffectJson.statusId == 0 %}
+    {% if skillEffectJson.statusId == 0 or effect.notDisplayHint %}
       {% continue %}
     {% endif %}
 

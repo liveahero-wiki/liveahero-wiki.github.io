@@ -9,7 +9,7 @@
 // elements in the rendered HTML are replaced with <span class="status"> (with
 // optional icon) and get tippy tooltips. A status footer is always shown at
 // the bottom. When tp is present, the tooltip prepends a [Buff/Stackable]-style
-// label matching status_description_v2 in _plugins/skill.rb.
+// label matching status_description_v2 in wiki_plugins/lib/skill.js.
 
 import { memo, useEffect, useRef } from 'preact/compat'
 import type { ChangeSkill, StatusDesc } from '../types'
