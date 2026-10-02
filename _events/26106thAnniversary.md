@@ -1,6 +1,6 @@
 ---
 title: 6th Anniversary
-eventId: 182
+eventId: 183
 has_story: true
 jp_title: 6周年記念キャンペーン
 banner_image: banner_info_6th_anniversary.webp
@@ -14,5 +14,11 @@ news_link: https://live-a-hero.jp/en/6th_anniversary
 {:toc}
 
 ## Quest Details
+
+### 6th Anniversary Story
+
+{% include quest-group.html chapterId=1304 %}
+
+### Double-reward Farming Quests
 
 {% include quest-group.html chapterId=201 %}
