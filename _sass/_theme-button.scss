@@ -114,7 +114,7 @@
   }
 }
 
-.search-icon-button {
+.toolbar-button {
   --size: 2rem;
   background: none;
   border: none;
@@ -131,7 +131,7 @@
   margin-right: 10px;
 }
 
-.search-icon-button > svg {
+.toolbar-button > svg {
   inline-size: 100%;
   block-size: 100%;
 }
@@ -142,12 +142,12 @@
   stroke-width: 2;
 }
 
-.search-icon-button:is(:hover, :focus-visible) .search-icon {
+.toolbar-button:is(:hover, :focus-visible) .search-icon {
   stroke: var(--icon-fill-hover);
 }
 
 @media (hover: none) {
-  .search-icon-button {
+  .toolbar-button {
     --size: 36px
   }
 }
@@ -157,4 +157,11 @@
 // stays hidden regardless of load order.
 pagefind-modal-trigger {
   display: none !important;
+}
+
+.code-icon {
+  fill: var(--icon-fill);
+}
+.toolbar-button:is(:hover, :focus-visible) .code-icon {
+  fill: var(--icon-fill-hover);
 }
