@@ -30,16 +30,20 @@
   </svg>
 </button>
 
-    <button class="search-icon-button" id="search-toggle" title="Search" aria-label="Search">
+    <button class="toolbar-button" id="search-toggle" title="Search" aria-label="Search">
       <svg class="search-icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="11" cy="11" r="7"></circle>
         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
       </svg>
     </button>
 
-    {% if content contains 'class="sdv' %}{% include skill-lang-picker.html %}{% endif %}
+    <a class="toolbar-button" href="{{ site.github_repo }}/blob/master/{{ page.path }}?plain=1" title="View source" aria-label="View source">
+        <svg class="code-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 -960 960 960">
+            <path d="M240-280 40-480l200-200 56 56-143 144 143 144-56 56Zm178 132-76-24 200-640 76 24-200 640Zm302-132-56-56 143-144-143-144 56-56 200 200-200 200Z"/>
+        </svg>
+    </a>
 
-    <a class="github-button" href="{{ site.github_repo }}/blob/master/{{ page.path }}?plain=1">View source</a>
+    {% if content contains 'class="sdv' %}{% include skill-lang-picker.html %}{% endif %}
 
     {% assign chara_id = page.characterId %}
     {% if chara_id %}
