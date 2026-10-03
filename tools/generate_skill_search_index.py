@@ -41,7 +41,7 @@ CHARAS = "_charas"
 # emitted JSON without a masterdata version change. Appended to the cache key so
 # clients (search/src/data/loadIndex.js) refetch the index instead of reusing a
 # stale cache.
-INDEX_SCHEMA_REV = "r17"
+INDEX_SCHEMA_REV = "r18"
 
 
 # --- Undocumented game-data enums / magic numbers ---------------------------
@@ -997,23 +997,41 @@ def _annotator(resolver):
 
 
 def displayed_status_rows(skill, resolver, SUM=None):
-    """The status rows the game lists for a skill, in order, one per distinct name. Effects with
-    statusId==0 are skipped, as are rows flagged notDisplayHint (the game hides them from the
-    skill's status list), and effects whose status has no name. When SUM
-    (SkillUpgradeMaster) is provided the effects are narrowed to the fully-bloomed set via
-    select_condition_rows, mirroring maxed_skill_description. This keeps superseded tree tiers
-    (e.g. View消費量+100 ... +750 for a progression that ends at +1000) from appearing alongside
-    the final one."""
+    """The status rows the game lists for a skill, in order. Effects with statusId==0 are skipped,
+    as are rows flagged notDisplayHint (the game hides them from the skill's status list), and
+    effects whose status has no name. When SUM (SkillUpgradeMaster) is provided the effects are
+    narrowed to the fully-bloomed set via select_condition_rows, mirroring
+    maxed_skill_description. This keeps superseded tree tiers (e.g. View消費量+100 ... +750 for a
+    progression that ends at +1000) from appearing alongside the final one.
+
+    notDisplayHint alone does not make the list unique: a plain status (Barrier, Burst, ...) is
+    applied by many effect rows that differ only in their numbers, and an effect can repeat. So
+    rows are listed once per name -- except those the developers named on purpose
+    (isOverrideStatusName) and that always apply (no trigger), which are listed once per
+    distinct name + text, so the two 特殊スキル rows of Turbak (same name, different text) both
+    show. Tiers of a condition group and trigger-gated variants (Okitaka's ten 急襲, one per
+    stack count) are not such rows: they stay one per name."""
     effects = (select_condition_rows(skill, SUM) if SUM is not None
                else (skill.get("effects") or []))
-    rows, seen = [], set()
+    rows = []
+    by_name, by_text = set(), set()     # names listed by name alone / (name, text) listed
     for eff in effects:
         if eff.get("notDisplayHint"):
             continue
-        row = resolver.effect_row(eff.get("skillEffectId", ""))
-        if row is None or row.name in seen:
+        seid = eff.get("skillEffectId", "")
+        row = resolver.effect_row(seid)
+        if row is None:
             continue
-        seen.add(row.name)
+        sej = resolver.SEM.get(str(seid), {}).get("skillEffectJson", {})
+        if (sej.get("isOverrideStatusName") and not eff.get("conditionGroupId")
+                and not eff.get("triggerJson")):
+            if row.name in by_name or (row.name, row.desc) in by_text:
+                continue
+            by_text.add((row.name, row.desc))
+        else:
+            if row.name in by_name or row.name in {n for n, _ in by_text}:
+                continue
+            by_name.add(row.name)
         rows.append(row)
     return rows
 

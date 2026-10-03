@@ -135,6 +135,19 @@ class TestSkillTreeMaxed(unittest.TestCase):
         self.assertEqual(self._status_names(1316102), ["SPDアップ", "加速信号"])
         self.assertEqual(self._status_names(1316103), ["ATKダウン", "減速信号"])
 
+    def test_same_named_overrides_with_different_text_are_both_kept(self):
+        # Turbak 1287103: the two 特殊スキル rows (3656 / 3657) share a name and differ in text.
+        # Without the Google-sheet renames (English only) they must still both be listed.
+        descs = build_status_descs(1287103, self.SM, self.SEM, self.SMA, {}, {}, None)
+        special = [d for d in descs if d["name"] == "特殊スキル"]
+        self.assertEqual(len(special), 2)
+        self.assertNotEqual(special[0]["desc"], special[1]["desc"])
+
+    def test_repeated_effect_is_listed_once(self):
+        # Reticul 1316103 applies 加速信号 (se 5425) from two effect rows; one chip.
+        self.assertEqual(self._status_names(1316103).count("減速信号"), 1)
+        self.assertEqual(self._status_names(1316102).count("加速信号"), 1)
+
     def test_flagged_override_without_hint_flag_is_kept(self):
         # Pubraseer 1073202: override names are flagged, so ATK Up+ and the
         # enemy-count note appear next to plain ATK Up.

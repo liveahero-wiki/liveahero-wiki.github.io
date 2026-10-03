@@ -235,6 +235,21 @@ class TestResolver(unittest.TestCase):
         self.assertIn("强火伤", got.aliases)
         self.assertIn("強火傷", got.aliases)   # raw Japanese stays an alias: fallback text is Japanese
 
+    def test_untranslated_override_borrows_the_name_of_a_translated_sibling(self):
+        # Deceleration Signal: the row a skill applies (101) has no translation but a follow-up
+        # tier of the same status with the same raw name does (105): both name the status alike.
+        sem = dict(FakeData.SEM)
+        sem["105"] = {"skillEffectJson": {"statusId": 10, "isOverrideStatusName": True,
+                                          "overrideStatusName": "強火傷", "effects": []}}
+        r = StatusResolver(FakeData.SMA, sem, {}, {}, {"OVERRIDE_STATUS_NAME_105": "强火伤"})
+        self.assertEqual(r.effect_row(101).name, "强火伤")
+        self.assertIn("強火傷", r.effect_row(101).aliases)
+        # a different raw name or another status does not borrow
+        sem["105"] = {"skillEffectJson": {"statusId": 30, "isOverrideStatusName": True,
+                                          "overrideStatusName": "強火傷", "effects": []}}
+        r = StatusResolver(FakeData.SMA, sem, {}, {}, {"OVERRIDE_STATUS_NAME_105": "强火伤"})
+        self.assertEqual(r.effect_row(101).name, "強火傷")
+
     def test_flag_and_icon(self):
         got = FakeData.resolver().effect_row(100)
         self.assertEqual((got.tp, got.fl, got.icon), ("d", 1, "status_burn"))
