@@ -7,6 +7,10 @@ import * as sass from "sass";
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default function sassPlugin(eleventyConfig, { loadPaths = ["_sass"], style = "compressed" } = {}) {
   eleventyConfig.addTemplateFormats("scss");
+  // Eleventy only watches template formats, so plain-CSS partials (`@use "tabs.css"`) would not trigger a rebuild.
+  for (const dir of loadPaths) {
+    eleventyConfig.addWatchTarget(dir);
+  }
   eleventyConfig.addExtension("scss", {
     outputFileExtension: "css",
     useLayouts: false, // the global default layout must not wrap CSS in the page shell
