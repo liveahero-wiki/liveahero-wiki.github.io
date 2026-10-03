@@ -195,7 +195,12 @@ Here is a list of this event's fan translated episodes:
 | 5  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRb42_ox-WcqtesuWg4PFUNK7v616GExmHxsY5AWEeWyAE7Ghmznk3_nLrfvfuNL7yAF0foK_1Kr_6K/pubhtml?gid=1117877134&single=true) |
 | 6  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRb42_ox-WcqtesuWg4PFUNK7v616GExmHxsY5AWEeWyAE7Ghmznk3_nLrfvfuNL7yAF0foK_1Kr_6K/pubhtml?gid=614396491&single=true) |
 | 7  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRb42_ox-WcqtesuWg4PFUNK7v616GExmHxsY5AWEeWyAE7Ghmznk3_nLrfvfuNL7yAF0foK_1Kr_6K/pubhtml?gid=1368126612&single=true) |
+| 8  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRb42_ox-WcqtesuWg4PFUNK7v616GExmHxsY5AWEeWyAE7Ghmznk3_nLrfvfuNL7yAF0foK_1Kr_6K/pubhtml?gid=484324055&single=true) |
 | Epilogue: Roiker  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRb42_ox-WcqtesuWg4PFUNK7v616GExmHxsY5AWEeWyAE7Ghmznk3_nLrfvfuNL7yAF0foK_1Kr_6K/pubhtml?gid=367047181&single=true) |
+| Epilogue: Ruchbath  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRb42_ox-WcqtesuWg4PFUNK7v616GExmHxsY5AWEeWyAE7Ghmznk3_nLrfvfuNL7yAF0foK_1Kr_6K/pubhtml?gid=533030562&single=true) |
+| Epilogue: Yvaga  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRb42_ox-WcqtesuWg4PFUNK7v616GExmHxsY5AWEeWyAE7Ghmznk3_nLrfvfuNL7yAF0foK_1Kr_6K/pubhtml?gid=461352803&single=true) |
+| Epilogue: Shiratori  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRb42_ox-WcqtesuWg4PFUNK7v616GExmHxsY5AWEeWyAE7Ghmznk3_nLrfvfuNL7yAF0foK_1Kr_6K/pubhtml?gid=1012011001&single=true) |
+| Epilogue: Amekuni  | [Docs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRb42_ox-WcqtesuWg4PFUNK7v616GExmHxsY5AWEeWyAE7Ghmznk3_nLrfvfuNL7yAF0foK_1Kr_6K/pubhtml?gid=15134754&single=true) |
 
 ### Free Quests
 
