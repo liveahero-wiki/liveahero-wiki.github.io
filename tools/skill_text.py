@@ -103,6 +103,7 @@ class StatusResolver:
         self._effect_rows: dict = {}
         self._status_rows: dict = {}
         self._first_plain_effect: dict | None = None
+        self._sibling_names: dict | None = None
         self._catalog: AliasCatalog | None = None
         self.template_missing = Counter()   # (status id, path) templates that hit a missing value
 
@@ -161,6 +162,26 @@ class StatusResolver:
             self._effect_rows[key] = self._build_effect_row(key)
         return self._effect_rows[key]
 
+    def _sibling_override_name(self, sej: dict) -> str:
+        """The translated override name of another effect row that has the same raw (Japanese)
+        override name for the same status, or "". The game's localization is per effect row and
+        sometimes covers only some of a status's rows (Deceleration Signal: the follow-up tiers
+        are translated, the row the skill applies is not); without this the untranslated row would
+        name the status in Japanese next to its translated siblings."""
+        if self._sibling_names is None:
+            idx: dict = {}
+            for seid, se in self.SEM.items():
+                j = se.get("skillEffectJson", {})
+                raw = (j.get("overrideStatusName") or "").strip()
+                if not (j.get("isOverrideStatusName") and raw):
+                    continue
+                tr = (self.SkillEffectTrans.get(seid, {}).get("overrideStatusName")
+                      or self.GameTrans.get(f"OVERRIDE_STATUS_NAME_{seid}") or "").strip()
+                if tr:
+                    idx.setdefault((j.get("statusId"), raw), tr)
+            self._sibling_names = idx
+        return self._sibling_names.get((sej.get("statusId"), (sej.get("overrideStatusName") or "").strip()), "")
+
     def _build_effect_row(self, seid: str) -> StatusRow | None:
         sej = self.SEM.get(seid, {}).get("skillEffectJson", {})
         status_id = sej.get("statusId")
@@ -171,6 +192,7 @@ class StatusResolver:
 
         ov_names = _uniq([se_trans.get("overrideStatusName"),
                           self.GameTrans.get(f"OVERRIDE_STATUS_NAME_{seid}"),
+                          self._sibling_override_name(sej),
                           sej.get("overrideStatusName")]) if sej.get("isOverrideStatusName") else []
         # unflagged override strings are developer placeholders: ignored, so a status with no
         # name of its own is dropped
