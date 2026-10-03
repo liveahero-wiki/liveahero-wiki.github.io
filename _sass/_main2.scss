@@ -23,6 +23,8 @@
   --mask-filter: brightness(0);
   --invert-filter: none;
 
+  --toolbar-height: 52px;
+
   --sectionHeader: rgb(94 203 140);
   --sectionBg: #d3f8eb;
 
@@ -71,6 +73,10 @@ html[data-theme="dark"] {
 
 *, *:before, *:after {
   box-sizing: border-box;
+}
+html {
+  // Keep anchor targets and focused elements clear of the fixed toolbar.
+  scroll-padding-top: calc(var(--toolbar-height) + 10px);
 }
 html, body {
   font: 400 16px Roboto, Arial, sans-serif;
@@ -126,7 +132,7 @@ th a {
   position: fixed;
   transform: translateX(-250px);
   transition: transform 0.15s ease;
-  z-index: 2;
+  z-index: 999;
   height: 100vh;
   -webkit-overflow-scrolling: touch;
 }
@@ -173,8 +179,18 @@ th a {
   border: 2px solid #888;
   border-radius: 2px;
 }
+// Fixed menu bar across the top of the page. It starts after the sidebar on
+// desktop, where the sidebar is always visible (see the min-width media query).
 .toolbar {
-  margin: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  height: var(--toolbar-height);
+  padding: 10px 20px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--colorGrey);
 }
 .wiki-badge {
   display: inline-block;
@@ -187,11 +203,11 @@ th a {
 }
 .menu-button, .github-button {
   display: inline-block;
-  font-size: 16px;
+  font-size: 1rem;
   background: none;
   border: none;
   padding: 6px;
-  margin-right: 10px;
+  margin-right: 8px;
   color: var(--text);
 }
 .github-button {
@@ -204,6 +220,7 @@ th a {
 }
 .content__area {
   width: 100%;
+  padding-top: calc(var(--toolbar-height) + 20px);
   padding-bottom: 40px;
 }
 .content {
@@ -230,8 +247,11 @@ th a {
     transform: translateX(0);
     visibility: visible;
   }
+  .toolbar {
+    left: 250px;
+  }
   .content__area {
-    padding: 40px 40px 40px 290px;
+    padding: calc(var(--toolbar-height) + 20px) 40px 40px 290px;
   }
   .menu-button {
     display: none;
@@ -364,7 +384,7 @@ th {
 }
 .sticky-header th {
   position: sticky;
-  top: 0;
+  top: var(--toolbar-height);
   z-index: 100;
 }
 .bordered {
