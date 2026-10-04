@@ -46,7 +46,7 @@ export function registerRubyPlugins(eleventyConfig, { site, charaIndex }) {
   filter("charaPageToLink", (page) => charaPageToLink(page, charaDeps));
 
   // ---- item.rb, catalog.rb, image.rb -----------------------------------------------------------
-  filter("lah_item", (id, rewardType, name) => lahItem(id, rewardType, name, site.data));
+  filter("lah_item", (id, rewardType, name) => lahItem(id, rewardType, name, site.data, charaDeps));
   filter("lah_item_icon", (id, rewardType, name) => lahItemIcon(id, rewardType, name, site.data));
   filter("processVoiceActor", processVoiceActor);
   filter("processCharaGroup", processCharaGroup);

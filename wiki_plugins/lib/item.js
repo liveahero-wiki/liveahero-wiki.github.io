@@ -2,6 +2,7 @@
 //   <span class="item tippy" data-content="…"><img src="/cdn/Sprite/item_x.png"> Name</span>
 // rewardType: 3 = item (default), 1 = hero card, 2 = sidekick card, 10 = skill evolution.
 
+import { stockIdToLinkImpl } from "./chara.js";
 import { dig, str, xmlEscape } from "./ruby.js";
 
 const nameToIdMaps = new WeakMap();
@@ -41,8 +42,11 @@ function itemOf(id, data) {
   return item;
 }
 
-/** @param {{ ItemMaster: object, CardMaster: object, SidekickMaster: object, wiki: { Item: object } }} data */
-export function lahItem(id, rewardType, name, data) {
+/**
+ * @param {{ ItemMaster: object, CardMaster: object, SidekickMaster: object, wiki: { Item: object } }} data
+ * @param {object} [charaDeps] chara.js deps; cards are then rendered as a link to their chara page
+ */
+export function lahItem(id, rewardType, name, data, charaDeps) {
   id = resolveItem(id, name, data);
   rewardType = rewardType || 3;
 
@@ -58,7 +62,9 @@ export function lahItem(id, rewardType, name, data) {
   }
   if (rewardType === 1 || rewardType === 2) {
     const { card, resourceName } = cardIcon(id, rewardType, data);
-    return `<span class="item"><img src="/cdn/Sprite/icon_${resourceName}.png" loading="lazy"> ${str(card.name)}</span>`;
+    // The masters only have the Japanese `cardName`; the wiki name and the link come from the chara page.
+    if (charaDeps && card.stockId !== undefined) return stockIdToLinkImpl(card.stockId, rewardType, charaDeps)[1];
+    return `<span class="item"><img src="/cdn/Sprite/icon_${resourceName}.png" loading="lazy"> ${str(card.cardName)}</span>`;
   }
   if (rewardType === 10) return "Skill evolution";
   return `Unknown rewardType ${str(rewardType)}`;

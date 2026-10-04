@@ -8,7 +8,7 @@ import { processCharaGroup, processVoiceActor } from "./catalog.js";
 import { imageDimension } from "./image.js";
 
 const data = {
-  CardMaster: { 100011: { resourceName: "akashi", name: "Akashi" } },
+  CardMaster: { 100011: { resourceName: "akashi", cardName: "アカシ", stockId: 10001 } },
   SidekickMaster: { 100021: { resourceName: "akashi", name: "Akashi" }, 1: { resourceName: "x" } },
   ItemMaster: { 3: { itemName: "Ether", description: 'A "crystal"', resourceName: "stone01" } },
   wiki: { Item: new IntKeyMap({ 3: { name: "Ether Crystal" } }) },
@@ -40,6 +40,13 @@ test("lah_item escapes the tooltip and prefers the wiki name", async () => {
   assert.equal(
     await render("{% include item.html id=3 %}"),
     '<span class="item tippy" data-content="A &quot;crystal&quot;"><img src="/cdn/Sprite/item_stone01.png" loading="lazy"> Ether Crystal</span>',
+  );
+});
+
+test("lah_item renders a card as a link to its chara page", async () => {
+  assert.equal(
+    await render("{% include item.html id=100011 rewardType=1 %}"),
+    '<a href="/charas/akashi/#h10001"><span class="item"><img src="/cdn/Sprite/icon_akashi_h01.png" loading="lazy" width="32" height="32"></span> Akashi</a>',
   );
 });
 
