@@ -2,7 +2,7 @@
 title: Blues of Heroes
 eventId: 184
 jp_title: 
-banner_image: 
+banner_image: banner_info_Blues2610.webp
 gacha: true
 event_start_time: 2026-10-08T20:00:00+09
 event_end_time: 2026-11-05T14:00:00+09
