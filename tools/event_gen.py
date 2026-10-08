@@ -123,7 +123,6 @@ def generate_event(eventId: str, prefix: str = ""):
                     f.write(f"| {{% chara_link {charaIdToPageMap[charaId]} %}} | {questBonusJson.get('bonusValue')} |\n")
             f.write(f"\n")
 
-        f.write(f"## Event Sales Bonus\n\nTODO\n\n")
         f.write(f"## Special Mission\n\nTODO\n\n")
         f.write(f"## Limited Time Mission\n\nTODO\n\n")
 

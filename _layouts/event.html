@@ -31,8 +31,7 @@ layout: default
 {{ content }}
 
 {% assign eventId = page.eventId | downcase %}
-{% assign regionId = site.data.EventMaster[eventId].eventPortalJson.salesRegionIds[0] | downcase %}
-{% assign sales_reports = site.data.processed.sales_report_master[regionId] %}
+{% assign sales_reports = site.data.processed.sales_report_master[eventId] %}
 
 {% if sales_reports.size > 0 %}
 <h2 id="event-sales-report">Event Sales Report</h2>

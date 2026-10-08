@@ -40,9 +40,6 @@ def extractSalesReport():
   with open("_data/processed/sales_report_master.json", "r", encoding="utf-8") as f:
     sales_report_master: dict = json.load(f)
 
-  with open("_data/EventMaster.json", "r", encoding="utf-8") as f:
-    EventMaster: dict = json.load(f)
-
   data = {}
 
   for file in files:
@@ -56,16 +53,9 @@ def extractSalesReport():
     if not eventId:
       continue
 
-    eventPortalJson = EventMaster[str(eventId)].get("eventPortalJson", {})
-    if not eventPortalJson:
+    reports = sales_report_master.get(str(eventId), [])
+    if len(reports) == 0:
       continue
-
-    regionIds = eventPortalJson.get("salesRegionIds", [])
-    if len(regionIds) == 0:
-      continue
-    regionId = regionIds[0]
-
-    reports = list(filter(lambda x: x.startswith("SALES_EVENT_"), sales_report_master.get(str(regionId), [])))
     i = 0
 
     found = False

@@ -82,10 +82,6 @@ Here is a list of heroes and sidekicks which grants bonus in this event:
 | {% chara_link Yvaga %} | 10 |
 | {% chara_link Ruchbath %} | 10 |
 
-## Event Sales Bonus
-
-TODO
-
 ## Special Mission
 
 TODO

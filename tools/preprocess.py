@@ -97,24 +97,50 @@ def processShopFile():
         dumpJson(os.path.join("_data", "stores", id + ".json"), store)
 
 
+def reportNumber(textKey):
+    return int(textKey.rsplit("_", 1)[1])
+
 def processSalesFile():
+    """Writes sales_report_master.json: `eventId -> [SALES_EVENT_* text keys]`, ordered by report number.
+
+    Newer events share the generic region 101 (whose reports are the SALES_REPORT_* pool), so their
+    reports are found through the text keys, which follow SALES_EVENT_<BASERESOURCENAME>_REPORT_<n>.
+    Older events have a dedicated sales region (>= 200) listing their reports in SalesMaster.json.
+    Needs zzz/Japanese.json, so it must run after the properties are downloaded.
+    """
     with open(os.path.join("_data", "SalesMaster.json"), "r", encoding="utf-8") as f:
-        obj = json.load(f)
+        sales = json.load(f)
 
-    data = defaultdict(set)
+    with open(os.path.join("_data", "EventMaster.json"), "r", encoding="utf-8") as f:
+        events = json.load(f)
 
-    for id, sale in obj.items():
-        regionId = sale["regionId"]
-        reports = sale["reports"]
-        for report in reports:
-            textKey = report["textKey"]
-            if int(regionId) >= 200 and textKey.startswith("SALES_REPORT_"):
-                continue
-            data[regionId].add(textKey)
+    with open(os.path.join("zzz", "Japanese.json"), "rb") as f:
+        textKeys = [k for k in json.load(f) if k.startswith("SALES_EVENT_")]
 
-    data = {k: sorted(list(v)) for k, v in data.items()}
+    region_reports = defaultdict(set)
+    for sale in sales.values():
+        regionId = int(sale["regionId"])
+        if regionId < 200:
+            continue
+        for report in sale["reports"]:
+            region_reports[regionId].add(report["textKey"])
 
-    dumpJson(os.path.join("_data", "processed", "sales_report_master.json"), data, indent='\t', sort_keys=True)
+    data = {}
+    for eventId, event in events.items():
+        prefix = f"SALES_EVENT_{event['baseResourceName'].upper()}_REPORT_"
+        reports = {k for k in textKeys if k.startswith(prefix)}
+
+        if not reports:
+            regionIds = (event.get("eventPortalJson") or {}).get("salesRegionIds", [])
+            if regionIds:
+                reports = {k for k in region_reports.get(int(regionIds[0]), []) if k.startswith("SALES_EVENT_")}
+
+        if reports:
+            data[eventId] = sorted(reports, key=reportNumber)
+
+    data = dict(sorted(data.items(), key=lambda kv: int(kv[0])))
+
+    dumpJson(os.path.join("_data", "processed", "sales_report_master.json"), data, indent='\t')
 
 def processMasterDataCatalog():
     with open(

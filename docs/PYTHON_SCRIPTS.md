@@ -40,7 +40,7 @@ graph TD
     *   `processMasterDataCatalog()`
     *   `processShopFile()`
     *   `processCardProfileOverride()`
-    *   `processSalesFile()`
+    *   `processSalesFile()` (after the localization files are downloaded)
     *   `processPropertiesFile()`
     *   `processItemInfo()`
 
@@ -52,6 +52,7 @@ graph TD
     *   `_data/CardProfileOverrideMaster.json`
     *   `_data/ShopMaster.json`
     *   `_data/SalesMaster.json`
+    *   `_data/EventMaster.json`
     *   `_data/MasterDataCatalog.json`
     *   `_data/ItemMaster.json`
     *   `_data/wiki/Item.yml`
@@ -59,7 +60,7 @@ graph TD
 *   **Output Files**:
     *   `_data/processed/CardProfileOverride.json`
     *   `_data/stores/<id>.json` (individual store files)
-    *   `_data/processed/sales_report_master.json`
+    *   `_data/processed/sales_report_master.json` (`eventId` → ordered `SALES_EVENT_*` text keys, so `_layouts/event.html` is a direct lookup)
     *   `_data/MasterDataCatalog_list.json`
     *   `_data/wiki/Item.yml` (merged translated item definitions)
     *   `_data/processed/*_bio.json`, `*_serif.json`, `*_profile.json`, `*_library.json`, `*_sales_report.json`, `*_score_attack.json` (for all language configurations)
@@ -161,7 +162,6 @@ graph TD
 *   **Input Files**:
     *   `_events/*.md`
     *   `_data/processed/sales_report_master.json`
-    *   `_data/EventMaster.json`
 *   **Output Files**:
     *   `_data/wiki/SalesReport.json`
 

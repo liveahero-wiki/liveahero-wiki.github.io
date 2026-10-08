@@ -117,7 +117,6 @@ def main(argv):
     processMasterDataCatalog()
     processShopFile()
     processCardProfileOverride()
-    processSalesFile()
 
   prop_files = [
     "Japanese.json",
@@ -138,6 +137,8 @@ def main(argv):
 
   for p in prop_files:
     downloadProperties(mV, p)
+
+  processSalesFile()
 
   jp_map = processPropertiesFile("Japanese.json", *[f"jp{s}" for s in tl_suffixes])
   processPropertiesFile("English.json", *[f"en{s}" for s in tl_suffixes], jp_map=jp_map)
