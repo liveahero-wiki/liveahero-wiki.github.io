@@ -15,3 +15,6 @@ sidekicks:
 
 {% include voice-table.html resourceName="alend"
 %}
+
+{% include voice-table.html resourceName="alendBlues2610"
+%}
