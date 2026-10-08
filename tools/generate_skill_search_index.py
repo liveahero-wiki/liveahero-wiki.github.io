@@ -461,6 +461,7 @@ CLASS_TO_LABELS = {
     "SkillTurnExtension": ["interf.extend"],
     "SkillTurnExtensionByStatus": ["interf.extend"],
     "DamageDependentParamDifferenceTurnExtension": ["interf.extend"],
+    "BarrierDependentTurnExtension": ["interf.extend"],
     "Silence": ["interf.silence"], 
     "SkillSkip": ["interf.silence"],
 
