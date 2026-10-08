@@ -49,7 +49,7 @@ sidekicks:
     which people are oftentimes scared of him when they meet for the first time. He
     is a gentle person with a soft demeanor, but he has a strong sense of
     responsibility. He loves taking baths and does so about 5 times a day.
-  extra_sprites: fg_nessen_s01_skin1,fg_nessen_s01_skin2,fg_nessen_s01_skin3,fg_nessen_s01_skin4
+  extra_sprites: fg_nessen_s01_skin1,fg_nessen_s01_skin2,fg_nessen_s01_skin3,fg_nessen_s01_skin4,fg_nessen_s01_skin5
 ---
 
 {% include voice-table.html resourceName="nessen"
