@@ -135403,7 +135403,7 @@
     "resourceName": "b_skill_damageAll",
     "subResourceName": "",
     "timing": 0,
-    "description": "敵全体に80%ダメージ。<style=\"改行\"></style>周波の値に応じて敵全体に1～3回40%ダメージ。（1回の回数ごとに周波を10消費）<style=\"パッシブ領域\">周波<sprite=0>を持つ。<style=\"改行\"></style>周波は「グランデ・エントラータ」の発動時に増加する。<style=\"改行\"></style>周波の増減は味方に檄声のアレンドが複数いるとき、共有される。</style>",
+    "description": "敵全体に80%ダメージ。<style=\"改行\"></style>周波の値に応じて敵全体に1～3回40%ダメージ。（1回の回数ごとに周波を1消費）<style=\"パッシブ領域\">周波<sprite=0>を持つ。<style=\"改行\"></style>周波は「グランデ・エントラータ」の発動時に増加する。<style=\"改行\"></style>周波の増減は味方に檄声のアレンドが複数いるとき、共有される。</style>",
     "shortenDescription": "",
     "cutin": [
       {
@@ -157643,7 +157643,7 @@
     "useView": 0,
     "targetFlag": 2,
     "resourceName": "b_skill_damage",
-    "subResourceName": "",
+    "subResourceName": "s_skill_buffOwn",
     "timing": 0,
     "description": "【自身にバリアが付与されていない時】敵単体に50%ダメージ。<style=\"改行\"></style>自身に2回の行動の間Viewの40％の値のバリアを付与。<style=\"改行\"></style>【自身にバリアが付与されている時】敵全体に50%ダメージ。<style=\"パッシブ領域\">支柱<sprite=0>を持つ。<style=\"改行\"></style>味方にバリアが付与された時、付与したバリア値の1%分支柱が増加する。（最大50まで）<style=\"改行\"></style>支柱が30を超えた時、味方全体の支柱を30消費して自身のスキル1を誘発する。（1ターンに4回まで）<style=\"改行\"></style>この誘発ではView・コンボを獲得できない。</style>",
     "shortenDescription": "敵単体に50%ダメージ。自身に2回の行動の間Viewの40％の値のバリアを付与。",
@@ -157753,22 +157753,6 @@
         "triggerJson": [
           {
             "role": 0,
-            "class": "OwnBuffNumberDontExecTrigger",
-            "value": 0,
-            "value2": 0,
-            "element": 0,
-            "statusId": 275,
-            "targetStates": null,
-            "includeTemporary": false
-          }
-        ],
-        "iconFileName": "b_skill_damage",
-        "subIconFileName": "s_skill_buffOwn"
-      },
-      {
-        "triggerJson": [
-          {
-            "role": 0,
             "class": "OwnBuffNumberExecTrigger",
             "value": 0,
             "value2": 0,
@@ -157779,7 +157763,7 @@
           }
         ],
         "iconFileName": "b_skill_damageAll_pu",
-        "subIconFileName": ""
+        "subIconFileName": "alphaTexture"
       }
     ],
     "effects": [
