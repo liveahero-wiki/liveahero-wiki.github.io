@@ -16,16 +16,6 @@ import { t, slotLabel } from '../lib/uiTranslations'
 import { charaLink, portrait, statusIcon } from '../lib/urls'
 import { SkillDescription } from './SkillDescription'
 
-export function dedupByName(ids: number[], statuses: Record<string, Status>): number[] {
-  const seen = new Set<string>()
-  return ids.filter((id) => {
-    const name = statuses[id]?.name
-    if (!name || seen.has(name)) return false
-    seen.add(name)
-    return true
-  })
-}
-
 interface ResultTableProps {
   rows: Row[]
   statuses: Record<string, Status>
@@ -102,19 +92,6 @@ export function ResultTable({ rows, statuses, onOpenKit, showLabels, categories,
                 <span class="skill-name" title={`skill id: ${r.skillId}`}>
                   {r.skillName}
                 </span>
-                {dedupByName(r.statusIds, statuses).map((id) => {
-                  const s = statuses[id]
-                  return s ? (
-                    <img
-                      key={id}
-                      class="inline-status"
-                      src={statusIcon(s.icon)}
-                      title={s.name}
-                      alt={s.name}
-                      loading="lazy"
-                    />
-                  ) : null
-                })}
               </div>
               <SkillDescription html={r.description} changeSkills={r.changeSkills} statusDescs={r.statusDescs} />
             </div>

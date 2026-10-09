@@ -11,7 +11,6 @@ import { t, slotLabel, elementLabel } from '../lib/uiTranslations'
 import { effectiveSkills } from '../lib/filters'
 import { statusIcon, portrait } from '../lib/urls'
 import { SkillDescription } from './SkillDescription'
-import { dedupByName } from './ResultTable'
 
 // closedby="any" gives Esc + backdrop light-dismiss declaratively, but Safari
 // doesn't support it yet — fall back to a manual backdrop-click handler.
@@ -97,19 +96,6 @@ export function SkillKitDialog({ entity, skillTree, statuses, lang, onClose }: S
                   <span class="slot-badge">{slotLabel(lang, s.slot)}</span>
                   <span class="skill-name">{s.name}</span>
                   {s.hidden && <span class="hidden-badge" title={t(lang, 'hidden_title')}>{t(lang, 'hidden_badge')}</span>}
-                  {dedupByName(s.statusIds, statuses).map((id) => {
-                    const st = statuses[id]
-                    return st ? (
-                      <img
-                        key={id}
-                        class="inline-status"
-                        src={statusIcon(st.icon)}
-                        title={st.name}
-                        alt={st.name}
-                        loading="lazy"
-                      />
-                    ) : null
-                  })}
                 </div>
                 <SkillDescription html={s.description} changeSkills={s.changeSkills} statusDescs={s.statusDescs} />
               </section>
