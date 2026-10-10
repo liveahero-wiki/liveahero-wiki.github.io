@@ -7,6 +7,13 @@
       "runtimeArgs": ["dev", "--port", "5190", "--strictPort"],
       "port": 5190,
       "autoPort": false
+    },
+    {
+      "name": "eleventy",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["eleventy:dev", "--port=8080"],
+      "port": 8080,
+      "autoPort": false
     }
   ]
 }
