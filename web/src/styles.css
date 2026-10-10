@@ -206,6 +206,7 @@
   cursor: pointer;
   list-style: none;
   user-select: none;
+  white-space: nowrap;
 }
 
 .filter-details > summary::-webkit-details-marker {
@@ -222,6 +223,14 @@
 
 .filter-details[open] > summary::before {
   transform: rotate(90deg);
+}
+
+.filter-details > summary::after {
+  content: '';
+  height: 1px;
+  background: var(--border);
+  flex: 1 1 0;
+  min-width: 1rem;
 }
 
 .filter-details > summary:hover {
