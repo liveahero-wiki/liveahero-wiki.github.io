@@ -90,7 +90,6 @@ export interface Query {
   characterName: string
   skillTree: boolean
   includeMob: boolean
-  _vcKey: number
 }
 
 export interface Row {

@@ -1,5 +1,6 @@
-// The query builder: type / category / status-type button rows, the status
-// autocomplete, a view-cost range, and the skill-tree / mob toggles.
+// The query builder: quick-shortcut presets, type / category / status-type
+// button rows, the status autocomplete, a view-cost range, and the skill-tree /
+// mob toggles.
 
 import type { JSX } from 'preact'
 import type { Query, SkillIndex } from '../types'
@@ -8,6 +9,7 @@ import type { QueryAction } from '../app'
 import { t, elementLabel } from '../lib/uiTranslations'
 import { ButtonRow } from './ButtonRow'
 import { StatusAutocomplete } from './StatusAutocomplete'
+import { SHORTCUTS } from '../lib/shortcuts'
 
 interface FilterPanelProps {
   index: SkillIndex
@@ -48,6 +50,22 @@ export function FilterPanel({ index, query, dispatch, resultCount, showLabels, o
 
   return (
     <div class="filter-panel">
+      <div class="row">
+        <span class="row-label">{t(lang, 'quick_shortcuts')}</span>
+        <div class="row-buttons" focusgroup="toolbar">
+          {SHORTCUTS.map((s) => (
+            <button
+              key={s.key}
+              type="button"
+              class="chip"
+              onClick={() => dispatch({ type: 'applyShortcut', shortcut: s })}
+            >
+              {t(lang, s.labelKey)}
+            </button>
+          ))}
+        </div>
+      </div>
+
       <div class="row">
         <span class="row-label">{t(lang, 'character')}</span>
         <div class="row-buttons" focusgroup="toolbar">
@@ -118,20 +136,20 @@ export function FilterPanel({ index, query, dispatch, resultCount, showLabels, o
         <span class="row-label">{t(lang, 'view_cost')}</span>
         <div class="row-buttons" focusgroup="toolbar">
           <input
-            key={`vcMin-${query._vcKey}`}
             type="number"
             class="vp-input"
             placeholder={t(lang, 'view_min')}
+            value={query.viewMin}
             onInput={(e: JSX.TargetedEvent<HTMLInputElement>) =>
               dispatch({ type: 'setView', field: 'viewMin', value: e.currentTarget.value })
             }
           />
           <span>–</span>
           <input
-            key={`vcMax-${query._vcKey}`}
             type="number"
             class="vp-input"
             placeholder={t(lang, 'view_max')}
+            value={query.viewMax}
             onInput={(e: JSX.TargetedEvent<HTMLInputElement>) =>
               dispatch({ type: 'setView', field: 'viewMax', value: e.currentTarget.value })
             }

@@ -5,6 +5,7 @@ import { filterRows } from './lib/filters'
 import { getInitialLang, LANGS, storeLang, type Lang } from './lib/lang'
 import { localizeCategories } from './lib/categoryTranslations'
 import { t } from './lib/uiTranslations'
+import type { Shortcut } from './lib/shortcuts'
 import { FilterPanel } from './components/FilterPanel'
 import { ResultTable } from './components/ResultTable'
 import { SkillKitDialog } from './components/SkillKitDialog'
@@ -22,6 +23,7 @@ export type QueryAction =
   | { type: 'setView'; field: ViewField; value: string }
   | { type: 'setCharacterName'; value: string }
   | { type: 'toggleFlag'; field: FlagField }
+  | { type: 'applyShortcut'; shortcut: Shortcut }
   | { type: 'reset' }
 
 function initialQuery(): Query {
@@ -37,7 +39,6 @@ function initialQuery(): Query {
     characterName: '',
     skillTree: true,
     includeMob: true,
-    _vcKey: 0,
   }
 }
 
@@ -68,8 +69,20 @@ function reducer(state: Query, action: QueryAction): Query {
       return { ...state, characterName: action.value }
     case 'toggleFlag':
       return { ...state, [action.field]: !state[action.field] }
+    case 'applyShortcut': {
+      const s = action.shortcut
+      return {
+        ...initialQuery(),
+        skillTree: state.skillTree,
+        includeMob: state.includeMob,
+        types: new Set(s.types),
+        labels: new Set(s.labels),
+        viewMin: s.viewMin ?? '',
+        viewMax: s.viewMax ?? '',
+      }
+    }
     case 'reset':
-      return { ...initialQuery(), _vcKey: state._vcKey + 1 }
+      return initialQuery()
     default:
       return state
   }

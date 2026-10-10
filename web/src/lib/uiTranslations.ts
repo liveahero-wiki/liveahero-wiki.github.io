@@ -17,6 +17,7 @@ export type UIKey =
   | 'kit_button' | 'kit_title' | 'mob_badge'
   | 'close' | 'hidden_badge' | 'hidden_title'
   | 'sub_filters_suffix' | 'advanced_filters'
+  | 'quick_shortcuts' | 'shortcut_sidekick_auto_passive'
   | 'loading' | 'load_error' | 'lang_title' | 'reload_title'
 
 type Translations = Record<UIKey, { en: string } & Partial<Record<Lang, string>>>
@@ -88,6 +89,19 @@ const TRANSLATIONS: Translations = {
   sub_filters_suffix: { en: ': sub-filters', 'zh-Hans': '：子筛选', 'zh-Hant': '：子篩選', ja: '：サブフィルター' },
 
   advanced_filters: { en: 'Advanced filters', 'zh-Hans': '进阶筛选', 'zh-Hant': '進階篩選', ja: '詳細フィルター' },
+
+  quick_shortcuts: {
+    en: 'Quick shortcuts',
+    'zh-Hans': '快捷筛选',
+    'zh-Hant': '快捷篩選',
+    ja: 'クイック検索',
+  },
+  shortcut_sidekick_auto_passive: {
+    en: 'Sidekick passive - Auto action',
+    'zh-Hans': '助手被动·自动行动',
+    'zh-Hant': '助手被動·自動行動',
+    ja: 'サイドキックのパッシブ（オート行動）',
+  },
 
   loading: { en: 'Loading skill index…', 'zh-Hans': '正在加载技能索引…', 'zh-Hant': '正在載入技能索引…', ja: 'スキルインデックスを読み込み中…' },
   load_error: { en: 'Failed to load index: ', 'zh-Hans': '加载索引失败：', 'zh-Hant': '載入索引失敗：', ja: 'インデックスの読み込みに失敗：' },
