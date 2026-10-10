@@ -117,6 +117,13 @@ export function ResultTable({ rows, statuses, onOpenKit, showLabels, categories,
         size: 100,
         cell: ({ row }) => row.original.useView.toLocaleString(),
       },
+      {
+        id: 'spd',
+        header: 'SPD',
+        accessorKey: 'spd',
+        size: 80,
+        cell: ({ row }) => row.original.spd?.toLocaleString() ?? '',
+      },
     ],
     [lang, statuses, onOpenKit, showLabels, labelMap],
   )

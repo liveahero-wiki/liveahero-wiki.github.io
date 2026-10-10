@@ -57,6 +57,14 @@ export interface Skill {
   hidden?: boolean
 }
 
+// Max-level stats of the entity's representative card.
+export interface EntityStats {
+  hp: number
+  atk: number
+  spd: number
+  view: number
+}
+
 export interface Entity {
   kind: 'hero' | 'sidekick'
   stockId: number
@@ -66,6 +74,7 @@ export interface Entity {
   isMob?: boolean
   role?: string
   element?: number
+  stats?: EntityStats
   skills: Skill[]
   skillsMaxed?: Skill[]
 }
@@ -102,6 +111,7 @@ export interface Row {
   skillName: string
   description: string
   useView: number
+  spd?: number
   labels: string[]
   matchLabels: string[]
   statusIds: number[]

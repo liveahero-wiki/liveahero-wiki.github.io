@@ -89,6 +89,14 @@ export function SkillKitDialog({ entity, skillTree, statuses, lang, onClose }: S
               ×
             </button>
           </header>
+          {entity.stats && (
+            <dl class="kit-stats">
+              <div><dt>HP</dt><dd>{entity.stats.hp.toLocaleString()}</dd></div>
+              <div><dt>ATK</dt><dd>{entity.stats.atk.toLocaleString()}</dd></div>
+              <div><dt>SPD</dt><dd>{entity.stats.spd.toLocaleString()}</dd></div>
+              <div><dt>View</dt><dd>{entity.stats.view.toLocaleString()}</dd></div>
+            </dl>
+          )}
           <div class="kit-skills">
             {skills.map((s) => (
               <section key={`${s.slot}-${s.skillId}`} class={'kit-skill' + (s.hidden ? ' is-hidden' : '')}>
@@ -96,6 +104,7 @@ export function SkillKitDialog({ entity, skillTree, statuses, lang, onClose }: S
                   <span class="slot-badge">{slotLabel(lang, s.slot)}</span>
                   <span class="skill-name">{s.name}</span>
                   {s.hidden && <span class="hidden-badge" title={t(lang, 'hidden_title')}>{t(lang, 'hidden_badge')}</span>}
+                  <span class="skill-view-cost">View {s.useView.toLocaleString()}</span>
                 </div>
                 <SkillDescription html={s.description} changeSkills={s.changeSkills} statusDescs={s.statusDescs} />
               </section>

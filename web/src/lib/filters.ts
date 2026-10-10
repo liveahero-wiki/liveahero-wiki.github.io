@@ -152,6 +152,7 @@ export function filterRows(
         skillName: s.name,
         description: s.description,
         useView: s.useView,
+        spd: entity.stats?.spd,
         labels: s.labels,
         matchLabels: s.matchLabels,
         statusIds: s.statusIds,

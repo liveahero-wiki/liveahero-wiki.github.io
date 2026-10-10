@@ -41,7 +41,7 @@ CHARAS = "_charas"
 # emitted JSON without a masterdata version change. Appended to the cache key so
 # clients (search/src/data/loadIndex.js) refetch the index instead of reusing a
 # stale cache.
-INDEX_SCHEMA_REV = "r18"
+INDEX_SCHEMA_REV = "r19"
 
 
 # --- Undocumented game-data enums / magic numbers ---------------------------
@@ -1251,6 +1251,16 @@ def make_entity(rep, stock_entries, kind, suffix, skills, chara_pages, has_tree=
     }
     if element is not None:
         entity["element"] = element
+    growths = rep.get("growths") or []
+    if growths:
+        # max-level row of the rep card (same card the kit is built from)
+        g = growths[-1]
+        entity["stats"] = {
+            "hp": g.get("hp"),
+            "atk": g.get("attack"),
+            "spd": g.get("agility"),
+            "view": g.get("addView"),
+        }
     return entity
 
 
