@@ -93,18 +93,6 @@ export function FilterPanel({ index, query, dispatch, resultCount, showLabels, o
         onClear={() => dispatch({ type: 'clear', field: 'roles' })}
       />
 
-      {index.categories.map((cat) => (
-        <ButtonRow
-          key={cat.key}
-          label={cat.label}
-          options={cat.labels}
-          selected={query.labels}
-          relation="and"
-          lang={lang}
-          onToggle={(v) => dispatch({ type: 'toggle', field: 'labels', value: v })}
-        />
-      ))}
-
       <ButtonRow
         label={t(lang, 'status_type')}
         options={STATUS_TYPE_OPTIONS}
@@ -150,6 +138,24 @@ export function FilterPanel({ index, query, dispatch, resultCount, showLabels, o
           />
         </div>
       </div>
+
+      <details class="filter-details">
+        <summary>
+          {t(lang, 'advanced_filters')}
+          {query.labels.size > 0 && <span class="chip-count">{query.labels.size}</span>}
+        </summary>
+        {index.categories.map((cat) => (
+          <ButtonRow
+            key={cat.key}
+            label={cat.label}
+            options={cat.labels}
+            selected={query.labels}
+            relation="and"
+            lang={lang}
+            onToggle={(v) => dispatch({ type: 'toggle', field: 'labels', value: v })}
+          />
+        ))}
+      </details>
 
       <div class="row">
         <label class="check">

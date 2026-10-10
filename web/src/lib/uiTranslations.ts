@@ -16,7 +16,7 @@ export type UIKey =
   | 'slot_sk_active' | 'slot_sk_passive' | 'slot_sk_append'
   | 'kit_button' | 'kit_title' | 'mob_badge'
   | 'close' | 'hidden_badge' | 'hidden_title'
-  | 'sub_filters_suffix'
+  | 'sub_filters_suffix' | 'advanced_filters'
   | 'loading' | 'load_error' | 'lang_title' | 'reload_title'
 
 type Translations = Record<UIKey, { en: string } & Partial<Record<Lang, string>>>
@@ -86,6 +86,8 @@ const TRANSLATIONS: Translations = {
   hidden_title: { en: 'Not shown in-game', 'zh-Hans': '游戏内不显示', 'zh-Hant': '遊戲內不顯示', ja: 'ゲーム内に表示されない' },
 
   sub_filters_suffix: { en: ': sub-filters', 'zh-Hans': '：子筛选', 'zh-Hant': '：子篩選', ja: '：サブフィルター' },
+
+  advanced_filters: { en: 'Advanced filters', 'zh-Hans': '进阶筛选', 'zh-Hant': '進階篩選', ja: '詳細フィルター' },
 
   loading: { en: 'Loading skill index…', 'zh-Hans': '正在加载技能索引…', 'zh-Hant': '正在載入技能索引…', ja: 'スキルインデックスを読み込み中…' },
   load_error: { en: 'Failed to load index: ', 'zh-Hans': '加载索引失败：', 'zh-Hant': '載入索引失敗：', ja: 'インデックスの読み込みに失敗：' },

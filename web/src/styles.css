@@ -188,6 +188,52 @@
   display: flex;
 }
 
+/* Collapsible group of extra filter rows (same label weight/size as .row-label). */
+.filter-details {
+  margin: 0.25rem 0;
+  padding: 0.25rem 0;
+  border: none;
+}
+
+.filter-details > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0;
+  font-weight: 600;
+  font-size: 14px;
+  background: none;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+.filter-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.filter-details > summary::before {
+  content: '⏵';
+  display: inline-block;
+  width: 1em;
+  color: var(--accent);
+  transition: transform 0.15s ease-out;
+}
+
+.filter-details[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.filter-details > summary:hover {
+  color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .filter-details > summary::before {
+    transition: none;
+  }
+}
+
 .vp-input {
   width: 80px;
   padding: 2px 6px;
