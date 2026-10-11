@@ -1,6 +1,13 @@
 ---
 title: Challenge Simulator
 banner: true
+team_formations:
+- quest: 616001
+  label: Simulator - Lantern-type Kaibutsu (SSS)
+- quest: 617001
+  label: Simulator - Slime-type Kaibutsu (SSS)
+- quest: 618001
+  label: Simulator - Labor's Site (SSS)
 ---
 
 * this will be unordered
@@ -246,3 +253,14 @@ When under 50% HP, the Plesiosaur Kaibutsu(?) will activate several additional e
 #### Plesiosaur Kaibutsu(?)'s skills
 
 {% include skill-table-manual.html skillIds="4121111,4121108,4121109" equipmentSkills="6121102,6121115,6121111,6121114" %}
+
+## Community Team Formations
+
+Share your team for the current simulator quest and browse teams submitted by other players.
+
+{% assign cms_groups = page | cms_groups %}
+{% for cms_group in cms_groups %}
+{% include cms-submissions.html group=cms_group.groupId label=cms_group.label anchor=cms_group.anchor %}
+{% endfor %}
+
+{% include cms-embed-script.html %}
