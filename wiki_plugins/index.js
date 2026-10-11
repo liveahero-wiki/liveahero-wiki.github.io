@@ -52,6 +52,18 @@ export default function wikiPlugins(eleventyConfig, { site, markdown }) {
   });
   eleventyConfig.addWatchTarget("_data/");
 
+  // wiki-cms (docs/CMS.md) runs on another origin and imports /assets/cms/lah-team-formation.js.
+  // A middleware only adds the header and lets the static handler answer; an `onRequest` callback would
+  // end the response itself (with an empty body).
+  eleventyConfig.setServerOptions({
+    middleware: [
+      (req, res, next) => {
+        res.setHeader("Access-Control-Allow-Origin", "*");
+        next();
+      },
+    ],
+  });
+
   // `site.<collection>` holds Jekyll-shaped documents; the Eleventy collection holds the items.
   for (const [name, { glob, order }] of Object.entries(COLLECTIONS)) {
     eleventyConfig.addCollection(name, (collectionApi) => {
