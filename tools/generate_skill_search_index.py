@@ -1525,6 +1525,10 @@ def build_roster(entities, m, version):
             out["en"] = e["name"]  # the wiki's own title
         return {lang: out[lang] for lang in ("en", "ja", "zh-Hans", "zh-Hant")}
 
+    def page(e):
+        # chara page permalink; "" when the stock has no released page
+        return "" if e["page"] == "/charas/" else e["page"]
+
     heroes, sidekicks = [], []
     for e in sorted(entities, key=lambda e: e["stockId"]):
         if e["isMob"]:
@@ -1534,6 +1538,7 @@ def build_roster(entities, m, version):
                 "stockId": e["stockId"],
                 "characterId": e["characterId"],
                 "name": names(e, "CARD_NAME_", card_ja.get(e["stockId"], "")),
+                "page": page(e),
                 "resourceName": e["resourceName"],
                 "rarity": e["rarity"],
                 "element": e.get("element"),
@@ -1545,6 +1550,7 @@ def build_roster(entities, m, version):
                 "stockId": e["stockId"],
                 "characterId": e["characterId"],
                 "name": names(e, "SIDEKICK_CARD_NAME_", sidekick_ja.get(e["stockId"], "")),
+                "page": page(e),
                 "resourceName": e["resourceName"],
                 "rarity": e["rarity"],
             })

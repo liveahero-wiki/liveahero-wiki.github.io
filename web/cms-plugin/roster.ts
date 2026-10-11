@@ -11,6 +11,11 @@ const SPRITE = `${SITE}/cdn/Sprite`
 export const heroIconUrl = (resourceName: string) => `${SPRITE}/icon_${resourceName}_h01.png`
 export const sidekickIconUrl = (resourceName: string) => `${SPRITE}/icon_${resourceName}_s01.png`
 
+/** Absolute chara page URL for a roster entry (anchored to its hero/sidekick card), or '' without a page. */
+export function charaUrl(kind: 'hero' | 'sidekick', e: RosterHero | RosterSidekick): string {
+  return e.page ? `${SITE}${e.page}#${kind === 'hero' ? 'h' : 's'}${e.stockId}` : ''
+}
+
 export interface Roster {
   version: string
   heroes: RosterHero[]

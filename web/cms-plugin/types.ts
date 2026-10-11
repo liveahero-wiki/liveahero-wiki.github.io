@@ -35,6 +35,8 @@ export interface RosterHero {
   stockId: number
   characterId: number
   name: LocalizedName
+  /** Wiki chara page path ("/charas/akashi/"); '' when the card has no released page. */
+  page?: string
   resourceName: string
   rarity: number
   element: number
@@ -46,6 +48,7 @@ export interface RosterSidekick {
   stockId: number
   characterId: number
   name: LocalizedName
+  page?: string
   resourceName: string
   rarity: number
 }

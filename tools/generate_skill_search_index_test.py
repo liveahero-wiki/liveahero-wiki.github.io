@@ -452,9 +452,11 @@ class TestRoster(unittest.TestCase):
         # no chara page and no translations: everything falls back to Japanese
         self.assertEqual(set(roster["heroes"][1]["name"].values()), {"日本語"})
         self.assertEqual(set(roster["heroes"][0]), {
-            "stockId", "characterId", "name", "resourceName", "rarity", "element", "role", "hasSkillTree"})
+            "stockId", "characterId", "name", "page", "resourceName", "rarity", "element", "role", "hasSkillTree"})
         self.assertEqual(set(roster["sidekicks"][0]), {
-            "stockId", "characterId", "name", "resourceName", "rarity"})
+            "stockId", "characterId", "name", "page", "resourceName", "rarity"})
+        self.assertEqual(roster["heroes"][0]["page"], "/charas/akashi/")
+        self.assertEqual(roster["heroes"][1]["page"], "")  # no released chara page
 
 
 if __name__ == "__main__":

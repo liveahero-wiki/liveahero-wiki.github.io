@@ -3,7 +3,7 @@
 import type { ComponentChildren } from 'preact'
 import { useEffect, useRef, useState } from 'preact/hooks'
 import type { Lang } from './plugin-api.ts'
-import { heroIconUrl, loadRoster, localizedName, sidekickIconUrl, type Roster } from './roster.ts'
+import { charaUrl, heroIconUrl, loadRoster, localizedName, sidekickIconUrl, type Roster } from './roster.ts'
 import type { T } from './i18n/t.ts'
 
 /** undefined = loading, null = failed to load, otherwise the roster. */
@@ -32,6 +32,20 @@ export function cardName(roster: Roster | null | undefined, kind: CardKind, stoc
 /** Display text for a card: its localized name, else "#stockId". */
 export function cardLabel(roster: Roster | null | undefined, kind: CardKind, stockId: number, lang: Lang): string {
   return cardName(roster, kind, stockId, lang) || `#${stockId}`
+}
+
+/** A card's name linked to its wiki chara page; plain text when the roster has no page for it. */
+export function CardName({ kind, stockId, roster, lang, class: cls }: { kind: CardKind; stockId: number; roster: Roster | null | undefined; lang: Lang; class: string }) {
+  const entry = kind === 'hero' ? roster?.hero(stockId) : roster?.sidekick(stockId)
+  const href = entry ? charaUrl(kind, entry) : ''
+  const label = cardLabel(roster, kind, stockId, lang)
+  return href ? (
+    <a class={cls} href={href} target="_blank" rel="noopener">
+      {label}
+    </a>
+  ) : (
+    <span class={cls}>{label}</span>
+  )
 }
 
 interface CardIconProps {
