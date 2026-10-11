@@ -2,7 +2,7 @@
 
 import type { PluginContext } from './plugin-api.ts'
 import type { TeamSlot } from './types.ts'
-import { CardIcon, cardLabel, useRoster } from './common.tsx'
+import { CardIcon, CardName, useRoster } from './common.tsx'
 import { makeT, type T } from './i18n/t.ts'
 import { parseFocus } from './validate.ts'
 import { isFocusCard, toViewSlots } from './view.ts'
@@ -50,7 +50,7 @@ function SlotCard({ slot, index, support, t, ctx, roster, focus }: CardProps) {
   const sidekickRow = (id: number) => (
     <li class="cms-lah-sk" key={id}>
       <CardIcon kind="sidekick" stockId={id} roster={roster} lang={lang} size="md" focus={isFocusCard(focus, 'sidekick', id)} />
-      <span class="cms-lah-sk-name">{cardLabel(roster, 'sidekick', id, lang)}</span>
+      <CardName kind="sidekick" stockId={id} roster={roster} lang={lang} class="cms-lah-sk-name" />
     </li>
   )
 
@@ -66,7 +66,11 @@ function SlotCard({ slot, index, support, t, ctx, roster, focus }: CardProps) {
       </div>
       <div class="cms-lah-hero">
         <CardIcon kind="hero" stockId={slot.stockId} roster={roster} lang={lang} size="lg" focus={isFocusCard(focus, 'hero', slot.stockId)} />
-        <span class="cms-lah-hero-name">{slot.stockId ? cardLabel(roster, 'hero', slot.stockId, lang) : t('none')}</span>
+        {slot.stockId ? (
+          <CardName kind="hero" stockId={slot.stockId} roster={roster} lang={lang} class="cms-lah-hero-name" />
+        ) : (
+          <span class="cms-lah-hero-name">{t('none')}</span>
+        )}
       </div>
       <dl class="cms-lah-stats">
         {stat(t('lv'), String(slot.lv))}

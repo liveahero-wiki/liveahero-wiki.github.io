@@ -399,6 +399,17 @@ html[data-theme='dark'] .cms-lah-support .cms-lah-badge {
   font-weight: 600;
   overflow-wrap: anywhere;
 }
+a.cms-lah-hero-name,
+a.cms-lah-sk-name {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+  text-underline-offset: 0.15em;
+}
+a.cms-lah-hero-name:hover,
+a.cms-lah-sk-name:hover {
+  text-decoration-color: currentColor;
+}
 .cms-lah-stats {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
