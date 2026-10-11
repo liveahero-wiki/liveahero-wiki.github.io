@@ -22,6 +22,7 @@ export const ERROR_CODES = [
   'bool_invalid',
   'stock_id_invalid',
   'active_same_as_hero',
+  'sidekick_same_character',
   'passives_too_many',
   'passives_duplicate',
   'support_not_allowed',
@@ -107,6 +108,14 @@ function rosterIds(roster: unknown, key: 'heroes' | 'sidekicks'): Set<number> | 
   const ids = new Set<number>()
   for (const e of roster[key] as unknown[]) if (isObj(e) && isInt(e.stockId)) ids.add(e.stockId)
   return ids.size ? ids : null
+}
+
+/** stockId -> characterId for one roster list; entries without an integer characterId are skipped. */
+function rosterCharacters(roster: unknown, key: 'heroes' | 'sidekicks'): Map<number, number> | null {
+  if (!isObj(roster) || !Array.isArray(roster[key])) return null
+  const map = new Map<number, number>()
+  for (const e of roster[key] as unknown[]) if (isObj(e) && isInt(e.stockId) && isInt(e.characterId)) map.set(e.stockId, e.characterId)
+  return map.size ? map : null
 }
 
 export function validateTeamPayload(input: unknown, group: GroupLike, ctx: ValidateContext = {}): ValidateResult {
@@ -214,6 +223,26 @@ export function validateTeamPayload(input: unknown, group: GroupLike, ctx: Valid
       })
     }
   })
+
+  // A hero cannot equip a sidekick of its own character (active or passive). Needs the roster's
+  // stockId -> characterId mapping; the active slot's plain same-card case is caught above without it.
+  const heroChars = rosterCharacters(ctx.roster, 'heroes')
+  const sidekickChars = rosterCharacters(ctx.roster, 'sidekicks')
+  if (heroChars && sidekickChars) {
+    slots.forEach((s, i) => {
+      const heroChar = heroChars.get(s.stockId)
+      if (heroChar === undefined) return
+      const sameChar = (id: number) => sidekickChars.get(id) === heroChar
+      if (s.active !== null && s.active !== s.stockId && sameChar(s.active)) {
+        errors.push(err(`payload.heroes.${i}.active`, 'sidekick_same_character', 'A hero cannot equip a sidekick of its own character.', { stockId: s.active }))
+      }
+      s.passives.forEach((id, j) => {
+        if (sameChar(id)) {
+          errors.push(err(`payload.heroes.${i}.passives.${j}`, 'sidekick_same_character', 'A hero cannot equip a sidekick of its own character.', { stockId: id }))
+        }
+      })
+    })
+  }
 
   if (errors.length) return { ok: false, errors }
   return { ok: true, value: { v: 1, supportIndex, heroes: slots } }

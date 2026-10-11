@@ -68,6 +68,7 @@ export const zhHant: Bundle = {
   error_bool_invalid: '必須為開或關。',
   error_stock_id_invalid: '請選擇有效的卡片。',
   error_active_same_as_hero: '英雄不能把自己的助手卡作為主動助手。',
+  error_sidekick_same_character: '英雄不能裝備與自己同一角色的助手（ID {stockId}）。',
   error_passives_too_many: '被動助手最多{max}個。',
   error_passives_duplicate: '同一位英雄不能重複使用同一個被動助手。',
   error_support_not_allowed: '該隊伍不允許使用借用的支援。',

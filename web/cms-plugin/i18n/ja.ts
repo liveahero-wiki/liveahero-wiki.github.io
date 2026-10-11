@@ -70,6 +70,7 @@ export const ja: Bundle = {
   error_bool_invalid: 'オンまたはオフにしてください。',
   error_stock_id_invalid: '有効なカードを選んでください。',
   error_active_same_as_hero: 'ヒーロー自身のサイドキックカードをアクティブサイドキックにはできません。',
+  error_sidekick_same_character: 'ヒーローは自分と同じキャラクターのサイドキックを装備できません（ID {stockId}）。',
   error_passives_too_many: 'パッシブサイドキックは最大{max}体です。',
   error_passives_duplicate: '同じヒーローに同じパッシブサイドキックは2回設定できません。',
   error_support_not_allowed: 'このチームでは借りているサポートは使えません。',

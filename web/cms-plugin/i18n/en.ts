@@ -71,6 +71,7 @@ export const en = {
   error_bool_invalid: 'Must be on or off.',
   error_stock_id_invalid: 'Choose a valid card.',
   error_active_same_as_hero: 'A hero cannot use its own sidekick card as the active sidekick.',
+  error_sidekick_same_character: 'A hero cannot equip a sidekick of its own character (ID {stockId}).',
   error_passives_too_many: 'At most {max} passive sidekicks.',
   error_passives_duplicate: 'The same passive sidekick cannot be used twice by one hero.',
   error_support_not_allowed: 'This team does not allow a borrowed support.',

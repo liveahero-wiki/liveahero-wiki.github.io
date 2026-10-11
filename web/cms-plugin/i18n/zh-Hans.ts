@@ -68,6 +68,7 @@ export const zhHans: Bundle = {
   error_bool_invalid: '必须为开或关。',
   error_stock_id_invalid: '请选择有效的卡片。',
   error_active_same_as_hero: '英雄不能把自己的助手卡作为主动助手。',
+  error_sidekick_same_character: '英雄不能装备与自己同一角色的助手（ID {stockId}）。',
   error_passives_too_many: '被动助手最多{max}个。',
   error_passives_duplicate: '同一位英雄不能重复使用同一个被动助手。',
   error_support_not_allowed: '该队伍不允许使用借用的支援。',

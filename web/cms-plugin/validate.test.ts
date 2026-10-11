@@ -150,6 +150,34 @@ describe('focus rule', () => {
   })
 })
 
+describe('same-character sidekick', () => {
+  const roster = {
+    heroes: [{ stockId: 10, characterId: 1 }, { stockId: 11, characterId: 1 }, { stockId: 20, characterId: 2 }],
+    sidekicks: [{ stockId: 30, characterId: 1 }, { stockId: 31, characterId: 2 }, { stockId: 32, characterId: 3 }],
+  }
+  const g = group({ support: false })
+  const run = (s: Partial<TeamSlot>) => validateTeamPayload({ v: 1, heroes: [slot(10, s)] }, g, { roster })
+
+  it('rejects an active sidekick of the hero’s own character, at the active path', () => {
+    const r = run({ active: 30 })
+    assert.ok(!r.ok)
+    if (!r.ok) assert.deepEqual(r.errors.map((e) => [e.code, e.path]), [['sidekick_same_character', 'payload.heroes.0.active']])
+  })
+  it('rejects a passive sidekick of the hero’s own character, at that passive’s path', () => {
+    const r = run({ passives: [32, 30] })
+    assert.ok(!r.ok)
+    if (!r.ok) assert.deepEqual(r.errors.map((e) => [e.code, e.path]), [['sidekick_same_character', 'payload.heroes.0.passives.1']])
+  })
+  it('allows sidekicks of other characters, and skips the check without a roster', () => {
+    assert.equal(run({ active: 31, passives: [32] }).ok, true)
+    assert.equal(validateTeamPayload({ v: 1, heroes: [slot(10, { active: 30 })] }, g).ok, true)
+  })
+  it('does not double-report the plain same-card active', () => {
+    const r = validateTeamPayload({ v: 1, heroes: [slot(10, { active: 10 })] }, g, { roster: { heroes: roster.heroes, sidekicks: [{ stockId: 10, characterId: 1 }] } })
+    assert.deepEqual(codes(r), ['active_same_as_hero'])
+  })
+})
+
 describe('roster soft check', () => {
   const roster = { heroes: [{ stockId: 1 }, { stockId: 2 }], sidekicks: [{ stockId: 1 }, { stockId: 9 }] }
   const g = group({ support: false })
