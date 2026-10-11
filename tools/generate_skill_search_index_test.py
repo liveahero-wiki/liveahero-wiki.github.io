@@ -418,5 +418,44 @@ class TestClassifyValueSign(unittest.TestCase):
         self.assertEqual(labels, {"vp.costup"})
 
 
+class TestRoster(unittest.TestCase):
+    """api/team-roster.json: mobs excluded, sorted by stockId, every language
+    present, Japanese as the fallback for a missing translation."""
+
+    def test_roster_shape_and_fallbacks(self):
+        def entity(kind, stock_id, name, page, is_mob=False, res="akashi"):
+            return {"stockId": stock_id, "kind": kind, "name": name, "page": page,
+                    "resourceName": res, "rarity": 5, "isMob": is_mob,
+                    "characterId": 1, "hasSkillTree": True, "role": "attack", "element": 1}
+        entities = [
+            entity("sidekick", 10011, "Akashi", "/charas/akashi/"),
+            entity("hero", 20021, "ja only", "/charas/", res="other"),
+            entity("hero", 10011, "Akashi", "/charas/akashi/"),
+            entity("hero", 30031, "Mob", "/charas/", is_mob=True),
+        ]
+        m = {"CardMaster": {"1": {"stockId": 10011, "cardName": "アカシ", "rarity": 6},
+                            "2": {"stockId": 20021, "cardName": "日本語", "rarity": 5},
+                            "3": {"stockId": 30031, "cardName": "モブ", "rarity": 1}},
+             "SidekickMaster": {"1": {"stockId": 10011, "cardName": "アカシ", "rarity": 4}}}
+        trans = {"en": {}, "ja": {}, "zh-Hans": {"CARD_NAME_AKASHI": "赤司"}, "zh-Hant": {}}
+        original = gen.load_game_trans
+        gen.load_game_trans = lambda lang: trans[lang]
+        try:
+            roster = gen.build_roster(entities, m, "v1")
+        finally:
+            gen.load_game_trans = original
+        self.assertEqual(roster["version"], "v1")
+        self.assertEqual([h["stockId"] for h in roster["heroes"]], [10011, 20021])
+        self.assertEqual([s["stockId"] for s in roster["sidekicks"]], [10011])
+        self.assertEqual(roster["heroes"][0]["name"],
+                         {"en": "Akashi", "ja": "アカシ", "zh-Hans": "赤司", "zh-Hant": "アカシ"})
+        # no chara page and no translations: everything falls back to Japanese
+        self.assertEqual(set(roster["heroes"][1]["name"].values()), {"日本語"})
+        self.assertEqual(set(roster["heroes"][0]), {
+            "stockId", "characterId", "name", "resourceName", "rarity", "element", "role", "hasSkillTree"})
+        self.assertEqual(set(roster["sidekicks"][0]), {
+            "stockId", "characterId", "name", "resourceName", "rarity"})
+
+
 if __name__ == "__main__":
     unittest.main()

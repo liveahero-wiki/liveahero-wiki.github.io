@@ -24,6 +24,24 @@ function setupSkillLangPicker() {
   document.addEventListener("skilllangchange", e => { picker.value = e.detail.lang });
 }
 
+// The community team formations (docs/CMS.md) show their UI in the language the reader picked for skill
+// names (<html data-skill-lang>: en, zh-Hans, zh-Hant or ja, the four languages of the embed too).
+// Tell every embed on the page: data-cms-lang is what it reads first, and a language change is
+// announced with a cms:lang event on the embed's element.
+function setupCmsLang() {
+  const hosts = document.querySelectorAll(".cms-submissions");
+  if (hosts.length === 0) return;
+  const apply = lang => {
+    if (!lang) return;
+    hosts.forEach(el => {
+      el.setAttribute("data-cms-lang", lang);
+      el.dispatchEvent(new CustomEvent("cms:lang", { detail: lang }));
+    });
+  };
+  apply(document.documentElement.getAttribute("data-skill-lang"));
+  document.addEventListener("skilllangchange", e => apply(e.detail.lang));
+}
+
 function setupExpiry() {
   const today = new Date();
   document.querySelectorAll("[data-expiry]").forEach(d => {
@@ -117,10 +135,22 @@ function setupWikiTab(tabgroup) {
     tabsection.scrollEndTimer = setTimeout(determineActiveTabSection, 100)
   })
 
-  if (location.hash) {
-    const tab = tabgroup.querySelector(location.hash)
-    if (tab !== null) tabsection.scrollLeft = tab.offsetLeft
+  // The panel holding the element the URL fragment names. #h10251 is a panel; #team-hero-10251 (the
+  // community team formations, docs/CMS.md) or any other id inside a panel selects the panel it is in.
+  const revealHash = () => {
+    let id = location.hash.slice(1)
+    try { id = decodeURIComponent(id) } catch (e) { /* keep the raw fragment */ }
+    const target = id && document.getElementById(id)
+    if (!target || !tabsection.contains(target)) return
+    let panel = target
+    while (panel.parentElement !== tabsection) panel = panel.parentElement
+    tabsection.scrollLeft = panel.offsetLeft
+    // the browser scrolled to the target before the panel was in view; do it again now
+    if (target !== panel) target.scrollIntoView()
   }
+
+  if (location.hash) revealHash()
+  window.addEventListener('hashchange', revealHash)
   determineActiveTabSection()
 }
 
@@ -157,7 +187,7 @@ function setupVoiceTableTabs() {
   });
 }
 
-const tasks = [setupWikiTabs, setupMenu, setupSkillLangPicker, setupExpiry, setupSortTable, setupVoiceTableTabs];
+const tasks = [setupWikiTabs, setupMenu, setupSkillLangPicker, setupCmsLang, setupExpiry, setupSortTable, setupVoiceTableTabs];
 for (const t of tasks) {
   setTimeout(t, 0)
 }

@@ -11,6 +11,10 @@ Outputs (plain static JSON, no Jekyll front-matter, so they are copied
 verbatim into _site/api/ and can be fetched at /api/skill-index.<lang>.json):
     api/skill-index.<lang>.json          - the full index for that language
     api/skill-index-version.<lang>.json  - { "version": "<masterdata version>-<INDEX_SCHEMA_REV>" }
+    api/team-roster.json                 - all four languages' hero/sidekick names for the
+                                           community team-formation submissions plugin (see
+                                           build_roster); identical whatever --lang is run, so
+                                           every run rewrites it
 
 Run from the repo root, once per language:
     python tools/generate_skill_search_index.py --lang en
@@ -1481,6 +1485,72 @@ def build_entities(m):
     return entities
 
 
+def _game_card_name(GameTrans, prefix, resource_name):
+    """Localized card name from the client dump (`CARD_NAME_<RESOURCE>` for
+    heroes, `SIDEKICK_CARD_NAME_<RESOURCE>` for sidekicks), or "" when absent."""
+    return (GameTrans.get(f"{prefix}{resource_name.upper()}") or "").strip()
+
+
+def build_roster(entities, m, version):
+    """The small hero/sidekick roster behind `api/team-roster.json` (community
+    team-formation submissions: the plugin's pickers and icons). Unlike the skill
+    index it carries all four languages' names in one file, so it does not
+    depend on --lang. Mobs (rarity-1 stocks) are excluded; sorted by stockId.
+
+    name.en is the wiki's own title (what the chara pages show, variant-aware)
+    when the stock has a released chara page, else the game's English name; the
+    other languages come from the client localization dumps, and any missing
+    translation falls back to the raw Japanese `cardName` (AGENTS.md: Japanese
+    fallback)."""
+    trans = {lang: load_game_trans(lang) for lang in LANG_ZZZ_FILE}
+
+    def ja_names(master):
+        out = {}
+        for entry in master.values():
+            sid = entry.get("stockId")
+            # the richest entry of the stock, like the entity's representative card
+            if sid not in out or entry.get("rarity", 0) >= out[sid].get("rarity", 0):
+                out[sid] = entry
+        return {sid: e.get("cardName", "") for sid, e in out.items()}
+
+    card_ja = ja_names(m["CardMaster"])
+    sidekick_ja = ja_names(m["SidekickMaster"])
+
+    def names(e, prefix, ja):
+        res = e["resourceName"]
+        out = {"ja": ja}
+        for lang in ("en", "zh-Hans", "zh-Hant"):
+            out[lang] = _game_card_name(trans[lang], prefix, res) or ja
+        if e["page"] != "/charas/":
+            out["en"] = e["name"]  # the wiki's own title
+        return {lang: out[lang] for lang in ("en", "ja", "zh-Hans", "zh-Hant")}
+
+    heroes, sidekicks = [], []
+    for e in sorted(entities, key=lambda e: e["stockId"]):
+        if e["isMob"]:
+            continue
+        if e["kind"] == "hero":
+            heroes.append({
+                "stockId": e["stockId"],
+                "characterId": e["characterId"],
+                "name": names(e, "CARD_NAME_", card_ja.get(e["stockId"], "")),
+                "resourceName": e["resourceName"],
+                "rarity": e["rarity"],
+                "element": e.get("element"),
+                "role": e["role"],
+                "hasSkillTree": e["hasSkillTree"],
+            })
+        else:
+            sidekicks.append({
+                "stockId": e["stockId"],
+                "characterId": e["characterId"],
+                "name": names(e, "SIDEKICK_CARD_NAME_", sidekick_ja.get(e["stockId"], "")),
+                "resourceName": e["resourceName"],
+                "rarity": e["rarity"],
+            })
+    return {"version": version, "heroes": heroes, "sidekicks": sidekicks}
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--lang", choices=list(LANG_ZZZ_FILE), default="en",
@@ -1538,6 +1608,9 @@ def main():
         json.dump(index, f, ensure_ascii=False, separators=(",", ":"))
     with open(os.path.join(API, f"skill-index-version.{lang}.json"), "w", encoding="utf-8") as f:
         json.dump({"version": version}, f, ensure_ascii=False)
+    roster = build_roster(entities, m, version)
+    with open(os.path.join(API, "team-roster.json"), "w", encoding="utf-8") as f:
+        json.dump(roster, f, ensure_ascii=False, separators=(",", ":"))
 
     # ----- report -----
     print(f"lang: {lang}")
@@ -1550,6 +1623,7 @@ def main():
           f"sidekick mobs: {sum(1 for e in sidekicks if e['isMob'])}")
     print(f"  heroes with skill tree: {sum(1 for e in heroes if e['hasSkillTree'])}")
     print(f"statuses referenced: {len(statuses)}")
+    print(f"team roster: {len(roster['heroes'])} heroes, {len(roster['sidekicks'])} sidekicks")
     if unmapped:
         print(f"\nUNMAPPED CLASSES ({len(unmapped)}):")
         for cls, n in unmapped.most_common():

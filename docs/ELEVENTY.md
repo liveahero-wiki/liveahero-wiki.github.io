@@ -16,6 +16,7 @@ wiki_plugins/
 ├── liquid/               # LiquidJS engine, Jekyll-semantics filters, Liquid adapters for lib/
 └── markdown/             # markdown-it configured to behave like kramdown
 sitemap.11ty.js           # /sitemap.xml
+cms-groups.11ty.js        # /api/cms-groups.json, the groups of the community team formations (docs/CMS.md)
 redirects.11ty.js         # redirect stubs for `redirect_from`
 scripts/compare-page.mjs  # compare the output with a Jekyll build
 ```
@@ -31,12 +32,12 @@ scripts/compare-page.mjs  # compare the output with a Jekyll build
 
 `ELEVENTY_ENV=production` additionally minifies the HTML (the CI does this). `ELEVENTY_COPY_CDN=1` copies the 2 GB `cdn/` checkout into the output.
 
-Generated inputs have to exist before building, as in CI: `_statuses/`, `_data/translation/`, `_data/processed/*_voice.json`, `_data/processed/SkillText.json` (every skill name and description; without it a `ELEVENTY_STRICT=1` build fails and a normal build warns once and prints empty skill tables), `_data/wiki/SkillUpgradeModel.json` and `api/skill-index*.json` come from the Python tools (see `docs/PYTHON_SCRIPTS.md`). Eleventy ignores `.gitignore`, so these gitignored files are built.
+Generated inputs have to exist before building, as in CI: `_statuses/`, `_data/translation/`, `_data/processed/*_voice.json`, `_data/processed/SkillText.json` (every skill name and description; without it a `ELEVENTY_STRICT=1` build fails and a normal build warns once and prints empty skill tables), `_data/wiki/SkillUpgradeModel.json`, `api/skill-index*.json` and `api/team-roster.json` come from the Python tools (see `docs/PYTHON_SCRIPTS.md`). Eleventy ignores `.gitignore`, so these gitignored files are built.
 
 ## What templates see
 
 - **`site.data`** is `_data/**` loaded once per build (`lib/site-data.js`), not Eleventy's data cascade — deep-merging 45 MB of data into every page would cost minutes. Folders nest, file names are keys. YAML mappings with integer keys (`Item.yml`) are `IntKeyMap`s that, like Ruby hashes, answer a lookup with the number `7` but not with the string `"7"`.
-- **`site.charas`, `site.events`, `site.main_quests`, `site.statuses`, `site.posts`** are arrays of documents with the front matter at the top level (`chara.title`, `event.event_start_time`), sorted as `_config.yml` used to sort them. `site.time` is the build time, `site.url`, `site.date_format`, … are in `wiki_plugins/site.js`.
+- **`site.charas`, `site.events`, `site.main_quests`, `site.statuses`, `site.posts`** are arrays of documents with the front matter at the top level (`chara.title`, `event.event_start_time`), sorted as `_config.yml` used to sort them. `site.time` is the build time, `site.url`, `site.date_format`, … are in `wiki_plugins/site.js`; so is `site.cms_url`, the wiki-cms Worker of the community team formations (`CMS_URL` environment variable, default `https://wiki-cms.rongjie.workers.dev`, `http://localhost:8787` for local development; see `docs/CMS.md`).
 - **`page`** has the front matter at the top level (`page.title`, `page.characterId`) plus `page.url`, `page.path`, `page.date`; Eleventy's own `page.fileSlug` and `page.inputPath` stay available. Dates are in Asia/Tokyo.
 - **Front matter timestamps** are `RubyTime`s: `{{ page.event_end_time }}` prints `2026-01-22 20:00:00 +0900`, which `assets/main.js` parses.
 - Defaults formerly in `_config.yml` (`layout`, `unreleased`, `additional_scripts`, permalinks) are in the `_charas/_charas.11tydata.js`-style directory data files. `_statuses/_statuses.11tydata.js` is the one exception to the `.gitignore` of that folder.

@@ -15,6 +15,9 @@ export function createSite() {
     timezone: "Asia/Tokyo",
     date_format: "%-d %b %Y %H:%M JST",
     excerpt_separator: "<!--more-->",
+    // The wiki-cms Worker behind the community team-formation submissions (docs/CMS.md).
+    // Local development: CMS_URL=http://localhost:8787
+    cms_url: process.env.CMS_URL || "https://wiki-cms.rongjie.workers.dev",
     time: nowInOffset(SITE_OFFSET_MINUTES),
     // filled in by the plugin
     data: {},

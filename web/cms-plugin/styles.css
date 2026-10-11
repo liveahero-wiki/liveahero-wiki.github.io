@@ -1,0 +1,630 @@
+/* LAH team-formation plugin. Injected once by index.ts into <style id="cms-plugin-lah-team-formation">.
+ *
+ * Host theming: --cms-fg --cms-bg --cms-border --cms-accent --cms-muted --cms-chip-bg --cms-support-bg
+ * (and optionally --cms-support-fg). Each has a fallback here, with dark fallbacks under both
+ * html[data-theme="dark"] and prefers-color-scheme (unless data-theme="light"), the same convention
+ * the wiki and the wiki-cms admin portal use. All classes are prefixed cms-lah-. */
+
+.cms-lah {
+  --cms-lah-fg: var(--cms-fg, #1f2328);
+  --cms-lah-bg: var(--cms-bg, #ffffff);
+  --cms-lah-border: var(--cms-border, #c3cad1);
+  --cms-lah-accent: var(--cms-accent, #0a64c8);
+  --cms-lah-muted: var(--cms-muted, #566270);
+  --cms-lah-chip-bg: var(--cms-chip-bg, #eceff2);
+  --cms-lah-support-bg: var(--cms-support-bg, #d9f4f7);
+  --cms-lah-support-fg: var(--cms-support-fg, #0b2f35);
+  --cms-lah-support-muted: #2b565e;
+  --cms-lah-danger: #b42318;
+  color: var(--cms-lah-fg);
+  font: inherit;
+  line-height: 1.4;
+}
+
+html[data-theme='dark'] .cms-lah {
+  --cms-lah-fg: var(--cms-fg, #e6e8ea);
+  --cms-lah-bg: var(--cms-bg, #1c2024);
+  --cms-lah-border: var(--cms-border, #3e464e);
+  --cms-lah-accent: var(--cms-accent, #6db2ff);
+  --cms-lah-muted: var(--cms-muted, #a0abb7);
+  --cms-lah-chip-bg: var(--cms-chip-bg, #2a3037);
+  --cms-lah-support-bg: var(--cms-support-bg, #1d4a52);
+  --cms-lah-support-fg: var(--cms-support-fg, #e6f7f9);
+  --cms-lah-support-muted: #b3d3d8;
+  --cms-lah-danger: #ff9a90;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .cms-lah {
+    --cms-lah-fg: var(--cms-fg, #e6e8ea);
+    --cms-lah-bg: var(--cms-bg, #1c2024);
+    --cms-lah-border: var(--cms-border, #3e464e);
+    --cms-lah-accent: var(--cms-accent, #6db2ff);
+    --cms-lah-muted: var(--cms-muted, #a0abb7);
+    --cms-lah-chip-bg: var(--cms-chip-bg, #2a3037);
+    --cms-lah-support-bg: var(--cms-support-bg, #1d4a52);
+    --cms-lah-support-fg: var(--cms-support-fg, #e6f7f9);
+    --cms-lah-support-muted: #b3d3d8;
+    --cms-lah-danger: #ff9a90;
+    color-scheme: dark;
+  }
+}
+
+.cms-lah,
+.cms-lah *,
+.cms-lah *::before,
+.cms-lah *::after {
+  box-sizing: border-box;
+}
+
+.cms-lah ul,
+.cms-lah ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cms-lah p {
+  margin: 0;
+}
+
+.cms-lah h2,
+.cms-lah h3 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1.3;
+}
+
+.cms-lah-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.cms-lah-muted {
+  color: var(--cms-lah-muted);
+}
+.cms-lah-small {
+  font-size: 0.8rem;
+}
+
+/* ---- the borrowed support slot (summary chip, detail card, editor card) ---- */
+.cms-lah-support {
+  background: var(--cms-lah-support-bg);
+  color: var(--cms-lah-support-fg);
+  --cms-lah-fg: var(--cms-lah-support-fg);
+  --cms-lah-muted: var(--cms-lah-support-muted);
+}
+
+.cms-lah-tag {
+  display: inline-block;
+  padding: 0 7px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.cms-lah-badge {
+  display: inline-block;
+  padding: 0 6px;
+  border-radius: 4px;
+  background: var(--cms-lah-chip-bg);
+  color: var(--cms-lah-fg);
+  font-size: 0.7rem;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.cms-lah-support .cms-lah-badge {
+  background: rgb(255 255 255 / 0.55);
+  color: var(--cms-lah-support-fg);
+}
+html[data-theme='dark'] .cms-lah-support .cms-lah-badge {
+  background: rgb(0 0 0 / 0.3);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .cms-lah-support .cms-lah-badge {
+    background: rgb(0 0 0 / 0.3);
+  }
+}
+
+/* ---- icons ---- */
+.cms-lah-icon {
+  flex: none;
+  display: inline-block;
+  object-fit: contain;
+  border-radius: 6px;
+  background: var(--cms-lah-chip-bg);
+}
+.cms-lah-icon-lg {
+  width: 48px;
+  height: 48px;
+}
+.cms-lah-icon-md {
+  width: 32px;
+  height: 32px;
+}
+.cms-lah-icon-sm {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+.cms-lah-icon-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2px;
+  overflow: hidden;
+  border: 1px solid var(--cms-lah-border);
+  color: var(--cms-lah-muted);
+  font-size: 0.65rem;
+  line-height: 1;
+  text-align: center;
+}
+.cms-lah-icon-sm.cms-lah-icon-text {
+  font-size: 0.5rem;
+}
+.cms-lah-focus {
+  outline: 2px solid var(--cms-lah-accent);
+  outline-offset: 1px;
+}
+
+/* ---- buttons / inputs ---- */
+.cms-lah-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--cms-lah-border);
+  border-radius: 6px;
+  background: var(--cms-lah-chip-bg);
+  color: var(--cms-lah-fg);
+  font: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+.cms-lah-btn-icon {
+  width: 40px;
+  padding: 0;
+}
+.cms-lah-btn:hover:not(:disabled) {
+  border-color: var(--cms-lah-accent);
+}
+.cms-lah-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.cms-lah-btn-add {
+  align-self: flex-start;
+}
+.cms-lah-btn-danger:hover:not(:disabled) {
+  border-color: var(--cms-lah-danger);
+  color: var(--cms-lah-danger);
+}
+
+.cms-lah-input {
+  width: 100%;
+  min-width: 0;
+  min-height: 40px;
+  padding: 6px 10px;
+  border: 1px solid var(--cms-lah-border);
+  border-radius: 6px;
+  background: var(--cms-lah-bg);
+  color: var(--cms-lah-fg);
+  font: inherit;
+  font-size: 1rem;
+}
+.cms-lah-input[aria-invalid='true'] {
+  border-color: var(--cms-lah-danger);
+}
+.cms-lah-input:disabled {
+  opacity: 0.6;
+}
+
+.cms-lah-btn:focus-visible,
+.cms-lah-input:focus-visible,
+.cms-lah-summary:focus-visible,
+.cms-lah-check input:focus-visible,
+.cms-lah-grip:focus-visible {
+  outline: 2px solid var(--cms-lah-accent);
+  outline-offset: 2px;
+}
+
+.cms-lah-label {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.cms-lah-error {
+  margin-top: 2px;
+  color: var(--cms-lah-danger);
+  font-size: 0.85rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cms-lah-btn,
+  .cms-lah-summary {
+    transition: border-color 0.12s, background-color 0.12s;
+  }
+}
+
+/* ---- summary ---- */
+.cms-lah-summary-root {
+  display: block;
+}
+.cms-lah-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 6px;
+  width: 100%;
+  min-height: 40px;
+  padding: 6px;
+  border: 1px solid var(--cms-lah-border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--cms-lah-fg);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.cms-lah-summary:hover {
+  border-color: var(--cms-lah-accent);
+}
+.cms-lah-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  min-width: 56px;
+  max-width: 84px;
+  padding: 4px;
+  border-radius: 6px;
+}
+.cms-lah-pips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2px;
+}
+.cms-lah-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2px;
+}
+
+/* ---- dialog ---- */
+.cms-lah-dialog {
+  width: min(960px, calc(100vw - 24px));
+  max-width: none;
+  max-height: calc(100dvh - 24px);
+  padding: 0;
+  border: 1px solid var(--cms-lah-border);
+  border-radius: 10px;
+  background: var(--cms-lah-bg);
+  color: var(--cms-lah-fg);
+}
+.cms-lah-dialog::backdrop {
+  background: rgb(0 0 0 / 0.55);
+}
+.cms-lah-dialog-body {
+  max-height: calc(100dvh - 26px);
+  padding: 0 14px 14px;
+  overflow: auto;
+}
+.cms-lah-dialog-head {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 0;
+  background: var(--cms-lah-bg);
+}
+.cms-lah-dialog-title {
+  font-size: 1.1rem;
+}
+
+/* ---- detail (read-only) cards ---- */
+.cms-lah-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: 10px;
+}
+.cms-lah-card {
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid var(--cms-lah-border);
+  border-radius: 8px;
+  background: var(--cms-lah-bg);
+}
+.cms-lah-card.cms-lah-support {
+  background: var(--cms-lah-support-bg);
+}
+.cms-lah-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.cms-lah-spacer {
+  flex: 1 1 0;
+}
+.cms-lah-hero {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cms-lah-hero-name {
+  min-width: 0;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.cms-lah-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 12px;
+  margin: 10px 0;
+}
+.cms-lah-stat dt {
+  color: var(--cms-lah-muted);
+  font-size: 0.75rem;
+}
+.cms-lah-stat dd {
+  margin: 0;
+  font-weight: 600;
+}
+.cms-lah-stat-on dd {
+  font-weight: 800;
+}
+.cms-lah-sub {
+  margin: 8px 0 4px;
+  color: var(--cms-lah-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.cms-lah-sk-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.cms-lah-sk {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cms-lah-sk-name {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* ---- editor ---- */
+.cms-lah-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+.cms-lah-hint {
+  padding: 8px 10px;
+  border-left: 3px solid var(--cms-lah-accent);
+  border-radius: 4px;
+  background: var(--cms-lah-chip-bg);
+  font-size: 0.9rem;
+}
+.cms-lah-hint-warn {
+  border-left-color: var(--cms-lah-danger);
+}
+.cms-lah-team-errors:empty {
+  display: none;
+}
+.cms-lah-slots-editor {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cms-lah-slot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cms-lah-slot .cms-lah-card-head {
+  margin-bottom: 0;
+}
+.cms-lah-grip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  color: var(--cms-lah-muted);
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.cms-lah-grip:hover {
+  background: var(--cms-lah-chip-bg);
+  color: var(--cms-lah-fg);
+}
+.cms-lah-dragging {
+  position: relative;
+  z-index: 20;
+  transform: translateY(var(--cms-lah-drag-y, 0px));
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.35);
+  cursor: grabbing;
+}
+.cms-lah-dragging .cms-lah-grip {
+  cursor: grabbing;
+}
+.cms-lah-drop-indicator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--cms-lah-accent);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.cms-lah-field {
+  min-width: 0;
+}
+.cms-lah-combo {
+  position: relative;
+  min-width: 0;
+}
+.cms-lah-combo-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cms-lah-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: none;
+  max-height: 16rem;
+  margin-top: 2px;
+  overflow: auto;
+  border: 1px solid var(--cms-lah-border);
+  border-radius: 6px;
+  background: var(--cms-lah-bg);
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.25);
+}
+.cms-lah-menu-open {
+  display: block;
+}
+.cms-lah-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 4px 10px;
+  color: var(--cms-lah-fg);
+  cursor: pointer;
+}
+.cms-lah-option-hl {
+  background: color-mix(in srgb, var(--cms-lah-accent) 22%, var(--cms-lah-bg));
+}
+.cms-lah-option-name {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.cms-lah-option-id {
+  margin-left: auto;
+  color: var(--cms-lah-muted);
+  font-size: 0.75rem;
+}
+.cms-lah-option-empty {
+  color: var(--cms-lah-muted);
+  cursor: default;
+}
+
+.cms-lah-nums {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  gap: 8px;
+}
+.cms-lah-num {
+  min-width: 0;
+}
+
+.cms-lah-checks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 16px;
+}
+.cms-lah-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  cursor: pointer;
+}
+.cms-lah-check input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: var(--cms-lah-accent);
+}
+.cms-lah-disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.cms-lah-support-radio {
+  font-weight: 600;
+}
+
+.cms-lah-passives {
+  min-width: 0;
+}
+.cms-lah-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.cms-lah-selchip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+  min-height: 40px;
+  padding: 0 0 0 4px;
+  overflow: hidden;
+  border: 1px solid var(--cms-lah-border);
+  border-radius: 999px;
+  background: var(--cms-lah-chip-bg);
+}
+.cms-lah-selchip .cms-lah-btn {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.cms-lah-selchip-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .cms-lah-nums {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .cms-lah-dialog-body {
+    padding: 0 10px 10px;
+  }
+  .cms-lah-card {
+    padding: 8px;
+  }
+}

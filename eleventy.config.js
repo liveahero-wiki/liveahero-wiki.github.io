@@ -74,6 +74,7 @@ export default function (eleventyConfig) {
   // Files without front matter, which Jekyll copied verbatim (json is not a template format here).
   eleventyConfig.addPassthroughCopy("api/mob.json");
   eleventyConfig.addPassthroughCopy("api/skill-*.json");
+  eleventyConfig.addPassthroughCopy("api/team-roster.json"); // tools/generate_skill_search_index.py
   const staticFiles = findStaticTemplateFiles(".", NOT_SITE_FILES);
   for (const file of staticFiles) {
     eleventyConfig.ignores.add(file);

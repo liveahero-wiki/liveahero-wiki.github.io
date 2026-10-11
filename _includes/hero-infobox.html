@@ -106,4 +106,10 @@
 {% include hero-skill-evolution-v2.html stockId=include.stockId %}
 {% endif %}
 
+{% if include.cms %}
+{% capture cms_group_id %}hero-{{ include.stockId }}{% endcapture %}
+{% assign cms_group = cms_groups | where: "groupId", cms_group_id | first %}
+{% if cms_group %}{% include cms-submissions.html group=cms_group.groupId anchor=cms_group.anchor %}{% endif %}
+{% endif %}
+
 </div>
