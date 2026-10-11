@@ -223,12 +223,17 @@ interface CardPickerProps extends PickerBase {
   onChange: (id: number | null) => void
   /** A card that cannot be chosen (the slot's own hero for the active sidekick). */
   exclude?: number | null
+  /** Cards of this character cannot be chosen (the slot hero's own character). */
+  excludeCharacter?: number | null
   clearable?: boolean
 }
 
-export function CardPicker({ kind, roster, value, onChange, exclude, clearable, lang, t, label, placeholder, invalid, describedBy, dataFocus }: CardPickerProps) {
+export function CardPicker({ kind, roster, value, onChange, exclude, excludeCharacter, clearable, lang, t, label, placeholder, invalid, describedBy, dataFocus }: CardPickerProps) {
   const list = roster ? (kind === 'hero' ? roster.heroes : roster.sidekicks) : []
-  const entries = useMemo(() => (exclude ? list.filter((e) => e.stockId !== exclude) : list), [list, exclude])
+  const entries = useMemo(
+    () => (exclude || excludeCharacter ? list.filter((e) => e.stockId !== exclude && e.characterId !== excludeCharacter) : list),
+    [list, exclude, excludeCharacter],
+  )
   if (roster === null) return <IdInput value={value} onChange={onChange} t={t} label={label} invalid={invalid} describedBy={describedBy} dataFocus={dataFocus} />
   if (roster === undefined) {
     return (
@@ -267,12 +272,17 @@ export function CardPicker({ kind, roster, value, onChange, exclude, clearable, 
 interface PassivePickerProps extends PickerBase {
   values: number[]
   max: number
+  /** Sidekicks of this character cannot be added (the slot hero's own character). */
+  excludeCharacter?: number | null
   onAdd: (id: number) => void
   onRemove: (id: number) => void
 }
 
-export function PassivePicker({ roster, values, max, onAdd, onRemove, lang, t, label, placeholder, invalid, describedBy }: PassivePickerProps) {
-  const entries = useMemo(() => (roster ? roster.sidekicks.filter((e) => !values.includes(e.stockId)) : []), [roster, values])
+export function PassivePicker({ roster, values, max, excludeCharacter, onAdd, onRemove, lang, t, label, placeholder, invalid, describedBy }: PassivePickerProps) {
+  const entries = useMemo(
+    () => (roster ? roster.sidekicks.filter((e) => !values.includes(e.stockId) && e.characterId !== excludeCharacter) : []),
+    [roster, values, excludeCharacter],
+  )
   const full = values.length >= max
   return (
     <div class="cms-lah-passives">

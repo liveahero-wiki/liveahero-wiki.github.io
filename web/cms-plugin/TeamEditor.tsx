@@ -321,12 +321,12 @@ function SlotEditor({ slot, index, total, idBase, support, allowsSupport, suppor
       ))}
 
       <div class="cms-lah-field">
-        <CardPicker kind="sidekick" roster={roster} value={slot.active} onChange={(id) => onPatch({ active: id })} exclude={slot.stockId || null} clearable lang={lang} t={t} label={t('activeField')} placeholder={t('activePlaceholder')} invalid={activeErr.invalid} describedBy={activeErr.describedBy} />
+        <CardPicker kind="sidekick" roster={roster} value={slot.active} onChange={(id) => onPatch({ active: id })} exclude={slot.stockId || null} excludeCharacter={hero?.characterId ?? null} clearable lang={lang} t={t} label={t('activeField')} placeholder={t('activePlaceholder')} invalid={activeErr.invalid} describedBy={activeErr.describedBy} />
         {activeErr.node}
       </div>
 
       <div class="cms-lah-field">
-        <PassivePicker roster={roster} values={slot.passives} max={maxPassives} onAdd={(id) => onPatch({ passives: [...slot.passives, id] })} onRemove={(id) => onPatch({ passives: slot.passives.filter((x) => x !== id) })} lang={lang} t={t} label={t('passivesField', { count: slot.passives.length, max: maxPassives })} placeholder={t('passivesPlaceholder')} invalid={passErr.invalid} describedBy={passErr.describedBy} />
+        <PassivePicker roster={roster} values={slot.passives} max={maxPassives} excludeCharacter={hero?.characterId ?? null} onAdd={(id) => onPatch({ passives: [...slot.passives, id] })} onRemove={(id) => onPatch({ passives: slot.passives.filter((x) => x !== id) })} lang={lang} t={t} label={t('passivesField', { count: slot.passives.length, max: maxPassives })} placeholder={t('passivesPlaceholder')} invalid={passErr.invalid} describedBy={passErr.describedBy} />
         {passErr.node}
       </div>
     </li>
