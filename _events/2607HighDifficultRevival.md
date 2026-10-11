@@ -7,6 +7,13 @@ gacha: false
 event_start_time: 2026-07-07T18:00:00+09
 event_end_time: 2026-07-21T20:00:00+09
 news_link: https://live-a-hero.jp/en/info/14298
+team_formations:
+- quest: 1272001
+  label: SS-Rank "Passionate Office Concert"
+- quest: 1272002
+  label: 'SS-Rank "On-Field Training: Stamina Test!"'
+- quest: 1272003
+  label: SS-Rank "Consecutive Challenge"
 ---
 
 * this will be unordered
