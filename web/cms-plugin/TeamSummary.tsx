@@ -41,10 +41,16 @@ export function TeamSummary({ payload, ctx }: Props) {
           const support = i === supportIndex
           return (
             <span key={i} class={'cms-lah-chip' + (support ? ' cms-lah-support' : '')}>
-              <CardIcon kind="hero" stockId={s.stockId} roster={roster} lang={lang} size="lg" named focus={isFocusCard(focus, 'hero', s.stockId)} />
-              {(s.active || s.passives.length > 0) && (
+              <span class="cms-lah-hero">
+                <CardIcon kind="hero" stockId={s.stockId} roster={roster} lang={lang} size="lg" named focus={isFocusCard(focus, 'hero', s.stockId)} />
+                {s.active ? (
+                  <span class="cms-lah-active-sk">
+                    <CardIcon kind="sidekick" stockId={s.active} roster={roster} lang={lang} size="sm" focus={isFocusCard(focus, 'sidekick', s.active)} />
+                  </span>
+                ) : null}
+              </span>
+              {s.passives.length > 0 && (
                 <span class="cms-lah-pips">
-                  {s.active ? <CardIcon kind="sidekick" stockId={s.active} roster={roster} lang={lang} size="sm" focus={isFocusCard(focus, 'sidekick', s.active)} /> : null}
                   {s.passives.map((p) => (
                     <CardIcon key={p} kind="sidekick" stockId={p} roster={roster} lang={lang} size="sm" focus={isFocusCard(focus, 'sidekick', p)} />
                   ))}
