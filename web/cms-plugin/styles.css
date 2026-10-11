@@ -147,16 +147,16 @@ html[data-theme='dark'] .cms-lah-support .cms-lah-badge {
   background: var(--cms-lah-chip-bg);
 }
 .cms-lah-icon-lg {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
 }
 .cms-lah-icon-md {
   width: 32px;
   height: 32px;
 }
 .cms-lah-icon-sm {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   border-radius: 4px;
 }
 .cms-lah-icon-text {
@@ -296,11 +296,30 @@ html[data-theme='dark'] .cms-lah-support .cms-lah-badge {
   padding: 4px;
   border-radius: 6px;
 }
+.cms-lah-hero {
+  position: relative;
+  display: inline-flex;
+}
+/* active sidekick: small icon overlapping the hero icon's bottom-right corner */
+.cms-lah-active-sk {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  display: inline-flex;
+  border-radius: 5px;
+  background: var(--cms-lah-bg);
+  box-shadow: 0 0 0 1.5px var(--cms-lah-bg);
+}
+.cms-lah-support .cms-lah-active-sk {
+  background: var(--cms-lah-support-bg);
+  box-shadow: 0 0 0 1.5px var(--cms-lah-support-bg);
+}
 .cms-lah-pips {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2px;
+  margin-top: 5px;
 }
 .cms-lah-badges {
   display: flex;
