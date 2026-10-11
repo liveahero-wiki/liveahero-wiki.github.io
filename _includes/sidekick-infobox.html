@@ -72,4 +72,10 @@
     {% include skill-table-v2.html skillIds=extraPassiveSkillIds hide_banner=true %}
     {% endif %}
 
+{% if include.cms %}
+{% capture cms_group_id %}sidekick-{{ include.stockId }}{% endcapture %}
+{% assign cms_group = cms_groups | where: "groupId", cms_group_id | first %}
+{% if cms_group %}{% include cms-submissions.html group=cms_group.groupId anchor=cms_group.anchor %}{% endif %}
+{% endif %}
+
 </div>

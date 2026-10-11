@@ -30,6 +30,14 @@ layout: default
 
 {{ content }}
 
+{% assign cms_groups = page | cms_groups %}
+{% if cms_groups.size > 0 %}
+<h2 id="team-formations" data-pagefind-ignore>Community Team Formations</h2>
+{% for cms_group in cms_groups %}
+{% include cms-submissions.html group=cms_group.groupId label=cms_group.label anchor=cms_group.anchor %}
+{% endfor %}
+{% endif %}
+
 {% assign eventId = page.eventId | downcase %}
 {% assign sales_reports = site.data.processed.sales_report_master[eventId] %}
 
@@ -42,3 +50,5 @@ layout: default
 
 {% endfor %}
 {% endif %}
+
+{% if cms_groups.size > 0 %}{% include cms-embed-script.html %}{% endif %}

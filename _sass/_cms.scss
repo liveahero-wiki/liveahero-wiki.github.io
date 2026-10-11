@@ -1,0 +1,33 @@
+// Community team formations (wiki-cms, docs/CMS.md). The submission list is drawn by the embed
+// from the wiki-cms Worker; it reads these --cms-* variables (with its own fallbacks), which map
+// onto the wiki's tokens from _main2.scss so it follows the light/dark theme. The game plugin
+// (web/cms-plugin) uses the same variables, notably --cms-support-bg for the borrowed support slot.
+//
+// `:root` raises the specificity over the dark defaults the embed ships for itself, which also
+// match when the reader's OS is dark.
+
+:root .cms-submissions {
+  --cms-fg: var(--text);
+  --cms-bg: var(--bg);
+  --cms-border: var(--colorGrey);
+  --cms-accent: var(--link);
+  --cms-muted: #666;
+  --cms-chip-bg: var(--color50);
+  --cms-support-bg: #d9f4f7;
+}
+
+html[data-theme="dark"]:root .cms-submissions {
+  --cms-muted: #aaa;
+  --cms-support-bg: #1d4a52;
+}
+
+.cms-section {
+  margin-top: 2em;
+  // the tab panels of a chara page scroll sideways; never let a list widen one
+  max-width: 100%;
+}
+
+.cms-submissions {
+  min-width: 0;
+  max-width: 100%;
+}

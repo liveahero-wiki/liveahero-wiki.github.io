@@ -2,6 +2,7 @@
 layout: markdownify
 ---
 
+{% assign cms_groups = page | cms_groups %}
 {% if page.unreleased %}
 {% include hero-infobox-unreleased.html sprites=page.sprites %}
 {% else %}
@@ -26,6 +27,7 @@ layout: markdownify
     BIO_H02=hero.BIO_H02
     limited=hero.limited
     extra_sprites=hero.extra_sprites
+    cms=true
 %}
 {% endfor %}
 {% for sk in page.sidekicks %}
@@ -34,6 +36,7 @@ layout: markdownify
     BIO_S01=sk.BIO_S01
     limited=sk.limited
     extra_sprites=sk.extra_sprites
+    cms=true
 %}
 {% endfor %}
 </wiki-tabcontent>
@@ -137,3 +140,5 @@ layout: markdownify
 
 </details>
 {% endif %}
+
+{% if cms_groups.size > 0 %}{% include cms-embed-script.html %}{% endif %}

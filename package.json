@@ -5,14 +5,19 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && vite build --config vite.cms-plugin.config.ts",
+    "build:cms-plugin": "vite build --config vite.cms-plugin.config.ts",
+    "dev:cms-plugin": "vite --config vite.cms-plugin.config.ts --port 5191 --strictPort",
+    "watch:cms-plugin": "vite build --watch --config vite.cms-plugin.config.ts",
+    "typecheck:cms-plugin": "tsc --noEmit -p web/cms-plugin/tsconfig.json",
+    "test:cms-plugin": "node --test \"web/cms-plugin/**/*.test.ts\"",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "eleventy:dev": "cross-env NODE_OPTIONS=--max-old-space-size=8192 eleventy --serve --incremental",
     "eleventy:dev:fast": "cross-env NODE_OPTIONS=--max-old-space-size=8192 eleventy --serve --incremental --ignore-initial",
     "eleventy:build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 eleventy",
     "eleventy:strict": "cross-env ELEVENTY_STRICT=1 NODE_OPTIONS=--max-old-space-size=8192 eleventy",
-    "test": "node --test \"wiki_plugins/**/*.test.js\""
+    "test": "node --test \"wiki_plugins/**/*.test.js\" \"web/cms-plugin/**/*.test.ts\""
   },
   "dependencies": {
     "@tanstack/react-table": "^8.21.3",

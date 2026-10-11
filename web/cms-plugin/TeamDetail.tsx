@@ -1,0 +1,87 @@
+// Full read-only view of a team (inline in the admin portal; inside <Dialog> from the summary).
+
+import type { PluginContext } from './plugin-api.ts'
+import type { TeamSlot } from './types.ts'
+import { CardIcon, cardLabel, useRoster } from './common.tsx'
+import { makeT, type T } from './i18n/t.ts'
+import { parseFocus } from './validate.ts'
+import { isFocusCard, toViewSlots } from './view.ts'
+
+interface Props {
+  payload: unknown
+  ctx: PluginContext
+}
+
+export function TeamDetail({ payload, ctx }: Props) {
+  const t = makeT(ctx.uiLang)
+  const roster = useRoster()
+  const focus = parseFocus(ctx.group.options)
+  const { slots, supportIndex } = toViewSlots(payload)
+
+  return (
+    <div class="cms-lah cms-lah-detail">
+      <ol class="cms-lah-cards" aria-label={t('detailHint')}>
+        {slots.map((s, i) => (
+          <SlotCard key={i} slot={s} index={i} support={i === supportIndex} t={t} ctx={ctx} roster={roster} focus={focus} />
+        ))}
+      </ol>
+    </div>
+  )
+}
+
+interface CardProps {
+  slot: TeamSlot
+  index: number
+  support: boolean
+  t: T
+  ctx: PluginContext
+  roster: ReturnType<typeof useRoster>
+  focus: ReturnType<typeof parseFocus>
+}
+
+function SlotCard({ slot, index, support, t, ctx, roster, focus }: CardProps) {
+  const lang = ctx.uiLang
+  const stat = (label: string, value: string, warn = false) => (
+    <div class={'cms-lah-stat' + (warn ? ' cms-lah-stat-on' : '')}>
+      <dt>{label}</dt>
+      <dd>{value}</dd>
+    </div>
+  )
+  const sidekickRow = (id: number) => (
+    <li class="cms-lah-sk" key={id}>
+      <CardIcon kind="sidekick" stockId={id} roster={roster} lang={lang} size="md" focus={isFocusCard(focus, 'sidekick', id)} />
+      <span class="cms-lah-sk-name">{cardLabel(roster, 'sidekick', id, lang)}</span>
+    </li>
+  )
+
+  return (
+    <li class={'cms-lah-card' + (support ? ' cms-lah-support' : '')}>
+      <div class="cms-lah-card-head">
+        <span class="cms-lah-slot-no">{t('slotN', { n: index + 1 })}</span>
+        {support && (
+          <span class="cms-lah-tag" title={t('supportTitle')}>
+            {t('support')}
+          </span>
+        )}
+      </div>
+      <div class="cms-lah-hero">
+        <CardIcon kind="hero" stockId={slot.stockId} roster={roster} lang={lang} size="lg" focus={isFocusCard(focus, 'hero', slot.stockId)} />
+        <span class="cms-lah-hero-name">{slot.stockId ? cardLabel(roster, 'hero', slot.stockId, lang) : t('none')}</span>
+      </div>
+      <dl class="cms-lah-stats">
+        {stat(t('lv'), String(slot.lv))}
+        {stat(t('plv'), String(slot.plv))}
+        {stat(t('fans'), String(slot.fans))}
+        {stat(t('engrave'), String(slot.engrave))}
+        {stat(t('bloom'), slot.bloom ? t('yes') : t('no'), slot.bloom)}
+        {stat(t('skillTree'), slot.skillTree ? t('skillTreeNeeded') : t('no'), slot.skillTree)}
+      </dl>
+      <div class="cms-lah-sks">
+        <h3 class="cms-lah-sub">{t('activeSidekick')}</h3>
+        {slot.active ? <ul class="cms-lah-sk-list">{sidekickRow(slot.active)}</ul> : <p class="cms-lah-muted">{t('none')}</p>}
+        <h3 class="cms-lah-sub">{t('passiveSidekicks')}</h3>
+        {slot.passives.length ? <ul class="cms-lah-sk-list">{slot.passives.map(sidekickRow)}</ul> : <p class="cms-lah-muted">{t('none')}</p>}
+      </div>
+    </li>
+  )
+}
