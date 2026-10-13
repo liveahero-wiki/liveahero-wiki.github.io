@@ -16,8 +16,11 @@ export function createSite() {
     date_format: "%-d %b %Y %H:%M JST",
     excerpt_separator: "<!--more-->",
     // The wiki-cms Worker behind the community team-formation submissions (docs/CMS.md).
-    // Local development: CMS_URL=http://localhost:8787
-    cms_url: process.env.CMS_URL || "https://wiki-cms.rongjie.workers.dev",
+    // Production builds (ELEVENTY_ENV=production, set by CI) use the deployed Worker; everything else
+    // uses the local `wrangler dev` one. CMS_URL overrides either.
+    cms_url:
+      process.env.CMS_URL ||
+      (process.env.ELEVENTY_ENV === "production" ? "https://wiki-cms.rongjie.workers.dev" : "http://localhost:8787"),
     time: nowInOffset(SITE_OFFSET_MINUTES),
     // filled in by the plugin
     data: {},

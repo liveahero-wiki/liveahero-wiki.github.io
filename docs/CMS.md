@@ -102,7 +102,7 @@ The embed picks its UI language from `data-cms-lang` on the host element, then `
 
 | What | How |
 |---|---|
-| Worker URL | `CMS_URL=http://localhost:8787` for local development, otherwise `https://wiki-cms.rongjie.workers.dev` (`wiki_plugins/site.js`) |
+| Worker URL | `https://wiki-cms.rongjie.workers.dev` when `ELEVENTY_ENV=production` (CI), otherwise `http://localhost:8787` (local `wrangler dev`); `CMS_URL` overrides either (`wiki_plugins/site.js`) |
 | Roster | `py tools/generate_skill_search_index.py --lang en` writes `api/team-roster.json` (all four languages, every run; CI already runs the generator) |
 | Plugin | `pnpm build:cms-plugin` (also part of `pnpm build`) writes `assets/cms/`; `pnpm watch:cms-plugin` rebuilds on change; `pnpm dev:cms-plugin` serves the standalone harness at `/dev.html` (editor scenarios, list filter parts) |
 | Tests | `pnpm test` (`wiki_plugins/lib/cms-groups.test.js`, the plugin's tests), `pnpm typecheck:cms-plugin` |
@@ -110,5 +110,5 @@ The embed picks its UI language from `data-cms-lang` on the host element, then `
 End to end on one machine:
 
 1. In `wiki-cms`: `wrangler dev` (port 8787). Register the type once in the local database: `cms type add lah-team-formation --origins http://localhost:8080 --plugin-url http://localhost:8080/assets/cms/lah-team-formation.js --groups-url http://localhost:8080/api/cms-groups.json`.
-2. Here: `pnpm watch:cms-plugin`, and `CMS_URL=http://localhost:8787 pnpm eleventy:dev` (port 8080).
+2. Here: `pnpm watch:cms-plugin`, and `pnpm eleventy:dev` (port 8080; `CMS_URL` defaults to the local Worker outside production builds).
 3. Open `/team-creator.html` (or a chara page, then follow its "Community teams using this hero" link), try the filters, submit, approve in the admin portal; the list shows it after the cache TTL (or at once with the devtools cache disabled).
