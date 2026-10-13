@@ -2,7 +2,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { EMIT_LEGACY_GROUPS, cmsGroupRegistry, cmsTargets } from "./cms-groups.js";
+import { cmsGroupRegistry, cmsTargets } from "./cms-groups.js";
 
 const warnings = [];
 const deps = {
@@ -170,51 +170,4 @@ test("registry: the same target id on two pages fails the build, naming both", (
 
 test("registry: a page error propagates", () => {
   assert.throws(() => cmsGroupRegistry([guide([{ quest: 616001, label: "x", support: false }])], deps), /support was removed/);
-});
-
-// ---- legacy per-page groups: delete this block together with the legacy code in cms-groups.js (phase 3) ----
-
-test("legacy: EMIT_LEGACY_GROUPS is on until the Worker has migrated", () => {
-  assert.equal(EMIT_LEGACY_GROUPS, true);
-});
-
-test("legacy: quest groups from team_formations (quest entries only) and legacy_team_formations, chara groups per card", () => {
-  const registry = cmsGroupRegistry(
-    [
-      guide([{ quest: 616001, label: { en: "Lantern" } }, { id: "rogue-2609", label: "Boss" }]),
-      {
-        url: "/events/2607HighDifficultRevival/",
-        title: "Worthy Foe",
-        eventId: 174,
-        legacy_team_formations: [{ quest: 1272001 }, { quest: 1272002, label: "Stamina Test", support: false }],
-      },
-      andrew({ sidekicks: undefined }),
-    ],
-    deps,
-  );
-  assert.deepEqual(Object.keys(registry.groups), ["all", "quest-616001", "quest-1272001", "quest-1272002", "hero-10251", "hero-10252"]);
-  assert.deepEqual(registry.groups["quest-616001"], {
-    title: "Challenge Simulator › Lantern",
-    url: "/guide/challenge_simulator/#team-quest-616001",
-    options: { support: true },
-  });
-  assert.equal(registry.groups["quest-1272001"].title, "Worthy Foe › 熱狂の事務所ライブ");
-  assert.deepEqual(registry.groups["quest-1272002"].options, { support: false });
-  assert.deepEqual(registry.groups["hero-10251"], {
-    title: "Andrew – Hero",
-    url: "/charas/andrew/#team-hero-10251",
-    options: { support: true, focus: { kind: "hero", stockId: 10251 } },
-  });
-  assert.equal(registry.groups["hero-10252"].title, 'Andrew – "The Riptide" Andrew');
-});
-
-test("legacy: sidekick groups, unreleased charas have none, a duplicate legacy group id fails the build", () => {
-  const registry = cmsGroupRegistry([andrew()], deps);
-  assert.deepEqual(
-    Object.keys(registry.groups).filter((id) => id.startsWith("sidekick-")),
-    ["sidekick-10251", "sidekick-10252"],
-  );
-  assert.equal(registry.groups["sidekick-10252"].title, 'Andrew – "The Riptide" Andrew (Sidekick)');
-  assert.deepEqual(Object.keys(cmsGroupRegistry([andrew({ unreleased: true })], deps).groups), ["all"]);
-  assert.throws(() => cmsGroupRegistry([andrew(), andrew({ url: "/charas/andrew-copy/" })], deps), /duplicate legacy submission group hero-10251/);
 });

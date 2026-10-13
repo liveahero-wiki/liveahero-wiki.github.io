@@ -84,8 +84,6 @@ The build **fails** (with a message naming the page) for: an entry with neither 
 
 Targets are in collection order (the order of the picker and the filter). `support: 'optional'` lets a team leave out the borrowed support. wiki-cms is pointed at this file with `--groups-url` and refetches it hourly (and when a group is unknown); the Worker's validator and the plugin both read `options.targets` from it.
 
-`wiki_plugins/lib/cms-groups.js` also still emits the **legacy per-page groups** (`quest-<questId>`, `hero-<stockId>`, `sidekick-<stockId>`) while `EMIT_LEGACY_GROUPS = true`. They exist only so that submissions made before the move to `all` stay valid until the Worker has migrated them (wiki-cms `scripts/data/2026-10-team-creator.sql`). Once that is done, set the constant to `false` (or delete the block at the end of the file) and delete `legacy_team_formations:` from `guide/quest.md` and `_events/2607HighDifficultRevival.md`.
-
 ## Roster `limited`
 
 `api/team-roster.json` (all four languages' names, written by every run of `tools/generate_skill_search_index.py`) has `limited: boolean` on every hero and sidekick: `limited: true` on the card's entry (`heroes[]` / `sidekicks[]`, matched by `stockId`) in the chara page's front matter; missing = `false`; every hero whose `stockId` ends in 2 or above is always `true`. The plugin counts the `limited` heroes of every slot for the "max limited-time heroes" filter and the `limited` sort. After changing `limited:` on a chara page, regenerate the roster.

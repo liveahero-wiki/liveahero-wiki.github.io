@@ -18,8 +18,6 @@
 // To remove a target, mark it `retired`. Anything wrong in the front matter throws, so that it fails the
 // build instead of silently losing a target.
 
-import { stockIdToLinkImpl } from "./chara.js";
-
 /** The one group of the registry. */
 export const TEAM_CREATOR = { groupId: "all", title: "Team Creator", url: "/team-creator.html" };
 
@@ -151,104 +149,5 @@ export function cmsGroupRegistry(pages, deps) {
       options: { support: "optional", targets },
     },
   };
-  if (EMIT_LEGACY_GROUPS) Object.assign(groups, legacyGroupRegistry(pages, deps));
   return { groups };
-}
-
-// ---------------------------------------------------------------------------------------------------
-// Legacy per-page groups (REMOVABLE). Until the Worker has migrated every submission to the `all` group
-// (wiki-cms docs/TEAM_CREATOR_PLAN.md, rollout phase 2), the registry keeps the groups the old embeds used,
-// so that existing submissions in `quest-<questId>` / `hero-<stockId>` / `sidekick-<stockId>` stay valid
-// and moderatable. Phase 3: set EMIT_LEGACY_GROUPS to false, or delete everything from here to the end of
-// this file (and the `legacyGroupRegistry` call above), then delete `legacy_team_formations:` from the pages
-// that still have it (guide/quest.md, _events/2607HighDifficultRevival.md). Nothing else reads it.
-// ---------------------------------------------------------------------------------------------------
-
-/** Phase 3: set to false (or remove the legacy block below). */
-export const EMIT_LEGACY_GROUPS = true;
-
-/**
- * Legacy groups of one page: events get `quest-<questId>` for every entry with a `quest` in
- * `team_formations:` (the new target format) and `legacy_team_formations:` (the old format, which may still
- * carry `support: false`); released chara pages get one group per card.
- */
-function legacyGroups(page, deps) {
-  const isChara = page.characterId !== undefined && page.characterId !== null;
-  return isChara ? legacyCharaGroups(page, deps) : legacyEventGroups(page, deps);
-}
-
-const asList = (v) => (Array.isArray(v) ? v : []);
-
-function legacyEventGroups(page, { data }) {
-  const title = page.title || page.jp_title || "";
-  const questMaster = data?.QuestMaster ?? {};
-  const groups = new Map();
-  for (const entry of [...asList(page.team_formations), ...asList(page.legacy_team_formations)]) {
-    if (!isObject(entry) || !Number.isInteger(entry.quest)) continue; // free-form targets have no legacy group
-    const groupId = `quest-${entry.quest}`;
-    if (groups.has(groupId)) continue;
-    const label = isObject(entry.label) ? entry.label.en : entry.label;
-    const heading = (nonEmpty(label) ? label.trim() : "") || String(questMaster[String(entry.quest)]?.questName ?? "").trim() || groupId;
-    groups.set(groupId, {
-      groupId,
-      title: `${title} › ${heading}`,
-      url: `${page.url}#team-${groupId}`,
-      options: { support: entry.support === false ? false : true },
-    });
-  }
-  return [...groups.values()];
-}
-
-function legacyCharaGroups(page, { data }) {
-  if (page.unreleased) return [];
-  const groups = [];
-  for (const [list, kind, type] of [
-    ["heroes", "hero", 1],
-    ["sidekicks", "sidekick", 2],
-  ]) {
-    const cards = page[list];
-    if (cards === undefined || cards === null) continue;
-    if (!Array.isArray(cards)) throw new Error(`${where(page)}: ${list} must be a list`);
-    cards.forEach((card, i) => {
-      const at = `${where(page)}: ${list}[${i}]`;
-      if (!isObject(card) || !Number.isInteger(card.stockId)) {
-        throw new Error(`${at}.stockId must be an integer, not ${JSON.stringify(card?.stockId)}`);
-      }
-      const groupId = `${kind}-${card.stockId}`;
-      groups.push({
-        groupId,
-        title: `${page.title} – ${legacyCardLabel(page, card.stockId, kind, type, data)}`,
-        url: `${page.url}#team-${groupId}`,
-        options: { support: true, focus: { kind, stockId: card.stockId } },
-      });
-    });
-  }
-  return groups;
-}
-
-/**
- * The card's name as its tab shows it (`stockIdToCharaTitle`); the base card's tab just repeats the
- * character's name, so there it is "Hero" / "Sidekick", and a sidekick variant says it is the sidekick.
- */
-function legacyCardLabel(page, stockId, kind, type, data) {
-  const tabTitle = stockIdToLinkImpl(stockId, type, { index: null, data: data ?? {} }, page)[0];
-  const same = !tabTitle || tabTitle === page.title;
-  if (kind === "hero") return same ? "Hero" : tabTitle;
-  return same ? "Sidekick" : `${tabTitle} (Sidekick)`;
-}
-
-/** `{ <groupId>: { title, url, options } }` of every page; two pages declaring one group id fail the build. */
-function legacyGroupRegistry(pages, deps) {
-  const groups = {};
-  const owner = {};
-  for (const page of pages) {
-    for (const group of legacyGroups(page, deps)) {
-      if (Object.hasOwn(groups, group.groupId)) {
-        throw new Error(`duplicate legacy submission group ${group.groupId}: declared by ${owner[group.groupId]} and ${where(page)}`);
-      }
-      owner[group.groupId] = where(page);
-      groups[group.groupId] = { title: group.title, url: group.url, options: group.options };
-    }
-  }
-  return groups;
 }
