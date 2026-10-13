@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Team Creator
-permalink: /team-creator.html
 wide_content: true
 ---
 
