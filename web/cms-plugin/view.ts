@@ -34,3 +34,9 @@ export function toViewSlots(payload: unknown): { slots: TeamSlot[]; supportIndex
 /** Is this card the page's focus card? (used for the subtle highlight) */
 export const isFocusCard = (focus: Focus | null, kind: 'hero' | 'sidekick', cardId: number): boolean =>
   !!focus && focus.kind === kind && focus.stockId === cardId
+
+/** The payload's target id, or null (general purpose; also for anything that is not a non-empty string). */
+export function toViewTarget(payload: unknown): string | null {
+  const t = (payload as { target?: unknown } | null | undefined)?.target
+  return typeof t === 'string' && t ? t : null
+}

@@ -1,0 +1,380 @@
+/* Team Creator page (web/team-creator). Ported from the wiki-cms embed's list/catalog rules; every class is
+   prefixed `lah-tc-` so that it never clashes with the embed stylesheet that the submit form injects (`cms-*`).
+   Injected once as <style id="lah-team-creator">. Theme variables (--cms-*) come from _sass/_cms.scss. */
+
+.team-creator {
+  box-sizing: border-box;
+  max-width: 100%;
+  color: var(--cms-fg, CanvasText);
+  line-height: 1.5;
+}
+.team-creator *,
+.team-creator *::before,
+.team-creator *::after {
+  box-sizing: border-box;
+}
+.team-creator [hidden] {
+  display: none !important;
+}
+.team-creator :is(button, a, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--cms-accent, #2563eb);
+  outline-offset: 2px;
+}
+
+/* ---- placeholder / status ---- */
+.lah-tc-placeholder {
+  margin: 0;
+  padding: 1rem 0;
+  color: var(--cms-muted, #6b7280);
+  min-height: 4rem;
+}
+.lah-tc-placeholder button {
+  font: inherit;
+}
+.lah-tc-status {
+  padding: 0.75rem 0;
+}
+.lah-tc-status p {
+  margin: 0 0 0.5rem;
+}
+.lah-tc-skeleton {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0.25rem 0;
+}
+.lah-tc-skeleton span {
+  display: block;
+  height: 5.5rem;
+  border-radius: 8px;
+  background: var(--cms-chip-bg, #8882);
+  animation: lah-tc-pulse 1.4s ease-in-out infinite;
+}
+@keyframes lah-tc-pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* ---- list ---- */
+.lah-tc-disclaimer {
+  margin: 0 0 0.75rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--cms-border, #8884);
+  border-left: 4px solid var(--cms-accent, #2563eb);
+  border-radius: 6px;
+  color: var(--cms-muted, #6b7280);
+  font-size: 0.9em;
+}
+.lah-tc-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin: 0 0 0.75rem;
+}
+.lah-tc-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 0.75rem;
+}
+.lah-tc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+.lah-tc-card {
+  margin: 0;
+  padding: 0.75rem;
+  border: 1px solid var(--cms-border, #8884);
+  border-radius: 8px;
+  background: var(--cms-bg, Canvas);
+  min-width: 0;
+}
+.lah-tc-summary {
+  min-height: 2.5rem;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.lah-tc-unavailable {
+  margin: 0;
+  color: var(--cms-muted, #6b7280);
+  font-style: italic;
+}
+.lah-tc-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.5rem;
+  margin: 0.6rem 0 0.4rem;
+}
+.lah-tc-date {
+  color: var(--cms-muted, #6b7280);
+  font-size: 0.85em;
+  margin-inline-start: auto;
+}
+.lah-tc-empty {
+  margin: 1rem 0;
+  color: var(--cms-muted, #6b7280);
+}
+.lah-tc-more {
+  display: block;
+  margin: 0.75rem auto 0;
+}
+
+/* explanation: collapsed until the toggle is opened (the HTML is not rendered before) */
+.lah-tc-expl-wrap {
+  margin-top: 0.25rem;
+}
+.lah-tc-expl {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.lah-tc-expl > div > :first-child {
+  margin-top: 0;
+}
+.lah-tc-expl > div > :last-child {
+  margin-bottom: 0;
+}
+.lah-tc-card-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.1em;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+.lah-tc-card-title.lah-tc-untitled {
+  color: var(--cms-muted, #6b7280);
+  font-style: italic;
+  font-weight: 500;
+}
+.lah-tc-expl h3,
+.lah-tc-expl h4,
+.lah-tc-expl h5,
+.lah-tc-expl h6 {
+  margin: 0.8em 0 0.3em;
+  font-size: 1.05em;
+  line-height: 1.3;
+}
+.lah-tc-expl h3 {
+  font-size: 1.15em;
+}
+.lah-tc-expl p,
+.lah-tc-expl ul,
+.lah-tc-expl ol,
+.lah-tc-expl blockquote,
+.lah-tc-expl pre {
+  margin: 0.4em 0;
+}
+.lah-tc-expl ul,
+.lah-tc-expl ol {
+  padding-inline-start: 1.4em;
+}
+.lah-tc-expl code {
+  padding: 0 0.25em;
+  border-radius: 3px;
+  background: var(--cms-chip-bg, #8882);
+  font-size: 0.92em;
+}
+.lah-tc-expl pre {
+  overflow-x: auto;
+  padding: 0.5em 0.7em;
+  border-radius: 6px;
+  background: var(--cms-chip-bg, #8882);
+}
+.lah-tc-expl pre code {
+  padding: 0;
+  background: none;
+}
+.lah-tc-expl blockquote {
+  padding-inline-start: 0.8em;
+  border-inline-start: 3px solid var(--cms-border, #8884);
+  color: var(--cms-muted, #6b7280);
+}
+
+/* ---- shared controls ---- */
+.lah-tc-btn,
+.lah-tc-chip-btn,
+.lah-tc-link {
+  font: inherit;
+  cursor: pointer;
+}
+.lah-tc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--cms-border, #8884);
+  border-radius: 6px;
+  background: var(--cms-bg, Canvas);
+  color: var(--cms-fg, CanvasText);
+  text-decoration: none;
+  line-height: 1.2;
+}
+.lah-tc-btn:hover:not(:disabled) {
+  border-color: var(--cms-accent, #2563eb);
+}
+.lah-tc-btn:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+.lah-tc-primary {
+  background: var(--cms-accent, #2563eb);
+  border-color: var(--cms-accent, #2563eb);
+  color: var(--cms-on-accent, #fff);
+}
+.lah-tc-demo {
+  font-size: 0.9em;
+  min-height: 36px;
+}
+.lah-tc-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  background: var(--cms-chip-bg, #8882);
+  font-size: 0.85em;
+  line-height: 1.6;
+}
+.lah-tc-chip-btn {
+  min-height: 40px;
+  padding-inline: 0.9rem;
+  border: 1px solid transparent;
+  color: inherit;
+}
+.lah-tc-chip-btn.lah-tc-active {
+  border-color: var(--cms-accent, #2563eb);
+  background: var(--cms-accent, #2563eb);
+  color: var(--cms-on-accent, #fff);
+}
+.lah-tc-link {
+  display: inline-block;
+  min-height: 40px;
+  padding: 0 0.25rem;
+  border: 0;
+  background: none;
+  color: var(--cms-accent, #2563eb);
+  text-decoration: underline;
+}
+.lah-tc-submissions :is(button, a, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--cms-accent, #2563eb);
+  outline-offset: 2px;
+}
+.lah-tc-error,
+.lah-tc-banner {
+  color: var(--cms-danger, #c62828);
+}
+.lah-tc-error p,
+.lah-tc-error {
+  font-size: 0.9em;
+}
+.lah-tc-error p {
+  margin: 0.2rem 0 0;
+}
+
+
+/* ---- input ---- */
+.lah-tc-input {
+  width: 100%;
+  min-height: 40px;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid var(--cms-border, #8884);
+  border-radius: 6px;
+  background: var(--cms-bg, Canvas);
+  color: var(--cms-fg, CanvasText);
+  font: inherit;
+}
+
+/* ---- catalog layout ---- */
+.lah-tc-controls {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0 0 0.75rem;
+}
+.lah-tc-controls-basic {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.5rem 0.75rem;
+}
+.lah-tc-search {
+  flex: 1 1 14rem;
+  min-width: 0;
+  max-width: 28rem;
+  min-height: 40px;
+}
+.lah-tc-controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+.lah-tc-sort {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-inline-start: auto;
+}
+.lah-tc-sort .lah-tc-input {
+  width: auto;
+  min-height: 40px;
+}
+.lah-tc-badge {
+  display: inline-block;
+  min-width: 1.4em;
+  margin-inline-start: 0.5rem;
+  padding: 0 0.4em;
+  border-radius: 999px;
+  background: var(--cms-accent, #2563eb);
+  color: var(--cms-on-accent, #fff);
+  font-size: 0.8em;
+  line-height: 1.5;
+  text-align: center;
+}
+.lah-tc-advanced {
+  display: grid;
+  gap: 0.6rem;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--cms-border, #8884);
+  border-radius: 8px;
+}
+.lah-tc-filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+.lah-tc-filter-label {
+  min-width: 6.5rem;
+  color: var(--cms-muted, #6b7280);
+  font-size: 0.9em;
+}
+.lah-tc-lf {
+  min-width: 0;
+}
+.lah-tc-lf-basic {
+  flex: 1 1 100%;
+}
+.lah-tc-results-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 1rem;
+  margin: 0 0 0.5rem;
+  color: var(--cms-muted, #6b7280);
+  font-size: 0.9em;
+}
+.lah-tc-catalog .lah-tc-card-title {
+  font-size: 1.15em;
+}
+@media (max-width: 520px) {
+  .lah-tc-sort {
+    margin-inline-start: 0;
+  }
+  .lah-tc-filter-label {
+    flex: 1 1 100%;
+  }
+}
+

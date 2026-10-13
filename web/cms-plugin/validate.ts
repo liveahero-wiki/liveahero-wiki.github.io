@@ -9,6 +9,7 @@
 // Kept free of JSX / CSS / path aliases so `node --test` can run it with type stripping.
 
 import type { FieldError } from './plugin-api.ts'
+import { parseTargets } from './targets.ts'
 import type { Focus, TeamPayload, TeamSlot } from './types.ts'
 
 export const MAX_SLOTS = 5
@@ -33,6 +34,7 @@ export const ERROR_CODES = [
   'focus_missing',
   'unknown_hero',
   'unknown_sidekick',
+  'target_unknown',
 ] as const
 
 export interface GroupLike {
@@ -66,9 +68,12 @@ export function parseFocus(options: Record<string, unknown>): Focus | null {
   return null
 }
 
-/** `support` defaults to true when absent. */
-export function groupAllowsSupport(options: Record<string, unknown>): boolean {
-  return options.support !== false
+export type SupportMode = 'required' | 'optional' | 'none'
+
+/** `support`: absent or `true` -> required, `false` -> none, `'optional'` -> optional (null or a valid index). */
+export function supportMode(options: Record<string, unknown>): SupportMode {
+  const s = options.support
+  return s === false ? 'none' : s === 'optional' ? 'optional' : 'required'
 }
 
 function readInt(errors: FieldError[], path: string, v: unknown, def: number, min: number, max: number): number {
@@ -171,19 +176,27 @@ export function validateTeamPayload(input: unknown, group: GroupLike, ctx: Valid
   })
 
   // Group-driven support rule.
-  const allowsSupport = groupAllowsSupport(group.options)
+  const mode = supportMode(group.options)
   const rawSupport = input.supportIndex
   let supportIndex: number | null = null
-  if (!allowsSupport) {
+  if (mode === 'none') {
     if (rawSupport !== undefined && rawSupport !== null) {
       errors.push(err('payload.supportIndex', 'support_not_allowed', 'This team does not allow a borrowed support.'))
     }
   } else if (rawSupport === undefined || rawSupport === null) {
-    errors.push(err('payload.supportIndex', 'support_required', 'Choose which slot is the borrowed support.'))
+    if (mode === 'required') errors.push(err('payload.supportIndex', 'support_required', 'Choose which slot is the borrowed support.'))
   } else if (!isInt(rawSupport) || rawSupport < 0 || rawSupport >= slots.length) {
     errors.push(err('payload.supportIndex', 'support_out_of_range', 'The support slot does not exist.'))
   } else {
     supportIndex = rawSupport
+  }
+
+  // Target (optional): absent / null = general purpose, else the id of a listed target (retired ones stay valid).
+  let target: string | null = null
+  const rawTarget = input.target
+  if (rawTarget !== undefined && rawTarget !== null) {
+    if (typeof rawTarget === 'string' && parseTargets(group.options).some((t) => t.id === rawTarget)) target = rawTarget
+    else errors.push(err('payload.target', 'target_unknown', 'Unknown target.'))
   }
 
   // Duplicates (the support slot is exempt). `active: null` never counts.
@@ -245,7 +258,7 @@ export function validateTeamPayload(input: unknown, group: GroupLike, ctx: Valid
   }
 
   if (errors.length) return { ok: false, errors }
-  return { ok: true, value: { v: 1, supportIndex, heroes: slots } }
+  return { ok: true, value: { v: 1, supportIndex, heroes: slots, ...(target !== null ? { target } : {}) } }
 }
 
 /** `validate()` flavour used by the editor handle: just the error list. */

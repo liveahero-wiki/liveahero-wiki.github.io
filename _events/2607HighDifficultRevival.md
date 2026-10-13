@@ -7,7 +7,9 @@ gacha: false
 event_start_time: 2026-07-07T18:00:00+09
 event_end_time: 2026-07-21T20:00:00+09
 news_link: https://live-a-hero.jp/en/info/14298
-team_formations:
+# Only for the legacy per-page groups of the registry (wiki_plugins/lib/cms-groups.js, EMIT_LEGACY_GROUPS):
+# delete together with that block.
+legacy_team_formations:
 - quest: 1272001
   label: SS-Rank "Passionate Office Concert"
 - quest: 1272002

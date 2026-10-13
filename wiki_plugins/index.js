@@ -3,7 +3,7 @@
 
 import { loadSiteData } from "./lib/site-data.js";
 import { CharaIndex } from "./lib/chara.js";
-import { cmsGroupRegistry, cmsGroups } from "./lib/cms-groups.js";
+import { cmsGroupRegistry, cmsTargets } from "./lib/cms-groups.js";
 import { toDocument } from "./lib/documents.js";
 import { registerJekyllFilters } from "./liquid/jekyll-filters.js";
 import { registerRubyPlugins } from "./liquid/ruby-plugins.js";
@@ -91,8 +91,8 @@ export default function wikiPlugins(eleventyConfig, { site, markdown }) {
 
   registerRubyPlugins(eleventyConfig, { site, charaIndex });
 
-  // Community team-formation submissions (docs/CMS.md): the groups of a page for the includes,
-  // and the registry /api/cms-groups.json (cms-groups.11ty.js) built from the same function.
-  eleventyConfig.addLiquidFilter("cms_groups", (page) => cmsGroups(page, site));
+  // Community team-formation submissions (docs/CMS.md): the targets a page declares, for the Team Creator
+  // links, and the registry /api/cms-groups.json (cms-groups.11ty.js) built from the same function.
+  eleventyConfig.addLiquidFilter("cms_targets", (page) => cmsTargets(page, site));
   eleventyConfig.addJavaScriptFunction("cmsGroupRegistry", (pages) => cmsGroupRegistry(pages, site));
 }

@@ -1,7 +1,5 @@
-// Source of truth: wiki-cms/src/shared/plugin-api.ts (repo `wiki-cms`). Keep in sync by copying it.
-// Only deviation: `Lang` is declared inline instead of imported from wiki-cms/src/shared/i18n.ts.
-
-export type Lang = 'en' | 'zh-Hans' | 'zh-Hant' | 'ja'
+// Source of truth: wiki-cms/src/shared/plugin-api.ts. Copy this file verbatim into plugin repos.
+import type { Lang } from './i18n.ts'
 
 /** `message` is the English fallback; `code` (+ `params`) is what localized clients translate. */
 export interface FieldError {

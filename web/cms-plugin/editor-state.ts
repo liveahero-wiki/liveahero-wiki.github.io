@@ -4,8 +4,8 @@
 
 import type { FieldError } from './plugin-api.ts'
 import type { TeamPayload, TeamSlot } from './types.ts'
-import { MAX_SLOTS, groupAllowsSupport, parseFocus } from './validate.ts'
-import { emptySlot, toViewSlots } from './view.ts'
+import { MAX_SLOTS, parseFocus, supportMode } from './validate.ts'
+import { emptySlot, toViewSlots, toViewTarget } from './view.ts'
 
 export interface Slot extends TeamSlot {
   /** Stable identity across reorders. */
@@ -15,8 +15,10 @@ export interface Slot extends TeamSlot {
 export interface State {
   slots: Slot[]
   supportKey: number | null
-  /** True while the support selection was made automatically (it then follows the newest slot). */
+  /** True while the support selection was made automatically (it then follows the newest slot; mode `required` only). */
   supportAuto: boolean
+  /** Id of the chosen target; null = general purpose. */
+  target: string | null
 }
 
 let keySeq = 0
@@ -26,12 +28,16 @@ const stripSlot = ({ key: _key, ...rest }: Slot): TeamSlot => ({ ...rest, passiv
 
 export function toPayload(state: State, allowsSupport: boolean): TeamPayload {
   const idx = allowsSupport && state.supportKey !== null ? state.slots.findIndex((s) => s.key === state.supportKey) : -1
-  return { v: 1, supportIndex: idx >= 0 ? idx : null, heroes: state.slots.map(stripSlot) }
+  return { v: 1, supportIndex: idx >= 0 ? idx : null, heroes: state.slots.map(stripSlot), ...(state.target ? { target: state.target } : {}) }
 }
 
-/** Build the editor state from an incoming payload, applying the group's rules where possible. */
+/**
+ * Build the editor state from an incoming payload, applying the group's rules where possible. Support
+ * mode `required` auto-selects the last slot (until the user chooses); `optional` never selects one by
+ * itself; `none` has no support slot.
+ */
 export function initState(value: unknown, options: Record<string, unknown>): State {
-  const allowsSupport = groupAllowsSupport(options)
+  const mode = supportMode(options)
   const view = toViewSlots(value)
   const slots: Slot[] = (view.slots.length ? view.slots : [emptySlot()]).slice(0, MAX_SLOTS).map((s) => ({ ...s, key: ++keySeq }))
   // A new/empty editor on a hero card page starts with that hero in slot 1.
@@ -39,28 +45,28 @@ export function initState(value: unknown, options: Record<string, unknown>): Sta
   if (focus?.kind === 'hero' && slots.length === 1 && slots[0].stockId === 0) slots[0].stockId = focus.stockId
   let supportKey: number | null = null
   let supportAuto = false
-  if (allowsSupport) {
+  if (mode !== 'none') {
     if (view.supportIndex !== null && view.supportIndex < slots.length) supportKey = slots[view.supportIndex].key
-    else {
+    else if (mode === 'required') {
       supportKey = slots[slots.length - 1].key
       supportAuto = true
     }
   }
-  return { slots, supportKey, supportAuto }
+  return { slots, supportKey, supportAuto, target: toViewTarget(value) }
 }
 
-/** Appends an empty slot; an unset or auto-chosen support moves to the new last slot. */
-export function addSlot(s: State, allowsSupport: boolean, slot: Slot = newSlot()): State {
+/** Appends an empty slot; with `autoSupport` (mode `required`) an unset or auto-chosen support moves to the new last slot. */
+export function addSlot(s: State, autoSupport: boolean, slot: Slot = newSlot()): State {
   if (s.slots.length >= MAX_SLOTS) return s
-  const follow = allowsSupport && (s.supportKey === null || s.supportAuto)
-  return { slots: [...s.slots, slot], supportKey: follow ? slot.key : s.supportKey, supportAuto: follow ? true : s.supportAuto }
+  const follow = autoSupport && (s.supportKey === null || s.supportAuto)
+  return { ...s, slots: [...s.slots, slot], supportKey: follow ? slot.key : s.supportKey, supportAuto: follow ? true : s.supportAuto }
 }
 
 /** Removing the support slot clears the selection (the next add picks the new last slot again). */
 export function removeSlot(s: State, key: number): State {
   if (s.slots.length <= 1) return s
   const lost = s.supportKey === key
-  return { slots: s.slots.filter((x) => x.key !== key), supportKey: lost ? null : s.supportKey, supportAuto: lost ? true : s.supportAuto }
+  return { ...s, slots: s.slots.filter((x) => x.key !== key), supportKey: lost ? null : s.supportKey, supportAuto: lost ? true : s.supportAuto }
 }
 
 export function moveSlot(s: State, from: number, to: number): State {
@@ -72,6 +78,11 @@ export function moveSlot(s: State, from: number, to: number): State {
 }
 
 export const selectSupport = (s: State, key: number): State => ({ ...s, supportKey: key, supportAuto: false })
+
+/** "No borrowed support" (mode `optional`): stays cleared, adding a slot does not pick one again. */
+export const clearSupport = (s: State): State => ({ ...s, supportKey: null, supportAuto: false })
+
+export const selectTarget = (s: State, target: string | null): State => ({ ...s, target: target || null })
 
 /** Key-order independent JSON, to tell whether normalizing changed the incoming payload. */
 export const sortedJson = (v: unknown): string =>
@@ -88,15 +99,17 @@ export function relPath(path: string): string {
 export interface SortedErrors {
   team: FieldError[]
   support: FieldError[]
+  target: FieldError[]
   /** slot index -> field ('' = the slot itself) -> errors */
   slots: Map<number, Map<string, FieldError[]>>
 }
 
 export function sortErrors(errors: FieldError[]): SortedErrors {
-  const out: SortedErrors = { team: [], support: [], slots: new Map() }
+  const out: SortedErrors = { team: [], support: [], target: [], slots: new Map() }
   for (const e of errors) {
     const parts = relPath(e.path).split('.')
     if (parts[0] === 'supportIndex') out.support.push(e)
+    else if (parts[0] === 'target') out.target.push(e)
     else if (parts[0] === 'heroes' && /^\d+$/.test(parts[1] ?? '')) {
       const i = Number(parts[1])
       const m = out.slots.get(i) ?? new Map<string, FieldError[]>()

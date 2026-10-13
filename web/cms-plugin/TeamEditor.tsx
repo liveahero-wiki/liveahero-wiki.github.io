@@ -10,7 +10,8 @@ import { makeT, errorText, type T } from './i18n/t.ts'
 import { CardPicker, PassivePicker } from './pickers.tsx'
 import type { Roster } from './roster.ts'
 import type { Focus, TeamPayload, TeamSlot } from './types.ts'
-import { MAX_SLOTS, groupAllowsSupport, parseFocus, validateTeam } from './validate.ts'
+import { parseTargets, targetChoices, targetLabel } from './targets.ts'
+import { MAX_SLOTS, parseFocus, supportMode, validateTeam } from './validate.ts'
 import * as ed from './editor-state.ts'
 import { sortErrors, sortedJson, toPayload, initState, type Slot, type State } from './editor-state.ts'
 
@@ -39,7 +40,11 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
   const t = makeT(ctx.uiLang)
   const lang = ctx.uiLang
   const options = ctx.group.options
-  const allowsSupport = groupAllowsSupport(options)
+  const mode = supportMode(options)
+  const allowsSupport = mode !== 'none'
+  /** Only a required support is picked automatically (the last slot); an optional one never is. */
+  const autoSupport = mode === 'required'
+  const targets = parseTargets(options)
   const focus = parseFocus(options)
   const roster = useRoster()
   const [uid] = useState(() => ++editorSeq)
@@ -106,7 +111,7 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
   }
   const addSlot = () => {
     const s = stateRef.current
-    const next = ed.addSlot(s, allowsSupport)
+    const next = ed.addSlot(s, autoSupport)
     if (next === s) return
     commit(next, { announce: t('slotAdded', { n: next.slots.length }), focus: { key: next.slots[next.slots.length - 1].key, what: 'hero' } })
   }
@@ -127,6 +132,8 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
     })
   }
   const selectSupport = (key: number) => commit(ed.selectSupport(stateRef.current, key))
+  const clearSupport = () => commit(ed.clearSupport(stateRef.current))
+  const selectTarget = (id: string | null) => commit(ed.selectTarget(stateRef.current, id))
 
   useEffect(() => () => abortDrag.current(), [])
 
@@ -145,7 +152,43 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
   return (
     <div class="cms-lah cms-lah-editor" ref={rootRef}>
       {focus && <p class="cms-lah-hint cms-lah-hint-focus">{t(focus.kind === 'hero' ? 'focusHero' : 'focusSidekick', { name: focusName })}</p>}
-      {allowsSupport && <p class="cms-lah-hint">{t('supportHelp')}</p>}
+      {targets.length > 0 && (
+        <div class="cms-lah-field cms-lah-target-field">
+          <label class="cms-lah-label" for={`cms-lah-${uid}-target`}>
+            {t('targetField')}
+          </label>
+          <select
+            id={`cms-lah-${uid}-target`}
+            class="cms-lah-input cms-lah-select"
+            value={state.target ?? ''}
+            aria-invalid={sorted.target.length ? true : undefined}
+            aria-describedby={sorted.target.length ? `cms-lah-${uid}-target-err` : `cms-lah-${uid}-target-help`}
+            onChange={(e) => selectTarget(e.currentTarget.value || null)}
+          >
+            <option value="">{t('targetGeneral')}</option>
+            {targetChoices(targets, state.target).map((tg) => (
+              <option key={tg.id} value={tg.id}>
+                {tg.retired ? t('targetRetiredOption', { name: targetLabel(tg, lang) }) : targetLabel(tg, lang)}
+              </option>
+            ))}
+          </select>
+          <p class="cms-lah-muted cms-lah-small" id={`cms-lah-${uid}-target-help`}>
+            {t('targetHelp')}
+          </p>
+          {sorted.target.length > 0 && (
+            <p class="cms-lah-error" id={`cms-lah-${uid}-target-err`}>
+              {sorted.target.map((e) => errorText(t, e)).join(' ')}
+            </p>
+          )}
+        </div>
+      )}
+      {allowsSupport && <p class="cms-lah-hint">{t(mode === 'optional' ? 'supportHelpOptional' : 'supportHelp')}</p>}
+      {mode === 'optional' && (
+        <label class="cms-lah-check cms-lah-support-radio cms-lah-support-none">
+          <input type="radio" name={`cms-lah-support-${uid}`} checked={state.supportKey === null} onChange={clearSupport} />
+          <span>{t('supportNone')}</span>
+        </label>
+      )}
       {roster === undefined && <p class="cms-lah-hint">{t('rosterLoading')}</p>}
       {roster === null && <p class="cms-lah-hint cms-lah-hint-warn">{t('rosterFailed')}</p>}
 

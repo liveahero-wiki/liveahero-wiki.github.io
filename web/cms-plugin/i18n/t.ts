@@ -1,6 +1,7 @@
 // String lookup for the plugin. The UI language is `ctx.uiLang`; anything missing falls back to English.
 // Kept free of CSS / JSX so the i18n tests can import it with node's type stripping.
-import type { FieldError, Lang } from '../plugin-api.ts'
+import type { FieldError } from '../plugin-api.ts'
+import type { Lang } from '../i18n.ts'
 import { en, type Bundle } from './en.ts'
 import { ja } from './ja.ts'
 import { zhHans } from './zh-Hans.ts'

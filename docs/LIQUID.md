@@ -26,7 +26,7 @@ Layouts act as structural wrappers for pages in the wiki, parsing markdown front
     *   Pulls and structures gacha banners, limited quests, and free quest rewards tables.
     *   Integrates `shop-table.html` using the store ID found in master data.
     *   Includes `quest-group.html` to render nested lists of main and free farming quest groups.
-    *   When the page declares `team_formations`, renders a *Community Team Formations* section with one `cms-submissions.html` per hard difficulty quest (see [CMS.md](CMS.md)); the groups come from the `cms_groups` filter (`page | cms_groups`).
+    *   When the page declares `team_formations`, renders a *Community Team Formations* section with one `team-creator-link.html` link per target to the Team Creator page (see [CMS.md](CMS.md)); the targets come from the `cms_targets` filter (`page | cms_targets`).
 
 ### 3. `status.html`
 *   **Purpose**: Renders battle status pages grouping characters by the status effects their skills can apply. Used by markdown files in `_statuses/`.

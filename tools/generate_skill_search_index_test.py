@@ -436,7 +436,10 @@ class TestRoster(unittest.TestCase):
         m = {"CardMaster": {"1": {"stockId": 10011, "cardName": "アカシ", "rarity": 6},
                             "2": {"stockId": 20021, "cardName": "日本語", "rarity": 5},
                             "3": {"stockId": 30031, "cardName": "モブ", "rarity": 1}},
-             "SidekickMaster": {"1": {"stockId": 10011, "cardName": "アカシ", "rarity": 4}}}
+             "SidekickMaster": {"1": {"stockId": 10011, "cardName": "アカシ", "rarity": 4}},
+             # the chara page's front matter decides `limited` (matched by stockId; absent = false)
+             "chara_pages": {1: {"data": {"heroes": [{"stockId": 10011, "limited": True}, {"stockId": 10012}],
+                                          "sidekicks": [{"stockId": 10011}]}}}}
         trans = {"en": {}, "ja": {}, "zh-Hans": {"CARD_NAME_AKASHI": "赤司"}, "zh-Hant": {}}
         original = gen.load_game_trans
         gen.load_game_trans = lambda lang: trans[lang]
@@ -452,9 +455,12 @@ class TestRoster(unittest.TestCase):
         # no chara page and no translations: everything falls back to Japanese
         self.assertEqual(set(roster["heroes"][1]["name"].values()), {"日本語"})
         self.assertEqual(set(roster["heroes"][0]), {
-            "stockId", "characterId", "name", "page", "resourceName", "rarity", "element", "role", "hasSkillTree"})
+            "stockId", "characterId", "name", "page", "resourceName", "rarity", "element", "role", "hasSkillTree",
+            "limited"})
         self.assertEqual(set(roster["sidekicks"][0]), {
-            "stockId", "characterId", "name", "page", "resourceName", "rarity"})
+            "stockId", "characterId", "name", "page", "resourceName", "rarity", "limited"})
+        self.assertEqual([h["limited"] for h in roster["heroes"]], [True, False])
+        self.assertEqual([s["limited"] for s in roster["sidekicks"]], [False])
         self.assertEqual(roster["heroes"][0]["page"], "/charas/akashi/")
         self.assertEqual(roster["heroes"][1]["page"], "")  # no released chara page
 

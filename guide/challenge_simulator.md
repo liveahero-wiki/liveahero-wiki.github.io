@@ -256,11 +256,6 @@ When under 50% HP, the Plesiosaur Kaibutsu(?) will activate several additional e
 
 ## Community Team Formations
 
-Share your team for the current simulator quest and browse teams submitted by other players.
+Share your team for the current simulator quest and browse teams submitted by other players on the [Team Creator](/team-creator.html).
 
-{% assign cms_groups = page | cms_groups %}
-{% for cms_group in cms_groups %}
-{% include cms-submissions.html group=cms_group.groupId label=cms_group.label anchor=cms_group.anchor %}
-{% endfor %}
-
-{% include cms-embed-script.html %}
+{% include team-creator-link.html %}

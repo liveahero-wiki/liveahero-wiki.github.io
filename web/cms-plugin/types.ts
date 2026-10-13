@@ -1,4 +1,4 @@
-import type { Lang } from './plugin-api.ts'
+import type { Lang } from './i18n.ts'
 
 export type { Lang }
 
@@ -17,9 +17,22 @@ export interface TeamSlot {
 
 export interface TeamPayload {
   v: 1
-  /** Index into `heroes` of the borrowed support slot; `null` when the group disallows support. */
+  /** Index into `heroes` of the borrowed support slot; `null` when the group disallows support or (mode `optional`) none is used. */
   supportIndex: number | null
   heroes: TeamSlot[]
+  /** Id of a target of the group's `options.targets` (e.g. `quest-616001`); absent/null = general purpose. */
+  target?: string | null
+}
+
+/** One entry of the group's `options.targets` (owned by the wiki, see docs/CMS.md). */
+export interface Target {
+  /** Permanent slug, `^[a-z0-9][a-z0-9-]{0,63}$`. */
+  id: string
+  label: LocalizedName
+  /** Link target of the chip (site path or https URL). */
+  url?: string
+  /** Hidden from the submit form, still valid and filterable. */
+  retired?: boolean
 }
 
 export interface Focus {
@@ -42,6 +55,8 @@ export interface RosterHero {
   element: number
   role: string
   hasSkillTree: boolean
+  /** Limited-time unit (`limited: true` in the chara page's front matter); missing = false. */
+  limited?: boolean
 }
 
 export interface RosterSidekick {
@@ -51,6 +66,7 @@ export interface RosterSidekick {
   page?: string
   resourceName: string
   rarity: number
+  limited?: boolean
 }
 
 export interface RosterFile {

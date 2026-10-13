@@ -2,9 +2,11 @@
 
 import type { ComponentChildren } from 'preact'
 import { useEffect, useRef, useState } from 'preact/hooks'
-import type { Lang } from './plugin-api.ts'
+import type { Lang } from './i18n.ts'
 import { charaUrl, heroIconUrl, loadRoster, localizedName, sidekickIconUrl, type Roster } from './roster.ts'
 import type { T } from './i18n/t.ts'
+import { findTarget, targetHref, targetLabel } from './targets.ts'
+import type { Target } from './types.ts'
 
 /** undefined = loading, null = failed to load, otherwise the roster. */
 export function useRoster(): Roster | null | undefined {
@@ -45,6 +47,30 @@ export function CardName({ kind, stockId, roster, lang, class: cls }: { kind: Ca
     </a>
   ) : (
     <span class={cls}>{label}</span>
+  )
+}
+
+/** The target a team was built for, linked to the target's page when it has one; an unlisted id shows as is. */
+export function TargetChip({ id, targets, lang, t }: { id: string; targets: Target[]; lang: Lang; t: T }) {
+  const target = findTarget(targets, id)
+  const label = target ? targetLabel(target, lang) : id
+  const href = target ? targetHref(target) : ''
+  const inner = (
+    <>
+      <span class="cms-lah-target-for">{t('targetChipLabel')}</span>
+      <span class="cms-lah-target-name">{label}</span>
+    </>
+  )
+  return (
+    <p class="cms-lah-target-row">
+      {href ? (
+        <a class="cms-lah-target-chip" href={href} target="_blank" rel="noopener">
+          {inner}
+        </a>
+      ) : (
+        <span class="cms-lah-target-chip">{inner}</span>
+      )}
+    </p>
   )
 }
 
