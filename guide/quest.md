@@ -1,9 +1,7 @@
 ---
 title: Quest
 banner: true
-# Only for the legacy per-page groups of the registry (wiki_plugins/lib/cms-groups.js, EMIT_LEGACY_GROUPS):
-# delete together with that block.
-legacy_team_formations:
+team_formations:
 - quest: 206002
   label: Parallel Quartz (S rank)
 ---
