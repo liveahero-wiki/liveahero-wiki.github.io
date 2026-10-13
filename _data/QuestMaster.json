@@ -339402,6 +339402,105 @@
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
   },
+  "1305003": {
+    "questId": 1305003,
+    "questName": "ヒーローは正義を譲らない",
+    "subName": "第３話",
+    "questKind": 5,
+    "questLabel": 0,
+    "chapterId": 1305,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "questEffectWindowAddress": "",
+    "startAt": "2026-10-13 18:00:00",
+    "endAt": "2026-11-05 14:00:00",
+    "questEffectLimitCount": 0,
+    "dayOfWeek": 0,
+    "sortWeight": 3,
+    "enemyLevel": 11,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "canReturnScenes": [],
+    "questReturnOption": 0,
+    "hasVoice": false,
+    "maxCycleCount": 5,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isAddReward": false,
+        "finalValue": 1,
+        "baseRewardBonusRate": 0,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "objectType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "rewardType": 3,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1305002,
+        "checkNotCleared": false,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 2,
+        "battleInfoSpd": 100
+      },
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 98
+      },
+      {
+        "battleInfoIcon": "icon_unknown_card",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 96
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
   "1306001": {
     "questId": 1306001,
     "questName": "ヒーローたちのアピールチャンス！",
