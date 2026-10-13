@@ -63,6 +63,35 @@ export const en = {
   skillTreeUnavailable: 'This hero has no skill tree.',
   slotsHeading: 'Team slots',
 
+  // ---- target, optional support, list filters
+  targetField: 'Purpose-built for',
+  targetGeneral: 'General purpose',
+  targetHelp: 'Pick a battle only if this team is built for it. Otherwise keep General purpose.',
+  targetRetiredOption: '{name} (retired)',
+  targetChipLabel: 'Built for',
+  supportHelpOptional: 'Optional: mark one slot as the borrowed support, or choose “No borrowed support”. A support may repeat a hero or active sidekick used in another slot.',
+  supportNone: 'No borrowed support',
+  filterTargets: 'Target',
+  filterHeroIn: 'Must use these heroes',
+  filterHeroOut: 'Must not use these heroes',
+  filterSkIn: 'Must use these active sidekicks',
+  filterSkOut: 'Must not use these active sidekicks',
+  filterTargetsAll: 'All targets',
+  filterTargetsN: '{count} targets',
+  filterUnits: 'Heroes and active sidekicks',
+  filterUnitPlaceholder: 'Search a hero or sidekick, then + to include or − to exclude…',
+  filterUnitHint: 'Enter includes the highlighted row, Shift+Enter excludes it.',
+  filterInclude: 'Must use',
+  filterExclude: 'Must not use',
+  filterTree: 'Show teams that need a skill tree',
+  filterBloom: 'Show teams that use blooming',
+  filterMaxLimited: 'Max limited-time heroes',
+  filterMaxLimitedHint: 'Counts every slot, including the borrowed support.',
+  filterLimitedAny: 'Any',
+  filterDecrease: 'Decrease',
+  filterIncrease: 'Increase',
+  sortLimited: 'Fewest limited-time heroes',
+
   // ---- validation errors (one per code emitted by validate.ts)
   error_payload_invalid: 'The team formation is malformed.',
   error_version_invalid: 'Unsupported team formation version.',
@@ -82,6 +111,7 @@ export const en = {
   error_focus_missing: 'The team must include this page’s {kind}.',
   error_unknown_hero: 'Unknown hero (ID {stockId}).',
   error_unknown_sidekick: 'Unknown sidekick (ID {stockId}).',
+  error_target_unknown: 'Choose one of the listed targets, or General purpose.',
 }
 
 export type Bundle = Record<keyof typeof en, string>

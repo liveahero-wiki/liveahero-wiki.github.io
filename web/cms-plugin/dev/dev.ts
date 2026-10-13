@@ -2,7 +2,9 @@
 import plugin from '../index.ts'
 import { setRosterSource } from '../roster.ts'
 import { validateTeam } from '../validate.ts'
-import type { EditorHandle, FieldError, Lang, PluginContext } from '../plugin-api.ts'
+import type { EditorHandle, FieldError, PluginContext } from '../plugin-api.ts'
+import { defaultFilterState, type FilterState } from '../filters.ts'
+import type { Lang } from '../i18n.ts'
 import type { RosterFile, TeamPayload, TeamSlot } from '../types.ts'
 import fixture from './team-roster.fixture.json'
 
@@ -17,8 +19,30 @@ interface Scenario {
   payload?: TeamPayload
 }
 
+const TARGETS = [
+  { id: 'quest-616001', label: { en: 'Simulator - Lantern-type Kaibutsu (SSS)', ja: 'シミュレーター 提灯型怪物 (SSS)' }, url: '/guide/challenge_simulator/' },
+  { id: 'quest-617001', label: { en: 'Simulator - Another SSS' }, url: '/guide/challenge_simulator/' },
+  { id: 'rogue-2609', label: { en: 'Unexplored: final boss' } },
+  { id: 'quest-605001', label: { en: 'Old simulator' }, url: '/guide/challenge_simulator/', retired: true },
+]
+
 const SCENARIOS: Record<string, Scenario> = {
   'quest-support': { label: 'Quest group, support true (default)', options: { support: true } },
+  'optional-targets': {
+    label: 'support optional + targets (Team Creator "all" group)',
+    options: { support: 'optional', targets: TARGETS },
+    payload: { v: 1, supportIndex: null, target: 'quest-616001', heroes: [slot(10011), slot(10021)] },
+  },
+  'retired-target': {
+    label: 'support optional, current target retired / unlisted',
+    options: { support: 'optional', targets: TARGETS },
+    payload: { v: 1, supportIndex: 1, target: 'quest-605001', heroes: [slot(10011), slot(10021)] },
+  },
+  'unlisted-target': {
+    label: 'support optional, unlisted target id (target_unknown)',
+    options: { support: 'optional', targets: TARGETS },
+    payload: { v: 1, supportIndex: null, target: 'gone-1', heroes: [slot(10011)] },
+  },
   'quest-nosupport': { label: 'Quest group, support false', options: { support: false } },
   'focus-hero': { label: 'Hero focus 10011 (prefill)', options: { support: true, focus: { kind: 'hero', stockId: 10011 } } },
   'focus-sidekick': { label: 'Sidekick focus 10021 (hint + focus_missing)', options: { support: true, focus: { kind: 'sidekick', stockId: 10021 } } },
@@ -129,6 +153,40 @@ function remountAll() {
   if (!state.theme) document.documentElement.removeAttribute('data-theme')
   applyRoster()
   mountEditor()
+  void mountFilter()
+}
+
+// ---- list filter harness
+const SAMPLES: { name: string; payload: TeamPayload }[] = [
+  { name: 'A: sim, heroes 10011+10021', payload: { v: 1, supportIndex: null, target: 'quest-616001', heroes: [slot(10011), slot(10021)] } },
+  { name: 'B: rogue, bloom + tree', payload: { v: 1, supportIndex: 0, target: 'rogue-2609', heroes: [slot(10011, { bloom: true, skillTree: true }), slot(10031)] } },
+  { name: 'C: general, 4 heroes', payload: { v: 1, supportIndex: null, heroes: [slot(10012), slot(10021, { active: 10011 }), slot(10031), slot(10041)] } },
+]
+let filterState: FilterState = defaultFilterState()
+let filterHandles: { update(s: FilterState): void; destroy(): void }[] = []
+
+function showFilter() {
+  const lf = plugin.listFilter!
+  const sorted = SAMPLES.filter((x) => lf.test(x.payload, filterState)).sort((a, b) => lf.sorts![0].compare(a.payload, b.payload))
+  $('filter-state').textContent = JSON.stringify(lf.toParams(filterState)) + ' | activeCount(advanced): ' + lf.activeCount(filterState) + ' | matches: ' + (sorted.map((x) => x.name).join(' | ') || '(none)')
+}
+
+async function mountFilter() {
+  filterHandles.forEach((h) => h.destroy())
+  const lf = plugin.listFilter!
+  await lf.prepare?.()
+  const c = ctx()
+  filterState = lf.init(new URLSearchParams(location.hash.slice(1)), c) as FilterState
+  const onChange = (s: FilterState) => {
+    filterState = s
+    filterHandles.forEach((h) => h.update(s))
+    showFilter()
+  }
+  filterHandles = [
+    lf.mount($('filter-basic'), 'basic', filterState, onChange as (s: unknown) => void, c),
+    lf.mount($('filter-advanced'), 'advanced', filterState, onChange as (s: unknown) => void, c),
+  ] as typeof filterHandles
+  showFilter()
 }
 
 // ---- controls
@@ -156,6 +214,7 @@ $('btn-validate').onclick = () => showValidation(state.handle!.validate())
 $('btn-errors').onclick = () => state.handle!.setErrors(SAMPLE_SERVER_ERRORS)
 $('btn-clear').onclick = () => state.handle!.setErrors([])
 $('btn-remount').onclick = () => mountEditor()
+$('btn-filter-reset').onclick = () => { filterState = defaultFilterState(); filterHandles.forEach((h) => h.update(filterState)); showFilter() }
 
 // Test hooks for the browser checks.
 ;(window as unknown as Record<string, unknown>).__dev = state

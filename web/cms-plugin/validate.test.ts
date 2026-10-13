@@ -1,7 +1,7 @@
 // Port of wiki-cms/src/types/lah-team-formation/validate.test.ts (vitest) to node:test.
 import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
-import { validateTeamPayload, validateTeam, ERROR_CODES, type ValidateResult } from './validate.ts'
+import { validateTeamPayload, validateTeam, supportMode, ERROR_CODES, type ValidateResult } from './validate.ts'
 import type { TeamSlot } from './types.ts'
 
 const group = (options: Record<string, unknown> = {}) => ({ options })
@@ -123,6 +123,68 @@ describe('support rule (group-driven)', () => {
   })
   it('null actives never count as duplicates', () => {
     assert.equal(validateTeamPayload({ v: 1, heroes: [slot(1), slot(2)] }, group({ support: false })).ok, true)
+  })
+})
+
+describe('supportMode', () => {
+  it('absent / true -> required, false -> none, "optional" -> optional (anything else is required)', () => {
+    assert.equal(supportMode({}), 'required')
+    assert.equal(supportMode({ support: true }), 'required')
+    assert.equal(supportMode({ support: false }), 'none')
+    assert.equal(supportMode({ support: 'optional' }), 'optional')
+    assert.equal(supportMode({ support: 'maybe' }), 'required')
+  })
+})
+
+describe('support=optional', () => {
+  const g = group({ support: 'optional' })
+  const dupHero = [slot(1), slot(2), slot(1)]
+  it('accepts no support (absent or null) and a valid index', () => {
+    assert.equal(validateTeamPayload({ v: 1, heroes: [slot(1)] }, g).ok, true)
+    const none = validateTeamPayload({ v: 1, supportIndex: null, heroes: [slot(1)] }, g)
+    assert.deepEqual(none.ok && none.value.supportIndex, null)
+    const some = validateTeamPayload({ v: 1, supportIndex: 1, heroes: [slot(1), slot(2)] }, g)
+    assert.deepEqual(some.ok && some.value.supportIndex, 1)
+  })
+  it('still rejects an out-of-range index', () => {
+    for (const supportIndex of [1, -1, 0.5, 'a']) {
+      assert.ok(codes(validateTeamPayload({ v: 1, supportIndex, heroes: [slot(1)] }, g)).includes('support_out_of_range'), String(supportIndex))
+    }
+  })
+  it('without a support slot duplicates are rejected; with one that slot is exempt', () => {
+    assert.ok(codes(validateTeamPayload({ v: 1, supportIndex: null, heroes: dupHero }, g)).includes('duplicate_hero'))
+    assert.equal(validateTeamPayload({ v: 1, supportIndex: 2, heroes: dupHero }, g).ok, true)
+  })
+})
+
+describe('target rule', () => {
+  const targets = [
+    { id: 'quest-616001', label: { en: 'Simulator' } },
+    { id: 'quest-605001', label: { en: 'Old' }, retired: true },
+    { id: 'broken entry', label: { en: 'ignored' } },
+  ]
+  const g = group({ support: 'optional', targets })
+  const withTarget = (target: unknown) => validateTeamPayload({ v: 1, supportIndex: null, heroes: [slot(1)], target }, g)
+  const targetValue = (r: ValidateResult) => (r.ok ? r.value.target : 'invalid')
+
+  it('absent or null target is general purpose', () => {
+    assert.equal(validateTeamPayload({ v: 1, supportIndex: null, heroes: [slot(1)] }, g).ok, true)
+    assert.equal(withTarget(null).ok, true)
+    assert.equal('target' in (withTarget(null) as { value: object }).value, false)
+  })
+  it('a listed id is valid, including a retired one', () => {
+    assert.equal(targetValue(withTarget('quest-616001')), 'quest-616001')
+    assert.equal(targetValue(withTarget('quest-605001')), 'quest-605001')
+  })
+  it('anything else is target_unknown at payload.target', () => {
+    for (const bad of ['quest-1', '', 'broken entry', 616001, true, {}, []]) {
+      const r = withTarget(bad)
+      assert.deepEqual(codes(r), ['target_unknown'], JSON.stringify(bad))
+      if (!r.ok) assert.equal(r.errors[0].path, 'payload.target')
+    }
+  })
+  it('a group without targets accepts none', () => {
+    assert.deepEqual(codes(validateTeamPayload({ v: 1, supportIndex: null, heroes: [slot(1)], target: 'quest-616001' }, group({ support: 'optional' }))), ['target_unknown'])
   })
 })
 

@@ -1,9 +1,11 @@
 ---
 title: Quest
 banner: true
-team_formations:
+# Only for the legacy per-page groups of the registry (wiki_plugins/lib/cms-groups.js, EMIT_LEGACY_GROUPS):
+# delete together with that block.
+legacy_team_formations:
 - quest: 206002
-  label: Parallel Quartz (S rank) 
+  label: Parallel Quartz (S rank)
 ---
 
 * this will be unordered
@@ -123,14 +125,3 @@ There are different Rank Up Items available each day. The attributes available d
 ### Stamp of Approval Quests
 
 {% include quest-group.html chapterId=207 %}
-
-## Community Team Formations
-
-Share your farming team and browse teams submitted by other players.
-
-{% assign cms_groups = page | cms_groups %}
-{% for cms_group in cms_groups %}
-{% include cms-submissions.html group=cms_group.groupId label=cms_group.label anchor=cms_group.anchor %}
-{% endfor %}
-
-{% include cms-embed-script.html %}

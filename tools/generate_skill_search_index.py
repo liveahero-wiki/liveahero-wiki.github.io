@@ -1529,6 +1529,16 @@ def build_roster(entities, m, version):
         # chara page permalink; "" when the stock has no released page
         return "" if e["page"] == "/charas/" else e["page"]
 
+    chara_pages = m.get("chara_pages") or {}
+
+    def limited(e):
+        # `limited: true` on the card's entry in the chara page's front matter
+        # (heroes[] / sidekicks[], matched by stockId); absent counts as false.
+        fm = (chara_pages.get(e["characterId"]) or {}).get("data") or {}
+        cards = fm.get("heroes" if e["kind"] == "hero" else "sidekicks") or []
+        return any(c.get("stockId") == e["stockId"] and c.get("limited") is True
+                   for c in cards if isinstance(c, dict))
+
     heroes, sidekicks = [], []
     for e in sorted(entities, key=lambda e: e["stockId"]):
         if e["isMob"]:
@@ -1544,6 +1554,7 @@ def build_roster(entities, m, version):
                 "element": e.get("element"),
                 "role": e["role"],
                 "hasSkillTree": e["hasSkillTree"],
+                "limited": limited(e),
             })
         else:
             sidekicks.append({
@@ -1553,6 +1564,7 @@ def build_roster(entities, m, version):
                 "page": page(e),
                 "resourceName": e["resourceName"],
                 "rarity": e["rarity"],
+                "limited": limited(e),
             })
     return {"version": version, "heroes": heroes, "sidekicks": sidekicks}
 

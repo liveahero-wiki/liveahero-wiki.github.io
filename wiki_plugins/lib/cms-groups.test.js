@@ -1,27 +1,25 @@
-// The submission groups of event and chara pages (cms-groups.js) and the registry built from them.
+// The targets declared by pages (cms-groups.js) and the single-group registry built from them.
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { cmsGroupRegistry, cmsGroups } from "./cms-groups.js";
+import { EMIT_LEGACY_GROUPS, cmsGroupRegistry, cmsTargets } from "./cms-groups.js";
 
+const warnings = [];
 const deps = {
+  warn: (message) => warnings.push(message),
   data: {
     QuestMaster: {
+      616001: { questId: 616001, questName: "シミュレーター 提灯型" },
       1272001: { questId: 1272001, questName: "熱狂の事務所ライブ" },
       1272002: { questId: 1272002, questName: "実戦式！体力テスト！" },
+      999001: { questId: 999001, questName: "" },
     },
     CardMaster: { 102511: { resourceName: "andrew" } },
     SidekickMaster: { 102511: { resourceName: "andrew" } },
   },
 };
 
-const event = (team_formations, extra = {}) => ({
-  url: "/events/2607HighDifficultRevival/",
-  title: "Worthy Foe",
-  eventId: 174,
-  team_formations,
-  ...extra,
-});
+const guide = (team_formations, extra = {}) => ({ url: "/guide/challenge_simulator/", title: "Challenge Simulator", team_formations, ...extra });
 
 const andrew = (extra = {}) => ({
   url: "/charas/andrew/",
@@ -35,148 +33,188 @@ const andrew = (extra = {}) => ({
   ...extra,
 });
 
-test("event: one group per declared quest, in declaration order", () => {
-  const groups = cmsGroups(event([{ quest: 1272001 }, { quest: 1272002, label: "Stamina Test", support: false }]), deps);
-  assert.deepEqual(groups, [
+test.beforeEach(() => {
+  warnings.length = 0;
+});
+
+test("quest entry: id defaults to quest-<questId>, a string label is en, ja defaults to the QuestMaster name", () => {
+  assert.deepEqual(cmsTargets(guide([{ quest: 616001, label: "Simulator - Lantern-type Kaibutsu (SSS)" }]), deps), [
     {
-      groupId: "quest-1272001",
-      title: "Worthy Foe › 熱狂の事務所ライブ",
-      url: "/events/2607HighDifficultRevival/#team-quest-1272001",
-      anchor: "team-quest-1272001",
-      label: "熱狂の事務所ライブ",
-      options: { support: true },
-    },
-    {
-      groupId: "quest-1272002",
-      title: "Worthy Foe › Stamina Test",
-      url: "/events/2607HighDifficultRevival/#team-quest-1272002",
-      anchor: "team-quest-1272002",
-      label: "Stamina Test",
-      options: { support: false },
+      id: "quest-616001",
+      label: { en: "Simulator - Lantern-type Kaibutsu (SSS)", ja: "シミュレーター 提灯型" },
+      url: "/guide/challenge_simulator/",
     },
   ]);
+  assert.deepEqual(warnings, []);
 });
 
-test("event: jp_title is the title of an event without an English one", () => {
-  const [group] = cmsGroups(event([{ quest: 1272001, label: "SS" }], { title: undefined, jp_title: "強敵" }), deps);
-  assert.equal(group.title, "強敵 › SS");
+test("quest entry without a label uses the QuestMaster name (ja)", () => {
+  const [target] = cmsTargets(guide([{ quest: 1272001 }]), deps);
+  assert.deepEqual(target.label, { ja: "熱狂の事務所ライブ" });
 });
 
-test("event without team_formations has no groups", () => {
-  assert.deepEqual(cmsGroups(event(undefined), deps), []);
-  assert.deepEqual(cmsGroups(event(null), deps), []);
-  assert.deepEqual(cmsGroups(event([]), deps), []);
+test("a label map keeps its languages (in en, ja, zh-Hans, zh-Hant order) and its own ja", () => {
+  const [target] = cmsTargets(guide([{ quest: 616001, label: { "zh-Hant": "繁", ja: "日本語", en: "English" } }]), deps);
+  assert.deepEqual(Object.entries(target.label), [["en", "English"], ["ja", "日本語"], ["zh-Hant", "繁"]]);
 });
 
-test("chara: one hero and one sidekick group per card, titled like the tabs", () => {
-  const groups = cmsGroups(andrew(), deps);
-  assert.deepEqual(
-    groups.map((g) => [g.groupId, g.anchor, g.url, g.title, g.label]),
-    [
-      ["hero-10251", "team-hero-10251", "/charas/andrew/#team-hero-10251", "Andrew – Hero", "Hero"],
-      ["hero-10252", "team-hero-10252", "/charas/andrew/#team-hero-10252", 'Andrew – "The Riptide" Andrew', '"The Riptide" Andrew'],
-      ["sidekick-10251", "team-sidekick-10251", "/charas/andrew/#team-sidekick-10251", "Andrew – Sidekick", "Sidekick"],
-      [
-        "sidekick-10252",
-        "team-sidekick-10252",
-        "/charas/andrew/#team-sidekick-10252",
-        'Andrew – "The Riptide" Andrew (Sidekick)',
-        '"The Riptide" Andrew (Sidekick)',
-      ],
-    ],
-  );
-  assert.deepEqual(groups[0].options, { support: true, focus: { kind: "hero", stockId: 10251 } });
-  assert.deepEqual(groups[2].options, { support: true, focus: { kind: "sidekick", stockId: 10251 } });
+test("free-form target: id and label required, retired is kept, url is the declaring page", () => {
+  const [target] = cmsTargets(guide([{ id: "rogue-2609", label: { en: "Unexplored: final boss" }, retired: true }], { url: "/events/2609Rogue/" }), deps);
+  assert.deepEqual(target, { id: "rogue-2609", label: { en: "Unexplored: final boss" }, url: "/events/2609Rogue/", retired: true });
 });
 
-test("chara: unreleased pages have no groups", () => {
-  assert.deepEqual(cmsGroups(andrew({ unreleased: true }), deps), []);
-  assert.deepEqual(cmsGroups(andrew({ unreleased: true, heroes: undefined, sidekicks: undefined }), deps), []);
+test("an explicit id wins over the quest default; retired: false is not emitted", () => {
+  const [target] = cmsTargets(guide([{ id: "sim-lantern", quest: 616001, label: "L", retired: false }]), deps);
+  assert.equal(target.id, "sim-lantern");
+  assert.equal("retired" in target, false);
 });
 
-test("chara: a card can opt out, true is the default spelled out", () => {
-  const groups = cmsGroups(
-    andrew({ heroes: [{ stockId: 10251, team_formations: true }, { stockId: 10252, team_formations: false }], sidekicks: [{ stockId: 10251, team_formations: false }] }),
-    deps,
-  );
-  assert.deepEqual(groups.map((g) => g.groupId), ["hero-10251"]);
+test("a quest that is not in QuestMaster only warns, and then the label is required", () => {
+  const [target] = cmsTargets(guide([{ quest: 5, label: "Gone quest" }]), deps);
+  assert.deepEqual(target.label, { en: "Gone quest" });
+  assert.equal(warnings.length, 1);
+  assert.match(warnings[0], /quest 5 is not in _data\/QuestMaster\.json/);
+  assert.throws(() => cmsTargets(guide([{ quest: 5 }]), deps), /has no label/);
 });
 
-test("chara without sidekicks only has hero groups", () => {
-  const groups = cmsGroups(andrew({ sidekicks: undefined }), deps);
-  assert.deepEqual(groups.map((g) => g.groupId), ["hero-10251", "hero-10252"]);
+test("targets keep the declaration order; pages without team_formations have none", () => {
+  const targets = cmsTargets(guide([{ quest: 1272002, label: "B" }, { quest: 1272001, label: "A" }]), deps);
+  assert.deepEqual(targets.map((t) => t.id), ["quest-1272002", "quest-1272001"]);
+  for (const value of [undefined, null, []]) assert.deepEqual(cmsTargets(guide(value), deps), []);
 });
 
-test("build failure: a quest that is not in QuestMaster", () => {
-  assert.throws(() => cmsGroups(event([{ quest: 999 }]), deps), /quest 999 is not in _data\/QuestMaster\.json/);
+test("build failure: neither quest nor id", () => {
+  assert.throws(() => cmsTargets(guide([{ label: "x" }]), deps), /needs a "quest"/);
 });
 
 test("build failure: quest is not an integer", () => {
-  for (const quest of ["1272001", 1272001.5, undefined, null, true]) {
-    assert.throws(() => cmsGroups(event([{ quest }]), deps), /quest must be an integer/, String(quest));
-  }
-  assert.throws(() => cmsGroups(event([1272001]), deps), /must be a mapping/);
-});
-
-test("build failure: support present but not a boolean", () => {
-  for (const support of ["false", 0, 1, null, []]) {
-    assert.throws(() => cmsGroups(event([{ quest: 1272001, support }]), deps), /support must be true or false/, String(support));
+  for (const quest of ["616001", 616001.5, null, true]) {
+    assert.throws(() => cmsTargets(guide([{ quest, label: "x" }]), deps), /quest must be an integer/, String(quest));
   }
 });
 
-test("build failure: team_formations on an event is not a list (including true)", () => {
-  for (const value of [true, false, "yes", 1272001, { quest: 1272001 }]) {
-    assert.throws(() => cmsGroups(event(value), deps), /team_formations must be a list/, String(value));
+test("build failure: malformed id", () => {
+  for (const id of ["Quest-1", "-x", "a b", "a_b", "", 5, "x".repeat(65)]) {
+    assert.throws(() => cmsTargets(guide([{ id, label: "x" }]), deps), /\.id must match/, String(id));
+  }
+  assert.doesNotThrow(() => cmsTargets(guide([{ id: "x".repeat(64), label: "x" }]), deps));
+});
+
+test("build failure: no label at all", () => {
+  assert.throws(() => cmsTargets(guide([{ id: "rogue-2609" }]), deps), /has no label/);
+  assert.throws(() => cmsTargets(guide([{ quest: 999001 }]), deps), /has no label/); // QuestMaster name is empty
+  assert.throws(() => cmsTargets(guide([{ id: "x1", label: {} }]), deps), /has no label/);
+});
+
+test("build failure: bad label values", () => {
+  for (const label of ["", "  ", 5, ["x"], true]) {
+    assert.throws(() => cmsTargets(guide([{ id: "x1", label }]), deps), /label must be a non-empty string or a map/, JSON.stringify(label));
+  }
+  assert.throws(() => cmsTargets(guide([{ id: "x1", label: { fr: "non" } }]), deps), /label\.fr: unknown language/);
+  assert.throws(() => cmsTargets(guide([{ id: "x1", label: { en: "" } }]), deps), /label\.en must be a non-empty string/);
+});
+
+test("build failure: the removed support key", () => {
+  for (const support of [true, false, "optional", undefined]) {
+    assert.throws(() => cmsTargets(guide([{ quest: 616001, label: "x", support }]), deps), /support was removed/, String(support));
   }
 });
 
-test("build failure: non-boolean team_formations on a card", () => {
-  for (const value of ["no", 0, null, []]) {
-    assert.throws(
-      () => cmsGroups(andrew({ heroes: [{ stockId: 10251, team_formations: value }] }), deps),
-      /heroes\[0\]\.team_formations must be true or false/,
-      String(value),
-    );
+test("build failure: retired is not a boolean", () => {
+  assert.throws(() => cmsTargets(guide([{ id: "x1", label: "x", retired: "yes" }]), deps), /retired must be true or false/);
+});
+
+test("build failure: team_formations is not a list (including true), entries are not mappings", () => {
+  for (const value of [true, false, "yes", 616001, { quest: 616001 }]) {
+    assert.throws(() => cmsTargets(guide(value), deps), /team_formations must be a list/, String(value));
   }
+  assert.throws(() => cmsTargets(guide([616001]), deps), /must be a mapping/);
+});
+
+test("build failure: duplicate id within one page", () => {
+  assert.throws(() => cmsTargets(guide([{ quest: 616001, label: "a" }, { id: "quest-616001", label: "b" }]), deps), /target quest-616001 is declared twice/);
+});
+
+test("build failure: team_formations on a chara page", () => {
+  assert.throws(() => cmsTargets(andrew({ team_formations: [{ id: "x1", label: "x" }] }), deps), /not allowed on a chara page/);
+  assert.deepEqual(cmsTargets(andrew(), deps), []);
+});
+
+test("registry: the single `all` group with support optional and the targets of every page in order", () => {
+  const registry = cmsGroupRegistry(
+    [
+      guide([{ quest: 616001, label: "Lantern" }, { quest: 617001, label: { en: "Slime", "zh-Hans": "史莱姆" } }]),
+      { url: "/faq/" },
+      { url: "/events/2609Rogue/", team_formations: [{ id: "rogue-2609", label: "Boss", retired: true }] },
+    ],
+    deps,
+  );
+  const { all } = registry.groups;
+  assert.equal(all.title, "Team Creator");
+  assert.equal(all.url, "/team-creator.html");
+  assert.equal(all.options.support, "optional");
+  assert.deepEqual(all.options.targets, [
+    { id: "quest-616001", label: { en: "Lantern", ja: "シミュレーター 提灯型" }, url: "/guide/challenge_simulator/" },
+    { id: "quest-617001", label: { en: "Slime", "zh-Hans": "史莱姆" }, url: "/guide/challenge_simulator/" },
+    { id: "rogue-2609", label: { en: "Boss" }, url: "/events/2609Rogue/", retired: true },
+  ]);
+});
+
+test("registry: the same target id on two pages fails the build, naming both", () => {
+  const other = guide([{ quest: 616001, label: "again" }], { url: "/events/other/" });
   assert.throws(
-    () => cmsGroups(andrew({ sidekicks: [{ stockId: 10251, team_formations: "off" }] }), deps),
-    /sidekicks\[0\]\.team_formations must be true or false/,
+    () => cmsGroupRegistry([guide([{ quest: 616001, label: "x" }]), other], deps),
+    /duplicate target quest-616001: declared by \/guide\/challenge_simulator\/ and \/events\/other\//,
   );
 });
 
-test("build failure: duplicate quest within one page", () => {
-  assert.throws(() => cmsGroups(event([{ quest: 1272001 }, { quest: 1272001, label: "again" }]), deps), /group quest-1272001 is declared twice/);
+test("registry: a page error propagates", () => {
+  assert.throws(() => cmsGroupRegistry([guide([{ quest: 616001, label: "x", support: false }])], deps), /support was removed/);
 });
 
-test("build failure: a label that is not text, a page-level flag on a chara page, a card without stockId", () => {
-  assert.throws(() => cmsGroups(event([{ quest: 1272001, label: 5 }]), deps), /label must be a non-empty string/);
-  assert.throws(() => cmsGroups(andrew({ team_formations: false }), deps), /not allowed on a chara page/);
-  assert.throws(() => cmsGroups(andrew({ heroes: [{ BIO_H01: "x" }] }), deps), /stockId must be an integer/);
+// ---- legacy per-page groups: delete this block together with the legacy code in cms-groups.js (phase 3) ----
+
+test("legacy: EMIT_LEGACY_GROUPS is on until the Worker has migrated", () => {
+  assert.equal(EMIT_LEGACY_GROUPS, true);
 });
 
-test("registry: shape of /api/cms-groups.json", () => {
-  const registry = cmsGroupRegistry([event([{ quest: 1272001, support: false }]), andrew({ sidekicks: undefined, heroes: [{ stockId: 10251 }] }), { url: "/faq/" }], deps);
-  assert.deepEqual(registry, {
-    groups: {
-      "quest-1272001": {
-        title: "Worthy Foe › 熱狂の事務所ライブ",
-        url: "/events/2607HighDifficultRevival/#team-quest-1272001",
-        options: { support: false },
+test("legacy: quest groups from team_formations (quest entries only) and legacy_team_formations, chara groups per card", () => {
+  const registry = cmsGroupRegistry(
+    [
+      guide([{ quest: 616001, label: { en: "Lantern" } }, { id: "rogue-2609", label: "Boss" }]),
+      {
+        url: "/events/2607HighDifficultRevival/",
+        title: "Worthy Foe",
+        eventId: 174,
+        legacy_team_formations: [{ quest: 1272001 }, { quest: 1272002, label: "Stamina Test", support: false }],
       },
-      "hero-10251": {
-        title: "Andrew – Hero",
-        url: "/charas/andrew/#team-hero-10251",
-        options: { support: true, focus: { kind: "hero", stockId: 10251 } },
-      },
-    },
+      andrew({ sidekicks: undefined }),
+    ],
+    deps,
+  );
+  assert.deepEqual(Object.keys(registry.groups), ["all", "quest-616001", "quest-1272001", "quest-1272002", "hero-10251", "hero-10252"]);
+  assert.deepEqual(registry.groups["quest-616001"], {
+    title: "Challenge Simulator › Lantern",
+    url: "/guide/challenge_simulator/#team-quest-616001",
+    options: { support: true },
   });
+  assert.equal(registry.groups["quest-1272001"].title, "Worthy Foe › 熱狂の事務所ライブ");
+  assert.deepEqual(registry.groups["quest-1272002"].options, { support: false });
+  assert.deepEqual(registry.groups["hero-10251"], {
+    title: "Andrew – Hero",
+    url: "/charas/andrew/#team-hero-10251",
+    options: { support: true, focus: { kind: "hero", stockId: 10251 } },
+  });
+  assert.equal(registry.groups["hero-10252"].title, 'Andrew – "The Riptide" Andrew');
 });
 
-test("registry: a group id declared by two pages fails the build, naming both", () => {
-  const other = event([{ quest: 1272001 }], { url: "/events/other/" });
-  assert.throws(
-    () => cmsGroupRegistry([event([{ quest: 1272001 }]), other], deps),
-    /duplicate submission group quest-1272001: declared by \/events\/2607HighDifficultRevival\/ and \/events\/other\//,
+test("legacy: sidekick groups, unreleased charas have none, a duplicate legacy group id fails the build", () => {
+  const registry = cmsGroupRegistry([andrew()], deps);
+  assert.deepEqual(
+    Object.keys(registry.groups).filter((id) => id.startsWith("sidekick-")),
+    ["sidekick-10251", "sidekick-10252"],
   );
-  assert.throws(() => cmsGroupRegistry([andrew(), andrew({ url: "/charas/andrew-copy/" })], deps), /duplicate submission group hero-10251/);
+  assert.equal(registry.groups["sidekick-10252"].title, 'Andrew – "The Riptide" Andrew (Sidekick)');
+  assert.deepEqual(Object.keys(cmsGroupRegistry([andrew({ unreleased: true })], deps).groups), ["all"]);
+  assert.throws(() => cmsGroupRegistry([andrew(), andrew({ url: "/charas/andrew-copy/" })], deps), /duplicate legacy submission group hero-10251/);
 });

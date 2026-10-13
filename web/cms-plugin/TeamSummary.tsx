@@ -3,11 +3,12 @@
 
 import { useRef, useState } from 'preact/hooks'
 import type { PluginContext } from './plugin-api.ts'
-import { CardIcon, Dialog, cardLabel, useRoster } from './common.tsx'
+import { CardIcon, Dialog, TargetChip, cardLabel, useRoster } from './common.tsx'
 import { makeT } from './i18n/t.ts'
 import { TeamDetail } from './TeamDetail.tsx'
+import { parseTargets } from './targets.ts'
 import { parseFocus } from './validate.ts'
-import { isFocusCard, toViewSlots } from './view.ts'
+import { isFocusCard, toViewSlots, toViewTarget } from './view.ts'
 
 interface Props {
   payload: unknown
@@ -20,6 +21,7 @@ export function TeamSummary({ payload, ctx }: Props) {
   const roster = useRoster()
   const focus = parseFocus(ctx.group.options)
   const { slots, supportIndex } = toViewSlots(payload)
+  const target = toViewTarget(payload)
   const [open, setOpen] = useState(false)
   const btn = useRef<HTMLButtonElement>(null)
 
@@ -29,6 +31,7 @@ export function TeamSummary({ payload, ctx }: Props) {
 
   return (
     <div class="cms-lah cms-lah-summary-root">
+      {target && <TargetChip id={target} targets={parseTargets(ctx.group.options)} lang={lang} t={t} />}
       <button
         ref={btn}
         type="button"

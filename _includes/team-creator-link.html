@@ -1,0 +1,21 @@
+{% comment %}
+  Links to the Team Creator page (docs/CMS.md), pre-filtered through the URL hash; no request to the
+  wiki-cms Worker is made from the page that carries them.
+  hero:    a hero stockId   -> teams using this hero              (#hero=<stockId>)
+  sidekick: a sidekick stockId -> teams using it as active sidekick (#sk=<stockId>)
+  neither: one link per target the page declares in `team_formations:` (#target=<id>)
+{% endcomment -%}
+{% if include.hero -%}
+<p class="team-creator-link" data-pagefind-ignore><a href="/team-creator.html#hero={{ include.hero }}">Community teams using this hero &rarr;</a></p>
+{%- elsif include.sidekick -%}
+<p class="team-creator-link" data-pagefind-ignore><a href="/team-creator.html#sk={{ include.sidekick }}">Community teams using this sidekick as active &rarr;</a></p>
+{%- else -%}
+{%- assign cms_targets = page | cms_targets -%}
+{%- if cms_targets.size > 0 %}
+<ul class="team-creator-link" data-pagefind-ignore>
+{%- for target in cms_targets %}
+<li><a href="/team-creator.html#target={{ target.id }}">Community teams for {{ target.label.en | default: target.label.ja | escape }} &rarr;</a></li>
+{%- endfor %}
+</ul>
+{%- endif -%}
+{%- endif %}

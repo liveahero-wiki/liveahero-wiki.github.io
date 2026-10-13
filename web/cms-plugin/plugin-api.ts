@@ -1,7 +1,5 @@
-// Source of truth: wiki-cms/src/shared/plugin-api.ts (repo `wiki-cms`). Keep in sync by copying it.
-// Only deviation: `Lang` is declared inline instead of imported from wiki-cms/src/shared/i18n.ts.
-
-export type Lang = 'en' | 'zh-Hans' | 'zh-Hant' | 'ja'
+// Source of truth: wiki-cms/src/shared/plugin-api.ts. Copy this file verbatim into plugin repos.
+import type { Lang } from './i18n.ts'
 
 /** `message` is the English fallback; `code` (+ `params`) is what localized clients translate. */
 export interface FieldError {
@@ -27,6 +25,33 @@ export interface EditorHandle {
   setErrors(errors: FieldError[]): void
 }
 
+/** Optional game-specific filtering and sorting for the catalog layout of the list. The core treats the state `S` as opaque. */
+export interface ListFilter<P = unknown, S = unknown> {
+  /** State from the hash params the plugin owns (the core reserves `q`, `sort`, `lang` and `t.*`). */
+  init(params: URLSearchParams, ctx: PluginContext): S
+  /** Non-default values only; merged into the hash by the core (an empty result means "no plugin filter is active"). */
+  toParams(state: S): Record<string, string>
+  /** Awaited once before the first filtering (e.g. to load the roster). */
+  prepare?(): Promise<void>
+  /**
+   * Render the controls of one part into `el` (owned by the core). `update(s)` is called on every state change, including
+   * the echo of `onChange` and "Clear filters" (which resets to `init(new URLSearchParams(), ctx)`): keep it idempotent.
+   */
+  mount(
+    el: HTMLElement,
+    part: 'basic' | 'advanced',
+    state: S,
+    onChange: (s: S) => void,
+    ctx: PluginContext,
+  ): { update(s: S): void; destroy(): void }
+  /** Pure and cheap; the payload is the published (server-validated) JSON. */
+  test(payload: P, state: S): boolean
+  /** Number of active (non-default) filters of the `advanced` part, shown as a badge on the core's "Advanced filters" toggle. */
+  activeCount(state: S): number
+  /** Extra sort options; ties are broken by newest first. */
+  sorts?: { key: string; label(lang: Lang): string; compare(a: P, b: P): number }[]
+}
+
 export interface SubmissionPlugin<P = unknown> {
   apiVersion: 1
   /** Must equal data-cms-type / the submission type id. */
@@ -41,4 +66,6 @@ export interface SubmissionPlugin<P = unknown> {
     init: { value: P; onChange(p: P): void; errors: FieldError[] },
     ctx: PluginContext,
   ): EditorHandle
+  /** Optional: extra filters and sorts for the catalog layout. Without it only the core filters are offered. */
+  listFilter?: ListFilter<P>
 }

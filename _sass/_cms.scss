@@ -21,6 +21,21 @@ html[data-theme="dark"]:root .cms-submissions {
   --cms-support-bg: #1d4a52;
 }
 
+.cms-submissions {
+  --cms-fg: var(--text);
+  --cms-bg: var(--bg);
+  --cms-border: var(--colorGrey);
+  --cms-accent: var(--link);
+  --cms-muted: #666;
+  --cms-chip-bg: var(--color50);
+  --cms-support-bg: #d9f4f7;
+}
+
+html[data-theme="dark"]:root .cms-submissions {
+  --cms-muted: #aaa;
+  --cms-support-bg: #1d4a52;
+}
+
 .cms-section {
   margin-top: 2em;
   // the tab panels of a chara page scroll sideways; never let a list widen one
@@ -30,4 +45,13 @@ html[data-theme="dark"]:root .cms-submissions {
 .cms-submissions {
   min-width: 0;
   max-width: 100%;
+}
+
+// "Community teams ..." links of chara cards, events and guides (_includes/team-creator-link.html)
+.team-creator-link {
+  margin-top: 1.5em;
+}
+
+ul.team-creator-link {
+  padding-left: 1.2em;
 }

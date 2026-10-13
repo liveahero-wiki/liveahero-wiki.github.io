@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
-import { addSlot, initState, moveSlot, relPath, removeSlot, selectSupport, sortErrors, sortedJson, toPayload, type Slot, type State } from './editor-state.ts'
+import { addSlot, clearSupport, initState, moveSlot, relPath, removeSlot, selectSupport, selectTarget, sortErrors, sortedJson, toPayload, type Slot, type State } from './editor-state.ts'
 import { validateTeam } from './validate.ts'
 
 const ids = (s: State) => s.slots.map((x) => x.stockId)
@@ -110,6 +110,67 @@ describe('support follows its slot', () => {
     s = addSlot(s, true)
     const filled: State = { ...s, slots: s.slots.map((x, i): Slot => ({ ...x, stockId: 100 + i })) }
     assert.deepEqual(validateTeam(toPayload(filled, true), {}), [])
+  })
+})
+
+describe('support mode optional', () => {
+  const opt = { support: 'optional' }
+  it('a new editor has no support selected and adding slots never selects one', () => {
+    let s = initState(undefined, opt)
+    assert.equal(s.supportKey, null)
+    s = addSlot(s, false)
+    s = addSlot(s, false)
+    assert.equal(s.supportKey, null)
+    assert.equal(toPayload(s, true).supportIndex, null)
+  })
+  it('keeps an incoming support, which follows its slot', () => {
+    let s = initState({ v: 1, supportIndex: 1, heroes: [{ stockId: 1 }, { stockId: 2 }] }, opt)
+    assert.equal(supportId(s), 2)
+    assert.equal(s.supportAuto, false)
+    s = moveSlot(s, 1, 0)
+    assert.equal(toPayload(s, true).supportIndex, 0)
+  })
+  it('"No borrowed support" clears the selection and stays cleared', () => {
+    let s = initState({ v: 1, supportIndex: 0, heroes: [{ stockId: 1 }] }, opt)
+    s = clearSupport(s)
+    s = addSlot(s, false)
+    assert.equal(toPayload(s, true).supportIndex, null)
+    s = selectSupport(s, s.slots[1].key)
+    assert.equal(toPayload(s, true).supportIndex, 1)
+  })
+  it('removing the support slot leaves none selected', () => {
+    const s0 = initState({ v: 1, supportIndex: 1, heroes: [{ stockId: 1 }, { stockId: 2 }] }, opt)
+    const s = addSlot(removeSlot(s0, s0.slots[1].key), false)
+    assert.equal(s.supportKey, null)
+  })
+  it('an emitted payload without support is valid under optional (and not under required)', () => {
+    let s = initState(undefined, opt)
+    s = { ...s, slots: [{ ...s.slots[0], stockId: 7 }] }
+    assert.deepEqual(validateTeam(toPayload(s, true), opt), [])
+    assert.deepEqual(validateTeam(toPayload(s, true), {}).map((e) => e.code), ['support_required'])
+  })
+})
+
+describe('target', () => {
+  it('is read from the incoming payload and emitted only when set', () => {
+    const s = initState({ v: 1, supportIndex: 0, heroes: [{ stockId: 1 }], target: 'quest-616001' }, {})
+    assert.equal(s.target, 'quest-616001')
+    assert.equal(toPayload(s, true).target, 'quest-616001')
+    const cleared = selectTarget(s, null)
+    assert.equal('target' in toPayload(cleared, true), false)
+    assert.equal(selectTarget(cleared, '').target, null)
+    assert.equal(initState({ v: 1, heroes: [{ stockId: 1 }], target: 5 }, {}).target, null)
+  })
+  it('survives slot changes', () => {
+    let s = selectTarget(initState(undefined, {}), 'rogue-2609')
+    s = addSlot(s, true)
+    s = removeSlot(s, s.slots[0].key)
+    assert.equal(s.target, 'rogue-2609')
+  })
+  it('sortErrors puts payload.target errors in their own bucket', () => {
+    const r = sortErrors([{ path: 'payload.target', code: 'target_unknown', message: 'x' }])
+    assert.equal(r.target.length, 1)
+    assert.equal(r.team.length, 0)
   })
 })
 

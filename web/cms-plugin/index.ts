@@ -3,7 +3,8 @@
 
 import { h, render, type VNode } from 'preact'
 import type { EditorHandle, FieldError, PluginContext, SubmissionPlugin } from './plugin-api.ts'
-import css from './styles.css?inline'
+import { listFilter } from './list-filter.ts'
+import { ensureStyles } from './style.ts'
 import { TeamDetail } from './TeamDetail.tsx'
 import { TeamEditor, type EditorBridge } from './TeamEditor.tsx'
 import { TeamSummary } from './TeamSummary.tsx'
@@ -11,16 +12,6 @@ import type { TeamPayload } from './types.ts'
 import { emptySlot } from './view.ts'
 
 const TYPE = 'lah-team-formation'
-const STYLE_ID = `cms-plugin-${TYPE}`
-
-/** Inject the stylesheet once (the same module may be loaded by several embeds on a page). */
-function ensureStyles(): void {
-  if (document.getElementById(STYLE_ID)) return
-  const style = document.createElement('style')
-  style.id = STYLE_ID
-  style.textContent = css
-  document.head.appendChild(style)
-}
 
 function mount(el: HTMLElement, vnode: VNode<any>): () => void {
   ensureStyles()
@@ -37,6 +28,8 @@ const plugin: SubmissionPlugin<TeamPayload> = {
   mountSummary: (el, payload, ctx: PluginContext) => mount(el, h(TeamSummary, { payload, ctx })),
 
   mountDetail: (el, payload, ctx: PluginContext) => mount(el, h(TeamDetail, { payload, ctx })),
+
+  listFilter,
 
   mountEditor(el, init, ctx: PluginContext): EditorHandle {
     const bridge: EditorBridge = { validate: () => [], setErrors: () => {}, abortDrag: () => {} }

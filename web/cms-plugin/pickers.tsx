@@ -5,7 +5,7 @@
 
 import type { ComponentChildren } from 'preact'
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks'
-import type { Lang } from './plugin-api.ts'
+import type { Lang } from './i18n.ts'
 import { CardIcon, cardLabel, type CardKind } from './common.tsx'
 import type { T } from './i18n/t.ts'
 import { localizedName, searchText, type Roster } from './roster.ts'
@@ -269,20 +269,23 @@ export function CardPicker({ kind, roster, value, onChange, exclude, excludeChar
   )
 }
 
-interface PassivePickerProps extends PickerBase {
+interface CardListPickerProps extends PickerBase {
+  kind: CardKind
   values: number[]
   max: number
-  /** Sidekicks of this character cannot be added (the slot hero's own character). */
+  /** Cards of this character cannot be added (the slot hero's own character). */
   excludeCharacter?: number | null
   onAdd: (id: number) => void
   onRemove: (id: number) => void
 }
 
-export function PassivePicker({ roster, values, max, excludeCharacter, onAdd, onRemove, lang, t, label, placeholder, invalid, describedBy }: PassivePickerProps) {
-  const entries = useMemo(
-    () => (roster ? roster.sidekicks.filter((e) => !values.includes(e.stockId) && e.characterId !== excludeCharacter) : []),
-    [roster, values, excludeCharacter],
-  )
+/** A list of chosen cards as removable icon chips plus a search box that adds one (up to `max`). */
+export function CardListPicker({ kind, roster, values, max, excludeCharacter, onAdd, onRemove, lang, t, label, placeholder, invalid, describedBy }: CardListPickerProps) {
+  const entries = useMemo(() => {
+    if (!roster) return []
+    const list: Entry[] = kind === 'hero' ? roster.heroes : roster.sidekicks
+    return list.filter((e) => !values.includes(e.stockId) && e.characterId !== excludeCharacter)
+  }, [roster, kind, values, excludeCharacter])
   const full = values.length >= max
   return (
     <div class="cms-lah-passives">
@@ -292,10 +295,10 @@ export function PassivePicker({ roster, values, max, excludeCharacter, onAdd, on
       {values.length > 0 && (
         <ul class="cms-lah-chips">
           {values.map((id) => {
-            const name = cardLabel(roster, 'sidekick', id, lang)
+            const name = cardLabel(roster, kind, id, lang)
             return (
               <li key={id} class="cms-lah-selchip">
-                <CardIcon kind="sidekick" stockId={id} roster={roster} lang={lang} size="md" />
+                <CardIcon kind={kind} stockId={id} roster={roster} lang={lang} size="md" />
                 <span class="cms-lah-selchip-name">{name}</span>
                 <button type="button" class="cms-lah-btn cms-lah-btn-icon" aria-label={t('removeItem', { name })} title={t('removeItem', { name })} onClick={() => onRemove(id)}>
                   <span aria-hidden="true">×</span>
@@ -309,7 +312,7 @@ export function PassivePicker({ roster, values, max, excludeCharacter, onAdd, on
         <IdAdder onAdd={onAdd} disabled={full} t={t} invalid={invalid} describedBy={describedBy} />
       ) : roster === undefined ? null : (
         <Combo
-          kind="sidekick"
+          kind={kind}
           roster={roster}
           entries={entries}
           selected={null}
@@ -326,6 +329,19 @@ export function PassivePicker({ roster, values, max, excludeCharacter, onAdd, on
       )}
     </div>
   )
+}
+
+interface PassivePickerProps extends PickerBase {
+  values: number[]
+  max: number
+  /** Sidekicks of this character cannot be added (the slot hero's own character). */
+  excludeCharacter?: number | null
+  onAdd: (id: number) => void
+  onRemove: (id: number) => void
+}
+
+export function PassivePicker(props: PassivePickerProps) {
+  return <CardListPicker kind="sidekick" {...props} />
 }
 
 /** Roster-less fallback for the passives: type a card id and press Enter / the button. */

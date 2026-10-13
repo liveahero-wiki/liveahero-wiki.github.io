@@ -2,10 +2,11 @@
 
 import type { PluginContext } from './plugin-api.ts'
 import type { TeamSlot } from './types.ts'
-import { CardIcon, CardName, useRoster } from './common.tsx'
+import { CardIcon, CardName, TargetChip, useRoster } from './common.tsx'
 import { makeT, type T } from './i18n/t.ts'
+import { parseTargets } from './targets.ts'
 import { parseFocus } from './validate.ts'
-import { isFocusCard, toViewSlots } from './view.ts'
+import { isFocusCard, toViewSlots, toViewTarget } from './view.ts'
 
 interface Props {
   payload: unknown
@@ -17,9 +18,11 @@ export function TeamDetail({ payload, ctx }: Props) {
   const roster = useRoster()
   const focus = parseFocus(ctx.group.options)
   const { slots, supportIndex } = toViewSlots(payload)
+  const target = toViewTarget(payload)
 
   return (
     <div class="cms-lah cms-lah-detail">
+      {target && <TargetChip id={target} targets={parseTargets(ctx.group.options)} lang={ctx.uiLang} t={t} />}
       <ol class="cms-lah-cards" aria-label={t('detailHint')}>
         {slots.map((s, i) => (
           <SlotCard key={i} slot={s} index={i} support={i === supportIndex} t={t} ctx={ctx} roster={roster} focus={focus} />
