@@ -431,6 +431,7 @@ class TestRoster(unittest.TestCase):
             entity("sidekick", 10011, "Akashi", "/charas/akashi/"),
             entity("hero", 20021, "ja only", "/charas/", res="other"),
             entity("hero", 10011, "Akashi", "/charas/akashi/"),
+            entity("hero", 10012, "Akashi 2", "/charas/akashi/"),
             entity("hero", 30031, "Mob", "/charas/", is_mob=True),
         ]
         m = {"CardMaster": {"1": {"stockId": 10011, "cardName": "アカシ", "rarity": 6},
@@ -448,21 +449,22 @@ class TestRoster(unittest.TestCase):
         finally:
             gen.load_game_trans = original
         self.assertEqual(roster["version"], "v1")
-        self.assertEqual([h["stockId"] for h in roster["heroes"]], [10011, 20021])
+        self.assertEqual([h["stockId"] for h in roster["heroes"]], [10011, 10012, 20021])
         self.assertEqual([s["stockId"] for s in roster["sidekicks"]], [10011])
         self.assertEqual(roster["heroes"][0]["name"],
                          {"en": "Akashi", "ja": "アカシ", "zh-Hans": "赤司", "zh-Hant": "アカシ"})
         # no chara page and no translations: everything falls back to Japanese
-        self.assertEqual(set(roster["heroes"][1]["name"].values()), {"日本語"})
+        self.assertEqual(set(roster["heroes"][2]["name"].values()), {"日本語"})
         self.assertEqual(set(roster["heroes"][0]), {
             "stockId", "characterId", "name", "page", "resourceName", "rarity", "element", "role", "hasSkillTree",
             "limited"})
         self.assertEqual(set(roster["sidekicks"][0]), {
             "stockId", "characterId", "name", "page", "resourceName", "rarity", "limited"})
-        self.assertEqual([h["limited"] for h in roster["heroes"]], [True, False])
+        self.assertEqual([h["limited"] for h in roster["heroes"]], [True, True, False])
+        # a hero stockId ending in 2+ is limited even without the front-matter flag (10012 has none)
         self.assertEqual([s["limited"] for s in roster["sidekicks"]], [False])
         self.assertEqual(roster["heroes"][0]["page"], "/charas/akashi/")
-        self.assertEqual(roster["heroes"][1]["page"], "")  # no released chara page
+        self.assertEqual(roster["heroes"][2]["page"], "")  # no released chara page
 
 
 if __name__ == "__main__":

@@ -1534,6 +1534,10 @@ def build_roster(entities, m, version):
     def limited(e):
         # `limited: true` on the card's entry in the chara page's front matter
         # (heroes[] / sidekicks[], matched by stockId); absent counts as false.
+        # Exception: a hero stock whose id ends in 2 or above is a later variant of
+        # the base card (…1), which is always limited.
+        if e["kind"] == "hero" and e["stockId"] % 10 >= 2:
+            return True
         fm = (chara_pages.get(e["characterId"]) or {}).get("data") or {}
         cards = fm.get("heroes" if e["kind"] == "hero" else "sidekicks") or []
         return any(c.get("stockId") == e["stockId"] and c.get("limited") is True

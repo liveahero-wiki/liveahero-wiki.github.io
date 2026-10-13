@@ -88,7 +88,7 @@ Targets are in collection order (the order of the picker and the filter). `suppo
 
 ## Roster `limited`
 
-`api/team-roster.json` (all four languages' names, written by every run of `tools/generate_skill_search_index.py`) has `limited: boolean` on every hero and sidekick: `limited: true` on the card's entry (`heroes[]` / `sidekicks[]`, matched by `stockId`) in the chara page's front matter; missing = `false`. The plugin counts the `limited` heroes of every slot for the "max limited-time heroes" filter and the `limited` sort. After changing `limited:` on a chara page, regenerate the roster.
+`api/team-roster.json` (all four languages' names, written by every run of `tools/generate_skill_search_index.py`) has `limited: boolean` on every hero and sidekick: `limited: true` on the card's entry (`heroes[]` / `sidekicks[]`, matched by `stockId`) in the chara page's front matter; missing = `false`; every hero whose `stockId` ends in 2 or above is always `true`. The plugin counts the `limited` heroes of every slot for the "max limited-time heroes" filter and the `limited` sort. After changing `limited:` on a chara page, regenerate the roster.
 
 ## Language
 
