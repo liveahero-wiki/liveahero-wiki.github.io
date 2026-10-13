@@ -1,12 +1,14 @@
-// Community team formations (wiki-cms, docs/CMS.md). The submission list is drawn by the embed
-// from the wiki-cms Worker; it reads these --cms-* variables (with its own fallbacks), which map
-// onto the wiki's tokens from _main2.scss so it follows the light/dark theme. The game plugin
+// Community team formations (wiki-cms, docs/CMS.md). The Team Creator page (web/team-creator, root
+// `.team-creator`) draws the list itself; the submit form (a dialog from the wiki-cms embed) and the older
+// per-page embeds live in `.cms-submissions`. Both read these --cms-* variables (with their own fallbacks),
+// which map onto the wiki's tokens from _main2.scss so they follow the light/dark theme. The game plugin
 // (web/cms-plugin) uses the same variables, notably --cms-support-bg for the borrowed support slot.
 //
 // `:root` raises the specificity over the dark defaults the embed ships for itself, which also
 // match when the reader's OS is dark.
 
-:root .cms-submissions {
+:root .cms-submissions,
+:root .team-creator {
   --cms-fg: var(--text);
   --cms-bg: var(--bg);
   --cms-border: var(--colorGrey);
@@ -16,24 +18,24 @@
   --cms-support-bg: #d9f4f7;
 }
 
-html[data-theme="dark"]:root .cms-submissions {
+html[data-theme="dark"]:root .cms-submissions,
+html[data-theme="dark"]:root .team-creator {
   --cms-muted: #aaa;
   --cms-support-bg: #1d4a52;
 }
 
-.cms-submissions {
-  --cms-fg: var(--text);
-  --cms-bg: var(--bg);
-  --cms-border: var(--colorGrey);
-  --cms-accent: var(--link);
-  --cms-muted: #666;
-  --cms-chip-bg: var(--color50);
-  --cms-support-bg: #d9f4f7;
+// The values the embed supplies for its own host in dark mode that the wiki has no token for.
+html[data-theme="dark"]:root .team-creator {
+  color-scheme: dark;
+  --cms-danger: #ff8a80;
+  --cms-on-accent: #0b1220;
 }
 
-html[data-theme="dark"]:root .cms-submissions {
-  --cms-muted: #aaa;
-  --cms-support-bg: #1d4a52;
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .team-creator {
+    --cms-danger: #ff8a80;
+    --cms-on-accent: #0b1220;
+  }
 }
 
 .cms-section {
@@ -42,7 +44,8 @@ html[data-theme="dark"]:root .cms-submissions {
   max-width: 100%;
 }
 
-.cms-submissions {
+.cms-submissions,
+.team-creator {
   min-width: 0;
   max-width: 100%;
 }

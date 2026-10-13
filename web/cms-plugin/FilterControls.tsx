@@ -1,7 +1,7 @@
 // Controls of the catalog filter's "basic" part:
 //   TargetDropdown - a dropdown with one checkbox per target (any of)
 //   UnitFilter     - one search box for heroes and sidekicks; every suggestion row has [+] (must use) and [-] (must not use)
-// Both are stateless: the state lives in the host (see list-filter.ts); every change goes through onChange.
+// Both are stateless: the state lives in the host (see web/team-creator/Catalog.tsx); every change goes through onChange.
 // The suggestion list is a small hand-written WAI-ARIA combobox, like Combo in pickers.tsx.
 
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks'

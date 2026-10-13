@@ -3,7 +3,6 @@
 
 import { h, render, type VNode } from 'preact'
 import type { EditorHandle, FieldError, PluginContext, SubmissionPlugin } from './plugin-api.ts'
-import { listFilter } from './list-filter.ts'
 import { ensureStyles } from './style.ts'
 import { TeamDetail } from './TeamDetail.tsx'
 import { TeamEditor, type EditorBridge } from './TeamEditor.tsx'
@@ -28,8 +27,6 @@ const plugin: SubmissionPlugin<TeamPayload> = {
   mountSummary: (el, payload, ctx: PluginContext) => mount(el, h(TeamSummary, { payload, ctx })),
 
   mountDetail: (el, payload, ctx: PluginContext) => mount(el, h(TeamDetail, { payload, ctx })),
-
-  listFilter,
 
   mountEditor(el, init, ctx: PluginContext): EditorHandle {
     const bridge: EditorBridge = { validate: () => [], setErrors: () => {}, abortDrag: () => {} }

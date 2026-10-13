@@ -1,9 +1,12 @@
 // Standalone harness: pnpm dev:cms-plugin, then open http://localhost:5191/dev.html
+import { h, render } from 'preact'
 import plugin from '../index.ts'
-import { setRosterSource } from '../roster.ts'
+import { FilterPanel } from '../FilterPanel.tsx'
+import { loadRoster, setRosterSource, type Roster } from '../roster.ts'
+import { ensureStyles } from '../style.ts'
 import { validateTeam } from '../validate.ts'
 import type { EditorHandle, FieldError, PluginContext } from '../plugin-api.ts'
-import { defaultFilterState, type FilterState } from '../filters.ts'
+import { activeCount, defaultFilterState, limitedCount, parseParams, testPayload, toParams, type FilterState } from '../filters.ts'
 import type { Lang } from '../i18n.ts'
 import type { RosterFile, TeamPayload, TeamSlot } from '../types.ts'
 import fixture from './team-roster.fixture.json'
@@ -163,29 +166,34 @@ const SAMPLES: { name: string; payload: TeamPayload }[] = [
   { name: 'C: general, 4 heroes', payload: { v: 1, supportIndex: null, heroes: [slot(10012), slot(10021, { active: 10011 }), slot(10031), slot(10041)] } },
 ]
 let filterState: FilterState = defaultFilterState()
-let filterHandles: { update(s: FilterState): void; destroy(): void }[] = []
+let filterRoster: Roster | null = null
 
 function showFilter() {
-  const lf = plugin.listFilter!
-  const sorted = SAMPLES.filter((x) => lf.test(x.payload, filterState)).sort((a, b) => lf.sorts![0].compare(a.payload, b.payload))
-  $('filter-state').textContent = JSON.stringify(lf.toParams(filterState)) + ' | activeCount(advanced): ' + lf.activeCount(filterState) + ' | matches: ' + (sorted.map((x) => x.name).join(' | ') || '(none)')
+  const matches = SAMPLES.filter((x) => testPayload(x.payload, filterState, filterRoster)).sort((a, b) => limitedCount(a.payload, filterRoster) - limitedCount(b.payload, filterRoster))
+  $('filter-state').textContent = JSON.stringify(toParams(filterState)) + ' | activeCount(advanced): ' + activeCount(filterState) + ' | matches: ' + (matches.map((x) => x.name).join(' | ') || '(none)')
+}
+
+// The Team Creator page (web/team-creator) renders FilterPanel the same way: the state lives in the host.
+function drawFilter() {
+  const c = ctx()
+  const onChange = (s: FilterState) => {
+    filterState = s
+    drawFilter()
+    showFilter()
+  }
+  render(h(FilterPanel, { part: 'basic', state: filterState, onChange, ctx: c }), $('filter-basic'))
+  render(h(FilterPanel, { part: 'advanced', state: filterState, onChange, ctx: c }), $('filter-advanced'))
 }
 
 async function mountFilter() {
-  filterHandles.forEach((h) => h.destroy())
-  const lf = plugin.listFilter!
-  await lf.prepare?.()
-  const c = ctx()
-  filterState = lf.init(new URLSearchParams(location.hash.slice(1)), c) as FilterState
-  const onChange = (s: FilterState) => {
-    filterState = s
-    filterHandles.forEach((h) => h.update(s))
-    showFilter()
+  ensureStyles()
+  try {
+    filterRoster = await loadRoster()
+  } catch {
+    filterRoster = null
   }
-  filterHandles = [
-    lf.mount($('filter-basic'), 'basic', filterState, onChange as (s: unknown) => void, c),
-    lf.mount($('filter-advanced'), 'advanced', filterState, onChange as (s: unknown) => void, c),
-  ] as typeof filterHandles
+  filterState = parseParams(new URLSearchParams(location.hash.slice(1)))
+  drawFilter()
   showFilter()
 }
 
@@ -214,7 +222,7 @@ $('btn-validate').onclick = () => showValidation(state.handle!.validate())
 $('btn-errors').onclick = () => state.handle!.setErrors(SAMPLE_SERVER_ERRORS)
 $('btn-clear').onclick = () => state.handle!.setErrors([])
 $('btn-remount').onclick = () => mountEditor()
-$('btn-filter-reset').onclick = () => { filterState = defaultFilterState(); filterHandles.forEach((h) => h.update(filterState)); showFilter() }
+$('btn-filter-reset').onclick = () => { filterState = defaultFilterState(); drawFilter(); showFilter() }
 
 // Test hooks for the browser checks.
 ;(window as unknown as Record<string, unknown>).__dev = state

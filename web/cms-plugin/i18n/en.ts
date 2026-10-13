@@ -112,6 +112,33 @@ export const en = {
   error_unknown_hero: 'Unknown hero (ID {stockId}).',
   error_unknown_sidekick: 'Unknown sidekick (ID {stockId}).',
   error_target_unknown: 'Choose one of the listed targets, or General purpose.',
+
+  // ---- Team Creator page (web/team-creator), copied from the wiki-cms embed's list/card/catalog strings
+  tcDisclaimer: 'Submissions are community-contributed. Moderators only screen for spam and abusive language — they do not verify that a team formation actually works.',
+  tcSubmit: 'Submit a team formation',
+  tcOpening: 'Opening…',
+  tcFilterLabel: 'Filter by language',
+  tcFilterAll: 'All',
+  tcEmpty: 'No team formations yet. Be the first to share one!',
+  tcShowMore: 'Show more',
+  tcLoadError: 'Could not load the community team formations.',
+  tcRetry: 'Try again',
+  tcFormError: 'Could not open the submission form. Please try again.',
+  tcSubmitted: 'Submitted {date}',
+  tcDemo: 'Demo on {platform}',
+  tcDemoGeneric: 'Demo link',
+  tcUntitled: 'Untitled team',
+  tcShowExplanation: 'Show explanation',
+  tcHideExplanation: 'Hide explanation',
+  tcSearch: 'Search team names',
+  tcAdvanced: 'Advanced filters',
+  tcActiveCount: '{count} active',
+  tcSort: 'Sort by',
+  tcSortNewest: 'Newest first',
+  tcSortOldest: 'Oldest first',
+  tcResults: 'Showing {shown} of {count}',
+  tcClear: 'Clear filters',
+  tcNoMatch: 'No team matches these filters.',
 }
 
 export type Bundle = Record<keyof typeof en, string>

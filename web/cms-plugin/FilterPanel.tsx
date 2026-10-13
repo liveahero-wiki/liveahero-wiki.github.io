@@ -1,7 +1,7 @@
-// Controls of the plugin's `listFilter` in the catalog layout. Two parts, hosted by the core:
+// Filter controls of the Team Creator page (web/team-creator renders them). Two parts:
 //   basic    - target dropdown (any of) and one search box to include / exclude heroes and active sidekicks
 //   advanced - skill-tree and blooming toggles, max limited-time heroes
-// Stateless: the state lives in the host (see list-filter.ts); every change goes through onChange.
+// Stateless: the state lives in the host (web/team-creator/Catalog.tsx); every change goes through onChange.
 
 import { useState } from 'preact/hooks'
 import type { PluginContext } from './plugin-api.ts'

@@ -1,36 +1,40 @@
 # Community Team Formation Submissions (wiki-cms)
 
-Visitors read, filter and submit team formations on one page, the **Team Creator** (`/team-creator.html`, `team-creator.md`). The generic list/form UI and the moderation backend are the separate **wiki-cms** Cloudflare Worker (repo `wiki-cms`, plan in `wiki-cms/docs/TEAM_CREATOR_PLAN.md`); this repo only provides
+Visitors read, filter and submit team formations on one page, the **Team Creator** (`/team-creator.html`, `team-creator.md`). The page and its list (disclaimer, filters, sorting, cards) are drawn by this repo (`web/team-creator/`); the API, the submit form and the moderation backend are the separate **wiki-cms** Cloudflare Worker (repo `wiki-cms`, plans in `wiki-cms/docs/TEAM_CREATOR_PLAN.md` and `TEAM_CREATOR_WIKI_UI_PLAN.md`). This repo provides
 
 | Piece | Where |
 |---|---|
 | Worker URL | `site.cms_url` (`wiki_plugins/site.js`) |
-| The page (host `<div>`, intro) | `team-creator.md`, `_includes/cms-embed-script.html`; header link in `_includes/header.html` (Tools) |
+| The page (host `<div>`, intro) | `team-creator.md`; header link in `_includes/header.html` (Tools) |
+| The page's app (list, filters, cards, disclaimer, submit button) | `web/team-creator/` -> `assets/cms/team-creator.js` (`vite.team-creator.config.ts`) |
 | Links to the page | `_includes/team-creator-link.html`, used by `hero-infobox.html`, `sidekick-infobox.html`, `_layouts/event.html` and `guide/challenge_simulator.md` |
 | Targets of a page | `wiki_plugins/lib/cms-groups.js` (Liquid filter `cms_targets`) |
 | Registry of valid groups and targets | `cms-groups.11ty.js` -> `/api/cms-groups.json` |
 | Roster for the plugin's pickers, icons and `limited` filter | `tools/generate_skill_search_index.py` -> `api/team-roster.json` |
 | Game plugin (renders, edits and filters a team formation) | `web/cms-plugin/` -> `assets/cms/lah-team-formation.js` |
-| Styles | `_sass/_cms.scss` (host variables, links), `web/cms-plugin/styles.css` (the plugin's own markup, classes `cms-lah-*`) |
+| Styles | `_sass/_cms.scss` (host variables, links), `web/team-creator/styles.css` (the list, classes `lah-tc-*`), `web/cms-plugin/styles.css` (the plugin's own markup, classes `cms-lah-*`) |
 | Language hook | `setupCmsLang()` in `assets/main.js` |
 
 Chara, event and guide pages carry **no embed** (no request to the Worker at all): they only link to the Team Creator with a pre-filtered URL hash.
 
 ## The page
 
-`team-creator.md` hosts the embed in the `catalog` layout:
+`team-creator.md` is only a host element and a script:
 
 ```html
-<div class="cms-submissions" data-cms-type="lah-team-formation" data-cms-group="all" data-cms-layout="catalog"
-     data-cms-plugin="/assets/cms/lah-team-formation.js" data-cms-api="{{ site.cms_url }}"></div>
-{% include cms-embed-script.html %}
+<div id="team-creator" class="team-creator"
+     data-cms-api="{{ site.cms_url }}" data-cms-group="all"
+     data-cms-plugin="/assets/cms/lah-team-formation.js" data-pagefind-ignore></div>
+<script type="module" src="/assets/cms/team-creator.js"></script>
 ```
 
-`<script type="module" src="{{ site.cms_url }}/embed/v1.js">` loads the embed; it loads the list lazily (IntersectionObserver). Everything is one group, `all`: one cached API response holds every approved team, and all filtering happens in the browser.
+`web/team-creator/` (Preact, one bundle) draws everything under it: the disclaimer (wiki i18n keys `tc*` in `web/cms-plugin/i18n/`), the submit button, search, tag / language / hero filters, sorting, paging and the cards (the plugin's `TeamSummary` directly). Everything is one group, `all`: one cached `GET {cms}/api/v1/submissions/lah-team-formation/all` holds every approved team (no query string, default HTTP caching), and all filtering happens in the browser. The root element must **not** have `data-cms-type` (the wiki-cms `v1.js` would take it over). `web/cms-plugin/api-types.ts` is a verbatim copy of `wiki-cms/src/shared/api-types.ts` (the public blob shape is a contract between the two repos, like `plugin-api.ts`; `I18nText` and `Lang` resolve to `web/cms-plugin/i18n.ts`).
+
+The submit form stays in wiki-cms. The submit button runs `import('{cms}/embed/v1.js')` on the first click (nothing from the Worker is loaded before; the page does not use a `<script>` tag for it) and then `window.cmsEmbed.openForm({ host, type, group, plugin, groupOptions, api, lang })`, where `host` is a dedicated empty `<div>` next to the list and `groupOptions` come from the blob (`wiki-cms/docs/EMBED.md`, "Opening the submit form from your own UI"). The embed stylesheet is injected when the form opens, so the list's classes are prefixed `lah-tc-` and never `cms-`.
 
 ## URL hash parameters
 
-The filter state lives in the hash (`/team-creator.html#hero=12641&t.teamType=auto`), so a filtered list can be bookmarked and the links of the other pages can pre-filter it. The core owns `q`, `sort`, `lang` and `t.<tagKey>` (comma list); the plugin (`web/cms-plugin/filters.ts`) owns the rest. Only non-default values are written.
+The filter state lives in the hash (`/team-creator.html#hero=12641&t.teamType=auto`), so a filtered list can be bookmarked and the links of the other pages can pre-filter it. The list (`web/team-creator/catalog.ts`) owns `q`, `sort`, `lang` and `t.<tagKey>` (comma list); the plugin filters (`web/cms-plugin/filters.ts`) own the rest. Only non-default values are written.
 
 | Key | Meaning |
 |---|---|
@@ -96,7 +100,7 @@ The embed picks its UI language from `data-cms-lang` on the host element, then `
 
 ## Plugin
 
-`web/cms-plugin/` is a Preact module implementing wiki-cms' `SubmissionPlugin` (`plugin-api.ts` is a verbatim copy of `wiki-cms/src/shared/plugin-api.ts`; its `Lang` import resolves to `i18n.ts`). Besides the summary / detail / editor it exports the optional `listFilter` that the `catalog` layout hosts: `filters.ts` (state, hash keys, matcher, pure), `FilterPanel.tsx` + `FilterControls.tsx` (the `basic` part: a target dropdown with checkboxes, and one search box for heroes and sidekicks whose suggestions each have a [+] (must use) / [-] (must not use) button; the `advanced` part: skill tree, blooming, max limited-time heroes) and the sort `limited`. `targets.ts` parses `options.targets` for the editor ("Purpose-built for" select), the chip and the filter; `validate.ts` mirrors the Worker's validator (support mode `required` / `optional` / `none`, `target_unknown`). UI strings are in `i18n/` (`en`, `zh-Hans`, `zh-Hant`, `ja`; a test keeps them in sync).
+`web/cms-plugin/` is a Preact module implementing wiki-cms' `SubmissionPlugin` (`plugin-api.ts` is a verbatim copy of `wiki-cms/src/shared/plugin-api.ts`; its `Lang` import resolves to `i18n.ts`). Besides the summary / detail / editor it holds the filters that `web/team-creator/` uses directly (not through the plugin bundle): `filters.ts` (state, hash keys, matcher, pure), `FilterPanel.tsx` + `FilterControls.tsx` (the `basic` part: a target dropdown with checkboxes, and one search box for heroes and sidekicks whose suggestions each have a [+] (must use) / [-] (must not use) button; the `advanced` part: skill tree, blooming, max limited-time heroes) and the sort `limited`. `targets.ts` parses `options.targets` for the editor ("Purpose-built for" select), the chip and the filter; `validate.ts` mirrors the Worker's validator (support mode `required` / `optional` / `none`, `target_unknown`). UI strings are in `i18n/` (`en`, `zh-Hans`, `zh-Hant`, `ja`; a test keeps them in sync).
 
 ## Building and running locally
 
@@ -104,11 +108,12 @@ The embed picks its UI language from `data-cms-lang` on the host element, then `
 |---|---|
 | Worker URL | `https://wiki-cms.rongjie.workers.dev` when `ELEVENTY_ENV=production` (CI), otherwise `http://localhost:8787` (local `wrangler dev`); `CMS_URL` overrides either (`wiki_plugins/site.js`) |
 | Roster | `py tools/generate_skill_search_index.py --lang en` writes `api/team-roster.json` (all four languages, every run; CI already runs the generator) |
-| Plugin | `pnpm build:cms-plugin` (also part of `pnpm build`) writes `assets/cms/`; `pnpm watch:cms-plugin` rebuilds on change; `pnpm dev:cms-plugin` serves the standalone harness at `/dev.html` (editor scenarios, list filter parts) |
+| Team Creator app | `pnpm build:team-creator` (also part of `pnpm build`) writes `assets/cms/team-creator.js`; `pnpm typecheck:team-creator`; its tests run with `pnpm test` |
+| Plugin | `pnpm build:cms-plugin` (also part of `pnpm build`) writes `assets/cms/lah-team-formation.js`; `pnpm watch:cms-plugin` rebuilds on change (the app has no watch script: rerun `pnpm build:team-creator`); `pnpm dev:cms-plugin` serves the standalone harness at `/dev.html` (editor scenarios, filter panels) |
 | Tests | `pnpm test` (`wiki_plugins/lib/cms-groups.test.js`, the plugin's tests), `pnpm typecheck:cms-plugin` |
 
 End to end on one machine:
 
 1. In `wiki-cms`: `wrangler dev` (port 8787). Register the type once in the local database: `cms type add lah-team-formation --origins http://localhost:8080 --plugin-url http://localhost:8080/assets/cms/lah-team-formation.js --groups-url http://localhost:8080/api/cms-groups.json`.
-2. Here: `pnpm watch:cms-plugin`, and `pnpm eleventy:dev` (port 8080; `CMS_URL` defaults to the local Worker outside production builds).
+2. Here: `pnpm build` (or `pnpm watch:cms-plugin` and `pnpm build:team-creator`), and `pnpm eleventy:dev` (port 8080; `CMS_URL` defaults to the local Worker outside production builds).
 3. Open `/team-creator.html` (or a chara page, then follow its "Community teams using this hero" link), try the filters, submit, approve in the admin portal; the list shows it after the cache TTL (or at once with the devtools cache disabled).

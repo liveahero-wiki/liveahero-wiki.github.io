@@ -1,4 +1,4 @@
-// Catalog filters of the Team Creator page (the plugin's `listFilter`): state, hash params and the
+// Catalog filters of the Team Creator page (web/team-creator): state, hash params and the
 // pure matcher. No JSX / CSS, so `node --test` runs it with type stripping.
 //
 // Rules (docs/CMS.md):
