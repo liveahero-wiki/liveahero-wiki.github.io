@@ -1,6 +1,7 @@
 ---
 title: Blues of Heroes
 eventId: 184
+has_story: true
 jp_title: 
 banner_image: banner_info_Blues2610.webp
 gacha: true
