@@ -6,19 +6,19 @@ team_formations:
   label:
     en: Simulator - Lantern-type Kaibutsu (SSS)
     "zh-Hant": 模拟・灯笼型恠物
-    "zh-Hants": 模拟・灯笼型恠物
+    "zh-Hans": 模拟・灯笼型恠物
     ja: シミュレート・灯篭型カイブツ
 - quest: 617001
   label:
     en: Simulator - Slime-type Kaibutsu (SSS)
     "zh-Hant": 模拟・史莱姆型恠物
-    "zh-Hants": 模拟・史莱姆型恠物
+    "zh-Hans": 模拟・史莱姆型恠物
     ja: シミュレート・スライム型カイブツ
 - quest: 618001
   label:
     en: Simulator - Labor's Site (SSS)
     "zh-Hant": 模拟・激戰！劳动事务所
-    "zh-Hants": 模拟・激战！劳动事务所
+    "zh-Hans": 模拟・激战！劳动事务所
     ja: シミュレート・激闘！レイバーズサイト
 ---
 
