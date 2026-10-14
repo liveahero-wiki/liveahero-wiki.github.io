@@ -419,8 +419,9 @@ class TestClassifyValueSign(unittest.TestCase):
 
 
 class TestRoster(unittest.TestCase):
-    """api/team-roster.json: mobs excluded, sorted by stockId, every language
-    present, Japanese as the fallback for a missing translation."""
+    """api/team-roster.json: part-time (mob) units included, sorted by stockId,
+    every language present, Japanese as the fallback for a missing translation,
+    plus the passive-slot skill-book items."""
 
     def test_roster_shape_and_fallbacks(self):
         def entity(kind, stock_id, name, page, is_mob=False, res="akashi"):
@@ -438,10 +439,14 @@ class TestRoster(unittest.TestCase):
                             "2": {"stockId": 20021, "cardName": "日本語", "rarity": 5},
                             "3": {"stockId": 30031, "cardName": "モブ", "rarity": 1}},
              "SidekickMaster": {"1": {"stockId": 10011, "cardName": "アカシ", "rarity": 4}},
+             "ItemMaster": {"65": {"itemName": "セカンド", "resourceName": "equipskill_auto_2ndAttack"},
+                            "80": {"itemName": "経験", "resourceName": "equipskill_exp"},
+                            "999": {"itemName": "not a passive item", "resourceName": "x"}},
              # the chara page's front matter decides `limited` (matched by stockId; absent = false)
              "chara_pages": {1: {"data": {"heroes": [{"stockId": 10011, "limited": True}, {"stockId": 10012}],
                                           "sidekicks": [{"stockId": 10011}]}}}}
-        trans = {"en": {}, "ja": {}, "zh-Hans": {"CARD_NAME_AKASHI": "赤司"}, "zh-Hant": {}}
+        trans = {"en": {"ITEM_NAME_80": "Experience Manual"}, "ja": {},
+                 "zh-Hans": {"CARD_NAME_AKASHI": "赤司"}, "zh-Hant": {}}
         original = gen.load_game_trans
         gen.load_game_trans = lambda lang: trans[lang]
         try:
@@ -449,7 +454,7 @@ class TestRoster(unittest.TestCase):
         finally:
             gen.load_game_trans = original
         self.assertEqual(roster["version"], "v1")
-        self.assertEqual([h["stockId"] for h in roster["heroes"]], [10011, 10012, 20021])
+        self.assertEqual([h["stockId"] for h in roster["heroes"]], [10011, 10012, 20021, 30031])
         self.assertEqual([s["stockId"] for s in roster["sidekicks"]], [10011])
         self.assertEqual(roster["heroes"][0]["name"],
                          {"en": "Akashi", "ja": "アカシ", "zh-Hans": "赤司", "zh-Hant": "アカシ"})
@@ -460,11 +465,16 @@ class TestRoster(unittest.TestCase):
             "limited"})
         self.assertEqual(set(roster["sidekicks"][0]), {
             "stockId", "characterId", "name", "page", "resourceName", "rarity", "limited"})
-        self.assertEqual([h["limited"] for h in roster["heroes"]], [True, True, False])
+        self.assertEqual([h["limited"] for h in roster["heroes"]], [True, True, False, False])
         # a hero stockId ending in 2+ is limited even without the front-matter flag (10012 has none)
         self.assertEqual([s["limited"] for s in roster["sidekicks"]], [False])
         self.assertEqual(roster["heroes"][0]["page"], "/charas/akashi/")
         self.assertEqual(roster["heroes"][2]["page"], "")  # no released chara page
+        # only the TEAM_PASSIVE_ITEM_IDS present in ItemMaster, by itemId, with the same Japanese fallback
+        self.assertEqual([i["itemId"] for i in roster["items"]], [65, 80])
+        self.assertEqual(roster["items"][1], {
+            "itemId": 80, "resourceName": "equipskill_exp",
+            "name": {"en": "Experience Manual", "ja": "経験", "zh-Hans": "経験", "zh-Hant": "経験"}})
 
 
 if __name__ == "__main__":

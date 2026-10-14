@@ -3,7 +3,7 @@
 import type { ComponentChildren } from 'preact'
 import { useEffect, useRef, useState } from 'preact/hooks'
 import type { Lang } from './i18n.ts'
-import { charaUrl, heroIconUrl, loadRoster, localizedName, sidekickIconUrl, type Roster } from './roster.ts'
+import { charaUrl, heroIconUrl, itemIconUrl, loadRoster, localizedName, sidekickIconUrl, type Roster } from './roster.ts'
 import type { T } from './i18n/t.ts'
 import { findTarget, targetHref, targetLabel } from './targets.ts'
 import type { Target } from './types.ts'
@@ -25,21 +25,27 @@ export function useRoster(): Roster | null | undefined {
 }
 
 export type CardKind = 'hero' | 'sidekick'
+/** What an icon / label can show: a card, or a skill-book item sitting in a passive slot (`stockId` is then its itemId). */
+export type IconKind = CardKind | 'item'
 
-export function cardName(roster: Roster | null | undefined, kind: CardKind, stockId: number, lang: Lang): string {
-  const e = kind === 'hero' ? roster?.hero(stockId) : roster?.sidekick(stockId)
+function rosterEntry(roster: Roster | null | undefined, kind: IconKind, id: number) {
+  return kind === 'hero' ? roster?.hero(id) : kind === 'sidekick' ? roster?.sidekick(id) : roster?.item(id)
+}
+
+export function cardName(roster: Roster | null | undefined, kind: IconKind, stockId: number, lang: Lang): string {
+  const e = rosterEntry(roster, kind, stockId)
   return e ? localizedName(e.name, lang) : ''
 }
 
-/** Display text for a card: its localized name, else "#stockId". */
-export function cardLabel(roster: Roster | null | undefined, kind: CardKind, stockId: number, lang: Lang): string {
+/** Display text for a card or item: its localized name, else "#id". */
+export function cardLabel(roster: Roster | null | undefined, kind: IconKind, stockId: number, lang: Lang): string {
   return cardName(roster, kind, stockId, lang) || `#${stockId}`
 }
 
-/** A card's name linked to its wiki chara page; plain text when the roster has no page for it. */
-export function CardName({ kind, stockId, roster, lang, class: cls }: { kind: CardKind; stockId: number; roster: Roster | null | undefined; lang: Lang; class: string }) {
-  const entry = kind === 'hero' ? roster?.hero(stockId) : roster?.sidekick(stockId)
-  const href = entry ? charaUrl(kind, entry) : ''
+/** A card's name linked to its wiki chara page; plain text when the roster has no page for it (and for items). */
+export function CardName({ kind, stockId, roster, lang, class: cls }: { kind: IconKind; stockId: number; roster: Roster | null | undefined; lang: Lang; class: string }) {
+  const entry = rosterEntry(roster, kind, stockId)
+  const href = entry && kind !== 'item' && 'stockId' in entry ? charaUrl(kind, entry) : ''
   const label = cardLabel(roster, kind, stockId, lang)
   return href ? (
     <a class={cls} href={href} target="_blank" rel="noopener">
@@ -75,7 +81,7 @@ export function TargetChip({ id, targets, lang, t }: { id: string; targets: Targ
 }
 
 interface CardIconProps {
-  kind: CardKind
+  kind: IconKind
   stockId: number
   roster: Roster | null | undefined
   lang: Lang
@@ -88,8 +94,8 @@ interface CardIconProps {
 /** Icon when the roster resolves the card; a loading box while loading; the stock id as text otherwise. */
 export function CardIcon({ kind, stockId, roster, lang, size, named, focus }: CardIconProps) {
   const [brokenSrc, setBrokenSrc] = useState('')
-  const entry = kind === 'hero' ? roster?.hero(stockId) : roster?.sidekick(stockId)
-  const src = !entry ? '' : kind === 'hero' ? heroIconUrl(entry.resourceName) : sidekickIconUrl(entry.resourceName)
+  const entry = rosterEntry(roster, kind, stockId)
+  const src = !entry ? '' : kind === 'hero' ? heroIconUrl(entry.resourceName) : kind === 'sidekick' ? sidekickIconUrl(entry.resourceName) : itemIconUrl(entry.resourceName)
   const cls = `cms-lah-icon cms-lah-icon-${size}${focus ? ' cms-lah-focus' : ''}`
   if (roster === undefined) return <span class={`${cls} cms-lah-icon-loading`} aria-hidden="true" />
   if (!entry || brokenSrc === src) {

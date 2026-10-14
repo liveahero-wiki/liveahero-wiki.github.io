@@ -2,7 +2,10 @@ import type { Lang } from './i18n.ts'
 
 export type { Lang }
 
-/** One team slot: a hero plus 0-1 active sidekick and 0-3 passive sidekicks. Mirrors wiki-cms §2.6. */
+/**
+ * One team slot: a hero plus 0-1 active sidekick and 0-3 passives. A passive is a sidekick stockId (>= 10000)
+ * or the itemId of a roster item (small ids, never colliding). Mirrors wiki-cms §2.6.
+ */
 export interface TeamSlot {
   stockId: number
   lv: number
@@ -69,8 +72,18 @@ export interface RosterSidekick {
   limited?: boolean
 }
 
+/** A skill-book item that can take a sidekick passive slot (stored in `TeamSlot.passives` by itemId). */
+export interface RosterItem {
+  itemId: number
+  name: LocalizedName
+  /** Icon: `item_<resourceName>.png`. */
+  resourceName: string
+}
+
 export interface RosterFile {
   version: string
   heroes: RosterHero[]
   sidekicks: RosterSidekick[]
+  /** Absent in rosters generated before items were supported. */
+  items?: RosterItem[]
 }

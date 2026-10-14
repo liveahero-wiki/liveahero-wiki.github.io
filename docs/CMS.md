@@ -84,6 +84,10 @@ The build **fails** (with a message naming the page) for: an entry with neither 
 
 Targets are in collection order (the order of the picker and the filter). `support: 'optional'` lets a team leave out the borrowed support. wiki-cms is pointed at this file with `--groups-url` and refetches it hourly (and when a group is unknown); the Worker's validator and the plugin both read `options.targets` from it.
 
+## Roster: part-time units and passive items
+
+`api/team-roster.json` lists every hero and sidekick stock, including the part-time ("非常勤ヒーロー") units that the skill search flags `isMob` (e.g. 10431, rarity-1 sidekick cards). It also has `items: [{ itemId, name, resourceName }]`: the skill books (`TEAM_PASSIVE_ITEM_IDS` in `tools/generate_skill_search_index.py`, currently 65, 66, 80-82, 108-113) that can take a sidekick passive slot. A team stores such an item in the slot's `passives` array by **itemId** next to the sidekick stockIds (item ids are below 10000, sidekick stockIds above, so they never collide). Items count towards the 2 / 3 (bloom) passive cap, an item cannot repeat within one hero (`passives_duplicate`) but can on different heroes, they skip the same-character rule, and an id that is in neither the sidekick nor the item list of the roster fails as `unknown_sidekick`. Adding a book is a one-line change to `TEAM_PASSIVE_ITEM_IDS` (regenerate the roster; wiki-cms picks it up with its hourly roster refresh).
+
 ## Roster `limited`
 
 `api/team-roster.json` (all four languages' names, written by every run of `tools/generate_skill_search_index.py`) has `limited: boolean` on every hero and sidekick: `limited: true` on the card's entry (`heroes[]` / `sidekicks[]`, matched by `stockId`) in the chara page's front matter; missing = `false`; every hero whose `stockId` ends in 2 or above is always `true`. The plugin counts the `limited` heroes of every slot for the "max limited-time heroes" filter and the `limited` sort. After changing `limited:` on a chara page, regenerate the roster.

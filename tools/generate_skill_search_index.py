@@ -11,7 +11,7 @@ Outputs (plain static JSON, no Jekyll front-matter, so they are copied
 verbatim into _site/api/ and can be fetched at /api/skill-index.<lang>.json):
     api/skill-index.<lang>.json          - the full index for that language
     api/skill-index-version.<lang>.json  - { "version": "<masterdata version>-<INDEX_SCHEMA_REV>" }
-    api/team-roster.json                 - all four languages' hero/sidekick names for the
+    api/team-roster.json                 - all four languages' hero/sidekick/item names for the
                                            community team-formation submissions plugin (see
                                            build_roster); identical whatever --lang is run, so
                                            every run rewrites it
@@ -178,6 +178,11 @@ STATUS_TYPE_DEFAULT = "system"
 # `stockIdToLink` filter.
 STOCK_ID_VARIANT_MODULO = 10
 STOCK_ID_BASE_VARIANT = 1   # variant > this -> use the variant-specific title
+
+# ItemMaster ids that a team formation can put in a sidekick passive slot (skill
+# books, "技術書"); emitted as `items` in api/team-roster.json. A game rule, not
+# derivable from the data, so a new book is a one-line addition here.
+TEAM_PASSIVE_ITEM_IDS = (65, 66, 80, 81, 82, 108, 109, 110, 111, 112, 113)
 
 # CardMaster.rarity value identifying the max-rarity card in a hero stock group;
 # that entry is used as the representative for indexing.
@@ -1457,6 +1462,7 @@ def load_all(lang="en"):
     return {
         "CardMaster": load("CardMaster.json"),
         "SidekickMaster": load("SidekickMaster.json"),
+        "ItemMaster": load("ItemMaster.json"),
         "SM": load("SkillMaster.json"),
         "SEM": load("SkillEffectMaster.json"),
         "SMA": load("StatusMaster.json"),
@@ -1495,7 +1501,8 @@ def build_roster(entities, m, version):
     """The small hero/sidekick roster behind `api/team-roster.json` (community
     team-formation submissions: the plugin's pickers and icons). Unlike the skill
     index it carries all four languages' names in one file, so it does not
-    depend on --lang. Mobs (rarity-1 stocks) are excluded; sorted by stockId.
+    depend on --lang. Part-time units (rarity-1 "mob" stocks) are included, sorted
+    by stockId; `items` lists the TEAM_PASSIVE_ITEM_IDS books by itemId.
 
     name.en is the wiki's own title (what the chara pages show, variant-aware)
     when the stock has a released chara page, else the game's English name; the
@@ -1545,8 +1552,6 @@ def build_roster(entities, m, version):
 
     heroes, sidekicks = [], []
     for e in sorted(entities, key=lambda e: e["stockId"]):
-        if e["isMob"]:
-            continue
         if e["kind"] == "hero":
             heroes.append({
                 "stockId": e["stockId"],
@@ -1570,7 +1575,17 @@ def build_roster(entities, m, version):
                 "rarity": e["rarity"],
                 "limited": limited(e),
             })
-    return {"version": version, "heroes": heroes, "sidekicks": sidekicks}
+    items = []
+    item_master = m.get("ItemMaster") or {}
+    for item_id in sorted(TEAM_PASSIVE_ITEM_IDS):
+        entry = item_master.get(str(item_id))
+        if not entry:
+            continue
+        ja = entry.get("itemName", "")
+        name = {lang: (trans[lang].get(f"ITEM_NAME_{item_id}") or "").strip() or ja
+                for lang in ("en", "ja", "zh-Hans", "zh-Hant")}
+        items.append({"itemId": item_id, "name": name, "resourceName": entry.get("resourceName", "")})
+    return {"version": version, "heroes": heroes, "sidekicks": sidekicks, "items": items}
 
 
 def parse_args():
@@ -1645,7 +1660,8 @@ def main():
           f"sidekick mobs: {sum(1 for e in sidekicks if e['isMob'])}")
     print(f"  heroes with skill tree: {sum(1 for e in heroes if e['hasSkillTree'])}")
     print(f"statuses referenced: {len(statuses)}")
-    print(f"team roster: {len(roster['heroes'])} heroes, {len(roster['sidekicks'])} sidekicks")
+    print(f"team roster: {len(roster['heroes'])} heroes, {len(roster['sidekicks'])} sidekicks, "
+          f"{len(roster['items'])} items")
     if unmapped:
         print(f"\nUNMAPPED CLASSES ({len(unmapped)}):")
         for cls, n in unmapped.most_common():

@@ -5,6 +5,7 @@ import { useRef, useState } from 'preact/hooks'
 import type { PluginContext } from './plugin-api.ts'
 import { CardIcon, Dialog, TargetChip, cardLabel, useRoster } from './common.tsx'
 import { makeT } from './i18n/t.ts'
+import { passiveKind } from './roster.ts'
 import { TeamDetail } from './TeamDetail.tsx'
 import { parseTargets } from './targets.ts'
 import { parseFocus } from './validate.ts'
@@ -54,9 +55,10 @@ export function TeamSummary({ payload, ctx }: Props) {
               </span>
               {s.passives.length > 0 && (
                 <span class="cms-lah-pips">
-                  {s.passives.map((p) => (
-                    <CardIcon key={p} kind="sidekick" stockId={p} roster={roster} lang={lang} size="sm" focus={isFocusCard(focus, 'sidekick', p)} />
-                  ))}
+                  {s.passives.map((p) => {
+                    const kind = passiveKind(roster, p)
+                    return <CardIcon key={p} kind={kind} stockId={p} roster={roster} lang={lang} size="sm" focus={kind === 'sidekick' && isFocusCard(focus, 'sidekick', p)} />
+                  })}
                 </span>
               )}
               <span class="cms-lah-badges">

@@ -2,8 +2,9 @@
 
 import type { PluginContext } from './plugin-api.ts'
 import type { TeamSlot } from './types.ts'
-import { CardIcon, CardName, TargetChip, useRoster } from './common.tsx'
+import { CardIcon, CardName, TargetChip, useRoster, type IconKind } from './common.tsx'
 import { makeT, type T } from './i18n/t.ts'
+import { passiveKind } from './roster.ts'
 import { parseTargets } from './targets.ts'
 import { parseFocus } from './validate.ts'
 import { isFocusCard, toViewSlots, toViewTarget } from './view.ts'
@@ -50,10 +51,10 @@ function SlotCard({ slot, index, support, t, ctx, roster, focus }: CardProps) {
       <dd>{value}</dd>
     </div>
   )
-  const sidekickRow = (id: number) => (
+  const sidekickRow = (id: number, kind: IconKind = 'sidekick') => (
     <li class="cms-lah-sk" key={id}>
-      <CardIcon kind="sidekick" stockId={id} roster={roster} lang={lang} size="md" focus={isFocusCard(focus, 'sidekick', id)} />
-      <CardName kind="sidekick" stockId={id} roster={roster} lang={lang} class="cms-lah-sk-name" />
+      <CardIcon kind={kind} stockId={id} roster={roster} lang={lang} size="md" focus={kind === 'sidekick' && isFocusCard(focus, 'sidekick', id)} />
+      <CardName kind={kind} stockId={id} roster={roster} lang={lang} class="cms-lah-sk-name" />
     </li>
   )
 
@@ -87,7 +88,7 @@ function SlotCard({ slot, index, support, t, ctx, roster, focus }: CardProps) {
         <h3 class="cms-lah-sub">{t('activeSidekick')}</h3>
         {slot.active ? <ul class="cms-lah-sk-list">{sidekickRow(slot.active)}</ul> : <p class="cms-lah-muted">{t('none')}</p>}
         <h3 class="cms-lah-sub">{t('passiveSidekicks')}</h3>
-        {slot.passives.length ? <ul class="cms-lah-sk-list">{slot.passives.map(sidekickRow)}</ul> : <p class="cms-lah-muted">{t('none')}</p>}
+        {slot.passives.length ? <ul class="cms-lah-sk-list">{slot.passives.map((id) => sidekickRow(id, passiveKind(roster, id)))}</ul> : <p class="cms-lah-muted">{t('none')}</p>}
       </div>
     </li>
   )

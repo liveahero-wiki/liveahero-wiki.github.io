@@ -46,6 +46,15 @@ const SCENARIOS: Record<string, Scenario> = {
     options: { support: 'optional', targets: TARGETS },
     payload: { v: 1, supportIndex: null, target: 'gone-1', heroes: [slot(10011)] },
   },
+  'items': {
+    label: 'Part-time hero 10431 + skill-book items as passives (same item on two heroes is fine)',
+    options: { support: 'optional' },
+    payload: {
+      v: 1,
+      supportIndex: null,
+      heroes: [slot(10431, { active: 10021, passives: [65, 80, 10031], bloom: true }), slot(10011, { passives: [65, 113] })],
+    },
+  },
   'quest-nosupport': { label: 'Quest group, support false', options: { support: false } },
   'focus-hero': { label: 'Hero focus 10011 (prefill)', options: { support: true, focus: { kind: 'hero', stockId: 10011 } } },
   'focus-sidekick': { label: 'Sidekick focus 10021 (hint + focus_missing)', options: { support: true, focus: { kind: 'sidekick', stockId: 10021 } } },

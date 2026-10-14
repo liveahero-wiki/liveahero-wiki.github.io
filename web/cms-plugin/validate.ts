@@ -115,6 +115,14 @@ function rosterIds(roster: unknown, key: 'heroes' | 'sidekicks'): Set<number> | 
   return ids.size ? ids : null
 }
 
+/** itemIds of the roster's passive-slot items (the roster entries key them by `itemId`, not `stockId`). */
+function rosterItemIds(roster: unknown): Set<number> | null {
+  if (!isObj(roster) || !Array.isArray(roster.items)) return null
+  const ids = new Set<number>()
+  for (const e of roster.items as unknown[]) if (isObj(e) && isInt(e.itemId)) ids.add(e.itemId)
+  return ids.size ? ids : null
+}
+
 /** stockId -> characterId for one roster list; entries without an integer characterId are skipped. */
 function rosterCharacters(roster: unknown, key: 'heroes' | 'sidekicks'): Map<number, number> | null {
   if (!isObj(roster) || !Array.isArray(roster[key])) return null
@@ -158,18 +166,18 @@ export function validateTeamPayload(input: unknown, group: GroupLike, ctx: Valid
     }
     const rawPassives = raw.passives ?? []
     if (!Array.isArray(rawPassives)) {
-      errors.push(err(`${p}.passives`, 'payload_invalid', 'Passive sidekicks must be a list.'))
+      errors.push(err(`${p}.passives`, 'payload_invalid', 'Passive sidekicks and items must be a list.'))
     } else {
       const max = bloom ? 3 : 2
       if (rawPassives.length > max) {
-        errors.push(err(`${p}.passives`, 'passives_too_many', `At most ${max} passive sidekicks.`, { max }))
+        errors.push(err(`${p}.passives`, 'passives_too_many', `At most ${max} passive sidekicks or items.`, { max }))
       }
       rawPassives.forEach((v, j) => {
         const id = readStockId(errors, `${p}.passives.${j}`, v)
         if (id !== null) slot.passives.push(id)
       })
       if (new Set(slot.passives).size !== slot.passives.length) {
-        errors.push(err(`${p}.passives`, 'passives_duplicate', 'A hero cannot use the same passive sidekick twice.'))
+        errors.push(err(`${p}.passives`, 'passives_duplicate', 'A hero cannot use the same passive sidekick or item twice.'))
       }
     }
     slots.push(slot)
@@ -223,6 +231,7 @@ export function validateTeamPayload(input: unknown, group: GroupLike, ctx: Valid
   // Soft roster existence check: only when the roster was fetched.
   const heroIds = rosterIds(ctx.roster, 'heroes')
   const sidekickIds = rosterIds(ctx.roster, 'sidekicks')
+  const itemIds = rosterItemIds(ctx.roster) // passives may also be skill-book items
   slots.forEach((s, i) => {
     if (heroIds && s.stockId && !heroIds.has(s.stockId)) {
       errors.push(err(`payload.heroes.${i}.stockId`, 'unknown_hero', 'Unknown hero.', { stockId: s.stockId }))
@@ -232,7 +241,7 @@ export function validateTeamPayload(input: unknown, group: GroupLike, ctx: Valid
         errors.push(err(`payload.heroes.${i}.active`, 'unknown_sidekick', 'Unknown sidekick.', { stockId: s.active }))
       }
       s.passives.forEach((id, j) => {
-        if (!sidekickIds.has(id)) errors.push(err(`payload.heroes.${i}.passives.${j}`, 'unknown_sidekick', 'Unknown sidekick.', { stockId: id }))
+        if (!sidekickIds.has(id) && !itemIds?.has(id)) errors.push(err(`payload.heroes.${i}.passives.${j}`, 'unknown_sidekick', 'Unknown sidekick or item.', { stockId: id }))
       })
     }
   })
