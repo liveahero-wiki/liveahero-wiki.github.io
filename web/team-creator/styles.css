@@ -196,6 +196,28 @@
   border-inline-start: 3px solid var(--cms-border, #8884);
   color: var(--cms-muted, #6b7280);
 }
+/* external links: the real host is part of the link, shown as a pill */
+.lah-tc-expl a.cms-ext {
+  color: var(--cms-accent, #2563eb);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.lah-tc-expl .cms-ext-host {
+  display: inline-block;
+  padding: 0 0.4em;
+  border: 1px solid var(--cms-border, #8884);
+  border-radius: 999px;
+  color: var(--cms-muted, #6b7280);
+  font-size: 0.82em;
+  line-height: 1.5;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.lah-tc-ext-note {
+  margin: 0.6em 0 0;
+  color: var(--cms-muted, #6b7280);
+  font-size: 0.85em;
+}
 
 /* ---- shared controls ---- */
 .lah-tc-btn,

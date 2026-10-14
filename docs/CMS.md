@@ -96,6 +96,10 @@ Targets are in collection order (the order of the picker and the filter). `suppo
 
 The embed picks its UI language from `data-cms-lang` on the host element, then `<html lang>`, then `navigator.language`, and re-renders on a `cms:lang` event (`detail` = `en | zh-Hans | zh-Hant | ja`) fired on the host. The wiki's own language choice is `<html data-skill-lang>` (the skill-name language picker, kept in `localStorage.skillSearchLang`, shared with the Skill Search page; see `_includes/js/skill-lang.js`), which uses the same four codes. `setupCmsLang()` in `assets/main.js` copies it to `data-cms-lang` of every `.cms-submissions` (so the host needs that class) on load and, on the `skilllangchange` event, updates the attribute and dispatches `cms:lang`. The picker only shows on pages with skill text (chara pages); on the Team Creator the language is the stored/detected one.
 
+## Links in explanations
+
+Explanations can contain up to 3 external `[text](https://…)` links. wiki-cms validates and renders them as `<a class="cms-ext">…<span class="cms-ext-host">host ↗</span></a>` (see wiki-cms `docs/EMBED.md`, "Links in explanations"). `web/team-creator/styles.css` styles `.lah-tc-expl a.cms-ext` / `.cms-ext-host`, and `Card.tsx` shows `tcExtLinksNote` (all four `web/cms-plugin/i18n` bundles) when the opened explanation contains `class="cms-ext"`. Deploy this wiki change before the wiki-cms Worker starts accepting links.
+
 ## Theming
 
 `_sass/_cms.scss` maps `--cms-fg/--cms-bg/--cms-border/--cms-accent/--cms-muted/--cms-chip-bg/--cms-support-bg` on `.cms-submissions` to the wiki's tokens (`--text`, `--bg`, `--colorGrey`, `--link`, `--color50`) for light and `html[data-theme="dark"]`; `--cms-support-bg` is `#d9f4f7` (light) / `#1d4a52` (dark). The embed's core stylesheet and the plugin's (`.cms-lah*`, injected once as `<style id="cms-plugin-lah-team-formation">`) read the same variables.

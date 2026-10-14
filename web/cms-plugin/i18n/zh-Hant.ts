@@ -127,6 +127,7 @@ export const zhHant: Bundle = {
   tcUntitled: '未命名隊伍',
   tcShowExplanation: '顯示說明',
   tcHideExplanation: '隱藏說明',
+  tcExtLinksNote: '連結是社群成員新增的，将前往維基無法控制的外部網站。',
   tcSearch: '搜尋隊伍名稱',
   tcAdvanced: '進階篩選',
   tcActiveCount: '已啟用 {count} 項',

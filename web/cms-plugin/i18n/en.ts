@@ -131,6 +131,7 @@ export const en = {
   tcUntitled: 'Untitled team',
   tcShowExplanation: 'Show explanation',
   tcHideExplanation: 'Hide explanation',
+  tcExtLinksNote: 'Links were added by community members and lead to external sites that the wiki does not control.',
   tcSearch: 'Search team names',
   tcAdvanced: 'Advanced filters',
   tcActiveCount: '{count} active',

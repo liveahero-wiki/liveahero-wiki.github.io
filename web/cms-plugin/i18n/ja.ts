@@ -129,6 +129,7 @@ export const ja: Bundle = {
   tcUntitled: '無題の編成',
   tcShowExplanation: '解説を表示',
   tcHideExplanation: '解説を隠す',
+  tcExtLinksNote: 'リンクはコミュニティのメンバーが追加したもので、Wiki が管理していない外部サイトへ移動します。',
   tcSearch: '編成名で検索',
   tcAdvanced: '詳細フィルター',
   tcActiveCount: '{count} 件適用中',

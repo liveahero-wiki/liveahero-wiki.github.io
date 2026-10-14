@@ -90,8 +90,9 @@ function Explanation({ html, lang, uiLang }: { html: string; lang: Lang; uiLang:
         {open ? t('tcHideExplanation') : t('tcShowExplanation')}
       </button>
       <div id={id} class="lah-tc-expl" lang={lang} hidden={!open}>
-        {/* Server-rendered with HTML disabled (wiki-cms src/shared/markdown-policy.ts). */}
+        {/* Server-rendered with HTML disabled; only validated https links become <a class="cms-ext"> (wiki-cms src/shared/markdown-policy.ts). */}
         {open && <div dangerouslySetInnerHTML={{ __html: html }} />}
+        {open && html.includes('class="cms-ext"') && <p class="lah-tc-ext-note">{t('tcExtLinksNote')}</p>}
       </div>
     </div>
   )

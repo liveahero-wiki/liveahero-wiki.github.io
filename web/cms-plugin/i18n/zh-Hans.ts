@@ -127,6 +127,7 @@ export const zhHans: Bundle = {
   tcUntitled: '未命名队伍',
   tcShowExplanation: '显示说明',
   tcHideExplanation: '隐藏说明',
+  tcExtLinksNote: '链接是社区成员添加的，将跳转到维基无法控制的外部网站。',
   tcSearch: '搜索队伍名称',
   tcAdvanced: '高级筛选',
   tcActiveCount: '已启用 {count} 项',
