@@ -1,12 +1,12 @@
 # Community Team Formation Submissions (wiki-cms)
 
-Visitors read, filter and submit team formations on one page, the **Team Creator** (`/team-creator.html`, `team-creator.md`). The page and its list (disclaimer, filters, sorting, cards) are drawn by this repo (`web/team-creator/`); the API, the submit form and the moderation backend are the separate **wiki-cms** Cloudflare Worker (repo `wiki-cms`, plans in `wiki-cms/docs/TEAM_CREATOR_PLAN.md` and `TEAM_CREATOR_WIKI_UI_PLAN.md`). This repo provides
+Visitors read, filter and submit team formations on one page, the **Team Creator** (`/team_creator/`, `team-creator.md`). The page and its list (disclaimer, filters, sorting, cards) are drawn by this repo (`web/team-creator/`); the API, the submit form and the moderation backend are the separate **wiki-cms** Cloudflare Worker (repo `wiki-cms`, plans in `wiki-cms/docs/TEAM_CREATOR_PLAN.md` and `TEAM_CREATOR_WIKI_UI_PLAN.md`). This repo provides
 
 | Piece | Where |
 |---|---|
 | Worker URL | `site.cms_url` (`wiki_plugins/site.js`) |
 | The page (host `<div>`, intro) | `team-creator.md`; header link in `_includes/header.html` (Tools) |
-| The page's app (list, filters, cards, disclaimer, submit button) | `web/team-creator/` -> `assets/cms/team-creator.js` (`vite.team-creator.config.ts`) |
+| The page's app (list, filters, cards, disclaimer, submit button) | `web/team_creator/` -> `assets/cms/team-creator.js` (`vite.team-creator.config.ts`) |
 | Links to the page | `_includes/team-creator-link.html`, used by `hero-infobox.html`, `sidekick-infobox.html`, `_layouts/event.html` and `guide/challenge_simulator.md` |
 | Targets of a page | `wiki_plugins/lib/cms-groups.js` (Liquid filter `cms_targets`) |
 | Registry of valid groups and targets | `cms-groups.11ty.js` -> `/api/cms-groups.json` |
@@ -19,7 +19,7 @@ Chara, event and guide pages carry **no embed** (no request to the Worker at all
 
 ## The page
 
-`team-creator.md` is only a host element and a script:
+`team_creator.md` is only a host element and a script:
 
 ```html
 <div id="team-creator" class="team-creator"
@@ -34,7 +34,7 @@ The submit form stays in wiki-cms. The submit button runs `import('{cms}/embed/v
 
 ## URL hash parameters
 
-The filter state lives in the hash (`/team-creator.html#hero=12641&t.teamType=auto`), so a filtered list can be bookmarked and the links of the other pages can pre-filter it. The list (`web/team-creator/catalog.ts`) owns `q`, `sort`, `lang` and `t.<tagKey>` (comma list); the plugin filters (`web/cms-plugin/filters.ts`) own the rest. Only non-default values are written.
+The filter state lives in the hash (`/team_creator/#hero=12641&t.teamType=auto`), so a filtered list can be bookmarked and the links of the other pages can pre-filter it. The list (`web/team-creator/catalog.ts`) owns `q`, `sort`, `lang` and `t.<tagKey>` (comma list); the plugin filters (`web/cms-plugin/filters.ts`) own the rest. Only non-default values are written.
 
 | Key | Meaning |
 |---|---|
@@ -77,7 +77,7 @@ The build **fails** (with a message naming the page) for: an entry with neither 
 ## Registry `/api/cms-groups.json`
 
 ```json
-{ "groups": { "all": { "title": "Team Creator", "url": "/team-creator.html",
+{ "groups": { "all": { "title": "Team Creator", "url": "/team_creator/",
     "options": { "support": "optional",
       "targets": [ { "id": "quest-616001", "label": { "en": "Simulator - Lantern-type Kaibutsu (SSS)", "ja": "シミュレート・灯篭型カイブツ" }, "url": "/guide/challenge_simulator/" } ] } } } }
 ```
@@ -114,4 +114,4 @@ End to end on one machine:
 
 1. In `wiki-cms`: `wrangler dev` (port 8787). Register the type once in the local database: `cms type add lah-team-formation --origins http://localhost:8080 --plugin-url http://localhost:8080/assets/cms/lah-team-formation.js --groups-url http://localhost:8080/api/cms-groups.json`.
 2. Here: `pnpm build` (or `pnpm watch:cms-plugin` and `pnpm build:team-creator`), and `pnpm eleventy:dev` (port 8080; `CMS_URL` defaults to the local Worker outside production builds).
-3. Open `/team-creator.html` (or a chara page, then follow its "Community teams using this hero" link), try the filters, submit, approve in the admin portal; the list shows it after the cache TTL (or at once with the devtools cache disabled).
+3. Open `/team_creator/` (or a chara page, then follow its "Community teams using this hero" link), try the filters, submit, approve in the admin portal; the list shows it after the cache TTL (or at once with the devtools cache disabled).
