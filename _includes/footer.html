@@ -7,10 +7,15 @@
 </footer>
 {% include wiki-msg.html %}
 {% for s in page.additional_scripts %}<script async src="{{ s }}"></script>{% endfor %}
+{% comment %} Production: the four scripts below are bundled into one by wiki_plugins/minify-js.js (keep the lists in sync). {% endcomment %}
+{% if jekyll.environment == "production" %}
+<script async src="/assets/site.js"></script>
+{% else %}
 <script async src="/assets/tippy.js"></script>
 <script async src="/assets/main.js"></script>
 <script async src="/assets/search.js"></script>
 <script async src="/assets/meteor-shower.js"></script>
+{% endif %}
 <script async src="https://liveahero-wiki-stats.rongjie.workers.dev/report.js"></script>
 </body>
 </html>

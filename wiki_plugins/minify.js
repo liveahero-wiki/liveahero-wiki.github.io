@@ -10,8 +10,8 @@ const OPTIONS = {
   conservativeCollapse: true, // keep a single space where whitespace separated inline content
   caseSensitive: true, // custom elements such as <wiki-status>
   removeComments: false,
-  minifyJS: false,
-  minifyCSS: false,
+  minifyJS: { compress: true, mangle: true }, // inline <script>, e.g. _includes/js/*.js; top-level names are kept
+  minifyCSS: true, // inline <style> and style=""
   keepClosingSlash: false,
   continueOnParseError: true, // game text sometimes contains stray "<"
 };

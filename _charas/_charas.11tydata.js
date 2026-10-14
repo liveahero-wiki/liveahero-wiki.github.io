@@ -2,6 +2,6 @@
 export default {
   layout: "chara.html",
   unreleased: false,
-  additional_scripts: ["/assets/atlas.min.js", "/assets/skill-tree.js"],
+  additional_scripts: ["/assets/atlas.js", "/assets/skill-tree.js"],
   permalink: "/charas/{{ page.fileSlug }}/",
 };

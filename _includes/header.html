@@ -10,7 +10,7 @@
   <title>{{ page_title }}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,minimum-scale=1.0">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link rel="preload" href="/assets/fonts/roboto-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   {% if page.hidden %}<meta name="robots" content="noindex">{% endif %}
   <meta name="theme-color" content="#ffa726">
@@ -29,7 +29,6 @@
 {% endif %}
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
   <link rel="stylesheet" type="text/css" href="/assets/main.css">
   <link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
   {% for s in page.additional_styles %}<link rel="stylesheet" href="{{ s }}">{% endfor %}

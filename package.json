@@ -22,6 +22,7 @@
     "test": "node --test \"wiki_plugins/**/*.test.js\" \"web/cms-plugin/**/*.test.ts\" \"web/team-creator/**/*.test.ts\""
   },
   "dependencies": {
+    "@fontsource/roboto": "^5.3.0",
     "@tanstack/react-table": "^8.21.3",
     "@tanstack/react-virtual": "^3.14.10",
     "downshift": "9.4.0",
@@ -34,7 +35,8 @@
     "markdown-it-deflist": "^4.0.0",
     "markdown-it-footnote": "^4.0.0",
     "preact": "^10.29.8",
-    "sass": "^1.104.1"
+    "sass": "^1.104.1",
+    "terser": "^5.51.2"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",

@@ -1,7 +1,7 @@
 ---
 title: Mobs and Enemies
 banner: true
-additional_scripts: ["/assets/atlas.min.js"]
+additional_scripts: ["/assets/atlas.js"]
 ---
 
 * unordered

@@ -1,8 +1,3 @@
-// ==ClosureCompiler==
-// @compilation_level SIMPLE_OPTIMIZATIONS
-// @language_out ECMASCRIPT_2019
-// ==/ClosureCompiler==
-
 class AtlasStitcher {
   constructor() {
     this.canvas = document.createElement("canvas");

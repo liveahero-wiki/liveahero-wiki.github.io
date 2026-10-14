@@ -8,6 +8,7 @@ wiki_plugins/
 ├── index.js              # collections, redirects, filter registration
 ├── site.js               # the Jekyll-style `site` object (url, date_format, time, …)
 ├── sass.js, minify.js    # SCSS compilation and HTML minification
+├── minify-js.js          # production: assets/*.js minified, footer scripts bundled into assets/site.js
 ├── lib/                  # framework-free logic, importable from web/ later
 │   ├── site-data.js      # _data/** -> site.data
 │   ├── documents.js      # `page` and collection documents, flattened like Jekyll's
@@ -30,7 +31,7 @@ scripts/compare-page.mjs  # compare the output with a Jekyll build
 | `pnpm eleventy:strict` | build, failing on any unknown Liquid filter |
 | `pnpm test` | unit tests (`node --test`) |
 
-`ELEVENTY_ENV=production` additionally minifies the HTML (the CI does this). `ELEVENTY_COPY_CDN=1` copies the 2 GB `cdn/` checkout into the output.
+`ELEVENTY_ENV=production` additionally (the CI does this) minifies the HTML including inline `<script>`/`<style>`, minifies every `assets/*.js` in `_site/` (sources in git stay readable; `*.min.js` and the Vite outputs are skipped) and bundles the scripts of `_includes/footer.html` into `assets/site.js`; the footer loads the bundle when `jekyll.environment == "production"` and the four files otherwise, so keep `BUNDLE` in `wiki_plugins/minify-js.js` and the footer in sync. Roboto is self-hosted: `_sass/_fonts.scss` plus the woff2 files of `@fontsource/roboto` copied to `assets/fonts/`. `ELEVENTY_COPY_CDN=1` copies the 2 GB `cdn/` checkout into the output.
 
 Generated inputs have to exist before building, as in CI: `_statuses/`, `_data/translation/`, `_data/processed/*_voice.json`, `_data/processed/SkillText.json` (every skill name and description; without it a `ELEVENTY_STRICT=1` build fails and a normal build warns once and prints empty skill tables), `_data/wiki/SkillUpgradeModel.json`, `api/skill-index*.json` and `api/team-roster.json` come from the Python tools (see `docs/PYTHON_SCRIPTS.md`). Eleventy ignores `.gitignore`, so these gitignored files are built.
 

@@ -8,6 +8,7 @@ import { frontMatterYamlEngine } from "./wiki_plugins/lib/ruby-time.js";
 import { findStaticTemplateFiles } from "./wiki_plugins/lib/static-files.js";
 import wikiPlugins from "./wiki_plugins/index.js";
 import minifyPlugin from "./wiki_plugins/minify.js";
+import minifyJsPlugin from "./wiki_plugins/minify-js.js";
 import sassPlugin from "./wiki_plugins/sass.js";
 
 const STRICT = Boolean(process.env.ELEVENTY_STRICT);
@@ -41,6 +42,7 @@ export default function (eleventyConfig) {
   wikiPlugins(eleventyConfig, { site, markdown: () => markdown });
   eleventyConfig.addPlugin(sassPlugin);
   eleventyConfig.addPlugin(minifyPlugin);
+  eleventyConfig.addPlugin(minifyJsPlugin);
   eleventyConfig.addGlobalData("siteUrl", site.url);
 
   // ---- which files are pages -------------------------------------------------------------
@@ -69,7 +71,11 @@ export default function (eleventyConfig) {
 
   // ---- static files ---------------------------------------------------------------------
   eleventyConfig.addPassthroughCopy("assets", {
-    filter: ["**/*", "!**/*.scss", "!atlas.js"],
+    filter: ["**/*", "!**/*.scss"],
+  });
+  // Roboto (see _sass/_fonts.scss): only the latin / latin-ext subsets of the weights main2.scss uses.
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/@fontsource/roboto/files/roboto-latin-{,ext-}{400,700}-normal.woff2": "assets/fonts",
   });
   // Files without front matter, which Jekyll copied verbatim (json is not a template format here).
   eleventyConfig.addPassthroughCopy("api/mob.json");
