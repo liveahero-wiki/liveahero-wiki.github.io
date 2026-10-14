@@ -24,7 +24,15 @@ export interface State {
 let keySeq = 0
 export const newSlot = (): Slot => ({ ...emptySlot(), key: ++keySeq })
 
-const stripSlot = ({ key: _key, ...rest }: Slot): TeamSlot => ({ ...rest, passives: [...rest.passives] })
+/** Passive sidekick slots available without blooming. */
+export const BASE_PASSIVES = 2
+/** With blooming (a third passive slot). */
+export const MAX_PASSIVES = 3
+
+/** Bloom is not a form field: it is implied by a 3rd passive or by a needed skill tree. */
+export const impliesBloom = (s: Pick<TeamSlot, 'skillTree' | 'passives'>): boolean => s.skillTree || s.passives.length > BASE_PASSIVES
+
+const stripSlot = ({ key: _key, ...rest }: Slot): TeamSlot => ({ ...rest, bloom: impliesBloom(rest), passives: [...rest.passives] })
 
 export function toPayload(state: State, allowsSupport: boolean): TeamPayload {
   const idx = allowsSupport && state.supportKey !== null ? state.slots.findIndex((s) => s.key === state.supportKey) : -1

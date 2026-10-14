@@ -1,5 +1,5 @@
 // Team editor: 1-5 slots reordered by pointer drag (mouse/touch) or by move up/down buttons, a hero
-// combobox, number inputs, bloom / skill-tree checkboxes, active + passive sidekick pickers, and (when
+// combobox, number inputs, a skill-tree checkbox (bloom is derived), active + passive sidekick pickers, and (when
 // the group allows it) a "borrowed support" radio. Emits normalized payloads through onChange.
 
 import { useEffect, useLayoutEffect, useRef, useState } from 'preact/hooks'
@@ -270,7 +270,7 @@ function SlotEditor({ slot, index, total, idBase, support, allowsSupport, suppor
   const n = index + 1
   const hero = slot.stockId ? roster?.hero(slot.stockId) : undefined
   const treeUnavailable = !!hero && !hero.hasSkillTree
-  const maxPassives = slot.bloom ? 3 : 2
+  const maxPassives = ed.MAX_PASSIVES
 
   const errorsOf = (field: string) => errs?.get(field) ?? []
   const fieldErrors = (field: string, id: string) => {
@@ -347,17 +347,13 @@ function SlotEditor({ slot, index, total, idBase, support, allowsSupport, suppor
       </div>
 
       <div class="cms-lah-checks">
-        <label class="cms-lah-check">
-          <input type="checkbox" checked={slot.bloom} aria-invalid={errorsOf('bloom').length ? true : undefined} onChange={(e) => onPatch({ bloom: e.currentTarget.checked })} />
-          <span>{t('bloomCheck')}</span>
-        </label>
         <label class={'cms-lah-check' + (treeUnavailable ? ' cms-lah-disabled' : '')} title={treeUnavailable ? t('skillTreeUnavailable') : undefined}>
           <input type="checkbox" checked={slot.skillTree} disabled={treeUnavailable} onChange={(e) => onPatch({ skillTree: e.currentTarget.checked })} />
           <span>{t('skillTreeCheck')}</span>
         </label>
         {treeUnavailable && <span class="cms-lah-muted cms-lah-small">{t('skillTreeUnavailable')}</span>}
       </div>
-      {[...errorsOf('bloom'), ...errorsOf('skillTree')].map((e) => (
+      {errorsOf('skillTree').map((e) => (
         <p key={e.path + e.code} class="cms-lah-error">
           {errorText(t, e)}
         </p>

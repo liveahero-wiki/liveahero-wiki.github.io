@@ -203,3 +203,23 @@ describe('error helpers', () => {
     assert.equal(sortedJson({ a: 1, b: { d: 1, c: [{ z: 1, y: 2 }] } }), sortedJson({ b: { c: [{ y: 2, z: 1 }], d: 1 }, a: 1 }))
   })
 })
+
+describe('derived bloom', () => {
+  const bloomOf = (extra: Record<string, unknown>) =>
+    toPayload(initState({ v: 1, heroes: [{ stockId: 1, ...extra }] }, { support: 'none' }), false).heroes[0].bloom
+  it('is false with up to 2 passives and no skill tree', () => {
+    assert.equal(bloomOf({ passives: [] }), false)
+    assert.equal(bloomOf({ passives: [2, 3] }), false)
+  })
+  it('is true with 3 passives, and a stale bloom flag is overwritten', () => {
+    assert.equal(bloomOf({ passives: [2, 3, 4] }), true)
+    assert.equal(bloomOf({ bloom: true, passives: [2] }), false)
+  })
+  it('is always true when the skill tree is needed', () => {
+    assert.equal(bloomOf({ skillTree: true, passives: [] }), true)
+  })
+  it('produces a payload the validator accepts with 3 passives', () => {
+    const p = toPayload(initState({ v: 1, heroes: [{ stockId: 1, passives: [2, 3, 4] }] }, { support: 'none' }), false)
+    assert.deepEqual(validateTeam(p, { support: 'none' }).filter((e) => e.code === 'passives_too_many'), [])
+  })
+})

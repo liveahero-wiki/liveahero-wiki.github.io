@@ -164,6 +164,9 @@ export function validateTeamPayload(input: unknown, group: GroupLike, ctx: Valid
     if (slot.active !== null && slot.active === stockId) {
       errors.push(err(`${p}.active`, 'active_same_as_hero', 'A hero cannot use its own sidekick card as the active sidekick.'))
     }
+    if (slot.skillTree && !bloom) {
+      errors.push(err(`${p}.bloom`, 'bloom_required', 'Blooming is required when the skill tree is needed.'))
+    }
     const rawPassives = raw.passives ?? []
     if (!Array.isArray(rawPassives)) {
       errors.push(err(`${p}.passives`, 'payload_invalid', 'Passive sidekicks and items must be a list.'))
