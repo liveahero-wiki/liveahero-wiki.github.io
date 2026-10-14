@@ -14,9 +14,11 @@ import { isFocusCard, toViewSlots, toViewTarget } from './view.ts'
 interface Props {
   payload: unknown
   ctx: PluginContext
+  /** The host shows the target chip itself (e.g. in a meta row), so leave it out of the summary. */
+  hideTarget?: boolean
 }
 
-export function TeamSummary({ payload, ctx }: Props) {
+export function TeamSummary({ payload, ctx, hideTarget }: Props) {
   const t = makeT(ctx.uiLang)
   const lang = ctx.uiLang
   const roster = useRoster()
@@ -32,7 +34,7 @@ export function TeamSummary({ payload, ctx }: Props) {
 
   return (
     <div class="cms-lah cms-lah-summary-root">
-      {target && <TargetChip id={target} targets={parseTargets(ctx.group.options)} lang={lang} t={t} />}
+      {target && !hideTarget && <TargetChip id={target} targets={parseTargets(ctx.group.options)} lang={lang} t={t} />}
       <button
         ref={btn}
         type="button"

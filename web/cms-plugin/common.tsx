@@ -68,15 +68,13 @@ export function TargetChip({ id, targets, lang, t }: { id: string; targets: Targ
     </>
   )
   return (
-    <p class="cms-lah-target-row">
-      {href ? (
-        <a class="cms-lah-target-chip" href={href} target="_blank" rel="noopener">
-          {inner}
-        </a>
-      ) : (
-        <span class="cms-lah-target-chip">{inner}</span>
-      )}
-    </p>
+    href ? (
+      <a class="cms-lah-target-chip" href={href} target="_blank" rel="noopener">
+        {inner}
+      </a>
+    ) : (
+      <span class="cms-lah-target-chip">{inner}</span>
+    )
   )
 }
 

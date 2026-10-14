@@ -5,7 +5,10 @@ import { useMemo, useState } from 'preact/hooks'
 import type { PublicBlob, PublicItem, TagDefDto } from '../cms-plugin/api-types.ts'
 import { makeT } from '../cms-plugin/i18n/t.ts'
 import type { PluginContext } from '../cms-plugin/plugin-api.ts'
+import { TargetChip } from '../cms-plugin/common.tsx'
+import { parseTargets } from '../cms-plugin/targets.ts'
 import { TeamSummary } from '../cms-plugin/TeamSummary.tsx'
+import { toViewTarget } from '../cms-plugin/view.ts'
 import { demoPlatform, parseHttps } from './api.ts'
 import { pickText, type Lang } from './lang.ts'
 
@@ -32,6 +35,7 @@ export function Card({ item, blob, uiLang, ctx }: { item: PublicItem; blob: Publ
       return new Date(item.createdAt).toISOString().slice(0, 10)
     }
   }, [uiLang, item.createdAt])
+  const target = toViewTarget(item.payload)
   const demo = parseHttps(item.demoUrl)
   const platform = demo ? demoPlatform(demo.hostname) : null
 
@@ -44,9 +48,15 @@ export function Card({ item, blob, uiLang, ctx }: { item: PublicItem; blob: Publ
         </h3>
       )}
       <div class="lah-tc-summary">
-        <TeamSummary payload={item.payload} ctx={ctx} />
+        <TeamSummary payload={item.payload} ctx={ctx} hideTarget />
       </div>
       <div class="lah-tc-meta">
+        {target && (
+          // `cms-lah` scopes the plugin's theme variables that the chip's styles read.
+          <span class="cms-lah">
+            <TargetChip id={target} targets={parseTargets(ctx.group.options)} lang={uiLang} t={t} />
+          </span>
+        )}
         {tagChips.map((c) => (
           <span key={c} class="lah-tc-chip">
             {c}
