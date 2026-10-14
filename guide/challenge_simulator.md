@@ -36,69 +36,95 @@ Quest in simulator will reset after a period of time (normally within 14 days), 
 
 ### Beware the exploding zone! (Difficulty: B)
 
-#### Flamier's skills
+<details>
+<summary>Flamier's skills</summary>
 
 {% include skill-table-manual.html skillIds="4011104,4011103" equipmentSkills="" %}
+</details>
 
-#### Mafiosos' skills
+<details>
+<summary>Mafiosos' skills</summary>
 
 {% include skill-table-manual.html skillIds="4054110,4054111,4054113" equipmentSkills="" %}
+</details>
 
 ### Clash! Space Pirate (Difficulty: A)
 
-#### Suhail's skills
+<details>
+<summary>Suhail's skills</summary>
 
 {% include skill-table-manual.html skillIds="4030101,4030102" equipmentSkills="6000017" %}
+</details>
 
-#### Villain's skills
+<details>
+<summary>Villain's skills</summary>
 
 {% include skill-table-manual.html skillIds="4041107" equipmentSkills="6000020,6000021" %}
+</details>
 
 ### Simulated Anomalous Kaibutsu (Difficulty: S)
 
-#### Shizuku?'s skills
+<details>
+<summary>Shizuku?'s skills</summary>
 
 {% include skill-table-manual.html skillIds="4060105,4060101,4060104" equipmentSkills="6060102,6060101,6000024,6000023" %}
+</details>
 
-#### Kaibutsu's skills
+<details>
+<summary>Kaibutsu's skills</summary>
 
 {% include skill-table-manual.html skillIds="4036107" equipmentSkills="6000015,6000022" %}
+</details>
 
 ### Challenge from the Fisherman (Difficulty: B)
 
-#### Isaribi's skills
+<details>
+<summary>Isaribi's skills</summary>
 
 {% include skill-table-manual.html skillIds="4022104,4022105" equipmentSkills="6000027" %}
+</details>
 
-#### Villain's skills
+<details>
+<summary>Villain's skills</summary>
 
 {% include skill-table-manual.html skillIds="4041101,4041108" equipmentSkills="" %}
+</details>
 
 ### Assault of the Kaibutsu (Difficulty: A)
 
-#### Adult Kaibutsu's skills
+<details>
+<summary>Adult Kaibutsu's skills</summary>
 
 {% include skill-table-manual.html skillIds="4046130,4046129,4046128" equipmentSkills="6000014,6000029" %}
+</details>
 
 ### Simulated Tree-type Kaibutsu (Difficulty: S)
 
-#### Tree-type Kaibutsu's skills
+<details>
+<summary>Tree-type Kaibutsu's skills</summary>
 
 {% include skill-table-manual.html skillIds="4052107,4052108,4052106" equipmentSkills="6000024,6000023,6052101,6052102" %}
+</details>
 
-#### Kaibutsu's skills
+<details>
+<summary>Kaibutsu's skills</summary>
 
 {% include skill-table-manual.html skillIds="4036108,4036109,4036110" equipmentSkills="6000021" %}
+</details>
 
 ### Decisive Battle in The Forest Area (Difficulty: B)
 
-#### Mokdai's skills
+<details>
+<summary>Mokdai's skills</summary>
 
 {% include skill-table-manual.html skillIds="4002101,4002103" equipmentSkills="6000032" %}
+</details>
 
-#### Villain's skills
+<details>
+<summary>Villain's skills</summary>
 
 {% include skill-table-manual.html skillIds="4054110,4054115,4054116" equipmentSkills="6061105" %}
+</details>
 
 ### Global Union Special Exercise (Difficulty: A)
 
@@ -106,65 +132,93 @@ This Simulator has different Score condition which is:
 - Endurance Bonus : How many turns you can survive
 - Survival Bonus : How many hero is still available for combat at the end of battle
 
-#### Furlong's skills
+<details>
+<summary>Furlong's skills</summary>
 
 {% include skill-table-manual.html skillIds="4008104,4008105" equipmentSkills="6000030,6000031,6000003,6000023" %}
+</details>
 
-#### Barrel's skills
+<details>
+<summary>Barrel's skills</summary>
 
 {% include skill-table-manual.html skillIds="4007105,4007107" %}
+</details>
 
-#### Gammei's skills
+<details>
+<summary>Gammei's skills</summary>
 
 {% include skill-table-manual.html skillIds="4006101,4006102" %}
+</details>
 
-#### Victom's skills
+<details>
+<summary>Victom's skills</summary>
 
 {% include skill-table-manual.html skillIds="4009104,4009103" %}
+</details>
 
 ### Simulated Phantom-thief Villain (Difficulty: S)
 
-#### Vulpecula's skills
+<details>
+<summary>Vulpecula's skills</summary>
 
 {% include skill-table-manual.html skillIds="4065104,4065105,4065106" equipmentSkills="6000024,6000023,6065101,6065102" %}
 
-#### Mercenary 1's skills
+</details>
+
+<details>
+<summary>Mercenary 1's skills</summary>
 
 {% include skill-table-manual.html skillIds="4066117,4066119" %}
+</details>
 
-#### Mercenary 2's skills
+<details>
+<summary>Mercenary 2's skills</summary>
 
 {% include skill-table-manual.html skillIds="4066117,4066118" %}
+</details>
 
 ### Simulated Shark-type Kaibutsu (Difficulty: S)
 
-#### Shark Kaibutsu (Water)'s skills
+<details>
+<summary>Shark Kaibutsu (Water)'s skills</summary>
 
 {% include skill-table-manual.html skillIds="4074105,4074106,4074107" equipmentSkills="6074101,6074103,6074104,6000024,6000023" %}
+</details>
 
-#### Shark Kaibutsu (Dark)'s skills
+<details>
+<summary>Shark Kaibutsu (Dark)'s skills</summary>
 
 {% include skill-table-manual.html skillIds="4074104,4074108" equipmentSkills="6074102,6074105,6000024" %}
+</details>
 
 ### Simulated Labyrinth Beast (Difficulty: S)
 
-#### Labyrinth Beast's skills
+<details>
+<summary>Labyrinth Beast's skills</summary>
 
 {% include skill-table-manual.html skillIds="4046131,4046133,4046132" equipmentSkills="6046102,6046101,6046104,6000044" %}
 
-#### Labyrinth Beast (Juvenile)'s skills
+</details>
+
+<details>
+<summary>Labyrinth Beast (Juvenile)'s skills</summary>
 
 {% include skill-table-manual.html skillIds="4036111" equipmentSkills="6036101,6000037" %}
+</details>
 
 ### Simulated Particular Hero Kaibutsu (Difficulty: S)
 
-#### Procy Shaped Kaibutsu's skills
+<details>
+<summary>Procy Shaped Kaibutsu's skills</summary>
 
 {% include skill-table-manual.html skillIds="4032112,4032111,4032113" equipmentSkills="6032103,6000024,6032104,6032105" %}
+</details>
 
-#### Gomeisa Shaped Kaibutsu's skills
+<details>
+<summary>Gomeisa Shaped Kaibutsu's skills</summary>
 
 {% include skill-table-manual.html skillIds="4033107,4033106" equipmentSkills="6033102,6000003" %}
+</details>
 
 ### Simulated Ghost Kaibutsu (Difficulty: SS)
 
@@ -190,13 +244,17 @@ Ghost Kaibutsu (Juvenile) has a skill that inflicts the "Grudge" status effect o
 
 When Ghost Kaibutsu (Juvenile) with "Grudge" is defeated, it deals damage to all Heroes.
 
-#### Ghost Kaibutsu (Adult)'s skills
+<details>
+<summary>Ghost Kaibutsu (Adult)'s skills</summary>
 
 {% include skill-table-manual.html skillIds="4109101,4109102,4109103" equipmentSkills="6109101,6109102,6121109,6121114" %}
+</details>
 
-#### Ghost Kaibutsu (Juvenile)'s skills
+<details>
+<summary>Ghost Kaibutsu (Juvenile)'s skills</summary>
 
 {% include skill-table-manual.html skillIds="4104101,4104102,4104103" equipmentSkills="6105101" %}
+</details>
 
 ### Simulated Meteorite Kaibutsu (Difficulty: SS)
 
@@ -222,13 +280,17 @@ Meteorite Kaibutsu (Large) grants itself "Meteor Fragments" every turn. Once eve
 
 Meteorite Kaibutsu (Small) performs single-target and area attacks that apply buffs and debuffs, and if it is knocked out by the fifth turn, it will revive.
 
-#### Meteorite Kaibutsu (Large)'s skills
+<details>
+<summary>Meteorite Kaibutsu (Large)'s skills</summary>
 
 {% include skill-table-manual.html skillIds="4095103,4095104,4095105" equipmentSkills="6095101,6095111,6095110,6095108" %}
+</details>
 
-#### Meteorite Kaibutsu (Small)'s skills
+<details>
+<summary>Meteorite Kaibutsu (Small)'s skills</summary>
 
 {% include skill-table-manual.html skillIds="4089103,4089101,4089102" equipmentSkills="" %}
+</details>
 
 ### Simulated Plesiosaur Kaibutsu (Difficulty: SS)
 
@@ -250,9 +312,11 @@ If the Plesiosaur Kaibutsu(?) has fewer than 3 debuffs at the time of the attack
 
 When under 50% HP, the Plesiosaur Kaibutsu(?) will activate several additional effects upon taking damage, such as removing its own debuffs.
 
-#### Plesiosaur Kaibutsu(?)'s skills
+<details>
+<summary>Plesiosaur Kaibutsu(?)'s skills</summary>
 
 {% include skill-table-manual.html skillIds="4121111,4121108,4121109" equipmentSkills="6121102,6121115,6121111,6121114" %}
+</details>
 
 ## Community Team Formations
 
