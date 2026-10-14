@@ -2,12 +2,33 @@
 title: Exploring the Unknown
 banner: true
 additional_scripts: ["/assets/filter.js"]
+team_formations:
+- id: unexplored-viscunam-octopus
+  label:
+    en: "Octopus Type Kaibutsu (Viscunam Unexplored)"
+    "zh-Hant": 章魚型恠物 (維斯庫納姆 - 未踏探訪)
+    "zh-Hans": 章鱼型恠物 (维斯库纳姆 - 未踏探访)
+    ja: "タコ型カイブツ (ヴィスカナム - 未踏探訪)"
+- id: unexplored-viscunam-serpentdragon
+  label:
+    en: "Serpent-dragon Type Kaibutsu (Viscunam Unexplored)"
+    "zh-Hant": 蛇龍型恠物 (維斯庫納姆 - 未踏探訪)
+    "zh-Hans": 蛇龙型恠物 (维斯库纳姆 - 未踏探访)
+    ja: "ヘビドラコ型カイブツ (ヴィスカナム - 未踏探訪)"
+- id: unexplored-viscunam-whitewhale
+  label:
+    en: "White Whale Type Kaibutsu (Viscunam Unexplored)"
+    "zh-Hant": 白鯨型恠物 (維斯庫納姆 - 未踏探訪)
+    "zh-Hans": 白鲸型恠物 (维斯库纳姆 - 未踏探访)
+    ja: "白鯨型カイブツ (ヴィスカナム - 未踏探訪)"
 ---
 
 * this will be unordered
 {:toc}
 
-## Exploring the Unknown
+## Exploring the Unknown (未踏探訪)
+
+> Wiki used to call it "Unexplored!" before official translation was released
 
 - Player will challenge a roguelike game mode, with a boss fight at the end
 - Consume 0 stamina with unlimited attempt
@@ -20,6 +41,46 @@ additional_scripts: ["/assets/filter.js"]
 - Every node in path has different enemy depending on its symbol, winning the battle will advance the path
 - 3 Exploration skills are available for choosing every time you win a battle, you can only choose one, list of exploration skills available below
 - You can have a maximum of 7 skills per exploration 
+
+## Enemy skills
+
+### The Inventor and the Runaway Mechanism (Viscunam)
+
+#### Octopus Type Kaibutsu
+
+<details>
+<summary>Octopus Type Kaibutsu</summary>
+
+{% include skill-table-manual.html skillIds="4184113,4184114,4184115" equipmentSkills="6184126,6184127,6184133,6184131" %}
+</details>
+
+#### Serpent-dragon Type Kaibutsu
+
+<details>
+<summary>Serpent-dragon Type Kaibutsu (Head)</summary>
+
+{% include skill-table-manual.html skillIds="4246113,4246107,4247110" equipmentSkills="6246117,6246118,6000062,6247119" %}
+</details>
+
+<details>
+<summary>Serpent-dragon Type Kaibutsu (Tail)</summary>
+
+{% include skill-table-manual.html skillIds="4247111,4247112,4247113" equipmentSkills="6247115,6247116,6247120,6247119" %}
+</details>
+
+#### White Whale Type Kaibutsu
+
+<details>
+<summary>White Whale Type Kaibutsu (Boss)</summary>
+
+{% include skill-table-manual.html skillIds="4232104,4232105,4232106" equipmentSkills="6232103,6232111,6232112,6149111" %}
+</details>
+
+<details>
+<summary>Shark Type Kaibutsu</summary>
+
+{% include skill-table-manual.html skillIds="4074307,4074308,4074309" equipmentSkills="6074313,6074311" %}
+</details>
 
 ## Exploration skills
 
