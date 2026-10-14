@@ -1,0 +1,36 @@
+{% comment %}
+  Announcements from _data/wiki/WikiMessages.json (id, text as markdown, optional start/end in JST).
+  Only the messages active at build time are rendered; _includes/js/wiki-msg.js keeps track of which
+  ones the reader has seen. The button goes into #float-btns, the stack shared with the meteor button.
+{% endcomment %}
+{% assign wiki_msgs = "" | split: "," %}
+{% assign now_ts = site.time | date: "%s" | plus: 0 %}
+{% for msg in site.data.wiki.WikiMessages %}
+  {% assign msg_on = true %}
+  {% if msg.start %}
+    {% assign start_ts = msg.start | append: "+09" | date: "%s" | plus: 0 %}
+    {% if start_ts > now_ts %}{% assign msg_on = false %}{% endif %}
+  {% endif %}
+  {% if msg.end %}
+    {% assign end_ts = msg.end | append: "+09" | date: "%s" | plus: 0 %}
+    {% if end_ts <= now_ts %}{% assign msg_on = false %}{% endif %}
+  {% endif %}
+  {% if msg_on %}{% assign wiki_msgs = wiki_msgs | push: msg %}{% endif %}
+{% endfor %}
+{% if wiki_msgs.size > 0 %}
+<div id="float-btns">
+  <button id="wiki-msg-btn" class="float-btn" type="button" title="Announcements" aria-label="Announcements">📢<span class="float-btn-badge">{{ wiki_msgs.size }}</span></button>
+</div>
+<dialog id="wiki-msg-dialog" aria-labelledby="wiki-msg-title">
+  <header>
+    <h2 id="wiki-msg-title">Announcements</h2>
+    <form method="dialog"><button aria-label="Close">✕</button></form>
+  </header>
+  <div class="wiki-msg-list">
+  {% for msg in wiki_msgs %}
+    <article class="wiki-msg" data-msg-id="{{ msg.id | escape }}">{{ msg.text | markdownify }}</article>
+  {% endfor %}
+  </div>
+</dialog>
+<script>{% include js/wiki-msg.js %}</script>
+{% endif %}

@@ -5,6 +5,7 @@
     <p>Powered by <a href="https://www.11ty.dev/">Eleventy</a></p>
   </nav>
 </footer>
+{% include wiki-msg.html %}
 {% for s in page.additional_scripts %}<script async src="{{ s }}"></script>{% endfor %}
 <script async src="/assets/tippy.js"></script>
 <script async src="/assets/main.js"></script>

@@ -155,6 +155,19 @@ the community English translation, else the game's own localization (`zzz/<lang>
 else the raw Japanese master text, sanitized to the wiki tag set
 (`wiki_util.sanitizeSkillDescriptionForDisplay`).
 
+### Wiki announcements (`_data/wiki/WikiMessages.json`)
+A hand-edited list shown by the floating announcements button (`_includes/wiki-msg.html`).
+```jsonc
+[ { "id": "skill-i18n",                       // unique; remembered as read in localStorage (wikiMsgRead)
+    "text": "Skill info is now in **Chinese**!", // markdown
+    "start": "2026-10-01 00:00:00",            // optional, JST
+    "end": "2026-11-01 00:00:00" } ]           // optional, JST; active while start <= build time < end
+```
+Only the messages active when the site is built are rendered (CI rebuilds every 6 hours). The
+badge on the button counts the ones this browser has not opened yet.
+
+---
+
 ---
 
 ## 💻 How Pages Use Game Schemas

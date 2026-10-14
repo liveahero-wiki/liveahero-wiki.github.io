@@ -218,13 +218,6 @@
     // Inject Styles for Anchor Positioning
     const style = document.createElement('style');
     style.textContent = `
-      #meteor-container {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 9999;
-        font-family: sans-serif;
-      }
       #meteor-shower-canvas {
         position: fixed;
         top: 0;
@@ -236,17 +229,6 @@
       }
       #meteor-toggle-btn {
         anchor-name: --meteor-toggle-btn;
-        font-size: 24px;
-        background: #333;
-        color: #fff;
-        border: none;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        cursor: pointer;
-      }
-      #meteor-toggle-btn:hover {
-        background-color: #555;
       }
       #meteor-shower-menu {
         margin: 0; /* Override default popover margin */
@@ -258,12 +240,19 @@
     `;
     document.head.appendChild(style);
 
-    const container = document.createElement('div');
-    container.id = 'meteor-container';
+    // #float-btns is the stack of round buttons in the corner (_sass/_floating-buttons.scss); the
+    // page may have rendered it already (_includes/wiki-msg.html), and this button goes below the others.
+    let container = document.getElementById('float-btns');
+    const isNewContainer = !container;
+    if (isNewContainer) {
+      container = document.createElement('div');
+      container.id = 'float-btns';
+    }
 
     // Toggle Button
     const btn = document.createElement('button');
     btn.id = 'meteor-toggle-btn';
+    btn.className = 'float-btn';
     btn.textContent = '🌟';
 
     btn.onclick = (e) => {
@@ -275,7 +264,7 @@
     };
 
     container.appendChild(btn);
-    document.body.appendChild(container);
+    if (isNewContainer) document.body.appendChild(container);
   }
 
   function handleResize() {
