@@ -14,6 +14,10 @@ import type { Focus, TeamPayload, TeamSlot } from './types.ts'
 
 export const MAX_SLOTS = 5
 
+/** Parallel Weapon forms by itemId: Base / Attack / Physical / Guard Design. Required when P.Lv > 0. */
+export const PW_FORMS = [60, 61, 62, 63] as const
+export const DEFAULT_PW_FORM = 60
+
 /** Every error code this validator can emit; each must have a message in every i18n bundle. */
 export const ERROR_CODES = [
   'payload_invalid',
@@ -21,6 +25,7 @@ export const ERROR_CODES = [
   'heroes_length',
   'int_range',
   'bool_invalid',
+  'pw_form_invalid',
   'stock_id_invalid',
   'active_same_as_hero',
   'sidekick_same_character',
@@ -149,16 +154,24 @@ export function validateTeamPayload(input: unknown, group: GroupLike, ctx: Valid
     }
     const stockId = readStockId(errors, `${p}.stockId`, raw.stockId)
     const bloom = readBool(errors, `${p}.bloom`, raw.bloom)
+    const plv = readInt(errors, `${p}.plv`, raw.plv, 0, 0, 100)
     const slot: TeamSlot = {
       stockId: stockId ?? 0,
       lv: readInt(errors, `${p}.lv`, raw.lv, 60, 1, 60),
-      plv: readInt(errors, `${p}.plv`, raw.plv, 0, 0, 100),
+      plv,
       fans: readInt(errors, `${p}.fans`, raw.fans, 0, 0, 1000),
       engrave: readInt(errors, `${p}.engrave`, raw.engrave, 0, 0, 1000),
       bloom,
       skillTree: readBool(errors, `${p}.skillTree`, raw.skillTree),
       active: null,
       passives: [],
+    }
+    // Parallel Weapon form: kept only with P.Lv > 0 (default Base Design); ignored otherwise.
+    if (plv > 0) {
+      const f = raw.pwForm
+      if (f === undefined || f === null) slot.pwForm = DEFAULT_PW_FORM
+      else if (isInt(f) && (PW_FORMS as readonly number[]).includes(f)) slot.pwForm = f
+      else errors.push(err(`${p}.pwForm`, 'pw_form_invalid', 'Must be one of the Parallel Weapon forms.'))
     }
     if (raw.active !== undefined && raw.active !== null) slot.active = readStockId(errors, `${p}.active`, raw.active)
     if (slot.active !== null && slot.active === stockId) {

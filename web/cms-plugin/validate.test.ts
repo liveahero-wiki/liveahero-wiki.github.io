@@ -38,6 +38,15 @@ describe('payload basics', () => {
       assert.ok(codes(r).includes('int_range'), JSON.stringify(bad))
     }
   })
+  it('keeps pwForm only with P.Lv > 0 (default Base Design) and rejects unknown forms', () => {
+    const run = (extra: Record<string, unknown>) => validateTeamPayload({ v: 1, heroes: [slot(1, extra as Partial<TeamSlot>)] }, group({ support: false }))
+    const form = (r: ValidateResult) => (r.ok ? r.value.heroes[0].pwForm : 'error')
+    assert.equal(form(run({ plv: 0, pwForm: 62 })), undefined)
+    assert.equal(form(run({ plv: 5 })), 60)
+    assert.equal(form(run({ plv: 5, pwForm: 63 })), 63)
+    assert.ok(codes(run({ plv: 5, pwForm: 64 })).includes('pw_form_invalid'))
+    assert.ok(codes(run({ plv: 5, pwForm: '61' })).includes('pw_form_invalid'))
+  })
   it('rejects non-positive stock ids and non-boolean flags', () => {
     assert.ok(codes(validateTeamPayload({ v: 1, heroes: [slot(0)] }, group({ support: false }))).includes('stock_id_invalid'))
     assert.ok(codes(validateTeamPayload({ v: 1, heroes: [{ stockId: 1, bloom: 'yes' }] }, group({ support: false }))).includes('bool_invalid'))

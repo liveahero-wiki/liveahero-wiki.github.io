@@ -27,6 +27,9 @@ export function makeT(lang: Lang): T {
   return (key, params) => fill(bundle[key] ?? en[key] ?? key, params)
 }
 
+/** Name of a Parallel Weapon form by its itemId (60-63). */
+export const pwFormLabel = (t: T, itemId: number): string => t(`pwForm${itemId}` as Key)
+
 /** Localized text for a server/validator error; falls back to its English `message`. */
 export function errorText(t: T, e: FieldError): string {
   const key = `error_${e.code}` as Key

@@ -62,6 +62,12 @@ export const ja: Bundle = {
   skillTreeCheck: 'スキルツリーが必要',
   skillTreeUnavailable: 'このヒーローにはスキルツリーがありません。',
   slotsHeading: 'チームのスロット',
+  pwForm: 'パラレルウェポンのフォーム',
+  pwFormRequired: 'P.Lvが1以上の場合は必須です。',
+  pwForm60: 'ベース・デザイン',
+  pwForm61: 'アタック・デザイン',
+  pwForm62: 'フィジカル・デザイン',
+  pwForm63: 'ガード・デザイン',
 
   targetField: '専用の対象',
   targetGeneral: '汎用',
@@ -110,6 +116,7 @@ export const ja: Bundle = {
   error_focus_missing: 'このページの{kind}をチームに含めてください。',
   error_unknown_hero: '不明なヒーローです（ID {stockId}）。',
   error_unknown_sidekick: '不明なサイドキックまたはアイテムです（ID {stockId}）。',
+  error_pw_form_invalid: 'パラレルウェポンのフォームを一覧から選んでください。',
   error_target_unknown: '一覧の対象から選ぶか、「汎用」を選んでください。',
 
   // ---- Team Creator page (web/team-creator), copied from the wiki-cms embed's list/card/catalog strings

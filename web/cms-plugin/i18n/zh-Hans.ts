@@ -60,6 +60,12 @@ export const zhHans: Bundle = {
   skillTreeCheck: '需要技能树',
   skillTreeUnavailable: '该英雄没有技能树。',
   slotsHeading: '队伍栏位',
+  pwForm: '平行武器形态',
+  pwFormRequired: 'P.Lv 大于 0 时必填。',
+  pwForm60: '基础设计',
+  pwForm61: '攻击设计',
+  pwForm62: '体能设计',
+  pwForm63: '防御设计',
 
   targetField: '专为此战斗组建',
   targetGeneral: '通用',
@@ -108,6 +114,7 @@ export const zhHans: Bundle = {
   error_focus_missing: '队伍必须包含本页的{kind}。',
   error_unknown_hero: '未知英雄（ID {stockId}）。',
   error_unknown_sidekick: '未知助手或道具（ID {stockId}）。',
+  error_pw_form_invalid: '请选择列出的平行武器形态。',
   error_target_unknown: '请选择列出的目标，或选择“通用”。',
 
   // ---- Team Creator page (web/team-creator), copied from the wiki-cms embed's list/card/catalog strings

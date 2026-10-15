@@ -10,6 +10,8 @@ export interface TeamSlot {
   stockId: number
   lv: number
   plv: number
+  /** Parallel Weapon form (itemId 60-63); present exactly when `plv` > 0 (absent in older payloads = Base Design). */
+  pwForm?: number
   fans: number
   engrave: number
   bloom: boolean

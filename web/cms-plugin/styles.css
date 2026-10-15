@@ -412,9 +412,23 @@ a.cms-lah-sk-name:hover {
 }
 .cms-lah-stats {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 4px 12px;
   margin: 10px 0;
+}
+.cms-lah-pwform-value,
+.cms-lah-pwform-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cms-lah-pwform-value {
+  display: inline-flex;
+  gap: 6px;
+}
+.cms-lah-pwform-row .cms-lah-select {
+  flex: 1;
+  min-width: 0;
 }
 .cms-lah-stat dt {
   color: var(--cms-lah-muted);

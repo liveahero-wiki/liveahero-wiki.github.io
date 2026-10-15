@@ -4,14 +4,14 @@
 
 import { useEffect, useLayoutEffect, useRef, useState } from 'preact/hooks'
 import type { FieldError, PluginContext } from './plugin-api.ts'
-import { cardLabel, useRoster } from './common.tsx'
+import { cardLabel, PwFormIcon, useRoster } from './common.tsx'
 import { startDrag } from './dnd.ts'
-import { makeT, errorText, type T } from './i18n/t.ts'
+import { makeT, errorText, pwFormLabel, type T } from './i18n/t.ts'
 import { CardPicker, PassivePicker } from './pickers.tsx'
 import type { Roster } from './roster.ts'
 import type { Focus, TeamPayload, TeamSlot } from './types.ts'
 import { parseTargets, targetChoices, targetLabel } from './targets.ts'
-import { MAX_SLOTS, parseFocus, supportMode, validateTeam } from './validate.ts'
+import { DEFAULT_PW_FORM, MAX_SLOTS, PW_FORMS, parseFocus, supportMode, validateTeam } from './validate.ts'
 import * as ed from './editor-state.ts'
 import { sortErrors, sortedJson, toPayload, initState, type Slot, type State } from './editor-state.ts'
 
@@ -345,6 +345,35 @@ function SlotEditor({ slot, index, total, idBase, support, allowsSupport, suppor
         <NumField id={`${idBase}-fans`} label={t('fans')} value={slot.fans} def={0} min={0} max={1000} t={t} errors={errorsOf('fans')} onChange={(v) => onPatch({ fans: v })} />
         <NumField id={`${idBase}-engrave`} label={t('engrave')} value={slot.engrave} def={0} min={0} max={1000} t={t} errors={errorsOf('engrave')} onChange={(v) => onPatch({ engrave: v })} />
       </div>
+
+      {slot.plv > 0 && (
+        <div class="cms-lah-field cms-lah-pwform-field">
+          <label class="cms-lah-label" for={`${idBase}-pwform`}>
+            {t('pwForm')} <span class="cms-lah-muted cms-lah-small">{t('pwFormRequired')}</span>
+          </label>
+          <div class="cms-lah-pwform-row">
+            <PwFormIcon itemId={slot.pwForm ?? DEFAULT_PW_FORM} size="md" />
+            <select
+              id={`${idBase}-pwform`}
+              class="cms-lah-input cms-lah-select"
+              value={slot.pwForm ?? DEFAULT_PW_FORM}
+              aria-invalid={errorsOf('pwForm').length ? true : undefined}
+              onChange={(e) => onPatch({ pwForm: Number(e.currentTarget.value) })}
+            >
+              {PW_FORMS.map((id) => (
+                <option key={id} value={id}>
+                  {pwFormLabel(t, id)}
+                </option>
+              ))}
+            </select>
+          </div>
+          {errorsOf('pwForm').map((e) => (
+            <p key={e.path + e.code} class="cms-lah-error">
+              {errorText(t, e)}
+            </p>
+          ))}
+        </div>
+      )}
 
       <div class="cms-lah-checks">
         <label class={'cms-lah-check' + (treeUnavailable ? ' cms-lah-disabled' : '')} title={treeUnavailable ? t('skillTreeUnavailable') : undefined}>

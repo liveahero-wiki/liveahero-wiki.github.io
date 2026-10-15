@@ -12,6 +12,10 @@ export const heroIconUrl = (resourceName: string) => `${SPRITE}/icon_${resourceN
 export const sidekickIconUrl = (resourceName: string) => `${SPRITE}/icon_${resourceName}_s01.png`
 export const itemIconUrl = (resourceName: string) => `${SPRITE}/item_${resourceName}.png`
 
+/** Item icon resource names of the Parallel Weapon forms (itemId 60-63, see validate.ts PW_FORMS). */
+const PW_FORM_RESOURCE: Record<number, string> = { 60: 'stance_normal', 61: 'stance_attack', 62: 'stance_physical', 63: 'stance_guard' }
+export const pwFormIconUrl = (itemId: number): string => itemIconUrl(PW_FORM_RESOURCE[itemId] ?? PW_FORM_RESOURCE[60])
+
 /** Sidekick stockIds start at 10000; passive-slot items (skill books) have small itemIds. */
 const FIRST_STOCK_ID = 10000
 

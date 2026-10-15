@@ -4,7 +4,7 @@
 
 import type { FieldError } from './plugin-api.ts'
 import type { TeamPayload, TeamSlot } from './types.ts'
-import { MAX_SLOTS, parseFocus, supportMode } from './validate.ts'
+import { DEFAULT_PW_FORM, MAX_SLOTS, parseFocus, supportMode } from './validate.ts'
 import { emptySlot, toViewSlots, toViewTarget } from './view.ts'
 
 export interface Slot extends TeamSlot {
@@ -32,7 +32,13 @@ export const MAX_PASSIVES = 3
 /** Bloom is not a form field: it is implied by a 3rd passive or by a needed skill tree. */
 export const impliesBloom = (s: Pick<TeamSlot, 'skillTree' | 'passives'>): boolean => s.skillTree || s.passives.length > BASE_PASSIVES
 
-const stripSlot = ({ key: _key, ...rest }: Slot): TeamSlot => ({ ...rest, bloom: impliesBloom(rest), passives: [...rest.passives] })
+/** `pwForm` exists only with P.Lv > 0 (defaulting to Base Design), mirroring the validator's normalization. */
+const stripSlot = ({ key: _key, pwForm, ...rest }: Slot): TeamSlot => ({
+  ...rest,
+  ...(rest.plv > 0 ? { pwForm: pwForm ?? DEFAULT_PW_FORM } : {}),
+  bloom: impliesBloom(rest),
+  passives: [...rest.passives],
+})
 
 export function toPayload(state: State, allowsSupport: boolean): TeamPayload {
   const idx = allowsSupport && state.supportKey !== null ? state.slots.findIndex((s) => s.key === state.supportKey) : -1

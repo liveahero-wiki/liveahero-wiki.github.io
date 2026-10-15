@@ -62,6 +62,12 @@ export const en = {
   skillTreeCheck: 'Needs skill tree',
   skillTreeUnavailable: 'This hero has no skill tree.',
   slotsHeading: 'Team slots',
+  pwForm: 'Parallel Weapon’s form',
+  pwFormRequired: 'Required when P.Lv is above 0.',
+  pwForm60: 'Base Design',
+  pwForm61: 'Attack Design',
+  pwForm62: 'Physical Design',
+  pwForm63: 'Guard Design',
 
   // ---- target, optional support, list filters
   targetField: 'Purpose-built for',
@@ -112,6 +118,7 @@ export const en = {
   error_focus_missing: 'The team must include this page’s {kind}.',
   error_unknown_hero: 'Unknown hero (ID {stockId}).',
   error_unknown_sidekick: 'Unknown sidekick or item (ID {stockId}).',
+  error_pw_form_invalid: 'Choose one of the Parallel Weapon forms.',
   error_target_unknown: 'Choose one of the listed targets, or General purpose.',
 
   // ---- Team Creator page (web/team-creator), copied from the wiki-cms embed's list/card/catalog strings

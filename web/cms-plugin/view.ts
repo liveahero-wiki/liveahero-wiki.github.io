@@ -2,6 +2,7 @@
 // not crash on a payload from an older/newer shape.
 
 import type { Focus, TeamPayload, TeamSlot } from './types.ts'
+import { DEFAULT_PW_FORM, PW_FORMS } from './validate.ts'
 
 const num = (v: unknown, def: number) => (typeof v === 'number' && Number.isFinite(v) ? v : def)
 const id = (v: unknown): number | null => (typeof v === 'number' && Number.isInteger(v) && v > 0 ? v : null)
@@ -15,10 +16,12 @@ export function toViewSlots(payload: unknown): { slots: TeamSlot[]; supportIndex
   const heroes = Array.isArray(p.heroes) ? p.heroes : []
   const slots = heroes.map((raw): TeamSlot => {
     const r = (raw ?? {}) as Partial<TeamSlot>
+    const plv = num(r.plv, 0)
     return {
       stockId: num(r.stockId, 0),
       lv: num(r.lv, 60),
-      plv: num(r.plv, 0),
+      plv,
+      ...(plv > 0 ? { pwForm: (PW_FORMS as readonly number[]).includes(r.pwForm as number) ? (r.pwForm as number) : DEFAULT_PW_FORM } : {}),
       fans: num(r.fans, 0),
       engrave: num(r.engrave, 0),
       bloom: r.bloom === true,

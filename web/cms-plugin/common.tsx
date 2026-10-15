@@ -3,7 +3,7 @@
 import type { ComponentChildren } from 'preact'
 import { useEffect, useRef, useState } from 'preact/hooks'
 import type { Lang } from './i18n.ts'
-import { charaUrl, heroIconUrl, itemIconUrl, loadRoster, localizedName, sidekickIconUrl, type Roster } from './roster.ts'
+import { charaUrl, heroIconUrl, itemIconUrl, loadRoster, localizedName, pwFormIconUrl, sidekickIconUrl, type Roster } from './roster.ts'
 import type { T } from './i18n/t.ts'
 import { findTarget, targetHref, targetLabel } from './targets.ts'
 import type { Target } from './types.ts'
@@ -115,6 +115,11 @@ export function CardIcon({ kind, stockId, roster, lang, size, named, focus }: Ca
       onError={() => setBrokenSrc(src)}
     />
   )
+}
+
+/** Icon of a Parallel Weapon form (decorative; the form's name is always shown next to it). */
+export function PwFormIcon({ itemId, size }: { itemId: number; size: 'md' | 'sm' }) {
+  return <img class={`cms-lah-icon cms-lah-icon-${size}`} src={pwFormIconUrl(itemId)} alt="" loading="lazy" decoding="async" onError={(e) => (e.currentTarget.hidden = true)} />
 }
 
 interface DialogProps {

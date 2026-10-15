@@ -1,9 +1,10 @@
 // Full read-only view of a team (inline in the admin portal; inside <Dialog> from the summary).
 
+import type { ComponentChildren } from 'preact'
 import type { PluginContext } from './plugin-api.ts'
 import type { TeamSlot } from './types.ts'
-import { CardIcon, CardName, TargetChip, useRoster, type IconKind } from './common.tsx'
-import { makeT, type T } from './i18n/t.ts'
+import { CardIcon, CardName, PwFormIcon, TargetChip, useRoster, type IconKind } from './common.tsx'
+import { makeT, pwFormLabel, type T } from './i18n/t.ts'
 import { passiveKind } from './roster.ts'
 import { parseTargets } from './targets.ts'
 import { parseFocus } from './validate.ts'
@@ -45,7 +46,7 @@ interface CardProps {
 
 function SlotCard({ slot, index, support, t, ctx, roster, focus }: CardProps) {
   const lang = ctx.uiLang
-  const stat = (label: string, value: string, warn = false) => (
+  const stat = (label: string, value: ComponentChildren, warn = false) => (
     <div class={'cms-lah-stat' + (warn ? ' cms-lah-stat-on' : '')}>
       <dt>{label}</dt>
       <dd>{value}</dd>
@@ -79,6 +80,13 @@ function SlotCard({ slot, index, support, t, ctx, roster, focus }: CardProps) {
       <dl class="cms-lah-stats">
         {stat(t('lv'), String(slot.lv))}
         {stat(t('plv'), String(slot.plv))}
+        {slot.pwForm !== undefined && stat(
+          t('pwForm'),
+          <span class="cms-lah-pwform-value">
+            <PwFormIcon itemId={slot.pwForm} size="sm" />
+            {pwFormLabel(t, slot.pwForm)}
+          </span>,
+        )}
         {stat(t('fans'), String(slot.fans))}
         {stat(t('engrave'), String(slot.engrave))}
         {stat(t('bloom'), slot.bloom ? t('yes') : t('no'), slot.bloom)}
