@@ -352,7 +352,7 @@ function SlotEditor({ slot, index, total, idBase, support, allowsSupport, suppor
             {t('pwForm')} <span class="cms-lah-muted cms-lah-small">{t('pwFormRequired')}</span>
           </label>
           <div class="cms-lah-pwform-row">
-            <PwFormIcon itemId={slot.pwForm ?? DEFAULT_PW_FORM} size="md" />
+            <PwFormIcon itemId={slot.pwForm ?? DEFAULT_PW_FORM} size="md" title="" />
             <select
               id={`${idBase}-pwform`}
               class="cms-lah-input cms-lah-select"

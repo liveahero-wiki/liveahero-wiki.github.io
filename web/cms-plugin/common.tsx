@@ -118,8 +118,8 @@ export function CardIcon({ kind, stockId, roster, lang, size, named, focus }: Ca
 }
 
 /** Icon of a Parallel Weapon form (decorative; the form's name is always shown next to it). */
-export function PwFormIcon({ itemId, size }: { itemId: number; size: 'md' | 'sm' }) {
-  return <img class={`cms-lah-icon cms-lah-icon-${size}`} src={pwFormIconUrl(itemId)} alt="" loading="lazy" decoding="async" onError={(e) => (e.currentTarget.hidden = true)} />
+export function PwFormIcon({ itemId, size, title='' }: { itemId: number; size: 'md' | 'sm'; title: string }) {
+  return <img class={`cms-lah-icon cms-lah-icon-${size}`} src={pwFormIconUrl(itemId)} alt={title} title={title} loading="lazy" decoding="async" onError={(e) => (e.currentTarget.hidden = true)} />
 }
 
 interface DialogProps {

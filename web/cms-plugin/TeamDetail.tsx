@@ -79,13 +79,15 @@ function SlotCard({ slot, index, support, t, ctx, roster, focus }: CardProps) {
       </div>
       <dl class="cms-lah-stats">
         {stat(t('lv'), String(slot.lv))}
-        {stat(t('plv'), String(slot.plv))}
-        {slot.pwForm !== undefined && stat(
-          t('pwForm'),
-          <span class="cms-lah-pwform-value">
-            <PwFormIcon itemId={slot.pwForm} size="sm" />
-            {pwFormLabel(t, slot.pwForm)}
-          </span>,
+        {stat(
+          t('plv'),
+          slot.pwForm !== undefined ? (
+            <span class="cms-lah-pwform-value">
+              {slot.plv} <PwFormIcon itemId={slot.pwForm} size="sm" title={pwFormLabel(t, slot.pwForm)} />
+            </span>
+          ) : (
+            String(slot.plv)
+          ),
         )}
         {stat(t('fans'), String(slot.fans))}
         {stat(t('engrave'), String(slot.engrave))}
