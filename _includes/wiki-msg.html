@@ -1,7 +1,8 @@
 {% comment %}
   Announcements from _data/wiki/WikiMessages.json (id, text as markdown, optional start/end in JST).
   Only the messages active at build time are rendered; _includes/js/wiki-msg.js keeps track of which
-  ones the reader has seen. The button goes into #float-btns, the stack shared with the meteor button.
+  ones the reader has seen. The button goes into #float-btns, the stack of corner buttons. The stack is
+  always rendered so that page scripts (meteor-shower.js, chara.js) can add their buttons to it.
 {% endcomment %}
 {% assign wiki_msgs = "" | split: "," %}
 {% assign now_ts = site.time | date: "%s" | plus: 0 %}
@@ -17,10 +18,12 @@
   {% endif %}
   {% if msg_on %}{% assign wiki_msgs = wiki_msgs | push: msg %}{% endif %}
 {% endfor %}
-{% if wiki_msgs.size > 0 %}
 <div id="float-btns">
+{%- if wiki_msgs.size > 0 %}
   <button id="wiki-msg-btn" class="float-btn" type="button" title="Announcements" aria-label="Announcements">📢<span class="float-btn-badge">{{ wiki_msgs.size }}</span></button>
+{%- endif %}
 </div>
+{% if wiki_msgs.size > 0 %}
 <dialog id="wiki-msg-dialog" aria-labelledby="wiki-msg-title">
   <header>
     <h2 id="wiki-msg-title">Announcements</h2>

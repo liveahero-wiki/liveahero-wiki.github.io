@@ -9,20 +9,7 @@ additional_scripts: ["/assets/chara.js", "/assets/filter.js"]
 
 <h2>Released units</h2>
 
-<fieldset>
-<legend>Collection</legend>
-<p>Activate Collection Mode, then click on the hero/sidekicks' icons to mark them and get a shareable URL for your collection.</p>
-<p><button id="collection-btn">Activate Collection Mode</button>
-</p>
-
-<fieldset id="collection-radio-group" name="radioFilter">
-<legend>Display</legend>
-<label><input type="radio" name="radioFilter" value="0" checked data-target-list="#hero-list,#sidekick-list">All</label>
-<label><input type="radio" name="radioFilter" value="1" data-target-list="#hero-list,#sidekick-list">Selected only</label>
-<label><input type="radio" name="radioFilter" value="2" data-target-list="#hero-list,#sidekick-list">Unselected only</label>
-</fieldset>
-
-</fieldset>
+<p>Keep track of the units you own: press <strong>✓ My Collection</strong> at the bottom right, tap the heroes and sidekicks you have, then copy the link to share your collection.</p>
 
 <h3 id="heroes">Heroes</h3>
 
@@ -120,3 +107,40 @@ additional_scripts: ["/assets/chara.js", "/assets/filter.js"]
 </ul>
 
 </details>
+
+{% comment %} Collection mode action bar, opened by the "My Collection" corner button (assets/chara.js) {% endcomment %}
+<section id="collection-bar" class="collection-bar" aria-label="My Collection" tabindex="-1" hidden>
+  <div class="collection-shared" hidden>
+    <p><strong>You're viewing a shared collection.</strong> Is it yours? Save it as yours to edit it.</p>
+    <div class="collection-actions">
+      <button type="button" data-action="compare" aria-pressed="false">Compare with mine</button>
+      <button type="button" data-action="save-shared">Save as mine</button>
+      <button type="button" data-action="back-to-mine">Back to mine</button>
+    </div>
+    <p class="collection-compare-only" hidden>✓ marks their units, <span class="collection-mine-tag">Mine</span> marks yours.</p>
+  </div>
+  <div class="collection-row">
+    <p class="collection-count">Heroes <span class="collection-count-h"></span> · Sidekicks <span class="collection-count-s"></span></p>
+    <fieldset class="collection-display">
+      <legend>Show</legend>
+      <label><input type="radio" name="radioFilter" value="0" checked>All</label>
+      <label><input type="radio" name="radioFilter" value="1">Owned</label>
+      <label><input type="radio" name="radioFilter" value="2">Missing</label>
+      <label class="collection-compare-only" hidden><input type="radio" name="radioFilter" value="3">They have, I don't</label>
+      <label class="collection-compare-only" hidden><input type="radio" name="radioFilter" value="4">I have, they don't</label>
+    </fieldset>
+  </div>
+  <div class="collection-row">
+    <div class="collection-actions collection-edit">
+      <button type="button" data-action="mark">Mark shown</button>
+      <button type="button" data-action="unmark">Unmark shown</button>
+      <button type="button" data-action="invert">Invert shown</button>
+    </div>
+    <div class="collection-actions collection-end">
+      <button type="button" class="collection-primary" data-action="copy">🔗 Copy link</button>
+      <button type="button" class="collection-primary" data-action="done">Done</button>
+    </div>
+  </div>
+  <p class="collection-hint">Tap a hero or sidekick to mark it. Your collection is saved in this browser; copy the link to share it or to open it on another device.</p>
+  <p class="collection-announcer visually-hidden" aria-live="polite"></p>
+</section>

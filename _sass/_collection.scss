@@ -1,0 +1,244 @@
+// Collection mode on /charas/ (assets/chara.js): the "My Collection" corner button, the action bar
+// (#collection-bar in charas.html), and the marked/unmarked card states. body.collection-on is set
+// while the bar is open, body.collection-readonly while it shows someone else's shared collection.
+
+.collection-fab {
+  order: 1; // bottom of the #float-btns stack, whatever order the scripts add their buttons in
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: auto;
+  padding: 0 18px 0 14px;
+  border-radius: 25px;
+  background: var(--colorPrimary);
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 30%);
+
+  &:hover {
+    background: var(--colorPrimary);
+    filter: brightness(1.1);
+  }
+
+  &[hidden] {
+    display: none;
+  }
+
+  // Once the reader has opened the collection, the label shrinks away to a round button
+  &.compact {
+    width: 50px;
+    padding: 0;
+
+    .collection-fab-label {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+      white-space: nowrap;
+    }
+  }
+}
+
+.collection-fab-icon {
+  font-size: 22px;
+}
+
+.collection-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9998; // under #float-btns
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 10px max(16px, env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  border-top: 3px solid var(--colorPrimary);
+  background: var(--bg);
+  color: var(--text);
+  box-shadow: 0 -4px 12px rgb(0 0 0 / 25%);
+  font-size: 14px;
+
+  &[hidden] {
+    display: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  button {
+    padding: 4px 10px;
+    border: 1px solid var(--colorGrey);
+    border-radius: 4px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--colorPrimary);
+    }
+
+    &[aria-pressed="true"] {
+      background: var(--colorPrimary);
+      color: #000;
+    }
+  }
+
+  .collection-primary {
+    border-color: var(--colorPrimary);
+    background: var(--colorPrimary);
+    color: #000;
+    font-weight: bold;
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+}
+
+.collection-row,
+.collection-actions,
+.collection-display {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
+}
+
+.collection-actions {
+  gap: 6px;
+}
+
+.collection-end {
+  margin-left: auto;
+}
+
+.collection-count {
+  font-weight: bold;
+}
+
+.collection-display {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  legend {
+    float: left; // keeps the legend on the same line as the radios
+    margin-right: 4px;
+    padding: 0;
+    opacity: 0.75;
+  }
+
+  label {
+    white-space: nowrap;
+    cursor: pointer;
+  }
+}
+
+.collection-shared {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 10px;
+  border-left: 4px solid var(--colorPrimary);
+}
+
+.collection-hint {
+  opacity: 0.75;
+  font-size: 13px;
+}
+
+.collection-mine-tag {
+  padding: 0 6px;
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+body.collection-on {
+  // keep the end of the page and the other corner buttons clear of the bar
+  padding-bottom: var(--collection-bar-h, 0px);
+
+  #float-btns {
+    bottom: calc(var(--collection-bar-h, 0px) + 15px);
+  }
+
+  .card-list {
+    li:not(.has-unit, .mine) :is(.hero-icon, .sidekick-icon) {
+      filter: grayscale(1);
+      opacity: 0.45;
+    }
+
+    li.has-unit {
+      outline: 3px solid var(--colorPrimary);
+      outline-offset: -3px;
+      background: color-mix(in srgb, var(--colorPrimary) 15%, transparent);
+    }
+
+    li.has-unit :is(.hero-icon, .sidekick-icon)::after {
+      content: "✓";
+      position: absolute;
+      z-index: 2; // above .chara-border
+      top: 4px;
+      right: 4px;
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--colorPrimary);
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 1px 3px rgb(0 0 0 / 40%);
+    }
+
+    // Compare: the reader's own units
+    li.mine :is(.hero-icon, .sidekick-icon)::before {
+      content: "Mine";
+      position: absolute;
+      z-index: 2;
+      top: 6px;
+      left: 4px;
+      padding: 0 6px;
+      border-radius: 8px;
+      background: #333;
+      color: #fff;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+
+  // The "Show" filter in the bar (data-radio-filter is set on both lists)
+  [data-radio-filter="1"] li:not(.has-unit),
+  [data-radio-filter="2"] li.has-unit,
+  [data-radio-filter="3"] li:not(.has-unit),
+  [data-radio-filter="3"] li.mine,
+  [data-radio-filter="4"] li:not(.mine),
+  [data-radio-filter="4"] li.has-unit {
+    display: none !important;
+  }
+
+  &:not(.collection-readonly) .card-list li {
+    cursor: pointer;
+    user-select: none;
+  }
+}

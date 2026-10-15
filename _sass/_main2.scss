@@ -784,20 +784,22 @@ $elementName: fire, water, earth, light, shadow;
 .control-panel div {
   padding: 0 3px;
 }
-.has-unit {
-  background: var(--colorLight);
-}
 .filter-on {
   opacity: 0.5;
 }
 .filtered {
   display: none !important;
 }
-[data-radio-filter="1"] li:not(.has-unit) {
-  display: none !important;
-}
-[data-radio-filter="2"] li.has-unit {
-  display: none !important;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
 .item, .status, abbr {
   position: relative;

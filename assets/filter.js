@@ -71,13 +71,3 @@ document.querySelectorAll(".chara-filter").forEach(ele => {
     });
   }
 });
-
-for (const radio of document.querySelectorAll("#collection-radio-group input[type=radio]")) {
-  const targetList = Array.from(document.querySelectorAll(radio.dataset.targetList));
-  const attr = radio.name;
-  radio.addEventListener("change", () => {
-    for (const list of targetList) {
-      list.dataset[attr] = radio.value;
-    }
-  });
-}
