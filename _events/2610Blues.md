@@ -43,6 +43,8 @@ This event's story can be enjoyed even more if you have cleared the previous eve
 
 (You can still participate in this event even if you have not cleared the scenarios for the events listed above.)
 
+translation: test
+
 ## Event Banners
 
 Rates as follow:
