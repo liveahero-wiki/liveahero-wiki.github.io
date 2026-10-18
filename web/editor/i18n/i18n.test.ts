@@ -45,7 +45,7 @@ describe('editor i18n bundles', () => {
     for (const code of ['text_required', 'text_too_long', 'text_invalid', 'text_same_as_base', 'key_invalid', 'key_duplicate', 'line_not_translatable', 'bio_not_translatable', 'unknown_resource', 'lines_length', 'note_too_long', 'note_invalid', 'path_not_editable', 'base_sha_invalid', 'after_too_long', 'after_front_matter', 'summary_length', 'summary_plain']) {
       assert.ok(hasKey(`fe_${code}`), code)
     }
-    assert.equal(fieldText(t, { path: 'payload.lines.0.text', code: 'text_too_long', params: { max: 2000 } }), '最多 2000 个字符。')
+    assert.equal(fieldText(t, { path: 'payload.lines.0.text', code: 'text_too_long', params: { max: 2000 } }), '最多2000个字符。')
     assert.equal(fieldText(t, { path: 'x', code: 'brand_new', message: 'English fallback' }), 'English fallback')
   })
 })
