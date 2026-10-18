@@ -10,6 +10,7 @@ import { contributorIncludes, isEditablePath } from "./lib/contrib-guard.js";
 import { toDocument } from "./lib/documents.js";
 import { buildEditorData } from "./lib/editor-data.js";
 import { registerJekyllFilters } from "./liquid/jekyll-filters.js";
+import { clearIncludeCaches } from "./liquid/engine.js";
 import { registerRubyPlugins } from "./liquid/ruby-plugins.js";
 import { SITE_OFFSET_MINUTES } from "./site.js";
 import { nowInOffset } from "./lib/ruby-time.js";
@@ -51,6 +52,7 @@ export default function wikiPlugins(eleventyConfig, { site, markdown }) {
 
   // Reload _data and the build time at the start of every build (also on --serve rebuilds).
   eleventyConfig.on("eleventy.before", () => {
+    clearIncludeCaches();
     site.data = loadSiteData("_data");
     site.time = nowInOffset(SITE_OFFSET_MINUTES);
   });
