@@ -1,6 +1,6 @@
 // Reads the translatable rows of a voice table (markup contract of _includes/voice-table.html):
 //   <tr data-voice-key="voice_<resourceName>_<part>" data-translatable>
-//     <td class="voice-jp-cell"> <div class="voice-key-badge">…</div> <div class="voice-text">JP</div> </td>
+//     <td class="voice-jp-cell"> <div class="voice-key-badge">…</div> <div class="voice-text">JP or -</div> </td>
 //     <td class="voice-translation-cell"> <div data-lang="en">EN or -</div> … </td>
 //   </tr>
 // The button is `<button data-contrib="voice-suggest" data-resource-name="…">`.
@@ -13,7 +13,10 @@ export interface VoiceRow {
   resource: string
   /** The badge text of the row (what the page shows as its name). */
   label: string
+  /** The Japanese text shown now, '' when the page shows the placeholder '-' (the game and the sheet have none). */
   jp: string
+  /** No Japanese text yet: the contributor may transcribe it. */
+  jpEditable: boolean
   /** The English text shown now, '' when the page shows the placeholder '-'. */
   base: string
 }
@@ -57,11 +60,13 @@ export function collectRows(table: Element, names: string[]): VoiceRow[] {
     seen.add(key)
     const en = tr.querySelector('[data-lang="en"]')
     const jpEl = tr.querySelector('.voice-text')
+    const jp = jpEl ? baseOf(cellText(jpEl)) : ''
     rows.push({
       key,
       resource,
       label: tr.querySelector('.voice-key-badge')?.textContent?.trim() || key,
-      jp: jpEl ? cellText(jpEl) : '',
+      jp,
+      jpEditable: jp === '',
       base: en ? baseOf(cellText(en)) : '',
     })
   })

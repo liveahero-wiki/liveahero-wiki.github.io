@@ -51,17 +51,47 @@ export interface LineState {
   base: string
   /** What the textarea holds now. */
   value: string
+  /** What the Japanese textarea holds now; only set for a line the game has no Japanese text for (and that has not been sent yet). */
+  jp?: string
 }
 
 export interface VoiceLine {
   key: string
   base: string
+  /** Empty only when `jp` is given. */
   text: string
+  /** The Japanese transcription; sent only when written. */
+  jp?: string
 }
 
-/** A line counts as changed once its trimmed text differs from the trimmed text it started from. Untouched lines are never sent. */
+const trimmed = (s: string | undefined): string => normalizeNewlines(s ?? '').trim()
+
+/** A line counts as changed once its trimmed text differs from the trimmed text it started from, or a Japanese transcription was written. Untouched lines are never sent. */
 export function isChanged(l: LineState): boolean {
-  return normalizeNewlines(l.value).trim() !== normalizeNewlines(l.base).trim()
+  return trimmed(l.value) !== trimmed(l.base) || trimmed(l.jp) !== ''
+}
+
+export interface LineProblems {
+  text: TextProblem | null
+  jp: TextProblem | null
+}
+
+/** The problems of one changed line. A written Japanese transcription makes the English text optional. */
+export function checkLine(l: LineState): LineProblems {
+  const jpText = trimmed(l.jp)
+  let jp: TextProblem | null = null
+  if (jpText) {
+    if (jpText.length > TEXT_MAX) jp = 'tooLong'
+    else jp = plainTextProblem(jpText)
+  }
+  const text = trimmed(l.value) === '' && jpText ? null : checkText(l.value, l.base)
+  return { text, jp }
+}
+
+/** `{ key, base, text }` (plus `jp` when written) of a changed line, trimmed and normalized. */
+export function toVoiceLine(l: LineState): VoiceLine {
+  const jp = trimmed(l.jp)
+  return { key: l.key, base: l.base, text: trimmed(l.value), ...(jp ? { jp } : {}) }
 }
 
 export function changedLines(lines: LineState[]): LineState[] {
@@ -72,7 +102,7 @@ export function changedLines(lines: LineState[]): LineState[] {
 export function batchOf(lines: LineState[], max = MAX_LINES): { send: VoiceLine[]; overflow: number } {
   const changed = changedLines(lines)
   return {
-    send: changed.slice(0, max).map((l) => ({ key: l.key, base: l.base, text: normalizeNewlines(l.value).trim() })),
+    send: changed.slice(0, max).map(toVoiceLine),
     overflow: Math.max(0, changed.length - max),
   }
 }
@@ -125,7 +155,7 @@ export function batchesOf(lines: Array<LineState & { resource: string }>, max = 
   const groups = order.map((resource) => {
     const all = byResource.get(resource)!
     overflow += Math.max(0, all.length - max)
-    return { resource, lines: all.slice(0, max).map((l) => ({ key: l.key, base: l.base, text: normalizeNewlines(l.value).trim() })) }
+    return { resource, lines: all.slice(0, max).map(toVoiceLine) }
   })
   return { groups, overflow }
 }

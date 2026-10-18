@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
-import { MAX_LINES, batchOf, batchesOf, checkAfter, checkNote, checkSummary, checkText, changedLines, isChanged, isPlaceholder, keyBelongs, normalizeNewlines } from './rules.ts'
+import { MAX_LINES, batchOf, batchesOf, checkAfter, checkLine, checkNote, checkSummary, checkText, changedLines, isChanged, isPlaceholder, keyBelongs, normalizeNewlines } from './rules.ts'
 
 describe('checkText (mirror of the server text rules)', () => {
   it('accepts a plain changed text, with line breaks', () => {
@@ -55,6 +55,23 @@ describe('changed lines', () => {
       { key: 'voice_x_c', base: 'was', text: 'now' },
     ])
     assert.equal(overflow, 0)
+  })
+  it('a written Japanese transcription makes the line changed and is sent next to the text', () => {
+    assert.equal(isChanged({ ...line('k', '', ''), jp: ' ' }), false)
+    assert.equal(isChanged({ ...line('k', '', ''), jp: 'いくぞ' }), true)
+    const { send } = batchOf([{ ...line('voice_x_a', '', ''), jp: ' いくぞ\r\nみんな ' }, { ...line('voice_x_b', '', 'Go'), jp: '' }])
+    assert.deepEqual(send, [
+      { key: 'voice_x_a', base: '', text: '', jp: 'いくぞ\nみんな' },
+      { key: 'voice_x_b', base: '', text: 'Go' },
+    ])
+  })
+  it('checkLine: the Japanese text makes the English optional and has its own rules', () => {
+    assert.deepEqual(checkLine({ ...line('k', '', ''), jp: 'いくぞ' }), { text: null, jp: null })
+    assert.deepEqual(checkLine({ ...line('k', '', 'Go'), jp: 'いくぞ' }), { text: null, jp: null })
+    assert.deepEqual(checkLine({ ...line('k', 'a', ''), jp: undefined }), { text: 'empty', jp: null })
+    assert.deepEqual(checkLine({ ...line('k', '', 'a'), jp: '<b>' }), { text: null, jp: 'angle' })
+    assert.deepEqual(checkLine({ ...line('k', '', ''), jp: 'あ'.repeat(2001) }), { text: null, jp: 'tooLong' })
+    assert.deepEqual(checkLine(line('k', 'same', 'same')), { text: 'same', jp: null })
   })
   it('sends at most 100 lines and reports the rest', () => {
     const many = Array.from({ length: 130 }, (_, i) => line(`voice_x_${i}`, '', `t${i}`))

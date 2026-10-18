@@ -36,12 +36,16 @@ class FakeCms:
 
 
 class FakeSheet:
-    def __init__(self, rows):
+    def __init__(self, rows, jp=None):
         self.rows = rows
+        self.jp = jp or {}
         self.applied = []
 
     def read(self, kind):
         return dict(self.rows.get(kind, {}))
+
+    def read_jp(self, kind):
+        return dict(self.jp.get(kind, {}))
 
     def apply(self, writes):
         self.applied.extend(writes)
@@ -113,6 +117,48 @@ class TestPlan(unittest.TestCase):
         self.assertEqual(plan["writes"][0]["kind"], "bio")
         gone = ci.plan_updates([bio_sub("dddddddd", "DETAIL_ABC_H02", "", "x")], {"bio": {}}, ROSTERS)
         self.assertEqual(gone["results"][0]["external"]["outcome"]["status"], "superseded")
+
+    def test_jp_transcription_with_translation(self):
+        # a line VoiceMaster knows but nobody transcribed: no JP in the roster, no sheet row
+        rosters = {**ROSTERS, "voice": {"version": "1", "resources": {"abc": {"voice_abc_battleStart": {"jp": ""}}}}}
+        sub = voice_sub("aaaaaaaa", [{"key": "voice_abc_battleStart", "base": "", "text": "Let's fight", "jp": "いくぞ\nみんな"}])
+        plan = ci.plan_updates([sub], {"voice": {}}, rosters, {"voice": {}})
+        [w] = plan["writes"]
+        self.assertEqual((w["text"], w["jp"], w["set_jp"], w["new_row"]), ("Let's fight", "いくぞ<br>みんな", True, True))
+        self.assertEqual(plan["results"][0]["external"]["outcome"], {"status": "synced"})
+
+    def test_jp_only_line(self):
+        rosters = {**ROSTERS, "voice": {"version": "1", "resources": {"abc": {"voice_abc_win": {"jp": ""}}}}}
+        sub = voice_sub("aaaaaaaa", [{"key": "voice_abc_win", "base": "", "text": "", "jp": "勝った"}])
+        # the sheet already has a row for the line, with an empty jp
+        plan = ci.plan_updates([sub], {"voice": {"voice_abc_win": ""}}, rosters, {"voice": {"voice_abc_win": ""}})
+        [w] = plan["writes"]
+        self.assertEqual((w["text"], w["jp"], w["set_jp"], w["new_row"]), (None, "勝った", True, False))
+
+    def test_jp_conflict_writes_nothing_of_the_line(self):
+        rosters = {**ROSTERS, "voice": {"version": "1", "resources": {"abc": {"voice_abc_win": {"jp": "勝ち"}}}}}
+        sub = voice_sub("aaaaaaaa", [{"key": "voice_abc_win", "base": "", "text": "We win", "jp": "勝った"}])
+        plan = ci.plan_updates([sub], {"voice": {"voice_abc_win": ""}}, rosters, {"voice": {"voice_abc_win": "勝ち"}})
+        self.assertEqual(plan["writes"], [])
+        ext = plan["results"][0]["external"]
+        self.assertEqual(ext["outcome"]["status"], "conflict")
+        self.assertEqual(ext["conflicts"][0]["current"], "勝ち")
+
+    def test_same_jp_counts_as_written_and_en_still_goes(self):
+        sub = voice_sub("aaaaaaaa", [{"key": "voice_abc_action", "base": "Let's go!", "text": "Here we go!", "jp": "行くぜ"}])
+        plan = ci.plan_updates([sub], {"voice": {"voice_abc_action": "Let's go!"}}, ROSTERS, {"voice": {"voice_abc_action": "行くぜ"}})
+        [w] = plan["writes"]
+        self.assertEqual((w["text"], w["set_jp"]), ("Here we go!", False))
+
+    def test_line_without_text_and_jp_is_rejected(self):
+        sub = voice_sub("aaaaaaaa", [{"key": "voice_abc_daily", "base": "", "text": "  "}])
+        plan = ci.plan_updates([sub], {"voice": {}}, ROSTERS)
+        self.assertEqual(plan["writes"], [])
+        self.assertEqual(plan["results"][0]["external"]["outcome"]["status"], "conflict")
+
+    def test_markup_in_jp_is_never_written(self):
+        sub = voice_sub("aaaaaaaa", [{"key": "voice_abc_daily", "base": "", "text": "ok", "jp": "<b>x"}])
+        self.assertEqual(ci.plan_updates([sub], {"voice": {}}, ROSTERS)["writes"], [])
 
     def test_markup_is_never_written(self):
         sub = voice_sub("aaaaaaaa", [{"key": "voice_abc_daily", "base": "", "text": "<script>x</script>"}])
@@ -213,13 +259,25 @@ class TestGspreadSheet(unittest.TestCase):
                               [["voice_abc_action", "行くぜ", "", "Let's go!"]])
         sheet = ci.GspreadSheet(FakeSpreadsheet({"Voice": voice}))
         self.assertEqual(sheet.read("voice"), {"voice_abc_action": "Let's go!"})
+        self.assertEqual(sheet.read_jp("voice"), {"voice_abc_action": "行くぜ"})
         sheet.apply([
-            {"kind": "voice", "key": "voice_abc_action", "text": "Here we go!", "source": "wiki-cms #1 (A)", "jp": "", "new_row": False},
-            {"kind": "voice", "key": "voice_abc_daily", "text": "Hi", "source": "wiki-cms #1 (A)", "jp": "おはよう", "new_row": True},
+            {"kind": "voice", "key": "voice_abc_action", "text": "Here we go!", "source": "wiki-cms #1 (A)", "jp": "", "set_jp": False, "new_row": False},
+            {"kind": "voice", "key": "voice_abc_daily", "text": "Hi", "source": "wiki-cms #1 (A)", "jp": "おはよう", "set_jp": False, "new_row": True},
         ])
         self.assertEqual(voice.headers[-1], "source")
         self.assertEqual(voice.cells, [(2, 4, "Here we go!"), (2, 5, "wiki-cms #1 (A)")])
         self.assertEqual(voice.appended, [["voice_abc_daily", "おはよう", "", "Hi", "wiki-cms #1 (A)"]])
+
+    def test_apply_writes_a_submitted_jp(self):
+        voice = FakeWorksheet(["voiceFilename", "jp", "enMachineTranslated", "enApproved"], [["voice_abc_win", "", "", ""]])
+        sheet = ci.GspreadSheet(FakeSpreadsheet({"Voice": voice}))
+        sheet.apply([
+            {"kind": "voice", "key": "voice_abc_win", "text": None, "source": "s", "jp": "勝った", "set_jp": True, "new_row": False},
+            {"kind": "voice", "key": "voice_abc_lose", "text": None, "source": "s", "jp": "負けた", "set_jp": True, "new_row": True},
+        ])
+        self.assertEqual(voice.headers[-2:], ["source", "jpSource"])
+        self.assertEqual(voice.cells, [(2, 2, "勝った"), (2, 6, "s"), (2, 5, "s")])  # EN cell untouched
+        self.assertEqual(voice.appended, [["voice_abc_lose", "負けた", "", "", "s", "s"]])
 
 
 if __name__ == "__main__":

@@ -10,6 +10,21 @@ const codes = (errs: { path: string; code: string }[]) => errs.map((e) => `${e.p
 const line = (part: string, over: Record<string, unknown> = {}) => ({ key: `voice_ryekie_${part}`, base: "Let's go!", text: 'Here we go!', ...over })
 const voice = (over: Record<string, unknown> = {}) => ({ resourceName: 'ryekie', lines: [line('action')], ...over })
 
+describe('validateVoice jp transcription', () => {
+  it('makes the translation optional; a blank jp counts as absent', () => {
+    assert.deepEqual(validateVoice(voice({ lines: [line('action', { base: '', text: '', jp: '行くぞ' })] })), [])
+    assert.deepEqual(validateVoice(voice({ lines: [line('action', { text: undefined, jp: '行くぞ' })] })), [])
+    assert.deepEqual(codes(validateVoice(voice({ lines: [line('action', { text: ' ', jp: '  ' })] }))), ['payload.lines.0.text:text_required'])
+    assert.deepEqual(validateVoice(voice({ lines: [line('action', { jp: ' ' })] })), [])
+  })
+  it('is plain text of at most 2000 characters', () => {
+    for (const t of ['<b>', '{{ x }}', 'nul\u0000', 5]) {
+      assert.deepEqual(codes(validateVoice(voice({ lines: [line('action', { jp: t })] }))), ['payload.lines.0.jp:text_invalid'], String(t))
+    }
+    assert.deepEqual(codes(validateVoice(voice({ lines: [line('action', { jp: 'あ'.repeat(2001) })] }))), ['payload.lines.0.jp:text_too_long'])
+  })
+})
+
 describe('validateVoice', () => {
   it('accepts a valid payload (and a note)', () => {
     assert.deepEqual(validateVoice(voice()), [])

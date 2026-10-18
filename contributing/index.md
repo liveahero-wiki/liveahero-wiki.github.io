@@ -87,7 +87,7 @@ The table is filled from the game's own data and from the sheet (older pages had
 |-|-|
 | h_gachaResult, s_gachaResult | Gacha summon lines |
 | appreciation, daily, eventA, eventB, eventC, eventD, hero, hero2, player, player2, relation, touch, touch2, train, trained | Only some characters may have eventC, eventD, hero2 and player2. A line the game has already translated is not editable here |
-| battleStart, action, attack, skillA, skillB, special, smallDamage, bigDamage, win, lose, assist, assisted, loveIndexMax, rankMax, salesStart, salesEnd | These lines only exist in the sheet. |
+| battleStart, action, attack, skillA, skillB, special, smallDamage, bigDamage, win, lose, assist, assisted, loveIndexMax, rankMax, salesStart, salesEnd | These lines only exist in the sheet; the game has no Japanese text for them. Every such line the game's voice list (`VoiceMaster`) knows is offered, also when nobody has transcribed it yet: "Suggest translations" then shows a Japanese box next to the English one, and you can send the Japanese you hear, the English, or both. |
 
 ### Translate sales report
 

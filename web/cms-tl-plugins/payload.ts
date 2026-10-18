@@ -6,7 +6,10 @@ export interface VoiceLine {
   key: string
   /** The EN text the contributor saw (empty when there was none). */
   base: string
+  /** The EN suggestion; empty only when `jp` is given. */
   text: string
+  /** The Japanese transcription of a line that has no Japanese text yet. */
+  jp?: string
 }
 export interface VoicePayload {
   resourceName: string
@@ -36,7 +39,8 @@ export function readVoice(payload: unknown): VoicePayload {
     resourceName: str(p.resourceName),
     lines: lines.map((raw) => {
       const l = isObj(raw) ? raw : {}
-      return { key: str(l.key), base: str(l.base), text: str(l.text) }
+      const jp = str(l.jp)
+      return { key: str(l.key), base: str(l.base), text: str(l.text), ...(jp.trim() ? { jp } : {}) }
     }),
   }
   if (typeof p.note === 'string' && p.note.trim()) out.note = p.note

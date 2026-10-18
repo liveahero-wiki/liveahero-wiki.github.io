@@ -67,6 +67,29 @@ class TestTranslatable(unittest.TestCase):
         data = {"en_voice": {"voice_x_attack": "Hah!"}}
         self.assertEqual(translatable.voice_resource_lines("x", data), {"voice_x_attack": {"jp": "", "en": "Hah!"}})
 
+    def test_voice_master_lines_are_listed_without_jp(self):
+        master = {"1": [
+            {"cardType": 1, "voiceKind": 15, "voiceFilename": "", "resourceName": "x"},                      # battleStart
+            {"cardType": 2, "voiceKind": 22, "voiceFilename": "", "resourceName": "x"},                      # assist
+            {"cardType": 1, "voiceKind": 18, "voiceFilename": "voice_x_skillB", "resourceName": "x"},        # filename wins
+            {"cardType": 1, "voiceKind": 20, "voiceFilename": "voice_x_smallDamage_simple", "resourceName": "x"},  # not a manual part
+            {"cardType": 1, "voiceKind": 3, "voiceFilename": "", "resourceName": "x"},                       # daily: the game's
+            {"cardType": 1, "voiceKind": 15, "voiceFilename": "", "resourceName": "y"},
+        ]}
+        known = translatable.voice_master_keys(master)
+        self.assertEqual(known, {"x": {"voice_x_battleStart", "voice_x_assist", "voice_x_skillB"}, "y": {"voice_y_battleStart"}})
+        data = {"voice_master_keys": known, "jp_voice": {"voice_x_assist": "助ける"}, "en_voice": {"voice_x_attack": "Hah!"}}
+        self.assertEqual(
+            translatable.voice_resource_lines("x", data),
+            {
+                "voice_x_battleStart": {"jp": ""},
+                "voice_x_assist": {"jp": "助ける"},
+                "voice_x_attack": {"jp": "", "en": "Hah!"},
+                "voice_x_skillB": {"jp": ""},
+            },
+        )
+        self.assertEqual(translatable.voice_resource_lines("z", data), {})
+
     def test_bios(self):
         jp = {"A": "あ", "B": "い", "C": "う"}
         en = {"B": "b", "C": "う"}
@@ -113,6 +136,20 @@ class TestSheetDownloads(unittest.TestCase):
         self.assertEqual(en["voice_a_win"], "We <b>win")
         self.assertEqual(len(errors), 1)
         self.assertIn("voice_a_win", errors[0])
+
+    def test_upload_keeps_a_contributors_jp(self):
+        rows = [
+            {"voiceFilename": "voice_a_win", "jp": "scraped win", "enApproved": "x"},
+            {"voiceFilename": "voice_a_lose", "jp": "scraped lose"},
+        ]
+        current = [
+            {"voiceFilename": "voice_a_win", "jp": "contributor win", "jpSource": "wiki-cms #1 (A)"},
+            {"voiceFilename": "voice_a_lose", "jp": "", "jpSource": ""},
+        ]
+        self.assertEqual(
+            voice_gsheet.drop_contributor_jp(rows, current),
+            [{"voiceFilename": "voice_a_win", "enApproved": "x"}, {"voiceFilename": "voice_a_lose", "jp": "scraped lose"}],
+        )
 
     def test_bio_rows(self):
         rows = [

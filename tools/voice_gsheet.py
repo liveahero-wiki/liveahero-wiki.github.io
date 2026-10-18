@@ -4,7 +4,8 @@
 Columns: voiceFilename (key, `voice_<resourceName>_<part>`), jp, enMachineTranslated, enApproved and the
 optional `source` (who wrote the translation, e.g. `wiki-cms #1a2b3c4d (Name)`; written only by
 contrib_intake.py, never touched by `upload`: it is neither updatable nor patched, and new rows leave it
-empty). The sheet is the source of truth for community translations; the game's own text always wins on
+empty) and `jpSource` (the same label, set when a contributor transcribed the `jp` of a line the JP wiki
+scrape (voice_scraper.py) had no text for; `upload` leaves such a `jp` alone, the contributor's text wins). The sheet is the source of truth for community translations; the game's own text always wins on
 the pages (see tools/translatable.py).
 """
 import os
@@ -40,6 +41,13 @@ def _try_load(path: str) -> dict:
         return wiki_util.loadJson(path)
     except FileNotFoundError:
         return {}
+
+
+def drop_contributor_jp(rows: list[dict], current: list[dict]) -> list[dict]:
+    """`rows` without the `jp` of every line whose sheet row has a `jpSource`: a contributor's transcription is
+    preferred over the text scraped from the JP wiki (update_sheet never writes an empty value)."""
+    owned = {str(r.get("voiceFilename", "")) for r in current if str(r.get("jpSource", "")).strip()}
+    return [{k: v for k, v in row.items() if k != "jp"} if row.get("voiceFilename") in owned else row for row in rows]
 
 
 def generate_voice_rows(index_path: str) -> list[dict]:
@@ -111,6 +119,7 @@ def cmd_upload(args):
         return
 
     sheet = sh.worksheet(VOICE_SHEET_NAME)
+    rows = drop_contributor_jp(rows, sheet.get_all_records())
     updated, new = update_sheet(
         gc, sheet, VOICE_SHEET_NAME, rows,
         pks=["voiceFilename"],

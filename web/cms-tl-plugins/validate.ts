@@ -4,7 +4,7 @@
 
 import type { FieldError } from '../cms-plugin/plugin-api.ts'
 import { contribGuard } from './guard.ts'
-import { KEY_RE, baseProblem, noteProblem, textProblem, type Problem } from './text-rules.ts'
+import { KEY_RE, baseProblem, noteProblem, optionalTextProblem, textProblem, type Problem } from './text-rules.ts'
 
 export const MAX_LINES = 100
 export const AFTER_MAX_CHARS = 120_000
@@ -53,7 +53,11 @@ export function validateVoice(input: unknown): FieldError[] {
     }
     const b = baseProblem(raw.base)
     if (b) errors.push(fromProblem(`${p}.base`, b))
-    const t = textProblem(raw.text, raw.base)
+    // a line without Japanese text may carry the transcription; then the translation is optional
+    const jp = optionalTextProblem(raw.jp)
+    if (jp) errors.push(fromProblem(`${p}.jp`, jp))
+    const hasJp = typeof raw.jp === 'string' && raw.jp.trim() !== ''
+    const t = hasJp && (typeof raw.text !== 'string' || raw.text.trim() === '') ? null : textProblem(raw.text, raw.base)
     if (t) errors.push(fromProblem(`${p}.text`, t))
   })
 

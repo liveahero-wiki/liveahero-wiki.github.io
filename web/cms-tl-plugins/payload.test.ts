@@ -20,6 +20,10 @@ describe('readVoice', () => {
       ],
     })
   })
+  it('keeps a written jp transcription and drops a blank one', () => {
+    const lines = [{ key: 'voice_r_a', base: '', text: '', jp: '行くぞ' }, { key: 'voice_r_b', base: '', text: 't', jp: '  ' }]
+    assert.deepEqual(readVoice({ resourceName: 'r', lines }).lines, [lines[0], { key: 'voice_r_b', base: '', text: 't' }])
+  })
   it('returns copies of the lines, so editing them cannot touch the input', () => {
     const input = { resourceName: 'r', lines: [{ key: 'voice_r_a', base: '', text: 't' }] }
     readVoice(input).lines[0].text = 'changed'

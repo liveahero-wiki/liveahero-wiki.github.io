@@ -46,6 +46,15 @@ export function textProblem(raw: unknown, base?: unknown): Problem | null {
   return null
 }
 
+/** An optional text (the JP transcription of a voice line): absent or blank is fine, else trimmed, plain, at most TEXT_MAX. */
+export function optionalTextProblem(raw: unknown): Problem | null {
+  if (raw === undefined || raw === null) return null
+  if (typeof raw !== 'string') return { code: 'text_invalid', message: 'Must be text.' }
+  if (!normalizeNewlines(raw).trim()) return null
+  const p = textProblem(raw)
+  return p
+}
+
 /** `base` may be empty; any string up to TEXT_MAX. */
 export function baseProblem(v: unknown): Problem | null {
   if (typeof v !== 'string' || v.length > TEXT_MAX) {

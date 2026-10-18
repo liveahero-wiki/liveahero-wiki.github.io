@@ -7,7 +7,9 @@ and `lah-bio-tl` (Bio tab) it
   1. GETs the approved submissions nobody has synced yet from wiki-cms (`/api/internal/submissions/<type>`,
      bearer CLI_TOKEN; rows that already carry an outcome are not listed any more),
   2. per line compares the sheet's current `enApproved` with the `base` the contributor saw: empty or equal
-     -> writes `text` (voice: line breaks become `<br>`; bio keeps them) and sets the `source` column to
+     -> writes `text` (voice: line breaks become `<br>`; bio keeps them); a voice line may also carry `jp`
+     (the transcription of a line the game has no Japanese text for), written into the `jp` column only
+     while that is empty (else conflict; a line is written whole or not at all); sets the `source` column to
      `wiki-cms #<id first 8> (<displayName>)`; otherwise it is a conflict (a translator changed the sheet in
      the meantime) and nothing is written; a key that is no longer translatable per the freshly generated
      rosters (the game shipped its own text) is `superseded`, nothing is written,
@@ -42,6 +44,10 @@ KINDS = {
 }
 SOURCE_COL = "source"
 TEXT_COL = "enApproved"
+JP_COL = "jp"
+# Who transcribed `jp` (same label as `source`); set only when a contributor's JP was written. voice_gsheet.py upload
+# never replaces a `jp` that has one with the text scraped from the JP wiki.
+JP_SOURCE_COL = "jpSource"
 MAX_CONFLICTS = 100  # keep the stored JSON small
 MAX_CURRENT_CHARS = 500
 
@@ -86,17 +92,24 @@ def roster_entry(rosters: dict | None, kind: str, key: str, resource_name: str =
     return rosters.get("bio", {}).get("bios", {}).get(key)
 
 
-def plan_updates(submissions: list[dict], sheet_rows: dict, rosters: dict | None = None) -> dict:
+def plan_updates(submissions: list[dict], sheet_rows: dict, rosters: dict | None = None,
+                 sheet_jp: dict | None = None) -> dict:
     """Decide what to write and what to report back. Pure.
 
     submissions: oldest first, each { kind: 'voice'|'bio', id, displayName, payload } (payload as
-        documented in the plan: voice { resourceName, lines: [{ key, base, text }] }, bio { key, base, text }).
+        documented in the plan: voice { resourceName, lines: [{ key, base, text, jp? }] }, bio { key, base, text }).
+        A voice line may carry `jp` (the transcription of a line the game has no Japanese text for) and then
+        `text` may be empty.
     sheet_rows: { kind: { key: current enApproved } } for keys that have a sheet row.
+    sheet_jp: { kind: { key: current jp } } (voice only; a missing key counts as empty).
     rosters: { voice: <voice-roster.json>, bio: <bio-roster.json> } or None.
 
-    Returns { writes: [{ kind, key, text, source, jp, new_row }], results: [{ kind, id, external }] }.
+    Returns { writes: [{ kind, key, text, source, jp, set_jp, new_row }], results: [{ kind, id, external }] }.
+    `text` is None when only the JP is written; `jp` is what a new row gets (the submitted JP, else the
+    roster's); `set_jp` says a submitted JP goes into the (existing or new) row. A line is written whole or not at all.
     Several submissions for one key in a run are applied in order: the later one sees the earlier write."""
     working = {kind: dict(rows) for kind, rows in sheet_rows.items()}
+    working_jp = {kind: dict(rows) for kind, rows in (sheet_jp or {}).items()}
     writes: dict[tuple[str, str], dict] = {}
     results = []
 
@@ -110,6 +123,7 @@ def plan_updates(submissions: list[dict], sheet_rows: dict, rosters: dict | None
             resource_name = ""
             lines = [payload] if payload.get("key") else []
         rows = working.setdefault(kind, {})
+        jps = working_jp.setdefault(kind, {})
         source = source_label(sub["id"], sub.get("displayName", ""))
 
         written: list[str] = []
@@ -118,28 +132,51 @@ def plan_updates(submissions: list[dict], sheet_rows: dict, rosters: dict | None
         for line in lines:
             key = str(line.get("key", ""))
             base = str(line.get("base", ""))
-            text = str(line.get("text", ""))
+            text = str(line.get("text", "")).strip()
+            jp_in = str(line.get("jp", "")).strip() if kind == "voice" else ""
             entry = roster_entry(rosters, kind, key, resource_name)
             if not key or entry is None:
                 superseded += 1
                 continue
-            if not _is_plain(text):
+            if (text and not _is_plain(text)) or (jp_in and not _is_plain(jp_in)) or not (text or jp_in):
                 conflicts.append({"key": key, "base": base, "current": "(invalid text)"})
                 continue
 
-            new_text = sheet_text(kind, text)
+            new_text = sheet_text(kind, text) if text else None
+            new_jp = sheet_text(kind, jp_in) if jp_in else None
             current = rows.get(key, "")
-            if normalize(current) == normalize(new_text):
-                written.append(key)  # already there (an earlier run wrote it before it could report)
-            elif normalize(current) == "" or normalize(current) == normalize(base):
-                rows[key] = new_text
+            # the roster's JP is what the table shows: it stands in for a sheet row without one
+            current_jp = jps.get(key, "") or entry.get("jp", "")
+
+            en_write = False
+            if new_text is not None and normalize(current) != normalize(new_text):
+                if normalize(current) in ("", normalize(base)):
+                    en_write = True
+                else:
+                    conflicts.append({"key": key, "base": base, "current": current})
+                    continue
+            jp_write = False
+            if new_jp is not None and normalize(current_jp) != normalize(new_jp):
+                if normalize(current_jp) == "":
+                    jp_write = True
+                else:
+                    conflicts.append({"key": key, "base": base, "current": current_jp})
+                    continue
+
+            if en_write or jp_write:
+                prev = writes.get((kind, key), {})
+                if en_write:
+                    rows[key] = new_text
+                if jp_write:
+                    jps[key] = new_jp
                 writes[(kind, key)] = {
-                    "kind": kind, "key": key, "text": new_text, "source": source,
-                    "jp": entry.get("jp", ""), "new_row": key not in sheet_rows.get(kind, {}),
+                    "kind": kind, "key": key, "source": source,
+                    "text": new_text if en_write else prev.get("text"),
+                    "set_jp": jp_write or prev.get("set_jp", False),
+                    "jp": new_jp if jp_write else prev.get("jp") or entry.get("jp", ""),
+                    "new_row": key not in sheet_rows.get(kind, {}),
                 }
-                written.append(key)
-            else:
-                conflicts.append({"key": key, "base": base, "current": current})
+            written.append(key)  # also when it was already there (an earlier run wrote it before it could report)
 
         if written and conflicts:
             status = "partial"  # some lines are in the sheet, the others need a moderator
@@ -195,7 +232,7 @@ class CmsClient:
 
 class GspreadSheet:
     """The translation spreadsheet (needs GOOGLE_CREDENTIALS_JSON). Interface used by main():
-    read(kind) -> { key: current enApproved }, apply(writes)."""
+    read(kind) -> { key: current enApproved }, read_jp(kind) -> { key: current jp }, apply(writes)."""
 
     def __init__(self, spreadsheet):
         self.sh = spreadsheet
@@ -210,6 +247,11 @@ class GspreadSheet:
         key_col = KINDS[kind]["key_col"]
         return {str(r.get(key_col, "")): str(r.get(TEXT_COL, "")) for r in self._tab(kind).get_all_records() if r.get(key_col)}
 
+    def read_jp(self, kind: str) -> dict[str, str]:
+        """{ key: current jp } (the tab's `jp` column; a tab without one reads as empty)."""
+        key_col = KINDS[kind]["key_col"]
+        return {str(r.get(key_col, "")): str(r.get(JP_COL, "")) for r in self._tab(kind).get_all_records() if r.get(key_col)}
+
     def apply(self, writes: list[dict]):
         import gspread
         for kind in KINDS:
@@ -219,12 +261,14 @@ class GspreadSheet:
             tab = self._tab(kind)
             key_col = KINDS[kind]["key_col"]
             headers = tab.row_values(1)
-            if SOURCE_COL not in headers:
-                col = len(headers) + 1
-                if col > tab.col_count:
-                    tab.add_cols(col - tab.col_count)
-                tab.update_cell(1, col, SOURCE_COL)
-                headers.append(SOURCE_COL)
+            wanted = [SOURCE_COL] + ([JP_SOURCE_COL] if any(w.get("set_jp") for w in ops) else [])
+            for name in wanted:
+                if name not in headers:
+                    col = len(headers) + 1
+                    if col > tab.col_count:
+                        tab.add_cols(col - tab.col_count)
+                    tab.update_cell(1, col, name)
+                    headers.append(name)
             idx = {h: i + 1 for i, h in enumerate(headers)}
             keys = tab.col_values(idx[key_col])
             cells = []
@@ -232,10 +276,16 @@ class GspreadSheet:
             for op in ops:
                 if op["key"] in keys:
                     row = keys.index(op["key"]) + 1
-                    cells.append(gspread.Cell(row, idx[TEXT_COL], op["text"]))
+                    if op["text"] is not None:
+                        cells.append(gspread.Cell(row, idx[TEXT_COL], op["text"]))
+                    if op.get("set_jp") and JP_COL in idx:
+                        cells.append(gspread.Cell(row, idx[JP_COL], op["jp"]))
+                        cells.append(gspread.Cell(row, idx[JP_SOURCE_COL], op["source"]))
                     cells.append(gspread.Cell(row, idx[SOURCE_COL], op["source"]))
                 else:
-                    values = {key_col: op["key"], "jp": op.get("jp", ""), TEXT_COL: op["text"], SOURCE_COL: op["source"]}
+                    values = {key_col: op["key"], JP_COL: op.get("jp", ""), TEXT_COL: op["text"] or "", SOURCE_COL: op["source"]}
+                    if op.get("set_jp"):
+                        values[JP_SOURCE_COL] = op["source"]
                     new_rows.append([values.get(h, "") for h in headers])
             if cells:
                 tab.update_cells(cells)  # RAW: a text starting with = or + is never a formula
@@ -287,10 +337,12 @@ def run(client: CmsClient, sheet, rosters: dict, dry_run: bool = False, dispatch
         return {"writes": [], "results": []}
 
     sheet_rows = {kind: sheet.read(kind) for kind in {s["kind"] for s in subs}}
-    plan = plan_updates(subs, sheet_rows, rosters)
+    sheet_jp = {"voice": sheet.read_jp("voice")} if "voice" in sheet_rows else {}
+    plan = plan_updates(subs, sheet_rows, rosters, sheet_jp)
 
     for w in plan["writes"]:
-        print(f"  [WRITE] {w['kind']} {w['key']}: {w['text'][:80]!r} <- {w['source']}")
+        jp_note = f" jp={w['jp'][:40]!r}" if w.get("set_jp") else ""
+        print(f"  [WRITE] {w['kind']} {w['key']}: {(w['text'] or '')[:80]!r}{jp_note} <- {w['source']}")
     for r in plan["results"]:
         ext = r["external"]
         print(f"  [{ext['outcome']['status'].upper()}] {r['kind']} {r['id']}: "

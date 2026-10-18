@@ -6,7 +6,8 @@ never come from the game, so they are always translatable.
 
 The voice row universe replicates `_includes/voice-table.html` (keep the two in sync): for every
 resourceName of a voice table, the greeting parts, the whitelisted SERIF parts and the manual parts that
-render a row. Keys are the sheet's `voice_<resourceName>_<part>`; the SERIF parts are lowercased/camel-cased
+render a row (a manual part also when VoiceMaster knows the line: the game has no JP text for it, a
+contributor can transcribe it). Keys are the sheet's `voice_<resourceName>_<part>`; the SERIF parts are lowercased/camel-cased
 there (`eventA`) while the template's whitelist is upper case (`EVENTA`).
 
 Pure functions only (no network, no sheet access) so the roster generator, the Bio upload and the tests
@@ -31,6 +32,25 @@ MANUAL_PARTS = [
     "salesEnd",
 ]
 GREETING_PARTS = ["h_gachaResult", "h_gachaResult_another", "s_gachaResult", "s_gachaResult_another"]
+# VoiceMaster `voiceKind` -> MANUAL_PARTS name (same numbering as voice_scraper.VOICE_KIND_MAP).
+VOICE_KIND_PARTS = {
+    7: "salesStart",
+    8: "salesEnd",
+    13: "rankMax",
+    14: "loveIndexMax",
+    15: "battleStart",
+    16: "action",
+    17: "attack",
+    18: "skillA",
+    19: "skillB",
+    20: "smallDamage",
+    21: "bigDamage",
+    22: "assist",
+    23: "assisted",
+    24: "special",
+    25: "win",
+    26: "lose",
+}
 
 VOICE_TABLE_PATTERN = re.compile(r'voice-table\.html\s+resourceName\s*=\s*"([^"]+)"')
 
@@ -61,11 +81,30 @@ def bio_translatable(jp_bio: dict, en_bio: dict, community: dict | None = None) 
     return result
 
 
+def voice_master_keys(voice_master: dict) -> dict:
+    """{ resourceName: {voice key} } of the manual voice lines VoiceMaster knows. The game ships no
+    Japanese text for them, so they exist here even when the sheet has no row yet. The key is the entry's
+    `voiceFilename`, else `voice_<resourceName>_<part>`; filenames that are not a manual part are skipped
+    (the table could not render them)."""
+    known: dict[str, set[str]] = {}
+    for entries in voice_master.values():
+        for e in entries:
+            part = VOICE_KIND_PARTS.get(e.get("voiceKind"))
+            name = e.get("resourceName", "")
+            if not part or not name:
+                continue
+            key = e.get("voiceFilename") or f"voice_{name}_{part}"
+            prefix = f"voice_{name}_"
+            if key.startswith(prefix) and key[len(prefix):] in MANUAL_PARTS:
+                known.setdefault(name, set()).add(key)
+    return known
+
+
 def voice_resource_lines(name: str, data: dict) -> dict:
     """{ voiceKey: { jp, en? } } of the translatable lines the voice table of `name` renders.
 
     `data` holds the loaded _data/processed json under the keys jp_serif, en_serif, jp_greeting,
-    en_greeting, jp_voice, en_voice (a missing one counts as empty)."""
+    en_greeting, jp_voice, en_voice and voice_master_keys (a missing one counts as empty)."""
     jp_serif = data.get("jp_serif", {})
     en_serif = data.get("en_serif", {})
     jp_greeting = data.get("jp_greeting", {})
@@ -95,11 +134,12 @@ def voice_resource_lines(name: str, data: dict) -> dict:
             key = f"voice_{name}_{part}"
             lines[key] = _lang_pair(jp, game_en if game_en and game_en != jp else en_voice.get(key, ""))
 
+    known = data.get("voice_master_keys", {}).get(name, ())
     for part in MANUAL_PARTS:
         key = f"voice_{name}_{part}"
         jp = jp_voice.get(key, "")
         en = en_voice.get(key, "")
-        if jp or en:
+        if jp or en or key in known:
             lines[key] = _lang_pair(jp, en)
 
     return lines
@@ -132,4 +172,9 @@ def load_processed(base: str = "_data/processed") -> dict:
             data[name] = wiki_util.loadJson(os.path.join(base, f"{name}.json"))
         except FileNotFoundError:
             data[name] = {}
+    try:
+        voice_master = wiki_util.loadJson(os.path.join(base, os.pardir, "VoiceMaster.json"))
+    except FileNotFoundError:
+        voice_master = {}
+    data["voice_master_keys"] = voice_master_keys(voice_master)
     return data

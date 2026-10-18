@@ -32,15 +32,21 @@ function summary(el: HTMLElement, raw: unknown): () => void {
 }
 
 /** One table row's cells that are the same in the read-only and the editor view (part, JP, current EN). */
-function jpCell(): { td: HTMLElement; fill(jp: string): void } {
+function jpCell(extra?: HTMLElement | null): { td: HTMLElement; fill(jp: string): void } {
   const td = h('td', { 'data-label': 'JP', lang: 'ja' }, h('span', { class: 'cms-lah-tl-muted' }, '...'))
   return {
     td,
     fill(jp) {
       clear(td)
-      td.append(textBlock(jp, { lang: 'ja', empty: 'Japanese text not available' }))
+      td.append(textBlock(jp, { lang: 'ja', empty: extra ? 'No Japanese text yet' : 'Japanese text not available' }))
+      if (extra) td.append(extra)
     },
   }
+}
+
+/** The transcription a contributor suggests for a line without Japanese text (read-only view). */
+function suggestedJp(jp: string): HTMLElement {
+  return h('div', { class: 'cms-lah-tl-suggested-jp' }, h('strong', null, 'Suggested JP: '), h('span', { class: 'cms-lah-tl-text', lang: 'ja' }, jp))
 }
 
 function table(headExtra: string): { table: HTMLTableElement; tbody: HTMLTableSectionElement } {
@@ -64,7 +70,7 @@ function detail(el: HTMLElement, raw: unknown): () => void {
   const { table: t, tbody } = table('Suggested EN')
   const fills: { jp: ReturnType<typeof jpCell>; key: string }[] = []
   for (const line of p.lines) {
-    const jp = jpCell()
+    const jp = jpCell(line.jp ? suggestedJp(line.jp) : null)
     fills.push({ jp, key: line.key })
     append(
       tbody,
@@ -74,7 +80,7 @@ function detail(el: HTMLElement, raw: unknown): () => void {
         h('td', { class: 'cms-lah-tl-part', 'data-label': 'Part' }, h('span', { class: 'cms-lah-tl-part-name' }, voicePart(p.resourceName, line.key))),
         jp.td,
         h('td', { 'data-label': 'Current EN' }, textBlock(line.base, { empty: 'no current text' })),
-        h('td', { 'data-label': 'Suggested EN' }, h('div', { class: 'cms-lah-tl-text' }, line.text)),
+        h('td', { 'data-label': 'Suggested EN' }, line.text ? h('div', { class: 'cms-lah-tl-text' }, line.text) : h('span', { class: 'cms-lah-tl-muted' }, 'no English text')),
       ),
     )
   }
@@ -97,8 +103,10 @@ interface Row {
   area: HTMLTextAreaElement
   keyErrs: HTMLElement
   textErrs: HTMLElement
+  jpErrs: HTMLElement
   count: HTMLElement
   jp: ReturnType<typeof jpCell>
+  jpArea: HTMLTextAreaElement | null
 }
 
 function editor(el: HTMLElement, init: { value: unknown; onChange(p: unknown): void; errors: FieldError[] }): EditorHandle {
@@ -137,6 +145,7 @@ function editor(el: HTMLElement, init: { value: unknown; onChange(p: unknown): v
       const i = idxOf(row.line)
       showErrors(row.keyErrs, [...errorsAt(shown, `lines.${i}.key`), ...errorsAt(shown, `lines.${i}.base`), ...errorsAt(shown, `lines.${i}`)])
       showErrors(row.textErrs, errorsAt(shown, `lines.${i}.text`), [row.area])
+      showErrors(row.jpErrs, errorsAt(shown, `lines.${i}.jp`), row.jpArea ? [row.jpArea] : [])
     }
     showErrors(noteField.errs, errorsAt(shown, 'note'), [noteArea])
   }
@@ -150,12 +159,15 @@ function editor(el: HTMLElement, init: { value: unknown; onChange(p: unknown): v
   }
 
   function addRow(line: VoiceLine): void {
-    const jp = jpCell()
+    // a line the contributor transcribed carries `jp`: the moderator can correct it
+    const jpErrs = errorBox()
+    const jpArea = line.jp !== undefined ? h('textarea', { class: 'cms-lah-tl-textarea', rows: 2, lang: 'ja', value: line.jp, 'aria-label': `Suggested JP for ${voicePart(resourceName, line.key)}` }) : null
+    const jp = jpCell(jpArea ? h('div', { class: 'cms-lah-tl-suggested-jp' }, h('strong', null, 'Suggested JP:'), jpArea, jpErrs) : null)
     const keyErrs = errorBox()
     const textErrs = errorBox()
     const count = h('div', { class: 'cms-lah-tl-count' })
     const area = h('textarea', { class: 'cms-lah-tl-textarea', rows: 3, value: line.text, 'aria-label': `Suggested EN for ${voicePart(resourceName, line.key)}` })
-    const row: Row = { line, area, keyErrs, textErrs, count, jp, tr: h('tr') }
+    const row: Row = { line, area, keyErrs, textErrs, jpErrs, count, jp, jpArea, tr: h('tr') }
     const updateCount = () => {
       const n = area.value.replace(/\r\n?/g, '\n').trim().length
       count.textContent = `${n} / ${TEXT_MAX}`
@@ -168,6 +180,12 @@ function editor(el: HTMLElement, init: { value: unknown; onChange(p: unknown): v
       // The edited text may have fixed (or caused) its own problem: drop the stale message for it.
       shown = shown.filter((e) => relPath(e.path) !== `lines.${idxOf(line)}.text`)
       showErrors(textErrs, [], [area])
+      onChange()
+    })
+    jpArea?.addEventListener('input', () => {
+      line.jp = jpArea.value
+      shown = shown.filter((e) => relPath(e.path) !== `lines.${idxOf(line)}.jp`)
+      showErrors(jpErrs, [], [jpArea])
       onChange()
     })
     const remove = button('Remove line', () => {

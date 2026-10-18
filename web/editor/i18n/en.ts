@@ -62,6 +62,7 @@ export const en = {
   fe_text_too_long: 'At most {max} characters.',
   fe_text_invalid: 'Plain text only.',
   fe_text_same_as_base: 'Same as the current text.',
+  fe_jp_not_allowed: 'This line already has Japanese text.',
   fe_key_invalid: 'This line does not belong here.',
   fe_key_duplicate: 'This line is listed twice.',
   fe_line_not_translatable: 'This line cannot be translated any more.',
@@ -88,10 +89,14 @@ export const en = {
 
   // ---- voice lines
   voiceTitle: 'Suggest voice-line translations',
-  voiceIntro: 'Edit the English text of the lines you want to improve. Only the lines you change are sent, and a moderator reviews them.',
+  voiceIntro: 'Edit the English text of the lines you want to improve. Only the lines you change are sent, and a moderator reviews them. For a line without Japanese text you can add the Japanese too.',
   voiceNothing: 'There are no lines to translate in this table.',
   voiceJp: 'Japanese',
   voiceEn: 'English',
+  voiceEnOptional: 'English (optional)',
+  voiceJpInput: 'Japanese text (as spoken)',
+  voiceJpMissing: 'The game has no Japanese text for this line. If you can, type what is said.',
+  voiceJpLabel: 'Japanese text of {key}',
   voiceChanged: '{n} changed',
   voiceNoChange: 'Change at least one line to send it.',
   voiceTooMany: '{n} lines changed. At most {max} can be sent at once: the first {max} go now, send again for the rest.',

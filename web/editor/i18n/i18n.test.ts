@@ -42,7 +42,7 @@ describe('editor i18n bundles', () => {
 
   it('field errors of the three types are localized, unknown codes keep the server message', () => {
     const t = makeT('zh-Hans')
-    for (const code of ['text_required', 'text_too_long', 'text_invalid', 'text_same_as_base', 'key_invalid', 'key_duplicate', 'line_not_translatable', 'bio_not_translatable', 'unknown_resource', 'lines_length', 'note_too_long', 'note_invalid', 'path_not_editable', 'base_sha_invalid', 'after_too_long', 'after_front_matter', 'summary_length', 'summary_plain']) {
+    for (const code of ['text_required', 'text_too_long', 'text_invalid', 'text_same_as_base', 'jp_not_allowed', 'key_invalid', 'key_duplicate', 'line_not_translatable', 'bio_not_translatable', 'unknown_resource', 'lines_length', 'note_too_long', 'note_invalid', 'path_not_editable', 'base_sha_invalid', 'after_too_long', 'after_front_matter', 'summary_length', 'summary_plain']) {
       assert.ok(hasKey(`fe_${code}`), code)
     }
     assert.equal(fieldText(t, { path: 'payload.lines.0.text', code: 'text_too_long', params: { max: 2000 } }), '最多2000个字符。')
