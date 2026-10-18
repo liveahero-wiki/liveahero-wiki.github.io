@@ -47,7 +47,7 @@ sidekicks:
 
 {% include voice-table.html resourceName="okitaka" %}
 
-{% include voice-table.html resourceName="okitakacrisis2404"
+{% include voice-table.html resourceName="okitakaCrisis2404"
 %}
 
 ## Notes

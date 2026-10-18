@@ -16,7 +16,7 @@ sidekicks:
 
 {% include voice-table.html resourceName="gaius" %}
 
-{% include voice-table.html resourceName="gaiusseekers2502"
+{% include voice-table.html resourceName="gaiusSeekers2502"
 %}
 
 ## Notes

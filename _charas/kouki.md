@@ -63,7 +63,7 @@ sidekicks:
 
 {% include voice-table.html resourceName="kouki" %}
 
-{% include voice-table.html resourceName="koukirakusai2304" %}
+{% include voice-table.html resourceName="koukiRakusai2304" %}
 
 ## Notes
 

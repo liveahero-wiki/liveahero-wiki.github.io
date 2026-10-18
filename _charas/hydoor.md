@@ -16,7 +16,7 @@ sidekicks:
 
 {% include voice-table.html resourceName="hydoor" %}
 
-{% include voice-table.html resourceName="hydoortravelers2504"
+{% include voice-table.html resourceName="hydoorTravelers2504"
 %}
 
 ## Notes

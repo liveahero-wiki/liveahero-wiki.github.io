@@ -20,7 +20,7 @@ sidekicks:
 
 {% include voice-table.html resourceName="gomeisa" %}
 
-{% include voice-table.html resourceName="gomeisaxmasmelt2212" %}
+{% include voice-table.html resourceName="gomeisaXmasMelt2212" %}
 
 ## Notes:
 

@@ -41,5 +41,5 @@ sidekicks:
 
 {% include voice-table.html resourceName="obsidius" %}
 
-{% include voice-table.html resourceName="obsidiuscrisis2404"
+{% include voice-table.html resourceName="obsidiusCrisis2404"
 %}
