@@ -33,7 +33,7 @@ Ryekie is a hero. {% chara_link Kalaski %} is his friend.
 
 function makeRepo() {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "contrib-guard-"));
-  const git = (...args) => execFileSync("git", ["-c", "user.name=t", "-c", "user.email=t@example.com", "-c", "commit.gpgsign=false", "-c", "core.autocrlf=false", ...args], { cwd: dir, stdio: ["ignore", "pipe", "pipe"] }).toString().trim();
+  const git = (...args) => execFileSync("git", ["-c", "user.name=t", "-c", "user.email=t@example.com", "-c", "commit.gpgsign=false", "-c", "core.autocrlf=false", "-c", "core.fileMode=false", ...args], { cwd: dir, stdio: ["ignore", "pipe", "pipe"] }).toString().trim();
   const write = (file, text) => {
     fs.mkdirSync(path.dirname(path.join(dir, file)), { recursive: true });
     fs.writeFileSync(path.join(dir, file), text);
