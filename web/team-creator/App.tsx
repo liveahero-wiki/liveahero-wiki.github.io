@@ -3,12 +3,14 @@
 
 import { Component, type ComponentChildren } from 'preact'
 import { useEffect, useMemo, useState } from 'preact/hooks'
-import type { PublicBlob } from '../cms-plugin/api-types.ts'
+import type { ContribSubmission, PublicBlob } from '../cms-plugin/api-types.ts'
 import { makeT } from '../cms-plugin/i18n/t.ts'
 import type { PluginContext } from '../cms-plugin/plugin-api.ts'
-import { currentTheme, fetchBlob, openCmsForm } from './api.ts'
+import { useAccount } from './account.ts'
+import { currentTheme, editStart, fetchBlob, getContrib, openCmsForm, prefetchEmbed } from './api.ts'
 import { Catalog } from './Catalog.tsx'
 import { initialLang, onLangChange, type Lang } from './lang.ts'
+import { MySubmissions } from './MySubmissions.tsx'
 
 export interface AppProps {
   /** Worker origin, no trailing slash. */
@@ -35,6 +37,11 @@ export function App({ api, group, plugin, formHost }: AppProps) {
   const [state, setState] = useState<BlobState>({ s: 'loading' })
   const [opening, setOpening] = useState(false)
   const [formError, setFormError] = useState(false)
+  const account = useAccount(api, t, uiLang)
+  const [showMine, setShowMine] = useState(false)
+  const [busyId, setBusyId] = useState<string | null>(null)
+  const [actionError, setActionError] = useState(false)
+  const mineById = useMemo(() => new Map((account.mine ?? []).map((m) => [m.id, m])), [account.mine])
 
   useEffect(() => {
     let dead = false
@@ -55,17 +62,32 @@ export function App({ api, group, plugin, formHost }: AppProps) {
   // Memoized so that the team summaries do not remount on every render.
   const ctx = useMemo<PluginContext>(() => ({ uiLang, theme: currentTheme(), group: { id: group, options: blob?.groupOptions ?? {} } }), [uiLang, blob, group])
 
-  const openForm = async () => {
+  const openForm = async (edit?: ContribSubmission) => {
     if (!blob || opening) return
     setOpening(true)
     setFormError(false)
     try {
-      await openCmsForm({ api, group, plugin, groupOptions: blob.groupOptions, host: formHost, lang: uiLang })
+      // Reload "my submissions" once the dialog is gone (a new team, an edit or a sign-in may have happened in it).
+      await openCmsForm({ api, group, plugin, groupOptions: blob.groupOptions, host: formHost, lang: uiLang, ...(edit ? { edit: editStart(edit) } : {}), onClose: () => void account.refresh() })
     } catch (e) {
       console.warn('[team-creator] could not open the form', e)
       setFormError(true)
     } finally {
       setOpening(false)
+    }
+  }
+
+  const withdraw = async (sub: ContribSubmission) => {
+    setBusyId(sub.id)
+    setActionError(false)
+    try {
+      await (await getContrib(api)).withdrawRevision(sub.id, api)
+      await account.refresh()
+    } catch (e) {
+      console.warn('[team-creator] could not withdraw the edit', e)
+      setActionError(true)
+    } finally {
+      setBusyId(null)
     }
   }
 
@@ -86,22 +108,48 @@ export function App({ api, group, plugin, formHost }: AppProps) {
       </div>
     )
   } else {
-    body = <Catalog blob={state.blob} uiLang={uiLang} ctx={ctx} />
+    body = <Catalog blob={state.blob} uiLang={uiLang} ctx={ctx} mine={mineById} onEdit={(sub) => void openForm(sub)} />
   }
 
   return (
     <div class="lah-tc-app">
       <p class="lah-tc-disclaimer">{t('tcDisclaimer')}</p>
-      <div class="lah-tc-toolbar">
-        <button type="button" class="lah-tc-btn lah-tc-primary" disabled={!blob || opening} onClick={openForm}>
+      <div class="lah-tc-toolbar" onPointerEnter={() => !account.user && prefetchEmbed(api)} onFocusIn={() => !account.user && prefetchEmbed(api)} onTouchStart={() => !account.user && prefetchEmbed(api)}>
+        <button type="button" class="lah-tc-btn lah-tc-primary" disabled={!blob || opening} onClick={() => void openForm()}>
           {opening ? t('tcOpening') : t('tcSubmit')}
         </button>
-        {formError && (
+        {account.user ? (
+          <span class="lah-tc-account">
+            <span>{t('tcSignedInAs', { name: account.user.displayName })}</span>
+            <button type="button" class="lah-tc-link" aria-expanded={showMine} onClick={() => setShowMine((x) => !x)}>
+              {showMine ? t('tcMyHide') : t('tcMySubmissions', { count: account.mine?.length ?? 0 })}
+            </button>
+            <button type="button" class="lah-tc-link" onClick={() => void account.signOut()}>
+              {t('tcSignOut')}
+            </button>
+          </span>
+        ) : (
+          <button type="button" class="lah-tc-link" onClick={() => void account.signIn()}>
+            {t('tcSignIn')}
+          </button>
+        )}
+        {(formError || actionError) && (
           <span class="lah-tc-error" role="alert">
-            {t('tcFormError')}
+            {formError ? t('tcFormError') : t('tcActionFailed')}
+          </span>
+        )}
+        {account.signInError && (
+          <span class="lah-tc-error" role="alert">
+            {account.signInError}
           </span>
         )}
       </div>
+      {account.user && showMine && (
+        <section class="lah-tc-mine" aria-label={t('tcMySubmissions', { count: account.mine?.length ?? 0 })}>
+          {account.mineError && <p class="lah-tc-error">{t('tcMyLoadError')}</p>}
+          {account.mine && <MySubmissions items={account.mine} uiLang={uiLang} ctx={ctx} busyId={busyId} onEdit={(sub) => void openForm(sub)} onWithdraw={(sub) => void withdraw(sub)} />}
+        </section>
+      )}
       {body}
     </div>
   )

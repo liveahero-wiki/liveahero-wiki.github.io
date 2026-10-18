@@ -1,4 +1,4 @@
-// Copied verbatim into lah-wiki `web/cms-plugin/api-types.ts`; the public blob types are a contract with the wiki (docs/TEAM_CREATOR_WIKI_UI_PLAN.md W8).
+// Copied verbatim into lah-wiki `web/cms-plugin/api-types.ts`; the public blob types are a contract with the wiki (docs/TEAM_CREATOR.md, "The blob is a contract with the wiki").
 // Request/response DTOs shared by the Worker, the embed and the admin portal. Pure types, no runtime imports.
 import type { I18nText, Lang } from './i18n.ts'
 import type { FieldError } from './plugin-api.ts'
@@ -38,6 +38,8 @@ export interface TypeConfig {
   demoUrl: { required: boolean; allowedHosts: string[] }
   turnstileSiteKey: string
   disclaimer: I18nText | null
+  /** 'account': submitting needs a contributor sign-in (see ContribApi below); anonymous POSTs are refused. Absent on older Workers = 'anonymous'. */
+  submitAuth?: 'anonymous' | 'account'
 }
 
 export interface PublicItem {
@@ -81,6 +83,74 @@ export interface SubmitRequest {
 export interface SubmitResponse {
   id: string
   state: 'pending'
+}
+
+// ---- contributor API (/api/contrib, bearer token only) ----
+
+/** Messages the sign-in popup (`/api/contrib/auth/done`) posts to `window.opener`. */
+export type ContribAuthMessage =
+  | { type: 'cms-contrib'; token: string; user: ContribUser }
+  | { type: 'cms-contrib-error'; code: 'account_too_young' | 'unauthenticated' | 'unavailable'; eligibleAt?: number | null }
+
+export interface ContribUser {
+  id: string
+  displayName: string
+  image: string | null
+}
+/** GET /api/contrib/me */
+export interface ContribMeResponse {
+  user: ContribUser
+}
+
+/** Editable fields of a submission or of a proposed revision of it. */
+export interface ContribContent {
+  title: string
+  payload: unknown
+  tags: Record<string, string>
+  lang: Lang
+  explanation: string
+  demoUrl: string
+}
+export interface ContribRevision extends ContribContent {
+  state: 'pending' | 'rejected'
+  createdAt: number
+  decidedAt: number | null
+  /** Moderator's note on a rejected edit. */
+  rejectReason: string | null
+}
+/** `state` never exposes 'spam': it is reported as 'pending'. */
+export interface ContribSubmission extends ContribContent {
+  id: string
+  type: string
+  groupId: string
+  state: 'pending' | 'approved'
+  /** Send back as `expectedVersion` when editing. */
+  version: number
+  createdAt: number
+  updatedAt: number
+  /** The latest proposed edit while it is pending review, or the latest rejected one. */
+  revision: ContribRevision | null
+}
+/** GET /api/contrib/submissions?type= */
+export interface ContribSubmissionsResponse {
+  items: ContribSubmission[]
+}
+/** POST /api/contrib/submissions/:type/:group (body): same as SubmitRequest. */
+export type ContribSubmitRequest = SubmitRequest
+/** PUT /api/contrib/submissions/:id (body) */
+export interface ContribEditRequest extends Omit<SubmitRequest, 'tags'> {
+  tags: Record<string, string>
+  expectedVersion: number
+}
+/** PUT response. `revision_pending`: the edit is queued; the published version stays live until a moderator approves it. */
+export interface ContribEditResponse {
+  id: string
+  state: 'pending' | 'revision_pending'
+  version: number
+}
+/** PATCH /api/contrib/me (body) */
+export interface ContribUpdateMeRequest {
+  displayName: string
 }
 
 // ---- admin API (/api/admin) ----
@@ -145,6 +215,61 @@ export interface AdminSubmission {
   country: string | null
   aiVerdict: string | null
   aiReason: string | null
+  /** Contributor who submitted it; null for legacy anonymous rows. Only set by the list/detail endpoints. */
+  owner?: AdminOwner | null
+  /** Id of the contributor's pending edit, if any. Only set by the list/detail endpoints. */
+  pendingRevisionId?: string | null
+}
+export interface AdminOwner {
+  id: string
+  displayName: string
+  /** Provider account (e.g. the Discord id), for moderators to recognise the person. */
+  provider: string | null
+  accountId: string | null
+}
+/** A contributor's proposed edit, with the submission it would replace. */
+export interface AdminRevision {
+  id: string
+  submissionId: string
+  state: 'pending' | 'approved' | 'rejected' | 'withdrawn'
+  /** The submission `version` the contributor saw; a larger current version means a moderator changed it since. */
+  baseVersion: number
+  title: string
+  payload: unknown
+  tags: Record<string, string>
+  lang: Lang
+  explanation: string
+  explanationHtml: string
+  demoUrl: string
+  rejectReason: string | null
+  createdAt: number
+  decidedAt: number | null
+  decidedBy: string | null
+  owner: AdminOwner | null
+  /** The current (published) version. */
+  submission: AdminSubmission
+}
+/** GET /types/:type/revisions?state=&cursor=&limit= */
+export interface RevisionsResponse {
+  items: AdminRevision[]
+  nextCursor: string | null
+}
+/** POST /revisions/:id/approve (body) */
+export interface ApproveRevisionRequest {
+  /** The submission's current `version`. */
+  expectedVersion: number
+}
+/** POST /revisions/:id/reject (body) */
+export interface RejectRevisionRequest {
+  reason?: string
+}
+/** GET /contributors?q= */
+export interface ContributorsResponse {
+  contributors: (AdminOwner & { createdAt: number })[]
+}
+/** POST /submissions/:id/owner (body); `userId: null` clears the owner. */
+export interface SetOwnerRequest {
+  userId: string | null
 }
 /** GET /types/:type/submissions?group=&state=&ipKey=&cursor=&limit= */
 export interface SubmissionsResponse {

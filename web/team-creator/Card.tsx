@@ -2,7 +2,7 @@
 
 import type { ComponentChildren } from 'preact'
 import { useMemo, useState } from 'preact/hooks'
-import type { PublicBlob, PublicItem, TagDefDto } from '../cms-plugin/api-types.ts'
+import type { ContribSubmission, PublicBlob, PublicItem, TagDefDto } from '../cms-plugin/api-types.ts'
 import { makeT } from '../cms-plugin/i18n/t.ts'
 import type { PluginContext } from '../cms-plugin/plugin-api.ts'
 import { TargetChip } from '../cms-plugin/common.tsx'
@@ -20,7 +20,22 @@ export function Chip({ active, onClick, children }: { active: boolean; onClick()
   )
 }
 
-export function Card({ item, blob, uiLang, ctx }: { item: PublicItem; blob: PublicBlob; uiLang: Lang; ctx: PluginContext }) {
+export function Card({
+  item,
+  blob,
+  uiLang,
+  ctx,
+  mine,
+  onEdit,
+}: {
+  item: PublicItem
+  blob: PublicBlob
+  uiLang: Lang
+  ctx: PluginContext
+  /** Set when the signed-in contributor owns this team. */
+  mine?: ContribSubmission
+  onEdit?(sub: ContribSubmission): void
+}) {
   const t = useMemo(() => makeT(uiLang), [uiLang])
   const tagChips = blob.meta.tags.flatMap((def: TagDefDto) => {
     const v = item.tags[def.key]
@@ -66,6 +81,14 @@ export function Card({ item, blob, uiLang, ctx }: { item: PublicItem; blob: Publ
           {langLabel}
         </span>
         <span class="lah-tc-date">{t('tcSubmitted', { date })}</span>
+        {mine && onEdit && (
+          <>
+            {mine.revision?.state === 'pending' && <span class="lah-tc-chip lah-tc-state-pending">{t('tcEditPending')}</span>}
+            <button type="button" class="lah-tc-btn lah-tc-demo" onClick={() => onEdit(mine)}>
+              {t('tcEdit')}
+            </button>
+          </>
+        )}
         {demo && (
           <a class="lah-tc-btn lah-tc-demo" href={demo.href} target="_blank" rel="noopener noreferrer nofollow ugc">
             {platform ? t('tcDemo', { platform }) : t('tcDemoGeneric')}

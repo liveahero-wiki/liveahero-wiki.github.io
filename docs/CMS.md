@@ -123,3 +123,12 @@ End to end on one machine:
 1. In `wiki-cms`: `wrangler dev` (port 8787). Register the type once in the local database: `cms type add lah-team-formation --origins http://localhost:8080 --plugin-url http://localhost:8080/assets/cms/lah-team-formation.js --groups-url http://localhost:8080/api/cms-groups.json`.
 2. Here: `pnpm build` (or `pnpm watch:cms-plugin` and `pnpm build:team-creator`), and `pnpm eleventy:dev` (port 8080; `CMS_URL` defaults to the local Worker outside production builds).
 3. Open `/team_creator/` (or a chara page, then follow its "Community teams using this hero" link), try the filters, submit, approve in the admin portal; the list shows it after the cache TTL (or at once with the devtools cache disabled).
+
+## Contributor accounts (Team Creator)
+
+Team submissions need a contributor account (Discord, account at least 30 days old). The session belongs to the wiki-cms embed (`window.cmsEmbed.contrib`; bearer token in this page's `localStorage` under `cms-contrib:<api>`, change event `cms:contrib`); `web/team-creator/account.ts` only mirrors it (through `cmsEmbed.contrib.session()` once the embed is loaded, else by reading the stored session) and loads nothing for visitors who never signed in (the embed is prefetched on hover/focus of the buttons so the sign-in popup can open inside the click).
+
+- **Page:** header shows "Sign in" or "Signed in as … · My submissions (n) · Sign out". **My submissions** (`MySubmissions.tsx`) lists the owner's teams in every state (also the ones not public yet), the pending/rejected edit status with the moderator's note, **Edit** and **Withdraw edit**. Own teams in the list get an **Edit** button.
+- **Editing:** `openCmsForm({ …, edit: editStart(sub) })` opens the wiki-cms form prefilled; a published team's edit is queued for a moderator and the public list keeps the old text until it is approved. The page passes `onClose` to `openForm` and reloads "my submissions" when the dialog closes.
+- **Contract:** the DTOs (`ContribSubmission`, `ContribContent`, …) are in `web/cms-plugin/api-types.ts`, a verbatim copy of wiki-cms `src/shared/api-types.ts`. Strings are the `tc*` keys in `web/cms-plugin/i18n` (4 languages; ja/zh to be reviewed). The public blob is unchanged.
+- Design and security notes: wiki-cms `docs/ARCHITECTURE.md` ("Contributor accounts"); the wider plan is `CONTRIBUTOR_EDITING_PLAN.md`.

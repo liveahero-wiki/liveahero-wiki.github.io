@@ -3,7 +3,7 @@
 // #hero=12641). Ported from wiki-cms `embed/src/catalog.tsx`, with the plugin filters called directly.
 
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks'
-import type { PublicBlob } from '../cms-plugin/api-types.ts'
+import type { ContribSubmission, PublicBlob } from '../cms-plugin/api-types.ts'
 import { FilterPanel } from '../cms-plugin/FilterPanel.tsx'
 import { activeCount, limitedCount, parseParams, testPayload, toParams, type FilterState } from '../cms-plugin/filters.ts'
 import { makeT } from '../cms-plugin/i18n/t.ts'
@@ -28,7 +28,20 @@ import { pickText, type Lang } from './lang.ts'
 const PAGE = 20
 const SEARCH_DEBOUNCE_MS = 200
 
-export function Catalog({ blob, uiLang, ctx }: { blob: PublicBlob; uiLang: Lang; ctx: PluginContext }) {
+export function Catalog({
+  blob,
+  uiLang,
+  ctx,
+  mine,
+  onEdit,
+}: {
+  blob: PublicBlob
+  uiLang: Lang
+  ctx: PluginContext
+  /** The signed-in contributor's own submissions by id (empty when signed out). */
+  mine?: ReadonlyMap<string, ContribSubmission>
+  onEdit?(sub: ContribSubmission): void
+}) {
   const t = useMemo(() => makeT(uiLang), [uiLang])
   const tagDefs = blob.meta.tags
 
@@ -231,7 +244,7 @@ export function Catalog({ blob, uiLang, ctx }: { blob: PublicBlob; uiLang: Lang;
           <ul class="lah-tc-list">
             {visible.map((item) => (
               <li key={item.id} class="lah-tc-card">
-                <Card item={item} blob={blob} uiLang={uiLang} ctx={ctx} />
+                <Card item={item} blob={blob} uiLang={uiLang} ctx={ctx} mine={mine?.get(item.id)} onEdit={onEdit} />
               </li>
             ))}
           </ul>

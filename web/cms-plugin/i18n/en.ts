@@ -148,6 +148,29 @@ export const en = {
   tcResults: 'Showing {shown} of {count}',
   tcClear: 'Clear filters',
   tcNoMatch: 'No team matches these filters.',
+
+  // Contributor accounts
+  tcSignIn: 'Sign in',
+  tcSignedInAs: 'Signed in as {name}',
+  tcSignOut: 'Sign out',
+  tcMySubmissions: 'My submissions ({count})',
+  tcMyHide: 'Hide my submissions',
+  tcMyEmpty: 'You have not submitted any team formation yet.',
+  tcMyLoadError: 'Could not load your submissions.',
+  tcMyNote: 'Edits are reviewed by a moderator. The published version stays visible until your edit is approved.',
+  tcStatePending: 'Waiting for review',
+  tcStateApproved: 'Published',
+  tcEdit: 'Edit',
+  tcEditPending: 'Edit waiting for review',
+  tcEditRejected: 'Edit not approved',
+  tcRejectReason: 'Moderator note: {reason}',
+  tcWithdrawEdit: 'Withdraw edit',
+  tcSignInFailed: 'Sign-in did not complete. Please try again.',
+  tcPopupBlocked: 'The sign-in window was blocked. Allow pop-ups for this site and try again.',
+  tcSignInClosed: 'The sign-in window was closed before it finished.',
+  tcTooYoung: 'Your Discord account must be at least {days} days old to contribute. You can sign in again on {date}.',
+  tcTooYoungNoDate: 'Your Discord account must be at least {days} days old to contribute.',
+  tcActionFailed: 'That did not work. Please try again.',
 }
 
 export type Bundle = Record<keyof typeof en, string>
