@@ -35,39 +35,59 @@ When editing articles, please try to write objectively and formally about the to
 - [Writing Guide](/contributing/writing/)
 - [Programming Guide](/contributing/programming/)
 
+## Contributor editing
+
+Pages that have an **Edit** button on top (the pencil, next to the GitHub link) can be edited in the browser without a GitHub account. Your change becomes a pull request that a collaborator reviews. A check named `contrib-guard` makes sure such a change only touches the text of the page; this section lists what it allows. Anything it does not allow can still be changed on GitHub (**Edit on GitHub**), where a collaborator reviews it as usual.
+
+### Which pages
+
+Only the body of existing pages: `_charas/*.md`, `_events/*.md`, `_main_quests/*.md`, `guide/*.md`, `chara_quests.md` and `mobs.md`. The front matter (the block between the `---` lines at the top) is never shown and cannot change. New or deleted files, layouts, includes, data and scripts need GitHub.
+
+### Templates
+
+Pages contain Liquid templates: `{% raw %}{% ... %}{% endraw %}`, `{% raw %}{{ ... }}{% endraw %}` and kramdown attributes such as `{% raw %}{:toc}{% endraw %}`. You can add, edit and remove two kinds of them:
+
+- `{% raw %}{% chara_link Name %}{% endraw %}` and `{% raw %}{% chara_link Name|h1 %}{% endraw %}` (`h` or `s` and a number picks the hero or sidekick variant).
+- `{% raw %}{% include item.html id=11 %}{% endraw %}` and the other allowed includes, with **plain parameters only**: numbers, `true`/`false`/`nil` or quoted text such as `name="Ether Crystal"`. No variables (`page.id`), no filters (`| upcase`), and no `"`, `'`, `<`, `>`, `{`, `}`, `|`, `;` inside the quoted text. The parameters `style` and `on...` are not allowed.
+
+Every other template is **protected**: the editor compares your text with the old page and rejects the change when a protected template was added, removed, changed or moved. You can freely edit the text around a `{% raw %}{% for %}{% endraw %}` loop or a `{% raw %}{{ ... }}{% endraw %}`, just not the template itself. The message names the template, for example "this `{% raw %}{% for %}{% endraw %}` tag was changed". Line endings do not matter.
+
+The includes you can use are listed in [`/api/contrib-includes.json`](/api/contrib-includes.json): every file in `_includes/` except page chrome and page structure (`header`, `footer`, `banner`, `pagefind-search`, `skill-lang-picker`, `wiki-msg`, `js/` and `style/`, `voice-table`, `bio-infobox`, `hero-infobox*`, `sidekick-infobox`, `hero-skill-evolution-v2`, `card-*`, `chara-*`, `team-creator-link` and the generated `quest-infobox`, `skill-description`, `skill-table-v2`). The list lives in `wiki_plugins/lib/contrib-guard.js` (`INCLUDE_DENYLIST`). An existing call of a denied include, or of an allowed one with variables, stays in the page as it is; it just cannot be edited.
+
+### HTML
+
+Existing HTML can stay or be deleted, and the text inside it is editable. You can add:
+
+- `<details>` (the only attribute is `open`) with `<summary>`, and `<br>`;
+- tables: `<table>`, `<thead>`, `<tbody>`, `<tfoot>`, `<tr>`, `<th>`, `<td>`, `<caption>`, `<colgroup>`, `<col>`, with no attributes except `colspan`, `rowspan` (numbers) and `align` (`left`, `right`, `center`).
+
+Everything else is rejected when it is new: other tags (`<div>`, `<img>`, `<a>`, `<svg>`, `<script>`, `<iframe>`...), `style=`, `on...=` handlers, `javascript:` and HTML comments. Use Markdown for links, images and code. Changing the attributes of an existing tag counts as adding a new tag. `<https://...>` links are fine.
+
 ## Instructions on specific tasks
 
-### Translate voice line
+### Translate voice lines and bios
 
-Take {% chara_link Ryekie %} for example [source code](https://github.com/liveahero-wiki/liveahero-wiki.github.io/blob/master/_charas/ryekie.md?plain=1)
-
-1. To translate the "relation" line, add `RELATION = "<translation>"`
-  - New line should be written as `<br>`
+Voice line and bio translations are kept in the [LAH Translation sheet](https://docs.google.com/spreadsheets/d/1PVTqJxN2-VF1TwSdlisrrLgW1vWlRKJSmv1cpCBaY-I/edit), which is the source of truth. A character page does **not** contain any translation text, it only names the voice table:
 
 ```
-{% raw %}{% include voice-table.html resourceName="exio"
-...
-RELATION = "hello world"
-...
-%}{% endraw %}
+{% raw %}{% include voice-table.html resourceName="ryekie" %}{% endraw %}
 ```
 
-| Field names | Notes |
+The table is filled from the game's own data and from the sheet (older pages had `RELATION = "..."` style parameters in this include; they were never shown and have been removed).
+
+- **Game text always wins.** A community translation is shown only while the game has no English text for the line (missing, or the same as the Japanese text). As soon as the game ships its own English text, the game's version is used and the sheet text is ignored.
+- **Suggest translations (no Github account needed).** A voice table that still has lines to translate has a "Suggest translations" button, and a bio that is not translated yet has a "Suggest an English translation" link. Sign in, write your translations and submit. A moderator reviews them; approved translations are copied into the sheet automatically and appear on the wiki with the next site build. The sheet's `source` column records who suggested a line.
+- **Translators with access to the sheet** edit it directly:
+  - tab `Voice`: one row per line, keyed `voice_<resourceName>_<part>`. Write the English text into `enApproved` (`enMachineTranslated` is only a hint and is not shown). A new line is written as `<br>`.
+  - tab `Bio`: one row per bio that the game has not translated yet, keyed by the game's bio key (like `DETAIL_CEPH_H01`). Write the English text into `enApproved`; blank lines separate paragraphs. The tab is shown as "EN (community translation)" next to the bio.
+  - Keep HTML tags closed: the site build checks every text and fails on a broken tag.
+  - Please contact @rongjie in `#lah-wiki` to get access permission to the sheet.
+
+| Part names | Notes |
 |-|-|
 | h_gachaResult, s_gachaResult | Gacha summon lines |
-| APPRECIATION, DAILY, EVENTA, EVENTB, EVENTC, EVENTD, HERO, HERO2, PLAYER, PLAYER2, RELATION, TOUCH, TOUCH2, TRAIN, TRAINED | Only some characters may have EVENTC, EVENTD, HERO2 and PLAYER2 |
-| battleStart, action, attack, skill, skillA, skillB, special, smallDamage, bigDamage, win, lose, assist, assisted, loveIndexMax, rankMax, salesStart, salesEnd | If a hero character has more than one voice line for their own skill, use skillA and skillB |
-
-#### Check syntax error for voice-table.html
-
-1. Go to [regex101 website](https://regex101.com/)
-1. Paste the following code to the "Regular Expression" field
-1. Paste your voice-table.html inner syntax into "Test string" field
-1. Check that every line in "Test string" should be fully highlighted, otherwise there is syntax error to be fixed
-
-```
-{% raw %}([\w-]+)\s*=\s*(?:"([^"\\]*(?:\\.[^"\\]*)*)"|'([^'\\]*(?:\\.[^'\\]*)*)'|([\w.-]+)){% endraw %}
-```
+| appreciation, daily, eventA, eventB, eventC, eventD, hero, hero2, player, player2, relation, touch, touch2, train, trained | Only some characters may have eventC, eventD, hero2 and player2. A line the game has already translated is not editable here |
+| battleStart, action, attack, skillA, skillB, special, smallDamage, bigDamage, win, lose, assist, assisted, loveIndexMax, rankMax, salesStart, salesEnd | These lines only exist in the sheet. |
 
 ### Translate sales report
 

@@ -32,7 +32,15 @@
       </svg>
     </button>
 
-    <a class="toolbar-button" href="{{ site.github_repo }}/blob/master/{{ page.path }}?plain=1" title="View source" aria-label="View source">
+    {% if page | contrib_editable %}
+    <button type="button" class="toolbar-button" id="contrib-edit" data-contrib="page-edit" data-path="{{ page.path }}" data-cms-api="{{ site.cms_url }}" data-github-repo="{{ site.github_repo }}" title="Edit" aria-label="Edit">
+        <svg class="edit-icon code-icon" aria-hidden="true" width="24" height="24" viewBox="0 -960 960 960">
+            <path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/>
+        </svg>
+    </button>
+    {% endif %}
+
+    <a class="toolbar-button" href="{{ site.github_repo }}/edit/master/{{ page.path }}" title="Edit on GitHub" aria-label="Edit on GitHub">
         <svg class="code-icon" aria-hidden="true" width="24" height="24" viewBox="0 -960 960 960">
             <path d="M240-280 40-480l200-200 56 56-143 144 143 144-56 56Zm178 132-76-24 200-640 76 24-200 640Zm302-132-56-56 143-144-143-144 56-56 200 200-200 200Z"/>
         </svg>

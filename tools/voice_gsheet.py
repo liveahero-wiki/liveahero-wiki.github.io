@@ -1,4 +1,12 @@
 #!python3
+"""Voice line Google Sheet sync (the "Voice" tab of the translation sheet).
+
+Columns: voiceFilename (key, `voice_<resourceName>_<part>`), jp, enMachineTranslated, enApproved and the
+optional `source` (who wrote the translation, e.g. `wiki-cms #1a2b3c4d (Name)`; written only by
+contrib_intake.py, never touched by `upload`: it is neither updatable nor patched, and new rows leave it
+empty). The sheet is the source of truth for community translations; the game's own text always wins on
+the pages (see tools/translatable.py).
+"""
 import os
 import sys
 import io
@@ -161,27 +169,47 @@ def cmd_patch_temp(args):
     print(f"\nSummary: {len(updated)} patched, {len(new)} new rows")
 
 
-def cmd_download(args):
+def process_voice_rows(rows) -> tuple[dict, dict, list[str]]:
+    """Sheet rows -> (jp_voice, en_voice, errors). Every loaded text goes through wiki_util.validateHtml;
+    each error names the voice filename (like translation_download_tsv.py does for skills)."""
     jp_voice: dict[str, str] = {}
     en_voice: dict[str, str] = {}
+    errors: list[str] = []
 
-    for row in getTranslatedCsv(VOICE_CSV_URL, VOICE_CSV_CACHE, use_local=args.local):
+    for row in rows:
         filename = row.get("voiceFilename", "")
         if not filename:
             continue
 
         jp_text = str(row.get("jp", ""))
         if jp_text and not _is_serif_or_greeting(filename):
+            if (e := wiki_util.validateHtml(jp_text)) is not None:
+                errors.append(f"Invalid voice html({filename}) in jp: {jp_text} {e}")
             jp_voice[filename] = jp_text
 
         en_text = str(row.get("enApproved", ""))
         if en_text:
+            if (e := wiki_util.validateHtml(en_text)) is not None:
+                errors.append(f"Invalid voice html({filename}) in enApproved: {en_text} {e}")
             en_voice[filename] = en_text
+
+    return jp_voice, en_voice, errors
+
+
+def cmd_download(args):
+    rows = getTranslatedCsv(VOICE_CSV_URL, VOICE_CSV_CACHE, use_local=args.local)
+    jp_voice, en_voice, errors = process_voice_rows(rows)
 
     wiki_util.dumpJson("_data/processed/jp_voice.json", jp_voice)
     wiki_util.dumpJson("_data/processed/en_voice.json", en_voice)
 
     print(f"Downloaded {len(jp_voice)} jp entries, {len(en_voice)} en entries")
+
+    # fail the build like translation_download_tsv.py: unclosed tags typed into the sheet would break pages
+    for message in errors:
+        print(message)
+    if errors:
+        sys.exit(1)
 
 
 def main():

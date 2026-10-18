@@ -1,10 +1,14 @@
 // Eleventy plugin that ports the Jekyll site's behaviour: the `site`/`page` variables,
 // collections (`site.charas` …), data loading, and the Liquid filters/tags that used to be Ruby.
 
+import fs from "node:fs";
+
 import { loadSiteData } from "./lib/site-data.js";
 import { CharaIndex } from "./lib/chara.js";
 import { cmsGroupRegistry, cmsTargets } from "./lib/cms-groups.js";
+import { contributorIncludes, isEditablePath } from "./lib/contrib-guard.js";
 import { toDocument } from "./lib/documents.js";
+import { buildEditorData } from "./lib/editor-data.js";
 import { registerJekyllFilters } from "./liquid/jekyll-filters.js";
 import { registerRubyPlugins } from "./liquid/ruby-plugins.js";
 import { SITE_OFFSET_MINUTES } from "./site.js";
@@ -95,4 +99,17 @@ export default function wikiPlugins(eleventyConfig, { site, markdown }) {
   // links, and the registry /api/cms-groups.json (cms-groups.11ty.js) built from the same function.
   eleventyConfig.addLiquidFilter("cms_targets", (page) => cmsTargets(page, site));
   eleventyConfig.addJavaScriptFunction("cmsGroupRegistry", (pages) => cmsGroupRegistry(pages, site));
+
+  // Contributor editing (docs/CONTRIBUTOR_EDITING_PLAN.md, Track B). `contrib_editable` is true for the pages
+  // the guard lets contributors edit (`page | contrib_editable`, a path string works too). The two functions
+  // feed /api/contrib-includes.json (contrib-includes.11ty.js) and /api/editor-data.json (editor-data.11ty.js).
+  eleventyConfig.addLiquidFilter("contrib_editable", (page) => isEditablePath(typeof page === "string" ? page : page?.path));
+  eleventyConfig.addJavaScriptFunction("contribIncludes", () =>
+    contributorIncludes(fs.readdirSync("_includes", { recursive: true }).map((file) => file.replaceAll("\\", "/"))),
+  );
+  eleventyConfig.addJavaScriptFunction("editorData", () => {
+    const versionFile = "tools/masterdata_ver.txt";
+    const version = fs.existsSync(versionFile) ? fs.readFileSync(versionFile, "utf8").trim() : "";
+    return buildEditorData({ data: site.data, charas: site.charas ?? [], version });
+  });
 }

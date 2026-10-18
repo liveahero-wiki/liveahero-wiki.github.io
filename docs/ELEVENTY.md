@@ -18,8 +18,11 @@ wiki_plugins/
 └── markdown/             # markdown-it configured to behave like kramdown
 sitemap.11ty.js           # /sitemap.xml
 cms-groups.11ty.js        # /api/cms-groups.json, the groups of the community team formations (docs/CMS.md)
+contrib-includes.11ty.js  # /api/contrib-includes.json, the includes contributors may use (wiki_plugins/lib/contrib-guard.js)
+editor-data.11ty.js       # /api/editor-data.json, charas and items for the contributor editor's preview (wiki_plugins/lib/editor-data.js)
 redirects.11ty.js         # redirect stubs for `redirect_from`
 scripts/compare-page.mjs  # compare the output with a Jekyll build
+scripts/contrib-guard-ci.mjs  # CI gate for contributor page edits (.github/workflows/contrib-guard.yml)
 ```
 
 ## Commands

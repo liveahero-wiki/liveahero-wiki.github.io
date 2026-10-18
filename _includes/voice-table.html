@@ -1,5 +1,10 @@
-{% assign whitelist = "APPRECIATION,DAILY,EVENTA,EVENTB,EVENTC,EVENTD,EVENTE,HERO,HERO2,PLAYER,PLAYER2,RELATION,TOUCH,TOUCH2,TRAIN,TRAINED" | split: "," %}
+{%- comment -%} Sheet part names; the SERIF_<NAME>_<PART> keys use them upper-cased (tools/translatable.py SERIF_PARTS). {%- endcomment -%}
+{% assign whitelist = "appreciation,daily,eventA,eventB,eventC,eventD,eventE,hero,hero2,player,player2,relation,touch,touch2,train,trained" | split: "," %}
 {% assign names = include.resourceName | split: "," %}
+{%- comment -%} The lines of each name a contributor can still translate (game text missing or equal to JP; tools/gen_translation_rosters.py). Without the generated roster nothing is offered. {%- endcomment -%}
+{%- assign roster = site.data.processed.voice_roster.resources -%}
+{%- assign suggest = false -%}
+{%- for n in names -%}{%- if roster[n] -%}{%- assign suggest = true -%}{%- endif -%}{%- endfor %}
 
 {% assign manual = "battleStart,boss_battleStart,action,attack,skill,skillA,skillB,special,special2,smallDamage,bigDamage,win,lose,assist,assisted,loveIndexMax,rankMax,salesStart,salesEnd" | split: "," %}
 {% assign greeting = "h_gachaResult,h_gachaResult_another,s_gachaResult,s_gachaResult_another" | split: "," %}
@@ -8,7 +13,7 @@
 <table class="voice-table" data-resourceName="{{ include.resourceName }}" data-active-lang="en">
   <thead>
     <tr>
-      <th>Japanese (JP)</th>
+      <th>Japanese (JP){% if suggest %} <button type="button" class="voice-suggest-btn" data-contrib="voice-suggest" data-resource-name="{{ include.resourceName }}">Suggest translations</button>{% endif %}</th>
       <th class="voice-header-right">
         <span class="voice-header-title">Translation</span>
         <div class="voice-tab-bar">
@@ -22,19 +27,21 @@
   <tbody>
 {% for n in names %}
   {% assign name = n | upcase | prepend: "_" | append: "_" %}
+  {% assign nr = roster[n] %}
 
   {% for part in greeting %}
-    {% capture key %}voice_{{ include.resourceName }}_{{ part }}{% endcapture %}
+    {% capture key %}voice_{{ n }}_{{ part }}{% endcapture %}
     {% assign jp_line = site.data.processed.jp_greeting[key] %}
     {% assign en_line = site.data.processed.en_greeting[key] %}
     {% assign translated = en_line | default: site.data.processed.en_voice[key] %}
+    {% if en_line and en_line == jp_line and site.data.processed.en_voice[key] %}{% assign translated = site.data.processed.en_voice[key] %}{% endif %}
     {% assign label_name = part | replace: "h_", "Hero " | replace: "s_", "Sidekick " %}
 
     {% if translated or jp_line %}
       {% assign en_val = translated | default: '-' %}
       {% assign hans_val = site.data.processed.hans_greeting[key] | default: '-' %}
       {% assign hant_val = site.data.processed.hant_greeting[key] | default: '-' %}
-      <tr>
+      <tr{% if nr[key] %} data-voice-key="{{ key }}" data-translatable{% endif %}>
         <td class="voice-jp-cell">
           <div class="voice-key-badge">{{ label_name }}</div>
           <div class="voice-text" lang="ja">{{ jp_line | default: "-" }}</div>
@@ -48,9 +55,10 @@
     {% endif %}
   {% endfor %}
 
-  {% for part in whitelist %}
+  {% for sheet_part in whitelist %}
+    {% assign part = sheet_part | upcase %}
     {% assign p = part %}
-    {% capture voiceFilename %}voice_{{ include.resourceName }}_{{ part }}{% endcapture %}
+    {% capture voiceFilename %}voice_{{ n }}_{{ sheet_part }}{% endcapture %}
     {% assign key = "SERIF" | append: name | append: part %}
     {% assign jp_line = site.data.processed.jp_serif[key] %}
     {% assign en_line = site.data.processed.en_serif[key] %}
@@ -59,12 +67,13 @@
       {% assign p = key | replace: "SERIF_", "" %}
     {% endif %}
     {% assign translated = en_line | default: site.data.processed.en_voice[voiceFilename] %}
+    {% if en_line and en_line == jp_line and site.data.processed.en_voice[voiceFilename] %}{% assign translated = site.data.processed.en_voice[voiceFilename] %}{% endif %}
 
     {% if jp_line %}
       {% assign en_val = translated | default: '-' %}
       {% assign hans_val = site.data.processed.hans_serif[key] | default: '-' %}
       {% assign hant_val = site.data.processed.hant_serif[key] | default: '-' %}
-      <tr>
+      <tr{% if nr[voiceFilename] %} data-voice-key="{{ voiceFilename }}" data-translatable{% endif %}>
         <td class="voice-jp-cell">
           <div class="voice-key-badge">{{ p }}</div>
           <div class="voice-text" lang="ja">{{ jp_line }}</div>
@@ -79,11 +88,11 @@
   {% endfor %}
 
   {% for part in manual %}
-    {% capture voiceFilename %}voice_{{ include.resourceName }}_{{ part }}{% endcapture %}
+    {% capture voiceFilename %}voice_{{ n }}_{{ part }}{% endcapture %}
     {% assign jp_line = site.data.processed.jp_voice[voiceFilename] %}
     {% assign en_line = site.data.processed.en_voice[voiceFilename] %}
     {% if jp_line or en_line %}
-      <tr>
+      <tr{% if nr[voiceFilename] %} data-voice-key="{{ voiceFilename }}" data-translatable{% endif %}>
         <td class="voice-jp-cell">
           <div class="voice-key-badge">{{ part }}</div>
           <div class="voice-text">{{ jp_line | default: '-' }}</div>

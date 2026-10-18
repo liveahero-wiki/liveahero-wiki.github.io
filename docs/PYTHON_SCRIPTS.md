@@ -228,3 +228,14 @@ graph TD
 *   **Output Files**:
     *   `Sprite/banner_*.jpg`
     *   `assets/img/survey-2025/*.jpg`
+
+---
+
+### 16. Voice / bio translations: `voice_gsheet.py`, `bio_gsheet.py`, `gen_translation_rosters.py`, `contrib_intake.py`
+*   **Purpose**: The Google Sheet is the source of truth for community voice and bio translations (`docs/CONTRIBUTOR_EDITING_PLAN.md`, Track A); the game's own text always wins (a line is *translatable* only while the game's EN is missing or equal to JP; the sheet-only "manual" voice parts always are, see `tools/translatable.py`).
+    *   `voice_gsheet.py download` reads the "Voice" tab (published CSV) into `_data/processed/{jp,en}_voice.json` and, like `translation_download_tsv.py`, runs `wiki_util.validateHtml` on every text and fails the build naming the voice filename. Optional sheet column `source` (`wiki-cms #<id> (<name>)`) is written by `contrib_intake.py` only; `upload` never touches it.
+    *   `bio_gsheet.py` handles the "Bio" tab (`bioKey, jp, enMachineTranslated, enApproved, source, status`): `upload` adds the translatable bio keys (and marks rows the game has translated since as `superseded`), `download` writes `_data/processed/en_bio_community.json` (`{ bioKey: text }`, gitignored) from `BIO_CSV_URL`, which stays empty (writes `{}`) until the tab is published. `bio-infobox.html` shows it as "EN (community translation)" while the game has no EN text.
+    *   `gen_translation_rosters.py` (run after the downloads and `masterdata.py`) writes `_data/processed/voice_roster.json` (`{ version, resources: { <resourceName>: { <voice key>: { jp, en? } } } }`) and `bio_roster.json` (`{ version, bios: { <bio key>: { jp, en? } } }`), gitignored. The voice table and bio infobox read them from `site.data` to mark translatable rows / offer "Suggest"; `translation-rosters.11ty.js` serves them as `/api/voice-roster.json` and `/api/bio-roster.json` for wiki-cms. The voice resource names are the ones pages pass to `voice-table.html`.
+    *   `contrib_intake.py` (`.github/workflows/translation-intake.yml`, hourly) pulls approved `lah-voice-tl` / `lah-bio-tl` submissions from wiki-cms, writes them to the sheet when `enApproved` is empty or still equals the contributor's `base` (otherwise it reports a conflict; lines the game has translated meanwhile are `superseded`), POSTs the outcomes back and dispatches `site.yml`. `plan_updates()` is pure; `--dry-run` prints the plan only. Needs `CMS_URL`, `CLI_TOKEN`, `GOOGLE_CREDENTIALS_JSON`.
+*   **One-shot cleanups (kept for history)**: `voice_strip_inline.py` removed the dead `KEY = "..."` params of the `voice-table.html` includes (writing the lines that existed only inline to `zzz/inline-voice-not-in-sheet.json`), `bio_strip_front_matter.py` the dead `BIO_H01/BIO_H02/BIO_S01` front matter (`zzz/inline-bio-not-in-sheet.json`).
+*   **Tests**: `translation_rosters_test.py`, `contrib_intake_test.py`, `strip_cleanups_test.py`.

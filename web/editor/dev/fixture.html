@@ -1,0 +1,148 @@
+<!doctype html>
+<!-- Dev harness only (not shipped): a static page with the markup the wiki templates produce for the editor entry points,
+     and a mocked wiki-cms (fetch + window.cmsEmbed + turnstile). Serve the repository root (py -m http.server 8099) and open
+     http://localhost:8099/web/editor/dev/fixture.html?lang=en&theme=light . Build first: pnpm build:editor, node web/editor/dev/build-css.mjs
+     Query: lang=en|zh-Hans|zh-Hant|ja, theme=light|dark, signed=1 (already signed in), fail=<code> (submissions fail with it), signin=<code> -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Editor fixture</title>
+    <link rel="stylesheet" href="./main.css" />
+    <script>
+      const q = new URLSearchParams(location.search)
+      document.documentElement.setAttribute('data-theme', q.get('theme') || 'light')
+      document.documentElement.setAttribute('data-skill-lang', q.get('lang') || 'en')
+      const API = location.origin + '/web/editor/dev/mock-cms'
+      window.__API = API
+      window.__posts = []
+      window.__mock = {
+        signInError: q.get('signin') || '',
+        fail: q.get('fail') || '',
+        mine: {
+          'lah-voice-tl': [{ id: 'v1', type: 'lah-voice-tl', state: 'approved', createdAt: Date.now() - 86400000, payload: { resourceName: 'ryekie', lines: [{}, {}] }, outcome: { status: 'synced' } }],
+          'lah-bio-tl': [{ id: 'b1', type: 'lah-bio-tl', state: 'pending', createdAt: Date.now() - 3600000, payload: { key: 'DETAIL_RYEKIE_H01' }, outcome: null }],
+          'lah-page-edit': [{ id: 'p1', type: 'lah-page-edit', state: 'approved', createdAt: Date.now() - 7200000, payload: { path: '_charas/ryekie.md' }, outcome: { status: 'pr_open', url: 'https://github.com/o/r/pull/7' } }],
+        },
+      }
+      if (q.get('signed')) localStorage.setItem('cms-contrib:' + API, JSON.stringify({ token: 'mock-token', user: { id: 'u1', displayName: 'Mock Contributor', image: null } }))
+      else localStorage.removeItem('cms-contrib:' + API)
+
+      // Turnstile: no network, a token as soon as the widget renders
+      let tsCb = null
+      window.turnstile = { render: (el, o) => { tsCb = o.callback; el.textContent = '[turnstile ' + o.action + ' ' + o.sitekey + ']'; setTimeout(() => o.callback('ts-token'), 50); return 'w1' }, reset() { setTimeout(() => tsCb && tsCb('ts-token-' + Date.now()), 300) }, remove() {} }
+
+      const SOURCE = `---
+layout: chara
+title: Ryekie
+characterId: 5
+---
+Ryekie is a *ranged* hero. Pairs well with {% chara_link Barrel|h1 %} and {% chara_link Ghost %}.
+
+## Usage guide
+
+Use {% include item.html id=10 %} to level up. Needs 3x {% include item-icon.html id=2 %}.
+
+{% include quest-group.html eventId=3 %}
+
+{% for x in site.data.list %}
+- {{ x }}
+{% endfor %}
+
+## Notes
+
+- Old note.
+- Another note.
+`
+      const real = window.fetch.bind(window)
+      const json = (b, status = 200) => new Response(JSON.stringify(b), { status, headers: { 'content-type': 'application/json' } })
+      window.fetch = async (url, init) => {
+        const u = String(url)
+        if (u.includes('raw.githubusercontent.com')) return new Response(SOURCE)
+        if (u.endsWith('/api/bio-roster.json')) return json({ version: '1', bios: { DETAIL_RYEKIE_H01: { jp: 'リエキーは遠距離ヒーローです。\nとても優しい性格です。', en: '' }, DETAIL_RYEKIE_S01: { jp: 'サイドキックの説明', en: 'Existing machine text.' } } })
+        if (u.endsWith('/api/contrib-includes.json')) return json({ includes: ['item.html', 'item-icon.html', 'quest-group.html', 'shop-table.html'] })
+        if (u.endsWith('/api/editor-data.json')) return json({
+          version: '1',
+          charas: [
+            { title: 'Ryekie', url: '/charas/ryekie/', characterId: 5, cards: { h1: 'ryekie', s1: 'ryekie' } },
+            { title: 'Barrel', url: '/charas/barrel/', characterId: 6, cards: { h1: 'barrel', s1: 'barrel' } },
+            { title: 'Ghost', url: '/charas/ghost/', unreleased: true, icon: 'ghost' },
+          ],
+          items: { 3: { 2: { name: 'Gem', icon: 'gem', wiki: 1 }, 10: { name: 'Gold Coin', icon: 'gold', wiki: 1 } } },
+        })
+        if (u.startsWith(API + '/api/v1/types/')) return json({ turnstileSiteKey: '1x00000000000000000000AA' })
+        if (u.startsWith(API + '/api/contrib/submissions/')) {
+          const body = JSON.parse(init.body)
+          window.__posts.push({ url: u, auth: init.headers.authorization, body })
+          await new Promise((r) => setTimeout(r, 300))
+          const f = window.__mock.fail
+          if (f === '401') return json({ error: { code: 'unauthenticated', message: 'x' } }, 401)
+          if (f === '429') return json({ error: { code: 'daily_cap', message: 'x' } }, 429)
+          if (f === '403') return json({ error: { code: 'turnstile_failed', message: 'x' } }, 403)
+          if (f === '400') return json({ error: { code: 'validation_failed', message: 'x', fields: [{ path: 'payload.lines.0.text', code: 'text_invalid', message: 'Plain text only.' }, { path: 'summary', code: 'summary_length', message: 'x', params: { min: 3, max: 120 } }] } }, 400)
+          return json({ id: 'new1', state: 'pending', version: 1 }, 201)
+        }
+        return real(url, init)
+      }
+    </script>
+  </head>
+  <body style="display:block;height:auto">
+    <nav class="toolbar clearfix">
+      <button class="theme-toggle" id="theme-toggle" title="Toggles light &amp; dark" aria-label="auto"></button>
+      <button type="button" class="toolbar-button" id="contrib-edit" data-contrib="page-edit" data-path="_charas/ryekie.md" data-cms-api="" title="Edit" aria-label="Edit">
+        <svg class="edit-icon code-icon" aria-hidden="true" width="24" height="24" viewBox="0 -960 960 960">
+          <path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z" />
+        </svg>
+      </button>
+    </nav>
+    <main class="content__area" style="padding-top: 70px">
+      <div class="content">
+        <h1>Ryekie (fixture)</h1>
+        <p>A page with the editor entry points. <a href="#">Some link</a>.</p>
+
+        <h2>Voice Lines (ryekie)</h2>
+        <table class="voice-table" data-resourceName="ryekie" data-active-lang="en">
+          <thead>
+            <tr>
+              <th>Japanese (JP) <button type="button" class="voice-suggest-btn" data-contrib="voice-suggest" data-resource-name="ryekie">Suggest translations</button></th>
+              <th class="voice-header-right">
+                <span class="voice-header-title">Translation</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-voice-key="voice_ryekie_action" data-translatable>
+              <td class="voice-jp-cell"><div class="voice-key-badge">action</div><div class="voice-text">いくぞ！</div></td>
+              <td class="voice-translation-cell"><div class="voice-lang-content" data-lang="en">Let's go!</div></td>
+            </tr>
+            <tr data-voice-key="voice_ryekie_attack" data-translatable>
+              <td class="voice-jp-cell"><div class="voice-key-badge">attack</div><div class="voice-text">くらえ！<br>これが私の力だ</div></td>
+              <td class="voice-translation-cell"><div class="voice-lang-content" data-lang="en">-</div></td>
+            </tr>
+            <tr data-voice-key="voice_ryekie_win" data-translatable>
+              <td class="voice-jp-cell"><div class="voice-key-badge">win</div><div class="voice-text">勝ったぞ</div></td>
+              <td class="voice-translation-cell"><div class="voice-lang-content" data-lang="en">First line<br>second line</div></td>
+            </tr>
+            <tr data-voice-key="voice_ryekie_DAILY">
+              <td class="voice-jp-cell"><div class="voice-key-badge">DAILY</div><div class="voice-text">おはよう</div></td>
+              <td class="voice-translation-cell"><div class="voice-lang-content" data-lang="en">Good morning (official, not translatable)</div></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Bio</h2>
+        <div class="tabcontent contain">リエキーは遠距離ヒーローです。</div>
+        <p class="bio-suggest" data-pagefind-ignore><button type="button" class="contrib-suggest-bio" data-contrib="bio-suggest" data-bio-key="DETAIL_RYEKIE_H01">Suggest an English translation</button></p>
+        <p class="bio-suggest" data-pagefind-ignore><button type="button" class="contrib-suggest-bio" data-contrib="bio-suggest" data-bio-key="DETAIL_NOT_IN_ROSTER">Not in roster</button></p>
+      </div>
+    </main>
+    <script>
+      document.getElementById('contrib-edit').setAttribute('data-cms-api', window.__API)
+      document.getElementById('theme-toggle').addEventListener('click', () => {
+        const el = document.documentElement
+        el.setAttribute('data-theme', el.getAttribute('data-theme') === 'dark' ? 'light' : 'dark')
+      })
+    </script>
+    <script src="/assets/main.js"></script>
+  </body>
+</html>

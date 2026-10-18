@@ -187,7 +187,31 @@ function setupVoiceTableTabs() {
   });
 }
 
-const tasks = [setupWikiTabs, setupMenu, setupSkillLangPicker, setupCmsLang, setupExpiry, setupSortTable, setupVoiceTableTabs];
+// Contributor editing (docs/CONTRIBUTOR_EDITING_PLAN.md): the editor bundle is fetched only when a reader
+// clicks an element with data-contrib (page-edit, voice-suggest, bio-suggest); hovering, focusing or touching
+// one prefetches it so the sign-in popup can open right inside the click.
+function setupContrib() {
+  const load = () => import("/assets/cms/editor.js");
+  const find = e => e.target.closest && e.target.closest("[data-contrib]");
+  for (const type of ["pointerover", "focusin", "touchstart"]) {
+    document.addEventListener(type, e => { if (find(e)) load().catch(() => {}); }, { passive: true });
+  }
+  document.addEventListener("click", e => {
+    const el = find(e);
+    if (!el) return;
+    e.preventDefault();
+    load().then(m => m.open(el.dataset.contrib, el), () => {
+      const msg = document.createElement("div");
+      msg.className = "contrib-toast";
+      msg.setAttribute("role", "status");
+      msg.textContent = "Could not load the editor. Please try again later.";
+      document.body.append(msg);
+      setTimeout(() => msg.remove(), 5000);
+    });
+  });
+}
+
+const tasks = [setupWikiTabs, setupMenu, setupSkillLangPicker, setupCmsLang, setupExpiry, setupSortTable, setupVoiceTableTabs, setupContrib];
 for (const t of tasks) {
   setTimeout(t, 0)
 }

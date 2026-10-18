@@ -1,6 +1,7 @@
 {% assign locales = "" | split: "," %}
 {% assign langCodes = "" | split: "," %}
 {% assign dataSources = "" | split: "," %}
+{% assign en_is_community = false %}
 
 {% assign jp_data = site.data.processed.jp_bio[include.bio] %}
 {% assign en_data = site.data.processed.en_bio[include.bio] %}
@@ -10,6 +11,15 @@
 {% assign locales = locales | push: "en" %}
 {% assign langCodes = langCodes | push: "en" %}
 {% assign dataSources = dataSources | push: site.data.processed.en_bio %}
+{% else %}
+{% comment %} No real game EN: a community translation (Bio tab of the sheet, tools/bio_gsheet.py) fills in until the game ships one. {% endcomment %}
+{% assign community_en = site.data.processed.en_bio_community[include.bio] %}
+{% if community_en and jp_data %}
+{% assign en_is_community = true %}
+{% assign locales = locales | push: "en" %}
+{% assign langCodes = langCodes | push: "en" %}
+{% assign dataSources = dataSources | push: site.data.processed.en_bio_community %}
+{% endif %}
 {% endif %}
 {% if jp_data %}
 {% assign locales = locales | push: "jp" %}
@@ -33,7 +43,7 @@
 <nav role="tablist">
 {% for locale in locales %}
 <a role="tab" aria-controls="bio-{{include.bio | downcase}}-{{ locale }}"
-    href="#bio-{{include.bio | downcase}}-{{ locale }}">{{ locale | convertLang }}</a>
+    href="#bio-{{include.bio | downcase}}-{{ locale }}">{% if en_is_community and locale == "en" %}EN (community translation){% else %}{{ locale | convertLang }}{% endif %}</a>
 {% endfor %}
 </nav>
 </wiki-header>
@@ -49,3 +59,6 @@
 {% endfor %}
 </wiki-tabcontent>
 </wiki-tabs>
+{% if site.data.processed.bio_roster.bios[include.bio] %}
+<p class="bio-suggest" data-pagefind-ignore><button type="button" class="contrib-suggest-bio" data-contrib="bio-suggest" data-bio-key="{{ include.bio }}">Suggest an English translation</button></p>
+{% endif %}

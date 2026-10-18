@@ -34,8 +34,10 @@ export interface TypeConfig {
   tags: TagDefDto[]
   /** Present when the type has a per-item name. */
   title: { required: boolean; minLength: number; maxLength: number; label: I18nText; placeholder?: I18nText } | null
-  explanation: { maxLength: number; template: Record<Lang, string> }
-  demoUrl: { required: boolean; allowedHosts: string[] }
+  /** Null for types without a markdown explanation (their payload says everything). */
+  explanation: { maxLength: number; template: Record<Lang, string> } | null
+  /** Null for types without a demo link. */
+  demoUrl: { required: boolean; allowedHosts: string[] } | null
   turnstileSiteKey: string
   disclaimer: I18nText | null
   /** 'account': submitting needs a contributor sign-in (see ContribApi below); anonymous POSTs are refused. Absent on older Workers = 'anonymous'. */
@@ -130,6 +132,16 @@ export interface ContribSubmission extends ContribContent {
   updatedAt: number
   /** The latest proposed edit while it is pending review, or the latest rejected one. */
   revision: ContribRevision | null
+  /** What happened to it after approval (a pull request, the sheet sync), or null. `status` values are owned by the type. */
+  outcome: ExternalOutcome | null
+}
+/** `external.outcome` of a submission: the part the owner may see. */
+export interface ExternalOutcome {
+  status: string
+  /** Where to look (for example the pull request). https only. */
+  url?: string
+  /** Short human-readable note. */
+  label?: string
 }
 /** GET /api/contrib/submissions?type= */
 export interface ContribSubmissionsResponse {
@@ -215,6 +227,9 @@ export interface AdminSubmission {
   country: string | null
   aiVerdict: string | null
   aiReason: string | null
+  /** The type's own record of what happened after approval (see ExternalOutcome), or null. */
+  external: { outcome?: ExternalOutcome; [key: string]: unknown } | null
+  externalAt: number | null
   /** Contributor who submitted it; null for legacy anonymous rows. Only set by the list/detail endpoints. */
   owner?: AdminOwner | null
   /** Id of the contributor's pending edit, if any. Only set by the list/detail endpoints. */

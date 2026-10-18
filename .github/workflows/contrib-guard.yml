@@ -1,0 +1,63 @@
+name: Contributor guard
+
+# Gate for page edits submitted through the wiki editor (docs/CONTRIBUTOR_EDITING_PLAN.md, Track B).
+# The wiki-cms GitHub App opens these as pull requests from `contrib/*` branches. A pull request may only
+# edit the text of existing pages (_charas/*.md, _events/*.md, _main_quests/*.md, guide/*.md,
+# chara_quests.md, mobs.md): no front matter, no template code, no new risky HTML, nothing else.
+# Make the `contrib-guard` check required in the branch ruleset of `master`.
+#
+# Why this is safe to run on untrusted pull requests:
+#   * `pull_request_target` runs the workflow file from the BASE branch, and `actions/checkout` below checks
+#     out the BASE branch too (no `ref:`), so scripts/contrib-guard-ci.mjs and wiki_plugins/lib/contrib-guard.js
+#     are the base branch's copies. A pull request therefore cannot weaken or skip its own guard by editing them.
+#   * The pull request head is fetched into the object database only, and the script reads it with
+#     `git show <sha>:<path>`. Nothing from the head is checked out, imported, installed or executed.
+#   * No dependencies are installed (the script uses only Node's standard library), no secrets are used and
+#     the token is read-only.
+# Pull requests from other branches skip this job; they get the normal human review. (A skipped job counts
+# as passing for a required check, so keep "require a pull request / approval" in the ruleset as well.)
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: contrib-guard-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  contrib-guard:
+    name: contrib-guard
+    if: startsWith(github.event.pull_request.head.ref, 'contrib/')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      # Default ref for pull_request_target: the base branch. Full history so the merge base can be found.
+      - name: Checkout base branch
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      # Fetch the pull request head as data only.
+      - name: Fetch pull request head
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: git fetch --no-tags origin "pull/${PR_NUMBER}/head"
+
+      - name: Check the edits
+        env:
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          # The checked-out base branch tip; the script diffs against the merge base of the two.
+          base="$(git rev-parse HEAD)"
+          git cat-file -e "${HEAD_SHA}^{commit}"
+          node scripts/contrib-guard-ci.mjs --base "$base" --head "$HEAD_SHA"

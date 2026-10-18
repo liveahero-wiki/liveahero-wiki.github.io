@@ -1,0 +1,51 @@
+name: Translation intake
+
+# Approved voice / bio translation submissions (wiki-cms) -> the Google Sheet, then rebuild the site.
+# See tools/contrib_intake.py and docs/CONTRIBUTOR_EDITING_PLAN.md (Track A).
+# Secrets: CMS_URL (the wiki-cms Worker origin), CLI_TOKEN (its internal API token), GOOGLE_CREDENTIALS_JSON.
+
+on:
+  workflow_dispatch: ~
+  schedule:
+    - cron: '17 * * * *'
+
+permissions:
+  contents: read
+  actions: write # dispatch site.yml
+
+# one run at a time: two overlapping runs would both read the same approved rows
+concurrency:
+  group: translation-intake
+  cancel-in-progress: false
+
+jobs:
+  intake:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: 3.13
+          cache: 'pip'
+
+      # the rosters (what is still translatable) are generated exactly like in site.yml
+      - name: Generate rosters
+        run: |
+          mkdir -p zzz
+          python -m pip install -r requirements.txt
+          python tools/voice_gsheet.py download
+          python tools/bio_gsheet.py download
+          python tools/masterdata.py -f=1 --skip_data
+          python tools/gen_translation_rosters.py
+
+      - name: Sync approved submissions into the sheet
+        env:
+          CMS_URL: https://wiki-cms.rongjie.workers.dev
+          CLI_TOKEN: ${{ secrets.CLI_TOKEN }}
+          GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: python tools/contrib_intake.py

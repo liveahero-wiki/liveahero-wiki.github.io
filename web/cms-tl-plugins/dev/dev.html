@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LAH translation / page-edit plugins: dev harness</title>
+    <style>
+      /* Harness-only styling (not part of the plugins). */
+      :root { color-scheme: light; --h-bg: #fff; --h-fg: #1f2328; --h-border: #c3cad1; }
+      html[data-theme='dark'] { color-scheme: dark; --h-bg: #14171a; --h-fg: #e6e8ea; --h-border: #3e464e; }
+      @media (prefers-color-scheme: dark) { html:not([data-theme='light']):not([data-theme='dark']) { color-scheme: dark; --h-bg: #14171a; --h-fg: #e6e8ea; --h-border: #3e464e; } }
+      body { margin: 0; padding: 12px 16px 40px; background: var(--h-bg); color: var(--h-fg); font: 15px/1.45 system-ui, sans-serif; }
+      header { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin-bottom: 12px; }
+      header label { display: inline-flex; gap: 6px; align-items: center; }
+      header select, header button { font: inherit; min-height: 32px; max-width: 100%; }
+      h1 { font-size: 1.1rem; margin: 0 12px 0 0; }
+      h2 { font-size: 0.95rem; margin: 16px 0 6px; }
+      .box { padding: 8px; border: 1px dashed var(--h-border); border-radius: 8px; }
+      #stage { margin: 0 auto 0 0; max-width: 100%; }
+      .row { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0; }
+      pre { margin: 0; padding: 8px; max-height: 14rem; overflow: auto; border: 1px solid var(--h-border); border-radius: 6px; font-size: 12px; white-space: pre-wrap; word-break: break-all; }
+      /* Simulated admin-portal host variables (toggle in the toolbar); off = the plugins' own fallbacks. */
+      html[data-host-vars='on'] { --cms-fg: #1f2328; --cms-bg: #ffffff; --cms-border: #c3cad1; --cms-accent: #0a64c8; --cms-muted: #566270; --cms-chip-bg: #eceff2; }
+      html[data-host-vars='on'][data-theme='dark'] { --cms-fg: #e6e8ea; --cms-bg: #14171a; --cms-border: #3e464e; --cms-accent: #6db2ff; --cms-muted: #a0abb7; --cms-chip-bg: #2a3037; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Moderator plugins</h1>
+      <label>Plugin
+        <select id="plugin">
+          <option value="voice">lah-voice-tl</option>
+          <option value="bio">lah-bio-tl</option>
+          <option value="page">lah-page-edit</option>
+        </select>
+      </label>
+      <label>Scenario <select id="scenario"></select></label>
+      <label>Theme
+        <select id="theme"><option value="light">light</option><option value="dark">dark</option><option value="">(none: OS)</option></select>
+      </label>
+      <label>Width
+        <select id="width"><option value="100%">full</option><option value="720px">720px</option><option value="420px">420px (narrow)</option><option value="340px">340px</option></select>
+      </label>
+      <label>Network
+        <select id="net">
+          <option value="ok">all ok</option>
+          <option value="slow">GitHub slow (3 s)</option>
+          <option value="gh404">GitHub 404</option>
+          <option value="ghrate">GitHub rate limited</option>
+          <option value="wikidown">wiki /api/*.json 404</option>
+        </select>
+      </label>
+      <label><input type="checkbox" id="hostvars" /> host --cms-* vars</label>
+    </header>
+
+    <div id="stage">
+      <h2>Summary</h2>
+      <div id="summary" class="box"></div>
+      <h2>Detail (inline, "Show full detail")</h2>
+      <div id="detail" class="box"></div>
+      <h2>Editor (moderator Edit dialog)</h2>
+      <div id="editor" class="box"></div>
+      <div class="row">
+        <button id="btn-validate" type="button">validate()</button>
+        <button id="btn-errors" type="button">setErrors(sample server errors)</button>
+        <button id="btn-clear" type="button">setErrors([])</button>
+        <button id="btn-remount" type="button">remount (reset payload)</button>
+        <button id="btn-views" type="button">refresh summary/detail from emitted payload</button>
+      </div>
+      <h2>Emitted payload (last onChange)</h2>
+      <pre id="payload"></pre>
+      <h2>validate() output</h2>
+      <pre id="validation"></pre>
+    </div>
+
+    <script type="module" src="./dev.ts"></script>
+  </body>
+</html>
