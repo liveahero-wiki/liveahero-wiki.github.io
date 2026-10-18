@@ -66,6 +66,9 @@ export default function (eleventyConfig) {
   ]) {
     eleventyConfig.ignores.add(pattern);
   }
+  // Template ignores don't stop the watcher: files written to zzz/ (e.g. tools/voice_scraper.py)
+  // would reach the incremental build as "changed templates" and crash it.
+  eleventyConfig.watchIgnores.add("zzz/**");
   // .gitignore lists generated inputs we do want to build (_statuses/, _data/translation/, api/skill-index*).
   eleventyConfig.setUseGitIgnore(false);
 
