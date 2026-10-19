@@ -61,8 +61,6 @@ class TestPlan(unittest.TestCase):
         self.assertEqual([(w["key"], w["text"]) for w in plan["writes"]],
                          [("voice_abc_daily", "Good<br>morning"), ("voice_abc_action", "Here we go!")])
         self.assertEqual(plan["writes"][0]["source"], "wiki-cms #12345678 (Rong Jie)")
-        self.assertTrue(plan["writes"][0]["new_row"])
-        self.assertFalse(plan["writes"][1]["new_row"])
         self.assertEqual(plan["writes"][0]["jp"], "おはよう")
         ext = plan["results"][0]["external"]
         self.assertEqual(ext["outcome"], {"status": "synced"})
@@ -124,7 +122,7 @@ class TestPlan(unittest.TestCase):
         sub = voice_sub("aaaaaaaa", [{"key": "voice_abc_battleStart", "base": "", "text": "Let's fight", "jp": "いくぞ\nみんな"}])
         plan = ci.plan_updates([sub], {"voice": {"en": {}}}, rosters, {"voice": {}})
         [w] = plan["writes"]
-        self.assertEqual((w["text"], w["jp"], w["set_jp"], w["new_row"]), ("Let's fight", "いくぞ<br>みんな", True, True))
+        self.assertEqual((w["text"], w["jp"], w["set_jp"]), ("Let's fight", "いくぞ<br>みんな", True))
         self.assertEqual(plan["results"][0]["external"]["outcome"], {"status": "synced"})
 
     def test_jp_only_line(self):
@@ -133,7 +131,7 @@ class TestPlan(unittest.TestCase):
         # the sheet already has a row for the line, with an empty jp
         plan = ci.plan_updates([sub], {"voice": {"en": {"voice_abc_win": ""}}}, rosters, {"voice": {"voice_abc_win": ""}})
         [w] = plan["writes"]
-        self.assertEqual((w["text"], w["jp"], w["set_jp"], w["new_row"]), (None, "勝った", True, False))
+        self.assertEqual((w["text"], w["jp"], w["set_jp"]), (None, "勝った", True))
 
     def test_jp_conflict_writes_nothing_of_the_line(self):
         rosters = {**ROSTERS, "voice": {"version": "1", "resources": {"abc": {"voice_abc_win": {"jp": "勝ち"}}}}}
@@ -190,7 +188,7 @@ class TestPlanChinese(unittest.TestCase):
         sub = zh_sub("1234567890abcdef", "zh-Hans", [{"key": "voice_abc_daily", "base": "", "text": "早上\n好"}])
         plan = ci.plan_updates([sub], {"voice": {"zh-Hans": {}}}, ZH_ROSTERS)
         [w] = plan["writes"]
-        self.assertEqual((w["lang"], w["text"], w["source"], w["set_jp"], w["new_row"]), ("zh-Hans", "早上<br>好", "wiki-cms #12345678 (Zh Person)", False, True))
+        self.assertEqual((w["lang"], w["text"], w["source"], w["set_jp"]), ("zh-Hans", "早上<br>好", "wiki-cms #12345678 (Zh Person)", False))
         self.assertEqual(plan["results"][0]["external"]["outcome"], {"status": "synced"})
 
     def test_conflict_is_judged_against_the_languages_own_column(self):
@@ -198,7 +196,7 @@ class TestPlanChinese(unittest.TestCase):
         sub = zh_sub("aaaaaaaa", "zh-Hant", [{"key": "voice_abc_daily", "base": "", "text": "早安"}])
         rows = {"voice": {"en": {"voice_abc_daily": "Good morning"}, "zh-Hant": {"voice_abc_daily": ""}}}
         plan = ci.plan_updates([sub], rows, ZH_ROSTERS)
-        self.assertEqual([(w["lang"], w["text"], w["new_row"]) for w in plan["writes"]], [("zh-Hant", "早安", False)])
+        self.assertEqual([(w["lang"], w["text"]) for w in plan["writes"]], [("zh-Hant", "早安")])
         # a translator changed the zh cell in the meantime
         rows["voice"]["zh-Hant"]["voice_abc_daily"] = "早上好"
         plan = ci.plan_updates([sub], rows, ZH_ROSTERS)
@@ -245,7 +243,19 @@ class TestPlanChinese(unittest.TestCase):
         sub = zh_sub("aaaaaaaa", "fr", [{"key": "voice_abc_daily", "base": "", "text": "Bonjour"}])
         plan = ci.plan_updates([sub], {}, ZH_ROSTERS)
         self.assertEqual(plan["writes"], [])
-        self.assertEqual(plan["results"][0]["external"]["outcome"]["status"], "superseded")
+        ext = plan["results"][0]["external"]
+        self.assertEqual(ext["outcome"], {"status": "conflict", "label": ci.UNSUPPORTED_LANG})  # not `superseded`: the game has nothing to do with it
+        self.assertEqual([c["key"] for c in ext["conflicts"]], ["voice_abc_daily"])
+
+    def test_chinese_needs_japanese_text(self):
+        rosters = {"voice": {"version": "1", "resources": {"abc": {"voice_abc_win": {"jp": "", "langs": ["en", "hans", "hant"]}}}}}
+        zh = zh_sub("aaaaaaaa", "zh-Hans", [{"key": "voice_abc_win", "base": "", "text": "赢了"}])
+        plan = ci.plan_updates([zh], {"voice": {"zh-Hans": {}}}, rosters, {"voice": {}})
+        self.assertEqual(plan["writes"], [])
+        self.assertEqual(plan["results"][0]["external"]["conflicts"][0]["current"], ci.NO_JP)
+        # a transcription already in the sheet is enough
+        plan = ci.plan_updates([zh], {"voice": {"zh-Hans": {}}}, rosters, {"voice": {"voice_abc_win": "勝った"}})
+        self.assertEqual([w["text"] for w in plan["writes"]], ["赢了"])
 
 
 class TestRun(unittest.TestCase):
@@ -343,8 +353,8 @@ class TestGspreadSheet(unittest.TestCase):
         self.assertEqual(sheet.read("voice", "zh-Hans"), {"voice_abc_action": ""})  # no such column yet
         self.assertEqual(sheet.read_jp("voice"), {"voice_abc_action": "行くぜ"})
         sheet.apply([
-            {"kind": "voice", "key": "voice_abc_action", "text": "Here we go!", "source": "wiki-cms #1 (A)", "jp": "", "set_jp": False, "new_row": False},
-            {"kind": "voice", "key": "voice_abc_daily", "text": "Hi", "source": "wiki-cms #1 (A)", "jp": "おはよう", "set_jp": False, "new_row": True},
+            {"kind": "voice", "key": "voice_abc_action", "text": "Here we go!", "source": "wiki-cms #1 (A)", "jp": "", "set_jp": False},
+            {"kind": "voice", "key": "voice_abc_daily", "text": "Hi", "source": "wiki-cms #1 (A)", "jp": "おはよう", "set_jp": False},
         ])
         self.assertEqual(voice.headers[-1], "source")
         self.assertEqual(voice.cells, [(2, 4, "Here we go!"), (2, 5, "wiki-cms #1 (A)")])
@@ -354,8 +364,8 @@ class TestGspreadSheet(unittest.TestCase):
         voice = FakeWorksheet(["voiceFilename", "jp", "enMachineTranslated", "enApproved"], [["voice_abc_win", "", "", ""]])
         sheet = ci.GspreadSheet(FakeSpreadsheet({"Voice": voice}))
         sheet.apply([
-            {"kind": "voice", "key": "voice_abc_win", "text": None, "source": "s", "jp": "勝った", "set_jp": True, "new_row": False},
-            {"kind": "voice", "key": "voice_abc_lose", "text": None, "source": "s", "jp": "負けた", "set_jp": True, "new_row": True},
+            {"kind": "voice", "key": "voice_abc_win", "text": None, "source": "s", "jp": "勝った", "set_jp": True},
+            {"kind": "voice", "key": "voice_abc_lose", "text": None, "source": "s", "jp": "負けた", "set_jp": True},
         ])
         self.assertEqual(voice.headers[-2:], ["source", "jpSource"])
         self.assertEqual(voice.cells, [(2, 2, "勝った"), (2, 6, "s"), (2, 5, "s")])  # EN cell untouched
@@ -365,9 +375,9 @@ class TestGspreadSheet(unittest.TestCase):
         voice = FakeWorksheet(["voiceFilename", "jp", "enMachineTranslated", "enApproved"], [["voice_abc_action", "行くぜ", "", "Let's go!"]])
         sheet = ci.GspreadSheet(FakeSpreadsheet({"Voice": voice}))
         sheet.apply([
-            {"kind": "voice", "key": "voice_abc_action", "lang": "zh-Hans", "text": "走吧", "source": "s1", "jp": "", "set_jp": False, "new_row": False},
-            {"kind": "voice", "key": "voice_abc_daily", "lang": "zh-Hans", "text": "早", "source": "s2", "jp": "おはよう", "set_jp": False, "new_row": True},
-            {"kind": "voice", "key": "voice_abc_daily", "lang": "zh-Hant", "text": "早安", "source": "s3", "jp": "おはよう", "set_jp": False, "new_row": True},
+            {"kind": "voice", "key": "voice_abc_action", "lang": "zh-Hans", "text": "走吧", "source": "s1", "jp": "", "set_jp": False},
+            {"kind": "voice", "key": "voice_abc_daily", "lang": "zh-Hans", "text": "早", "source": "s2", "jp": "おはよう", "set_jp": False},
+            {"kind": "voice", "key": "voice_abc_daily", "lang": "zh-Hant", "text": "早安", "source": "s3", "jp": "おはよう", "set_jp": False},
         ])
         self.assertEqual(voice.headers, ["voiceFilename", "jp", "enMachineTranslated", "enApproved",
                                          "zhHansApproved", "zhHansSource", "zhHantApproved", "zhHantSource"])

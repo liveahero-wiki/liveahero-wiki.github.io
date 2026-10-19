@@ -65,6 +65,7 @@ LABELS = {
     "superseded": "The game now has this text",
 }
 UNSUPPORTED_LANG = "Unsupported language"
+NO_JP = "(no Japanese text to translate from)"
 
 _BR = re.compile(r"<br\s*/?>", re.IGNORECASE)
 
@@ -122,7 +123,7 @@ def plan_updates(submissions: list[dict], sheet_rows: dict, rosters: dict | None
     sheet_jp: { kind: { key: current jp } } (voice only; a missing key counts as empty).
     rosters: { voice: <voice-roster.json>, bio: <bio-roster.json> } or None.
 
-    Returns { writes: [{ kind, key, lang, text, source, jp, set_jp, new_row }], results: [{ kind, id, external }] }.
+    Returns { writes: [{ kind, key, lang, text, source, jp, set_jp }], results: [{ kind, id, external }] }.
     One write per (kind, key, lang). `text` is None when only the JP is written; `jp` is what a new row gets
     (the submitted JP, else the roster's); `set_jp` says a submitted JP goes into the (existing or new) row. A
     line is written whole or not at all.
@@ -145,8 +146,10 @@ def plan_updates(submissions: list[dict], sheet_rows: dict, rosters: dict | None
         source = source_label(sub["id"], sub.get("displayName", ""))
 
         if lang not in LANGS:  # the Worker only accepts the languages above; never write for an unknown column
-            results.append({"kind": kind, "id": sub["id"], "superseded": len(lines), "external": {
-                "outcome": {"status": "superseded", "label": UNSUPPORTED_LANG}, "written": [], "conflicts": []}})
+            conflicts = [{"key": str(line.get("key", "")), "base": str(line.get("base", "")), "current": f"(unsupported language: {lang})"}
+                         for line in lines[:MAX_CONFLICTS]]
+            results.append({"kind": kind, "id": sub["id"], "superseded": 0, "external": {
+                "outcome": {"status": "conflict", "label": UNSUPPORTED_LANG}, "written": [], "conflicts": conflicts}})
             continue
 
         rows = working.setdefault(kind, {}).setdefault(lang, {})
@@ -166,6 +169,9 @@ def plan_updates(submissions: list[dict], sheet_rows: dict, rosters: dict | None
                 continue
             if (text and not _is_plain(text)) or (jp_in and not _is_plain(jp_in)) or not (text or jp_in):
                 conflicts.append({"key": key, "base": base, "current": "(invalid text)"})
+                continue
+            if lang != "en" and entry and not (jps.get(key) or entry.get("jp")):
+                conflicts.append({"key": key, "base": base, "current": NO_JP})  # a Chinese text is written from the Japanese one
                 continue
 
             new_text = sheet_text(kind, text) if text else None
@@ -200,7 +206,6 @@ def plan_updates(submissions: list[dict], sheet_rows: dict, rosters: dict | None
                     "text": new_text if text_write else prev.get("text"),
                     "set_jp": jp_write or prev.get("set_jp", False),
                     "jp": new_jp if jp_write else prev.get("jp") or entry.get("jp", ""),
-                    "new_row": not any(key in r for r in sheet_rows.get(kind, {}).values()),
                 }
             written.append(key)  # also when it was already there (an earlier run wrote it before it could report)
 

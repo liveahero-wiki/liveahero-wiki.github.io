@@ -230,6 +230,15 @@ class TestSheetDownloads(unittest.TestCase):
         self.assertEqual(errors, [])
         self.assertEqual(texts, {"en": {"voice_a_action": "Go"}, "hans": {"voice_a_action": "走<br>吧"}, "hant": {"voice_a_action": "走吧"}})
 
+    def test_reopened_rows(self):
+        jp = {"A": "あ", "B": "い"}
+        en = {"A": "a", "B": "b"}
+        zh = {"hans": {"B": "び"}, "hant": {"B": "び"}}
+        # A was marked superseded when only EN counted, but the game still lacks its zh text: open again
+        statuses = {"A": "superseded", "B": "superseded", "ZZZ": "superseded"}
+        self.assertEqual(bio_gsheet.reopened_rows(jp, en, statuses, zh), [{"bioKey": "A", "status": "open"}])
+        self.assertEqual(bio_gsheet.reopened_rows(jp, en, {"A": ""}, zh), [])
+
     def test_bio_upload_rows(self):
         jp = {"A": "あ", "B": "い", "C": "う"}
         en = {"B": "b", "C": "う"}

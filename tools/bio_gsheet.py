@@ -38,6 +38,7 @@ LANG_COLUMNS = {
     "hant": ("zhHantApproved", "_data/processed/hant_bio_community.json"),
 }
 SUPERSEDED = "superseded"
+REOPENED = "open"  # status of a row that was `superseded` but is translatable again (a language the game still lacks)
 
 
 def generate_bio_rows(jp_bio: dict, en_bio: dict, zh_bio: dict | None = None) -> list[dict]:
@@ -50,6 +51,13 @@ def superseded_rows(jp_bio: dict, en_bio: dict, existing_keys, zh_bio: dict | No
     """Rows of the sheet whose bio is no longer translatable (the game shipped its text in every language): marked `superseded`."""
     open_keys = translatable.bio_translatable(jp_bio, en_bio, zh_bio=zh_bio)
     return [{"bioKey": k, "status": SUPERSEDED} for k in existing_keys if k in jp_bio and k not in open_keys]
+
+
+def reopened_rows(jp_bio: dict, en_bio: dict, statuses: dict, zh_bio: dict | None = None) -> list[dict]:
+    """Rows still marked `superseded` whose bio is translatable again: the mark came from the time only English
+    counted, and the download skips such rows, so it is replaced by `open` (the cell cannot be emptied by update_sheet)."""
+    open_keys = translatable.bio_translatable(jp_bio, en_bio, zh_bio=zh_bio)
+    return [{"bioKey": k, "status": REOPENED} for k, status in statuses.items() if status == SUPERSEDED and k in open_keys]
 
 
 def get_or_create_worksheet(sh, name: str, headers: list[str], create: bool = True):
@@ -115,8 +123,9 @@ def cmd_upload(args):
     if sheet is None:
         print(f"Dry run: the {BIO_SHEET_NAME} tab does not exist yet, it would be created with {len(rows)} rows")
         return
-    existing = [k for k in sheet.col_values(1)[1:] if k]
-    rows += superseded_rows(jp_bio, en_bio, existing, zh_bio)
+    statuses = {str(r.get("bioKey", "")): str(r.get("status", "")) for r in sheet.get_all_records() if r.get("bioKey")}
+    rows += superseded_rows(jp_bio, en_bio, list(statuses), zh_bio)
+    rows += reopened_rows(jp_bio, en_bio, statuses, zh_bio)
 
     updated, new = update_sheet(
         gc, sheet, BIO_SHEET_NAME, rows,

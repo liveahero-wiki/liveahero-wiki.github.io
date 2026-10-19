@@ -1,7 +1,7 @@
 // Track A: suggest translations (English, Simplified or Traditional Chinese) for the translatable lines of one voice table.
 // Only changed lines are sent; every language is its own submission, because a submission has one language.
 
-import { useEffect, useState } from 'preact/hooks'
+import { useEffect, useMemo, useState } from 'preact/hooks'
 import type { Ctx } from '../core/Shell.tsx'
 import { LANG_NAME, LANG_TAB, TL_LANGS, perLang, type TlLang } from '../core/langs.ts'
 import { MAX_LINES, NOTE_MAX, batchesOf, checkLine, checkNote, isChanged, type LineState, type ResourceBatch, type TextProblem } from '../core/rules.ts'
@@ -44,20 +44,22 @@ export function VoiceView({ ctx, rows, initialLang = 'en' }: { ctx: Ctx; rows: V
   const [sent, setSent] = useState<number | null>(null)
 
   const jpOpen = (r: VoiceRow): boolean => r.jpEditable && jpSent[r.key] === undefined
-  const statesOf = (l: TlLang): LangState[] =>
-    rows
-      .filter((r) => r.langs.includes(l))
-      .map((r) => ({ key: r.key, resource: r.resource, base: bases[l][r.key] ?? '', value: values[l][r.key] ?? '', ...(l === 'en' && jpOpen(r) ? { jp: jpValues[r.key] ?? '' } : {}) }))
-  const states = perLang(statesOf)
-  const changedBy = perLang((l) => states[l].filter(isChanged))
-  const changedTotal = TL_LANGS.reduce((n, l) => n + changedBy[l].length, 0)
-  const groups: LangBatch[] = []
-  let overflow = 0
-  for (const l of TL_LANGS) {
-    const b = batchesOf(states[l], MAX_LINES)
-    overflow += b.overflow
-    groups.push(...b.groups.map((g) => ({ ...g, lang: l })))
-  }
+  // Rebuilt only when an input changes, not on every render (the table can have hundreds of lines in three languages).
+  const { changedBy, changedTotal, groups, overflow } = useMemo(() => {
+    const statesOf = (l: TlLang): LangState[] =>
+      rows
+        .filter((r) => r.langs.includes(l))
+        .map((r) => ({ key: r.key, resource: r.resource, base: bases[l][r.key] ?? '', value: values[l][r.key] ?? '', ...(l === 'en' && jpOpen(r) ? { jp: jpValues[r.key] ?? '' } : {}) }))
+    const changedBy = perLang((l) => statesOf(l).filter(isChanged))
+    const groups: LangBatch[] = []
+    let overflow = 0
+    for (const l of TL_LANGS) {
+      const b = batchesOf(statesOf(l), MAX_LINES)
+      overflow += b.overflow
+      groups.push(...b.groups.map((g) => ({ ...g, lang: l })))
+    }
+    return { changedBy, changedTotal: TL_LANGS.reduce((n, l) => n + changedBy[l].length, 0), groups, overflow }
+  }, [rows, bases, values, jpValues, jpSent])
   const problems: Record<string, string> = {}
   const jpProblems: Record<string, string> = {}
   for (const l of TL_LANGS) {
@@ -127,7 +129,6 @@ export function VoiceView({ ctx, rows, initialLang = 'en' }: { ctx: Ctx; rows: V
   if (rows.length === 0) return <Notice>{t('voiceNothing')}</Notice>
 
   const langName = t(LANG_NAME[active])
-  const htmlLang = active === 'en' ? 'en' : active
 
   return (
     <form class="contrib-form" onSubmit={onSubmit} noValidate>
@@ -193,7 +194,7 @@ export function VoiceView({ ctx, rows, initialLang = 'en' }: { ctx: Ctx; rows: V
                   <label class="contrib-sr-only" for={id}>
                     {t('voiceLineLabel', { key: r.label, lang: langName })}
                   </label>
-                  <textarea id={id} lang={htmlLang} rows={Math.min(6, Math.max(2, v.split('\n').length))} value={v} aria-invalid={err ? 'true' : undefined} aria-describedby={err ? `${id}-err` : undefined} placeholder={jpInput ? t('voiceOptional', { lang: langName }) : langName} onInput={(e) => setValues((s) => ({ ...s, [active]: { ...s[active], [r.key]: (e.currentTarget as HTMLTextAreaElement).value } }))} />
+                  <textarea id={id} lang={active} rows={Math.min(6, Math.max(2, v.split('\n').length))} value={v} aria-invalid={err ? 'true' : undefined} aria-describedby={err ? `${id}-err` : undefined} placeholder={jpInput ? t('voiceOptional', { lang: langName }) : langName} onInput={(e) => setValues((s) => ({ ...s, [active]: { ...s[active], [r.key]: (e.currentTarget as HTMLTextAreaElement).value } }))} />
                   {err && (
                     <p class="contrib-field-error" id={`${id}-err`} role="alert">
                       {err}
@@ -202,7 +203,7 @@ export function VoiceView({ ctx, rows, initialLang = 'en' }: { ctx: Ctx; rows: V
                 </>
               ) : (
                 <div class="contrib-voice-rows__closed">
-                  <div lang={htmlLang}>{bases[active][r.key] || '-'}</div>
+                  <div lang={active}>{bases[active][r.key] || '-'}</div>
                   <p class="contrib-help">{active !== 'en' && !r.jp ? t('voiceNeedsJp') : t('voiceClosed')}</p>
                 </div>
               )}

@@ -102,6 +102,10 @@ describe('data', () => {
     // no Japanese text to translate from: only English can be suggested
     assert.deepEqual(bioEntry(roster, 'DETAIL_B_H01')?.langs, ['en'])
   })
+  it('bioEntry offers nothing when only Chinese is open and there is no Japanese text', () => {
+    const roster = { bios: { DETAIL_B_H01: { jp: '', langs: ['hans'] } } }
+    assert.equal(bioEntry(roster, 'DETAIL_B_H01'), null)
+  })
   it("voice cells: the page's '-' is no text", () => {
     assert.equal(baseOf('-'), '')
     assert.equal(baseOf(' Hello '), 'Hello')

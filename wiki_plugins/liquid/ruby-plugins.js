@@ -11,6 +11,7 @@ import { lahItem, lahItemIcon } from "../lib/item.js";
 import { xmlEscape } from "../lib/ruby.js";
 import * as skill from "../lib/skill.js";
 import { createSkillText } from "../lib/skill-text.js";
+import { gameOrCommunity } from "../lib/translation.js";
 
 /**
  * @param {import("@11ty/eleventy").UserConfig} eleventyConfig
@@ -105,4 +106,5 @@ export function registerRubyPlugins(eleventyConfig, { site, charaIndex }) {
   filter("sanitizePlayerName", skill.sanitizePlayerName);
   filter("sanitizeSalesCharaName", skill.sanitizeSalesCharaName);
   filter("convertLang", skill.convertLang);
+  filter("game_or_community", gameOrCommunity);
 }

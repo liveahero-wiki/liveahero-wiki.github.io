@@ -39,9 +39,7 @@ export function bioEntry(roster: BioRoster | null | undefined, key: string): Bio
   const e = bios[key] ?? {}
   const jp = typeof e.jp === 'string' ? e.jp : ''
   const text = (v: unknown): string => (typeof v === 'string' && v.trim() !== jp.trim() ? v : '')
-  return {
-    jp,
-    bases: { en: text(e.en), 'zh-Hans': text(e.hans), 'zh-Hant': text(e.hant) },
-    langs: langsOf(e.langs).filter((l) => l === 'en' || jp !== ''),
-  }
+  const langs = langsOf(e.langs).filter((l) => l === 'en' || jp !== '')
+  if (langs.length === 0) return null // only Chinese is open and there is no Japanese text to translate from
+  return { jp, bases: { en: text(e.en), 'zh-Hans': text(e.hans), 'zh-Hant': text(e.hant) }, langs }
 }
