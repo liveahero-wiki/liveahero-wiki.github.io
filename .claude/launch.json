@@ -9,6 +9,14 @@
       "autoPort": false
     },
     {
+      "name": "cms-plugin",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["dev:cms-plugin"],
+      "port": 5191,
+      "url": "http://localhost:5191",
+      "autoPort": false
+    },
+    {
       "name": "eleventy",
       "runtimeExecutable": "pnpm",
       "runtimeArgs": ["eleventy:dev", "--port=8080"],
