@@ -1,5 +1,5 @@
 #!python3
-"""Translation intake: approved wiki-cms submissions -> Google Sheet (docs/CONTRIBUTOR_EDITING_PLAN.md, Track A).
+"""Translation intake: approved wiki-cms submissions -> Google Sheet (docs/CONTRIBUTOR_EDITING.md).
 
 Run hourly by .github/workflows/translation-intake.yml. For the submission types `lah-voice-tl` (Voice tab)
 and `lah-bio-tl` (Bio tab) it

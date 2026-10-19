@@ -75,5 +75,7 @@ For more in-depth documentation on the different layers of this workspace, refer
     *   See [docs/ELEVENTY.md](/docs/ELEVENTY.md)
 * **Liquid Templates & Plugins**: How layouts, custom inclusions, and JavaScript plugins build pages.
     *   See [docs/LIQUID.md](/docs/LIQUID.md)
+* **Contributor Editing**: Editing and translation suggestions without a GitHub account (wiki-cms submissions, guard, Google Sheet intake): decisions, gotchas, and what is not built.
+    *   See [docs/CONTRIBUTOR_EDITING.md](/docs/CONTRIBUTOR_EDITING.md)
 * **Game Data Schemas & Relationships**: Understanding JSON relational schemas and Liquid joins.
     *   See [docs/DATA_SCHEMAS.md](/docs/DATA_SCHEMAS.md)

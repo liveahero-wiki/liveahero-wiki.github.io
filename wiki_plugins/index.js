@@ -102,7 +102,7 @@ export default function wikiPlugins(eleventyConfig, { site, markdown }) {
   eleventyConfig.addLiquidFilter("cms_targets", (page) => cmsTargets(page, site));
   eleventyConfig.addJavaScriptFunction("cmsGroupRegistry", (pages) => cmsGroupRegistry(pages, site));
 
-  // Contributor editing (docs/CONTRIBUTOR_EDITING_PLAN.md, Track B). `contrib_editable` is true for the pages
+  // Contributor editing (docs/CONTRIBUTOR_EDITING.md). `contrib_editable` is true for the pages
   // the guard lets contributors edit (`page | contrib_editable`, a path string works too). The two functions
   // feed /api/contrib-includes.json (contrib-includes.11ty.js) and /api/editor-data.json (editor-data.11ty.js).
   eleventyConfig.addLiquidFilter("contrib_editable", (page) => isEditablePath(typeof page === "string" ? page : page?.path));

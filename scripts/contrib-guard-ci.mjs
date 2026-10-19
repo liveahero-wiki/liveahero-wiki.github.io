@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// CI gate for contributor page edits (docs/CONTRIBUTOR_EDITING_PLAN.md, "Where the guard runs").
+// CI gate for contributor page edits (docs/CONTRIBUTOR_EDITING.md, "The guard").
 //
 //   node scripts/contrib-guard-ci.mjs --base <sha> --head <sha> [--repo <dir>]
 //

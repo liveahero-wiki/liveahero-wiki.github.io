@@ -1,6 +1,6 @@
 """Which voice lines / bios can a contributor still translate?
 
-Rule (docs/CONTRIBUTOR_EDITING_PLAN.md, "game text wins"), applied per language (en, hans, hant): a line is
+Rule (docs/CONTRIBUTOR_EDITING.md, "Goals and constraints"), applied per language (en, hans, hant): a line is
 translatable into a language only while the game's text in it is missing or equal to the JP text. The
 sheet-only "manual" voice parts (battleStart, action ...) never come from the game, so they are always
 translatable. A roster entry lists the languages still open in `langs`; a line is listed while any is open.

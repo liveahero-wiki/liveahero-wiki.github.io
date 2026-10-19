@@ -1,4 +1,4 @@
-// The contributor-edit guard (docs/CONTRIBUTOR_EDITING_PLAN.md, "Liquid and HTML guard").
+// The contributor-edit guard (docs/CONTRIBUTOR_EDITING.md, "The guard").
 //
 // Contributors edit the *body* of a page. Page bodies contain Liquid templates and HTML, so instead of
 // banning `{%` the guard compares the body before and after the edit:

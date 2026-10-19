@@ -187,7 +187,7 @@ function setupVoiceTableTabs() {
   });
 }
 
-// Contributor editing (docs/CONTRIBUTOR_EDITING_PLAN.md): the editor bundle is fetched only when a reader
+// Contributor editing (docs/CONTRIBUTOR_EDITING.md): the editor bundle is fetched only when a reader
 // clicks an element with data-contrib (page-edit, voice-suggest, bio-suggest); hovering, focusing or touching
 // one prefetches it so the sign-in popup can open right inside the click.
 function setupContrib() {
