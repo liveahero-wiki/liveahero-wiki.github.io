@@ -63,6 +63,7 @@ export const en = {
   fe_text_invalid: 'Plain text only.',
   fe_text_same_as_base: 'Same as the current text.',
   fe_jp_not_allowed: 'This line already has Japanese text.',
+  fe_jp_required: 'There is no Japanese text to translate from yet.',
   fe_key_invalid: 'This line does not belong here.',
   fe_key_duplicate: 'This line is listed twice.',
   fe_line_not_translatable: 'This line cannot be translated any more.',
@@ -89,11 +90,16 @@ export const en = {
 
   // ---- voice lines
   voiceTitle: 'Suggest voice-line translations',
-  voiceIntro: 'Edit the English text of the lines you want to improve. Only the lines you change are sent, and a moderator reviews them. For a line without Japanese text you can add the Japanese too.',
+  voiceIntro: 'Pick a language, then edit the lines you want to improve. Only the lines you change are sent, and a moderator reviews them. For a line without Japanese text you can add the Japanese too.',
   voiceNothing: 'There are no lines to translate in this table.',
+  voiceLangs: 'Language',
+  voiceClosed: 'The game already has this text in this language.',
+  voiceNeedsJp: 'This line needs Japanese text before it can be translated.',
   voiceJp: 'Japanese',
-  voiceEn: 'English',
-  voiceEnOptional: 'English (optional)',
+  langEn: 'English',
+  langHans: 'Simplified Chinese',
+  langHant: 'Traditional Chinese',
+  voiceOptional: '{lang} (optional)',
   voiceJpInput: 'Japanese text (as spoken)',
   voiceJpMissing: 'The game has no Japanese text for this line. If you can, type what is said.',
   voiceJpLabel: 'Japanese text of {key}',
@@ -103,15 +109,14 @@ export const en = {
   voiceSent: 'Thank you! {n} lines were sent for review.',
   voiceSentMore: '{n} changed lines are still waiting to be sent.',
   voiceSendRest: 'Edit the remaining lines',
-  voiceLineLabel: 'English text of {key}',
+  voiceLineLabel: '{lang} text of {key}',
 
   // ---- bio
   bioTitle: 'Suggest a bio translation',
-  bioIntro: 'Write the English text for this bio. A moderator reviews it before it appears.',
+  bioIntro: 'Pick a language and write the text for this bio. A moderator reviews it before it appears.',
   bioLoading: 'Loading the bio…',
   bioNotOffered: 'This bio does not need a community translation (any more).',
   bioJp: 'Japanese',
-  bioEn: 'English',
   bioSent: 'Thank you! Your translation was sent for review.',
 
   // ---- page editor

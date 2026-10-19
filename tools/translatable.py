@@ -1,8 +1,9 @@
 """Which voice lines / bios can a contributor still translate?
 
-Rule (docs/CONTRIBUTOR_EDITING_PLAN.md, "game text wins"): a line is translatable only while the game's
-EN text is missing or equal to the JP text. The sheet-only "manual" voice parts (battleStart, action ...)
-never come from the game, so they are always translatable.
+Rule (docs/CONTRIBUTOR_EDITING_PLAN.md, "game text wins"), applied per language (en, hans, hant): a line is
+translatable into a language only while the game's text in it is missing or equal to the JP text. The
+sheet-only "manual" voice parts (battleStart, action ...) never come from the game, so they are always
+translatable. A roster entry lists the languages still open in `langs`; a line is listed while any is open.
 
 The voice row universe replicates `_includes/voice-table.html` (keep the two in sync): for every
 resourceName of a voice table, the greeting parts, the whitelisted SERIF parts and the manual parts that
@@ -55,29 +56,48 @@ VOICE_KIND_PARTS = {
 VOICE_TABLE_PATTERN = re.compile(r'voice-table\.html\s+resourceName\s*=\s*"([^"]+)"')
 
 
-def _lang_pair(jp: str, en: str) -> dict:
-    """{ jp, en } with en omitted when empty."""
+# Roster language codes: the game's `{lang}_*` processed files and the roster's `langs` / text fields use them.
+LANGS = ("en", "hans", "hant")
+
+
+def _entry(jp: str, current: dict, open_langs) -> dict | None:
+    """{ jp, en?, hans?, hant?, langs } (a text omitted when empty), None when no language is open any more."""
+    langs = [lang for lang in LANGS if lang in open_langs]
+    if not langs:
+        return None
     entry = {"jp": jp}
-    if en:
-        entry["en"] = en
+    for lang in LANGS:
+        if current.get(lang):
+            entry[lang] = current[lang]
+    entry["langs"] = langs
     return entry
 
 
-def is_translatable(jp: str, game_en: str) -> bool:
-    """The game's EN is missing or just the JP text."""
-    return bool(jp) and (not game_en or game_en == jp)
+def is_translatable(jp: str, game_text: str) -> bool:
+    """The game's text (of one language) is missing or just the JP text."""
+    return bool(jp) and (not game_text or game_text == jp)
 
 
-def bio_translatable(jp_bio: dict, en_bio: dict, community: dict | None = None) -> dict:
-    """{ bioKey: { jp, en? } } of the bios the game has no real EN text for.
+def effective_text(jp: str, game_text: str, community: str) -> str:
+    """The text a page shows: the game's, unless it is missing or just the JP text, then the community's."""
+    return game_text if game_text and game_text != jp else community
 
-    `en` is the current effective text: the game's (never set here, it is missing or equal to JP) else
-    the community translation."""
-    community = community or {}
+
+def bio_translatable(jp_bio: dict, en_bio: dict, community: dict | None = None,
+                     zh_bio: dict | None = None, zh_community: dict | None = None) -> dict:
+    """{ bioKey: { jp, en?, hans?, hant?, langs } } of the bios the game has no real text for in some language.
+
+    `zh_bio` / `zh_community` are { "hans": {...}, "hant": {...} } (a missing language counts as empty).
+    Each text field is the current effective text of its language: the game's, else the community's."""
+    game = {"en": en_bio or {}, **{lang: (zh_bio or {}).get(lang, {}) for lang in LANGS[1:]}}
+    comm = {"en": community or {}, **{lang: (zh_community or {}).get(lang, {}) for lang in LANGS[1:]}}
     result = {}
     for key, jp in jp_bio.items():
-        if is_translatable(jp, en_bio.get(key, "")):
-            result[key] = _lang_pair(jp, community.get(key, ""))
+        open_langs = {lang for lang in LANGS if is_translatable(jp, game[lang].get(key, ""))}
+        current = {lang: effective_text(jp, game[lang].get(key, ""), comm[lang].get(key, "")) for lang in LANGS}
+        entry = _entry(jp, current, open_langs)
+        if entry:
+            result[key] = entry
     return result
 
 
@@ -101,46 +121,50 @@ def voice_master_keys(voice_master: dict) -> dict:
 
 
 def voice_resource_lines(name: str, data: dict) -> dict:
-    """{ voiceKey: { jp, en? } } of the translatable lines the voice table of `name` renders.
+    """{ voiceKey: { jp, en?, hans?, hant?, langs } } of the translatable lines the voice table of `name` renders.
 
-    `data` holds the loaded _data/processed json under the keys jp_serif, en_serif, jp_greeting,
-    en_greeting, jp_voice, en_voice and voice_master_keys (a missing one counts as empty)."""
+    `data` holds the loaded _data/processed json under the keys jp_serif, jp_greeting, jp_voice,
+    {en,hans,hant}_{serif,greeting,voice} and voice_master_keys (a missing one counts as empty)."""
+    def table(kind: str, lang: str) -> dict:
+        return data.get(f"{lang}_{kind}", {})
+
     jp_serif = data.get("jp_serif", {})
-    en_serif = data.get("en_serif", {})
     jp_greeting = data.get("jp_greeting", {})
-    en_greeting = data.get("en_greeting", {})
     jp_voice = data.get("jp_voice", {})
-    en_voice = data.get("en_voice", {})
 
     lines = {}
     upper = f"_{name.upper()}_"
 
+    def add_game_line(key: str, jp: str, game_kind: str, game_key: str):
+        """A greeting or SERIF line: the game's text per language, the sheet's (`{lang}_voice`) as the community text."""
+        game = {lang: table(game_kind, lang).get(game_key, "") for lang in LANGS}
+        open_langs = {lang for lang in LANGS if is_translatable(jp, game[lang])}
+        current = {lang: effective_text(jp, game[lang], table("voice", lang).get(key, "")) for lang in LANGS}
+        entry = _entry(jp, current, open_langs)
+        if entry:
+            lines[key] = entry
+
     for part in GREETING_PARTS:
         key = f"voice_{name}_{part}"
         jp = jp_greeting.get(key, "")
-        game_en = en_greeting.get(key, "")
-        if jp and is_translatable(jp, game_en):
-            lines[key] = _lang_pair(jp, game_en or en_voice.get(key, ""))
+        if jp:
+            add_game_line(key, jp, "greeting", key)
 
     for upper_part, part in SERIF_WHITELIST.items():
         if "PLAYER" in upper and upper_part != "TRAINED":
             continue
         serif_key = f"SERIF{upper}{upper_part}"
         jp = jp_serif.get(serif_key, "")
-        if not jp:
-            continue
-        game_en = en_serif.get(serif_key, "")
-        if is_translatable(jp, game_en):
-            key = f"voice_{name}_{part}"
-            lines[key] = _lang_pair(jp, game_en if game_en and game_en != jp else en_voice.get(key, ""))
+        if jp:
+            add_game_line(f"voice_{name}_{part}", jp, "serif", serif_key)
 
     known = data.get("voice_master_keys", {}).get(name, ())
     for part in MANUAL_PARTS:
         key = f"voice_{name}_{part}"
         jp = jp_voice.get(key, "")
-        en = en_voice.get(key, "")
-        if jp or en or key in known:
-            lines[key] = _lang_pair(jp, en)
+        current = {lang: table("voice", lang).get(key, "") for lang in LANGS}
+        if jp or any(current.values()) or key in known:
+            lines[key] = _entry(jp, current, LANGS)
 
     return lines
 
@@ -163,11 +187,22 @@ def page_resource_names(*dirs: str) -> list[str]:
     return names
 
 
+def bio_inputs(data: dict) -> dict:
+    """The keyword arguments of `bio_translatable` for the zh game text and community text of `load_processed` data."""
+    return {
+        "community": data.get("en_bio_community", {}),
+        "zh_bio": {lang: data.get(f"{lang}_bio", {}) for lang in LANGS[1:]},
+        "zh_community": {lang: data.get(f"{lang}_bio_community", {}) for lang in LANGS[1:]},
+    }
+
+
 def load_processed(base: str = "_data/processed") -> dict:
     """The json inputs of voice_resource_lines / bio_translatable (a missing file counts as empty)."""
     data = {}
-    for name in ("jp_serif", "en_serif", "jp_greeting", "en_greeting", "jp_voice", "en_voice",
-                 "jp_bio", "en_bio", "en_bio_community"):
+    names = ["jp_serif", "jp_greeting", "jp_voice", "jp_bio"]
+    for lang in LANGS:
+        names += [f"{lang}_{kind}" for kind in ("serif", "greeting", "voice", "bio", "bio_community")]
+    for name in names:
         try:
             data[name] = wiki_util.loadJson(os.path.join(base, f"{name}.json"))
         except FileNotFoundError:

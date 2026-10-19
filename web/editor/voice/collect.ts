@@ -1,10 +1,12 @@
 // Reads the translatable rows of a voice table (markup contract of _includes/voice-table.html):
 //   <tr data-voice-key="voice_<resourceName>_<part>" data-translatable>
 //     <td class="voice-jp-cell"> <div class="voice-key-badge">…</div> <div class="voice-text">JP or -</div> </td>
-//     <td class="voice-translation-cell"> <div data-lang="en">EN or -</div> … </td>
+//     <td class="voice-translation-cell"> <div data-lang="en|hans|hant">text or -</div> … </td>
 //   </tr>
+// `data-tl-langs` lists the languages still open for the row (roster codes, e.g. "en hans hant"); missing means all.
 // The button is `<button data-contrib="voice-suggest" data-resource-name="…">`.
 
+import { LANG_CODE, langsOf, perLang, type TlLang } from '../core/langs.ts'
 import { isPlaceholder, keyBelongs } from '../core/rules.ts'
 
 export interface VoiceRow {
@@ -17,8 +19,10 @@ export interface VoiceRow {
   jp: string
   /** No Japanese text yet: the contributor may transcribe it. */
   jpEditable: boolean
-  /** The English text shown now, '' when the page shows the placeholder '-'. */
-  base: string
+  /** The text shown now per language, '' when the page shows the placeholder '-'. */
+  bases: Record<TlLang, string>
+  /** The languages a contributor may suggest for this line: open per the roster; a Chinese text is translated from the Japanese, so it needs one. */
+  langs: TlLang[]
 }
 
 /** Visible text of a cell: <br> become line breaks. */
@@ -58,16 +62,20 @@ export function collectRows(table: Element, names: string[]): VoiceRow[] {
     const resource = resourceOf(key, names)
     if (!resource || seen.has(key)) return
     seen.add(key)
-    const en = tr.querySelector('[data-lang="en"]')
     const jpEl = tr.querySelector('.voice-text')
     const jp = jpEl ? baseOf(cellText(jpEl)) : ''
+    const bases = perLang((l) => {
+      const cell = tr.querySelector(`[data-lang="${LANG_CODE[l]}"]`)
+      return cell ? baseOf(cellText(cell)) : ''
+    })
     rows.push({
       key,
       resource,
       label: tr.querySelector('.voice-key-badge')?.textContent?.trim() || key,
       jp,
       jpEditable: jp === '',
-      base: en ? baseOf(cellText(en)) : '',
+      bases,
+      langs: langsOf(tr.getAttribute('data-tl-langs')).filter((l) => l === 'en' || jp !== ''),
     })
   })
   return rows

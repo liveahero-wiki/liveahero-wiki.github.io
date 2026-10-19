@@ -1,4 +1,5 @@
-// lah-bio-tl: moderator views for one bio translation suggestion.
+// lah-bio-tl: moderator views for one bio translation suggestion, in the submission's `lang` (shown by the admin card),
+// so the headings are language-neutral.
 // Built (with dom.ts / styles.css) into the self-contained assets/cms/lah-bio-tl.js by vite.cms-tl-plugins.config.ts.
 
 import type { EditorHandle, FieldError, PluginContext, SubmissionPlugin } from '../cms-plugin/plugin-api.ts'
@@ -55,9 +56,9 @@ function detail(el: HTMLElement, raw: unknown): () => void {
       h('dd', { class: 'cms-lah-tl-mono' }, p.key),
       dt('JP'),
       jp.dd,
-      dt('Current EN'),
+      dt('Current text'),
       h('dd', null, textBlock(p.base, { empty: 'no current text' })),
-      dt('Suggested EN'),
+      dt('Suggested text'),
       h('dd', null, h('div', { class: 'cms-lah-tl-text' }, p.text)),
       p.note ? dt('Note') : null,
       p.note ? h('dd', null, h('div', { class: 'cms-lah-tl-text' }, p.note)) : null,
@@ -133,9 +134,9 @@ function editor(el: HTMLElement, init: { value: unknown; onChange(p: unknown): v
       h('dd', null, h('span', { class: 'cms-lah-tl-mono' }, cur.key), keyErrs),
       dt('JP'),
       jp.dd,
-      dt('Current EN'),
+      dt('Current text'),
       h('dd', null, textBlock(cur.base, { empty: 'no current text' }), baseErrs),
-      h('dt', null, h('label', { for: textId }, 'Suggested EN')),
+      h('dt', null, h('label', { for: textId }, 'Suggested text')),
       h('dd', null, area, count, textErrs),
       h('dt', null, h('label', { for: noteId }, 'Note')),
       h('dd', null, noteArea, h('p', { class: 'cms-lah-tl-hint' }, `Optional, from the contributor. Plain text, at most ${NOTE_MAX} characters.`), noteErrs),

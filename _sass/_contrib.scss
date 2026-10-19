@@ -469,6 +469,51 @@ ul.contrib-field-error {
   }
 }
 
+// The language switch of the voice and bio editors (one submission per language)
+.contrib-langs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.contrib-langs__btn {
+  font: inherit;
+  min-height: 34px;
+  padding: 4px 14px;
+  border: 1px solid var(--colorGrey);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+
+  &[aria-pressed="true"] {
+    color: #000;
+    background: var(--colorPrimary);
+    border-color: var(--colorPrimary);
+    font-weight: 600;
+  }
+}
+
+html[data-theme="dark"] .contrib-langs__btn[aria-pressed="true"] {
+  color: #fff;
+}
+
+.contrib-langs__count {
+  font-size: 0.8rem;
+}
+
+// A line the contributor cannot suggest in the chosen language (the game has the text, or there is no Japanese text yet)
+.contrib-voice-rows__closed {
+  margin: 4px 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+
+  .contrib-help {
+    margin: 2px 0 0;
+  }
+}
+
 // ---- page editor ----------------------------------------------------------------------------------------------------
 
 .contrib-tabs {

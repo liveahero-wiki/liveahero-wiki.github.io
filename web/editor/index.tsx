@@ -13,6 +13,7 @@ import { Modal, Notice } from './core/ui.tsx'
 import { makeT } from './i18n/t.ts'
 import { PageEditor } from './page/PageEditor.tsx'
 import { initialLang, type Lang } from '../team-creator/lang.ts'
+import { langOfCode } from './core/langs.ts'
 import { collectRows, findTable, resourceNames } from './voice/collect.ts'
 import { VoiceView } from './voice/VoiceView.tsx'
 
@@ -53,7 +54,7 @@ function Root({ kind, el, cfg, lang, onClose }: { kind: string; el: HTMLElement;
       const rows = table ? collectRows(table, resourceNames(resourceName)) : []
       return (
         <Shell api={cfg.api} lang={lang} title={(t) => t('voiceTitle')} wide onClose={onClose}>
-          {(ctx) => <VoiceView ctx={ctx} rows={rows} />}
+          {(ctx) => <VoiceView ctx={ctx} rows={rows} initialLang={langOfCode(table?.getAttribute('data-active-lang'))} />}
         </Shell>
       )
     }

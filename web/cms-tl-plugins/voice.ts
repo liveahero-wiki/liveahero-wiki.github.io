@@ -1,4 +1,5 @@
-// lah-voice-tl: moderator views for a batch of voice-line translation suggestions.
+// lah-voice-tl: moderator views for a batch of voice-line translation suggestions. The batch is in one language (the
+// submission's `lang`, which the admin card shows): `base` and `text` are in it, so the headings are language-neutral.
 // Built (with dom.ts / styles.css) into the self-contained assets/cms/lah-voice-tl.js by vite.cms-tl-plugins.config.ts.
 
 import type { EditorHandle, FieldError, PluginContext, SubmissionPlugin } from '../cms-plugin/plugin-api.ts'
@@ -54,7 +55,7 @@ function table(headExtra: string): { table: HTMLTableElement; tbody: HTMLTableSe
   const t = h(
     'table',
     { class: 'cms-lah-tl-table' },
-    h('thead', null, h('tr', null, h('th', { scope: 'col' }, 'Part'), h('th', { scope: 'col' }, 'JP'), h('th', { scope: 'col' }, 'Current EN'), h('th', { scope: 'col' }, headExtra))),
+    h('thead', null, h('tr', null, h('th', { scope: 'col' }, 'Part'), h('th', { scope: 'col' }, 'JP'), h('th', { scope: 'col' }, 'Current text'), h('th', { scope: 'col' }, headExtra))),
     tbody,
   )
   return { table: t, tbody }
@@ -67,7 +68,7 @@ function header(p: VoicePayload): HTMLElement {
 function detail(el: HTMLElement, raw: unknown): () => void {
   const p = readVoice(raw)
   const { root, unmount } = mountRoot(el, 'cms-lah-tl-stack')
-  const { table: t, tbody } = table('Suggested EN')
+  const { table: t, tbody } = table('Suggested text')
   const fills: { jp: ReturnType<typeof jpCell>; key: string }[] = []
   for (const line of p.lines) {
     const jp = jpCell(line.jp ? suggestedJp(line.jp) : null)
@@ -79,8 +80,8 @@ function detail(el: HTMLElement, raw: unknown): () => void {
         null,
         h('td', { class: 'cms-lah-tl-part', 'data-label': 'Part' }, h('span', { class: 'cms-lah-tl-part-name' }, voicePart(p.resourceName, line.key))),
         jp.td,
-        h('td', { 'data-label': 'Current EN' }, textBlock(line.base, { empty: 'no current text' })),
-        h('td', { 'data-label': 'Suggested EN' }, line.text ? h('div', { class: 'cms-lah-tl-text' }, line.text) : h('span', { class: 'cms-lah-tl-muted' }, 'no English text')),
+        h('td', { 'data-label': 'Current text' }, textBlock(line.base, { empty: 'no current text' })),
+        h('td', { 'data-label': 'Suggested text' }, line.text ? h('div', { class: 'cms-lah-tl-text' }, line.text) : h('span', { class: 'cms-lah-tl-muted' }, 'no translation text')),
       ),
     )
   }
@@ -125,7 +126,7 @@ function editor(el: HTMLElement, init: { value: unknown; onChange(p: unknown): v
   const { root, unmount } = mountRoot(el, 'cms-lah-tl-stack')
   const summaryEl = h('div', { class: 'cms-lah-tl-row' })
   const generalErrs = errorBox()
-  const { table: t, tbody } = table('Suggested EN')
+  const { table: t, tbody } = table('Suggested text')
   const emptyRow = h('tr', { class: 'cms-lah-tl-empty' }, h('td', { colspan: '4' }, 'No lines left. At least one line is required: reject the submission instead of removing everything.'))
   const noteArea = h('textarea', { class: 'cms-lah-tl-textarea', rows: 2, maxlength: NOTE_MAX * 2, value: note })
   const noteField = field('Note from the contributor (optional)', noteArea, `Plain text, at most ${NOTE_MAX} characters.`)
@@ -166,7 +167,7 @@ function editor(el: HTMLElement, init: { value: unknown; onChange(p: unknown): v
     const keyErrs = errorBox()
     const textErrs = errorBox()
     const count = h('div', { class: 'cms-lah-tl-count' })
-    const area = h('textarea', { class: 'cms-lah-tl-textarea', rows: 3, value: line.text, 'aria-label': `Suggested EN for ${voicePart(resourceName, line.key)}` })
+    const area = h('textarea', { class: 'cms-lah-tl-textarea', rows: 3, value: line.text, 'aria-label': `Suggested text for ${voicePart(resourceName, line.key)}` })
     const row: Row = { line, area, keyErrs, textErrs, jpErrs, count, jp, jpArea, tr: h('tr') }
     const updateCount = () => {
       const n = area.value.replace(/\r\n?/g, '\n').trim().length
@@ -202,8 +203,8 @@ function editor(el: HTMLElement, init: { value: unknown; onChange(p: unknown): v
       row.tr,
       h('td', { class: 'cms-lah-tl-part', 'data-label': 'Part' }, h('span', { class: 'cms-lah-tl-part-name' }, voicePart(resourceName, line.key)), keyErrs, remove),
       jp.td,
-      h('td', { 'data-label': 'Current EN' }, textBlock(line.base, { empty: 'no current text' })),
-      h('td', { 'data-label': 'Suggested EN' }, area, count, textErrs),
+      h('td', { 'data-label': 'Current text' }, textBlock(line.base, { empty: 'no current text' })),
+      h('td', { 'data-label': 'Suggested text' }, area, count, textErrs),
     )
     if (rosterLoaded) jp.fill(voiceJp(roster, resourceName, line.key))
     rows.push(row)

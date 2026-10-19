@@ -5,6 +5,7 @@ import type { VNode } from 'preact'
 import { useCallback, useEffect, useRef, useState } from 'preact/hooks'
 import { getContrib } from '../../team-creator/api.ts'
 import type { Lang } from '../../team-creator/lang.ts'
+import type { TlLang } from './langs.ts'
 import { SubmitError, postSubmission, trimApi, type SubmissionType } from './submit.ts'
 
 interface TurnstileApi {
@@ -54,8 +55,8 @@ const theme = (): 'light' | 'dark' => {
 export interface Submitter {
   /** Put this where the verification widget should appear. */
   widget: VNode
-  /** Sends one submission. Rejects with a SubmitError (code `verify_missing` / `verify_load` before anything is sent). */
-  send(payload: unknown): Promise<{ id: string }>
+  /** Sends one submission in `lang` (English when omitted). Rejects with a SubmitError (code `verify_missing` / `verify_load` before anything is sent). */
+  send(payload: unknown, lang?: TlLang): Promise<{ id: string }>
 }
 
 export function useSubmitter(api: string, type: SubmissionType, lang: Lang): Submitter {
@@ -104,14 +105,14 @@ export function useSubmitter(api: string, type: SubmissionType, lang: Lang): Sub
   }
 
   const send = useCallback(
-    async (payload: unknown) => {
+    async (payload: unknown, tlLang?: TlLang) => {
       const session = (await getContrib(api)).session(api)
       if (!session) throw new SubmitError(401, 'unauthenticated')
       // after a reset the widget solves again by itself (several submissions in a row): give it a moment
       for (let waited = 0; !token.current && !loadError && waited < 8000; waited += 100) await new Promise((r) => setTimeout(r, 100))
       if (!token.current) throw new SubmitError(0, loadError ? 'verify_load' : 'verify_missing')
       try {
-        return await postSubmission({ api, type, payload, token: session.token, turnstileToken: token.current })
+        return await postSubmission({ api, type, payload, lang: tlLang, token: session.token, turnstileToken: token.current })
       } finally {
         reset() // tokens are single-use
       }

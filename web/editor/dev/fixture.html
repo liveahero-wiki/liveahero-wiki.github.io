@@ -59,7 +59,7 @@ Use {% include item.html id=10 %} to level up. Needs 3x {% include item-icon.htm
       window.fetch = async (url, init) => {
         const u = String(url)
         if (u.includes('raw.githubusercontent.com')) return new Response(SOURCE)
-        if (u.endsWith('/api/bio-roster.json')) return json({ version: '1', bios: { DETAIL_RYEKIE_H01: { jp: 'リエキーは遠距離ヒーローです。\nとても優しい性格です。', en: '' }, DETAIL_RYEKIE_S01: { jp: 'サイドキックの説明', en: 'Existing machine text.' } } })
+        if (u.endsWith('/api/bio-roster.json')) return json({ version: '1', bios: { DETAIL_RYEKIE_H01: { jp: 'リエキーは遠距離ヒーローです。\nとても優しい性格です。', langs: ['en', 'hans', 'hant'] }, DETAIL_RYEKIE_S01: { jp: 'サイドキックの説明', en: 'Existing machine text.', hant: '側翼的說明', langs: ['en', 'hans', 'hant'] } } })
         if (u.endsWith('/api/contrib-includes.json')) return json({ includes: ['item.html', 'item-icon.html', 'quest-group.html', 'shop-table.html'] })
         if (u.endsWith('/api/editor-data.json')) return json({
           version: '1',
@@ -107,25 +107,30 @@ Use {% include item.html id=10 %} to level up. Needs 3x {% include item-icon.htm
               <th>Japanese (JP) <button type="button" class="voice-suggest-btn" data-contrib="voice-suggest" data-resource-name="ryekie">Suggest translations</button></th>
               <th class="voice-header-right">
                 <span class="voice-header-title">Translation</span>
+                <div class="voice-tab-bar">
+                  <button type="button" class="voice-tab-btn" data-lang-target="en" aria-selected="true">EN</button>
+                  <button type="button" class="voice-tab-btn" data-lang-target="hans">简中</button>
+                  <button type="button" class="voice-tab-btn" data-lang-target="hant">繁中</button>
+                </div>
               </th>
             </tr>
           </thead>
           <tbody>
-            <tr data-voice-key="voice_ryekie_action" data-translatable>
+            <tr data-voice-key="voice_ryekie_action" data-translatable data-tl-langs="en hans hant">
               <td class="voice-jp-cell"><div class="voice-key-badge">action</div><div class="voice-text">いくぞ！</div></td>
-              <td class="voice-translation-cell"><div class="voice-lang-content" data-lang="en">Let's go!</div></td>
+              <td class="voice-translation-cell"><div class="voice-lang-content" data-lang="en">Let's go!</div><div class="voice-lang-content" data-lang="hans">-</div><div class="voice-lang-content" data-lang="hant">出發吧！</div></td>
             </tr>
-            <tr data-voice-key="voice_ryekie_attack" data-translatable>
+            <tr data-voice-key="voice_ryekie_attack" data-translatable data-tl-langs="en hans hant">
               <td class="voice-jp-cell"><div class="voice-key-badge">attack</div><div class="voice-text">くらえ！<br>これが私の力だ</div></td>
-              <td class="voice-translation-cell"><div class="voice-lang-content" data-lang="en">-</div></td>
+              <td class="voice-translation-cell"><div class="voice-lang-content" data-lang="en">-</div><div class="voice-lang-content" data-lang="hans">-</div><div class="voice-lang-content" data-lang="hant">-</div></td>
             </tr>
-            <tr data-voice-key="voice_ryekie_win" data-translatable>
+            <tr data-voice-key="voice_ryekie_win" data-translatable data-tl-langs="en hant">
               <td class="voice-jp-cell"><div class="voice-key-badge">win</div><div class="voice-text">勝ったぞ</div></td>
-              <td class="voice-translation-cell"><div class="voice-lang-content" data-lang="en">First line<br>second line</div></td>
+              <td class="voice-translation-cell"><div class="voice-lang-content" data-lang="en">First line<br>second line</div><div class="voice-lang-content" data-lang="hans">我们赢了（官方文本）</div><div class="voice-lang-content" data-lang="hant">-</div></td>
             </tr>
-            <tr data-voice-key="voice_ryekie_battleStart" data-translatable>
+            <tr data-voice-key="voice_ryekie_battleStart" data-translatable data-tl-langs="en hans hant">
               <td class="voice-jp-cell"><div class="voice-key-badge">battleStart</div><div class="voice-text">-</div></td>
-              <td class="voice-translation-cell"><div class="voice-lang-content" data-lang="en"></div></td>
+              <td class="voice-translation-cell"><div class="voice-lang-content" data-lang="en"></div><div class="voice-lang-content" data-lang="hans">-</div><div class="voice-lang-content" data-lang="hant">-</div></td>
             </tr>
             <tr data-voice-key="voice_ryekie_DAILY">
               <td class="voice-jp-cell"><div class="voice-key-badge">DAILY</div><div class="voice-text">おはよう</div></td>
@@ -136,7 +141,7 @@ Use {% include item.html id=10 %} to level up. Needs 3x {% include item-icon.htm
 
         <h2>Bio</h2>
         <div class="tabcontent contain">リエキーは遠距離ヒーローです。</div>
-        <p class="bio-suggest" data-pagefind-ignore><button type="button" class="contrib-suggest-bio" data-contrib="bio-suggest" data-bio-key="DETAIL_RYEKIE_H01">Suggest an English translation</button></p>
+        <p class="bio-suggest" data-pagefind-ignore><button type="button" class="contrib-suggest-bio" data-contrib="bio-suggest" data-bio-key="DETAIL_RYEKIE_H01">Suggest a translation</button></p>
         <p class="bio-suggest" data-pagefind-ignore><button type="button" class="contrib-suggest-bio" data-contrib="bio-suggest" data-bio-key="DETAIL_NOT_IN_ROSTER">Not in roster</button></p>
       </div>
     </main>

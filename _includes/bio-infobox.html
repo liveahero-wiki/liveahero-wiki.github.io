@@ -2,6 +2,8 @@
 {% assign langCodes = "" | split: "," %}
 {% assign dataSources = "" | split: "," %}
 {% assign en_is_community = false %}
+{% assign hans_is_community = false %}
+{% assign hant_is_community = false %}
 
 {% assign jp_data = site.data.processed.jp_bio[include.bio] %}
 {% assign en_data = site.data.processed.en_bio[include.bio] %}
@@ -30,11 +32,27 @@
 {% assign locales = locales | push: "hans" %}
 {% assign langCodes = langCodes | push: "zh-Hans" %}
 {% assign dataSources = dataSources | push: site.data.processed.hans_bio %}
+{% else %}
+{% assign community_hans = site.data.processed.hans_bio_community[include.bio] %}
+{% if community_hans and jp_data %}
+{% assign hans_is_community = true %}
+{% assign locales = locales | push: "hans" %}
+{% assign langCodes = langCodes | push: "zh-Hans" %}
+{% assign dataSources = dataSources | push: site.data.processed.hans_bio_community %}
+{% endif %}
 {% endif %}
 {% if hant_data and hant_data != jp_data %}
 {% assign locales = locales | push: "hant" %}
 {% assign langCodes = langCodes | push: "zh-Hant" %}
 {% assign dataSources = dataSources | push: site.data.processed.hant_bio %}
+{% else %}
+{% assign community_hant = site.data.processed.hant_bio_community[include.bio] %}
+{% if community_hant and jp_data %}
+{% assign hant_is_community = true %}
+{% assign locales = locales | push: "hant" %}
+{% assign langCodes = langCodes | push: "zh-Hant" %}
+{% assign dataSources = dataSources | push: site.data.processed.hant_bio_community %}
+{% endif %}
 {% endif %}
 
 <wiki-tabs class="mini-tabs">
@@ -43,7 +61,7 @@
 <nav role="tablist">
 {% for locale in locales %}
 <a role="tab" aria-controls="bio-{{include.bio | downcase}}-{{ locale }}"
-    href="#bio-{{include.bio | downcase}}-{{ locale }}">{% if en_is_community and locale == "en" %}EN (community translation){% else %}{{ locale | convertLang }}{% endif %}</a>
+    href="#bio-{{include.bio | downcase}}-{{ locale }}">{% if en_is_community and locale == "en" %}EN (community translation){% elsif hans_is_community and locale == "hans" %}{{ locale | convertLang }} (community translation){% elsif hant_is_community and locale == "hant" %}{{ locale | convertLang }} (community translation){% else %}{{ locale | convertLang }}{% endif %}</a>
 {% endfor %}
 </nav>
 </wiki-header>
@@ -60,5 +78,5 @@
 </wiki-tabcontent>
 </wiki-tabs>
 {% if site.data.processed.bio_roster.bios[include.bio] %}
-<p class="bio-suggest" data-pagefind-ignore><button type="button" class="contrib-suggest-bio" data-contrib="bio-suggest" data-bio-key="{{ include.bio }}">Suggest an English translation</button></p>
+<p class="bio-suggest" data-pagefind-ignore><button type="button" class="contrib-suggest-bio" data-contrib="bio-suggest" data-bio-key="{{ include.bio }}">Suggest a translation</button></p>
 {% endif %}

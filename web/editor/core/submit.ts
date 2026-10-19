@@ -2,6 +2,7 @@
 // Pure apart from `fetch` (injectable), so node --test can import it.
 
 import { hasKey, type Key, type T } from '../i18n/t.ts'
+import type { TlLang } from './langs.ts'
 
 export const TYPES = ['lah-voice-tl', 'lah-bio-tl', 'lah-page-edit'] as const
 export type SubmissionType = (typeof TYPES)[number]
@@ -32,6 +33,8 @@ export interface SubmitArgs {
   api: string
   type: SubmissionType
   payload: unknown
+  /** The language of the submission (`text` and `base` of the payload are in it); `en` when omitted. */
+  lang?: TlLang
   /** The contributor bearer token (`contrib.session(api).token`). */
   token: string
   /** Cloudflare Turnstile token of this attempt (single use). */
@@ -40,13 +43,13 @@ export interface SubmitArgs {
 }
 
 /** `POST {api}/api/contrib/submissions/{type}/all`. Resolves with the new id; rejects with a SubmitError. */
-export async function postSubmission({ api, type, payload, token, turnstileToken, fetchImpl = fetch }: SubmitArgs): Promise<{ id: string }> {
+export async function postSubmission({ api, type, payload, lang = 'en', token, turnstileToken, fetchImpl = fetch }: SubmitArgs): Promise<{ id: string }> {
   let res: Response
   try {
     res = await fetchImpl(`${trimApi(api)}/api/contrib/submissions/${encodeURIComponent(type)}/all`, {
       method: 'POST',
       headers: { 'content-type': 'application/json', authorization: `Bearer ${token}` },
-      body: JSON.stringify({ payload, tags: {}, lang: 'en', turnstileToken, website: '' }),
+      body: JSON.stringify({ payload, tags: {}, lang, turnstileToken, website: '' }),
     })
   } catch {
     throw new SubmitError(0, 'network')

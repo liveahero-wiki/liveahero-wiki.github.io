@@ -60,9 +60,13 @@ async function getJson(url: string): Promise<unknown> {
 
 const isObj = (v: unknown): v is Record<string, unknown> => typeof v === 'object' && v !== null && !Array.isArray(v)
 
+/** `en` / `hans` / `hant`: the current text per language; `langs`: the languages still open for the line. */
 export interface RosterEntry {
   jp?: string
   en?: string
+  hans?: string
+  hant?: string
+  langs?: string[]
 }
 export type VoiceRoster = Record<string, Record<string, RosterEntry>>
 export type BioRoster = Record<string, RosterEntry>

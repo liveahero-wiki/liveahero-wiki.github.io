@@ -85,15 +85,22 @@ describe('data', () => {
   it('dataUrl resolves next to assets/cms/', () => {
     assert.equal(dataUrl('bio-roster.json', 'https://wiki.example/assets/cms/editor.js'), 'https://wiki.example/api/bio-roster.json')
   })
-  it('bioEntry offers only roster keys and drops an English text that is a copy of the Japanese', () => {
+  it('bioEntry offers only roster keys and drops a text that is a copy of the Japanese', () => {
     const roster = { bios: { DETAIL_A_H01: { jp: '日本語', en: 'English' }, DETAIL_B_H01: { jp: '同じ', en: '同じ' }, DETAIL_C_H01: { jp: 'だけ' } } }
-    assert.deepEqual(bioEntry(roster, 'DETAIL_A_H01'), { jp: '日本語', en: 'English' })
-    assert.deepEqual(bioEntry(roster, 'DETAIL_B_H01'), { jp: '同じ', en: '' })
-    assert.deepEqual(bioEntry(roster, 'DETAIL_C_H01'), { jp: 'だけ', en: '' })
+    const all = ['en', 'zh-Hans', 'zh-Hant']
+    assert.deepEqual(bioEntry(roster, 'DETAIL_A_H01'), { jp: '日本語', bases: { en: 'English', 'zh-Hans': '', 'zh-Hant': '' }, langs: all })
+    assert.deepEqual(bioEntry(roster, 'DETAIL_B_H01'), { jp: '同じ', bases: { en: '', 'zh-Hans': '', 'zh-Hant': '' }, langs: all })
+    assert.deepEqual(bioEntry(roster, 'DETAIL_C_H01'), { jp: 'だけ', bases: { en: '', 'zh-Hans': '', 'zh-Hant': '' }, langs: all })
     assert.equal(bioEntry(roster, 'DETAIL_NOPE_H01'), null)
     assert.equal(bioEntry(roster, '__proto__'), null)
     assert.equal(bioEntry(null, 'DETAIL_A_H01'), null)
     assert.equal(bioEntry({ bios: {} }, 'DETAIL_A_H01'), null)
+  })
+  it('bioEntry reads the Chinese texts and the open languages of the roster entry', () => {
+    const roster = { bios: { DETAIL_A_H01: { jp: '日本語', en: 'English', hans: '简介', hant: '日本語', langs: ['hant', 'hans'] }, DETAIL_B_H01: { jp: '', langs: ['en', 'hans'] } } }
+    assert.deepEqual(bioEntry(roster, 'DETAIL_A_H01'), { jp: '日本語', bases: { en: 'English', 'zh-Hans': '简介', 'zh-Hant': '' }, langs: ['zh-Hans', 'zh-Hant'] })
+    // no Japanese text to translate from: only English can be suggested
+    assert.deepEqual(bioEntry(roster, 'DETAIL_B_H01')?.langs, ['en'])
   })
   it("voice cells: the page's '-' is no text", () => {
     assert.equal(baseOf('-'), '')

@@ -5,17 +5,18 @@ Run after the sheet downloads (`voice_gsheet.py download`, `bio_gsheet.py downlo
 has regenerated _data/processed/{jp,en}_{serif,greeting,bio}.json.
 
 Writes (gitignored, like the other generated inputs):
-  _data/processed/voice_roster.json  { version, resources: { <resourceName>: { <voice key>: { jp, en? } } } }
-  _data/processed/bio_roster.json    { version, bios: { <bio key>: { jp, en? } } }
+  _data/processed/voice_roster.json  { version, resources: { <resourceName>: { <voice key>: { jp, en?, hans?, hant?, langs } } } }
+  _data/processed/bio_roster.json    { version, bios: { <bio key>: { jp, en?, hans?, hant?, langs } } }
 
 Eleventy serves them as /api/voice-roster.json and /api/bio-roster.json (translation-rosters.11ty.js); the
 wiki-cms submission types lah-voice-tl / lah-bio-tl validate submissions against them, the voice table and
 bio infobox templates read them from site.data to decide what to offer, and contrib_intake.py uses them to
 detect lines the game has translated in the meantime.
 
-Only translatable lines are listed (tools/translatable.py): game EN missing or equal to JP; the sheet-only
-"manual" voice parts always. Resources without a translatable line are left out. `en` is the effective
-current text (game, else community) and omitted when empty.
+Only translatable lines are listed (tools/translatable.py): the game's text missing or equal to JP in at least
+one language (en, hans, hant); the sheet-only "manual" voice parts always. `langs` lists the languages still
+open for the line (the game's text wins per language). Resources without a translatable line are left out.
+`en` / `hans` / `hant` are the effective current text of that language (game, else community), omitted when empty.
 """
 import argparse
 import os
@@ -46,7 +47,7 @@ def build_voice_roster(data: dict, names: list[str], version: str) -> dict:
 
 
 def build_bio_roster(data: dict, version: str) -> dict:
-    bios = translatable.bio_translatable(data.get("jp_bio", {}), data.get("en_bio", {}), data.get("en_bio_community", {}))
+    bios = translatable.bio_translatable(data.get("jp_bio", {}), data.get("en_bio", {}), **translatable.bio_inputs(data))
     return {"version": version, "bios": {k: bios[k] for k in sorted(bios)}}
 
 

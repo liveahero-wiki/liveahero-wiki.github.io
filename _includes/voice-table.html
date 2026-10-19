@@ -39,9 +39,16 @@
 
     {% if translated or jp_line %}
       {% assign en_val = translated | default: '-' %}
-      {% assign hans_val = site.data.processed.hans_greeting[key] | default: '-' %}
-      {% assign hant_val = site.data.processed.hant_greeting[key] | default: '-' %}
-      <tr{% if nr[key] %} data-voice-key="{{ key }}" data-translatable{% endif %}>
+      {%- comment -%} Chinese: the game's text, else the community's (the sheet); same rule as the English cell. {%- endcomment -%}
+      {% assign hans_line = site.data.processed.hans_greeting[key] %}
+      {% assign hans_val = hans_line | default: site.data.processed.hans_voice[key] %}
+      {% if hans_line and hans_line == jp_line and site.data.processed.hans_voice[key] %}{% assign hans_val = site.data.processed.hans_voice[key] %}{% endif %}
+      {% assign hans_val = hans_val | default: '-' %}
+      {% assign hant_line = site.data.processed.hant_greeting[key] %}
+      {% assign hant_val = hant_line | default: site.data.processed.hant_voice[key] %}
+      {% if hant_line and hant_line == jp_line and site.data.processed.hant_voice[key] %}{% assign hant_val = site.data.processed.hant_voice[key] %}{% endif %}
+      {% assign hant_val = hant_val | default: '-' %}
+      <tr{% if nr[key] %} data-voice-key="{{ key }}" data-translatable data-tl-langs="{{ nr[key].langs | join: ' ' }}"{% endif %}>
         <td class="voice-jp-cell">
           <div class="voice-key-badge">{{ label_name }}</div>
           <div class="voice-text" lang="ja">{{ jp_line | default: "-" }}</div>
@@ -71,9 +78,15 @@
 
     {% if jp_line %}
       {% assign en_val = translated | default: '-' %}
-      {% assign hans_val = site.data.processed.hans_serif[key] | default: '-' %}
-      {% assign hant_val = site.data.processed.hant_serif[key] | default: '-' %}
-      <tr{% if nr[voiceFilename] %} data-voice-key="{{ voiceFilename }}" data-translatable{% endif %}>
+      {% assign hans_line = site.data.processed.hans_serif[key] %}
+      {% assign hans_val = hans_line | default: site.data.processed.hans_voice[voiceFilename] %}
+      {% if hans_line and hans_line == jp_line and site.data.processed.hans_voice[voiceFilename] %}{% assign hans_val = site.data.processed.hans_voice[voiceFilename] %}{% endif %}
+      {% assign hans_val = hans_val | default: '-' %}
+      {% assign hant_line = site.data.processed.hant_serif[key] %}
+      {% assign hant_val = hant_line | default: site.data.processed.hant_voice[voiceFilename] %}
+      {% if hant_line and hant_line == jp_line and site.data.processed.hant_voice[voiceFilename] %}{% assign hant_val = site.data.processed.hant_voice[voiceFilename] %}{% endif %}
+      {% assign hant_val = hant_val | default: '-' %}
+      <tr{% if nr[voiceFilename] %} data-voice-key="{{ voiceFilename }}" data-translatable data-tl-langs="{{ nr[voiceFilename].langs | join: ' ' }}"{% endif %}>
         <td class="voice-jp-cell">
           <div class="voice-key-badge">{{ p }}</div>
           <div class="voice-text" lang="ja">{{ jp_line }}</div>
@@ -91,17 +104,19 @@
     {% capture voiceFilename %}voice_{{ n }}_{{ part }}{% endcapture %}
     {% assign jp_line = site.data.processed.jp_voice[voiceFilename] %}
     {% assign en_line = site.data.processed.en_voice[voiceFilename] %}
+    {% assign hans_line = site.data.processed.hans_voice[voiceFilename] %}
+    {% assign hant_line = site.data.processed.hant_voice[voiceFilename] %}
     {%- comment -%} A roster entry without JP is a line VoiceMaster knows but nobody transcribed yet. {%- endcomment -%}
-    {% if jp_line or en_line or nr[voiceFilename] %}
-      <tr{% if nr[voiceFilename] %} data-voice-key="{{ voiceFilename }}" data-translatable{% endif %}>
+    {% if jp_line or en_line or hans_line or hant_line or nr[voiceFilename] %}
+      <tr{% if nr[voiceFilename] %} data-voice-key="{{ voiceFilename }}" data-translatable data-tl-langs="{{ nr[voiceFilename].langs | join: ' ' }}"{% endif %}>
         <td class="voice-jp-cell">
           <div class="voice-key-badge">{{ part }}</div>
           <div class="voice-text">{{ jp_line | default: '-' }}</div>
         </td>
         <td class="voice-translation-cell">
-          <div class="voice-lang-content" data-lang="en">{{ en_line | default: '-' }}</div>
-          <div class="voice-lang-content" data-lang="hans">-</div>
-          <div class="voice-lang-content" data-lang="hant">-</div>
+          <div class="voice-lang-content" lang="en" data-lang="en">{{ en_line | default: '-' }}</div>
+          <div class="voice-lang-content" lang="zh-Hans" data-lang="hans">{{ hans_line | default: '-' }}</div>
+          <div class="voice-lang-content" lang="zh-Hant" data-lang="hant">{{ hant_line | default: '-' }}</div>
         </td>
       </tr>
     {% endif %}
