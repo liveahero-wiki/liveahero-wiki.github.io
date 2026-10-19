@@ -132,17 +132,7 @@ export function VoiceView({ ctx, rows, initialLang = 'en' }: { ctx: Ctx; rows: V
 
   return (
     <form class="contrib-form" onSubmit={onSubmit} noValidate>
-      {sent !== null ? (
-        <Notice kind="success">
-          {t('voiceSent', { n: sent })}{' '}
-          <button type="button" class="contrib-link" onClick={ctx.openMine}>
-            {t('mineButton')}
-          </button>
-        </Notice>
-      ) : (
-        <p class="contrib-help">{t('voiceIntro')}</p>
-      )}
-      {sent !== null && changedTotal > 0 && <Notice>{t('voiceSentMore', { n: changedTotal })}</Notice>}
+      {sent === null && <p class="contrib-help">{t('voiceIntro')}</p>}
 
       <div class="contrib-langs" role="group" aria-label={t('voiceLangs')}>
         {available.map((l) => (
@@ -229,6 +219,15 @@ export function VoiceView({ ctx, rows, initialLang = 'en' }: { ctx: Ctx; rows: V
           </button>
         </div>
       )}
+      {sent !== null && (
+        <Notice kind="success">
+          {t('voiceSent', { n: sent })}{' '}
+          <button type="button" class="contrib-link" onClick={ctx.openMine}>
+            {t('mineButton')}
+          </button>
+        </Notice>
+      )}
+      {sent !== null && changedTotal > 0 && <Notice>{t('voiceSentMore', { n: changedTotal })}</Notice>}
 
       {submitter.widget}
       <div class="contrib-actions">
