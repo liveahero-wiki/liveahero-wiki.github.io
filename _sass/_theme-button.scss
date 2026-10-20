@@ -159,6 +159,59 @@ pagefind-modal-trigger {
   display: none !important;
 }
 
+// Phones: tighter gutters so the toolbar (menu, theme, search, edit, language, JP Wiki) stays on one row down to 320px.
+@media (max-width: 400px) {
+  .toolbar {
+    padding-inline: 10px;
+  }
+
+  .toolbar .toolbar-button {
+    margin-right: 4px;
+  }
+
+  .toolbar :is(.menu-button, .github-button, .skill-lang-picker) {
+    margin-right: 4px;
+  }
+}
+
+// The Edit dropdown (popover, so Escape and outside clicks close it). Opens under the toolbar, at the right edge.
+.toolbar-menu {
+  inset: var(--toolbar-height) 10px auto auto;
+  margin: 0;
+  padding: 4px;
+  min-width: 12rem;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--colorGrey);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.2);
+
+  &:popover-open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  > :is(a, button) {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    font: inherit;
+    color: inherit;
+    text-align: left;
+    text-decoration: none;
+    background: none;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:is(:hover, :focus-visible) {
+      background: var(--color50);
+      text-decoration: none;
+    }
+  }
+}
+
 .code-icon {
   fill: var(--icon-fill);
 }

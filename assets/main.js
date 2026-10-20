@@ -211,7 +211,14 @@ function setupContrib() {
   });
 }
 
-const tasks = [setupWikiTabs, setupMenu, setupSkillLangPicker, setupCmsLang, setupExpiry, setupSortTable, setupVoiceTableTabs, setupContrib];
+// Close the toolbar's Edit dropdown once an item is chosen (the editor opens over it, the GitHub link navigates away).
+function setupToolbarMenu() {
+  document.querySelector(".toolbar-menu")?.addEventListener("click", e => {
+    if (e.target.closest("[role=menuitem]")) e.currentTarget.hidePopover?.();
+  });
+}
+
+const tasks = [setupWikiTabs, setupMenu, setupToolbarMenu, setupSkillLangPicker, setupCmsLang, setupExpiry, setupSortTable, setupVoiceTableTabs, setupContrib];
 for (const t of tasks) {
   setTimeout(t, 0)
 }
