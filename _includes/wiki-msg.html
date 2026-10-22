@@ -1,5 +1,7 @@
 {% comment %}
-  Announcements from _data/wiki/WikiMessages.json (id, text as markdown, optional start/end in JST).
+  Announcements from _data/wiki/WikiMessages.json (id, text as markdown or a map from language to markdown,
+  optional start/end in JST). The text is written in every language and _sass/_skill-lang.scss shows the one
+  in <html data-skill-lang> (wiki_plugins/lib/wiki-messages.js).
   Only the messages active at build time are rendered; _includes/js/wiki-msg.js keeps track of which
   ones the reader has seen. The button goes into #float-btns, the stack of corner buttons. The stack is
   always rendered so that page scripts (meteor-shower.js, chara.js) can add their buttons to it.
@@ -31,7 +33,12 @@
   </header>
   <div class="wiki-msg-list">
   {% for msg in wiki_msgs %}
-    <article class="wiki-msg" data-msg-id="{{ msg.id | escape }}">{{ msg.text | markdownify }}</article>
+    <article class="wiki-msg" data-msg-id="{{ msg.id | escape }}">
+    {%- assign blocks = msg | wiki_msg_blocks -%}
+    {%- for block in blocks -%}
+      <div{% unless block.single and block.src == "en" %} lang="{{ block.src }}"{% endunless %}{% unless block.single %} class="sdv" data-l="{{ block.langs }}"{% endunless %}>{{ block.text | markdownify }}</div>
+    {%- endfor -%}
+    </article>
   {% endfor %}
   </div>
 </dialog>

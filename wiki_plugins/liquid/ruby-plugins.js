@@ -11,6 +11,7 @@ import { lahItem, lahItemIcon } from "../lib/item.js";
 import { xmlEscape } from "../lib/ruby.js";
 import * as skill from "../lib/skill.js";
 import { createSkillText } from "../lib/skill-text.js";
+import { wikiMessageBlocks } from "../lib/wiki-messages.js";
 import { gameOrCommunity } from "../lib/translation.js";
 
 /**
@@ -81,6 +82,9 @@ export function registerRubyPlugins(eleventyConfig, { site, charaIndex }) {
     const json = skillEffectJson ?? this.context.get(["skillEffectJson"]);
     return skill.statusDescription(id, json, statusData(), (t, v) => renderInContext(this, t, v));
   });
+
+  // Announcements in every language (see lib/wiki-messages.js)
+  filter("wiki_msg_blocks", (msg) => wikiMessageBlocks(msg, { strict: Boolean(process.env.ELEVENTY_STRICT) }));
 
   // Skill names/descriptions in every language (see lib/skill-text.js)
   const skillText = createSkillText(site, { strict: Boolean(process.env.ELEVENTY_STRICT) });

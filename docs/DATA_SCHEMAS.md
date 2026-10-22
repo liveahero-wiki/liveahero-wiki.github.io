@@ -159,10 +159,17 @@ else the raw Japanese master text, sanitized to the wiki tag set
 A hand-edited list shown by the floating announcements button (`_includes/wiki-msg.html`).
 ```jsonc
 [ { "id": "skill-i18n",                       // unique; remembered as read in localStorage (wikiMsgRead)
-    "text": "Skill info is now in **Chinese**!", // markdown
+    "text": {                                  // markdown; a plain string is English only
+      "en": "Skill info is now in **Chinese**!",
+      "ja": "…", "zh-Hans": "…", "zh-Hant": "…" },
     "start": "2026-10-01 00:00:00",            // optional, JST
     "end": "2026-11-01 00:00:00" } ]           // optional, JST; active while start <= build time < end
 ```
+`text` keys are the UI languages `en`, `zh-Hans`, `zh-Hant`, `ja`, and `en` is required. Every language is
+written into the page and the one in `<html data-skill-lang>` (the toolbar language picker) is shown, like
+skill text (`wiki_plugins/lib/wiki-messages.js`). A language without text shows the other Chinese variant,
+then English. The build warns about a missing `en`, an unknown key or an empty text (`ELEVENTY_STRICT` fails).
+
 Only the messages active when the site is built are rendered (CI rebuilds every 6 hours). The
 badge on the button counts the ones this browser has not opened yet.
 
