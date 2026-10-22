@@ -20,12 +20,19 @@ describe('contribStrings', () => {
   })
 })
 
+describe('provider-neutral wording', () => {
+  it('no sign-in string names a provider (the wiki does not know which one the user picks)', () => {
+    for (const lang of LANGS) for (const [k, v] of Object.entries(contribStrings[lang])) assert.doesNotMatch(v, /discord|bluesky/i, `${lang}.${k}`)
+  })
+})
+
 describe('signInErrorText', () => {
   it('maps popup_blocked, closed and the account age rule', () => {
     assert.equal(signInErrorText(t, 'en', { code: 'popup_blocked' }), t('popupBlocked'))
     assert.equal(signInErrorText(t, 'en', { code: 'closed' }), t('signInClosed'))
     assert.match(signInErrorText(t, 'en', { code: 'account_too_young', eligibleAt: Date.UTC(2026, 10, 20) }), /at least 30 days old/)
     assert.equal(signInErrorText(t, 'en', { code: 'account_too_young' }), t('tooYoungNoDate', { days: 30 }))
+    assert.equal(signInErrorText(t, 'en', { code: 'age_check_unavailable' }), t('ageCheckUnavailable'))
     assert.equal(signInErrorText(t, 'en', new Error('x')), t('signInFailed'))
     assert.equal(signInErrorText(t, 'en', null), t('signInFailed'))
   })

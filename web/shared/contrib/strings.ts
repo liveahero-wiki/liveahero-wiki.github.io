@@ -10,8 +10,9 @@ const en = {
   signedInAs: 'Signed in as {name}',
   popupBlocked: 'The sign-in window was blocked by your browser. Allow pop-ups for this site and try again.',
   signInClosed: 'The sign-in window was closed before finishing.',
-  tooYoung: 'Your Discord account must be at least {days} days old to contribute. You can sign in again from {date}.',
-  tooYoungNoDate: 'Your Discord account must be at least {days} days old to contribute.',
+  tooYoung: 'Your account must be at least {days} days old to contribute. You can sign in again from {date}.',
+  tooYoungNoDate: 'Your account must be at least {days} days old to contribute.',
+  ageCheckUnavailable: 'We could not check your account age right now. Please try again in a few minutes.',
   signInFailed: 'Signing in failed. Please try again.',
 }
 
@@ -26,8 +27,9 @@ export const contribStrings: Record<Lang, ContribBundle> = {
     signedInAs: '{name} としてサインイン中',
     popupBlocked: 'サインインのウィンドウがブラウザにブロックされました。このサイトのポップアップを許可してもう一度お試しください。',
     signInClosed: 'サインインが完了する前にウィンドウが閉じられました。',
-    tooYoung: '投稿するにはDiscordアカウントの作成から{days}日以上経っている必要があります。{date}以降にもう一度サインインできます。',
-    tooYoungNoDate: '投稿するにはDiscordアカウントの作成から{days}日以上経っている必要があります。',
+    tooYoung: '投稿するにはアカウントの作成から{days}日以上経っている必要があります。{date}以降にもう一度サインインできます。',
+    tooYoungNoDate: '投稿するにはアカウントの作成から{days}日以上経っている必要があります。',
+    ageCheckUnavailable: 'アカウントの作成日を確認できませんでした。しばらくしてからもう一度お試しください。',
     signInFailed: 'サインインに失敗しました。もう一度お試しください。',
   },
   'zh-Hans': {
@@ -36,8 +38,9 @@ export const contribStrings: Record<Lang, ContribBundle> = {
     signedInAs: '已登录：{name}',
     popupBlocked: '登录窗口被浏览器拦截。请允许此网站弹出窗口后重试。',
     signInClosed: '登录窗口在完成前被关闭。',
-    tooYoung: '你的 Discord 账号注册需满{days}天后才能投稿。你可以从{date}起再次登录。',
-    tooYoungNoDate: '你的 Discord 账号注册需满{days}天后才能投稿。',
+    tooYoung: '你的账号注册需满{days}天后才能投稿。你可以从{date}起再次登录。',
+    tooYoungNoDate: '你的账号注册需满{days}天后才能投稿。',
+    ageCheckUnavailable: '暂时无法确认你的账号注册时间，请几分钟后再试。',
     signInFailed: '登录失败，请重试。',
   },
   'zh-Hant': {
@@ -46,8 +49,9 @@ export const contribStrings: Record<Lang, ContribBundle> = {
     signedInAs: '已登入：{name}',
     popupBlocked: '登入視窗被瀏覽器封鎖。請允許此網站的彈出視窗後重試。',
     signInClosed: '登入視窗在完成前被關閉。',
-    tooYoung: '你的 Discord 帳號註冊需滿{days}天後才能投稿。你可以從{date}起再次登入。',
-    tooYoungNoDate: '你的 Discord 帳號需註冊滿{days}天後才能投稿。',
+    tooYoung: '你的帳號註冊需滿{days}天後才能投稿。你可以從{date}起再次登入。',
+    tooYoungNoDate: '你的帳號需註冊滿{days}天後才能投稿。',
+    ageCheckUnavailable: '暫時無法確認你的帳號註冊時間，請幾分鐘後再試。',
     signInFailed: '登入失敗，請重試。',
   },
 }
@@ -62,6 +66,7 @@ export function signInErrorText(t: (key: ContribKey, params?: Record<string, str
   const code = (e as SignInLike | null)?.code
   if (code === 'popup_blocked') return t('popupBlocked')
   if (code === 'closed') return t('signInClosed')
+  if (code === 'age_check_unavailable') return t('ageCheckUnavailable')
   if (code === 'account_too_young') {
     const at = (e as SignInLike).eligibleAt
     if (!at) return t('tooYoungNoDate', { days: MIN_ACCOUNT_AGE_DAYS })

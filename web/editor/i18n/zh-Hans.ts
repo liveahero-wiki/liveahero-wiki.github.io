@@ -13,8 +13,8 @@ export const zhHans: Bundle = {
   loadFailed: '无法打开编辑器，请稍后再试。',
 
   signInTitle: '登录后才能投稿',
-  signInIntro: '使用 Discord 账号登录后即可提交建议。所有建议在出现在 Wiki 之前都会由管理员审核。',
-  signInButton: '使用 Discord 登录',
+  signInIntro: '使用 Discord 或 Bluesky 账号登录后即可提交建议。所有建议在出现在 Wiki 之前都会由管理员审核。',
+  signInButton: '登录',
   signingIn: '正在等待登录窗口…',
   signInAgain: '登录已过期，请重新登录。',
 

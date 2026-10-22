@@ -17,7 +17,7 @@ graph LR
 
 - **Translations (voice lines, bios)**: moderated wiki-cms submissions (`lah-voice-tl`, `lah-bio-tl`) that the hourly `translation-intake.yml` Action writes into the Google Sheet.
 - **Page edits**: a moderated submission (`lah-page-edit`) that wiki-cms turns into a pull request through a GitHub App; `contrib-guard.yml` is the gate.
-- **Sign-in** is shared with the Team Creator (wiki-cms contributor accounts).
+- **Sign-in** is shared with the Team Creator (wiki-cms contributor accounts). The popup offers **Discord** or **Bluesky** (atproto OAuth, handle entered in the popup, identity only; account age from the `did:plc` creation date in plc.directory; two separate contributors, no linking). The wiki does not know which one the user picks, so every sign-in string is provider-neutral and `signIn()` sends no provider. X was dropped because its API pricing is too high for this wiki. Design and decisions: wiki-cms `docs/BLUESKY_LOGIN_PLAN.md`. Bluesky avatars come from `cdn.bsky.app` (the wiki sets no CSP, so nothing to allow).
 
 ## Goals and constraints
 
@@ -66,7 +66,7 @@ graph LR
 ## Designed but not built
 
 - **Data edits (`_data/wiki/*.yml`).** Whitelist `VoiceActor.yml`, `Illustrator.yml`, `Affiliation.yml`, `Item.yml` (not `UITranslation.yml`, `SalesReport.json` or generated files). Edit in context with a form (e.g. "Edit voice actor / illustrator" on a chara page opens that entry's fields) instead of raw YAML. One Valibot schema per file, kept here, bundled into the editor and checked again at build (an Eleventy data check that throws, like `cms-groups.js`). The Worker applies the edit with the `yaml` package's Document API so comments, key order and quoting survive and the PR diff shows only the changed lines. Same path as page edits: type `lah-data-edit` → moderation → App PR (plus a CI guard for the whitelist).
-- **More sign-in providers.** GitHub first (leads people onto GitHub; opt-in `public_repo` scope would later allow PRs from the contributor's own fork under their own name), then Reddit and X after checking their current API access and pricing. The registry is `src/core/providers.ts` in wiki-cms (Reddit/X return a creation date for the same age gate). Account linking across providers is not implemented.
+- **More sign-in providers.** GitHub (leads people onto GitHub; opt-in `public_repo` scope would later allow PRs from the contributor's own fork under their own name), then Reddit. The registry is `src/core/providers.ts` in wiki-cms (a provider returns a creation date for the same age gate). Account linking across providers is not implemented.
 - **Trust level.** `contributor_tab.trust_level` is reserved; the idea is to auto-approve translations from contributors with N accepted edits. Revisit auto-merge only together with this.
 - **Getting contributors onto GitHub:** link "your edit is in PR #n" and "you can also edit directly on GitHub" from the submitter's status page, and offer GitHub sign-in after a few accepted edits.
 - **Editor polish:** CodeMirror 6, and LiquidJS in the preview if guide pages need more than placeholder chips (today only `chara_link`, `item.html` and `item-icon.html` render for real, from `/api/editor-data.json`; every other include and protected token is a labelled chip).
