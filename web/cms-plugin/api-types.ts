@@ -92,7 +92,7 @@ export interface SubmitResponse {
 /** Messages the sign-in popup (`/api/contrib/auth/done`) posts to `window.opener`. */
 export type ContribAuthMessage =
   | { type: 'cms-contrib'; token: string; user: ContribUser }
-  | { type: 'cms-contrib-error'; code: 'account_too_young' | 'age_check_unavailable' | 'unauthenticated' | 'unavailable'; eligibleAt?: number | null }
+  | { type: 'cms-contrib-error'; code: 'account_too_young' | 'unauthenticated' | 'unavailable'; eligibleAt?: number | null }
 
 export interface ContribUser {
   id: string
@@ -241,8 +241,6 @@ export interface AdminOwner {
   /** Provider account (e.g. the Discord id), for moderators to recognise the person. */
   provider: string | null
   accountId: string | null
-  /** Bluesky handle at first sign-in (it can change later: link by DID). Null for other providers. */
-  handle: string | null
 }
 /** A contributor's proposed edit, with the submission it would replace. */
 export interface AdminRevision {
