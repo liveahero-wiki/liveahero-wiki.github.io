@@ -185168,5 +185168,263 @@
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
     }
+  },
+  "6976": {
+    "skillEffectId": 6976,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "CountDamage",
+          "parameter": {
+            "value": 60,
+            "target": 3,
+            "maxMult": 2,
+            "minMult": 1,
+            "statusId": 275,
+            "countMult": 0.0001,
+            "dontCallDamaged": false,
+            "dontCallDefenced": false
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "60%ダメージ+味方全体のバリアの値に応じてダメージ上昇",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "6979": {
+    "skillEffectId": 6979,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": {
+            "timing": 17,
+            "avoidExtensionTurn": false
+          }
+        }
+      ],
+      "filename": "status_immunity",
+      "statusId": 128,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "弱体抵抗+50(アイコン表示のみ)",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "弱体抵抗50",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "デバフが付与される確率が50%減少する。",
+      "isDisplayPersistenceStatus": true,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "6990": {
+    "skillEffectId": 6990,
+    "skillEffectJson": {
+      "turn": 2,
+      "count": 0,
+      "effects": [
+        {
+          "class": "OtherParamBarrier",
+          "parameter": {
+            "mult": 10,
+            "value": 0,
+            "maxValue": 10000,
+            "isInvoker": false,
+            "paramType": 0
+          }
+        }
+      ],
+      "filename": "status_barrier",
+      "statusId": 275,
+      "canDispel": true,
+      "filterIds": [
+        5
+      ],
+      "parameter": true,
+      "description": "対象の最大HPの10%バリア最大10000",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "被ダメージ時、受けるダメージをバリア値だけ軽減する。バリア値は付与キャラクターの最大HPの10%。（最大10000まで）<br><color=#505050>バリア値が無くなった時、解除される。</color>",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "6991": {
+    "skillEffectId": 6991,
+    "skillEffectJson": {
+      "turn": 3,
+      "count": 0,
+      "effects": [
+        {
+          "class": "OtherParamBarrier",
+          "parameter": {
+            "mult": 10,
+            "value": 0,
+            "maxValue": 10000,
+            "isInvoker": false,
+            "paramType": 0
+          }
+        }
+      ],
+      "filename": "status_barrier",
+      "statusId": 275,
+      "canDispel": true,
+      "filterIds": [
+        5
+      ],
+      "parameter": true,
+      "description": "対象の最大HPの10%バリア最大10000",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "被ダメージ時、受けるダメージをバリア値だけ軽減する。バリア値は付与キャラクターの最大HPの10%。（最大10000まで）<br><color=#505050>バリア値が無くなった時、解除される。</color>",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "6992": {
+    "skillEffectId": 6992,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RegistDebuff",
+          "parameter": {
+            "value": 50,
+            "statusId": 0
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"value2\":0,\"includeTemporary\":false,\"element\":0,\"statusId\":276,\"role\":0,\"class\":\"OwnSystemStatusNumberExecTrigger\",\"targetStates\":null},{\"value\":0,\"value2\":0,\"includeTemporary\":false,\"element\":0,\"statusId\":275,\"role\":0,\"class\":\"OwnBuffNumberExecTrigger\",\"targetStates\":null}]",
+      "filename": "status_immunity",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [
+        2
+      ],
+      "parameter": false,
+      "description": "弱体抵抗+50(バリアとゲージがある時のみ)",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "弱体抵抗50",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "デバフが付与される確率が50%減少する。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
   }
 }
