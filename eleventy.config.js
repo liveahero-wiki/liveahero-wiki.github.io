@@ -80,6 +80,12 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "node_modules/@fontsource/roboto/files/roboto-latin-{,ext-}{400,700}-normal.woff2": "assets/fonts",
   });
+  // Polyfills for old browsers, loaded on demand by _includes/js/polyfills.js.
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/@oddbird/popover-polyfill/dist/popover.iife.min.js": "assets/polyfills/popover.js",
+    "node_modules/dialog-polyfill/dist/dialog-polyfill.js": "assets/polyfills/dialog.js",
+    "node_modules/dialog-polyfill/dist/dialog-polyfill.css": "assets/polyfills/dialog.css",
+  });
   // Files without front matter, which Jekyll copied verbatim (json is not a template format here).
   eleventyConfig.addPassthroughCopy("api/mob.json");
   eleventyConfig.addPassthroughCopy("api/skill-*.json");

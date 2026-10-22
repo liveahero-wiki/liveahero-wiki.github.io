@@ -186,7 +186,8 @@ pagefind-modal-trigger {
   border-radius: 6px;
   box-shadow: 0 4px 12px rgb(0 0 0 / 0.2);
 
-  &:popover-open {
+  // `.\:popover-open` is what the popover polyfill (_includes/js/polyfills.js) sets; an old browser would drop a bare `:popover-open` rule.
+  &:where(:popover-open, .\:popover-open) {
     display: flex;
     flex-direction: column;
   }
