@@ -246,9 +246,9 @@ test("the tree's script data carries the lines, the tree and per language the pa
   assert.equal(model.langs.en.nodes["11"], "Burn <rate> +5%");
 });
 
-test("UI languages match web/src/lib/lang.ts", async () => {
-  const fs = await import("node:fs");
-  const ts = fs.readFileSync("web/src/lib/lang.ts", "utf8");
-  const codes = [...ts.matchAll(/code: '([^']+)'/g)].map((m) => m[1]);
-  assert.deepEqual(UI_LANGS, codes);
+test("UI languages match web/shared/lang.ts", async () => {
+  const path = await import("node:path");
+  const { pathToFileURL } = await import("node:url");
+  const { LANGS } = await import(pathToFileURL(path.resolve("web/shared/lang.ts")).href);
+  assert.deepEqual(UI_LANGS, LANGS);
 });

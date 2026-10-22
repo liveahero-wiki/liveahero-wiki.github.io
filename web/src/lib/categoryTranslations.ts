@@ -4,7 +4,7 @@
 // module applies the user's chosen language at load time.
 
 import type { Category } from '../types'
-import type { Lang } from './lang'
+import type { Lang } from '../../shared/lang.ts'
 
 const CATEGORY_LABEL_TRANSLATIONS: Record<string, Partial<Record<Lang, string>>> = {
   'attack': { 'zh-Hans': '攻击', 'zh-Hant': '攻擊', ja: '攻撃' },

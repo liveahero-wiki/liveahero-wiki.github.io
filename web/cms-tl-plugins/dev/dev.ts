@@ -1,4 +1,4 @@
-// Standalone harness: vite --config vite.cms-tl-plugins.config.ts --port 5192, then open http://localhost:5192/dev.html
+// Standalone harness: pnpm dev, then open http://localhost:5173/cms-tl-plugins/dev/dev.html
 // Mounts each plugin's summary / detail / editor with realistic payloads. `fetch` is mocked for the wiki rosters,
 // /api/contrib-includes.json and the two GitHub API calls (blobs, contents).
 import bio from '../bio.ts'

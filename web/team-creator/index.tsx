@@ -1,5 +1,5 @@
 // Entry of assets/cms/team-creator.js: draws the Team Creator page into #team-creator (see team-creator.md).
-// Built by vite.team-creator.config.ts into one ES module.
+// Built by vite.config.ts into one ES module.
 
 import { render } from 'preact'
 import { ensureStyles } from '../cms-plugin/style.ts'

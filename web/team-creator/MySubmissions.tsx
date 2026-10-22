@@ -6,7 +6,7 @@ import type { ContribSubmission } from '../cms-plugin/api-types.ts'
 import { makeT } from '../cms-plugin/i18n/t.ts'
 import type { PluginContext } from '../cms-plugin/plugin-api.ts'
 import { TeamSummary } from '../cms-plugin/TeamSummary.tsx'
-import type { Lang } from './lang.ts'
+import type { Lang } from '../shared/lang.ts'
 
 export function MySubmissions({
   items,

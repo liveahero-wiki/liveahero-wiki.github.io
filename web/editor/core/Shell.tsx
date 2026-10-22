@@ -4,7 +4,7 @@
 import type { ComponentChildren } from 'preact'
 import { useCallback, useMemo, useRef, useState } from 'preact/hooks'
 import type { ContribUser } from '../../cms-plugin/api-types.ts'
-import type { Lang } from '../../team-creator/lang.ts'
+import type { Lang } from '../../shared/lang.ts'
 import { makeT, type T } from '../i18n/t.ts'
 import { MyContributions } from './MyContributions.tsx'
 import { SignInGate, useSession, type Session } from './session.tsx'

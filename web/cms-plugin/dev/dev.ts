@@ -1,4 +1,4 @@
-// Standalone harness: pnpm dev:cms-plugin, then open http://localhost:5191/dev.html
+// Standalone harness: pnpm dev, then open http://localhost:5173/cms-plugin/dev/dev.html
 import { h, render } from 'preact'
 import plugin from '../index.ts'
 import { FilterPanel } from '../FilterPanel.tsx'

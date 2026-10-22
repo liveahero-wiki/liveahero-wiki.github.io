@@ -9,8 +9,9 @@
 // wires aria-expanded on the invoker natively. Clicks inside don't light-
 // dismiss, so several sublabels can be toggled in one open.
 
+import type { JSX } from 'preact'
 import type { Label } from '../types'
-import type { Lang } from '../lib/lang'
+import type { Lang } from '../../shared/lang.ts'
 import { t } from '../lib/uiTranslations'
 
 interface SublabelChipProps {

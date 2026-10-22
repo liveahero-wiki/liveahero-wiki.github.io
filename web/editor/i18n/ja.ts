@@ -1,6 +1,8 @@
+import { contribStrings } from '../../shared/contrib/strings.ts'
 import type { Bundle } from './en.ts'
 
 export const ja: Bundle = {
+  ...contribStrings.ja,
   close: '閉じる',
   cancel: 'キャンセル',
   submit: 'レビューに送信',
@@ -14,13 +16,6 @@ export const ja: Bundle = {
   signInIntro: 'Discordアカウントでサインインすると提案を送信できます。すべての提案は、Wikiに反映される前にモデレーターが確認します。',
   signInButton: 'Discordでサインイン',
   signingIn: 'サインインのウィンドウを待っています…',
-  signOut: 'サインアウト',
-  signedInAs: '{name} としてサインイン中',
-  popupBlocked: 'サインインのウィンドウがブラウザにブロックされました。このサイトのポップアップを許可してもう一度お試しください。',
-  signInClosed: 'サインインが完了する前にウィンドウが閉じられました。',
-  tooYoung: '投稿するにはDiscordアカウントの作成から{days}日以上経っている必要があります。{date}以降にもう一度サインインできます。',
-  tooYoungNoDate: '投稿するにはDiscordアカウントの作成から{days}日以上経っている必要があります。',
-  signInFailed: 'サインインに失敗しました。もう一度お試しください。',
   signInAgain: 'サインインの有効期限が切れました。もう一度サインインしてください。',
 
   mineButton: '自分の投稿',

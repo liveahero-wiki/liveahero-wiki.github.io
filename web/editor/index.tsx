@@ -1,4 +1,4 @@
-// Entry of assets/cms/editor.js (built by vite.editor.config.ts). assets/main.js imports it only when a reader clicks an
+// Entry of assets/cms/editor.js (built by vite.config.ts). assets/main.js imports it only when a reader clicks an
 // element with `data-contrib` and calls `open(kind, element)`:
 //   page-edit      toolbar button, `data-path` (Track B: edit the page body)
 //   voice-suggest  button of a voice table, `data-resource-name` (Track A)
@@ -12,7 +12,7 @@ import { Shell } from './core/Shell.tsx'
 import { Modal, Notice } from './core/ui.tsx'
 import { makeT } from './i18n/t.ts'
 import { PageEditor } from './page/PageEditor.tsx'
-import { initialLang, type Lang } from '../team-creator/lang.ts'
+import { pageLang, type Lang } from '../shared/lang.ts'
 import { langOfCode } from './core/langs.ts'
 import { collectRows, findTable, resourceNames } from './voice/collect.ts'
 import { VoiceView } from './voice/VoiceView.tsx'
@@ -86,7 +86,7 @@ export function open(kind: string, element: Element): void {
   const host = document.createElement('div')
   host.className = HOST_CLASS
   document.body.appendChild(host)
-  const lang = initialLang()
+  const lang = pageLang()
   const onClose = () => {
     render(null, host)
     host.remove()

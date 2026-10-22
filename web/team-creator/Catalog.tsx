@@ -23,7 +23,7 @@ import {
   type CatalogState,
   type PluginSort,
 } from './catalog.ts'
-import { pickText, type Lang } from './lang.ts'
+import { pickText, type Lang } from '../shared/lang.ts'
 
 const PAGE = 20
 const SEARCH_DEBOUNCE_MS = 200

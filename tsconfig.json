@@ -1,6 +1,8 @@
 {
+  // One project for everything under web/ (`pnpm typecheck`). `.ts` import extensions and `import type` everywhere, so
+  // node --test can run the pure modules with type stripping.
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2022",
     "module": "ESNext",
     "moduleResolution": "bundler",
     "jsx": "react-jsx",
@@ -8,8 +10,15 @@
     "strict": true,
     "skipLibCheck": true,
     "noEmit": true,
+    "allowImportingTsExtensions": true,
+    // the editor's markdown preview imports wiki_plugins/ (plain JS, not checked)
+    "allowJs": true,
+    "checkJs": false,
     "resolveJsonModule": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"]
+    "verbatimModuleSyntax": true,
+    "types": ["node"],
+    "lib": ["ES2022", "DOM", "DOM.Iterable"]
   },
-  "include": ["web/src", "vite.config.ts"]
+  "include": ["web", "vite.config.ts"],
+  "exclude": ["web/editor/dev"]
 }

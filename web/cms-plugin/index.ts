@@ -1,5 +1,5 @@
 // LAH team-formation plugin for the wiki-cms embed (wiki) and admin portal.
-// Built by vite.cms-plugin.config.ts into the single ES module assets/cms/lah-team-formation.js.
+// Built by vite.config.ts into the single ES module assets/cms/lah-team-formation.js.
 
 import { h, render, type VNode } from 'preact'
 import type { EditorHandle, FieldError, PluginContext, SubmissionPlugin } from './plugin-api.ts'

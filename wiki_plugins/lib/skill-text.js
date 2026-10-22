@@ -15,7 +15,7 @@
 
 import { str, xmlEscape } from "./ruby.js";
 
-/** Same codes, in the same order of preference, as web/src/lib/lang.ts. */
+/** Same codes, in the same order of preference, as LANGS in web/shared/lang.ts. */
 export const UI_LANGS = ["en", "zh-Hans", "zh-Hant", "ja"];
 
 // Where a language without text of its own looks next: Japanese is always there.

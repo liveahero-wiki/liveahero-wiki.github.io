@@ -6,7 +6,7 @@ Visitors read, filter and submit team formations on one page, the **Team Creator
 |---|---|
 | Worker URL | `site.cms_url` (`wiki_plugins/site.js`) |
 | The page (host `<div>`, intro) | `team-creator.md`; header link in `_includes/header.html` (Tools) |
-| The page's app (list, filters, cards, disclaimer, submit button) | `web/team_creator/` -> `assets/cms/team-creator.js` (`vite.team-creator.config.ts`) |
+| The page's app (list, filters, cards, disclaimer, submit button) | `web/team-creator/` -> `assets/cms/team-creator.js` (`vite.config.ts`, like every bundle under `web/`) |
 | Links to the page | `_includes/team-creator-link.html`, used by `hero-infobox.html`, `sidekick-infobox.html`, `_layouts/event.html` and `guide/challenge_simulator.md` |
 | Targets of a page | `wiki_plugins/lib/cms-groups.js` (Liquid filter `cms_targets`) |
 | Registry of valid groups and targets | `cms-groups.11ty.js` -> `/api/cms-groups.json` |
@@ -114,9 +114,9 @@ Explanations can contain up to 3 external `[text](https://…)` links. wiki-cms 
 |---|---|
 | Worker URL | `https://wiki-cms.rongjie.workers.dev` when `ELEVENTY_ENV=production` (CI), otherwise `http://localhost:8787` (local `wrangler dev`); `CMS_URL` overrides either (`wiki_plugins/site.js`) |
 | Roster | `py tools/generate_skill_search_index.py --lang en` writes `api/team-roster.json` (all four languages, every run; CI already runs the generator) |
-| Team Creator app | `pnpm build:team-creator` (also part of `pnpm build`) writes `assets/cms/team-creator.js`; `pnpm typecheck:team-creator`; its tests run with `pnpm test` |
-| Plugin | `pnpm build:cms-plugin` (also part of `pnpm build`) writes `assets/cms/lah-team-formation.js`; `pnpm watch:cms-plugin` rebuilds on change (the app has no watch script: rerun `pnpm build:team-creator`); `pnpm dev:cms-plugin` serves the standalone harness at `/dev.html` (editor scenarios, filter panels) |
-| Tests | `pnpm test` (`wiki_plugins/lib/cms-groups.test.js`, the plugin's tests), `pnpm typecheck:cms-plugin` |
+| Team Creator app | `pnpm build:team-creator` (also part of `pnpm build`) writes `assets/cms/team-creator.js`; `pnpm typecheck` (one project for all of `web/`); its tests run with `pnpm test` |
+| Plugin | `pnpm build:cms-plugin` (also part of `pnpm build`) writes `assets/cms/lah-team-formation.js`; `pnpm watch:cms-plugin` rebuilds on change (the app has no watch script: rerun `pnpm build:team-creator`); `pnpm dev` serves the standalone harness at `/cms-plugin/dev/dev.html` (editor scenarios, filter panels) |
+| Tests | `pnpm test` (`wiki_plugins/lib/cms-groups.test.js`, the plugin's tests), `pnpm typecheck` |
 
 End to end on one machine:
 

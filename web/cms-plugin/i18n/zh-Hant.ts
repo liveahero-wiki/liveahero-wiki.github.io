@@ -1,7 +1,9 @@
 // 繁體中文 UI bundle.
+import { contribStrings } from '../../shared/contrib/strings.ts'
 import type { Bundle } from './en.ts'
 
 export const zhHant: Bundle = {
+  ...contribStrings['zh-Hant'],
   support: '支援',
   supportTitle: '支援位',
   hero: '英雄',
@@ -146,9 +148,6 @@ export const zhHant: Bundle = {
   tcNoMatch: '沒有符合篩選條件的隊伍。',
 
   // Contributor accounts
-  tcSignIn: '登入',
-  tcSignedInAs: '已登入：{name}',
-  tcSignOut: '登出',
   tcMySubmissions: '我的投稿（{count}）',
   tcMyHide: '收起我的投稿',
   tcMyEmpty: '你還沒有提交過隊伍配置。',
@@ -161,10 +160,5 @@ export const zhHant: Bundle = {
   tcEditRejected: '修改未通過',
   tcRejectReason: '版主備註：{reason}',
   tcWithdrawEdit: '撤回修改',
-  tcSignInFailed: '登入未完成，請重試。',
-  tcPopupBlocked: '登入視窗被攔截。請允許此網站彈出視窗後重試。',
-  tcSignInClosed: '登入視窗在完成前被關閉。',
-  tcTooYoung: '你的 Discord 帳號註冊需滿{days}天後才能投稿。你可以在{date}再次登入。',
-  tcTooYoungNoDate: '你的 Discord 帳號註冊需滿{days}天後才能投稿。',
   tcActionFailed: '操作失敗，請重試。',
 }

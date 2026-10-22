@@ -1,6 +1,6 @@
 // lah-voice-tl: moderator views for a batch of voice-line translation suggestions. The batch is in one language (the
 // submission's `lang`, which the admin card shows): `base` and `text` are in it, so the headings are language-neutral.
-// Built (with dom.ts / styles.css) into the self-contained assets/cms/lah-voice-tl.js by vite.cms-tl-plugins.config.ts.
+// Built (with dom.ts / styles.css) into the self-contained assets/cms/lah-voice-tl.js by vite.config.ts.
 
 import type { EditorHandle, FieldError, PluginContext, SubmissionPlugin } from '../cms-plugin/plugin-api.ts'
 import { append, button, clear, errorBox, errorsAt, field, h, mountRoot, relPath, showErrors, textBlock } from './dom.ts'

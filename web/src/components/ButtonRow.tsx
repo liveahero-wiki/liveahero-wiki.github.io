@@ -5,7 +5,7 @@
 //   - 'and': every selected chip must match — no [All] button.
 
 import type { Label } from '../types'
-import type { Lang } from '../lib/lang'
+import type { Lang } from '../../shared/lang.ts'
 import { t } from '../lib/uiTranslations'
 import { SublabelChip } from './SublabelChip'
 

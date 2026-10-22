@@ -1,6 +1,6 @@
 // lah-page-edit: moderator views for a proposed edit of a wiki page body (diff against the base + advisory guard).
 // Built (with dom.ts / styles.css and the shared guard) into the self-contained assets/cms/lah-page-edit.js
-// by vite.cms-tl-plugins.config.ts.
+// by vite.config.ts.
 
 import type { EditorHandle, FieldError, PluginContext, SubmissionPlugin } from '../cms-plugin/plugin-api.ts'
 import type { Row } from './diff.ts'

@@ -1,6 +1,11 @@
 // English UI bundle of the contributor editor (also the fallback for every other language).
 
+import { contribStrings } from '../../shared/contrib/strings.ts'
+
 export const en = {
+  // ---- contributor sign-in (shared with the Team Creator)
+  ...contribStrings.en,
+
   // ---- generic
   close: 'Close',
   cancel: 'Cancel',
@@ -16,13 +21,6 @@ export const en = {
   signInIntro: 'Sign in with your Discord account to send suggestions. Every suggestion is reviewed by a moderator before it appears on the wiki.',
   signInButton: 'Sign in with Discord',
   signingIn: 'Waiting for the sign-in window…',
-  signOut: 'Sign out',
-  signedInAs: 'Signed in as {name}',
-  popupBlocked: 'The sign-in window was blocked by your browser. Allow pop-ups for this site and try again.',
-  signInClosed: 'The sign-in window was closed before finishing.',
-  tooYoung: 'Your Discord account must be at least {days} days old to contribute. You can sign in again from {date}.',
-  tooYoungNoDate: 'Your Discord account must be at least {days} days old to contribute.',
-  signInFailed: 'Signing in failed. Please try again.',
   signInAgain: 'Your sign-in has expired. Please sign in again.',
 
   // ---- my contributions

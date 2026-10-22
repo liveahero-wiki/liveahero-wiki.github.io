@@ -4,7 +4,7 @@
 
 import type { JSX } from 'preact'
 import type { Query, SkillIndex } from '../types'
-import type { Lang } from '../lib/lang'
+import type { Lang } from '../../shared/lang.ts'
 import type { QueryAction } from '../app'
 import { t, elementLabel } from '../lib/uiTranslations'
 import { ButtonRow } from './ButtonRow'

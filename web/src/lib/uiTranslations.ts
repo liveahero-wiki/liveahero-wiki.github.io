@@ -1,4 +1,4 @@
-import type { Lang } from './lang'
+import type { Lang } from '../../shared/lang.ts'
 
 export type UIKey =
   | 'character' | 'type' | 'element' | 'role' | 'status_type' | 'has_status' | 'view_cost'

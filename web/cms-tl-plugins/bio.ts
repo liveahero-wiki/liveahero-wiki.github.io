@@ -1,6 +1,6 @@
 // lah-bio-tl: moderator views for one bio translation suggestion, in the submission's `lang` (shown by the admin card),
 // so the headings are language-neutral.
-// Built (with dom.ts / styles.css) into the self-contained assets/cms/lah-bio-tl.js by vite.cms-tl-plugins.config.ts.
+// Built (with dom.ts / styles.css) into the self-contained assets/cms/lah-bio-tl.js by vite.config.ts.
 
 import type { EditorHandle, FieldError, PluginContext, SubmissionPlugin } from '../cms-plugin/plugin-api.ts'
 import { append, clear, errorBox, errorsAt, h, mountRoot, nextId, relPath, showErrors, textBlock } from './dom.ts'

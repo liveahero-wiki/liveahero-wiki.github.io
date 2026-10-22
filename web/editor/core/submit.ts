@@ -119,24 +119,3 @@ export function lineIndexOf(path: string): number | null {
 
 /** `payload.lines.2.text` -> 'text', `payload.note` -> 'note'; the last path segment. */
 export const fieldName = (path: string): string => path.slice(path.lastIndexOf('.') + 1)
-
-// ---- sign-in errors (rejections of `contrib.signIn`) ----
-
-export const MIN_ACCOUNT_AGE_DAYS = 30
-
-interface SignInLike {
-  code?: string
-  eligibleAt?: number | null
-}
-
-export function signInErrorText(t: T, lang: string, e: unknown): string {
-  const code = (e as SignInLike | null)?.code
-  if (code === 'popup_blocked') return t('popupBlocked')
-  if (code === 'closed') return t('signInClosed')
-  if (code === 'account_too_young') {
-    const at = (e as SignInLike).eligibleAt
-    if (!at) return t('tooYoungNoDate', { days: MIN_ACCOUNT_AGE_DAYS })
-    return t('tooYoung', { days: MIN_ACCOUNT_AGE_DAYS, date: new Date(at).toLocaleDateString(lang) })
-  }
-  return t('signInFailed')
-}

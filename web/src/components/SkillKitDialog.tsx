@@ -6,7 +6,7 @@
 
 import { useEffect, useRef } from 'preact/hooks'
 import type { Entity, Status } from '../types'
-import type { Lang } from '../lib/lang'
+import type { Lang } from '../../shared/lang.ts'
 import { t, slotLabel, elementLabel } from '../lib/uiTranslations'
 import { effectiveSkills } from '../lib/filters'
 import { statusIcon, portrait } from '../lib/urls'

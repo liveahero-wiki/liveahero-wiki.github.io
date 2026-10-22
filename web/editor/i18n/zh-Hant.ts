@@ -1,6 +1,8 @@
+import { contribStrings } from '../../shared/contrib/strings.ts'
 import type { Bundle } from './en.ts'
 
 export const zhHant: Bundle = {
+  ...contribStrings['zh-Hant'],
   close: '關閉',
   cancel: '取消',
   submit: '提交審核',
@@ -14,13 +16,6 @@ export const zhHant: Bundle = {
   signInIntro: '使用 Discord 帳號登入後即可提交建議。所有建議在出現在 Wiki 之前都會由管理員審核。',
   signInButton: '使用 Discord 登入',
   signingIn: '正在等待登入視窗…',
-  signOut: '登出',
-  signedInAs: '已登入：{name}',
-  popupBlocked: '登入視窗被瀏覽器封鎖。請允許此網站的彈出視窗後重試。',
-  signInClosed: '登入視窗在完成前被關閉。',
-  tooYoung: '你的 Discord 帳號註冊需滿{days}天後才能投稿。你可以從{date}起再次登入。',
-  tooYoungNoDate: '你的 Discord 帳號需註冊滿{days}天後才能投稿。',
-  signInFailed: '登入失敗，請重試。',
   signInAgain: '登入已過期，請重新登入。',
 
   mineButton: '我的投稿',

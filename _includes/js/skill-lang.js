@@ -2,10 +2,10 @@
 // <html data-skill-lang>. _sass/_skill-lang.scss shows the blocks that serve that language; the page
 // itself carries every language (wiki_plugins/lib/skill-text.js), so there is nothing to fetch.
 //
-// The choice and the detection mirror web/src/lib/lang.ts (getInitialLang), including the localStorage
-// key, so a language picked on the Skill Search page applies here and the other way round. Detection
-// never writes anything; only a choice made with setSkillLang does. wiki_plugins/lib/skill-lang.test.js
-// runs this file against lang.ts, so keep the two in step.
+// This is the only language detection on the wiki: the apps under web/ (Skill Search, Team Creator, the
+// editor) read <html data-skill-lang> and change it through setSkillLang (web/shared/lang.ts), so a
+// language picked in any of them applies everywhere. Detection never writes anything; only a choice made
+// with setSkillLang does. Tested by wiki_plugins/lib/skill-lang.test.js.
 (function () {
   var KEY = 'skillSearchLang';
   var LANGS = ['en', 'zh-Hans', 'zh-Hant', 'ja'];

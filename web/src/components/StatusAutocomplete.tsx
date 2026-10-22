@@ -5,7 +5,7 @@
 import { useCombobox } from 'downshift'
 import { useMemo, useState } from 'preact/hooks'
 import type { Status } from '../types'
-import type { Lang } from '../lib/lang'
+import type { Lang } from '../../shared/lang.ts'
 import { t } from '../lib/uiTranslations'
 import { statusIcon } from '../lib/urls'
 

@@ -1,7 +1,7 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
 import { makeT } from '../i18n/t.ts'
-import { SubmitError, errorText, fieldName, fieldText, lineIndexOf, needsSignIn, postSubmission, signInErrorText } from './submit.ts'
+import { SubmitError, errorText, fieldName, fieldText, lineIndexOf, needsSignIn, postSubmission } from './submit.ts'
 
 const t = makeT('en')
 
@@ -78,16 +78,5 @@ describe('field paths', () => {
   })
   it('fieldText localizes known codes with params', () => {
     assert.equal(fieldText(t, { path: 'summary', code: 'summary_length', params: { min: 3, max: 120 } }), 'The summary needs 3 to 120 characters.')
-  })
-})
-
-describe('signInErrorText', () => {
-  it('maps popup_blocked, closed and the account age rule', () => {
-    assert.equal(signInErrorText(t, 'en', { code: 'popup_blocked' }), t('popupBlocked'))
-    assert.equal(signInErrorText(t, 'en', { code: 'closed' }), t('signInClosed'))
-    assert.match(signInErrorText(t, 'en', { code: 'account_too_young', eligibleAt: Date.UTC(2026, 10, 20) }), /at least 30 days old/)
-    assert.equal(signInErrorText(t, 'en', { code: 'account_too_young' }), t('tooYoungNoDate', { days: 30 }))
-    assert.equal(signInErrorText(t, 'en', new Error('x')), t('signInFailed'))
-    assert.equal(signInErrorText(t, 'en', null), t('signInFailed'))
   })
 })

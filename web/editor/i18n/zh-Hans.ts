@@ -1,6 +1,8 @@
+import { contribStrings } from '../../shared/contrib/strings.ts'
 import type { Bundle } from './en.ts'
 
 export const zhHans: Bundle = {
+  ...contribStrings['zh-Hans'],
   close: '关闭',
   cancel: '取消',
   submit: '提交审核',
@@ -14,13 +16,6 @@ export const zhHans: Bundle = {
   signInIntro: '使用 Discord 账号登录后即可提交建议。所有建议在出现在 Wiki 之前都会由管理员审核。',
   signInButton: '使用 Discord 登录',
   signingIn: '正在等待登录窗口…',
-  signOut: '退出登录',
-  signedInAs: '已登录：{name}',
-  popupBlocked: '登录窗口被浏览器拦截。请允许此网站弹出窗口后重试。',
-  signInClosed: '登录窗口在完成前被关闭。',
-  tooYoung: '你的 Discord 账号注册需满{days}天后才能投稿。你可以从{date}起再次登录。',
-  tooYoungNoDate: '你的 Discord 账号注册需满{days}天后才能投稿。',
-  signInFailed: '登录失败，请重试。',
   signInAgain: '登录已过期，请重新登录。',
 
   mineButton: '我的投稿',

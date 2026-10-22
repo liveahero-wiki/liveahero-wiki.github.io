@@ -1,7 +1,7 @@
 // "My contributions": the signed-in contributor's own submissions of the three editor types, with what happened to each.
 
 import { useEffect, useState } from 'preact/hooks'
-import { getContrib } from '../../team-creator/api.ts'
+import { getContrib } from '../../shared/contrib/embed.ts'
 import type { T } from '../i18n/t.ts'
 import { rowsOf, type ContribSubmission, type MineRow } from './mine.ts'
 import { TYPES } from './submit.ts'

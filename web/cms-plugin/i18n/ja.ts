@@ -1,9 +1,11 @@
 // 日本語 UI bundle. First pass: terms taken from the wiki's own material where it exists
 // (guide/*.md kanji terms, web/src/lib/uiTranslations.ts, ItemMaster ファン数); needs a native review.
 //   開花 / スキルツリー / 刻印(Lv) / ファン数 / サポート / ヒーロー / サイドキック / アクティブ / パッシブ
+import { contribStrings } from '../../shared/contrib/strings.ts'
 import type { Bundle } from './en.ts'
 
 export const ja: Bundle = {
+  ...contribStrings.ja,
   support: 'サポート',
   supportTitle: 'サポート枠',
   hero: 'ヒーロー',
@@ -148,9 +150,6 @@ export const ja: Bundle = {
   tcNoMatch: '条件に合う編成がありません。',
 
   // Contributor accounts
-  tcSignIn: 'サインイン',
-  tcSignedInAs: '{name} としてサインイン中',
-  tcSignOut: 'サインアウト',
   tcMySubmissions: '自分の投稿（{count}）',
   tcMyHide: '自分の投稿を閉じる',
   tcMyEmpty: 'まだ編成を投稿していません。',
@@ -163,10 +162,5 @@ export const ja: Bundle = {
   tcEditRejected: '編集は承認されませんでした',
   tcRejectReason: 'モデレーターからのメモ：{reason}',
   tcWithdrawEdit: '編集を取り下げる',
-  tcSignInFailed: 'サインインが完了しませんでした。もう一度お試しください。',
-  tcPopupBlocked: 'サインインのウィンドウがブロックされました。このサイトのポップアップを許可してもう一度お試しください。',
-  tcSignInClosed: 'サインインが完了する前にウィンドウが閉じられました。',
-  tcTooYoung: '投稿するには Discord アカウントの作成から{days}日以上が必要です。{date}以降にもう一度サインインできます。',
-  tcTooYoungNoDate: '投稿するには Discord アカウントの作成から{days}日以上が必要です。',
   tcActionFailed: '処理に失敗しました。もう一度お試しください。',
 }

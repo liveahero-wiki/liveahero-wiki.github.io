@@ -15,7 +15,6 @@ import {
   sortItems,
   type CatalogState,
 } from './catalog.ts'
-import { initialLang, langFromTag } from './lang.ts'
 
 const tagDefs = [
   { key: 'teamType', options: [{ value: 'manual' }, { value: 'auto' }] },
@@ -122,17 +121,4 @@ describe('sorting and filtering', () => {
     assert.deepEqual(activeCoreCount(emptyState()), { basic: 0, advanced: 0 })
     assert.deepEqual(activeCoreCount({ q: 'x', sort: 'oldest', lang: 'ja', tags: { teamType: ['auto'], successRate: [] } }), { basic: 1, advanced: 2 })
   })
-})
-
-describe('language mapping', () => {
-  it('maps BCP-47 tags to the four UI languages', () => {
-    assert.equal(langFromTag('ja-JP'), 'ja')
-    assert.equal(langFromTag('zh-TW'), 'zh-Hant')
-    assert.equal(langFromTag('zh-Hant-HK'), 'zh-Hant')
-    assert.equal(langFromTag('zh-CN'), 'zh-Hans')
-    assert.equal(langFromTag('en-GB'), 'en')
-    assert.equal(langFromTag('fr'), null)
-    assert.equal(langFromTag(''), null)
-  })
-  it('exports initialLang', () => assert.equal(typeof initialLang, 'function'))
 })

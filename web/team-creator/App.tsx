@@ -6,10 +6,11 @@ import { useEffect, useMemo, useState } from 'preact/hooks'
 import type { ContribSubmission, PublicBlob } from '../cms-plugin/api-types.ts'
 import { makeT } from '../cms-plugin/i18n/t.ts'
 import type { PluginContext } from '../cms-plugin/plugin-api.ts'
+import { getContrib, prefetchEmbed } from '../shared/contrib/embed.ts'
+import { onLangChange, pageLang, type Lang } from '../shared/lang.ts'
 import { useAccount } from './account.ts'
-import { currentTheme, editStart, fetchBlob, getContrib, openCmsForm, prefetchEmbed } from './api.ts'
+import { currentTheme, editStart, fetchBlob, openCmsForm } from './api.ts'
 import { Catalog } from './Catalog.tsx'
-import { initialLang, onLangChange, type Lang } from './lang.ts'
 import { MySubmissions } from './MySubmissions.tsx'
 
 export interface AppProps {
@@ -25,7 +26,7 @@ export interface AppProps {
 type BlobState = { s: 'loading' } | { s: 'error' } | { s: 'ok'; blob: PublicBlob }
 
 function useUiLang(): Lang {
-  const [lang, setLang] = useState(initialLang)
+  const [lang, setLang] = useState(pageLang)
   useEffect(() => onLangChange(setLang), [])
   return lang
 }
@@ -120,17 +121,17 @@ export function App({ api, group, plugin, formHost }: AppProps) {
         </button>
         {account.user ? (
           <span class="lah-tc-account">
-            <span>{t('tcSignedInAs', { name: account.user.displayName })}</span>
+            <span>{t('signedInAs', { name: account.user.displayName })}</span>
             <button type="button" class="lah-tc-link" aria-expanded={showMine} onClick={() => setShowMine((x) => !x)}>
               {showMine ? t('tcMyHide') : t('tcMySubmissions', { count: account.mine?.length ?? 0 })}
             </button>
             <button type="button" class="lah-tc-link" onClick={() => void account.signOut()}>
-              {t('tcSignOut')}
+              {t('signOut')}
             </button>
           </span>
         ) : (
           <button type="button" class="lah-tc-link" onClick={() => void account.signIn()}>
-            {t('tcSignIn')}
+            {t('signIn')}
           </button>
         )}
         {(formError || actionError) && (
@@ -164,7 +165,7 @@ export class Boundary extends Component<{ children: ComponentChildren }, { error
   }
   render() {
     if (!this.state.error) return this.props.children
-    const t = makeT(initialLang())
+    const t = makeT(pageLang())
     return (
       <div class="lah-tc-status" role="alert">
         <p>{t('tcLoadError')}</p>

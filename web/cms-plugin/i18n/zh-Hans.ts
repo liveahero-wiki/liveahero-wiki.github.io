@@ -1,7 +1,9 @@
 // 简体中文 UI bundle.
+import { contribStrings } from '../../shared/contrib/strings.ts'
 import type { Bundle } from './en.ts'
 
 export const zhHans: Bundle = {
+  ...contribStrings['zh-Hans'],
   support: '支援',
   supportTitle: '支援位',
   hero: '英雄',
@@ -146,9 +148,6 @@ export const zhHans: Bundle = {
   tcNoMatch: '没有符合筛选条件的队伍。',
 
   // Contributor accounts
-  tcSignIn: '登录',
-  tcSignedInAs: '已登录：{name}',
-  tcSignOut: '退出登录',
   tcMySubmissions: '我的投稿（{count}）',
   tcMyHide: '收起我的投稿',
   tcMyEmpty: '你还没有提交过队伍配置。',
@@ -161,10 +160,5 @@ export const zhHans: Bundle = {
   tcEditRejected: '修改未通过',
   tcRejectReason: '版主备注：{reason}',
   tcWithdrawEdit: '撤回修改',
-  tcSignInFailed: '登录未完成，请重试。',
-  tcPopupBlocked: '登录窗口被拦截。请允许此网站弹出窗口后重试。',
-  tcSignInClosed: '登录窗口在完成前被关闭。',
-  tcTooYoung: '你的 Discord 账号注册需满{days}天后才能投稿。你可以在{date}再次登录。',
-  tcTooYoungNoDate: '你的 Discord 账号注册需满{days}天后才能投稿。',
   tcActionFailed: '操作失败，请重试。',
 }

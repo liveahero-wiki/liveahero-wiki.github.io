@@ -11,7 +11,7 @@ import {
 import { useVirtualizer } from '@tanstack/react-virtual'
 import { useMemo, useRef, useState } from 'preact/hooks'
 import type { Category, Entity, Row, Status } from '../types'
-import type { Lang } from '../lib/lang'
+import type { Lang } from '../../shared/lang.ts'
 import { t, slotLabel } from '../lib/uiTranslations'
 import { charaLink, portrait, statusIcon } from '../lib/urls'
 import { SkillDescription } from './SkillDescription'

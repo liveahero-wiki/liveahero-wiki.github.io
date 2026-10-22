@@ -3,8 +3,8 @@
 
 import type { VNode } from 'preact'
 import { useCallback, useEffect, useRef, useState } from 'preact/hooks'
-import { getContrib } from '../../team-creator/api.ts'
-import type { Lang } from '../../team-creator/lang.ts'
+import { getContrib } from '../../shared/contrib/embed.ts'
+import type { Lang } from '../../shared/lang.ts'
 import type { TlLang } from './langs.ts'
 import { SubmitError, postSubmission, trimApi, type SubmissionType } from './submit.ts'
 

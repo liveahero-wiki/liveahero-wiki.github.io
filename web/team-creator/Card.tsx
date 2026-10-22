@@ -10,7 +10,7 @@ import { parseTargets } from '../cms-plugin/targets.ts'
 import { TeamSummary } from '../cms-plugin/TeamSummary.tsx'
 import { toViewTarget } from '../cms-plugin/view.ts'
 import { demoPlatform, parseHttps } from './api.ts'
-import { pickText, type Lang } from './lang.ts'
+import { pickText, type Lang } from '../shared/lang.ts'
 
 export function Chip({ active, onClick, children }: { active: boolean; onClick(): void; children: ComponentChildren }) {
   return (

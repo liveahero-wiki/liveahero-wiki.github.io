@@ -2,7 +2,7 @@ import { useEffect, useMemo, useReducer, useState } from 'preact/hooks'
 import type { Entity, Query, SkillIndex } from './types'
 import { clearCache, loadIndex } from './data/loadIndex'
 import { filterRows } from './lib/filters'
-import { getInitialLang, LANGS, storeLang, type Lang } from './lib/lang'
+import { LANG_LABELS, LANGS, onLangChange, pageLang, setPageLang, type Lang } from '../shared/lang.ts'
 import { localizeCategories } from './lib/categoryTranslations'
 import { t } from './lib/uiTranslations'
 import type { Shortcut } from './lib/shortcuts'
@@ -89,7 +89,8 @@ function reducer(state: Query, action: QueryAction): Query {
 }
 
 export function App() {
-  const [lang, setLang] = useState<Lang>(getInitialLang)
+  // The page language (<html data-skill-lang>, see web/shared/lang.ts), shared with the rest of the wiki.
+  const [lang, setLang] = useState<Lang>(pageLang)
   const [index, setIndex] = useState<SkillIndex | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [query, dispatch] = useReducer(reducer, initialQuery())
@@ -103,6 +104,8 @@ export function App() {
       .then(idx => setIndex({ ...idx, categories: localizeCategories(idx.categories, lang) }))
       .catch((e: unknown) => setError(String(e)))
   }, [lang])
+
+  useEffect(() => onLangChange(setLang), [])
 
   useEffect(() => {
     document.documentElement.lang = lang
@@ -118,8 +121,7 @@ export function App() {
   }
 
   function handleLangChange(next: Lang) {
-    storeLang(next)
-    setLang(next)
+    setPageLang(next) // stores the choice; onLangChange above then updates `lang`
   }
 
   const rows = useMemo(() => {
@@ -141,8 +143,8 @@ export function App() {
           onChange={(e) => handleLangChange(e.currentTarget.value as Lang)}
           title={t(lang, 'lang_title')}
         >
-          {LANGS.map((l) => (
-            <option key={l.code} value={l.code}>{l.label}</option>
+          {LANGS.map((code) => (
+            <option key={code} value={code}>{LANG_LABELS[code]}</option>
           ))}
         </select>
         <span class="ver">index v{index.version}</span>

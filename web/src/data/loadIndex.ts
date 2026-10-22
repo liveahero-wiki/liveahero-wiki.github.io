@@ -10,7 +10,7 @@
 // clobber another language's cached copy.
 
 import type { SkillIndex } from '../types'
-import type { Lang } from '../lib/lang'
+import type { Lang } from '../../shared/lang.ts'
 
 function versionUrl(lang: Lang): string {
   return `/api/skill-index-version.${lang}.json`

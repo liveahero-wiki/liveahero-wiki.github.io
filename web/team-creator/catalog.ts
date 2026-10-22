@@ -2,7 +2,7 @@
 // catalog.test.ts. Ported from wiki-cms `embed/src/catalog.ts`.
 
 import type { PublicItem } from '../cms-plugin/api-types.ts'
-import { LANGS, type Lang } from './lang.ts'
+import { LANGS, type Lang } from '../shared/lang.ts'
 
 /** Hash keys owned by the list itself; every other key belongs to the plugin filters (`cms-plugin/filters.ts`). */
 export const CORE_KEYS = ['q', 'sort', 'lang'] as const

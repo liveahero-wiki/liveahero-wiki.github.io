@@ -1,6 +1,10 @@
 // English UI bundle (also the fallback for every other language).
+import { contribStrings } from '../../shared/contrib/strings.ts'
 
 export const en = {
+  // ---- contributor sign-in (shared with the editor)
+  ...contribStrings.en,
+
   // ---- generic terms
   support: 'Support',
   supportTitle: 'Support slot',
@@ -149,10 +153,7 @@ export const en = {
   tcClear: 'Clear filters',
   tcNoMatch: 'No team matches these filters.',
 
-  // Contributor accounts
-  tcSignIn: 'Sign in',
-  tcSignedInAs: 'Signed in as {name}',
-  tcSignOut: 'Sign out',
+  // ---- contributor accounts (sign-in strings: contribStrings above)
   tcMySubmissions: 'My submissions ({count})',
   tcMyHide: 'Hide my submissions',
   tcMyEmpty: 'You have not submitted any team formation yet.',
@@ -165,11 +166,6 @@ export const en = {
   tcEditRejected: 'Edit not approved',
   tcRejectReason: 'Moderator note: {reason}',
   tcWithdrawEdit: 'Withdraw edit',
-  tcSignInFailed: 'Sign-in did not complete. Please try again.',
-  tcPopupBlocked: 'The sign-in window was blocked. Allow pop-ups for this site and try again.',
-  tcSignInClosed: 'The sign-in window was closed before it finished.',
-  tcTooYoung: 'Your Discord account must be at least {days} days old to contribute. You can sign in again on {date}.',
-  tcTooYoungNoDate: 'Your Discord account must be at least {days} days old to contribute.',
   tcActionFailed: 'That did not work. Please try again.',
 }
 
