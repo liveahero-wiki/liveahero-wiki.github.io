@@ -40,11 +40,9 @@ export function useContribSession(api: string, t: (key: ContribKey, params?: Rec
     }
   }, [api])
 
-  const attempt = useRef(0)
   const signIn = useCallback(async (): Promise<boolean> => {
     // Callable while a sign-in waits: a provider popup that lost its link to this page (Google's) cannot be seen closing, so
-    // signing in again is how the visitor abandons it. The embed rejects the old call; its outcome is ignored here.
-    const mine = ++attempt.current
+    // signing in again is how the visitor abandons it. The embed then rejects the old call with `superseded`.
     setSignInError(null)
     setSigningIn(true)
     try {
@@ -52,13 +50,19 @@ export function useContribSession(api: string, t: (key: ContribKey, params?: Rec
       // there, so a cold click that has to load the embed first is fine too. `lang` localizes the picker and its name dialog.
       const loaded = loadedContrib()
       const session = await (loaded ? loaded.signIn(api, { lang }) : getContrib(api).then((c) => c.signIn(api, { lang })))
-      if (alive.current) setUser(session.user)
+      if (alive.current) {
+        setUser(session.user)
+        setSigningIn(false)
+      }
       return true
     } catch (e) {
-      if (alive.current && attempt.current === mine) setSignInError(signInErrorText(t, lang, e))
+      const code = (e as { code?: unknown } | null)?.code
+      if (code === 'superseded') return false // the newer sign-in owns the busy state and the error
+      if (alive.current) {
+        setSigningIn(false)
+        if (code !== 'cancelled') setSignInError(signInErrorText(t, lang, e)) // a dismissed picker is not an error
+      }
       return false
-    } finally {
-      if (alive.current && attempt.current === mine) setSigningIn(false)
     }
   }, [api, t, lang])
 

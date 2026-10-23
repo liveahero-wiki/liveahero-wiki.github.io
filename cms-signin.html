@@ -1,0 +1,25 @@
+---
+layout: none
+permalink: /cms-signin/
+sitemap: false
+---
+<!doctype html>
+<!-- wiki-cms sign-in callback (CONTRIB_SIGNIN_CALLBACK_PATH in wiki-cms src/shared/contrib.ts): the Worker redirects a
+     sign-in popup that lost window.opener (Google) here with the result in the fragment. The embed loader hands it to the
+     waiting wiki tab and closes the popup. Kept bare on purpose: no layout, analytics or search index ever sees the URL. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<title>Sign in</title>
+</head>
+<body>
+<p>Signing in… You can close this window.</p>
+<p lang="ja">サインイン中… このウィンドウは閉じて構いません。</p>
+<p lang="zh-Hans">正在登录… 可以关闭此窗口。</p>
+<p lang="zh-Hant">正在登入… 可以關閉此視窗。</p>
+<script type="module" src="{{ site.cms_url }}/embed/v1.js"></script>
+</body>
+</html>
