@@ -21,7 +21,7 @@ export function SignInGate({ session, t }: { session: Session; t: T }) {
     <div class="contrib-gate">
       <p>{t('signInIntro')}</p>
       {session.signInError && <Notice kind="error">{session.signInError}</Notice>}
-      <button type="button" class="contrib-btn contrib-btn--primary" disabled={session.signingIn} onClick={() => void session.signIn()}>
+      <button type="button" class="contrib-btn contrib-btn--primary" onClick={() => void session.signIn()}>
         {session.signingIn ? t('signingIn') : t('signInButton')}
       </button>
     </div>

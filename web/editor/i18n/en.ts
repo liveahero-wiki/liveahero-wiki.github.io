@@ -18,8 +18,8 @@ export const en = {
 
   // ---- sign-in
   signInTitle: 'Sign in to contribute',
-  signInIntro: 'Sign in with your Discord account to send suggestions. Every suggestion is reviewed by a moderator before it appears on the wiki.',
-  signInButton: 'Sign in with Discord',
+  signInIntro: 'Sign in to send suggestions. Every suggestion is reviewed by a moderator before it appears on the wiki.',
+  signInButton: 'Sign in',
   signingIn: 'Waiting for the sign-in window…',
   signInAgain: 'Your sign-in has expired. Please sign in again.',
 

@@ -40,21 +40,25 @@ export function useContribSession(api: string, t: (key: ContribKey, params?: Rec
     }
   }, [api])
 
+  const attempt = useRef(0)
   const signIn = useCallback(async (): Promise<boolean> => {
+    // Callable while a sign-in waits: a provider popup that lost its link to this page (Google's) cannot be seen closing, so
+    // signing in again is how the visitor abandons it. The embed rejects the old call; its outcome is ignored here.
+    const mine = ++attempt.current
     setSignInError(null)
     setSigningIn(true)
     try {
-      // The popup must open synchronously inside the click: when the embed is already loaded (prefetchEmbed), call
-      // `signIn` before any await. A cold click waits for the script and may be blocked (reported as popup_blocked).
+      // The embed shows its provider picker (last used provider first) and opens the popup from the click on a provider
+      // there, so a cold click that has to load the embed first is fine too. `lang` localizes the picker and its name dialog.
       const loaded = loadedContrib()
-      const session = await (loaded ? loaded.signIn(api) : getContrib(api).then((c) => c.signIn(api)))
+      const session = await (loaded ? loaded.signIn(api, { lang }) : getContrib(api).then((c) => c.signIn(api, { lang })))
       if (alive.current) setUser(session.user)
       return true
     } catch (e) {
-      if (alive.current) setSignInError(signInErrorText(t, lang, e))
+      if (alive.current && attempt.current === mine) setSignInError(signInErrorText(t, lang, e))
       return false
     } finally {
-      if (alive.current) setSigningIn(false)
+      if (alive.current && attempt.current === mine) setSigningIn(false)
     }
   }, [api, t, lang])
 

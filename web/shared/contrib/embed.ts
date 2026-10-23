@@ -6,7 +6,7 @@ import type { ContribSubmission, ContribUser } from '../../cms-plugin/api-types.
 /** What `window.cmsEmbed.contrib` offers (wiki-cms embed/src/loader.ts). */
 export interface CmsContrib {
   session(api?: string): { token: string; user: ContribUser } | null
-  signIn(api?: string, provider?: string): Promise<{ token: string; user: ContribUser }>
+  signIn(api?: string, options?: string | { provider?: string; lang?: string }): Promise<{ token: string; user: ContribUser; needsDisplayName?: true }>
   signOut(api?: string): Promise<void>
   mine(type?: string, api?: string): Promise<ContribSubmission[]>
   withdrawRevision(submissionId: string, api?: string): Promise<void>

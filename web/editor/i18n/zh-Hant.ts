@@ -13,8 +13,8 @@ export const zhHant: Bundle = {
   loadFailed: '無法開啟編輯器，請稍後再試。',
 
   signInTitle: '登入後才能投稿',
-  signInIntro: '使用 Discord 帳號登入後即可提交建議。所有建議在出現在 Wiki 之前都會由管理員審核。',
-  signInButton: '使用 Discord 登入',
+  signInIntro: '登入後即可提交建議。所有建議在出現在 Wiki 之前都會由管理員審核。',
+  signInButton: '登入',
   signingIn: '正在等待登入視窗…',
   signInAgain: '登入已過期，請重新登入。',
 

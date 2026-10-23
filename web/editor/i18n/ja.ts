@@ -13,8 +13,8 @@ export const ja: Bundle = {
   loadFailed: 'エディターを開けませんでした。しばらくしてからもう一度お試しください。',
 
   signInTitle: '投稿するにはサインイン',
-  signInIntro: 'Discordアカウントでサインインすると提案を送信できます。すべての提案は、Wikiに反映される前にモデレーターが確認します。',
-  signInButton: 'Discordでサインイン',
+  signInIntro: 'サインインすると提案を送信できます。すべての提案は、Wikiに反映される前にモデレーターが確認します。',
+  signInButton: 'サインイン',
   signingIn: 'サインインのウィンドウを待っています…',
   signInAgain: 'サインインの有効期限が切れました。もう一度サインインしてください。',
 
