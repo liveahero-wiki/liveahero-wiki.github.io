@@ -185,6 +185,7 @@ export const en = {
   tcSharedEditCopy: 'Edit a copy',
   tcSharedChecking: 'Checking the shared team…',
   tcSharedInvalid: 'This team link is invalid or outdated, so the team cannot be shown.',
+  tcSharedNewer: 'This team link was made with a newer version of the wiki. Reload the page, and if it still does not show, ask for a new link.',
   tcSharedRosterError: 'Could not load the hero data needed to check this team link.',
   tcEditCopyConfirm: 'Replace the team you are building with a copy of this one?',
 }
