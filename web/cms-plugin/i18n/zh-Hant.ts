@@ -38,7 +38,6 @@ export const zhHant: Bundle = {
   removeSlot: '刪除欄位{n}',
   moveUp: '將欄位{n}上移',
   moveDown: '將欄位{n}下移',
-  dragSlot: '拖曳以重新排列欄位{n}',
   movedTo: '欄位已移動到第{pos}位（共{total}位）。',
   slotAdded: '已新增欄位{n}。',
   slotRemoved: '已刪除欄位。',
@@ -121,7 +120,7 @@ export const zhHant: Bundle = {
 
   // ---- Team Creator page (web/team-creator), copied from the wiki-cms embed's list/card/catalog strings
   tcDisclaimer: '投稿內容皆由社群玩家提供。版主僅審核垃圾訊息與不當言論，不會驗證隊伍配置是否真的可行。',
-  tcSubmit: '提交隊伍配置',
+  tcBuildTeam: '製作隊伍',
   tcOpening: '正在開啟…',
   tcFilterLabel: '依語言篩選',
   tcFilterAll: '全部',
@@ -161,4 +160,26 @@ export const zhHant: Bundle = {
   tcRejectReason: '版主備註：{reason}',
   tcWithdrawEdit: '撤回修改',
   tcActionFailed: '操作失敗，請重試。',
+
+  // ---- build & share (no sign-in)
+  tcBuild: '隊伍製作器',
+  tcBuildHelp: '組好隊伍後，可複製其連結，或提交到列表。連結不會向 Wiki 傳送任何內容，也無需登入：隊伍就儲存在連結裡，任何拿到連結的人都能看到。',
+  tcBuildLoading: '正在載入編輯器…',
+  tcBuildError: '無法載入隊伍編輯器，請重試。',
+  tcShareLink: '分享連結',
+  tcShareCopy: '複製連結',
+  tcShareCopied: '連結已複製。',
+  tcShareCopyFailed: '無法自動複製，請選取連結後手動複製。',
+  tcShareIncomplete: '請完成隊伍並修正所有錯誤後，再取得連結或提交。',
+  tcSubmitTeam: '提交到列表…',
+  tcBuildReset: '重設',
+  tcResetConfirm: '要清空正在製作的隊伍嗎？',
+  tcSharedTitle: '分享的隊伍',
+  tcSharedNote: '透過連結分享。這不是社群投稿，也未經審核。',
+  tcSharedEditCopy: '編輯副本',
+  tcSharedChecking: '正在檢查分享的隊伍…',
+  tcSharedInvalid: '此隊伍連結無效或已過期，無法顯示隊伍。',
+  tcSharedNewer: '此隊伍連結由更新版本的 wiki 產生。請重新整理頁面，若仍無法顯示，請向分享者索取新連結。',
+  tcSharedRosterError: '無法載入檢查此隊伍連結所需的英雄資料。',
+  tcEditCopyConfirm: '要用此隊伍的副本取代正在製作的隊伍嗎？',
 }

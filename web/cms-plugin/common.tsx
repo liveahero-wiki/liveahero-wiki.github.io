@@ -9,9 +9,10 @@ import { findTarget, targetHref, targetLabel } from './targets.ts'
 import type { Target } from './types.ts'
 
 /** undefined = loading, null = failed to load, otherwise the roster. */
-export function useRoster(): Roster | null | undefined {
+export function useRoster(enabled = true): Roster | null | undefined {
   const [roster, setRoster] = useState<Roster | null | undefined>(undefined)
   useEffect(() => {
+    if (!enabled) return
     let live = true
     loadRoster().then(
       (r) => live && setRoster(r),
@@ -20,7 +21,7 @@ export function useRoster(): Roster | null | undefined {
     return () => {
       live = false
     }
-  }, [])
+  }, [enabled])
   return roster
 }
 

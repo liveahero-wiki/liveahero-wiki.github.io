@@ -38,7 +38,6 @@ export const zhHans: Bundle = {
   removeSlot: '删除栏位{n}',
   moveUp: '将栏位{n}上移',
   moveDown: '将栏位{n}下移',
-  dragSlot: '拖动以重新排列栏位{n}',
   movedTo: '栏位已移动到第{pos}位（共{total}位）。',
   slotAdded: '已添加栏位{n}。',
   slotRemoved: '已删除栏位。',
@@ -121,7 +120,7 @@ export const zhHans: Bundle = {
 
   // ---- Team Creator page (web/team-creator), copied from the wiki-cms embed's list/card/catalog strings
   tcDisclaimer: '投稿内容均由社区玩家提供。版主仅审核垃圾信息和不当言论，不会验证队伍配置是否真的可行。',
-  tcSubmit: '提交队伍配置',
+  tcBuildTeam: '制作队伍',
   tcOpening: '正在打开…',
   tcFilterLabel: '按语言筛选',
   tcFilterAll: '全部',
@@ -161,4 +160,26 @@ export const zhHans: Bundle = {
   tcRejectReason: '版主备注：{reason}',
   tcWithdrawEdit: '撤回修改',
   tcActionFailed: '操作失败，请重试。',
+
+  // ---- build & share (no sign-in)
+  tcBuild: '队伍制作器',
+  tcBuildHelp: '组好队伍后，可复制其链接，或提交到列表。链接不会向 Wiki 发送任何内容，也无需登录：队伍就保存在链接里，任何拿到链接的人都能看到。',
+  tcBuildLoading: '正在加载编辑器…',
+  tcBuildError: '无法加载队伍编辑器，请重试。',
+  tcShareLink: '分享链接',
+  tcShareCopy: '复制链接',
+  tcShareCopied: '链接已复制。',
+  tcShareCopyFailed: '无法自动复制，请选中链接后手动复制。',
+  tcShareIncomplete: '请完成队伍并修正所有错误后，再获取链接或提交。',
+  tcSubmitTeam: '提交到列表…',
+  tcBuildReset: '重置',
+  tcResetConfirm: '要清空正在制作的队伍吗？',
+  tcSharedTitle: '分享的队伍',
+  tcSharedNote: '通过链接分享。这不是社区投稿，也未经审核。',
+  tcSharedEditCopy: '编辑副本',
+  tcSharedChecking: '正在检查分享的队伍…',
+  tcSharedInvalid: '此队伍链接无效或已过期，无法显示队伍。',
+  tcSharedNewer: '此队伍链接由更新版本的 wiki 生成。请刷新页面，若仍无法显示，请向分享者索取新链接。',
+  tcSharedRosterError: '无法加载检查此队伍链接所需的英雄数据。',
+  tcEditCopyConfirm: '要用此队伍的副本替换正在制作的队伍吗？',
 }
