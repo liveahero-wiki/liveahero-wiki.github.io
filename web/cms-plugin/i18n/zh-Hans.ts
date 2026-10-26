@@ -120,7 +120,7 @@ export const zhHans: Bundle = {
 
   // ---- Team Creator page (web/team-creator), copied from the wiki-cms embed's list/card/catalog strings
   tcDisclaimer: '投稿内容均由社区玩家提供。版主仅审核垃圾信息和不当言论，不会验证队伍配置是否真的可行。',
-  tcSubmit: '提交队伍配置',
+  tcBuildTeam: '制作队伍',
   tcOpening: '正在打开…',
   tcFilterLabel: '按语言筛选',
   tcFilterAll: '全部',
@@ -162,15 +162,16 @@ export const zhHans: Bundle = {
   tcActionFailed: '操作失败，请重试。',
 
   // ---- build & share (no sign-in)
-  tcBuild: '制作并分享队伍（无需登录）',
-  tcBuildHelp: '组好队伍后可复制其链接。不会向 Wiki 发送任何内容：队伍就保存在链接里，任何拿到链接的人都能看到。',
+  tcBuild: '队伍制作器',
+  tcBuildHelp: '组好队伍后，可复制其链接，或提交到列表。链接不会向 Wiki 发送任何内容，也无需登录：队伍就保存在链接里，任何拿到链接的人都能看到。',
   tcBuildLoading: '正在加载编辑器…',
   tcBuildError: '无法加载队伍编辑器，请重试。',
   tcShareLink: '分享链接',
   tcShareCopy: '复制链接',
   tcShareCopied: '链接已复制。',
   tcShareCopyFailed: '无法自动复制，请选中链接后手动复制。',
-  tcShareIncomplete: '请完成队伍并修正所有错误后再获取链接。',
+  tcShareIncomplete: '请完成队伍并修正所有错误后，再获取链接或提交。',
+  tcSubmitTeam: '提交到列表…',
   tcBuildReset: '重置',
   tcResetConfirm: '要清空正在制作的队伍吗？',
   tcSharedTitle: '分享的队伍',

@@ -122,7 +122,7 @@ export const ja: Bundle = {
 
   // ---- Team Creator page (web/team-creator), copied from the wiki-cms embed's list/card/catalog strings
   tcDisclaimer: '投稿はコミュニティの皆さんによるものです。モデレーターはスパムや不適切な表現のみを確認しており、編成が実際に有効かどうかは検証していません。',
-  tcSubmit: '編成を投稿する',
+  tcBuildTeam: '編成を作る',
   tcOpening: '開いています…',
   tcFilterLabel: '言語で絞り込み',
   tcFilterAll: 'すべて',
@@ -164,15 +164,16 @@ export const ja: Bundle = {
   tcActionFailed: '処理に失敗しました。もう一度お試しください。',
 
   // ---- build & share (no sign-in)
-  tcBuild: '編成を作って共有（ログイン不要）',
-  tcBuildHelp: '編成を作って、そのリンクをコピーできます。Wikiには何も送信されません。編成はリンク自体に含まれており、リンクを知っている人は誰でも見られます。',
+  tcBuild: '編成ビルダー',
+  tcBuildHelp: '編成を作って、そのリンクをコピーするか、リストに投稿できます。リンクはWikiに何も送信せず、ログインも不要です。編成はリンク自体に含まれており、リンクを知っている人は誰でも見られます。',
   tcBuildLoading: 'エディターを読み込み中…',
   tcBuildError: 'エディターを読み込めませんでした。もう一度お試しください。',
   tcShareLink: '共有リンク',
   tcShareCopy: 'リンクをコピー',
   tcShareCopied: 'リンクをコピーしました。',
   tcShareCopyFailed: '自動でコピーできませんでした。リンクを選択して手動でコピーしてください。',
-  tcShareIncomplete: '編成を完成させ、エラーを解消するとリンクが表示されます。',
+  tcShareIncomplete: '編成を完成させ、エラーを解消すると、リンクの取得や投稿ができます。',
+  tcSubmitTeam: 'リストに投稿…',
   tcBuildReset: 'リセット',
   tcResetConfirm: '作成中の編成を消去しますか？',
   tcSharedTitle: '共有された編成',

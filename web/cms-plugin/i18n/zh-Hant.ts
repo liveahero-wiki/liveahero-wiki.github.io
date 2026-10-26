@@ -120,7 +120,7 @@ export const zhHant: Bundle = {
 
   // ---- Team Creator page (web/team-creator), copied from the wiki-cms embed's list/card/catalog strings
   tcDisclaimer: '投稿內容皆由社群玩家提供。版主僅審核垃圾訊息與不當言論，不會驗證隊伍配置是否真的可行。',
-  tcSubmit: '提交隊伍配置',
+  tcBuildTeam: '製作隊伍',
   tcOpening: '正在開啟…',
   tcFilterLabel: '依語言篩選',
   tcFilterAll: '全部',
@@ -162,15 +162,16 @@ export const zhHant: Bundle = {
   tcActionFailed: '操作失敗，請重試。',
 
   // ---- build & share (no sign-in)
-  tcBuild: '製作並分享隊伍（無需登入）',
-  tcBuildHelp: '組好隊伍後可複製其連結。不會向 Wiki 傳送任何內容：隊伍就儲存在連結裡，任何拿到連結的人都能看到。',
+  tcBuild: '隊伍製作器',
+  tcBuildHelp: '組好隊伍後，可複製其連結，或提交到列表。連結不會向 Wiki 傳送任何內容，也無需登入：隊伍就儲存在連結裡，任何拿到連結的人都能看到。',
   tcBuildLoading: '正在載入編輯器…',
   tcBuildError: '無法載入隊伍編輯器，請重試。',
   tcShareLink: '分享連結',
   tcShareCopy: '複製連結',
   tcShareCopied: '連結已複製。',
   tcShareCopyFailed: '無法自動複製，請選取連結後手動複製。',
-  tcShareIncomplete: '請完成隊伍並修正所有錯誤後再取得連結。',
+  tcShareIncomplete: '請完成隊伍並修正所有錯誤後，再取得連結或提交。',
+  tcSubmitTeam: '提交到列表…',
   tcBuildReset: '重設',
   tcResetConfirm: '要清空正在製作的隊伍嗎？',
   tcSharedTitle: '分享的隊伍',

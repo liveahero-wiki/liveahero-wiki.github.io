@@ -6,7 +6,7 @@ Visitors read, filter and submit team formations on one page, the **Team Creator
 |---|---|
 | Worker URL | `site.cms_url` (`wiki_plugins/site.js`) |
 | The page (host `<div>`, intro) | `team-creator.md`; header link in `_includes/header.html` (Tools) |
-| The page's app (list, filters, cards, disclaimer, submit button) | `web/team-creator/` -> `assets/cms/team-creator.js` (`vite.config.ts`, like every bundle under `web/`) |
+| The page's app (list, filters, cards, disclaimer, team builder) | `web/team-creator/` -> `assets/cms/team-creator.js` (`vite.config.ts`, like every bundle under `web/`) |
 | Links to the page | `_includes/team-creator-link.html`, used by `hero-infobox.html`, `sidekick-infobox.html`, `_layouts/event.html` and `guide/challenge_simulator.md` |
 | Targets of a page | `wiki_plugins/lib/cms-groups.js` (Liquid filter `cms_targets`) |
 | Registry of valid groups and targets | `cms-groups.11ty.js` -> `/api/cms-groups.json` |
@@ -50,9 +50,12 @@ The borrowed support slot counts in every one of these (a viewer may own the uni
 
 Links the wiki generates (`_includes/team-creator-link.html`): a hero card links `#hero=<stockId>` ("Community teams using this hero"), a sidekick card `#sk=<stockId>` ("…using this sidekick as active"), and every page with `team_formations` gets one `#target=<id>` link per target. Old anchors such as `#team-hero-10251` no longer exist; the tab-fragment code just finds no element.
 
-## Shared team links (no sign-in)
+## Team builder: share a link or submit (`?team=`)
 
-Visitors who do not want to submit can still build a team and share it. A collapsed "Build & share a team" section on the page (`web/team-creator/Builder.tsx`) loads the plugin's editor (the `data-cms-plugin` module, imported on first open) and keeps the team as a draft in `localStorage` (`draft.ts`). Once the team passes `validateTeam` against the roster and the group's options, the section shows a link `/team_creator/?team=<code>` and a copy button; nothing is sent to the Worker.
+A new team is put together in one place, the collapsed "Team builder" section that the page's "Build a team" button opens (`web/team-creator/Builder.tsx`). It loads the plugin's editor (the `data-cms-plugin` module, imported on first open) and keeps the team as a draft in `localStorage` (`draft.ts`). Once the team passes `validateTeam` against the roster and the group's options, it offers two actions:
+
+- **Copy link** (no sign-in, nothing is sent to the Worker): a link `/team_creator/?team=<code>`, also shown in a selectable input.
+- **Submit to the list…**: opens the wiki-cms form with the team passed as `openForm({ payload })`. The form shows the team read-only and asks only for the rest (title, tags, language, explanation, demo link, verification, and sign-in where the type needs it). The builder stays the only editor of a new team, so there is one draft for it; the form's own draft keeps just the other fields. Editing an existing submission still opens the form with its editable team (`edit`). `payload` needs a wiki-cms Worker that supports it (deploy the Worker first; see wiki-cms `docs/EMBED.md`).
 
 `?team=` is a query parameter, so it never collides with the filter hash. The code (`web/team-creator/share.ts`) is a compact versioned binary layout in base64url (about 60-150 characters; the layout is documented at the top of the file). It carries only the team and its target: no title, explanation, demo link or tags. **The layout is a public contract**: links live in chats for years, so a change must bump `VERSION` and keep decoding the old versions.
 
