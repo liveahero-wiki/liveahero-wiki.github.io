@@ -42,7 +42,6 @@ export const en = {
   removeSlot: 'Remove slot {n}',
   moveUp: 'Move slot {n} up',
   moveDown: 'Move slot {n} down',
-  dragSlot: 'Drag to reorder slot {n}',
   movedTo: 'Slot moved to position {pos} of {total}.',
   slotAdded: 'Slot {n} added.',
   slotRemoved: 'Slot removed.',
@@ -167,6 +166,26 @@ export const en = {
   tcRejectReason: 'Moderator note: {reason}',
   tcWithdrawEdit: 'Withdraw edit',
   tcActionFailed: 'That did not work. Please try again.',
+
+  // ---- build & share (no sign-in)
+  tcBuild: 'Build & share a team (no sign-in)',
+  tcBuildHelp: 'Put a team together and copy a link to it. Nothing is sent to the wiki: the team is stored in the link itself, so anyone with the link can see it.',
+  tcBuildLoading: 'Loading the editor…',
+  tcBuildError: 'Could not load the team editor. Please try again.',
+  tcShareLink: 'Share link',
+  tcShareCopy: 'Copy link',
+  tcShareCopied: 'Link copied.',
+  tcShareCopyFailed: 'Could not copy automatically. Select the link and copy it yourself.',
+  tcShareIncomplete: 'Complete the team and fix any errors to get a link.',
+  tcBuildReset: 'Reset',
+  tcResetConfirm: 'Clear the team you are building?',
+  tcSharedTitle: 'Shared team',
+  tcSharedNote: 'Shared through a link. This is not a community submission and has not been reviewed.',
+  tcSharedEditCopy: 'Edit a copy',
+  tcSharedChecking: 'Checking the shared team…',
+  tcSharedInvalid: 'This team link is invalid or outdated, so the team cannot be shown.',
+  tcSharedRosterError: 'Could not load the hero data needed to check this team link.',
+  tcEditCopyConfirm: 'Replace the team you are building with a copy of this one?',
 }
 
 export type Bundle = Record<keyof typeof en, string>

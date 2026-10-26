@@ -43,7 +43,7 @@ describe('initState', () => {
 })
 
 describe('support follows its slot', () => {
-  it('reorders (drag or buttons) keep supportIndex on the same slot', () => {
+  it('reorders keep supportIndex on the same slot', () => {
     let s = four()
     s = moveSlot(s, 3, 0)
     assert.deepEqual(ids(s), [4, 1, 2, 3])

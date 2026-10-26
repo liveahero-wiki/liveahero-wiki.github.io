@@ -29,11 +29,10 @@ const plugin: SubmissionPlugin<TeamPayload> = {
   mountDetail: (el, payload, ctx: PluginContext) => mount(el, h(TeamDetail, { payload, ctx })),
 
   mountEditor(el, init, ctx: PluginContext): EditorHandle {
-    const bridge: EditorBridge = { validate: () => [], setErrors: () => {}, abortDrag: () => {} }
+    const bridge: EditorBridge = { validate: () => [], setErrors: () => {} }
     const unmount = mount(el, h(TeamEditor, { init, ctx, bridge }))
     return {
       destroy() {
-        bridge.abortDrag()
         unmount()
       },
       validate: () => bridge.validate(),

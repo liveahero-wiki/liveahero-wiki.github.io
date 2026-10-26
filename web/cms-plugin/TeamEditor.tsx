@@ -1,11 +1,10 @@
-// Team editor: 1-5 slots reordered by pointer drag (mouse/touch) or by move up/down buttons, a hero
+// Team editor: 1-5 slots reordered by move up/down buttons, a hero
 // combobox, number inputs, a skill-tree checkbox (bloom is derived), active + passive sidekick pickers, and (when
 // the group allows it) a "borrowed support" radio. Emits normalized payloads through onChange.
 
 import { useEffect, useLayoutEffect, useRef, useState } from 'preact/hooks'
 import type { FieldError, PluginContext } from './plugin-api.ts'
 import { cardLabel, PwFormIcon, useRoster } from './common.tsx'
-import { startDrag } from './dnd.ts'
 import { makeT, errorText, pwFormLabel, type T } from './i18n/t.ts'
 import { CardPicker, PassivePicker } from './pickers.tsx'
 import type { Roster } from './roster.ts'
@@ -18,7 +17,6 @@ import { sortErrors, sortedJson, toPayload, initState, type Slot, type State } f
 export interface EditorBridge {
   validate(): FieldError[]
   setErrors(errors: FieldError[]): void
-  abortDrag(): void
 }
 
 let editorSeq = 0
@@ -56,10 +54,8 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
   const [serverErrors, setServerErrors] = useState<FieldError[]>(() => init.errors ?? [])
   const [showAll, setShowAll] = useState(false)
   const [live, setLive] = useState({ text: '', n: 0 })
-  const listRef = useRef<HTMLOListElement>(null)
   const rootRef = useRef<HTMLDivElement>(null)
   const pendingFocus = useRef<{ key: number; what: 'hero' | 'up' | 'down' | 'remove' } | null>(null)
-  const abortDrag = useRef<() => void>(() => {})
   const onChangeRef = useRef(init.onChange)
   onChangeRef.current = init.onChange
 
@@ -81,7 +77,7 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // Bridge for the EditorHandle (validate / setErrors / drag cleanup).
+  // Bridge for the EditorHandle (validate / setErrors).
   bridge.validate = () => {
     setShowAll(true)
     return validateTeam(toPayload(stateRef.current, allowsSupport), options, rosterRef.current ?? undefined)
@@ -90,7 +86,6 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
     setServerErrors(errors ?? [])
     if (errors?.length) setShowAll(true)
   }
-  bridge.abortDrag = () => abortDrag.current()
 
   // Restore keyboard focus after a move/add (keyed nodes can be re-inserted). Layout effect: runs
   // synchronously after the DOM update instead of waiting for an animation frame.
@@ -122,20 +117,18 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
     const at = Math.min(s.slots.findIndex((x) => x.key === key), next.slots.length - 1)
     commit(next, { announce: t('slotRemoved'), focus: { key: next.slots[at].key, what: 'hero' } })
   }
-  const moveSlot = (from: number, to: number, via: 'drag' | 'up' | 'down') => {
+  const moveSlot = (from: number, to: number, via: 'up' | 'down') => {
     const s = stateRef.current
     const next = ed.moveSlot(s, from, to)
     if (next === s) return
     commit(next, {
       announce: t('movedTo', { pos: to + 1, total: next.slots.length }),
-      focus: via === 'drag' ? null : { key: next.slots[to].key, what: via },
+      focus: { key: next.slots[to].key, what: via },
     })
   }
   const selectSupport = (key: number) => commit(ed.selectSupport(stateRef.current, key))
   const clearSupport = () => commit(ed.clearSupport(stateRef.current))
   const selectTarget = (id: string | null) => commit(ed.selectTarget(stateRef.current, id))
-
-  useEffect(() => () => abortDrag.current(), [])
 
   // ---- errors
   const payload = toPayload(state, allowsSupport)
@@ -200,7 +193,7 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
         ))}
       </div>
 
-      <ol class="cms-lah-slots-editor" ref={listRef} aria-label={t('slotsHeading')}>
+      <ol class="cms-lah-slots-editor" aria-label={t('slotsHeading')}>
         {state.slots.map((slot, i) => (
           <SlotEditor
             key={slot.key}
@@ -220,14 +213,6 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
             onSupport={() => selectSupport(slot.key)}
             onRemove={() => removeSlot(slot.key)}
             onMove={(dir) => moveSlot(i, i + dir, dir < 0 ? 'up' : 'down')}
-            onGrip={(e) => {
-              if (e.pointerType === 'mouse' && e.button !== 0) return
-              const grip = e.currentTarget as HTMLElement
-              const item = grip.closest<HTMLElement>('[data-cms-slot]')
-              if (!item || !listRef.current) return
-              e.preventDefault()
-              abortDrag.current = startDrag(e, { list: listRef.current, item, grip, onDrop: (from, to) => moveSlot(from, to, 'drag') })
-            }}
           />
         ))}
       </ol>
@@ -263,10 +248,9 @@ interface SlotProps {
   onSupport(): void
   onRemove(): void
   onMove(dir: -1 | 1): void
-  onGrip(e: PointerEvent): void
 }
 
-function SlotEditor({ slot, index, total, idBase, support, allowsSupport, supportName, roster, lang, t, errs, onPatch, onSupport, onRemove, onMove, onGrip }: SlotProps) {
+function SlotEditor({ slot, index, total, idBase, support, allowsSupport, supportName, roster, lang, t, errs, onPatch, onSupport, onRemove, onMove }: SlotProps) {
   const n = index + 1
   const hero = slot.stockId ? roster?.hero(slot.stockId) : undefined
   const treeUnavailable = !!hero && !hero.hasSkillTree
@@ -293,16 +277,6 @@ function SlotEditor({ slot, index, total, idBase, support, allowsSupport, suppor
   return (
     <li class={'cms-lah-card cms-lah-slot' + (support ? ' cms-lah-support' : '')} data-cms-slot={slot.key}>
       <div class="cms-lah-card-head">
-        <span class="cms-lah-grip" aria-hidden="true" title={t('dragSlot', { n })} onPointerDown={onGrip}>
-          <svg viewBox="0 0 12 18" width="14" height="20" fill="currentColor" focusable="false">
-            <circle cx="3" cy="3" r="1.6" />
-            <circle cx="9" cy="3" r="1.6" />
-            <circle cx="3" cy="9" r="1.6" />
-            <circle cx="9" cy="9" r="1.6" />
-            <circle cx="3" cy="15" r="1.6" />
-            <circle cx="9" cy="15" r="1.6" />
-          </svg>
-        </span>
         <span class="cms-lah-slot-no">{t('slotN', { n })}</span>
         {support && (
           <span class="cms-lah-tag" title={t('supportTitle')}>

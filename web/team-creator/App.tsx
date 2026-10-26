@@ -6,12 +6,17 @@ import { useEffect, useMemo, useState } from 'preact/hooks'
 import type { ContribSubmission, PublicBlob } from '../cms-plugin/api-types.ts'
 import { makeT } from '../cms-plugin/i18n/t.ts'
 import type { PluginContext } from '../cms-plugin/plugin-api.ts'
+import type { TeamPayload } from '../cms-plugin/types.ts'
 import { getContrib, prefetchEmbed } from '../shared/contrib/embed.ts'
 import { onLangChange, pageLang, type Lang } from '../shared/lang.ts'
 import { useAccount } from './account.ts'
 import { currentTheme, editStart, fetchBlob, openCmsForm } from './api.ts'
+import { Builder } from './Builder.tsx'
 import { Catalog } from './Catalog.tsx'
+import { isBlankTeam, loadDraft, saveDraft } from './draft.ts'
 import { MySubmissions } from './MySubmissions.tsx'
+import { SharedTeam } from './SharedTeam.tsx'
+import { sharedParam } from './share.ts'
 
 export interface AppProps {
   /** Worker origin, no trailing slash. */
@@ -42,6 +47,9 @@ export function App({ api, group, plugin, formHost }: AppProps) {
   const [showMine, setShowMine] = useState(false)
   const [busyId, setBusyId] = useState<string | null>(null)
   const [actionError, setActionError] = useState(false)
+  const sharedTeam = useMemo(() => sharedParam(location.search), [])
+  const [builderOpen, setBuilderOpen] = useState(false)
+  const [builderSeed, setBuilderSeed] = useState(0)
   const mineById = useMemo(() => new Map((account.mine ?? []).map((m) => [m.id, m])), [account.mine])
 
   useEffect(() => {
@@ -92,6 +100,15 @@ export function App({ api, group, plugin, formHost }: AppProps) {
     }
   }
 
+  /** "Edit a copy" of a shared team: it replaces the draft (after asking when there is something in it) and opens the builder. */
+  const editCopy = (team: TeamPayload) => {
+    if (!isBlankTeam(loadDraft()) && !confirm(t('tcEditCopyConfirm'))) return
+    saveDraft(team)
+    setBuilderSeed((n) => n + 1)
+    setBuilderOpen(true)
+    setTimeout(() => document.getElementById('lah-tc-builder')?.scrollIntoView({ block: 'start' }), 0)
+  }
+
   let body: ComponentChildren
   if (state.s === 'error') {
     body = (
@@ -114,6 +131,7 @@ export function App({ api, group, plugin, formHost }: AppProps) {
 
   return (
     <div class="lah-tc-app">
+      {sharedTeam !== null && (blob ? <SharedTeam param={sharedTeam} ctx={ctx} onEditCopy={editCopy} /> : state.s === 'loading' && <p class="lah-tc-hint">{t('tcSharedChecking')}</p>)}
       <p class="lah-tc-disclaimer">{t('tcDisclaimer')}</p>
       <div class="lah-tc-toolbar" onPointerEnter={() => !account.user && prefetchEmbed(api)} onFocusIn={() => !account.user && prefetchEmbed(api)} onTouchStart={() => !account.user && prefetchEmbed(api)}>
         <button type="button" class="lah-tc-btn lah-tc-primary" disabled={!blob || opening} onClick={() => void openForm()}>
@@ -145,6 +163,7 @@ export function App({ api, group, plugin, formHost }: AppProps) {
           </span>
         )}
       </div>
+      {blob && <Builder ctx={ctx} plugin={plugin} open={builderOpen} onOpenChange={setBuilderOpen} seed={builderSeed} />}
       {account.user && showMine && (
         <section class="lah-tc-mine" aria-label={t('tcMySubmissions', { count: account.mine?.length ?? 0 })}>
           {account.mineError && <p class="lah-tc-error">{t('tcMyLoadError')}</p>}

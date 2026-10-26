@@ -248,6 +248,49 @@
   font-size: 0.85em;
 }
 
+/* ---- build & share, shared team ---- */
+.lah-tc-builder {
+  margin: 0 0 1rem;
+  border: 1px solid var(--cms-border, #8884);
+  border-radius: 8px;
+}
+.lah-tc-builder > summary {
+  padding: 0.6rem 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.lah-tc-builder-body {
+  padding: 0 0.9rem 0.9rem;
+}
+.lah-tc-share {
+  margin-top: 0.75rem;
+}
+.lah-tc-share-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+.lah-tc-share-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.lah-tc-share-input {
+  flex: 1 1 16rem;
+  min-width: 0;
+}
+.lah-tc-btn[aria-disabled='true'] {
+  opacity: 0.55;
+}
+.lah-tc-shared {
+  margin: 0 0 1rem;
+}
+.lah-tc-shared-title {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+}
+
 /* ---- shared controls ---- */
 .lah-tc-btn,
 .lah-tc-chip-btn,
