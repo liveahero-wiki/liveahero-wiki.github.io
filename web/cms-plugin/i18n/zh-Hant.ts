@@ -179,6 +179,7 @@ export const zhHant: Bundle = {
   tcSharedEditCopy: '編輯副本',
   tcSharedChecking: '正在檢查分享的隊伍…',
   tcSharedInvalid: '此隊伍連結無效或已過期，無法顯示隊伍。',
+  tcSharedNewer: '此隊伍連結由更新版本的 wiki 產生。請重新整理頁面，若仍無法顯示，請向分享者索取新連結。',
   tcSharedRosterError: '無法載入檢查此隊伍連結所需的英雄資料。',
   tcEditCopyConfirm: '要用此隊伍的副本取代正在製作的隊伍嗎？',
 }

@@ -5,7 +5,7 @@
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks'
 import { makeT } from '../cms-plugin/i18n/t.ts'
 import type { EditorHandle, PluginContext, SubmissionPlugin } from '../cms-plugin/plugin-api.ts'
-import { loadRoster, type Roster } from '../cms-plugin/roster.ts'
+import { useRoster } from '../cms-plugin/common.tsx'
 import type { TeamPayload } from '../cms-plugin/types.ts'
 import { validateTeam } from '../cms-plugin/validate.ts'
 import { clearDraft, isBlankTeam, loadDraft, saveDraft } from './draft.ts'
@@ -52,7 +52,7 @@ export interface BuilderProps {
 export function Builder({ ctx, plugin, open, onOpenChange, seed, onSubmit, submitting }: BuilderProps) {
   const t = useMemo(() => makeT(ctx.uiLang), [ctx.uiLang])
   const [mod, setMod] = useState<TeamPlugin | 'error' | null>(null)
-  const [roster, setRoster] = useState<Roster | null | undefined>(undefined)
+  const roster = useRoster(open)
   const [team, setTeam] = useState<TeamPayload | null>(null)
   const [resetN, setResetN] = useState(0)
   const [copied, setCopied] = useState<'ok' | 'fail' | null>(null)
@@ -71,13 +71,6 @@ export function Builder({ ctx, plugin, open, onOpenChange, seed, onSubmit, submi
       (e) => {
         console.warn('[team-creator] could not load the team editor', e)
         if (!dead) setMod('error')
-      },
-    )
-    loadRoster().then(
-      (r) => !dead && setRoster(r),
-      (e) => {
-        console.warn('[team-creator] roster unavailable', e)
-        if (!dead) setRoster(null)
       },
     )
     return () => {
@@ -114,9 +107,9 @@ export function Builder({ ctx, plugin, open, onOpenChange, seed, onSubmit, submi
     }
   }, [open, mod, seed, resetN, ctx])
 
-  const errors = team && roster !== undefined ? validateTeam(team, ctx.group.options, roster ?? undefined) : null
+  const errors = useMemo(() => (team && roster !== undefined ? validateTeam(team, ctx.group.options, roster ?? undefined) : null), [team, roster, ctx.group.options])
   const ready = !!team && errors !== null && errors.length === 0
-  const url = ready ? linkOf(team) : ''
+  const url = useMemo(() => (ready && team ? linkOf(team) : ''), [ready, team])
   useEffect(() => setCopied(null), [url])
 
   const copy = async () => {

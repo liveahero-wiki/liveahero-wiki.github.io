@@ -181,6 +181,7 @@ export const ja: Bundle = {
   tcSharedEditCopy: 'コピーを編集',
   tcSharedChecking: '共有された編成を確認中…',
   tcSharedInvalid: 'この編成リンクは無効か古いため、編成を表示できません。',
+  tcSharedNewer: 'この編成リンクは新しいバージョンのwikiで作成されました。ページを再読み込みしても表示されない場合は、新しいリンクをご依頼ください。',
   tcSharedRosterError: 'この編成リンクの確認に必要なヒーローデータを読み込めませんでした。',
   tcEditCopyConfirm: '作成中の編成を、この編成のコピーで置き換えますか？',
 }

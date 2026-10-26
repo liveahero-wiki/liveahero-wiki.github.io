@@ -179,6 +179,7 @@ export const zhHans: Bundle = {
   tcSharedEditCopy: '编辑副本',
   tcSharedChecking: '正在检查分享的队伍…',
   tcSharedInvalid: '此队伍链接无效或已过期，无法显示队伍。',
+  tcSharedNewer: '此队伍链接由更新版本的 wiki 生成。请刷新页面，若仍无法显示，请向分享者索取新链接。',
   tcSharedRosterError: '无法加载检查此队伍链接所需的英雄数据。',
   tcEditCopyConfirm: '要用此队伍的副本替换正在制作的队伍吗？',
 }
