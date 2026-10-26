@@ -1,5 +1,6 @@
-// "Build & share a team": the plugin's team editor on the page itself (no sign-in, nothing sent to the server). The
-// team is kept as a draft in localStorage and, once it validates, turned into a `?team=` link (see share.ts).
+// The team builder: the plugin's team editor on the page itself, the only place a new team is put together. The team
+// is kept as a draft in localStorage and, once it validates, can be copied as a `?team=` link (see share.ts; no sign-in,
+// nothing sent to the server) or handed to the wiki-cms submit form, which asks for the rest.
 
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks'
 import { makeT } from '../cms-plugin/i18n/t.ts'
@@ -42,9 +43,13 @@ export interface BuilderProps {
   onOpenChange(open: boolean): void
   /** Bumped when the draft was replaced from outside ("Edit a copy"): the editor reloads it. */
   seed: number
+  /** Submit the (valid) team to the list. */
+  onSubmit(team: TeamPayload): void
+  /** The submit form is being opened. */
+  submitting: boolean
 }
 
-export function Builder({ ctx, plugin, open, onOpenChange, seed }: BuilderProps) {
+export function Builder({ ctx, plugin, open, onOpenChange, seed, onSubmit, submitting }: BuilderProps) {
   const t = useMemo(() => makeT(ctx.uiLang), [ctx.uiLang])
   const [mod, setMod] = useState<TeamPlugin | 'error' | null>(null)
   const [roster, setRoster] = useState<Roster | null | undefined>(undefined)
@@ -110,7 +115,8 @@ export function Builder({ ctx, plugin, open, onOpenChange, seed }: BuilderProps)
   }, [open, mod, seed, resetN, ctx])
 
   const errors = team && roster !== undefined ? validateTeam(team, ctx.group.options, roster ?? undefined) : null
-  const url = team && errors && errors.length === 0 ? linkOf(team) : ''
+  const ready = !!team && errors !== null && errors.length === 0
+  const url = ready ? linkOf(team) : ''
   useEffect(() => setCopied(null), [url])
 
   const copy = async () => {
@@ -130,6 +136,14 @@ export function Builder({ ctx, plugin, open, onOpenChange, seed }: BuilderProps)
         setCopied('fail')
       }
     }
+  }
+
+  const submit = () => {
+    if (!ready || !team) {
+      handle.current?.validate()
+      return
+    }
+    if (!submitting) onSubmit(team)
   }
 
   const reset = () => {
@@ -159,16 +173,21 @@ export function Builder({ ctx, plugin, open, onOpenChange, seed }: BuilderProps)
               </label>
               <div class="lah-tc-share-row">
                 <input id="lah-tc-share-link" ref={linkInput} class="lah-tc-input lah-tc-share-input" type="text" readOnly value={url} placeholder={t('tcShareIncomplete')} onFocus={(e) => e.currentTarget.select()} />
-                <button type="button" class="lah-tc-btn lah-tc-primary" aria-disabled={!url} onClick={() => void copy()}>
+                <button type="button" class="lah-tc-btn" aria-disabled={!url} onClick={() => void copy()}>
                   {t('tcShareCopy')}
-                </button>
-                <button type="button" class="lah-tc-btn" onClick={reset}>
-                  {t('tcBuildReset')}
                 </button>
               </div>
               <p class="lah-tc-hint" role="status">
                 {copied === 'ok' ? t('tcShareCopied') : copied === 'fail' ? t('tcShareCopyFailed') : url ? '' : t('tcShareIncomplete')}
               </p>
+              <div class="lah-tc-share-row lah-tc-share-actions">
+                <button type="button" class="lah-tc-btn lah-tc-primary" aria-disabled={!ready || submitting} onClick={submit}>
+                  {submitting ? t('tcOpening') : t('tcSubmitTeam')}
+                </button>
+                <button type="button" class="lah-tc-btn" onClick={reset}>
+                  {t('tcBuildReset')}
+                </button>
+              </div>
             </div>
           )}
         </div>

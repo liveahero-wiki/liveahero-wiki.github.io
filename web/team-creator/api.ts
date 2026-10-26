@@ -2,6 +2,7 @@
 // (`window.cmsEmbed.openForm`; the embed bridge and the contributor session are in web/shared/contrib/).
 
 import type { ContribContent, ContribSubmission, PublicBlob } from '../cms-plugin/api-types.ts'
+import type { TeamPayload } from '../cms-plugin/types.ts'
 import { cmsEmbed, loadEmbed } from '../shared/contrib/embed.ts'
 import type { Lang } from '../shared/lang.ts'
 
@@ -66,14 +67,16 @@ export interface OpenFormArgs {
   lang: Lang
   /** Edit one of the signed-in contributor's own submissions. */
   edit?: { id: string; version: number; initial: ContribContent }
+  /** A new submission of the team built on the page: the form shows it read-only and submits it unchanged. */
+  payload?: TeamPayload
   /** Called once the dialog has closed (submitted or not). */
   onClose?: () => void
 }
 
 /** Opens the wiki-cms submit form. Rejects when the embed cannot be loaded or the options are rejected. */
-export async function openCmsForm({ api, group, plugin, groupOptions, host, lang, edit, onClose }: OpenFormArgs): Promise<void> {
+export async function openCmsForm({ api, group, plugin, groupOptions, host, lang, edit, payload, onClose }: OpenFormArgs): Promise<void> {
   await loadEmbed(api)
   const embed = cmsEmbed()
   if (!embed?.openForm) throw new Error('wiki-cms embed has no openForm')
-  await embed.openForm({ host, type: TYPE, group, plugin, groupOptions, api, lang, ...(edit ? { edit } : {}), ...(onClose ? { onClose } : {}) })
+  await embed.openForm({ host, type: TYPE, group, plugin, groupOptions, api, lang, ...(edit ? { edit } : {}), ...(payload ? { payload } : {}), ...(onClose ? { onClose } : {}) })
 }

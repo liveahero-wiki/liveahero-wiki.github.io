@@ -126,7 +126,7 @@ export const en = {
 
   // ---- Team Creator page (web/team-creator), copied from the wiki-cms embed's list/card/catalog strings
   tcDisclaimer: 'Submissions are community-contributed. Moderators only screen for spam and abusive language — they do not verify that a team formation actually works.',
-  tcSubmit: 'Submit a team formation',
+  tcBuildTeam: 'Build a team',
   tcOpening: 'Opening…',
   tcFilterLabel: 'Filter by language',
   tcFilterAll: 'All',
@@ -168,15 +168,16 @@ export const en = {
   tcActionFailed: 'That did not work. Please try again.',
 
   // ---- build & share (no sign-in)
-  tcBuild: 'Build & share a team (no sign-in)',
-  tcBuildHelp: 'Put a team together and copy a link to it. Nothing is sent to the wiki: the team is stored in the link itself, so anyone with the link can see it.',
+  tcBuild: 'Team builder',
+  tcBuildHelp: 'Put a team together, then copy a link to it or submit it to the list. A link sends nothing to the wiki and needs no sign-in: the team is stored in the link itself, so anyone with the link can see it.',
   tcBuildLoading: 'Loading the editor…',
   tcBuildError: 'Could not load the team editor. Please try again.',
   tcShareLink: 'Share link',
   tcShareCopy: 'Copy link',
   tcShareCopied: 'Link copied.',
   tcShareCopyFailed: 'Could not copy automatically. Select the link and copy it yourself.',
-  tcShareIncomplete: 'Complete the team and fix any errors to get a link.',
+  tcShareIncomplete: 'Complete the team and fix any errors to get a link or submit it.',
+  tcSubmitTeam: 'Submit to the list…',
   tcBuildReset: 'Reset',
   tcResetConfirm: 'Clear the team you are building?',
   tcSharedTitle: 'Shared team',

@@ -1,5 +1,5 @@
-// The Team Creator page: disclaimer, submit button and the list. The blob comes from the wiki-cms Worker; the
-// submit form is wiki-cms' (opened through `window.cmsEmbed.openForm`).
+// The Team Creator page: disclaimer, the team builder (share a link, or submit to the list) and the list. The blob comes
+// from the wiki-cms Worker; the submit form is wiki-cms' (opened through `window.cmsEmbed.openForm`, with the built team).
 
 import { Component, type ComponentChildren } from 'preact'
 import { useEffect, useMemo, useState } from 'preact/hooks'
@@ -71,13 +71,14 @@ export function App({ api, group, plugin, formHost }: AppProps) {
   // Memoized so that the team summaries do not remount on every render.
   const ctx = useMemo<PluginContext>(() => ({ uiLang, theme: currentTheme(), group: { id: group, options: blob?.groupOptions ?? {} } }), [uiLang, blob, group])
 
-  const openForm = async (edit?: ContribSubmission) => {
+  /** The wiki-cms form: for a team built on the page (`payload`), or to edit one of the contributor's own submissions. */
+  const openForm = async (edit?: ContribSubmission, payload?: TeamPayload) => {
     if (!blob || opening) return
     setOpening(true)
     setFormError(false)
     try {
       // Reload "my submissions" once the dialog is gone (a new team, an edit or a sign-in may have happened in it).
-      await openCmsForm({ api, group, plugin, groupOptions: blob.groupOptions, host: formHost, lang: uiLang, ...(edit ? { edit: editStart(edit) } : {}), onClose: () => void account.refresh() })
+      await openCmsForm({ api, group, plugin, groupOptions: blob.groupOptions, host: formHost, lang: uiLang, ...(edit ? { edit: editStart(edit) } : {}), ...(payload ? { payload } : {}), onClose: () => void account.refresh() })
     } catch (e) {
       console.warn('[team-creator] could not open the form', e)
       setFormError(true)
@@ -100,13 +101,22 @@ export function App({ api, group, plugin, formHost }: AppProps) {
     }
   }
 
+  const showBuilder = () => {
+    setBuilderOpen(true)
+    setTimeout(() => document.getElementById('lah-tc-builder')?.scrollIntoView({ block: 'start' }), 0)
+  }
+
+  // The builder's submit step needs the embed.
+  useEffect(() => {
+    if (builderOpen && !account.user) prefetchEmbed(api)
+  }, [builderOpen, api, account.user])
+
   /** "Edit a copy" of a shared team: it replaces the draft (after asking when there is something in it) and opens the builder. */
   const editCopy = (team: TeamPayload) => {
     if (!isBlankTeam(loadDraft()) && !confirm(t('tcEditCopyConfirm'))) return
     saveDraft(team)
     setBuilderSeed((n) => n + 1)
-    setBuilderOpen(true)
-    setTimeout(() => document.getElementById('lah-tc-builder')?.scrollIntoView({ block: 'start' }), 0)
+    showBuilder()
   }
 
   let body: ComponentChildren
@@ -134,8 +144,8 @@ export function App({ api, group, plugin, formHost }: AppProps) {
       {sharedTeam !== null && (blob ? <SharedTeam param={sharedTeam} ctx={ctx} onEditCopy={editCopy} /> : state.s === 'loading' && <p class="lah-tc-hint">{t('tcSharedChecking')}</p>)}
       <p class="lah-tc-disclaimer">{t('tcDisclaimer')}</p>
       <div class="lah-tc-toolbar" onPointerEnter={() => !account.user && prefetchEmbed(api)} onFocusIn={() => !account.user && prefetchEmbed(api)} onTouchStart={() => !account.user && prefetchEmbed(api)}>
-        <button type="button" class="lah-tc-btn lah-tc-primary" disabled={!blob || opening} onClick={() => void openForm()}>
-          {opening ? t('tcOpening') : t('tcSubmit')}
+        <button type="button" class="lah-tc-btn lah-tc-primary" disabled={!blob} onClick={showBuilder}>
+          {t('tcBuildTeam')}
         </button>
         {account.user ? (
           <span class="lah-tc-account">
@@ -163,7 +173,7 @@ export function App({ api, group, plugin, formHost }: AppProps) {
           </span>
         )}
       </div>
-      {blob && <Builder ctx={ctx} plugin={plugin} open={builderOpen} onOpenChange={setBuilderOpen} seed={builderSeed} />}
+      {blob && <Builder ctx={ctx} plugin={plugin} open={builderOpen} onOpenChange={setBuilderOpen} seed={builderSeed} submitting={opening} onSubmit={(team) => void openForm(undefined, team)} />}
       {account.user && showMine && (
         <section class="lah-tc-mine" aria-label={t('tcMySubmissions', { count: account.mine?.length ?? 0 })}>
           {account.mineError && <p class="lah-tc-error">{t('tcMyLoadError')}</p>}
