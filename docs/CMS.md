@@ -50,6 +50,14 @@ The borrowed support slot counts in every one of these (a viewer may own the uni
 
 Links the wiki generates (`_includes/team-creator-link.html`): a hero card links `#hero=<stockId>` ("Community teams using this hero"), a sidekick card `#sk=<stockId>` ("…using this sidekick as active"), and every page with `team_formations` gets one `#target=<id>` link per target. Old anchors such as `#team-hero-10251` no longer exist; the tab-fragment code just finds no element.
 
+## Shared team links (no sign-in)
+
+Visitors who do not want to submit can still build a team and share it. A collapsed "Build & share a team" section on the page (`web/team-creator/Builder.tsx`) loads the plugin's editor (the `data-cms-plugin` module, imported on first open) and keeps the team as a draft in `localStorage` (`draft.ts`). Once the team passes `validateTeam` against the roster and the group's options, the section shows a link `/team_creator/?team=<code>` and a copy button; nothing is sent to the Worker.
+
+`?team=` is a query parameter, so it never collides with the filter hash. The code (`web/team-creator/share.ts`) is a compact versioned binary layout in base64url (about 60-150 characters; the layout is documented at the top of the file). It carries only the team and its target: no title, explanation, demo link or tags. **The layout is a public contract**: links live in chats for years, so a change must bump `VERSION` and keep decoding the old versions.
+
+A page opened with `?team=` shows the team read-only above the list (`SharedTeam.tsx`, the plugin's `TeamDetail`) with a "not reviewed" note. The link is untrusted: it is decoded and then run through the same validator as a submission against the live roster and group options, and anything wrong (unknown card, a code from a newer version, a group that no longer allows support) shows "invalid or outdated" instead of a card. "Edit a copy" replaces the draft with the shared team (after a confirm when the draft is not blank) and opens the builder. Submitting from a shared link is not built.
+
 ## Targets (`team_formations:` front matter)
 
 A target is a fight that a team can be built for ("Purpose-built for" in the form, a chip on the card, a filter). Anything else goes in the team's name. A page lists its targets in `team_formations:` (event, guide and other non-chara pages):

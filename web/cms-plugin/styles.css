@@ -237,8 +237,7 @@ html[data-theme='dark'] .cms-lah-support .cms-lah-badge {
 .cms-lah-btn:focus-visible,
 .cms-lah-input:focus-visible,
 .cms-lah-summary:focus-visible,
-.cms-lah-check input:focus-visible,
-.cms-lah-grip:focus-visible {
+.cms-lah-check input:focus-visible {
   outline: 2px solid var(--cms-lah-accent);
   outline-offset: 2px;
 }
@@ -497,45 +496,6 @@ a.cms-lah-sk-name:hover {
 .cms-lah-slot .cms-lah-card-head {
   margin-bottom: 0;
 }
-.cms-lah-grip {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 6px;
-  color: var(--cms-lah-muted);
-  cursor: grab;
-  touch-action: none;
-  user-select: none;
-  -webkit-user-select: none;
-}
-.cms-lah-grip:hover {
-  background: var(--cms-lah-chip-bg);
-  color: var(--cms-lah-fg);
-}
-.cms-lah-dragging {
-  position: relative;
-  z-index: 20;
-  transform: translateY(var(--cms-lah-drag-y, 0px));
-  box-shadow: 0 8px 24px rgb(0 0 0 / 0.35);
-  cursor: grabbing;
-}
-.cms-lah-dragging .cms-lah-grip {
-  cursor: grabbing;
-}
-.cms-lah-drop-indicator {
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 30;
-  height: 4px;
-  border-radius: 2px;
-  background: var(--cms-lah-accent);
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
 .cms-lah-field {
   min-width: 0;
 }
