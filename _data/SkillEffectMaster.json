@@ -63011,6 +63011,53 @@
       "isOverrideStatusDescription": false
     }
   },
+  "2196": {
+    "skillEffectId": 2196,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HpThresholdDependDamageLimit",
+          "parameter": {
+            "mult": 50,
+            "value": 0,
+            "isMult": true,
+            "affectDotDamage": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "HPが最大HPの50%を下回るダメージを受けない。継続ダメージを含む。",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "3001": {
     "skillEffectId": 3001,
     "skillEffectJson": {
@@ -92618,6 +92665,496 @@
       "reaminDeath": false,
       "addSortOrder": 0,
       "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3892": {
+    "skillEffectId": 3892,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "PopupValueDamage",
+          "parameter": {
+            "value": 30,
+            "effectType": 0,
+            "popupValue": 248,
+            "dontCallDamaged": false,
+            "dontCallDefenced": false
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "13050072_30%ダメージ_ポップアップ表示固定（248）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3893": {
+    "skillEffectId": 3893,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "PopupValueDamage",
+          "parameter": {
+            "value": 150,
+            "effectType": 0,
+            "popupValue": 1240,
+            "dontCallDamaged": false,
+            "dontCallDefenced": false
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "150%ダメージ_ポップアップ固定（1240）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3894": {
+    "skillEffectId": 3894,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HpThresholdDependDamageLimit",
+          "parameter": {
+            "value": 1,
+            "isMult": false,
+            "affectDotDamage": true
+          }
+        }
+      ],
+      "filename": "status_defup",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "HP1で耐える",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "根性！",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "1回のスキル発動で受けるダメージを自身の最大HPの90%までにする。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3895": {
+    "skillEffectId": 3895,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeDisplayParameter",
+          "parameter": {
+            "parameter": 0,
+            "displayValue": 0
+          }
+        }
+      ],
+      "filename": "status_defup",
+      "statusId": 1335106,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "詳細画面HPを0表示",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "根性！",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "1回のスキル発動で受けるダメージを自身の最大HPの90%までにする。",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3896": {
+    "skillEffectId": 3896,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Silence",
+          "parameter": {
+            "index": 4,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "ウェイトを禁止する",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3897": {
+    "skillEffectId": 3897,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": {
+            "timing": 1,
+            "avoidExtensionTurn": false
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 1335105,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "勝利判定用状態変化1335105付与",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        1
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3898": {
+    "skillEffectId": 3898,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NotDisplayPinchCutin",
+          "parameter": []
+        }
+      ],
+      "filename": "",
+      "statusId": 334,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "ピンチカットイン非表示",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3899": {
+    "skillEffectId": 3899,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeHp",
+          "parameter": {
+            "value": 100,
+            "notDisplayPopup": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "最大HPの100%のダメージ（数値非表示）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": null,
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3900": {
+    "skillEffectId": 3900,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ElementPenetrateDamage",
+          "parameter": {
+            "value": 50,
+            "element": true,
+            "dontCallDamaged": false,
+            "dontCallDefenced": false
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "50%ダメージの有利属性攻撃",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "3901": {
+    "skillEffectId": 3901,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ElementPenetrateDamage",
+          "parameter": {
+            "value": 120,
+            "element": true,
+            "dontCallDamaged": false,
+            "dontCallDefenced": false
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [
+        1
+      ],
+      "parameter": false,
+      "description": "120%ダメージの有利属性攻撃",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
       "isCountEffect": false,
       "isFieldEffect": false,
       "effectFilename": "",
@@ -185167,6 +185704,56 @@
       "overrideStatusDescription": "ATK+50%。",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
+    }
+  },
+  "6943": {
+    "skillEffectId": 6943,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "SkillTurnExtension",
+          "parameter": {
+            "value": 1,
+            "isRandom": false,
+            "statusId": 82,
+            "extensionLimit": 3,
+            "statusTypeValue": 1
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "協奏を1ターン延長（最大3ターンまで）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
     }
   },
   "6976": {
