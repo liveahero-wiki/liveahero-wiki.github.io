@@ -91,7 +91,7 @@ export interface SubmitResponse {
 
 /** Messages the sign-in popup (`/api/contrib/auth/done`) posts to `window.opener`. */
 export type ContribAuthMessage =
-  | { type: 'cms-contrib'; token: string; user: ContribUser }
+  | { type: 'cms-contrib'; token: string; user: ContribUser; /** New account on a provider that returns a real name: the wiki asks the contributor to choose a display name. */ needsDisplayName?: true }
   | { type: 'cms-contrib-error'; code: 'account_too_young' | 'unauthenticated' | 'unavailable'; eligibleAt?: number | null }
 
 export interface ContribUser {
@@ -172,10 +172,10 @@ export interface AdminUser {
   name: string
   image: string | null
 }
-/** GET /me */
+/** GET /me. The two counts drive the sidebar badges and the tab counts; they are refreshed with the rest of the session. */
 export interface MeResponse {
   user: AdminUser
-  types: { id: string; name: string; pluginUrl: string; enabled: boolean; hasCodeDef: boolean }[]
+  types: { id: string; name: string; pluginUrl: string; enabled: boolean; hasCodeDef: boolean; pendingSubmissions: number; pendingEdits: number }[]
 }
 
 export interface AdminGroup {
