@@ -350,7 +350,7 @@ These heroes are unique in their flexibility and are able to fit into any team a
 : A 4 star healer that applies Shift, one of the best healing skills in the game. Shift converts a portion of damage taken into healing, and pairs well with the Attack Down and Defense Up he applies with his skills. Should you ever need a healer, consider him.
 
 {% chara_link Sterio|h1 %}
-: The best 4 star hero in the game, no contest. {% chara_link Sterio|h1 %} is unique in his ability to give buffs to an ally with his Skill 2 and Skill 3, and then inflict the Scar debuff on enemies. He continues to use his FUA as long as the ally continues attacking, piggybacking off of other FUA effects. His skill rotation is simple and repetitive, but extremely effective.
+: {% chara_link Sterio|h1 %} is unique in his ability to give buffs to an ally with his Skill 2 and Skill 3, and then inflict the Scar debuff on enemies. He continues to use his FUA as long as the ally continues attacking, piggybacking off of other FUA effects. His skill rotation is simple and repetitive, but extremely effective.
 
 {% chara_link Danzo|h2 %}
 : A Healer who's better at dealing damage, He is unique in his ability to FUA after using his Skill 3 and gaining the unique buff, Voltage, which enables Pick Toss. Pick Toss has several noteable interactions, triggering after Sterio and HA!Huckle FUA's, allowing for increased damage and Scar stacks. His healing is effective as well, automatically healing allies at the start of their turn and also cleansing debuffs.
