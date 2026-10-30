@@ -218,14 +218,14 @@ At this point, you can start exploring other important concepts of this game:
     1. There is a {% include item.html id=3 %} available every week from the weekly quest store. It costs 500 {% include item.html id=234 %}, and you get 1000 {% include item.html id=234 %} every week. {% include item.html id=3 %} can only be used on the Permanent gacha, and is useful for building up your roster while saving pulls.
     1. Starting quests give you access to {% chara_link Pubraseer|h1 %}, a 3 star Healer that is serviceable, but likely to be replaced by another healer later on. There is also the {% include item.html id=183 %}, which lets you choose between five different 5 star heroes from early in the game's lifespan. All of these heroes have access to Skill Trees (see: Upgrading Heroes), but are generally underpowered compared to modern heroes. {% chara_link Gomeisa|h1 %} is the recommended choice for his combination of healing and VP Gain, but if there's a hero you like more from that selection then choose them.
 1. Limited banners have a consistent rerun schedule, if you miss a unit on their debut, don't worry!
-    1. Events rerun ~1 year after their debut, after that rerun they are added to the Anniversary rerun pool for 2 years. Finally, the banner is added to the Half-Anniversary rerun pool. This does not include random banners for Character Quest releases, Skill Trees, in-real-life Events, etc.
+    1. Events rerun ~1 year after their debut, after that rerun they are added to the Anniversary rerun pool for 2 years. Finally, the banner is added to the Half-Anniversary rerun pool. This does not include random banners for Character Quest releases, Skill Trees, in person Events, etc.
     1. Main Quest banners are rerun when a new Chapter is released, but not on Anniversary events.
 
 ### Upgrading Heroes
 
-Newly summoned heroes start at level 1 and need to reach the level cap before upgrading them to the next rank. Easy sources of {% include item.html id=11 %} are the training quests, Event Stores, and playing the game and gaining {% include item.html id=11 %} from clearing quests.
+Newly summoned heroes start at level 1 and need to reach the level cap before upgrading them to the next rank. Easy sources of {% include item.html id=11 %} are the training quests, Event Stores, and gaining {% include item.html id=11 %} from clearing quests.
 
-In order to upgrade a hero's rank, you need a certain amount of elemental Powerstones and medals. These can be earned from their respective elemental training quests, bought from event stores with event currency, or bought from the monthly store with Coin.
+In order to upgrade a hero's rank, you need a certain amount of elemental Powerstones and medals. These can be earned from their respective elemental training quests, bought from event stores with event currency, or bought from the monthly store with {% include item.html id=35 %}.
 
 {% include item.html id=35 %} is the standard currency used to buy materials from the monthly store. It is passively obtained by clearing quests, but the most reliable source of it is from the [Sales](/guide/sales/) and Events Stores.
 
@@ -235,20 +235,20 @@ After obtaining Rank 6 and getting your hero to level 60, there is one final upg
 
 After Bloom, there are a few heroes who are then able to get a Skill Tree upgrade. The Skill Tree enhances that hero's abilities and puts them closer/on par with modern heroes, but it requires a large amount of elemental Powerstones. Some upgrades are more impactful than others, like Ryekie's Skill 2 upgrade giving him an second action after using his Skill 2 once, but the prority order is unique to each hero.
 
-One of the last upgrades you'll complete on a hero is their Parallel Level, which requires 1300 {% include item.html id=59 %} to reach P.Lv 100. {% include item.html id=59 %} can be obtained through Event Shops, the Challenge Simulator Shop, [Exploring the Unknown](/guide/unexplored/), and SSS Challenge Quests (high difficulty, not recommended for early game). You can also clear the training quest for {% include item.html id=59 %}, but that is limited to 3 clears per day. After establishing a team of Level 50 or 60 heroes, it's recommended to switch your Daily Quest tickets to the {% include item.html id=59 %} quests to get into the habit of farming the resource because it has a high impact on a hero's stats.
+One of the last upgrades you'll complete on a hero is their Parallel Level, which requires 1300 {% include item.html id=59 %} to reach P.Lv 100. {% include item.html id=59 %} can be obtained through Event Shops, the Challenge Simulator Shop, [Exploring the Unknown](/guide/unexplored/), and SSS Challenge Quests (high difficulty, not recommended for early game). You can also clear the training quest for {% include item.html id=59 %}, but that is limited to 3 clears per day. After establishing a team of Level 50 or 60 heroes, it's recommended to switch your Daily Quest tickets to the {% include item.html id=59 %} quests to get into the habit of farming the resource because it has a high impact on a hero's stats and performance.
 
 > In the Monthly Coin Store there is the ability to purchase Parallel forms: {% include item.html id=60 %}, {% include item.html id=61 %}, {% include item.html id=62 %}, and {% include item.html id=63 %}. {% include item.html id=61 %} is preferred for DPS and Healers (Healing scales off of Attack), while {% include item.html id=63 %} is reserved for tanks like {% chara_link Sterio|h2 %} and {% chara_link Valoray|h1 %}. {% include item.html id=62 %} is niche, but generally not as useful as running the {% include item.html id=60 %}, which is a balanced upgrade to stats.
 
-Finally, there is Seal Level and Fan Count. Seal level is automatically applied to a hero when they are obtained and offers a slight increase to a hero's HP, Attack, and decreases the VP cost of skills. Fan Count is manually added through the "Gain Fans" tab in the Training Menu and increases the amount of VP generated by the hero. Both of these are optimizations and not at all necessary for standard play.
+Finally, there is Seal Level and Fan Count. Seal level is automatically applied to a hero when a duplicate is obtained. It gives a slight increase to a hero's HP and Attack and decreases the VP cost of the hero's skills. Fan Count is manually added through the "Gain Fans" tab in the Training Menu and increases the amount of VP generated by the hero. Both of these are optimizations and not at all necessary for standard play.
 
 ### Upgrading Sidekicks
 
 Sidekicks start at maximum bond level 50, which is also when a hero is able to use their Passive skills. In order to raise the maximum bond level up to 100 you need duplicates of the sidekick, {% include item.html id=39 %} or {% include item.html id=46 %} to increase the maximum bond level.
 
-Sidekick Hearts are obtained through the Record Cube Exchange. {% include item.html id=40 %} are obtained from Hero and Sidekick duplicates, with 3 star Heroes/Sidekicks giving 1 {% include item-icon.html id=40 %}, 4 star giving 5 {% include item-icon.html id=40 %}, and 5 star Heroes giving 20 {% include item-icon.html id=40 %}.
+Sidekick Hearts are obtained through the Record Cube Exchange. {% include item.html id=40 %} are obtained from Hero and Sidekick duplicates. 3 star Heroes/Sidekicks give 1 {% include item-icon.html id=40 %}, 4 star give 5 {% include item-icon.html id=40 %}, and 5 star Heroes give 20 {% include item-icon.html id=40 %}.
 
 1. Hero Duplicates only increase fan count, so it is recommended to convert all 3 star Hero duplicates and any excess 3 star Sidekick duplicates into {% include item.html id=40 %}.
-1. Additional upgrade material is available in the Record Cube Exchange but should only be considered as a last resort due to the impact Sidekick upgrades have.
+1. Additional hero upgrade materials are available in the Record Cube Exchange but should only be considered as a last resort due to the impact Sidekick upgrades have.
 
 Sidekicks have five levels, and their Passive Skill increases in effectiveness with each level. The Sidekick's Active Skill will upgrade upon reaching to level 60 and then again at level 100.
 
@@ -260,7 +260,8 @@ Quick list of Commonly Used Sidekick Passives:
 - Attack: {% chara_link Senthak %}, {% chara_link Barte %}, {% chara_link Akashi %}, {% chara_link Sterio %}, {% chara_link Roiker %}
 - Support: {% chara_link Exio %}, {% chara_link Orbiter %}, {% chara_link Ryusei %}, {% chara_link Pubraseer %}, {% chara_link Theoreol %}
 - Speed: {% chara_link Ryekie %} (+5), {% chara_link Gammei %} (-5)
-- Increase drop items: {% chara_link Procy %} and {% chara_link Zaniah %} (Coin), {% chara_link Huckle %} (EXP)
+- Increase drop items: {% chara_link Huckle %} (EXP), {% chara_link Procy %} and {% chara_link Zaniah %} (Coin) 
+> Note: {% chara_link Procy %} and {% chara_link Zaniah %}coin drop passive will not stack when used on the same hero.
 
 Quick list of Commonly Used Active Sidekick Skills
 
@@ -280,7 +281,8 @@ Teams are centered around a main DPS and their supports and/or sub-DPS in their 
 
 Sidekicks are split between the Active (Big Badge) and the Passive (small icon), the Active and the Passive have different skills with Passive skills being generally higher impact than the Active skills.
 
-> Must-Have Passives on teams: {% chara_link Exio %}, {% chara_link Orbiter %} (team ATK up on Skill 2) or {% chara_link Ryusei %} (team ATK up on Skill 3)
+> Must-Have Passives on teams: {% chara_link Exio %}, {% chara_link Orbiter %} or {% chara_link Ryusei %}
+> Note: {% chara_link Orbiter %} and {% chara_link Ryusei %} passive effects do not stack when used on the same team, so only use 1 of them when building a team.
 
 Turn order: you want the DPS as your slowest unit while all the supports go before to apply buffs, debuffs, and generate VP.
 
@@ -334,7 +336,7 @@ Example Units: {% chara_link Vlaham|h1 %}, {% chara_link Moriyasu|h1 %}, {% char
 
 View centers around manipulating view power to trigger FUA's, Enhanced Attacks, buffs, and more. A new archetype, it boasts one of the strongest DPS units in the game by virtue of {% chara_link Barrel|h3 %}'s consistent FUA's when view is gained or spent. F!Roudin provides a way to regain lost view at the start of the next turn, which pairs extremely well with {% chara_link Roiker|h2 %}'s summon consuming VP and converting it into ATK buffs at the end of turn. Even without his optimal teammates, {% chara_link Barrel|h3 %} is capable of clearing quests with the large amount of budget support options available.
 
-Example Units: {% chara_link Barrel|h3 %}, {% chara_link Roudin|h2 %}, {% chara_link Roiker|h2 %}, {% chara_link Kalaski|h1 %}, {% chara_link Borealis|h1 %} (with Skill Tree)
+Example Units: {% chara_link Barrel|h3 %}, {% chara_link Roudin|h2 %}, {% chara_link Roiker|h2 %}, {% chara_link Kalaski|h1 %}, {% chara_link Borealis|h1 %}
 
 #### Barrier
 
@@ -344,16 +346,16 @@ Example Units: {% chara_link Thuban %} (Hero and SK), {% chara_link Loren|h2 $},
 
 #### The Exceptions
 
-These heroes are unique in their flexibility and are able to fit into any team as needed. While they do benefit from being in their "home" archetype, it is not the only place they can succeed and thrive in.
+These heroes, listed in release order, are unique in their flexibility and are able to fit into any team as needed. While they do benefit from being in their "home" archetype, it is not the only place they can succeed and thrive in. 
 
 {% chara_link Theoreol|h1 %}
-: A 4 star healer that applies Shift, one of the best healing skills in the game. Shift converts a portion of damage taken into healing, and pairs well with the Attack Down and Defense Up he applies with his skills. Should you ever need a healer, consider him.
+: A 4 star healer that applies Shift, one of the best healing effects in the game. Shift converts a portion of damage taken into healing, and pairs well with the Attack Down and Defense Up he applies with his skills. Should you ever need a healer, consider him.
 
 {% chara_link Sterio|h1 %}
 : {% chara_link Sterio|h1 %} is unique in his ability to give buffs to an ally with his Skill 2 and Skill 3, and then inflict the Scar debuff on enemies. He continues to use his FUA as long as the ally continues attacking, piggybacking off of other FUA effects. His skill rotation is simple and repetitive, but extremely effective.
 
 {% chara_link Danzo|h2 %}
-: A Healer who's better at dealing damage, He is unique in his ability to FUA after using his Skill 3 and gaining the unique buff, Voltage, which enables Pick Toss. Pick Toss has several noteable interactions, triggering after Sterio and HA!Huckle FUA's, allowing for increased damage and Scar stacks. His healing is effective as well, automatically healing allies at the start of their turn and also cleansing debuffs.
+: A Healer who's better at dealing damage, He is unique in his ability to FUA after using his Skill 3 and gaining the unique buff, Voltage, which enables Pick Toss. Pick Toss has several noteable interactions, triggering after {% chara_link Sterio|h1 %} and {% chara_link Huckle|h2 %} FUA's, allowing for increased damage and Scar stacks. His healing is effective as well, automatically healing allies at the start of their turn and also cleansing debuffs.
 
 {% chara_link Hydoor|h2 %}
 : A DPS who likes both speed and multihit effects, using them both to great success. He grants extra Attack and Speed to allies when recieving a Speed Up and gains the ability to act twice in one turn when a certain amount of hits have been dealt to enemies. His Skill 2 will activate again when Hydoor has Speed Up, making him scale very well with Scar debuffs.
@@ -365,10 +367,10 @@ These heroes are unique in their flexibility and are able to fit into any team a
 : A lawyer lion in a bunny suit that singlehandedly changed the game. He is able to take two actions in one turn, using either his Skill 1 or Skill 2 before his most impactful skill, Skill 3. Skill 3 provides the Guidance buff, which automatically casts that ally's Skill 2 on the start of their turn. This provides action economy to heroes who do not have access to it and enhances the action economy of those who do {% chara_link Sterio|h2 %}, {% chara_link Ceph|h1 %}), allowing them to benefit from the additional damage or added buffs from a Skill 2 before their turn begins. One of the best users of this is {% chara_link Pubraseer|h2 %}, who receives an Attack buff from his Skill 2, which increases his Skill 3 damage when able to act again after Guidance is consumed. There are a few heroes that do not benefit from Guidance ({% chara_link Santetsu|h2 %}, {% chara_link Tsuneaki|h2 %}, {% chara_link Monomasa|h1 %}), but they can still benefit from the attack buffs that {% chara_link Astosis|h2 %} provides with his other skills.
 
 {% chara_link Roiker|h2 %}
-: Making already powerful heroes even stronger, He splashed onto the scene with great fanfare. {% chara_link Roiker|h2 %} uses a new addition to the game, Summons, which act separate from the hero that summons them. Instead of being combat oriented like {% chara_link Andrew|h2 %}, {% chara_link Roiker|h2 %}'s summon consumes extra View Power after your last hero acts, and when paired with {% chara_link Barrel|h3 %}, it can trigger multiple {% chara_link Barrel|h3 %} FUA's and even fill his 12 attack gauge and trigger an extra attack. {% chara_link Barrel|h3 %} is not the only beneficiary of this, because the attack buffs provided from the summon are among the highest in the game. {% chara_link Roiker|h2 %} is capable of generating a large amount of View power on his own, which means he can be inserted into most teams and support the DPS well.
+: Making already powerful heroes even stronger, Roiker splashed onto the scene with great fanfare. {% chara_link Roiker|h2 %} uses a new addition to the game, Summons, which act separate from the hero that summons them. Instead of being combat oriented like {% chara_link Andrew|h2 %}, {% chara_link Roiker|h2 %}'s summon consumes extra View Power after your last hero acts, and when paired with {% chara_link Barrel|h3 %}, it can trigger multiple {% chara_link Barrel|h3 %} FUA's and even fill his 12 attack gauge and trigger an extra attack. {% chara_link Barrel|h3 %} is not the only beneficiary of this, because the attack buffs provided from the summon are among the highest in the game. {% chara_link Roiker|h2 %} is capable of generating a large amount of View power on his own, which means he can be inserted into most teams and support the DPS well.
 
 {% chara_link Gomeisa|h2 %} (Skill Tree)
-: Revived by his skill tree, He went from niche use to on par with {% chara_link Sterio|h2 %} in tanking and support utility. {% chara_link Gomeisa|h2 %} provides a large amount of buffs to both himself and his allies to increase survivability, along with the ability to nullify debuffs to both himself and allies. On top of that, {% chara_link Gomeisa|h2 %} provides an attack buff that is charged by taking attacks and when allies recieve buffs, pairing very well with {% chara_link Astosis|h2 %} to make almost any hero succeed in endgame content.
+: Revived by his skill tree, Gomeisa went from niche use to on par with {% chara_link Sterio|h2 %} in tanking and support utility. {% chara_link Gomeisa|h2 %} provides a large amount of buffs to both himself and his allies to increase survivability, along with the ability to nullify debuffs to both himself and allies. On top of that, {% chara_link Gomeisa|h2 %} provides an attack buff that is charged by taking attacks and when allies recieve buffs, pairing very well with {% chara_link Astosis|h2 %} to make almost any hero succeed in endgame content.
 
 ## Keeping Your Account Safe
 
