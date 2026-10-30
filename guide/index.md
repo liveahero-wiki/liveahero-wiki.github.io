@@ -208,7 +208,7 @@ At this point, you can start exploring other important concepts of this game:
   - Read scenarios and battle to earn rewards
 - [Mission](/guide/mission/), [Login Bonus](/guide/login_bonus/)
 
-## Begineer Guide
+## Beginner Guide
 
 ### General Tips
 
