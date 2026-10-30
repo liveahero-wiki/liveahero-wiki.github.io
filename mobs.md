@@ -45,6 +45,12 @@ sprites="fg_villainAndroidSoldierEarth_s01,fg_villainAndroidSoldierFire_s01,fg_v
 sprites="fg_villainAndroidSoldierEarth_h01,fg_villainAndroidSoldierFire_h01,fg_villainAndroidSoldierLight_h01,fg_villainAndroidSoldierShadow_h01,fg_villainAndroidSoldierWater_h01"
 %}
 
+### Anglerfish Kaibutsu (Adult)
+
+{% include hero-infobox-unreleased.html name="Angler Kaibutsu" mob=true
+sprites="fg_kaibutsuAnglerfishAdultEarth_h01,fg_kaibutsuAnglerfishAdultFire_h01,fg_kaibutsuAnglerfishAdultLight_h01,fg_kaibutsuAnglerfishAdultShadow_h01,fg_kaibutsuAnglerfishAdultWater_h01"
+%}
+
 ### Anglerfish Kaibutsu (Juvenile)
 
 {% include hero-infobox-unreleased.html name="Angler Kaibutsu" mob=true
