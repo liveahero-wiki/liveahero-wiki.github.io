@@ -23,4 +23,8 @@ sidekicks:
 ## Notes
 
 - He has two skill voicelines; however, the second skill voiceline is only used for his boss fight in the Virtual Festa Royale event
-- [Lambda Draconis](https://en.wikipedia.org/wiki/Lambda_Draconis), also known as Giausar, is a solitary, orange-red star in the northern circumpolar constellation of [Draco](https://en.wikipedia.org/wiki/Draco_(constellation)).
+- [λ Draconis](https://en.wikipedia.org/wiki/Lambda_Draconis), also known as Giausar, is a solitary, orange-red star in the northern circumpolar constellation of [Draco](https://en.wikipedia.org/wiki/Draco_(constellation)).
+- Details on his sidekick costume:
+  - `λ` (lambda) symbol on his phone: λ Draconis
+  - `11H31M2422075S` on the pockets of his pants: 11<sup>h</sup> 31<sup>m</sup> 24.22075<sup>s</sup>, which is the right ascension of λ Draconis
+  - `385` on his jacket and shoes: could be a reference to λ Draconis's apparent magnitude (V) (+3.77 to 3.86)
