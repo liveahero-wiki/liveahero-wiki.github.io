@@ -306,7 +306,7 @@ Example Units: {% chara_link Alend|h2 %}, {% chara_link Sterio|h2 %}, {% chara_l
 
 Multihit centers around attacking multiple times in one attack. These units are strong at applying debuffs because each damage instance is a new chance at inflicting them, or continue to apply them in the case of the Scar debuff. Modern multihit units come with debuffs built into their skills, making it easier to increase damage dealt to enemies.
 
-Example Units: {% chara_link Shiratori|h2 %}, {% chara_link Gaius|h2 %}, {% chara_link Monomasa|h3 %}, {% chara_link Yvaga|h1 %}, {% chara_link Valoray|h1 %}
+Example Units: {% chara_link Shiratori|h1 %}, {% chara_link Gaius|h2 %}, {% chara_link Monomasa|h2 %}, {% chara_link Yvaga|h1 %}, {% chara_link Valoray|h1 %}
 
 #### Damage Over Time (DoT)
 
