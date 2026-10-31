@@ -43,5 +43,5 @@ sidekicks:
 
 ## Notes
 
-- His full name is Kyoichi Ootomo(大友 キョウイチ)
+- His full name is Kyoichi Ootomo (大友教一). "教" has the meaning of "teach".
 - E.T.L is short for Element Teacher Love, as self-proclaimed by Kyoichi
