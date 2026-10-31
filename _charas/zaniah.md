@@ -11,3 +11,9 @@ sidekicks:
 ---
 
 {% include voice-table.html resourceName="zaniah" %}
+
+## Notes
+
+- [Eta Virginis (Zaniah)](https://en.wikipedia.org/wiki/Eta_Virginis) — The star system from which the name and character lore are derived
+  - **Zāwiyah** (*Arabic:* زاوية (*Zāwiyah*)) — The etymological origin of the name Zaniah, meaning "corner" or "nook". In traditional Arabic astronomy, it formed part of the asterism *Zāwiyat al-ʿAwwāʾ* ("Corner of the Barking Dog").
+  - This is likely the reason why this character is designed as a canine anthro character.
