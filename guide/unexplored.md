@@ -82,6 +82,84 @@ team_formations:
 {% include skill-table-manual.html skillIds="4074307,4074308,4074309" equipmentSkills="6074313,6074311" %}
 </details>
 
+### The Archaeologist and the Land Lost to Time (Marfik)
+
+> Encounter names below are the game's own ("Defeat Midboss/Boss ..." hints). "In a Ruined Land" and "Life-reaping Scythe" are not documented yet.
+
+#### Labyrinth Guardian (Midboss)
+
+<details>
+<summary>Labyrinth Beast</summary>
+
+{% include skill-table-manual.html skillIds="4046301,4046302,4046303" equipmentSkills="6046301,6000048,6096207" %}
+</details>
+
+#### Christmas Strikes Back (Midboss)
+
+<details>
+<summary>Tree Type Kaibutsu</summary>
+
+{% include skill-table-manual.html skillIds="4052109,4052110,4052111" equipmentSkills="6052104,6052107,6052106,6000047" startStatuses="6052104:Growth" %}
+</details>
+
+#### Fangs in the Water (Midboss)
+
+<details>
+<summary>Shark Type Kaibutsu (Elite)</summary>
+
+{% include skill-table-manual.html skillIds="4074113,4074114,4074115" equipmentSkills="6074110,6074111,6074112" %}
+</details>
+
+<details>
+<summary>Shark Type Kaibutsu (Escort)</summary>
+
+{% include skill-table-manual.html skillIds="4074116,4074117" equipmentSkills="6074112" %}
+</details>
+
+#### Computer Kaibutsu (Boss)
+
+<details>
+<summary>Computer Kaibutsu</summary>
+
+{% include skill-table-manual.html skillIds="4096201,4096202,4096203" equipmentSkills="6096201,6096202,6096203,6001104" startStatuses="6096202:Damage Counter:10" %}
+</details>
+
+#### Creeping Malice (Boss)
+
+<details>
+<summary>Mistletoe Type Kaibutsu (Boss)</summary>
+
+{% include skill-table-manual.html skillIds="4127109,4127110,4127111" equipmentSkills="6127108,6127107,6127109" startStatuses="6127108:Vine Protection:10" %}
+</details>
+
+<details>
+<summary>Ivy Type Kaibutsu</summary>
+
+{% include skill-table-manual.html skillIds="4088107,4088108" equipmentSkills="6088106,6088107" %}
+</details>
+
+#### Ruler of the Sky (Boss)
+
+<details>
+<summary>Bird Type Kaibutsu (Boss)</summary>
+
+{% include skill-table-manual.html skillIds="4135101,4135102,4136107" equipmentSkills="6135101,6136107" %}
+</details>
+
+<details>
+<summary>Bird Type Kaibutsu (Escort)</summary>
+
+{% include skill-table-manual.html skillIds="4131116,4131117,4131118" equipmentSkills="6130109,6131107,6130105" %}
+</details>
+
+#### Crawling From the Sea of Chaos (Boss)
+
+<details>
+<summary>Lizard Type Kaibutsu</summary>
+
+{% include skill-table-manual.html skillIds="4205101,4205102,4205103" equipmentSkills="6205103,6205104,6205109,6072205" %}
+</details>
+
 ## Exploration skills
 
 ### Available skill tags

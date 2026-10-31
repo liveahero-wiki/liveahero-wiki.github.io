@@ -67,7 +67,14 @@ Includes are reusable HTML/Liquid template fragments that compile master data at
     *   Skill names use the same scheme through the `skill_name_html` filter (`{{ skillId | skill_name_html }}`).
     *   A skill with no text in any language renders nothing; `skill_has_text` tells whether there is any.
 
-### 4. `shop-table.html`
+### 4. `skill-table-manual.html`
+*   **Purpose**: An enemy's whole kit, written out by hand: `{% include skill-table-manual.html skillIds="…" equipmentSkills="…" startStatuses="…" %}`. The master data has no enemy → skill mapping, so the IDs are read off in-game screenshots and matched back to `SkillMaster.json` through `zzz/English.json` (`SKILL_NAME_<id>` / `SKILL_DESCRIPTION_<id>`); the guide pages (`guide/unexplored.md`) are the callers.
+*   **Details**:
+    *   `skillIds` and the optional `equipmentSkills` are comma-separated IDs, rendered as "Main skills" and "Passive skills" through `skill-description.html`.
+    *   The whole workflow, from screenshots to page, is `.claude/skills/document-enemy-skills/` (its `scripts/resolve_skill_ids.py` does the matching).
+    *   The optional `startStatuses` is what the enemy already carries when the battle opens — the game shows it on a "Status Effect" tab, and no skill description states it in those words. Each item is `<skillId>:<English status name>[:<count>]`, comma-separated, and the `start_status_chips` filter renders it as a status chip in every language, the count after the name. The skill is the one that grants the status, and it is what tells apart the statuses that share a `statusId` (the game overrides them per skill, so `126` is both "Damage Counter" and "Growth"). A name the skill does not apply is written out as plain text with a build warning.
+
+### 5. `shop-table.html`
 *   **Purpose**: Formats event-store reward grids.
 *   **Details**:
     *   Loads individual store datasets from `_data/stores/<id>.json`.
@@ -99,6 +106,7 @@ The plugins perform server-side calculations during the compilation phase, injec
 ### 3. `lib/skill-text.js` and `lib/skill.js`
 *   **Liquid Filters** (`lib/skill-text.js`, see `skill-description.html` above):
     *   `skill_html`, `skill_name_html`, `skill_has_text`: a skill's description / name in every language, from `SkillText.json`.
+    *   `start_status_chips`: the statuses an enemy starts a battle with, as chips in every language (`skill-table-manual.html` above).
     *   `skill_tree_name`, `skill_tree_html`, `skill_tree_node_tip`, `skill_tree_json`: the same for a bloom skill of `_data/wiki/SkillUpgradeModel.json` (`hero-skill-evolution-v2.html`). `skill_tree_json` is what `assets/skill-tree.js` reads: the lines and the tree, and per language the raw text parts with their status chips already in them.
 *   **Liquid Filters** (`lib/skill.js`):
     *   `element_enum`: Maps element integer IDs (1-5) to their localization strings (Fire, Water, Earth, Light, Shadow).

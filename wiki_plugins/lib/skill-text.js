@@ -166,6 +166,34 @@ export function createSkillText(site, { strict = false, warn = console.warn } = 
     return flatten(html);
   }
 
+  /**
+   * One `<skillId>:<English status name>[:<count>]` of a start_status_chips spec as a chip in every
+   * language. The skill's status lists run parallel across languages, so the status is found by name
+   * once and then read at that position in each language's own list -- a language whose list is
+   * shorter (it names fewer statuses in its text) falls back to the entry the name was found in.
+   */
+  function chip(d, item) {
+    const [skillId, name, count] = item.split(":").map((s) => s.trim());
+    const lists = d.skills[skillId]?.s;
+    const at = (lang, i) => d.statuses[lists?.[lang]?.[i]];
+    const langs = Object.keys(lists ?? {});
+    const index = (lists?.[sourceLang(lists, "en")] ?? []).findIndex((_, i) =>
+      langs.some((lang) => at(lang, i)?.n?.en === name),
+    );
+    if (index < 0) {
+      warn(`start_status_chips: skill ${skillId} does not apply "${name}"`);
+      return xmlEscape(str(name));
+    }
+    const found = langs.find((lang) => at(lang, index));
+    const variants = UI_LANGS.map((lang) => {
+      const src = sourceLang(lists, lang);
+      const entry = flat(at(src, index) ?? at(found, index), src);
+      const shown = count ? `${entry.name} ×${count}` : entry.name;
+      return { lang, src, html: statusChip(d.labels[src], entry, shown) };
+    });
+    return renderVariants(variants, "span");
+  }
+
   return {
     /** Whether there is any description text for the skill. */
     hasText(skillId) {
@@ -200,6 +228,22 @@ export function createSkillText(site, { strict = false, warn = console.warn } = 
         });
         return renderVariants(variants, "div");
       });
+    },
+
+    /**
+     * `start_status_chips`: the statuses an enemy already carries when the battle opens, which no
+     * skill description states in those words. The spec is a comma-separated list of
+     * `<skillId>:<English status name>[:<count>]`: the skill is the one that grants the status, and
+     * it is what tells apart the statuses that share a statusId (the game overrides them per skill).
+     */
+    startStatusChips(spec) {
+      const d = data();
+      if (!d) return "";
+      const items = str(spec)
+        .split(",")
+        .map((s) => s.trim())
+        .filter(Boolean);
+      return memo(`ss:${items.join(",")}`, () => items.map((item) => chip(d, item)).join(", "));
     },
 
     /** `skill_name_html`: the skill's name in every language (plain text when they all agree). */
