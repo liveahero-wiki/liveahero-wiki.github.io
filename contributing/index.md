@@ -37,11 +37,20 @@ When editing articles, please try to write objectively and formally about the to
 
 ## Contributor editing
 
-Pages that have an **Edit** button on top (the pencil, next to the GitHub link) can be edited in the browser without a GitHub account. Your change becomes a pull request that a collaborator reviews. A check named `contrib-guard` makes sure such a change only touches the text of the page; this section lists what it allows. Anything it does not allow can still be changed on GitHub (**Edit on GitHub**), where a collaborator reviews it as usual.
+Pages that have an **Edit** button on top (the pencil icon in the top bar) can be edited in the browser without a GitHub account.
 
-### Which pages
+- Suggest an edit: sign in with Discord account to make page edit suggestion directly in this wiki with rich editor
+- Edit on Github: sign in with Github account and make page edit on Github
 
-Only the body of existing pages: `_charas/*.md`, `_events/*.md`, `_main_quests/*.md`, `guide/*.md`, `chara_quests.md` and `mobs.md`. The front matter (the block between the `---` lines at the top) is never shown and cannot change. New or deleted files, layouts, includes, data and scripts need GitHub.
+## Suggest an edit
+
+In-page rich editor is created to allow people with less coding experience to contribute to the Wiki. Currently, only Character/Event/Main Quest/Guide pages can be edited this way.
+
+Most wiki pages are written in [Markdown](https://www.markdownguide.org/basic-syntax/) syntax. See [Writing Guide](writing/).
+
+After submission, moderator will approve the edit after checking for spam/abuse, then site owner will merge the edit.
+
+For simplicity's sake, the in-page rich editor only allows a subset of Liquid templates and HTML code. If you must edit those things, I assume you are a programmer, so please submit such edit via Github.
 
 ### Templates
 
@@ -50,7 +59,7 @@ Pages contain Liquid templates: `{% raw %}{% ... %}{% endraw %}`, `{% raw %}{{ .
 - `{% raw %}{% chara_link Name %}{% endraw %}` and `{% raw %}{% chara_link Name|h1 %}{% endraw %}` (`h` or `s` and a number picks the hero or sidekick variant).
 - `{% raw %}{% include item.html id=11 %}{% endraw %}` and the other allowed includes, with **plain parameters only**: numbers, `true`/`false`/`nil` or quoted text such as `name="Ether Crystal"`. No variables (`page.id`), no filters (`| upcase`), and no `"`, `'`, `<`, `>`, `{`, `}`, `|`, `;` inside the quoted text. The parameters `style` and `on...` are not allowed.
 
-Every other template is **protected**: the editor compares your text with the old page and rejects the change when a protected template was added, removed, changed or moved. You can freely edit the text around a `{% raw %}{% for %}{% endraw %}` loop or a `{% raw %}{{ ... }}{% endraw %}`, just not the template itself. The message names the template, for example "this `{% raw %}{% for %}{% endraw %}` tag was changed". Line endings do not matter.
+Every other Liquid template syntax is **protected**: {% for %}{% endraw %}` loop or a `{% raw %}{{ ... }}{% endraw %}`, just not the template itself. The message names the template, for example "this `{% raw %}{% for %}{% endraw %}` tag was changed". Line endings do not matter.
 
 The includes you can use are listed in [`/api/contrib-includes.json`](/api/contrib-includes.json): every file in `_includes/` except page chrome and page structure (`header`, `footer`, `banner`, `pagefind-search`, `skill-lang-picker`, `wiki-msg`, `js/` and `style/`, `voice-table`, `bio-infobox`, `hero-infobox*`, `sidekick-infobox`, `hero-skill-evolution-v2`, `card-*`, `chara-*`, `team-creator-link` and the generated `quest-infobox`, `skill-description`, `skill-table-v2`). The list lives in `wiki_plugins/lib/contrib-guard.js` (`INCLUDE_DENYLIST`). An existing call of a denied include, or of an allowed one with variables, stays in the page as it is; it just cannot be edited.
 
@@ -63,7 +72,29 @@ Existing HTML can stay or be deleted, and the text inside it is editable. You ca
 
 Everything else is rejected when it is new: other tags (`<div>`, `<img>`, `<a>`, `<svg>`, `<script>`, `<iframe>`...), `style=`, `on...=` handlers, `javascript:` and HTML comments. Use Markdown for links, images and code. Changing the attributes of an existing tag counts as adding a new tag. `<https://...>` links are fine.
 
-## Instructions on specific tasks
+## What to contribute
+
+### Character Notes/Trivia
+
+LifeWonders put a lot of thoughts when designing the game characters, and they love to hide references in the character.
+
+What character notes/trivia we are looking for (non-exhaustive):
+
+- Origin of character name
+  - A huge percentage of the character names like {% chara_link Giansar %} and {% chara_link Zaniah %} are related to astrology
+  - Japanese names often have kanji form that may have special meaning about the characters' background, such as {% chara_link Kyoichi %} and {% chara_link Sadayoshi %}
+- Character full name (sometime their surname are only revealed in story)
+- Other random character trivia. Example:
+  - {% chara_link Akashi %}'s university is a reference to an old LifeWonders game. [See also](/charas/akashi/#notes)
+  - {% chara_link Giansar %}'s costume has a few hidden reference to λ Draconis. [See also](/charas/giansar/#notes)
+
+If you are able to find those trivia/facts, please submit edit by **adding a Notes section in the character page below the voice table**.
+
+### Hero/sidekick usage guide
+
+Submit example team to showcase how to use a hero/sidekick in [Team Creator](/team_creator/).
+
+You may also submit explanation of hero/sidekick skill mechanism as character page's edit by **adding a section in the character page above the voice table**.
 
 ### Translate voice lines and bios
 
@@ -76,7 +107,7 @@ Voice line and bio translations are kept in the [LAH Translation sheet](https://
 The table is filled from the game's own data and from the sheet (older pages had `RELATION = "..."` style parameters in this include; they were never shown and have been removed).
 
 - **Game text always wins.** A community translation is shown only while the game has no text of that language for the line (missing, or the same as the Japanese text). This is checked per language: English, Simplified Chinese (简中) and Traditional Chinese (繁中). As soon as the game ships its own text, the game's version is used and the sheet text is ignored.
-- **Suggest translations (no Github account needed).** A voice table that still has lines to translate has a "Suggest translations" button, and a bio that is not translated yet has a "Suggest a translation" link. Sign in, pick the language (EN, 简中 or 繁中), write your translations and submit; a Chinese translation is written from the Japanese text, so a line needs one first. You can fill in several languages in one go, each is reviewed on its own. A moderator reviews them; approved translations are copied into the sheet automatically and appear on the wiki with the next site build. The sheet's `source` column (and `zhHansSource` / `zhHantSource` for the Chinese columns) records who suggested a line.
+- **Suggest translations.** A voice table that still has lines to translate has a "Suggest translations" button, and a bio that is not translated yet has a "Suggest a translation" link. Sign in, pick the language (EN, 简中 or 繁中), write your translations and submit; a Chinese translation is written from the Japanese text, so a line needs one first. You can fill in several languages in one go, each is reviewed on its own. A moderator reviews them; approved translations are copied into the sheet automatically and appear on the wiki with the next site build. The sheet's `source` column (and `zhHansSource` / `zhHantSource` for the Chinese columns) records who suggested a line.
 - **Translators with access to the sheet** edit it directly:
   - tab `Voice`: one row per line, keyed `voice_<resourceName>_<part>`. Write the English text into `enApproved`, the Simplified Chinese text into `zhHansApproved` and the Traditional Chinese text into `zhHantApproved` (`enMachineTranslated` is only a hint and is not shown). A new line is written as `<br>`.
   - tab `Bio`: one row per bio that the game has not translated yet, keyed by the game's bio key (like `DETAIL_CEPH_H01`). Write the text into `enApproved` / `zhHansApproved` / `zhHantApproved`; blank lines separate paragraphs. Each is shown as a "(community translation)" tab next to the bio.
