@@ -10,37 +10,12 @@ banner: true
 
 Welcome to the fan-made Live A Hero Wiki! Basically all the contributors (which are like 2~3 people so far) discuss issues in `#lah-wiki` channel of [LAH Discord (Herocord)](https://discord.gg/zpc7PCk). Feel free to report bugs there.
 
-## Create account for wiki edit
-
-For all potential wiki contributors, you need to [sign up for a free Github account](https://github.com/join), which is the website where this wiki is hosted.
-
-### Edit a page
-
-Every page should have a "View source" link on top. It will lead you to the edit page in Github. If you don't have a Github account, you will be prompted to make one.
-
-After that, if you are a new contributor, you may be asked to "fork" the repository, just agree with it. What this means is you will be editing a copied version of the Wiki before it goes through our review process.
-
-You will now see a simple editing interface. Most pages are written in Markdown syntax. Please see our [Writing Guide](/contributing/writing/).
-
-Once you are done, you can click "Propose changes" and follow the instructions to create a "Pull Request". A Wiki collaborator will review your change and accept it.
-
-For existing Wiki collaborator, you can just choose "Commit directly to the `master` branch" and click "Commit changes" to skip the review process.
-
-Please feel free to fix typos and phrasings.
-
-Keep in mind that vandalism is reversible, but the punitive measures you'll face for committing this is not.
-
-When editing articles, please try to write objectively and formally about the topics at hand while using proper English. Avoid writing in the first person, casual figures of speech, spelling and grammatical errors, et cetera unless appropriate for the situation. Information should be accurately and concisely conveyed, and article contributions should reflect this goal.
-
-- [Writing Guide](/contributing/writing/)
-- [Programming Guide](/contributing/programming/)
-
 ## Contributor editing
 
 Pages that have an **Edit** button on top (the pencil icon in the top bar) can be edited in the browser without a GitHub account.
 
-- Suggest an edit: sign in with Discord account to make page edit suggestion directly in this wiki with rich editor
-- Edit on Github: sign in with Github account and make page edit on Github
+- **Suggest an edit:** sign in with Discord account to make page edit suggestion directly in this wiki with rich editor
+- **Edit on Github:** sign in with Github account and make page edit on Github
 
 ## Suggest an edit
 
@@ -51,6 +26,10 @@ Most wiki pages are written in [Markdown](https://www.markdownguide.org/basic-sy
 After submission, moderator will approve the edit after checking for spam/abuse, then site owner will merge the edit.
 
 For simplicity's sake, the in-page rich editor only allows a subset of Liquid templates and HTML code. If you must edit those things, I assume you are a programmer, so please submit such edit via Github.
+
+{% include figure-image.html path="/assets/img/wiki-in-page-editor.jpg"
+  title="In-page editor"
+%}
 
 ### Templates
 
@@ -97,6 +76,14 @@ Submit example team to showcase how to use a hero/sidekick in [Team Creator](/te
 You may also submit explanation of hero/sidekick skill mechanism as character page's edit by **adding a section in the character page above the voice table**.
 
 ### Translate voice lines and bios
+
+{% include figure-image.html path="/assets/img/wiki-bio-tl.jpg"
+  title="Contribute Bio translation"
+%}
+
+{% include figure-image.html path="/assets/img/wiki-voice-tl.jpg"
+  title="Contribute voice lines translation"
+%}
 
 Voice line and bio translations are kept in the [LAH Translation sheet](https://docs.google.com/spreadsheets/d/1PVTqJxN2-VF1TwSdlisrrLgW1vWlRKJSmv1cpCBaY-I/edit), which is the source of truth. A character page does **not** contain any translation text, it only names the voice table:
 
