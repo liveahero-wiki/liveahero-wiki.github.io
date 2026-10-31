@@ -219,7 +219,7 @@ At this point, you can start exploring other important concepts of this game:
     1. Starting quests give you access to {% chara_link Pubraseer|h1 %}, a 3 star Healer that is serviceable, but likely to be replaced by another healer later on. There is also the {% include item.html id=183 %}, which lets you choose between five different 5 star heroes from early in the game's lifespan. All of these heroes have access to Skill Trees (see: Upgrading Heroes), but are generally underpowered compared to modern heroes. {% chara_link Gomeisa|h1 %} is the recommended choice for his combination of healing and VP Gain, but if there's a hero you like more from that selection then choose them.
 1. Limited banners have a consistent rerun schedule, if you miss a unit on their debut, don't worry!
     1. Events rerun ~1 year after their debut, after that rerun they are added to the Anniversary rerun pool for 2 years. Finally, the banner is added to the Half-Anniversary rerun pool. This does not include random banners for Character Quest releases, Skill Trees, in person Events, etc.
-    1. Main Quest banners are rerun when a new Chapter is released, but not on Anniversary events.
+    1. Main Quest banners are rerun when a new Main Quest Chapter is released, but not on Anniversary events.
 
 ### Upgrading Heroes
 
@@ -229,13 +229,13 @@ In order to upgrade a hero's rank, you need a certain amount of elemental Powers
 
 {% include item.html id=35 %} is the standard currency used to buy materials from the monthly store. It is passively obtained by clearing quests, but the most reliable source of it is from the [Sales](/guide/sales/) and Events Stores.
 
-Sales is where you can send heroes (and later sidekicks) out to obtain character upgrade resources over time, even when you are not actively playing the game. In the early game, it's recommended to set 2 of your sales to {% include item.html id=35 %} and 1 on {% include item.html id=11 %} or {% include item.html id=30 %} (see: Upgrading Sidekicks). If you use paid stones, you can purchase a 4th slot, which can be used on whatever resource is needed more.
+Sales is where you can send heroes, and later sidekicks, out to obtain character upgrade resources over time, even when you are not actively playing the game. In the early game, it's recommended to set 2 of your sales to {% include item.html id=35 %} and 1 on {% include item.html id=11 %} or {% include item.html id=30 %} (see: Upgrading Sidekicks). If you use paid stones, you can purchase a 4th slot, which can be used on whatever resource is needed more.
 
 After obtaining Rank 6 and getting your hero to level 60, there is one final upgrade: [Blooming](/guide/blooming/). Blooming unlocks a third Sidekick Passive slot, which is important when optimizing endgame content. In order to Bloom a hero you need elemental Powerstones, {% include item.html id=135 %} (Events Store, Monthly Store, [Challenge Simulator](/guide/challenge_simulator/)), and {% include item.html id=166 %} (Monthly Store). Obtaining all these resources takes a substantial amount of time and/or coin, so don't worry if it's slow going.
 
-After Bloom, there are a few heroes who are then able to get a Skill Tree upgrade. The Skill Tree enhances that hero's abilities and puts them closer/on par with modern heroes, but it requires a large amount of elemental Powerstones. Some upgrades are more impactful than others, like Ryekie's Skill 2 upgrade giving him an second action after using his Skill 2 once, but the prority order is unique to each hero.
+After Bloom, there are a few heroes who are then able to get a Skill Tree upgrade. The Skill Tree enhances that hero's abilities and puts them closer/on par with modern heroes, but it requires a large amount of elemental Powerstones. Some upgrades are more impactful than others, like {% chara_link Ryekie|h1 %} Skill 2 upgrade giving him an second action after using his Skill 2 once. If you're lacking for resources it's fine to leave skill tree's unfinished, but it's recommended to go back and finish them once you have the resources to do so. 
 
-One of the last upgrades you'll complete on a hero is their Parallel Level, which requires 1300 {% include item.html id=59 %} to reach P.Lv 100. {% include item.html id=59 %} can be obtained through Event Shops, the Challenge Simulator Shop, [Exploring the Unknown](/guide/unexplored/), and SSS Challenge Quests (high difficulty, not recommended for early game). You can also clear the training quest for {% include item.html id=59 %}, but that is limited to 3 clears per day. After establishing a team of Level 50 or 60 heroes, it's recommended to switch your Daily Quest tickets to the {% include item.html id=59 %} quests to get into the habit of farming the resource because it has a high impact on a hero's stats and performance.
+One of the last upgrades you'll complete on a hero is their Parallel Level, which requires 1300 {% include item.html id=59 %} to reach P.Lv 100. {% include item.html id=59 %} can be obtained through Event Shops, the Challenge Simulator Shop, [Exploring the Unknown](/guide/unexplored/), and SSS Challenge Quests (high difficulty, not recommended for early game). You can also clear the training quest for {% include item.html id=59 %}, but the quest is limited to 3 clears per day. After establishing a team of Level 50 or 60 heroes, it's recommended to switch your Daily Quest tickets to the {% include item.html id=59 %} quests to get into the habit of farming the resource because it has a high impact on a hero's stats and performance.
 
 > In the Monthly Coin Store there is the ability to purchase Parallel forms: {% include item.html id=60 %}, {% include item.html id=61 %}, {% include item.html id=62 %}, and {% include item.html id=63 %}. {% include item.html id=61 %} is preferred for DPS and Healers (Healing scales off of Attack), while {% include item.html id=63 %} is reserved for tanks like {% chara_link Sterio|h2 %} and {% chara_link Valoray|h1 %}. {% include item.html id=62 %} is niche, but generally not as useful as running the {% include item.html id=60 %}, which is a balanced upgrade to stats.
 
@@ -243,16 +243,16 @@ Finally, there is Seal Level and Fan Count. Seal level is automatically applied 
 
 ### Upgrading Sidekicks
 
-Sidekicks start at maximum bond level 50, which is also when a hero is able to use their Passive skills. In order to raise the maximum bond level up to 100 you need duplicates of the sidekick, {% include item.html id=39 %} or {% include item.html id=46 %} to increase the maximum bond level.
+Sidekicks start at maximum bond level 50, which is also when a hero is able to use the sidekick's Passive skills. In order to raise the maximum bond level up to 100 you need duplicates of the sidekick or {% include item.html id=39 %} and {% include item.html id=46 %} to increase the maximum bond level.
 
 Sidekick Hearts are obtained through the Record Cube Exchange. {% include item.html id=40 %} are obtained from Hero and Sidekick duplicates. 3 star Heroes/Sidekicks give 1 {% include item-icon.html id=40 %}, 4 star give 5 {% include item-icon.html id=40 %}, and 5 star Heroes give 20 {% include item-icon.html id=40 %}.
 
 1. Hero Duplicates only increase fan count, so it is recommended to convert all 3 star Hero duplicates and any excess 3 star Sidekick duplicates into {% include item.html id=40 %}.
 1. Additional hero upgrade materials are available in the Record Cube Exchange but should only be considered as a last resort due to the impact Sidekick upgrades have.
 
-Sidekicks have five levels, and their Passive Skill increases in effectiveness with each level. The Sidekick's Active Skill will upgrade upon reaching to level 60 and then again at level 100.
+Sidekicks have five levels, and their Passive Skill increases in effectiveness with each level. The Sidekick's Active Skill will upgrade upon reaching max bond level 60 and then again at max bond level 100.
 
-The Active Sidekick (Big Badge) also boosts the stats of the Hero they are equipped with. The most impactful stat is the speed stat provided, since that will play a part in determining speed order for the team (see: [Team Building](#team-building)).
+The Active Sidekick (Big Badge) also boosts the stats of the Hero they are equipped with. The most impactful stat is the speed stat provided, since that will play a part in determining the turn order for your team.
 
 Quick list of Commonly Used Sidekick Passives:
 
@@ -261,7 +261,7 @@ Quick list of Commonly Used Sidekick Passives:
 - Support: {% chara_link Exio %}, {% chara_link Orbiter %}, {% chara_link Ryusei %}, {% chara_link Pubraseer %}, {% chara_link Theoreol %}
 - Speed: {% chara_link Ryekie %} (+5), {% chara_link Gammei %} (-5)
 - Increase drop items: {% chara_link Huckle %} (EXP), {% chara_link Procy %} and {% chara_link Zaniah %} (Coin) 
-> Note: {% chara_link Procy %} and {% chara_link Zaniah %}coin drop passive will not stack when used on the same hero.
+> Note: {% chara_link Procy %} and {% chara_link Zaniah %} coin drop passive will not stack when used on the same hero.
 
 Quick list of Commonly Used Active Sidekick Skills
 
@@ -281,12 +281,14 @@ Teams are centered around a main DPS and their supports and/or sub-DPS in their 
 
 Sidekicks are split between the Active (Big Badge) and the Passive (small icon), the Active and the Passive have different skills with Passive skills being generally higher impact than the Active skills.
 
-> Must-Have Passives on teams: {% chara_link Exio %}, {% chara_link Orbiter %} or {% chara_link Ryusei %}
+> Must-Have Passives on teams: {% chara_link Exio %}, {% chara_link Orbiter %} or {% chara_link Ryusei %}   
 > Note: {% chara_link Orbiter %} and {% chara_link Ryusei %} passive effects do not stack when used on the same team, so only use 1 of them when building a team.
 
-Turn order: you want the DPS as your slowest unit while all the supports go before to apply buffs, debuffs, and generate VP.
+While building a team you should consider the turn order; you want the main DPS as your slowest unit while all the supports go before to apply buffs, debuffs, and generate VP.
 
 > Turn order is determined by Speed, which includes the base speed stat of a hero and the speed stat of the active sidekick. There are two passives that affect the speed stat, {% chara_link Ryekie %} (+5) and {% chara_link Gammei %} (-5).
+
+The positioning of heroes, like slots 1-4, have a small impact on gameplay. According to the game, the hero in position 1 is more likely to get targeted by enemy attacks. There are also heroes like {% chara_link Alend|h2 %} who's Skill 2 can trigger an FUA from the hero positioned above him.
 
 ### Archetype Overviews
 
@@ -294,17 +296,17 @@ Turn order: you want the DPS as your slowest unit while all the supports go befo
 
 Speed centers around increasing the speed of allies or decreasing the speed of enemies in order to deal more damage. This archetype experienced a revival upon the releases of {% chara_link Vulpecula|h2 %}, one of the best DPS heroes in the game, and {% chara_link Huckle|h2 %}, a support that offers healing and debuffs to Speed teams. It also has the benefit of being easy to build, with {% chara_link Ryekie|h1 %}, {% chara_link Farden|h1 %}, and {% chara_link Reticul|h1 %} all performing well as budget options to support Speed DPS's.
 
-Example Units: {% chara_link Vulpecula|h2 %}, {% chara_link Andrew|h2 %}, {% chara_link Huckle|h2 %}, {% chara_link Santetsu|h1 %}, {% chara_link Ryekie|h1 %}, {% chara_link Farden|h1 %}
+Example Units: {% chara_link Vulpecula|h2 %}, {% chara_link Andrew|h3 %}, {% chara_link Huckle|h2 %}, {% chara_link Santetsu|h1 %}, {% chara_link Ryekie|h1 %} (Skill Tree), {% chara_link Farden|h1 %}
 
 #### Combo
 
-Combo centers around increasing the combo meter to increase damage dealt by your heroes. It is broken when the enemy attacks again, so it's important to keep in mind how to quickly regain combo when your turn begins again. Modern Combo units have many different ways of building combo, along with certain thresholds that trigger attacks/buffs when reached.
+Combo centers around increasing the combo meter to increase damage dealt by your heroes. It is broken when the enemy attacks again, so it's important to keep in mind how to quickly regain combo when your turn begins again. Modern Combo units have many different ways of building combo, along with certain thresholds that trigger attacks or buffs when reached.
 
-Example Units: {% chara_link Alend|h2 %}, {% chara_link Sterio|h2 %}, {% chara_link Alphecca|h1 %}, {% chara_link Barrel|h1 %}, {% chara_link Ceph|h1 %}, {% chara_link Barte|h1 %}
+Example Units: {% chara_link Alend|h2 %}, {% chara_link Sterio|h2 %}, {% chara_link Alphecca|h2 %}, {% chara_link Barrel|h1 %}, {% chara_link Ceph|h1 %}, {% chara_link Barte|s1 %}
 
 #### Multihit
 
-Multihit centers around attacking multiple times in one attack. These units are strong at applying debuffs because each damage instance is a new chance at inflicting them, or continue to apply them in the case of the Scar debuff. Modern multihit units come with debuffs built into their skills, making it easier to increase damage dealt to enemies.
+Multihit centers around attacking multiple times in one action. These units are strong at applying debuffs because each damage instance is a new chance at inflicting them, or continue to apply them in the case of the Scar debuff. Modern multihit units come with debuffs built into their skills, making it easier to increase damage dealt to enemies.
 
 Example Units: {% chara_link Shiratori|h1 %}, {% chara_link Gaius|h2 %}, {% chara_link Monomasa|h2 %}, {% chara_link Yvaga|h1 %}, {% chara_link Valoray|h1 %}
 
@@ -316,9 +318,9 @@ Example Units: {% chara_link Yohack|h2 $}, {% chara_link Astar|h2 %}, {% chara_l
 
 #### Hyperbuff
 
-Hyperbuff centers around putting all of the buffs on one unit. This often involves using FUA (follow-up action) effects to increase the number of attacks the main DPS can do in one turn, stacking buffs for one large attack, or a mix of both. This archetype is falling out of style as other archetypes outperform it in most content, but a modern DPS could swing things back in its favor.
+Hyperbuff centers around putting a large amount of buffs on one unit. This often involves using FUA (follow-up action) effects to increase the number of attacks the main DPS can do in one turn, stacking buffs for one large attack, or a mix of both. This archetype is falling out of style as other archetypes outperform it in most content, but a modern DPS could swing things back in its favor.
 
-Example Units: {% chara_link Sadayoshi|h2 %}, {% chara_link Gomeisa|h2 %} (with Skill Tree), {% chara_link Nessen|h2 %}, {% chara_link Taika %}, {% chara_link Astosis|h2 %}, {% chara_link Roiker %}
+Example Units: {% chara_link Sadayoshi|h2 %}, {% chara_link Gomeisa|h2 %} (Skill Tree), {% chara_link Nessen|h2 %}, {% chara_link Taika %}, {% chara_link Astosis|h2 %}, {% chara_link Roiker %}
 
 #### Debuff
 
@@ -334,9 +336,9 @@ Example Units: {% chara_link Vlaham|h1 %}, {% chara_link Moriyasu|h1 %}, {% char
 
 #### View
 
-View centers around manipulating view power to trigger FUA's, Enhanced Attacks, buffs, and more. A new archetype, it boasts one of the strongest DPS units in the game by virtue of {% chara_link Barrel|h3 %}'s consistent FUA's when view is gained or spent. F!Roudin provides a way to regain lost view at the start of the next turn, which pairs extremely well with {% chara_link Roiker|h2 %}'s summon consuming VP and converting it into ATK buffs at the end of turn. Even without his optimal teammates, {% chara_link Barrel|h3 %} is capable of clearing quests with the large amount of budget support options available.
+View centers around manipulating view power to trigger FUA's, Enhanced Attacks, buffs, and more. A new archetype, it boasts one of the strongest DPS units in the game by virtue of {% chara_link Barrel|h3 %}'s consistent FUA's when view is gained or spent. {% chara_link Roudin|h2 %} provides a way to regain lost view at the start of the next turn, which pairs extremely well with {% chara_link Roiker|h2 %} summon consuming VP and converting it into ATK buffs at the end of turn. Even without his optimal teammates, {% chara_link Barrel|h3 %} is capable of clearing quests with the large amount of budget support options available.
 
-Example Units: {% chara_link Barrel|h3 %}, {% chara_link Roudin|h2 %}, {% chara_link Roiker|h2 %}, {% chara_link Kalaski|h1 %}, {% chara_link Borealis|h1 %}
+Example Units: {% chara_link Barrel|h3 %}, {% chara_link Roudin|h2 %}, {% chara_link Roiker|h2 %}, {% chara_link Kalaski|h2 %}, {% chara_link Borealis|h1 %} (Skill Tree)
 
 #### Barrier
 
@@ -352,25 +354,25 @@ These heroes, listed in release order, are unique in their flexibility and are a
 : A 4 star healer that applies Shift, one of the best healing effects in the game. Shift converts a portion of damage taken into healing, and pairs well with the Attack Down and Defense Up he applies with his skills. Should you ever need a healer, consider him.
 
 {% chara_link Sterio|h1 %}
-: {% chara_link Sterio|h1 %} is unique in his ability to give buffs to an ally with his Skill 2 and Skill 3, and then inflict the Scar debuff on enemies. He continues to use his FUA as long as the ally continues attacking, piggybacking off of other FUA effects. His skill rotation is simple and repetitive, but extremely effective.
+: {% chara_link Sterio|h1 %} is unique in his ability to give buffs to an ally with his Skill 2 and Skill 3, and then inflict the Scar debuff on enemies with FUA. He continues to use his FUA as long as the ally continues attacking, piggybacking off of other FUA effects. His skill rotation is simple and repetitive, but extremely effective.
 
 {% chara_link Danzo|h2 %}
-: A Healer who's better at dealing damage, He is unique in his ability to FUA after using his Skill 3 and gaining the unique buff, Voltage, which enables Pick Toss. Pick Toss has several noteable interactions, triggering after {% chara_link Sterio|h1 %} and {% chara_link Huckle|h2 %} FUA's, allowing for increased damage and Scar stacks. His healing is effective as well, automatically healing allies at the start of their turn and also cleansing debuffs.
+: A Healer who's better at dealing damage, he is unique in his ability to FUA after using his Skill 3 and gaining the unique buff, Voltage, which enables Pick Toss. Pick Toss has several noteable interactions, triggering after {% chara_link Sterio|h1 %} and {% chara_link Huckle|h2 %} FUA, allowing for increased damage and Scar stacks. His healing is effective as well, automatically healing allies at the start of their turn and also cleansing debuffs.
 
 {% chara_link Hydoor|h2 %}
 : A DPS who likes both speed and multihit effects, using them both to great success. He grants extra Attack and Speed to allies when recieving a Speed Up and gains the ability to act twice in one turn when a certain amount of hits have been dealt to enemies. His Skill 2 will activate again when Hydoor has Speed Up, making him scale very well with Scar debuffs.
 
 {% chara_link Sterio|h2 %}
-: A tank, combo unit, FUA enabler, and debuffer all in one. His strength is in his action economy, where he can use all three of his skills in one turn provided there is enough combo generated to provide enough Resonance stacks. His gauge also provides a stackable Attack buff that can ramp up quickly, along with having self-sustainable healing and debuff immunity. His Skill 3 triggers an FUA (2 FUA with resonance stacks) with allies' Skill 1, on top of reducing enemy attack and inflicting Aim, a debuff that increases damage taken.
+: A tank, combo unit, FUA enabler, and attack support all in one. His strength is in his action economy, where he can use all three of his skills in one turn provided there is enough combo generated to provide enough Resonance stacks. His gauge also provides a stackable Attack buff that can ramp up quickly, along with having self-sustainable healing and debuff immunity. His Skill 3 triggers an FUA (2 FUA with resonance stacks) with allies' Skill 1, on top of reducing enemy attack and inflicting Aim, a debuff that increases damage taken.
 
 {% chara_link Astosis|h2 %}
-: A lawyer lion in a bunny suit that singlehandedly changed the game. He is able to take two actions in one turn, using either his Skill 1 or Skill 2 before his most impactful skill, Skill 3. Skill 3 provides the Guidance buff, which automatically casts that ally's Skill 2 on the start of their turn. This provides action economy to heroes who do not have access to it and enhances the action economy of those who do {% chara_link Sterio|h2 %}, {% chara_link Ceph|h1 %}), allowing them to benefit from the additional damage or added buffs from a Skill 2 before their turn begins. One of the best users of this is {% chara_link Pubraseer|h2 %}, who receives an Attack buff from his Skill 2, which increases his Skill 3 damage when able to act again after Guidance is consumed. There are a few heroes that do not benefit from Guidance ({% chara_link Santetsu|h2 %}, {% chara_link Tsuneaki|h2 %}, {% chara_link Monomasa|h1 %}), but they can still benefit from the attack buffs that {% chara_link Astosis|h2 %} provides with his other skills.
+: A lawyer lion in a bunny suit that singlehandedly changed the game. He is able to take two actions in one turn, using either his Skill 1 or Skill 2 before his most impactful skill, Skill 3. Skill 3 provides the Guidance buff, which automatically casts that ally's Skill 2 on the start of their turn. This provides action economy to heroes who do not have access to it and enhances the action economy of those who do, like {% chara_link Sterio|h2 %} and {% chara_link Ceph|h1 %} One of the best users of this is {% chara_link Pubraseer|h2 %}, who receives an Attack buff from his Skill 2, which increases his Skill 3 damage when able to act again after Guidance is consumed. There are a few heroes that do not benefit from Guidance, like {% chara_link Santetsu|h2 %}, {% chara_link Tsuneaki|h2 %}, and {% chara_link Monomasa|h1 %}, but they can still benefit from the attack buffs that {% chara_link Astosis|h2 %} provides with his other skills.
 
 {% chara_link Roiker|h2 %}
-: Making already powerful heroes even stronger, Roiker splashed onto the scene with great fanfare. {% chara_link Roiker|h2 %} uses a new addition to the game, Summons, which act separate from the hero that summons them. Instead of being combat oriented like {% chara_link Andrew|h2 %}, {% chara_link Roiker|h2 %}'s summon consumes extra View Power after your last hero acts, and when paired with {% chara_link Barrel|h3 %}, it can trigger multiple {% chara_link Barrel|h3 %} FUA's and even fill his 12 attack gauge and trigger an extra attack. {% chara_link Barrel|h3 %} is not the only beneficiary of this, because the attack buffs provided from the summon are among the highest in the game. {% chara_link Roiker|h2 %} is capable of generating a large amount of View power on his own, which means he can be inserted into most teams and support the DPS well.
+: Making already powerful heroes even stronger, he splashed onto the scene with great fanfare. {% chara_link Roiker|h2 %} uses a new addition to the game, Summons, which act separate from the hero that summons them. Instead of being combat oriented like {% chara_link Andrew|h3 %}, {% chara_link Roiker|h2 %}'s summon consumes extra View Power after your last hero acts, and when paired with {% chara_link Barrel|h3 %}, it can trigger multiple {% chara_link Barrel|h3 %} FUA's and even fill his 12 attack gauge and trigger an extra attack. {% chara_link Barrel|h3 %} is not the only beneficiary of this, because the attack buffs provided from the summon are among the highest in the game. {% chara_link Roiker|h2 %} is capable of generating a large amount of View power on his own, which means he can be inserted into most teams and support the DPS well.
 
 {% chara_link Gomeisa|h2 %} (Skill Tree)
-: Revived by his skill tree, Gomeisa went from niche use to on par with {% chara_link Sterio|h2 %} in tanking and support utility. {% chara_link Gomeisa|h2 %} provides a large amount of buffs to both himself and his allies to increase survivability, along with the ability to nullify debuffs to both himself and allies. On top of that, {% chara_link Gomeisa|h2 %} provides an attack buff that is charged by taking attacks and when allies recieve buffs, pairing very well with {% chara_link Astosis|h2 %} to make almost any hero succeed in endgame content.
+: Revived by his skill tree, Gomeisa went from niche use to on par with {% chara_link Sterio|h2 %} in tanking and support utility. {% chara_link Gomeisa|h2 %} provides a large amount of buffs to both himself and his allies to increase survivability, along with the ability to nullify debuffs to both himself and allies. On top of that, {% chara_link Gomeisa|h2 %} provides an attack buff that is charged by taking attacks and when allies recieve buffs, pairing very well with {% chara_link Astosis|h2 %} or {% chara_link Roiker|h2 %} to make almost any hero succeed in endgame content.
 
 ## Keeping Your Account Safe
 
