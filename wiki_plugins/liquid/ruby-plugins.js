@@ -91,6 +91,7 @@ export function registerRubyPlugins(eleventyConfig, { site, charaIndex }) {
   filter("skill_html", (skillId, changeSkillIds) => skillText.skillHtml(skillId, changeSkillIds));
   filter("skill_name_html", (skillId) => skillText.skillNameHtml(skillId));
   filter("skill_has_text", (skillId) => skillText.hasText(skillId));
+  filter("start_status_chips", (spec) => skillText.startStatusChips(spec));
   filter("skill_tree_name", (model) => skillText.treeNameHtml(model));
   filter("skill_tree_html", (model) => skillText.treeHtml(model));
   filter("skill_tree_node_tip", (model, nodeId) => skillText.treeNodeTip(model, nodeId));
