@@ -59,7 +59,7 @@ Pages contain Liquid templates: `{% raw %}{% ... %}{% endraw %}`, `{% raw %}{{ .
 - `{% raw %}{% chara_link Name %}{% endraw %}` and `{% raw %}{% chara_link Name|h1 %}{% endraw %}` (`h` or `s` and a number picks the hero or sidekick variant).
 - `{% raw %}{% include item.html id=11 %}{% endraw %}` and the other allowed includes, with **plain parameters only**: numbers, `true`/`false`/`nil` or quoted text such as `name="Ether Crystal"`. No variables (`page.id`), no filters (`| upcase`), and no `"`, `'`, `<`, `>`, `{`, `}`, `|`, `;` inside the quoted text. The parameters `style` and `on...` are not allowed.
 
-Every other Liquid template syntax is **protected**: {% for %}{% endraw %}` loop or a `{% raw %}{{ ... }}{% endraw %}`, just not the template itself. The message names the template, for example "this `{% raw %}{% for %}{% endraw %}` tag was changed". Line endings do not matter.
+Every other Liquid template syntax is **protected**: e.g. `{% raw %}{% for %}{% endraw %}` loop or a `{% raw %}{{ ... }}{% endraw %}`.
 
 The includes you can use are listed in [`/api/contrib-includes.json`](/api/contrib-includes.json): every file in `_includes/` except page chrome and page structure (`header`, `footer`, `banner`, `pagefind-search`, `skill-lang-picker`, `wiki-msg`, `js/` and `style/`, `voice-table`, `bio-infobox`, `hero-infobox*`, `sidekick-infobox`, `hero-skill-evolution-v2`, `card-*`, `chara-*`, `team-creator-link` and the generated `quest-infobox`, `skill-description`, `skill-table-v2`). The list lives in `wiki_plugins/lib/contrib-guard.js` (`INCLUDE_DENYLIST`). An existing call of a denied include, or of an allowed one with variables, stays in the page as it is; it just cannot be edited.
 
