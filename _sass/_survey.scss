@@ -1,0 +1,22 @@
+// Survey report figures: _includes/survey-chart.html, survey-graph.html and survey-ranking.html.
+// Charts follow the light/dark theme (assets/chart.js), so their figure must not keep the light
+// background other figures use. Graphs (survey-graph) keep it: they are drawn for a light page.
+figure.survey-chart,
+figure.survey-ranking {
+  background: transparent;
+}
+figure.survey-chart small {
+  color: var(--textSecondary, inherit);
+  opacity: 0.85;
+}
+figure.survey-graph object {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+iframe.survey-ranking {
+  display: block;
+  width: 100%;
+  height: 760px; // until the embed reports its height
+  border: 0;
+}

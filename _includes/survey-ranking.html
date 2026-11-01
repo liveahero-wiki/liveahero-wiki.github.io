@@ -1,0 +1,23 @@
+{%- comment -%}
+  The survey-platform ranking explorer, embedded with a fixed view, in the post's language.
+    {% include survey-ranking.html query="survey=lah&y=2026&country=Japan" title="Japan" %}
+  `query` is the explorer's own URL state (copy it from the address bar). host= points at another deployment,
+  e.g. a local `netlify dev` while testing.
+{%- endcomment -%}
+{%- assign host = include.host | default: "https://rongjie-survey-platform.netlify.app" -%}
+{%- assign lang = page.lang | default: "en" -%}
+{%- capture url -%}{{ host }}/ranking.html?{{ include.query }}&lang={{ lang }}{%- endcapture -%}
+<figure class="survey-ranking">
+<iframe class="survey-ranking" src="{{ url }}&embed=1" title="{{ include.title | escape }}" loading="lazy" data-origin="{{ host }}"></iframe>
+<figcaption>{{ include.title }} · <a href="{{ url }}" target="_blank" rel="noopener">{% case lang %}{% when "ja" %}ランキングを全画面で開く{% when "zh-tw" %}在新分頁開啟完整排行榜{% else %}Open the full explorer{% endcase %}</a></figcaption>
+</figure>
+<script>
+window.surveyRankingResize || (window.surveyRankingResize = addEventListener("message", (event) => {
+  if (!event.data || event.data.type !== "ranking-resize") return;
+  for (const frame of document.querySelectorAll("iframe.survey-ranking")) {
+    if (frame.contentWindow === event.source && event.origin === frame.dataset.origin) {
+      frame.style.height = `${Math.max(event.data.height, 320)}px`; // the loading state is one line tall
+    }
+  }
+}) || true);
+</script>
