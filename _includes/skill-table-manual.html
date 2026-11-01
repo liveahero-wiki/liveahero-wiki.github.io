@@ -1,4 +1,14 @@
+{% comment %}
+  An enemy's kit, written out by hand (the master data has no enemy -> skill mapping).
+  Inputs: skillIds, and optionally equipmentSkills and startStatuses.
+  startStatuses is "<skillId>:<English status name>[:<count>]", comma-separated -- what the enemy
+  already carries when the battle opens; see start_status_chips in wiki_plugins/lib/skill-text.js.
+{% endcomment %}
 <table>
+    {% if include.startStatuses %}
+    <tr><th colspan="3">Statuses at start of battle</th></tr>
+    <tr><td colspan="3">{{ include.startStatuses | start_status_chips }}</td></tr>
+    {% endif %}
     <tr><th colspan="3">Main skills</th></tr>
     <tr>
         <th>Skill Name</th><th>Skill Description</th><th>View cost</th>

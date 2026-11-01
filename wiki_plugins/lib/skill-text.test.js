@@ -170,6 +170,51 @@ test("the Liquid filters are registered", async () => {
   void site;
   assert.equal(await render("{{ 102 | skill_html }}|{{ 101 | skill_has_text }}|{{ 104 | skill_has_text }}"), "+10%|true|false");
   assert.match(await render("{{ id | skill_html: ids }}", { id: 105, ids: [100] }), /<details data-id="100">/);
+  assert.match(await render('{{ "100:Burn:3" | start_status_chips }}'), /Burn ×3<\/span>/);
+});
+
+// ---- statuses an enemy starts the battle with ---------------------------------------------------
+
+test("a start status is a chip of the skill that grants it, with its count after the name", () => {
+  const html = make().startStatusChips("100:Burn:3");
+  assert.match(
+    html,
+    /<span class="sdv" lang="en" data-l="en"><span class="status tippy" data-id="7" data-content="&lt;b&gt;Burn \[Debuff\/Stackable\/Damage over time\]&lt;\/b&gt;[^"]*"><img class="status-s" src="\/cdn\/Sprite\/status_burn\.png" loading="lazy"> Burn ×3<\/span><\/span>/,
+  );
+  assert.match(html, /<span class="sdv" lang="zh-Hant" data-l="zh-Hant ja">.*火傷 ×3<\/span><\/span>$/);
+});
+
+test("a start status without a count is just the status name", () => {
+  assert.match(make().startStatusChips("100:Burn"), /> Burn<\/span>/);
+});
+
+test("several start statuses are listed in the order they are written", () => {
+  const html = make().startStatusChips("100:Wait, 100:Burn:2");
+  assert.ok(html.indexOf('data-id="9"') < html.indexOf('data-id="7"'));
+  assert.match(html, /<\/span>, <span/);
+});
+
+test("a language that names fewer statuses falls back to the entry the name was found in", () => {
+  // skill 100 lists [Burn, Wait] in English but only [Burn] in Japanese: Wait is read off the
+  // English entry, which still carries the name and labels of every language.
+  assert.equal(
+    make().startStatusChips("100:Wait"),
+    '<span class="sdv" lang="en" data-l="en"><span class="status tippy" data-id="9" ' +
+      'data-content="&lt;b&gt;Wait [Buff/Unstackable]&lt;/b&gt;&lt;br&gt;待つ">Wait</span></span>' +
+      '<span class="sdv" lang="zh-Hans" data-l="zh-Hans zh-Hant ja"><span class="status tippy" data-id="9" ' +
+      'data-content="&lt;b&gt;ウェイト [バフ/重複不可]&lt;/b&gt;&lt;br&gt;待つ">ウェイト</span></span>',
+  );
+});
+
+test("a status the skill does not apply is written out as plain text, with a warning", () => {
+  const warnings = [];
+  const st = createSkillText({ data: { processed: { SkillText }, SkillMaster } }, { warn: (m) => warnings.push(m) });
+  assert.equal(st.startStatusChips("100:Growth"), "Growth");
+  assert.equal(st.startStatusChips("104:Burn"), "Burn");
+  assert.deepEqual(warnings, [
+    'start_status_chips: skill 100 does not apply "Growth"',
+    'start_status_chips: skill 104 does not apply "Burn"',
+  ]);
 });
 
 // ---- bloom skill trees ------------------------------------------------------------------------
