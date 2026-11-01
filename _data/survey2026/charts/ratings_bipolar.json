@@ -1,0 +1,664 @@
+{
+ "section": "ratings",
+ "height": 330,
+ "en": {
+  "title": "Scales where 3 is “just right”",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "Story length (1 = Too short, 5 = Too long)\n(n=374, avg 3.24)",
+     "Gameplay difficulty (1 = Too easy, 5 = Too hard)\n(n=374, avg 3.24)",
+     "Required daily play time (1 = Too little, 5 = Too much)\n(n=374, avg 2.95)",
+     "Frequency of new content release (1 = Too slow, 5 = Too fast)\n(n=374, avg 2.61)"
+    ],
+    "axisLabel": {
+     "width": 200,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "1",
+     "type": "bar",
+     "data": [
+      {
+       "value": 1.6,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 1.3,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 2.7,
+       "label": {
+        "show": false
+       }
+      },
+      6.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#c9403f"
+     }
+    },
+    {
+     "name": "2",
+     "type": "bar",
+     "data": [
+      8.3,
+      8.3,
+      16.8,
+      35.6
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#eda3a0"
+     }
+    },
+    {
+     "name": "3",
+     "type": "bar",
+     "data": [
+      60.7,
+      57.5,
+      67.4,
+      49.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#a9a8a0"
+     }
+    },
+    {
+     "name": "4",
+     "type": "bar",
+     "data": [
+      23.5,
+      30.5,
+      9.4,
+      5.9
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "5",
+     "type": "bar",
+     "data": [
+      5.9,
+      {
+       "value": 2.4,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 3.7,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 2.1,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#256abf"
+     }
+    }
+   ]
+  },
+  "note": "On these scales both ends are a complaint, so their averages are not comparable with the other ratings."
+ },
+ "ja": {
+  "title": "3が「ちょうどよい」の項目",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "シナリオの長さ (1 = 短すぎる, 5 = 長すぎる)\n(n=374, 平均 3.24)",
+     "ゲームプレイの難易度 (1 = 簡単すぎる, 5 = 難しすぎる)\n(n=374, 平均 3.24)",
+     "必要な1日のプレイ時間 (1 = 少なすぎる, 5 = 多すぎる)\n(n=374, 平均 2.95)",
+     "新コンテンツのリリース頻度 (1 = 遅すぎる, 5 = 速すぎる)\n(n=374, 平均 2.61)"
+    ],
+    "axisLabel": {
+     "width": 200,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "1",
+     "type": "bar",
+     "data": [
+      {
+       "value": 1.6,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 1.3,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 2.7,
+       "label": {
+        "show": false
+       }
+      },
+      6.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#c9403f"
+     }
+    },
+    {
+     "name": "2",
+     "type": "bar",
+     "data": [
+      8.3,
+      8.3,
+      16.8,
+      35.6
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#eda3a0"
+     }
+    },
+    {
+     "name": "3",
+     "type": "bar",
+     "data": [
+      60.7,
+      57.5,
+      67.4,
+      49.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#a9a8a0"
+     }
+    },
+    {
+     "name": "4",
+     "type": "bar",
+     "data": [
+      23.5,
+      30.5,
+      9.4,
+      5.9
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "5",
+     "type": "bar",
+     "data": [
+      5.9,
+      {
+       "value": 2.4,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 3.7,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 2.1,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#256abf"
+     }
+    }
+   ]
+  },
+  "note": "これらの項目は両端がどちらも不満を表すため、平均値を他の評価と比べることはできません。"
+ },
+ "zh-tw": {
+  "title": "以3為「剛剛好」的項目",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "劇情長度 (1 = 太短, 5 = 太長)\n(n=374, 平均 3.24)",
+     "遊戲難度 (1 = 太簡單, 5 = 太難)\n(n=374, 平均 3.24)",
+     "每日所需的遊玩時間 (1 = 太少, 5 = 太多)\n(n=374, 平均 2.95)",
+     "新內容釋出頻率 (1 = 太慢, 5 = 太快)\n(n=374, 平均 2.61)"
+    ],
+    "axisLabel": {
+     "width": 200,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "1",
+     "type": "bar",
+     "data": [
+      {
+       "value": 1.6,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 1.3,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 2.7,
+       "label": {
+        "show": false
+       }
+      },
+      6.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#c9403f"
+     }
+    },
+    {
+     "name": "2",
+     "type": "bar",
+     "data": [
+      8.3,
+      8.3,
+      16.8,
+      35.6
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#eda3a0"
+     }
+    },
+    {
+     "name": "3",
+     "type": "bar",
+     "data": [
+      60.7,
+      57.5,
+      67.4,
+      49.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#a9a8a0"
+     }
+    },
+    {
+     "name": "4",
+     "type": "bar",
+     "data": [
+      23.5,
+      30.5,
+      9.4,
+      5.9
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "5",
+     "type": "bar",
+     "data": [
+      5.9,
+      {
+       "value": 2.4,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 3.7,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 2.1,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#256abf"
+     }
+    }
+   ]
+  },
+  "note": "這些項目的兩端都代表不滿，因此平均值不能與其他評分比較。"
+ }
+}

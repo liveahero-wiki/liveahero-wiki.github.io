@@ -1,0 +1,385 @@
+{
+ "section": "ratings",
+ "aspect": "2 / 1",
+ "en": {
+  "title": "Average event rating by Japanese reading ability",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis"
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "xAxis": {
+    "type": "category",
+    "data": [
+     "5th Anniversary",
+     "Stella Link Carnival",
+     "City of Engraved Partings ~Smoke and Mirrors~",
+     "Whiteout Liberation",
+     "New Year 2026",
+     "Chocolate Fight Wonderland",
+     "Echoes of Frontier Memories",
+     "Spring Campaign 2026",
+     "Main Quest Book 2 Chapter 4",
+     "Summer Montage Halation",
+     "Autumn Campaign 2026"
+    ],
+    "axisLabel": {
+     "width": 90,
+     "overflow": "break",
+     "interval": 0,
+     "rotate": 0
+    }
+   },
+   "yAxis": {
+    "type": "value",
+    "name": "Average stars",
+    "min": 1,
+    "max": 5,
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    }
+   },
+   "series": [
+    {
+     "name": "Everyone (n=374)",
+     "type": "line",
+     "data": [
+      4.05,
+      4.02,
+      3.74,
+      4.16,
+      3.47,
+      3.74,
+      4.05,
+      3.23,
+      4.15,
+      4.34,
+      3.46
+     ],
+     "symbolSize": 8,
+     "lineStyle": {
+      "width": 2
+     },
+     "emphasis": {
+      "focus": "series"
+     }
+    },
+    {
+     "name": "Japanese N1–N3 (n=58)",
+     "type": "line",
+     "data": [
+      4.29,
+      4.03,
+      4.02,
+      4.21,
+      3.78,
+      3.88,
+      4.21,
+      3.5,
+      4.29,
+      4.26,
+      3.6
+     ],
+     "symbolSize": 8,
+     "lineStyle": {
+      "width": 2
+     },
+     "emphasis": {
+      "focus": "series"
+     }
+    },
+    {
+     "name": "Japanese N4, N5 or none (n=316)",
+     "type": "line",
+     "data": [
+      4.01,
+      4.02,
+      3.69,
+      4.15,
+      3.41,
+      3.71,
+      4.02,
+      3.18,
+      4.13,
+      4.36,
+      3.43
+     ],
+     "symbolSize": 8,
+     "lineStyle": {
+      "width": 2
+     },
+     "emphasis": {
+      "focus": "series"
+     }
+    }
+   ]
+  }
+ },
+ "ja": {
+  "title": "日本語読解力別のイベント平均評価",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis"
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "xAxis": {
+    "type": "category",
+    "data": [
+     "5周年記念キャンペーン",
+     "ステラリンク・カーニバル",
+     "さよならを刻む街 ～Smoke and Mirrors～",
+     "ホワイトアウト・リベレーション",
+     "謹賀新年2026！",
+     "チョコレートファイト・ワンダーランド",
+     "残響のフロンティアメモリーズ",
+     "スプリングキャンペーン2026",
+     "第2部4章",
+     "サマーモンタージュ・ハレーション",
+     "オータムキャンペーン2026"
+    ],
+    "axisLabel": {
+     "width": 90,
+     "overflow": "break",
+     "interval": 0,
+     "rotate": 0
+    }
+   },
+   "yAxis": {
+    "type": "value",
+    "name": "平均の星の数",
+    "min": 1,
+    "max": 5,
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    }
+   },
+   "series": [
+    {
+     "name": "全員（n=374）",
+     "type": "line",
+     "data": [
+      4.05,
+      4.02,
+      3.74,
+      4.16,
+      3.47,
+      3.74,
+      4.05,
+      3.23,
+      4.15,
+      4.34,
+      3.46
+     ],
+     "symbolSize": 8,
+     "lineStyle": {
+      "width": 2
+     },
+     "emphasis": {
+      "focus": "series"
+     }
+    },
+    {
+     "name": "日本語 N1〜N3（n=58）",
+     "type": "line",
+     "data": [
+      4.29,
+      4.03,
+      4.02,
+      4.21,
+      3.78,
+      3.88,
+      4.21,
+      3.5,
+      4.29,
+      4.26,
+      3.6
+     ],
+     "symbolSize": 8,
+     "lineStyle": {
+      "width": 2
+     },
+     "emphasis": {
+      "focus": "series"
+     }
+    },
+    {
+     "name": "日本語 N4・N5・知識ゼロ（n=316）",
+     "type": "line",
+     "data": [
+      4.01,
+      4.02,
+      3.69,
+      4.15,
+      3.41,
+      3.71,
+      4.02,
+      3.18,
+      4.13,
+      4.36,
+      3.43
+     ],
+     "symbolSize": 8,
+     "lineStyle": {
+      "width": 2
+     },
+     "emphasis": {
+      "focus": "series"
+     }
+    }
+   ]
+  }
+ },
+ "zh-tw": {
+  "title": "依日語閱讀能力區分的活動平均評分",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis"
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "xAxis": {
+    "type": "category",
+    "data": [
+     "5週年紀念活動",
+     "Stella Link Carnival",
+     "City of Engraved Partings ~Smoke and Mirrors~",
+     "Whiteout Liberation",
+     "2026新年活動",
+     "Chocolate Fight Wonderland",
+     "Echoes of Frontier Memories",
+     "2026春季活動",
+     "主線第2部第4章",
+     "Summer Montage Halation",
+     "2026秋季活動"
+    ],
+    "axisLabel": {
+     "width": 90,
+     "overflow": "break",
+     "interval": 0,
+     "rotate": 0
+    }
+   },
+   "yAxis": {
+    "type": "value",
+    "name": "平均星數",
+    "min": 1,
+    "max": 5,
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    }
+   },
+   "series": [
+    {
+     "name": "全體（n=374）",
+     "type": "line",
+     "data": [
+      4.05,
+      4.02,
+      3.74,
+      4.16,
+      3.47,
+      3.74,
+      4.05,
+      3.23,
+      4.15,
+      4.34,
+      3.46
+     ],
+     "symbolSize": 8,
+     "lineStyle": {
+      "width": 2
+     },
+     "emphasis": {
+      "focus": "series"
+     }
+    },
+    {
+     "name": "日語 N1～N3（n=58）",
+     "type": "line",
+     "data": [
+      4.29,
+      4.03,
+      4.02,
+      4.21,
+      3.78,
+      3.88,
+      4.21,
+      3.5,
+      4.29,
+      4.26,
+      3.6
+     ],
+     "symbolSize": 8,
+     "lineStyle": {
+      "width": 2
+     },
+     "emphasis": {
+      "focus": "series"
+     }
+    },
+    {
+     "name": "日語 N4、N5 或完全不會（n=316）",
+     "type": "line",
+     "data": [
+      4.01,
+      4.02,
+      3.69,
+      4.15,
+      3.41,
+      3.71,
+      4.02,
+      3.18,
+      4.13,
+      4.36,
+      3.43
+     ],
+     "symbolSize": 8,
+     "lineStyle": {
+      "width": 2
+     },
+     "emphasis": {
+      "focus": "series"
+     }
+    }
+   ]
+  }
+ }
+}

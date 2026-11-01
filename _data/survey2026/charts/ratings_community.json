@@ -1,0 +1,646 @@
+{
+ "section": "ratings",
+ "height": 330,
+ "en": {
+  "title": "Translation, wiki and fan works (outside Japan, n=360)",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "Quality of official translation\n(n=360, avg 3.67)",
+     "Release schedule of official translation\n(n=360, avg 2.33)",
+     "How important is the fan-made wiki to your game experience?\n(n=360, avg 4.38)",
+     "How important are fan works (e.g. fanart, fanfiction, doujinshi) to your game experience?\n(n=360, avg 4.26)"
+    ],
+    "axisLabel": {
+     "width": 200,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "1",
+     "type": "bar",
+     "data": [
+      {
+       "value": 2.8,
+       "label": {
+        "show": false
+       }
+      },
+      26.9,
+      {
+       "value": 0.8,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 3.3,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#c9403f"
+     }
+    },
+    {
+     "name": "2",
+     "type": "bar",
+     "data": [
+      8.1,
+      30.6,
+      {
+       "value": 3.6,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 3.9,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#eda3a0"
+     }
+    },
+    {
+     "name": "3",
+     "type": "bar",
+     "data": [
+      26.9,
+      30.0,
+      12.5,
+      12.2
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#a9a8a0"
+     }
+    },
+    {
+     "name": "4",
+     "type": "bar",
+     "data": [
+      43.6,
+      8.1,
+      22.8,
+      24.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "5",
+     "type": "bar",
+     "data": [
+      18.6,
+      4.4,
+      60.3,
+      55.8
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#256abf"
+     }
+    }
+   ]
+  }
+ },
+ "ja": {
+  "title": "翻訳・Wiki・ファン活動（日本以外、n=360）",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "公式翻訳の品質\n(n=360, 平均 3.67)",
+     "公式翻訳のリリーススケジュール\n(n=360, 平均 2.33)",
+     "ファンが作成したウィキは、あなたのゲーム体験にとってどれほど重要ですか？\n(n=360, 平均 4.38)",
+     "二次創作（例：ファンアート、ファンフィクション、同人誌）は、あなたのゲーム体験にとってどれほど重要ですか？\n(n=360, 平均 4.26)"
+    ],
+    "axisLabel": {
+     "width": 200,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "1",
+     "type": "bar",
+     "data": [
+      {
+       "value": 2.8,
+       "label": {
+        "show": false
+       }
+      },
+      26.9,
+      {
+       "value": 0.8,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 3.3,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#c9403f"
+     }
+    },
+    {
+     "name": "2",
+     "type": "bar",
+     "data": [
+      8.1,
+      30.6,
+      {
+       "value": 3.6,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 3.9,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#eda3a0"
+     }
+    },
+    {
+     "name": "3",
+     "type": "bar",
+     "data": [
+      26.9,
+      30.0,
+      12.5,
+      12.2
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#a9a8a0"
+     }
+    },
+    {
+     "name": "4",
+     "type": "bar",
+     "data": [
+      43.6,
+      8.1,
+      22.8,
+      24.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "5",
+     "type": "bar",
+     "data": [
+      18.6,
+      4.4,
+      60.3,
+      55.8
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#256abf"
+     }
+    }
+   ]
+  }
+ },
+ "zh-tw": {
+  "title": "翻譯、Wiki 與同人創作（日本以外，n=360）",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "官方翻譯質量\n(n=360, 平均 3.67)",
+     "官方翻譯的釋出進度\n(n=360, 平均 2.33)",
+     "粉絲製作的維基對您的遊戲體驗有多重要？\n(n=360, 平均 4.38)",
+     "同人作品（例如：同人畫作、同人小說）對您的遊戲體驗有多重要？\n(n=360, 平均 4.26)"
+    ],
+    "axisLabel": {
+     "width": 200,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "1",
+     "type": "bar",
+     "data": [
+      {
+       "value": 2.8,
+       "label": {
+        "show": false
+       }
+      },
+      26.9,
+      {
+       "value": 0.8,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 3.3,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#c9403f"
+     }
+    },
+    {
+     "name": "2",
+     "type": "bar",
+     "data": [
+      8.1,
+      30.6,
+      {
+       "value": 3.6,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 3.9,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#eda3a0"
+     }
+    },
+    {
+     "name": "3",
+     "type": "bar",
+     "data": [
+      26.9,
+      30.0,
+      12.5,
+      12.2
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#a9a8a0"
+     }
+    },
+    {
+     "name": "4",
+     "type": "bar",
+     "data": [
+      43.6,
+      8.1,
+      22.8,
+      24.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "5",
+     "type": "bar",
+     "data": [
+      18.6,
+      4.4,
+      60.3,
+      55.8
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#256abf"
+     }
+    }
+   ]
+  }
+ }
+}

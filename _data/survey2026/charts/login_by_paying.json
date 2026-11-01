@@ -1,0 +1,835 @@
+{
+ "section": "gameplay",
+ "height": 426,
+ "en": {
+  "title": "Play pattern by spending tier (players)",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    }
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "Only login once in a while",
+     "Only login once a week, not using stamina",
+     "Only login once a day, not using stamina",
+     "Only login once a week, try to clear as much missions as possible during that",
+     "Only login once a day, to clear current stamina and sales only",
+     "Login almost everyday, clear almost all stamina, but does not always able to clear hard game content",
+     "Login almost everyday, clear all game content in the most optimised method"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "Zero",
+     "type": "bar",
+     "data": [
+      13,
+      2,
+      5,
+      8,
+      39,
+      65,
+      25
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#a9a8a0"
+     }
+    },
+    {
+     "name": "XS",
+     "type": "bar",
+     "data": [
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      1,
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      7,
+      16,
+      7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "S",
+     "type": "bar",
+     "data": [
+      4,
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      2,
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      7,
+      17,
+      8
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#5598e7"
+     }
+    },
+    {
+     "name": "M",
+     "type": "bar",
+     "data": [
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      4,
+      9,
+      13,
+      13
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#2a78d6"
+     }
+    },
+    {
+     "name": "L",
+     "type": "bar",
+     "data": [
+      7,
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      3,
+      1,
+      15,
+      25,
+      26
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#1c5cab"
+     }
+    },
+    {
+     "name": "XL",
+     "type": "bar",
+     "data": [
+      2,
+      1,
+      4,
+      2,
+      2,
+      12,
+      9
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#104281"
+     }
+    }
+   ]
+  }
+ },
+ "ja": {
+  "title": "課金レベル別のプレイスタイル（人数）",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    }
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "たまにしかログインしない",
+     "週に1度しかログインせず、スタミナを使わない",
+     "ログインは1日1回のみ、スタミナは使わない",
+     "ログインは週に1回だけ、やる時はできるだけ多くのミッションやクエストをクリアするようにする。",
+     "ログインは1日1回のみで、現在のスタミナと营業をクリアするのみ",
+     "ほぼ毎日ログインし、スタミナはほぼクリアしているが、難しいクエストは大体クリアできない",
+     "ほぼ毎日ログインし、最も最適化された方法ですべてのゲームコンテンツをクリアする"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "無課金",
+     "type": "bar",
+     "data": [
+      13,
+      2,
+      5,
+      8,
+      39,
+      65,
+      25
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#a9a8a0"
+     }
+    },
+    {
+     "name": "XS",
+     "type": "bar",
+     "data": [
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      1,
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      7,
+      16,
+      7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "S",
+     "type": "bar",
+     "data": [
+      4,
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      2,
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      7,
+      17,
+      8
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#5598e7"
+     }
+    },
+    {
+     "name": "M",
+     "type": "bar",
+     "data": [
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      4,
+      9,
+      13,
+      13
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#2a78d6"
+     }
+    },
+    {
+     "name": "L",
+     "type": "bar",
+     "data": [
+      7,
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      3,
+      1,
+      15,
+      25,
+      26
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#1c5cab"
+     }
+    },
+    {
+     "name": "XL",
+     "type": "bar",
+     "data": [
+      2,
+      1,
+      4,
+      2,
+      2,
+      12,
+      9
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#104281"
+     }
+    }
+   ]
+  }
+ },
+ "zh-tw": {
+  "title": "各課金等級的遊玩模式（人數）",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    }
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "偶爾登入",
+     "每週登入一次，不消耗AP",
+     "每天登入一次，不消耗AP",
+     "每週登入一次，在當天儘可能完成任務",
+     "每天登入一次，只消耗AP和營業",
+     "幾乎每天登入，消耗所有AP，但並非能通過所有高難內容",
+     "幾乎每天登入，會試圖以最最佳化方式通過所有遊戲內容"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "無課金",
+     "type": "bar",
+     "data": [
+      13,
+      2,
+      5,
+      8,
+      39,
+      65,
+      25
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#a9a8a0"
+     }
+    },
+    {
+     "name": "XS",
+     "type": "bar",
+     "data": [
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      1,
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      7,
+      16,
+      7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "S",
+     "type": "bar",
+     "data": [
+      4,
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      2,
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      7,
+      17,
+      8
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#5598e7"
+     }
+    },
+    {
+     "name": "M",
+     "type": "bar",
+     "data": [
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      4,
+      9,
+      13,
+      13
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#2a78d6"
+     }
+    },
+    {
+     "name": "L",
+     "type": "bar",
+     "data": [
+      7,
+      {
+       "value": 0,
+       "label": {
+        "show": false
+       }
+      },
+      3,
+      1,
+      15,
+      25,
+      26
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#1c5cab"
+     }
+    },
+    {
+     "name": "XL",
+     "type": "bar",
+     "data": [
+      2,
+      1,
+      4,
+      2,
+      2,
+      12,
+      9
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#104281"
+     }
+    }
+   ]
+  }
+ }
+}

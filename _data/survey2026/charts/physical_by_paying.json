@@ -1,0 +1,244 @@
+{
+ "section": "spending",
+ "aspect": "2 / 1",
+ "en": {
+  "title": "Bought official physical merchandise, by spending tier",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "category",
+    "data": [
+     "Zero (n=157)",
+     "XS (n=31)",
+     "S (n=38)",
+     "M (n=39)",
+     "L (n=77)",
+     "XL (n=32)"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    }
+   },
+   "yAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    }
+   },
+   "series": [
+    {
+     "name": "Bought merchandise",
+     "type": "bar",
+     "data": [
+      5.1,
+      0.0,
+      31.6,
+      17.9,
+      24.7,
+      18.8
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "top"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36
+    }
+   ]
+  }
+ },
+ "ja": {
+  "title": "公式グッズを購入した人の割合（課金レベル別）",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "category",
+    "data": [
+     "無課金 (n=157)",
+     "XS (n=31)",
+     "S (n=38)",
+     "M (n=39)",
+     "L (n=77)",
+     "XL (n=32)"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    }
+   },
+   "yAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    }
+   },
+   "series": [
+    {
+     "name": "グッズ購入あり",
+     "type": "bar",
+     "data": [
+      5.1,
+      0.0,
+      31.6,
+      17.9,
+      24.7,
+      18.8
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "top"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36
+    }
+   ]
+  }
+ },
+ "zh-tw": {
+  "title": "購買官方實體周邊的比例（依課金等級）",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "category",
+    "data": [
+     "無課金 (n=157)",
+     "XS (n=31)",
+     "S (n=38)",
+     "M (n=39)",
+     "L (n=77)",
+     "XL (n=32)"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    }
+   },
+   "yAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    }
+   },
+   "series": [
+    {
+     "name": "曾購買周邊",
+     "type": "bar",
+     "data": [
+      5.1,
+      0.0,
+      31.6,
+      17.9,
+      24.7,
+      18.8
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "top"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36
+    }
+   ]
+  }
+ }
+}
