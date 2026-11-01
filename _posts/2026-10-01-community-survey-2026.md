@@ -233,15 +233,21 @@ Every ranking below can be filtered by country, region, age, gender and playing 
 
 {% include survey-ranking.html query="survey=lah&y=2026" title="Character popularity explorer" %}
 
-| Male furry | Approval | Male Human | Approval | Female/Other | Approval |
+| Male Anthro | Approval | Male Humanoid | Approval | Female/Other | Approval |
 |-|-|-|-|-|-|
 |{% chara_link Pubraseer %}| 65.3% |{% chara_link Akashi %}  | 37.7% |{% chara_link Melide %}   |23.3%|
-|{% chara_link Barrel %}   | 59.1% |{% chara_link Astar %}   | 36.7%|{% chara_link Melide %}    |19.4%|
+|{% chara_link Barrel %}   | 59.1% |{% chara_link Astar %}   | 36.7%|{% chara_link ⇌Melide %}   |19.4%|
 |{% chara_link Monomasa %} | 53.3% |{% chara_link Ruchbath %}| 35.5% |{% chara_link Sensettia %}|17.1%|
 |{% chara_link Ryekie %}   | 51.4% |{% chara_link ⇌Akashi %}| 32.3% |{% chara_link Sui %}       |16.6%|
-|{% chara_link Sterio %}   | 49.4% |{% chara_link Roudin %}  | 28.5% |{% chara_link Flamier% }  |15.4%|
+|{% chara_link Sterio %}   | 49.4% |{% chara_link Roudin %}  | 28.5% |{% chara_link Flamier %}  |15.4%|
+
+To no one's surprise, male anthro characters dominated this year's popularity ranking. The approval rating winner in "Male Anthro", "Male Humanoid" and "Female/Other" are exactly the same as last year, congratulations to them for successfully defending their thrones!
+
+LifeWonders officially introduced more parallel/xeno characters now, so I included them in the survey for the first time. We can see that right now, the original version all have higher appproval rating than the xeno version (e.g. {% chara_link Akashi %} > {% chara_link ⇌Akashi %}, {% chara_link Melide %} > {% chara_link ⇌Melide %}).
 
 {% include survey-chart.html id="top10_size" %}
+
+Every year there are people complaining that only allowing top 10 characters are too little, so here is a reminder that there are also plenty respondents that do not even choose full 10 characters.
 
 ## Ranked Voting System
 
@@ -266,6 +272,16 @@ Every ranking below can be filtered by country, region, age, gender and playing 
 
 {% include survey-graph.html path="/assets/img/survey-2026/ranked_voting_non_male.svg"
   title="Ranked Voting (non-male respondents only)" %}
+
+If we only consider by raw approval rating, {% chara_link Akashi %} wins over {% chara_link Astar %}. But in Rank Voting, {% chara_link Astar %} is higher.
+
+In Japan, {% chara_link Monomasa %} is the Cordocet winner, where most other respondent groups tend put {% chara_link Pubraseer %} as (one of) the Cordocet winner.
+
+In Taiwan, {% chara_link Ruchbath %} became the highest male human character in the top 10.
+
+Among China respondents, there are two Cordocet winners: {% chara_link Pubraseer %} and {% chara_link Barrel %}. They each won over the other 50% of the time, so there is a tie. {% chara_link Astar %} is the only male humanoid in China's top 10.
+
+For non-male respondents, {% chara_link Vlaham %}, {% chara_link Akashi %} and {% chara_link ⇌Akashi %} climbed into top 10.
 
 ## Mobs and Kaibutsu
 
