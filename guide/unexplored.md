@@ -44,44 +44,6 @@ team_formations:
 
 ## Enemy skills
 
-### The Inventor and the Runaway Mechanism (Viscunam)
-
-#### Octopus Type Kaibutsu
-
-<details>
-<summary>Octopus Type Kaibutsu</summary>
-
-{% include skill-table-manual.html skillIds="4184113,4184114,4184115" equipmentSkills="6184126,6184127,6184133,6184131" %}
-</details>
-
-#### Serpent-dragon Type Kaibutsu
-
-<details>
-<summary>Serpent-dragon Type Kaibutsu (Head)</summary>
-
-{% include skill-table-manual.html skillIds="4246113,4246107,4247110" equipmentSkills="6246117,6246118,6000062,6247119" %}
-</details>
-
-<details>
-<summary>Serpent-dragon Type Kaibutsu (Tail)</summary>
-
-{% include skill-table-manual.html skillIds="4247111,4247112,4247113" equipmentSkills="6247115,6247116,6247120,6247119" %}
-</details>
-
-#### White Whale Type Kaibutsu
-
-<details>
-<summary>White Whale Type Kaibutsu (Boss)</summary>
-
-{% include skill-table-manual.html skillIds="4232104,4232105,4232106" equipmentSkills="6232103,6232111,6232112,6149111" %}
-</details>
-
-<details>
-<summary>Shark Type Kaibutsu</summary>
-
-{% include skill-table-manual.html skillIds="4074307,4074308,4074309" equipmentSkills="6074313,6074311" %}
-</details>
-
 ### The Archaeologist and the Land Lost to Time (Marfik)
 
 > Encounter names below are the game's own ("Defeat Midboss/Boss ..." hints). "In a Ruined Land" and "Life-reaping Scythe" are not documented yet.
@@ -158,6 +120,44 @@ team_formations:
 <summary>Lizard Type Kaibutsu</summary>
 
 {% include skill-table-manual.html skillIds="4205101,4205102,4205103" equipmentSkills="6205103,6205104,6205109,6072205" %}
+</details>
+
+### The Inventor and the Runaway Mechanism (Viscunam)
+
+#### Octopus Type Kaibutsu
+
+<details>
+<summary>Octopus Type Kaibutsu</summary>
+
+{% include skill-table-manual.html skillIds="4184113,4184114,4184115" equipmentSkills="6184126,6184127,6184133,6184131" %}
+</details>
+
+#### Serpent-dragon Type Kaibutsu
+
+<details>
+<summary>Serpent-dragon Type Kaibutsu (Head)</summary>
+
+{% include skill-table-manual.html skillIds="4246113,4246107,4247110" equipmentSkills="6246117,6246118,6000062,6247119" %}
+</details>
+
+<details>
+<summary>Serpent-dragon Type Kaibutsu (Tail)</summary>
+
+{% include skill-table-manual.html skillIds="4247111,4247112,4247113" equipmentSkills="6247115,6247116,6247120,6247119" %}
+</details>
+
+#### White Whale Type Kaibutsu
+
+<details>
+<summary>White Whale Type Kaibutsu (Boss)</summary>
+
+{% include skill-table-manual.html skillIds="4232104,4232105,4232106" equipmentSkills="6232103,6232111,6232112,6149111" %}
+</details>
+
+<details>
+<summary>Shark Type Kaibutsu</summary>
+
+{% include skill-table-manual.html skillIds="4074307,4074308,4074309" equipmentSkills="6074313,6074311" %}
 </details>
 
 ## Exploration skills
