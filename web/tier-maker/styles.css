@@ -1,0 +1,82 @@
+/* Tier Maker. Colors come from the site tokens (--text, --bg, --link) so dark mode follows the theme. */
+
+.lah-tm {
+  --tm-line: color-mix(in srgb, var(--text) 25%, transparent);
+  --tm-soft: color-mix(in srgb, var(--text) 8%, var(--bg));
+  --tm-accent: var(--link);
+  --tm-tile: 56px;
+  position: relative;
+}
+.lah-tm.is-file-over { outline: 3px dashed var(--tm-accent); outline-offset: 6px; }
+.lah-tm button, .lah-tm input { font: inherit; }
+
+.lah-tm-status { padding: 24px 0; }
+
+/* toolbar */
+.lah-tm-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 8px; }
+.lah-tm-title { flex: 1 1 260px; min-width: 0; padding: 8px 10px; font-size: 1.25em; font-weight: 600; color: var(--text); background: var(--bg); border: 1px solid var(--tm-line); border-radius: 6px; }
+.lah-tm-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.lah-tm-btn { display: inline-block; padding: 7px 14px; color: var(--text); background: var(--tm-soft); border: 1px solid var(--tm-line); border-radius: 6px; cursor: pointer; line-height: 1.3; }
+.lah-tm-btn:hover:not(:disabled) { border-color: var(--tm-accent); }
+.lah-tm-btn:disabled { opacity: .5; cursor: default; }
+.lah-tm-btn.is-primary { color: #fff; background: var(--tm-accent); border-color: var(--tm-accent); }
+.lah-tm-notice { margin: 8px 0; padding: 8px 12px; border-radius: 6px; border: 1px solid var(--tm-line); }
+.lah-tm-notice.is-ok { border-color: #3a9a4a; }
+.lah-tm-notice.is-warn { border-color: #c8921c; }
+.lah-tm-notice.is-error { border-color: #d04a4a; }
+.lah-tm-hint { margin: 4px 0 12px; font-size: .9em; opacity: .8; }
+
+/* tiers */
+.lah-tm-tiers { border: 1px solid var(--tm-line); border-radius: 8px; overflow: hidden; }
+.lah-tm-tier { display: flex; align-items: stretch; border-bottom: 1px solid var(--tm-line); background: var(--tm-soft); }
+.lah-tm-tier:last-child { border-bottom: 0; }
+.lah-tm-label { position: relative; flex: 0 0 110px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 6px; }
+.lah-tm-label-name { width: 100%; padding: 2px; font-size: 1.15em; font-weight: 700; text-align: center; color: #111; background: transparent; border: 1px solid transparent; border-radius: 4px; }
+.lah-tm-label-name:hover, .lah-tm-label-name:focus { background: rgba(255, 255, 255, .55); border-color: rgba(0, 0, 0, .3); }
+.lah-tm-color { width: 28px; height: 20px; padding: 0; border: 1px solid rgba(0, 0, 0, .4); border-radius: 4px; background: none; cursor: pointer; }
+.lah-tm-zone, .lah-tm-pool { display: flex; flex-wrap: wrap; align-content: flex-start; gap: 4px; padding: 6px; }
+.lah-tm-zone { flex: 1 1 auto; min-width: 0; min-height: calc(var(--tm-tile) + 12px); }
+.lah-tm-zone.is-over, .lah-tm-pool.is-over { background: color-mix(in srgb, var(--tm-accent) 15%, transparent); }
+.lah-tm-placeholder { align-self: center; padding-left: 6px; font-size: .85em; opacity: .5; }
+.lah-tm-ctl { flex: 0 0 auto; display: flex; flex-direction: column; justify-content: center; gap: 3px; padding: 4px; }
+.lah-tm-mini { padding: 1px 7px; font-size: .8em; color: var(--text); background: var(--bg); border: 1px solid var(--tm-line); border-radius: 4px; cursor: pointer; }
+.lah-tm-mini:disabled { opacity: .35; cursor: default; }
+.lah-tm-mini.is-place { color: #fff; background: var(--tm-accent); border-color: var(--tm-accent); }
+
+/* characters */
+.lah-tm-tile { position: relative; flex: 0 0 auto; width: var(--tm-tile); height: var(--tm-tile); padding: 0; overflow: hidden; background: #333; border: 2px solid transparent; border-radius: 8px; cursor: grab; user-select: none; -webkit-user-select: none; touch-action: manipulation; }
+.lah-tm-tile img { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; -webkit-user-drag: none; }
+.lah-tm-tile:hover { border-color: var(--tm-line); }
+.lah-tm-tile.is-selected { border-color: var(--tm-accent); box-shadow: 0 0 0 2px var(--tm-accent); }
+.lah-tm-tile.is-dragging { opacity: .35; }
+.lah-tm-badge { position: absolute; right: 0; bottom: 0; padding: 0 4px; font-size: 10px; font-weight: 700; line-height: 14px; color: #fff; background: rgba(0, 0, 0, .7); border-radius: 6px 0 6px 0; }
+.lah-tm-caret { flex: 0 0 4px; align-self: stretch; margin: 0 -2px; background: var(--tm-accent); border-radius: 2px; }
+.lah-tm-ghost { position: fixed; z-index: 1000; width: var(--tm-tile); height: var(--tm-tile); margin: -28px 0 0 -28px; border-radius: 8px; opacity: .85; pointer-events: none; box-shadow: 0 4px 14px rgba(0, 0, 0, .45); }
+body.lah-tm-dragging { cursor: grabbing; user-select: none; -webkit-user-select: none; }
+body.lah-tm-dragging .lah-tm-tile { cursor: grabbing; }
+
+/* pool */
+.lah-tm-poolbox { margin-top: 16px; }
+.lah-tm-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-bottom: 8px; }
+.lah-tm-seg { display: inline-flex; border: 1px solid var(--tm-line); border-radius: 6px; overflow: hidden; }
+.lah-tm-seg-btn { padding: 5px 12px; color: var(--text); background: var(--bg); border: 0; border-right: 1px solid var(--tm-line); cursor: pointer; }
+.lah-tm-seg-btn:last-child { border-right: 0; }
+.lah-tm-seg-btn.is-on { color: #fff; background: var(--tm-accent); }
+.lah-tm-check { display: inline-flex; align-items: center; gap: 5px; cursor: pointer; }
+.lah-tm-search { padding: 5px 8px; color: var(--text); background: var(--bg); border: 1px solid var(--tm-line); border-radius: 6px; }
+.lah-tm-count { margin-left: auto; font-size: .9em; opacity: .75; }
+.lah-tm-pool { min-height: 80px; max-height: 60vh; overflow-y: auto; border: 1px solid var(--tm-line); border-radius: 8px; }
+.lah-tm-empty { margin: 8px; opacity: .7; }
+.lah-tm-selected { margin: 8px 0 0; font-size: .9em; }
+.lah-tm-foot { margin-top: 16px; font-size: .85em; opacity: .7; }
+
+@media (max-width: 600px) {
+  .lah-tm { --tm-tile: 48px; }
+  .lah-tm-label { flex-basis: 76px; }
+  .lah-tm-label-name { font-size: 1em; }
+  .lah-tm-ghost { margin: -24px 0 0 -24px; }
+  .lah-tm-count { margin-left: 0; width: 100%; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .lah-tm-tile { transition: border-color .12s, box-shadow .12s; }
+}

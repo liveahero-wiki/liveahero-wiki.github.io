@@ -21,6 +21,8 @@ const LIBS = {
   'lah-team-formation': 'web/cms-plugin/index.ts',
   // the Team Creator page app; a separate bundle so the admin portal never downloads the list
   'team-creator': 'web/team-creator/index.tsx',
+  // the Tier Maker page app (/tier_maker/)
+  'tier-maker': 'web/tier-maker/index.tsx',
   // the contributor editor, imported by assets/main.js only when a reader clicks Edit / Suggest
   editor: 'web/editor/index.tsx',
   // the moderator plugins of the wiki-cms admin portal

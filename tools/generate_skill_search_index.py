@@ -1564,6 +1564,7 @@ def build_roster(entities, m, version):
                 "role": e["role"],
                 "hasSkillTree": e["hasSkillTree"],
                 "limited": limited(e),
+                "isMob": e["isMob"],
             })
         else:
             sidekicks.append({
@@ -1574,6 +1575,7 @@ def build_roster(entities, m, version):
                 "resourceName": e["resourceName"],
                 "rarity": e["rarity"],
                 "limited": limited(e),
+                "isMob": e["isMob"],
             })
     items = []
     item_master = m.get("ItemMaster") or {}

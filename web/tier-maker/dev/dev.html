@@ -1,0 +1,18 @@
+<!doctype html>
+<!-- Dev harness for the Tier Maker (vite dev server, /tier-maker/dev/dev.html): the page chrome's tokens and the mount point. -->
+<html lang="en" data-skill-lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tier Maker (dev)</title>
+    <style>
+      :root { --text: #222; --bg: #fff; --link: #1a6fd1; }
+      html[data-theme='dark'] { --text: #ddd; --bg: #1b1b1f; --link: #6aa8ff; }
+      body { margin: 0 auto; max-width: 1100px; padding: 16px; font: 16px/1.5 system-ui, sans-serif; color: var(--text); background: var(--bg); }
+    </style>
+  </head>
+  <body>
+    <div id="tier-maker" class="tier-maker"></div>
+    <script type="module" src="/tier-maker/index.tsx"></script>
+  </body>
+</html>

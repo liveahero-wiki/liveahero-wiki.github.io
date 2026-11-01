@@ -62,6 +62,8 @@ export interface RosterHero {
   hasSkillTree: boolean
   /** Limited-time unit (`limited: true` in the chara page's front matter); missing = false. */
   limited?: boolean
+  /** Part-time (rarity-1) unit; missing = false (rosters generated before this field). */
+  isMob?: boolean
 }
 
 export interface RosterSidekick {
@@ -72,6 +74,7 @@ export interface RosterSidekick {
   resourceName: string
   rarity: number
   limited?: boolean
+  isMob?: boolean
 }
 
 /** A skill-book item that can take a sidekick passive slot (stored in `TeamSlot.passives` by itemId). */

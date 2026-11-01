@@ -462,9 +462,11 @@ class TestRoster(unittest.TestCase):
         self.assertEqual(set(roster["heroes"][2]["name"].values()), {"日本語"})
         self.assertEqual(set(roster["heroes"][0]), {
             "stockId", "characterId", "name", "page", "resourceName", "rarity", "element", "role", "hasSkillTree",
-            "limited"})
+            "limited", "isMob"})
         self.assertEqual(set(roster["sidekicks"][0]), {
-            "stockId", "characterId", "name", "page", "resourceName", "rarity", "limited"})
+            "stockId", "characterId", "name", "page", "resourceName", "rarity", "limited", "isMob"})
+        self.assertEqual([h["isMob"] for h in roster["heroes"]], [False, False, False, True])
+        self.assertEqual([s["isMob"] for s in roster["sidekicks"]], [False])
         self.assertEqual([h["limited"] for h in roster["heroes"]], [True, True, False, False])
         # a hero stockId ending in 2+ is limited even without the front-matter flag (10012 has none)
         self.assertEqual([s["limited"] for s in roster["sidekicks"]], [False])

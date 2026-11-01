@@ -24,7 +24,7 @@ lah-wiki/
 ├── assets/                    # Site assets (images, scripts, etc.)
 ├── scripts/                   # Developer scripts (e.g. compare-page.mjs, comparing the output with a Jekyll build)
 ├── tools/                     # Python data-engineering pipeline, scraping utilities, and translation syncer
-├── web/                       # Preact skill-search UI (built by Vite into assets/skill-search.*)
+├── web/                       # Preact apps built by Vite: skill search (assets/skill-search.*), team creator, tier maker (assets/cms/*.js)
 ├── wiki_plugins/              # JavaScript plugins for Eleventy: Liquid filters/tags, collections, kramdown-style markdown
 ├── eleventy.config.js         # Eleventy configuration
 └── zzz/                       # Temp workspace containing raw game localization JSON dumps
@@ -77,5 +77,7 @@ For more in-depth documentation on the different layers of this workspace, refer
     *   See [docs/LIQUID.md](/docs/LIQUID.md)
 * **Contributor Editing**: Editing and translation suggestions without a GitHub account (wiki-cms submissions, guard, Google Sheet intake): decisions, gotchas, and what is not built.
     *   See [docs/CONTRIBUTOR_EDITING.md](/docs/CONTRIBUTOR_EDITING.md)
+* **Tier Maker**: The `/tier_maker/` page: character set, variant/mob rules, and the PNG metadata format.
+    *   See [docs/TIER_MAKER.md](/docs/TIER_MAKER.md)
 * **Game Data Schemas & Relationships**: Understanding JSON relational schemas and Liquid joins.
     *   See [docs/DATA_SCHEMAS.md](/docs/DATA_SCHEMAS.md)
