@@ -25,7 +25,7 @@ graph LR
 - **No custom domain.** The wiki (`github.io`) and wiki-cms (`workers.dev`) are both on the Public Suffix List, and Safari blocks third-party cookies, so the wiki-cms cookie never reaches wiki pages. That is the whole reason for the popup + `postMessage` + own bearer token design instead of cookies.
 - **The Google Sheet stays the source of truth** for voice and bio translations (translators work in it directly). The Worker never holds Google credentials, so a GitHub Action does the sheet writes.
 - **Game text always wins.** A line or bio is translatable into a language only while the game's text in that language is missing or equal to JP. The editor offers Suggest only then, the renderer prefers game text, and sheet text the game later supersedes is just not shown (the intake marks such submissions `superseded`).
-- New contributed HTML is limited to `<details>`, `<summary>`, `<br>` and table tags. Richer markup is for people using GitHub directly.
+- New contributed HTML is limited to `<details>`, `<summary>`, `<br>`, table tags (`colspan`, `rowspan`, `align` only) and inline tags that markdown has no syntax for: `<sup>`, `<sub>`, `<ruby>`/`<rt>`/`<rp>`, `<u>`, `<mark>`, `<kbd>`, `<small>`, `<s>`, `<del>`, `<ins>`, `<wbr>` (no attributes), `<abbr title="...">` (plain-text title) and `<span class="...">` (up to four plain class names; `style` and every other attribute stay refused). They are typed by hand, there is no toolbar button. Richer markup is for people using GitHub directly.
 - Long-term contributors should still end up on GitHub: the toolbar keeps an "Edit on GitHub" link (`/edit/master/<path>`, which forks automatically) next to the new "Edit" button.
 - Out of scope: skill translation (stays in its own Google Sheet).
 

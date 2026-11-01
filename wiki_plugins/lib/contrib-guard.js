@@ -8,7 +8,8 @@
 //   * FREE tokens may be added, edited and removed: `{% chara_link Name %}` / `{% chara_link Name|h1 %}`
 //     and `{% include <file>.html key=value ... %}` with an allowed file and literal parameters only.
 //   * Every other token is PROTECTED: the ordered sequence of protected tokens must be identical.
-//   * New HTML may only be <details>, <summary>, <br> and the table family, with almost no attributes.
+//   * New HTML may only be <details>, <summary>, <br>, the table family and a few inline tags (<sup>, <sub>, ...,
+//     <abbr title>, <span class>), with almost no attributes.
 //
 // This module has no dependencies and uses only standard JS plus WebCrypto, so the very same file runs
 // in Node (CI: scripts/contrib-guard-ci.mjs, the Eleventy build) and in the browser editor bundle.
@@ -296,8 +297,13 @@ export function classifyToken(token, allowedIncludes = []) {
 // ---------------------------------------------------------------------------------------------
 
 export const TABLE_TAGS = ["table", "thead", "tbody", "tfoot", "tr", "th", "td", "caption", "colgroup", "col"];
-/** The only tags a contributor can introduce. `details` takes only `open`, table tags only `ALLOWED_TABLE_ATTRS`. */
-export const ALLOWED_NEW_TAGS = ["details", "summary", "br", ...TABLE_TAGS];
+/** Inline tags with no markdown equivalent. They take no attributes (`abbr` and `span` below take one each). */
+export const INLINE_TAGS = ["sup", "sub", "ruby", "rt", "rp", "u", "mark", "kbd", "small", "s", "del", "ins", "wbr"];
+/**
+ * The only tags a contributor can introduce. `details` takes only `open`, table tags only `ALLOWED_TABLE_ATTRS`,
+ * `abbr` only a plain `title` and `span` only `class` names.
+ */
+export const ALLOWED_NEW_TAGS = ["details", "summary", "br", ...TABLE_TAGS, ...INLINE_TAGS, "abbr", "span"];
 export const ALLOWED_TABLE_ATTRS = ["colspan", "rowspan", "align"];
 
 const TABLE_ATTR_VALUES = {
@@ -305,6 +311,15 @@ const TABLE_ATTR_VALUES = {
   rowspan: /^\d{1,3}$/,
   align: /^(?:left|right|center|justify)$/i,
 };
+// What each tag with attributes accepts: attribute name -> value check and the hint shown when it fails.
+const TABLE_ATTR_RULES = Object.fromEntries(
+  Object.entries(TABLE_ATTR_VALUES).map(([name, re]) => [name, { re, hint: "a number for colspan and rowspan, left/right/center for align" }]),
+);
+const ATTR_RULES = {
+  abbr: { title: { re: /^[^<>"'`{}&\r\n]{1,100}$/, hint: "plain text of at most 100 characters without quotes, & or brackets" } },
+  span: { class: { re: /^[A-Za-z][\w-]{0,30}(?: [A-Za-z][\w-]{0,30}){0,3}$/, hint: "up to four class names of letters, digits, - and _" } },
+};
+for (const tag of TABLE_TAGS) ATTR_RULES[tag] = TABLE_ATTR_RULES;
 const AUTOLINK = /<https?:\/\/[^\s<>]*>/y;
 const ATTR = /\s*([A-Za-z_:][\w:.-]*)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'=<>`]+)))?/y;
 
@@ -401,20 +416,19 @@ function newTagProblem(tag) {
   if (unterminated) return `The new ${shown} tag is never closed with ">".`;
   if (!ALLOWED_NEW_TAGS.includes(tag.name)) {
     const risky = /(?:^|\s)on\w+\s*=|(?:^|\s)style\s*=|javascript:/i.test(tag.attrs);
-    return `${shown} cannot be added (you may add <details>, <summary>, <br> and table tags)${risky ? "; event handlers, style and javascript: are never allowed" : ""}.`;
+    return `${shown} cannot be added (you may add <details>, <summary>, <br>, table tags and inline tags such as <sup>, <sub>, <u> and <span class="...">)${risky ? "; event handlers, style and javascript: are never allowed" : ""}.`;
   }
   if (tag.name === "details") {
     return attrs === "" || /^open$/i.test(attrs) ? null : "<details> can only have the open attribute.";
   }
-  if (tag.name === "summary" || tag.name === "br") {
-    return attrs === "" ? null : `${shown} cannot have attributes.`;
-  }
+  const rules = ATTR_RULES[tag.name];
+  if (!rules) return attrs === "" ? null : `${shown} cannot have attributes.`;
   const list = parseAttrs(attrs);
   if (!list) return `The attributes of the new ${shown} tag are not plain attributes.`;
   for (const { name, value } of list) {
-    const re = TABLE_ATTR_VALUES[name];
-    if (!re) return `${shown} cannot have the attribute "${name}" (only colspan, rowspan and align).`;
-    if (value === null || !re.test(value)) return `The value of "${name}" on ${shown} must be simple (a number for colspan and rowspan, left/right/center for align).`;
+    const rule = rules[name];
+    if (!rule) return `${shown} cannot have the attribute "${name}" (only ${Object.keys(rules).join(", ")}).`;
+    if (value === null || !rule.re.test(value)) return `The value of "${name}" on ${shown} must be simple (${rule.hint}).`;
   }
   return null;
 }

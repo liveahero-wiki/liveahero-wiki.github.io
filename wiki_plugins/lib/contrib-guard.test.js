@@ -399,7 +399,10 @@ test("HTML: allowed new tags", () => {
   passes("A\n", "<details open>\n<summary>More</summary>\nx\n</details>\n");
   passes("", "<table>\n<thead><tr><th>A</th><th colspan=2>B</th></tr></thead>\n<tbody><tr><td align=\"center\">1</td><td rowspan=\"2\" align=right>2</td></tr></tbody>\n<caption>c</caption><colgroup><col></colgroup><tfoot><tr><td>x</td></tr></tfoot></table>");
   passes("", "<TABLE><TR><TD>x</TD></TR></TABLE>");
-  assert.ok(["details", "summary", "br", "table", "td", "col", "colgroup"].every((t) => ALLOWED_NEW_TAGS.includes(t)));
+  assert.ok(["details", "summary", "br", "table", "td", "col", "colgroup", "sup", "sub", "ruby", "abbr", "span"].every((t) => ALLOWED_NEW_TAGS.includes(t)));
+  passes("A\n", "2<sup>nd</sup> H<sub>2</sub>O <u>u</u> <mark>m</mark> <kbd>Ctrl</kbd> <small>s</small> <s>s</s> <del>d</del> <ins>i</ins> a<wbr>b <SUP>x</SUP>\n");
+  passes("A\n", "<ruby>漢<rp>(</rp><rt>かん</rt><rp>)</rp></ruby>\n");
+  passes("A\n", '<abbr title="Damage over time">DoT</abbr> <span>x</span> <span class="masked">x</span> <span class="text-red big_1">x</span>\n');
   // autolinks and ordinary angle brackets are not tags
   passes("", "See <https://example.com/a?b=1&c=2> and <http://x.y> for 1 < 2, a <- b, <3, and 5 > 4.\n");
   // closing tags alone are not checked
@@ -440,6 +443,25 @@ test("HTML: new tags that are rejected", () => {
     '<td colspan="2" onmouseover="x">': /cannot have the attribute "onmouseover"/,
     '<th align="javascript:x">': /must be simple/,
     "<td colspan>": /must be simple/,
+    '<sup class="x">': /cannot have attributes/,
+    '<sub onclick="x()">': /cannot have attributes/,
+    '<u style="color:red">': /cannot have attributes/,
+    '<ruby id="a">': /cannot have attributes/,
+    '<abbr class="x">': /cannot have the attribute "class" \(only title\)/,
+    '<abbr title="a<b">': /must be simple/,
+    '<abbr title=\'it\'s\'>': /must be simple|not plain|cannot have the attribute/,
+    "<abbr title>": /must be simple/,
+    '<span style="color:red">': /cannot have the attribute "style"/,
+    '<span onclick="x()">': /cannot have the attribute "onclick"/,
+    '<span id="x">': /cannot have the attribute "id"/,
+    '<span class="a" style="b:c">': /cannot have the attribute "style"/,
+    '<span class="a;b">': /must be simple/,
+    '<span class="1a">': /must be simple/,
+    '<span class="">': /must be simple/,
+    '<span class="a b c d e">': /must be simple/,
+    "<span class>": /must be simple/,
+    "<font color=red>": /<font> cannot be added/,
+    "<center>": /<center> cannot be added/,
     "<table border=1>": /cannot have the attribute "border"/,
     '<td colspan="1">x</td><td colspan="1234">': /must be simple/,
     "<SCRIPT>x</SCRIPT>": /<script>/,
@@ -453,6 +475,12 @@ test("HTML: new tags that are rejected", () => {
     assert.ok(r.violations.every((v) => v.code === "html-not-allowed"), html);
     assert.match(r.violations[0].message, message, html);
   }
+});
+
+test("HTML: an abbr title cannot carry a Liquid token", () => {
+  const r = check("A\n", 'A\n<abbr title="{{ x }}">y</abbr>\n');
+  assert.equal(r.ok, false);
+  assert.ok(r.violations.some((v) => v.code === "html-not-allowed" && /must be simple/.test(v.message)));
 });
 
 test("HTML: existing tags may stay or go, nothing new may appear", () => {
