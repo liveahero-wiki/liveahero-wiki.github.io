@@ -12,12 +12,25 @@
 <figcaption>{{ include.title }} · <a href="{{ url }}" target="_blank" rel="noopener">{% case lang %}{% when "ja" %}ランキングを全画面で開く{% when "zh-tw" %}在新分頁開啟完整排行榜{% else %}Open the full explorer{% endcase %}</a></figcaption>
 </figure>
 <script>
-window.surveyRankingResize || (window.surveyRankingResize = addEventListener("message", (event) => {
-  if (!event.data || event.data.type !== "ranking-resize") return;
-  for (const frame of document.querySelectorAll("iframe.survey-ranking")) {
-    if (frame.contentWindow === event.source && event.origin === frame.dataset.origin) {
-      frame.style.height = `${Math.max(event.data.height, 320)}px`; // the loading state is one line tall
+// The explorer is a separate document, so it cannot see this site's light/dark toggle (data-theme on <html>);
+// post it the theme on load and whenever the toggle changes. No data-theme = follow the OS, which it does itself.
+window.surveyRankingResize || (window.surveyRankingResize = (() => {
+  const frames = () => document.querySelectorAll("iframe.survey-ranking");
+  const postTheme = window.surveyRankingTheme = (frame) => frame.contentWindow?.postMessage(
+    { type: "ranking-theme", theme: document.documentElement.dataset.theme || null }, frame.dataset.origin);
+  addEventListener("message", (event) => {
+    if (!event.data || event.data.type !== "ranking-resize") return;
+    for (const frame of frames()) {
+      if (frame.contentWindow === event.source && event.origin === frame.dataset.origin) {
+        frame.style.height = `${Math.max(event.data.height, 320)}px`; // the loading state is one line tall
+      }
     }
-  }
-}) || true);
+  });
+  new MutationObserver(() => frames().forEach(postTheme))
+    .observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  return true;
+})());
+// The listener above is page-wide, so each include only wires its own frame's load.
+document.currentScript.previousElementSibling.querySelector("iframe.survey-ranking")
+  .addEventListener("load", (event) => window.surveyRankingTheme(event.target));
 </script>

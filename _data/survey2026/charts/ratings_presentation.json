@@ -1,8 +1,8 @@
 {
  "section": "ratings",
- "height": 270,
+ "height": 260,
  "en": {
-  "title": "Characters, voice and illustration",
+  "title": "Characters and voice acting",
   "options": {
    "tooltip": {
     "confine": true,
@@ -42,8 +42,7 @@
     "type": "category",
     "data": [
      "Characters design\n(n=374, avg 4.70)",
-     "Voice acting\n(n=374, avg 4.60)",
-     "Change of illustrator\n(n=374, avg 4.12)"
+     "Voice acting\n(n=374, avg 4.60)"
     ],
     "axisLabel": {
      "width": 200,
@@ -71,113 +70,7 @@
        "label": {
         "show": false
        }
-      },
-      {
-       "value": 0.5,
-       "label": {
-        "show": false
-       }
       }
-     ],
-     "label": {
-      "show": true,
-      "formatter": "{c}%",
-      "position": "inside",
-      "color": "#ffffff"
-     },
-     "emphasis": {
-      "focus": "series"
-     },
-     "barMaxWidth": 36,
-     "stack": "total",
-     "itemStyle": {
-      "borderColor": "transparent",
-      "borderWidth": 1,
-      "color": "#c9403f"
-     }
-    },
-    {
-     "name": "2",
-     "type": "bar",
-     "data": [
-      {
-       "value": 0.0,
-       "label": {
-        "show": false
-       }
-      },
-      {
-       "value": 0.3,
-       "label": {
-        "show": false
-       }
-      },
-      {
-       "value": 0.8,
-       "label": {
-        "show": false
-       }
-      }
-     ],
-     "label": {
-      "show": true,
-      "formatter": "{c}%",
-      "position": "inside",
-      "color": "#0b0b0b"
-     },
-     "emphasis": {
-      "focus": "series"
-     },
-     "barMaxWidth": 36,
-     "stack": "total",
-     "itemStyle": {
-      "borderColor": "transparent",
-      "borderWidth": 1,
-      "color": "#eda3a0"
-     }
-    },
-    {
-     "name": "3",
-     "type": "bar",
-     "data": [
-      {
-       "value": 1.3,
-       "label": {
-        "show": false
-       }
-      },
-      {
-       "value": 3.5,
-       "label": {
-        "show": false
-       }
-      },
-      22.5
-     ],
-     "label": {
-      "show": true,
-      "formatter": "{c}%",
-      "position": "inside",
-      "color": "#0b0b0b"
-     },
-     "emphasis": {
-      "focus": "series"
-     },
-     "barMaxWidth": 36,
-     "stack": "total",
-     "itemStyle": {
-      "borderColor": "transparent",
-      "borderWidth": 1,
-      "color": "#a9a8a0"
-     }
-    },
-    {
-     "name": "4",
-     "type": "bar",
-     "data": [
-      27.5,
-      32.4,
-      38.2
      ],
      "label": {
       "show": true,
@@ -197,12 +90,55 @@
      }
     },
     {
-     "name": "5",
+     "name": "2",
      "type": "bar",
      "data": [
-      71.1,
-      63.9,
-      38.0
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.3,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#5598e7"
+     }
+    },
+    {
+     "name": "3",
+     "type": "bar",
+     "data": [
+      {
+       "value": 1.3,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 3.5,
+       "label": {
+        "show": false
+       }
+      }
      ],
      "label": {
       "show": true,
@@ -218,7 +154,55 @@
      "itemStyle": {
       "borderColor": "transparent",
       "borderWidth": 1,
-      "color": "#256abf"
+      "color": "#2a78d6"
+     }
+    },
+    {
+     "name": "4",
+     "type": "bar",
+     "data": [
+      27.5,
+      32.4
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#1c5cab"
+     }
+    },
+    {
+     "name": "5",
+     "type": "bar",
+     "data": [
+      71.1,
+      63.9
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#104281"
      }
     }
    ]
@@ -226,7 +210,7 @@
   "note": "1 = very bad, 5 = very good."
  },
  "ja": {
-  "title": "キャラクター・ボイス・イラスト",
+  "title": "キャラクターとボイス",
   "options": {
    "tooltip": {
     "confine": true,
@@ -266,8 +250,7 @@
     "type": "category",
     "data": [
      "キャラクターデザイン\n(n=374, 平均 4.70)",
-     "声優\n(n=374, 平均 4.60)",
-     "イラストレーターの変更\n(n=374, 平均 4.12)"
+     "声優\n(n=374, 平均 4.60)"
     ],
     "axisLabel": {
      "width": 200,
@@ -295,113 +278,7 @@
        "label": {
         "show": false
        }
-      },
-      {
-       "value": 0.5,
-       "label": {
-        "show": false
-       }
       }
-     ],
-     "label": {
-      "show": true,
-      "formatter": "{c}%",
-      "position": "inside",
-      "color": "#ffffff"
-     },
-     "emphasis": {
-      "focus": "series"
-     },
-     "barMaxWidth": 36,
-     "stack": "total",
-     "itemStyle": {
-      "borderColor": "transparent",
-      "borderWidth": 1,
-      "color": "#c9403f"
-     }
-    },
-    {
-     "name": "2",
-     "type": "bar",
-     "data": [
-      {
-       "value": 0.0,
-       "label": {
-        "show": false
-       }
-      },
-      {
-       "value": 0.3,
-       "label": {
-        "show": false
-       }
-      },
-      {
-       "value": 0.8,
-       "label": {
-        "show": false
-       }
-      }
-     ],
-     "label": {
-      "show": true,
-      "formatter": "{c}%",
-      "position": "inside",
-      "color": "#0b0b0b"
-     },
-     "emphasis": {
-      "focus": "series"
-     },
-     "barMaxWidth": 36,
-     "stack": "total",
-     "itemStyle": {
-      "borderColor": "transparent",
-      "borderWidth": 1,
-      "color": "#eda3a0"
-     }
-    },
-    {
-     "name": "3",
-     "type": "bar",
-     "data": [
-      {
-       "value": 1.3,
-       "label": {
-        "show": false
-       }
-      },
-      {
-       "value": 3.5,
-       "label": {
-        "show": false
-       }
-      },
-      22.5
-     ],
-     "label": {
-      "show": true,
-      "formatter": "{c}%",
-      "position": "inside",
-      "color": "#0b0b0b"
-     },
-     "emphasis": {
-      "focus": "series"
-     },
-     "barMaxWidth": 36,
-     "stack": "total",
-     "itemStyle": {
-      "borderColor": "transparent",
-      "borderWidth": 1,
-      "color": "#a9a8a0"
-     }
-    },
-    {
-     "name": "4",
-     "type": "bar",
-     "data": [
-      27.5,
-      32.4,
-      38.2
      ],
      "label": {
       "show": true,
@@ -421,12 +298,55 @@
      }
     },
     {
-     "name": "5",
+     "name": "2",
      "type": "bar",
      "data": [
-      71.1,
-      63.9,
-      38.0
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.3,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#5598e7"
+     }
+    },
+    {
+     "name": "3",
+     "type": "bar",
+     "data": [
+      {
+       "value": 1.3,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 3.5,
+       "label": {
+        "show": false
+       }
+      }
      ],
      "label": {
       "show": true,
@@ -442,7 +362,55 @@
      "itemStyle": {
       "borderColor": "transparent",
       "borderWidth": 1,
-      "color": "#256abf"
+      "color": "#2a78d6"
+     }
+    },
+    {
+     "name": "4",
+     "type": "bar",
+     "data": [
+      27.5,
+      32.4
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#1c5cab"
+     }
+    },
+    {
+     "name": "5",
+     "type": "bar",
+     "data": [
+      71.1,
+      63.9
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#104281"
      }
     }
    ]
@@ -450,7 +418,7 @@
   "note": "1 = とても悪い、5 = とても良い。"
  },
  "zh-tw": {
-  "title": "角色、配音與插畫",
+  "title": "角色與配音",
   "options": {
    "tooltip": {
     "confine": true,
@@ -490,8 +458,7 @@
     "type": "category",
     "data": [
      "角色設計\n(n=374, 平均 4.70)",
-     "聲優\n(n=374, 平均 4.60)",
-     "畫師變更\n(n=374, 平均 4.12)"
+     "聲優\n(n=374, 平均 4.60)"
     ],
     "axisLabel": {
      "width": 200,
@@ -519,113 +486,7 @@
        "label": {
         "show": false
        }
-      },
-      {
-       "value": 0.5,
-       "label": {
-        "show": false
-       }
       }
-     ],
-     "label": {
-      "show": true,
-      "formatter": "{c}%",
-      "position": "inside",
-      "color": "#ffffff"
-     },
-     "emphasis": {
-      "focus": "series"
-     },
-     "barMaxWidth": 36,
-     "stack": "total",
-     "itemStyle": {
-      "borderColor": "transparent",
-      "borderWidth": 1,
-      "color": "#c9403f"
-     }
-    },
-    {
-     "name": "2",
-     "type": "bar",
-     "data": [
-      {
-       "value": 0.0,
-       "label": {
-        "show": false
-       }
-      },
-      {
-       "value": 0.3,
-       "label": {
-        "show": false
-       }
-      },
-      {
-       "value": 0.8,
-       "label": {
-        "show": false
-       }
-      }
-     ],
-     "label": {
-      "show": true,
-      "formatter": "{c}%",
-      "position": "inside",
-      "color": "#0b0b0b"
-     },
-     "emphasis": {
-      "focus": "series"
-     },
-     "barMaxWidth": 36,
-     "stack": "total",
-     "itemStyle": {
-      "borderColor": "transparent",
-      "borderWidth": 1,
-      "color": "#eda3a0"
-     }
-    },
-    {
-     "name": "3",
-     "type": "bar",
-     "data": [
-      {
-       "value": 1.3,
-       "label": {
-        "show": false
-       }
-      },
-      {
-       "value": 3.5,
-       "label": {
-        "show": false
-       }
-      },
-      22.5
-     ],
-     "label": {
-      "show": true,
-      "formatter": "{c}%",
-      "position": "inside",
-      "color": "#0b0b0b"
-     },
-     "emphasis": {
-      "focus": "series"
-     },
-     "barMaxWidth": 36,
-     "stack": "total",
-     "itemStyle": {
-      "borderColor": "transparent",
-      "borderWidth": 1,
-      "color": "#a9a8a0"
-     }
-    },
-    {
-     "name": "4",
-     "type": "bar",
-     "data": [
-      27.5,
-      32.4,
-      38.2
      ],
      "label": {
       "show": true,
@@ -645,12 +506,55 @@
      }
     },
     {
-     "name": "5",
+     "name": "2",
      "type": "bar",
      "data": [
-      71.1,
-      63.9,
-      38.0
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.3,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#5598e7"
+     }
+    },
+    {
+     "name": "3",
+     "type": "bar",
+     "data": [
+      {
+       "value": 1.3,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 3.5,
+       "label": {
+        "show": false
+       }
+      }
      ],
      "label": {
       "show": true,
@@ -666,7 +570,55 @@
      "itemStyle": {
       "borderColor": "transparent",
       "borderWidth": 1,
-      "color": "#256abf"
+      "color": "#2a78d6"
+     }
+    },
+    {
+     "name": "4",
+     "type": "bar",
+     "data": [
+      27.5,
+      32.4
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#1c5cab"
+     }
+    },
+    {
+     "name": "5",
+     "type": "bar",
+     "data": [
+      71.1,
+      63.9
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#104281"
      }
     }
    ]

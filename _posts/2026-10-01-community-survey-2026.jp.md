@@ -151,6 +151,8 @@ eleventyExcludeFromCollections: true
 
 {% include survey-chart.html id="ratings_presentation" %}
 
+{% include survey-chart.html id="ratings_illustrator" %}
+
 {% include survey-chart.html id="ratings_story" %}
 
 {% include survey-chart.html id="ratings_gameplay" %}

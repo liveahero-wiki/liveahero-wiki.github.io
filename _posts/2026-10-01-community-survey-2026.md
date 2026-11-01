@@ -27,12 +27,15 @@ eleventyExcludeFromCollections: true
 # Foreword
 
 We received **{{ f.respondents }}** responses this year, compared with {{ f.respondents_prev }} last year.
+I had been running this survey for the past few years, and this is the first time where the number of respondents
+is less than the previous year, and by such a huge margin.
 
-<!-- TODO: thanks, what changed in the survey this year (mobs, kaibutsu, best CP, wiki questions, zh-tw report). -->
+Nonetheless, I still want to thank everyone who took the time to fill up the survey. I know it is not an easy task, and I plan to cut down certain questions that are less valuable.
 
 ## Disclaimer on Limitation of the Survey
 
-<!-- TODO: carry over from 2025, update numbers. -->
+Once again, the demographics percentage of this year's respondents is very different from past few years, in that the percentage of China and Japanese respondents are a lot less than previous year.
+This means that many "2025 vs 2026" comparsions do not really tell if there is a sentiment change for the same group of people, because the underlying group of respondents are quite different. Take the comparison with a pinch of salt.
 
 # Respondent Profile
 
@@ -42,13 +45,15 @@ We received **{{ f.respondents }}** responses this year, compared with {{ f.resp
 
 {% include survey-chart.html id="yoy_source" %}
 
-<!-- TODO -->
+Discord and Reddit covered more than half of the respondent source, Reddit's number nearly doubled from the previous year!
+
+Compared to 2025, the biggest loss were traffic from this wiki, Bahamut (Taiwan game forum), X/Twitter and Weibo (China). I didn't dare to post on Zawazawa again, so that is another zero. This leads to significant decrease in China, Japan (and to some extend, Taiwan) respondents this year.
 
 ## Age
 
 {% include survey-chart.html id="age" %}
 
-The median age is {{ f.age_median }}.
+The median age is {{ f.age_median }}. There was one respondent from Philipines that claimed to be 6 years old.
 
 {% include survey-chart.html id="age_female" %}
 
@@ -76,7 +81,9 @@ The median age is {{ f.age_median }}.
 
 {% include survey-chart.html id="country" %}
 
-<!-- TODO: Japan share fell from {{ f.yoy["2025"].japan_pct }}% to {{ f.yoy["2026"].japan_pct }}%. -->
+Japan share fell from {{ f.yoy["2025"].japan_pct }}% to {{ f.yoy["2026"].japan_pct }}%.
+China share fell from {{ f.yoy["2025"].china_pct }}% to {{ f.yoy["2026"].china_pct }}%.
+Taiwan share fell from {{ f.yoy["2025"].taiwan_pct }}% to {{ f.yoy["2026"].taiwan_pct }}%.
 
 ## Japanese proficiency
 
@@ -106,6 +113,8 @@ The median age is {{ f.age_median }}.
 
 {% include survey-chart.html id="paying" %}
 
+More than half of the respondents at least spent money in-game once in the entire journye.
+
 ### Definition of Spending level
 
 |Grade|Description|
@@ -119,11 +128,19 @@ The median age is {{ f.age_median }}.
 
 {% include survey-chart.html id="yoy_paying" %}
 
+Compared to 2025, the number of free players increases slightly.
+
+Among paying players, XL (biggest spender) and S tier (only spent in new year/anniversary) have some decrease, while XS tier saw the biggest increase. It is likely that these people went to buy the new web shop value pack.
+
 {% include survey-chart.html id="money_items" %}
+
+It seems that the attractiveness of the new year grab bag and 5th anniversary hero selection pack have decreased since previous survey run.
 
 {% include survey-chart.html id="paying_by_region" %}
 
 {% include survey-chart.html id="paying_east_asia" %}
+
+East Asia have the biggest percentage of paying players, with Taiwan being the top in this survey. However, because this survey has very little Japanese respondents, so we can't be certain that the percentage is right for the actual Japan player population.
 
 {% include survey-chart.html id="paying_by_gender" %}
 
@@ -133,7 +150,11 @@ The median age is {{ f.age_median }}.
 
 {% include survey-chart.html id="shop_by_platform" %}
 
+LW only started selling in-game items on web shop this year, a result of [Epic Games v. Google](https://en.wikipedia.org/wiki/Epic_Games_v._Google) lawsuit that forces app stores to allow game developers to accept payment outside of the app store, so that the game developers can pay less transaction fee.
+
 {% include survey-chart.html id="physical_by_paying" %}
+
+As expected, respondents that bought in-game items are more likely to also buy physical merchandises, but there are also some free players that buy physical merchandises.
 
 ## Gameplay Style
 
@@ -149,11 +170,23 @@ The median age is {{ f.age_median }}.
 
 {% include survey-chart.html id="hdq_sss" %}
 
+46% of the players are able to complete 90~100% of the SS rank. The percentage drops to 34.2% for SSS rank.
+
 {% include survey-chart.html id="hdq_by_paying" %}
+
+Players who spent more money in this game have higher chance of being able to complete SS/SSS rank quests,
+but there are also many paying players that struggle in these hard game content.
 
 ## Game Elements' Rating
 
 {% include survey-chart.html id="ratings_presentation" %}
+
+For a game whose main selling point is attractive characters, it is no surprise that majority of the respondents
+gave a very high rating for character design and voice acting.
+
+{% include survey-chart.html id="ratings_illustrator" %}
+
+The respondents also gave very high rating for how LifeWonders handled change of illustrators, with only 1.3% of the respondents who voiced dissatisfaction in this question (rating = 1~2). I think this is a good news for the company and the playerbase, as that means a character do not need to suffer from reduced story appearance due to illustrator issues.
 
 {% include survey-chart.html id="ratings_story" %}
 
@@ -200,7 +233,13 @@ Every ranking below can be filtered by country, region, age, gender and playing 
 
 {% include survey-ranking.html query="survey=lah&y=2026" title="Character popularity explorer" %}
 
-<!-- TODO: insights by segment and year over year, from digest.md ("Segment ..." and "biggest approval changes"). Link each one to its explorer view. -->
+| Male furry | Approval | Male Human | Approval | Female/Other | Approval |
+|-|-|-|-|-|-|
+|{% chara_link Pubraseer %}| 65.3% |{% chara_link Akashi %}  | 37.7% |{% chara_link Melide %}   |23.3%|
+|{% chara_link Barrel %}   | 59.1% |{% chara_link Astar %}   | 36.7%|{% chara_link Melide %}    |19.4%|
+|{% chara_link Monomasa %} | 53.3% |{% chara_link Ruchbath %}| 35.5% |{% chara_link Sensettia %}|17.1%|
+|{% chara_link Ryekie %}   | 51.4% |{% chara_link ⇌Akashi %}| 32.3% |{% chara_link Sui %}       |16.6%|
+|{% chara_link Sterio %}   | 49.4% |{% chara_link Roudin %}  | 28.5% |{% chara_link Flamier% }  |15.4%|
 
 {% include survey-chart.html id="top10_size" %}
 

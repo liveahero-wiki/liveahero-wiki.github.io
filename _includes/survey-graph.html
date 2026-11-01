@@ -8,7 +8,7 @@
 {%- assign dim = include.path | image_dimension -%}
 <figure class="survey-graph">
 <object type="image/svg+xml" data="{{ include.path }}" aria-label="{{ include.title | xml_escape }}"
-  {% if dim %}style="max-width: {{ dim[0] }}px; aspect-ratio: {{ dim[0] }} / {{ dim[1] }}"{% endif %}>
+  {% if dim %}style="max-width: min(100%, {{ dim[0] }}px); aspect-ratio: {{ dim[0] }} / {{ dim[1] }}"{% endif %}>
 {% include image.html path=include.path title=include.title %}
 </object>
 {% if include.title %}<figcaption>{{ include.title }}</figcaption>{% endif %}
