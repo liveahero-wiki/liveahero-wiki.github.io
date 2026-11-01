@@ -52,7 +52,7 @@ async function eachLimited<T>(items: T[], fn: (item: T) => Promise<void>): Promi
 }
 
 /** Black or white, whichever reads better on `hex`. */
-function textOn(hex: string): string {
+export function textOn(hex: string): string {
   const n = parseInt(hex.slice(1), 16)
   const lum = 0.299 * (n >> 16) + 0.587 * ((n >> 8) & 255) + 0.114 * (n & 255)
   return lum > 150 ? '#111' : '#fff'

@@ -30,10 +30,8 @@
 .lah-tm-tiers { border: 1px solid var(--tm-line); border-radius: 8px; overflow: hidden; }
 .lah-tm-tier { display: flex; align-items: stretch; border-bottom: 1px solid var(--tm-line); background: var(--tm-soft); }
 .lah-tm-tier:last-child { border-bottom: 0; }
-.lah-tm-label { position: relative; flex: 0 0 110px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 6px; }
-.lah-tm-label-name { width: 100%; padding: 2px; font-size: 1.15em; font-weight: 700; text-align: center; color: #111; background: transparent; border: 1px solid transparent; border-radius: 4px; }
-.lah-tm-label-name:hover, .lah-tm-label-name:focus { background: rgba(255, 255, 255, .55); border-color: rgba(0, 0, 0, .3); }
-.lah-tm-color { width: 28px; height: 20px; padding: 0; border: 1px solid rgba(0, 0, 0, .4); border-radius: 4px; background: none; cursor: pointer; }
+.lah-tm-label { flex: 0 0 110px; display: flex; align-items: center; justify-content: center; box-sizing: border-box; padding: 6px; font-size: 1.15em; font-weight: 700; line-height: 1.2; text-align: center; overflow-wrap: anywhere; white-space: pre-wrap; color: #111; cursor: text; }
+.lah-tm-label:focus { outline: 2px solid var(--tm-accent); outline-offset: -2px; }
 .lah-tm-zone, .lah-tm-pool { display: flex; flex-wrap: wrap; align-content: flex-start; gap: 4px; padding: 6px; }
 .lah-tm-zone { flex: 1 1 auto; min-width: 0; min-height: calc(var(--tm-tile) + 12px); }
 .lah-tm-zone.is-over, .lah-tm-pool.is-over { background: color-mix(in srgb, var(--tm-accent) 15%, transparent); }
@@ -42,6 +40,23 @@
 .lah-tm-mini { padding: 1px 7px; font-size: .8em; color: var(--text); background: var(--bg); border: 1px solid var(--tm-line); border-radius: 4px; cursor: pointer; }
 .lah-tm-mini:disabled { opacity: .35; cursor: default; }
 .lah-tm-mini.is-place { color: #fff; background: var(--tm-accent); border-color: var(--tm-accent); }
+.lah-tm-gear { display: flex; align-items: center; justify-content: center; padding: 4px; }
+.lah-tm-btn.is-danger:hover:not(:disabled) { border-color: #d04a4a; color: #d04a4a; }
+
+/* Tier settings popover: top layer (the tier list clips its overflow), anchored under the gear and flipped when it does not fit. */
+.lah-tm-pop { position: fixed; inset: auto; margin: 0; padding: 10px; box-sizing: border-box; width: 232px; max-width: calc(100vw - 16px); color: var(--text); background: var(--bg); border: 1px solid var(--tm-line); border-radius: 8px; box-shadow: 0 4px 14px rgba(0, 0, 0, .3);
+  top: calc(anchor(bottom) + 4px); right: max(8px, anchor(right)); position-try-fallbacks: flip-block; }
+.lah-tm-pop:where(:popover-open, .\:popover-open) { display: flex; flex-direction: column; gap: 10px; }
+.lah-tm-pop-field { display: flex; flex-direction: column; gap: 4px; font-size: .85em; font-weight: 600; }
+.lah-tm-pop-field input { padding: 5px 8px; font-weight: 400; color: var(--text); background: var(--bg); border: 1px solid var(--tm-line); border-radius: 6px; }
+.lah-tm-swatches { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.lah-tm-swatch { aspect-ratio: 1; padding: 0; border: 2px solid rgba(0, 0, 0, .25); border-radius: 6px; cursor: pointer; }
+.lah-tm-swatch:hover { border-color: var(--tm-line); transform: scale(1.08); }
+.lah-tm-swatch[aria-pressed="true"] { border-color: var(--text); box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--tm-accent); }
+.lah-tm-custom { display: flex; align-items: center; gap: 8px; font-weight: 400; cursor: pointer; }
+.lah-tm-pop-field input[type="color"] { width: 36px; height: 24px; padding: 0; border-radius: 4px; cursor: pointer; }
+.lah-tm-pop-actions { display: flex; flex-direction: column; gap: 6px; }
+.lah-tm-pop-actions .lah-tm-btn { text-align: left; }
 
 /* characters */
 .lah-tm-tile { position: relative; flex: 0 0 auto; width: var(--tm-tile); height: var(--tm-tile); padding: 0; overflow: hidden; background: #333; border: 2px solid transparent; border-radius: 8px; cursor: grab; user-select: none; -webkit-user-select: none; touch-action: manipulation; }

@@ -1,15 +1,15 @@
 // The Tier Maker page: a title, the tier rows, and the pool of characters not yet ranked (with the variant / mob toggles).
 // The tier list is autosaved to localStorage and can be exported to a PNG that carries it (export.ts, pngMeta.ts).
 
-import { Component, Fragment, type ComponentChildren } from 'preact'
-import { useEffect, useMemo, useRef, useState } from 'preact/hooks'
+import { Component, Fragment, type ComponentChildren, type JSX } from 'preact'
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'preact/hooks'
 import { loadRoster, SITE } from '../cms-plugin/roster.ts'
 import { onLangChange, pageLang, type Lang } from '../shared/lang.ts'
 import { buildCandidates, candidateName, DEFAULT_FILTER, filterCandidates, type Candidate, type Filter } from './candidates.ts'
 import { POOL_ZONE, useDnd, type DropTarget } from './dnd.ts'
-import { download, exportPng, fileName, iconUrl } from './export.ts'
+import { download, exportPng, fileName, iconUrl, textOn } from './export.ts'
 import {
-  addTier, defaultList, isPristine, MAX_TIERS, MAX_TIER_NAME, MAX_TITLE, moveTier, placedKeys, placeItem, removeItem, removeTier, sanitize, setTitle,
+  addTier, defaultList, isPristine, MAX_TIERS, MAX_TIER_NAME, MAX_TITLE, moveTier, normalizeTierName, PALETTE, placedKeys, placeItem, removeItem, removeTier, sanitize, setTitle,
   updateTier, type Tier, type TierList,
 } from './model.ts'
 import { MAX_PNG_BYTES, readTierList } from './pngMeta.ts'
@@ -371,21 +371,133 @@ interface TierRowProps {
   onRemove: () => void
 }
 
+/**
+ * The tier's name, editable in place. Plain text only: formatting commands, drops and pastes are blocked, and `sync` flattens
+ * anything that still gets in. The text is written to the DOM by hand: re-rendering a text child would reset the caret while typing.
+ */
+function TierLabel({ name, color, onName }: { name: string; color: string; onName: (name: string) => void }) {
+  const ref = useRef<HTMLDivElement>(null)
+  useLayoutEffect(() => {
+    const el = ref.current
+    if (el && el.textContent !== name) el.textContent = name
+  }, [name])
+  const sync = (el: HTMLElement) => {
+    const text = normalizeTierName(el.textContent ?? '')
+    if (el.childElementCount || el.textContent !== text) {
+      el.textContent = text
+      const sel = getSelection()
+      sel?.selectAllChildren(el)
+      sel?.collapseToEnd()
+    }
+    onName(text)
+  }
+  return (
+    <div
+      ref={ref}
+      class="lah-tm-label"
+      style={{ background: color, color: textOn(color) }}
+      contentEditable="true"
+      spellcheck={false}
+      role="textbox"
+      aria-multiline="false"
+      aria-label="Tier name"
+      onKeyDown={(e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault()
+          e.currentTarget.blur()
+        }
+      }}
+      onBeforeInput={(e) => {
+        if (e.inputType.startsWith('format')) e.preventDefault()
+      }}
+      onDrop={(e) => e.preventDefault()}
+      onPaste={(e) => {
+        e.preventDefault()
+        const range = getSelection()?.getRangeAt(0)
+        if (!range) return
+        range.deleteContents()
+        range.insertNode(document.createTextNode(e.clipboardData?.getData('text/plain') ?? ''))
+        range.collapse(false)
+        sync(e.currentTarget)
+      }}
+      onInput={(e) => sync(e.currentTarget)}
+    />
+  )
+}
+
+function TierSettings({ tier, first, last, canRemove, onChange, onMove, onRemove }: Pick<TierRowProps, 'tier' | 'first' | 'last' | 'canRemove' | 'onChange' | 'onMove' | 'onRemove'>) {
+  const popId = `lah-tm-pop-${tier.id}`
+  const anchorName = `--${popId}`
+  const pop = useRef<HTMLDivElement>(null)
+  const reopen = useRef<HTMLElement | null>(null)
+  // Moving a row re-inserts its DOM node, which closes the popover; reopen it so the tier can be moved again, and put focus back.
+  useLayoutEffect(() => {
+    const el = pop.current
+    const from = reopen.current
+    if (!from || !el) return
+    reopen.current = null
+    if (!el.matches(':popover-open')) el.showPopover()
+    const next = from.isConnected && !(from as HTMLButtonElement).disabled ? from : el.querySelector<HTMLElement>('.lah-tm-pop-actions button:not(:disabled)')
+    next?.focus()
+  })
+  const move = (d: -1 | 1, e: JSX.TargetedMouseEvent<HTMLButtonElement>) => {
+    reopen.current = e.currentTarget
+    onMove(d)
+  }
+  return (
+    <>
+      <button type="button" class="lah-tm-mini lah-tm-gear" popovertarget={popId} style={{ anchorName } as JSX.CSSProperties} aria-label="Tier settings" title="Tier settings">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="3" />
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+        </svg>
+      </button>
+      <div id={popId} ref={pop} popover="auto" class="lah-tm-pop" style={{ positionAnchor: anchorName } as JSX.CSSProperties}>
+        <label class="lah-tm-pop-field">
+          Name
+          <input type="text" value={tier.name} maxLength={MAX_TIER_NAME} onInput={(e) => onChange({ name: e.currentTarget.value })} />
+        </label>
+        <div class="lah-tm-pop-field" role="group" aria-label="Color">
+          Color
+          <div class="lah-tm-swatches">
+            {PALETTE.map((c) => (
+              <button
+                key={c}
+                type="button"
+                class="lah-tm-swatch"
+                style={{ background: c }}
+                aria-label={c}
+                aria-pressed={tier.color.toLowerCase() === c}
+                onClick={() => onChange({ color: c })}
+              />
+            ))}
+          </div>
+          <label class="lah-tm-custom">
+            <input type="color" value={tier.color} aria-label="Custom color" onInput={(e) => onChange({ color: e.currentTarget.value })} />
+            Custom
+          </label>
+        </div>
+        <div class="lah-tm-pop-actions">
+          <button type="button" class="lah-tm-btn" disabled={first} onClick={(e) => move(-1, e)}>
+            ▲ Move up
+          </button>
+          <button type="button" class="lah-tm-btn" disabled={last} onClick={(e) => move(1, e)}>
+            ▼ Move down
+          </button>
+          <button type="button" class="lah-tm-btn is-danger" disabled={!canRemove} onClick={onRemove}>
+            Delete tier
+          </button>
+        </div>
+      </div>
+    </>
+  )
+}
+
 function TierRow({ tier, first, last, canRemove, byKey, lang, selected, drag, overIndex, startDrag, onSelect, onPlace, onChange, onMove, onRemove }: TierRowProps) {
   const items = tier.items.map((k) => byKey.get(k)).filter((c): c is Candidate => !!c)
   return (
     <div class="lah-tm-tier">
-      <div class="lah-tm-label" style={{ background: tier.color }}>
-        <input
-          class="lah-tm-label-name"
-          type="text"
-          value={tier.name}
-          maxLength={MAX_TIER_NAME}
-          aria-label="Tier name"
-          onInput={(e) => onChange({ name: e.currentTarget.value })}
-        />
-        <input class="lah-tm-color" type="color" value={tier.color} aria-label="Tier color" onInput={(e) => onChange({ color: e.currentTarget.value })} />
-      </div>
+      <TierLabel name={tier.name} color={tier.color} onName={(name) => onChange({ name })} />
       <div class={`lah-tm-zone${overIndex !== null ? ' is-over' : ''}`} data-zone={tier.id} onClick={onPlace}>
         {items.map((c, i) => (
           <Fragment key={c.key}>
@@ -402,15 +514,7 @@ function TierRow({ tier, first, last, canRemove, byKey, lang, selected, drag, ov
             Place here
           </button>
         )}
-        <button type="button" class="lah-tm-mini" disabled={first} onClick={() => onMove(-1)} aria-label="Move tier up">
-          ▲
-        </button>
-        <button type="button" class="lah-tm-mini" disabled={last} onClick={() => onMove(1)} aria-label="Move tier down">
-          ▼
-        </button>
-        <button type="button" class="lah-tm-mini" disabled={!canRemove} onClick={onRemove} aria-label="Delete tier">
-          ✕
-        </button>
+        <TierSettings tier={tier} first={first} last={last} canRemove={canRemove} onChange={onChange} onMove={onMove} onRemove={onRemove} />
       </div>
     </div>
   )

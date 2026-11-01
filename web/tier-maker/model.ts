@@ -74,11 +74,14 @@ export const removeItem = (list: TierList, key: string): TierList => ({
   tiers: list.tiers.map((t) => (t.items.includes(key) ? { ...t, items: t.items.filter((k) => k !== key) } : t)),
 })
 
+/** A tier name is one line: whitespace runs collapse to a space, and it is capped at MAX_TIER_NAME. */
+export const normalizeTierName = (name: string): string => name.replace(/\s+/g, ' ').slice(0, MAX_TIER_NAME)
+
 export const setTitle = (list: TierList, title: string): TierList => ({ ...list, title: title.slice(0, MAX_TITLE) })
 
 export const updateTier = (list: TierList, id: string, patch: Partial<Pick<Tier, 'name' | 'color'>>): TierList => ({
   ...list,
-  tiers: list.tiers.map((t) => (t.id === id ? { ...t, ...patch, name: (patch.name ?? t.name).slice(0, MAX_TIER_NAME) } : t)),
+  tiers: list.tiers.map((t) => (t.id === id ? { ...t, ...patch, name: normalizeTierName(patch.name ?? t.name) } : t)),
 })
 
 export function addTier(list: TierList): TierList {
@@ -126,7 +129,7 @@ export function sanitize(raw: unknown, validKeys: ReadonlySet<string>): { list: 
     }
     tiers.push({
       id,
-      name: typeof rt.name === 'string' ? rt.name.slice(0, MAX_TIER_NAME) : '',
+      name: typeof rt.name === 'string' ? normalizeTierName(rt.name) : '',
       color: typeof rt.color === 'string' && /^#[0-9a-f]{6}$/i.test(rt.color) ? rt.color.toLowerCase() : FALLBACK_COLOR,
       items,
     })

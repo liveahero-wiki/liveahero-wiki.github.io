@@ -1,8 +1,14 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { addTier, defaultList, isPristine, itemKey, MAX_TIERS, moveTier, parseKey, placedKeys, placeItem, removeItem, removeTier, sanitize, updateTier } from './model.ts'
+import { addTier, defaultList, isPristine, itemKey, MAX_TIERS, moveTier, normalizeTierName, parseKey, placedKeys, placeItem, removeItem, removeTier, sanitize, updateTier } from './model.ts'
 
 const items = (l: ReturnType<typeof defaultList>, id: string) => l.tiers.find((t) => t.id === id)!.items
+
+test('tier names are one line and capped', () => {
+  assert.equal(normalizeTierName('a \n\t b c'), 'a b c')
+  assert.equal(normalizeTierName('x'.repeat(100)).length, 40)
+  assert.equal(updateTier(defaultList(), 't1', { name: 'a\nb' }).tiers[0].name, 'a b')
+})
 
 test('removeTier keeps the last tier', () => {
   let l = defaultList()
