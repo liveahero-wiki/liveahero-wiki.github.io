@@ -12,7 +12,7 @@
 <figcaption>{{ include.title }} · <a href="{{ url }}" target="_blank" rel="noopener">{% case lang %}{% when "ja" %}ランキングを全画面で開く{% when "zh-tw" %}在新分頁開啟完整排行榜{% else %}Open the full explorer{% endcase %}</a></figcaption>
 </figure>
 <script>
-// The explorer is a separate document, so it cannot see this site's light/dark toggle (data-theme on <html>);
+// The explorer is a separate document, so it cannot see this site's light/dark toggle (data-theme on the html element);
 // post it the theme on load and whenever the toggle changes. No data-theme = follow the OS, which it does itself.
 window.surveyRankingResize || (window.surveyRankingResize = (() => {
   const frames = () => document.querySelectorAll("iframe.survey-ranking");
