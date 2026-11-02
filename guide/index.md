@@ -288,7 +288,7 @@ While building a team you should consider the turn order; you want the main DPS 
 
 > Turn order is determined by Speed, which includes the base speed stat of a hero and the speed stat of the active sidekick. There are two passives that affect the speed stat, {% chara_link Ryekie %} (+5) and {% chara_link Gammei %} (-5).
 
-The positioning of heroes, like slots 1-4, have a small impact on gameplay. According to the game, the hero in position 1 is more likely to get targeted by enemy attacks. There are also heroes like {% chara_link Alend|h2 %} who's Skill 2 can trigger an FUA from the hero positioned above him.
+The positioning of heroes in your team has an impact on gameplay. First, if two of your heroes share the same speed, the hero in the higher position will go before the hero in the lower position. Second, The hero in position 1 is more likely to get targeted by enemy attacks, which is a spot usually reserved for tanks or Emnity heroes. Finally, there are heroes like {% chara_link Alend|h2 %} who's Skill 2 can trigger an FUA from the hero positioned above him.
 
 ### Archetype Overviews
 
