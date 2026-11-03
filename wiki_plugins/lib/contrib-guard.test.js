@@ -586,7 +586,7 @@ test("real pages: guide/sale.md (items in tables, a loop with an include, a big 
   // the long HTML comment may stay, but not be edited or duplicated
   const comment = /<!--[\s\S]*?-->/.exec(body)[0];
   passes(body, body.replace("For special sales report", "For the special sales reports"));
-  fails(body, body.replace(comment, comment.replace("Sales Report 1", "Sales Report one")), "html-not-allowed");
+  fails(body, body.replace(comment, comment.replace("Sale can be conducted", "Sale can be xxx")), "html-not-allowed");
   fails(body, `${body}\n${comment}\n`, "html-not-allowed");
   passes(body, body.replace(comment, ""));
 });
