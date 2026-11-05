@@ -15439,6 +15439,109 @@
     ],
     "appendPassiveSkillIds": null
   },
+  "231": {
+    "skillId": 231,
+    "skillName": "",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "光属性・影属性のみATK+50%＆被ダメージ-25%",
+    "shortenDescription": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 0
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 231,
+        "serialNo": 0,
+        "skillEffectId": 5661,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 4,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 231,
+        "serialNo": 1,
+        "skillEffectId": 5663,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "TargetElementExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 5,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
   "1000": {
     "skillId": 1000,
     "skillName": "リブート",
@@ -101410,6 +101513,1501 @@
     ],
     "appendPassiveSkillIds": null
   },
+  "1126201": {
+    "skillId": 1126201,
+    "skillName": "シュペーアタンツ",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体に50%ダメージ。<style=\"改行\"></style>【自身の行動時にこのスキルを発動した場合】Viewを3000獲得。<style=\"改行\"></style>【自身以外の行動時にこのスキルを発動した場合】計2回、チームで一番HPが減っているヒーローのHPを基礎ATKの25%回復する。",
+    "shortenDescription": "敵単体に60%ダメージ。Viewを3000獲得。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_sensettiaCrossroads2611_h01_01",
+        "execPassive": false,
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 2
+    },
+    "descriptionInfo": [],
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 1126201,
+        "serialNo": 0,
+        "skillEffectId": 33,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 2
+        }
+      },
+      {
+        "skillId": 1126201,
+        "serialNo": 1,
+        "skillEffectId": 24,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 1126201,
+        "serialNo": 2,
+        "skillEffectId": 352,
+        "prob": 100,
+        "effectTarget": 11,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "NotNowAttackingTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": [],
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 11
+        }
+      },
+      {
+        "skillId": 1126201,
+        "serialNo": 3,
+        "skillEffectId": 352,
+        "prob": 100,
+        "effectTarget": 11,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "NotNowAttackingTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": [],
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 11
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "1126202": {
+    "skillId": 1126202,
+    "skillName": "トイフェルスリート",
+    "skillIndex": 1,
+    "useView": 5500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回分の追唱を付与。（発動対象以外に追唱が付与されていた場合、解除する）<style=\"改行\"></style>2回の行動の間ATKアップ付与。<style=\"改行\"></style>1回の行動の間協奏を付与。対象に協奏が付与されている場合、付与の代わりに協奏1つを1ターン延長する。（最大3ターンまで）<style=\"改行\"></style>自身の行動時にアンコールが付与されている状態でこのスキルを発動した場合、アンコールを消費して再行動する。（1ターンに1回まで。再行動時、Viewとコンボを獲得できない）",
+    "shortenDescription": "味方単体に1回分の追唱を付与。（発動対象以外に追唱が付与されていた場合、解除する）2回の行動の間ATKアップ付与。1回の行動の間協奏を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_sensettiaCrossroads2611_h01_02",
+        "execPassive": false,
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": {
+      "stateEntries": [
+        {
+          "trigger": {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126205,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          "stateType": 1
+        },
+        {
+          "trigger": {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126209,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          "stateType": 1
+        },
+        {
+          "trigger": {
+            "role": 0,
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          "stateType": 1
+        },
+        {
+          "trigger": {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126205,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          "stateType": 2
+        },
+        {
+          "trigger": {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126209,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          "stateType": 2
+        },
+        {
+          "trigger": {
+            "role": 0,
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          "stateType": 2
+        }
+      ]
+    },
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 1
+    },
+    "descriptionInfo": [
+      {
+        "skillId": 1126202,
+        "serialNo": 0,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126205,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126209,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "shortenDescription": "味方単体に1回分の追唱を付与。（発動対象以外に追唱が付与されていた場合、解除する）2回の行動の間ATKアップ付与。1回の行動の間協奏を付与。アンコールを消費して再行動する。"
+      }
+    ],
+    "iconInfo": [
+      {
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126205,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126209,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "iconFileName": "b_skill_buff_pu",
+        "subIconFileName": ""
+      }
+    ],
+    "effects": [
+      {
+        "skillId": 1126202,
+        "serialNo": 0,
+        "skillEffectId": 5650,
+        "prob": 100,
+        "effectTarget": 17,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 17
+        }
+      },
+      {
+        "skillId": 1126202,
+        "serialNo": 1,
+        "skillEffectId": 5636,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 1
+        }
+      },
+      {
+        "skillId": 1126202,
+        "serialNo": 2,
+        "skillEffectId": 27,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 1
+        }
+      },
+      {
+        "skillId": 1126202,
+        "serialNo": 3,
+        "skillEffectId": 6943,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 82,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 1
+        }
+      },
+      {
+        "skillId": 1126202,
+        "serialNo": 4,
+        "skillEffectId": 6988,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 82,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 1
+        }
+      },
+      {
+        "skillId": 1126202,
+        "serialNo": 5,
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126205,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126209,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 1126202,
+        "serialNo": 6,
+        "skillEffectId": 5655,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126205,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126209,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 1126202,
+        "serialNo": 7,
+        "skillEffectId": 5651,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126205,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126209,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 1126202,
+        "serialNo": 8,
+        "skillEffectId": 5645,
+        "prob": 0,
+        "effectTarget": 5,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 5
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "1126203": {
+    "skillId": 1126203,
+    "skillName": "グレンツェント・ゼンガー",
+    "skillIndex": 2,
+    "useView": 9500,
+    "targetFlag": 0,
+    "resourceName": "status_field",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "【歌陣が付与されていない場合】味方全体に1回の行動の間協奏を付与。自身に3ターンの間歌陣を付与。<br>【歌陣が付与されている場合】味方全体に2回の行動の間協奏を付与。敵単体に1ターンの間照準を付与。<br>歌陣の残ターン数+1。(最大5ターンまで)<style=\"パッシブ領域\">以下の条件でゲージが増加する。(ゲージの最大値は10)<br>(１)味方がスキル1を使用した時、ゲージ+1。(1行動毎に1人1回まで)<style=\"改行\"></style>(２)味方の協奏の残ターン数が減少した時、自身のゲージ+1。<style=\"改行\"></style>(３)味方がアクティブスキルによって別の味方に追撃・誘発をさせた時、ゲージ+2。(1回のスキルで複数人数が誘発された場合、誘発された人数の分ゲージが増加)<style=\"改行\"></style>ゲージが5溜まる度にスキル1を発動する。ゲージが最大になった時、ゲージを全て消費して自身にアンコールを付与。<style=\"改行\"></style>この効果によるスキル発動時、行動後のView・コンボの獲得と条件(1)によるゲージの増加は発生しない。</style>",
+    "shortenDescription": "自身に3ターンの間歌陣を付与。味方全体に1回の行動の間協奏を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_sensettiaCrossroads2611_h01_03",
+        "execPassive": false,
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 0
+    },
+    "descriptionInfo": [],
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 1126203,
+        "serialNo": 0,
+        "skillEffectId": 6988,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 1126203,
+        "serialNo": 1,
+        "skillEffectId": 3722,
+        "prob": 100,
+        "effectTarget": 30,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 30
+        }
+      },
+      {
+        "skillId": 1126203,
+        "serialNo": 2,
+        "skillEffectId": 3724,
+        "prob": 100,
+        "effectTarget": 15,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 15
+        }
+      },
+      {
+        "skillId": 1126203,
+        "serialNo": 3,
+        "skillEffectId": 3724,
+        "prob": 100,
+        "effectTarget": 12,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 12
+        }
+      },
+      {
+        "skillId": 1126203,
+        "serialNo": 4,
+        "skillEffectId": 3725,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 1126203,
+        "serialNo": 5,
+        "skillEffectId": 5639,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 1126203,
+        "serialNo": 6,
+        "skillEffectId": 5640,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 1126203,
+        "serialNo": 7,
+        "skillEffectId": 5640,
+        "prob": 100,
+        "effectTarget": 12,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 12
+        }
+      },
+      {
+        "skillId": 1126203,
+        "serialNo": 8,
+        "skillEffectId": 832,
+        "prob": 0,
+        "effectTarget": 5,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 5
+        }
+      },
+      {
+        "skillId": 1126203,
+        "serialNo": 9,
+        "skillEffectId": 5645,
+        "prob": 0,
+        "effectTarget": 5,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 5
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "1126204": {
+    "skillId": 1126204,
+    "skillName": "トイフェルスリート+",
+    "skillIndex": 1,
+    "useView": 5500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "味方単体に1回分の追唱を付与。（発動対象以外に追唱が付与されていた場合、解除する）<style=\"改行\"></style>3回の行動の間ATKアップ付与。<style=\"改行\"></style>1回の行動の間協奏を付与。対象に協奏が付与されている場合、付与の代わりに協奏1つを1ターン延長する。（最大3ターンまで）<style=\"改行\"></style>自身の行動時にアンコールが付与されている状態でこのスキルを発動した場合、アンコールを消費して再行動する。（1ターンに1回まで。再行動時、Viewとコンボを獲得できない）",
+    "shortenDescription": "味方単体に1回分の追唱を付与。（発動対象以外に追唱が付与されていた場合、解除する）3回の行動の間ATKアップ付与。1回の行動の間協奏を付与。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_sensettiaCrossroads2611_h01_02",
+        "execPassive": false,
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": {
+      "stateEntries": [
+        {
+          "trigger": {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126205,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          "stateType": 1
+        },
+        {
+          "trigger": {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126209,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          "stateType": 1
+        },
+        {
+          "trigger": {
+            "role": 0,
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          "stateType": 1
+        },
+        {
+          "trigger": {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126205,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          "stateType": 2
+        },
+        {
+          "trigger": {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126209,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          "stateType": 2
+        },
+        {
+          "trigger": {
+            "role": 0,
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          "stateType": 2
+        }
+      ]
+    },
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 1
+    },
+    "descriptionInfo": [
+      {
+        "skillId": 1126204,
+        "serialNo": 0,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126205,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126209,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "shortenDescription": "味方単体に1回分の追唱を付与。（発動対象以外に追唱が付与されていた場合、解除する）3回の行動の間ATKアップ付与。1回の行動の間協奏を付与。アンコールを消費して再行動する。"
+      }
+    ],
+    "iconInfo": [
+      {
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126205,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126209,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "iconFileName": "b_skill_buff_pu",
+        "subIconFileName": ""
+      }
+    ],
+    "effects": [
+      {
+        "skillId": 1126204,
+        "serialNo": 0,
+        "skillEffectId": 5650,
+        "prob": 100,
+        "effectTarget": 17,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 17
+        }
+      },
+      {
+        "skillId": 1126204,
+        "serialNo": 1,
+        "skillEffectId": 5636,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 1
+        }
+      },
+      {
+        "skillId": 1126204,
+        "serialNo": 2,
+        "skillEffectId": 3,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 1
+        }
+      },
+      {
+        "skillId": 1126204,
+        "serialNo": 3,
+        "skillEffectId": 6943,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 82,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 1
+        }
+      },
+      {
+        "skillId": 1126204,
+        "serialNo": 4,
+        "skillEffectId": 6988,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 82,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 1
+        }
+      },
+      {
+        "skillId": 1126204,
+        "serialNo": 5,
+        "skillEffectId": 29,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126205,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126209,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 1126204,
+        "serialNo": 6,
+        "skillEffectId": 5655,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126205,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126209,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 1126204,
+        "serialNo": 7,
+        "skillEffectId": 5651,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126205,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126209,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 1126204,
+        "serialNo": 8,
+        "skillEffectId": 5645,
+        "prob": 0,
+        "effectTarget": 5,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 5
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
   "1128101": {
     "skillId": 1128101,
     "skillName": "サーナービムル",
@@ -149798,6 +151396,1236 @@
         "targetEntity": {
           "json": null,
           "target": 5
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "1255201": {
+    "skillId": 1255201,
+    "skillName": "フォース・ラプソディー",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 7,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵全体からランダムに2～4回30%ダメージ。<style=\"改行\"></style>スキル発動時にViewが1500以上ある場合、追加でViewを消費して攻撃回数が増加する。（ViewPower1500消費毎に攻撃回数+1。最大でViewPowerを3000消費して攻撃回数+2）<style=\"パッシブ領域\">生存中、味方は自身の行動時以外ATK+20%。<style=\"改行\"></style>この効果は重複しない</style>",
+    "shortenDescription": "敵全体からランダムに2～4回30%ダメージ。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_gnomonCrossroads2611_h01_01",
+        "execPassive": false,
+        "triggerJson": []
+      },
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_gnomonCrossroads2611_h01_04",
+        "execPassive": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "MinHPTrigger",
+            "value": 100,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "MaxHPTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ]
+      },
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_gnomonCrossroads2611_h01_05",
+        "execPassive": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "MinHPTrigger",
+            "value": 100,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "MaxHPTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ]
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 7
+    },
+    "descriptionInfo": [
+      {
+        "skillId": 1255201,
+        "serialNo": 0,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "ViewDontExecTrigger",
+            "value": 1499,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "shortenDescription": "敵全体からランダムに2回30%ダメージ。"
+      },
+      {
+        "skillId": 1255201,
+        "serialNo": 1,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "ViewTrigger",
+            "value": 1500,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "ViewDontExecTrigger",
+            "value": 2999,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "shortenDescription": "敵全体からランダムに3回30%ダメージ。ViewPowerを1500消費する。"
+      },
+      {
+        "skillId": 1255201,
+        "serialNo": 2,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "ViewTrigger",
+            "value": 3000,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "shortenDescription": "敵全体からランダムに4回30%ダメージ。ViewPowerを3000消費する。"
+      }
+    ],
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 1255201,
+        "serialNo": 0,
+        "skillEffectId": 122,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 1,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 7
+        }
+      },
+      {
+        "skillId": 1255201,
+        "serialNo": 1,
+        "skillEffectId": 122,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 2,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 7
+        }
+      },
+      {
+        "skillId": 1255201,
+        "serialNo": 2,
+        "skillEffectId": 122,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 3,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "ViewTrigger",
+            "value": 1500,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 7
+        }
+      },
+      {
+        "skillId": 1255201,
+        "serialNo": 3,
+        "skillEffectId": 2117,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 3,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "ViewTrigger",
+            "value": 1500,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 1255201,
+        "serialNo": 4,
+        "skillEffectId": 122,
+        "prob": 100,
+        "effectTarget": 7,
+        "sequenceGroupId": 4,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "ViewTrigger",
+            "value": 3000,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 7
+        }
+      },
+      {
+        "skillId": 1255201,
+        "serialNo": 5,
+        "skillEffectId": 2117,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 4,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "ViewTrigger",
+            "value": 3000,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "1255202": {
+    "skillId": 1255202,
+    "skillName": "クロス・インテルメッツォ",
+    "skillIndex": 1,
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "b_skill_special",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "【祈奏のノーモンを対象に発動した場合】対象に2ターンの間ソロモードを付与。<style=\"改行\"></style>【祈奏のノーモン以外の味方を対象に発動した場合】自身と対象に2ターンの間デュオモードを付与。<style=\"改行\"></style><style=\"改行\"></style>自身の行動時にこのスキルを発動した場合、連続行動をする。連続行動時、サイドキックスキル使用不可。<style=\"改行\"></style>ソロモードが付与された味方がいる場合、このスキルは「ソウル・レゾナンス」に変化する。<style=\"改行\"></style>デュオモードが付与された味方がいる場合、このスキルは「ソウル・オブリガート」に変化する。",
+    "shortenDescription": "祈奏のノーモンに使用した場合ソロモードに、祈奏のノーモン以外に使用した場合デュオモードになる。スキル発動後、連続行動する。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_gnomonCrossroads2611_h01_02",
+        "execPassive": false,
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": {
+      "stateEntries": [
+        {
+          "trigger": {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 1,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1112201,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          "stateType": 1
+        },
+        {
+          "trigger": {
+            "role": 0,
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          "stateType": 1
+        },
+        {
+          "trigger": {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 1,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1112201,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          "stateType": 2
+        },
+        {
+          "trigger": {
+            "role": 0,
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          "stateType": 2
+        }
+      ]
+    },
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 1
+    },
+    "descriptionInfo": [],
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 1255202,
+        "serialNo": 0,
+        "skillEffectId": 6961,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255205,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 1
+        }
+      },
+      {
+        "skillId": 1255202,
+        "serialNo": 1,
+        "skillEffectId": 6965,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255205,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 1
+        }
+      },
+      {
+        "skillId": 1255202,
+        "serialNo": 2,
+        "skillEffectId": 6989,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255205,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 1
+        }
+      },
+      {
+        "skillId": 1255202,
+        "serialNo": 3,
+        "skillEffectId": 6945,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255203,
+            "targetStates": null,
+            "includeTemporary": true
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 1255202,
+        "serialNo": 4,
+        "skillEffectId": 7005,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255203,
+            "targetStates": null,
+            "includeTemporary": true
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 1255202,
+        "serialNo": 5,
+        "skillEffectId": 6968,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255203,
+            "targetStates": null,
+            "includeTemporary": true
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 1255202,
+        "serialNo": 6,
+        "skillEffectId": 6965,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255203,
+            "targetStates": null,
+            "includeTemporary": true
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 1255202,
+        "serialNo": 7,
+        "skillEffectId": 6945,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255203,
+            "targetStates": null,
+            "includeTemporary": true
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 1
+        }
+      },
+      {
+        "skillId": 1255202,
+        "serialNo": 8,
+        "skillEffectId": 6968,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255203,
+            "targetStates": null,
+            "includeTemporary": true
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 1
+        }
+      },
+      {
+        "skillId": 1255202,
+        "serialNo": 9,
+        "skillEffectId": 3572,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 1255202,
+        "serialNo": 10,
+        "skillEffectId": 3126,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": true,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 1255202,
+        "serialNo": 11,
+        "skillEffectId": 4150,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": true,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "NowAttackingTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 1255202,
+        "serialNo": 12,
+        "skillEffectId": 3809,
+        "prob": 0,
+        "effectTarget": 5,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 5
+        }
+      },
+      {
+        "skillId": 1255202,
+        "serialNo": 13,
+        "skillEffectId": 7004,
+        "prob": 0,
+        "effectTarget": 5,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 5
+        }
+      },
+      {
+        "skillId": 1255202,
+        "serialNo": 14,
+        "skillEffectId": 7003,
+        "prob": 0,
+        "effectTarget": 5,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 5
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "1255203": {
+    "skillId": 1255203,
+    "skillName": "エコーズ・オブ・メモリー",
+    "skillIndex": 2,
+    "useView": 6500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "敵単体に180%ダメージ。<style=\"改行\"></style>味方全体に1回の行動の間協奏を付与。<style=\"改行\"></style>対象に既に協奏が付与されている場合、協奏を付与する代わりに、対象に付与されている協奏の内ランダムに1つの回数を+1。（最大3ターンまで）<style=\"パッシブ領域\">祈奏のノーモン以外の味方のアクティブスキル発動で協奏の残ターン数が減少した時、ゲージ+1。（ゲージの最大値は5）<style=\"改行\"></style>ゲージの増加量は、発動したスキルの種別に応じて変化する。（スキル1なら+1、スキル2なら+2、スキル3なら+3。）<style=\"改行\"></style>ゲージが3に達した時、味方の祈奏のノーモン全員のゲージを3消費して自身のスキル1を誘発する。（1ターンに3回まで）</style>",
+    "shortenDescription": "",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_gnomonCrossroads2611_h01_03",
+        "execPassive": false,
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 2
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 1255203,
+        "serialNo": 0,
+        "skillEffectId": 21,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 2
+        }
+      },
+      {
+        "skillId": 1255203,
+        "serialNo": 1,
+        "skillEffectId": 6988,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 82,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 1255203,
+        "serialNo": 2,
+        "skillEffectId": 6943,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 82,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "1255204": {
+    "skillId": 1255204,
+    "skillName": "エコーズ・オブ・メモリー+",
+    "skillIndex": 2,
+    "useView": 5500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damage",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "敵単体に180%ダメージ。<style=\"改行\"></style>味方全体に1回の行動の間協奏を付与。<style=\"改行\"></style>対象に既に協奏が付与されている場合、協奏を付与する代わりに、対象に付与されている協奏の内ランダムに1つの回数を+1。（最大3ターンまで）<style=\"パッシブ領域\">祈奏のノーモン以外の味方のアクティブスキル発動で協奏の残ターン数が減少した時、ゲージ+1。（ゲージの最大値は5）<style=\"改行\"></style>ゲージの増加量は、発動したスキルの種別に応じて変化する。（スキル1なら+1、スキル2なら+2、スキル3なら+3。）<style=\"改行\"></style>ゲージが3に達した時、味方の祈奏のノーモン全員のゲージを3消費して自身のスキル1を誘発する。（1ターンに3回まで）</style>",
+    "shortenDescription": "",
+    "cutin": [
+      {
+        "info": {
+          "class": "CutIn"
+        },
+        "name": "skill_gnomonCrossroads2611_h01_03",
+        "execPassive": false,
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 2
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 1255204,
+        "serialNo": 0,
+        "skillEffectId": 21,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 2
+        }
+      },
+      {
+        "skillId": 1255204,
+        "serialNo": 1,
+        "skillEffectId": 6988,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemyBuffNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 82,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 1255204,
+        "serialNo": 2,
+        "skillEffectId": 6943,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemyBuffNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 82,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
         }
       }
     ],
@@ -355368,6 +358196,96 @@
     ],
     "appendPassiveSkillIds": null
   },
+  "4102202": {
+    "skillId": 4102202,
+    "skillName": "鬼火",
+    "skillIndex": 0,
+    "useView": 12000,
+    "targetFlag": 4,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "s_skill_debuffAll",
+    "timing": 0,
+    "description": "敵全体に60%ダメージ。2ターンの間火傷を付与。（敵専用）",
+    "shortenDescription": "",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuGhostLarva_h01_03",
+        "execPassive": false,
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 4
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 4102202,
+        "serialNo": 0,
+        "skillEffectId": 8,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 4
+        }
+      },
+      {
+        "skillId": 4102202,
+        "serialNo": 1,
+        "skillEffectId": 2,
+        "prob": 100,
+        "effectTarget": 4,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 4
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
   "4103101": {
     "skillId": 4103101,
     "skillName": "体当たり",
@@ -355819,6 +358737,96 @@
         "targetEntity": {
           "json": null,
           "target": 4
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "4104104": {
+    "skillId": 4104104,
+    "skillName": "体当たり",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 2,
+    "resourceName": "b_skill_damageAll",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "敵単体と隣接する敵に30%ダメージ。",
+    "shortenDescription": "",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_kaibutsuGhostLarva_h01_01",
+        "execPassive": false,
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 2
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 4104104,
+        "serialNo": 0,
+        "skillEffectId": 122,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 2
+        }
+      },
+      {
+        "skillId": 4104104,
+        "serialNo": 1,
+        "skillEffectId": 122,
+        "prob": 100,
+        "effectTarget": 21,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 21
         }
       }
     ],
@@ -657774,6 +660782,1184 @@
     ],
     "appendPassiveSkillIds": null
   },
+  "8126201": {
+    "skillId": 8126201,
+    "skillName": "",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 3,
+    "description": "",
+    "shortenDescription": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 3,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 0
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 8126201,
+        "serialNo": 0,
+        "skillEffectId": 5637,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "InvokerCanUseSkillByIndexTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "TargetIsActionSelectableTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8126201,
+        "serialNo": 1,
+        "skillEffectId": 5638,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "InvokerCanUseSkillByIndexTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "TargetIsActionSelectableTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8126201,
+        "serialNo": 2,
+        "skillEffectId": 5646,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "InvokerCanUseSkillByIndexTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "TargetIsActionSelectableTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126204,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "8126202": {
+    "skillId": 8126202,
+    "skillName": "",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "",
+    "shortenDescription": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 1,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 0
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 8126202,
+        "serialNo": 0,
+        "skillEffectId": 5641,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8126202,
+        "serialNo": 1,
+        "skillEffectId": 5642,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8126202,
+        "serialNo": 2,
+        "skillEffectId": 5647,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8126202,
+        "serialNo": 3,
+        "skillEffectId": 5647,
+        "prob": 100,
+        "effectTarget": 12,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 12
+        }
+      },
+      {
+        "skillId": 8126202,
+        "serialNo": 4,
+        "skillEffectId": 5648,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8126202,
+        "serialNo": 5,
+        "skillEffectId": 5648,
+        "prob": 100,
+        "effectTarget": 12,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 12
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "8126203": {
+    "skillId": 8126203,
+    "skillName": "グレンツェント・ゼンガー",
+    "skillIndex": 2,
+    "useView": 9500,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "s_skill_buffAll",
+    "timing": 0,
+    "description": "【歌陣が付与されていない場合】味方全体に1回の行動の間協奏を付与。自身に3ターンの間歌陣を付与。<br>【歌陣が付与されている場合】味方全体に2回の行動の間協奏を付与。敵単体に1ターンの間照準を付与。<br>歌陣の残ターン数+1。(最大5ターンまで)<style=\"パッシブ領域\">以下の条件でゲージが増加する。(ゲージの最大値は10)<br>(１)味方がスキル1を使用した時、ゲージ+1。(1行動毎に1人1回まで)<style=\"改行\"></style>(２)味方の協奏の残ターン数が減少した時、自身のゲージ+1。<style=\"改行\"></style>(３)味方がアクティブスキルによって別の味方に追撃・誘発をさせた時、ゲージ+2。(1回のスキルで複数人数が誘発された場合、誘発された人数の分ゲージが増加)<style=\"改行\"></style>ゲージが5溜まる度にスキル1を発動する。ゲージが最大になった時、ゲージを全て消費して自身にアンコールを付与。<style=\"改行\"></style>この効果によるスキル発動時、行動後のView・コンボの獲得と条件(1)によるゲージの増加は発生しない。</style>",
+    "shortenDescription": "敵単体に1ターンの間照準を付与。味方全体に2回の行動の間協奏を付与。歌陣の残ターン数+1。",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_sensettiaCrossroads2611_h01_04",
+        "execPassive": false,
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 2
+    },
+    "descriptionInfo": [],
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 8126203,
+        "serialNo": 0,
+        "skillEffectId": 832,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 2
+        }
+      },
+      {
+        "skillId": 8126203,
+        "serialNo": 1,
+        "skillEffectId": 672,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8126203,
+        "serialNo": 2,
+        "skillEffectId": 6389,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnFieldStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 307,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "8126204": {
+    "skillId": 8126204,
+    "skillName": "",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 1,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 99,
+    "description": "",
+    "shortenDescription": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 99,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 1
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 8126204,
+        "serialNo": 0,
+        "skillEffectId": 5302,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 6,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126204,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126210,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8126204,
+        "serialNo": 1,
+        "skillEffectId": 5656,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 6,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126204,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126210,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8126204,
+        "serialNo": 2,
+        "skillEffectId": 5659,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 6,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126204,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126210,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8126204,
+        "serialNo": 3,
+        "skillEffectId": 5302,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 1,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126204,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8126204,
+        "serialNo": 4,
+        "skillEffectId": 5645,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 1,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126204,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8126204,
+        "serialNo": 5,
+        "skillEffectId": 5659,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 1,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126204,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8126204,
+        "serialNo": 6,
+        "skillEffectId": 5657,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 1,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126204,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8126204,
+        "serialNo": 7,
+        "skillEffectId": 5643,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 1,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126204,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "8126206": {
+    "skillId": 8126206,
+    "skillName": "",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 58,
+    "description": "",
+    "shortenDescription": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 58,
+      "trigger": {
+        "statusId": 82
+      },
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 0
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 8126206,
+        "serialNo": 0,
+        "skillEffectId": 5646,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126204,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "8126207": {
+    "skillId": 8126207,
+    "skillName": "",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 51,
+    "description": "",
+    "shortenDescription": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 51,
+      "trigger": {
+        "isEnemy": 2,
+        "isActive": 1,
+        "skillIndexes": 0
+      },
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 0
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 8126207,
+        "serialNo": 0,
+        "skillEffectId": 5646,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126211,
+            "targetStates": null,
+            "includeTemporary": true
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126208,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126204,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8126207,
+        "serialNo": 1,
+        "skillEffectId": 5658,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126211,
+            "targetStates": null,
+            "includeTemporary": true
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8126207,
+        "serialNo": 2,
+        "skillEffectId": 5660,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1126208,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "8126209": {
+    "skillId": 8126209,
+    "skillName": "",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 59,
+    "description": "",
+    "shortenDescription": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 59,
+      "trigger": {
+        "isActive": 1,
+        "sameCharacter": 2
+      },
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 0
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 8126209,
+        "serialNo": 0,
+        "skillEffectId": 5653,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "NotNowAttackingTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 0,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "8126210": {
+    "skillId": 8126210,
+    "skillName": "",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 0,
+    "description": "",
+    "shortenDescription": "",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_sensettiaCrossroads2611_h01_04",
+        "execPassive": false,
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 0
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [],
+    "appendPassiveSkillIds": null
+  },
   "8128101": {
     "skillId": 8128101,
     "skillName": "",
@@ -687221,6 +691407,2568 @@
         "targetEntity": {
           "json": null,
           "target": 2
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "8255201": {
+    "skillId": 8255201,
+    "skillName": "",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 1,
+    "description": "",
+    "shortenDescription": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 1,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 0
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 8255201,
+        "serialNo": 0,
+        "skillEffectId": 6957,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 1,
+        "skillEffectId": 6956,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 2,
+        "skillEffectId": 6955,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 3,
+        "skillEffectId": 6960,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 4,
+        "skillEffectId": 6975,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 5,
+        "skillEffectId": 6957,
+        "prob": 100,
+        "effectTarget": 12,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 12
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 6,
+        "skillEffectId": 6956,
+        "prob": 100,
+        "effectTarget": 12,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 12
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 7,
+        "skillEffectId": 6955,
+        "prob": 100,
+        "effectTarget": 12,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 12
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 8,
+        "skillEffectId": 6960,
+        "prob": 100,
+        "effectTarget": 12,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 12
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 9,
+        "skillEffectId": 6975,
+        "prob": 100,
+        "effectTarget": 12,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 12
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 10,
+        "skillEffectId": 6980,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 11,
+        "skillEffectId": 6946,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 12,
+        "skillEffectId": 6981,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 13,
+        "skillEffectId": 6947,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 14,
+        "skillEffectId": 6982,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 15,
+        "skillEffectId": 6948,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 16,
+        "skillEffectId": 6983,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 17,
+        "skillEffectId": 6949,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 18,
+        "skillEffectId": 6984,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 19,
+        "skillEffectId": 6950,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 20,
+        "skillEffectId": 6951,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 21,
+        "skillEffectId": 6987,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8255201,
+        "serialNo": 22,
+        "skillEffectId": 7001,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "8255202": {
+    "skillId": 8255202,
+    "skillName": "",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "",
+    "shortenDescription": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 4,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 0
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 8255202,
+        "serialNo": 0,
+        "skillEffectId": 6969,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255214,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255218,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8255202,
+        "serialNo": 1,
+        "skillEffectId": 7006,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255214,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255218,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255202,
+        "serialNo": 2,
+        "skillEffectId": 6964,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255214,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255218,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255202,
+        "serialNo": 3,
+        "skillEffectId": 6985,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255214,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255218,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255202,
+        "serialNo": 4,
+        "skillEffectId": 6963,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255214,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255218,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8255202,
+        "serialNo": 5,
+        "skillEffectId": 6972,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255214,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255218,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8255202,
+        "serialNo": 6,
+        "skillEffectId": 7002,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255214,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255218,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "8255203": {
+    "skillId": 8255203,
+    "skillName": "",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 51,
+    "description": "",
+    "shortenDescription": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 51,
+      "trigger": {
+        "isActive": 1,
+        "skillIndexes": 1
+      },
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 0
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 8255203,
+        "serialNo": 0,
+        "skillEffectId": 6952,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255206,
+            "targetStates": null,
+            "includeTemporary": true
+          }
+        ],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255205,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255203,
+        "serialNo": 1,
+        "skillEffectId": 6952,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255206,
+            "targetStates": null,
+            "includeTemporary": true
+          }
+        ],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255205,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "8255204": {
+    "skillId": 8255204,
+    "skillName": "",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 51,
+    "description": "",
+    "shortenDescription": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 51,
+      "trigger": {
+        "isActive": 1,
+        "skillIndexes": 2
+      },
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 0
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 8255204,
+        "serialNo": 0,
+        "skillEffectId": 6952,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255206,
+            "targetStates": null,
+            "includeTemporary": true
+          }
+        ],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255205,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255204,
+        "serialNo": 1,
+        "skillEffectId": 6952,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255206,
+            "targetStates": null,
+            "includeTemporary": true
+          }
+        ],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255205,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255204,
+        "serialNo": 2,
+        "skillEffectId": 6952,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255206,
+            "targetStates": null,
+            "includeTemporary": true
+          }
+        ],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255205,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "8255205": {
+    "skillId": 8255205,
+    "skillName": "",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 58,
+    "description": "",
+    "shortenDescription": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 58,
+      "trigger": {
+        "statusId": 82
+      },
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 0
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 8255205,
+        "serialNo": 0,
+        "skillEffectId": 6954,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255205,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "8255206": {
+    "skillId": 8255206,
+    "skillName": "",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 99,
+    "description": "",
+    "shortenDescription": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 99,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 0
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 8255206,
+        "serialNo": 0,
+        "skillEffectId": 6958,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 3,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255205,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 2,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255210,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255211,
+            "targetStates": null,
+            "includeTemporary": true
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255206,
+        "serialNo": 1,
+        "skillEffectId": 5302,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 3,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255205,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 2,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255210,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255211,
+            "targetStates": null,
+            "includeTemporary": true
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8255206,
+        "serialNo": 2,
+        "skillEffectId": 6959,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 3,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255205,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 2,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255210,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255211,
+            "targetStates": null,
+            "includeTemporary": true
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255206,
+        "serialNo": 3,
+        "skillEffectId": 6953,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "RemainInvokerSpecialEffectTurnTrigger",
+            "value": 3,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255205,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 2,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255210,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255211,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "8255207": {
+    "skillId": 8255207,
+    "skillName": "",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 51,
+    "description": "",
+    "shortenDescription": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 51,
+      "trigger": {
+        "isActive": 1,
+        "skillIndexes": 0
+      },
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 0
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 8255207,
+        "serialNo": 0,
+        "skillEffectId": 6952,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255206,
+            "targetStates": null,
+            "includeTemporary": true
+          }
+        ],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255205,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255207,
+        "serialNo": 1,
+        "skillEffectId": 6962,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255203,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255203,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255207,
+        "serialNo": 2,
+        "skillEffectId": 6973,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255202,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255207,
+        "serialNo": 3,
+        "skillEffectId": 6967,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255203,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255203,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255207,
+        "serialNo": 4,
+        "skillEffectId": 6967,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255202,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [
+          {
+            "role": 0,
+            "class": "EnemySystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255214,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "8255208": {
+    "skillId": 8255208,
+    "skillName": "",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 4,
+    "description": "",
+    "shortenDescription": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 4,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 0
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 8255208,
+        "serialNo": 0,
+        "skillEffectId": 6944,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberDontExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255201,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "8255209": {
+    "skillId": 8255209,
+    "skillName": "",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 14,
+    "description": "",
+    "shortenDescription": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 14,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 0
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 8255209,
+        "serialNo": 0,
+        "skillEffectId": 6964,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255214,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255209,
+        "serialNo": 1,
+        "skillEffectId": 6985,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255214,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255209,
+        "serialNo": 2,
+        "skillEffectId": 6963,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255203,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "8255210": {
+    "skillId": 8255210,
+    "skillName": "ソウル・オブリガート",
+    "skillIndex": 1,
+    "useView": 2000,
+    "targetFlag": 2,
+    "resourceName": "b_skill_debuff",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "敵単体と対象の1つ下の敵にチャージ数1の傷跡を付与。Viewを4000獲得。",
+    "shortenDescription": "",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_gnomonCrossroads2611_h01_05",
+        "execPassive": false,
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 2
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 8255210,
+        "serialNo": 0,
+        "skillEffectId": 3409,
+        "prob": 100,
+        "effectTarget": 2,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 2
+        }
+      },
+      {
+        "skillId": 8255210,
+        "serialNo": 1,
+        "skillEffectId": 3409,
+        "prob": 100,
+        "effectTarget": 37,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 37
+        }
+      },
+      {
+        "skillId": 8255210,
+        "serialNo": 2,
+        "skillEffectId": 295,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "8255211": {
+    "skillId": 8255211,
+    "skillName": "ソウル・レゾナンス",
+    "skillIndex": 1,
+    "useView": 1500,
+    "targetFlag": 1,
+    "resourceName": "b_skill_buff",
+    "subResourceName": "s_skill_view",
+    "timing": 0,
+    "description": "味方単体に2回の行動の間協奏を付与。Viewを4000獲得。",
+    "shortenDescription": "",
+    "cutin": [
+      {
+        "info": {
+          "class": "NormalAttack"
+        },
+        "name": "skill_gnomonCrossroads2611_h01_04",
+        "execPassive": false,
+        "triggerJson": []
+      }
+    ],
+    "isEquip": false,
+    "isHeroSkill": true,
+    "timingEntity": {
+      "timing": 0,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 1
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 8255211,
+        "serialNo": 0,
+        "skillEffectId": 672,
+        "prob": 100,
+        "effectTarget": 1,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 1
+        }
+      },
+      {
+        "skillId": 8255211,
+        "serialNo": 1,
+        "skillEffectId": 295,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      }
+    ],
+    "appendPassiveSkillIds": null
+  },
+  "8255212": {
+    "skillId": 8255212,
+    "skillName": "",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 99,
+    "description": "",
+    "shortenDescription": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 99,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 0
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 8255212,
+        "serialNo": 0,
+        "skillEffectId": 6969,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberDontExecTrigger",
+            "value": 1,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255202,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255202,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8255212,
+        "serialNo": 1,
+        "skillEffectId": 7006,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberDontExecTrigger",
+            "value": 1,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255202,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255202,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255212,
+        "serialNo": 2,
+        "skillEffectId": 6985,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberDontExecTrigger",
+            "value": 1,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255202,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255202,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255212,
+        "serialNo": 3,
+        "skillEffectId": 6964,
+        "prob": 100,
+        "effectTarget": 3,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberDontExecTrigger",
+            "value": 1,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255202,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255202,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 3
+        }
+      },
+      {
+        "skillId": 8255212,
+        "serialNo": 4,
+        "skillEffectId": 6972,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberDontExecTrigger",
+            "value": 1,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255202,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255202,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      },
+      {
+        "skillId": 8255212,
+        "serialNo": 5,
+        "skillEffectId": 7002,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [
+          {
+            "role": 0,
+            "class": "TeamAllSystemStatusNumberDontExecTrigger",
+            "value": 1,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255202,
+            "targetStates": null,
+            "includeTemporary": false
+          },
+          {
+            "role": 0,
+            "class": "OwnSystemStatusNumberExecTrigger",
+            "value": 0,
+            "value2": 0,
+            "element": 0,
+            "statusId": 1255202,
+            "targetStates": null,
+            "includeTemporary": false
+          }
+        ],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
         }
       }
     ],
