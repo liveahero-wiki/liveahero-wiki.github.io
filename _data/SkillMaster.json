@@ -151764,7 +151764,7 @@
     "resourceName": "b_skill_special",
     "subResourceName": "",
     "timing": 0,
-    "description": "【祈奏のノーモンを対象に発動した場合】対象に2ターンの間ソロモードを付与。<style=\"改行\"></style>【祈奏のノーモン以外の味方を対象に発動した場合】自身と対象に2ターンの間デュオモードを付与。<style=\"改行\"></style><style=\"改行\"></style>自身の行動時にこのスキルを発動した場合、連続行動をする。連続行動時、サイドキックスキル使用不可。<style=\"改行\"></style>ソロモードが付与された味方がいる場合、このスキルは「ソウル・レゾナンス」に変化する。<style=\"改行\"></style>デュオモードが付与された味方がいる場合、このスキルは「ソウル・オブリガート」に変化する。",
+    "description": "【祈奏のノーモンを対象に発動した場合】対象に2ターンの間ソロモードを付与。<style=\"改行\"></style>【祈奏のノーモン以外の味方を対象に発動した場合】自身と対象に2ターンの間デュオモードを付与。<style=\"改行\"></style><style=\"改行\"></style>自身の行動時にこのスキルを発動した場合、連続行動をする。連続行動時、サイドキックスキル使用不可。<style=\"改行\"></style>ソロモードが付与された味方がいる場合、このスキルは「ソウル・レゾナンス」に変化する。<style=\"改行\"></style>デュオモードが付与された味方がいる場合、このスキルは「ソウル・オブリガート」に変化する。<br>　<br>",
     "shortenDescription": "祈奏のノーモンに使用した場合ソロモードに、祈奏のノーモン以外に使用した場合デュオモードになる。スキル発動後、連続行動する。",
     "cutin": [
       {
@@ -661958,6 +661958,62 @@
     "descriptionInfo": null,
     "iconInfo": [],
     "effects": [],
+    "appendPassiveSkillIds": null
+  },
+  "8126211": {
+    "skillId": 8126211,
+    "skillName": "",
+    "skillIndex": 0,
+    "useView": 0,
+    "targetFlag": 0,
+    "resourceName": "",
+    "subResourceName": "",
+    "timing": 2,
+    "description": "",
+    "shortenDescription": "",
+    "cutin": [],
+    "isEquip": false,
+    "isHeroSkill": false,
+    "timingEntity": {
+      "timing": 2,
+      "trigger": null,
+      "dontExecTrigger": null
+    },
+    "skillStateCondition": null,
+    "targetEntity": {
+      "json": null,
+      "isLoop": false,
+      "target": 0
+    },
+    "descriptionInfo": null,
+    "iconInfo": [],
+    "effects": [
+      {
+        "skillId": 8126211,
+        "serialNo": 0,
+        "skillEffectId": 5664,
+        "prob": 100,
+        "effectTarget": 0,
+        "sequenceGroupId": 0,
+        "probGroupId": 0,
+        "randomGroupId": 0,
+        "popupTimingId": 0,
+        "isSameTimingBasePopup": false,
+        "conditionEntityId": 0,
+        "conditionGroupId": 0,
+        "conditionPriority": 0,
+        "conditionDescription": "",
+        "subIconAddress": "",
+        "notDisplayHint": false,
+        "triggerJson": [],
+        "receiverTriggerJson": [],
+        "targetEntity": {
+          "json": null,
+          "isLoop": false,
+          "target": 0
+        }
+      }
+    ],
     "appendPassiveSkillIds": null
   },
   "8128101": {

@@ -149518,8 +149518,7 @@
             "dontGetBaseCombo": false,
             "isInvokeAddDamage": true,
             "isRecalculateTarget": false,
-            "notExecuteInTargetReversal": false,
-            "triggerOverrideResolverJson": "{\"forceTruePublicTriggers\":[\"NotNowAttackingTrigger\"],\"forceFalsePublicTriggers\":[\"NowAttackingTrigger\"],\"forceTrueReceiveTriggers\":[\"NotNowAttackingTrigger\"],\"forceFalseReceiveTriggers\":[\"NowAttackingTrigger\"]}"
+            "notExecuteInTargetReversal": false
           }
         }
       ],
@@ -150370,6 +150369,13 @@
             "timing": 17,
             "avoidExtensionTurn": false
           }
+        },
+        {
+          "class": "PassiveBattleSkillEffect",
+          "parameter": {
+            "timing": 17,
+            "skillId": 8126211
+          }
         }
       ],
       "filename": "",
@@ -150602,6 +150608,54 @@
       "overrideStatusDescription": "ATK+50%＆被ダメージ-25%。",
       "isDisplayPersistenceStatus": true,
       "isOverrideStatusDescription": true
+    }
+  },
+  "5664": {
+    "skillEffectId": 5664,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "RemoveSystemEffect",
+          "parameter": {
+            "value": 999,
+            "target": 1126211,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "b_skill_special",
+      "statusId": 0,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "システム効果1126211番除去",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": true,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
     }
   },
   "6001": {
