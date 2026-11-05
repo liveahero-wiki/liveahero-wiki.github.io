@@ -1,6 +1,7 @@
 ---
 title: Shining Night Crossroads Concert
 eventId: 185
+has_story: true
 jp_title: 
 banner_image: 
 gacha: true
