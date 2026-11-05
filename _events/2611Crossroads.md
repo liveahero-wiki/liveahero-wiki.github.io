@@ -3,7 +3,7 @@ title: Shining Night Crossroads Concert
 eventId: 185
 has_story: true
 jp_title: 
-banner_image: 
+banner_image: banner_info_Crossroads2611.webp
 gacha: true
 event_start_time: 2026-11-05T20:00:00+09
 event_end_time: 2026-11-26T14:00:00+09
