@@ -225,8 +225,8 @@ eleventyExcludeFromCollections: true
 {% include survey-graph.html path="/assets/img/survey-2026/ranked_voting_china.svg"
   title="排序投票（僅中國回答者）" %}
 
-{% include survey-graph.html path="/assets/img/survey-2026/ranked_voting_non_male.svg"
-  title="排序投票（僅非男性回答者）" %}
+{% include survey-graph.html path="/assets/img/survey-2026/ranked_voting_female.svg"
+  title="排序投票（僅女性回答者）" %}
 
 ## 路人角色與怪物
 

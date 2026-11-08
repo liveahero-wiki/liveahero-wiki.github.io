@@ -227,8 +227,8 @@ eleventyExcludeFromCollections: true
 {% include survey-graph.html path="/assets/img/survey-2026/ranked_voting_china.svg"
   title="順位付け投票（中国の回答者のみ）" %}
 
-{% include survey-graph.html path="/assets/img/survey-2026/ranked_voting_non_male.svg"
-  title="順位付け投票（男性以外の回答者のみ）" %}
+{% include survey-graph.html path="/assets/img/survey-2026/ranked_voting_female.svg"
+  title="順位付け投票（女性の回答者のみ）" %}
 
 ## モブと怪物
 

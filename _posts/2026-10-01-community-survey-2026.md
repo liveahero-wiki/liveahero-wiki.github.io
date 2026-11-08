@@ -296,7 +296,7 @@ Every ranking below can be filtered by country, region, age, gender and playing 
 
 To no one's surprise, male anthro characters dominated this year's popularity ranking. The approval rating winner in "Male Anthro", "Male Humanoid" and "Female/Other" are exactly the same as last year, congratulations to them for successfully defending their thrones!
 
-{% chara_link Akashi %} has more votes in All favourites ranking (unlimited votes), but {% chara_link Astar %} has more votes in "Top 10 favourites".
+{% chara_link Akashi %} has more votes in "All favourites" ranking (unlimited votes), but {% chara_link Astar %} has more votes in "Top 10 favourites".
 
 LifeWonders officially introduced more parallel/xeno characters now, so I included them in the survey for the first time.
 
@@ -334,16 +334,16 @@ Every year there are people complaining that only allowing top 10 characters are
 {% include survey-graph.html path="/assets/img/survey-2026/ranked_voting_china.svg"
   title="Ranked Voting (China respondents only)" %}
 
-{% include survey-graph.html path="/assets/img/survey-2026/ranked_voting_non_male.svg"
-  title="Ranked Voting (non-male respondents only)" %}
+{% include survey-graph.html path="/assets/img/survey-2026/ranked_voting_female.svg"
+  title="Ranked Voting (female respondents only)" %}
 
-In Japan, {% chara_link Monomasa %} is the Cordocet winner, where most other respondent groups tend put {% chara_link Pubraseer %} as (one of) the Cordocet winner.
+In Japan, {% chara_link Monomasa %} is the Cordocet winner, where most other respondent groups tend to put {% chara_link Pubraseer %} as (one of) the Cordocet winner.
 
 In Taiwan, {% chara_link Ruchbath %} became the highest male human character in the top 10. For Japan, the highest male human character is {% chara_link Rastaban %}.
 
 Among China respondents, there are two Cordocet winners: {% chara_link Pubraseer %} and {% chara_link Barrel %}. They each won over the other 50% of the time, so there is a tie. {% chara_link Astar %} is the only male humanoid in China's top 10.
 
-For non-male respondents, {% chara_link Vlaham %}, {% chara_link Akashi %} and {% chara_link ⇌Akashi %} climbed into top 10.
+Female respondents are a small group (only {{ f.female_answered }} ballots), so take their graph with a grain of salt: there is no Cordocet winner, and {% chara_link Akashi %} leads the locked order, followed by {% chara_link Melide %} and {% chara_link Crowne %}. Only {% chara_link Pubraseer %}, {% chara_link Barrel %} and {% chara_link Sterio %} overlap with the global top 10.
 
 ## Mobs and Kaibutsu
 
