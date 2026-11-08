@@ -17,7 +17,7 @@
    },
    "xAxis": {
     "type": "category",
-    "name": "Months since starting to play",
+    "name": "Time since starting to play (years)",
     "nameLocation": "middle",
     "nameGap": 28,
     "axisLabel": {
@@ -40,122 +40,132 @@
      "data": [
       {
        "value": [
-        "0–6",
-        52,
-        13.3
+        "0–0.5",
+        46,
+        11.9
        ],
        "tooltip": {
-        "formatter": "0–6<br>52 (13.3%)<br>Cumulative: 13.3%"
+        "formatter": "0–0.5<br>46 (11.9%)<br>Cumulative: 11.9%"
        }
       },
       {
        "value": [
-        "6–12",
+        "0.5–1",
         43,
-        11.0
+        11.2
        ],
        "tooltip": {
-        "formatter": "6–12<br>43 (11%)<br>Cumulative: 24.3%"
+        "formatter": "0.5–1<br>43 (11.2%)<br>Cumulative: 23.1%"
        }
       },
       {
        "value": [
-        "12–18",
+        "1–1.5",
         19,
         4.9
        ],
        "tooltip": {
-        "formatter": "12–18<br>19 (4.9%)<br>Cumulative: 29.2%"
+        "formatter": "1–1.5<br>19 (4.9%)<br>Cumulative: 28.1%"
        }
       },
       {
        "value": [
-        "18–24",
+        "1.5–2",
         21,
-        5.4
+        5.5
        ],
        "tooltip": {
-        "formatter": "18–24<br>21 (5.4%)<br>Cumulative: 34.5%"
+        "formatter": "1.5–2<br>21 (5.5%)<br>Cumulative: 33.5%"
        }
       },
       {
        "value": [
-        "24–30",
+        "2–2.5",
         22,
-        5.6
+        5.7
        ],
        "tooltip": {
-        "formatter": "24–30<br>22 (5.6%)<br>Cumulative: 40.2%"
+        "formatter": "2–2.5<br>22 (5.7%)<br>Cumulative: 39.2%"
        }
       },
       {
        "value": [
-        "30–36",
+        "2.5–3",
         12,
         3.1
        ],
        "tooltip": {
-        "formatter": "30–36<br>12 (3.1%)<br>Cumulative: 43.2%"
+        "formatter": "2.5–3<br>12 (3.1%)<br>Cumulative: 42.3%"
        }
       },
       {
        "value": [
-        "36–42",
+        "3–3.5",
         31,
-        7.9
+        8.1
        ],
        "tooltip": {
-        "formatter": "36–42<br>31 (7.9%)<br>Cumulative: 51.2%"
+        "formatter": "3–3.5<br>31 (8.1%)<br>Cumulative: 50.4%"
        }
       },
       {
        "value": [
-        "42–48",
+        "3.5–4",
         7,
         1.8
        ],
        "tooltip": {
-        "formatter": "42–48<br>7 (1.8%)<br>Cumulative: 52.9%"
+        "formatter": "3.5–4<br>7 (1.8%)<br>Cumulative: 52.2%"
        }
       },
       {
        "value": [
-        "48–54",
+        "4–4.5",
         8,
-        2.0
+        2.1
        ],
        "tooltip": {
-        "formatter": "48–54<br>8 (2%)<br>Cumulative: 55%"
+        "formatter": "4–4.5<br>8 (2.1%)<br>Cumulative: 54.3%"
        }
       },
       {
        "value": [
-        "54–60",
+        "4.5–5",
         12,
         3.1
        ],
        "tooltip": {
-        "formatter": "54–60<br>12 (3.1%)<br>Cumulative: 58.1%"
+        "formatter": "4.5–5<br>12 (3.1%)<br>Cumulative: 57.4%"
        }
       },
       {
        "value": [
-        "60–66",
+        "5–5.5",
         15,
-        3.8
+        3.9
        ],
        "tooltip": {
-        "formatter": "60–66<br>15 (3.8%)<br>Cumulative: 61.9%"
+        "formatter": "5–5.5<br>15 (3.9%)<br>Cumulative: 61.3%"
        }
       },
       {
        "value": [
-        "66–72",
-        149,
-        38.1
+        "5.5–6",
+        55,
+        14.3
        ],
        "tooltip": {
-        "formatter": "66–72<br>149 (38.1%)<br>Cumulative: 100%"
+        "formatter": "5.5–6<br>55 (14.3%)<br>Cumulative: 75.6%"
+       }
+      },
+      {
+       "value": [
+        "6–6.5",
+        94,
+        24.4
+       ],
+       "tooltip": {
+        "formatter": "6–6.5<br>94 (24.4%)<br>Cumulative: 100%"
        }
       }
      ],
@@ -180,7 +190,7 @@
     }
    ]
   },
-  "note": "Counted up to the end of the survey. Start dates before launch or after the response are excluded."
+  "note": "Counted up to the end of the survey, in half-year bins. Start dates before launch are excluded, as are 7 responses whose start date was within one day of submitting (most likely the form's default date)."
  },
  "ja": {
   "title": "プレイ期間",
@@ -198,7 +208,7 @@
    },
    "xAxis": {
     "type": "category",
-    "name": "プレイ開始からの月数",
+    "name": "プレイ開始からの期間（年）",
     "nameLocation": "middle",
     "nameGap": 28,
     "axisLabel": {
@@ -221,122 +231,132 @@
      "data": [
       {
        "value": [
-        "0–6",
-        52,
-        13.3
+        "0–0.5",
+        46,
+        11.9
        ],
        "tooltip": {
-        "formatter": "0–6<br>52 (13.3%)<br>累積: 13.3%"
+        "formatter": "0–0.5<br>46 (11.9%)<br>累積: 11.9%"
        }
       },
       {
        "value": [
-        "6–12",
+        "0.5–1",
         43,
-        11.0
+        11.2
        ],
        "tooltip": {
-        "formatter": "6–12<br>43 (11%)<br>累積: 24.3%"
+        "formatter": "0.5–1<br>43 (11.2%)<br>累積: 23.1%"
        }
       },
       {
        "value": [
-        "12–18",
+        "1–1.5",
         19,
         4.9
        ],
        "tooltip": {
-        "formatter": "12–18<br>19 (4.9%)<br>累積: 29.2%"
+        "formatter": "1–1.5<br>19 (4.9%)<br>累積: 28.1%"
        }
       },
       {
        "value": [
-        "18–24",
+        "1.5–2",
         21,
-        5.4
+        5.5
        ],
        "tooltip": {
-        "formatter": "18–24<br>21 (5.4%)<br>累積: 34.5%"
+        "formatter": "1.5–2<br>21 (5.5%)<br>累積: 33.5%"
        }
       },
       {
        "value": [
-        "24–30",
+        "2–2.5",
         22,
-        5.6
+        5.7
        ],
        "tooltip": {
-        "formatter": "24–30<br>22 (5.6%)<br>累積: 40.2%"
+        "formatter": "2–2.5<br>22 (5.7%)<br>累積: 39.2%"
        }
       },
       {
        "value": [
-        "30–36",
+        "2.5–3",
         12,
         3.1
        ],
        "tooltip": {
-        "formatter": "30–36<br>12 (3.1%)<br>累積: 43.2%"
+        "formatter": "2.5–3<br>12 (3.1%)<br>累積: 42.3%"
        }
       },
       {
        "value": [
-        "36–42",
+        "3–3.5",
         31,
-        7.9
+        8.1
        ],
        "tooltip": {
-        "formatter": "36–42<br>31 (7.9%)<br>累積: 51.2%"
+        "formatter": "3–3.5<br>31 (8.1%)<br>累積: 50.4%"
        }
       },
       {
        "value": [
-        "42–48",
+        "3.5–4",
         7,
         1.8
        ],
        "tooltip": {
-        "formatter": "42–48<br>7 (1.8%)<br>累積: 52.9%"
+        "formatter": "3.5–4<br>7 (1.8%)<br>累積: 52.2%"
        }
       },
       {
        "value": [
-        "48–54",
+        "4–4.5",
         8,
-        2.0
+        2.1
        ],
        "tooltip": {
-        "formatter": "48–54<br>8 (2%)<br>累積: 55%"
+        "formatter": "4–4.5<br>8 (2.1%)<br>累積: 54.3%"
        }
       },
       {
        "value": [
-        "54–60",
+        "4.5–5",
         12,
         3.1
        ],
        "tooltip": {
-        "formatter": "54–60<br>12 (3.1%)<br>累積: 58.1%"
+        "formatter": "4.5–5<br>12 (3.1%)<br>累積: 57.4%"
        }
       },
       {
        "value": [
-        "60–66",
+        "5–5.5",
         15,
-        3.8
+        3.9
        ],
        "tooltip": {
-        "formatter": "60–66<br>15 (3.8%)<br>累積: 61.9%"
+        "formatter": "5–5.5<br>15 (3.9%)<br>累積: 61.3%"
        }
       },
       {
        "value": [
-        "66–72",
-        149,
-        38.1
+        "5.5–6",
+        55,
+        14.3
        ],
        "tooltip": {
-        "formatter": "66–72<br>149 (38.1%)<br>累積: 100%"
+        "formatter": "5.5–6<br>55 (14.3%)<br>累積: 75.6%"
+       }
+      },
+      {
+       "value": [
+        "6–6.5",
+        94,
+        24.4
+       ],
+       "tooltip": {
+        "formatter": "6–6.5<br>94 (24.4%)<br>累積: 100%"
        }
       }
      ],
@@ -361,7 +381,7 @@
     }
    ]
   },
-  "note": "アンケート終了時点まで。リリース前または回答日より後の開始日は除外しています。"
+  "note": "アンケート終了時点まで、半年刻みで集計。リリース前の開始日と、回答日との差が1日以内の開始日（初期値のままの可能性が高い）の7件は除外しています。"
  },
  "zh-tw": {
   "title": "遊玩時間長度",
@@ -379,7 +399,7 @@
    },
    "xAxis": {
     "type": "category",
-    "name": "開始遊玩至今的月數",
+    "name": "開始遊玩至今的時間（年）",
     "nameLocation": "middle",
     "nameGap": 28,
     "axisLabel": {
@@ -402,122 +422,132 @@
      "data": [
       {
        "value": [
-        "0–6",
-        52,
-        13.3
+        "0–0.5",
+        46,
+        11.9
        ],
        "tooltip": {
-        "formatter": "0–6<br>52 (13.3%)<br>累計: 13.3%"
+        "formatter": "0–0.5<br>46 (11.9%)<br>累計: 11.9%"
        }
       },
       {
        "value": [
-        "6–12",
+        "0.5–1",
         43,
-        11.0
+        11.2
        ],
        "tooltip": {
-        "formatter": "6–12<br>43 (11%)<br>累計: 24.3%"
+        "formatter": "0.5–1<br>43 (11.2%)<br>累計: 23.1%"
        }
       },
       {
        "value": [
-        "12–18",
+        "1–1.5",
         19,
         4.9
        ],
        "tooltip": {
-        "formatter": "12–18<br>19 (4.9%)<br>累計: 29.2%"
+        "formatter": "1–1.5<br>19 (4.9%)<br>累計: 28.1%"
        }
       },
       {
        "value": [
-        "18–24",
+        "1.5–2",
         21,
-        5.4
+        5.5
        ],
        "tooltip": {
-        "formatter": "18–24<br>21 (5.4%)<br>累計: 34.5%"
+        "formatter": "1.5–2<br>21 (5.5%)<br>累計: 33.5%"
        }
       },
       {
        "value": [
-        "24–30",
+        "2–2.5",
         22,
-        5.6
+        5.7
        ],
        "tooltip": {
-        "formatter": "24–30<br>22 (5.6%)<br>累計: 40.2%"
+        "formatter": "2–2.5<br>22 (5.7%)<br>累計: 39.2%"
        }
       },
       {
        "value": [
-        "30–36",
+        "2.5–3",
         12,
         3.1
        ],
        "tooltip": {
-        "formatter": "30–36<br>12 (3.1%)<br>累計: 43.2%"
+        "formatter": "2.5–3<br>12 (3.1%)<br>累計: 42.3%"
        }
       },
       {
        "value": [
-        "36–42",
+        "3–3.5",
         31,
-        7.9
+        8.1
        ],
        "tooltip": {
-        "formatter": "36–42<br>31 (7.9%)<br>累計: 51.2%"
+        "formatter": "3–3.5<br>31 (8.1%)<br>累計: 50.4%"
        }
       },
       {
        "value": [
-        "42–48",
+        "3.5–4",
         7,
         1.8
        ],
        "tooltip": {
-        "formatter": "42–48<br>7 (1.8%)<br>累計: 52.9%"
+        "formatter": "3.5–4<br>7 (1.8%)<br>累計: 52.2%"
        }
       },
       {
        "value": [
-        "48–54",
+        "4–4.5",
         8,
-        2.0
+        2.1
        ],
        "tooltip": {
-        "formatter": "48–54<br>8 (2%)<br>累計: 55%"
+        "formatter": "4–4.5<br>8 (2.1%)<br>累計: 54.3%"
        }
       },
       {
        "value": [
-        "54–60",
+        "4.5–5",
         12,
         3.1
        ],
        "tooltip": {
-        "formatter": "54–60<br>12 (3.1%)<br>累計: 58.1%"
+        "formatter": "4.5–5<br>12 (3.1%)<br>累計: 57.4%"
        }
       },
       {
        "value": [
-        "60–66",
+        "5–5.5",
         15,
-        3.8
+        3.9
        ],
        "tooltip": {
-        "formatter": "60–66<br>15 (3.8%)<br>累計: 61.9%"
+        "formatter": "5–5.5<br>15 (3.9%)<br>累計: 61.3%"
        }
       },
       {
        "value": [
-        "66–72",
-        149,
-        38.1
+        "5.5–6",
+        55,
+        14.3
        ],
        "tooltip": {
-        "formatter": "66–72<br>149 (38.1%)<br>累計: 100%"
+        "formatter": "5.5–6<br>55 (14.3%)<br>累計: 75.6%"
+       }
+      },
+      {
+       "value": [
+        "6–6.5",
+        94,
+        24.4
+       ],
+       "tooltip": {
+        "formatter": "6–6.5<br>94 (24.4%)<br>累計: 100%"
        }
       }
      ],
@@ -542,6 +572,6 @@
     }
    ]
   },
-  "note": "計算至問卷結束。早於上線日或晚於回答日的開始日期不計入。"
+  "note": "計算至問卷結束，以半年為區間。早於上線日的開始日期，以及開始日期與填答日相差一天內（很可能是未更改的預設日期）的 7 筆回答不計入。"
  }
 }

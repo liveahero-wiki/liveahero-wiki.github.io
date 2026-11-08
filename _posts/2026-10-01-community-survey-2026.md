@@ -81,13 +81,18 @@ The median age is {{ f.age_median }}. There was one respondent from Philipines t
 
 {% include survey-chart.html id="country" %}
 
-Japan share fell from {{ f.yoy["2025"].japan_pct }}% to {{ f.yoy["2026"].japan_pct }}%.
-China share fell from {{ f.yoy["2025"].china_pct }}% to {{ f.yoy["2026"].china_pct }}%.
-Taiwan share fell from {{ f.yoy["2025"].taiwan_pct }}% to {{ f.yoy["2026"].taiwan_pct }}%.
+Between 2025 and 2026 survey:
+
+- Japan share fell from {{ f.yoy["2025"].japan_pct }}% to {{ f.yoy["2026"].japan_pct }}%.
+- China share fell from {{ f.yoy["2025"].china_pct }}% to {{ f.yoy["2026"].china_pct }}%.
+- Taiwan share fell from {{ f.yoy["2025"].taiwan_pct }}% to {{ f.yoy["2026"].taiwan_pct }}%.
 
 ## Japanese proficiency
 
 {% include survey-chart.html id="jp" %}
+
+If we assume that you need at least N3 level to be able to read Live A Hero story in Japanese comfortably, then only 14.9% of the respondents can do so.
+If we exclude the Japan players ({{ f.jp_n1_japan }}), the percentage drops to 11.2%.
 
 # The Game
 
@@ -99,9 +104,19 @@ Taiwan share fell from {{ f.yoy["2025"].taiwan_pct }}% to {{ f.yoy["2026"].taiwa
 
 {% include survey-chart.html id="platform" %}
 
+{% include survey-graph.html path="/assets/img/survey-2026/platform_venn.en.svg" title="Platform overlap" %}
+
+{{ f.platform_multi }} respondents ({{ f.platform_multi_pct }}%) use more than one platform. Each number in the diagram is the respondents who chose exactly that combination; the regions are all the same size, so it is not drawn to scale.
+
+12 respondents (3%) play exclusively via Android emulators on PC, but no one plays exclusively on "Google Play Games on PC"
+
 ## Playing Time
 
 {% include survey-chart.html id="tenure" %}
+
+- We have close a quarter of the respondents that started playing this game near the game launch date.
+- The player growth was slow until there was a spike near [3rd anniversary](/events/23093rdAnniversary/), which was the time when LifeWonders announced they "planned" to release official translation.
+- The player growth reaccelerated in the past 12 months (mostly oversea players). This is also the year where official translation was finally released.
 
 ## Main Character Configuration
 
@@ -131,6 +146,8 @@ More than half of the respondents at least spent money in-game once in the entir
 Compared to 2025, the number of free players increases slightly.
 
 Among paying players, XL (biggest spender) and S tier (only spent in new year/anniversary) have some decrease, while XS tier saw the biggest increase. It is likely that these people went to buy the new web shop value pack.
+
+> We know that East-Asia has the highest percentage of paying players for this game, but this player segment also decreased the most in this year's survey, so take that into the consideration.
 
 {% include survey-chart.html id="money_items" %}
 
@@ -164,6 +181,8 @@ As expected, respondents that bought in-game items are more likely to also buy p
 
 {% include survey-chart.html id="login_paying_share" %}
 
+Despite the demographics of the survey respondents changes every year and LifeWonders may have added more game features, the overall shape of these charts still remain pretty much the same across many years. The game seem to have cemented the type of players it can attract.
+
 ## High Difficulty Quest
 
 {% include survey-chart.html id="hdq_ss" %}
@@ -190,11 +209,21 @@ The respondents also gave very high rating for how LifeWonders handled change of
 
 {% include survey-chart.html id="ratings_story" %}
 
+In general, the respondents gave a pretty high score for the story aspect of the game.
+
 {% include survey-chart.html id="ratings_gameplay" %}
+
+- Nearly 3/4 of the respondents are positive about the gameplay design
+- Nearly half of the respondents think that other gacha games have better gacha system than this game
 
 {% include survey-chart.html id="ratings_bipolar" %}
 
+- Nearly half of the respondents think the current pace of new content release is optimal, while rest of the respondents lean more towards wanting a more frequent new content release
+
 {% include survey-chart.html id="ratings_community" %}
+
+- More than half of the respondents give positive score for the quality of official translation
+- Even higher percentage of the respondents are dissatisfied with the release schedule of the official translation
 
 ## Read Story
 
@@ -202,11 +231,23 @@ The respondents also gave very high rating for how LifeWonders handled change of
 
 {% include survey-chart.html id="read_story_by_jp" %}
 
+> Note: This question allowed multiple answers
+
+- Respondents with Japanese reading ability ranging N1~N3 level naturally are more likely to read the game story directly in-game, but nearly 30% of them also rely on official/fan/machine translation
+- 57.1% of the respondents have Japanese reading ability below N3 level
+  - 42.4% rely on fan translation while 28.8% rely on machine translation
+  - More than half of them do read official translated game story (including those that may have read fan/machine translation years ago)
+- 11% of the respondents play the game to collect characters without reading the game story in any form
+
 ## Event Rating
 
 {% include survey-chart.html id="event_ratings" %}
 
 {% include survey-chart.html id="event_by_jp" %}
+
+- [Summer Montage Halation](/events/2607Montage/) has the highest average event score (4.34)
+- In general, respondents with Japanese reading ability > N3 level tend to give higher score than those with lower Japanese reading ability
+  - The only excepption is [Summer Montage Halation](/events/2607Montage/)
 
 ## Other games
 
@@ -220,6 +261,16 @@ The respondents also gave very high rating for how LifeWonders handled change of
 
 {% include survey-graph.html path="/assets/img/survey-2026/ranked_games_global.svg"
   title="Ranked voting of games (global)" %}
+
+I don't want to repeat too much from my last year commentary, you can read it [here](/blog/2025/community-survey-2025/#other-games).
+
+- **Gyee**:
+  - Last year, more than a third of Japan respondents had never heard of this game. But since I added the Japanese name of the game in the survey this year, the percentage dropped to 7.1%
+- **Another Eidoes of Dragonvein** vs **XXL Woofia**:
+  - Japan respondents tend to rank this game higher than XXL Woofia, while the opposite is true for the rest of the respondents.
+  - Both games have simultaneous official translation release. Such popularity gap between region exists despite no language barrier is quite interesting.
+- **Tamacolle**
+  - Surprisingly, Taiwan respondents has higher percentage of respondents still playing this game thant Japanese respondents, but it is likely just because the number of Japanese respondents is too low.
 
 ## English Wiki
 
@@ -242,6 +293,8 @@ Every ranking below can be filtered by country, region, age, gender and playing 
 |{% chara_link Sterio %}   | 49.4% |{% chara_link Roudin %}  | 28.5% |{% chara_link Flamier %}  |15.4%|
 
 To no one's surprise, male anthro characters dominated this year's popularity ranking. The approval rating winner in "Male Anthro", "Male Humanoid" and "Female/Other" are exactly the same as last year, congratulations to them for successfully defending their thrones!
+
+{% chara_link Akashi %} has more votes in All favourites ranking (unlimited votes), but {% chara_link Astar %} has more votes in "Top 10 favourites".
 
 LifeWonders officially introduced more parallel/xeno characters now, so I included them in the survey for the first time. We can see that right now, the original version all have higher appproval rating than the xeno version (e.g. {% chara_link Akashi %} > {% chara_link ⇌Akashi %}, {% chara_link Melide %} > {% chara_link ⇌Melide %}).
 
@@ -273,11 +326,9 @@ Every year there are people complaining that only allowing top 10 characters are
 {% include survey-graph.html path="/assets/img/survey-2026/ranked_voting_non_male.svg"
   title="Ranked Voting (non-male respondents only)" %}
 
-If we only consider by raw approval rating, {% chara_link Akashi %} wins over {% chara_link Astar %}. But in Rank Voting, {% chara_link Astar %} is higher.
-
 In Japan, {% chara_link Monomasa %} is the Cordocet winner, where most other respondent groups tend put {% chara_link Pubraseer %} as (one of) the Cordocet winner.
 
-In Taiwan, {% chara_link Ruchbath %} became the highest male human character in the top 10.
+In Taiwan, {% chara_link Ruchbath %} became the highest male human character in the top 10. For Japan, the highest male human character is {% chara_link Rastaban %}.
 
 Among China respondents, there are two Cordocet winners: {% chara_link Pubraseer %} and {% chara_link Barrel %}. They each won over the other 50% of the time, so there is a tie. {% chara_link Astar %} is the only male humanoid in China's top 10.
 
@@ -286,6 +337,8 @@ For non-male respondents, {% chara_link Vlaham %}, {% chara_link Akashi %} and {
 ## Mobs and Kaibutsu
 
 New this year: {{ f.mob_answered }} respondents picked their favourite mob characters and {{ f.kaibutsu_answered }} their favourite kaibutsu.
+
+Mercenary
 
 {% include survey-ranking.html query="survey=lah-mobs&y=2026" title="Mob popularity explorer" %}
 

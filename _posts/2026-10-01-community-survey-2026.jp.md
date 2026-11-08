@@ -88,6 +88,10 @@ eleventyExcludeFromCollections: true
 
 {% include survey-chart.html id="platform" %}
 
+{% include survey-graph.html path="/assets/img/survey-2026/platform_venn.ja.svg" title="プラットフォームの重なり" %}
+
+複数のプラットフォームを併用している回答者は{{ f.platform_multi }}人（{{ f.platform_multi_pct }}%）です。図中の数字は、その組み合わせをちょうど選んだ回答者数です。どの領域も同じ大きさで描いており、面積は人数に比例しません。
+
 ## プレイ時間
 
 {% include survey-chart.html id="tenure" %}

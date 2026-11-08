@@ -86,6 +86,10 @@ eleventyExcludeFromCollections: true
 
 {% include survey-chart.html id="platform" %}
 
+{% include survey-graph.html path="/assets/img/survey-2026/platform_venn.zh-tw.svg" title="平台重疊情形" %}
+
+有 {{ f.platform_multi }} 位受訪者（{{ f.platform_multi_pct }}%）同時使用多個平台。圖中數字是剛好選了該平台組合的受訪者人數；各區域大小相同，並非依比例繪製。
+
 ## 遊玩時間
 
 {% include survey-chart.html id="tenure" %}
