@@ -337,13 +337,13 @@ Every year there are people complaining that only allowing top 10 characters are
 {% include survey-graph.html path="/assets/img/survey-2026/ranked_voting_female.svg"
   title="Ranked Voting (female respondents only)" %}
 
-In Japan, {% chara_link Monomasa %} is the Cordocet winner, where most other respondent groups tend to put {% chara_link Pubraseer %} as (one of) the Cordocet winner.
+In **Japan**, {% chara_link Monomasa %} is the Cordocet winner, where most other respondent groups tend to put {% chara_link Pubraseer %} as (one of) the Cordocet winner.
 
-In Taiwan, {% chara_link Ruchbath %} became the highest male human character in the top 10. For Japan, the highest male human character is {% chara_link Rastaban %}.
+In **Taiwan**, {% chara_link Ruchbath %} became the highest male human character in the top 10. For **Japan**, the highest male human character is {% chara_link Rastaban %}.
 
-Among China respondents, there are two Cordocet winners: {% chara_link Pubraseer %} and {% chara_link Barrel %}. They each won over the other 50% of the time, so there is a tie. {% chara_link Astar %} is the only male humanoid in China's top 10.
+Among **China respondents**, there is no single Cordocet winner, because {% chara_link Pubraseer %} and {% chara_link Barrel %} won over the other character at 50% of the time (tie). {% chara_link Astar %} is the only male humanoid character in China's top 10.
 
-Female respondents are a small group (only {{ f.female_answered }} ballots), so take their graph with a grain of salt: there is no Cordocet winner, and {% chara_link Akashi %} leads the locked order, followed by {% chara_link Melide %} and {% chara_link Crowne %}. Only {% chara_link Pubraseer %}, {% chara_link Barrel %} and {% chara_link Sterio %} overlap with the global top 10.
+**Female respondents** are a small group (only {{ f.female_answered }} ballots), so take their graph with a grain of salt: there is no Cordocet winner, and {% chara_link Akashi %} leads the locked order, followed by {% chara_link Melide %} and {% chara_link Crowne %}. Only {% chara_link Pubraseer %}, {% chara_link Barrel %} and {% chara_link Sterio %} overlap with the global top 10.
 
 ## Mobs and Kaibutsu
 
@@ -356,7 +356,13 @@ New this year: {{ f.mob_answered }} respondents picked their favourite mob chara
 {% include survey-graph.html path="/assets/img/survey-2026/ranked_voting_mob.svg"
   title="Ranked Voting (mobs)" %}
 
-{% mob mercenary-transform %} is the Cordocet Winner in the ranked voting. I only realized that I forgot to add the civilian form of Mercenary while writing this report...
+> I only realized that I forgot to add the civilian form of Mercenary while writing this report...
+
+{% mob mercenary-transform %} is the Cordocet Winner in the ranked voting.
+
+**Locked order (top 10)**: {% mob Mercenary (Transform) %} > {% mob Wolfman (Summer) %} > {% mob Wolfman %} > {% mob Wolfman (Transform) %} > {% mob Ranger %} > {% mob Ranger (Transform) %} > {% mob Wrestler %} > {% mob Acolyte %} > {% mob Mercenary (Clown) %} > {% mob Acolyte (Transform) %}
+
+**Tie**: {% mob Mercenary (Clown) %} = {% mob Acolyte (Transform) %}
 
 ### Kaibutsu
 
@@ -367,6 +373,8 @@ New this year: {{ f.mob_answered }} respondents picked their favourite mob chara
 
 {% mob id-replica %} has the highest approval rating, and the gap between it and the second place is huge! {% chara_link Exio %} would be proud.
 
+**Locked order (top 10)**: {% mob Id Replica %} > {% mob Cetus/Plesiosaur Kaibutsu %} > {% mob Gatekeeper %} > {% mob Engine Kaibutsu (Adult) %} > {% mob Imposter %} > {% mob Palanquin Kaibutsu %} > {% mob Coal Tar Kaibutsu %} > {% mob Lizard Kaibutsu %} > {% mob Shark Kaibutsu %} > {% mob Ghost Kaibutsu (Adult) %}
+
 ## Best CP
 
 {{ f.best_cp_respondents }} respondents submitted {{ f.best_cp_pairs }} pairings.
@@ -374,7 +382,97 @@ New this year: {{ f.mob_answered }} respondents picked their favourite mob chara
 {% include survey-graph.html path="/assets/img/survey-2026/best_cp.svg"
   title="Best CP (pairs chosen by at least two respondents)" %}
 
-<!-- TODO: paste the "Best CP (paste-ready)" table from digest.md. -->
+| Pairs | Count |
+|-|-|
+| {% chara_link Huckle %} x {% chara_link Ryekie %} | 54 |
+| {% chara_link Barrel %} x {% chara_link Furlong %} | 39 |
+| {% chara_link Monomasa %} x {% chara_link Sadayoshi %} | 31 |
+| {% chara_link Giansar %} x {% chara_link reXer %} | 27 |
+| {% chara_link Norbrand %} x {% chara_link Vergald %} | 27 |
+| {% chara_link Giansar %} x {% chara_link Sadayoshi %} | 26 |
+| {% chara_link Akashi %} x {% chara_link ⇌Akashi %} | 24 |
+| {% chara_link Barrel %} x {% chara_link Gammei %} | 17 |
+| {% chara_link Phein %} x {% chara_link Procy %} | 17 |
+| {% chara_link Goro %} x {% chara_link Isaribi %} | 16 |
+| {% chara_link Branch %} x {% chara_link Broker %} | 14 |
+| {% chara_link Gammei %} x {% chara_link Tsuneaki %} | 13 |
+| {% chara_link Exio %} x {% chara_link Yoshiori %} | 12 |
+| {% chara_link Melide %} x {% chara_link Monomasa %} | 12 |
+| {% chara_link Canes %} x {% chara_link Sterio %} | 11 |
+| {% chara_link Saotome %} x {% chara_link Shiratori %} | 11 |
+| {% chara_link Alchiba %} x {% chara_link Vulpecula %} | 9 |
+| {% chara_link Astosis %} x {% chara_link Yohack %} | 9 |
+| {% chara_link Gomeisa %} x {% chara_link Procy %} | 8 |
+| {% chara_link Barrel %} x {% chara_link Ryekie %} | 7 |
+| {% chara_link Akashi %} x {% chara_link Kyoichi %} | 6 |
+| {% chara_link Borealis %} x {% chara_link Goro %} | 6 |
+| {% chara_link Esperdica %} x {% chara_link Raizi %} | 6 |
+| {% chara_link Gammei %} x {% chara_link Suhail %} | 6 |
+| {% chara_link Sensettia %} x {% chara_link Viscunam %} | 6 |
+| {% chara_link Amekuni %} x {% chara_link Ruchbath %} | 5 |
+| {% chara_link Astar %} x {% chara_link Senthak %} | 5 |
+| {% chara_link Barrel %} x {% chara_link Mokdai %} | 5 |
+| {% chara_link Exio %} x {% chara_link Huckle %} | 5 |
+| {% chara_link Gnomon %} x {% chara_link Rutilix %} | 5 |
+| {% chara_link Obsidius %} x {% chara_link Roiker %} | 5 |
+| {% chara_link Rastaban %} x {% chara_link Thuban %} | 5 |
+| {% chara_link Barrel %} x {% chara_link Monomasa %} | 4 |
+| {% chara_link Hitomi %} x {% chara_link Sui %} | 4 |
+| {% chara_link Mokdai %} x {% chara_link Yohack %} | 4 |
+| {% chara_link Roiker %} x {% chara_link Yvaga %} | 4 |
+| {% chara_link Sadayoshi %} x {% chara_link Tsuneaki %} | 4 |
+| {% chara_link Akashi %} x {% chara_link Mokdai %} | 3 |
+| {% chara_link Antares %} x {% chara_link Taika %} | 3 |
+| {% chara_link Barrel %} x {% chara_link Pubraseer %} | 3 |
+| {% chara_link Branch %} x {% chara_link Norbrand %} | 3 |
+| {% chara_link Crowne %} x {% chara_link Maculata %} | 3 |
+| {% chara_link Crowne %} x {% chara_link Sui %} | 3 |
+| {% chara_link Flamier %} x {% chara_link Lilac %} | 3 |
+| {% chara_link Gammei %} x {% chara_link Okitaka %} | 3 |
+| {% chara_link Giansar %} x {% chara_link Hydoor %} | 3 |
+| {% chara_link Hydoor %} x {% chara_link Isaribi %} | 3 |
+| {% chara_link Lilac %} x {% chara_link Roudin %} | 3 |
+| {% chara_link Pubraseer %} x {% chara_link Ryekie %} | 3 |
+| {% chara_link Shoen %} x {% chara_link Toshu %} | 3 |
+| {% chara_link Akashi %} x {% chara_link Crowne %} | 2 |
+| {% chara_link Akashi %} x {% chara_link Rutilix %} | 2 |
+| {% chara_link Akashi %} x {% chara_link Sui %} | 2 |
+| {% chara_link Akashi %} x {% chara_link Yoshiori %} | 2 |
+| {% chara_link Alend %} x {% chara_link Saotome %} | 2 |
+| {% chara_link Alend %} x {% chara_link Turbak %} | 2 |
+| {% chara_link Amekuni %} x {% chara_link Shiratori %} | 2 |
+| {% chara_link Astosis %} x {% chara_link Tsuneaki %} | 2 |
+| {% chara_link Barrel %} x {% chara_link Giansar %} | 2 |
+| {% chara_link Barrel %} x {% chara_link Sterio %} | 2 |
+| {% chara_link Broker %} x {% chara_link Exio %} | 2 |
+| {% chara_link Bygul %} x {% chara_link Mokdai %} | 2 |
+| {% chara_link Conche %} x {% chara_link Sterio %} | 2 |
+| {% chara_link Crowne %} x {% chara_link Hisaki %} | 2 |
+| {% chara_link Crowne %} x {% chara_link Mokdai %} | 2 |
+| {% chara_link Danzo %} x {% chara_link Victom %} | 2 |
+| {% chara_link Denebora %} x {% chara_link Pubraseer %} | 2 |
+| {% chara_link Gaisei %} x {% chara_link Yotaro %} | 2 |
+| {% chara_link Gammei %} x {% chara_link Huckle %} | 2 |
+| {% chara_link Giansar %} x {% chara_link Monomasa %} | 2 |
+| {% chara_link Giansar %} x {% chara_link Ruchbath %} | 2 |
+| {% chara_link Giansar %} x {% chara_link Vulpecula %} | 2 |
+| {% chara_link Gnomon %} x {% chara_link Hydoor %} | 2 |
+| {% chara_link Grigory %} x {% chara_link Santetsu %} | 2 |
+| {% chara_link Melide %} x {% chara_link Yoshiori %} | 2 |
+| {% chara_link Mokdai %} x {% chara_link Ryekie %} | 2 |
+| {% chara_link Obsidius %} x {% chara_link Pubraseer %} | 2 |
+| {% chara_link Obsidius %} x {% chara_link Yvaga %} | 2 |
+| {% chara_link Pubraseer %} x {% chara_link Ruchbath %} | 2 |
+| {% chara_link Pubraseer %} x {% chara_link Sterio %} | 2 |
+| {% chara_link Pubraseer %} x {% chara_link Tsuneaki %} | 2 |
+| {% chara_link Pubraseer %} x {% chara_link Valoray %} | 2 |
+| {% chara_link Rastaban %} x {% chara_link Yuhang %} | 2 |
+| {% chara_link Reticul %} x {% chara_link Roiker %} | 2 |
+| {% chara_link Roudin %} x {% chara_link Ruchbath %} | 2 |
+| {% chara_link Taika %} x {% chara_link Toshu %} | 2 |
+| {% chara_link Thuban %} x {% chara_link Vergald %} | 2 |
+| {% chara_link ⇌Akashi %} x {% chara_link Crowne (Alter) %} | 2 |
+| {% chara_link ⇌Akashi %} x {% chara_link ⇌Melide %} | 2 |
 
 ## Humanoid vs Anthro Bias
 
