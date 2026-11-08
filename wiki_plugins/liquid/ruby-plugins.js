@@ -8,6 +8,7 @@ import { charaLink, charaPageToIcon, charaPageToLink, stockIdToLinkImpl } from "
 import { imageDimension } from "../lib/image.js";
 import { OrderedIntHash } from "../lib/int-key-map.js";
 import { lahItem, lahItemIcon } from "../lib/item.js";
+import { mobLink } from "../lib/mob.js";
 import { xmlEscape } from "../lib/ruby.js";
 import * as skill from "../lib/skill.js";
 import { createSkillText } from "../lib/skill-text.js";
@@ -39,6 +40,15 @@ export function registerRubyPlugins(eleventyConfig, { site, charaIndex }) {
     },
     render() {
       return charaLink(this.input, charaDeps);
+    },
+  }));
+  // `{% mob Acolyte %}`: icon + name of an enemy series from api/mob.json, no link
+  eleventyConfig.addLiquidTag("mob", () => ({
+    parse(tagToken) {
+      this.input = tagToken.args;
+    },
+    render() {
+      return mobLink(this.input, site.data);
     },
   }));
   filter("stockIdToLink", (stockId, type) => stockIdToLinkImpl(Number(stockId), type, charaDeps)[1]);
