@@ -313,6 +313,116 @@ LifeWonders officially introduced more parallel/xeno characters now, so I includ
 
 Every year there are people complaining that only allowing top 10 characters are too little, so here is a reminder that there are also plenty respondents that do not even choose full 10 characters.
 
+## All favourites: global top 25 (2026, n=403)
+
+| rank | character | approval | 2025 | rank change |
+|---|---|---|---|---|
+| 1 | Pubraseer | 65.3% | 65.4% | +0 |
+| 2 | Barrel | 59.1% | 47.5% | +3 |
+| 3 | Monomasa | 53.3% | 53.5% | -1 |
+| 4 | Ryekie | 51.4% | 48.5% | +0 |
+| 5 | Sterio | 49.4% | 40.8% | +6 |
+| 6 | Giansar | 47.9% | 49.5% | -3 |
+| 7 | Norbrand | 44.7% | new | new |
+| 8 | Toshu | 43.2% | 42.6% | +0 |
+| 9 | Denebora | 42.4% | 31.7% | +10 |
+| 10 | Tsuneaki | 41.9% | 47.0% | -4 |
+| 11 | Valoray | 41.2% | 38.3% | +2 |
+| 11 | reXer | 41.2% | 41.9% | -2 |
+| 13 | Obsidius | 40.2% | 43.5% | -6 |
+| 14 | Akashi | 37.7% | 41.4% | -4 |
+| 15 | Sadayoshi | 37.5% | 38.9% | -3 |
+| 16 | Astar | 36.7% | 37.8% | -2 |
+| 16 | Yohack | 36.7% | 37.2% | -1 |
+| 18 | Mokdai | 36.0% | 30.9% | +4 |
+| 19 | Ruchbath | 35.5% | new | new |
+| 20 | Astosis | 35.2% | 32.9% | -3 |
+| 21 | Huckle | 34.5% | 25.7% | +6 |
+| 22 | Galvo | 33.5% | 35.9% | -6 |
+| 22 | Thuban | 33.5% | new | new |
+| 24 | Gnomon | 32.8% | 27.5% | +0 |
+| 25 | ⇌Akashi | 32.3% | new | new |
+
+## All favourites: biggest approval changes 2025 -> 2026
+
+| character | change (pp) | 2025 | 2026 | rank then -> now |
+|---|---|---|---|---|
+| Roiker | +13.2 | 17.6% | 30.8% | 48 -> 28 |
+| Barrel | +11.6 | 47.5% | 59.1% | 5 -> 2 |
+| Denebora | +10.7 | 31.7% | 42.4% | 19 -> 9 |
+| Huckle | +8.8 | 25.7% | 34.5% | 27 -> 21 |
+| Sterio | +8.6 | 40.8% | 49.4% | 11 -> 5 |
+| Procy | +6.4 | 14.4% | 20.8% | 56 -> 49 |
+| Senthak | +6.0 | 18.3% | 24.3% | 46 -> 39 |
+| Taika | +5.5 | 21.8% | 27.3% | 39 -> 33 |
+| Gnomon | +5.2 | 27.5% | 32.8% | 24 -> 24 |
+| Mokdai | +5.1 | 30.9% | 36.0% | 22 -> 18 |
+| Kiloc | -7.5 | 24.8% | 17.4% | 30 -> 58 |
+| Gammei | -7.1 | 31.4% | 24.3% | 21 -> 39 |
+| Antares | -6.0 | 14.4% | 8.4% | 56 -> 100 |
+| Lilac | -5.5 | 29.9% | 24.3% | 23 -> 39 |
+| Tsuneaki | -5.0 | 47.0% | 41.9% | 6 -> 10 |
+| Shiratori | -5.0 | 17.6% | 12.7% | 48 -> 80 |
+| Shaft | -4.8 | 20.5% | 15.6% | 41 -> 66 |
+| Houley | -4.5 | 14.4% | 9.9% | 56 -> 89 |
+| Seiichiro | -4.5 | 13.4% | 8.9% | 66 -> 99 |
+| Polaris Mask | -4.0 | 23.8% | 19.9% | 32 -> 51 |
+
+## Top 10: global top 25 (2026, n=403)
+
+| rank | character | approval | 2025 | rank change |
+|---|---|---|---|---|
+| 1 | Pubraseer | 44.9% | 49.2% | +0 |
+| 2 | Barrel | 36.5% | 28.5% | +2 |
+| 3 | Monomasa | 32.3% | 37.9% | -1 |
+| 4 | Giansar | 28.8% | 32.2% | -1 |
+| 5 | Sterio | 27.5% | 18.0% | +7 |
+| 6 | Ryekie | 23.8% | 26.0% | -1 |
+| 7 | Obsidius | 22.1% | 24.3% | -1 |
+| 8 | Tsuneaki | 20.8% | 22.8% | +2 |
+| 9 | Norbrand | 19.9% | new | new |
+| 10 | Sadayoshi | 19.1% | 24.3% | -4 |
+| 11 | Astar | 18.6% | 16.4% | +5 |
+| 12 | Akashi | 18.1% | 24.0% | -4 |
+| 13 | Denebora | 17.9% | 11.7% | +9 |
+| 13 | Ruchbath | 17.9% | new | new |
+| 15 | reXer | 17.6% | 23.5% | -6 |
+| 16 | Yohack | 15.9% | 16.8% | -3 |
+| 17 | Toshu | 15.4% | 19.3% | -6 |
+| 18 | Astosis | 14.9% | 12.2% | +3 |
+| 19 | Valoray | 13.9% | 14.4% | -2 |
+| 20 | Mokdai | 13.2% | 13.4% | -1 |
+| 21 | Huckle | 12.4% | 10.2% | +4 |
+| 22 | Roiker | 12.2% | 5.7% | +24 |
+| 23 | Gammei | 11.7% | 16.6% | -8 |
+| 24 | ⇌Akashi | 11.4% | new | new |
+| 25 | Viscunam | 10.7% | 7.9% | +9 |
+
+## Top 10: biggest approval changes 2025 -> 2026
+
+| character | change (pp) | 2025 | 2026 | rank then -> now |
+|---|---|---|---|---|
+| Sterio | +9.6 | 18.0% | 27.5% | 12 -> 5 |
+| Barrel | +8.0 | 28.5% | 36.5% | 4 -> 2 |
+| Roiker | +6.5 | 5.7% | 12.2% | 46 -> 22 |
+| Denebora | +6.1 | 11.7% | 17.9% | 22 -> 13 |
+| Gnomon | +3.1 | 6.4% | 9.4% | 43 -> 31 |
+| Viscunam | +2.8 | 7.9% | 10.7% | 34 -> 25 |
+| Taika | +2.7 | 7.2% | 9.9% | 38 -> 28 |
+| Astosis | +2.6 | 12.2% | 14.9% | 21 -> 18 |
+| Sui | +2.5 | 2.0% | 4.5% | 82 -> 64 |
+| Senthak | +2.4 | 4.0% | 6.5% | 58 -> 46 |
+| Lilac | -7.1 | 16.8% | 9.7% | 13 -> 29 |
+| Kiloc | -6.6 | 9.1% | 2.5% | 31 -> 83 |
+| Akashi | -5.9 | 24.0% | 18.1% | 8 -> 12 |
+| reXer | -5.9 | 23.5% | 17.6% | 9 -> 15 |
+| Monomasa | -5.7 | 37.9% | 32.3% | 2 -> 3 |
+| Galvo | -5.6 | 13.8% | 8.2% | 18 -> 33 |
+| Sadayoshi | -5.2 | 24.3% | 19.1% | 6 -> 10 |
+| Gammei | -4.9 | 16.6% | 11.7% | 15 -> 23 |
+| Polaris Mask | -4.8 | 9.7% | 5.0% | 26 -> 56 |
+| Exio | -4.4 | 10.4% | 6.0% | 24 -> 49 |
+
 ## Ranked Voting System
 
 <!-- TODO: carry over the Tideman explanation from 2025. -->
@@ -473,14 +583,6 @@ New this year: {{ f.mob_answered }} respondents picked their favourite mob chara
 | {% chara_link Thuban %} x {% chara_link Vergald %} | 2 |
 | {% chara_link ⇌Akashi %} x {% chara_link Crowne (Alter) %} | 2 |
 | {% chara_link ⇌Akashi %} x {% chara_link ⇌Melide %} | 2 |
-
-## Humanoid vs Anthro Bias
-
-{% include survey-chart.html id="anthro_everyone" %}
-
-{% include survey-chart.html id="anthro_japan" %}
-
-{% include survey-chart.html id="anthro_non_male" %}
 
 # Free form questions
 
