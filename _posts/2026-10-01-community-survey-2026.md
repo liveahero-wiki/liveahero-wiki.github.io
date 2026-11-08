@@ -284,6 +284,8 @@ Every ranking below can be filtered by country, region, age, gender and playing 
 
 {% include survey-ranking.html query="survey=lah&y=2026" title="Character popularity explorer" %}
 
+**Approval Rating (Global)**
+
 | Male Anthro | Approval | Male Humanoid | Approval | Female/Other | Approval |
 |-|-|-|-|-|-|
 |{% chara_link Pubraseer %}| 65.3% |{% chara_link Akashi %}  | 37.7% |{% chara_link Melide %}   |23.3%|
@@ -296,7 +298,16 @@ To no one's surprise, male anthro characters dominated this year's popularity ra
 
 {% chara_link Akashi %} has more votes in All favourites ranking (unlimited votes), but {% chara_link Astar %} has more votes in "Top 10 favourites".
 
-LifeWonders officially introduced more parallel/xeno characters now, so I included them in the survey for the first time. We can see that right now, the original version all have higher appproval rating than the xeno version (e.g. {% chara_link Akashi %} > {% chara_link ⇌Akashi %}, {% chara_link Melide %} > {% chara_link ⇌Melide %}).
+LifeWonders officially introduced more parallel/xeno characters now, so I included them in the survey for the first time.
+
+**Approval Rating for parallel selfs (Global)**
+
+| Version 1 |Approval Rating| Version 2 |Approval Rating|
+|-|-|-|-|
+|{% chara_link Akashi %} (win) | 37.7% | {% chara_link ⇌Akashi %} | 32.3% |
+|{% chara_link Broker %} | 26.8% | {% chara_link Branch %} (win) | 31.5 % |
+|{% chara_link Melide %} (win) | 23.3% | {% chara_link ⇌Melide %} | 19.4% |
+|{% chara_link Crowne %} (win) | 12.9% | {% chara_link Crowne (alter) %} | 6.0% |
 
 {% include survey-chart.html id="top10_size" %}
 
@@ -338,17 +349,23 @@ For non-male respondents, {% chara_link Vlaham %}, {% chara_link Akashi %} and {
 
 New this year: {{ f.mob_answered }} respondents picked their favourite mob characters and {{ f.kaibutsu_answered }} their favourite kaibutsu.
 
-Mercenary
+### Mobs
 
 {% include survey-ranking.html query="survey=lah-mobs&y=2026" title="Mob popularity explorer" %}
 
 {% include survey-graph.html path="/assets/img/survey-2026/ranked_voting_mob.svg"
   title="Ranked Voting (mobs)" %}
 
+{% mob mercenary-transform %} is the Cordocet Winner in the ranked voting. I only realized that I forgot to add the civilian form of Mercenary while writing this report...
+
+### Kaibutsu
+
 {% include survey-ranking.html query="survey=lah-kaibutsu&y=2026" title="Kaibutsu popularity explorer" %}
 
 {% include survey-graph.html path="/assets/img/survey-2026/ranked_voting_kaibutsu.svg"
   title="Ranked Voting (kaibutsu)" %}
+
+{% mob id-replica %} has the highest approval rating, and the gap between it and the second place is huge! {% chara_link Exio %} would be proud.
 
 ## Best CP
 
