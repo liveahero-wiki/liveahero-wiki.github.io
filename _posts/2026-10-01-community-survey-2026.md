@@ -100,6 +100,15 @@ If we exclude the Japan players ({{ f.jp_n1_japan }}), the percentage drops to 1
 
 {% include survey-chart.html id="play_lah" %}
 
+## Stop Reason (21 answers)
+
+- No English translation at the time when they gave up
+- Lost interest/motivation
+- Battle system is too complicated / unfamiliar with game mechanics
+- Quit becasue respondent cannot pull the character they want
+- Too little (free) pull currency
+- Respondent also play other gacha games, no time to keep Live A Hero
+
 ## Platform
 
 {% include survey-chart.html id="platform" %}
