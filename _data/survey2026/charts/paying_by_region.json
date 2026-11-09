@@ -1,0 +1,958 @@
+{
+ "section": "gameplay",
+ "height": 410,
+ "en": {
+  "title": "Spending tier by region",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "Southeast Asia (n=102)",
+     "East Asia (n=98)",
+     "North America (n=78)",
+     "Europe (n=42)",
+     "South America (n=40)",
+     "Oceania (n=6)",
+     "Western Asia (n=5)",
+     "Africa (n=3)"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "Zero",
+     "type": "bar",
+     "data": [
+      52.9,
+      22.4,
+      34.6,
+      54.8,
+      55.0,
+      50.0,
+      60.0,
+      100.0
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#a9a8a0"
+     }
+    },
+    {
+     "name": "XS",
+     "type": "bar",
+     "data": [
+      11.8,
+      8.2,
+      7.7,
+      {
+       "value": 2.4,
+       "label": {
+        "show": false
+       }
+      },
+      10.0,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "S",
+     "type": "bar",
+     "data": [
+      11.8,
+      8.2,
+      10.3,
+      11.9,
+      12.5,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#5598e7"
+     }
+    },
+    {
+     "name": "M",
+     "type": "bar",
+     "data": [
+      10.8,
+      13.3,
+      14.1,
+      4.8,
+      {
+       "value": 2.5,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      20.0,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#2a78d6"
+     }
+    },
+    {
+     "name": "L",
+     "type": "bar",
+     "data": [
+      8.8,
+      36.7,
+      19.2,
+      19.0,
+      17.5,
+      33.3,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#1c5cab"
+     }
+    },
+    {
+     "name": "XL",
+     "type": "bar",
+     "data": [
+      {
+       "value": 3.9,
+       "label": {
+        "show": false
+       }
+      },
+      11.2,
+      14.1,
+      7.1,
+      {
+       "value": 2.5,
+       "label": {
+        "show": false
+       }
+      },
+      16.7,
+      20.0,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#104281"
+     }
+    }
+   ]
+  }
+ },
+ "ja": {
+  "title": "地域ごとの課金レベル",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "東南アジア (n=102)",
+     "東アジア (n=98)",
+     "北アメリカ (n=78)",
+     "ヨーロッパ (n=42)",
+     "南アメリカ (n=40)",
+     "オセアニア (n=6)",
+     "西アジア (n=5)",
+     "アフリカ (n=3)"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "無課金",
+     "type": "bar",
+     "data": [
+      52.9,
+      22.4,
+      34.6,
+      54.8,
+      55.0,
+      50.0,
+      60.0,
+      100.0
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#a9a8a0"
+     }
+    },
+    {
+     "name": "XS",
+     "type": "bar",
+     "data": [
+      11.8,
+      8.2,
+      7.7,
+      {
+       "value": 2.4,
+       "label": {
+        "show": false
+       }
+      },
+      10.0,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "S",
+     "type": "bar",
+     "data": [
+      11.8,
+      8.2,
+      10.3,
+      11.9,
+      12.5,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#5598e7"
+     }
+    },
+    {
+     "name": "M",
+     "type": "bar",
+     "data": [
+      10.8,
+      13.3,
+      14.1,
+      4.8,
+      {
+       "value": 2.5,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      20.0,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#2a78d6"
+     }
+    },
+    {
+     "name": "L",
+     "type": "bar",
+     "data": [
+      8.8,
+      36.7,
+      19.2,
+      19.0,
+      17.5,
+      33.3,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#1c5cab"
+     }
+    },
+    {
+     "name": "XL",
+     "type": "bar",
+     "data": [
+      {
+       "value": 3.9,
+       "label": {
+        "show": false
+       }
+      },
+      11.2,
+      14.1,
+      7.1,
+      {
+       "value": 2.5,
+       "label": {
+        "show": false
+       }
+      },
+      16.7,
+      20.0,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#104281"
+     }
+    }
+   ]
+  }
+ },
+ "zh-tw": {
+  "title": "各地區的課金等級",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "東南亞 (n=102)",
+     "東亞 (n=98)",
+     "北美洲 (n=78)",
+     "歐洲 (n=42)",
+     "南美洲 (n=40)",
+     "大洋洲 (n=6)",
+     "西亞 (n=5)",
+     "非洲 (n=3)"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "無課金",
+     "type": "bar",
+     "data": [
+      52.9,
+      22.4,
+      34.6,
+      54.8,
+      55.0,
+      50.0,
+      60.0,
+      100.0
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#a9a8a0"
+     }
+    },
+    {
+     "name": "XS",
+     "type": "bar",
+     "data": [
+      11.8,
+      8.2,
+      7.7,
+      {
+       "value": 2.4,
+       "label": {
+        "show": false
+       }
+      },
+      10.0,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "S",
+     "type": "bar",
+     "data": [
+      11.8,
+      8.2,
+      10.3,
+      11.9,
+      12.5,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#5598e7"
+     }
+    },
+    {
+     "name": "M",
+     "type": "bar",
+     "data": [
+      10.8,
+      13.3,
+      14.1,
+      4.8,
+      {
+       "value": 2.5,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      20.0,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#2a78d6"
+     }
+    },
+    {
+     "name": "L",
+     "type": "bar",
+     "data": [
+      8.8,
+      36.7,
+      19.2,
+      19.0,
+      17.5,
+      33.3,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#1c5cab"
+     }
+    },
+    {
+     "name": "XL",
+     "type": "bar",
+     "data": [
+      {
+       "value": 3.9,
+       "label": {
+        "show": false
+       }
+      },
+      11.2,
+      14.1,
+      7.1,
+      {
+       "value": 2.5,
+       "label": {
+        "show": false
+       }
+      },
+      16.7,
+      20.0,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#104281"
+     }
+    }
+   ]
+  }
+ }
+}

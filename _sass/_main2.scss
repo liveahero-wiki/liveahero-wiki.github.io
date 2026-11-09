@@ -820,6 +820,14 @@ $elementName: fire, water, earth, light, shadow;
     height: 1.5em;
   }
 }
+// `{% mob Name %}`: an enemy's icon and name; plain (no tooltip, so no dashed underline)
+.mob img {
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
+  object-fit: contain;
+  object-position: center;
+}
 .status span {
   display: block;
   position: absolute;

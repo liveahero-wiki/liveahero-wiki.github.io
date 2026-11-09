@@ -12,6 +12,12 @@ const data = {
   SidekickMaster: { 100021: { resourceName: "akashi", name: "Akashi" }, 1: { resourceName: "x" } },
   ItemMaster: { 3: { itemName: "Ether", description: 'A "crystal"', resourceName: "stone01" } },
   wiki: { Item: new IntKeyMap({ 3: { name: "Ether Crystal" } }) },
+  mob: {
+    series: [
+      { id: "acolyte", name: "Acolyte", category: "villain", icon: "/assets/img/mob/icon_villainAcolyte_s01.png" },
+      { id: "id-kaibutsu-adult", name: "Id Kaibutsu (Adult)", category: "kaibutsu", icon: "/assets/img/mob/icon_kaibutsuIdAdult_h01.png" },
+    ],
+  },
 };
 const charas = [
   { title: "Akashi", characterId: 0, url: "/charas/akashi/", unreleased: false, h2: { title: "Akashi (alt)" } },
@@ -29,6 +35,15 @@ test("chara_link: plain name, variant suffix, unreleased and unknown", async () 
     '<a href="/charas/ghost/"><span class="item"><img src="/assets/img/unreleased/ghost.png" loading="lazy"></span> Ghost</a>',
   );
   assert.equal(await render("{% chara_link Nobody|h1 %}"), "Nobody");
+});
+
+test("mob: name, id, case-insensitive, unknown and escaped fallback", async () => {
+  const acolyte =
+    '<span class="mob"><img src="/assets/img/mob/icon_villainAcolyte_s01.png" loading="lazy" width="32" height="32"> Acolyte</span>';
+  assert.equal(await render("{% mob Acolyte %}"), acolyte);
+  assert.equal(await render("{% mob acolyte %}"), acolyte);
+  assert.match(await render("{% mob id-kaibutsu-adult %}"), /icon_kaibutsuIdAdult_h01\.png.*> Id Kaibutsu \(Adult\)<\/span>$/);
+  assert.equal(await render("{% mob Nobody <b> %}"), "Nobody &lt;b&gt;");
 });
 
 test("stockIdToLink uses the variant title for variants above 1", async () => {

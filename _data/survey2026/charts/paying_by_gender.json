@@ -1,0 +1,724 @@
+{
+ "section": "gameplay",
+ "height": 260,
+ "en": {
+  "title": "Spending tier by gender",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "Male (n=326)",
+     "Female (n=13)",
+     "Non-binary (n=23)",
+     "Other (n=12)"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "Zero",
+     "type": "bar",
+     "data": [
+      39.0,
+      69.2,
+      69.6,
+      41.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#a9a8a0"
+     }
+    },
+    {
+     "name": "XS",
+     "type": "bar",
+     "data": [
+      9.5,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "S",
+     "type": "bar",
+     "data": [
+      9.8,
+      15.4,
+      8.7,
+      16.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#5598e7"
+     }
+    },
+    {
+     "name": "M",
+     "type": "bar",
+     "data": [
+      10.4,
+      7.7,
+      13.0,
+      8.3
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#2a78d6"
+     }
+    },
+    {
+     "name": "L",
+     "type": "bar",
+     "data": [
+      23.0,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      16.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#1c5cab"
+     }
+    },
+    {
+     "name": "XL",
+     "type": "bar",
+     "data": [
+      8.3,
+      7.7,
+      8.7,
+      16.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#104281"
+     }
+    }
+   ]
+  }
+ },
+ "ja": {
+  "title": "性別ごとの課金レベル",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "男性 (n=326)",
+     "女性 (n=13)",
+     "ノンバイナリー (n=23)",
+     "その他 (n=12)"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "無課金",
+     "type": "bar",
+     "data": [
+      39.0,
+      69.2,
+      69.6,
+      41.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#a9a8a0"
+     }
+    },
+    {
+     "name": "XS",
+     "type": "bar",
+     "data": [
+      9.5,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "S",
+     "type": "bar",
+     "data": [
+      9.8,
+      15.4,
+      8.7,
+      16.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#5598e7"
+     }
+    },
+    {
+     "name": "M",
+     "type": "bar",
+     "data": [
+      10.4,
+      7.7,
+      13.0,
+      8.3
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#2a78d6"
+     }
+    },
+    {
+     "name": "L",
+     "type": "bar",
+     "data": [
+      23.0,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      16.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#1c5cab"
+     }
+    },
+    {
+     "name": "XL",
+     "type": "bar",
+     "data": [
+      8.3,
+      7.7,
+      8.7,
+      16.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#104281"
+     }
+    }
+   ]
+  }
+ },
+ "zh-tw": {
+  "title": "各性別的課金等級",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "男性 (n=326)",
+     "女性 (n=13)",
+     "非二元性別 (n=23)",
+     "其他 (n=12)"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "無課金",
+     "type": "bar",
+     "data": [
+      39.0,
+      69.2,
+      69.6,
+      41.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#a9a8a0"
+     }
+    },
+    {
+     "name": "XS",
+     "type": "bar",
+     "data": [
+      9.5,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "S",
+     "type": "bar",
+     "data": [
+      9.8,
+      15.4,
+      8.7,
+      16.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#5598e7"
+     }
+    },
+    {
+     "name": "M",
+     "type": "bar",
+     "data": [
+      10.4,
+      7.7,
+      13.0,
+      8.3
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#2a78d6"
+     }
+    },
+    {
+     "name": "L",
+     "type": "bar",
+     "data": [
+      23.0,
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 0.0,
+       "label": {
+        "show": false
+       }
+      },
+      16.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#1c5cab"
+     }
+    },
+    {
+     "name": "XL",
+     "type": "bar",
+     "data": [
+      8.3,
+      7.7,
+      8.7,
+      16.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#104281"
+     }
+    }
+   ]
+  }
+ }
+}

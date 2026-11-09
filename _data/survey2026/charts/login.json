@@ -1,0 +1,427 @@
+{
+ "section": "gameplay",
+ "height": 398,
+ "en": {
+  "title": "Choose the option that best describe your recent playing behaviour",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "item"
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 56,
+    "top": 16,
+    "bottom": 8
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    }
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "Only login once in a while",
+     "Only login once a week, not using stamina",
+     "Only login once a day, not using stamina",
+     "Only login once a week, try to clear as much missions as possible during that",
+     "Only login once a day, to clear current stamina and sales only",
+     "Login almost everyday, clear almost all stamina, but does not always able to clear hard game content",
+     "Login almost everyday, clear all game content in the most optimised method"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "type": "bar",
+     "data": [
+      {
+       "value": [
+        "Only login once in a while",
+        26,
+        7.0
+       ],
+       "tooltip": {
+        "formatter": "Only login once in a while<br>26 (7%)"
+       }
+      },
+      {
+       "value": [
+        "Only login once a week, not using stamina",
+        4,
+        1.1
+       ],
+       "tooltip": {
+        "formatter": "Only login once a week, not using stamina<br>4 (1.1%)"
+       }
+      },
+      {
+       "value": [
+        "Only login once a day, not using stamina",
+        14,
+        3.7
+       ],
+       "tooltip": {
+        "formatter": "Only login once a day, not using stamina<br>14 (3.7%)"
+       }
+      },
+      {
+       "value": [
+        "Only login once a week, try to clear as much missions as possible during that",
+        15,
+        4.0
+       ],
+       "tooltip": {
+        "formatter": "Only login once a week, try to clear as much missions as possible during that<br>15 (4%)"
+       }
+      },
+      {
+       "value": [
+        "Only login once a day, to clear current stamina and sales only",
+        79,
+        21.1
+       ],
+       "tooltip": {
+        "formatter": "Only login once a day, to clear current stamina and sales only<br>79 (21.1%)"
+       }
+      },
+      {
+       "value": [
+        "Login almost everyday, clear almost all stamina, but does not always able to clear hard game content",
+        148,
+        39.6
+       ],
+       "tooltip": {
+        "formatter": "Login almost everyday, clear almost all stamina, but does not always able to clear hard game content<br>148 (39.6%)"
+       }
+      },
+      {
+       "value": [
+        "Login almost everyday, clear all game content in the most optimised method",
+        88,
+        23.5
+       ],
+       "tooltip": {
+        "formatter": "Login almost everyday, clear all game content in the most optimised method<br>88 (23.5%)"
+       }
+      }
+     ],
+     "encode": {
+      "x": 1,
+      "y": 0
+     },
+     "label": {
+      "show": true,
+      "position": "right",
+      "formatter": "{@[1]} ({@[2]}%)"
+     },
+     "itemStyle": {
+      "borderRadius": [
+       0,
+       4,
+       4,
+       0
+      ]
+     },
+     "barMaxWidth": 28
+    }
+   ]
+  }
+ },
+ "ja": {
+  "title": "最近のプレイ方にいちばん当てはまる選択肢を選んでください。",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "item"
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 56,
+    "top": 16,
+    "bottom": 8
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    }
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "たまにしかログインしない",
+     "週に1度しかログインせず、スタミナを使わない",
+     "ログインは1日1回のみ、スタミナは使わない",
+     "ログインは週に1回だけ、やる時はできるだけ多くのミッションやクエストをクリアするようにする。",
+     "ログインは1日1回のみで、現在のスタミナと营業をクリアするのみ",
+     "ほぼ毎日ログインし、スタミナはほぼクリアしているが、難しいクエストは大体クリアできない",
+     "ほぼ毎日ログインし、最も最適化された方法ですべてのゲームコンテンツをクリアする"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "type": "bar",
+     "data": [
+      {
+       "value": [
+        "たまにしかログインしない",
+        26,
+        7.0
+       ],
+       "tooltip": {
+        "formatter": "たまにしかログインしない<br>26 (7%)"
+       }
+      },
+      {
+       "value": [
+        "週に1度しかログインせず、スタミナを使わない",
+        4,
+        1.1
+       ],
+       "tooltip": {
+        "formatter": "週に1度しかログインせず、スタミナを使わない<br>4 (1.1%)"
+       }
+      },
+      {
+       "value": [
+        "ログインは1日1回のみ、スタミナは使わない",
+        14,
+        3.7
+       ],
+       "tooltip": {
+        "formatter": "ログインは1日1回のみ、スタミナは使わない<br>14 (3.7%)"
+       }
+      },
+      {
+       "value": [
+        "ログインは週に1回だけ、やる時はできるだけ多くのミッションやクエストをクリアするようにする。",
+        15,
+        4.0
+       ],
+       "tooltip": {
+        "formatter": "ログインは週に1回だけ、やる時はできるだけ多くのミッションやクエストをクリアするようにする。<br>15 (4%)"
+       }
+      },
+      {
+       "value": [
+        "ログインは1日1回のみで、現在のスタミナと营業をクリアするのみ",
+        79,
+        21.1
+       ],
+       "tooltip": {
+        "formatter": "ログインは1日1回のみで、現在のスタミナと营業をクリアするのみ<br>79 (21.1%)"
+       }
+      },
+      {
+       "value": [
+        "ほぼ毎日ログインし、スタミナはほぼクリアしているが、難しいクエストは大体クリアできない",
+        148,
+        39.6
+       ],
+       "tooltip": {
+        "formatter": "ほぼ毎日ログインし、スタミナはほぼクリアしているが、難しいクエストは大体クリアできない<br>148 (39.6%)"
+       }
+      },
+      {
+       "value": [
+        "ほぼ毎日ログインし、最も最適化された方法ですべてのゲームコンテンツをクリアする",
+        88,
+        23.5
+       ],
+       "tooltip": {
+        "formatter": "ほぼ毎日ログインし、最も最適化された方法ですべてのゲームコンテンツをクリアする<br>88 (23.5%)"
+       }
+      }
+     ],
+     "encode": {
+      "x": 1,
+      "y": 0
+     },
+     "label": {
+      "show": true,
+      "position": "right",
+      "formatter": "{@[1]} ({@[2]}%)"
+     },
+     "itemStyle": {
+      "borderRadius": [
+       0,
+       4,
+       4,
+       0
+      ]
+     },
+     "barMaxWidth": 28
+    }
+   ]
+  }
+ },
+ "zh-tw": {
+  "title": "請選擇最符合您近期遊玩習慣的描述",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "item"
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 56,
+    "top": 16,
+    "bottom": 8
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    }
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "偶爾登入",
+     "每週登入一次，不消耗AP",
+     "每天登入一次，不消耗AP",
+     "每週登入一次，在當天儘可能完成任務",
+     "每天登入一次，只消耗AP和營業",
+     "幾乎每天登入，消耗所有AP，但並非能通過所有高難內容",
+     "幾乎每天登入，會試圖以最最佳化方式通過所有遊戲內容"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "type": "bar",
+     "data": [
+      {
+       "value": [
+        "偶爾登入",
+        26,
+        7.0
+       ],
+       "tooltip": {
+        "formatter": "偶爾登入<br>26 (7%)"
+       }
+      },
+      {
+       "value": [
+        "每週登入一次，不消耗AP",
+        4,
+        1.1
+       ],
+       "tooltip": {
+        "formatter": "每週登入一次，不消耗AP<br>4 (1.1%)"
+       }
+      },
+      {
+       "value": [
+        "每天登入一次，不消耗AP",
+        14,
+        3.7
+       ],
+       "tooltip": {
+        "formatter": "每天登入一次，不消耗AP<br>14 (3.7%)"
+       }
+      },
+      {
+       "value": [
+        "每週登入一次，在當天儘可能完成任務",
+        15,
+        4.0
+       ],
+       "tooltip": {
+        "formatter": "每週登入一次，在當天儘可能完成任務<br>15 (4%)"
+       }
+      },
+      {
+       "value": [
+        "每天登入一次，只消耗AP和營業",
+        79,
+        21.1
+       ],
+       "tooltip": {
+        "formatter": "每天登入一次，只消耗AP和營業<br>79 (21.1%)"
+       }
+      },
+      {
+       "value": [
+        "幾乎每天登入，消耗所有AP，但並非能通過所有高難內容",
+        148,
+        39.6
+       ],
+       "tooltip": {
+        "formatter": "幾乎每天登入，消耗所有AP，但並非能通過所有高難內容<br>148 (39.6%)"
+       }
+      },
+      {
+       "value": [
+        "幾乎每天登入，會試圖以最最佳化方式通過所有遊戲內容",
+        88,
+        23.5
+       ],
+       "tooltip": {
+        "formatter": "幾乎每天登入，會試圖以最最佳化方式通過所有遊戲內容<br>88 (23.5%)"
+       }
+      }
+     ],
+     "encode": {
+      "x": 1,
+      "y": 0
+     },
+     "label": {
+      "show": true,
+      "position": "right",
+      "formatter": "{@[1]} ({@[2]}%)"
+     },
+     "itemStyle": {
+      "borderRadius": [
+       0,
+       4,
+       4,
+       0
+      ]
+     },
+     "barMaxWidth": 28
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,36 @@
+{%- comment -%}
+  The survey-platform ranking explorer, embedded with a fixed view, in the post's language.
+    {% include survey-ranking.html query="survey=lah&y=2026&country=Japan" title="Japan" %}
+  `query` is the explorer's own URL state (copy it from the address bar). host= points at another deployment,
+  e.g. a local `netlify dev` while testing.
+{%- endcomment -%}
+{%- assign host = include.host | default: "https://rongjie-survey-platform.netlify.app" -%}
+{%- assign lang = page.lang | default: "en" -%}
+{%- capture url -%}{{ host }}/ranking.html?{{ include.query }}&lang={{ lang }}{%- endcapture -%}
+<figure class="survey-ranking">
+<iframe class="survey-ranking" src="{{ url }}&embed=1" title="{{ include.title | escape }}" loading="lazy" data-origin="{{ host }}"></iframe>
+<figcaption>{{ include.title }} · <a href="{{ url }}" target="_blank" rel="noopener">{% case lang %}{% when "ja" %}ランキングを全画面で開く{% when "zh-tw" %}在新分頁開啟完整排行榜{% else %}Open the full explorer{% endcase %}</a></figcaption>
+</figure>
+<script>
+// The explorer is a separate document, so it cannot see this site's light/dark toggle (data-theme on the html element);
+// post it the theme on load and whenever the toggle changes. No data-theme = follow the OS, which it does itself.
+window.surveyRankingResize || (window.surveyRankingResize = (() => {
+  const frames = () => document.querySelectorAll("iframe.survey-ranking");
+  const postTheme = window.surveyRankingTheme = (frame) => frame.contentWindow?.postMessage(
+    { type: "ranking-theme", theme: document.documentElement.dataset.theme || null }, frame.dataset.origin);
+  addEventListener("message", (event) => {
+    if (!event.data || event.data.type !== "ranking-resize") return;
+    for (const frame of frames()) {
+      if (frame.contentWindow === event.source && event.origin === frame.dataset.origin) {
+        frame.style.height = `${Math.max(event.data.height, 320)}px`; // the loading state is one line tall
+      }
+    }
+  });
+  new MutationObserver(() => frames().forEach(postTheme))
+    .observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+  return true;
+})());
+// The listener above is page-wide, so each include only wires its own frame's load.
+document.currentScript.previousElementSibling.querySelector("iframe.survey-ranking")
+  .addEventListener("load", (event) => window.surveyRankingTheme(event.target));
+</script>

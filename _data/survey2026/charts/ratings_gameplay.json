@@ -1,0 +1,601 @@
+{
+ "section": "ratings",
+ "height": 270,
+ "en": {
+  "title": "Gameplay, gacha and value for money",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "Gameplay design is fun and engaging to play\n(n=374, avg 4.06)",
+     "Gacha system of this game is better than other gacha games\n(n=374, avg 2.46)",
+     "In-game purchase's value for money\n(n=374, avg 2.80)"
+    ],
+    "axisLabel": {
+     "width": 200,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "1",
+     "type": "bar",
+     "data": [
+      {
+       "value": 0.5,
+       "label": {
+        "show": false
+       }
+      },
+      21.7,
+      8.8
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#c9403f"
+     }
+    },
+    {
+     "name": "2",
+     "type": "bar",
+     "data": [
+      {
+       "value": 3.2,
+       "label": {
+        "show": false
+       }
+      },
+      30.2,
+      20.6
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#eda3a0"
+     }
+    },
+    {
+     "name": "3",
+     "type": "bar",
+     "data": [
+      19.5,
+      33.4,
+      56.1
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#a9a8a0"
+     }
+    },
+    {
+     "name": "4",
+     "type": "bar",
+     "data": [
+      43.3,
+      10.2,
+      10.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "5",
+     "type": "bar",
+     "data": [
+      33.4,
+      4.5,
+      {
+       "value": 3.7,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#256abf"
+     }
+    }
+   ]
+  },
+  "note": "1 = very bad, 5 = very good."
+ },
+ "ja": {
+  "title": "ゲーム性・ガチャ・課金のお得感",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "遊び方が楽しくて魅力\n(n=374, 平均 4.06)",
+     "ガチャシステムは他のガチャゲームよりも優れている\n(n=374, 平均 2.46)",
+     "課金のコスパ\n(n=374, 平均 2.80)"
+    ],
+    "axisLabel": {
+     "width": 200,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "1",
+     "type": "bar",
+     "data": [
+      {
+       "value": 0.5,
+       "label": {
+        "show": false
+       }
+      },
+      21.7,
+      8.8
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#c9403f"
+     }
+    },
+    {
+     "name": "2",
+     "type": "bar",
+     "data": [
+      {
+       "value": 3.2,
+       "label": {
+        "show": false
+       }
+      },
+      30.2,
+      20.6
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#eda3a0"
+     }
+    },
+    {
+     "name": "3",
+     "type": "bar",
+     "data": [
+      19.5,
+      33.4,
+      56.1
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#a9a8a0"
+     }
+    },
+    {
+     "name": "4",
+     "type": "bar",
+     "data": [
+      43.3,
+      10.2,
+      10.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "5",
+     "type": "bar",
+     "data": [
+      33.4,
+      4.5,
+      {
+       "value": 3.7,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#256abf"
+     }
+    }
+   ]
+  },
+  "note": "1 = とても悪い、5 = とても良い。"
+ },
+ "zh-tw": {
+  "title": "遊戲性、扭蛋與課金划算度",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "遊戲玩法的設計充滿樂趣且極具吸引力\n(n=374, 平均 4.06)",
+     "扭蛋系統比其他扭蛋遊戲更出色\n(n=374, 平均 2.46)",
+     "遊戲內購的價效比\n(n=374, 平均 2.80)"
+    ],
+    "axisLabel": {
+     "width": 200,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "1",
+     "type": "bar",
+     "data": [
+      {
+       "value": 0.5,
+       "label": {
+        "show": false
+       }
+      },
+      21.7,
+      8.8
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#c9403f"
+     }
+    },
+    {
+     "name": "2",
+     "type": "bar",
+     "data": [
+      {
+       "value": 3.2,
+       "label": {
+        "show": false
+       }
+      },
+      30.2,
+      20.6
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#eda3a0"
+     }
+    },
+    {
+     "name": "3",
+     "type": "bar",
+     "data": [
+      19.5,
+      33.4,
+      56.1
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#a9a8a0"
+     }
+    },
+    {
+     "name": "4",
+     "type": "bar",
+     "data": [
+      43.3,
+      10.2,
+      10.7
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "5",
+     "type": "bar",
+     "data": [
+      33.4,
+      4.5,
+      {
+       "value": 3.7,
+       "label": {
+        "show": false
+       }
+      }
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#256abf"
+     }
+    }
+   ]
+  },
+  "note": "1 = 非常差，5 = 非常好。"
+ }
+}

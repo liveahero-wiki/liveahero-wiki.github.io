@@ -91,6 +91,9 @@ The plugins perform server-side calculations during the compilation phase, injec
 *   **Liquid Tag**: `chara_link`
     *   *Usage*: `{% chara_link "Marfik|h1" %}`
     *   *Result*: Renders a styled anchor link to Marfik's hero page, appending the correct icon thumbnail and anchor parameters.
+*   **Liquid Tag**: `mob` (`lib/mob.js`)
+    *   *Usage*: `{% mob Acolyte %}` or by id `{% mob acolyte-transform %}` (names are case-insensitive).
+    *   *Result*: `<span class="mob">` with the series icon and name, no link. Covers villain mobs and kaibutsu alike: the data is `api/mob.json` (`tools/generate_mob_index.py`), which `wiki_plugins/index.js` loads into `site.data.mob` on every build. An unknown name prints the text as it is.
 *   **Liquid Filters**:
     *   `charaPageToIcon`: Converts a character's markdown reference page to their corresponding cdn card icon asset.
     *   `charaPageToLink`: Builds a full HTML link complete with thumbnail icon and title.

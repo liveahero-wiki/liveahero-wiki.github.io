@@ -1,0 +1,847 @@
+{
+ "section": "ratings",
+ "height": 618,
+ "en": {
+  "title": "Star rating of each event (chronological)",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "5th Anniversary\n(n=374, avg 4.05)",
+     "Stella Link Carnival\n(n=374, avg 4.02)",
+     "City of Engraved Partings ~Smoke and Mirrors~\n(n=374, avg 3.74)",
+     "Whiteout Liberation\n(n=374, avg 4.16)",
+     "New Year 2026\n(n=374, avg 3.47)",
+     "Chocolate Fight Wonderland\n(n=374, avg 3.74)",
+     "Echoes of Frontier Memories\n(n=374, avg 4.05)",
+     "Spring Campaign 2026\n(n=374, avg 3.23)",
+     "Main Quest Book 2 Chapter 4\n(n=374, avg 4.15)",
+     "Summer Montage Halation\n(n=374, avg 4.34)",
+     "Autumn Campaign 2026\n(n=374, avg 3.46)"
+    ],
+    "axisLabel": {
+     "width": 200,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "1★",
+     "type": "bar",
+     "data": [
+      {
+       "value": 3.2,
+       "label": {
+        "show": false
+       }
+      },
+      4.0,
+      5.1,
+      {
+       "value": 3.5,
+       "label": {
+        "show": false
+       }
+      },
+      4.8,
+      4.0,
+      {
+       "value": 2.9,
+       "label": {
+        "show": false
+       }
+      },
+      5.6,
+      {
+       "value": 1.6,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 1.9,
+       "label": {
+        "show": false
+       }
+      },
+      5.1
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "2★",
+     "type": "bar",
+     "data": [
+      {
+       "value": 2.1,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 2.4,
+       "label": {
+        "show": false
+       }
+      },
+      4.3,
+      {
+       "value": 2.7,
+       "label": {
+        "show": false
+       }
+      },
+      9.6,
+      4.0,
+      4.3,
+      13.4,
+      {
+       "value": 3.2,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 2.4,
+       "label": {
+        "show": false
+       }
+      },
+      9.1
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#5598e7"
+     }
+    },
+    {
+     "name": "3★",
+     "type": "bar",
+     "data": [
+      22.5,
+      23.3,
+      32.9,
+      16.6,
+      37.4,
+      29.4,
+      19.0,
+      46.3,
+      19.5,
+      13.1,
+      41.2
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#2a78d6"
+     }
+    },
+    {
+     "name": "4★",
+     "type": "bar",
+     "data": [
+      30.7,
+      28.1,
+      26.7,
+      29.1,
+      29.9,
+      39.3,
+      32.9,
+      21.9,
+      29.7,
+      24.9,
+      24.3
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#1c5cab"
+     }
+    },
+    {
+     "name": "5★",
+     "type": "bar",
+     "data": [
+      41.4,
+      42.2,
+      31.0,
+      48.1,
+      18.2,
+      23.3,
+      40.9,
+      12.8,
+      46.0,
+      57.8,
+      20.3
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#104281"
+     }
+    }
+   ]
+  }
+ },
+ "ja": {
+  "title": "各イベントの星評価（開催順）",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "5周年記念キャンペーン\n(n=374, 平均 4.05)",
+     "ステラリンク・カーニバル\n(n=374, 平均 4.02)",
+     "さよならを刻む街 ～Smoke and Mirrors～\n(n=374, 平均 3.74)",
+     "ホワイトアウト・リベレーション\n(n=374, 平均 4.16)",
+     "謹賀新年2026！\n(n=374, 平均 3.47)",
+     "チョコレートファイト・ワンダーランド\n(n=374, 平均 3.74)",
+     "残響のフロンティアメモリーズ\n(n=374, 平均 4.05)",
+     "スプリングキャンペーン2026\n(n=374, 平均 3.23)",
+     "第2部4章\n(n=374, 平均 4.15)",
+     "サマーモンタージュ・ハレーション\n(n=374, 平均 4.34)",
+     "オータムキャンペーン2026\n(n=374, 平均 3.46)"
+    ],
+    "axisLabel": {
+     "width": 200,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "1★",
+     "type": "bar",
+     "data": [
+      {
+       "value": 3.2,
+       "label": {
+        "show": false
+       }
+      },
+      4.0,
+      5.1,
+      {
+       "value": 3.5,
+       "label": {
+        "show": false
+       }
+      },
+      4.8,
+      4.0,
+      {
+       "value": 2.9,
+       "label": {
+        "show": false
+       }
+      },
+      5.6,
+      {
+       "value": 1.6,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 1.9,
+       "label": {
+        "show": false
+       }
+      },
+      5.1
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "2★",
+     "type": "bar",
+     "data": [
+      {
+       "value": 2.1,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 2.4,
+       "label": {
+        "show": false
+       }
+      },
+      4.3,
+      {
+       "value": 2.7,
+       "label": {
+        "show": false
+       }
+      },
+      9.6,
+      4.0,
+      4.3,
+      13.4,
+      {
+       "value": 3.2,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 2.4,
+       "label": {
+        "show": false
+       }
+      },
+      9.1
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#5598e7"
+     }
+    },
+    {
+     "name": "3★",
+     "type": "bar",
+     "data": [
+      22.5,
+      23.3,
+      32.9,
+      16.6,
+      37.4,
+      29.4,
+      19.0,
+      46.3,
+      19.5,
+      13.1,
+      41.2
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#2a78d6"
+     }
+    },
+    {
+     "name": "4★",
+     "type": "bar",
+     "data": [
+      30.7,
+      28.1,
+      26.7,
+      29.1,
+      29.9,
+      39.3,
+      32.9,
+      21.9,
+      29.7,
+      24.9,
+      24.3
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#1c5cab"
+     }
+    },
+    {
+     "name": "5★",
+     "type": "bar",
+     "data": [
+      41.4,
+      42.2,
+      31.0,
+      48.1,
+      18.2,
+      23.3,
+      40.9,
+      12.8,
+      46.0,
+      57.8,
+      20.3
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#104281"
+     }
+    }
+   ]
+  }
+ },
+ "zh-tw": {
+  "title": "各活動的星級評分（依時間順序）",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "5週年紀念活動\n(n=374, 平均 4.05)",
+     "Stella Link Carnival\n(n=374, 平均 4.02)",
+     "City of Engraved Partings ~Smoke and Mirrors~\n(n=374, 平均 3.74)",
+     "Whiteout Liberation\n(n=374, 平均 4.16)",
+     "2026新年活動\n(n=374, 平均 3.47)",
+     "Chocolate Fight Wonderland\n(n=374, 平均 3.74)",
+     "Echoes of Frontier Memories\n(n=374, 平均 4.05)",
+     "2026春季活動\n(n=374, 平均 3.23)",
+     "主線第2部第4章\n(n=374, 平均 4.15)",
+     "Summer Montage Halation\n(n=374, 平均 4.34)",
+     "2026秋季活動\n(n=374, 平均 3.46)"
+    ],
+    "axisLabel": {
+     "width": 200,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "1★",
+     "type": "bar",
+     "data": [
+      {
+       "value": 3.2,
+       "label": {
+        "show": false
+       }
+      },
+      4.0,
+      5.1,
+      {
+       "value": 3.5,
+       "label": {
+        "show": false
+       }
+      },
+      4.8,
+      4.0,
+      {
+       "value": 2.9,
+       "label": {
+        "show": false
+       }
+      },
+      5.6,
+      {
+       "value": 1.6,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 1.9,
+       "label": {
+        "show": false
+       }
+      },
+      5.1
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#86b6ef"
+     }
+    },
+    {
+     "name": "2★",
+     "type": "bar",
+     "data": [
+      {
+       "value": 2.1,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 2.4,
+       "label": {
+        "show": false
+       }
+      },
+      4.3,
+      {
+       "value": 2.7,
+       "label": {
+        "show": false
+       }
+      },
+      9.6,
+      4.0,
+      4.3,
+      13.4,
+      {
+       "value": 3.2,
+       "label": {
+        "show": false
+       }
+      },
+      {
+       "value": 2.4,
+       "label": {
+        "show": false
+       }
+      },
+      9.1
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#0b0b0b"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#5598e7"
+     }
+    },
+    {
+     "name": "3★",
+     "type": "bar",
+     "data": [
+      22.5,
+      23.3,
+      32.9,
+      16.6,
+      37.4,
+      29.4,
+      19.0,
+      46.3,
+      19.5,
+      13.1,
+      41.2
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#2a78d6"
+     }
+    },
+    {
+     "name": "4★",
+     "type": "bar",
+     "data": [
+      30.7,
+      28.1,
+      26.7,
+      29.1,
+      29.9,
+      39.3,
+      32.9,
+      21.9,
+      29.7,
+      24.9,
+      24.3
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#1c5cab"
+     }
+    },
+    {
+     "name": "5★",
+     "type": "bar",
+     "data": [
+      41.4,
+      42.2,
+      31.0,
+      48.1,
+      18.2,
+      23.3,
+      40.9,
+      12.8,
+      46.0,
+      57.8,
+      20.3
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "inside",
+      "color": "#ffffff"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36,
+     "stack": "total",
+     "itemStyle": {
+      "borderColor": "transparent",
+      "borderWidth": 1,
+      "color": "#104281"
+     }
+    }
+   ]
+  }
+ }
+}

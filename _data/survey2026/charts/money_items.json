@@ -1,0 +1,331 @@
+{
+ "section": "spending",
+ "height": 558,
+ "en": {
+  "title": "What players have bought",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "Respondents",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    }
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "Not at all",
+     "10 stones for the 4th sales slot",
+     "[Web Shop] Official Shop Only Value Pack (JPY120)",
+     "New year grab bag",
+     "Anniversary Hero selection pack",
+     "Anniversary stone pack",
+     "Event limited stone pack (small)",
+     "Event limited stone pack (large)",
+     "Regular paid stones"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "Ever",
+     "type": "bar",
+     "data": [
+      157,
+      121,
+      102,
+      105,
+      88,
+      89,
+      123,
+      102,
+      32
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "right"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36
+    },
+    {
+     "name": "Since the 5th anniversary",
+     "type": "bar",
+     "data": [
+      183,
+      51,
+      96,
+      78,
+      66,
+      68,
+      102,
+      78,
+      26
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "right"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36
+    }
+   ]
+  },
+  "note": "Multiple answers allowed, so the percentages add up to more than 100%."
+ },
+ "ja": {
+  "title": "購入したことのある商品",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "回答者数",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    }
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "Not at all",
+     "4番目の营業枠に有償エーテル晶石10個",
+     "[Webショップ] 公式ショップ限定パック (JPY120)",
+     "新年福袋",
+     "周年記念ヒーロー指名パック",
+     "周年記念パック",
+     "イベント限定エーテル晶石パック（小）",
+     "イベント限定エーテル晶石パック（大）",
+     "通常の有償エーテル晶石"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "これまで",
+     "type": "bar",
+     "data": [
+      157,
+      121,
+      102,
+      105,
+      88,
+      89,
+      123,
+      102,
+      32
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "right"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36
+    },
+    {
+     "name": "5周年以降",
+     "type": "bar",
+     "data": [
+      183,
+      51,
+      96,
+      78,
+      66,
+      68,
+      102,
+      78,
+      26
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "right"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36
+    }
+   ]
+  },
+  "note": "複数回答可のため、割合の合計は100%を超えます。"
+ },
+ "zh-tw": {
+  "title": "玩家購買過的商品",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "回答人數",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    }
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "Not at all",
+     "第4個營業所需的十石",
+     "[網頁版] 官方充值中心限定禮包 (JPY120)",
+     "新年福袋",
+     "週年英雄選定禮包",
+     "週年禮包",
+     "活動限定禮包（小）",
+     "活動限定禮包（大）",
+     "非特價石頭"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "曾經購買",
+     "type": "bar",
+     "data": [
+      157,
+      121,
+      102,
+      105,
+      88,
+      89,
+      123,
+      102,
+      32
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "right"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36
+    },
+    {
+     "name": "5週年後",
+     "type": "bar",
+     "data": [
+      183,
+      51,
+      96,
+      78,
+      66,
+      68,
+      102,
+      78,
+      26
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}",
+      "position": "right"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36
+    }
+   ]
+  },
+  "note": "可複選，因此百分比總和超過100%。"
+ }
+}

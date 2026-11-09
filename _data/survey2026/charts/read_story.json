@@ -1,0 +1,364 @@
+{
+ "section": "gameplay",
+ "height": 260,
+ "en": {
+  "title": "Do you read Live A Hero game story?",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "item"
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 56,
+    "top": 16,
+    "bottom": 8
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    }
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "Directly read in-game story in Japanese",
+     "Directly read In-game story with official translation",
+     "Read in-game story with the help of machine translation",
+     "Read fan translated game story if they are available",
+     "No"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "type": "bar",
+     "data": [
+      {
+       "value": [
+        "Directly read in-game story in Japanese",
+        61,
+        16.3
+       ],
+       "tooltip": {
+        "formatter": "Directly read in-game story in Japanese<br>61 (16.3%)"
+       }
+      },
+      {
+       "value": [
+        "Directly read In-game story with official translation",
+        181,
+        48.4
+       ],
+       "tooltip": {
+        "formatter": "Directly read In-game story with official translation<br>181 (48.4%)"
+       }
+      },
+      {
+       "value": [
+        "Read in-game story with the help of machine translation",
+        100,
+        26.7
+       ],
+       "tooltip": {
+        "formatter": "Read in-game story with the help of machine translation<br>100 (26.7%)"
+       }
+      },
+      {
+       "value": [
+        "Read fan translated game story if they are available",
+        148,
+        39.6
+       ],
+       "tooltip": {
+        "formatter": "Read fan translated game story if they are available<br>148 (39.6%)"
+       }
+      },
+      {
+       "value": [
+        "No",
+        41,
+        11.0
+       ],
+       "tooltip": {
+        "formatter": "No<br>41 (11%)"
+       }
+      }
+     ],
+     "encode": {
+      "x": 1,
+      "y": 0
+     },
+     "label": {
+      "show": true,
+      "position": "right",
+      "formatter": "{@[1]} ({@[2]}%)"
+     },
+     "itemStyle": {
+      "borderRadius": [
+       0,
+       4,
+       4,
+       0
+      ]
+     },
+     "barMaxWidth": 28
+    }
+   ]
+  },
+  "note": "Multiple answers allowed, so the percentages add up to more than 100%."
+ },
+ "ja": {
+  "title": "『Live A Hero』のシナリオを読んでいますか？",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "item"
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 56,
+    "top": 16,
+    "bottom": 8
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    }
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "ゲーム内ストーリー (日本語)",
+     "ゲーム内ストーリー (公式翻訳)",
+     "ゲーム内ストーリー (機械翻訳)",
+     "ファンの翻訳したゲームストーリーがあれば読む",
+     "No"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "type": "bar",
+     "data": [
+      {
+       "value": [
+        "ゲーム内ストーリー (日本語)",
+        61,
+        16.3
+       ],
+       "tooltip": {
+        "formatter": "ゲーム内ストーリー (日本語)<br>61 (16.3%)"
+       }
+      },
+      {
+       "value": [
+        "ゲーム内ストーリー (公式翻訳)",
+        181,
+        48.4
+       ],
+       "tooltip": {
+        "formatter": "ゲーム内ストーリー (公式翻訳)<br>181 (48.4%)"
+       }
+      },
+      {
+       "value": [
+        "ゲーム内ストーリー (機械翻訳)",
+        100,
+        26.7
+       ],
+       "tooltip": {
+        "formatter": "ゲーム内ストーリー (機械翻訳)<br>100 (26.7%)"
+       }
+      },
+      {
+       "value": [
+        "ファンの翻訳したゲームストーリーがあれば読む",
+        148,
+        39.6
+       ],
+       "tooltip": {
+        "formatter": "ファンの翻訳したゲームストーリーがあれば読む<br>148 (39.6%)"
+       }
+      },
+      {
+       "value": [
+        "No",
+        41,
+        11.0
+       ],
+       "tooltip": {
+        "formatter": "No<br>41 (11%)"
+       }
+      }
+     ],
+     "encode": {
+      "x": 1,
+      "y": 0
+     },
+     "label": {
+      "show": true,
+      "position": "right",
+      "formatter": "{@[1]} ({@[2]}%)"
+     },
+     "itemStyle": {
+      "borderRadius": [
+       0,
+       4,
+       4,
+       0
+      ]
+     },
+     "barMaxWidth": 28
+    }
+   ]
+  },
+  "note": "複数回答可のため、割合の合計は100%を超えます。"
+ },
+ "zh-tw": {
+  "title": "您會閱讀Live A Hero內的遊戲劇情嗎？",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "item"
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 56,
+    "top": 16,
+    "bottom": 8
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    }
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "直接讀遊戲內的日文劇情",
+     "直接讀遊戲內的官方翻譯劇情",
+     "靠機器翻譯的幫助下閱讀遊戲內的劇情",
+     "如果有，會在遊戲外閱讀粉絲翻譯的遊戲劇情",
+     "No"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "type": "bar",
+     "data": [
+      {
+       "value": [
+        "直接讀遊戲內的日文劇情",
+        61,
+        16.3
+       ],
+       "tooltip": {
+        "formatter": "直接讀遊戲內的日文劇情<br>61 (16.3%)"
+       }
+      },
+      {
+       "value": [
+        "直接讀遊戲內的官方翻譯劇情",
+        181,
+        48.4
+       ],
+       "tooltip": {
+        "formatter": "直接讀遊戲內的官方翻譯劇情<br>181 (48.4%)"
+       }
+      },
+      {
+       "value": [
+        "靠機器翻譯的幫助下閱讀遊戲內的劇情",
+        100,
+        26.7
+       ],
+       "tooltip": {
+        "formatter": "靠機器翻譯的幫助下閱讀遊戲內的劇情<br>100 (26.7%)"
+       }
+      },
+      {
+       "value": [
+        "如果有，會在遊戲外閱讀粉絲翻譯的遊戲劇情",
+        148,
+        39.6
+       ],
+       "tooltip": {
+        "formatter": "如果有，會在遊戲外閱讀粉絲翻譯的遊戲劇情<br>148 (39.6%)"
+       }
+      },
+      {
+       "value": [
+        "No",
+        41,
+        11.0
+       ],
+       "tooltip": {
+        "formatter": "No<br>41 (11%)"
+       }
+      }
+     ],
+     "encode": {
+      "x": 1,
+      "y": 0
+     },
+     "label": {
+      "show": true,
+      "position": "right",
+      "formatter": "{@[1]} ({@[2]}%)"
+     },
+     "itemStyle": {
+      "borderRadius": [
+       0,
+       4,
+       4,
+       0
+      ]
+     },
+     "barMaxWidth": 28
+    }
+   ]
+  },
+  "note": "可複選，因此百分比總和超過100%。"
+ }
+}

@@ -54,9 +54,13 @@ export default function wikiPlugins(eleventyConfig, { site, markdown }) {
   eleventyConfig.on("eleventy.before", () => {
     clearIncludeCaches();
     site.data = loadSiteData("_data");
+    // the mob index lives in api/ (it is also served as /api/mob.json); `{% mob %}` reads it from here
+    const mobFile = "api/mob.json";
+    if (fs.existsSync(mobFile)) site.data.mob = JSON.parse(fs.readFileSync(mobFile, "utf8"));
     site.time = nowInOffset(SITE_OFFSET_MINUTES);
   });
   eleventyConfig.addWatchTarget("_data/");
+  eleventyConfig.addWatchTarget("api/mob.json");
 
   // wiki-cms (docs/CMS.md) runs on another origin and imports /assets/cms/lah-team-formation.js.
   // A middleware only adds the header and lets the static handler answer; an `onRequest` callback would

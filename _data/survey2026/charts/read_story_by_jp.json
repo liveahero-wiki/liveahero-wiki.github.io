@@ -1,0 +1,304 @@
+{
+ "section": "gameplay",
+ "height": 350,
+ "en": {
+  "title": "How players read the story, by Japanese reading ability",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "Directly read in-game story in Japanese",
+     "Directly read In-game story with official translation",
+     "Read in-game story with the help of machine translation",
+     "Read fan translated game story if they are available",
+     "No"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "Japanese N1–N3 (n=58)",
+     "type": "bar",
+     "data": [
+      63.8,
+      27.6,
+      15.5,
+      24.1,
+      3.4
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "right"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36
+    },
+    {
+     "name": "Japanese N4, N5 or none (n=316)",
+     "type": "bar",
+     "data": [
+      7.6,
+      52.2,
+      28.8,
+      42.4,
+      12.3
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "right"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36
+    }
+   ]
+  }
+ },
+ "ja": {
+  "title": "日本語読解力別のストーリーの読み方",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "ゲーム内ストーリー (日本語)",
+     "ゲーム内ストーリー (公式翻訳)",
+     "ゲーム内ストーリー (機械翻訳)",
+     "ファンの翻訳したゲームストーリーがあれば読む",
+     "No"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "日本語 N1〜N3（n=58）",
+     "type": "bar",
+     "data": [
+      63.8,
+      27.6,
+      15.5,
+      24.1,
+      3.4
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "right"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36
+    },
+    {
+     "name": "日本語 N4・N5・知識ゼロ（n=316）",
+     "type": "bar",
+     "data": [
+      7.6,
+      52.2,
+      28.8,
+      42.4,
+      12.3
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "right"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36
+    }
+   ]
+  }
+ },
+ "zh-tw": {
+  "title": "依日語閱讀能力區分的劇情閱讀方式",
+  "options": {
+   "tooltip": {
+    "confine": true,
+    "trigger": "axis",
+    "axisPointer": {
+     "type": "shadow"
+    }
+   },
+   "legend": {
+    "type": "scroll",
+    "top": 0
+   },
+   "grid": {
+    "containLabel": true,
+    "left": 8,
+    "right": 24,
+    "top": 40,
+    "bottom": 8
+   },
+   "labelLayout": {
+    "hideOverlap": true
+   },
+   "xAxis": {
+    "type": "value",
+    "name": "",
+    "splitLine": {
+     "lineStyle": {
+      "type": "dashed"
+     }
+    },
+    "axisLabel": {
+     "formatter": "{value}%"
+    },
+    "max": 100
+   },
+   "yAxis": {
+    "type": "category",
+    "data": [
+     "直接讀遊戲內的日文劇情",
+     "直接讀遊戲內的官方翻譯劇情",
+     "靠機器翻譯的幫助下閱讀遊戲內的劇情",
+     "如果有，會在遊戲外閱讀粉絲翻譯的遊戲劇情",
+     "No"
+    ],
+    "axisLabel": {
+     "width": 160,
+     "overflow": "break",
+     "interval": 0
+    },
+    "axisTick": {
+     "alignWithLabel": true
+    },
+    "inverse": true
+   },
+   "series": [
+    {
+     "name": "日語 N1～N3（n=58）",
+     "type": "bar",
+     "data": [
+      63.8,
+      27.6,
+      15.5,
+      24.1,
+      3.4
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "right"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36
+    },
+    {
+     "name": "日語 N4、N5 或完全不會（n=316）",
+     "type": "bar",
+     "data": [
+      7.6,
+      52.2,
+      28.8,
+      42.4,
+      12.3
+     ],
+     "label": {
+      "show": true,
+      "formatter": "{c}%",
+      "position": "right"
+     },
+     "emphasis": {
+      "focus": "series"
+     },
+     "barMaxWidth": 36
+    }
+   ]
+  }
+ }
+}
