@@ -1,9 +1,7 @@
 ---
 title: Community Survey Result 2026
-date: 2026-11-01 12:00:00 +08
+date: 2026-11-09 21:00:00 +08
 lang: en
-draft: true
-eleventyExcludeFromCollections: true
 ---
 {%- comment -%}
   Charts, numbers and graphs are generated: run `uv run -m analysis.lah2026` in survey-platform.
@@ -30,7 +28,7 @@ We received **{{ f.respondents }}** responses this year, compared with {{ f.resp
 I have been running this survey for the past few years, and this is the first time the number of respondents
 is lower than the previous year, and by such a huge margin.
 
-Nonetheless, I still want to thank everyone who took the time to fill in the survey. I know it is not an easy task, and I plan to cut down certain questions that are less valuable.
+Nonetheless, I still want to thank everyone who took the time to fill in the survey. I know it is not an easy task, and I plan to cut down certain questions that are less valuable in the future.
 
 ## Disclaimer on Limitation of the Survey
 
