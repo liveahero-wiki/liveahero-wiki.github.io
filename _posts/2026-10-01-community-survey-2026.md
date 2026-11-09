@@ -279,9 +279,9 @@ I don't want to repeat too much from my last year commentary, you can read it [h
   - Last year, more than a third of Japan respondents had never heard of this game. But since I added the Japanese name of the game in the survey this year, the percentage dropped to 7.1%
 - **Another Eidoes of Dragonvein** vs **XXL Woofia**:
   - Japan respondents tend to rank this game higher than XXL Woofia, while the opposite is true for the rest of the respondents.
-  - Both games have simultaneous official translation release. Such popularity gap between region exists despite no language barrier is quite interesting.
+  - Both games have simultaneous official translation release. Existence of such popularity gap between region despite no language barrier is quite interesting.
 - **Tamacolle**
-  - Surprisingly, Taiwan respondents has higher percentage of respondents still playing this game thant Japanese respondents, but it is likely just because the number of Japanese respondents is too low.
+  - Surprisingly, Taiwan respondents has higher percentage of respondents still playing this game thant Japanese respondents, but it might just be due to the number of Japanese respondents is too low.
 
 ## English Wiki
 
@@ -328,111 +328,111 @@ Every year there are people complaining that only allowing top 10 characters are
 
 | rank | character | approval | 2025 | rank change |
 |---|---|---|---|---|
-| 1 | Pubraseer | 65.3% | 65.4% | +0 |
-| 2 | Barrel | 59.1% | 47.5% | +3 |
-| 3 | Monomasa | 53.3% | 53.5% | -1 |
-| 4 | Ryekie | 51.4% | 48.5% | +0 |
-| 5 | Sterio | 49.4% | 40.8% | +6 |
-| 6 | Giansar | 47.9% | 49.5% | -3 |
-| 7 | Norbrand | 44.7% | new | new |
-| 8 | Toshu | 43.2% | 42.6% | +0 |
-| 9 | Denebora | 42.4% | 31.7% | +10 |
-| 10 | Tsuneaki | 41.9% | 47.0% | -4 |
-| 11 | Valoray | 41.2% | 38.3% | +2 |
-| 11 | reXer | 41.2% | 41.9% | -2 |
-| 13 | Obsidius | 40.2% | 43.5% | -6 |
-| 14 | Akashi | 37.7% | 41.4% | -4 |
-| 15 | Sadayoshi | 37.5% | 38.9% | -3 |
-| 16 | Astar | 36.7% | 37.8% | -2 |
-| 16 | Yohack | 36.7% | 37.2% | -1 |
-| 18 | Mokdai | 36.0% | 30.9% | +4 |
-| 19 | Ruchbath | 35.5% | new | new |
-| 20 | Astosis | 35.2% | 32.9% | -3 |
-| 21 | Huckle | 34.5% | 25.7% | +6 |
-| 22 | Galvo | 33.5% | 35.9% | -6 |
-| 22 | Thuban | 33.5% | new | new |
-| 24 | Gnomon | 32.8% | 27.5% | +0 |
-| 25 | ⇌Akashi | 32.3% | new | new |
+| 1 | {% chara_link Pubraseer %} | 65.3% | 65.4% | +0 |
+| 2 | {% chara_link Barrel %} | 59.1% | 47.5% | +3 |
+| 3 | {% chara_link Monomasa %} | 53.3% | 53.5% | -1 |
+| 4 | {% chara_link Ryekie %} | 51.4% | 48.5% | +0 |
+| 5 | {% chara_link Sterio %} | 49.4% | 40.8% | +6 |
+| 6 | {% chara_link Giansar %} | 47.9% | 49.5% | -3 |
+| 7 | {% chara_link Norbrand %} | 44.7% | new | new |
+| 8 | {% chara_link Toshu %} | 43.2% | 42.6% | +0 |
+| 9 | {% chara_link Denebora %} | 42.4% | 31.7% | +10 |
+| 10 | {% chara_link Tsuneaki %} | 41.9% | 47.0% | -4 |
+| 11 | {% chara_link Valoray %} | 41.2% | 38.3% | +2 |
+| 11 | {% chara_link reXer %} | 41.2% | 41.9% | -2 |
+| 13 | {% chara_link Obsidius %} | 40.2% | 43.5% | -6 |
+| 14 | {% chara_link Akashi %} | 37.7% | 41.4% | -4 |
+| 15 | {% chara_link Sadayoshi %} | 37.5% | 38.9% | -3 |
+| 16 | {% chara_link Astar %} | 36.7% | 37.8% | -2 |
+| 16 | {% chara_link Yohack %} | 36.7% | 37.2% | -1 |
+| 18 | {% chara_link Mokdai %} | 36.0% | 30.9% | +4 |
+| 19 | {% chara_link Ruchbath %} | 35.5% | new | new |
+| 20 | {% chara_link Astosis %} | 35.2% | 32.9% | -3 |
+| 21 | {% chara_link Huckle %} | 34.5% | 25.7% | +6 |
+| 22 | {% chara_link Galvo %} | 33.5% | 35.9% | -6 |
+| 22 | {% chara_link Thuban %} | 33.5% | new | new |
+| 24 | {% chara_link Gnomon %} | 32.8% | 27.5% | +0 |
+| 25 | {% chara_link ⇌Akashi %} | 32.3% | new | new |
 
 ## All favourites: biggest approval changes 2025 -> 2026
 
 | character | change (pp) | 2025 | 2026 | rank then -> now |
 |---|---|---|---|---|
-| Roiker | +13.2 | 17.6% | 30.8% | 48 -> 28 |
-| Barrel | +11.6 | 47.5% | 59.1% | 5 -> 2 |
-| Denebora | +10.7 | 31.7% | 42.4% | 19 -> 9 |
-| Huckle | +8.8 | 25.7% | 34.5% | 27 -> 21 |
-| Sterio | +8.6 | 40.8% | 49.4% | 11 -> 5 |
-| Procy | +6.4 | 14.4% | 20.8% | 56 -> 49 |
-| Senthak | +6.0 | 18.3% | 24.3% | 46 -> 39 |
-| Taika | +5.5 | 21.8% | 27.3% | 39 -> 33 |
-| Gnomon | +5.2 | 27.5% | 32.8% | 24 -> 24 |
-| Mokdai | +5.1 | 30.9% | 36.0% | 22 -> 18 |
-| Kiloc | -7.5 | 24.8% | 17.4% | 30 -> 58 |
-| Gammei | -7.1 | 31.4% | 24.3% | 21 -> 39 |
-| Antares | -6.0 | 14.4% | 8.4% | 56 -> 100 |
-| Lilac | -5.5 | 29.9% | 24.3% | 23 -> 39 |
-| Tsuneaki | -5.0 | 47.0% | 41.9% | 6 -> 10 |
-| Shiratori | -5.0 | 17.6% | 12.7% | 48 -> 80 |
-| Shaft | -4.8 | 20.5% | 15.6% | 41 -> 66 |
-| Houley | -4.5 | 14.4% | 9.9% | 56 -> 89 |
-| Seiichiro | -4.5 | 13.4% | 8.9% | 66 -> 99 |
-| Polaris Mask | -4.0 | 23.8% | 19.9% | 32 -> 51 |
+| {% chara_link Roiker %} | +13.2 | 17.6% | 30.8% | 48 -> 28 |
+| {% chara_link Barrel %} | +11.6 | 47.5% | 59.1% | 5 -> 2 |
+| {% chara_link Denebora %} | +10.7 | 31.7% | 42.4% | 19 -> 9 |
+| {% chara_link Huckle %} | +8.8 | 25.7% | 34.5% | 27 -> 21 |
+| {% chara_link Sterio %} | +8.6 | 40.8% | 49.4% | 11 -> 5 |
+| {% chara_link Procy %} | +6.4 | 14.4% | 20.8% | 56 -> 49 |
+| {% chara_link Senthak %} | +6.0 | 18.3% | 24.3% | 46 -> 39 |
+| {% chara_link Taika %} | +5.5 | 21.8% | 27.3% | 39 -> 33 |
+| {% chara_link Gnomon %} | +5.2 | 27.5% | 32.8% | 24 -> 24 |
+| {% chara_link Mokdai %} | +5.1 | 30.9% | 36.0% | 22 -> 18 |
+| {% chara_link Kiloc %} | -7.5 | 24.8% | 17.4% | 30 -> 58 |
+| {% chara_link Gammei %} | -7.1 | 31.4% | 24.3% | 21 -> 39 |
+| {% chara_link Antares %} | -6.0 | 14.4% | 8.4% | 56 -> 100 |
+| {% chara_link Lilac %} | -5.5 | 29.9% | 24.3% | 23 -> 39 |
+| {% chara_link Tsuneaki %} | -5.0 | 47.0% | 41.9% | 6 -> 10 |
+| {% chara_link Shiratori %} | -5.0 | 17.6% | 12.7% | 48 -> 80 |
+| {% chara_link Shaft %} | -4.8 | 20.5% | 15.6% | 41 -> 66 |
+| {% chara_link Houley %} | -4.5 | 14.4% | 9.9% | 56 -> 89 |
+| {% chara_link Seiichiro %} | -4.5 | 13.4% | 8.9% | 66 -> 99 |
+| {% chara_link Polaris Mask %} | -4.0 | 23.8% | 19.9% | 32 -> 51 |
 
 ## Top 10: global top 25 (2026, n=403)
 
 | rank | character | approval | 2025 | rank change |
 |---|---|---|---|---|
-| 1 | Pubraseer | 44.9% | 49.2% | +0 |
-| 2 | Barrel | 36.5% | 28.5% | +2 |
-| 3 | Monomasa | 32.3% | 37.9% | -1 |
-| 4 | Giansar | 28.8% | 32.2% | -1 |
-| 5 | Sterio | 27.5% | 18.0% | +7 |
-| 6 | Ryekie | 23.8% | 26.0% | -1 |
-| 7 | Obsidius | 22.1% | 24.3% | -1 |
-| 8 | Tsuneaki | 20.8% | 22.8% | +2 |
-| 9 | Norbrand | 19.9% | new | new |
-| 10 | Sadayoshi | 19.1% | 24.3% | -4 |
-| 11 | Astar | 18.6% | 16.4% | +5 |
-| 12 | Akashi | 18.1% | 24.0% | -4 |
-| 13 | Denebora | 17.9% | 11.7% | +9 |
-| 13 | Ruchbath | 17.9% | new | new |
-| 15 | reXer | 17.6% | 23.5% | -6 |
-| 16 | Yohack | 15.9% | 16.8% | -3 |
-| 17 | Toshu | 15.4% | 19.3% | -6 |
-| 18 | Astosis | 14.9% | 12.2% | +3 |
-| 19 | Valoray | 13.9% | 14.4% | -2 |
-| 20 | Mokdai | 13.2% | 13.4% | -1 |
-| 21 | Huckle | 12.4% | 10.2% | +4 |
-| 22 | Roiker | 12.2% | 5.7% | +24 |
-| 23 | Gammei | 11.7% | 16.6% | -8 |
-| 24 | ⇌Akashi | 11.4% | new | new |
-| 25 | Viscunam | 10.7% | 7.9% | +9 |
+| 1 | {% chara_link Pubraseer %} | 44.9% | 49.2% | +0 |
+| 2 | {% chara_link Barrel %} | 36.5% | 28.5% | +2 |
+| 3 | {% chara_link Monomasa %} | 32.3% | 37.9% | -1 |
+| 4 | {% chara_link Giansar %} | 28.8% | 32.2% | -1 |
+| 5 | {% chara_link Sterio %} | 27.5% | 18.0% | +7 |
+| 6 | {% chara_link Ryekie %} | 23.8% | 26.0% | -1 |
+| 7 | {% chara_link Obsidius %} | 22.1% | 24.3% | -1 |
+| 8 | {% chara_link Tsuneaki %} | 20.8% | 22.8% | +2 |
+| 9 | {% chara_link Norbrand %} | 19.9% | new | new |
+| 10 | {% chara_link Sadayoshi %} | 19.1% | 24.3% | -4 |
+| 11 | {% chara_link Astar %} | 18.6% | 16.4% | +5 |
+| 12 | {% chara_link Akashi %} | 18.1% | 24.0% | -4 |
+| 13 | {% chara_link Denebora %} | 17.9% | 11.7% | +9 |
+| 13 | {% chara_link Ruchbath %} | 17.9% | new | new |
+| 15 | {% chara_link reXer %} | 17.6% | 23.5% | -6 |
+| 16 | {% chara_link Yohack %} | 15.9% | 16.8% | -3 |
+| 17 | {% chara_link Toshu %} | 15.4% | 19.3% | -6 |
+| 18 | {% chara_link Astosis %} | 14.9% | 12.2% | +3 |
+| 19 | {% chara_link Valoray %} | 13.9% | 14.4% | -2 |
+| 20 | {% chara_link Mokdai %} | 13.2% | 13.4% | -1 |
+| 21 | {% chara_link Huckle %} | 12.4% | 10.2% | +4 |
+| 22 | {% chara_link Roiker %} | 12.2% | 5.7% | +24 |
+| 23 | {% chara_link Gammei %} | 11.7% | 16.6% | -8 |
+| 24 | {% chara_link ⇌Akashi %} | 11.4% | new | new |
+| 25 | {% chara_link Viscunam %} | 10.7% | 7.9% | +9 |
 
 ## Top 10: biggest approval changes 2025 -> 2026
 
 | character | change (pp) | 2025 | 2026 | rank then -> now |
 |---|---|---|---|---|
-| Sterio | +9.6 | 18.0% | 27.5% | 12 -> 5 |
-| Barrel | +8.0 | 28.5% | 36.5% | 4 -> 2 |
-| Roiker | +6.5 | 5.7% | 12.2% | 46 -> 22 |
-| Denebora | +6.1 | 11.7% | 17.9% | 22 -> 13 |
-| Gnomon | +3.1 | 6.4% | 9.4% | 43 -> 31 |
-| Viscunam | +2.8 | 7.9% | 10.7% | 34 -> 25 |
-| Taika | +2.7 | 7.2% | 9.9% | 38 -> 28 |
-| Astosis | +2.6 | 12.2% | 14.9% | 21 -> 18 |
-| Sui | +2.5 | 2.0% | 4.5% | 82 -> 64 |
-| Senthak | +2.4 | 4.0% | 6.5% | 58 -> 46 |
-| Lilac | -7.1 | 16.8% | 9.7% | 13 -> 29 |
-| Kiloc | -6.6 | 9.1% | 2.5% | 31 -> 83 |
-| Akashi | -5.9 | 24.0% | 18.1% | 8 -> 12 |
-| reXer | -5.9 | 23.5% | 17.6% | 9 -> 15 |
-| Monomasa | -5.7 | 37.9% | 32.3% | 2 -> 3 |
-| Galvo | -5.6 | 13.8% | 8.2% | 18 -> 33 |
-| Sadayoshi | -5.2 | 24.3% | 19.1% | 6 -> 10 |
-| Gammei | -4.9 | 16.6% | 11.7% | 15 -> 23 |
-| Polaris Mask | -4.8 | 9.7% | 5.0% | 26 -> 56 |
-| Exio | -4.4 | 10.4% | 6.0% | 24 -> 49 |
+| {% chara_link Sterio %} | +9.6 | 18.0% | 27.5% | 12 -> 5 |
+| {% chara_link Barrel %} | +8.0 | 28.5% | 36.5% | 4 -> 2 |
+| {% chara_link Roiker %} | +6.5 | 5.7% | 12.2% | 46 -> 22 |
+| {% chara_link Denebora %} | +6.1 | 11.7% | 17.9% | 22 -> 13 |
+| {% chara_link Gnomon %} | +3.1 | 6.4% | 9.4% | 43 -> 31 |
+| {% chara_link Viscunam %} | +2.8 | 7.9% | 10.7% | 34 -> 25 |
+| {% chara_link Taika %} | +2.7 | 7.2% | 9.9% | 38 -> 28 |
+| {% chara_link Astosis %} | +2.6 | 12.2% | 14.9% | 21 -> 18 |
+| {% chara_link Sui %} | +2.5 | 2.0% | 4.5% | 82 -> 64 |
+| {% chara_link Senthak %} | +2.4 | 4.0% | 6.5% | 58 -> 46 |
+| {% chara_link Lilac %} | -7.1 | 16.8% | 9.7% | 13 -> 29 |
+| {% chara_link Kiloc %} | -6.6 | 9.1% | 2.5% | 31 -> 83 |
+| {% chara_link Akashi %} | -5.9 | 24.0% | 18.1% | 8 -> 12 |
+| {% chara_link reXer %} | -5.9 | 23.5% | 17.6% | 9 -> 15 |
+| {% chara_link Monomasa %} | -5.7 | 37.9% | 32.3% | 2 -> 3 |
+| {% chara_link Galvo %} | -5.6 | 13.8% | 8.2% | 18 -> 33 |
+| {% chara_link Sadayoshi %} | -5.2 | 24.3% | 19.1% | 6 -> 10 |
+| {% chara_link Gammei %} | -4.9 | 16.6% | 11.7% | 15 -> 23 |
+| {% chara_link Polaris Mask %} | -4.8 | 9.7% | 5.0% | 26 -> 56 |
+| {% chara_link Exio %} | -4.4 | 10.4% | 6.0% | 24 -> 49 |
 
 ## Ranked Voting System
 
@@ -502,6 +502,8 @@ New this year: {{ f.mob_answered }} respondents picked their favourite mob chara
 
 {% include survey-graph.html path="/assets/img/survey-2026/best_cp.svg"
   title="Best CP (pairs chosen by at least two respondents)" %}
+
+> Relationships that were only supported by one respondent are omitted, as I considered them as being too random
 
 | Pairs | Count |
 |-|-|
@@ -599,7 +601,7 @@ New this year: {{ f.mob_answered }} respondents picked their favourite mob chara
 
 This free text analysis was done with the help of LLM assistant, then I manually scan for term/context ambiguity and fix them, add character/link formatting.
 
-A few people misspelled Vergald, Norbrand and Theoreol's name in the survey, I am revoking your husbando license.
+A few people misspelled {% chara_link Vergald %}, {% chara_link Norbrand %} and {% chara_link Theoreol %}'s name in the survey, I am revoking your husbando certificate.
 
 The survey ended before 6th anniversary, and since then LW has released some new improvements before this survey report is published:
 
@@ -1078,7 +1080,7 @@ Source columns:
 
 ### 4.3 Outfits, skins and protagonist customisation
 
-- **More outfits for characters** (×~6: US, SE "more costumes", TW 更多外觀服裝樣式, VN, MA "more outfits for the player"). TW: "swimsuit characters... don't make the 差分 too few... look at 竹本 (Takemoto)'s extreme 差分." TW also asks for **Live2D versions** when the art has outfit 差分.
+- **More outfits for characters** (×~6: US, SE "more costumes", TW 更多外觀服裝樣式, VN, MA "more outfits for the player"). TW: "swimsuit characters... don't make the 差分 too few... look at 竹本 (Takemoto)'s extreme 差分." TW also asks for **Live2D (Spine2D) versions** when the art has outfit variation.
 - **Skin systems** (×3): VN skin system, **US premium skin system** (VFX/SFX change like Arknights/R1999), ID "More skins".
 - **Hero accessories** "should be more than just floating items by the hero" (US).
 - **Protagonist** (×~6): FI wants casual wear and a battle sprite "for the Office"; SV (×2) wants **more avatar bodies** ("Rabbit, Hyena, Lion, Coyote... male and female rabbit variants... male-looking cat and female-looking dog") and more scenes where the avatar speaks; MA wants outfits earned from events and a new unit or look for the player; FI protagonist sidekick-skill buff (§3.8).
@@ -1097,7 +1099,7 @@ Source columns:
 
 - **Ultimate-skill animation** (×~5: MY ×2, MA, IT, TH). IT: "Dokkan level animations for really unique skills". MA: ultimates should show an action related to the skill, not a generic attack; idle pose; TH wants faster skill animation or skip.
 - **Update older sprites** (×~7: US, BR (Spine), PH ×2, BA "older animations... Parallel Flight members", PH (stopped) "older character's animations", US "from launch to 1st or 2nd Anniversary").
-- **Live2D** (ID, "live 2d arts characters"), **3D models** (PH, stopped), **CG art in stories** (ID), **frame-by-frame combat animation inspection** (TH), "official art of the characters" (PH, stopped), "animated PV" (PH).
+- **Live2D (Spine2D)** (ID, "live 2d arts characters"), **3D models** (PH, stopped), **CG art in stories** (ID), **frame-by-frame combat animation inspection** (TH), "official art of the characters" (PH, stopped), "animated PV" (PH).
 - **Disabling animation to reduce lag** (US): see §3.7.
 
 ### 4.5 Voice and music
@@ -1231,7 +1233,11 @@ Counts overlap, because one respondent can appear in several rows.
 
 # Afterword
 
-<!-- TODO -->
+I hope this report brings more insight about the game.
+
+This survey and its report took me a lot of effort to prepare, but unfortunately the number of respondents are not that great, so the result is less representative. I initially promised to publish this report by the end of October, and I missed that deadline by more than a week. This was partly due to lower motivation, working on other wiki improvements and just the energy drain from my day job...
+
+Housamo's anniversary celebration was brought forward by a few weeks, so I didn't even have time to prepare survey for *that game* before its anniversary. If I decide to still go about doing it this year, I guess I would have to shrink the survey size by a lot.
 
 <script defer src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
 <script defer src="/assets/chart.js"></script>
