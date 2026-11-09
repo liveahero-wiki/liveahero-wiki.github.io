@@ -620,8 +620,10 @@ A few people misspelled {% chara_link Vergald %}, {% chara_link Norbrand %} and 
 The survey ended before the 6th anniversary, and since then LW has released some new improvements before this survey report was published:
 
 - {% chara_link Thuban %} has been released
+- First female 5 star variant: {% chara_link Sensettia|h2 %}
 - Main Quest Chapter 4's official translation
 - A new form of Item Search Box that takes less stamina to clear
+- The sister game (Housamo) has released marriage system (despite that game's protagonist being a highschooler, while this game's protagonist is a working adult...)
 
 Source columns:
 
