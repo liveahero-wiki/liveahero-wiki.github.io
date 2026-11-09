@@ -27,15 +27,15 @@ eleventyExcludeFromCollections: true
 # Foreword
 
 We received **{{ f.respondents }}** responses this year, compared with {{ f.respondents_prev }} last year.
-I had been running this survey for the past few years, and this is the first time where the number of respondents
-is less than the previous year, and by such a huge margin.
+I have been running this survey for the past few years, and this is the first time the number of respondents
+is lower than the previous year, and by such a huge margin.
 
-Nonetheless, I still want to thank everyone who took the time to fill up the survey. I know it is not an easy task, and I plan to cut down certain questions that are less valuable.
+Nonetheless, I still want to thank everyone who took the time to fill in the survey. I know it is not an easy task, and I plan to cut down certain questions that are less valuable.
 
 ## Disclaimer on Limitation of the Survey
 
-Once again, the demographics percentage of this year's respondents is very different from past few years, in that the percentage of China and Japanese respondents are a lot less than previous year.
-This means that many "2025 vs 2026" comparsions do not really tell if there is a sentiment change for the same group of people, because the underlying group of respondents are quite different. Take the comparison with a pinch of salt.
+Once again, the demographics percentage of this year's respondents is very different from past few years, in that the percentage of China and Japan respondents are much less than previous year.
+This means that many "2025 vs 2026" comparisons do not really tell if there is a sentiment change for the same group of people, because the underlying group of respondents are quite different. Take the comparison with a pinch of salt.
 
 # Respondent Profile
 
@@ -47,13 +47,13 @@ This means that many "2025 vs 2026" comparsions do not really tell if there is a
 
 Discord and Reddit covered more than half of the respondent source, Reddit's number nearly doubled from the previous year!
 
-Compared to 2025, the biggest loss were traffic from this wiki, Bahamut (Taiwan game forum), X/Twitter and Weibo (China). I didn't dare to post on Zawazawa again, so that is another zero. This leads to significant decrease in China, Japan (and to some extend, Taiwan) respondents this year.
+Compared to 2025, the biggest loss was traffic from this wiki, Bahamut (Taiwan game forum), X/Twitter and Weibo (China). I didn't dare to post on Zawazawa again, so that is another zero. This leads to a significant decrease in China, Japan (and to some extent, Taiwan) respondents this year.
 
 ## Age
 
 {% include survey-chart.html id="age" %}
 
-The median age is {{ f.age_median }}. There was one respondent from Philipines that claimed to be 6 years old.
+The median age is {{ f.age_median }}. There was one respondent from Philippines who claimed to be 6 years old.
 
 {% include survey-chart.html id="age_female" %}
 
@@ -98,7 +98,7 @@ If we exclude the Japan players ({{ f.jp_n1_japan }}), the percentage drops to 1
 
 # The Game
 
-## Actual Player
+## Actual Players
 
 {% include survey-chart.html id="play_lah" %}
 
@@ -107,9 +107,9 @@ If we exclude the Japan players ({{ f.jp_n1_japan }}), the percentage drops to 1
 - No English translation at the time when they gave up
 - Lost interest/motivation
 - Battle system is too complicated / unfamiliar with game mechanics
-- Quit becasue respondent cannot pull the character they want
+- Could not pull the character they wanted
 - Too little (free) pull currency
-- Respondent also play other gacha games, no time to keep Live A Hero
+- Respondent also plays other gacha games, no time to keep Live A Hero
 
 ## Platform
 
@@ -119,15 +119,15 @@ If we exclude the Japan players ({{ f.jp_n1_japan }}), the percentage drops to 1
 
 {{ f.platform_multi }} respondents ({{ f.platform_multi_pct }}%) use more than one platform. Each number in the diagram is the respondents who chose exactly that combination; the regions are all the same size, so it is not drawn to scale.
 
-12 respondents (3%) play exclusively via Android emulators on PC, but no one plays exclusively on "Google Play Games on PC"
+12 respondents (3%) play exclusively via Android emulators on PC, but no one plays exclusively on "Google Play Games on PC".
 
 ## Playing Time
 
 {% include survey-chart.html id="tenure" %}
 
-- We have close a quarter of the respondents that started playing this game near the game launch date.
+- We have close to a quarter of the respondents that started playing this game around launch date.
 - The player growth was slow until there was a spike near [3rd anniversary](/events/23093rdAnniversary/), which was the time when LifeWonders announced they "planned" to release official translation.
-- The player growth reaccelerated in the past 12 months (mostly oversea players). This is also the year where official translation was finally released.
+- The player growth reaccelerated in the past 12 months (mostly overseas players). This is also the year where official translation was finally released.
 
 ## Main Character Configuration
 
@@ -135,11 +135,11 @@ If we exclude the Japan players ({{ f.jp_n1_japan }}), the percentage drops to 1
 
 {% include survey-chart.html id="mc_voice" %}
 
-## Money spending
+## Money Spending
 
 {% include survey-chart.html id="paying" %}
 
-More than half of the respondents at least spent money in-game once in the entire journye.
+More than half of the respondents spent money in-game at least once during their journey.
 
 ### Definition of Spending level
 
@@ -154,11 +154,11 @@ More than half of the respondents at least spent money in-game once in the entir
 
 {% include survey-chart.html id="yoy_paying" %}
 
-Compared to 2025, the number of free players increases slightly.
+Compared to 2025, the number of free players increased slightly.
 
 Among paying players, XL (biggest spender) and S tier (only spent in new year/anniversary) have some decrease, while XS tier saw the biggest increase. It is likely that these people went to buy the new web shop value pack.
 
-> We know that East-Asia has the highest percentage of paying players for this game, but this player segment also decreased the most in this year's survey, so take that into the consideration.
+> We know that East-Asia has the highest percentage of paying players for this game, but this player segment also decreased the most in this year's survey, so take that into consideration.
 
 {% include survey-chart.html id="money_items" %}
 
@@ -168,7 +168,7 @@ It seems that the attractiveness of the new year grab bag and 5th anniversary he
 
 {% include survey-chart.html id="paying_east_asia" %}
 
-East Asia have the biggest percentage of paying players, with Taiwan being the top in this survey. However, because this survey has very little Japanese respondents, so we can't be certain that the percentage is right for the actual Japan player population.
+East Asia has the biggest percentage of paying players, with Taiwan being the top in this survey. However, as this survey has very few Japanese respondents, we can't be certain that the percentage is right for the actual Japan player population.
 
 {% include survey-chart.html id="paying_by_gender" %}
 
@@ -178,11 +178,11 @@ East Asia have the biggest percentage of paying players, with Taiwan being the t
 
 {% include survey-chart.html id="shop_by_platform" %}
 
-LW only started selling in-game items on web shop this year, a result of [Epic Games v. Google](https://en.wikipedia.org/wiki/Epic_Games_v._Google) lawsuit that forces app stores to allow game developers to accept payment outside of the app store, so that the game developers can pay less transaction fee.
+LW only started selling in-game items on its web shop this year, a result of [Epic Games v. Google](https://en.wikipedia.org/wiki/Epic_Games_v._Google) lawsuit that forces app stores to allow game developers to accept payment outside of the app store, so that the game developers can pay less transaction fee.
 
 {% include survey-chart.html id="physical_by_paying" %}
 
-As expected, respondents that bought in-game items are more likely to also buy physical merchandises, but there are also some free players that buy physical merchandises.
+As expected, respondents that bought in-game items are more likely to also buy physical merchandises, but there are also some free players that buy physical merchandise.
 
 ## Gameplay Style
 
@@ -200,7 +200,7 @@ Despite the demographics of the survey respondents changes every year and LifeWo
 
 {% include survey-chart.html id="hdq_sss" %}
 
-46% of the players are able to complete 90~100% of the SS rank. The percentage drops to 34.2% for SSS rank.
+46.9% of the players are able to complete 90~100% of the SS rank. The percentage drops to 34.2% for SSS rank.
 
 {% include survey-chart.html id="hdq_by_paying" %}
 
@@ -236,7 +236,7 @@ In general, the respondents gave a pretty high score for the story aspect of the
 - More than half of the respondents give positive score for the quality of official translation
 - Even higher percentage of the respondents are dissatisfied with the release schedule of the official translation
 
-## Read Story
+## Reading the Story
 
 {% include survey-chart.html id="read_story" %}
 
@@ -273,15 +273,15 @@ In general, the respondents gave a pretty high score for the story aspect of the
 {% include survey-graph.html path="/assets/img/survey-2026/ranked_games_global.svg"
   title="Ranked voting of games (global)" %}
 
-I don't want to repeat too much from my last year commentary, you can read it [here](/blog/2025/community-survey-2025/#other-games).
+I don't want to repeat too much from my commentary from last year, you can read it [here](/blog/2025/community-survey-2025/#other-games).
 
 - **Gyee**:
   - Last year, more than a third of Japan respondents had never heard of this game. But since I added the Japanese name of the game in the survey this year, the percentage dropped to 7.1%
-- **Another Eidoes of Dragonvein** vs **XXL Woofia**:
+- **Another Eidos of Dragonvein** vs **XXL Woofia**:
   - Japan respondents tend to rank this game higher than XXL Woofia, while the opposite is true for the rest of the respondents.
   - Both games have simultaneous official translation release. Existence of such popularity gap between region despite no language barrier is quite interesting.
-- **Tamacolle**
-  - Surprisingly, Taiwan respondents has higher percentage of respondents still playing this game thant Japanese respondents, but it might just be due to the number of Japanese respondents is too low.
+- **Tamacolle**:
+  - Surprisingly, Taiwan respondents have higher percentage of respondents still playing this game that Japanese respondents, but it might just be due to the low number of Japanese respondents.
 
 # Character popularity
 
@@ -299,7 +299,7 @@ Every ranking below can be filtered by country, region, age, gender and playing 
 |{% chara_link Ryekie %}   | 51.4% |{% chara_link ⇌Akashi %}| 32.3% |{% chara_link Sui %}       |16.6%|
 |{% chara_link Sterio %}   | 49.4% |{% chara_link Roudin %}  | 28.5% |{% chara_link Flamier %}  |15.4%|
 
-To no one's surprise, male anthro characters dominated this year's popularity ranking. The approval rating winner in "Male Anthro", "Male Humanoid" and "Female/Other" are exactly the same as last year, congratulations to them for successfully defending their thrones!
+To no one's surprise, male anthro characters dominated this year's popularity ranking. The approval rating winners in "Male Anthro", "Male Humanoid" and "Female/Other" are exactly the same as last year, congratulations to them for successfully defending their thrones!
 
 {% chara_link Akashi %} has more votes in "All favourites" ranking (unlimited votes), but {% chara_link Astar %} has more votes in "Top 10 favourites".
 
@@ -310,13 +310,13 @@ LifeWonders officially introduced more parallel/xeno characters now, so I includ
 | Version 1 |Approval Rating| Version 2 |Approval Rating|
 |-|-|-|-|
 |{% chara_link Akashi %} (win) | 37.7% | {% chara_link ⇌Akashi %} | 32.3% |
-|{% chara_link Broker %} | 26.8% | {% chara_link Branch %} (win) | 31.5 % |
+|{% chara_link Broker %} | 26.8% | {% chara_link Branch %} (win) | 31.5% |
 |{% chara_link Melide %} (win) | 23.3% | {% chara_link ⇌Melide %} | 19.4% |
 |{% chara_link Crowne %} (win) | 12.9% | {% chara_link Crowne (alter) %} | 6.0% |
 
 {% include survey-chart.html id="top10_size" %}
 
-Every year there are people complaining that only allowing top 10 characters are too little, so here is a reminder that there are also plenty respondents that do not even choose full 10 characters.
+Every year there are people complaining that only allowing top 10 characters are too few, so here is a reminder that there are also many respondents that do not even choose full 10 characters.
 
 ## All favourites: global top 25 (2026, n=403)
 
@@ -452,13 +452,13 @@ Every year there are people complaining that only allowing top 10 characters are
 {% include survey-graph.html path="/assets/img/survey-2026/ranked_voting_female.svg"
   title="Ranked Voting (female respondents only)" %}
 
-In **Japan**, {% chara_link Monomasa %} is the Cordocet winner, where most other respondent groups tend to put {% chara_link Pubraseer %} as (one of) the Cordocet winner.
+In **Japan**, {% chara_link Monomasa %} is the Condorcet winner, whereas most other groups tend to put {% chara_link Pubraseer %} as (one of) the Condorcet winner.
 
-In **Taiwan**, {% chara_link Ruchbath %} became the highest male human character in the top 10. For **Japan**, the highest male human character is {% chara_link Rastaban %}.
+In **Taiwan**, {% chara_link Ruchbath %} became the highest male humanoid character in the top 10. For **Japan**, the highest male humanoid character is {% chara_link Rastaban %}.
 
-Among **China respondents**, there is no single Cordocet winner, because {% chara_link Pubraseer %} and {% chara_link Barrel %} won over the other character at 50% of the time (tie). {% chara_link Astar %} is the only male humanoid character in China's top 10.
+Among **China respondents**, there is no single Condorcet winner, because {% chara_link Pubraseer %} and {% chara_link Barrel %} beat each other 50% of the time (tie). {% chara_link Astar %} is the only male humanoid character in China's top 10.
 
-**Female respondents** are a small group (only {{ f.female_answered }} ballots), so take their graph with a grain of salt: there is no Cordocet winner, and {% chara_link Akashi %} leads the locked order, followed by {% chara_link Melide %} and {% chara_link Crowne %}. Only {% chara_link Pubraseer %}, {% chara_link Barrel %} and {% chara_link Sterio %} overlap with the global top 10.
+**Female respondents** are a small group (only {{ f.female_answered }} ballots), so take their graph with a grain of salt: there is no Condorcet winner, and {% chara_link Akashi %} leads the locked order, followed by {% chara_link Melide %} and {% chara_link Crowne %}. Only {% chara_link Pubraseer %}, {% chara_link Barrel %} and {% chara_link Sterio %} overlap with the global top 10.
 
 ## Mobs and Kaibutsu
 
@@ -473,7 +473,7 @@ New this year: {{ f.mob_answered }} respondents picked their favourite mob chara
 
 > I only realized that I forgot to add the civilian form of Mercenary while writing this report...
 
-{% mob mercenary-transform %} is the Cordocet Winner in the ranked voting.
+{% mob mercenary-transform %} is the Condorcet Winner in the ranked voting.
 
 **Locked order (top 10)**: {% mob Mercenary (Transform) %} > {% mob Wolfman (Summer) %} > {% mob Wolfman %} > {% mob Wolfman (Transform) %} > {% mob Ranger %} > {% mob Ranger (Transform) %} > {% mob Wrestler %} > {% mob Acolyte %} > {% mob Mercenary (Clown) %} > {% mob Acolyte (Transform) %}
 
@@ -497,7 +497,7 @@ New this year: {{ f.mob_answered }} respondents picked their favourite mob chara
 {% include survey-graph.html path="/assets/img/survey-2026/best_cp.svg"
   title="Best CP (pairs chosen by at least two respondents)" %}
 
-> Relationships that were only supported by one respondent are omitted, as I considered them as being too random
+> Relationships that were only supported by one respondent are omitted, as I considered them too random
 
 | Pairs | Count |
 |-|-|
@@ -588,24 +588,24 @@ New this year: {{ f.mob_answered }} respondents picked their favourite mob chara
 | {% chara_link Roudin %} x {% chara_link Ruchbath %} | 2 |
 | {% chara_link Taika %} x {% chara_link Toshu %} | 2 |
 | {% chara_link Thuban %} x {% chara_link Vergald %} | 2 |
-| {% chara_link ⇌Akashi %} x {% chara_link Crowne (Alter) %} | 2 |
+| {% chara_link ⇌Akashi %} x {% chara_link Crowne (alter) %} | 2 |
 | {% chara_link ⇌Akashi %} x {% chara_link ⇌Melide %} | 2 |
 
 # Player Feedback Analysis
 
-This free text analysis was done with the help of LLM assistant, then I manually scan for term/context ambiguity and fix them, add character/link formatting.
+This free text analysis was done with the help of LLM assistant, then I manually scanned for term/context ambiguity and fixed them, added character/link formatting.
 
-A few people misspelled {% chara_link Vergald %}, {% chara_link Norbrand %} and {% chara_link Theoreol %}'s name in the survey, I am revoking your husbando certificate.
+A few people misspelled {% chara_link Vergald %}, {% chara_link Norbrand %} and {% chara_link Theoreol %}'s names in the survey, I am revoking your husbando certificate.
 
-The survey ended before 6th anniversary, and since then LW has released some new improvements before this survey report is published:
+The survey ended before the 6th anniversary, and since then LW has released some new improvements before this survey report was published:
 
 - {% chara_link Thuban %} has been released
 - Main Quest Chapter 4's official translation
-- New form of Item Search Box that takes less stamina to clear
+- A new form of Item Search Box that takes less stamina to clear
 
 Source columns:
 
-- **`feedback`**: "Do you have any feedback to say about the content and changes put out by the game between {previous anniversary cutoff} till now?" (126 answers)
+- **`feedback`**: "Do you have any feedback to say about the content and changes put out by the game between 30 Sep 2025 till now?" (126 answers)
 - **`improvement`**: "What improvements would you like to see in this game? (Optional)" (213 answers)
 
 228 of 403 respondents wrote in at least one column and 111 wrote in both. Almost all are current players. Players who have stopped are tagged `(stopped)`, and there are only about ten of them.
@@ -997,7 +997,7 @@ Source columns:
 - **PW shard speed**: "it took 2 months to max one so basically you need 8 months to build 1 team" (TH).
 - **Powerstones**: obtained more at once, and a ticket variant that gives a mix, e.g., "6 small, 5 medium, 3 big" (FI).
 - **EXP / leveling**: CN says newcomers can't level high-star heroes to Lv.60 and so can't play hard event content. They ask for more EXP items and a higher EXP/Livo (coin) stage reward.
-- **Star Shards**: remove the 4000 cap; add Gnomon and Ruchbath to the Star Shard shop (US).
+- **Star Shards**: remove the 4000 cap; add {% chara_link Gnomon %} and {% chara_link Ruchbath %} to the Star Shard shop (US).
 - **Level cap and upgrades**:
   - Level 70 for heroes (ID, PA "ascend up to 7 stars, maximum level 70"), 開放等級上限 (HK).
   - Fourth passive slot (ID ×2).
@@ -1227,11 +1227,11 @@ Counts overlap, because one respondent can appear in several rows.
 
 I hope this report brings more insight about the game, and makes you feel that filling up the survey was worth it.
 
-This survey and its report took me a lot of effort to prepare, but unfortunately the number of respondents are not that great, so the result is less representative. I initially promised to publish this report by the end of October, and I missed that deadline by more than a week. This was partly due to lower motivation, working on other wiki improvements and just the energy drain from my day job...
+This survey and its report took me a lot of effort to prepare, but unfortunately the number of respondents is not that great, so the result is less representative. I initially promised to publish this report by the end of October, and I missed that deadline by more than a week. This was partly due to lower motivation, working on other wiki improvements and just the energy drain from my day job...
 
-Housamo's anniversary celebration was brought forward by a few weeks, so I didn't even have time to prepare survey for *that game* before its anniversary. If I decide to still go about doing it this year, I guess I would have to shrink the survey size by a lot.
+Housamo's anniversary celebration was brought forward by a few weeks, so I didn't even have time to prepare a survey for *that game* before its anniversary. If I decide to still go about doing it this year, I guess I would have to shrink the survey size by a lot.
 
-The survey also asked about wiki usage, feature and feedback, but I have decided to move their results into a future blog post where talk about some behind the scene of this wiki's development.
+The survey also asked about wiki usage, feature and feedback, but I have decided to move their results into a future blog post where I talk about some behind-the-scenes of this wiki's development.
 
 Thank you for reading till this far, see you at another time!
 
