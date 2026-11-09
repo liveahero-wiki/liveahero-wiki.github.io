@@ -15,7 +15,7 @@ eleventyExcludeFromCollections: true
 {%- endcomment -%}
 {% assign f = site.data.survey2026.facts %}
 
-> この記事には日本語版があります。詳しくは[こちら](/blog/2026/community-survey-2026.jp/)をご覧ください。
+> この記事には日本語版があります。詳しくは[こちら](/blog/2026/community-survey-2026.ja/)をご覧ください。
 >
 > 本文有繁體中文版，請見[這裡](/blog/2026/community-survey-2026.zh-tw/)。
 
@@ -245,7 +245,7 @@ In general, the respondents gave a pretty high score for the story aspect of the
 > Note: This question allowed multiple answers
 
 - Respondents with Japanese reading ability ranging N1~N3 level naturally are more likely to read the game story directly in-game, but nearly 30% of them also rely on official/fan/machine translation
-- 57.1% of the respondents have Japanese reading ability below N3 level
+- 84.5% of the respondents have Japanese reading ability below N3 level
   - 42.4% rely on fan translation while 28.8% rely on machine translation
   - More than half of them do read official translated game story (including those that may have read fan/machine translation years ago)
 - 11% of the respondents play the game to collect characters without reading the game story in any form
@@ -430,7 +430,29 @@ Every year there are people complaining that only allowing top 10 characters are
 
 ## Ranked Voting System
 
-<!-- TODO: carry over the Tideman explanation from 2025. -->
+Apart from asking survey respondents to choose all their favourite characters and top 10 favourite characters, I also asked them to rank the top 10 into a linear order.
+
+With this data, we can try to do a ranked voting using Tideman Method.
+
+<details open markdown="1">
+<summary>Tideman Method (Wikipedia definition)</summary>
+
+**Ranked Pairs (RP)**, also known as the **Tideman method**, is a tournament-style system of ranked voting first proposed by Nicolaus Tideman in 1987.
+
+If there is a candidate who is preferred over the other candidates, when compared in turn with each of the others, the ranked-pairs procedure guarantees that candidate will win. Therefore, the ranked-pairs procedure complies with the Condorcet winner criterion—that is, it is a [Condorcet method](https://en.wikipedia.org/wiki/Condorcet_method).
+
+Ranked pairs begins with a round-robin tournament, where the one-on-one margins of victory for each possible pair of candidates are compared to find a majority-preferred candidate; if such a candidate exists, they are immediately elected. Otherwise, if there is a
+[Condorcet cycle](https://en.wikipedia.org/wiki/Condorcet_paradox) (a rock-paper-scissors-like sequence A > B > C > A) of three or more candidates then the cycle is broken by dropping the "weakest" election in the cycle, i.e. the one that is closest to being tied.
+
+Source: [Ranked Pairs (Wikipedia)](https://en.wikipedia.org/wiki/Ranked_pairs)
+
+</details>
+
+### Key adaptation to Tideman Method made for this survey
+
+1. Let *Set X* (*X<sub>1</sub>, X<sub>2</sub>, X<sub>3</sub>, ...*) be the set of characters that are in a respondent's top 10 ranking, and another *Set Y* (*Y<sub>1</sub>, Y<sub>2</sub>, ...*) that contains characters not in the respondent's top 10 ranking
+1. For each pair of (*X<sub>i</sub>, Y<sub>j</sub>*), we assume the respondent would rank *X<sub>i</sub>* > *Y<sub>j</sub>* 
+    - This is necessary because I only asked the respondents to rank the top 10 characters instead of **all the characters**. Asking respondents to rank all characters into a linear order would be too exhausting and boring for most people.
 
 {% include survey-graph.html path="/assets/img/survey-2026/ranked_voting_global.svg"
   title="Ranked Voting (global)" %}
@@ -475,7 +497,7 @@ New this year: {{ f.mob_answered }} respondents picked their favourite mob chara
 
 {% mob mercenary-transform %} is the Condorcet Winner in the ranked voting.
 
-**Locked order (top 10)**: {% mob Mercenary (Transform) %} > {% mob Wolfman (Summer) %} > {% mob Wolfman %} > {% mob Wolfman (Transform) %} > {% mob Ranger %} > {% mob Ranger (Transform) %} > {% mob Wrestler %} > {% mob Acolyte %} > {% mob Mercenary (Clown) %} > {% mob Acolyte (Transform) %}
+**Locked order (top 10)**: {% mob Mercenary (Transform) %} > {% mob Wolfman (Summer) %} > {% mob Wolfman %} > {% mob Wolfman (Transform) %} > {% mob Ranger %} > {% mob Ranger (Transform) %} > {% mob Wrestler %} > {% mob Acolyte %} > {% mob Mercenary (Clown) %} = {% mob Acolyte (Transform) %}
 
 **Tie**: {% mob Mercenary (Clown) %} = {% mob Acolyte (Transform) %}
 
@@ -608,7 +630,7 @@ Source columns:
 - **`feedback`**: "Do you have any feedback to say about the content and changes put out by the game between 30 Sep 2025 till now?" (126 answers)
 - **`improvement`**: "What improvements would you like to see in this game? (Optional)" (213 answers)
 
-228 of 403 respondents wrote in at least one column and 111 wrote in both. Almost all are current players. Players who have stopped are tagged `(stopped)`, and there are only about ten of them.
+228 of 403 respondents wrote in at least one column and 111 wrote in both. Almost all are current players. Players who have stopped are tagged `(stopped)`, and there are only about 12 of them.
 
 ## How to read this
 
@@ -791,7 +813,7 @@ Source columns:
   - Halve it: 降井（200→100） (CN), "the amount of gems needed to pity a character needs to be halved" (US), "less pulls necessary for guaranteed 5 star" (DE), "Lower the pull point... the more people pull but still not getting the character is a downer" (MY).
   - "Reduce stones for 1 roll from 5 to 2... 3... 4" (TH ×2, F and I).
   - "Increased pull economy to reduce the amount of time needed to save for the 200 pull guarantee" (US).
-- **Pity does not carry over between banners** (×4).
+- **Pity does not carry over between banners** (×5).
   - LU: "200 summon pity that doesn't carry over between banners. They should either let it carry over or drastically increase pull-economy."
   - MY: 或者能繼承保底數 ("or let pity carry over").
   - SG: "An accumulated pity system since it's difficult for F2P players to save up to 200 pulls for a single pity."
@@ -813,7 +835,7 @@ Source columns:
 
 ### 2.4 Pull-point shops, selectors and exchange
 
-- **Free limited 5★ selector / select-your-own pack** (×5): 能不能出限定五星的自选礼包？(CN, F and I), 多點自選禮包 (TW), "Free limited 5* selector" (TH), "more free 5 star for f2p play" (TH).
+- **Free limited 5★ selector / select-your-own pack** (×4): 能不能出限定五星的自选礼包？(CN, F and I), 多點自選禮包 (TW), "Free limited 5* selector" (TH), "more free 5 star for f2p play" (TH).
 - **Search Structure / pull-point shop**:
   - Add old units so they can be purchased (IT).
   - "Update the exchange item from shop (livo, search structure, etc)" (ID).
@@ -864,7 +886,6 @@ Source columns:
 - **Auto does not use passive/S4 skills** (×3): ID "Auto but not linked to passive for skill activation", UY "Passive skill to activate S4 in autobattle", US nb "new sidekick passives or a rework of the system that automatically saves and repeats all actions taken in previous manual battles".
 - **Bugginess of the 9/17 update** (US).
 - **Never-ending jobs can't change heroes on the fly** (TW).
-- **login calendar / history** and **player information and statistics page** (AR)
 - **Skip / sweep instead of repeating** (×~7).
   - US nb: "The newly added feature to use stamina in multiples is nice but you still repeat the quest rather than skipping it."
   - US: "The just released multi battle is nice but a skip function would be even better."
@@ -924,10 +945,11 @@ Source columns:
 - **Titles** (TW): the "new" badge on titles forces the player to click the new title, which also equips it. This is "unfriendly to those with OCD". The respondent wants titles locked in.
 - **Skin system / premium skins**: "make a skin system or more accessory for the characters" (VN); a premium skin system with whole-outfit changes and VFX/SFX changes like Arknights and R1999 (US); see §4.3.
 - **Gallery** to see all units, mobs and special NPCs (US).
+- **Login calendar / history** and **player information and statistics page** (AR).
 
 ### 3.6 Formation, UI, sorting and menus
 
-- **More formation/loadout slots** (×4: CN 可以保存更多编队; TW 希望有更多編組 ×2 (F and I); US "More loadout slots").
+- **More formation/loadout slots** (×3: CN 可以保存更多编队; TW 希望有更多編組 ×2 (F and I); US "More loadout slots").
 - **Team of 6** (BR), and **support team** restriction: MY 助戰角色編成那邊如果可以拔掉屬性限制改為最多編入6位任意屬性的角色也不錯.
 - **Persistent sort/filter** (×3: VN, CN, BR "ui sorting system"). CN: 在备战界面将排序设置为"Lv"+"降序" resets every time.
 - **Role filter** (ID: "only show heroes of specific roles").
@@ -1022,7 +1044,7 @@ Source columns:
 
 ### 3.11 Account, data and region
 
-- **Save data / account backup** (×6: TW, TH ×2, TH other, US, MA, PH). TH(stopped): "plz need save game data. I hate link save." US: "a more secure way to save data." MA: "connecting our account to email or iCloud." PH: "Google/Apple account linking." TW: 資料備份需要更靈活方便的方式.
+- **Save data / account backup** (×7: TW, TH ×2, TH other, US, MA, PH). TH(stopped): "plz need save game data. I hate link save." US: "a more secure way to save data." MA: "connecting our account to email or iCloud." PH: "Google/Apple account linking." TW: 資料備份需要更靈活方便的方式.
 - **China payment** (see §2.6).
 
 ### 3.12 New-player experience
