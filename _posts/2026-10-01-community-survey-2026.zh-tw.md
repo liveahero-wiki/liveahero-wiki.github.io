@@ -1,9 +1,7 @@
 ---
 title: 社群問卷調查結果2026
-date: 2026-11-01 12:00:00 +08
+date: 2026-11-09 21:00:00 +08
 lang: zh-tw
-draft: true
-eleventyExcludeFromCollections: true
 ---
 {%- comment -%}
   Translation of 2026-10-01-community-survey-2026.md: same includes and facts, only the prose differs.
@@ -42,7 +40,7 @@ eleventyExcludeFromCollections: true
 
 Discord和Reddit佔了回答者來源的一半以上，Reddit的人數比前一年幾乎翻倍！
 
-和2025年相比，流失最多的是來自本Wiki、巴哈姆特（台灣遊戲論壇）、X/Twitter和微博（中國）的流量。我不敢再去Zawazawa發文，所以那邊又是零。這導致今年中國、日本（以及某種程度上的台灣）回答者大幅減少。
+和2025年相比，流失最多的是來自本Wiki、巴哈姆特（台灣遊戲論壇）、X/Twitter和微博（中國）的流量。我不敢再去Zawazawa發文，所以那邊也是零。這導致今年中國、日本（以及某種程度上的台灣）回答者大幅減少。
 
 ## 年齡
 
@@ -660,7 +658,7 @@ LifeWonders現在正式推出了更多平行／異世界版本的角色，所以
 
 - **有官方翻譯這件事本身，就是最受稱讚的改動**（~25）。
   - 「儘管遲了5年，這是這款遊戲有史以來最大的進步」（ID）。
-  - 「很高興遊戲在5年後終於有了官方翻譯。我一直很期待下一批翻譯推出，好讓我學習並愛上更多角色」（US）。
+  - 「很高興遊戲在5年後終於有了官方翻譯。我一直很期待下一批翻譯推出，好讓我認識並愛上更多角色」（US）。
   - 「對遊戲的易用性來說是很大的一步」（US）。
   - 「翻譯幫助很大……等不及現在每隔幾個月就能看到釋出了」（US）。
   - 另外還有來自AR、PR、PH、SG、ID、MY、UY、TW、BR、MO的回答。
