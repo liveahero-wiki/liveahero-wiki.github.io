@@ -283,12 +283,6 @@ I don't want to repeat too much from my last year commentary, you can read it [h
 - **Tamacolle**
   - Surprisingly, Taiwan respondents has higher percentage of respondents still playing this game thant Japanese respondents, but it might just be due to the number of Japanese respondents is too low.
 
-## English Wiki
-
-{% include survey-chart.html id="wiki_usage" %}
-
-{% include survey-chart.html id="wiki_new_feature" %}
-
 # Character popularity
 
 Every ranking below can be filtered by country, region, age, gender and playing status, and compared with 2024 and 2025. Click a character for their history.
@@ -1233,11 +1227,15 @@ Counts overlap, because one respondent can appear in several rows.
 
 # Afterword
 
-I hope this report brings more insight about the game.
+I hope this report brings more insight about the game, and makes you feel that filling up the survey was worth it.
 
 This survey and its report took me a lot of effort to prepare, but unfortunately the number of respondents are not that great, so the result is less representative. I initially promised to publish this report by the end of October, and I missed that deadline by more than a week. This was partly due to lower motivation, working on other wiki improvements and just the energy drain from my day job...
 
 Housamo's anniversary celebration was brought forward by a few weeks, so I didn't even have time to prepare survey for *that game* before its anniversary. If I decide to still go about doing it this year, I guess I would have to shrink the survey size by a lot.
+
+The survey also asked about wiki usage, feature and feedback, but I have decided to move their results into a future blog post where talk about some behind the scene of this wiki's development.
+
+Thank you for reading till this far, see you at another time!
 
 <script defer src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
 <script defer src="/assets/chart.js"></script>
