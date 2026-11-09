@@ -704,6 +704,7 @@ Source columns:
   - US: "abilities, statuses, sidekicks and ui elements are still untranslated."
   - CN: 增加中文翻译，包括主线/活动剧情、角色技能等.
   - MO: new character skill text has become "小作文" (essay-like) and even with official Chinese they need a reworded chinese skill description (中译中) written by other online users to understand it.
+  - ES: "Less redundant text"
   - ID: wants the new-unit *combat trial* in the banner translated, so non-JP players can see skill mechanics and recommendations.
 - **UI** (×4: US(I), FI, ID, PH). "Full ui translation" (US).
 - **Voice-line / battle-line subtitles**: see §4.4.
@@ -828,7 +829,7 @@ Source columns:
   - "so that character alts don't take, say, three years to arrive" (MX).
   - "not take too long to reveal new character alts" (MX(F)).
   - JP: 新しいキャラクターを先行公開するなら半年以内には実装してほしい ("if you preview a new character, release them within half a year").
-  - JP: ディグラムとテオレールの限定化を早く…頼む… ("hurry up with releasing limited variant for Digram and Theoreal").
+  - JP: ディグラムとテオレールの限定化を早く…頼む… ("hurry up with releasing limited variant for {% chara_link Digram %} and {% chara_link Theoreol %}").
   - PH: "The advent of 2nd alts makes the pain of waiting for the 1st alt of a not so popular character all the more brutal."
   - SE: "Focus on giving alts to characters who already don't have one" (see §4.1 for the character list).
 - **Polarisation**: US wrote "the characters getting alts are fair" but has no motivation to pull. VN "forced myself to use base heroes rather than limited heroes because I only have one alter hero".
@@ -863,6 +864,7 @@ Source columns:
 - **Auto does not use passive/S4 skills** (×3): ID "Auto but not linked to passive for skill activation", UY "Passive skill to activate S4 in autobattle", US nb "new sidekick passives or a rework of the system that automatically saves and repeats all actions taken in previous manual battles".
 - **Bugginess of the 9/17 update** (US).
 - **Never-ending jobs can't change heroes on the fly** (TW).
+- **login calendar / history** and **player information and statistics page** (AR)
 - **Skip / sweep instead of repeating** (×~7).
   - US nb: "The newly added feature to use stamina in multiples is nice but you still repeat the quest rather than skipping it."
   - US: "The just released multi battle is nice but a skip function would be even better."
@@ -1016,6 +1018,7 @@ Source columns:
   - BR: "ARs like its predecessor or an Eidos like in AnEi" (verbatim) plus dungeons.
   - US: more events and ability awakenings.
 - **More content to existing mechanics** (AU, Office, Skill Trees).
+- GB(F): "Change Challenge Simulator to Monthly".
 
 ### 3.11 Account, data and region
 
@@ -1194,12 +1197,7 @@ Source columns:
 
 ### 7.3 Items that don't fit elsewhere
 
-- **Housamo-specific** (not LAH): story **AUTO button** and, for LAH, a **login calendar / history** and **player information and statistics page** (AR).
-- ES: "Less redundant text" (verbatim; context unclear).
-- GB(F): "Change Simulator to Monthly" (verbatim; context unclear, see §2.2).
-- TW: 沒有朱交這個遊戲可以等收了 (verbatim; context unclear).
-- CN (verbatim): 加强贞义的大包 (§3.8).
-- JP: the preview-then-release timing request (§2.5).
+- **Housamo-specific** (not LAH): request for story **AUTO button**.
 
 ---
 
