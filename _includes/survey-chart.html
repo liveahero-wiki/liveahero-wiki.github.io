@@ -13,7 +13,7 @@
 {%- if chart.height -%}{%- capture size -%}height: {{ chart.height }}px{%- endcapture -%}
 {%- else -%}{%- capture size -%}aspect-ratio: {{ chart.aspect | default: "3 / 2" }}{%- endcapture -%}{%- endif -%}
 <figure class="survey-chart" id="chart-{{ include.id }}">
-<div class="apache-chart" data-survey-chart style="{{ size }}"><script type="application/json">{{ spec.options | jsonify | replace: "</", "<\/" }}</script></div>
+<div class="apache-chart" data-survey-chart data-lang="{{ lang }}" style="{{ size }}"><script type="application/json">{{ spec.options | jsonify | replace: "</", "<\/" }}</script></div>
 <figcaption>{{ include.title | default: spec.title }}{% if spec.note %}<br><small>{{ spec.note }}</small>{% endif %}</figcaption>
 </figure>
 {%- else -%}

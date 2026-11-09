@@ -79,6 +79,8 @@ The median age is {{ f.age_median }}. There was one respondent from Philipines t
 
 {% include survey-chart.html id="yoy_region" %}
 
+{% include survey-chart.html id="country_map" %}
+
 {% include survey-chart.html id="country" %}
 
 Between 2025 and 2026 survey:

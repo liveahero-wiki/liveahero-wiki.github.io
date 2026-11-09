@@ -70,6 +70,8 @@ eleventyExcludeFromCollections: true
 
 {% include survey-chart.html id="yoy_region" %}
 
+{% include survey-chart.html id="country_map" %}
+
 {% include survey-chart.html id="country" %}
 
 <!-- TODO: Japan share fell from {{ f.yoy["2025"].japan_pct }}% to {{ f.yoy["2026"].japan_pct }}%. -->

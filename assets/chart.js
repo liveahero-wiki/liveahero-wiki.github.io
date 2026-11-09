@@ -39,7 +39,47 @@ for (const [name, t] of Object.entries(THEMES)) {
     bar: { itemStyle: { borderColor: t.surface } },
     sankey: { label: { color: t.ink } },
     visualMap: { textStyle: { color: t.ink } },
+    map: { itemStyle: { areaColor: t.grid, borderColor: t.surface } },
   });
+}
+
+// Map series (survey-platform's ec.country_map): regions are keyed by ISO 3166-1 alpha-2 code. The GeoJSON
+// is fetched once from /assets/geo/<map>.json (or taken from window.surveyGeo, which the offline gallery
+// fills in), and the tooltip's country name comes from Intl.DisplayNames in the chart's language.
+const maps = new Map(); // map name -> Promise
+
+function loadMap(name) {
+  if (!maps.has(name)) {
+    const inline = window.surveyGeo?.[name];
+    const geo = inline ? Promise.resolve(inline) : fetch(`/assets/geo/${name}.json`).then((r) => {
+      if (!r.ok) throw new Error(`${r.status} loading map ${name}`);
+      return r.json();
+    });
+    maps.set(name, geo.then((json) => echarts.registerMap(name, json)).catch((e) => {
+      maps.delete(name); // let a later render retry
+      throw e;
+    }));
+  }
+  return maps.get(name);
+}
+
+function mapTooltip(options, lang) {
+  let names = null;
+  try {
+    names = new Intl.DisplayNames([lang], { type: "region" });
+  } catch (e) { /* no Intl.DisplayNames: show the code */ }
+  options.tooltip = {
+    ...options.tooltip,
+    formatter: (p) => {
+      if (!/^[A-Z]{2}$/.test(p.name)) return ""; // regions with no ISO code in the GeoJSON
+      let label = p.name;
+      try {
+        label = names?.of(p.name) ?? label;
+      } catch (e) { /* not a region code Intl knows */ }
+      const n = Number.isFinite(p.value) ? p.value : 0;
+      return `${label}<br>${n} (${p.data?.pct ?? 0}%)`;
+    },
+  };
 }
 
 function isDark() {
@@ -65,6 +105,15 @@ function render(el) {
         options.title = { text: title, left: "center" };
         if (subtext) options.title.subtext = subtext;
       }
+    }
+    const mapSeries = (options.series ?? []).filter((s) => s.type === "map");
+    if (mapSeries.length) {
+      const pending = mapSeries.map((s) => s.map).filter((name) => !echarts.getMap(name));
+      if (pending.length) {
+        Promise.all(pending.map(loadMap)).then(() => render(el), (e) => console.error("Failed to load map:", e, el));
+        return;
+      }
+      mapTooltip(options, el.dataset.lang || "en");
     }
     instances.get(el)?.dispose();
     const chart = echarts.init(el, survey ? `survey-${isDark() ? "dark" : "light"}` : null);
