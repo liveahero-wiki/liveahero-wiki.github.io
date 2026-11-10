@@ -347301,6 +347301,105 @@
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
   },
+  "1310003": {
+    "questId": 1310003,
+    "questName": "明日に希望の灯火を",
+    "subName": "第３話",
+    "questKind": 5,
+    "questLabel": 0,
+    "chapterId": 1310,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "questEffectWindowAddress": "",
+    "startAt": "2026-11-10 18:00:00",
+    "endAt": "2026-11-26 14:00:00",
+    "questEffectLimitCount": 0,
+    "dayOfWeek": 0,
+    "sortWeight": 3,
+    "enemyLevel": 11,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "canReturnScenes": [],
+    "questReturnOption": 0,
+    "hasVoice": false,
+    "maxCycleCount": 5,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isAddReward": false,
+        "finalValue": 1,
+        "baseRewardBonusRate": 0,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "objectType": 3,
+        "objectId": 11,
+        "objectValue": 160,
+        "rewardType": 3,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      },
+      {
+        "class": "QuestClear",
+        "questId": 1310002,
+        "checkNotCleared": false,
+        "isBannerDisplay": false
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuGhostLarvaEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 101
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuGhostLarvaShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 102
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuGhostLarvaEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 100
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
   "1311001": {
     "questId": 1311001,
     "questName": "音楽祭に忍び寄る影！",

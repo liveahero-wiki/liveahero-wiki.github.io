@@ -151410,7 +151410,7 @@
     "resourceName": "b_skill_damageAll",
     "subResourceName": "",
     "timing": 0,
-    "description": "敵全体からランダムに2～4回30%ダメージ。<style=\"改行\"></style>スキル発動時にViewが1500以上ある場合、追加でViewを消費して攻撃回数が増加する。（ViewPower1500消費毎に攻撃回数+1。最大でViewPowerを3000消費して攻撃回数+2）<style=\"パッシブ領域\">生存中、味方は自身の行動時以外ATK+20%。<style=\"改行\"></style>この効果は重複しない</style>",
+    "description": "敵全体からランダムに2～4回30%ダメージ。<style=\"改行\"></style>スキル発動時にViewが1500以上ある場合、追加でViewを消費して攻撃回数が増加する。（ViewPower1500消費毎に攻撃回数+1。最大でViewPowerを3000消費して攻撃回数+2）<style=\"パッシブ領域\">生存中、味方は自身の行動時以外ATK+20%。<style=\"改行\"></style>この効果は重複しない。</style>",
     "shortenDescription": "敵全体からランダムに2～4回30%ダメージ。",
     "cutin": [
       {
@@ -661869,6 +661869,8 @@
       "timing": 59,
       "trigger": {
         "isActive": 1,
+        "actorTeam": 2,
+        "sourceTeam": 2,
         "sameCharacter": 2
       },
       "dontExecTrigger": null
