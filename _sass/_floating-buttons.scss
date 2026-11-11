@@ -104,6 +104,12 @@
     padding: 16px 16px 0;
   }
 
+  // messages the reader has already seen: muted so that the unread ones stand out
+  .wiki-msg.is-read {
+    border: 1px solid var(--colorGrey);
+    opacity: 0.6;
+  }
+
   .wiki-msg > div > :first-child {
     margin-top: 0;
   }

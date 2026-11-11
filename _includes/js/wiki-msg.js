@@ -35,6 +35,14 @@
     badge.hidden = true;
   }
 
+  // Messages that were already read when the page loaded are dimmed (.is-read) so that the unread ones
+  // stand out. This is fixed at load: opening the dialog marks everything as read, but the messages
+  // that were new stay highlighted until the next page load.
+  var readAtLoad = getRead();
+  Array.prototype.forEach.call(dialog.querySelectorAll('[data-msg-id]'), function (el) {
+    if (readAtLoad.indexOf(el.getAttribute('data-msg-id')) >= 0) el.classList.add('is-read');
+  });
+
   showBadge();
 
   btn.addEventListener('click', function () {
