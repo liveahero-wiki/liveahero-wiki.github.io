@@ -1,6 +1,7 @@
-// Collection mode on /charas/ (assets/chara.js): the "My Collection" corner button, the action bar
-// (#collection-bar in charas.html), and the marked/unmarked card states. body.collection-on is set
-// while the bar is open, body.collection-readonly while it shows someone else's shared collection.
+// Collection mode on /charas/ (assets/chara.js): the "My Collection" corner button, the collection
+// row in the sticky panel (#collection-bar in charas.html), and the marked/unmarked card states.
+// body.collection-on is set while it is open, body.collection-readonly while it shows someone else's
+// shared collection.
 
 .collection-fab {
   order: 1; // bottom of the #float-btns stack, whatever order the scripts add their buttons in
@@ -46,28 +47,14 @@
   font-size: 22px;
 }
 
+// The collection row inside the /charas/ sticky panel (.chara-panel styles its buttons)
 .collection-bar {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9998; // under #float-btns
-  box-sizing: border-box;
   display: flex;
+  flex-basis: 100%;
   flex-direction: column;
   gap: 8px;
-  max-height: 60vh;
-  overflow-y: auto;
-  padding: 10px max(16px, env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
-  border-top: 3px solid var(--colorPrimary);
-  background: var(--bg);
-  color: var(--text);
-  box-shadow: 0 -4px 12px rgb(0 0 0 / 25%);
-  font-size: 14px;
-
-  &[hidden] {
-    display: none;
-  }
+  padding-top: 8px;
+  border-top: 2px solid var(--colorPrimary);
 
   &:focus {
     outline: none;
@@ -75,29 +62,6 @@
 
   p {
     margin: 0;
-  }
-
-  [hidden] {
-    display: none !important;
-  }
-
-  button {
-    padding: 4px 10px;
-    border: 1px solid var(--colorGrey);
-    border-radius: 4px;
-    background: transparent;
-    color: inherit;
-    font: inherit;
-    cursor: pointer;
-
-    &:hover {
-      border-color: var(--colorPrimary);
-    }
-
-    &[aria-pressed="true"] {
-      background: var(--colorPrimary);
-      color: #000;
-    }
   }
 
   .collection-primary {
@@ -114,15 +78,16 @@
 
 .collection-row,
 .collection-actions,
-.collection-display {
+.collection-actions > span,
+.collection-end {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 6px 12px;
+  gap: 6px;
 }
 
-.collection-actions {
-  gap: 6px;
+.collection-row {
+  gap: 6px 10px;
 }
 
 .collection-end {
@@ -131,23 +96,86 @@
 
 .collection-count {
   font-weight: bold;
+  white-space: nowrap;
 }
 
-.collection-display {
-  margin: 0;
-  padding: 0;
-  border: 0;
+.collection-shared-tag {
+  padding: 1px 8px;
+  border-radius: 8px;
+  background: var(--colorPrimary);
+  color: #000;
+  font-size: 13px;
+}
 
-  legend {
-    float: left; // keeps the legend on the same line as the radios
-    margin-right: 4px;
-    padding: 0;
-    opacity: 0.75;
+.chara-panel .collection-more-toggle {
+  min-width: 44px;
+  padding: 0 8px;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  &[aria-expanded="true"] {
+    border-color: var(--colorPrimary);
+  }
+}
+
+// Phones: keep the collection row on one line
+@media (max-width: 480px) {
+  .collection-row {
+    flex-wrap: nowrap;
+    gap: 6px;
   }
 
-  label {
-    white-space: nowrap;
+  // ...except someone's shared collection, whose "Shared" tag needs the room
+  body.collection-readonly .collection-row {
+    flex-wrap: wrap;
+  }
+
+  .collection-end {
+    flex-wrap: nowrap;
+  }
+
+  .collection-count-label,
+  .collection-copy-label {
+    display: none;
+  }
+
+  .chara-panel .collection-bar :is(button, select) {
+    padding-inline: 10px;
+  }
+}
+
+// Notes above the lists while the collection is open (not sticky)
+.collection-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 12px 0;
+  font-size: 14px;
+
+  &[hidden],
+  [hidden] {
+    display: none !important;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  button {
+    min-height: 36px;
+    padding: 4px 12px;
+    border: 1px solid var(--colorGrey);
+    border-radius: 18px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
     cursor: pointer;
+
+    &[aria-pressed="true"] {
+      border-color: var(--colorPrimary);
+      background: var(--colorPrimary);
+      color: #000;
+    }
   }
 }
 
@@ -161,7 +189,6 @@
 
 .collection-hint {
   opacity: 0.75;
-  font-size: 13px;
 }
 
 .collection-mine-tag {
@@ -174,13 +201,6 @@
 }
 
 body.collection-on {
-  // keep the end of the page and the other corner buttons clear of the bar
-  padding-bottom: var(--collection-bar-h, 0px);
-
-  #float-btns {
-    bottom: calc(var(--collection-bar-h, 0px) + 15px);
-  }
-
   .card-list {
     li:not(.has-unit, .mine) :is(.hero-icon, .sidekick-icon) {
       filter: grayscale(1);

@@ -11,88 +11,165 @@ additional_scripts: ["/assets/chara.js", "/assets/filter.js"]
 
 <p>Keep track of the units you own: press <strong>✓ My Collection</strong> at the bottom right, tap the heroes and sidekicks you have, then copy the link to share your collection.</p>
 
-<h3 id="heroes">Heroes</h3>
+{% comment %}
+One sticky panel holds the tabs, name search, filters and the collection controls, so they stay in
+reach while scrolling (assets/chara.js: tabs, counts, collection; assets/filter.js: search + filters).
+{% endcomment %}
+<div id="chara-browser" class="chara-browser">
 
-<fieldset class="chara-sort" data-list="#hero-list">
-<legend>Sort</legend>
-<button data-sort="id">Card ID</button>
-<button data-sort="name">Name</button>
-<button data-sort="rarity">Rarity</button>
-<button data-sort="element">Element</button>
-</fieldset>
-
-<fieldset class="chara-filter" data-list="#hero-list">
-<legend>Filter</legend>
-<div class="control-panel">
-  <div>Rarity</div>
-  <div> |
-    <button data-field="rarity" data-value="1">1</button>
-    <button data-field="rarity" data-value="3">3</button>
-    <button data-field="rarity" data-value="4">4</button>
-    <button data-field="rarity" data-value="5">5</button>
-    | <button data-reset="rarity">All</button>
+<section class="chara-panel" aria-label="Find units">
+  <div class="chara-tabs" role="tablist" aria-label="Unit type">
+    <button type="button" role="tab" id="tab-heroes" aria-controls="heroes" aria-selected="true" data-kind="h">Heroes <span class="chara-tab-count"></span></button>
+    <button type="button" role="tab" id="tab-sidekicks" aria-controls="sidekicks" aria-selected="false" tabindex="-1" data-kind="s">Sidekicks <span class="chara-tab-count"></span></button>
   </div>
 
-  <div>Element</div>
-  <div> |
-    <button data-field="element" data-value="1">Fire</button>
-    <button data-field="element" data-value="2">Water</button>
-    <button data-field="element" data-value="3">Wood</button>
-    <button data-field="element" data-value="4">Light</button>
-    <button data-field="element" data-value="5">Shadow</button>
-    | <button data-reset="element">All</button>
+  <div class="chara-search-row">
+    <input type="search" class="chara-search" data-filter-text data-list="#hero-list, #sidekick-list" placeholder="Search by name" aria-label="Search heroes and sidekicks by name" autocomplete="off" enterkeyhint="search">
+    <button type="button" class="chara-filters-toggle" aria-expanded="false" aria-controls="chara-filters">Filters<span class="chara-filters-badge" hidden></span></button>
   </div>
 
-  <div>Role</div>
-  <div> |
-    <button data-field="role" data-value="1">Attack</button>
-    <button data-field="role" data-value="2">Defense</button>
-    <button data-field="role" data-value="3">Assistance</button>
-    <button data-field="role" data-value="4">Debuff</button>
-    <button data-field="role" data-value="5">Speed</button>
-    <button data-field="role" data-value="6">VP Gain</button>
-    <button data-field="role" data-value="7">Heal</button>
-    <button data-field="role" data-value="99">Special</button>
-    | <button data-reset="role">All</button>
-  </div>
-</table>
-</fieldset>
+  <div id="chara-filters" class="chara-filters" hidden>
+    <div data-tab="h">
+      <fieldset class="chara-sort" data-list="#hero-list">
+        <legend>Sort</legend>
+        <button type="button" data-sort="id">Card ID</button>
+        <button type="button" data-sort="name">Name</button>
+        <button type="button" data-sort="rarity">Rarity</button>
+        <button type="button" data-sort="element">Element</button>
+      </fieldset>
 
+      <fieldset class="chara-filter" data-list="#hero-list">
+        <legend>Filter</legend>
+        <div class="control-panel">
+          <div>Rarity</div>
+          <div>
+            <button type="button" data-field="rarity" data-value="1">1★</button>
+            <button type="button" data-field="rarity" data-value="3">3★</button>
+            <button type="button" data-field="rarity" data-value="4">4★</button>
+            <button type="button" data-field="rarity" data-value="5">5★</button>
+            <button type="button" data-reset="rarity">All</button>
+          </div>
+
+          <div>Element</div>
+          <div>
+            <button type="button" data-field="element" data-value="1">Fire</button>
+            <button type="button" data-field="element" data-value="2">Water</button>
+            <button type="button" data-field="element" data-value="3">Wood</button>
+            <button type="button" data-field="element" data-value="4">Light</button>
+            <button type="button" data-field="element" data-value="5">Shadow</button>
+            <button type="button" data-reset="element">All</button>
+          </div>
+
+          <div>Role</div>
+          <div>
+            <button type="button" data-field="role" data-value="1">Attack</button>
+            <button type="button" data-field="role" data-value="2">Defense</button>
+            <button type="button" data-field="role" data-value="3">Assistance</button>
+            <button type="button" data-field="role" data-value="4">Debuff</button>
+            <button type="button" data-field="role" data-value="5">Speed</button>
+            <button type="button" data-field="role" data-value="6">VP Gain</button>
+            <button type="button" data-field="role" data-value="7">Heal</button>
+            <button type="button" data-field="role" data-value="99">Special</button>
+            <button type="button" data-reset="role">All</button>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div data-tab="s" hidden>
+      <fieldset class="chara-sort" data-list="#sidekick-list">
+        <legend>Sort</legend>
+        <button type="button" data-sort="id">Card ID</button>
+        <button type="button" data-sort="name">Name</button>
+        <button type="button" data-sort="rarity">Rarity</button>
+      </fieldset>
+
+      <fieldset class="chara-filter" data-list="#sidekick-list">
+        <legend>Filter</legend>
+        <div class="control-panel">
+          <div>Rarity</div>
+          <div>
+            <button type="button" data-field="rarity" data-value="1">1★</button>
+            <button type="button" data-field="rarity" data-value="3">3★</button>
+            <button type="button" data-field="rarity" data-value="4">4★</button>
+            <button type="button" data-reset="rarity">All</button>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+
+  {% comment %} Collection mode controls, opened by the "My Collection" corner button {% endcomment %}
+  <div id="collection-bar" class="collection-bar" role="region" aria-label="My Collection" tabindex="-1" hidden>
+    <div class="collection-row">
+      <p class="collection-count"><span class="collection-shared-tag" hidden>Shared</span> <span aria-hidden="true">✓</span> <span class="collection-count-n"></span><span class="collection-count-label"> owned</span></p>
+      <label class="collection-display"><span class="visually-hidden">Show</span>
+        <select name="collectionDisplay">
+          <option value="0">All</option>
+          <option value="1">Owned</option>
+          <option value="2">Missing</option>
+          <option value="3" data-compare>They have, I don't</option>
+          <option value="4" data-compare>I have, they don't</option>
+        </select>
+      </label>
+      <button type="button" class="collection-more-toggle" aria-expanded="false" aria-controls="collection-more" aria-label="More actions" title="More actions">⋯</button>
+      <div class="collection-end">
+        <button type="button" class="collection-primary" data-action="copy" aria-label="Copy link" title="Copy link"><span class="collection-copy-icon" aria-hidden="true">🔗</span><span class="collection-copy-label" aria-hidden="true"> Copy link</span></button>
+        <button type="button" class="collection-primary" data-action="done">Done</button>
+      </div>
+    </div>
+    <div id="collection-more" class="collection-actions" hidden>
+      <span class="collection-edit">
+        <button type="button" data-action="mark">Mark shown</button>
+        <button type="button" data-action="unmark">Unmark shown</button>
+        <button type="button" data-action="invert">Invert shown</button>
+      </span>
+      <span class="collection-shared-actions">
+        <button type="button" data-action="compare" aria-pressed="false">Compare with mine</button>
+        <button type="button" data-action="save-shared">Save as mine</button>
+        <button type="button" data-action="back-to-mine">Back to mine</button>
+      </span>
+    </div>
+  </div>
+</section>
+
+<div class="collection-notes" hidden>
+  <div class="collection-shared">
+    <p><strong>You're viewing a shared collection.</strong> Is it yours? Save it as yours to edit it.</p>
+    <div class="collection-actions">
+      <button type="button" data-action="compare" aria-pressed="false">Compare with mine</button>
+      <button type="button" data-action="save-shared">Save as mine</button>
+      <button type="button" data-action="back-to-mine">Back to mine</button>
+    </div>
+    <p class="collection-compare-only" hidden>✓ marks their units, <span class="collection-mine-tag">Mine</span> marks yours.</p>
+  </div>
+  <p class="collection-hint">Tap a hero or sidekick to mark it. Your collection is saved in this browser; copy the link to share it or to open it on another device.</p>
+</div>
+<p class="collection-announcer visually-hidden" aria-live="polite"></p>
+
+<section id="heroes" class="chara-tabpanel" role="tabpanel" aria-labelledby="tab-heroes">
+<h3 class="visually-hidden">Heroes</h3>
+<div class="chara-empty" hidden></div>
 {% assign cardInfos = site.data.CardMaster | where: "stockOrder", 1 | where_exp: "item", "item.stockId < 90000" %}
 <ul id="hero-list" class="card-list">
 {% for c in cardInfos %}
 {% include card-hero.html card=c %}
 {% endfor %}
 </ul>
+</section>
 
-<h3 id="sidekicks">Sidekicks</h3>
-
-<fieldset class="chara-sort" data-list="#sidekick-list">
-<legend>Sort</legend>
-<button data-sort="id">Card ID</button>
-<button data-sort="name">Name</button>
-<button data-sort="rarity">Rarity</button>
-</fieldset>
-
-<fieldset class="chara-filter" data-list="#sidekick-list">
-  <legend>Filter</legend>
-  <div class="control-panel">
-    <div>Rarity</div>
-    <div> |
-      <button data-field="rarity" data-value="1">1</button>
-      <button data-field="rarity" data-value="3">3</button>
-      <button data-field="rarity" data-value="4">4</button>
-      | <button data-reset="rarity">All</button>
-    </div>
-  </div>
-</fieldset>
-
+<section id="sidekicks" class="chara-tabpanel" role="tabpanel" aria-labelledby="tab-sidekicks">
+<h3 class="visually-hidden">Sidekicks</h3>
+<div class="chara-empty" hidden></div>
 {% assign cardInfos = site.data.SidekickMaster | where: "levelZone", 1 %}
 <ul id="sidekick-list" class="card-list">
 {% for c in cardInfos %}
 {% include card-sidekick.html card=c %}
 {% endfor %}
 </ul>
+</section>
+
+</div>
 
 <details>
 <summary id="unreleased">Unreleased units</summary>
@@ -107,40 +184,3 @@ additional_scripts: ["/assets/chara.js", "/assets/filter.js"]
 </ul>
 
 </details>
-
-{% comment %} Collection mode action bar, opened by the "My Collection" corner button (assets/chara.js) {% endcomment %}
-<section id="collection-bar" class="collection-bar" aria-label="My Collection" tabindex="-1" hidden>
-  <div class="collection-shared" hidden>
-    <p><strong>You're viewing a shared collection.</strong> Is it yours? Save it as yours to edit it.</p>
-    <div class="collection-actions">
-      <button type="button" data-action="compare" aria-pressed="false">Compare with mine</button>
-      <button type="button" data-action="save-shared">Save as mine</button>
-      <button type="button" data-action="back-to-mine">Back to mine</button>
-    </div>
-    <p class="collection-compare-only" hidden>✓ marks their units, <span class="collection-mine-tag">Mine</span> marks yours.</p>
-  </div>
-  <div class="collection-row">
-    <p class="collection-count">Heroes <span class="collection-count-h"></span> · Sidekicks <span class="collection-count-s"></span></p>
-    <fieldset class="collection-display">
-      <legend>Show</legend>
-      <label><input type="radio" name="radioFilter" value="0" checked>All</label>
-      <label><input type="radio" name="radioFilter" value="1">Owned</label>
-      <label><input type="radio" name="radioFilter" value="2">Missing</label>
-      <label class="collection-compare-only" hidden><input type="radio" name="radioFilter" value="3">They have, I don't</label>
-      <label class="collection-compare-only" hidden><input type="radio" name="radioFilter" value="4">I have, they don't</label>
-    </fieldset>
-  </div>
-  <div class="collection-row">
-    <div class="collection-actions collection-edit">
-      <button type="button" data-action="mark">Mark shown</button>
-      <button type="button" data-action="unmark">Unmark shown</button>
-      <button type="button" data-action="invert">Invert shown</button>
-    </div>
-    <div class="collection-actions collection-end">
-      <button type="button" class="collection-primary" data-action="copy">🔗 Copy link</button>
-      <button type="button" class="collection-primary" data-action="done">Done</button>
-    </div>
-  </div>
-  <p class="collection-hint">Tap a hero or sidekick to mark it. Your collection is saved in this browser; copy the link to share it or to open it on another device.</p>
-  <p class="collection-announcer visually-hidden" aria-live="polite"></p>
-</section>

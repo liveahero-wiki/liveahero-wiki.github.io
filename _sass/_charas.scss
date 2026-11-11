@@ -1,0 +1,256 @@
+// The /charas/ page (charas.html, assets/chara.js): the sticky panel with the Heroes/Sidekicks tabs,
+// name search, filters and collection controls, and smaller cards on phones.
+
+.chara-panel {
+  position: sticky;
+  top: var(--toolbar-height);
+  z-index: 1; // above the cards scrolling under it
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin: 0 -8px;
+  padding: 8px;
+  // a tall panel (filters + collection open) scrolls itself rather than running off the screen
+  max-height: calc(100vh - var(--toolbar-height));
+  max-height: calc(100dvh - var(--toolbar-height));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--bg);
+  border-bottom: 1px solid var(--colorGrey);
+  box-sizing: border-box;
+  font-size: 15px;
+
+  [hidden] {
+    display: none !important;
+  }
+
+  button,
+  select {
+    min-height: 36px;
+    padding: 4px 12px;
+    border: 1px solid var(--colorGrey);
+    border-radius: 18px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--colorPrimary);
+    }
+
+    &[aria-pressed="true"] {
+      border-color: var(--colorPrimary);
+      background: var(--colorPrimary);
+      color: #000;
+    }
+  }
+
+  select {
+    border-radius: 8px;
+  }
+}
+
+// The phone menu's dimming overlay (.content__overlay, z-index 1) comes earlier in the page, so step
+// under it while it is open
+body:has(.content__overlay--is-active) .chara-panel {
+  z-index: auto;
+}
+
+.chara-tabs {
+  display: flex;
+  flex: none;
+  border: 1px solid var(--colorGrey);
+  border-radius: 18px;
+  overflow: hidden;
+
+  [role="tab"] {
+    border: 0;
+    border-radius: 0;
+
+    &[aria-selected="true"] {
+      background: var(--colorPrimary);
+      color: #000;
+      font-weight: bold;
+    }
+
+    & + [role="tab"] {
+      border-left: 1px solid var(--colorGrey);
+    }
+  }
+}
+
+.chara-tab-count {
+  display: inline-block;
+  min-width: 1.5em;
+  padding: 0 6px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--text) 12%, transparent);
+  font-size: 13px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.chara-search-row {
+  display: flex;
+  flex: 1 1 260px;
+  gap: 8px;
+}
+
+.chara-search {
+  flex: 1;
+  min-width: 0;
+  min-height: 36px;
+  padding: 4px 12px;
+  border: 1px solid var(--colorGrey);
+  border-radius: 18px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 16px; // 16px keeps iOS from zooming into the field
+
+  &:focus-visible {
+    outline: 2px solid var(--colorPrimary);
+    outline-offset: 1px;
+  }
+}
+
+.chara-panel .chara-filters-toggle {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 6px;
+
+  &[aria-expanded="true"] {
+    border-color: var(--colorPrimary);
+  }
+
+  &::after {
+    content: "▾";
+  }
+
+  &[aria-expanded="true"]::after {
+    content: "▴";
+  }
+}
+
+.chara-filters-badge {
+  min-width: 1.4em;
+  border-radius: 10px;
+  background: var(--colorPrimary);
+  color: #000;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.chara-filters {
+  flex-basis: 100%;
+
+  fieldset {
+    margin: 0 0 8px;
+    padding: 0;
+    border: 0;
+  }
+
+  legend {
+    padding: 0;
+    margin-bottom: 4px;
+    font-weight: bold;
+  }
+
+  .chara-sort {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    // ↑/↓ on the active sort
+    [aria-pressed="true"][data-order="1"]::after {
+      content: " ↑";
+    }
+
+    [aria-pressed="true"][data-order="-1"]::after {
+      content: " ↓";
+    }
+  }
+
+  .control-panel {
+    grid-template-columns: max-content 1fr;
+    gap: 6px 10px;
+    align-items: baseline;
+
+    > div {
+      padding: 0;
+    }
+
+    > div:nth-child(even) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+  }
+
+  // the chips in the panel show their state with aria-pressed, not the faded .filter-on
+  .filter-on {
+    opacity: 1;
+  }
+
+  button[data-reset] {
+    border-style: dashed;
+  }
+}
+
+.chara-tabpanel {
+  // anchors and revealList() land just below the stuck panel
+  scroll-margin-top: calc(var(--toolbar-height) + var(--chara-panel-h, 0px) + 8px);
+}
+
+.chara-empty {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin: 16px 0;
+
+  &[hidden] {
+    display: none;
+  }
+
+  p {
+    flex-basis: 100%;
+    margin: 0;
+  }
+
+  button {
+    min-height: 36px;
+    padding: 4px 14px;
+    border: 1px solid var(--colorPrimary);
+    border-radius: 18px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+}
+
+// Phones: three cards per row instead of two
+@media (max-width: 480px) {
+  @supports (zoom: 0.75) {
+    .chara-browser .card-list {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      grid-auto-rows: minmax(140px, auto);
+
+      .hero-icon,
+      .sidekick-icon {
+        zoom: 0.75;
+        margin: 6px auto 0;
+      }
+
+      a {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+      }
+    }
+  }
+}
