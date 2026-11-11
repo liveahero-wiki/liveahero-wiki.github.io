@@ -191,7 +191,18 @@ function setupVoiceTableTabs() {
 // clicks an element with data-contrib (page-edit, voice-suggest, bio-suggest); hovering, focusing or touching
 // one prefetches it so the sign-in popup can open right inside the click.
 function setupContrib() {
-  const load = () => import("/assets/cms/editor.js");
+  // The editor's dialog styles are not in main.css; they are requested together with the first fetch of the bundle,
+  // and opening waits for them so a dialog never shows unstyled (a failed stylesheet does not block the editor).
+  let styles;
+  const loadStyles = () => styles ||= new Promise(resolve => {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "/assets/css/contrib-editor.css";
+    link.onload = link.onerror = resolve;
+    document.head.append(link);
+  });
+  const bundle = () => import("/assets/cms/editor.js");
+  const load = () => Promise.all([bundle(), loadStyles()]).then(([m]) => m);
   const find = e => e.target.closest && e.target.closest("[data-contrib]");
   for (const type of ["pointerover", "focusin", "touchstart"]) {
     document.addEventListener(type, e => { if (find(e)) load().catch(() => {}); }, { passive: true });

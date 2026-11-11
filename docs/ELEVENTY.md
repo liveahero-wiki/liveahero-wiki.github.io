@@ -65,6 +65,15 @@ LiquidJS is not Ruby Liquid. These would silently change the output, so they are
 - footnotes and definition lists in kramdown's markup; code spans and fences with rouge's classes (no syntax highlighting). Quotes are curly (markdown-it's `smartquotes`); `--`, `...` and `~~x~~` (`<s>`) are markdown-it's own.
 - lists: a marker line right after an item nests however little it is indented; whether an item gets `<p>` is decided per item, not per list.
 
+## CSS bundles
+
+`assets/main.scss` is the stylesheet every page loads (`_includes/header.html`); keep it to what most pages need. Styles that only one page or feature uses are their own entry point, compiled to their own file (any non-`_` `.scss` with front matter is compiled by `wiki_plugins/sass.js`):
+
+- `assets/css/charas.scss` (`_collection`, `_charas`): added by `/charas/` with `additional_styles: ["/assets/css/charas.css"]` in its front matter (the layout renders one `<link>` per entry).
+- `assets/css/contrib-editor.scss` (`_contrib-editor`): the editor dialogs. `assets/main.js` adds the `<link>` the first time it fetches `assets/cms/editor.js` and opens the editor only once it has loaded. The buttons on the pages that start the editor stay in `_contrib.scss`, which is in `main.css`.
+
+Do not `@import` remote stylesheets: that is a cross-origin request in front of rendering on every page (the easings from Open Props that `_theme-button.scss` uses are copied there instead).
+
 ## Checking a change against Jekyll
 
 `scripts/compare-page.mjs` compares `_site/` with a Jekyll build, one normalized DOM node per line:
