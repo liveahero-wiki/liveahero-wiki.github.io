@@ -49,6 +49,13 @@
 
   select {
     border-radius: 8px;
+
+    // The select itself is transparent and inherits the page text colour, so without these the
+    // expanded list paints white text on the browser's default white popup in dark mode
+    option {
+      background: var(--bg);
+      color: var(--text);
+    }
   }
 }
 
