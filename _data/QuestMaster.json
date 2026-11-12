@@ -347400,6 +347400,110 @@
     "scoreAttackBattleCount": 0,
     "rewardUpRate": null
   },
+  "1310004": {
+    "questId": 1310004,
+    "questName": "遠い日の思い出へ",
+    "subName": "第４話",
+    "questKind": 5,
+    "questLabel": 0,
+    "chapterId": 1310,
+    "bannerResourceName": "ui_window_quest_01",
+    "iconFilename": "ui_icon_eventicon",
+    "questEffectWindowAddress": "",
+    "startAt": "2026-11-12 18:00:00",
+    "endAt": "2026-11-26 14:00:00",
+    "questEffectLimitCount": 0,
+    "dayOfWeek": 0,
+    "sortWeight": 4,
+    "enemyLevel": 12,
+    "canNotRetire": false,
+    "canNotContinue": false,
+    "canNotGetFriendPoint": false,
+    "canNotAuto": false,
+    "canRestart": true,
+    "canSavePreviousTeam": true,
+    "canReturnScenes": [],
+    "questReturnOption": 0,
+    "hasVoice": false,
+    "maxCycleCount": 5,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isAddReward": false,
+        "finalValue": 1,
+        "baseRewardBonusRate": 0,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [
+      {
+        "objectType": 3,
+        "objectId": 35,
+        "objectValue": 160,
+        "rewardType": 3,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isHidden": false,
+        "prob": 100
+      }
+    ],
+    "conditions": [
+      {
+        "class": "QuestClear",
+        "questId": 1310003,
+        "checkNotCleared": false,
+        "isBannerDisplay": false
+      },
+      {
+        "class": "Stamina",
+        "stamina": 7,
+        "isBannerDisplay": true
+      }
+    ],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuGhostLarvaLight_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 103
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuGhostLarvaShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 102
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuGhostLarvaLight_h01",
+        "battleInfoElement": 4,
+        "battleInfoSpd": 101
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuGhostLarvaShadow_h01",
+        "battleInfoElement": 5,
+        "battleInfoSpd": 100
+      }
+    ],
+    "hasAdv": true,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
   "1311001": {
     "questId": 1311001,
     "questName": "音楽祭に忍び寄る影！",
@@ -348176,6 +348280,105 @@
         "battleInfoIcon": "icon_kaibutsuGhostLarvaEarth_h01",
         "battleInfoElement": 3,
         "battleInfoSpd": 103
+      }
+    ],
+    "hasAdv": false,
+    "hasBattle": true,
+    "hasStockBattle": false,
+    "hasScoreAttack": false,
+    "boostItems": [],
+    "questEffects": null,
+    "executeLimit": null,
+    "overwriteStamina": null,
+    "scoreThresholds": null,
+    "scoreAttackBonuses": null,
+    "scoreAttackStandards": null,
+    "scoreAttackHintTextKey": "",
+    "scoreAttackBattleCount": 0,
+    "rewardUpRate": null
+  },
+  "1313001": {
+    "questId": 1313001,
+    "questName": "幽霊のオーケストラ",
+    "subName": "チャレンジクエスト1",
+    "questKind": 2,
+    "questLabel": 0,
+    "chapterId": 1313,
+    "bannerResourceName": "ui_window_quest_05",
+    "iconFilename": "item_stone01",
+    "questEffectWindowAddress": "",
+    "startAt": "2026-11-12 18:00:00",
+    "endAt": "2026-11-26 14:00:00",
+    "questEffectLimitCount": 0,
+    "dayOfWeek": 0,
+    "sortWeight": 2,
+    "enemyLevel": 45,
+    "canNotRetire": false,
+    "canNotContinue": true,
+    "canNotGetFriendPoint": true,
+    "canNotAuto": false,
+    "canRestart": false,
+    "canSavePreviousTeam": true,
+    "canReturnScenes": [],
+    "questReturnOption": 0,
+    "hasVoice": false,
+    "maxCycleCount": 5,
+    "rewards": [
+      {
+        "rewardType": 3,
+        "objectId": 2,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isAddReward": false,
+        "finalValue": 1,
+        "baseRewardBonusRate": 0,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 29,
+        "objectValue": 1,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isAddReward": false,
+        "finalValue": 1,
+        "baseRewardBonusRate": 0,
+        "isHidden": false
+      },
+      {
+        "rewardType": 3,
+        "objectId": 34,
+        "objectValue": 2,
+        "bonus": 100,
+        "fixAddValue": 0,
+        "isAddDrop": false,
+        "isAddReward": false,
+        "finalValue": 2,
+        "baseRewardBonusRate": 0,
+        "isHidden": false
+      }
+    ],
+    "overwriteRewards": [],
+    "drops": [],
+    "conditions": [],
+    "enemies": [
+      {
+        "battleInfoIcon": "icon_kaibutsuGhostLarvaEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 96
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuGhostLarvaEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 94
+      },
+      {
+        "battleInfoIcon": "icon_kaibutsuGhostLarvaEarth_h01",
+        "battleInfoElement": 3,
+        "battleInfoSpd": 92
       }
     ],
     "hasAdv": false,
