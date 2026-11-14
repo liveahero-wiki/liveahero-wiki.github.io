@@ -8,7 +8,6 @@ import { Context, Liquid } from "liquidjs";
 
 import { toPage } from "../lib/documents.js";
 import { SITE_OFFSET_MINUTES } from "../site.js";
-import { keepBackslashesInStrings } from "./string-literals.js";
 
 // Every include is looked up in each root and read again for every use, which dominated build time.
 // Results are remembered until the next build starts (see clearIncludeCaches).
@@ -26,10 +25,10 @@ function cached(map, key, load) {
 }
 
 function readIncludeSync(file) {
-  return cached(readCache, file, () => keepBackslashesInStrings(fs.readFileSync(file, "utf8")));
+  return cached(readCache, file, () => fs.readFileSync(file, "utf8"));
 }
 
-/** LiquidJS's own node file system, except that included files go through keepBackslashesInStrings. */
+/** LiquidJS's own node file system, plus the caches above. */
 const includeFs = {
   sep: path.sep,
   exists: async (file) => cached(existsCache, file, () => fs.existsSync(file)),
@@ -62,10 +61,6 @@ export class JekyllLiquid extends Liquid {
         jekyll: { environment: process.env.JEKYLL_ENV ?? process.env.ELEVENTY_ENV ?? "development" },
       },
     });
-  }
-
-  parse(html, filepath) {
-    return super.parse(keepBackslashesInStrings(html), filepath);
   }
 
   render(tpl, scope, renderOptions) {

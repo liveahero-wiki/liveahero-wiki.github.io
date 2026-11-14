@@ -50,7 +50,7 @@ Generated inputs have to exist before building, as in CI: `_statuses/`, `_data/t
 
 LiquidJS is not Ruby Liquid. These would silently change the output, so they are emulated (`wiki_plugins/liquid/`, `wiki_plugins/lib/`):
 
-- `{% include a.html x=y %}` with `include.x` (LiquidJS `jekyllInclude`); quoted parameters follow Jekyll's rules (`\"` is the only escape), other tags take strings literally (`'a\nb'` keeps the backslash) — `string-literals.js`.
+- `{% include a.html x=y %}` with `include.x` (LiquidJS `jekyllInclude`). String literals in tags use LiquidJS's rules, so `\n`, `\"` and `\\` are escapes (Ruby Liquid and Jekyll keep the backslash); to pass a literal backslash, e.g. `\n` inside JSON, write `\\n`.
 - `where`, `where_exp`, `group_by`, `group_by_exp` iterate the values of Hashes and compare as strings; `sort` puts items without the key first; `split: " "` is awk-style; `slugify` keeps non-ASCII letters; `date` is LiquidJS's own, pinned to the site timezone (`timezoneOffset`; Asia/Tokyo) and without `%R`, and a time without a zone has to get one (`| append: '+09'`) or it is read in the build machine's; `jsonify` of nothing is `null`; `xml_escape` leaves `'` alone.
 - `divided_by` always divides as floating point, and every arithmetic filter on Floats is exact decimal arithmetic (Ruby Liquid goes through BigDecimal), printing `2.0` like Ruby does. Use `| floor` if an integer is wanted.
 - `status_description` and friends read `skillEffectJson` from the calling template's context and render Liquid text stored in `_data` (`translation/Status.json`).
