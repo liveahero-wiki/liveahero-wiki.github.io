@@ -1,12 +1,12 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { addTier, defaultList, isPristine, itemKey, MAX_TIERS, moveTier, normalizeTierName, parseKey, placedKeys, placeItem, removeItem, removeTier, sanitize, updateTier } from './model.ts'
+import { addTier, defaultList, isPristine, itemKey, MAX_TIER_NAME, MAX_TIERS, moveTier, normalizeTierName, parseKey, placedKeys, placeItem, removeItem, removeTier, sanitize, updateTier } from './model.ts'
 
 const items = (l: ReturnType<typeof defaultList>, id: string) => l.tiers.find((t) => t.id === id)!.items
 
 test('tier names are one line and capped', () => {
   assert.equal(normalizeTierName('a \n\t b c'), 'a b c')
-  assert.equal(normalizeTierName('x'.repeat(100)).length, 40)
+  assert.equal(normalizeTierName('x'.repeat(MAX_TIER_NAME + 100)).length, MAX_TIER_NAME)
   assert.equal(updateTier(defaultList(), 't1', { name: 'a\nb' }).tiers[0].name, 'a b')
 })
 
@@ -58,8 +58,8 @@ test('removeItem and removeTier send characters back to the pool', () => {
 })
 
 test('tier edits', () => {
-  let l = updateTier(defaultList(), 't1', { name: 'x'.repeat(100), color: '#123456' })
-  assert.equal(l.tiers[0].name.length, 40)
+  let l = updateTier(defaultList(), 't1', { name: 'x'.repeat(MAX_TIER_NAME + 100), color: '#123456' })
+  assert.equal(l.tiers[0].name.length, MAX_TIER_NAME)
   assert.equal(l.tiers[0].color, '#123456')
   l = moveTier(l, 't1', 1)
   assert.deepEqual(l.tiers.slice(0, 2).map((t) => t.id), ['t2', 't1'])

@@ -95,21 +95,21 @@ function wrapText(ctx: CanvasRenderingContext2D, text: string, maxW: number): st
   return lines
 }
 
-/** Wraps a tier name over as many lines as fit in `maxH`, shrinking the font to LABEL_MIN_FONT before truncating with an ellipsis. Leaves ctx.font set for drawing. */
-function fitLabel(ctx: CanvasRenderingContext2D, text: string, maxW: number, maxH: number): { lines: string[]; lineH: number } {
+/** Wraps a tier name over as many lines as fit in `maxH`, shrinking the font to LABEL_MIN_FONT before truncating with an ellipsis (`fits` is false then). Leaves ctx.font set for drawing. */
+function fitLabel(ctx: CanvasRenderingContext2D, text: string, maxW: number, maxH: number): { lines: string[]; lineH: number; fits: boolean } {
   let lines: string[] = []
   let lineH = 0
   for (let s = LABEL_FONT; s >= LABEL_MIN_FONT; s--) {
     ctx.font = `bold ${s}px ${FONT}`
     lineH = Math.round(s * 1.15)
     lines = wrapText(ctx, text, maxW)
-    if (lines.length * lineH <= maxH) return { lines, lineH }
+    if (lines.length * lineH <= maxH) return { lines, lineH, fits: true }
   }
   lines = lines.slice(0, Math.max(1, Math.floor(maxH / lineH)))
   let last = lines[lines.length - 1]
   while (last.length > 1 && ctx.measureText(`${last}…`).width > maxW) last = last.slice(0, -1)
   lines[lines.length - 1] = `${last}…`
-  return { lines, lineH }
+  return { lines, lineH, fits: false }
 }
 
 export interface Exported {
@@ -124,15 +124,21 @@ export async function exportPng(list: TierList, byKey: ReadonlyMap<string, Candi
   await eachLimited(keys, async (k) => void images.set(k, await loadImage(iconUrl(byKey.get(k)!))))
 
   const cols = Math.max(1, Math.floor((WIDTH - LABEL_W - PAD) / (ICON + GAP)))
-  const rowHeights = list.tiers.map((t) => Math.max(MIN_ROW_H, Math.ceil(t.items.length / cols) * (ICON + GAP) - GAP + 2 * PAD))
+  const canvas = document.createElement('canvas')
+  const ctx = canvas.getContext('2d')
+  if (!ctx) throw new Error('canvas unavailable')
+
+  // a row is as tall as its icons need; a name that does not fit even at the smallest font adds whole icon rows
+  const rowHeights = list.tiers.map((t) => {
+    let h = Math.max(MIN_ROW_H, Math.ceil(t.items.length / cols) * (ICON + GAP) - GAP + 2 * PAD)
+    while (!fitLabel(ctx, t.name, LABEL_W - 20, h - 2 * PAD).fits) h += ICON + GAP
+    return h
+  })
   const head = list.title.trim() ? TITLE_H : 12
   const height = head + rowHeights.reduce((a, b) => a + b, 0) + FOOTER_H
 
-  const canvas = document.createElement('canvas')
   canvas.width = WIDTH
   canvas.height = height
-  const ctx = canvas.getContext('2d')
-  if (!ctx) throw new Error('canvas unavailable')
 
   ctx.fillStyle = '#1a1a1d'
   ctx.fillRect(0, 0, WIDTH, height)
