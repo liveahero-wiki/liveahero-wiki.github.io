@@ -696,6 +696,27 @@ wiki-auto-action::before {
   padding: 5px;
   text-align: center;
 }
+// Phones: shrink cards so three fit per row instead of two. Applies to every
+// .card-list (charas, voice actors, illustrators, affiliations).
+@media (max-width: 480px) {
+  @supports (zoom: 0.75) {
+    .card-list {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      grid-auto-rows: minmax(140px, auto);
+
+      .hero-icon,
+      .sidekick-icon {
+        zoom: 0.75;
+        margin: 6px auto 0;
+      }
+
+      a {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+      }
+    }
+  }
+}
 .hero-icon, .sidekick-icon {
   width: 128px;
   height: 128px;
