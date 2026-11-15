@@ -12,6 +12,9 @@ const ICON = 88
 const GAP = 4
 const PAD = 6
 const LABEL_W = 150
+/** Past the first LABEL_CHARS characters, a tier name grows the label column by LABEL_GROW per further LABEL_CHARS started. */
+const LABEL_CHARS = 100
+const LABEL_GROW = 75
 const TITLE_H = 76
 const FOOTER_H = 30
 const LABEL_FONT = 34
@@ -123,7 +126,8 @@ export async function exportPng(list: TierList, byKey: ReadonlyMap<string, Candi
   const keys = [...new Set(list.tiers.flatMap((t) => t.items))].filter((k) => byKey.has(k))
   await eachLimited(keys, async (k) => void images.set(k, await loadImage(iconUrl(byKey.get(k)!))))
 
-  const cols = Math.max(1, Math.floor((WIDTH - LABEL_W - PAD) / (ICON + GAP)))
+  const labelW = LABEL_W + LABEL_GROW * Math.max(0, ...list.tiers.map((t) => Math.ceil(t.name.length / LABEL_CHARS) - 1))
+  const cols = Math.max(1, Math.floor((WIDTH - labelW - PAD) / (ICON + GAP)))
   const canvas = document.createElement('canvas')
   const ctx = canvas.getContext('2d')
   if (!ctx) throw new Error('canvas unavailable')
@@ -131,7 +135,7 @@ export async function exportPng(list: TierList, byKey: ReadonlyMap<string, Candi
   // a row is as tall as its icons need; a name that does not fit even at the smallest font adds whole icon rows
   const rowHeights = list.tiers.map((t) => {
     let h = Math.max(MIN_ROW_H, Math.ceil(t.items.length / cols) * (ICON + GAP) - GAP + 2 * PAD)
-    while (!fitLabel(ctx, t.name, LABEL_W - 20, h - 2 * PAD).fits) h += ICON + GAP
+    while (!fitLabel(ctx, t.name, labelW - 20, h - 2 * PAD).fits) h += ICON + GAP
     return h
   })
   const head = list.title.trim() ? TITLE_H : 12
@@ -155,18 +159,18 @@ export async function exportPng(list: TierList, byKey: ReadonlyMap<string, Candi
   list.tiers.forEach((tier, i) => {
     const h = rowHeights[i]
     ctx.fillStyle = tier.color
-    ctx.fillRect(0, y, LABEL_W, h)
+    ctx.fillRect(0, y, labelW, h)
     ctx.fillStyle = '#2a2a2e'
-    ctx.fillRect(LABEL_W, y, WIDTH - LABEL_W, h)
+    ctx.fillRect(labelW, y, WIDTH - labelW, h)
     ctx.fillStyle = textOn(tier.color)
     ctx.textAlign = 'center'
-    const { lines, lineH } = fitLabel(ctx, tier.name, LABEL_W - 20, h - 2 * PAD)
+    const { lines, lineH } = fitLabel(ctx, tier.name, labelW - 20, h - 2 * PAD)
     const top = y + h / 2 - (lines.length * lineH) / 2 + lineH / 2
-    lines.forEach((line, n) => ctx.fillText(line, LABEL_W / 2, top + n * lineH))
+    lines.forEach((line, n) => ctx.fillText(line, labelW / 2, top + n * lineH))
 
     tier.items.filter((k) => byKey.has(k)).forEach((k, n) => {
       const c = byKey.get(k)!
-      const x = LABEL_W + PAD + (n % cols) * (ICON + GAP)
+      const x = labelW + PAD + (n % cols) * (ICON + GAP)
       const iy = y + PAD + Math.floor(n / cols) * (ICON + GAP)
       const img = images.get(k)
       ctx.save()

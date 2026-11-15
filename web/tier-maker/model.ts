@@ -19,7 +19,7 @@ export interface TierList {
 
 export const MAX_TIERS = 20
 export const MAX_TITLE = 100
-export const MAX_TIER_NAME = 200
+export const MAX_TIER_NAME = 600
 export const FALLBACK_COLOR = '#c8c8c8'
 
 /** Tier colors offered by the color picker (the first five are the default tiers). */
