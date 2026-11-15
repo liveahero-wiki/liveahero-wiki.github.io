@@ -14,6 +14,9 @@ const PAD = 6
 const LABEL_W = 150
 const TITLE_H = 76
 const FOOTER_H = 30
+const LABEL_FONT = 34
+const LABEL_MIN_FONT = 14
+const DIVIDER = '#555'
 const MIN_ROW_H = ICON + 2 * PAD
 const IMAGE_TIMEOUT_MS = 15_000
 const IMAGE_CONCURRENCY = 24
@@ -68,6 +71,47 @@ function fitText(ctx: CanvasRenderingContext2D, text: string, maxW: number, size
   return `${t}…`
 }
 
+/** Greedy word wrap; a word wider than `maxW` (or text without spaces, e.g. CJK) is broken between characters. */
+function wrapText(ctx: CanvasRenderingContext2D, text: string, maxW: number): string[] {
+  const lines: string[] = []
+  let line = ''
+  for (const word of text.split(/\s+/).filter(Boolean)) {
+    const joined = line ? `${line} ${word}` : word
+    if (ctx.measureText(joined).width <= maxW) {
+      line = joined
+      continue
+    }
+    if (line) lines.push(line)
+    line = ''
+    for (const ch of word) {
+      if (line && ctx.measureText(line + ch).width > maxW) {
+        lines.push(line)
+        line = ''
+      }
+      line += ch
+    }
+  }
+  if (line) lines.push(line)
+  return lines
+}
+
+/** Wraps a tier name over as many lines as fit in `maxH`, shrinking the font to LABEL_MIN_FONT before truncating with an ellipsis. Leaves ctx.font set for drawing. */
+function fitLabel(ctx: CanvasRenderingContext2D, text: string, maxW: number, maxH: number): { lines: string[]; lineH: number } {
+  let lines: string[] = []
+  let lineH = 0
+  for (let s = LABEL_FONT; s >= LABEL_MIN_FONT; s--) {
+    ctx.font = `bold ${s}px ${FONT}`
+    lineH = Math.round(s * 1.15)
+    lines = wrapText(ctx, text, maxW)
+    if (lines.length * lineH <= maxH) return { lines, lineH }
+  }
+  lines = lines.slice(0, Math.max(1, Math.floor(maxH / lineH)))
+  let last = lines[lines.length - 1]
+  while (last.length > 1 && ctx.measureText(`${last}…`).width > maxW) last = last.slice(0, -1)
+  lines[lines.length - 1] = `${last}…`
+  return { lines, lineH }
+}
+
 export interface Exported {
   blob: Blob
   /** Icons that failed to load (drawn as placeholders). */
@@ -110,7 +154,9 @@ export async function exportPng(list: TierList, byKey: ReadonlyMap<string, Candi
     ctx.fillRect(LABEL_W, y, WIDTH - LABEL_W, h)
     ctx.fillStyle = textOn(tier.color)
     ctx.textAlign = 'center'
-    ctx.fillText(fitText(ctx, tier.name, LABEL_W - 20, 34, 'bold'), LABEL_W / 2, y + h / 2)
+    const { lines, lineH } = fitLabel(ctx, tier.name, LABEL_W - 20, h - 2 * PAD)
+    const top = y + h / 2 - (lines.length * lineH) / 2 + lineH / 2
+    lines.forEach((line, n) => ctx.fillText(line, LABEL_W / 2, top + n * lineH))
 
     tier.items.filter((k) => byKey.has(k)).forEach((k, n) => {
       const c = byKey.get(k)!
@@ -145,6 +191,14 @@ export async function exportPng(list: TierList, byKey: ReadonlyMap<string, Candi
     })
     y += h
   })
+
+  // thin grey line between tiers
+  ctx.fillStyle = DIVIDER
+  let sepY = head
+  for (const h of rowHeights.slice(0, -1)) {
+    sepY += h
+    ctx.fillRect(0, sepY - 1, WIDTH, 2)
+  }
 
   ctx.fillStyle = '#8a8a90'
   ctx.textAlign = 'right'
