@@ -150658,6 +150658,437 @@
       "isOverrideStatusDescription": false
     }
   },
+  "5665": {
+    "skillEffectId": 5665,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "HighestViewPowerMultipleAttack",
+          "parameter": {
+            "maxMult": 150,
+            "maxView": 100000,
+            "minMult": 100
+          }
+        }
+      ],
+      "trigger": "[{\"value\":0,\"value2\":0,\"includeTemporary\":false,\"element\":0,\"statusId\":0,\"role\":0,\"class\":\"InvokerAliveTrigger\",\"targetStates\":null}]",
+      "filename": "",
+      "statusId": 133,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": true,
+      "description": "スキル発動後のViewPowerに応じて味方全体のAtkを上昇（View100000の時最大値）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "5666": {
+    "skillEffectId": 5666,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseChangeAgi",
+          "parameter": {
+            "value": 2
+          }
+        }
+      ],
+      "filename": "status_system_speedatk",
+      "statusId": 127,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "SPDチャージ（チャージ数1につきSPD+2。システム効果127）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": true,
+      "displayPopupText": "",
+      "elapseTurnTiming": [],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "SPDチャージ",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "チャージ数1につき、SPD+2。<br><color=#505050>特定のスキルによりチャージ数が増加する。</color>",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "5667": {
+    "skillEffectId": 5667,
+    "skillEffectJson": {
+      "turn": 1,
+      "count": 0,
+      "effects": [
+        {
+          "class": "TurnBaseMultipleAttack",
+          "parameter": {
+            "value": 105
+          }
+        }
+      ],
+      "filename": "status_system_atkup",
+      "statusId": 128,
+      "canDispel": false,
+      "filterIds": [
+        4
+      ],
+      "parameter": false,
+      "description": "ATKチャージ(ID128、+5%)",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": false,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": true,
+      "displayPopupText": "",
+      "elapseTurnTiming": [],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "ATKチャージ",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": true,
+      "overrideStatusDescription": "チャージ数1につき、ATK+5%。<br><color=#505050>特定のスキルによりチャージ数が増加する。</color>",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": true
+    }
+  },
+  "5668": {
+    "skillEffectId": 5668,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "NoneEffect",
+          "parameter": {
+            "timing": 17
+          }
+        },
+        {
+          "class": "ParticleStatus",
+          "parameter": {
+            "address": "eff_sensettiaCrossroads2611_h01_01"
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 1126205,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "励唱のセンセチアアンコール（説明文表示なし）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "5669": {
+    "skillEffectId": 5669,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Silence",
+          "parameter": {
+            "index": 4,
+            "isForce": true
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "ウェイトを禁止する(死亡時貫通)",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": true,
+      "addSortOrder": 0,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": true,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "5670": {
+    "skillEffectId": 5670,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "ChangeActiveSkill",
+          "parameter": {
+            "index": 4,
+            "skillId": 234
+          }
+        }
+      ],
+      "filename": "",
+      "statusId": 126,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "ウェイトを表示用スキルに置き換え",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": false,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "5671": {
+    "skillEffectId": 5671,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Silence",
+          "parameter": {
+            "index": 1,
+            "isForce": true
+          }
+        }
+      ],
+      "trigger": "[{\"value\":2,\"value2\":0,\"includeTemporary\":false,\"element\":0,\"statusId\":1065214,\"role\":0,\"class\":\"TurnMismatchTrigger\",\"targetStates\":null}]",
+      "filename": "",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "スキル2沈黙（2ターン目以外沈黙）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "スキル2沈黙",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "スキル2沈黙（時の砂30で解除）",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "5672": {
+    "skillEffectId": 5672,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Silence",
+          "parameter": {
+            "index": 0,
+            "isForce": true
+          }
+        }
+      ],
+      "trigger": "[{\"value\":2,\"value2\":0,\"includeTemporary\":false,\"element\":0,\"statusId\":1065214,\"role\":0,\"class\":\"TurnTrigger\",\"targetStates\":null}]",
+      "filename": "",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "スキル1沈黙（2ターン目以降沈黙）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "スキル2沈黙",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "スキル2沈黙（時の砂30で解除）",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
+  "5673": {
+    "skillEffectId": 5673,
+    "skillEffectJson": {
+      "turn": 0,
+      "count": 0,
+      "effects": [
+        {
+          "class": "Silence",
+          "parameter": {
+            "index": 2,
+            "isForce": true
+          }
+        }
+      ],
+      "trigger": "[{\"value\":2,\"value2\":0,\"includeTemporary\":false,\"element\":0,\"statusId\":1065214,\"role\":0,\"class\":\"TurnDontExecTrigger\",\"targetStates\":null}]",
+      "filename": "",
+      "statusId": 27,
+      "canDispel": false,
+      "filterIds": [],
+      "parameter": false,
+      "description": "スキル3沈黙（2ターン目まで沈黙）",
+      "isCountTurn": false,
+      "isDotDamage": false,
+      "isImmediate": false,
+      "persistence": true,
+      "reaminDeath": false,
+      "addSortOrder": 0,
+      "canDuplicate": true,
+      "isCountEffect": false,
+      "isFieldEffect": false,
+      "effectFilename": "",
+      "penetrateDeath": false,
+      "disappearTiming": 17,
+      "isCharageEffect": false,
+      "displayPopupText": "",
+      "elapseTurnTiming": [
+        0
+      ],
+      "canDuplicateForce": false,
+      "isCountDownEffect": false,
+      "overrideStatusName": "スキル2沈黙",
+      "notDisplayTeamEdit": false,
+      "isOverrideStatusName": false,
+      "overrideStatusDescription": "スキル2沈黙（時の砂30で解除）",
+      "isDisplayPersistenceStatus": false,
+      "isOverrideStatusDescription": false
+    }
+  },
   "6001": {
     "skillEffectId": 6001,
     "skillEffectJson": {
