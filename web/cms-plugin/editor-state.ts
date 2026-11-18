@@ -2,7 +2,8 @@
 // The editor always shows MAX_SLOTS rows, like the game's formation screen. A row with a hero is "filled"; the empty rows
 // are skipped when the team is emitted, as the game does when the battle starts, so the payload is the recompacted team.
 // Rows carry a stable `key`; the borrowed support is stored as that key, so it follows its row through reorders and the
-// payload's `supportIndex` is derived on every emit.
+// payload's `supportIndex` is derived on every emit. Whether the team borrows a support at all is a separate flag
+// (`supportOn`), so switching it off and on again remembers the row.
 
 import type { FieldError } from './plugin-api.ts'
 import { DEFAULT_HERO_ID, DEFAULT_SUPPORT_ROW } from './default-team.ts'
@@ -17,7 +18,9 @@ export interface Slot extends TeamSlot {
 
 export interface State {
   slots: Slot[]
-  /** Row carrying the borrowed support role; null = no support. It only counts while that row has a hero. */
+  /** The team borrows a support. Always false in mode `none`, always true in mode `required`. */
+  supportOn: boolean
+  /** Row carrying the borrowed support role (kept while `supportOn` is off). It only counts while that row has a hero. */
   supportKey: number | null
   /** Id of the chosen target; null = general purpose. */
   target: string | null
@@ -60,14 +63,15 @@ export function battleSlots(s: State): (number | null)[] {
 export function toPayload(state: State, allowsSupport: boolean): TeamPayload {
   const rows = payloadRows(state)
   const heroes = rows.length ? rows.map((i) => stripSlot(state.slots[i])) : [stripSlot(newSlot())]
-  const idx = allowsSupport && state.supportKey !== null ? rows.findIndex((i) => state.slots[i].key === state.supportKey) : -1
+  const idx = allowsSupport && state.supportOn && state.supportKey !== null ? rows.findIndex((i) => state.slots[i].key === state.supportKey) : -1
   return { v: 1, supportIndex: idx >= 0 ? idx : null, heroes, ...(state.target ? { target: state.target } : {}) }
 }
 
 /**
  * Build the editor state from an incoming payload, applying the group's rules where possible. Heroes go to the first
  * rows (the rest are padded empty); the support's row keeps the role. A payload without any hero is a blank team and
- * becomes the default team: Akashi in row 1 and the support role on row 4. Mode `none` has no support role.
+ * becomes the default team: Akashi in row 1 and the support role on row 4. Mode `none` has no support role; in mode
+ * `optional` a team without a support starts with the switch off and the role remembered on row 4.
  */
 export function initState(value: unknown, options: Record<string, unknown>): State {
   const mode = supportMode(options)
@@ -79,12 +83,20 @@ export function initState(value: unknown, options: Record<string, unknown>): Sta
   // A new/empty editor on a hero card page starts with that hero in row 1.
   const focus = parseFocus(options)
   if (blank && focus?.kind === 'hero') slots[0].stockId = focus.stockId
+  let supportOn = false
   let supportKey: number | null = null
   if (mode !== 'none') {
-    if (blank) supportKey = slots[DEFAULT_SUPPORT_ROW].key
-    else if (view.supportIndex !== null && view.supportIndex < given.length) supportKey = given[view.supportIndex].key
+    const defaultKey = slots[DEFAULT_SUPPORT_ROW].key
+    if (blank) {
+      supportOn = true
+      supportKey = defaultKey
+    } else if (view.supportIndex !== null && view.supportIndex < given.length) {
+      supportOn = true
+      supportKey = given[view.supportIndex].key
+    } else if (mode === 'required') supportOn = true // no row chosen yet: the validator asks for one
+    else supportKey = defaultKey
   }
-  return { slots, supportKey, target: toViewTarget(value) }
+  return { slots, supportOn, supportKey, target: toViewTarget(value) }
 }
 
 export const patchSlot = (s: State, key: number, patch: Partial<TeamSlot>): State =>
@@ -101,8 +113,15 @@ export function moveSlot(s: State, from: number, to: number): State {
   return { ...s, slots }
 }
 
-/** Gives the support role to a row, or takes it off the row that has it (then there is no support). */
-export const toggleSupport = (s: State, key: number): State => ({ ...s, supportKey: s.supportKey === key ? null : key })
+/** Gives the support role to a row (and so switches the support on). */
+export const setSupportRow = (s: State, key: number): State => (s.slots.some((x) => x.key === key) ? { ...s, supportOn: true, supportKey: key } : s)
+
+/** Switches the borrowed support on or off. Switching on without a remembered row picks the default one (row 4). */
+export function setSupportOn(s: State, on: boolean): State {
+  if (s.supportOn === on) return s
+  const key = s.supportKey ?? s.slots[Math.min(DEFAULT_SUPPORT_ROW, s.slots.length - 1)]?.key ?? null
+  return { ...s, supportOn: on, supportKey: on ? key : s.supportKey }
+}
 
 export const selectTarget = (s: State, target: string | null): State => ({ ...s, target: target || null })
 

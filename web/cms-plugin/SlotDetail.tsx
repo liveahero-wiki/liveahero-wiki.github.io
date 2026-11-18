@@ -1,5 +1,5 @@
-// Detail dialog of an editor row: levels (sliders), Parallel Weapon design, skill tree, passive sidekicks / items and the
-// borrowed support role. It edits live (every change goes straight to the editor state); "Close" just dismisses it.
+// Detail dialog of an editor row: levels (sliders), Parallel Weapon design, skill tree and passive sidekicks / items.
+// It edits live (every change goes straight to the editor state); "Close" just dismisses it.
 
 import { useMemo, useState } from 'preact/hooks'
 import { CardIcon, Dialog, PwFormIcon, cardLabel } from './common.tsx'
@@ -27,15 +27,11 @@ interface Props {
   lang: Lang
   t: T
   errs: Map<string, FieldError[]> | undefined
-  /** The borrowed support is possible in this team. */
-  allowsSupport: boolean
-  support: boolean
   onPatch(p: Partial<TeamSlot>): void
-  onToggleSupport(): void
   onClose(): void
 }
 
-export function SlotDetailDialog({ slot, title, idBase, roster, lang, t, errs, allowsSupport, support, onPatch, onToggleSupport, onClose }: Props) {
+export function SlotDetailDialog({ slot, title, idBase, roster, lang, t, errs, onPatch, onClose }: Props) {
   const [adding, setAdding] = useState(false)
   const hero = slot.stockId ? roster?.hero(slot.stockId) : undefined
   const treeUnavailable = !!hero && !hero.hasSkillTree
@@ -127,16 +123,6 @@ export function SlotDetailDialog({ slot, title, idBase, roster, lang, t, errs, a
           </button>
           {fieldErrors('passives')}
         </div>
-
-        {allowsSupport && (
-          <div class="cms-lah-field">
-            <label class="cms-lah-check cms-lah-support-radio">
-              <input type="checkbox" checked={support} onChange={onToggleSupport} />
-              <span>{t('supportSlotRadio')}</span>
-            </label>
-            <p class="cms-lah-muted cms-lah-small">{t('supportHelpOptional')}</p>
-          </div>
-        )}
       </div>
 
       {adding && roster && (

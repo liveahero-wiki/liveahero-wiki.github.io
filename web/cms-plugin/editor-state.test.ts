@@ -1,7 +1,7 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
 import { defaultTeamPayload } from './default-team.ts'
-import { battleSlots, clearSlot, initState, moveSlot, patchSlot, payloadRows, relPath, selectTarget, sortErrors, sortedJson, toggleSupport, toPayload, type State } from './editor-state.ts'
+import { battleSlots, clearSlot, initState, moveSlot, patchSlot, payloadRows, relPath, selectTarget, sortErrors, sortedJson, setSupportOn, setSupportRow, toPayload, type State } from './editor-state.ts'
 import { validateTeam } from './validate.ts'
 
 const OPT = { support: 'optional' }
@@ -19,6 +19,7 @@ describe('default team', () => {
     const s = initState(undefined, OPT)
     assert.deepEqual(ids(s), [10011, 0, 0, 0, 0])
     assert.equal(s.slots[0].lv, 60)
+    assert.equal(s.supportOn, true)
     assert.equal(s.supportKey, s.slots[3].key)
   })
   it('emits just Akashi, and no support (an empty support row is none)', () => {
@@ -34,7 +35,9 @@ describe('default team', () => {
     assert.deepEqual(ids(s), [10011, 0, 0, 0, 0])
   })
   it('has no support role in mode none', () => {
-    assert.equal(initState(undefined, { support: false }).supportKey, null)
+    const s = initState(undefined, { support: false })
+    assert.equal(s.supportKey, null)
+    assert.equal(s.supportOn, false)
   })
   it('hero focus puts that hero in row 1 of a blank editor only', () => {
     const opts = { ...OPT, focus: { kind: 'hero', stockId: 10251 } }
@@ -54,8 +57,14 @@ describe('initState', () => {
   it('keeps an incoming support on its row, and none when there is none', () => {
     assert.equal(supportId(four()), 4)
     const none = initState({ v: 1, supportIndex: null, heroes: [1, 2, 3, 4].map((stockId) => ({ stockId })) }, OPT)
-    assert.equal(none.supportKey, null)
+    assert.equal(none.supportOn, false)
+    assert.equal(none.supportKey, none.slots[3].key) // remembered for when the switch goes on
     assert.equal(toPayload(none, true).supportIndex, null)
+  })
+  it('mode required is always on, with no row chosen for an incoming team without support', () => {
+    const s = initState({ v: 1, supportIndex: null, heroes: [1, 2].map((stockId) => ({ stockId })) }, { support: true })
+    assert.equal(s.supportOn, true)
+    assert.equal(s.supportKey, null)
   })
   it('caps at 5 rows', () => {
     const s = initState({ v: 1, supportIndex: 0, heroes: [1, 2, 3, 4, 5, 6, 7].map((stockId) => ({ stockId })) }, OPT)
@@ -122,13 +131,28 @@ describe('support follows its row', () => {
     assert.equal(moveSlot(s, 0, 5), s)
     assert.equal(moveSlot(s, -1, 0), s)
   })
-  it('toggleSupport gives the role to a row, or takes it away', () => {
-    let s = four()
-    s = toggleSupport(s, s.slots[1].key)
+  it('setSupportRow gives the role to a row and switches the support on', () => {
+    let s = setSupportOn(four(), false)
+    s = setSupportRow(s, s.slots[1].key)
+    assert.equal(s.supportOn, true)
     assert.equal(supportId(s), 2)
-    s = toggleSupport(s, s.slots[1].key)
-    assert.equal(s.supportKey, null)
+    assert.equal(setSupportRow(s, -1), s)
+  })
+  it('setSupportOn(false) means no support but remembers the row; on restores it', () => {
+    let s = four()
+    s = setSupportRow(s, s.slots[1].key)
+    s = setSupportOn(s, false)
     assert.equal(toPayload(s, true).supportIndex, null)
+    s = setSupportOn(s, true)
+    assert.equal(supportId(s), 2)
+    assert.equal(setSupportOn(s, true), s)
+  })
+  it('switching on without a remembered row picks row 4', () => {
+    const s = setSupportOn({ ...four(), supportOn: false, supportKey: null }, true)
+    assert.equal(s.supportKey, s.slots[3].key)
+  })
+  it('the support row is not emitted when allowsSupport is false', () => {
+    assert.equal(toPayload(four(), false).supportIndex, null)
   })
 })
 

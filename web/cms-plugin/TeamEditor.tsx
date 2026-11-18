@@ -1,8 +1,9 @@
 // Team editor: the 5 rows of the game's formation screen, one compact row per slot (hero icon, active sidekick icon and a
 // 3-line summary of the levels / fans / seal level / passives). The icons open picker popovers, the summary opens a detail
 // dialog, and the handle of a row drags it (Up / Down arrows move it from the keyboard). Rows left empty are skipped, like
-// the game does when the battle starts: the emitted payload is the recompacted team. The borrowed support is a role of one
-// row (row 4 by default). Emits normalized payloads through onChange.
+// the game does when the battle starts: the emitted payload is the recompacted team. The borrowed support is a team switch
+// (optional mode) plus a radio on every row, next to the slot number, that picks the row carrying the role (row 4 by
+// default). Emits normalized payloads through onChange.
 
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'preact/hooks'
 import type { FieldError, PluginContext } from './plugin-api.ts'
@@ -116,6 +117,8 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
     commit(next, { announce: t('movedTo', { pos: to + 1, total: next.slots.length }), focus: { key: next.slots[to].key, what: 'handle' } })
   }
   const selectTarget = (id: string | null) => commit(ed.selectTarget(stateRef.current, id))
+  const setSupportOn = (on: boolean) => commit(ed.setSupportOn(stateRef.current, on))
+  const setSupportRow = (key: number) => commit(ed.setSupportRow(stateRef.current, key))
 
   // ---- drag to reorder: pointer events on the handle, live-reordering as the dragged row crosses its neighbours
   const drag = useRef<{ key: number; grabY: number; lastY: number; dy: number; from: number; li: HTMLElement } | null>(null)
@@ -197,6 +200,7 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
   const numbers = battleSlots(state)
   const sorted = sortErrors(errors, rows)
 
+  const supportName = `cms-lah-${uid}-support`
   const focusName = focus ? cardLabel(roster, focus.kind, focus.stockId, lang) : ''
 
   return (
@@ -235,6 +239,20 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
       {roster === undefined && <p class="cms-lah-hint">{t('rosterLoading')}</p>}
       {roster === null && <p class="cms-lah-hint cms-lah-hint-warn">{t('rosterFailed')}</p>}
 
+      {allowsSupport && (
+        <div class="cms-lah-field cms-lah-support-field">
+          {mode === 'optional' ? (
+            <label class="cms-lah-check">
+              <input type="checkbox" checked={state.supportOn} onChange={(e) => setSupportOn(e.currentTarget.checked)} />
+              <span class="cms-lah-support-switch">{t('supportToggle')}</span>
+            </label>
+          ) : (
+            <div class="cms-lah-label">{t('supportToggle')}</div>
+          )}
+          <p class="cms-lah-muted cms-lah-small">{t(mode === 'optional' ? 'supportHelpOptional' : 'supportHelpRequired')}</p>
+        </div>
+      )}
+
       <div class="cms-lah-team-errors" aria-live="polite">
         {[...sorted.team, ...sorted.support].map((e) => (
           <p key={errKey(e)} class="cms-lah-error">
@@ -251,8 +269,8 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
             index={i}
             pos={numbers[i]}
             idBase={`cms-lah-${uid}-${slot.key}`}
-            support={allowsSupport && state.supportKey === slot.key}
-            allowsSupport={allowsSupport}
+            supportName={allowsSupport && state.supportOn ? supportName : null}
+            support={allowsSupport && state.supportOn && state.supportKey === slot.key}
             dragging={dragKey === slot.key}
             roster={roster}
             lang={lang}
@@ -260,7 +278,7 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
             errs={sorted.slots.get(i)}
             onHero={(id) => setHero(slot.key, id)}
             onPatch={(p) => patch(slot.key, p)}
-            onToggleSupport={() => commit(ed.toggleSupport(stateRef.current, slot.key))}
+            onSupport={() => setSupportRow(slot.key)}
             onClear={() => clearSlot(slot.key)}
             onDragStart={(e) => startDrag(e, slot.key)}
             onNudge={(dir) => moveSlot(i, i + dir)}
@@ -287,8 +305,10 @@ interface SlotProps {
   /** Battle slot (1-based) the row takes once the empty rows are skipped; null for a skipped row. */
   pos: number | null
   idBase: string
+  /** Name of the radio group choosing the support row; null when the team has no support (no radios). */
+  supportName: string | null
+  /** This row carries the support role. */
   support: boolean
-  allowsSupport: boolean
   dragging: boolean
   roster: Roster | null | undefined
   lang: PluginContext['uiLang']
@@ -296,14 +316,15 @@ interface SlotProps {
   errs: Map<string, FieldError[]> | undefined
   onHero(id: number): void
   onPatch(p: Partial<TeamSlot>): void
-  onToggleSupport(): void
+  /** The support radio of this row was chosen. */
+  onSupport(): void
   onClear(): void
   onDragStart(e: PointerEvent): void
   /** Up / Down arrow on the handle. */
   onNudge(dir: -1 | 1): void
 }
 
-function SlotEditor({ slot, index, pos, idBase, support, allowsSupport, dragging, roster, lang, t, errs, onHero, onPatch, onToggleSupport, onClear, onDragStart, onNudge }: SlotProps) {
+function SlotEditor({ slot, index, pos, idBase, supportName, support, dragging, roster, lang, t, errs, onHero, onPatch, onSupport, onClear, onDragStart, onNudge }: SlotProps) {
   const [open, setOpen] = useState<Overlay>(null)
   const filled = slot.stockId !== 0
   const hero = filled ? roster?.hero(slot.stockId) : undefined
@@ -324,10 +345,11 @@ function SlotEditor({ slot, index, pos, idBase, support, allowsSupport, dragging
       <div class="cms-lah-slot-row">
         <div class="cms-lah-slot-no">
           <span aria-label={t('slotN', { n: pos ?? index + 1 })}>{pos ? t('slotN', { n: pos }) : '–'}</span>
-          {support && (
-            <span class="cms-lah-tag" title={t('supportTitle')}>
-              {t('support')}
-            </span>
+          {supportName !== null && (
+            <label class="cms-lah-support-pick" title={t('supportTitle')}>
+              <input type="radio" name={supportName} checked={support} aria-label={t('supportRadio', { n: pos ?? index + 1 })} onChange={onSupport} />
+              <span>{t('support')}</span>
+            </label>
           )}
         </div>
 
@@ -395,8 +417,10 @@ function SlotEditor({ slot, index, pos, idBase, support, allowsSupport, dragging
               </span>
             </button>
           ) : (
-            // An empty row keeps its place for the support role and the detail dialog (support toggle) is reached from a filled row only.
-            <span class="cms-lah-params cms-lah-params-empty" aria-hidden="true" />
+            // An empty row keeps its place; the support row says what it is waiting for.
+            <span class="cms-lah-params cms-lah-params-empty" aria-hidden={support ? undefined : true}>
+              {support && <span class="cms-lah-muted">{t('supportPickHero')}</span>}
+            </span>
           )}
         </div>
 
@@ -509,10 +533,7 @@ function SlotEditor({ slot, index, pos, idBase, support, allowsSupport, dragging
           lang={lang}
           t={t}
           errs={errs}
-          allowsSupport={allowsSupport}
-          support={support}
           onPatch={onPatch}
-          onToggleSupport={onToggleSupport}
           onClose={close}
         />
       )}
