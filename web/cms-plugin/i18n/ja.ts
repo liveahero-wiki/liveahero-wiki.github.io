@@ -51,7 +51,7 @@ export const ja: Bundle = {
   showMore: 'もっと見る',
   element1: '火',
   element2: '水',
-  element3: '地',
+  element3: '木',
   element4: '光',
   element5: '闇',
   supportToggle: 'サポートを借りる',
@@ -174,10 +174,10 @@ export const ja: Bundle = {
   tcRejectReason: 'モデレーターからのメモ：{reason}',
   tcWithdrawEdit: '編集を取り下げる',
   tcActionFailed: '処理に失敗しました。もう一度お試しください。',
+  tcRemixFailed: 'この編成はコピーできません。利用できなくなったカードまたは設定が含まれています。',
 
   // ---- build & share (no sign-in)
   tcBuild: '編成ビルダー',
-  tcBuildHelp: '編成を作って、そのリンクをコピーするか、リストに投稿できます。リンクはWikiに何も送信せず、ログインも不要です。編成はリンク自体に含まれており、リンクを知っている人は誰でも見られます。',
   tcBuildLoading: 'エディターを読み込み中…',
   tcBuildError: 'エディターを読み込めませんでした。もう一度お試しください。',
   tcShareLink: '共有リンク',

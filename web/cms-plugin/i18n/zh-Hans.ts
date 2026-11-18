@@ -49,7 +49,7 @@ export const zhHans: Bundle = {
   showMore: '显示更多',
   element1: '火',
   element2: '水',
-  element3: '地',
+  element3: '木',
   element4: '光',
   element5: '暗',
   supportToggle: '借用支援',
@@ -172,10 +172,10 @@ export const zhHans: Bundle = {
   tcRejectReason: '版主备注：{reason}',
   tcWithdrawEdit: '撤回修改',
   tcActionFailed: '操作失败，请重试。',
+  tcRemixFailed: '无法复制这支队伍：其中包含已不可用的卡牌或设置。',
 
   // ---- build & share (no sign-in)
   tcBuild: '队伍制作器',
-  tcBuildHelp: '组好队伍后，可复制其链接，或提交到列表。链接不会向 Wiki 发送任何内容，也无需登录：队伍就保存在链接里，任何拿到链接的人都能看到。',
   tcBuildLoading: '正在加载编辑器…',
   tcBuildError: '无法加载队伍编辑器，请重试。',
   tcShareLink: '分享链接',

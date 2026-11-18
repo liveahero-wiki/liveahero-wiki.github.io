@@ -1,7 +1,7 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
 import { ELEMENT_IDS, elementIconUrl } from './elements.ts'
-import { filterEntries, heroEntries, passiveEntries, searchIndex, sidekickEntries, type PickEntry } from './pick.ts'
+import { filterEntries, heroEntries, passiveEntries, rosterSearchIndex, searchIndex, sidekickEntries, type PickEntry } from './pick.ts'
 import { buildRoster } from './roster.ts'
 
 const roster = buildRoster({
@@ -65,6 +65,13 @@ describe('filterEntries', () => {
     assert.deepEqual(idsOf(filterEntries(heroes, f({ query: '10031' }), 'en')), [10031])
     // "a": Akashi and Alan start with it, Kageyama only contains it
     assert.deepEqual(idsOf(filterEntries(heroes, f({ query: 'a' }), 'en')), [10011, 10031, 10021])
+  })
+  it('builds the roster-wide index once and it covers heroes, sidekicks and items', () => {
+    const index = rosterSearchIndex(roster)
+    assert.equal(rosterSearchIndex(roster), index)
+    for (const e of [...heroes, ...passiveEntries(roster)]) assert.ok(index.has(`${e.kind}:${e.id}`))
+    const q = f({ query: 'a' })
+    assert.deepEqual(idsOf(filterEntries(heroes, q, 'en', index)), idsOf(filterEntries(heroes, q, 'en')))
   })
   it('gives the same result with a prebuilt index, and does not mutate the entries', () => {
     const copy = [...heroes]

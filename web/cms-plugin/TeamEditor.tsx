@@ -66,13 +66,17 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
 
   const announce = (text: string) => setLive((l) => ({ text, n: l.n + 1 }))
 
+  const emit = (s: State) => {
+    setServerErrors([]) // reported positions are stale after any edit
+    onChangeRef.current(toPayload(s, allowsSupport))
+  }
+
   const commit = (next: State, opts: { announce?: string; focus?: typeof pendingFocus.current } = {}) => {
     stateRef.current = next
     pendingFocus.current = opts.focus ?? null
     setState(next)
-    setServerErrors([]) // reported positions are stale after any edit
     if (opts.announce) announce(opts.announce)
-    onChangeRef.current(toPayload(next, allowsSupport))
+    emit(next)
   }
 
   // Tell the host when normalizing the incoming value (a blank team, defaults) changed it.
@@ -160,7 +164,12 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
       }).length
       const s = stateRef.current
       const at = s.slots.findIndex((x) => x.key === d.key)
-      if (to !== at) commit(ed.moveSlot(s, at, to))
+      if (to !== at) {
+        // Live reorder only: the host hears about the final order once, when the drag ends.
+        const next = ed.moveSlot(s, at, to)
+        stateRef.current = next
+        setState(next)
+      }
     }
     const removeListeners = () => {
       document.removeEventListener('pointermove', move)
@@ -176,7 +185,10 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
       d.li.style.transform = ''
       const at = stateRef.current.slots.findIndex((x) => x.key === d.key)
       pendingFocus.current = { key: d.key, what: 'handle' }
-      if (at !== d.from) announce(t('movedTo', { pos: at + 1, total: stateRef.current.slots.length }))
+      if (at !== d.from) {
+        announce(t('movedTo', { pos: at + 1, total: stateRef.current.slots.length }))
+        emit(stateRef.current)
+      }
       setDragKey(null)
     }
     document.addEventListener('pointermove', move)

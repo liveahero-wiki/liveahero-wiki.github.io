@@ -2,7 +2,7 @@
 
 import type { Lang } from './i18n.ts'
 import type { IconKind } from './common.tsx'
-import { localizedName, type Roster } from './roster.ts'
+import { localizedName, MAX_STOCK_ID, type Roster } from './roster.ts'
 import type { LocalizedName } from './types.ts'
 
 export interface PickEntry {
@@ -24,13 +24,10 @@ export interface PickFilter {
   query: string
 }
 
-/** Stock ids from here up are event-only units (e.g. "Borealis (+Custom)" 90821): not playable in a formation, and /charas/ and the tier maker leave them out too. */
-export const MAX_PICKABLE_STOCK_ID = 90000
-
-/** Heroes the picker offers (without the event-only units); the rarity filter uses the card's base rarity (the lowest of its stock), not the maxed one. */
+/** Heroes the picker offers (without the event-only units from `MAX_STOCK_ID` up, e.g. "Borealis (+Custom)" 90821); the rarity filter uses the card's base rarity (the lowest of its stock), not the maxed one. */
 export const heroEntries = (roster: Roster): PickEntry[] =>
   roster.heroes
-    .filter((e) => e.stockId < MAX_PICKABLE_STOCK_ID)
+    .filter((e) => e.stockId < MAX_STOCK_ID)
     .map((e) => ({ id: e.stockId, kind: 'hero', rarity: e.baseRarity ?? e.rarity, element: e.element, resourceName: e.resourceName, name: e.name }))
 
 /** Sidekicks a hero can take: not the hero's own character, not the excluded ones. */
@@ -50,6 +47,18 @@ export const pickSearchText = (e: PickEntry): string => [...Object.values(e.name
 
 /** Search text per entry, built once per entries list, not per keystroke. */
 export const searchIndex = (entries: readonly PickEntry[]): Map<string, string> => new Map(entries.map((e) => [`${e.kind}:${e.id}`, pickSearchText(e)]))
+
+const rosterIndexes = new WeakMap<Roster, Map<string, string>>()
+
+/** Search text of every entry a picker can offer (heroes, sidekicks, items), built once per roster and shared by all popovers. */
+export function rosterSearchIndex(roster: Roster): Map<string, string> {
+  let index = rosterIndexes.get(roster)
+  if (!index) {
+    index = searchIndex([...heroEntries(roster), ...passiveEntries(roster)])
+    rosterIndexes.set(roster, index)
+  }
+  return index
+}
 
 /**
  * The entries that pass the rarity / element filter. With a query: names starting with it first, then the other hits in

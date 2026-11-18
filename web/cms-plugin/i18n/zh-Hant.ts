@@ -49,7 +49,7 @@ export const zhHant: Bundle = {
   showMore: '顯示更多',
   element1: '火',
   element2: '水',
-  element3: '地',
+  element3: '木',
   element4: '光',
   element5: '暗',
   supportToggle: '借用支援',
@@ -172,10 +172,10 @@ export const zhHant: Bundle = {
   tcRejectReason: '版主備註：{reason}',
   tcWithdrawEdit: '撤回修改',
   tcActionFailed: '操作失敗，請重試。',
+  tcRemixFailed: '無法複製這支隊伍：其中包含已不可用的卡牌或設定。',
 
   // ---- build & share (no sign-in)
   tcBuild: '隊伍製作器',
-  tcBuildHelp: '組好隊伍後，可複製其連結，或提交到列表。連結不會向 Wiki 傳送任何內容，也無需登入：隊伍就儲存在連結裡，任何拿到連結的人都能看到。',
   tcBuildLoading: '正在載入編輯器…',
   tcBuildError: '無法載入隊伍編輯器，請重試。',
   tcShareLink: '分享連結',

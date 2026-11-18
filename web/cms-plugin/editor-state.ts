@@ -93,7 +93,7 @@ export function initState(value: unknown, options: Record<string, unknown>): Sta
     } else if (view.supportIndex !== null && view.supportIndex < given.length) {
       supportOn = true
       supportKey = given[view.supportIndex].key
-    } else if (mode === 'required') supportOn = true // no row chosen yet: the validator asks for one
+    } else if (mode === 'required' || view.supportIndex !== null) supportOn = true // no (valid) row chosen yet: the validator asks for one (required) or the switch stays on with no row picked (optional)
     else supportKey = defaultKey
   }
   return { slots, supportOn, supportKey, target: toViewTarget(value) }

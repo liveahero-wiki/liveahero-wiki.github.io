@@ -1,13 +1,12 @@
 // The characters a tier list can rank: the same set `/charas/` lists, from api/team-roster.json. Pure, so `node --test`
 // can import it.
 
-import { localizedName, searchText } from '../cms-plugin/roster.ts'
+import { localizedName, MAX_STOCK_ID, searchText } from '../cms-plugin/roster.ts'
 import type { LocalizedName, RosterHero, RosterSidekick } from '../cms-plugin/types.ts'
 import type { Lang } from '../shared/lang.ts'
 import { itemKey, type Kind } from './model.ts'
 
-/** `/charas/` leaves out stock ids from 90000 up (event-only meteor units and the like). */
-export const MAX_STOCK_ID = 90000
+export { MAX_STOCK_ID }
 
 export interface Candidate {
   key: string

@@ -6,7 +6,7 @@ import type { Lang } from './i18n.ts'
 import { CardIcon } from './common.tsx'
 import { ELEMENT_IDS, elementIconUrl } from './elements.ts'
 import type { Key, T } from './i18n/t.ts'
-import { filterEntries, searchIndex, type PickEntry } from './pick.ts'
+import { filterEntries, rosterSearchIndex, type PickEntry } from './pick.ts'
 import { closePopoverOf, Popover } from './Popover.tsx'
 import { localizedName, type Roster } from './roster.ts'
 
@@ -43,7 +43,7 @@ export function EntryPickerPopover({ roster, entries, rarities, elements: withEl
   const [element, setElement] = useState<ReadonlySet<number>>(new Set())
   const [query, setQuery] = useState('')
   const [shown, setShown] = useState(PAGE)
-  const index = useMemo(() => searchIndex(entries), [entries])
+  const index = useMemo(() => rosterSearchIndex(roster), [roster])
   const filtered = useMemo(() => filterEntries(entries, { rarities: rarity, elements: element, query }, lang, index), [entries, index, rarity, element, query, lang])
   const refilter = () => setShown(PAGE)
 

@@ -53,7 +53,7 @@ export const en = {
   showMore: 'Show more',
   element1: 'Fire',
   element2: 'Water',
-  element3: 'Earth',
+  element3: 'Wood',
   element4: 'Light',
   element5: 'Shadow',
   supportToggle: 'Borrowed support',
@@ -178,10 +178,10 @@ export const en = {
   tcRejectReason: 'Moderator note: {reason}',
   tcWithdrawEdit: 'Withdraw edit',
   tcActionFailed: 'That did not work. Please try again.',
+  tcRemixFailed: 'This team can no longer be copied: it uses a card or setting that is not available any more.',
 
   // ---- build & share (no sign-in)
   tcBuild: 'Team builder',
-  tcBuildHelp: 'Put a team together, then copy a link to it or submit it to the list. A link sends nothing to the wiki and needs no sign-in: the team is stored in the link itself, so anyone with the link can see it.',
   tcBuildLoading: 'Loading the editor…',
   tcBuildError: 'Could not load the team editor. Please try again.',
   tcShareLink: 'Share link',

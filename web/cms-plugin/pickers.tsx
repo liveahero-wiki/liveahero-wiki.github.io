@@ -2,7 +2,6 @@
 // downshift's useCombobox measured ~+40 KB gzip in this single-file bundle (it does not tree-shake), which
 // is not worth it for one control.
 
-import type { ComponentChildren } from 'preact'
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks'
 import type { Lang } from './i18n.ts'
 import { CardIcon, cardLabel, type CardKind, type IconKind } from './common.tsx'
@@ -22,7 +21,6 @@ interface ComboProps {
   kind: CardKind
   roster: Roster
   entries: Entry[]
-  selected: Entry | null
   onSelect: (e: Entry) => void
   lang: Lang
   t: T
@@ -31,16 +29,13 @@ interface ComboProps {
   disabled?: boolean
   invalid?: boolean
   describedBy?: string
-  /** Rendered after the input (e.g. a clear button). */
-  trailing?: ComponentChildren
   hideLabel?: boolean
-  dataFocus?: string
 }
 
-function Combo({ kind, roster, entries, selected, onSelect, lang, t, label, placeholder, disabled, invalid, describedBy, trailing, hideLabel, dataFocus }: ComboProps) {
+function Combo({ kind, roster, entries, onSelect, lang, t, label, placeholder, disabled, invalid, describedBy, hideLabel }: ComboProps) {
   const [uid] = useState(() => `cms-lah-cb-${++comboSeq}`)
   const [open, setOpen] = useState(false)
-  /** What the user typed; null = show the selected card's name. */
+  /** What the user typed; null = nothing yet. */
   const [query, setQuery] = useState<string | null>(null)
   const [hl, setHl] = useState(0)
   const listRef = useRef<HTMLUListElement>(null)
@@ -118,7 +113,6 @@ function Combo({ kind, roster, entries, selected, onSelect, lang, t, label, plac
         {label}
       </label>
       <div class="cms-lah-combo-row">
-        {selected && <CardIcon kind={iconKindOf(selected, kind)} stockId={entryId(selected)} roster={roster} lang={lang} size="md" />}
         <input
           id={`${uid}-in`}
           class="cms-lah-input"
@@ -131,10 +125,9 @@ function Combo({ kind, roster, entries, selected, onSelect, lang, t, label, plac
           aria-activedescendant={open && items[hl] ? optionId(hl) : undefined}
           aria-invalid={invalid || undefined}
           aria-describedby={describedBy}
-          data-focus={dataFocus}
           disabled={disabled}
           placeholder={placeholder}
-          value={query ?? (selected ? localizedName(selected.name, lang) : '')}
+          value={query ?? ''}
           onInput={(e) => {
             setQuery(e.currentTarget.value)
             setOpen(true)
@@ -144,7 +137,6 @@ function Combo({ kind, roster, entries, selected, onSelect, lang, t, label, plac
           onKeyDown={onKeyDown}
           onBlur={close}
         />
-        {trailing}
       </div>
       <ul
         id={`${uid}-list`}
@@ -190,7 +182,6 @@ interface PickerBase {
   placeholder: string
   invalid?: boolean
   describedBy?: string
-  dataFocus?: string
 }
 
 interface CardListPickerProps extends PickerBase {
@@ -243,7 +234,6 @@ export function CardListPicker({ kind, roster, values, max, excludeCharacter, wi
           kind={kind}
           roster={roster}
           entries={entries}
-          selected={null}
           onSelect={(e) => onAdd(entryId(e))}
           lang={lang}
           t={t}

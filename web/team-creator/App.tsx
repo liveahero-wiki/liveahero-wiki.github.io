@@ -4,7 +4,7 @@
 import { Component, type ComponentChildren } from 'preact'
 import { useEffect, useMemo, useState } from 'preact/hooks'
 import type { ContribSubmission, PublicBlob } from '../cms-plugin/api-types.ts'
-import { makeT } from '../cms-plugin/i18n/t.ts'
+import { makeT, type Key } from '../cms-plugin/i18n/t.ts'
 import { loadRoster } from '../cms-plugin/roster.ts'
 import type { PluginContext } from '../cms-plugin/plugin-api.ts'
 import type { TeamPayload } from '../cms-plugin/types.ts'
@@ -47,7 +47,7 @@ export function App({ api, group, plugin, formHost }: AppProps) {
   const account = useAccount(api, t, uiLang)
   const [showMine, setShowMine] = useState(false)
   const [busyId, setBusyId] = useState<string | null>(null)
-  const [actionError, setActionError] = useState(false)
+  const [actionError, setActionError] = useState<Key | null>(null)
   const sharedTeam = useMemo(() => sharedParam(location.search), [])
   const [builderOpen, setBuilderOpen] = useState(false)
   const [builderSeed, setBuilderSeed] = useState(0)
@@ -90,13 +90,13 @@ export function App({ api, group, plugin, formHost }: AppProps) {
 
   const withdraw = async (sub: ContribSubmission) => {
     setBusyId(sub.id)
-    setActionError(false)
+    setActionError(null)
     try {
       await (await getContrib(api)).withdrawRevision(sub.id, api)
       await account.refresh()
     } catch (e) {
       console.warn('[team-creator] could not withdraw the edit', e)
-      setActionError(true)
+      setActionError('tcActionFailed')
     } finally {
       setBusyId(null)
     }
@@ -122,11 +122,15 @@ export function App({ api, group, plugin, formHost }: AppProps) {
 
   /** "Remix" of a published team: starts a new team from it, the same way as "Edit a copy" (the team only). */
   const remix = async (payload: unknown) => {
-    setActionError(false)
+    setActionError(null)
     const roster = await loadRoster().catch(() => null)
-    const team = roster ? remixTeam(payload, ctx.group.options, roster) : null
+    if (!roster) {
+      setActionError('tcActionFailed')
+      return
+    }
+    const team = remixTeam(payload, ctx.group.options, roster)
     if (!team) {
-      setActionError(true)
+      setActionError('tcRemixFailed')
       return
     }
     editCopy(team)
@@ -177,7 +181,7 @@ export function App({ api, group, plugin, formHost }: AppProps) {
         )}
         {(formError || actionError) && (
           <span class="lah-tc-error" role="alert">
-            {formError ? t('tcFormError') : t('tcActionFailed')}
+            {formError ? t('tcFormError') : actionError ? t(actionError) : null}
           </span>
         )}
         {account.signInError && (

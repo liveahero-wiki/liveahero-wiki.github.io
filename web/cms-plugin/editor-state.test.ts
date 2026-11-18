@@ -70,6 +70,11 @@ describe('initState', () => {
     const s = initState({ v: 1, supportIndex: 0, heroes: [1, 2, 3, 4, 5, 6, 7].map((stockId) => ({ stockId })) }, OPT)
     assert.equal(s.slots.length, 5)
   })
+  it('a support beyond the 5th row is not silently forgotten: the switch stays on with no row chosen', () => {
+    const s = initState({ v: 1, supportIndex: 6, heroes: [1, 2, 3, 4, 5, 6, 7].map((stockId) => ({ stockId })) }, OPT)
+    assert.equal(s.supportOn, true)
+    assert.equal(s.supportKey, null)
+  })
   it('no support in mode none, even if the value had one', () => {
     const s = initState({ v: 1, supportIndex: 1, heroes: [{ stockId: 1 }, { stockId: 2 }] }, { support: false })
     assert.equal(toPayload(s, false).supportIndex, null)
