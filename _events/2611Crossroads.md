@@ -42,7 +42,7 @@ Rates as follow:
 | Character                                                | Rates (Single) | Rates (Multis) |
 |----------------------------------------------------------|----------------|----------------|
 | {% chara_link Gnomon|h2 %}                            | 0.8 %            | 1.6 %            |
-| {% chara_link Sensettia|h1 %}                            | 0.8 %            | 1.6 %           |
+| {% chara_link Sensettia|h2 %}                            | 0.8 %            | 1.6 %           |
 | {% chara_link Sensettia %}                                  | 5 %             | 0 %              |
 | Offbanner 5 star hero                                    | 0.4 %            | 0.8 %            |
 | Offbanner 4 star hero                                    | 8 %              | 96 %             |
