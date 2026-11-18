@@ -1,18 +1,23 @@
-// Team editor: 1-5 slots reordered by move up/down buttons, a hero
-// combobox, number inputs, a skill-tree checkbox (bloom is derived), active + passive sidekick pickers, and (when
-// the group allows it) a "borrowed support" radio. Emits normalized payloads through onChange.
+// Team editor: the 5 rows of the game's formation screen, one compact row per slot (hero icon, active sidekick icon and a
+// 3-line summary of the levels / fans / seal level / passives). The icons open picker popovers, the summary opens a detail
+// dialog, and the handle of a row drags it (Up / Down arrows move it from the keyboard). Rows left empty are skipped, like
+// the game does when the battle starts: the emitted payload is the recompacted team. The borrowed support is a team switch
+// (optional mode) plus a radio on every row, next to the slot number, that picks the row carrying the role (row 4 by
+// default). Emits normalized payloads through onChange.
 
-import { useEffect, useLayoutEffect, useRef, useState } from 'preact/hooks'
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'preact/hooks'
 import type { FieldError, PluginContext } from './plugin-api.ts'
-import { cardLabel, PwFormIcon, useRoster } from './common.tsx'
-import { makeT, errorText, pwFormLabel, type T } from './i18n/t.ts'
-import { CardPicker, PassivePicker } from './pickers.tsx'
-import type { Roster } from './roster.ts'
-import type { Focus, TeamPayload, TeamSlot } from './types.ts'
-import { parseTargets, targetChoices, targetLabel } from './targets.ts'
-import { DEFAULT_PW_FORM, MAX_SLOTS, PW_FORMS, parseFocus, supportMode, validateTeam } from './validate.ts'
+import { CardIcon, PwFormIcon, cardLabel, useRoster } from './common.tsx'
 import * as ed from './editor-state.ts'
-import { sortErrors, sortedJson, toPayload, initState, type Slot, type State } from './editor-state.ts'
+import { battleSlots, initState, payloadRows, sortErrors, sortedJson, toPayload, type Slot, type State } from './editor-state.ts'
+import { EntryPickerPopover, IdPickerPopover } from './EntryGrid.tsx'
+import { makeT, errorText, type T } from './i18n/t.ts'
+import { heroEntries, sidekickEntries } from './pick.ts'
+import { passiveKind, type Roster } from './roster.ts'
+import { SIDEKICK_RARITIES, SlotDetailDialog } from './SlotDetail.tsx'
+import type { TeamPayload, TeamSlot } from './types.ts'
+import { parseTargets, targetChoices, targetLabel } from './targets.ts'
+import { parseFocus, supportMode, validateTeam } from './validate.ts'
 
 export interface EditorBridge {
   validate(): FieldError[]
@@ -23,6 +28,8 @@ let editorSeq = 0
 
 /** Codes that only matter once the user tried to submit (a fresh editor is legitimately incomplete). */
 const QUIET_UNTIL_VALIDATED = new Set(['stock_id_invalid', 'focus_missing'])
+
+const HERO_RARITIES = [1, 3, 4, 5]
 
 const errKey = (e: FieldError) => `${e.path}|${e.code}|${JSON.stringify(e.params ?? {})}`
 
@@ -40,8 +47,6 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
   const options = ctx.group.options
   const mode = supportMode(options)
   const allowsSupport = mode !== 'none'
-  /** Only a required support is picked automatically (the last slot); an optional one never is. */
-  const autoSupport = mode === 'required'
   const targets = parseTargets(options)
   const focus = parseFocus(options)
   const roster = useRoster()
@@ -55,22 +60,26 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
   const [showAll, setShowAll] = useState(false)
   const [live, setLive] = useState({ text: '', n: 0 })
   const rootRef = useRef<HTMLDivElement>(null)
-  const pendingFocus = useRef<{ key: number; what: 'hero' | 'up' | 'down' | 'remove' } | null>(null)
+  const pendingFocus = useRef<{ key: number; what: 'hero' | 'handle' } | null>(null)
   const onChangeRef = useRef(init.onChange)
   onChangeRef.current = init.onChange
 
   const announce = (text: string) => setLive((l) => ({ text, n: l.n + 1 }))
 
+  const emit = (s: State) => {
+    setServerErrors([]) // reported positions are stale after any edit
+    onChangeRef.current(toPayload(s, allowsSupport))
+  }
+
   const commit = (next: State, opts: { announce?: string; focus?: typeof pendingFocus.current } = {}) => {
     stateRef.current = next
     pendingFocus.current = opts.focus ?? null
     setState(next)
-    setServerErrors([]) // reported positions are stale after any edit
     if (opts.announce) announce(opts.announce)
-    onChangeRef.current(toPayload(next, allowsSupport))
+    emit(next)
   }
 
-  // Tell the host when normalizing the incoming value (prefilled hero, auto support) changed it.
+  // Tell the host when normalizing the incoming value (a blank team, defaults) changed it.
   useEffect(() => {
     const payload = toPayload(stateRef.current, allowsSupport)
     if (sortedJson(payload) !== sortedJson(init.value)) onChangeRef.current(payload)
@@ -87,59 +96,123 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
     if (errors?.length) setShowAll(true)
   }
 
-  // Restore keyboard focus after a move/add (keyed nodes can be re-inserted). Layout effect: runs
-  // synchronously after the DOM update instead of waiting for an animation frame.
+  // Restore keyboard focus after a move/clear (keyed nodes can be re-inserted).
   useLayoutEffect(() => {
     const p = pendingFocus.current
     if (!p || !rootRef.current) return
     pendingFocus.current = null
     const li = rootRef.current.querySelector(`[data-cms-slot="${p.key}"]`)
     const pick = (w: string) => li?.querySelector<HTMLElement>(`[data-focus="${w}"]:not([disabled])`)
-    const target = pick(p.what) ?? pick(p.what === 'up' ? 'down' : 'up') ?? pick('hero')
-    target?.focus()
+    ;(pick(p.what) ?? pick('hero'))?.focus()
   })
 
   // ---- actions
-  const patchSlot = (key: number, patch: Partial<TeamSlot>) => {
-    const s = stateRef.current
-    commit({ ...s, slots: s.slots.map((x) => (x.key === key ? { ...x, ...patch } : x)) })
+  const patch = (key: number, p: Partial<TeamSlot>) => commit(ed.patchSlot(stateRef.current, key, p))
+  const setHero = (key: number, id: number) => {
+    const r = rosterRef.current
+    // A hero without a skill tree cannot need one.
+    commit(ed.patchSlot(stateRef.current, key, { stockId: id, ...(r?.hero(id)?.hasSkillTree === false ? { skillTree: false } : {}) }))
   }
-  const addSlot = () => {
-    const s = stateRef.current
-    const next = ed.addSlot(s, autoSupport)
-    if (next === s) return
-    commit(next, { announce: t('slotAdded', { n: next.slots.length }), focus: { key: next.slots[next.slots.length - 1].key, what: 'hero' } })
-  }
-  const removeSlot = (key: number) => {
-    const s = stateRef.current
-    const next = ed.removeSlot(s, key)
-    if (next === s) return
-    const at = Math.min(s.slots.findIndex((x) => x.key === key), next.slots.length - 1)
-    commit(next, { announce: t('slotRemoved'), focus: { key: next.slots[at].key, what: 'hero' } })
-  }
-  const moveSlot = (from: number, to: number, via: 'up' | 'down') => {
+  const clearSlot = (key: number) => commit(ed.clearSlot(stateRef.current, key), { announce: t('slotCleared'), focus: { key, what: 'hero' } })
+  const moveSlot = (from: number, to: number) => {
     const s = stateRef.current
     const next = ed.moveSlot(s, from, to)
     if (next === s) return
-    commit(next, {
-      announce: t('movedTo', { pos: to + 1, total: next.slots.length }),
-      focus: { key: next.slots[to].key, what: via },
-    })
+    commit(next, { announce: t('movedTo', { pos: to + 1, total: next.slots.length }), focus: { key: next.slots[to].key, what: 'handle' } })
   }
-  const selectSupport = (key: number) => commit(ed.selectSupport(stateRef.current, key))
-  const clearSupport = () => commit(ed.clearSupport(stateRef.current))
   const selectTarget = (id: string | null) => commit(ed.selectTarget(stateRef.current, id))
+  const setSupportOn = (on: boolean) => commit(ed.setSupportOn(stateRef.current, on))
+  const setSupportRow = (key: number) => commit(ed.setSupportRow(stateRef.current, key))
+
+  // ---- drag to reorder: pointer events on the handle, live-reordering as the dragged row crosses its neighbours
+  const drag = useRef<{ key: number; grabY: number; lastY: number; dy: number; from: number; li: HTMLElement } | null>(null)
+  const [dragKey, setDragKey] = useState<number | null>(null)
+  /** Removes the document listeners of a drag in progress (so an unmount mid-drag does not leak them). */
+  const dragCleanup = useRef<(() => void) | null>(null)
+  useEffect(() => () => dragCleanup.current?.(), [])
+
+  /** Puts the dragged row under the pointer (its natural position moves whenever the rows are reordered). */
+  const placeDragged = () => {
+    const d = drag.current
+    if (!d) return
+    const natural = d.li.getBoundingClientRect().top - d.dy
+    d.dy = d.lastY - d.grabY - natural
+    d.li.style.transform = `translateY(${d.dy}px)`
+  }
+
+  const startDrag = (e: PointerEvent, key: number) => {
+    if (drag.current || (e.pointerType === 'mouse' && e.button !== 0)) return
+    const li = (e.currentTarget as HTMLElement).closest<HTMLElement>('[data-cms-slot]')
+    if (!li) return
+    e.preventDefault()
+    const from = stateRef.current.slots.findIndex((x) => x.key === key)
+    drag.current = { key, grabY: e.clientY - li.getBoundingClientRect().top, lastY: e.clientY, dy: 0, from, li }
+    setDragKey(key)
+
+    const move = (ev: PointerEvent) => {
+      const d = drag.current
+      if (!d) return
+      d.lastY = ev.clientY
+      placeDragged()
+      // The row goes where its centre is: after every other row whose centre is above it.
+      const rect = d.li.getBoundingClientRect()
+      const centre = rect.top + rect.height / 2
+      const others = [...(rootRef.current?.querySelectorAll<HTMLElement>('[data-cms-slot]') ?? [])].filter((x) => x !== d.li)
+      const to = others.filter((x) => {
+        const r = x.getBoundingClientRect()
+        return r.top + r.height / 2 < centre
+      }).length
+      const s = stateRef.current
+      const at = s.slots.findIndex((x) => x.key === d.key)
+      if (to !== at) {
+        // Live reorder only: the host hears about the final order once, when the drag ends.
+        const next = ed.moveSlot(s, at, to)
+        stateRef.current = next
+        setState(next)
+      }
+    }
+    const removeListeners = () => {
+      document.removeEventListener('pointermove', move)
+      document.removeEventListener('pointerup', end)
+      document.removeEventListener('pointercancel', end)
+      dragCleanup.current = null
+    }
+    const end = () => {
+      removeListeners()
+      const d = drag.current
+      drag.current = null
+      if (!d) return
+      d.li.style.transform = ''
+      const at = stateRef.current.slots.findIndex((x) => x.key === d.key)
+      pendingFocus.current = { key: d.key, what: 'handle' }
+      if (at !== d.from) {
+        announce(t('movedTo', { pos: at + 1, total: stateRef.current.slots.length }))
+        emit(stateRef.current)
+      }
+      setDragKey(null)
+    }
+    document.addEventListener('pointermove', move)
+    document.addEventListener('pointerup', end)
+    document.addEventListener('pointercancel', end)
+    dragCleanup.current = () => {
+      removeListeners()
+      drag.current = null
+    }
+  }
+
+  // A reorder moves the dragged row in the list: keep it under the pointer.
+  useLayoutEffect(placeDragged, [state.slots])
 
   // ---- errors
   const payload = toPayload(state, allowsSupport)
-  const clientErrors = validateTeam(payload, options, roster ?? undefined)
-    .filter((e) => showAll || !QUIET_UNTIL_VALIDATED.has(e.code))
-    // Several still-empty slots all have stockId 0 and would be reported as duplicates of each other.
-    .filter((e) => e.code !== 'duplicate_hero' || !String(e.params?.slots ?? '').split(',').every((n) => state.slots[Number(n) - 1]?.stockId === 0))
+  const clientErrors = validateTeam(payload, options, roster ?? undefined).filter((e) => showAll || !QUIET_UNTIL_VALIDATED.has(e.code))
   const seen = new Set<string>()
   const errors = [...serverErrors, ...clientErrors].filter((e) => !seen.has(errKey(e)) && !!seen.add(errKey(e)))
-  const sorted = sortErrors(errors)
+  const rows = payloadRows(state)
+  const numbers = battleSlots(state)
+  const sorted = sortErrors(errors, rows)
 
+  const supportName = `cms-lah-${uid}-support`
   const focusName = focus ? cardLabel(roster, focus.kind, focus.stockId, lang) : ''
 
   return (
@@ -175,15 +248,22 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
           )}
         </div>
       )}
-      {allowsSupport && <p class="cms-lah-hint">{t(mode === 'optional' ? 'supportHelpOptional' : 'supportHelp')}</p>}
-      {mode === 'optional' && (
-        <label class="cms-lah-check cms-lah-support-radio cms-lah-support-none">
-          <input type="radio" name={`cms-lah-support-${uid}`} checked={state.supportKey === null} onChange={clearSupport} />
-          <span>{t('supportNone')}</span>
-        </label>
-      )}
       {roster === undefined && <p class="cms-lah-hint">{t('rosterLoading')}</p>}
       {roster === null && <p class="cms-lah-hint cms-lah-hint-warn">{t('rosterFailed')}</p>}
+
+      {allowsSupport && (
+        <div class="cms-lah-field cms-lah-support-field">
+          {mode === 'optional' ? (
+            <label class="cms-lah-check">
+              <input type="checkbox" checked={state.supportOn} onChange={(e) => setSupportOn(e.currentTarget.checked)} />
+              <span class="cms-lah-support-switch">{t('supportToggle')}</span>
+            </label>
+          ) : (
+            <div class="cms-lah-label">{t('supportToggle')}</div>
+          )}
+          <p class="cms-lah-muted cms-lah-small">{t(mode === 'optional' ? 'supportHelpOptional' : 'supportHelpRequired')}</p>
+        </div>
+      )}
 
       <div class="cms-lah-team-errors" aria-live="polite">
         {[...sorted.team, ...sorted.support].map((e) => (
@@ -199,27 +279,24 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
             key={slot.key}
             slot={slot}
             index={i}
-            total={state.slots.length}
+            pos={numbers[i]}
             idBase={`cms-lah-${uid}-${slot.key}`}
-            support={allowsSupport && state.supportKey === slot.key}
-            allowsSupport={allowsSupport}
-            supportName={`cms-lah-support-${uid}`}
+            supportName={allowsSupport && state.supportOn ? supportName : null}
+            support={allowsSupport && state.supportOn && state.supportKey === slot.key}
+            dragging={dragKey === slot.key}
             roster={roster}
             lang={lang}
             t={t}
-            focus={focus}
             errs={sorted.slots.get(i)}
-            onPatch={(p) => patchSlot(slot.key, p)}
-            onSupport={() => selectSupport(slot.key)}
-            onRemove={() => removeSlot(slot.key)}
-            onMove={(dir) => moveSlot(i, i + dir, dir < 0 ? 'up' : 'down')}
+            onHero={(id) => setHero(slot.key, id)}
+            onPatch={(p) => patch(slot.key, p)}
+            onSupport={() => setSupportRow(slot.key)}
+            onClear={() => clearSlot(slot.key)}
+            onDragStart={(e) => startDrag(e, slot.key)}
+            onNudge={(dir) => moveSlot(i, i + dir)}
           />
         ))}
       </ol>
-
-      <button type="button" class="cms-lah-btn cms-lah-btn-add" disabled={state.slots.length >= MAX_SLOTS} onClick={addSlot}>
-        + {t('addSlot')} ({state.slots.length}/{MAX_SLOTS})
-      </button>
 
       <div class="cms-lah-sr" aria-live="polite" aria-atomic="true">
         {live.text}
@@ -231,204 +308,247 @@ export function TeamEditor({ init, ctx, bridge }: Props) {
 
 // ---- one slot ---------------------------------------------------------------------------------------
 
+type Overlay = null | 'hero' | 'active' | 'detail'
+
 interface SlotProps {
   slot: Slot
+  /** Row (0-based). */
   index: number
-  total: number
+  /** Battle slot (1-based) the row takes once the empty rows are skipped; null for a skipped row. */
+  pos: number | null
   idBase: string
+  /** Name of the radio group choosing the support row; null when the team has no support (no radios). */
+  supportName: string | null
+  /** This row carries the support role. */
   support: boolean
-  allowsSupport: boolean
-  supportName: string
+  dragging: boolean
   roster: Roster | null | undefined
   lang: PluginContext['uiLang']
   t: T
-  focus: Focus | null
   errs: Map<string, FieldError[]> | undefined
+  onHero(id: number): void
   onPatch(p: Partial<TeamSlot>): void
+  /** The support radio of this row was chosen. */
   onSupport(): void
-  onRemove(): void
-  onMove(dir: -1 | 1): void
+  onClear(): void
+  onDragStart(e: PointerEvent): void
+  /** Up / Down arrow on the handle. */
+  onNudge(dir: -1 | 1): void
 }
 
-function SlotEditor({ slot, index, total, idBase, support, allowsSupport, supportName, roster, lang, t, errs, onPatch, onSupport, onRemove, onMove }: SlotProps) {
-  const n = index + 1
-  const hero = slot.stockId ? roster?.hero(slot.stockId) : undefined
-  const treeUnavailable = !!hero && !hero.hasSkillTree
-  const maxPassives = ed.MAX_PASSIVES
+function SlotEditor({ slot, index, pos, idBase, supportName, support, dragging, roster, lang, t, errs, onHero, onPatch, onSupport, onClear, onDragStart, onNudge }: SlotProps) {
+  const [open, setOpen] = useState<Overlay>(null)
+  const filled = slot.stockId !== 0
+  const hero = filled ? roster?.hero(slot.stockId) : undefined
+  const heroName = filled ? cardLabel(roster, 'hero', slot.stockId, lang) : t('heroNone')
+  const activeName = slot.active !== null ? cardLabel(roster, 'sidekick', slot.active, lang) : t('activeNone')
+  const close = () => setOpen(null)
 
-  const errorsOf = (field: string) => errs?.get(field) ?? []
-  const fieldErrors = (field: string, id: string) => {
-    const list = errorsOf(field)
-    return {
-      invalid: list.length > 0,
-      describedBy: list.length ? id : undefined,
-      node: list.length ? (
-        <p class="cms-lah-error" id={id}>
-          {list.map((e) => errorText(t, e)).join(' ')}
-        </p>
-      ) : null,
-    }
-  }
-  const heroErr = fieldErrors('stockId', `${idBase}-e-hero`)
-  const activeErr = fieldErrors('active', `${idBase}-e-active`)
-  const passErr = fieldErrors('passives', `${idBase}-e-passives`)
-  const slotErrs = errorsOf('')
+  const allErrors = errs ? [...errs.values()].flat() : []
+  const hasErr = (field: string) => (errs?.get(field) ?? []).length > 0
+  const detailErr = [...(errs?.entries() ?? [])].some(([field, list]) => list.length > 0 && !['', 'stockId', 'active'].includes(field))
+  const summary = `${t('lv')} ${slot.lv}, ${t('plv')} ${slot.plv}, ${t('fans')} ${slot.fans}, ${t('engrave')} ${slot.engrave}`
+
+  const heroEntriesAll = useMemo(() => (roster ? heroEntries(roster) : []), [roster])
+  const activeEntries = useMemo(() => (roster ? sidekickEntries(roster, { excludeCharacter: hero?.characterId ?? null, exclude: [slot.stockId] }) : []), [roster, hero, slot.stockId])
 
   return (
-    <li class={'cms-lah-card cms-lah-slot' + (support ? ' cms-lah-support' : '')} data-cms-slot={slot.key}>
-      <div class="cms-lah-card-head">
-        <span class="cms-lah-slot-no">{t('slotN', { n })}</span>
-        {support && (
-          <span class="cms-lah-tag" title={t('supportTitle')}>
-            {t('support')}
-          </span>
-        )}
-        <span class="cms-lah-spacer" />
-        <button type="button" class="cms-lah-btn cms-lah-btn-icon" data-focus="up" disabled={index === 0} aria-label={t('moveUp', { n })} title={t('moveUp', { n })} onClick={() => onMove(-1)}>
-          <span aria-hidden="true">▲</span>
-        </button>
-        <button type="button" class="cms-lah-btn cms-lah-btn-icon" data-focus="down" disabled={index === total - 1} aria-label={t('moveDown', { n })} title={t('moveDown', { n })} onClick={() => onMove(1)}>
-          <span aria-hidden="true">▼</span>
-        </button>
-        <button type="button" class="cms-lah-btn cms-lah-btn-icon cms-lah-btn-danger" data-focus="remove" disabled={total <= 1} aria-label={t('removeSlot', { n })} title={t('removeSlot', { n })} onClick={onRemove}>
-          <span aria-hidden="true">✕</span>
-        </button>
-      </div>
-
-      {slotErrs.map((e) => (
-        <p key={e.code} class="cms-lah-error">
-          {errorText(t, e)}
-        </p>
-      ))}
-
-      {allowsSupport && (
-        <label class="cms-lah-check cms-lah-support-radio">
-          <input type="radio" name={supportName} checked={support} onChange={onSupport} />
-          <span>{t('supportSlotRadio')}</span>
-        </label>
-      )}
-
-      <div class="cms-lah-field">
-        <CardPicker kind="hero" dataFocus="hero" roster={roster} value={slot.stockId || null} onChange={(id) => onPatch({ stockId: id ?? 0, ...(id && roster?.hero(id)?.hasSkillTree === false ? { skillTree: false } : {}) })} lang={lang} t={t} label={t('heroField')} placeholder={t('heroPlaceholder')} invalid={heroErr.invalid} describedBy={heroErr.describedBy} />
-        {heroErr.node}
-      </div>
-
-      <div class="cms-lah-nums">
-        <NumField id={`${idBase}-lv`} label={t('lv')} value={slot.lv} def={60} min={1} max={60} t={t} errors={errorsOf('lv')} onChange={(v) => onPatch({ lv: v })} />
-        <NumField id={`${idBase}-plv`} label={t('plv')} value={slot.plv} def={0} min={0} max={100} t={t} errors={errorsOf('plv')} onChange={(v) => onPatch({ plv: v })} />
-        <NumField id={`${idBase}-fans`} label={t('fans')} value={slot.fans} def={0} min={0} max={1000} t={t} errors={errorsOf('fans')} onChange={(v) => onPatch({ fans: v })} />
-        <NumField id={`${idBase}-engrave`} label={t('engrave')} value={slot.engrave} def={0} min={0} max={1000} t={t} errors={errorsOf('engrave')} onChange={(v) => onPatch({ engrave: v })} />
-      </div>
-
-      {slot.plv > 0 && (
-        <div class="cms-lah-field cms-lah-pwform-field">
-          <label class="cms-lah-label" for={`${idBase}-pwform`}>
-            {t('pwForm')} <span class="cms-lah-muted cms-lah-small">{t('pwFormRequired')}</span>
-          </label>
-          <div class="cms-lah-pwform-row">
-            <PwFormIcon itemId={slot.pwForm ?? DEFAULT_PW_FORM} size="md" title="" />
-            <select
-              id={`${idBase}-pwform`}
-              class="cms-lah-input cms-lah-select"
-              value={slot.pwForm ?? DEFAULT_PW_FORM}
-              aria-invalid={errorsOf('pwForm').length ? true : undefined}
-              onChange={(e) => onPatch({ pwForm: Number(e.currentTarget.value) })}
-            >
-              {PW_FORMS.map((id) => (
-                <option key={id} value={id}>
-                  {pwFormLabel(t, id)}
-                </option>
-              ))}
-            </select>
-          </div>
-          {errorsOf('pwForm').map((e) => (
-            <p key={e.path + e.code} class="cms-lah-error">
-              {errorText(t, e)}
-            </p>
-          ))}
+    <li class={'cms-lah-card cms-lah-slot' + (support ? ' cms-lah-support' : '') + (dragging ? ' cms-lah-slot-dragging' : '')} data-cms-slot={slot.key}>
+      <div class="cms-lah-slot-row">
+        <div class="cms-lah-slot-no">
+          <span aria-label={t('slotN', { n: pos ?? index + 1 })}>{pos ? t('slotN', { n: pos }) : '–'}</span>
+          {supportName !== null && (
+            <label class="cms-lah-support-pick" title={t('supportTitle')}>
+              <input type="radio" name={supportName} checked={support} aria-label={t('supportRadio', { n: pos ?? index + 1 })} onChange={onSupport} />
+              <span>{t('support')}</span>
+            </label>
+          )}
         </div>
-      )}
 
-      <div class="cms-lah-checks">
-        <label class={'cms-lah-check' + (treeUnavailable ? ' cms-lah-disabled' : '')} title={treeUnavailable ? t('skillTreeUnavailable') : undefined}>
-          <input type="checkbox" checked={slot.skillTree} disabled={treeUnavailable} onChange={(e) => onPatch({ skillTree: e.currentTarget.checked })} />
-          <span>{t('skillTreeCheck')}</span>
-        </label>
-        {treeUnavailable && <span class="cms-lah-muted cms-lah-small">{t('skillTreeUnavailable')}</span>}
+        <div class="cms-lah-slot-main">
+          <div class="cms-lah-herocol">
+            <button
+              type="button"
+              class="cms-lah-slotbtn"
+              data-focus="hero"
+              disabled={roster === undefined}
+              aria-haspopup="dialog"
+              aria-label={`${t('heroField')}: ${heroName}`}
+              aria-invalid={hasErr('stockId') ? true : undefined}
+              onClick={() => setOpen('hero')}
+            >
+              {filled ? <CardIcon kind="hero" stockId={slot.stockId} roster={roster} lang={lang} size="lg" /> : <span class="cms-lah-icon cms-lah-icon-lg cms-lah-icon-empty" aria-hidden="true">+</span>}
+            </button>
+            {filled && slot.skillTree && <span class="cms-lah-badge">{t('badgeSkillTree')}</span>}
+          </div>
+
+          <button
+            type="button"
+            class="cms-lah-slotbtn cms-lah-slotbtn-sk"
+            data-focus="active"
+            disabled={roster === undefined || !filled}
+            title={filled ? undefined : t('pickHeroFirst')}
+            aria-haspopup="dialog"
+            aria-label={`${t('activeField')}: ${activeName}`}
+            aria-invalid={hasErr('active') ? true : undefined}
+            onClick={() => setOpen('active')}
+          >
+            {slot.active !== null ? <CardIcon kind="sidekick" stockId={slot.active} roster={roster} lang={lang} size="lg" /> : <span class="cms-lah-icon cms-lah-icon-lg cms-lah-icon-empty" aria-hidden="true">+</span>}
+          </button>
+
+          {filled ? (
+            <button type="button" class={'cms-lah-params' + (detailErr ? ' cms-lah-params-err' : '')} aria-haspopup="dialog" aria-label={`${t('editDetails', { n: pos ?? index + 1 })}: ${summary}`} onClick={() => setOpen('detail')}>
+              <span class="cms-lah-prow">
+                <span class="cms-lah-param">
+                  {t('lv')} {slot.lv}
+                </span>
+                {slot.plv > 0 && <PwFormIcon itemId={slot.pwForm ?? 60} size="sm" title="" />}
+                <span class="cms-lah-param">
+                  {t('plv')} {slot.plv}
+                </span>
+              </span>
+              <span class="cms-lah-pbody">
+                <span class="cms-lah-pcol">
+                  <span class="cms-lah-param">
+                    {t('fans')} {slot.fans}
+                  </span>
+                  <span class="cms-lah-param">
+                    {t('engrave')} {slot.engrave}
+                  </span>
+                </span>
+                <span class="cms-lah-pslots" aria-hidden="true">
+                  {[0, 1, 2].map((i) => {
+                    const id = slot.passives[i]
+                    return id !== undefined ? (
+                      <CardIcon key={i} kind={passiveKind(roster, id)} stockId={id} roster={roster} lang={lang} size="md" />
+                    ) : (
+                      <span key={i} class="cms-lah-pslot" />
+                    )
+                  })}
+                </span>
+              </span>
+            </button>
+          ) : (
+            // An empty row keeps its place; the support row says what it is waiting for.
+            <span class="cms-lah-params cms-lah-params-empty" aria-hidden={support ? undefined : true}>
+              {support && <span class="cms-lah-muted">{t('supportPickHero')}</span>}
+            </span>
+          )}
+        </div>
+
+        <button
+          type="button"
+          class="cms-lah-handle"
+          data-focus="handle"
+          aria-label={t('dragHandle', { n: pos ?? index + 1 })}
+          title={t('dragHandle', { n: pos ?? index + 1 })}
+          onPointerDown={(e) => onDragStart(e)}
+          onKeyDown={(e) => {
+            if (e.key !== 'ArrowUp' && e.key !== 'ArrowDown') return
+            e.preventDefault()
+            onNudge(e.key === 'ArrowUp' ? -1 : 1)
+          }}
+        >
+          <span aria-hidden="true">⠿</span>
+        </button>
       </div>
-      {errorsOf('skillTree').map((e) => (
-        <p key={e.path + e.code} class="cms-lah-error">
+
+      {allErrors.map((e, i) => (
+        <p key={`${e.path}|${e.code}|${i}`} class="cms-lah-error">
           {errorText(t, e)}
         </p>
       ))}
 
-      <div class="cms-lah-field">
-        <CardPicker kind="sidekick" roster={roster} value={slot.active} onChange={(id) => onPatch({ active: id })} exclude={slot.stockId || null} excludeCharacter={hero?.characterId ?? null} clearable lang={lang} t={t} label={t('activeField')} placeholder={t('activePlaceholder')} invalid={activeErr.invalid} describedBy={activeErr.describedBy} />
-        {activeErr.node}
-      </div>
-
-      <div class="cms-lah-field">
-        <PassivePicker roster={roster} values={slot.passives} max={maxPassives} excludeCharacter={hero?.characterId ?? null} onAdd={(id) => onPatch({ passives: [...slot.passives, id] })} onRemove={(id) => onPatch({ passives: slot.passives.filter((x) => x !== id) })} lang={lang} t={t} label={t('passivesField', { count: slot.passives.length, max: maxPassives })} placeholder={t('passivesPlaceholder')} invalid={passErr.invalid} describedBy={passErr.describedBy} />
-        {passErr.node}
-      </div>
-    </li>
-  )
-}
-
-// ---- number field -----------------------------------------------------------------------------------
-
-interface NumProps {
-  id: string
-  label: string
-  value: number
-  def: number
-  min: number
-  max: number
-  t: T
-  errors: FieldError[]
-  onChange(v: number): void
-}
-
-function NumField({ id, label, value, def, min, max, errors, onChange, t }: NumProps) {
-  const [draft, setDraft] = useState(String(value))
-  const emitted = useRef(value)
-  useEffect(() => {
-    if (value !== emitted.current) {
-      emitted.current = value
-      setDraft(String(value))
-    }
-  }, [value])
-  const errId = `${id}-err`
-  return (
-    <div class="cms-lah-num">
-      <label class="cms-lah-label" for={id}>
-        {label} <span class="cms-lah-muted cms-lah-small">{t('range', { min, max })}</span>
-      </label>
-      <input
-        id={id}
-        class="cms-lah-input"
-        type="number"
-        inputMode="numeric"
-        step={1}
-        min={min}
-        max={max}
-        value={draft}
-        aria-invalid={errors.length ? true : undefined}
-        aria-describedby={errors.length ? errId : undefined}
-        onInput={(e) => {
-          const raw = e.currentTarget.value
-          setDraft(raw)
-          const v = raw === '' ? def : Number(raw)
-          emitted.current = v
-          onChange(v)
-        }}
-        onBlur={() => setDraft(String(value))}
-      />
-      {errors.length > 0 && (
-        <p class="cms-lah-error" id={errId}>
-          {errors.map((e) => errorText(t, e)).join(' ')}
-        </p>
+      {open === 'hero' && roster === null && (
+        <IdPickerPopover
+          t={t}
+          title={t('heroField')}
+          onSelect={(id) => {
+            close()
+            onHero(id)
+          }}
+          onClear={filled ? () => (close(), onClear()) : undefined}
+          clearLabel={t('clearSlot')}
+          onClose={close}
+        />
       )}
-    </div>
+      {open === 'hero' && roster && (
+        <EntryPickerPopover
+          roster={roster}
+          entries={heroEntriesAll}
+          rarities={HERO_RARITIES}
+          elements
+          selectedId={slot.stockId || null}
+          lang={lang}
+          t={t}
+          title={t('heroField')}
+          onSelect={(e) => {
+            close()
+            onHero(e.id)
+          }}
+          clearLabel={t('clearSlot')}
+          onClear={
+            filled
+              ? () => {
+                  close()
+                  onClear()
+                }
+              : undefined
+          }
+          onClose={close}
+        />
+      )}
+      {open === 'active' && roster === null && (
+        <IdPickerPopover
+          t={t}
+          title={t('activeField')}
+          onSelect={(id) => {
+            close()
+            onPatch({ active: id })
+          }}
+          onClear={slot.active !== null ? () => (close(), onPatch({ active: null })) : undefined}
+          clearLabel={t('activeNone')}
+          onClose={close}
+        />
+      )}
+      {open === 'active' && roster && (
+        <EntryPickerPopover
+          roster={roster}
+          entries={activeEntries}
+          rarities={SIDEKICK_RARITIES}
+          selectedId={slot.active}
+          lang={lang}
+          t={t}
+          title={t('activeField')}
+          onSelect={(e) => {
+            close()
+            onPatch({ active: e.id })
+          }}
+          clearLabel={t('activeNone')}
+          onClear={
+            slot.active !== null
+              ? () => {
+                  close()
+                  onPatch({ active: null })
+                }
+              : undefined
+          }
+          onClose={close}
+        />
+      )}
+      {open === 'detail' && (
+        <SlotDetailDialog
+          slot={slot}
+          title={`${t('slotN', { n: pos ?? index + 1 })}: ${heroName}`}
+          idBase={idBase}
+          roster={roster}
+          lang={lang}
+          t={t}
+          errs={errs}
+          onPatch={onPatch}
+          onClose={close}
+        />
+      )}
+    </li>
   )
 }

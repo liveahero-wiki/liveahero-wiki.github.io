@@ -24,6 +24,9 @@ export function charaUrl(kind: 'hero' | 'sidekick', e: RosterHero | RosterSideki
   return e.page ? `${SITE}${e.page}#${kind === 'hero' ? 'h' : 's'}${e.stockId}` : ''
 }
 
+/** `/charas/` leaves out stock ids from 90000 up (event-only meteor units and the like); the pickers and the tier maker do too. */
+export const MAX_STOCK_ID = 90000
+
 export interface Roster {
   version: string
   heroes: RosterHero[]

@@ -151,7 +151,6 @@ export function Builder({ ctx, plugin, open, onOpenChange, seed, onSubmit, submi
       <summary>{t('tcBuild')}</summary>
       {open && (
         <div class="lah-tc-builder-body">
-          <p class="lah-tc-hint">{t('tcBuildHelp')}</p>
           {mod === null && <p class="lah-tc-hint">{t('tcBuildLoading')}</p>}
           {mod === 'error' && (
             <p class="lah-tc-error" role="alert">

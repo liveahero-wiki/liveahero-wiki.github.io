@@ -127,13 +127,15 @@ interface DialogProps {
   title: string
   t: T
   onClose: () => void
+  /** Extra class for the dialog (e.g. a narrower width). */
+  class?: string
   children: ComponentChildren
 }
 
 let dialogSeq = 0
 
 /** Native modal <dialog>: showModal(), close button, Esc, backdrop click; focus returns to the opener. */
-export function Dialog({ title, t, onClose, children }: DialogProps) {
+export function Dialog({ title, t, onClose, class: cls, children }: DialogProps) {
   const ref = useRef<HTMLDialogElement>(null)
   const [titleId] = useState(() => `cms-lah-dlg-${++dialogSeq}`)
   const onCloseRef = useRef(onClose)
@@ -171,7 +173,7 @@ export function Dialog({ title, t, onClose, children }: DialogProps) {
   return (
     <dialog
       ref={ref}
-      class="cms-lah cms-lah-dialog"
+      class={'cms-lah cms-lah-dialog' + (cls ? ` ${cls}` : '')}
       aria-labelledby={titleId}
       onPointerDown={(e) => {
         pressedOnBackdrop.current = e.target === ref.current

@@ -436,6 +436,9 @@ class TestRoster(unittest.TestCase):
             entity("hero", 30031, "Mob", "/charas/", is_mob=True),
         ]
         m = {"CardMaster": {"1": {"stockId": 10011, "cardName": "アカシ", "rarity": 6},
+                            "10": {"stockId": 10011, "cardName": "アカシ", "rarity": 3},
+                            "11": {"stockId": 10012, "cardName": "アカシ2", "rarity": 6},
+                            "12": {"stockId": 10012, "cardName": "アカシ2", "rarity": 5},
                             "2": {"stockId": 20021, "cardName": "日本語", "rarity": 5},
                             "3": {"stockId": 30031, "cardName": "モブ", "rarity": 1}},
              "SidekickMaster": {"1": {"stockId": 10011, "cardName": "アカシ", "rarity": 4}},
@@ -461,8 +464,10 @@ class TestRoster(unittest.TestCase):
         # no chara page and no translations: everything falls back to Japanese
         self.assertEqual(set(roster["heroes"][2]["name"].values()), {"日本語"})
         self.assertEqual(set(roster["heroes"][0]), {
-            "stockId", "characterId", "name", "page", "resourceName", "rarity", "element", "role", "hasSkillTree",
-            "limited", "isMob"})
+            "stockId", "characterId", "name", "page", "resourceName", "rarity", "baseRarity", "element", "role",
+            "hasSkillTree", "limited", "isMob"})
+        # base rarity = the lowest rarity among the cards of the stock (falls back to `rarity`)
+        self.assertEqual([h["baseRarity"] for h in roster["heroes"]], [3, 5, 5, 1])
         self.assertEqual(set(roster["sidekicks"][0]), {
             "stockId", "characterId", "name", "page", "resourceName", "rarity", "limited", "isMob"})
         self.assertEqual([h["isMob"] for h in roster["heroes"]], [False, False, False, True])

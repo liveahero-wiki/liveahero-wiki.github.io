@@ -207,9 +207,6 @@ html[data-theme='dark'] .cms-lah-support .cms-lah-badge {
   opacity: 0.45;
   cursor: not-allowed;
 }
-.cms-lah-btn-add {
-  align-self: flex-start;
-}
 .cms-lah-btn-danger:hover:not(:disabled) {
   border-color: var(--cms-lah-danger);
   color: var(--cms-lah-danger);
@@ -552,21 +549,7 @@ a.cms-lah-sk-name:hover {
   cursor: default;
 }
 
-.cms-lah-nums {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
-  gap: 8px;
-}
-.cms-lah-num {
-  min-width: 0;
-}
 
-.cms-lah-checks {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 4px 16px;
-}
 .cms-lah-check {
   display: inline-flex;
   align-items: center;
@@ -584,7 +567,7 @@ a.cms-lah-sk-name:hover {
   opacity: 0.55;
   cursor: not-allowed;
 }
-.cms-lah-support-radio {
+.cms-lah-support-switch {
   font-weight: 600;
 }
 
@@ -669,10 +652,6 @@ a.cms-lah-target-chip:focus-visible {
   overflow-wrap: anywhere;
 }
 
-/* "No borrowed support" radio above the slots (support mode optional) */
-.cms-lah-support-none {
-  align-self: flex-start;
-}
 
 /* ---- catalog filters (FilterPanel, rendered by web/team-creator) ---- */
 .cms-lah-filter {
@@ -773,14 +752,468 @@ a.cms-lah-target-chip:focus-visible {
   text-align: center;
 }
 
-@media (max-width: 480px) {
-  .cms-lah-nums {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+/* ---- compact editor rows: [no.] [hero] [active sidekick] [levels / fans / seal lv / passives] [handle] ---- */
+/* The card has no padding of its own: the handle is a full-height strip fused into its right edge. */
+.cms-lah-slot {
+  gap: 0;
+  padding: 0;
+}
+.cms-lah-slot-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: auto auto;
+}
+.cms-lah-slot-no {
+  grid-column: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 5px 8px 4px;
+  font-weight: 700;
+}
+/* radio choosing the support row: on the slot number's line, so it fits 375px; the whole label is the touch target */
+.cms-lah-support-pick {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+  min-height: 32px;
+  padding: 0 4px;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+.cms-lah-support-pick input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--cms-lah-accent);
+}
+.cms-lah-support-pick input:focus-visible {
+  outline: 2px solid var(--cms-lah-accent);
+  outline-offset: 2px;
+}
+.cms-lah-support .cms-lah-support-pick {
+  font-weight: 700;
+}
+.cms-lah-params-empty .cms-lah-muted {
+  padding: 0 4px;
+}
+.cms-lah-slot-main {
+  grid-column: 1;
+  display: grid;
+  grid-template-columns: 56px 56px minmax(0, 1fr);
+  align-items: center;
+  gap: 6px;
+  padding: 0 8px 6px;
+}
+.cms-lah-slot > .cms-lah-error {
+  margin: 0;
+  padding: 0 8px 6px;
+}
+.cms-lah-slotbtn {
+  display: inline-flex;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.cms-lah-slotbtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.cms-lah-slotbtn:focus-visible,
+.cms-lah-params:focus-visible,
+.cms-lah-grid-item:focus-visible {
+  outline: 2px solid var(--cms-lah-accent);
+  outline-offset: 2px;
+}
+.cms-lah-slotbtn[aria-invalid='true'] .cms-lah-icon {
+  outline: 2px solid var(--cms-lah-danger);
+  outline-offset: 1px;
+}
+.cms-lah-slot .cms-lah-icon-lg {
+  width: 56px;
+  height: 56px;
+}
+.cms-lah-icon-empty {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--cms-lah-muted);
+  background: transparent;
+  color: var(--cms-lah-muted);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+/* the 3-line summary that opens the detail dialog */
+.cms-lah-params {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  min-width: 0;
+  height: 100%;
+  padding: 3px 6px;
+  border: 1px solid var(--cms-lah-border);
+  border-radius: 6px;
+  color: var(--cms-lah-fg);
+  font: inherit;
+  --cms-lah-pfs: 0.78rem;
+  font-size: var(--cms-lah-pfs);
+  line-height: 1.3;
+  overflow: hidden;
+  text-align: left;
+  cursor: pointer;
+}
+.cms-lah-params:hover {
+  border-color: var(--cms-lah-accent);
+}
+.cms-lah-params-err {
+  border-color: var(--cms-lah-danger);
+}
+.cms-lah-params-empty {
+  border-style: dashed;
+  background: transparent;
+  cursor: default;
+}
+.cms-lah-support .cms-lah-params:not(.cms-lah-params-empty) {
+  background: rgb(255 255 255 / 0.55);
+}
+html[data-theme='dark'] .cms-lah-support .cms-lah-params:not(.cms-lah-params-empty) {
+  background: rgb(0 0 0 / 0.3);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .cms-lah-support .cms-lah-params:not(.cms-lah-params-empty) {
+    background: rgb(0 0 0 / 0.3);
   }
+}
+.cms-lah-prow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  white-space: nowrap;
+}
+/* hero icon with the skill tree badge underneath */
+.cms-lah-slotbtn-sk {
+  align-self: start;
+}
+.cms-lah-herocol {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+/* fans / seal lv stacked on the left, the passive sidekick icons as tall as those two rows */
+.cms-lah-pbody {
+  --cms-lah-pslot-size: calc(2 * var(--cms-lah-pfs) * 1.3 + 2px);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+.cms-lah-pcol {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  white-space: nowrap;
+}
+.cms-lah-pslots {
+  display: inline-flex;
+  gap: 2px;
+  margin-left: auto;
+}
+.cms-lah-pslots .cms-lah-icon-md {
+  width: var(--cms-lah-pslot-size);
+  height: var(--cms-lah-pslot-size);
+}
+.cms-lah-pslot {
+  width: var(--cms-lah-pslot-size);
+  height: var(--cms-lah-pslot-size);
+}
+.cms-lah-pslot {
+  display: inline-block;
+  border: 1px dashed var(--cms-lah-muted);
+  border-radius: 4px;
+}
+/* drag handle of a row (pointer drag; Up / Down arrows when focused) */
+.cms-lah-handle {
+  grid-column: 2;
+  grid-row: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  padding: 0;
+  border: 0;
+  border-left: 1px solid var(--cms-lah-border);
+  border-radius: 0 7px 7px 0;
+  background: color-mix(in srgb, var(--cms-lah-fg) 6%, transparent);
+  color: var(--cms-lah-muted);
+  font: inherit;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.cms-lah-slot-dragging {
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.3);
+  border-color: var(--cms-lah-accent);
+}
+.cms-lah-slot-dragging .cms-lah-handle {
+  cursor: grabbing;
+}
+.cms-lah-handle:hover {
+  background: color-mix(in srgb, var(--cms-lah-accent) 18%, transparent);
+  color: var(--cms-lah-fg);
+}
+.cms-lah-handle:focus-visible {
+  outline: 2px solid var(--cms-lah-accent);
+  outline-offset: -2px;
+}
+
+/* ---- popovers (pickers) ---- */
+.cms-lah-pop {
+  width: min(640px, calc(100vw - 24px));
+  max-width: none;
+  max-height: min(80dvh, 720px);
+  padding: 0 12px 12px;
+  overflow: auto;
+  border: 1px solid var(--cms-lah-border);
+  border-radius: 10px;
+  background: var(--cms-lah-bg);
+  color: var(--cms-lah-fg);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.35);
+}
+.cms-lah-pop::backdrop {
+  background: rgb(0 0 0 / 0.45);
+}
+.cms-lah-pop-head {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 0;
+  background: var(--cms-lah-bg);
+}
+.cms-lah-pop-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.cms-lah-pop-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.cms-lah-chipbtn {
+  min-width: 40px;
+  padding: 0 10px;
+}
+.cms-lah-chipbtn[aria-pressed='true'] {
+  border-color: var(--cms-lah-accent);
+  background: color-mix(in srgb, var(--cms-lah-accent) 25%, var(--cms-lah-bg));
+}
+.cms-lah-elembtn {
+  padding: 0;
+}
+.cms-lah-pop-empty {
+  padding: 16px 0;
+  text-align: center;
+}
+.cms-lah-pop-more {
+  width: 100%;
+  margin-top: 10px;
+}
+.cms-lah-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  gap: 8px;
+  justify-items: center;
+}
+.cms-lah-grid-item {
+  display: flex;
+  padding: 4px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.cms-lah-grid-item:hover {
+  background: var(--cms-lah-chip-bg);
+}
+.cms-lah-grid-item[aria-pressed='true'] {
+  border-color: var(--cms-lah-accent);
+}
+
+/* ---- detail dialog and the number slider ---- */
+.cms-lah-dialog.cms-lah-dialog-narrow {
+  width: min(520px, calc(100vw - 24px));
+}
+.cms-lah-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-bottom: 6px;
+}
+.cms-lah-slider {
+  --pad: 12px;
+  --half: 10px;
+  min-width: 0;
+}
+.cms-lah-slider-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cms-lah-slider-head .cms-lah-label {
+  flex: 1 1 auto;
+  margin: 0;
+}
+.cms-lah-slider-num {
+  flex: none;
+  width: 5.5rem;
+  text-align: right;
+}
+.cms-lah-slider-max {
+  flex: none;
+  padding: 0 10px;
+}
+.cms-lah-slider-track {
+  position: relative;
+  padding: 4px var(--pad) 18px;
+}
+.cms-lah-slider-range {
+  display: block;
+  width: 100%;
+  height: 28px;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.cms-lah-slider-range:disabled {
+  cursor: not-allowed;
+}
+.cms-lah-slider-range::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--cms-lah-border);
+}
+.cms-lah-slider-range::-moz-range-track {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--cms-lah-border);
+}
+.cms-lah-slider-range::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  margin-top: -7px;
+  border: 2px solid var(--cms-lah-bg);
+  border-radius: 50%;
+  background: var(--cms-lah-accent);
+  box-shadow: 0 0 0 1px var(--cms-lah-accent);
+  appearance: none;
+  -webkit-appearance: none;
+}
+.cms-lah-slider-range::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--cms-lah-bg);
+  border-radius: 50%;
+  background: var(--cms-lah-accent);
+  box-shadow: 0 0 0 1px var(--cms-lah-accent);
+}
+.cms-lah-slider-range:focus-visible {
+  outline: 2px solid var(--cms-lah-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.cms-lah-slider-off {
+  opacity: 0.55;
+}
+.cms-lah-slider-ticks {
+  position: absolute;
+  right: calc(var(--pad) + var(--half));
+  bottom: 0;
+  left: calc(var(--pad) + var(--half));
+  height: 16px;
+  pointer-events: none;
+}
+.cms-lah-slider-tick {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  color: var(--cms-lah-muted);
+  font-size: 0.65rem;
+  line-height: 1;
+  text-align: center;
+}
+.cms-lah-slider-tick::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 4px;
+  margin: 0 auto 2px;
+  background: var(--cms-lah-muted);
+}
+
+/* ---- phones ---- */
+@media (max-width: 600px) {
+  .cms-lah-pop {
+    inset: auto 0 0 0;
+    width: 100vw;
+    max-height: 85dvh;
+    margin: 0;
+    border-bottom: 0;
+    border-radius: 12px 12px 0 0;
+  }
+}
+@media (max-width: 480px) {
   .cms-lah-dialog-body {
     padding: 0 10px 10px;
   }
   .cms-lah-card {
     padding: 8px;
+  }
+  .cms-lah-slot {
+    padding: 0;
+  }
+  .cms-lah-slot-main {
+    grid-template-columns: 48px 48px minmax(0, 1fr);
+    gap: 4px;
+    padding: 0 4px 6px;
+  }
+  .cms-lah-slot-no {
+    padding: 5px 4px 4px;
+  }
+  .cms-lah-slot .cms-lah-icon-lg {
+    width: 48px;
+    height: 48px;
+  }
+  .cms-lah-slotbtn-sk .cms-lah-icon-md {
+    width: 34px;
+    height: 34px;
+  }
+  .cms-lah-params {
+    --cms-lah-pfs: 0.72rem;
+    padding: 3px 4px;
+  }
+  .cms-lah-handle {
+    width: 26px;
   }
 }
