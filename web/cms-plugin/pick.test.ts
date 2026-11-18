@@ -28,6 +28,11 @@ describe('picker entries', () => {
     assert.equal(e[1].rarity, 5)
     assert.deepEqual(e[0], { id: 10011, kind: 'hero', rarity: 3, element: 1, resourceName: 'akashi', name: { en: 'Akashi', ja: 'アカシ' } })
   })
+  it('heroes leave out the event-only units (stockId 90000 and up)', () => {
+    const r = buildRoster({ heroes: [...roster.heroes, { ...roster.heroes[0], stockId: 90011, name: { en: 'Akashi (+Custom)' } }], sidekicks: [], items: [] })
+    assert.deepEqual(idsOf(heroEntries(r)), [10011, 10021, 10031])
+    assert.ok(r.hero(90011)) // still resolvable for teams that already hold it
+  })
   it('sidekicks leave out the hero own character and the excluded ids', () => {
     assert.deepEqual(idsOf(sidekickEntries(roster, { excludeCharacter: 1 })), [10021, 10031])
     assert.deepEqual(idsOf(sidekickEntries(roster, { exclude: [10031] })), [10011, 10021])

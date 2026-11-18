@@ -24,9 +24,14 @@ export interface PickFilter {
   query: string
 }
 
-/** Heroes the picker offers; the rarity filter uses the card's base rarity (the lowest of its stock), not the maxed one. */
+/** Stock ids from here up are event-only units (e.g. "Borealis (+Custom)" 90821): not playable in a formation, and /charas/ and the tier maker leave them out too. */
+export const MAX_PICKABLE_STOCK_ID = 90000
+
+/** Heroes the picker offers (without the event-only units); the rarity filter uses the card's base rarity (the lowest of its stock), not the maxed one. */
 export const heroEntries = (roster: Roster): PickEntry[] =>
-  roster.heroes.map((e) => ({ id: e.stockId, kind: 'hero', rarity: e.baseRarity ?? e.rarity, element: e.element, resourceName: e.resourceName, name: e.name }))
+  roster.heroes
+    .filter((e) => e.stockId < MAX_PICKABLE_STOCK_ID)
+    .map((e) => ({ id: e.stockId, kind: 'hero', rarity: e.baseRarity ?? e.rarity, element: e.element, resourceName: e.resourceName, name: e.name }))
 
 /** Sidekicks a hero can take: not the hero's own character, not the excluded ones. */
 export const sidekickEntries = (roster: Roster, opts: { excludeCharacter?: number | null; exclude?: readonly number[] } = {}): PickEntry[] =>
