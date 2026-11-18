@@ -57,6 +57,8 @@ export interface RosterHero {
   page?: string
   resourceName: string
   rarity: number
+  /** Lowest rarity among the cards sharing the stockId (the picker's rarity filter); missing in older rosters = `rarity`. */
+  baseRarity?: number
   element: number
   role: string
   hasSkillTree: boolean

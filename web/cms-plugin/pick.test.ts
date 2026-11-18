@@ -6,9 +6,9 @@ import { buildRoster } from './roster.ts'
 
 const roster = buildRoster({
   heroes: [
-    { stockId: 10011, characterId: 1, name: { en: 'Akashi', ja: 'アカシ' }, resourceName: 'akashi', rarity: 6, element: 1, role: 'attack', hasSkillTree: true, limited: false, isMob: false },
+    { stockId: 10011, characterId: 1, name: { en: 'Akashi', ja: 'アカシ' }, resourceName: 'akashi', rarity: 6, baseRarity: 3, element: 1, role: 'attack', hasSkillTree: true, limited: false, isMob: false },
     { stockId: 10021, characterId: 2, name: { en: 'Kageyama' }, resourceName: 'kageyama', rarity: 5, element: 3, role: 'defense', hasSkillTree: false, limited: false, isMob: false },
-    { stockId: 10031, characterId: 3, name: { en: 'Alan' }, resourceName: 'alan', rarity: 6, element: 3, role: 'heal', hasSkillTree: false, limited: true, isMob: false },
+    { stockId: 10031, characterId: 3, name: { en: 'Alan' }, resourceName: 'alan', rarity: 6, baseRarity: 5, element: 3, role: 'heal', hasSkillTree: false, limited: true, isMob: false },
   ],
   sidekicks: [
     { stockId: 10011, characterId: 1, name: { en: 'Akashi' }, resourceName: 'akashi', rarity: 4, limited: false, isMob: false },
@@ -22,10 +22,11 @@ const f = (over: Partial<{ rarities: Set<number>; elements: Set<number>; query: 
 const idsOf = (list: PickEntry[]) => list.map((e) => e.id)
 
 describe('picker entries', () => {
-  it('heroes carry their rarity and element', () => {
+  it('heroes carry their base rarity (lowest of the stock; the maxed rarity for older rosters) and element', () => {
     const e = heroEntries(roster)
     assert.equal(e.length, 3)
-    assert.deepEqual(e[0], { id: 10011, kind: 'hero', rarity: 6, element: 1, resourceName: 'akashi', name: { en: 'Akashi', ja: 'アカシ' } })
+    assert.equal(e[1].rarity, 5)
+    assert.deepEqual(e[0], { id: 10011, kind: 'hero', rarity: 3, element: 1, resourceName: 'akashi', name: { en: 'Akashi', ja: 'アカシ' } })
   })
   it('sidekicks leave out the hero own character and the excluded ids', () => {
     assert.deepEqual(idsOf(sidekickEntries(roster, { excludeCharacter: 1 })), [10021, 10031])
@@ -45,8 +46,9 @@ describe('filterEntries', () => {
     assert.equal(filterEntries(passiveEntries(roster), f(), 'en')[0].kind, 'item')
   })
   it('filters by rarity and element together', () => {
-    assert.deepEqual(idsOf(filterEntries(heroes, f({ rarities: new Set([6]) }), 'en')), [10031, 10011])
-    assert.deepEqual(idsOf(filterEntries(heroes, f({ rarities: new Set([6]), elements: new Set([3]) }), 'en')), [10031])
+    assert.deepEqual(idsOf(filterEntries(heroes, f({ rarities: new Set([5]) }), 'en')), [10031, 10021])
+    assert.deepEqual(idsOf(filterEntries(heroes, f({ rarities: new Set([3]) }), 'en')), [10011])
+    assert.deepEqual(idsOf(filterEntries(heroes, f({ rarities: new Set([3, 5]), elements: new Set([3]) }), 'en')), [10031, 10021])
   })
   it('a rarity filter leaves out the items (they have none)', () => {
     const e = filterEntries(passiveEntries(roster), f({ rarities: new Set([1, 3, 4]) }), 'en')
@@ -61,7 +63,7 @@ describe('filterEntries', () => {
   })
   it('gives the same result with a prebuilt index, and does not mutate the entries', () => {
     const copy = [...heroes]
-    const q = f({ query: 'a', rarities: new Set([6]) })
+    const q = f({ query: 'a', rarities: new Set([5]) })
     assert.deepEqual(idsOf(filterEntries(heroes, q, 'en', searchIndex(heroes))), idsOf(filterEntries(heroes, q, 'en')))
     assert.deepEqual(heroes, copy)
   })

@@ -28,7 +28,7 @@ let editorSeq = 0
 /** Codes that only matter once the user tried to submit (a fresh editor is legitimately incomplete). */
 const QUIET_UNTIL_VALIDATED = new Set(['stock_id_invalid', 'focus_missing'])
 
-const HERO_RARITIES = [4, 5, 6]
+const HERO_RARITIES = [1, 3, 4, 5]
 
 const errKey = (e: FieldError) => `${e.path}|${e.code}|${JSON.stringify(e.params ?? {})}`
 

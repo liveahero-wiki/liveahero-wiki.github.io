@@ -1523,6 +1523,14 @@ def build_roster(entities, m, version):
     card_ja = ja_names(m["CardMaster"])
     sidekick_ja = ja_names(m["SidekickMaster"])
 
+    # a hero card's base rarity: the lowest rarity among the cards sharing its stockId
+    # (Akashi 10011 starts at 3, his variant 10012 at 5); the picker's rarity filter uses it
+    base_rarity = {}
+    for entry in m["CardMaster"].values():
+        sid, rarity = entry.get("stockId"), entry.get("rarity")
+        if sid is not None and rarity is not None and rarity < base_rarity.get(sid, rarity + 1):
+            base_rarity[sid] = rarity
+
     def names(e, prefix, ja):
         res = e["resourceName"]
         out = {"ja": ja}
@@ -1560,6 +1568,7 @@ def build_roster(entities, m, version):
                 "page": page(e),
                 "resourceName": e["resourceName"],
                 "rarity": e["rarity"],
+                "baseRarity": base_rarity.get(e["stockId"], e["rarity"]),
                 "element": e.get("element"),
                 "role": e["role"],
                 "hasSkillTree": e["hasSkillTree"],
