@@ -753,27 +753,39 @@ a.cms-lah-target-chip:focus-visible {
 }
 
 /* ---- compact editor rows: [no.] [hero] [active sidekick] [levels / fans / seal lv / passives] [handle] ---- */
+/* The card has no padding of its own: the handle is a full-height strip fused into its right edge. */
 .cms-lah-slot {
-  gap: 4px;
-  padding: 6px 8px;
+  gap: 0;
+  padding: 0;
 }
 .cms-lah-slot-row {
   display: grid;
-  grid-template-columns: 3.2rem 56px 56px minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 6px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: auto auto;
 }
 .cms-lah-slot-no {
+  grid-column: 1;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 6px;
+  padding: 5px 8px 4px;
   font-weight: 700;
-  text-align: center;
 }
 .cms-lah-slot-no .cms-lah-tag {
   padding: 0 4px;
   font-size: 0.62rem;
+}
+.cms-lah-slot-main {
+  grid-column: 1;
+  display: grid;
+  grid-template-columns: 56px 56px minmax(0, 1fr);
+  align-items: center;
+  gap: 6px;
+  padding: 0 8px 6px;
+}
+.cms-lah-slot > .cms-lah-error {
+  margin: 0;
+  padding: 0 8px 6px;
 }
 .cms-lah-slotbtn {
   display: inline-flex;
@@ -826,8 +838,10 @@ a.cms-lah-target-chip:focus-visible {
   border-radius: 6px;
   color: var(--cms-lah-fg);
   font: inherit;
-  font-size: 0.78rem;
+  --cms-lah-pfs: 0.78rem;
+  font-size: var(--cms-lah-pfs);
   line-height: 1.3;
+  overflow: hidden;
   text-align: left;
   cursor: pointer;
 }
@@ -860,14 +874,43 @@ html[data-theme='dark'] .cms-lah-support .cms-lah-params:not(.cms-lah-params-emp
   min-width: 0;
   white-space: nowrap;
 }
+/* hero icon with the skill tree badge underneath */
+.cms-lah-slotbtn-sk {
+  align-self: start;
+}
+.cms-lah-herocol {
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+/* fans / seal lv stacked on the left, the passive sidekick icons as tall as those two rows */
+.cms-lah-pbody {
+  --cms-lah-pslot-size: calc(2 * var(--cms-lah-pfs) * 1.3 + 2px);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+.cms-lah-pcol {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  white-space: nowrap;
+}
 .cms-lah-pslots {
   display: inline-flex;
   gap: 2px;
   margin-left: auto;
 }
+.cms-lah-pslots .cms-lah-icon-md {
+  width: var(--cms-lah-pslot-size);
+  height: var(--cms-lah-pslot-size);
+}
 .cms-lah-pslot {
-  width: 32px;
-  height: 32px;
+  width: var(--cms-lah-pslot-size);
+  height: var(--cms-lah-pslot-size);
 }
 .cms-lah-pslot {
   display: inline-block;
@@ -876,9 +919,19 @@ html[data-theme='dark'] .cms-lah-support .cms-lah-params:not(.cms-lah-params-emp
 }
 /* drag handle of a row (pointer drag; Up / Down arrows when focused) */
 .cms-lah-handle {
-  min-width: 36px;
-  width: 36px;
-  align-self: stretch;
+  grid-column: 2;
+  grid-row: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  padding: 0;
+  border: 0;
+  border-left: 1px solid var(--cms-lah-border);
+  border-radius: 0 7px 7px 0;
+  background: color-mix(in srgb, var(--cms-lah-fg) 6%, transparent);
+  color: var(--cms-lah-muted);
+  font: inherit;
   cursor: grab;
   touch-action: none;
   user-select: none;
@@ -892,6 +945,14 @@ html[data-theme='dark'] .cms-lah-support .cms-lah-params:not(.cms-lah-params-emp
 }
 .cms-lah-slot-dragging .cms-lah-handle {
   cursor: grabbing;
+}
+.cms-lah-handle:hover {
+  background: color-mix(in srgb, var(--cms-lah-accent) 18%, transparent);
+  color: var(--cms-lah-fg);
+}
+.cms-lah-handle:focus-visible {
+  outline: 2px solid var(--cms-lah-accent);
+  outline-offset: -2px;
 }
 
 /* ---- popovers (pickers) ---- */
@@ -1106,11 +1167,15 @@ html[data-theme='dark'] .cms-lah-support .cms-lah-params:not(.cms-lah-params-emp
     padding: 8px;
   }
   .cms-lah-slot {
-    padding: 6px 4px;
+    padding: 0;
   }
-  .cms-lah-slot-row {
-    grid-template-columns: 2.2rem 48px 48px minmax(0, 1fr) auto;
+  .cms-lah-slot-main {
+    grid-template-columns: 48px 48px minmax(0, 1fr);
     gap: 4px;
+    padding: 0 4px 6px;
+  }
+  .cms-lah-slot-no {
+    padding: 5px 4px 4px;
   }
   .cms-lah-slot .cms-lah-icon-lg {
     width: 48px;
@@ -1121,11 +1186,10 @@ html[data-theme='dark'] .cms-lah-support .cms-lah-params:not(.cms-lah-params-emp
     height: 34px;
   }
   .cms-lah-params {
+    --cms-lah-pfs: 0.72rem;
     padding: 3px 4px;
-    font-size: 0.72rem;
   }
   .cms-lah-handle {
-    min-width: 30px;
-    width: 30px;
+    width: 26px;
   }
 }

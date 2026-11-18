@@ -323,7 +323,7 @@ function SlotEditor({ slot, index, pos, idBase, support, allowsSupport, dragging
     <li class={'cms-lah-card cms-lah-slot' + (support ? ' cms-lah-support' : '') + (dragging ? ' cms-lah-slot-dragging' : '')} data-cms-slot={slot.key}>
       <div class="cms-lah-slot-row">
         <div class="cms-lah-slot-no">
-          <span aria-label={t('slotN', { n: pos ?? index + 1 })}>{pos ?? '–'}</span>
+          <span aria-label={t('slotN', { n: pos ?? index + 1 })}>{pos ? t('slotN', { n: pos }) : '–'}</span>
           {support && (
             <span class="cms-lah-tag" title={t('supportTitle')}>
               {t('support')}
@@ -331,72 +331,78 @@ function SlotEditor({ slot, index, pos, idBase, support, allowsSupport, dragging
           )}
         </div>
 
-        <button
-          type="button"
-          class="cms-lah-slotbtn"
-          data-focus="hero"
-          disabled={roster === undefined}
-          aria-haspopup="dialog"
-          aria-label={`${t('heroField')}: ${heroName}`}
-          aria-invalid={hasErr('stockId') ? true : undefined}
-          onClick={() => setOpen('hero')}
-        >
-          {filled ? <CardIcon kind="hero" stockId={slot.stockId} roster={roster} lang={lang} size="lg" /> : <span class="cms-lah-icon cms-lah-icon-lg cms-lah-icon-empty" aria-hidden="true">+</span>}
-        </button>
+        <div class="cms-lah-slot-main">
+          <div class="cms-lah-herocol">
+            <button
+              type="button"
+              class="cms-lah-slotbtn"
+              data-focus="hero"
+              disabled={roster === undefined}
+              aria-haspopup="dialog"
+              aria-label={`${t('heroField')}: ${heroName}`}
+              aria-invalid={hasErr('stockId') ? true : undefined}
+              onClick={() => setOpen('hero')}
+            >
+              {filled ? <CardIcon kind="hero" stockId={slot.stockId} roster={roster} lang={lang} size="lg" /> : <span class="cms-lah-icon cms-lah-icon-lg cms-lah-icon-empty" aria-hidden="true">+</span>}
+            </button>
+            {filled && slot.skillTree && <span class="cms-lah-badge">{t('badgeSkillTree')}</span>}
+          </div>
 
-        <button
-          type="button"
-          class="cms-lah-slotbtn cms-lah-slotbtn-sk"
-          data-focus="active"
-          disabled={roster === undefined || !filled}
-          title={filled ? undefined : t('pickHeroFirst')}
-          aria-haspopup="dialog"
-          aria-label={`${t('activeField')}: ${activeName}`}
-          aria-invalid={hasErr('active') ? true : undefined}
-          onClick={() => setOpen('active')}
-        >
-          {slot.active !== null ? <CardIcon kind="sidekick" stockId={slot.active} roster={roster} lang={lang} size="lg" /> : <span class="cms-lah-icon cms-lah-icon-lg cms-lah-icon-empty" aria-hidden="true">+</span>}
-        </button>
-
-        {filled ? (
-          <button type="button" class={'cms-lah-params' + (detailErr ? ' cms-lah-params-err' : '')} aria-haspopup="dialog" aria-label={`${t('editDetails', { n: pos ?? index + 1 })}: ${summary}`} onClick={() => setOpen('detail')}>
-            <span class="cms-lah-prow">
-              <span class="cms-lah-param">
-                {t('lv')} {slot.lv}
-              </span>
-              {slot.skillTree && <span class="cms-lah-badge">{t('badgeSkillTree')}</span>}
-              {slot.plv > 0 && <PwFormIcon itemId={slot.pwForm ?? 60} size="sm" title="" />}
-              <span class="cms-lah-param">
-                {t('plv')} {slot.plv}
-              </span>
-            </span>
-            <span class="cms-lah-prow">
-              <span class="cms-lah-param">
-                {t('fans')} {slot.fans}
-              </span>
-              <span class="cms-lah-param">
-                {t('engrave')} {slot.engrave}
-              </span>
-              <span class="cms-lah-pslots" aria-hidden="true">
-                {[0, 1, 2].map((i) => {
-                  const id = slot.passives[i]
-                  return id !== undefined ? (
-                    <CardIcon key={i} kind={passiveKind(roster, id)} stockId={id} roster={roster} lang={lang} size="md" />
-                  ) : (
-                    <span key={i} class="cms-lah-pslot" />
-                  )
-                })}
-              </span>
-            </span>
+          <button
+            type="button"
+            class="cms-lah-slotbtn cms-lah-slotbtn-sk"
+            data-focus="active"
+            disabled={roster === undefined || !filled}
+            title={filled ? undefined : t('pickHeroFirst')}
+            aria-haspopup="dialog"
+            aria-label={`${t('activeField')}: ${activeName}`}
+            aria-invalid={hasErr('active') ? true : undefined}
+            onClick={() => setOpen('active')}
+          >
+            {slot.active !== null ? <CardIcon kind="sidekick" stockId={slot.active} roster={roster} lang={lang} size="lg" /> : <span class="cms-lah-icon cms-lah-icon-lg cms-lah-icon-empty" aria-hidden="true">+</span>}
           </button>
-        ) : (
-          // An empty row keeps its place for the support role and the detail dialog (support toggle) is reached from a filled row only.
-          <span class="cms-lah-params cms-lah-params-empty" aria-hidden="true" />
-        )}
+
+          {filled ? (
+            <button type="button" class={'cms-lah-params' + (detailErr ? ' cms-lah-params-err' : '')} aria-haspopup="dialog" aria-label={`${t('editDetails', { n: pos ?? index + 1 })}: ${summary}`} onClick={() => setOpen('detail')}>
+              <span class="cms-lah-prow">
+                <span class="cms-lah-param">
+                  {t('lv')} {slot.lv}
+                </span>
+                {slot.plv > 0 && <PwFormIcon itemId={slot.pwForm ?? 60} size="sm" title="" />}
+                <span class="cms-lah-param">
+                  {t('plv')} {slot.plv}
+                </span>
+              </span>
+              <span class="cms-lah-pbody">
+                <span class="cms-lah-pcol">
+                  <span class="cms-lah-param">
+                    {t('fans')} {slot.fans}
+                  </span>
+                  <span class="cms-lah-param">
+                    {t('engrave')} {slot.engrave}
+                  </span>
+                </span>
+                <span class="cms-lah-pslots" aria-hidden="true">
+                  {[0, 1, 2].map((i) => {
+                    const id = slot.passives[i]
+                    return id !== undefined ? (
+                      <CardIcon key={i} kind={passiveKind(roster, id)} stockId={id} roster={roster} lang={lang} size="md" />
+                    ) : (
+                      <span key={i} class="cms-lah-pslot" />
+                    )
+                  })}
+                </span>
+              </span>
+            </button>
+          ) : (
+            // An empty row keeps its place for the support role and the detail dialog (support toggle) is reached from a filled row only.
+            <span class="cms-lah-params cms-lah-params-empty" aria-hidden="true" />
+          )}
+        </div>
 
         <button
           type="button"
-          class="cms-lah-btn cms-lah-btn-icon cms-lah-handle"
+          class="cms-lah-handle"
           data-focus="handle"
           aria-label={t('dragHandle', { n: pos ?? index + 1 })}
           title={t('dragHandle', { n: pos ?? index + 1 })}
