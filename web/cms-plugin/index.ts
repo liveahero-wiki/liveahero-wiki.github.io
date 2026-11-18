@@ -3,12 +3,12 @@
 
 import { h, render, type VNode } from 'preact'
 import type { EditorHandle, FieldError, PluginContext, SubmissionPlugin } from './plugin-api.ts'
+import { defaultTeamPayload } from './default-team.ts'
 import { ensureStyles } from './style.ts'
 import { TeamDetail } from './TeamDetail.tsx'
 import { TeamEditor, type EditorBridge } from './TeamEditor.tsx'
 import { TeamSummary } from './TeamSummary.tsx'
 import type { TeamPayload } from './types.ts'
-import { emptySlot } from './view.ts'
 
 const TYPE = 'lah-team-formation'
 
@@ -22,7 +22,7 @@ const plugin: SubmissionPlugin<TeamPayload> = {
   apiVersion: 1,
   type: TYPE,
 
-  defaultPayload: () => ({ v: 1, supportIndex: null, heroes: [emptySlot()] }),
+  defaultPayload: defaultTeamPayload,
 
   mountSummary: (el, payload, ctx: PluginContext) => mount(el, h(TeamSummary, { payload, ctx })),
 

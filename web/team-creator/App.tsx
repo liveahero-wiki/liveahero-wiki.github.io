@@ -5,6 +5,7 @@ import { Component, type ComponentChildren } from 'preact'
 import { useEffect, useMemo, useState } from 'preact/hooks'
 import type { ContribSubmission, PublicBlob } from '../cms-plugin/api-types.ts'
 import { makeT } from '../cms-plugin/i18n/t.ts'
+import { loadRoster } from '../cms-plugin/roster.ts'
 import type { PluginContext } from '../cms-plugin/plugin-api.ts'
 import type { TeamPayload } from '../cms-plugin/types.ts'
 import { getContrib, prefetchEmbed } from '../shared/contrib/embed.ts'
@@ -13,7 +14,7 @@ import { useAccount } from './account.ts'
 import { currentTheme, editStart, fetchBlob, openCmsForm } from './api.ts'
 import { Builder } from './Builder.tsx'
 import { Catalog } from './Catalog.tsx'
-import { isBlankTeam, loadDraft, saveDraft } from './draft.ts'
+import { isBlankTeam, loadDraft, remixTeam, saveDraft } from './draft.ts'
 import { MySubmissions } from './MySubmissions.tsx'
 import { SharedTeam } from './SharedTeam.tsx'
 import { sharedParam } from './share.ts'
@@ -119,6 +120,18 @@ export function App({ api, group, plugin, formHost }: AppProps) {
     showBuilder()
   }
 
+  /** "Remix" of a published team: starts a new team from it, the same way as "Edit a copy" (the team only). */
+  const remix = async (payload: unknown) => {
+    setActionError(false)
+    const roster = await loadRoster().catch(() => null)
+    const team = roster ? remixTeam(payload, ctx.group.options, roster) : null
+    if (!team) {
+      setActionError(true)
+      return
+    }
+    editCopy(team)
+  }
+
   let body: ComponentChildren
   if (state.s === 'error') {
     body = (
@@ -136,7 +149,7 @@ export function App({ api, group, plugin, formHost }: AppProps) {
       </div>
     )
   } else {
-    body = <Catalog blob={state.blob} uiLang={uiLang} ctx={ctx} mine={mineById} onEdit={(sub) => void openForm(sub)} />
+    body = <Catalog blob={state.blob} uiLang={uiLang} ctx={ctx} mine={mineById} onEdit={(sub) => void openForm(sub)} onRemix={(payload) => void remix(payload)} />
   }
 
   return (

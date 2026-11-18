@@ -259,8 +259,16 @@
   cursor: pointer;
   font-weight: 600;
 }
+.lah-tc-builder {
+  max-width: 500px;
+}
 .lah-tc-builder-body {
-  padding: 0 0.9rem 0.9rem;
+  padding: 0.9rem;
+}
+@media (max-width: 480px) {
+  .lah-tc-builder-body {
+    padding: 0.5rem;
+  }
 }
 .lah-tc-share {
   margin-top: 0.75rem;
@@ -326,7 +334,8 @@
   border-color: var(--cms-accent, #2563eb);
   color: var(--cms-on-accent, #fff);
 }
-.lah-tc-demo {
+.lah-tc-demo,
+.lah-tc-remix {
   font-size: 0.9em;
   min-height: 36px;
 }

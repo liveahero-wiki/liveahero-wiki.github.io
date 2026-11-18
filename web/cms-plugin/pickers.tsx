@@ -1,5 +1,4 @@
-// Searchable card pickers: a single-select combobox (hero / active sidekick) and a multi-select chip list
-// (passive sidekicks and skill-book items). The combobox is a small hand-written WAI-ARIA 1.2 "list autocomplete" combobox:
+// Searchable card picker of the catalog filters: a multi-select chip list with a combobox that adds one. The combobox is a small hand-written WAI-ARIA 1.2 "list autocomplete" combobox:
 // downshift's useCombobox measured ~+40 KB gzip in this single-file bundle (it does not tree-shake), which
 // is not worth it for one control.
 
@@ -194,84 +193,6 @@ interface PickerBase {
   dataFocus?: string
 }
 
-/** Fallback when the roster could not be loaded: plain numeric card id. */
-function IdInput({ value, onChange, t, label, invalid, describedBy, dataFocus }: { value: number | null; onChange: (id: number | null) => void } & Pick<PickerBase, 't' | 'label' | 'invalid' | 'describedBy' | 'dataFocus'>) {
-  return (
-    <div class="cms-lah-combo">
-      <label class="cms-lah-label">
-        {label} ({t('cardId')})
-        <input
-          class="cms-lah-input"
-          type="number"
-          min={1}
-          step={1}
-          inputMode="numeric"
-          value={value ?? ''}
-          aria-invalid={invalid || undefined}
-          aria-describedby={describedBy}
-          data-focus={dataFocus}
-          onInput={(e) => {
-            const raw = e.currentTarget.value
-            onChange(raw === '' ? null : Number(raw))
-          }}
-        />
-      </label>
-    </div>
-  )
-}
-
-interface CardPickerProps extends PickerBase {
-  kind: CardKind
-  value: number | null
-  onChange: (id: number | null) => void
-  /** A card that cannot be chosen (the slot's own hero for the active sidekick). */
-  exclude?: number | null
-  /** Cards of this character cannot be chosen (the slot hero's own character). */
-  excludeCharacter?: number | null
-  clearable?: boolean
-}
-
-export function CardPicker({ kind, roster, value, onChange, exclude, excludeCharacter, clearable, lang, t, label, placeholder, invalid, describedBy, dataFocus }: CardPickerProps) {
-  const list = roster ? (kind === 'hero' ? roster.heroes : roster.sidekicks) : []
-  const entries = useMemo(
-    () => (exclude || excludeCharacter ? list.filter((e) => e.stockId !== exclude && e.characterId !== excludeCharacter) : list),
-    [list, exclude, excludeCharacter],
-  )
-  if (roster === null) return <IdInput value={value} onChange={onChange} t={t} label={label} invalid={invalid} describedBy={describedBy} dataFocus={dataFocus} />
-  if (roster === undefined) {
-    return (
-      <div class="cms-lah-combo">
-        <span class="cms-lah-label">{label}</span>
-        <input class="cms-lah-input" disabled value={value ? `#${value}` : t('loading')} aria-label={label} />
-      </div>
-    )
-  }
-  const selected = value ? (kind === 'hero' ? roster.hero(value) : roster.sidekick(value)) ?? null : null
-  return (
-    <Combo
-      kind={kind}
-      roster={roster}
-      entries={entries}
-      selected={selected}
-      onSelect={(e) => onChange(entryId(e))}
-      lang={lang}
-      t={t}
-      label={label}
-      placeholder={value && !selected ? `#${value}` : placeholder}
-      invalid={invalid}
-      describedBy={describedBy}
-      dataFocus={dataFocus}
-      trailing={
-        clearable && value ? (
-          <button type="button" class="cms-lah-btn cms-lah-btn-icon" aria-label={`${t('clear')}: ${label}`} title={t('clear')} onClick={() => onChange(null)}>
-            <span aria-hidden="true">×</span>
-          </button>
-        ) : undefined
-      }
-    />
-  )
-}
-
 interface CardListPickerProps extends PickerBase {
   kind: CardKind
   values: number[]
@@ -336,20 +257,6 @@ export function CardListPicker({ kind, roster, values, max, excludeCharacter, wi
       )}
     </div>
   )
-}
-
-interface PassivePickerProps extends PickerBase {
-  values: number[]
-  max: number
-  /** Sidekicks of this character cannot be added (the slot hero's own character). */
-  excludeCharacter?: number | null
-  onAdd: (id: number) => void
-  onRemove: (id: number) => void
-}
-
-/** Passive slots take sidekick cards and skill-book items. */
-export function PassivePicker(props: PassivePickerProps) {
-  return <CardListPicker kind="sidekick" withItems {...props} />
 }
 
 /** Roster-less fallback for the passives: type a card id and press Enter / the button. */

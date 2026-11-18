@@ -27,6 +27,7 @@ export function Card({
   ctx,
   mine,
   onEdit,
+  onRemix,
 }: {
   item: PublicItem
   blob: PublicBlob
@@ -35,6 +36,8 @@ export function Card({
   /** Set when the signed-in contributor owns this team. */
   mine?: ContribSubmission
   onEdit?(sub: ContribSubmission): void
+  /** Starts a new team from this one (the team only, not the title, video link or explanation). */
+  onRemix?(payload: unknown): void
 }) {
   const t = useMemo(() => makeT(uiLang), [uiLang])
   const tagChips = blob.meta.tags.flatMap((def: TagDefDto) => {
@@ -88,6 +91,11 @@ export function Card({
               {t('tcEdit')}
             </button>
           </>
+        )}
+        {onRemix && (
+          <button type="button" class="lah-tc-btn lah-tc-remix" onClick={() => onRemix(item.payload)}>
+            {t('tcRemix')}
+          </button>
         )}
         {demo && (
           <a class="lah-tc-btn lah-tc-demo" href={demo.href} target="_blank" rel="noopener noreferrer nofollow ugc">

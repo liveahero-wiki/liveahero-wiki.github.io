@@ -34,6 +34,7 @@ export function Catalog({
   ctx,
   mine,
   onEdit,
+  onRemix,
 }: {
   blob: PublicBlob
   uiLang: Lang
@@ -41,6 +42,7 @@ export function Catalog({
   /** The signed-in contributor's own submissions by id (empty when signed out). */
   mine?: ReadonlyMap<string, ContribSubmission>
   onEdit?(sub: ContribSubmission): void
+  onRemix?(payload: unknown): void
 }) {
   const t = useMemo(() => makeT(uiLang), [uiLang])
   const tagDefs = blob.meta.tags
@@ -244,7 +246,7 @@ export function Catalog({
           <ul class="lah-tc-list">
             {visible.map((item) => (
               <li key={item.id} class="lah-tc-card">
-                <Card item={item} blob={blob} uiLang={uiLang} ctx={ctx} mine={mine?.get(item.id)} onEdit={onEdit} />
+                <Card item={item} blob={blob} uiLang={uiLang} ctx={ctx} mine={mine?.get(item.id)} onEdit={onEdit} onRemix={onRemix} />
               </li>
             ))}
           </ul>
