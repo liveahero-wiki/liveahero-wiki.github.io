@@ -2,8 +2,9 @@
  * Meteor Shower Animation
  *
  * With optional ambient sound (off by default; the 🔇/🔊 button beside 🌟), synthesized with the
- * Web Audio API: a space background (wind noise + a slow pad), a whoosh per meteor and a crystal
- * chime when it shatters. Every pitch is in D major pentatonic, so nothing ever clashes.
+ * Web Audio API: a space background (wind noise, a slow pad, wind chimes brushed now and then and a
+ * distant meteor swarm every 10 seconds), a whoosh per meteor and the same rising 3-note chime
+ * whenever one shatters. Every pitch is in D major pentatonic, so nothing ever clashes.
  *
  * This file is concatenated into assets/site.js in production (wiki_plugins/minify-js.js), so it
  * must not declare anything outside the IIFE.
@@ -85,8 +86,12 @@
       wind: 0.15, // low rumbling noise
       air: 0.05, // faint high hiss drifting left and right
       padVoice: 0.045, // each of the 3 pad notes
-      whoosh: 0.08, // per meteor
-      chime: 0.11, // per shatter
+      chimes: 0.022, // each wind chime of a brush stroke
+      whoosh: 0.04, // per meteor
+      hit: 0.07, // each note of the chime when a meteor shatters
+      swarm: 0.07, // each streak of the distant swarm
+      swell: 0.2, // the rush of air under the swarm
+      twinkle: 0.012, // the faint far-off chimes where the swarm lands
       reverb: 0.6,
     };
     // D major pentatonic: degree 0 is D2, 5 is D3, -1 is B1, and so on.
@@ -95,10 +100,19 @@
     // Pad chords, only from scale notes: Dsus2, Bm, Esus, Asus.
     const CHORDS = [[0, 3, 6], [-1, 2, 5], [1, 4, 7], [-2, 1, 4]];
     const PAD_LFO_RATES = [0.043, 0.071, 0.109];
-    // Chime pitch range (D5..B6) and the bell's partials: [frequency ratio, amplitude, decay seconds].
-    const CHIME_LOW = 15;
-    const CHIME_HIGH = 24;
-    const PARTIALS = [[1, 1, 1.8], [2, 0.4, 1.0], [3.01, 0.2, 0.5], [4.17, 0.1, 0.3]];
+
+    // Bell timbres, as partials: [frequency ratio, amplitude, decay as a share of the note's]. In
+    // both, a second fundamental a few cents sharp beats against the first: the shimmer of a bell.
+    // A struck metal bar or tube (the wind chimes), with its inharmonic overtones.
+    const CHIME = [[1, 0.55, 1], [1.0012, 0.45, 1], [2.756, 0.25, 0.4], [5.404, 0.08, 0.15]];
+    // A sweeter, glassy star chime (meteor hits, far twinkles), with harmonic overtones.
+    const STAR = [[1, 0.6, 1], [1.002, 0.4, 1], [2, 0.3, 0.35], [4, 0.08, 0.12]];
+
+    // The wind chimes, in a row from left to right: A6 B6 D7 E7 F#7.
+    const CHIMES = [23, 24, 25, 26, 27];
+    // Every meteor hit rings these three notes, going up: D6 F#6 A6.
+    const HIT_NOTES = [20, 22, 23];
+    const HIT_GAP = 0.07; // seconds between them
 
     let ac = null;
     let master, dry, reverbIn, padBus;
@@ -106,10 +120,10 @@
     let active = false; // meant to be audible
     let unlocked = false; // has been running once, so it may resume without a gesture
     let stopTimer = 0;
-    let chordTimer = 0;
     let chordIdx = 0;
     let pad = null;
-    let lastDegree = 18;
+    let strokeRight = Math.random() < 0.5; // direction of the last wind-chime stroke
+    const timers = []; // the recurring events (see every), while the sound is on
     const impacts = []; // times of recent shatters, for the density limiter
 
     function degreeFreq(n) {
@@ -199,6 +213,50 @@
       g.connect(param);
       osc.start();
       return osc;
+    }
+
+    // A new stereo panner at `p`, routed with reverb send `send`.
+    function panner(p, send) {
+      const node = ac.createStereoPanner();
+      node.pan.value = p;
+      route(node, send);
+      return node;
+    }
+
+    // One bell note into `dest`, struck at time t, made of `partials` (CHIME or STAR) and ringing
+    // for `decay` seconds. Returns the oscillator of its fundamental, which ends last.
+    function bell(dest, partials, freq, t, level, decay) {
+      let fundamental = null;
+      partials.forEach(([ratio, amp, share]) => {
+        const f = freq * ratio;
+        if (f > ac.sampleRate * 0.45) return;
+        const end = t + decay * share;
+        const osc = ac.createOscillator();
+        osc.frequency.value = f;
+        const g = ac.createGain();
+        g.gain.setValueAtTime(0, t);
+        g.gain.linearRampToValueAtTime(level * amp, t + 0.002);
+        g.gain.exponentialRampToValueAtTime(0.0001, end);
+        osc.connect(g);
+        g.connect(dest);
+        osc.start(t);
+        osc.stop(end + 0.05);
+        fundamental = fundamental || osc;
+      });
+      return fundamental;
+    }
+
+    // Calls fn every delay() seconds while the sound is on (stop() cancels it).
+    function every(delay, fn) {
+      const timer = { id: 0 };
+      const next = () => {
+        timer.id = setTimeout(() => {
+          next();
+          if (live()) fn();
+        }, delay() * 1000);
+      };
+      next();
+      timers.push(timer);
     }
 
     function build() {
@@ -321,7 +379,6 @@
     }
 
     function nextChord() {
-      if (ac.state !== 'running') return;
       const fade = 8;
       const t = ac.currentTime;
       const old = pad;
@@ -333,11 +390,102 @@
       old.nodes[0].onended = () => old.out.disconnect();
     }
 
-    function scheduleChord() {
-      chordTimer = setTimeout(() => {
-        nextChord();
-        scheduleChord();
-      }, (40 + Math.random() * 30) * 1000);
+    // A hand brushing through the wind chimes: 4 or 5 neighbouring chimes in a quick run, one way
+    // and the other way the next time, then a soft knock or two as they swing back.
+    function chimeStroke() {
+      strokeRight = !strokeRight;
+      const count = Math.random() < 0.5 ? 4 : 5;
+      const first = Math.floor(Math.random() * (CHIMES.length - count + 1));
+      const order = [];
+      for (let i = first; i < first + count; i++) order.push(i);
+      if (!strokeRight) order.reverse();
+      const gap = 0.08 + Math.random() * 0.06; // hand speed
+      let t = ac.currentTime + 0.05;
+      order.forEach((i, n) => {
+        const firmness = 0.55 + 0.45 * Math.sin((Math.PI * (n + 0.5)) / count); // most mid-stroke
+        strikeChime(i, t, MIX.chimes * firmness * (0.85 + Math.random() * 0.3));
+        t += gap * (0.75 + Math.random() * 0.5);
+      });
+      for (let k = Math.floor(Math.random() * 3); k > 0; k--) {
+        const i = order[Math.floor(Math.random() * count)];
+        strikeChime(i, t + 0.2 + Math.random() * 1.2, MIX.chimes * (0.15 + Math.random() * 0.2));
+      }
+    }
+
+    // Wind chime i (an index in CHIMES), panned to its place in the row; the higher, the shorter.
+    function strikeChime(i, t, level) {
+      const pan = panner(-0.75 + (1.5 * i) / (CHIMES.length - 1), 1);
+      bell(pan, CHIME, degreeFreq(CHIMES[i]), t, level, 3.2 - i * 0.35).onended = () =>
+        pan.disconnect();
+    }
+
+    // A shower far away: a handful of faint streaks crossing the sky together over a rush of air,
+    // dark and mostly reverb so that they sound distant, with a few tiny twinkles where they land.
+    function swarm() {
+      const t0 = ac.currentTime + 0.05;
+      const dir = Math.random() < 0.5 ? 1 : -1; // 1: left to right
+      const len = 4.5;
+
+      const rush = ac.createBufferSource();
+      rush.buffer = brownBuf;
+      rush.loop = true;
+      const lp = ac.createBiquadFilter();
+      lp.type = 'lowpass';
+      lp.frequency.setValueAtTime(250, t0);
+      lp.frequency.exponentialRampToValueAtTime(900, t0 + len * 0.4);
+      lp.frequency.exponentialRampToValueAtTime(250, t0 + len);
+      const g = ac.createGain();
+      g.gain.setValueAtTime(0.0001, t0);
+      g.gain.exponentialRampToValueAtTime(MIX.swell, t0 + len * 0.4);
+      g.gain.exponentialRampToValueAtTime(0.0001, t0 + len);
+      const pan = panner(-0.5 * dir, 1);
+      pan.pan.setValueAtTime(-0.5 * dir, t0);
+      pan.pan.linearRampToValueAtTime(0.5 * dir, t0 + len);
+      rush.connect(lp);
+      lp.connect(g);
+      g.connect(pan);
+      rush.start(t0, Math.random() * 5);
+      rush.stop(t0 + len + 0.05);
+      rush.onended = () => pan.disconnect();
+
+      const count = 5 + Math.floor(Math.random() * 5);
+      for (let i = 0; i < count; i++) {
+        streak(t0 + 0.3 + (i / count) * 2.4 + Math.random() * 0.3, 0.6 + Math.random() * 0.8, dir);
+      }
+    }
+
+    // One far-off meteor of the swarm, crossing the stereo field towards `dir` from `start` for
+    // `dur` seconds.
+    function streak(start, dur, dir) {
+      const end = start + dur;
+      const src = ac.createBufferSource();
+      src.buffer = whiteBuf;
+      src.loop = true;
+      const bp = ac.createBiquadFilter();
+      bp.type = 'bandpass';
+      bp.Q.value = 1.5 + Math.random() * 2.5;
+      bp.frequency.setValueAtTime(1400 + Math.random() * 800, start);
+      bp.frequency.exponentialRampToValueAtTime(350 + Math.random() * 200, end);
+      const g = ac.createGain();
+      g.gain.setValueAtTime(0.0001, start);
+      g.gain.exponentialRampToValueAtTime(MIX.swarm * (0.4 + Math.random() * 0.6), start + dur * 0.45);
+      g.gain.exponentialRampToValueAtTime(0.0001, end);
+      const to = dir * (0.2 + Math.random() * 0.6);
+      const pan = panner(0, 1.6);
+      pan.pan.setValueAtTime(-dir * (0.4 + Math.random() * 0.5), start);
+      pan.pan.linearRampToValueAtTime(to, end);
+      src.connect(bp);
+      bp.connect(g);
+      g.connect(pan);
+      src.start(start, Math.random() * 5);
+      src.stop(end + 0.05);
+      src.onended = () => pan.disconnect();
+
+      if (Math.random() < 0.35) {
+        const tw = panner(to, 2);
+        const degree = 20 + Math.floor(Math.random() * 7);
+        bell(tw, STAR, degreeFreq(degree), end, MIX.twinkle, 1.5).onended = () => tw.disconnect();
+      }
     }
 
     function live() {
@@ -353,7 +501,11 @@
         const t = ac.currentTime;
         hold(master.gain, t);
         master.gain.linearRampToValueAtTime(CONFIG.audioVolume, t + 3);
-        if (!chordTimer) scheduleChord();
+        if (!timers.length) {
+          every(() => 40 + Math.random() * 30, nextChord);
+          every(() => 6 + Math.random() * 6, chimeStroke);
+          every(() => 10, swarm);
+        }
         return ac.resume().then(() => {
           if (ac.state === 'running') unlocked = true;
         }, () => {});
@@ -362,8 +514,8 @@
       /** Fades the sound out, then suspends the context so that it costs nothing. */
       stop() {
         active = false;
-        clearTimeout(chordTimer);
-        chordTimer = 0;
+        timers.forEach((timer) => clearTimeout(timer.id));
+        timers.length = 0;
         if (!ac) return;
         const t = ac.currentTime;
         hold(master.gain, t);
@@ -401,12 +553,10 @@
         g.gain.setValueAtTime(0.0001, t);
         g.gain.exponentialRampToValueAtTime(peak, t + dur * 0.4);
         g.gain.exponentialRampToValueAtTime(peak * 0.5, t + dur);
-        const pan = ac.createStereoPanner();
-        pan.pan.value = panFor(m.x);
+        const pan = panner(panFor(m.x), 0.25);
         src.connect(filter);
         filter.connect(g);
         g.connect(pan);
-        route(pan, 0.25);
         src.start(t, Math.random() * 5);
         src.stop(t + dur + 1); // in case it is never released
         src.onended = () => pan.disconnect();
@@ -431,78 +581,23 @@
         voice.src.stop(t + 0.3);
       },
 
-      /** A crystal breaking: a glassy tink, a bell note and a few tiny shards. */
+      /** A meteor shattering: the same three star-chime notes every time, going up. */
       shatter(x, size) {
         if (!live()) return;
-        const t = ac.currentTime + 0.005;
-
         const now = performance.now();
         while (impacts.length && now - impacts[0] > 2000) impacts.shift();
-        const level = MIX.chime * (size / CONFIG.meteorSize) / Math.sqrt(1 + 0.4 * impacts.length);
+        const level = MIX.hit * (size / CONFIG.meteorSize) / Math.sqrt(1 + 0.4 * impacts.length);
         impacts.push(now);
 
-        const center = panFor(x) * 0.8;
-        const pan = ac.createStereoPanner();
-        pan.pan.value = center;
-        route(pan, 0.9);
-
-        // Tink
-        const noise = ac.createBufferSource();
-        noise.buffer = whiteBuf;
-        const hp = ac.createBiquadFilter();
-        hp.type = 'highpass';
-        hp.frequency.value = 4500;
-        const tink = ac.createGain();
-        tink.gain.setValueAtTime(level * 0.3, t);
-        tink.gain.exponentialRampToValueAtTime(0.0001, t + 0.05);
-        noise.connect(hp);
-        hp.connect(tink);
-        tink.connect(pan);
-        noise.start(t, Math.random() * 5);
-        noise.stop(t + 0.08);
-
-        // Bell: the note takes a small step from the previous one, so the chimes form a melody.
-        const step = [-2, -1, -1, 1, 1, 2][Math.floor(Math.random() * 6)];
-        let degree = lastDegree + step;
-        if (degree < CHIME_LOW || degree > CHIME_HIGH) degree = lastDegree - step;
-        lastDegree = degree;
-        const freq = degreeFreq(degree);
-        let longest = null;
-        PARTIALS.forEach(([ratio, amp, decay]) => {
-          const osc = ac.createOscillator();
-          osc.frequency.value = freq * ratio;
-          osc.detune.value = (Math.random() - 0.5) * 6;
-          const g = ac.createGain();
-          g.gain.setValueAtTime(0, t);
-          g.gain.linearRampToValueAtTime(level * amp, t + 0.003);
-          g.gain.exponentialRampToValueAtTime(0.0001, t + decay);
-          osc.connect(g);
-          g.connect(pan);
-          osc.start(t);
-          osc.stop(t + decay + 0.05);
-          longest = longest || osc;
+        const pan = panner(panFor(x) * 0.8, 0.9);
+        const t = ac.currentTime + 0.005;
+        let last = null;
+        HIT_NOTES.forEach((degree, i) => {
+          // Each note a little louder and longer than the one before, so the run lands on the top.
+          const decay = 0.9 + 0.35 * i;
+          last = bell(pan, STAR, degreeFreq(degree), t + i * HIT_GAP, level * (0.75 + 0.125 * i), decay);
         });
-        longest.onended = () => pan.disconnect();
-
-        // Shards, one per star particle
-        for (let i = 0; i < CONFIG.particleCount; i++) {
-          const start = t + 0.03 + Math.random() * 0.37;
-          const decay = 0.12 + Math.random() * 0.08;
-          const osc = ac.createOscillator();
-          osc.frequency.value = Math.min(5000, degreeFreq(degree + 5 + Math.floor(Math.random() * 6)));
-          const g = ac.createGain();
-          g.gain.setValueAtTime(0, start);
-          g.gain.linearRampToValueAtTime(level * (0.18 + Math.random() * 0.12), start + 0.002);
-          g.gain.exponentialRampToValueAtTime(0.0001, start + decay);
-          const shardPan = ac.createStereoPanner();
-          shardPan.pan.value = Math.max(-1, Math.min(1, center + (Math.random() - 0.5) * 0.6));
-          osc.connect(g);
-          g.connect(shardPan);
-          route(shardPan, 0.9);
-          osc.start(start);
-          osc.stop(start + decay + 0.05);
-          osc.onended = () => shardPan.disconnect();
-        }
+        last.onended = () => pan.disconnect();
       },
     };
   })();
