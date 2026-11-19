@@ -8,6 +8,7 @@ h2:
 heroes:
 - stockId: 11261
 - stockId: 11262
+  extra_sprites: fg_sensettiaCrossroads2611_h02_skin2
 sidekicks:
 - stockId: 11261
   extra_sprites: fg_sensettia_s01_skin1,fg_sensettia_s01_skin2

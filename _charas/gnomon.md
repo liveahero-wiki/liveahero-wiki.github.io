@@ -8,6 +8,7 @@ h2:
 heroes:
 - stockId: 12551
 - stockId: 12552
+  extra_sprites: fg_gnomonCrossroads2611_h02_skin2
 sidekicks:
 - stockId: 12551
   extra_sprites: fg_gnomon_s01_skin1
