@@ -15,8 +15,7 @@ wiki-tabs {
 }
 
 .tabcontent {
-  /* be pushy about consuming all space */
-  block-size: 100%;
+  /* only as tall as its content: assets/main.js clips wiki-tabcontent to the panel being read */
   scroll-snap-align: start;
 }
 
@@ -75,6 +74,7 @@ wiki-tabcontent {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 100%;
+  align-items: start;
 }
 
 .mini-tabs {

@@ -100,6 +100,27 @@ function setupWikiTab(tabgroup) {
   const tabnav = tabgroup.querySelector(':scope nav')
   const tabnavitems = tabnav.querySelectorAll(':scope a')
   const isMiniTabs = tabgroup.classList.contains('mini-tabs')
+  const panels = [...tabsection.children]
+  let activePanel = null
+
+  // The panels sit side by side in one grid row, which is as tall as the tallest panel, so a short tab would
+  // leave a long empty space above what follows the tabs. Clip the row to the panel being read, or to the taller
+  // of the two a swipe is between. Without JavaScript the row keeps the tallest panel's height.
+  const heights = new Map()
+  const fitHeight = () => {
+    const pos = tabsection.scrollLeft / tabsection.clientWidth
+    const shown = panels.slice(Math.floor(pos + 0.01), Math.ceil(pos - 0.01) + 1)
+    const h = Math.max(0, ...shown.map(p => heights.get(p) ?? 0))
+    if (h === 0) return
+    const scrollbar = tabsection.offsetHeight - tabsection.clientHeight
+    const height = `${h + scrollbar}px`
+    if (tabsection.style.height !== height) tabsection.style.height = height
+  }
+  const observer = new ResizeObserver(entries => {
+    for (const e of entries) heights.set(e.target, e.borderBoxSize[0].blockSize)
+    fitHeight()
+  })
+  panels.forEach(p => observer.observe(p))
 
   const setActiveTab = (tabbtn, scrollTabSection = false) => {
     const t = tabnav.querySelector(':scope a[aria-selected="true"]')
@@ -111,7 +132,11 @@ function setupWikiTab(tabgroup) {
       behavior: 'smooth'
     })
   
-    if (scrollTabSection) tabsection.scrollLeft = tabsection.querySelector(tabbtn.hash).offsetLeft
+    if (scrollTabSection) {
+      activePanel = tabsection.querySelector(tabbtn.hash)
+      tabsection.scrollLeft = activePanel.offsetLeft
+      fitHeight()
+    }
     if (!isMiniTabs) {
       history.replaceState(null, '', tabbtn.hash)
     }
@@ -119,8 +144,17 @@ function setupWikiTab(tabgroup) {
 
   const determineActiveTabSection = () => {
     const i = Math.round(tabsection.scrollLeft / tabsection.clientWidth)
-    const matchingNavItem = tabnavitems[i]
+    const panel = panels[i]
+    // A swipe made far down a long panel can land past the end of a shorter one, where the page shows only
+    // what follows the tabs: go to the top of the new panel instead.
+    if (activePanel && panel && panel !== activePanel) {
+      const r = panel.getBoundingClientRect()
+      if (r.top < 0 && r.bottom < innerHeight / 2) tabgroup.scrollIntoView()
+    }
+    activePanel = panel
+    fitHeight()
 
+    const matchingNavItem = tabnavitems[i]
     matchingNavItem && setActiveTab(matchingNavItem)
   }
 
@@ -131,6 +165,14 @@ function setupWikiTab(tabgroup) {
   })
 
   tabsection.addEventListener('scroll', (e) => {
+    // Find-in-page or focus can scroll the clipped row down to reach the lower part of a hidden panel: grow the
+    // row to that panel and move the same distance on the page instead, which keeps the match where it is.
+    const dy = tabsection.scrollTop
+    fitHeight()
+    if (dy) {
+      tabsection.scrollTop = 0
+      window.scrollBy(0, dy)
+    }
     clearTimeout(tabsection.scrollEndTimer)
     tabsection.scrollEndTimer = setTimeout(determineActiveTabSection, 100)
   })
@@ -144,7 +186,9 @@ function setupWikiTab(tabgroup) {
     if (!target || !tabsection.contains(target)) return
     let panel = target
     while (panel.parentElement !== tabsection) panel = panel.parentElement
+    activePanel = panel
     tabsection.scrollLeft = panel.offsetLeft
+    fitHeight()
     // the browser scrolled to the target before the panel was in view; do it again now
     if (target !== panel) target.scrollIntoView()
   }
