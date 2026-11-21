@@ -34,7 +34,7 @@
 {% endif %}
 
 <wiki-tabs class="mini-tabs">
-<wiki-header class="scroll-snap-x">
+<wiki-header>
 <nav role="tablist">
 {% for locale in locales %}
     <a role="tab" aria-controls="library-{{include.key | downcase}}-{{ locale }}" href="#library-{{include.key | downcase}}-{{ locale }}">{{ locale | convertLang }}</a>
@@ -42,7 +42,7 @@
 </nav>
 </wiki-header>
 
-<wiki-tabcontent class="scroll-snap-x">
+<wiki-tabcontent>
 {% for locale in locales %}
 {% assign localeIdx = forloop.index0 %}
 <div role="tabpanel" class="tabcontent contain" id="library-{{include.key | downcase}}-{{ locale }}" lang="{{ langCodes[localeIdx] }}">

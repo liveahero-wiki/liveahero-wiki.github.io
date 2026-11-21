@@ -39,7 +39,7 @@
 <h2>Signature Stories</h2>
 
 <wiki-tabs class="mini-tabs">
-<wiki-header class="scroll-snap-x">
+<wiki-header>
 <nav role="tablist">
 {% for locale in locales %}
 <a role="tab" aria-controls="sign-story-{{ include.stockId }}-{{ locale }}" href="#sign-story-{{ include.stockId }}-{{ locale }}">{{ locale | convertLang }}</a>
@@ -47,7 +47,7 @@
 </nav>
 </wiki-header>
 
-<wiki-tabcontent class="scroll-snap-x">
+<wiki-tabcontent>
 {% for locale in locales %}
 {% assign localeIdx = forloop.index0 %}
 <div role="tabpanel" class="tabcontent contain" id="sign-story-{{ include.stockId }}-{{ locale }}" lang="{{ langCodes[localeIdx] }}">

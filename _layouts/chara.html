@@ -7,7 +7,7 @@ layout: markdownify
 {% else %}
 <wiki-tabs>
 
-<wiki-header class="scroll-snap-x">
+<wiki-header>
 <nav role="tablist">
 {% for hero in page.heroes %}
 <a role="tab" aria-controls="h{{ hero.stockId }}" href="#h{{ hero.stockId }}">{{ hero.stockId | stockIdToCharaTitle: 1 }}</a>
@@ -18,7 +18,7 @@ layout: markdownify
 </nav>
 </wiki-header>
 
-<wiki-tabcontent class="scroll-snap-x">
+<wiki-tabcontent>
 {% for hero in page.heroes %}
 {% include hero-infobox.html
     stockId=hero.stockId

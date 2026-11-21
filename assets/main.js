@@ -98,42 +98,49 @@ function setupWikiTab(tabgroup) {
   const tabsection = tabgroup.querySelector(':scope > wiki-tabcontent')
   const tabheader = tabgroup.querySelector(':scope > wiki-header')
   const tabnav = tabgroup.querySelector(':scope nav')
-  const tabnavitems = tabnav.querySelectorAll(':scope a')
+  const tabnavitems = [...tabnav.querySelectorAll(':scope a')]
   const isMiniTabs = tabgroup.classList.contains('mini-tabs')
+  const panels = [...tabsection.children]
 
-  const setActiveTab = (tabbtn, scrollTabSection = false) => {
-    const t = tabnav.querySelector(':scope a[aria-selected="true"]')
-    if (t !== null) t.removeAttribute('aria-selected')
+  // Show one panel. The others get hidden="until-found", which keeps their text reachable by find-in-page:
+  // the browser fires `beforematch` on the panel holding a match, and we switch to it.
+  const setActiveTab = (tabbtn, { scrollToTabs = false, updateHash = true } = {}) => {
+    const panel = tabsection.querySelector(tabbtn.hash)
+    if (!panel) return
 
+    tabnav.querySelector(':scope a[aria-selected="true"]')?.removeAttribute('aria-selected')
     tabbtn.setAttribute('aria-selected', 'true')
     tabheader.scrollTo({
       left: tabbtn.offsetLeft,
       behavior: 'smooth'
     })
-  
-    if (scrollTabSection) tabsection.scrollLeft = tabsection.querySelector(tabbtn.hash).offsetLeft
-    if (!isMiniTabs) {
+
+    for (const p of panels) {
+      if (p === panel) p.removeAttribute('hidden')
+      else p.setAttribute('hidden', 'until-found')
+    }
+    // The page may have been scrolled far down a long panel; the new one can be shorter.
+    if (scrollToTabs && tabgroup.getBoundingClientRect().top < 0) tabgroup.scrollIntoView()
+    if (updateHash && !isMiniTabs) {
       history.replaceState(null, '', tabbtn.hash)
     }
   }
 
-  const determineActiveTabSection = () => {
-    const i = Math.round(tabsection.scrollLeft / tabsection.clientWidth)
-    const matchingNavItem = tabnavitems[i]
-
-    matchingNavItem && setActiveTab(matchingNavItem)
-  }
+  const tabFor = panel => tabnavitems.find(a => a.hash === `#${panel.id}`)
 
   tabnav.addEventListener('click', e => {
-    if (e.target.nodeName !== "A") return
-    setActiveTab(e.target, true)
+    const tab = e.target.closest('a')
+    if (!tab) return
+    setActiveTab(tab, { scrollToTabs: true })
     e.preventDefault()
   })
 
-  tabsection.addEventListener('scroll', (e) => {
-    clearTimeout(tabsection.scrollEndTimer)
-    tabsection.scrollEndTimer = setTimeout(determineActiveTabSection, 100)
-  })
+  for (const panel of panels) {
+    panel.addEventListener('beforematch', () => {
+      const tab = tabFor(panel)
+      if (tab) setActiveTab(tab)
+    })
+  }
 
   // The panel holding the element the URL fragment names. #h10251 is a panel; #team-hero-10251 (the
   // community team formations, docs/CMS.md) or any other id inside a panel selects the panel it is in.
@@ -144,14 +151,16 @@ function setupWikiTab(tabgroup) {
     if (!target || !tabsection.contains(target)) return
     let panel = target
     while (panel.parentElement !== tabsection) panel = panel.parentElement
-    tabsection.scrollLeft = panel.offsetLeft
-    // the browser scrolled to the target before the panel was in view; do it again now
-    if (target !== panel) target.scrollIntoView()
+    const tab = tabFor(panel)
+    if (!tab) return
+    setActiveTab(tab, { updateHash: false })
+    // the browser scrolled to the target before the panel was shown; do it again now
+    target.scrollIntoView()
   }
 
+  setActiveTab(tabnavitems[0], { updateHash: false })
   if (location.hash) revealHash()
   window.addEventListener('hashchange', revealHash)
-  determineActiveTabSection()
 }
 
 function setupVoiceTableTabs() {

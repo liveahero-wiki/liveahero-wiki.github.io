@@ -34,7 +34,7 @@
 
 <wiki-tabtitle>{{ sales_report }}</wiki-tabtitle>
 
-<wiki-header class="scroll-snap-x">
+<wiki-header>
 <nav role="tablist">
 {% for locale in locales %}
     <a role="tab" aria-controls="{{ sales_report_id }}-{{ locale }}" href="#{{ sales_report_id }}-{{ locale }}">{{ locale | convertLang }}</a>
@@ -42,7 +42,7 @@
 </nav>
 </wiki-header>
 
-<wiki-tabcontent class="scroll-snap-x">
+<wiki-tabcontent>
 {% for locale in locales %}
 {% assign localeIdx = forloop.index0 %}
 <div role="tabpanel" class="tabcontent contain" id="{{ sales_report_id }}-{{ locale }}" lang="{{ langCodes[localeIdx] }}">

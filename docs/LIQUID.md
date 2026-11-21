@@ -13,6 +13,7 @@ Layouts act as structural wrappers for pages in the wiki, parsing markdown front
 *   **Mechanics**:
     *   If `page.unreleased` is `true`, it includes `hero-infobox-unreleased.html`.
     *   Otherwise, it mounts a custom tabbed navigation container (`<wiki-tabs>` and `<wiki-tabcontent>`) splitting **Hero** forms and **Sidekick** forms.
+        *   Plain tabs: `setupWikiTab` in `assets/main.js` shows one `<wiki-tabcontent>` panel and gives the others `hidden="until-found"`, so find-in-page and `#fragment` links still reach them (`beforematch` / `revealHash` switch to the panel). `<wiki-header>` is `position: sticky` under the toolbar, so `<wiki-tabs>` must not set `overflow`. The same applies to every `<wiki-tabs>`, the `mini-tabs` included.
     *   Includes `hero-infobox.html` or `sidekick-infobox.html` for each form registered under front-matter lists `page.heroes` and `page.sidekicks`.
     *   Passes `cms=true` to the infoboxes so each card's panel ends with its community team-formation list (`cms-submissions.html`; see [CMS.md](CMS.md)), and loads the wiki-cms embed script once.
     *   Loads cards collection info via `card-collection-info.html`.

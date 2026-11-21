@@ -2,40 +2,24 @@ wiki-tabs {
   --hue: 328deg;
   --accent: var(--hue) 100% 54%;
   --indicator-size: 2px;
-  --space-1: .5rem;
-  --space-2: 1rem;
-  --space-3: 1.5rem;
 
+  /* no overflow here: it would stop wiki-header from sticking to the toolbar */
   display: block;
-  /* flex-direction: column; */
-
-  /* establish primary containing box */
-  overflow: hidden;
   position: relative;
 }
 
-.tabcontent {
-  /* be pushy about consuming all space */
-  block-size: 100%;
-  scroll-snap-align: start;
-}
+/* Only the active panel is shown (assets/main.js); the others carry hidden="until-found" so find-in-page can still reach them */
 
 wiki-header {
-  display: flex;
-  flex-direction: column;
-  /* defend against <section> needing 100% */
-  flex-shrink: 0;
-  /* fixes cross browser quarks */
-  min-block-size: fit-content;
-}
-
-.scroll-snap-x {
-  /* browser decide if x is ok to scroll and show bars on, y hidden */
+  display: block;
+  /* stays under the fixed toolbar while the panel scrolls */
+  position: sticky;
+  top: var(--toolbar-height);
+  z-index: 1;
+  background: var(--bg);
+  /* a long row of tabs scrolls sideways */
   overflow: auto hidden;
-  /* prevent scroll chaining on x scroll */
   overscroll-behavior-x: contain;
-  /* scrolling should snap children on x */
-  scroll-snap-type: x mandatory;
 }
 
 wiki-header nav {
@@ -44,7 +28,6 @@ wiki-header nav {
 
 wiki-header a {
   padding: 1rem 1.5rem;
-  scroll-snap-align: start;
 
   font-weight: 700;
   color: hsl(var(--hue) 5% 40%);
@@ -67,14 +50,6 @@ wiki-header a:hover {
 wiki-header a:is(:target, :active, [aria-selected]) {
   color: var(--text);
   border-block-end-color: hsl(var(--accent));
-}
-
-wiki-tabcontent {
-  block-size: 100%;
-
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 100%;
 }
 
 .mini-tabs {
