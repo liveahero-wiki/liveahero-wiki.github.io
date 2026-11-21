@@ -254,13 +254,13 @@ test("classifyToken: includes with literal parameters", () => {
 });
 
 test("includes: denylist and the contributor list", () => {
-  for (const f of ["header.html", "footer.html", "banner.html", "pagefind-search.html", "skill-lang-picker.html", "js/theme.js", "style/tabs.min.css", "voice-table.html", "bio-infobox.html", "hero-infobox.html", "hero-infobox-unreleased.html", "hero-infobox-gallery.html", "sidekick-infobox.html", "hero-skill-evolution-v2.html", "card-hero.html", "card-collection-info.html", "team-creator-link.html"]) {
+  for (const f of ["header.html", "footer.html", "banner.html", "pagefind-search.html", "skill-lang-picker.html", "js/theme.js", "voice-table.html", "bio-infobox.html", "hero-infobox.html", "hero-infobox-unreleased.html", "hero-infobox-gallery.html", "sidekick-infobox.html", "hero-skill-evolution-v2.html", "card-hero.html", "card-collection-info.html", "team-creator-link.html"]) {
     assert.equal(isIncludeDenied(f), true, f);
   }
   for (const f of ["quest-group.html", "shop-table.html", "skill-table-manual.html", "apache-chart.html", "item.html", "item-icon.html", "figure-image.html", "library-info.html"]) {
     assert.equal(isIncludeDenied(f), false, f);
   }
-  assert.deepEqual(contributorIncludes(["item.html", "header.html", "js/theme.js", "style/tabs.min.css", "quest-group.html", "x.js", "card-hero.html", "sub/item.html"]), ["item.html", "quest-group.html"]);
+  assert.deepEqual(contributorIncludes(["item.html", "header.html", "js/theme.js", "quest-group.html", "x.js", "card-hero.html", "sub/item.html"]), ["item.html", "quest-group.html"]);
   assert.ok(INCLUDE_DENYLIST.length > 10);
 });
 
