@@ -63,7 +63,7 @@
 <wiki-tabcontent>
 {% for locale in locales %}
 {% assign localeIdx = forloop.index0 %}
-<div role="tabpanel" class="tabcontent contain" id="bio-{{include.bio | downcase}}-{{ locale }}" markdown="1" lang="{{ langCodes[localeIdx] }}">
+<div role="tabpanel" class="tabcontent contain" id="bio-{{include.bio | downcase}}-{{ locale }}" markdown="1" lang="{{ langCodes[localeIdx] }}"{% unless forloop.first %} hidden="until-found"{% endunless %}>
 
 {{ dataSources[localeIdx][include.bio] }}
 

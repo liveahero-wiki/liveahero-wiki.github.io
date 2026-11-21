@@ -14,7 +14,7 @@
 
 {% assign stockId = include.stockId | downcase %}
 
-<div id="s{{ include.stockId }}" role="tabpanel" tabindex="0"  class="tabcontent contain elementNone">
+<div id="s{{ include.stockId }}" role="tabpanel" tabindex="0"  class="tabcontent contain elementNone"{% if include.hide %} hidden="until-found"{% endif %}>
 {% include hero-infobox-profile.html stockId=include.stockId firstCardInfo=firstCardInfo sprites=sprites limited=include.limited %}
 
 {% assign detail_prefix = firstCardInfo.resourceName | upcase | prepend: "DETAIL_" %}

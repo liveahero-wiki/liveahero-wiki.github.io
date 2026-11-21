@@ -45,7 +45,7 @@
 <wiki-tabcontent>
 {% for locale in locales %}
 {% assign localeIdx = forloop.index0 %}
-<div role="tabpanel" class="tabcontent contain" id="{{ sales_report_id }}-{{ locale }}" lang="{{ langCodes[localeIdx] }}">
+<div role="tabpanel" class="tabcontent contain" id="{{ sales_report_id }}-{{ locale }}" lang="{{ langCodes[localeIdx] }}"{% unless forloop.first %} hidden="until-found"{% endunless %}>
     <p markdown="1">{{ dataSources[localeIdx][sales_report] | sanitizeSalesCharaName }}</p>
 </div>
 {% endfor %}

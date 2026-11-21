@@ -19,18 +19,23 @@ layout: markdownify
 </wiki-header>
 
 <wiki-tabcontent>
+{% comment %} Only the first panel is shown; the rest are hidden="until-found" in the HTML (see assets/main.js, _sass/tabs.css) so the page does not reflow when main.js collapses them. {% endcomment %}
 {% for hero in page.heroes %}
+{% assign hide = true %}{% if forloop.first %}{% assign hide = false %}{% endif %}
 {% include hero-infobox.html
     stockId=hero.stockId
     limited=hero.limited
     extra_sprites=hero.extra_sprites
+    hide=hide
 %}
 {% endfor %}
 {% for sk in page.sidekicks %}
+{% assign hide = true %}{% if forloop.first and page.heroes.size == 0 %}{% assign hide = false %}{% endif %}
 {% include sidekick-infobox.html
     stockId=sk.stockId
     limited=sk.limited
     extra_sprites=sk.extra_sprites
+    hide=hide
 %}
 {% endfor %}
 </wiki-tabcontent>

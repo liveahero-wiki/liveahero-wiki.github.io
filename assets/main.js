@@ -161,6 +161,8 @@ function setupWikiTab(tabgroup) {
   setActiveTab(tabnavitems[0], { updateHash: false })
   if (location.hash) revealHash()
   window.addEventListener('hashchange', revealHash)
+  // hands over from the pre-script rules in _sass/tabs.css; the panels' hidden attributes are now ours
+  tabgroup.dataset.ready = ''
 }
 
 function setupVoiceTableTabs() {

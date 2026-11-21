@@ -8,7 +8,17 @@ wiki-tabs {
   position: relative;
 }
 
-/* Only the active panel is shown (assets/main.js); the others carry hidden="until-found" so find-in-page can still reach them */
+/* Only the active panel is shown; the others carry hidden="until-found" so find-in-page can still reach them.
+   The HTML marks every panel but the first that way, and assets/main.js keeps it up to date once it has run
+   (it sets data-ready). main.js is async, so until then these rules show the panel the URL fragment names
+   (the panel that is :target or contains it) in place of the first one. Without them the page paints the
+   first panel, then jumps when main.js switches to the fragment's panel. */
+wiki-tabs:not([data-ready]) > wiki-tabcontent:has(:target) > :not(:target, :has(:target)) {
+  display: none;
+}
+wiki-tabs:not([data-ready]) > wiki-tabcontent > :is(:target, :has(:target)) {
+  content-visibility: visible;
+}
 
 wiki-header {
   display: block;
