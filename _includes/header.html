@@ -17,10 +17,10 @@
   <meta name="generator" content="{{ eleventy.generator }}">
   <link rel="apple-touch-icon" href="{{ site.url }}/assets/img/logo192.png"/>
   <!--<link rel="manifest" href="{{ site.url }}/assets/img/manifest.json"/>-->
-  <meta name="description" content="Live A Hero Wiki"/>
-  <meta property="og:title" content="{{ page_title }}"/>
-  <meta property="og:site_name" content="Live A Hero Wiki"/>
-  <meta property="og:description" content="{{ page_title }}"/>
+  <meta name="description" content="{{ page.title | escape }}"/>
+  <meta property="og:title" content="{{ page.title | escape }}"/>
+  <meta property="og:site_name" content="{{ site.title | escape }}"/>
+  <meta property="og:description" content="{{ page.title | escape }}"/>
 {% if page.characterId %}
 {% assign cardId = page.characterId | times: 100 | plus: 100011 | downcase %}
   <meta property="og:image" content="{{ site.url }}/cdn/Sprite/icon_{{ site.data.SidekickMaster[cardId].resourceName }}_s01.png"/>
