@@ -23821,14 +23821,14 @@
   "143": {
     "eventId": 143,
     "chapterId": 1207,
-    "lookBackChapterId": 542,
+    "lookBackChapterId": 0,
     "baseResourceName": "Stella2510",
     "questSelectPrefabAddress": "",
     "appendPrefabAddressInHome": null,
     "appendPrefabAddressInWindow": null,
     "startAt": "2025-09-18 14:00:03",
     "endAt": "2025-11-04 14:00:00",
-    "canRemember": 1,
+    "canRemember": 0,
     "eventPortalJson": {
       "bg": "ui_bg_sprite_event_Stella2510",
       "bgm": "bgm_stellalink_adv",
@@ -32969,14 +32969,14 @@
   "185": {
     "eventId": 185,
     "chapterId": 1310,
-    "lookBackChapterId": 0,
+    "lookBackChapterId": 555,
     "baseResourceName": "Crossroads2611",
     "questSelectPrefabAddress": "",
     "appendPrefabAddressInHome": "EventBannerAppendHome",
     "appendPrefabAddressInWindow": "EventBannerAppendWindow",
     "startAt": "2026-11-05 14:00:00",
     "endAt": "2026-11-26 14:00:00",
-    "canRemember": 0,
+    "canRemember": 1,
     "eventPortalJson": {
       "bg": "ui_bg_sprite_quest_Crossroads2611",
       "bgm": "bgm_crossroads_adv",
@@ -33215,7 +33215,59 @@
       "missionCategoryButtonLabels": null
     },
     "roguePortalJson": null,
-    "pastPortalJson": null,
+    "pastPortalJson": {
+      "bg": "ui_bg_sprite_quest_Crossroads2611",
+      "bgm": "bgm_crossroads_adv",
+      "logo": "Crossroads2611_title",
+      "terms": [],
+      "storeId": 0,
+      "isArchived": false,
+      "questInfos": [
+        {
+          "type": 5,
+          "chapterId": 555,
+          "buttonType": 0
+        },
+        {
+          "type": 7,
+          "chapterId": 556,
+          "buttonType": 3
+        }
+      ],
+      "tutorialKey": "Crossroads2611",
+      "eventItemIds": [],
+      "missionViews": [],
+      "portalWindow": "EventPortalWindowCrossroads2611_past",
+      "characterViews": [
+        {
+          "skinId": 0,
+          "stockId": 12552,
+          "cardType": 1,
+          "serifKinds": [
+            27,
+            28
+          ],
+          "visualType": 1,
+          "resourceName": "gnomonCrossroads2611",
+          "characterName": "ノーモン"
+        },
+        {
+          "skinId": 0,
+          "stockId": 11262,
+          "cardType": 1,
+          "serifKinds": [
+            27,
+            28
+          ],
+          "visualType": 1,
+          "resourceName": "sensettiaCrossroads2611",
+          "characterName": "センセチア"
+        }
+      ],
+      "missionGroupId": 0,
+      "missionGroupIds": [],
+      "missionCategoryButtonLabels": null
+    },
     "summary": {
       "description": "UI_EVENT_SUMMARY_2611CROSSROADS",
       "mainChapterId": 109,
@@ -33413,5 +33465,466 @@
     "summary": null,
     "url": null,
     "questBonusJsons": []
+  },
+  "187": {
+    "eventId": 187,
+    "chapterId": 1316,
+    "lookBackChapterId": 542,
+    "baseResourceName": "StellaRevival2611",
+    "questSelectPrefabAddress": "",
+    "appendPrefabAddressInHome": null,
+    "appendPrefabAddressInWindow": null,
+    "startAt": "2026-11-26 14:00:00",
+    "endAt": "2026-12-17 14:00:00",
+    "canRemember": 0,
+    "eventPortalJson": {
+      "bg": "ui_bg_sprite_event_Stella2510",
+      "bgm": "bgm_stellalink_adv",
+      "logo": "StellaRevival2611_title",
+      "endAt": "2026-12-10 20:00:00",
+      "terms": [
+        {
+          "keys": [
+            "UI_MAIN_QUEST",
+            "UI_EPILOGUE_QUEST",
+            "UI_MISSION",
+            "UI_EXCHANGE"
+          ],
+          "endAt": "2026-12-17 14:00:00"
+        },
+        {
+          "keys": [
+            "UI_FREE_QUEST",
+            "UI_SALES"
+          ],
+          "endAt": "2026-12-10 20:00:00"
+        }
+      ],
+      "gachaId": 239,
+      "storeId": 111,
+      "questInfos": [
+        {
+          "type": 5,
+          "chapterId": 1316,
+          "buttonType": 0
+        },
+        {
+          "type": 6,
+          "chapterId": 1317,
+          "buttonType": 1
+        },
+        {
+          "type": 7,
+          "chapterId": 1318,
+          "buttonType": 0
+        }
+      ],
+      "tutorialKey": "StellaRevival2611",
+      "eventItemIds": [
+        257
+      ],
+      "missionViews": [
+        {
+          "skinId": 0,
+          "stockId": 10073,
+          "cardType": 1,
+          "serifKinds": [
+            29
+          ],
+          "visualType": 1,
+          "serifEntity": [
+            {
+              "priority": 0,
+              "serifKind": 29,
+              "conditions": []
+            },
+            {
+              "priority": 1,
+              "serifKind": 30,
+              "conditions": [
+                {
+                  "class": "MissionClear",
+                  "questId": 0,
+                  "missionIds": [
+                    22423,
+                    22424,
+                    22425,
+                    23078,
+                    23079,
+                    23080,
+                    23081,
+                    23082,
+                    23083,
+                    23084,
+                    23085,
+                    23086,
+                    23087,
+                    23088,
+                    23089,
+                    23090,
+                    23091,
+                    23092,
+                    23093,
+                    23094,
+                    23095,
+                    23096,
+                    23097
+                  ],
+                  "isCheckClear": true
+                }
+              ]
+            }
+          ],
+          "resourceName": "barrelStella2510",
+          "characterName": "バレル"
+        },
+        {
+          "skinId": 0,
+          "stockId": 12092,
+          "cardType": 1,
+          "serifKinds": [
+            29
+          ],
+          "visualType": 1,
+          "serifEntity": [
+            {
+              "priority": 0,
+              "serifKind": 29,
+              "conditions": []
+            },
+            {
+              "priority": 1,
+              "serifKind": 30,
+              "conditions": [
+                {
+                  "class": "MissionClear",
+                  "questId": 0,
+                  "missionIds": [
+                    22423,
+                    22424,
+                    22425,
+                    23078,
+                    23079,
+                    23080,
+                    23081,
+                    23082,
+                    23083,
+                    23084,
+                    23085,
+                    23086,
+                    23087,
+                    23088,
+                    23089,
+                    23090,
+                    23091,
+                    23092,
+                    23093,
+                    23094,
+                    23095,
+                    23096,
+                    23097
+                  ],
+                  "isCheckClear": true
+                }
+              ]
+            }
+          ],
+          "resourceName": "roudinStella2510",
+          "characterName": "ルーディン"
+        },
+        {
+          "skinId": 0,
+          "stockId": 12871,
+          "cardType": 2,
+          "serifKinds": [
+            29
+          ],
+          "visualType": 1,
+          "serifEntity": [
+            {
+              "priority": 0,
+              "serifKind": 29,
+              "conditions": []
+            },
+            {
+              "priority": 1,
+              "serifKind": 30,
+              "conditions": [
+                {
+                  "class": "MissionClear",
+                  "questId": 0,
+                  "missionIds": [
+                    22423,
+                    22424,
+                    22425,
+                    23078,
+                    23079,
+                    23080,
+                    23081,
+                    23082,
+                    23083,
+                    23084,
+                    23085,
+                    23086,
+                    23087,
+                    23088,
+                    23089,
+                    23090,
+                    23091,
+                    23092,
+                    23093,
+                    23094,
+                    23095,
+                    23096,
+                    23097
+                  ],
+                  "isCheckClear": true
+                }
+              ]
+            }
+          ],
+          "resourceName": "turbak",
+          "characterName": "ターバック"
+        }
+      ],
+      "portalWindow": "EventPortalWindowStellaRevival2611",
+      "characterViews": [
+        {
+          "skinId": 0,
+          "stockId": 10073,
+          "cardType": 1,
+          "serifKinds": [
+            27,
+            28
+          ],
+          "visualType": 1,
+          "resourceName": "barrelStella2510",
+          "characterName": "バレル"
+        },
+        {
+          "skinId": 0,
+          "stockId": 12092,
+          "cardType": 1,
+          "serifKinds": [
+            27,
+            28
+          ],
+          "visualType": 1,
+          "resourceName": "roudinStella2510",
+          "characterName": "ルーディン"
+        },
+        {
+          "skinId": 0,
+          "stockId": 12871,
+          "cardType": 2,
+          "serifKinds": [
+            27,
+            28
+          ],
+          "visualType": 1,
+          "resourceName": "turbak",
+          "characterName": "ターバック"
+        }
+      ],
+      "salesRegionIds": [
+        101
+      ],
+      "missionGroupIds": [
+        1316,
+        1317,
+        1319
+      ],
+      "eventMissionWindowAddress": "",
+      "missionCategoryButtonLabels": null
+    },
+    "roguePortalJson": null,
+    "pastPortalJson": null,
+    "summary": {
+      "description": "UI_EVENT_SUMMARY_2510STELLA",
+      "mainChapterId": 108,
+      "relationEventIds": [
+        2,
+        21,
+        97
+      ]
+    },
+    "url": null,
+    "questBonusJsons": [
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 40,
+        "targetStockId": 10073
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 40,
+        "targetStockId": 12092
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 30,
+        "targetStockId": 12871
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 10,
+        "targetStockId": 10071
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 10,
+        "targetStockId": 12091
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 20,
+        "targetStockId": 12552
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 20,
+        "targetStockId": 11262
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 20,
+        "targetStockId": 10532
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 20,
+        "targetStockId": 11151
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 10,
+        "targetStockId": 10252
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 20,
+        "targetStockId": 10072
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 20,
+        "targetStockId": 10092
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 10,
+        "targetStockId": 10751
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 20,
+        "targetStockId": 11251
+      },
+      {
+        "type": 3,
+        "class": "HeroQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 10,
+        "targetStockId": 11261
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 30,
+        "targetStockId": 12871
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 10,
+        "targetStockId": 10071
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 10,
+        "targetStockId": 12091
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 10,
+        "targetStockId": 11611
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 10,
+        "targetStockId": 11261
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 10,
+        "targetStockId": 11151
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 10,
+        "targetStockId": 10711
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 10,
+        "targetStockId": 10751
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 10,
+        "targetStockId": 11251
+      },
+      {
+        "type": 3,
+        "class": "SidekickQuestRewardBonus",
+        "objectId": 257,
+        "bonusValue": 10,
+        "targetStockId": 19991
+      }
+    ]
   }
 }
