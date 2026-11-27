@@ -116,12 +116,11 @@ The bonus:
 
 | No  | Description      | Rewards      |
 |----|-----------------------------------------------------------|----------------|
-| 1  | Clear 1 challenge quest | 1 {% include item-icon.html id=10 %}    |
-| 2  | Clear 3 challenge quest | 1 {% include item-icon.html id=34 %}    |
-| 3  | Clear 5 challenge quest | 1 {% include item-icon.html id=10 %}    |
-| 4  | Clear all main event quest | Title Unlocked:「PR担当」"PR Representative"  |
-| 5  | Clear all event challenge quest | Title Unlocked:「盛り上げ上手の」"Hype Expert"   |
-| 6  | Clear all event quest | Title Unlocked:「想いを繋ぐ」"Connector of Hearts"  |
+| 1  | Clear 2 challenge quest | 1 {% include item-icon.html id=3 %}    |
+| 2  | Clear 5 challenge quest | 1 {% include item-icon.html id=3 %}    |
+| 3  | Clear all main event quest | Title Unlocked:「PR担当」"PR Representative"  |
+| 4  | Clear all event challenge quest | Title Unlocked:「盛り上げ上手の」"Festivity Master"   |
+| 5  | Clear all event quest | Title Unlocked:「想いを繋ぐ」"Heart Uniter"  |
 
 ## Limited Time Mission
 
