@@ -1,5 +1,5 @@
 ---
-title: Stella Link Carnival
+title: Stella Link Carnival (Re-run)
 eventId: 143
 has_story: true
 jp_title: ステラリンク・カーニバル 開催！
